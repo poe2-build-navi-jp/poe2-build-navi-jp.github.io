@@ -79,7 +79,7 @@ function renderStage(index, scroll = false) {
     ["交換すべき装備", data?.replaceGear],
     ["注意点・移行条件", data ? `${data.caution} 移行条件：${data.transitionCondition}` : null]
   ].forEach(([label, value]) => grid.append(stageItem(label, value)));
-  byId("stage-status").textContent = data ? "複数ソース確認済み" : "ビルド固有データ確認中";
+  byId("stage-status").textContent = data ? "掲載資料を確認済み" : "ビルド固有データ確認中";
   byId("stage-status").className = data ? "verified" : "pending";
   if (scroll) byId("roadmap").scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -94,7 +94,7 @@ function renderNow(index) {
     "確認済みのスキル・パッシブ情報が登録されるまで『確認中』を目印にする",
     "装備更新前に必要レベルと、このビルドの対応パッチを確認する"
   ];
-  byId("now-source-label").textContent = verifiedActions ? "複数ソースで確認した優先行動" : "一般的な確認項目（ビルド固有データ確認中）";
+  byId("now-source-label").textContent = verifiedActions ? "掲載資料から整理した優先行動" : "一般的な確認項目（ビルド固有データ確認中）";
   document.querySelectorAll("[data-now-action]").forEach((element, actionIndex) => { element.textContent = actions[actionIndex]; });
 }
 
