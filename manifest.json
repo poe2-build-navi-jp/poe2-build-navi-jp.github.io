@@ -1,7 +1,7 @@
 {
   "name": "POE2ビルドナビ",
   "short_name": "POE2ビルドナビ",
-  "description": "PoE2の人気ビルド、レベル別スキル・パッシブ・装備、取引相場の見方を日本語で案内する初心者向け攻略サイト。",
+  "description": "PoE2初心者がビルドと現在レベルを選び、育成段階と次に確認することが分かる日本語ナビ。",
   "start_url":"/",
   "display": "standalone",
   "background_color": "#0d1520",

@@ -2,8 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://poe2-build-navi-jp.github.io/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://poe2-build-navi-jp.github.io/about/</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+  <url>
+    <loc>https://poe2-build-navi-jp.github.io/editorial-policy/</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+  <url>
+    <loc>https://poe2-build-navi-jp.github.io/privacy/</loc>
+    <lastmod>2026-09-07</lastmod>
+  </url>
+  <url>
+    <loc>https://poe2-build-navi-jp.github.io/terms/</loc>
+    <lastmod>2026-09-07</lastmod>
   </url>
 </urlset>
