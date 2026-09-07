@@ -921,5 +921,554 @@
     ],
     "dataStatus": "reviewed",
     "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人"
+  },
+  {
+    "id": "ranger-ice-shot-deadeye",
+    "slug": "ice-shot-deadeye",
+    "classSlug": "ranger",
+    "name": "アイスショット・デッドアイ",
+    "className": "レンジャー",
+    "ascendancy": "デッドアイ",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "dataStatus": "reviewed",
+    "mainSkill": "アイスショット（Ice Shot）",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "Lv31で主力を切替",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "Lv1〜30の育成構成と、Lv31以降のアイスショット構成が段階別に公開されている。",
+      "周回用のアイスショットと単体用のスナイプを役割分担できる。",
+      "Endgameは非クリティカル型から始め、装備に合わせて後から移行できる。"
+    ],
+    "weaknesses": [
+      "アイスショットはLv31まで解禁されないため、序盤はライトニングアローとライトニングロッドを使う。",
+      "後半の防御やクリティカル移行は装備依存で、完成形へ早く切り替えると不安定になりやすい。",
+      "単体戦ではスナイプの溜めとマナ管理が必要になる。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "ライトニングアロー + ライトニングロッド",
+        "supports": "ライトニングアロー：Rapid Attacks I → Elemental Armament I。ライトニングロッド：Concentrated Area。",
+        "passivePriority": "原典のlvl 1-14段階別ツリーを使用。正確なノード名はリンク先ツリーで確認。",
+        "gearPriority": "弓と矢筒の追加アタックダメージ、ライフ、耐性、移動速度。",
+        "replaceGear": "火力が止まった弓と、移動速度のないブーツを優先して見直す。",
+        "caution": "アイスショットはまだ使えない。弓と矢筒を入手したら通常品のまま放置せず、序盤クラフトで確認する。",
+        "transitionCondition": "Lv11到達。ライトニングロッドを置いてライトニングアローで攻撃する流れが安定している。",
+        "nowActions": [
+          "ライトニングロッドを先に置く",
+          "ライトニングアローへ序盤サポートを付ける",
+          "弓・矢筒の追加ダメージを確認する"
+        ]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "ライトニングアロー + ライトニングロッド",
+        "supports": "序盤サポートを継続し、原典のlvl 15-23構成へ進む。",
+        "passivePriority": "lvl 1-14からlvl 15-23の段階別ツリーへ進む。",
+        "gearPriority": "Lv11の弓更新、Lv16以降の弓とソケット、矢筒のスキルレベル・追加ダメージ。",
+        "replaceGear": "Lv11前後の弓を確認し、Lv16以降の更新用素材は使い切らない。",
+        "caution": "原典では序盤の弓に高価な通貨を使い切らず、次の弓更新へ残す方針。",
+        "transitionCondition": "Lv21到達。弓更新用の素材を残し、火力と耐性が維持できている。",
+        "nowActions": [
+          "Lv11前後で弓を比較する",
+          "Lv16以降の弓更新用素材を残す",
+          "ライフ・マナフラスコを更新する"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "ライトニングアロー + ライトニングロッドを継続",
+        "supports": "原典のlvl 24-30構成を使用。アイスショット用ジェムはLv31切替まで外さない。",
+        "passivePriority": "lvl 24-30段階別ツリーを使用し、Lv31の切替地点へ接続。",
+        "gearPriority": "弓、矢筒、ライフ、耐性、移動速度。必要な知性も確認。",
+        "replaceGear": "Lv31切替後も使える防具を優先し、短期間だけの装備へ過剰投資しない。",
+        "caution": "Lv31前に現在の主力を外さない。サポートの能力値要求へ器用さだけを振りすぎない。",
+        "transitionCondition": "Lv31到達。アイスショットと切替後のサポートを用意できる。",
+        "nowActions": [
+          "Lv31用アイスショットを準備する",
+          "切替前の主力を残す",
+          "サポートに必要な知性を確認する"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "アイスショットへ切替。単体にはスナイプを使用",
+        "supports": "原典のlvl 31-41構成へ変更。Lv36以降は段階別構成に合わせてHerald of Iceを確認。",
+        "passivePriority": "lvl 31-41段階別ツリーへ移る。完成ツリーへ一括変更しない。",
+        "gearPriority": "冷気または物理の追加アタックダメージ、弓DPS、矢筒、ライフ、耐性。",
+        "replaceGear": "切替後に通常敵を処理できない場合は、サポートより先に弓と矢筒を比較する。",
+        "caution": "日本語プレイ記録ではLv31直後はSpiritジェム条件に注意が必要とされる。揃わない場合は切替を数レベル遅らせる。",
+        "transitionCondition": "Lv41到達。アイスショットで周回し、スナイプを単体用に使い分けられる。",
+        "nowActions": [
+          "Lv31でアイスショットへの切替を判断する",
+          "単体用にスナイプを設定する",
+          "弓と矢筒の追加ダメージを確認する"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "アイスショット + スナイプ",
+        "supports": "原典のlvl 42-59、lvl 60+構成を順に使用。未確認枠は原典表示を優先。",
+        "passivePriority": "lvl 42-59からlvl 60+の段階別ツリーへ進む。",
+        "gearPriority": "弓、矢筒、ライフ、回避、属性耐性、移動速度、必要能力値。",
+        "replaceGear": "火力不足なら弓・矢筒、死亡が多いなら耐性とライフの低い防具を更新。",
+        "caution": "スナイプがマナ不足で途中終了しないよう、ボス前にマナと消費量を確認する。",
+        "transitionCondition": "キャンペーン終了。アイスショットの周回とスナイプの単体戦が安定している。",
+        "nowActions": [
+          "lvl 42-59→60+の順で更新する",
+          "耐性と回避を整える",
+          "スナイプのマナ不足を確認する"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "アイスショットを周回主力、スナイプを強敵用に使用",
+        "supports": "EndgameガイドのEarly構成へ移行。",
+        "passivePriority": "Earlyの非クリティカル・ライフ/回避型ツリーを使用。",
+        "gearPriority": "三属性耐性、ライフ、回避、冷気・物理の追加アタックダメージ、弓と矢筒。",
+        "replaceGear": "耐性不足の防具を先に直し、次に弓・矢筒を更新。",
+        "caution": "マップ開始時は原典のEarly非クリティカル型を使い、装備が揃う前にクリティカル型へ移らない。",
+        "transitionCondition": "低Tierマップを安定して周回でき、三属性耐性とライフ・回避が不足していない。",
+        "nowActions": [
+          "Early非クリティカル型へ移る",
+          "三属性耐性を確認する",
+          "弓と矢筒を1部位ずつ比較する"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "アイスショット + スナイプ",
+        "supports": "non-crit Midgameからnon-crit Hybrid swapの順で進める。",
+        "passivePriority": "原典のnon-crit Midgameを完成させ、装備条件を満たしてからHybrid swapを検討。",
+        "gearPriority": "弓、矢筒、追加アタックダメージ、耐性、ライフ・回避。Hybrid移行時はESも確認。",
+        "replaceGear": "防御が不安定ならHybrid移行を止め、現行のライフ・回避装備を先に改善。",
+        "caution": "Hybridは自動的な上位互換ではない。装備とパッシブを半端に混ぜない。",
+        "transitionCondition": "非クリティカル型が安定し、Hybrid移行に必要な装備が揃う。",
+        "nowActions": [
+          "非クリティカル型を先に安定させる",
+          "Hybrid移行用装備を確認する",
+          "火力と防御の不足を分けて考える"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "アイスショットを主力に、装備が揃うまではスナイプを単体用として維持",
+        "supports": "Crit HybridからUber Endgameは装備前提を満たす場合のみ移行。",
+        "passivePriority": "Crit Hybrid段階別ツリーを基準にし、Uber版は原典の装備条件を確認後に採用。",
+        "gearPriority": "高性能な弓と矢筒、追加ダメージ、クリティカル、防御、耐性、必要能力値。",
+        "replaceGear": "固定価格ではなく、現在装備と同条件出品の性能差で1部位ずつ更新。",
+        "caution": "装備が十分ならスナイプを外す選択肢もあるが、固定DPSや一撃条件は断定しない。",
+        "transitionCondition": "完成後は弓、単体火力、防御のボトルネックを1項目ずつ改善する。",
+        "nowActions": [
+          "Crit移行の装備条件を確認する",
+          "スナイプを残すか実戦で判断する",
+          "固定相場を使わず1部位ずつ更新する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "弓・矢筒：追加アタックダメージと実際の攻撃性能",
+      "防具：ライフ、回避、属性耐性",
+      "ブーツ：移動速度。後半は必要能力値とES移行条件も確認"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Ice Shot Deadeye Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
+        "checkedAt": "2026-09-07",
+        "type": "海外検証済みレベリングガイド"
+      },
+      {
+        "name": "Mobalytics: Ice Shot Deadeye Endgame 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+        "checkedAt": "2026-09-07",
+        "type": "海外検証済みEndgameガイド"
+      },
+      {
+        "name": "YouTube: 0.5.5 ACT序盤から組めるアイスショット",
+        "url": "https://www.youtube.com/watch?v=DbtGucCmzOY",
+        "checkedAt": "2026-09-07",
+        "type": "日本語動画"
+      },
+      {
+        "name": "note: 0.5 アイスショット・デッドアイActテスト",
+        "url": "https://note.com/dybotiam/n/n20fcbdab59e4",
+        "checkedAt": "2026-09-07",
+        "type": "日本語プレイ記録"
+      }
+    ],
+    "audience": "弓で遠距離から戦い、周回と単体攻撃を使い分けたい初心者"
+  },
+  {
+    "id": "witch-minion-infernalist",
+    "slug": "minion-infernalist",
+    "classSlug": "witch",
+    "name": "スナイパーミニオン・インファーナリスト",
+    "className": "ウィッチ",
+    "ascendancy": "インファーナリスト",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "dataStatus": "reviewed",
+    "mainSkill": "スケルタルスナイパー / スペクター",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "Act 3とLv67前後で召喚対象を切替",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "各Act、Interlude、Lv67〜90まで段階別資料が公開されている。",
+      "ミニオンが攻撃を担当するため、プレイヤーはボスの動作確認に集中しやすい。",
+      "ミニオンレベル、Spirit、防御という装備目標が分かりやすい。"
+    ],
+    "weaknesses": [
+      "移動速度は高速周回型より遅く、狭い場所ではミニオンAIが詰まる場合がある。",
+      "Act 3とLv67前後でスペクター構成を切り替える必要がある。",
+      "後半の耐久はES、ブロック、耐性など複数項目の装備更新に依存する。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "スケルタルスナイパー + Flame Wall。Contagion + Unearthを周回補助に使用",
+        "supports": "スケルタルスナイパー：Multishot I。Flame Wall：Ignite I。Frost BombをExposure用に追加。",
+        "passivePriority": "原典のLvl 5、Lvl 10段階別ツリーを順に使用。",
+        "gearPriority": "ミニオンスキルレベル、Spirit、ライフ、ES、耐性。Rattling Sceptreも確認。",
+        "replaceGear": "ミニオンレベルまたはSpiritが付くセプターを優先して比較。",
+        "caution": "Act 1のスキル・サポート報酬クエストを取り逃さない。ContagionとUnearthへサポートを使いすぎない。",
+        "transitionCondition": "Lv11到達。Flame Wallとスナイパーの連携でRare・ボスを処理できる。",
+        "nowActions": [
+          "スナイパーにMultishot Iを付ける",
+          "Flame WallにIgnite Iを付ける",
+          "Act 1の報酬クエストを確認する"
+        ]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "スケルタルスナイパー + Flame Wallを中心に継続",
+        "supports": "原典のEnd of Act 1構成へ進み、Frost BombをExposure用に維持。",
+        "passivePriority": "End of Act 1段階別ツリーを使用。",
+        "gearPriority": "ミニオンレベル、Spirit、ライフ、ES、属性耐性。",
+        "replaceGear": "セプター、アミュレット、兜のミニオンレベルと、Spiritが付く部位を確認。",
+        "caution": "ミニオン数だけでなく、Flame Wallとの連携と自分の防御を維持する。",
+        "transitionCondition": "Lv21到達。Act 1報酬を回収し、ミニオンと自身の耐性が不足していない。",
+        "nowActions": [
+          "ミニオンレベル付き装備を探す",
+          "Spiritの合計を確認する",
+          "ライフ・ES・耐性を更新する"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "スケルタルスナイパー中心。Act 3のスペクター切替までは現構成を維持",
+        "supports": "原典のEnd of Act 2、Act 3 - Before Spectre Swap構成を順に使用。",
+        "passivePriority": "End of Act 2からAct 3切替前の段階別ツリーへ進む。",
+        "gearPriority": "ミニオンレベル、Spirit、ライフ、ES、耐性、移動速度。",
+        "replaceGear": "スペクター切替前は、現在の召喚構成が崩れる交換を避ける。",
+        "caution": "切替対象を確保する前にスナイパー構成を外さない。",
+        "transitionCondition": "Act 3のVaal Guard Spectre切替地点へ到達し、対象と必要ジェムを確認できる。",
+        "nowActions": [
+          "End of Act 2ツリーを確認する",
+          "Act 3のスペクター切替準備をする",
+          "現在のスナイパー構成を残す"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "Vaal Guard Spectreへ段階的に切替",
+        "supports": "原典のAct 3 - Vaal Guard Spectres構成を使用。確認できない名称は原典表示を優先。",
+        "passivePriority": "Act 3 - Vaal Guard Spectres段階別ツリーへ移行。",
+        "gearPriority": "ミニオンレベル、Spirit、防御、耐性。",
+        "replaceGear": "スペクターの必要Spiritを満たせない場合は、Spirit部位を優先して見直す。",
+        "caution": "召喚対象、サポート、Spiritを揃えてから切り替え、途中構成を長く残さない。",
+        "transitionCondition": "Lv41到達。Vaal Guard Spectreと補助ミニオンの役割が安定している。",
+        "nowActions": [
+          "Vaal Guard Spectreを確保する",
+          "必要Spiritを確認する",
+          "切替後のサポートを原典と照合する"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "Vaal Guard Spectreを主力にキャンペーンを進行",
+        "supports": "End of Act 4、End of Interludes構成を順に使用。",
+        "passivePriority": "End of Act 4からEnd of Interludes段階別ツリーへ進む。",
+        "gearPriority": "ミニオンレベル、Spirit、ライフ・ES、ブロックに関係する装備、耐性。",
+        "replaceGear": "死亡が多い場合はミニオン火力より自身の防具・盾・耐性を先に確認。",
+        "caution": "ミニオンが狭い通路で遅れる場合は、自分の位置を変えて再誘導する。",
+        "transitionCondition": "キャンペーンとInterlude終了。Lv67前後の次のスペクター切替を準備できる。",
+        "nowActions": [
+          "Act 4→Interludesの順に進める",
+          "自身の防御と耐性を整える",
+          "Lv67用スペクター切替を準備する"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "Vaal Guard SpectreからPowered Zealotへの切替をLv67前後で判断",
+        "supports": "原典のLvl 67 - Powered Zealot Swap、Lvl 70、Lvl 75構成を順に使用。",
+        "passivePriority": "Lvl 67、70、75の段階別ツリーを順に追う。",
+        "gearPriority": "ミニオンレベル、Spirit、ES、ブロック、属性耐性、移動速度。",
+        "replaceGear": "切替条件が不足する場合はVaal Guard構成を維持し、Spiritと防御装備を先に更新。",
+        "caution": "新しいスペクターを確保する前に現在の召喚構成を解除しない。",
+        "transitionCondition": "低Tierマップが安定し、Powered Zealot構成または継続構成の方針を決められる。",
+        "nowActions": [
+          "Lv67切替条件を確認する",
+          "新しいスペクターを先に確保する",
+          "ES・ブロック・耐性を確認する"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Powered Zealotを含むスペクター構成",
+        "supports": "原典のLvl 80、Lvl 85、Lvl 90構成へ段階的に更新。",
+        "passivePriority": "Lvl 80→85→90の段階別ツリーを順に使用。",
+        "gearPriority": "ミニオンレベル、Spirit、ES、ブロック、耐性、ミニオンに有効な能力。",
+        "replaceGear": "防御不足ならES・ブロック・耐性、処理不足ならミニオンレベルとSpiritを優先。",
+        "caution": "ESリチャージは0.5で変更されているため、古い防御感覚を前提にしない。",
+        "transitionCondition": "Lv90前後の段階別構成が揃い、火力と防御の不足を分けて判断できる。",
+        "nowActions": [
+          "Lvl 80→85→90の順で確認する",
+          "防御とミニオン火力を分けて診断する",
+          "ESリチャージの実戦挙動を確認する"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "スナイパー/スペクター軍団を主力に、Flame WallやExposure補助を状況別に使用",
+        "supports": "原典のDay 4、Day 6、Final Updateを比較し、採用した装備段階に合う構成だけ使用。",
+        "passivePriority": "Final Update for 0.5のツリーを基準に、装備不足へ合わせて調整。",
+        "gearPriority": "ミニオンレベル、Spirit、ES、ブロック、耐性を不足順で更新。",
+        "replaceGear": "固定価格やDPSではなく、現在の不足へ直接効く部位を1つずつ比較。",
+        "caution": "Final Updateと途中段階の装備・ツリーを無計画に混ぜない。ミニオンAIと視認性は残る弱点。",
+        "transitionCondition": "完成後はSpirit、ミニオン火力、自身の防御のボトルネックを1項目ずつ改善する。",
+        "nowActions": [
+          "採用する完成段階を1つに決める",
+          "Spiritとミニオンレベルを確認する",
+          "ES・ブロック・耐性を不足順に更新する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "セプター・兜・アミュレット：ミニオンスキルレベル",
+      "セプター・アミュレット・胴：Spirit",
+      "自身の防御：ライフ、ES、ブロック、耐性"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Detailed SSF Minion Infernalist 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+        "checkedAt": "2026-09-07",
+        "type": "海外Lv1〜Endgameガイド"
+      },
+      {
+        "name": "Mobalytics: Witch Minions Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/witch-minions-leveling",
+        "checkedAt": "2026-09-07",
+        "type": "海外レベリングガイド"
+      },
+      {
+        "name": "YouTube: 0.5 ミニオンウィッチ ピナクル実戦",
+        "url": "https://www.youtube.com/watch?v=RzZfEcPjUlU",
+        "checkedAt": "2026-09-07",
+        "type": "日本語実戦動画"
+      }
+    ],
+    "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者"
+  },
+  {
+    "id": "druid-plant-oracle",
+    "slug": "plant-oracle",
+    "classSlug": "druid",
+    "name": "植物オラクル",
+    "className": "ドルイド",
+    "ascendancy": "オラクル",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "dataStatus": "reviewed",
+    "mainSkill": "Entangle / Thrashing Vines",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "主力はLv1から継続、後半に自動発動を追加",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "Lv1からEndgameまでEntangleを主力として継続できる。",
+      "周回の基本操作を少なくしやすく、植物による足止めも使える。",
+      "育成ガイドとEndgameガイドが同じ作成者から公開されている。"
+    ],
+    "weaknesses": [
+      "防御は装備依存で、後半はESと混沌耐性を整える必要がある。",
+      "長いボス戦ではマナ不足に注意が必要。",
+      "第二アセンダンシー以降の自動発動構成は、必要ジェムとSpiritを揃えてから切り替える必要がある。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "Entangle。ボスには手持ちの単体補助スペルも使用",
+        "supports": "Entangleの序盤構成は原典のレベリング表示を使用。安全に抽出できない名称は原典で確認。",
+        "passivePriority": "原典の序盤段階別ツリーを使用。正確なノード名はリンク先で確認。",
+        "gearPriority": "+物理/全スペルレベル、スペル/物理スペル威力、ライフ、ESまたはアーマー、耐性、移動速度。",
+        "replaceGear": "+スペルレベルまたはスペル威力のない武器を優先して比較。",
+        "caution": "Entangleはダメージ発生まで時間差がある。敵の足元へ置いてから距離を取る。",
+        "transitionCondition": "Lv11到達。Entangleで通常敵を処理し、強敵に補助スキルを使える。",
+        "nowActions": [
+          "Entangleを敵の進路へ置く",
+          "+スペルレベル付き武器を探す",
+          "ライフ・耐性・移動速度を確認する"
+        ]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "Entangleを主力として継続",
+        "supports": "原典の育成構成を段階的に追加。未確認のサポート名は原典を優先。",
+        "passivePriority": "レベリングガイドの現在レベルに近い段階別ツリーを使用。",
+        "gearPriority": "+物理/全スペルレベル、スペル威力、キャスト速度、防御、耐性。",
+        "replaceGear": "主力の伸びが止まった場合は武器、防御不足なら胴と耐性部位を更新。",
+        "caution": "序盤から完成装備を探さず、現在レベルで効果のある武器と防具を優先。",
+        "transitionCondition": "Lv21到達。Entangleの設置と移動を繰り返して安定して進める。",
+        "nowActions": [
+          "Entangleのサポートを原典と照合する",
+          "武器のスペル性能を比較する",
+          "耐性と移動速度を整える"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "Entangle。強敵には植物系の単体補助を準備",
+        "supports": "育成ガイドの中盤構成を使用。",
+        "passivePriority": "中盤の段階別ツリーへ進み、アセンダンシー取得後の導線へ接続。",
+        "gearPriority": "スペルレベル、物理スペル威力、追加雷ダメージ、キャスト速度、ライフ、耐性。",
+        "replaceGear": "火力不足なら武器、死亡が多いなら防具を1部位ずつ更新。",
+        "caution": "追加雷ダメージはShock用の候補だが、装備に付けば必ず最優先とは断定しない。",
+        "transitionCondition": "Lv31到達。最初のアセンダンシー段階と主力の装備条件を確認できる。",
+        "nowActions": [
+          "アセンダンシー取得を進める",
+          "Entangleの火力源を確認する",
+          "火力と防御の不足を分ける"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "Entangleを周回主力、Thrashing Vinesを強敵用に追加",
+        "supports": "原典の中盤構成へ進み、強敵用サポートはリンク先表示を確認。",
+        "passivePriority": "中盤のオラクル段階別ツリーを使用。",
+        "gearPriority": "スペルレベル、キャスト速度、ライフ、ES/アーマー、耐性、移動速度。",
+        "replaceGear": "Thrashing Vines追加で必要能力値が不足する部位を先に調整。",
+        "caution": "周回用と単体用の植物を混同せず、強敵でだけ操作を増やす。",
+        "transitionCondition": "Lv41到達。EntangleとThrashing Vinesを役割別に使える。",
+        "nowActions": [
+          "Thrashing Vinesを強敵用に設定する",
+          "必要能力値を確認する",
+          "周回とボスで操作を分ける"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "Entangle + Thrashing Vines",
+        "supports": "レベリングガイド後半の構成を使用し、第二アセンダンシー後の自動発動を準備。",
+        "passivePriority": "キャンペーン後半の段階別ツリーを使用。",
+        "gearPriority": "スペルレベル、キャスト速度、ライフ、ES/アーマー、三属性耐性、移動速度。",
+        "replaceGear": "キャンペーン終了時に不足する耐性と、火力が停滞した武器を優先。",
+        "caution": "Cast on CriticalとThunderstormは必要条件が揃ってから追加し、先に現在の主力を外さない。",
+        "transitionCondition": "キャンペーン終了。第二アセンダンシーと自動発動構成の準備ができる。",
+        "nowActions": [
+          "キャンペーン後半ツリーを確認する",
+          "三属性耐性を整える",
+          "自動発動用ジェムとSpiritを準備する"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "Entangle + Thrashing Vines。条件達成後にCast on Critical + Thunderstormを追加",
+        "supports": "原典ではForced Outcome後、Cast on CriticalからThunderstormを発動して植物を強化する。",
+        "passivePriority": "マップ開始用のオラクル段階別ツリーへ移行。",
+        "gearPriority": "耐性、ライフ/ES、混沌耐性、スペルレベル、Spirit、キャスト速度。",
+        "replaceGear": "マップで倒される場合は武器より防具と耐性、自動発動しない場合はSpiritとジェム条件を確認。",
+        "caution": "第二アセンダンシーと必要条件を満たす前に自動発動構成を完成扱いしない。",
+        "transitionCondition": "低TierマップでEntangle、Thrashing Vines、自動Thunderstormが役割どおり動く。",
+        "nowActions": [
+          "Forced Outcome取得状況を確認する",
+          "Cast on CriticalとThunderstormを接続する",
+          "耐性・ES・混沌耐性を確認する"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Entangleを周回主力、Thrashing Vinesを単体用、Thunderstormを自動発動",
+        "supports": "EndgameガイドのCheap構成を基準にする。",
+        "passivePriority": "Cheap段階のEndgameツリーを使用し、装備が揃う前に高額版へ移らない。",
+        "gearPriority": "ES、混沌耐性、スペルレベル、クリティカル、キャスト速度、Spirit、マナ維持。",
+        "replaceGear": "長い戦闘でマナ不足なら火力装備より、マナ維持と防御の不足部位を先に確認。",
+        "caution": "防御は装備依存。火力だけを伸ばしてESと混沌耐性を後回しにしない。",
+        "transitionCondition": "Cheap構成で周回とボスが安定し、マナと防御の不足を判断できる。",
+        "nowActions": [
+          "Cheap構成を先に完成させる",
+          "ESと混沌耐性を確認する",
+          "長期戦のマナ維持を試す"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "Entangle + Thrashing Vines + 自動Thunderstorm",
+        "supports": "Expensive、Mirror Tierは装備前提を満たす場合だけ検討。基本はCheap構成から不足を更新。",
+        "passivePriority": "Endgameガイドの採用段階を1つ選び、装備とツリーを同じ段階へ揃える。",
+        "gearPriority": "ES、混沌耐性、スペルレベル、クリティカル、キャスト速度、Spirit、マナ維持。",
+        "replaceGear": "固定価格ではなく、現在の不足へ効く装備を同条件出品と比較。",
+        "caution": "高額版を部分的に混ぜない。長期戦のマナ不足と装備依存の防御は完成後も確認する。",
+        "transitionCondition": "完成後は単体火力、ES/混沌耐性、マナのボトルネックを1項目ずつ改善する。",
+        "nowActions": [
+          "採用するEndgame段階を決める",
+          "ES・混沌耐性・マナを確認する",
+          "固定相場を使わず1部位ずつ更新する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "武器：+物理/全スペルレベル、スペル威力、キャスト速度",
+      "防具：ライフ、ES/アーマー、属性耐性、移動速度",
+      "Endgame：ES、混沌耐性、Spirit、マナ維持"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Plant Oracle Druid Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide",
+        "checkedAt": "2026-09-07",
+        "type": "海外検証済みレベリングガイド"
+      },
+      {
+        "name": "Mobalytics: Plant Oracle Druid Endgame 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+        "checkedAt": "2026-09-07",
+        "type": "海外検証済みEndgameガイド"
+      },
+      {
+        "name": "note: 0.5 Entangle GP Totem Oracle雑記",
+        "url": "https://note.com/cosine1016/n/n76a4972476a0",
+        "checkedAt": "2026-09-07",
+        "type": "日本語プレイ記録"
+      },
+      {
+        "name": "Gamerch: 0.5.5 プラントオラクル解説",
+        "url": "https://gamerch.com/poe2/954990",
+        "checkedAt": "2026-09-07",
+        "type": "日本語攻略資料"
+      }
+    ],
+    "audience": "Lv1から同じ主力を使い、少ない基本操作で植物ビルドを育てたい初心者"
   }
 ]

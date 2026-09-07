@@ -17,7 +17,8 @@ const [index, buildList, gearCheck, robots, sitemap, ads, verification, buildsTe
 const builds = JSON.parse(buildsText);
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
-assert(builds.length === 5, "build count must be 5");
+assert(builds.length === 8, "build count must be 8");
+assert(new Set(builds.map((build) => build.className)).size === 8, "each playable class must have one build");
 assert(index.includes("今日やることが、<em>3つに絞れる。"), "homepage action-first message missing");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
@@ -38,6 +39,7 @@ for (const build of builds) {
   }
   assert(build.sources.some((source) => source.type?.includes("日本語")), `${build.id}: Japanese source missing`);
   const pagePath = `builds/${build.classSlug}/${build.slug}/index.html`;
+  assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/`), `${build.id}: missing from sitemap`);
   try {
     const page = await read(pagePath);
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/">`), `${pagePath}: canonical mismatch`);
@@ -56,7 +58,7 @@ for (const page of ["builds/", "gear-check/", "tier-list/", "beginner-guide/", "
   assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
-for (const removed of ["builds/ranger/ice-shot-deadeye/index.html", "builds/druid/wolf/index.html", "builds/witch/spark-comet-infernalist/index.html"]) {
+for (const removed of ["builds/druid/wolf/index.html", "builds/witch/spark-comet-infernalist/index.html"]) {
   try { await access(resolve(root, removed)); failures.push(`retired build still exists: ${removed}`); } catch {}
 }
 assert(ads.includes("pub-7738997902416481"), "ads.txt publisher missing");
