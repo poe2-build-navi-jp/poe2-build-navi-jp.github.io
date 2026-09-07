@@ -26,7 +26,8 @@ for (const build of builds) {
   try {
     const page = await read(pagePath);
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/">`), `${pagePath}: canonical mismatch`);
-    assert(page.includes('content="noindex,follow"'), `${pagePath}: unverified page must be noindex`);
+    const expectedRobots = build.dataStatus === "reviewed" ? 'content="index,follow"' : 'content="noindex,follow"';
+    assert(page.includes(expectedRobots), `${pagePath}: robots status mismatch`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -35,6 +36,7 @@ assert(index.includes('<link rel="canonical" href="https://poe2-build-navi-jp.gi
 assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
+assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
 assert(ads.includes("pub-7738997902416481"), "ads.txt publisher missing");
 assert(verification.trim() === "google-site-verification: googlebaa56ffa7c50bcfb.html", "Search Console verification file changed");
 

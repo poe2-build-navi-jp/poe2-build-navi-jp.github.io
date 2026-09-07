@@ -1,5 +1,133 @@
 [
-  {"id":"monk-whirling-assault","slug":"whirling-assault","classSlug":"monk","name":"旋風強襲マーシャルアーティスト","className":"モンク","ascendancy":"マーシャルアーティスト","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"旋風強襲","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
+  {
+    "id": "monk-whirling-assault",
+    "slug": "whirling-assault",
+    "classSlug": "monk",
+    "name": "ワーリングアサルト・マーシャルアーティスト",
+    "className": "モンク",
+    "ascendancy": "マーシャルアーティスト",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "dataStatus": "reviewed",
+    "mainSkill": "ワーリングアサルト（Whirling Assault）",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "中（Lv41で構成切替）",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "ワーリングアサルトで移動しながら攻撃でき、マップを進みやすい。",
+      "フォーリングサンダーを組み合わせ、チャージを単体火力や広範囲攻撃へ変換できる。",
+      "Lv1からLv41までの育成用ルートが用意されている。"
+    ],
+    "weaknesses": [
+      "ワーリングアサルトはLv41まで使えないため、キャンペーン途中でスキルを切り替える必要がある。",
+      "序盤のGlacial Cascadeルートは耐久が低いと案内されており、防具更新と回避操作が重要。",
+      "Endgameでは最初のパワーチャージ生成とCharged Staff維持が必要で、完全な1ボタン構成ではない。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "Glacial Cascade + Frozen Locus（英語名）",
+        "supports": "Glacial Cascade：Concentrated Area → Cold Attunement。Frozen Locus：Ice Bite I → Cold Attunement。",
+        "passivePriority": "「Glacial 1-22」段階別ツリーに沿う。固有ノード名は安全に抽出できないため、下記の原典ツリーで取得順を確認。",
+        "gearPriority": "武器は物理ダメージ増加・追加ダメージを優先。ブーツは移動速度、防具は耐性・ライフ・回避。",
+        "replaceGear": "武器のダメージが伸びない場合と、移動速度のないブーツを優先して交換。",
+        "caution": "Frozen Locusを敵集団へ置き、後方からGlacial Cascadeで破壊する。Lv10でHerald of Iceを追加。",
+        "transitionCondition": "Lv11到達。Glacial CascadeとFrozen Locusの基本連携が安定していること。",
+        "nowActions": ["Glacial Cascadeを最優先で強化する", "Frozen Locusを置いてからGlacial Cascadeで破壊する", "移動速度付きブーツを探す"]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "Glacial Cascade + Frozen Locus。ボスのみTempest Flurryを使用。",
+        "supports": "序盤構成を継続。Tempest FlurryにはShockを付け、ボスへのショック付与用として使う。",
+        "passivePriority": "「Glacial 1-22」段階別ツリーを継続。冷気・アタック系の導線から外れない。",
+        "gearPriority": "武器：物理増加・追加ダメージ。ブーツ：移動速度。その他：耐性・ライフ・回避。",
+        "replaceGear": "現在レベルより大きく古い武器、防御値や耐性が不足する防具を交換。",
+        "caution": "Tempest Flurryは通常周回の主力ではなく、ボスへのショック付与に使う。",
+        "transitionCondition": "Lv21到達。ボス戦でFrozen LocusとGlacial Cascadeの連携を再現できること。",
+        "nowActions": ["Glacial Cascadeを優先して更新する", "ボス戦だけTempest Flurryでショックを付与する", "耐性・ライフ付き防具を確保する"]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "Lv22まではGlacial Cascade。Lv22以降はStorm Waveルートへ移行可能。",
+        "supports": "Storm Waveのサポート構成は0.5.5ガイドの「Stormwave 22+」段階を使用。名称を確認できない枠は原典参照。",
+        "passivePriority": "「Stormwave 22+」段階別ツリーへ切り替える。Hollow Palm Techniqueは装備条件を理解した場合のみ選択。",
+        "gearPriority": "Hollow Palm採用時は武器を外す。採用しない場合は高性能クォータースタッフを継続。",
+        "replaceGear": "Hollow Palmへ切り替える前に、武器を外しても火力が成立する回避・エナジーシールド装備を揃える。",
+        "caution": "Hollow Palmは自動的に最適になるわけではなく、良いクォータースタッフの方が高火力になる場合がある。",
+        "transitionCondition": "Lv31到達。Storm Wave構成またはGlacial Cascade継続構成のどちらかを決める。",
+        "nowActions": ["Lv22でStorm Waveへの移行を判断する", "Hollow Palm採用前に装備条件を確認する", "移行直後に武器を売却しない"]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "Storm Wave、または安定している場合はGlacial Cascadeを継続。",
+        "supports": "選択した育成ルートの0.5.5段階別構成を維持し、Lv41用ジェムを準備。",
+        "passivePriority": "Lv41+ Whirlingの段階別ツリーへ接続できるように進める。固有ノードは原典ツリーで確認。",
+        "gearPriority": "耐性・ライフ・回避を優先し、Lv41切替後の器用さ・知性要求も確認。",
+        "replaceGear": "Lv41切替で装備条件を満たせない部位を先に交換。",
+        "caution": "ワーリングアサルトはLv41で解禁。早い段階で既存の主力スキルを外さない。",
+        "transitionCondition": "Lv41到達、ワーリングアサルトを用意し、必要能力値を満たす。",
+        "nowActions": ["Lv41用のワーリングアサルトを準備する", "必要な器用さ・知性を確認する", "切替前の主力スキルを残しておく"]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "ワーリングアサルト + フォーリングサンダー + Charged Staff。",
+        "supports": "ワーリングアサルト：Magnified Area II、Elemental Armament II、Rage III、Ancestral Call II、Efficiency IIを順次追加。",
+        "passivePriority": "0.5.5ガイドの「Leveling Whirling 41+」ツリーへ切り替える。",
+        "gearPriority": "クォータースタッフは追加ダメージ、ダメージ増加、近接/アタックスキルレベル、クリティカル、攻撃速度。防具は耐性・ライフ・回避。",
+        "replaceGear": "良いクォータースタッフがHollow Palmを上回る場合は武器型へ戻す。",
+        "caution": "Efficiency IIはマナ問題がある場合に使用。問題がなければクリティカル系サポートへ変更候補。",
+        "transitionCondition": "キャンペーン終了。ワーリングアサルトで周回し、フォーリングサンダーでチャージを消費できる。",
+        "nowActions": ["ワーリングアサルトへ切り替える", "マナ不足ならEfficiency IIを使う", "フォーリングサンダーをチャージ消費用に設定する"]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "Killing Palm → Charged Staff → ワーリングアサルト → フォーリングサンダー。",
+        "supports": "ワーリングアサルトの5枠を揃え、フォーリングサンダーはFist of War III、Culmination II、Nova Projectilesを優先候補にする。",
+        "passivePriority": "「Early Endgame Whirling」ツリーへ移行。アセンダンシーはWay of the Stonefistを含む現行ガイドを確認。",
+        "gearPriority": "まず耐性と防御を安定させ、次にクォータースタッフの火力、近接スキルレベル、クリティカル、攻撃速度を伸ばす。",
+        "replaceGear": "耐性不足の防具、移動速度不足のブーツ、火力が停滞したクォータースタッフの順で確認。",
+        "caution": "マップ開始時はKilling Palmで最初のパワーチャージを作ってからCharged Staffを起動する。",
+        "transitionCondition": "Charged Staffを切らさず、ワーリングアサルト2回前後からフォーリングサンダーへつなげられる。",
+        "nowActions": ["Killing Palmで最初のチャージを作る", "Charged Staffを維持する", "ワーリングアサルト後にフォーリングサンダーを使う"]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "ワーリングアサルトを周回主力、フォーリングサンダーをチャージ消費・単体火力として使用。",
+        "supports": "ワーリングアサルトはマナ状況でEfficiency IIとクリティカル系を切替。フォーリングサンダーは反射・範囲用サポートを段階的に追加。",
+        "passivePriority": "Early Endgameツリーを完成させてからLate Endgameへ移る。パッシブの一括変更は避ける。",
+        "gearPriority": "近接スキルレベル、クリティカル率、回避、最大ES、全体防御、足りない耐性。",
+        "replaceGear": "防御が不安定なら火力装備より回避・ES・耐性を優先。",
+        "caution": "Hollow Focusなど別のチャージ手段もあるが、現行ガイドではCharged Staff方式を安定案としている。",
+        "transitionCondition": "チャージ生成とマナ維持が安定し、Late Endgame用装備への更新目的が明確になる。",
+        "nowActions": ["チャージが途切れる原因を確認する", "マナ問題の有無でサポートを切り替える", "回避・ES・耐性を先に安定させる"]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "ワーリングアサルト×2 → フォーリングサンダーを基本ローテーションとして反復。",
+        "supports": "完成候補：ワーリングアサルトにMagnified Area II、Elemental Armament II、Rage III、Ancestral Call II、Efficiency II。マナ問題がなければEfficiency IIをクリティカル系へ。",
+        "passivePriority": "Late Endgame Whirlingツリーを基準に、装備のクリティカル・回避・ES・耐性不足へ合わせて調整。",
+        "gearPriority": "高性能クォータースタッフ、近接スキルレベル、クリティカル率/ダメージ、回避、ES、全体防御を順に比較。",
+        "replaceGear": "価格ではなく、現在の不足項目と実際の出品性能を比較して1部位ずつ更新。",
+        "caution": "固定価格・DPSは掲載時点で保証できないため、数値目標として断定しない。",
+        "transitionCondition": "完成後はクリティカル、防御、マナのボトルネックを1項目ずつ更新。",
+        "nowActions": ["基本ローテーションを安定させる", "クリティカル・回避・ESの不足を確認する", "1部位ずつ更新効果を比較する"]
+      }
+    ],
+    "gearPriorities": ["武器：追加ダメージ・ダメージ増加・近接/アタックスキルレベル・クリティカル・攻撃速度", "ブーツ：移動速度 → 耐性・ライフ・回避", "防具：耐性・ライフ・回避。EndgameはESと全体防御も評価"],
+    "sources": [
+      {"name":"Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5","url":"https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius","checkedAt":"2026-09-07","type":"海外ビルドガイド"},
+      {"name":"Mobalytics: Martial Artist League Starter","url":"https://mobalytics.gg/poe-2/builds/martial-artist-leveling-and-early-mapping-nicktew","checkedAt":"2026-09-07","type":"海外レベリングガイド"},
+      {"name":"YouTube: Whirling Assault Monk Leveling Guide 0.5.5","url":"https://www.youtube.com/watch?v=lCdE8gVV2Qo","checkedAt":"2026-09-07","type":"海外プレイ動画"},
+      {"name":"YouTube: エンドゲーム突入！ワーリングアサルトマーシャルアーティスト","url":"https://www.youtube.com/watch?v=I4z9JsPSLuQ","checkedAt":"2026-09-07","type":"日本語プレイ動画"},
+      {"name":"PoE2DB日本語版: ワーリングアサルト","url":"https://poe2db.tw/jp/Whirling_Assault","checkedAt":"2026-09-07","type":"日本語スキルデータ"}
+    ]
+  },
   {"id":"mercenary-twister-gemling","slug":"twister-gemling","classSlug":"mercenary","name":"ツイスター・ジェムリング","className":"マーセナリー","ascendancy":"ジェムリング","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ツイスター","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
   {"id":"warrior-shield-wall-smith","slug":"shield-wall-smith","classSlug":"warrior","name":"盾壁・炎化身スミス","className":"ウォリアー","ascendancy":"スミス","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"シールドウォール","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
   {"id":"sorceress-sand-fire","slug":"sand-and-fire","classSlug":"sorceress","name":"砂と炎のヴァラシュタ","className":"ソーサレス","ascendancy":"ヴァラシュタ","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ケラリの幻惑","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},

@@ -11,6 +11,7 @@ function detailPage(build) {
   const title = `${build.name}｜Lv1からの育成ロードマップ｜POE2ビルドナビ`;
   const description = `${build.name}のLv1からEndgameまでの育成段階を確認できる初心者向けナビ。未確認の攻略項目は確認中と明示します。`;
   const url = `${baseUrl}/builds/${build.classSlug}/${build.slug}/`;
+  const reviewed = build.dataStatus === "reviewed";
   const breadcrumb = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -27,7 +28,7 @@ function detailPage(build) {
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
-  <meta name="robots" content="noindex,follow">
+  <meta name="robots" content="${reviewed ? "index,follow" : "noindex,follow"}">
   <meta name="google-adsense-account" content="${publisher}">
   <link rel="canonical" href="${url}">
   <meta property="og:type" content="article">
@@ -49,15 +50,16 @@ function detailPage(build) {
   <main id="main">
     <section class="build-hero">
       <div class="build-hero-grid">
-        <div><p id="build-class" class="eyebrow">${escapeHtml(build.className)} / ${escapeHtml(build.ascendancy)}</p><h1 id="build-name">${escapeHtml(build.name)}</h1><p id="build-skill" class="lead">メインスキル：${escapeHtml(build.mainSkill)}</p><p class="status-note">攻略データ再確認中：未確認項目は断定せず「確認中」と表示します</p><div id="fact-grid" class="fact-grid"></div></div>
+        <div><p id="build-class" class="eyebrow">${escapeHtml(build.className)} / ${escapeHtml(build.ascendancy)}</p><h1 id="build-name">${escapeHtml(build.name)}</h1><p id="build-skill" class="lead">メインスキル：${escapeHtml(build.mainSkill)}</p><p class="status-note">${reviewed ? "0.5.5対応：日本語・海外・動画・スキルDBを横断確認済み" : "攻略データ再確認中：未確認項目は断定せず「確認中」と表示します"}</p><div id="fact-grid" class="fact-grid"></div></div>
         <section class="level-card" aria-labelledby="level-title"><div class="level-number"><h2 id="level-title">現在Lv</h2><output id="level-output" for="level-input level-range">Lv1</output></div><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="level-input" type="number" inputmode="numeric" min="1" max="100" value="1" aria-label="現在レベル"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><input id="level-range" type="range" min="1" max="100" value="1" aria-label="現在レベルのスライダー"><div class="range-labels"><span>Lv1</span><span>Lv100</span></div><p class="disclaimer">この端末に自動保存されます。</p></section>
       </div>
     </section>
     <div class="detail-main">
-      <section id="now" class="now-panel" aria-labelledby="now-title"><div class="now-stage"><small>あなたは現在ここ</small><strong id="now-stage">Lv1〜10</strong></div><div class="now-actions"><p class="section-kicker">一般的な確認項目（ビルド固有データ確認中）</p><h2 id="now-title">今やること</h2><div class="priority-list"><div class="priority-item"><b>最優先</b><span data-now-action></span></div><div class="priority-item"><b>次</b><span data-now-action></span></div><div class="priority-item"><b>その次</b><span data-now-action></span></div></div><p id="now-next" class="disclaimer"></p></div></section>
-      <section id="roadmap" aria-labelledby="roadmap-title"><div class="section-head"><p class="section-kicker">LEVELING ROADMAP</p><h2 id="roadmap-title">Lv1 → Endgame育成ロードマップ</h2><p>各段階を選んで確認できます。</p></div><div id="stage-nav" class="stage-nav" aria-label="育成段階"></div><article class="stage-card"><p class="pending">ビルド固有データ確認中</p><h2 id="stage-heading">Lv1〜10</h2><p id="stage-next" class="disclaimer"></p><div id="stage-grid" class="stage-grid"></div></article></section>
+      <section id="now" class="now-panel" aria-labelledby="now-title"><div class="now-stage"><small>あなたは現在ここ</small><strong id="now-stage">Lv1〜10</strong></div><div class="now-actions"><p id="now-source-label" class="section-kicker">一般的な確認項目（ビルド固有データ確認中）</p><h2 id="now-title">今やること</h2><div class="priority-list"><div class="priority-item"><b>最優先</b><span data-now-action></span></div><div class="priority-item"><b>次</b><span data-now-action></span></div><div class="priority-item"><b>その次</b><span data-now-action></span></div></div><p id="now-next" class="disclaimer"></p></div></section>
+      <section id="roadmap" aria-labelledby="roadmap-title"><div class="section-head"><p class="section-kicker">LEVELING ROADMAP</p><h2 id="roadmap-title">Lv1 → Endgame育成ロードマップ</h2><p>各段階を選んで確認できます。</p></div><div id="stage-nav" class="stage-nav" aria-label="育成段階"></div><article class="stage-card"><p id="stage-status" class="pending">ビルド固有データ確認中</p><h2 id="stage-heading">Lv1〜10</h2><p id="stage-next" class="disclaimer"></p><div id="stage-grid" class="stage-grid"></div></article></section>
       <div class="pros-cons"><section class="info-card"><h2>おすすめな人</h2><ul id="strength-list"></ul></section><section class="info-card"><h2>弱点</h2><ul id="weakness-list"></ul></section></div>
       <section class="related"><h2>同じクラスの関連ビルド</h2><div id="related-links" class="related-links"></div></section>
+      <section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">確認した情報源</h2><p>文章は転載せず、複数資料を照合して初心者向けの手順へ再構成しています。</p><ul id="source-list" class="source-list"></ul></section>
     </div>
   </main>
   <a class="mobile-sticky" href="#now">今やることを見る</a>

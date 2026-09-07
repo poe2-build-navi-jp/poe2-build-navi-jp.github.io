@@ -32,17 +32,22 @@ function fact(label, value) {
   return wrapper;
 }
 
-function pendingItem(label) {
+function stageItem(label, value) {
   const item = document.createElement("div");
   item.className = "stage-item";
   const small = document.createElement("small");
-  const badge = document.createElement("span");
   const paragraph = document.createElement("p");
   small.textContent = label;
-  badge.className = "pending";
-  badge.textContent = "確認中";
-  paragraph.textContent = "検証できた情報を順次登録します。未確認の内容は掲載しません。";
-  item.append(small, badge, paragraph);
+  if (value) {
+    paragraph.textContent = value;
+    item.append(small, paragraph);
+  } else {
+    const badge = document.createElement("span");
+    badge.className = "pending";
+    badge.textContent = "確認中";
+    paragraph.textContent = "検証できた情報を順次登録します。未確認の内容は掲載しません。";
+    item.append(small, badge, paragraph);
+  }
   return item;
 }
 
@@ -56,7 +61,17 @@ function renderStage(index, scroll = false) {
   byId("stage-next").textContent = `次の目標：${stage.next}`;
   const grid = byId("stage-grid");
   grid.replaceChildren();
-  ["今使うメインスキル", "サポートジェム", "次に取るパッシブ", "装備で優先する能力", "交換すべき装備", "注意点・移行条件"].forEach((label) => grid.append(pendingItem(label)));
+  const data = build.levelingStages?.find((item) => item.label === stage.label);
+  [
+    ["今使うメインスキル", data?.mainSkill],
+    ["サポートジェム", data?.supports],
+    ["次に取るパッシブ", data?.passivePriority],
+    ["装備で優先する能力", data?.gearPriority],
+    ["交換すべき装備", data?.replaceGear],
+    ["注意点・移行条件", data ? `${data.caution} 移行条件：${data.transitionCondition}` : null]
+  ].forEach(([label, value]) => grid.append(stageItem(label, value)));
+  byId("stage-status").textContent = data ? "複数ソース確認済み" : "ビルド固有データ確認中";
+  byId("stage-status").className = data ? "verified" : "pending";
   if (scroll) byId("roadmap").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -64,11 +79,13 @@ function renderNow(index) {
   const stage = STAGES[index];
   byId("now-stage").textContent = stage.label;
   byId("now-next").textContent = `次の目標：${stage.next}`;
-  const actions = [
+  const verifiedActions = build.levelingStages?.find((item) => item.label === stage.label)?.nowActions;
+  const actions = verifiedActions || [
     "現在レベルと育成段階が合っているか確認する",
     "確認済みのスキル・パッシブ情報が登録されるまで『確認中』を目印にする",
     "装備更新前に必要レベルと、このビルドの対応パッチを確認する"
   ];
+  byId("now-source-label").textContent = verifiedActions ? "複数ソースで確認した優先行動" : "一般的な確認項目（ビルド固有データ確認中）";
   document.querySelectorAll("[data-now-action]").forEach((element, actionIndex) => { element.textContent = actions[actionIndex]; });
 }
 
@@ -93,6 +110,29 @@ function fillList(id, values, emptyText) {
   });
 }
 
+function renderSources() {
+  const list = byId("source-list");
+  list.replaceChildren();
+  if (!build.sources?.length) {
+    const item = document.createElement("li");
+    item.textContent = "情報源を確認中です。";
+    list.append(item);
+    return;
+  }
+  build.sources.forEach((source) => {
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+    const meta = document.createElement("span");
+    link.href = source.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = source.name;
+    meta.textContent = `${source.type}・確認日 ${source.checkedAt}`;
+    item.append(link, meta);
+    list.append(item);
+  });
+}
+
 function renderBuild(builds) {
   document.title = `${build.name}｜Lv1からの育成ロードマップ｜POE2ビルドナビ`;
   byId("build-name").textContent = build.name;
@@ -109,6 +149,7 @@ function renderBuild(builds) {
   ].forEach(([label, value]) => facts.append(fact(label, value)));
   fillList("strength-list", build.strengths, "確認中：検証後に、このビルドをおすすめできる人を掲載します。");
   fillList("weakness-list", build.weaknesses, "確認中：強みだけでなく、弱点も検証して掲載します。");
+  renderSources();
 
   const nav = byId("stage-nav");
   nav.replaceChildren();
