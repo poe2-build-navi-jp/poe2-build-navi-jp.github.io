@@ -1,80 +1,28 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>POE2ビルドナビ｜初心者向けLv1からの育成ロードマップ</title>
-  <meta name="description" content="Path of Exile 2初心者向け日本語ビルドナビ。ビルドを選び、現在レベルを入力すると、今いる育成段階と次に確認することが分かります。">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="google-adsense-account" content="ca-pub-7738997902416481">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>POE2ビルドナビ｜現在Lvから次にやることが分かる</title>
+  <meta name="description" content="Path of Exile 2初心者向け日本語ビルドナビ。5つの厳選ビルドから選び、現在レベルを入力すると、今の育成段階と次の行動が分かります。">
+  <meta name="robots" content="index,follow,max-image-preview:large"><meta name="google-adsense-account" content="ca-pub-7738997902416481">
   <link rel="canonical" href="https://poe2-build-navi-jp.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="POE2ビルドナビ">
-  <meta property="og:title" content="POE2ビルドナビ｜初心者向けLv1からの育成ロードマップ">
-  <meta property="og:description" content="現在レベルから、次に確認する行動が分かるPOE2初心者向け日本語ビルドナビ。">
-  <meta property="og:url" content="https://poe2-build-navi-jp.github.io/">
-  <meta name="twitter:card" content="summary">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="POE2ビルドナビ"><meta property="og:title" content="POE2ビルドナビ｜現在Lvから次にやることが分かる"><meta property="og:description" content="ビルドを選び、現在Lvを入れるだけ。今日やることを3つに絞って案内します。"><meta property="og:url" content="https://poe2-build-navi-jp.github.io/"><meta name="twitter:card" content="summary">
+  <link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/assets/styles.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7738997902416481" crossorigin="anonymous"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"POE2ビルドナビ","url":"https://poe2-build-navi-jp.github.io/","inLanguage":"ja"}</script>
   <script type="module" src="/assets/app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="POE2ビルドナビ ホーム"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></a>
-    <button id="menu-button" class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false">メニュー</button>
-    <nav id="site-nav" class="site-nav" aria-label="メインメニュー"><a href="#builds">ビルドを選ぶ</a><a href="#diagnosis">困りごと診断</a><a href="#guide">初心者ガイド</a><a href="#dictionary">用語辞典</a></nav>
-  </header>
+  <header class="site-header"><a class="brand" href="/" aria-label="POE2ビルドナビ ホーム"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></a><button id="menu-button" class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false">メニュー</button><nav id="site-nav" class="site-nav" aria-label="メインメニュー"><a href="/builds/">ビルドを探す</a><a href="/gear-check/">装備診断</a><a href="/beginner-guide/">初心者ガイド</a><a href="/dictionary/">用語辞典</a></nav></header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <p class="eyebrow">PATH OF EXILE 2 / BEGINNER NAVIGATION</p>
-        <h1 id="hero-title">次に何をするかが、<em>すぐ分かる。</em></h1>
-        <p class="lead">ビルドと現在レベルを選ぶと、Lv1からEndgameまでのどこにいるかを表示します。攻略情報は確認できた項目だけを掲載し、未確認項目は「確認中」と明示します。</p>
-        <div class="hero-actions"><a class="button" href="#quick-start">現在Lvから始める</a><a class="button-secondary" href="#builds">ビルド一覧を見る</a></div>
-        <div class="status-note">対応パッチ <span id="site-version">読込中</span>・最終更新 <span id="last-updated">読込中</span></div>
-      </div>
-      <section id="quick-start" class="quick-start" aria-labelledby="quick-title">
-        <h2 id="quick-title">いまの育成地点を確認</h2><p>ログイン不要。選択内容はこの端末に保存されます。</p>
-        <label class="field">ビルド<select id="quick-build"><option value="">ビルドを選択</option></select></label>
-        <label class="field" for="quick-level">現在Lv</label>
-        <div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="quick-level" type="number" inputmode="numeric" min="1" max="100" value="1" aria-label="現在レベル"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div>
-        <div class="quick-result" aria-live="polite"><small>あなたは現在ここ</small><b id="quick-stage">Lv1〜10</b><p id="quick-summary">ビルドを選ぶと、現在レベルに対応する育成段階へ移動できます。</p><a id="quick-link" class="button" href="#builds" aria-disabled="true">今やることを見る</a></div>
-      </section>
+      <div><p class="eyebrow">PATH OF EXILE 2 / BEGINNER NAVIGATION</p><h1 id="hero-title">今日やることが、<em>3つに絞れる。</em></h1><p class="lead">5つの厳選ビルドから選び、現在Lvを入力してください。今いる育成段階と、次に確認する行動へ直接進めます。</p><div class="journey-steps" aria-label="使い方"><span><b>1</b>ビルドを選ぶ</span><span><b>2</b>現在Lvを入力</span><span><b>3</b>今やることを見る</span></div><div class="status-note">対応パッチ <span id="site-version">0.5.5</span>・最終更新 <span id="last-updated">2026-09-07</span></div></div>
+      <section id="quick-start" class="quick-start" aria-labelledby="quick-title"><h2 id="quick-title">現在地から再開</h2><p>ログイン不要。選択内容はこの端末に保存されます。</p><label class="field">ビルド<select id="quick-build"><option value="">ビルドを選択</option></select></label><label class="field" for="quick-level">現在Lv</label><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="quick-level" type="number" inputmode="numeric" min="1" max="100" value="1" aria-label="現在レベル"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><div class="quick-result" aria-live="polite"><small>あなたは現在ここ</small><b id="quick-stage">Lv1〜10</b><p id="quick-summary">ビルドを選ぶと、対応する育成段階へ移動できます。</p><a id="quick-link" class="button" href="/builds/" aria-disabled="true">今やることを見る</a></div></section>
     </section>
-
-    <section id="builds" class="section section-dark" aria-labelledby="builds-title">
-      <div class="section-head"><p class="section-kicker">CHOOSE A BUILD</p><h2 id="builds-title">Lv1から育てるビルドを選ぶ</h2><p>評価値を推測で埋めず、確認中の項目はそのまま表示しています。</p></div>
-      <div class="filters" aria-label="ビルド検索条件">
-        <label><span class="search-icon" aria-hidden="true">⌕</span><span class="skip-link">名前・スキル検索</span><input id="build-search" type="search" placeholder="ビルド名・スキルで検索"></label>
-        <label><span class="skip-link">クラス</span><select id="class-filter"><option value="">すべてのクラス</option></select></label>
-        <label><span class="skip-link">予算</span><select id="budget-filter"><option value="">予算指定なし</option><option value="確認中">予算確認中</option></select></label>
-      </div>
-      <p class="filter-note"><span id="result-count">読込中</span>。複数条件を組み合わせて絞り込めます。</p>
-      <div id="build-grid" class="build-grid" aria-live="polite"><p class="empty">ビルドデータを読み込んでいます。</p></div>
-    </section>
-
-    <section id="diagnosis" class="section" aria-labelledby="diagnosis-title">
-      <div class="section-head"><p class="section-kicker">TROUBLE CHECK</p><h2 id="diagnosis-title">困りごとから、次の確認へ</h2><p>ビルド固有データが未確認の場合は、一般的な確認項目として明示します。</p></div>
-      <div class="diagnosis-layout">
-        <div class="diagnosis-form">
-          <label class="field">ビルド<select id="diagnosis-build"><option value="">指定しない</option></select></label>
-          <label class="field">現在Lv<input id="diagnosis-level" type="number" inputmode="numeric" min="1" max="100" value="1"></label>
-          <p>困っていること</p>
-          <div class="concerns"><button type="button" data-concern="death" aria-pressed="true">すぐ死ぬ</button><button type="button" data-concern="damage" aria-pressed="false">火力が低い</button><button type="button" data-concern="mana" aria-pressed="false">マナ不足</button><button type="button" data-concern="boss" aria-pressed="false">ボスが倒せない</button><button type="button" data-concern="speed" aria-pressed="false">周回が遅い</button><button type="button" data-concern="purchase" aria-pressed="false">何を買えばいいか分からない</button></div>
-        </div>
-        <div class="diagnosis-result" aria-live="polite"><p class="section-kicker">今やること</p><h3 id="diagnosis-heading">Lv1の一般チェック</h3><ol id="diagnosis-actions" class="action-list"></ol><p class="disclaimer">これは一般的な確認手順です。ビルド固有の装備・スキル・数値は検証後に追加します。</p></div>
-      </div>
-    </section>
-
-    <section class="section section-soft" aria-labelledby="tier-title"><div class="section-head"><p class="section-kicker">TIER LIST</p><h2 id="tier-title">Tier評価は再確認中</h2></div><div class="tier-placeholder"><strong>根拠を確認できるまで順位を掲載しません</strong><p>対応パッチ、確認日、評価基準、情報源を揃えてから公開します。</p></div></section>
-    <section id="guide" class="section" aria-labelledby="guide-title"><div class="section-head"><p class="section-kicker">BEGINNER GUIDE</p><h2 id="guide-title">初心者が最初に確認すること</h2></div><div class="guide-grid"><article class="guide-card"><b>1. ビルドと現在Lvを選ぶ</b><p>詳細ページで、現在の育成段階を自動表示します。</p></article><article class="guide-card"><b>2. 今やることを3つ確認</b><p>大量の情報より、次の行動を先に表示します。</p></article><article class="guide-card"><b>3. 確認中を見分ける</b><p>未検証の攻略内容や評価は断定せず、確認中と表示します。</p></article></div></section>
-    <section id="dictionary" class="section section-soft" aria-labelledby="dictionary-title"><div class="section-head"><p class="section-kicker">DICTIONARY</p><h2 id="dictionary-title">最初に知りたい用語</h2></div><div class="dictionary-grid"><article class="dictionary-card"><b>ビルド</b><p>スキル・パッシブ・装備を組み合わせたキャラクター育成方針。</p></article><article class="dictionary-card"><b>Mapping / Endgame</b><p>キャンペーン後の進行。詳細な初心者ガイドはPHASE 4で拡充します。</p></article></div></section>
-    <section class="section" aria-labelledby="policy-title"><div class="section-head"><p class="section-kicker">INFORMATION POLICY</p><h2 id="policy-title">掲載情報の基準</h2></div><div class="standards-grid"><article class="standard-card"><b>未確認情報を断定しない</b><p>スキル、装備、評価、価格は確認できたものだけ掲載します。</p></article><article class="standard-card"><b>転載しない</b><p>参考情報を確認し、日本語初心者向けの独自説明に再構成します。</p></article><article class="standard-card"><b>更新日を表示</b><p>対応パッチと最終確認日をビルドごとに管理します。</p></article></div></section>
+    <section class="section section-dark" aria-labelledby="builds-title"><div class="section-head"><p class="section-kicker">FIVE CURATED BUILDS</p><h2 id="builds-title">まずは、この5ビルド</h2><p>数を増やすより、Lv1から進められる品質を優先。評価点は作らず「誰向けか」と弱点を先に示します。</p></div><div id="build-grid" class="build-grid build-grid-five" aria-live="polite"><p class="empty">表示を準備しています。</p></div><div class="section-cta"><a class="button" href="/builds/">5ビルドを詳しく比較する</a></div></section>
+    <section class="section" aria-labelledby="tools-title"><div class="section-head"><p class="section-kicker">NEXT ACTION TOOLS</p><h2 id="tools-title">迷った場所から進める</h2></div><div class="tool-grid"><a class="tool-card" href="/gear-check/"><span>装備診断</span><strong>ビルド × Lv × 悩み × 予算</strong><p>次に確認する部位と理由を3つに絞ります。</p></a><a class="tool-card" href="/beginner-guide/"><span>初心者ガイド</span><strong>知らないまま進めない</strong><p>ビルド、耐性、Mappingを順番に理解できます。</p></a><a class="tool-card" href="/dictionary/"><span>用語辞典</span><strong>用語をその場で解決</strong><p>DPS、SSF、Endgameなどを短く説明します。</p></a></div></section>
+    <section class="section section-soft" aria-labelledby="quality-title"><div class="section-head"><p class="section-kicker">DATA QUALITY</p><h2 id="quality-title">人気と強さを混ぜない</h2><p>人気順位やTierは、対応パッチ・確認日・評価基準を揃えられた場合だけ公開します。現時点の根拠は独立ページで確認できます。</p></div><div class="section-cta"><a class="button-secondary" href="/tier-list/">評価基準を見る</a><a class="button-secondary" href="/editorial-policy/">編集方針を見る</a></div></section>
   </main>
   <footer class="site-footer"><div class="footer-row"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></div><nav class="footer-links" aria-label="サイト情報"><a href="/about/">運営者情報</a><a href="/editorial-policy/">編集方針</a><a href="/privacy/">プライバシー</a><a href="/terms/">利用規約</a></nav></div><p class="fine">Path of Exile 2 is a trademark of Grinding Gear Games. This site is not affiliated with or endorsed by Grinding Gear Games.</p></footer>
-</body>
-</html>
+</body></html>

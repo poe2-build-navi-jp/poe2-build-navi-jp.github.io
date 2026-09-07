@@ -14,6 +14,15 @@ const text = (value) => value === null || value === undefined || value === "" ? 
 const stageIndexFor = (level) => Math.max(0, STAGES.findIndex((stage) => level >= stage.min && level <= stage.max));
 let build;
 let level = 1;
+const PROGRESS_ITEMS = [
+  ["skill", "現在段階のメインスキルを用意した"],
+  ["support", "案内されたサポートを確認した"],
+  ["passive", "現在段階のパッシブルートを確認した"],
+  ["weapon", "武器・主力装備を見直した"],
+  ["armor", "防具と移動速度を見直した"],
+  ["resistance", "属性耐性を確認した"],
+  ["mechanic", "ビルド固有の操作順を試した"]
+];
 
 function pathInfo() {
   const parts = location.pathname.split("/").filter(Boolean);
@@ -89,6 +98,39 @@ function renderNow(index) {
   document.querySelectorAll("[data-now-action]").forEach((element, actionIndex) => { element.textContent = actions[actionIndex]; });
 }
 
+function renderProgress() {
+  const wrapper = byId("progress-checks");
+  wrapper.replaceChildren();
+  const storageKey = `poe2:navi:progress:${build.id}`;
+  const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+  PROGRESS_ITEMS.forEach(([id, label]) => {
+    const row = document.createElement("label");
+    row.className = "progress-check";
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.checked = Boolean(saved[id]);
+    const text = document.createElement("span");
+    text.textContent = label;
+    input.addEventListener("change", () => {
+      saved[id] = input.checked;
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+      updateProgress(saved);
+    });
+    row.append(input, text);
+    wrapper.append(row);
+  });
+  updateProgress(saved);
+}
+
+function updateProgress(saved) {
+  const complete = PROGRESS_ITEMS.filter(([id]) => saved[id]).length;
+  const percent = Math.round((complete / PROGRESS_ITEMS.length) * 100);
+  byId("progress-percent").textContent = `${percent}%`;
+  byId("progress-bar").style.width = `${percent}%`;
+  const next = PROGRESS_ITEMS.find(([id]) => !saved[id]);
+  byId("progress-next").textContent = next ? `次にやること：${next[1]}` : "現在段階の確認は完了です。次のロードマップ段階へ進みましょう。";
+}
+
 function setLevel(value) {
   level = Math.max(1, Math.min(100, Number(value) || 1));
   byId("level-input").value = level;
@@ -142,7 +184,7 @@ function renderBuild(builds) {
   const facts = byId("fact-grid");
   facts.replaceChildren();
   [
-    ["対応パッチ", build.version], ["最終確認日", build.updatedAt], ["初心者", build.beginnerRating === null ? null : `${build.beginnerRating}/5`],
+    ["対応パッチ", build.version], ["最終確認日", build.updatedAt], ["確認済み段階", `${build.levelingStages?.length || 0}/8`],
     ["予算", build.budget], ["操作難易度", build.difficulty], ["火力", build.damageRating === null ? null : `${build.damageRating}/5`],
     ["耐久", build.defenseRating === null ? null : `${build.defenseRating}/5`], ["周回", build.mappingRating === null ? null : `${build.mappingRating}/5`],
     ["ボス", build.bossRating === null ? null : `${build.bossRating}/5`]
@@ -150,6 +192,7 @@ function renderBuild(builds) {
   fillList("strength-list", build.strengths, "確認中：検証後に、このビルドをおすすめできる人を掲載します。");
   fillList("weakness-list", build.weaknesses, "確認中：強みだけでなく、弱点も検証して掲載します。");
   renderSources();
+  renderProgress();
 
   const nav = byId("stage-nav");
   nav.replaceChildren();
@@ -171,10 +214,17 @@ function renderBuild(builds) {
   });
   if (!related.childElementCount) {
     const link = document.createElement("a");
-    link.href = "/#builds";
+    link.href = "/builds/";
     link.textContent = "ビルド一覧へ戻る";
     related.append(link);
   }
+  [["/gear-check/", "このビルドで装備診断"], ["/beginner-guide/", "初心者ガイド"], ["/dictionary/", "用語辞典"]].forEach(([href, label]) => {
+    if (related.childElementCount >= 3) return;
+    const link = document.createElement("a");
+    link.href = href;
+    link.textContent = label;
+    related.append(link);
+  });
 
   const urlLevel = Number(new URLSearchParams(location.search).get("level"));
   const savedLevel = Number(localStorage.getItem(`poe2:navi:level:${build.id}`));

@@ -39,7 +39,11 @@
         "replaceGear": "武器のダメージが伸びない場合と、移動速度のないブーツを優先して交換。",
         "caution": "Frozen Locusを敵集団へ置き、後方からGlacial Cascadeで破壊する。Lv10でHerald of Iceを追加。",
         "transitionCondition": "Lv11到達。Glacial CascadeとFrozen Locusの基本連携が安定していること。",
-        "nowActions": ["Glacial Cascadeを最優先で強化する", "Frozen Locusを置いてからGlacial Cascadeで破壊する", "移動速度付きブーツを探す"]
+        "nowActions": [
+          "Glacial Cascadeを最優先で強化する",
+          "Frozen Locusを置いてからGlacial Cascadeで破壊する",
+          "移動速度付きブーツを探す"
+        ]
       },
       {
         "label": "Lv11〜20",
@@ -50,7 +54,11 @@
         "replaceGear": "現在レベルより大きく古い武器、防御値や耐性が不足する防具を交換。",
         "caution": "Tempest Flurryは通常周回の主力ではなく、ボスへのショック付与に使う。",
         "transitionCondition": "Lv21到達。ボス戦でFrozen LocusとGlacial Cascadeの連携を再現できること。",
-        "nowActions": ["Glacial Cascadeを優先して更新する", "ボス戦だけTempest Flurryでショックを付与する", "耐性・ライフ付き防具を確保する"]
+        "nowActions": [
+          "Glacial Cascadeを優先して更新する",
+          "ボス戦だけTempest Flurryでショックを付与する",
+          "耐性・ライフ付き防具を確保する"
+        ]
       },
       {
         "label": "Lv21〜30",
@@ -61,7 +69,11 @@
         "replaceGear": "Hollow Palmへ切り替える前に、武器を外しても火力が成立する回避・エナジーシールド装備を揃える。",
         "caution": "Hollow Palmは自動的に最適になるわけではなく、良いクォータースタッフの方が高火力になる場合がある。",
         "transitionCondition": "Lv31到達。Storm Wave構成またはGlacial Cascade継続構成のどちらかを決める。",
-        "nowActions": ["Lv22でStorm Waveへの移行を判断する", "Hollow Palm採用前に装備条件を確認する", "移行直後に武器を売却しない"]
+        "nowActions": [
+          "Lv22でStorm Waveへの移行を判断する",
+          "Hollow Palm採用前に装備条件を確認する",
+          "移行直後に武器を売却しない"
+        ]
       },
       {
         "label": "Lv31〜40",
@@ -72,7 +84,11 @@
         "replaceGear": "Lv41切替で装備条件を満たせない部位を先に交換。",
         "caution": "ワーリングアサルトはLv41で解禁。早い段階で既存の主力スキルを外さない。",
         "transitionCondition": "Lv41到達、ワーリングアサルトを用意し、必要能力値を満たす。",
-        "nowActions": ["Lv41用のワーリングアサルトを準備する", "必要な器用さ・知性を確認する", "切替前の主力スキルを残しておく"]
+        "nowActions": [
+          "Lv41用のワーリングアサルトを準備する",
+          "必要な器用さ・知性を確認する",
+          "切替前の主力スキルを残しておく"
+        ]
       },
       {
         "label": "Lv41〜キャンペーン終了",
@@ -83,7 +99,11 @@
         "replaceGear": "良いクォータースタッフがHollow Palmを上回る場合は武器型へ戻す。",
         "caution": "Efficiency IIはマナ問題がある場合に使用。問題がなければクリティカル系サポートへ変更候補。",
         "transitionCondition": "キャンペーン終了。ワーリングアサルトで周回し、フォーリングサンダーでチャージを消費できる。",
-        "nowActions": ["ワーリングアサルトへ切り替える", "マナ不足ならEfficiency IIを使う", "フォーリングサンダーをチャージ消費用に設定する"]
+        "nowActions": [
+          "ワーリングアサルトへ切り替える",
+          "マナ不足ならEfficiency IIを使う",
+          "フォーリングサンダーをチャージ消費用に設定する"
+        ]
       },
       {
         "label": "Mapping開始",
@@ -94,7 +114,11 @@
         "replaceGear": "耐性不足の防具、移動速度不足のブーツ、火力が停滞したクォータースタッフの順で確認。",
         "caution": "マップ開始時はKilling Palmで最初のパワーチャージを作ってからCharged Staffを起動する。",
         "transitionCondition": "Charged Staffを切らさず、ワーリングアサルト2回前後からフォーリングサンダーへつなげられる。",
-        "nowActions": ["Killing Palmで最初のチャージを作る", "Charged Staffを維持する", "ワーリングアサルト後にフォーリングサンダーを使う"]
+        "nowActions": [
+          "Killing Palmで最初のチャージを作る",
+          "Charged Staffを維持する",
+          "ワーリングアサルト後にフォーリングサンダーを使う"
+        ]
       },
       {
         "label": "Early Endgame",
@@ -105,7 +129,11 @@
         "replaceGear": "防御が不安定なら火力装備より回避・ES・耐性を優先。",
         "caution": "Hollow Focusなど別のチャージ手段もあるが、現行ガイドではCharged Staff方式を安定案としている。",
         "transitionCondition": "チャージ生成とマナ維持が安定し、Late Endgame用装備への更新目的が明確になる。",
-        "nowActions": ["チャージが途切れる原因を確認する", "マナ問題の有無でサポートを切り替える", "回避・ES・耐性を先に安定させる"]
+        "nowActions": [
+          "チャージが途切れる原因を確認する",
+          "マナ問題の有無でサポートを切り替える",
+          "回避・ES・耐性を先に安定させる"
+        ]
       },
       {
         "label": "Endgame完成",
@@ -116,35 +144,368 @@
         "replaceGear": "価格ではなく、現在の不足項目と実際の出品性能を比較して1部位ずつ更新。",
         "caution": "固定価格・DPSは掲載時点で保証できないため、数値目標として断定しない。",
         "transitionCondition": "完成後はクリティカル、防御、マナのボトルネックを1項目ずつ更新。",
-        "nowActions": ["基本ローテーションを安定させる", "クリティカル・回避・ESの不足を確認する", "1部位ずつ更新効果を比較する"]
+        "nowActions": [
+          "基本ローテーションを安定させる",
+          "クリティカル・回避・ESの不足を確認する",
+          "1部位ずつ更新効果を比較する"
+        ]
       }
     ],
-    "gearPriorities": ["武器：追加ダメージ・ダメージ増加・近接/アタックスキルレベル・クリティカル・攻撃速度", "ブーツ：移動速度 → 耐性・ライフ・回避", "防具：耐性・ライフ・回避。EndgameはESと全体防御も評価"],
+    "gearPriorities": [
+      "武器：追加ダメージ・ダメージ増加・近接/アタックスキルレベル・クリティカル・攻撃速度",
+      "ブーツ：移動速度 → 耐性・ライフ・回避",
+      "防具：耐性・ライフ・回避。EndgameはESと全体防御も評価"
+    ],
     "sources": [
-      {"name":"Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5","url":"https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius","checkedAt":"2026-09-07","type":"海外ビルドガイド"},
-      {"name":"Mobalytics: Martial Artist League Starter","url":"https://mobalytics.gg/poe-2/builds/martial-artist-leveling-and-early-mapping-nicktew","checkedAt":"2026-09-07","type":"海外レベリングガイド"},
-      {"name":"YouTube: Whirling Assault Monk Leveling Guide 0.5.5","url":"https://www.youtube.com/watch?v=lCdE8gVV2Qo","checkedAt":"2026-09-07","type":"海外プレイ動画"},
-      {"name":"YouTube: エンドゲーム突入！ワーリングアサルトマーシャルアーティスト","url":"https://www.youtube.com/watch?v=I4z9JsPSLuQ","checkedAt":"2026-09-07","type":"日本語プレイ動画"},
-      {"name":"PoE2DB日本語版: ワーリングアサルト","url":"https://poe2db.tw/jp/Whirling_Assault","checkedAt":"2026-09-07","type":"日本語スキルデータ"}
-    ]
+      {
+        "name": "Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "checkedAt": "2026-09-07",
+        "type": "海外ビルドガイド"
+      },
+      {
+        "name": "Mobalytics: Martial Artist League Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/martial-artist-leveling-and-early-mapping-nicktew",
+        "checkedAt": "2026-09-07",
+        "type": "海外レベリングガイド"
+      },
+      {
+        "name": "YouTube: Whirling Assault Monk Leveling Guide 0.5.5",
+        "url": "https://www.youtube.com/watch?v=lCdE8gVV2Qo",
+        "checkedAt": "2026-09-07",
+        "type": "海外プレイ動画"
+      },
+      {
+        "name": "YouTube: エンドゲーム突入！ワーリングアサルトマーシャルアーティスト",
+        "url": "https://www.youtube.com/watch?v=I4z9JsPSLuQ",
+        "checkedAt": "2026-09-07",
+        "type": "日本語プレイ動画"
+      },
+      {
+        "name": "PoE2DB日本語版: ワーリングアサルト",
+        "url": "https://poe2db.tw/jp/Whirling_Assault",
+        "checkedAt": "2026-09-07",
+        "type": "日本語スキルデータ"
+      }
+    ],
+    "audience": "近接で移動しながら戦い、Lv1からEndgameまで同じページで進めたい人"
   },
-  {"id":"mercenary-twister-gemling","slug":"twister-gemling","classSlug":"mercenary","name":"ツイスター・ジェムリング","className":"マーセナリー","ascendancy":"ジェムリング","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ツイスター","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"warrior-shield-wall-smith","slug":"shield-wall-smith","classSlug":"warrior","name":"盾壁・炎化身スミス","className":"ウォリアー","ascendancy":"スミス","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"シールドウォール","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"sorceress-sand-fire","slug":"sand-and-fire","classSlug":"sorceress","name":"砂と炎のヴァラシュタ","className":"ソーサレス","ascendancy":"ヴァラシュタ","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ケラリの幻惑","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"huntress-companion","slug":"companion","classSlug":"huntress","name":"相棒ハントレス","className":"ハントレス","ascendancy":"確認中","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ビースト召喚","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"ranger-ice-shot-deadeye","slug":"ice-shot-deadeye","classSlug":"ranger","name":"アイスショット・デッドアイ","className":"レンジャー","ascendancy":"デッドアイ","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"アイスショット","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"huntress-plant-oracle","slug":"plant-oracle","classSlug":"huntress","name":"植物オラクル","className":"ハントレス","ascendancy":"オラクル","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ブライアーパッチ","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"witch-spark-comet","slug":"spark-comet-infernalist","classSlug":"witch","name":"スパーク彗星インファーナリスト","className":"ウィッチ","ascendancy":"インファーナリスト","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"スパーク／コメット","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"witch-ed-contagion","slug":"essence-drain-contagion","classSlug":"witch","name":"エッセンスドレイン・コンテイジョン","className":"ウィッチ","ascendancy":"確認中","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"エッセンスドレイン","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"mercenary-stormblast-tactician","slug":"stormblast-tactician","classSlug":"mercenary","name":"ストームブラスト・タクティシャン","className":"マーセナリー","ascendancy":"タクティシャン","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ストームブラストボルト","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"druid-wolf","slug":"wolf","classSlug":"druid","name":"狼ドルイド","className":"ドルイド","ascendancy":"確認中","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"狼変身","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"witch-bleed-bow","slug":"bleed-bow-blood-mage","classSlug":"witch","name":"出血弓ブラッドメイジ","className":"ウィッチ","ascendancy":"ブラッドメイジ","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"出血弓","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"mercenary-galvanic-shards","slug":"galvanic-shards-tactician","classSlug":"mercenary","name":"ガルヴァニックシャード・タクティシャン","className":"マーセナリー","ascendancy":"タクティシャン","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ガルヴァニックシャード","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"huntress-bone-cage","slug":"bone-cage-oracle","classSlug":"huntress","name":"ボーンケージ・オラクル","className":"ハントレス","ascendancy":"オラクル","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ボーンケージ","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"monk-falling-thunder","slug":"falling-thunder-invoker","classSlug":"monk","name":"フォーリングサンダー・インヴォーカー","className":"モンク","ascendancy":"インヴォーカー","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"フォーリングサンダー","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"sorceress-frostbolt","slug":"frostbolt-varashta","classSlug":"sorceress","name":"フロストボルト・ヴァラシュタ","className":"ソーサレス","ascendancy":"ヴァラシュタ","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"フロストボルト","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"mercenary-grenade","slug":"grenade-gemling","classSlug":"mercenary","name":"グレネード・ジェムリング","className":"マーセナリー","ascendancy":"ジェムリング","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"エクスプローシブ・グレネード","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"warrior-rake-bleed","slug":"rake-bleed-titan","classSlug":"warrior","name":"レイク出血タイタン","className":"ウォリアー","ascendancy":"タイタン","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"レイク","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"sorceress-spark","slug":"spark-stormweaver","classSlug":"sorceress","name":"スパーク・ストームウィーバー","className":"ソーサレス","ascendancy":"ストームウィーバー","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"スパーク","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]},
-  {"id":"warrior-rolling-slam","slug":"rolling-slam-boneshatter","classSlug":"warrior","name":"ローリングスラム・ボーンシャッター","className":"ウォリアー","ascendancy":"確認中","version":"0.5.5（再確認中）","updatedAt":"2026-09-07","mainSkill":"ローリングスラム","beginnerRating":null,"damageRating":null,"defenseRating":null,"mappingRating":null,"bossRating":null,"difficulty":"確認中","budget":"確認中","leagueStarter":null,"ssf":null,"strengths":[],"weaknesses":[],"levelingStages":[],"gearPriorities":[],"sources":[]}
+  {
+    "id": "mercenary-twister-gemling",
+    "slug": "twister-gemling",
+    "classSlug": "mercenary",
+    "name": "ツイスター・ジェムリング",
+    "className": "マーセナリー",
+    "ascendancy": "ジェムリング・リージョネア",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "mainSkill": "ツイスター（Twister）",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "複数スキルの順番管理",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "キャンペーン開始からツイスターを主力にできる。",
+      "段階別の装備・スキル・パッシブ構成が公開されている。"
+    ],
+    "weaknesses": [
+      "ワーリングスラッシュはマナ消費を抑えるためLv1維持が推奨され、誤って上げない注意が必要。",
+      "武器セット別のスキル割り当てとローテーションを覚える必要がある。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "ワーリングスラッシュ×3 → ツイスター",
+        "supports": "ワーリングスラッシュ：Rage、Rapid Attacks。ツイスター：Retreat、Elemental Armament。",
+        "passivePriority": "原典のCampaign Startツリーを使用。固有ノード名は原典で確認。",
+        "gearPriority": "槍・手袋・指輪の追加ダメージ、ブーツの移動速度、ライフ、耐性。",
+        "replaceGear": "追加ダメージが不足する槍を優先して更新。",
+        "caution": "ワーリングスラッシュはLv1のまま維持する。",
+        "transitionCondition": "Ice-Tipped ArrowsとBarrageを使える段階へ進む。",
+        "nowActions": [
+          "ワーリングスラッシュをLv1のままにする",
+          "3回使ってからツイスターへつなぐ",
+          "槍・手袋・指輪の追加ダメージを確認する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "序盤：槍・手袋・指輪の追加ダメージ",
+      "ブーツ：移動速度",
+      "防具：最大ライフと耐性"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: 0.5.5 Twister Gemling Legionnaire",
+        "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+        "checkedAt": "2026-09-07",
+        "type": "海外レベリング・Endgameガイド"
+      }
+    ],
+    "dataStatus": "source-checked",
+    "audience": "序盤からツイスターを使い、武器セットを切り替えて進めたい人"
+  },
+  {
+    "id": "warrior-shield-wall-smith",
+    "slug": "shield-wall-smith",
+    "classSlug": "warrior",
+    "name": "シールドウォール・スミス",
+    "className": "ウォリアー",
+    "ascendancy": "スミス・オブ・キタヴァ",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "mainSkill": "シールドウォール（Shield Wall）",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "Lv22で主力を切替",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "最初のアセンダンシー取得後はキャンペーンで耐久を得やすい。",
+      "段階別のAct・Maps・Endgame構成が公開されている。"
+    ],
+    "weaknesses": [
+      "主力のシールドウォールはLv22まで使えない。",
+      "高額装備帯では他構成ほど火力と周回が伸びないと原典で説明されている。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "ローリングスラム + ボーンシャッター",
+        "supports": "ローリングスラム：Rapid Attacks、Brink。ボーンシャッター：Impact Shockwave、Magnified Area。",
+        "passivePriority": "原典のAct 1ツリーを使用。",
+        "gearPriority": "メイスと防具を現在レベルに合わせる。",
+        "replaceGear": "スタン蓄積や火力が不足する場合はメイスを更新。",
+        "caution": "ローリングスラム1段目から、2段目の前にボーンシャッターへつなぐ。",
+        "transitionCondition": "Lv14で単体用Perfect Strikeを追加する段階へ進む。",
+        "nowActions": [
+          "ローリングスラム1段目からボーンシャッターへつなぐ",
+          "ローリングスラムをLv1で保持する",
+          "メイスと防具のレベルを確認する"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "Lv22からシールドウォールへ切替",
+        "supports": "正式な段階別サポートは原典のAct 2 - Shield Wall Swapで確認。",
+        "passivePriority": "原典のAct 2 - Shield Wall Swapツリーへ移行。",
+        "gearPriority": "Lv22以降はアーマー値が高い盾を優先。",
+        "replaceGear": "シールドウォール切替時に盾を最優先で更新。",
+        "caution": "Lv22前に主力を外さない。",
+        "transitionCondition": "シールドウォールを起爆する操作が安定する。",
+        "nowActions": [
+          "Lv22でシールドウォールへ切り替える",
+          "アーマー値の高い盾を探す",
+          "起爆操作を練習する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Lv22以降：アーマー値の高い盾",
+      "キャンペーンとEndgame：耐性",
+      "現在レベルに合う防具"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "checkedAt": "2026-09-07",
+        "type": "海外検証済みレベリングガイド"
+      },
+      {
+        "name": "Mobalytics: Shield Wall + Avatar of Fire 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/avatar-of-fire-smith-of-kitava-lexd",
+        "checkedAt": "2026-09-07",
+        "type": "海外Endgameガイド"
+      }
+    ],
+    "dataStatus": "source-checked",
+    "audience": "装備を整えやすい耐久型のリーグスターターを探している人"
+  },
+  {
+    "id": "sorceress-sand-fire",
+    "slug": "sand-and-fire",
+    "classSlug": "sorceress",
+    "name": "砂と炎のヴァラシュタ",
+    "className": "ソーサレス",
+    "ascendancy": "ディサイプル・オブ・ヴァラシュタ",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "mainSkill": "ケラリの幻惑 / ルザンの罠",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "最初のアセンダンシーで構成切替",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "Lv1からキャンペーン、Endgameまでの段階別ガイドが公開されている。",
+      "最初のアセンダンシー取得後にケラリの指示スキルへ移行できる。"
+    ],
+    "weaknesses": [
+      "最初のアセンダンシー取得までは本来の構成にならない。",
+      "指示スキルのクールダウンと複数の操作を管理する必要がある。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "Lv1〜5：Entangle + Contagion。Lv6以降：Essence Drain + Contagion。",
+        "supports": "Contagion：Unleash、Magnified Area。Essence Drain：Chain、Swift Affliction。",
+        "passivePriority": "原典のAct 1ツリーを使用。",
+        "gearPriority": "キャンペーン中はアーマーと不足耐性を優先。",
+        "replaceGear": "防御が不足する防具を更新。",
+        "caution": "Lv6以降はFrost BombとVolcano、Raging Spiritsも加える。",
+        "transitionCondition": "Lv21前後で最初のアセンダンシーへ進める。",
+        "nowActions": [
+          "Lv6でEssence Drainへ移行する",
+          "Frost BombでExposureを付ける",
+          "アーマーと耐性を確認する"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "ケラリの幻惑 + ケラリの残虐",
+        "supports": "範囲はMagnified Area II、単体はConcentrated Areaへ切替候補。",
+        "passivePriority": "最初のアセンダンシー後にスペル系からミニオン系ツリーへ振り直す。",
+        "gearPriority": "アーマーを保ちつつ、ミニオン系の必要能力を確認。",
+        "replaceGear": "構成切替に合わないスペル専用装備を1部位ずつ見直す。",
+        "caution": "構成切替用のゴールドを残す。",
+        "transitionCondition": "ケラリの指示スキルで通常敵と単体を処理できる。",
+        "nowActions": [
+          "最初のアセンダンシーを完了する",
+          "ケラリの指示スキルへ切り替える",
+          "振り直し用ゴールドを残す"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "ケラリの幻惑 + ケラリの残虐。Lv40以降はルザンの罠を追加。",
+        "supports": "Lv36でMusterを追加候補。",
+        "passivePriority": "原典のAct 3〜4ツリーを継続。",
+        "gearPriority": "アーマー、耐性、必要能力値。",
+        "replaceGear": "ルザン追加に必要な条件を満たさない部位を更新。",
+        "caution": "ルザンの罠はLv40以降の切替。",
+        "transitionCondition": "ルザンの罠を戦闘開始時に使える。",
+        "nowActions": [
+          "Lv36でMusterを確認する",
+          "Lv40用のルザンを準備する",
+          "指示スキルのクールダウンを意識する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "キャンペーン：アーマーと耐性",
+      "Mapping以降：エナジーシールド移行は原典の段階に合わせる",
+      "構成切替用の必要能力値"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Sandscorcher Campaign Guide 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide",
+        "checkedAt": "2026-09-07",
+        "type": "海外キャンペーンガイド"
+      },
+      {
+        "name": "Mobalytics: SSF Sand & Fire Varashta 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide",
+        "checkedAt": "2026-09-07",
+        "type": "海外キャンペーン・Endgameガイド"
+      }
+    ],
+    "dataStatus": "source-checked",
+    "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人"
+  },
+  {
+    "id": "huntress-companion",
+    "slug": "companion",
+    "classSlug": "huntress",
+    "name": "相棒スピリットウォーカー",
+    "className": "ハントレス",
+    "ascendancy": "スピリットウォーカー",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "mainSkill": "テイムビースト（Tame Beast）",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "Act 3で大きく構成切替",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "固有ビーストを主力にする明確なEndgame方針がある。",
+      "Act 1〜3の育成ルートと相棒型への切替条件が説明されている。"
+    ],
+    "weaknesses": [
+      "テイムビーストはTier 7ジェムまで使えず、相棒型への切替はAct 3・2回目の試練後が推奨されている。",
+      "ツイスター型から相棒型への振り直し用ゴールドを残す必要がある。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "ツイスター + ワーリングスラッシュ",
+        "supports": "詳細は原典のAct 1構成を確認。安全に抽出できない名称は掲載しない。",
+        "passivePriority": "相棒型へ早く寄せすぎず、原典のAct 1ツリーを使用。",
+        "gearPriority": "槍・手袋・指輪の追加ダメージを優先。",
+        "replaceGear": "追加ダメージの低い槍を更新。",
+        "caution": "この段階では相棒型へ切り替えない。",
+        "transitionCondition": "Tier 7ジェムとAct 3の切替準備へ進む。",
+        "nowActions": [
+          "ツイスターとワーリングスラッシュで進める",
+          "槍・手袋・指輪の追加ダメージを確認する",
+          "振り直し用ゴールドを使い切らない"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "Act 3・2回目の試練まではツイスター型を継続。条件達成後にテイムビーストへ移行。",
+        "supports": "相棒用サポートは原典の切替後構成を確認。",
+        "passivePriority": "2回目の試練後、相棒用ツリーへまとめて振り直す。",
+        "gearPriority": "相棒ダメージ、ミニオンスキルレベル、ライフ、回避/ディフレクション、耐性。",
+        "replaceGear": "切替後に槍中心の装備から相棒向け装備へ段階的に更新。",
+        "caution": "振り直しに約20,000ゴールドが必要という原典の目安がある。",
+        "transitionCondition": "Tier 7ジェム、2回目の試練、振り直し資金が揃う。",
+        "nowActions": [
+          "2回目の試練を終える",
+          "Tier 7ジェムを用意する",
+          "約20,000ゴールドを切替用に残す"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "育成前半：槍・手袋・指輪の追加ダメージ",
+      "切替後：相棒ダメージとミニオンスキルレベル",
+      "防御：ライフ、回避/ディフレクション、耐性"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Spirit Walker Beast Master 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
+        "checkedAt": "2026-09-07",
+        "type": "海外検証済みレベリング・Endgameガイド"
+      },
+      {
+        "name": "Mobalytics: Zoo Companion Huntress",
+        "url": "https://mobalytics.gg/poe-2/builds/companion-huntress-league-starter",
+        "checkedAt": "2026-09-07",
+        "type": "海外レベリングガイド"
+      }
+    ],
+    "dataStatus": "source-checked",
+    "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人"
+  }
 ]
