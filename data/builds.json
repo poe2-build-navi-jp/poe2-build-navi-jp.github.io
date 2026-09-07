@@ -170,18 +170,6 @@
         "type": "海外レベリングガイド"
       },
       {
-        "name": "YouTube: Whirling Assault Monk Leveling Guide 0.5.5",
-        "url": "https://www.youtube.com/watch?v=lCdE8gVV2Qo",
-        "checkedAt": "2026-09-07",
-        "type": "海外プレイ動画"
-      },
-      {
-        "name": "YouTube: エンドゲーム突入！ワーリングアサルトマーシャルアーティスト",
-        "url": "https://www.youtube.com/watch?v=I4z9JsPSLuQ",
-        "checkedAt": "2026-09-07",
-        "type": "日本語プレイ動画"
-      },
-      {
         "name": "PoE2DB日本語版: ワーリングアサルト",
         "url": "https://poe2db.tw/jp/Whirling_Assault",
         "checkedAt": "2026-09-07",
@@ -350,18 +338,6 @@
         "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
         "checkedAt": "2026-09-07",
         "type": "海外レベリング・Endgameガイド"
-      },
-      {
-        "name": "YouTube: ジェムリング ツイスター スターターガイド 0.5.5",
-        "url": "https://www.youtube.com/watch?v=IbfwRV3D33Y",
-        "checkedAt": "2026-09-07",
-        "type": "日本語動画"
-      },
-      {
-        "name": "YouTube: Gemling Twister Act進行",
-        "url": "https://www.youtube.com/watch?v=L8BaPlJR9pE",
-        "checkedAt": "2026-09-07",
-        "type": "日本語動画"
       }
     ],
     "dataStatus": "reviewed",
@@ -533,18 +509,6 @@
         "url": "https://mobalytics.gg/poe-2/builds/avatar-of-fire-smith-of-kitava-lexd",
         "checkedAt": "2026-09-07",
         "type": "海外Endgameガイド"
-      },
-      {
-        "name": "YouTube: Shield Wall Smith of Kitava 0.5 Final Update",
-        "url": "https://www.youtube.com/watch?v=lmgCL7idCpg",
-        "checkedAt": "2026-09-07",
-        "type": "海外動画"
-      },
-      {
-        "name": "YouTube: 0.5 ウォリアー環境・育成確認",
-        "url": "https://www.youtube.com/watch?v=Qzck6ikP-ec",
-        "checkedAt": "2026-09-07",
-        "type": "日本語補助動画"
       }
     ],
     "dataStatus": "reviewed",
@@ -716,12 +680,6 @@
         "url": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide",
         "checkedAt": "2026-09-07",
         "type": "海外キャンペーン・Endgameガイド"
-      },
-      {
-        "name": "YouTube: 0.5.5 Starter Build Valashta Minions",
-        "url": "https://www.youtube.com/watch?v=OEA3Xcf7qhU",
-        "checkedAt": "2026-09-07",
-        "type": "日本語動画"
       },
       {
         "name": "note: 0.5 ヴァラシュタ エンドゲーム構成",
@@ -905,18 +863,6 @@
         "url": "https://mobalytics.gg/poe-2/builds/companion-huntress-league-starter",
         "checkedAt": "2026-09-07",
         "type": "海外レベリングガイド"
-      },
-      {
-        "name": "YouTube: POE2 0.5 Spirit Walker Twister Build",
-        "url": "https://www.youtube.com/watch?v=WO2pUIEWT40",
-        "checkedAt": "2026-09-07",
-        "type": "日本語動画"
-      },
-      {
-        "name": "YouTube: Spirit Walker Beast Master Guide",
-        "url": "https://www.youtube.com/watch?v=p6uR2uC1Kk4",
-        "checkedAt": "2026-09-07",
-        "type": "海外動画"
       }
     ],
     "dataStatus": "reviewed",
@@ -1091,12 +1037,6 @@
         "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
         "checkedAt": "2026-09-07",
         "type": "海外検証済みEndgameガイド"
-      },
-      {
-        "name": "YouTube: 0.5.5 ACT序盤から組めるアイスショット",
-        "url": "https://www.youtube.com/watch?v=DbtGucCmzOY",
-        "checkedAt": "2026-09-07",
-        "type": "日本語動画"
       },
       {
         "name": "note: 0.5 アイスショット・デッドアイActテスト",
@@ -1276,12 +1216,6 @@
         "url": "https://mobalytics.gg/poe-2/builds/witch-minions-leveling",
         "checkedAt": "2026-09-07",
         "type": "海外レベリングガイド"
-      },
-      {
-        "name": "YouTube: 0.5 ミニオンウィッチ ピナクル実戦",
-        "url": "https://www.youtube.com/watch?v=RzZfEcPjUlU",
-        "checkedAt": "2026-09-07",
-        "type": "日本語実戦動画"
       }
     ],
     "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者"

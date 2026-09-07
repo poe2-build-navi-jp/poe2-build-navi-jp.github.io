@@ -137,6 +137,7 @@ function setLevel(value) {
   byId("level-range").value = level;
   byId("level-output").value = `Lv${level}`;
   localStorage.setItem(`poe2:navi:level:${build.id}`, String(level));
+  localStorage.setItem("poe2:navi:quick-level", String(level));
   const index = stageIndexFor(level);
   renderNow(index);
   renderStage(index);
@@ -181,6 +182,10 @@ function renderBuild(builds) {
   byId("build-class").textContent = `${build.className} / ${text(build.ascendancy)}`;
   byId("build-skill").textContent = `メインスキル：${text(build.mainSkill)}`;
   byId("breadcrumb-name").textContent = build.name;
+  byId("breadcrumb-class").textContent = build.className;
+  byId("breadcrumb-class").href = `/classes/${build.classSlug}/`;
+  localStorage.setItem("poe2:navi:selected-class", build.className);
+  localStorage.setItem("poe2:navi:selected-build", build.id);
   const facts = byId("fact-grid");
   facts.replaceChildren();
   [

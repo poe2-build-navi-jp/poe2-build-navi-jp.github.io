@@ -6,7 +6,7 @@ const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
 
-const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/builds.json", "assets/app.js", "assets/detail.js"];
+const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "assets/app.js", "assets/detail.js"];
 for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
@@ -15,10 +15,15 @@ const [index, buildList, gearCheck, robots, sitemap, ads, verification, buildsTe
   read("index.html"), read("builds/index.html"), read("gear-check/index.html"), read("robots.txt"), read("sitemap.xml"), read("ads.txt"), read("googlebaa56ffa7c50bcfb.html"), read("data/builds.json")
 ]);
 const builds = JSON.parse(buildsText);
+const classes = JSON.parse(await read("data/classes.json"));
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
 assert(builds.length === 8, "build count must be 8");
 assert(new Set(builds.map((build) => build.className)).size === 8, "each playable class must have one build");
+assert(classes.length === 8, "class count must be 8");
+assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
+assert(index.includes('id="class-grid"'), "homepage class cards container missing");
+assert(index.indexOf('id="choose-class"') < index.indexOf('id="quick-start"'), "homepage must show class selection before resume controls");
 assert(index.includes("今日やることが、<em>3つに絞れる。"), "homepage action-first message missing");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
@@ -37,7 +42,7 @@ for (const build of builds) {
     for (const field of stageFields) assert(typeof stage[field] === "string" && stage[field].trim(), `${build.id}/${stage.label}: missing ${field}`);
     assert(Array.isArray(stage.nowActions) && stage.nowActions.length === 3 && stage.nowActions.every(Boolean), `${build.id}/${stage.label}: nowActions must contain 3 actions`);
   }
-  assert(build.sources.some((source) => source.type?.includes("日本語")), `${build.id}: Japanese source missing`);
+  assert(build.sources.every((source) => !/(youtube\.com|youtu\.be)/i.test(source.url || "") && !/youtube/i.test(source.name || "")), `${build.id}: YouTube source must be removed`);
   const pagePath = `builds/${build.classSlug}/${build.slug}/index.html`;
   assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/`), `${build.id}: missing from sitemap`);
   try {
@@ -45,6 +50,17 @@ for (const build of builds) {
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/">`), `${pagePath}: canonical mismatch`);
     const expectedRobots = ["reviewed", "source-checked"].includes(build.dataStatus) ? 'content="index,follow"' : 'content="noindex,follow"';
     assert(page.includes(expectedRobots), `${pagePath}: robots status mismatch`);
+  } catch { failures.push(`missing: ${pagePath}`); }
+}
+
+for (const classData of classes) {
+  assert(builds.some((build) => build.classSlug === classData.slug), `${classData.slug}: class has no build`);
+  const pagePath = `classes/${classData.slug}/index.html`;
+  assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/classes/${classData.slug}/`), `${classData.slug}: class missing from sitemap`);
+  try {
+    const page = await read(pagePath);
+    assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/classes/${classData.slug}/">`), `${pagePath}: canonical mismatch`);
+    assert(page.includes("このビルドで育てる"), `${pagePath}: build CTA missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 

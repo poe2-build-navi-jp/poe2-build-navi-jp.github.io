@@ -4,7 +4,7 @@ const STAGES = [
   { min: 41, max: 65, label: "Lv41〜キャンペーン終了" }, { min: 66, max: 75, label: "Mapping開始" },
   { min: 76, max: 90, label: "Early Endgame" }, { min: 91, max: 100, label: "Endgame完成" }
 ];
-const state = { builds: [], selectedClass: "", selectedBuild: "", level: 1 };
+const state = { classes: [], builds: [], selectedClass: "", selectedBuild: "", level: 1, selectedStyle: "" };
 const byId = (id) => document.getElementById(id);
 const stageFor = (level) => STAGES.find((stage) => level >= stage.min && level <= stage.max) || STAGES[0];
 const buildUrl = (build) => `/builds/${build.classSlug}/${build.slug}/`;
@@ -36,21 +36,33 @@ function populateQuickBuilds() {
   select.disabled = !state.selectedClass;
 }
 
-function renderCards() {
-  const grid = byId("build-grid");
+function renderClassCards() {
+  const grid = byId("class-grid");
   grid.replaceChildren();
-  state.builds.forEach((build, index) => {
+  const matches = state.classes.filter((item) => !state.selectedStyle || item.combatStyle.includes(state.selectedStyle));
+  matches.forEach((classData) => {
+    const classBuilds = state.builds.filter((build) => build.classSlug === classData.slug);
     const card = document.createElement("article");
-    card.className = "build-card";
-    const stageCount = build.levelingStages?.length || 0;
-    const weakness = build.weaknesses?.[0] || "詳細な弱点は情報源と照合後に追記します。";
-    card.innerHTML = `<div class="card-top"><span class="card-status">${build.version}</span><span class="card-rank">${index + 1}</span></div><div class="class">${build.className} / ${build.ascendancy}</div><h3></h3><div class="skill"></div><div class="audience"><small>こんな人向け</small><strong></strong></div><div class="card-warning"><small>先に知る弱点</small><span></span></div><div class="card-meta"><span class="chip">操作：${build.difficulty}</span><span class="chip">公開済み段階：${stageCount}/8</span></div><div class="card-actions"><a href="${buildUrl(build)}">${build.dataStatus === "reviewed" ? "Lv1から育てる" : "確認済み手順を見る"} →</a></div>`;
-    card.querySelector("h3").textContent = build.name;
-    card.querySelector(".skill").textContent = `主力：${build.mainSkill}`;
-    card.querySelector(".audience strong").textContent = build.audience || "掲載方針を確認中";
-    card.querySelector(".card-warning span").textContent = weakness;
+    card.className = "class-card";
+    card.innerHTML = `<div class="class-card-head"><span class="class-initial" aria-hidden="true"></span><div><h3></h3><p class="class-tagline"></p></div></div><div class="class-tags"></div><p class="class-description"></p><ul class="class-points"></ul><p class="class-build-count"></p><a class="button" href="/classes/${classData.slug}/">この職業のビルドを見る</a>`;
+    card.querySelector(".class-initial").textContent = classData.name.slice(0, 1);
+    card.querySelector("h3").textContent = classData.name;
+    card.querySelector(".class-tagline").textContent = classData.tagline;
+    card.querySelector(".class-description").textContent = classData.description;
+    classData.combatStyle.forEach((style) => {
+      const tag = document.createElement("span");
+      tag.textContent = style;
+      card.querySelector(".class-tags").append(tag);
+    });
+    classData.beginnerPoints.slice(0, 2).forEach((point) => {
+      const item = document.createElement("li");
+      item.textContent = point;
+      card.querySelector(".class-points").append(item);
+    });
+    card.querySelector(".class-build-count").textContent = `掲載中：${classBuilds.length}ビルド`;
     grid.append(card);
   });
+  byId("style-result").textContent = state.selectedStyle ? `${state.selectedStyle}に該当する${matches.length}職業を表示しています。` : `${matches.length}職業から選べます。`;
 }
 
 function bindEvents() {
@@ -74,17 +86,23 @@ function bindEvents() {
   byId("quick-level").addEventListener("input", (event) => setLevel(event.target.value));
   byId("level-minus").addEventListener("click", () => setLevel(state.level - 1));
   byId("level-plus").addEventListener("click", () => setLevel(state.level + 1));
+  document.querySelectorAll("[data-style]").forEach((button) => button.addEventListener("click", () => {
+    state.selectedStyle = button.dataset.style;
+    document.querySelectorAll("[data-style]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    renderClassCards();
+  }));
 }
 
 async function init() {
   try {
-    const [buildResponse, siteResponse] = await Promise.all([fetch("/data/builds.json"), fetch("/data/site.json")]);
-    if (!buildResponse.ok || !siteResponse.ok) throw new Error("data fetch failed");
+    const [classResponse, buildResponse, siteResponse] = await Promise.all([fetch("/data/classes.json"), fetch("/data/builds.json"), fetch("/data/site.json")]);
+    if (!classResponse.ok || !buildResponse.ok || !siteResponse.ok) throw new Error("data fetch failed");
     const site = await siteResponse.json();
+    state.classes = await classResponse.json();
     state.builds = await buildResponse.json();
     byId("site-version").textContent = site.siteVersion;
     byId("last-updated").textContent = site.lastUpdated;
-    [...new Set(state.builds.map((build) => build.className))].forEach((name) => byId("quick-class").append(new Option(name, name)));
+    state.classes.forEach((item) => byId("quick-class").append(new Option(item.name, item.name)));
     state.selectedBuild = localStorage.getItem("poe2:navi:selected-build") || "";
     const restoredBuild = state.builds.find((build) => build.id === state.selectedBuild);
     state.selectedClass = localStorage.getItem("poe2:navi:selected-class") || restoredBuild?.className || "";
@@ -92,10 +110,11 @@ async function init() {
     byId("quick-class").value = state.selectedClass;
     populateQuickBuilds();
     setLevel(state.level);
-    renderCards();
+    renderClassCards();
+    if (restoredBuild) byId("resume-copy").textContent = `${restoredBuild.className}「${restoredBuild.name}」をLv${state.level}から再開できます。`;
     bindEvents();
   } catch (error) {
-    byId("build-grid").innerHTML = '<p class="empty">表示できませんでした。再読み込みしてください。</p>';
+    byId("class-grid").innerHTML = '<p class="empty">表示できませんでした。再読み込みしてください。</p>';
     console.error(error);
   }
 }
