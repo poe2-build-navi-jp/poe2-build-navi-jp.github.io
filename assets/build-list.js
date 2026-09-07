@@ -28,10 +28,38 @@ function render() {
   });
 }
 
+function setClass(name) {
+  byId("class-filter").value = name;
+  localStorage.setItem("poe2:navi:catalog-class", name);
+  document.querySelectorAll("[data-class-choice]").forEach((button) => {
+    const active = button.dataset.classChoice === name;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  render();
+}
+
 fetch("/data/builds.json").then((response) => response.json()).then((data) => {
   builds = data;
-  [...new Set(builds.map((build) => build.className))].forEach((name) => byId("class-filter").append(new Option(name, name)));
-  render();
+  const names = [...new Set(builds.map((build) => build.className))];
+  const choices = byId("class-choices");
+  const all = document.createElement("button");
+  all.type = "button";
+  all.dataset.classChoice = "";
+  all.textContent = "すべて";
+  all.addEventListener("click", () => setClass(""));
+  choices.append(all);
+  names.forEach((name) => {
+    byId("class-filter").append(new Option(name, name));
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.classChoice = name;
+    button.textContent = name;
+    button.addEventListener("click", () => setClass(name));
+    choices.append(button);
+  });
+  const restored = localStorage.getItem("poe2:navi:catalog-class") || "";
+  setClass(names.includes(restored) ? restored : "");
 }).catch(() => { byId("build-list").innerHTML = '<p class="empty">表示できませんでした。再読み込みしてください。</p>'; });
 byId("build-search").addEventListener("input", render);
-byId("class-filter").addEventListener("change", render);
+byId("class-filter").addEventListener("change", (event) => setClass(event.target.value));

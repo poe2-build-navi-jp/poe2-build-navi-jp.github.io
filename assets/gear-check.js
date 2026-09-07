@@ -11,6 +11,15 @@ const common = {
   purchase:["最も古い部位","困りごとに直結する1部位だけ比較","必要レベルと装備条件"]
 };
 
+function populateBuilds(className, selectedBuild = "") {
+  const select = byId("gear-build");
+  const matches = builds.filter((build) => build.className === className);
+  select.replaceChildren(new Option(className ? "ビルドを選択" : "先に職業を選択", ""));
+  matches.forEach((build) => select.append(new Option(build.name, build.id)));
+  select.disabled = !className;
+  select.value = matches.some((build) => build.id === selectedBuild) ? selectedBuild : (matches[0]?.id || "");
+}
+
 function render() {
   const build = builds.find((item) => item.id === byId("gear-build").value);
   const level = Math.max(1, Math.min(100, Number(byId("gear-level").value) || 1));
@@ -45,9 +54,17 @@ function render() {
 
 fetch("/data/builds.json").then((response) => response.json()).then((data) => {
   builds = data;
-  builds.forEach((build) => byId("gear-build").append(new Option(build.name, build.id)));
-  byId("gear-build").value = localStorage.getItem("poe2:navi:gear-build") || builds[0].id;
+  [...new Set(builds.map((build) => build.className))].forEach((name) => byId("gear-class").append(new Option(name, name)));
+  const savedBuild = localStorage.getItem("poe2:navi:gear-build") || "";
+  const savedClass = localStorage.getItem("poe2:navi:gear-class") || builds.find((build) => build.id === savedBuild)?.className || "";
+  byId("gear-class").value = savedClass;
+  populateBuilds(savedClass, savedBuild);
   byId("gear-level").value = localStorage.getItem("poe2:navi:gear-level") || 1;
+  render();
+});
+byId("gear-class").addEventListener("change", (event) => {
+  localStorage.setItem("poe2:navi:gear-class", event.target.value);
+  populateBuilds(event.target.value);
   render();
 });
 ["gear-build","gear-level","gear-concern","gear-budget"].forEach((id) => byId(id).addEventListener("input", render));

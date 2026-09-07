@@ -4,7 +4,7 @@ const STAGES = [
   { min: 41, max: 65, label: "Lv41〜キャンペーン終了" }, { min: 66, max: 75, label: "Mapping開始" },
   { min: 76, max: 90, label: "Early Endgame" }, { min: 91, max: 100, label: "Endgame完成" }
 ];
-const state = { builds: [], selectedBuild: "", level: 1 };
+const state = { builds: [], selectedClass: "", selectedBuild: "", level: 1 };
 const byId = (id) => document.getElementById(id);
 const stageFor = (level) => STAGES.find((stage) => level >= stage.min && level <= stage.max) || STAGES[0];
 const buildUrl = (build) => `/builds/${build.classSlug}/${build.slug}/`;
@@ -24,6 +24,16 @@ function updateQuickResult() {
   const link = byId("quick-link");
   link.href = build ? `${buildUrl(build)}?level=${state.level}#now` : "/builds/";
   build ? link.removeAttribute("aria-disabled") : link.setAttribute("aria-disabled", "true");
+}
+
+function populateQuickBuilds() {
+  const select = byId("quick-build");
+  const matches = state.builds.filter((build) => build.className === state.selectedClass);
+  select.replaceChildren(new Option(state.selectedClass ? "ビルドを選択" : "先に職業を選択", ""));
+  matches.forEach((build) => select.append(new Option(build.name, build.id)));
+  if (!matches.some((build) => build.id === state.selectedBuild)) state.selectedBuild = "";
+  select.value = state.selectedBuild;
+  select.disabled = !state.selectedClass;
 }
 
 function renderCards() {
@@ -49,6 +59,13 @@ function bindEvents() {
     const open = nav.classList.toggle("open");
     byId("menu-button").setAttribute("aria-expanded", String(open));
   });
+  byId("quick-class").addEventListener("change", (event) => {
+    state.selectedClass = event.target.value;
+    localStorage.setItem("poe2:navi:selected-class", state.selectedClass);
+    populateQuickBuilds();
+    localStorage.setItem("poe2:navi:selected-build", state.selectedBuild);
+    updateQuickResult();
+  });
   byId("quick-build").addEventListener("change", (event) => {
     state.selectedBuild = event.target.value;
     localStorage.setItem("poe2:navi:selected-build", state.selectedBuild);
@@ -67,15 +84,13 @@ async function init() {
     state.builds = await buildResponse.json();
     byId("site-version").textContent = site.siteVersion;
     byId("last-updated").textContent = site.lastUpdated;
-    state.builds.forEach((build) => {
-      const option = document.createElement("option");
-      option.value = build.id;
-      option.textContent = build.name;
-      byId("quick-build").append(option);
-    });
+    [...new Set(state.builds.map((build) => build.className))].forEach((name) => byId("quick-class").append(new Option(name, name)));
     state.selectedBuild = localStorage.getItem("poe2:navi:selected-build") || "";
+    const restoredBuild = state.builds.find((build) => build.id === state.selectedBuild);
+    state.selectedClass = localStorage.getItem("poe2:navi:selected-class") || restoredBuild?.className || "";
     state.level = Math.max(1, Math.min(100, Number(localStorage.getItem("poe2:navi:quick-level")) || 1));
-    byId("quick-build").value = state.selectedBuild;
+    byId("quick-class").value = state.selectedClass;
+    populateQuickBuilds();
     setLevel(state.level);
     renderCards();
     bindEvents();

@@ -222,15 +222,120 @@
         "label": "Lv1〜10",
         "mainSkill": "ワーリングスラッシュ×3 → ツイスター",
         "supports": "ワーリングスラッシュ：Rage、Rapid Attacks。ツイスター：Retreat、Elemental Armament。",
-        "passivePriority": "原典のCampaign Startツリーを使用。固有ノード名は原典で確認。",
+        "passivePriority": "原典のCampaign Start段階別ツリーを使用。正確な取得ノードはリンク先ツリーで確認。",
         "gearPriority": "槍・手袋・指輪の追加ダメージ、ブーツの移動速度、ライフ、耐性。",
         "replaceGear": "追加ダメージが不足する槍を優先して更新。",
-        "caution": "ワーリングスラッシュはLv1のまま維持する。",
-        "transitionCondition": "Ice-Tipped ArrowsとBarrageを使える段階へ進む。",
+        "caution": "ワーリングスラッシュはマナ消費を抑えるためLv1のまま維持する。",
+        "transitionCondition": "Lv11到達。ワーリングスラッシュ3回からツイスターへ安定してつなげられる。",
         "nowActions": [
           "ワーリングスラッシュをLv1のままにする",
           "3回使ってからツイスターへつなぐ",
           "槍・手袋・指輪の追加ダメージを確認する"
+        ]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "ワーリングスラッシュ → ツイスター。単体にはパリィ → Fangs of Frostも使用。",
+        "supports": "序盤のRage、Rapid Attacks、Retreat、Elemental Armamentを継続。War Bannerを最初のSpiritスキルとして追加。",
+        "passivePriority": "原典のEarly Campaign段階別ツリーへ進む。固有ノード名は原典ツリーで確認。",
+        "gearPriority": "追加ダメージ付きの槍・手袋・指輪、移動速度付きブーツ、ライフと耐性。",
+        "replaceGear": "武器の基礎性能が現在レベルから遅れている場合は槍を先に更新。",
+        "caution": "Fangs of Frostは通常周回の必須操作ではなく、強敵への補助として使う。",
+        "transitionCondition": "Lv21到達。War Bannerと単体用の補助操作を使い分けられる。",
+        "nowActions": [
+          "War Bannerを設定する",
+          "強敵にはFangs of Frostを加える",
+          "移動速度付きブーツを確保する"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "ワーリングスラッシュ×3 → ツイスターを継続。",
+        "supports": "主力4サポートを維持し、追加枠は原典のCampaign Progression構成に合わせる。未確認名は断定しない。",
+        "passivePriority": "Campaign Progression段階別ツリーへ移る。取得順は原典ツリーを優先。",
+        "gearPriority": "移動用と攻撃用の槍を分け始める。防具はライフ、耐性、移動速度。",
+        "replaceGear": "同じ槍1本で移動と攻撃の両方が停滞する場合、武器セットを2つに分ける。",
+        "caution": "武器セット1は速度、武器セット2はツイスターのダメージ用という役割を混同しない。",
+        "transitionCondition": "Lv31到達。スキルごとの武器セット切替が安定している。",
+        "nowActions": [
+          "移動用と攻撃用の槍を分ける",
+          "ツイスターを攻撃用セットへ割り当てる",
+          "ライフと不足耐性を補う"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "ワーリングスラッシュ / Fangs of Frostは速度用、ツイスターは攻撃用セットで使用。",
+        "supports": "Late Campaignへ向けて既存サポートを維持。変更は原典の段階別構成を確認して1枠ずつ行う。",
+        "passivePriority": "Campaign Progression後半の段階別ツリーを使用。装備条件を満たす能力値も確認。",
+        "gearPriority": "攻撃用槍のダメージ、速度用槍の使いやすさ、ブーツ移動速度、ライフ、耐性。",
+        "replaceGear": "火力不足なら攻撃用槍、防御不足なら耐性・ライフの低い防具を更新。",
+        "caution": "火力用の槍で移動操作まで行うと操作感が変わるため、割当を確認する。",
+        "transitionCondition": "Lv41到達。2つの武器セットと主力ローテーションが定着している。",
+        "nowActions": [
+          "武器セットの割当を確認する",
+          "攻撃用槍を優先して更新する",
+          "ボス前にWar Bannerを準備する"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "ワーリングスラッシュ×3 → ツイスター。強敵にはパリィ → Fangs of Frostを先に使用。",
+        "supports": "原典のLate Campaign構成へ段階的に更新。名称を検証できない枠は原典表示を優先。",
+        "passivePriority": "Late Campaign段階別ツリーを使用し、キャンペーン終了前に耐性と装備条件を整える。",
+        "gearPriority": "攻撃用槍のダメージ、ライフ、属性耐性、移動速度。",
+        "replaceGear": "キャンペーン終了時点で耐性不足になる部位と、火力が止まった攻撃用槍。",
+        "caution": "最大火力は複数操作が前提。通常敵には操作を増やしすぎない。",
+        "transitionCondition": "キャンペーン終了。主力ローテーション、武器切替、耐性が安定している。",
+        "nowActions": [
+          "Late Campaign構成へ更新する",
+          "不足耐性をキャンペーン終了前に補う",
+          "強敵用の操作順を練習する"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "広範囲のツイスターを周回主力にし、War BannerとFangs of Frostを強敵用に使用。",
+        "supports": "原典のEarly Atlas構成へ移行。未確認のサポート名は原典で確認。",
+        "passivePriority": "Early Atlas段階別ツリーへ移る。キャンペーン用ツリーを一括で推測変更しない。",
+        "gearPriority": "まずライフと耐性、次に攻撃用槍のダメージと移動速度。",
+        "replaceGear": "マップで倒される場合は火力装備より不足耐性・ライフの部位を先に更新。",
+        "caution": "視認性が下がりやすい構成なので、危険床やボス動作を見失わない。",
+        "transitionCondition": "低Tierマップを安定周回でき、強敵への操作順を再現できる。",
+        "nowActions": [
+          "Early Atlasツリーへ移る",
+          "ライフと耐性を先に安定させる",
+          "危険床が見える設定を優先する"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "ツイスターを周回と単体の主力にし、パリィ・Fangs of Frost・War Bannerを状況別に追加。",
+        "supports": "Atlas ProgressionからEarly Endgameの原典構成へ進む。変更前後のマナ消費を確認。",
+        "passivePriority": "Atlas Progression、Late Atlas、Early Endgameの順で段階別ツリーを追う。",
+        "gearPriority": "攻撃用槍、ライフ、耐性、防御、移動速度。更新効果を1部位ずつ比較。",
+        "replaceGear": "単体火力不足なら攻撃用槍、死亡が多いなら防具を優先。",
+        "caution": "装備依存度が高いため、固定価格やDPSではなく不足項目で比較する。",
+        "transitionCondition": "周回・単体・防御のどこがボトルネックか判断できる。",
+        "nowActions": [
+          "不足が火力か防御か切り分ける",
+          "原典のAtlas段階を順番に追う",
+          "装備を1部位ずつ比較する"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "ワーリングスラッシュ×3 → ツイスター。必要時にパリィ → Fangs of Frost → War Bannerを組み込む。",
+        "supports": "Mid EndgameからLate Endgameの原典構成を基準に、装備とマナに合わせて調整。",
+        "passivePriority": "Mid Endgame、Late Endgame段階別ツリーを順に完成。正確なノード名は原典を確認。",
+        "gearPriority": "攻撃用槍の実性能、防御、ライフ、耐性、移動速度を現在の不足順で更新。",
+        "replaceGear": "表示価格ではなく、同条件の出品と現在装備の差を比較して更新。",
+        "caution": "複数ボタンと武器切替が必要。簡略操作時と最大火力時を分けて考える。",
+        "transitionCondition": "完成後は火力・防御・操作性の不足を1項目ずつ改善する。",
+        "nowActions": [
+          "最大火力の操作順を安定させる",
+          "Late Endgameツリーを原典で確認する",
+          "固定相場を使わず更新効果を比較する"
         ]
       }
     ],
@@ -245,9 +350,21 @@
         "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
         "checkedAt": "2026-09-07",
         "type": "海外レベリング・Endgameガイド"
+      },
+      {
+        "name": "YouTube: ジェムリング ツイスター スターターガイド 0.5.5",
+        "url": "https://www.youtube.com/watch?v=IbfwRV3D33Y",
+        "checkedAt": "2026-09-07",
+        "type": "日本語動画"
+      },
+      {
+        "name": "YouTube: Gemling Twister Act進行",
+        "url": "https://www.youtube.com/watch?v=L8BaPlJR9pE",
+        "checkedAt": "2026-09-07",
+        "type": "日本語動画"
       }
     ],
-    "dataStatus": "source-checked",
+    "dataStatus": "reviewed",
     "audience": "序盤からツイスターを使い、武器セットを切り替えて進めたい人"
   },
   {
@@ -282,11 +399,11 @@
         "label": "Lv1〜10",
         "mainSkill": "ローリングスラム + ボーンシャッター",
         "supports": "ローリングスラム：Rapid Attacks、Brink。ボーンシャッター：Impact Shockwave、Magnified Area。",
-        "passivePriority": "原典のAct 1ツリーを使用。",
-        "gearPriority": "メイスと防具を現在レベルに合わせる。",
+        "passivePriority": "原典のAct 1段階別ツリーを使用。正確な取得ノードはリンク先で確認。",
+        "gearPriority": "メイスと防具を現在レベルに合わせ、ライフと耐性を優先。",
         "replaceGear": "スタン蓄積や火力が不足する場合はメイスを更新。",
-        "caution": "ローリングスラム1段目から、2段目の前にボーンシャッターへつなぐ。",
-        "transitionCondition": "Lv14で単体用Perfect Strikeを追加する段階へ進む。",
+        "caution": "ローリングスラム1段目から、2段目の前にボーンシャッターへつなぐ。ローリングスラムはLv1で保持。",
+        "transitionCondition": "Lv11到達。ローリングスラムからボーンシャッターへ安定してつなげられる。",
         "nowActions": [
           "ローリングスラム1段目からボーンシャッターへつなぐ",
           "ローリングスラムをLv1で保持する",
@@ -294,18 +411,108 @@
         ]
       },
       {
+        "label": "Lv11〜20",
+        "mainSkill": "ローリングスラム + ボーンシャッター。Lv14から単体用Perfect Strikeを追加。",
+        "supports": "Perfect Strike：Window of Opportunity、Concentrated Area。Herald of Ash：Magnified Area。",
+        "passivePriority": "原典のAct 2 - Pre Level 22段階別ツリーを使用。",
+        "gearPriority": "メイスの火力、アーマー、ライフ、耐性、移動速度。",
+        "replaceGear": "Perfect Strikeを追加しても単体火力が不足する場合はメイスを先に確認。",
+        "caution": "シールドウォールはLv22から。先に現在の主力を外さない。",
+        "transitionCondition": "Lv21到達。Lv22切替用の高アーマー盾を探し始めている。",
+        "nowActions": [
+          "Lv14でPerfect Strikeを追加する",
+          "単体戦でPerfect Strikeを使う",
+          "Lv22用の高アーマー盾を探す"
+        ]
+      },
+      {
         "label": "Lv21〜30",
-        "mainSkill": "Lv22からシールドウォールへ切替",
-        "supports": "正式な段階別サポートは原典のAct 2 - Shield Wall Swapで確認。",
-        "passivePriority": "原典のAct 2 - Shield Wall Swapツリーへ移行。",
-        "gearPriority": "Lv22以降はアーマー値が高い盾を優先。",
+        "mainSkill": "Lv22からシールドウォールへ切替。",
+        "supports": "正式な段階別サポートは原典のAct 2 - Shield Wall Swapで確認。安全に抽出できない名称は断定しない。",
+        "passivePriority": "原典のAct 2 - Shield Wall Swap段階別ツリーへ移行。",
+        "gearPriority": "Lv22以降はアーマー値が高い盾を最優先。防具はライフと耐性。",
         "replaceGear": "シールドウォール切替時に盾を最優先で更新。",
-        "caution": "Lv22前に主力を外さない。",
-        "transitionCondition": "シールドウォールを起爆する操作が安定する。",
+        "caution": "Lv22前に主力を外さず、切替後は壁を起爆する操作を練習する。",
+        "transitionCondition": "シールドウォールを設置して起爆する操作が安定する。",
         "nowActions": [
           "Lv22でシールドウォールへ切り替える",
-          "アーマー値の高い盾を探す",
-          "起爆操作を練習する"
+          "アーマー値の高い盾を装備する",
+          "壁の設置と起爆を練習する"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "シールドウォールを主力として継続。",
+        "supports": "原典のAct 3段階別構成へ進む。サポートはリンク先の現行表示を確認して交換。",
+        "passivePriority": "原典のAct 3段階別ツリーを使用。Smithの防御効果と装備要求を優先。",
+        "gearPriority": "盾のアーマー、胴装備の防御、ライフ、不足耐性、移動速度。",
+        "replaceGear": "火力と壁の性能に直結する盾を先に比較し、防御不足なら胴装備を更新。",
+        "caution": "主力の性能が盾に強く依存するため、武器だけを更新し続けない。",
+        "transitionCondition": "Lv41到達。通常敵とボスで壁の置き方を使い分けられる。",
+        "nowActions": [
+          "盾のアーマー値を比較する",
+          "Act 3段階別ツリーを確認する",
+          "壁の置き方を敵ごとに変える"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "シールドウォールを周回・単体の中心に使用。",
+        "supports": "原典のAct 4、Interludes段階別構成を順に使用。未確認の名称は原典を優先。",
+        "passivePriority": "Act 4からInterludes段階別ツリーへ進み、キャンペーン後のMapsへ接続。",
+        "gearPriority": "高アーマー盾、アーマー防具、ライフ、属性耐性、移動速度。",
+        "replaceGear": "キャンペーン終了時に不足する耐性と、性能が停滞した盾を優先。",
+        "caution": "Smithは耐性を整えやすいが、未確認の上限値や装備不要を前提にしない。",
+        "transitionCondition": "キャンペーン終了。盾の性能と防御が低Tierマップ開始に耐えられる。",
+        "nowActions": [
+          "Act 4→Interludesの順に進める",
+          "盾と胴装備のアーマーを確認する",
+          "キャンペーン終了前に耐性を整える"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "シールドウォールで進路と敵集団を制御しながら起爆。",
+        "supports": "原典のMaps段階別構成へ切り替える。変更後は操作感と消費リソースを確認。",
+        "passivePriority": "Maps段階別ツリーを使用し、キャンペーン用から一括で推測変更しない。",
+        "gearPriority": "耐性とライフを安定させ、高アーマー盾と胴防具を更新。",
+        "replaceGear": "死亡が多い場合は防具、壁の火力不足なら盾を最優先。",
+        "caution": "狭い地形と広い地形で壁の当て方が変わる。設置位置を固定しない。",
+        "transitionCondition": "低Tierマップを安定周回し、ボスへ壁を継続して当てられる。",
+        "nowActions": [
+          "Maps段階別ツリーへ移る",
+          "耐性とライフを先に安定させる",
+          "地形に合わせて壁の位置を変える"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "シールドウォールを主力に、周回とボスで配置を切り替える。",
+        "supports": "Maps後半からEndgameガイドの構成へ段階的に移行。確認できない枠は原典で照合。",
+        "passivePriority": "Mapsツリーを完成させ、装備が揃ってからEndgame側へ移る。",
+        "gearPriority": "盾のアーマー、防具のアーマー、ライフ、耐性、移動速度。",
+        "replaceGear": "単体火力なら盾、防御不足なら胴と不足耐性の部位を更新。",
+        "caution": "高投資時の火力伸びは他構成と同じではない。固定DPS目標を置かない。",
+        "transitionCondition": "周回とボスのどちらが不足しているか切り分けられる。",
+        "nowActions": [
+          "不足が火力か防御か確認する",
+          "盾と胴を別々に比較する",
+          "装備が揃ってからEndgame構成へ移る"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "シールドウォールを主力とし、地形・敵サイズに合わせて設置と起爆を反復。",
+        "supports": "原典のGiga EndgameおよびAvatar of Fire版を候補として比較し、装備前提を満たす方だけ採用。",
+        "passivePriority": "Giga Endgame段階別ツリーを基準にする。Avatar of Fire版への変更は原典の装備前提を確認後に行う。",
+        "gearPriority": "高性能盾、アーマー、防御、ライフ、耐性を不足順で更新。",
+        "replaceGear": "固定価格を使わず、現在の盾・防具と同条件出品の性能差で判断。",
+        "caution": "Avatar of Fire版は自動的な上位互換ではない。装備とツリーを部分的に混ぜない。",
+        "transitionCondition": "完成後は盾、防御、操作のボトルネックを1項目ずつ改善する。",
+        "nowActions": [
+          "完成形を1種類に決める",
+          "原典の装備前提を確認する",
+          "盾と防御を不足順に更新する"
         ]
       }
     ],
@@ -326,9 +533,21 @@
         "url": "https://mobalytics.gg/poe-2/builds/avatar-of-fire-smith-of-kitava-lexd",
         "checkedAt": "2026-09-07",
         "type": "海外Endgameガイド"
+      },
+      {
+        "name": "YouTube: Shield Wall Smith of Kitava 0.5 Final Update",
+        "url": "https://www.youtube.com/watch?v=lmgCL7idCpg",
+        "checkedAt": "2026-09-07",
+        "type": "海外動画"
+      },
+      {
+        "name": "YouTube: 0.5 ウォリアー環境・育成確認",
+        "url": "https://www.youtube.com/watch?v=Qzck6ikP-ec",
+        "checkedAt": "2026-09-07",
+        "type": "日本語補助動画"
       }
     ],
-    "dataStatus": "source-checked",
+    "dataStatus": "reviewed",
     "audience": "装備を整えやすい耐久型のリーグスターターを探している人"
   },
   {
@@ -363,11 +582,11 @@
         "label": "Lv1〜10",
         "mainSkill": "Lv1〜5：Entangle + Contagion。Lv6以降：Essence Drain + Contagion。",
         "supports": "Contagion：Unleash、Magnified Area。Essence Drain：Chain、Swift Affliction。",
-        "passivePriority": "原典のAct 1ツリーを使用。",
-        "gearPriority": "キャンペーン中はアーマーと不足耐性を優先。",
+        "passivePriority": "原典のAct 1段階別ツリーを使用。正確な取得ノードはリンク先で確認。",
+        "gearPriority": "キャンペーン中はアーマー、ライフ、不足耐性を優先。",
         "replaceGear": "防御が不足する防具を更新。",
         "caution": "Lv6以降はFrost BombとVolcano、Raging Spiritsも加える。",
-        "transitionCondition": "Lv21前後で最初のアセンダンシーへ進める。",
+        "transitionCondition": "Lv11到達。Essence DrainとContagionの連携が安定している。",
         "nowActions": [
           "Lv6でEssence Drainへ移行する",
           "Frost BombでExposureを付ける",
@@ -375,33 +594,108 @@
         ]
       },
       {
+        "label": "Lv11〜20",
+        "mainSkill": "Essence Drain + Contagion。Frost Bomb、Volcano、Raging Spiritsを補助に使用。",
+        "supports": "序盤サポートを継続し、原典のAct 2構成へ進む。未確認枠は原典で確認。",
+        "passivePriority": "最初のアセンダンシーまでは原典のスペル育成ツリーを継続。",
+        "gearPriority": "アーマー、ライフ、不足耐性。構成切替用の能力値とゴールドも確保。",
+        "replaceGear": "防御不足の防具を優先し、切替直前のスペル装備への過剰投資は避ける。",
+        "caution": "Lv22前後でミニオン型へ切り替えるため、スペル用ツリーを完成形と思わない。",
+        "transitionCondition": "最初のアセンダンシーへ進め、切替用ゴールドを残している。",
+        "nowActions": [
+          "Essence DrainとContagionを継続する",
+          "最初のアセンダンシーを進める",
+          "振り直し用ゴールドを残す"
+        ]
+      },
+      {
         "label": "Lv21〜30",
-        "mainSkill": "ケラリの幻惑 + ケラリの残虐",
-        "supports": "範囲はMagnified Area II、単体はConcentrated Areaへ切替候補。",
-        "passivePriority": "最初のアセンダンシー後にスペル系からミニオン系ツリーへ振り直す。",
-        "gearPriority": "アーマーを保ちつつ、ミニオン系の必要能力を確認。",
+        "mainSkill": "最初のアセンダンシー後、ケラリの幻惑 + ケラリの残虐へ切替。",
+        "supports": "範囲はMagnified Area II、単体はConcentrated Areaを切替候補にする。",
+        "passivePriority": "最初のアセンダンシー後にスペル系からミニオン系の段階別ツリーへ振り直す。",
+        "gearPriority": "アーマーを保ちつつ、ミニオン系の必要能力と防御を確認。",
         "replaceGear": "構成切替に合わないスペル専用装備を1部位ずつ見直す。",
-        "caution": "構成切替用のゴールドを残す。",
+        "caution": "指示スキルとサポートを用意してから切り替え、途中状態を長く残さない。",
         "transitionCondition": "ケラリの指示スキルで通常敵と単体を処理できる。",
         "nowActions": [
           "最初のアセンダンシーを完了する",
           "ケラリの指示スキルへ切り替える",
-          "振り直し用ゴールドを残す"
+          "スペル系からミニオン系へ振り直す"
         ]
       },
       {
         "label": "Lv31〜40",
         "mainSkill": "ケラリの幻惑 + ケラリの残虐。Lv40以降はルザンの罠を追加。",
-        "supports": "Lv36でMusterを追加候補。",
-        "passivePriority": "原典のAct 3〜4ツリーを継続。",
-        "gearPriority": "アーマー、耐性、必要能力値。",
+        "supports": "Lv36でMusterを追加候補。ルザン用サポートは切替時に原典を確認。",
+        "passivePriority": "原典のAct 3〜Act 4段階別ツリーを継続。",
+        "gearPriority": "アーマー、ライフ、耐性、必要能力値。",
         "replaceGear": "ルザン追加に必要な条件を満たさない部位を更新。",
-        "caution": "ルザンの罠はLv40以降の切替。",
-        "transitionCondition": "ルザンの罠を戦闘開始時に使える。",
+        "caution": "ルザンの罠はLv40以降。先に既存の処理手段を外さない。",
+        "transitionCondition": "Lv40到達。ルザンの罠を戦闘開始時に使える。",
         "nowActions": [
           "Lv36でMusterを確認する",
           "Lv40用のルザンを準備する",
           "指示スキルのクールダウンを意識する"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "ルザンの罠を開始時に置き、ケラリの幻惑・残虐を合間に指示。",
+        "supports": "ルザンの罠は原典のAct 4+構成へ。ケラリ用サポートも同段階を確認。",
+        "passivePriority": "Act 4+のミニオン段階別ツリーを使用し、キャンペーン後の防御型へ接続。",
+        "gearPriority": "アーマー、ライフ、属性耐性、ミニオン系の有効能力。",
+        "replaceGear": "防御不足の防具を優先し、ミニオン用装備は実際の効果を確認して更新。",
+        "caution": "通常敵とボスでは指示順が異なる。通常は罠を優先し、強敵では残虐から幻惑を重ねる。",
+        "transitionCondition": "キャンペーン終了。ルザンとケラリの指示をクールダウンごとに使える。",
+        "nowActions": [
+          "ルザンの罠を戦闘開始時に使う",
+          "ケラリの指示を合間に入れる",
+          "キャンペーン終了前に耐性を整える"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "ルザンの罠 + ケラリの指示。マッピング用Spectreは条件を満たした場合のみ追加。",
+        "supports": "ケラリ：Bidding II、Muster、Hulking Minionsを軸に、残りは原典の現行構成を確認。ルザンも原典のMapping構成へ。",
+        "passivePriority": "Mapping開始用のミニオン・防御ツリーへ移行。装備が揃う前に完成形へ一括変更しない。",
+        "gearPriority": "まず耐性と防御。次にミニオンのジェムレベル、ダメージ、攻撃速度。",
+        "replaceGear": "マップで倒される場合は防具、処理が遅い場合はミニオンに有効な装備を確認。",
+        "caution": "Spectre候補は入手場所と能力を原典で確認し、未入手なら無理に完成扱いしない。",
+        "transitionCondition": "低Tierマップで指示順と防御が安定し、Spectre枠の目的が明確になる。",
+        "nowActions": [
+          "耐性と防御を先に安定させる",
+          "ミニオンのジェムレベルを確認する",
+          "Spectreは入手条件を確認して追加する"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "ルザンの罠を軸にケラリの指示を重ね、Bind Spectreを周回補助として運用。",
+        "supports": "ケラリはBidding II、Muster、Hulking Minionsなど、ルザンはBidding III、Muster、Long Fuse II、Hulking Minions、Magnified Area IIが原典候補。",
+        "passivePriority": "Endgameのミニオン・ES段階へ進む。防御切替は装備が揃ってから行う。",
+        "gearPriority": "最大ES、Focus由来ES、ミニオンのクリティカル・ダメージ、リチャージ、耐性。",
+        "replaceGear": "アーマー育成装備からES装備へ一括で変えず、耐性と実防御を維持して1部位ずつ更新。",
+        "caution": "ルザンのExposure相互作用にはガイド記載の不具合注意があるため、現行挙動をゲーム内で確認する。",
+        "transitionCondition": "ESと耐性が安定し、各ミニオンの役割とSpirit配分を説明できる。",
+        "nowActions": [
+          "ES移行を1部位ずつ行う",
+          "ミニオン用サポートを原典と照合する",
+          "ルザンの現行挙動を確認する"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "ルザンの罠とケラリの指示を基本に、用途を確認したSpectreを組み合わせる。",
+        "supports": "ケラリとルザンの完成候補を原典に合わせ、装備とSpirit配分に応じて調整。",
+        "passivePriority": "現行Endgame段階別ツリーを基準に、ES・ミニオン・耐性の不足へ合わせて調整。",
+        "gearPriority": "ミニオンのジェムレベル、最大ES、Focus由来ES、ミニオン火力、リチャージ、耐性。",
+        "replaceGear": "固定価格ではなく、現在の不足と同条件出品の性能差で1部位ずつ判断。",
+        "caution": "指示スキルが多い構成。周回とボスで操作順を分け、未確認の数値DPSを目標にしない。",
+        "transitionCondition": "完成後はミニオン火力、ES、防御操作の不足を1項目ずつ改善する。",
+        "nowActions": [
+          "周回とボスの操作順を分ける",
+          "ESと耐性の不足を確認する",
+          "ミニオン装備を1部位ずつ比較する"
         ]
       }
     ],
@@ -422,9 +716,27 @@
         "url": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide",
         "checkedAt": "2026-09-07",
         "type": "海外キャンペーン・Endgameガイド"
+      },
+      {
+        "name": "YouTube: 0.5.5 Starter Build Valashta Minions",
+        "url": "https://www.youtube.com/watch?v=OEA3Xcf7qhU",
+        "checkedAt": "2026-09-07",
+        "type": "日本語動画"
+      },
+      {
+        "name": "note: 0.5 ヴァラシュタ エンドゲーム構成",
+        "url": "https://note.com/poe2_sat/n/n5d5723c96d96",
+        "checkedAt": "2026-09-07",
+        "type": "日本語補助資料"
+      },
+      {
+        "name": "Mobalytics: Sandscorcher Endgame 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/sandscorcher-disciple-of-varashta",
+        "checkedAt": "2026-09-07",
+        "type": "海外Endgameガイド"
       }
     ],
-    "dataStatus": "source-checked",
+    "dataStatus": "reviewed",
     "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人"
   },
   {
@@ -458,12 +770,12 @@
       {
         "label": "Lv1〜10",
         "mainSkill": "ツイスター + ワーリングスラッシュ",
-        "supports": "詳細は原典のAct 1構成を確認。安全に抽出できない名称は掲載しない。",
-        "passivePriority": "相棒型へ早く寄せすぎず、原典のAct 1ツリーを使用。",
-        "gearPriority": "槍・手袋・指輪の追加ダメージを優先。",
-        "replaceGear": "追加ダメージの低い槍を更新。",
+        "supports": "ワーリングスラッシュ：Rage、Rapid Attacks。ツイスター：Retreat、Chilling Ice。",
+        "passivePriority": "相棒型へ早く寄せず、原典のAct 1段階別ツリーを使用。",
+        "gearPriority": "槍・手袋・指輪の追加ダメージ、ライフ、耐性。",
+        "replaceGear": "追加ダメージの低い槍を優先して更新。",
         "caution": "この段階では相棒型へ切り替えない。",
-        "transitionCondition": "Tier 7ジェムとAct 3の切替準備へ進む。",
+        "transitionCondition": "Lv11到達。ツイスターとワーリングスラッシュで安定して進める。",
         "nowActions": [
           "ツイスターとワーリングスラッシュで進める",
           "槍・手袋・指輪の追加ダメージを確認する",
@@ -471,18 +783,108 @@
         ]
       },
       {
+        "label": "Lv11〜20",
+        "mainSkill": "ツイスター + ワーリングスラッシュを継続。",
+        "supports": "Act 1構成を継続し、原典のAct 2段階別構成へ進む。未確認枠は原典で確認。",
+        "passivePriority": "原典のAct 2段階別ツリーを使用し、まだ相棒完成形へ振り直さない。",
+        "gearPriority": "槍・手袋・指輪の追加ダメージ、移動速度、ライフ、耐性。",
+        "replaceGear": "序盤の武器更新以外ではゴールドを使いすぎず、Act 3切替資金を残す。",
+        "caution": "Act 2〜3でのギャンブル購入は切替資金を失いやすいため控える。",
+        "transitionCondition": "Lv21到達。Tier 7ジェムと2回目の試練を目標に進める。",
+        "nowActions": [
+          "ツイスター育成を継続する",
+          "移動速度と耐性を確認する",
+          "切替用ゴールドを残す"
+        ]
+      },
+      {
         "label": "Lv21〜30",
         "mainSkill": "Act 3・2回目の試練まではツイスター型を継続。条件達成後にテイムビーストへ移行。",
-        "supports": "相棒用サポートは原典の切替後構成を確認。",
-        "passivePriority": "2回目の試練後、相棒用ツリーへまとめて振り直す。",
-        "gearPriority": "相棒ダメージ、ミニオンスキルレベル、ライフ、回避/ディフレクション、耐性。",
+        "supports": "相棒用サポートは原典のAct 3 SWAP段階を確認。安全に抽出できない名称は断定しない。",
+        "passivePriority": "2回目の試練後、原典のAct 3 SWAP段階別ツリーへまとめて振り直す。",
+        "gearPriority": "相棒ダメージ、ミニオンスキルレベル、ライフ、回避・ディフレクション、耐性。",
         "replaceGear": "切替後に槍中心の装備から相棒向け装備へ段階的に更新。",
-        "caution": "振り直しに約20,000ゴールドが必要という原典の目安がある。",
+        "caution": "原典では振り直しに約20,000ゴールドの目安。価格ではなく切替資金の参考値として扱う。",
         "transitionCondition": "Tier 7ジェム、2回目の試練、振り直し資金が揃う。",
         "nowActions": [
           "2回目の試練を終える",
           "Tier 7ジェムを用意する",
-          "約20,000ゴールドを切替用に残す"
+          "切替資金を残して相棒型へ移る"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "テイムした相棒を主力にし、自身は位置取りと補助を担当。",
+        "supports": "原典のAct 3 SWAPからAct 4段階へ進む。相棒ごとのサポートは原典表示を確認。",
+        "passivePriority": "Act 3 SWAP後の相棒用段階別ツリーを使用。",
+        "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ライフ、回避、耐性。",
+        "replaceGear": "相棒へ寄与しない槍育成装備を、相棒・防御に有効な部位から交換。",
+        "caution": "相棒の種類には差があるが、未確認の個体を必須・最強と断定しない。",
+        "transitionCondition": "Lv41到達。相棒が主力として通常敵と強敵を処理できる。",
+        "nowActions": [
+          "相棒用ツリーへの切替を完了する",
+          "相棒に有効な装備へ1部位ずつ替える",
+          "相棒のAIと位置取りを確認する"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "相棒を主力として継続し、自身は敵の誘導と安全な位置取りを行う。",
+        "supports": "原典のAct 4、Interludes段階別構成を順に使用。",
+        "passivePriority": "Act 4からInterludes段階別ツリーへ進み、マップ用構成へ接続。",
+        "gearPriority": "ライフ、回避・ディフレクション、属性耐性、相棒ダメージ、ミニオン攻撃速度。",
+        "replaceGear": "死亡が多い場合は相棒火力より自身の防具と耐性を優先。",
+        "caution": "相棒は通路で詰まる場合がある。狭い場所では自分の位置を変えて誘導する。",
+        "transitionCondition": "キャンペーン終了。相棒の維持、自身の防御、位置取りが安定している。",
+        "nowActions": [
+          "自身のライフと耐性を整える",
+          "狭い場所で相棒を誘導する",
+          "Interludes段階別ツリーを確認する"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "相棒を主力に、マップでは敵集団へ安全に接近させる。",
+        "supports": "原典のRed Maps前段階へ進む。相棒固有サポートはテイム対象と現行ガイドを照合。",
+        "passivePriority": "マップ開始用の相棒・防御ツリーへ移る。",
+        "gearPriority": "属性・混沌耐性、ライフ、回避・ディフレクション、相棒ダメージ、ミニオンのジェムレベル。",
+        "replaceGear": "低Tierマップで倒されるなら防具、処理が遅いなら相棒に有効な装備を確認。",
+        "caution": "相棒AIが狙った敵を攻撃しない場合がある。火力だけでなく誘導しやすさも確認。",
+        "transitionCondition": "低Tierマップで相棒の生存と自身の防御が安定する。",
+        "nowActions": [
+          "属性と混沌耐性を確認する",
+          "相棒の生存とAIを観察する",
+          "不足が防御か相棒火力か切り分ける"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "用途に合う相棒を主力にし、自身は位置取りと補助に専念。",
+        "supports": "Red MapsからEndgame段階別構成へ進む。テイム対象に合わないサポートを混在させない。",
+        "passivePriority": "Red Maps、Endgameの順に段階別ツリーを追う。",
+        "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ES、回避、防御、耐性。",
+        "replaceGear": "後半のES移行は耐性と実防御を維持しながら1部位ずつ行う。",
+        "caution": "Hasteを持つRare Werewolfなどは候補だが、入手した個体の能力を確認して採用する。",
+        "transitionCondition": "相棒の役割、サポート、防御移行の目的が明確になる。",
+        "nowActions": [
+          "相棒の能力を実物で確認する",
+          "Red Maps段階別ツリーを追う",
+          "ES移行は1部位ずつ行う"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "選んだ相棒を主力として、敵の誘導・位置取り・補助操作を安定させる。",
+        "supports": "EndgameまたはZoo段階の原典構成を選び、テイム対象と装備前提に合わせる。",
+        "passivePriority": "EndgameとZooを混ぜず、選んだ段階別ツリーを基準に不足防御を調整。",
+        "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ES、回避・ディフレクション、耐性。",
+        "replaceGear": "固定相場やDPSを使わず、自身と相棒の不足へ効果がある部位だけ更新。",
+        "caution": "相棒のボディブロックとAIは残る弱点。数値だけでなく実戦での扱いやすさを評価する。",
+        "transitionCondition": "完成後は相棒火力、自身の防御、AI対策を1項目ずつ改善する。",
+        "nowActions": [
+          "EndgameかZooの方針を決める",
+          "相棒と自身の不足を分けて確認する",
+          "実戦でAIと位置取りを調整する"
         ]
       }
     ],
@@ -503,9 +905,21 @@
         "url": "https://mobalytics.gg/poe-2/builds/companion-huntress-league-starter",
         "checkedAt": "2026-09-07",
         "type": "海外レベリングガイド"
+      },
+      {
+        "name": "YouTube: POE2 0.5 Spirit Walker Twister Build",
+        "url": "https://www.youtube.com/watch?v=WO2pUIEWT40",
+        "checkedAt": "2026-09-07",
+        "type": "日本語動画"
+      },
+      {
+        "name": "YouTube: Spirit Walker Beast Master Guide",
+        "url": "https://www.youtube.com/watch?v=p6uR2uC1Kk4",
+        "checkedAt": "2026-09-07",
+        "type": "海外動画"
       }
     ],
-    "dataStatus": "source-checked",
+    "dataStatus": "reviewed",
     "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人"
   }
 ]
