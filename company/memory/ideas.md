@@ -11,9 +11,10 @@
   サイト全体の課題。中途半端な主観評価より、まず採点基準のフォーマットを
   決めてから埋めるべき。
 - **sources（裏付け情報源）の件数にばらつき**:
-  mercenary(twister-gemling)=1件、warrior・huntress・witch=2件、
-  monk・ranger=3件、sorceress・druid=4件。1〜2件のビルドは裏付けが薄く、
-  優先して追加候補。
+  mercenary(twister-gemling)=1件だったが、2026-09-08にMaxrollのガイド
+  （0.5.5対応、WebFetchで内容を直接検証済み）を追加し2件に。
+  warrior・huntress・witch=2件、monk・ranger=3件、sorceress・druid=4件は
+  未着手。次点の追加対象。
 - **ssf（ソロセルフファウンド適性）が半数で未設定**:
   monk, mercenary, huntress, druid の4ビルドで `ssf: null`。
   SSFプレイヤー向けの需要は根強いため、検証して埋める価値がある。
