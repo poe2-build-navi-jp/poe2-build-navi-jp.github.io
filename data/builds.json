@@ -18,11 +18,12 @@
     "difficulty": "中（Lv41で構成切替）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": null,
+    "ssf": true,
     "strengths": [
       "ワーリングアサルトで移動しながら攻撃でき、マップを進みやすい。",
       "フォーリングサンダーを組み合わせ、チャージを単体火力や広範囲攻撃へ変換できる。",
-      "Lv1からLv41までの育成用ルートが用意されている。"
+      "Lv1からLv41までの育成用ルートが用意されている。",
+      "Maxrollのガイドで「ユニークアイテムを必要としない」と明記されており、SSFでも成立しやすい。武器は物理DPS400以上のクォータースタッフをドロップ/クラフトで揃えるのが主な条件。"
     ],
     "weaknesses": [
       "ワーリングアサルトはLv41まで使えないため、キャンペーン途中でスキルを切り替える必要がある。",
@@ -174,6 +175,12 @@
         "url": "https://poe2db.tw/jp/Whirling_Assault",
         "checkedAt": "2026-09-07",
         "type": "日本語スキルデータ"
+      },
+      {
+        "name": "Maxroll: Whirling Assault Martial Artist Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
+        "checkedAt": "2026-09-08",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
       }
     ],
     "audience": "近接で移動しながら戦い、Lv1からEndgameまで同じページで進めたい人"
@@ -1278,7 +1285,8 @@
     "weaknesses": [
       "防御は装備依存で、後半はESと混沌耐性を整える必要がある。",
       "長いボス戦ではマナ不足に注意が必要。",
-      "第二アセンダンシー以降の自動発動構成は、必要ジェムとSpiritを揃えてから切り替える必要がある。"
+      "第二アセンダンシー以降の自動発動構成は、必要ジェムとSpiritを揃えてから切り替える必要がある。",
+      "SSFでの成立可否は情報源に明記されていない。序盤は安価に始められると案内される一方、Maxrollのガイドはエンドゲームで複数のユニークアイテム（Atalui's Bloodletting等）を重要な強化先として挙げており、終盤の完成度はSSFでは下がる可能性がある。"
     ],
     "levelingStages": [
       {
@@ -1431,6 +1439,12 @@
         "url": "https://gamerch.com/poe2/954990",
         "checkedAt": "2026-09-07",
         "type": "日本語攻略資料"
+      },
+      {
+        "name": "Maxroll: Entangle Oracle Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
+        "checkedAt": "2026-09-08",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新）"
       }
     ],
     "audience": "Lv1から同じ主力を使い、少ない基本操作で植物ビルドを育てたい初心者"

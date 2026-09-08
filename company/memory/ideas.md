@@ -10,11 +10,11 @@
   未設定（null）。評価基準（何を1〜5点等でどう採点するか）の設計自体が
   サイト全体の課題。中途半端な主観評価より、まず採点基準のフォーマットを
   決めてから埋めるべき。
-- **sources（裏付け情報源）の件数にばらつき**:
-  mercenary(twister-gemling)=1件だったが、2026-09-08にMaxrollのガイド
-  （0.5.5対応、WebFetchで内容を直接検証済み）を追加し2件に。
-  warrior・huntress・witch=2件、monk・ranger=3件、sorceress・druid=4件は
-  未着手。次点の追加対象。
+- **sources（裏付け情報源）の件数にばらつき**: 2026-09-08に手薄だった4ビルド
+  （mercenary=1→2、huntress=2→2〈新規源に差し替え〉、warrior=2→3、witch=2→3）
+  全てにMaxroll等の2件目・3件目の情報源をWebFetchで直接検証のうえ追加した。
+  現在は全ビルドが2件以上（mercenary/huntress=2、warrior/monk/ranger/witch=3、
+  sorceress/druid=4）。優先度の高い「1件のみ」ビルドは無くなった。
 - **ssf（ソロセルフファウンド適性）が半数で未設定**:
   monk, mercenary, huntress, druid の4ビルドで `ssf: null`。
   SSFプレイヤー向けの需要は根強いため、検証して埋める価値がある。
@@ -27,6 +27,14 @@
     poe.ninjaをブラウザで直接確認するか、実際のキャラクタービルドURLを個別に
     WebFetchする必要がある。現状は`ssf: null`のまま、weaknessesに
     「情報源間で矛盾があり未確認」という趣旨を記載済み。
+  - monk(whirling-assault)は2026-09-08に調査し解決。Maxrollのガイドに
+    「ユニークアイテムを必要としない」との明記があり、`ssf: true`に更新した。
+  - druid(plant-oracle)は2026-09-08に調査したが、mercenaryと同様に未解決。
+    Maxrollのガイドはエンドゲームで複数の重要ユニーク（Atalui's Bloodletting等）
+    を挙げており、序盤は安価に始められるとしつつ終盤の完成度はSSFで下がる
+    可能性がある。`ssf: null`のまま、weaknessesにその旨を記載済み。
+  - 残る未解決はmercenaryとdruidの2件（huntressは明示断定なしだが前向きな
+    情報のみでstrengthsに追記済み）。
 - **levelingStagesの各段階のnowActions等は充実している一方、Endgame以降の
   比較データ（他ビルドとの相対評価、装備の具体的な価格帯・入手難易度）は
   記事内では扱われていない**（要件からの推測。深掘り時に確認）。
