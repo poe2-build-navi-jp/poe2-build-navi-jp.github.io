@@ -203,7 +203,8 @@
     ],
     "weaknesses": [
       "ワーリングスラッシュはマナ消費を抑えるためLv1維持が推奨され、誤って上げない注意が必要。",
-      "武器セット別のスキル割り当てとローテーションを覚える必要がある。"
+      "武器セット別のスキル割り当てとローテーションを覚える必要がある。",
+      "SSF（ソロセルフファウンド）での成立可否は情報源に明記されていない。Maxrollのガイドではユニークアイテムを前提にした最適化ルートも紹介されており、SSFでは代替装備の検討が必要になる可能性がある。"
     ],
     "levelingStages": [
       {
@@ -338,6 +339,12 @@
         "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
         "checkedAt": "2026-09-07",
         "type": "海外レベリング・Endgameガイド"
+      },
+      {
+        "name": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "checkedAt": "2026-09-08",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新）"
       }
     ],
     "dataStatus": "reviewed",
