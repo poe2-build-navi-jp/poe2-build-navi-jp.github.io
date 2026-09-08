@@ -520,6 +520,12 @@
         "url": "https://mobalytics.gg/poe-2/builds/avatar-of-fire-smith-of-kitava-lexd",
         "checkedAt": "2026-09-07",
         "type": "海外Endgameガイド"
+      },
+      {
+        "name": "Maxroll: Smith of Kitava Ascendancy Overview",
+        "url": "https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview",
+        "checkedAt": "2026-09-08",
+        "type": "海外アセンダンシー解説（2026年6月17日更新。Shield Wall自体への言及はないが、耐性キャップの取りやすさなど本ビルドの前提となる耐性面の裏付けとして参照）"
       }
     ],
     "dataStatus": "reviewed",
@@ -1234,6 +1240,12 @@
         "url": "https://mobalytics.gg/poe-2/builds/witch-minions-leveling",
         "checkedAt": "2026-09-07",
         "type": "海外レベリングガイド"
+      },
+      {
+        "name": "Maxroll: Skeletal Sniper Infernalist Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/skeletal-sniper-infernalist-build-guide",
+        "checkedAt": "2026-09-08",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月3日更新）"
       }
     ],
     "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者"
