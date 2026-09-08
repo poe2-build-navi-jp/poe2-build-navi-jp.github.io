@@ -18,6 +18,15 @@
 - **ssf（ソロセルフファウンド適性）が半数で未設定**:
   monk, mercenary, huntress, druid の4ビルドで `ssf: null`。
   SSFプレイヤー向けの需要は根強いため、検証して埋める価値がある。
+  - mercenary(twister-gemling)は2026-09-08に調査したが未解決のまま。
+    Maxrollは早期にユニークアミュレット「The Taming」入手を推奨する一方、
+    WebSearchの合成要約は「uniqueアイテム不要でSSF向き」と正反対の主張をしており、
+    aoeahのSSF Tier10には掲載なし。poe.ninjaの実データ
+    （Runes of Aldur SSFリーグのGemling Legionnaire一覧）で裏を取ろうとしたが、
+    JS描画ページのためWebFetchでは中身が取得できなかった。今後もし取り組むなら、
+    poe.ninjaをブラウザで直接確認するか、実際のキャラクタービルドURLを個別に
+    WebFetchする必要がある。現状は`ssf: null`のまま、weaknessesに
+    「情報源間で矛盾があり未確認」という趣旨を記載済み。
 - **levelingStagesの各段階のnowActions等は充実している一方、Endgame以降の
   比較データ（他ビルドとの相対評価、装備の具体的な価格帯・入手難易度）は
   記事内では扱われていない**（要件からの推測。深掘り時に確認）。
