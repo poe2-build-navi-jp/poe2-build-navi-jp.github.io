@@ -729,7 +729,8 @@
     "ssf": null,
     "strengths": [
       "固有ビーストを主力にする明確なEndgame方針がある。",
-      "Act 1〜3の育成ルートと相棒型への切替条件が説明されている。"
+      "Act 1〜3の育成ルートと相棒型への切替条件が説明されている。",
+      "主力のコンパニオン（テイムしたビースト）はトレード不要のドロップ/捕獲要素。Maxrollのガイドでもこのビルドはユニークアイテムを必要としないと明記されており、SSF環境でも比較的成立しやすいと考えられる（ただし『SSF対応』と明言されているわけではなく、マーケットプレイスでビーストの強さを事前確認する機能はSSFで使用不可という注記がある）。"
     ],
     "weaknesses": [
       "テイムビーストはTier 7ジェムまで使えず、相棒型への切替はAct 3・2回目の試練後が推奨されている。",
@@ -874,6 +875,12 @@
         "url": "https://mobalytics.gg/poe-2/builds/companion-huntress-league-starter",
         "checkedAt": "2026-09-07",
         "type": "海外レベリングガイド"
+      },
+      {
+        "name": "Maxroll: Companion Spirit Walker Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/companion-spirit-walker-build-guide",
+        "checkedAt": "2026-09-08",
+        "type": "海外Endgameガイド（対応パッチ0.5.4、2026年6月26日更新）"
       }
     ],
     "dataStatus": "reviewed",
