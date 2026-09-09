@@ -7,4 +7,5 @@ const date="2026-09-09";
 const urls=["/","/builds/","/gear-check/","/class-check/","/beginner-guide/","/dictionary/","/tier-list/","/about/","/editorial-policy/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...builds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`)];
 const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((path,i)=>`  <url><loc>${base}${path}</loc><lastmod>${date}</lastmod><priority>${i===0?"1.0":path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority></url>`).join("\n")}\n</urlset>\n`;
 await writeFile(resolve(root,"sitemap.xml"),xml);
+await writeFile(resolve(root,"sitemap.xml"),xml.replace('</urlset>',`  <url><loc>${base}/classes/</loc></url>\n</urlset>`));
 console.log(`Generated sitemap with ${urls.length} URLs.`);

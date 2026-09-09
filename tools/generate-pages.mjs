@@ -95,3 +95,4 @@ for (const classData of classes) {
 }
 
 console.log(`Generated ${builds.length} build detail pages and ${classes.length} class pages.`);
+await import('./generate-static-content.mjs');

@@ -102,7 +102,13 @@ function renderNow(index) {
 function renderProgress() {
   const wrapper = byId("progress-checks");
   wrapper.replaceChildren();
-  const storageKey = `poe2:navi:progress:${build.id}`;
+  const storageKey = `poe2:navi:progress:${build.id}:${stageIndexFor(level)}`;
+  // Preserve pre-migration checks on the saved character's current stage.
+  const legacyKey=`poe2:navi:progress:${build.id}`;
+  if(!localStorage.getItem(storageKey)&&!localStorage.getItem(`${legacyKey}:migrated`)){
+    const legacy=localStorage.getItem(legacyKey);
+    if(legacy){const oldLevel=Number(localStorage.getItem(`poe2:navi:level:${build.id}`))||1;localStorage.setItem(`poe2:navi:progress:${build.id}:${stageIndexFor(oldLevel)}`,legacy);localStorage.setItem(`${legacyKey}:migrated`,'true');}
+  }
   const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
   PROGRESS_ITEMS.forEach(([id, label]) => {
     const row = document.createElement("label");
@@ -133,7 +139,7 @@ function updateProgress(saved) {
 }
 
 function setLevel(value) {
-  level = Math.max(1, Math.min(100, Number(value) || 1));
+  level = Math.max(1, Math.min(100, Math.trunc(Number(value) || 1)));
   byId("level-input").value = level;
   byId("level-range").value = level;
   byId("level-output").value = `Lv${level}`;
@@ -142,6 +148,8 @@ function setLevel(value) {
   const index = stageIndexFor(level);
   renderNow(index);
   renderStage(index);
+  renderProgress();
+  localStorage.setItem('poe2:navi:last-access', new Date().toISOString());
   if (selectedTrouble) renderTrouble(selectedTrouble);
 }
 
@@ -262,6 +270,11 @@ function renderBuild(builds) {
 }
 
 function bindEvents() {
+  const savedStages=JSON.parse(localStorage.getItem(`poe2:navi:stages:${build.id}`)||'{}');
+  document.querySelectorAll('#static-roadmap details').forEach((details,index)=>{
+    const label=document.createElement('label'),check=document.createElement('input');check.type='checkbox';check.checked=Boolean(savedStages[index]);label.className='progress-check';label.append(check,document.createTextNode('この育成段階を完了した'));details.append(label);
+    check.addEventListener('change',()=>{savedStages[index]=check.checked;localStorage.setItem(`poe2:navi:stages:${build.id}`,JSON.stringify(savedStages));});
+  });
   byId("level-input").addEventListener("input", (event) => setLevel(event.target.value));
   byId("level-range").addEventListener("input", (event) => setLevel(event.target.value));
   byId("level-minus").addEventListener("click", () => setLevel(level - 1));

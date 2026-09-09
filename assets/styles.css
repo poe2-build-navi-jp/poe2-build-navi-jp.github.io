@@ -1,6 +1,12 @@
 :root{--ink:#10171e;--dark:#0c151d;--dark2:#172630;--paper:#f2eee5;--surface:#fffdf8;--gold:#d8ad52;--orange:#d86130;--muted:#68727a;--line:#d7d0c4;--ok:#2b7652;--warning:#936514;--focus:#69a7ff;--shadow:0 20px 55px #10171e18}
 *{box-sizing:border-box}
+*[hidden]{display:none!important}
+main,section,article,nav,aside,div,fieldset{min-width:0}
+input,select{max-width:100%;min-width:0}
+p,li,h1,h2,h3,a,dd,strong{overflow-wrap:anywhere}
+#static-roadmap{margin:28px 0}#static-roadmap details{background:#fff;border:1px solid var(--line);margin:8px 0;padding:14px}#static-roadmap summary{cursor:pointer;min-height:44px;font-weight:800}#static-roadmap dd{margin:4px 0 18px}#static-roadmap dt{font-weight:800}
 html{scroll-behavior:smooth}
+html{scroll-padding-top:100px}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "Yu Gothic",YuGothic,system-ui,sans-serif;-webkit-text-size-adjust:100%}
 body.modal-open{overflow:hidden}
 a{color:inherit;text-decoration:none}

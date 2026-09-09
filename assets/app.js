@@ -38,6 +38,13 @@ function populateQuickBuilds() {
 
 function renderClassCards() {
   const grid = byId("class-grid");
+  const existing = [...grid.querySelectorAll('[data-class-slug]')];
+  if (existing.length) {
+    let count=0;
+    existing.forEach(card=>{const data=state.classes.find(c=>c.slug===card.dataset.classSlug);card.hidden=Boolean(state.selectedStyle&&!data?.combatStyle.includes(state.selectedStyle));if(!card.hidden)count++;});
+    byId('style-result').textContent=`${count}職業から選べます。`;
+    return;
+  }
   grid.replaceChildren();
   const matches = state.classes.filter((item) => !state.selectedStyle || item.combatStyle.includes(state.selectedStyle));
   matches.forEach((classData) => {
@@ -120,7 +127,13 @@ async function init() {
     populateQuickBuilds();
     setLevel(state.level);
     renderClassCards();
-    if (restoredBuild) byId("resume-copy").textContent = `${restoredBuild.className}「${restoredBuild.name}」をLv${state.level}から再開できます。`;
+    if (restoredBuild) {
+      const checks=JSON.parse(localStorage.getItem(`poe2:navi:stages:${restoredBuild.id}`)||'{}');
+      const count=Object.values(checks).filter(Boolean).length;
+      byId('resume-copy').textContent=`${restoredBuild.className}「${restoredBuild.name}」Lv${state.level}・育成ロードマップ進捗 ${Math.round(count/8*100)}%`;
+      byId('quick-link').textContent=`Lv${state.level}から再開`;
+      const shortcut=document.createElement('a');shortcut.className='button';shortcut.href='#quick-start';shortcut.textContent=`Lv${state.level}から続ける`;document.querySelector('.hero-guide').prepend(shortcut);
+    }
     bindEvents();
   } catch (error) {
     byId("class-grid").innerHTML = '<p class="empty">表示できませんでした。再読み込みしてください。</p>';

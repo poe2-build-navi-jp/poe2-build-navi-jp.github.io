@@ -1,0 +1,20 @@
+/* Keep controls in normal flow: no clipped content or horizontal carousels. */
+@media(max-width:680px){
+ .site-header{gap:8px;flex-wrap:wrap;padding:10px 16px}
+ .brand{flex-shrink:0}
+ .page-nav{flex:1 1 100%;display:flex;flex-wrap:wrap;white-space:normal;overflow:visible;margin:0;gap:4px}
+ .page-nav a{flex:1 1 auto;min-height:44px;text-align:center;padding:10px 6px}
+ .stage-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;scroll-snap-type:none}
+ .stage-button{min-width:0;min-height:52px;white-space:normal}
+ .level-controls{grid-template-columns:48px minmax(0,1fr) 48px}
+ .level-controls button{min-width:48px;min-height:48px;touch-action:manipulation}
+ input,select{font-size:16px}
+ .build-hero-grid{display:flex;flex-direction:column}
+ .level-card{order:-1;width:100%}
+ .fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .mobile-sticky{bottom:max(8px,env(safe-area-inset-bottom));left:12px;right:12px}
+ .site-footer{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+ .footer-links{gap:8px}.footer-links a{min-height:44px;padding:8px}
+ .source-list a{word-break:break-word}
+ .section .filter-note{color:var(--muted)}
+}
