@@ -1448,5 +1448,339 @@
       }
     ],
     "audience": "Lv1から同じ主力を使い、少ない基本操作で植物ビルドを育てたい初心者"
+  },
+  {
+    "id": "witch-ed-contagion-lich",
+    "slug": "ed-contagion-lich",
+    "classSlug": "witch",
+    "name": "ED・コンテージョン リッチ",
+    "className": "ウィッチ",
+    "ascendancy": "リッチ",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-09",
+    "dataStatus": "reviewed",
+    "mainSkill": "Essence Drain + Contagion",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "低〜中（マナ管理あり）",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "ContagionとEssence Drainを中心にLv1からEndgameまで段階別構成がある。",
+      "通常敵の集団処理と安全な位置取りを両立しやすいと書面ガイドで説明されている。",
+      "キャンペーン、T1〜T15、フルライフ、ローライフの各構成が分けて提示されている。"
+    ],
+    "weaknesses": [
+      "スキルを複数使うため、マナ消費が重くなりやすい。",
+      "単体戦ではBonestorm、Dark Effigy、Despairなど役割の違う操作が増える。",
+      "ローライフ版は必要条件が多いため、序盤から部分的に混ぜない。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "Contagion。単体はVolcanoからEssence Drainへ移行",
+        "supports": "UnleashをContagionへ。Essence Drain入手後はSwift Affliction IとZenith I。",
+        "passivePriority": "書面ガイドのACT 1段階ツリーを使用。正確なノード名は掲載元で確認。",
+        "gearPriority": "+Chaos Spell Skills、Spell Damage。防具は最大ライフ、冷気耐性、移動速度。",
+        "replaceGear": "混沌呪文を伸ばさない武器、移動速度のないブーツを比較。",
+        "caution": "Contagionだけで単体を倒そうとせず、VolcanoまたはEssence Drainを使う。",
+        "transitionCondition": "Lv11到達。Contagionと単体スキルを役割別に使える。",
+        "nowActions": [
+          "ContagionへUnleashを付ける",
+          "Essence Drainを入手したら単体用に使う",
+          "ライフ・冷気耐性・移動速度を確認する"
+        ]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "Essence Drain + Contagion。単体にBonestormを追加",
+        "supports": "ContagionへMagnified Area I。BonestormへBurgeon IとZenith I。",
+        "passivePriority": "ACT 1後半からACT 2の段階別ツリーへ進む。固有名は書面資料で確認。",
+        "gearPriority": "+Chaos Spell Skills、Spell Damage、Cast Speed、ライフ、耐性。",
+        "replaceGear": "火力不足ならワンド、防御不足なら胴・ブーツを優先。",
+        "caution": "通常敵はContagionからEssence Drain、強敵はBonestormも使う。",
+        "transitionCondition": "Lv21到達。通常敵と強敵でスキルを使い分けられる。",
+        "nowActions": [
+          "EDとContagionの順番を試す",
+          "Bonestormを強敵用に設定する",
+          "ワンドの混沌呪文性能を比較する"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "Essence Drain + Contagion + Bonestorm",
+        "supports": "Ravenous SwarmにはCorrosion、またはWithering PresenceにはProlonged Duration I。",
+        "passivePriority": "書面ガイドのACT 2〜ACT 3段階ツリーを使用。",
+        "gearPriority": "混沌スペルレベル、スペルダメージ、キャスト速度、ライフ、耐性。",
+        "replaceGear": "古いワンド、耐性不足の防具を1部位ずつ更新。",
+        "caution": "ボスではWithered WandのChaos BoltでWitherを補う手順が示されている。",
+        "transitionCondition": "Lv31到達。ボス用の弱体化とBonestormを使える。",
+        "nowActions": [
+          "ボス用のWither手段を確認する",
+          "Bonestormのサポートを照合する",
+          "耐性不足を1属性ずつ直す"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "Essence Drain + Contagion。Dark EffigyとDespairを準備",
+        "supports": "ACT 3〜ACT 4の表示構成を使用。未確認名称は書面ガイドで確認。",
+        "passivePriority": "ACT 3/4段階ツリーへ移行。",
+        "gearPriority": "混沌スペルレベル、キャスト速度、ライフ、エナジーシールド、耐性。",
+        "replaceGear": "主力が伸びない場合はワンド、死亡が多い場合は防具。",
+        "caution": "Dark EffigyとDespairは強敵用。通常敵で毎回すべて使う必要はない。",
+        "transitionCondition": "Lv41到達。周回用と強敵用の操作を分けられる。",
+        "nowActions": [
+          "Dark Effigyを強敵用に準備する",
+          "Despairの役割を確認する",
+          "ワンドと防具の不足を分ける"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "Essence Drain + Contagion。強敵にDark Effigy + Despair",
+        "supports": "書面ガイドのACT 4-Endgame移行構成を使用。",
+        "passivePriority": "ACT 4-Endgame段階ツリーを使用。",
+        "gearPriority": "混沌スペルレベル、キャスト速度、ライフ/ES、各耐性、移動速度。",
+        "replaceGear": "キャンペーン終了時の耐性不足を優先し、次にワンド。",
+        "caution": "フルライフ版へ進む前にキャンペーン構成を崩さない。",
+        "transitionCondition": "キャンペーン終了。T1マップ用のフルライフ構成を確認できる。",
+        "nowActions": [
+          "キャンペーン用構成を完成させる",
+          "各耐性とライフ/ESを確認する",
+          "T1用フルライフ版を開く"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "Essence Drain + Contagion + Dark Effigy + Despair",
+        "supports": "T1〜T15用の書面表示構成を使用。",
+        "passivePriority": "T1〜T15フルライフ段階ツリーへ移行。",
+        "gearPriority": "ライフ/ES、耐性、混沌スペルレベル、キャスト速度、マナ維持。",
+        "replaceGear": "倒されるなら防具、処理が遅いならワンドとサポートを先に確認。",
+        "caution": "マナ不足を感じたら、火力更新前にスキル回しと維持を確認する。",
+        "transitionCondition": "低Tierマップを安定して周回し、ボス用操作を再現できる。",
+        "nowActions": [
+          "T1用フルライフ構成へ揃える",
+          "耐性とライフ/ESを確認する",
+          "長い戦闘のマナ維持を試す"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Essence Drain + Contagionを周回、Dark Effigy + Despairを強敵用",
+        "supports": "T1〜T15フルライフ版を基準に不足だけ更新。",
+        "passivePriority": "フルライフEndgame段階ツリーを使用。",
+        "gearPriority": "混沌スペルレベル、スペルダメージ、キャスト速度、防御、マナ維持。",
+        "replaceGear": "火力・防御・マナのうち最も不足する1部位から更新。",
+        "caution": "ローライフ版の必要条件が揃う前に部分移行しない。",
+        "transitionCondition": "フルライフ版でT1〜T15の進行が安定する。",
+        "nowActions": [
+          "フルライフ版の不足を確認する",
+          "火力・防御・マナを分けて評価する",
+          "ローライフ移行条件を先に読む"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "Essence Drain + Contagion。採用版に応じた強敵用セット",
+        "supports": "フルライフまたはローライフの一方へ構成全体を揃える。",
+        "passivePriority": "採用するEndgame版のツリーだけを使用。",
+        "gearPriority": "採用版が要求する混沌呪文性能、防御、キャスト速度、マナ維持。",
+        "replaceGear": "固定相場を使わず、現在の不足に効く部位を同条件で比較。",
+        "caution": "フルライフとローライフを部分的に混ぜない。",
+        "transitionCondition": "採用版の主力、防御、マナ維持が役割どおり動く。",
+        "nowActions": [
+          "フルライフかローライフか決める",
+          "採用版へ装備とツリーを揃える",
+          "マナと防御の不足を1つずつ更新する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "ワンド：+Chaos Spell Skills、Spell Damage、Cast Speed",
+      "防具：ライフ/ES、耐性、移動速度",
+      "Endgame：採用版の防御条件とマナ維持"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Chaos DoT Lich Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit",
+        "checkedAt": "2026-09-09",
+        "type": "海外書面レベリング・Endgameガイド"
+      }
+    ],
+    "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者"
+  },
+  {
+    "id": "mercenary-grenade-gemling",
+    "slug": "grenade-gemling",
+    "classSlug": "mercenary",
+    "name": "グレネード・ジェムリング",
+    "className": "マーセナリー",
+    "ascendancy": "ジェムリング・リージョネア",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-09",
+    "dataStatus": "reviewed",
+    "mainSkill": "Explosive Grenade",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "中（複数グレネード）",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "Lv1からEndgameまでグレネードを軸にする段階別の書面ガイドがある。",
+      "Explosive、Flash、Gas、Oil、Cluster Grenadeを状況別に使える。",
+      "ACT 1からUber Endgameまで構成が分けて提示されている。"
+    ],
+    "weaknesses": [
+      "複数のグレネードを使うため、画面上の効果が多くなりやすい。",
+      "クロスボウと各部位の攻撃性能を段階的に更新する必要がある。",
+      "Endgame版を序盤へ部分的に持ち込まず、段階を揃える必要がある。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "Explosive Grenade。補助にFrost BombとFlash Grenade",
+        "supports": "Explosive Grenade：Multishot + Elemental Armament。Flash Grenade：Multishot。",
+        "passivePriority": "ACT 1段階ツリー。書面で確認できた優先ノードはDemolitionist、Grenadier。",
+        "gearPriority": "クロスボウの物理/元素ダメージ、投射物レベル。ブーツ移動速度、手袋・指輪の追加ダメージ。",
+        "replaceGear": "古いクロスボウと移動速度のないブーツを優先。",
+        "caution": "Explosive Grenadeを主力にし、Frost BombはExposure用として使う。",
+        "transitionCondition": "Lv11到達。Explosive Grenadeと補助スキルを役割別に使える。",
+        "nowActions": [
+          "Explosive Grenadeへサポートを付ける",
+          "クロスボウのダメージを比較する",
+          "移動速度付きブーツを探す"
+        ]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "Explosive Grenade + Flash Grenade。入手後Gas Grenade",
+        "supports": "書面ガイドのACT 1〜2表示構成を使用。",
+        "passivePriority": "ACT 2段階ツリーへ進み、Repeating Explosivesへの導線を確認。",
+        "gearPriority": "クロスボウ、手袋・指輪の追加ダメージ、ライフ、耐性、移動速度。",
+        "replaceGear": "火力不足はクロスボウ、防御不足は胴・兜を優先。",
+        "caution": "新しいグレネードを一度に増やさず、役割を確認して追加する。",
+        "transitionCondition": "Lv21到達。FlashとGasの役割を区別できる。",
+        "nowActions": [
+          "Flash Grenadeの役割を確認する",
+          "Gas Grenadeを入手後に試す",
+          "クロスボウと耐性を見直す"
+        ]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "Explosive Grenade + Flash/Gas Grenade",
+        "supports": "ACT 2〜3の表示構成を使用。",
+        "passivePriority": "ACT 3段階ツリー。Demolitionist、Grenadier、Repeating Explosivesの取得順は掲載ツリーで確認。",
+        "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、ライフ、アーマー、耐性。",
+        "replaceGear": "古いクロスボウ、次にライフ/耐性不足の防具。",
+        "caution": "複数グレネードのクールダウンと投げる順番を実戦で確認する。",
+        "transitionCondition": "Lv31到達。主力と補助グレネードの順番が安定する。",
+        "nowActions": [
+          "段階別ツリーと現在位置を照合する",
+          "投げる順番を固定する",
+          "ライフ・アーマー・耐性を確認する"
+        ]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "Explosive Grenadeを主力に複数グレネードを追加",
+        "supports": "ACT 3/4表示構成を使用。",
+        "passivePriority": "ACT 3/4段階ツリーと最初のアセンダンシー取得を確認。",
+        "gearPriority": "クロスボウ、追加ダメージ、投射物レベル、アーマー、ライフ、耐性。",
+        "replaceGear": "火力停滞ならクロスボウ、死亡が増えたら防具を更新。",
+        "caution": "アセンダンシーは書面ガイドの順序と現在のジェム条件を照合する。",
+        "transitionCondition": "Lv41到達。キャンペーン後半構成へ移れる。",
+        "nowActions": [
+          "アセンダンシー取得状況を確認する",
+          "クロスボウの更新効果を比較する",
+          "補助グレネードを必要時だけ使う"
+        ]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "Explosive、Flash、Gas、Oil、Cluster Grenadeから段階表示どおり採用",
+        "supports": "ACT 4/Interludes表示構成を使用。",
+        "passivePriority": "ACT 4とInterludesの段階別ツリーを使用。",
+        "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、アーマー、ライフ、各耐性。",
+        "replaceGear": "キャンペーン終了時は耐性不足と古いクロスボウを優先。",
+        "caution": "Endgame用グレネードを必要条件前に部分採用しない。",
+        "transitionCondition": "キャンペーン終了。Early Endgame表示へ移行できる。",
+        "nowActions": [
+          "ACT 4構成へスキルを揃える",
+          "各耐性とアーマーを確認する",
+          "Early Endgame版の条件を読む"
+        ]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "書面ガイドのEarly Endgameグレネード構成",
+        "supports": "Early Endgame表示のサポート構成を使用。",
+        "passivePriority": "Early Endgame段階ツリーへ移行。",
+        "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、ライフ、アーマー、耐性。",
+        "replaceGear": "倒されるなら防具、処理が遅いならクロスボウとサポート。",
+        "caution": "画面効果が多いときも危険範囲と自分の位置を優先する。",
+        "transitionCondition": "低Tierマップで主力と補助グレネードが役割どおり動く。",
+        "nowActions": [
+          "Early Endgame版へ全体を揃える",
+          "防具と耐性を確認する",
+          "グレネードの順番を再確認する"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "書面ガイドのMid Endgameグレネード構成",
+        "supports": "Mid Endgame表示のサポートを使用。",
+        "passivePriority": "Mid Endgame段階ツリーを使用。",
+        "gearPriority": "クロスボウ、追加ダメージ、投射物レベル、防御、必要能力。",
+        "replaceGear": "火力・防御の不足を分け、最も効果が高い1部位から更新。",
+        "caution": "Uber版の装備前提が揃うまではMid Endgame版を維持する。",
+        "transitionCondition": "Mid Endgame版で周回とボス用操作が安定する。",
+        "nowActions": [
+          "Mid Endgame版へ揃える",
+          "火力と防御の不足を分ける",
+          "Uber版の条件を先に確認する"
+        ]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "書面ガイドのUber Endgameグレネード構成",
+        "supports": "Uber Endgame表示のサポート構成を、条件を満たす場合だけ使用。",
+        "passivePriority": "Uber Endgame段階ツリーを使用。",
+        "gearPriority": "採用版のクロスボウ、投射物レベル、追加ダメージ、防御、必要能力。",
+        "replaceGear": "固定相場を使わず、現在の不足へ効く部位を同条件で比較。",
+        "caution": "Early/Mid/Uberの装備とツリーを部分的に混ぜない。",
+        "transitionCondition": "採用した段階の主力、補助、防御が役割どおり動く。",
+        "nowActions": [
+          "採用するEndgame段階を決める",
+          "装備とツリーを同じ段階へ揃える",
+          "不足部位を1つずつ更新する"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "クロスボウ：物理/元素ダメージ、投射物レベル",
+      "手袋・指輪：追加ダメージ、ライフ、耐性",
+      "防具：アーマー、ライフ、耐性、ブーツ移動速度"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Grenades Gemling League Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
+        "checkedAt": "2026-09-09",
+        "type": "海外書面レベリング・Endgameガイド"
+      }
+    ],
+    "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者"
   }
 ]

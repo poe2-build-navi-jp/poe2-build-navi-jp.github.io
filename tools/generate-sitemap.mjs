@@ -1,0 +1,10 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+const root=resolve(import.meta.dirname,"..");
+const [builds,classes,guides,terms]=await Promise.all(["builds","classes","guides","dictionary"].map(name=>readFile(resolve(root,`data/${name}.json`),"utf8").then(JSON.parse)));
+const base="https://poe2-build-navi-jp.github.io";
+const date="2026-09-09";
+const urls=["/","/builds/","/gear-check/","/class-check/","/beginner-guide/","/dictionary/","/tier-list/","/about/","/editorial-policy/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...builds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`)];
+const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((path,i)=>`  <url><loc>${base}${path}</loc><lastmod>${date}</lastmod><priority>${i===0?"1.0":path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority></url>`).join("\n")}\n</urlset>\n`;
+await writeFile(resolve(root,"sitemap.xml"),xml);
+console.log(`Generated sitemap with ${urls.length} URLs.`);

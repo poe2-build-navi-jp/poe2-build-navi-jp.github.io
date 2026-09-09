@@ -1,0 +1,15 @@
+[
+  {"slug":"build","term":"ビルド","oneLine":"キャラクターの育て方一式。","description":"スキル、サポート、パッシブ、装備を組み合わせた方針です。同じ職業でも選ぶビルドで進め方が変わります。","importance":"職業を決めただけでは、次に取るスキルや装備は決まりません。","action":"職業ページから1つ選び、現在Lvを入力します。","guide":"/guides/what-is-a-build/"},
+  {"slug":"dps","term":"DPS","oneLine":"1秒あたりに与えるダメージの目安。","description":"計算条件や効果の発動条件で値が変わるため、異なる条件の数値をそのまま比較しません。","importance":"火力の一部を比べる助けになりますが、実戦のすべてを表す数値ではありません。","action":"主力、サポート、武器、パッシブの順に確認します。","guide":"/guides/increase-damage/"},
+  {"slug":"skill-gem","term":"スキルジェム","oneLine":"攻撃、呪文、召喚など実際の行動を行う能力。","description":"使用条件や役割があり、育成途中で主力が切り替わる場合があります。","importance":"ビルドの操作と火力の中心です。","action":"現在段階の「今使うメインスキル」を確認します。","guide":"/guides/skill-gems/"},
+  {"slug":"support-gem","term":"サポートジェム","oneLine":"対応するスキルの性能を変える補助ジェム。","description":"サポートごとに対応条件があります。ゲーム内表示と確認済みビルド資料を照合します。","importance":"主力スキルの挙動や性能を大きく変えます。","action":"現在段階のサポート欄とゲーム内の対応表示を確認します。","guide":"/guides/support-gems/"},
+  {"slug":"passive-tree","term":"パッシブツリー","oneLine":"ポイントを割り振って継続的な能力を得る仕組み。","description":"完成形だけでなく、現在レベルに対応する経路が重要です。","importance":"育成途中の火力、防御、必要能力を支えます。","action":"ビルド詳細の現在段階に対応したツリーを確認します。","guide":"/guides/passive-tree/"},
+  {"slug":"resistance","term":"耐性","oneLine":"特定種類のダメージを軽減する防御値。","description":"火・冷気・雷など種類ごとに確認します。耐性以外の防御手段も必要です。","importance":"不足すると対応属性の攻撃で倒されやすくなります。","action":"キャラクター画面で不足属性を特定し、装備を1部位ずつ見直します。","guide":"/guides/resistance/"},
+  {"slug":"mapping","term":"Mapping","oneLine":"キャンペーン後にマップを進める周回段階。","description":"当サイトではキャンペーン後をMapping開始、Early Endgame、Endgame完成に分けます。","importance":"育成用構成から終盤用構成へ移る節目です。","action":"ビルド詳細のMapping開始段階を開きます。","guide":"/guides/mapping/"},
+  {"slug":"endgame","term":"Endgame","oneLine":"キャンペーン後に続く高難度コンテンツ全体。","description":"完成条件はビルドにより異なるため、固定DPSだけで判定しません。","importance":"装備、防御、資源維持を自分の不足に合わせて更新する段階です。","action":"Early Endgameから不足を1項目ずつ改善します。","guide":"/guides/endgame/"},
+  {"slug":"league-starter","term":"リーグスターター","oneLine":"新しい環境の最初のキャラクターで始めやすいビルド。","description":"安価と常に同じ意味ではありません。育成手順や必要装備も含めて確認します。","importance":"資産が少ない状態から進められるかを判断する目安です。","action":"情報源がStarterと明示したビルドだけ候補にします。","guide":"/guides/choosing-a-class/"},
+  {"slug":"ssf","term":"SSF","oneLine":"他プレイヤーとの取引なしで遊ぶ形式。","description":"必要装備を自分で入手するため、入手難度がビルド選択へ影響します。","importance":"取引前提の固有装備が必要な構成は進めにくくなる場合があります。","action":"SSF対応を情報源が明示しているか確認します。","guide":"/guides/choosing-a-class/"},
+  {"slug":"ascendancy","term":"アセンダンシー","oneLine":"職業から派生する専門クラス。","description":"ビルド固有の仕組みを支える選択が含まれます。","importance":"同じ職業でもアセンダンシーで役割や育成方針が変わります。","action":"ビルド概要と現在段階の取得条件を確認します。","guide":"/guides/what-is-a-build/"},
+  {"slug":"spirit","term":"Spirit","oneLine":"一部の継続効果などで使用するリソース。","description":"使用する仕組みや必要量はビルドによって異なります。","importance":"必要条件を満たさないと予定した継続効果が動きません。","action":"採用ビルドの段階別資料で必要条件を確認します。","guide":"/guides/equipment-basics/"},
+  {"slug":"energy-shield","term":"エナジーシールド","oneLine":"ライフとは別にダメージを受け止める防御層。","description":"略してESと表記されることがあります。採用量や回復方法はビルドごとに異なります。","importance":"ESを主防御にするビルドでは装備選びへ大きく影響します。","action":"ビルドの防御方針と装備優先を確認します。","guide":"/guides/why-i-die/"}
+]

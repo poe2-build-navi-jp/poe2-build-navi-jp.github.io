@@ -2,11 +2,12 @@ import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
+const baseUrl = "https://poe2-build-navi-jp.github.io";
 const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
 
-const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "assets/app.js", "assets/detail.js"];
+const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "class-check/index.html"];
 for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
@@ -16,10 +17,12 @@ const [index, buildList, gearCheck, robots, sitemap, ads, verification, buildsTe
 ]);
 const builds = JSON.parse(buildsText);
 const classes = JSON.parse(await read("data/classes.json"));
+const guides = JSON.parse(await read("data/guides.json"));
+const terms = JSON.parse(await read("data/dictionary.json"));
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
-assert(builds.length === 8, "build count must be 8");
-assert(new Set(builds.map((build) => build.className)).size === 8, "each playable class must have one build");
+assert(builds.length === 10, "build count must be 10");
+assert(new Set(builds.map((build) => build.className)).size === 8, "each playable class must have a build");
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
 assert(index.includes('id="class-grid"'), "homepage class cards container missing");
@@ -50,6 +53,7 @@ for (const build of builds) {
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/">`), `${pagePath}: canonical mismatch`);
     const expectedRobots = ["reviewed", "source-checked"].includes(build.dataStatus) ? 'content="index,follow"' : 'content="noindex,follow"';
     assert(page.includes(expectedRobots), `${pagePath}: robots status mismatch`);
+    assert(page.includes('id="trouble-buttons"'), `${pagePath}: trouble diagnosis missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -70,10 +74,21 @@ assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
-for (const page of ["builds/", "gear-check/", "tier-list/", "beginner-guide/", "dictionary/"]) {
+for (const page of ["builds/", "gear-check/", "class-check/", "tier-list/", "beginner-guide/", "dictionary/"]) {
   assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
+assert(guides.length === 13, "beginner guide must have 13 chapters");
+for (const guide of guides) {
+  assert(sitemap.includes(`${baseUrl}/guides/${guide.slug}/`), `${guide.slug}: guide missing from sitemap`);
+  try { const page=await read(`guides/${guide.slug}/index.html`); assert(page.includes(`<link rel="canonical" href="${baseUrl}/guides/${guide.slug}/">`), `${guide.slug}: guide canonical mismatch`); } catch { failures.push(`missing guide: ${guide.slug}`); }
+}
+for (const term of terms) {
+  assert(sitemap.includes(`${baseUrl}/dictionary/${term.slug}/`), `${term.slug}: term missing from sitemap`);
+  try { await access(resolve(root, "dictionary", term.slug, "index.html")); } catch { failures.push(`missing term: ${term.slug}`); }
+}
+const allText = [index, buildsText, JSON.stringify(guides), JSON.stringify(terms)].join("\n");
+assert(!/(youtube\.com|youtu\.be)/i.test(allText), "YouTube references must not appear");
 for (const removed of ["builds/druid/wolf/index.html", "builds/witch/spark-comet-infernalist/index.html"]) {
   try { await access(resolve(root, removed)); failures.push(`retired build still exists: ${removed}`); } catch {}
 }

@@ -63,6 +63,15 @@ function renderClassCards() {
     grid.append(card);
   });
   byId("style-result").textContent = state.selectedStyle ? `${state.selectedStyle}に該当する${matches.length}職業を表示しています。` : `${matches.length}職業から選べます。`;
+  const helper = document.querySelector(".class-helper");
+  if (helper && !helper.querySelector("[data-full-class-check]")) {
+    const link = document.createElement("a");
+    link.className = "button";
+    link.href = "/class-check/";
+    link.dataset.fullClassCheck = "";
+    link.textContent = "4問の職業診断を始める";
+    helper.append(link);
+  }
 }
 
 function bindEvents() {

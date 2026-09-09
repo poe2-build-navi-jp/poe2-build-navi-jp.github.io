@@ -14,6 +14,7 @@ const text = (value) => value === null || value === undefined || value === "" ? 
 const stageIndexFor = (level) => Math.max(0, STAGES.findIndex((stage) => level >= stage.min && level <= stage.max));
 let build;
 let level = 1;
+let selectedTrouble = null;
 const PROGRESS_ITEMS = [
   ["skill", "現在段階のメインスキルを用意した"],
   ["support", "案内されたサポートを確認した"],
@@ -141,6 +142,30 @@ function setLevel(value) {
   const index = stageIndexFor(level);
   renderNow(index);
   renderStage(index);
+  if (selectedTrouble) renderTrouble(selectedTrouble);
+}
+
+function renderTrouble(type) {
+  selectedTrouble = type;
+  const stage = build.levelingStages?.[stageIndexFor(level)];
+  if (!stage) return;
+  const manaWeakness = (build.weaknesses || []).find((item) => /マナ|Mana/i.test(item));
+  const plans = {
+    death: [["最優先", stage.gearPriority], ["次", stage.replaceGear], ["その次", stage.caution]],
+    damage: [["最優先", `主力「${stage.mainSkill}」が現在段階どおりか確認`], ["次", stage.supports], ["その次", stage.passivePriority]],
+    mana: manaWeakness ? [["最優先", manaWeakness], ["次", "主力と補助スキルを必要以上に連打していないか確認"], ["その次", stage.replaceGear]] : [["最優先", "このビルド固有のマナ対策は資料で確認できていません"], ["次", "主力・サポートの必要条件と消費をゲーム内で確認"], ["その次", "装備変更前後でマナ維持を比較"]],
+    boss: [["最優先", `単体戦で使うスキルを確認：${stage.mainSkill}`], ["次", stage.supports], ["その次", stage.caution]],
+    speed: [["最優先", stage.mainSkill], ["次", stage.gearPriority], ["その次", stage.transitionCondition]],
+    gear: [["最優先", stage.replaceGear], ["次", stage.gearPriority], ["その次", "固定相場ではなく、現在出品を同条件で比較"]]
+  };
+  document.querySelectorAll("[data-trouble]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.trouble === type)));
+  const result = byId("trouble-result");
+  result.replaceChildren();
+  const list = document.createElement("ol"); list.className = "trouble-plan";
+  plans[type].forEach(([rank, action]) => { const li=document.createElement("li"); const b=document.createElement("b"); const span=document.createElement("span"); b.textContent=rank; span.textContent=action; li.append(b,span); list.append(li); });
+  const note=document.createElement("p"); note.className="disclaimer"; note.textContent=`${stage.label}の確認済みデータを基準に表示しています。一般項目はその旨を明記しています。`;
+  result.append(list,note);
+  localStorage.setItem(`poe2:navi:trouble:${build.id}`, type);
 }
 
 function fillList(id, values, emptyText) {
@@ -241,6 +266,7 @@ function bindEvents() {
   byId("level-range").addEventListener("input", (event) => setLevel(event.target.value));
   byId("level-minus").addEventListener("click", () => setLevel(level - 1));
   byId("level-plus").addEventListener("click", () => setLevel(level + 1));
+  document.querySelectorAll("[data-trouble]").forEach((button) => button.addEventListener("click", () => renderTrouble(button.dataset.trouble)));
   byId("menu-button").addEventListener("click", () => {
     const nav = byId("site-nav");
     const open = nav.classList.toggle("open");
@@ -261,6 +287,8 @@ async function init() {
     }
     renderBuild(builds);
     bindEvents();
+    const savedTrouble = localStorage.getItem(`poe2:navi:trouble:${build.id}`);
+    if (savedTrouble) renderTrouble(savedTrouble);
   } catch (error) {
     byId("build-name").textContent = "データを読み込めませんでした";
     console.error(error);
