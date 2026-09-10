@@ -7,7 +7,7 @@ const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
 
-const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "class-check/index.html"];
+const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "class-check/index.html", "NOTE_CONTENT_MAP.md"];
 for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
@@ -26,8 +26,9 @@ assert(new Set(builds.map((build) => build.className)).size === 8, "each playabl
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
 assert(index.includes('id="class-grid"'), "homepage class cards container missing");
+assert(index.indexOf('id="featured-builds"') < index.indexOf('id="choose-class"'), "homepage must show recommended builds before classes");
 assert(index.indexOf('id="choose-class"') < index.indexOf('id="quick-start"'), "homepage must show class selection before resume controls");
-assert(index.includes("今日やることが、<em>3つに絞れる。"), "homepage action-first message missing");
+assert(index.includes("現在のレベルを入力すると、次にやることが分かります"), "homepage action-first message missing");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
 assert(gearCheck.indexOf('id="gear-class"') < gearCheck.indexOf('id="gear-build"') && gearCheck.indexOf('id="gear-build"') < gearCheck.indexOf('id="gear-level"'), "gear flow must be class -> build -> level");
@@ -54,6 +55,8 @@ for (const build of builds) {
     const expectedRobots = ["reviewed", "source-checked"].includes(build.dataStatus) ? 'content="index,follow"' : 'content="noindex,follow"';
     assert(page.includes(expectedRobots), `${pagePath}: robots status mismatch`);
     assert(page.includes('id="trouble-buttons"'), `${pagePath}: trouble diagnosis missing`);
+    assert(page.includes('id="faq-title"'), `${pagePath}: FAQ missing`);
+    assert(page.includes('id="related-links"') && page.includes('/tier-list/'), `${pagePath}: static internal links missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -74,10 +77,22 @@ assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
-for (const page of ["builds/", "gear-check/", "class-check/", "tier-list/", "beginner-guide/", "dictionary/"]) {
+for (const page of ["builds/", "classes/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
   assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
+for (const page of [
+  ["tier-list/", "PoE2 最新ビルドTierリスト"],
+  ["league-starter/", "PoE2 リーグスターターおすすめビルド"],
+  ["guides/beginner-build/", "PoE2初心者おすすめビルド"],
+  ["poe2-1-0/", "PoE2 1.0 最新情報"]
+]) {
+  const html = await read(`${page[0]}index.html`);
+  assert(html.includes(`<h1>${page[1]}</h1>`), `${page[0]} initial H1 missing`);
+  assert(html.includes(`<link rel="canonical" href="${baseUrl}/${page[0]}">`), `${page[0]} self canonical missing`);
+  assert(html.includes('application/ld+json') && html.includes('BreadcrumbList'), `${page[0]} breadcrumb data missing`);
+}
+assert(!sitemap.match(/<loc>[^<]+<\/loc>/g).some((url, index, all) => all.indexOf(url) !== index), "sitemap URLs must be unique");
 assert(guides.length === 13, "beginner guide must have 13 chapters");
 for (const guide of guides) {
   assert(sitemap.includes(`${baseUrl}/guides/${guide.slug}/`), `${guide.slug}: guide missing from sitemap`);

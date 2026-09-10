@@ -1,0 +1,96 @@
+{
+  "updatedAt": "2026-09-10",
+  "patchVersion": "0.5.5",
+  "featuredBuildIds": [
+    "ranger-ice-shot-deadeye",
+    "warrior-shield-wall-smith",
+    "witch-minion-infernalist",
+    "druid-plant-oracle",
+    "monk-whirling-assault"
+  ],
+  "tiers": {
+    "S": [
+      {
+        "id": "ranger-ice-shot-deadeye",
+        "reason": "初心者向け遠距離として目的が明確で、序盤用スキルからアイスショットへ移る時期も確認できます。"
+      },
+      {
+        "id": "warrior-shield-wall-smith",
+        "reason": "耐久型のリーグスターターを探す人向けで、主力へ切り替えるLv22までの手順も確認できます。"
+      },
+      {
+        "id": "witch-minion-infernalist",
+        "reason": "攻撃をミニオンへ任せやすく、初心者が回避と位置取りへ集中しやすい構成です。"
+      }
+    ],
+    "A": [
+      {
+        "id": "druid-plant-oracle",
+        "reason": "Lv1から同じ主力を継続しやすい一方、後半の防御は装備確認が必要です。"
+      },
+      {
+        "id": "monk-whirling-assault",
+        "reason": "移動しながら戦えますが、Lv41で主力を切り替える準備が必要です。"
+      },
+      {
+        "id": "sorceress-sand-fire",
+        "reason": "育成資料は揃っていますが、最初のアセンダンシー取得時に構成が変わります。"
+      }
+    ],
+    "B": [
+      {
+        "id": "mercenary-twister-gemling",
+        "reason": "序盤から主力を使えますが、複数スキルと武器セットの管理が必要です。"
+      },
+      {
+        "id": "huntress-companion",
+        "reason": "相棒型の目的は明確ですが、Act 3で大きな構成変更があります。"
+      },
+      {
+        "id": "witch-ed-contagion-lich",
+        "reason": "Lv1から育成できますが、複数スキルとマナ管理が必要で、現在の確認資料は1件です。"
+      },
+      {
+        "id": "mercenary-grenade-gemling",
+        "reason": "同じ攻撃軸で進めますが、複数グレネードの操作があり、現在の確認資料は1件です。"
+      }
+    ],
+    "C": []
+  },
+  "beginnerPurposes": [
+    {
+      "label": "遠距離から始めたい",
+      "buildId": "ranger-ice-shot-deadeye"
+    },
+    {
+      "label": "死ににくさを優先したい",
+      "buildId": "warrior-shield-wall-smith"
+    },
+    {
+      "label": "召喚した仲間に任せたい",
+      "buildId": "witch-minion-infernalist"
+    },
+    {
+      "label": "序盤から同じ主力を使いたい",
+      "buildId": "druid-plant-oracle"
+    },
+    {
+      "label": "移動しながら近接で戦いたい",
+      "buildId": "monk-whirling-assault"
+    }
+  ],
+  "poe2One": {
+    "releaseDate": "2026-12-11",
+    "sourceName": "Path of Exile 2 公式サイト",
+    "sourceUrl": "https://pathofexile2.com/",
+    "checkedAt": "2026-09-10",
+    "confirmed": [
+      "正式版1.0は2026年12月11日に公開予定です。",
+      "正式版は基本プレイ無料で提供予定です。"
+    ],
+    "unconfirmed": [
+      "1.0環境の最強ビルドやTierは、正式なパッチノートと実プレイ情報を確認するまで掲載しません。",
+      "現在掲載中の育成手順は0.5.5向けであり、1.0公開後に再確認します。"
+    ]
+  }
+}

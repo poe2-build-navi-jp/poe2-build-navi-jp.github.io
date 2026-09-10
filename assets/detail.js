@@ -245,24 +245,21 @@ function renderBuild(builds) {
   });
 
   const related = byId("related-links");
-  builds.filter((item) => item.className === build.className && item.id !== build.id).slice(0, 3).forEach((item) => {
-    const link = document.createElement("a");
-    link.href = `/builds/${item.classSlug}/${item.slug}/`;
-    link.textContent = item.name;
-    related.append(link);
-  });
-  if (!related.childElementCount) {
-    const link = document.createElement("a");
-    link.href = "/builds/";
-    link.textContent = "ビルド一覧へ戻る";
-    related.append(link);
-  }
-  [["/gear-check/", "このビルドで装備診断"], ["/beginner-guide/", "初心者ガイド"], ["/dictionary/", "用語辞典"]].forEach(([href, label]) => {
-    if (related.childElementCount >= 3) return;
+  const addRelated = (href, label) => {
+    if (related.querySelector(`a[href="${href}"]`) || related.childElementCount >= 3) return;
     const link = document.createElement("a");
     link.href = href;
     link.textContent = label;
     related.append(link);
+  };
+  builds.filter((item) => item.className === build.className && item.id !== build.id).slice(0, 3).forEach((item) => {
+    addRelated(`/builds/${item.classSlug}/${item.slug}/`, item.name);
+  });
+  if (!related.childElementCount) {
+    addRelated("/builds/", "ビルド一覧へ戻る");
+  }
+  [["/gear-check/", "このビルドで装備診断"], ["/beginner-guide/", "初心者ガイド"], ["/dictionary/", "用語辞典"]].forEach(([href, label]) => {
+    addRelated(href, label);
   });
 
   const urlLevel = Number(new URLSearchParams(location.search).get("level"));

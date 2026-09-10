@@ -33,3 +33,4 @@ const termCards = terms.map((t) => `<a class="content-card" href="/dictionary/${
 await writeFile(resolve(root, "dictionary/index.html"), `<!doctype html><html lang="ja"><head>${head("POE2初心者用語辞典｜独立解説ページ", "POE2初心者が別サイトへ戻らず理解できる、DPS、スキル、耐性、Mappingなどの用語辞典。", `${base}/dictionary/`)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li>用語辞典</li></ol></nav><article class="article-page wide-article"><p class="section-kicker">DICTIONARY</p><h1>分からない言葉を、その場で確認</h1><p>各用語は独立URLで詳しく説明し、次に読むガイドへつなげています。</p><div class="content-grid dictionary-cards">${termCards}</div></article></main></body></html>`);
 
 console.log(`Generated ${guides.length} guide pages and ${terms.length} dictionary pages.`);
+await import('./generate-discovery-pages.mjs');

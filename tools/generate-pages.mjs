@@ -9,8 +9,8 @@ const baseUrl = "https://poe2-build-navi-jp.github.io";
 const escapeHtml = (value) => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
 function detailPage(build) {
-  const title = `${build.name}｜Lv1からの育成ロードマップ｜POE2ビルドナビ`;
-  const description = `${build.name}のLv1からEndgameまでの育成段階を確認できる初心者向けナビ。未確認の攻略項目は確認中と明示します。`;
+  const title = `PoE2 ${build.name} ビルド｜Lv1からEndgame`;
+  const description = `PoE2 ${build.name}のスキル・サポート・パッシブ・装備とLv1からEndgameまでの育成手順。現在Lvから次にやることを3つ確認できます。`;
   const url = `${baseUrl}/builds/${build.classSlug}/${build.slug}/`;
   const reviewed = build.dataStatus === "reviewed";
   const indexable = ["reviewed", "source-checked"].includes(build.dataStatus);
@@ -19,10 +19,16 @@ function detailPage(build) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "ホーム", item: `${baseUrl}/` },
-      { "@type": "ListItem", position: 2, name: build.className, item: `${baseUrl}/classes/${build.classSlug}/` },
-      { "@type": "ListItem", position: 3, name: build.name, item: url }
+      { "@type": "ListItem", position: 2, name: "ビルド一覧", item: `${baseUrl}/builds/` },
+      { "@type": "ListItem", position: 3, name: build.className, item: `${baseUrl}/classes/${build.classSlug}/` },
+      { "@type": "ListItem", position: 4, name: build.name, item: url }
     ]
   });
+  const relatedBuilds = [
+    ...builds.filter((item) => item.classSlug === build.classSlug && item.id !== build.id),
+    ...builds.filter((item) => item.classSlug !== build.classSlug && item.id !== build.id)
+  ].slice(0, 3);
+  const relatedHtml = relatedBuilds.map((item) => `<a href="/builds/${item.classSlug}/${item.slug}/">${escapeHtml(item.name)}</a>`).join("");
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -47,8 +53,8 @@ function detailPage(build) {
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header"><a class="brand" href="/" aria-label="POE2ビルドナビ ホーム"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></a><button id="menu-button" class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false">メニュー</button><nav id="site-nav" class="site-nav" aria-label="メインメニュー"><a href="/builds/">ビルド一覧</a><a href="/gear-check/">装備診断</a><a href="/beginner-guide/">初心者ガイド</a><a href="/dictionary/">用語辞典</a></nav></header>
-  <nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a id="breadcrumb-class" href="/classes/${build.classSlug}/">${escapeHtml(build.className)}</a></li><li id="breadcrumb-name">${escapeHtml(build.name)}</li></ol></nav>
+  <header class="site-header"><a class="brand" href="/" aria-label="POE2ビルドナビ ホーム"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></a><button id="menu-button" class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false">メニュー</button><nav id="site-nav" class="site-nav" aria-label="メインメニュー"><a href="/tier-list/">Tier</a><a href="/league-starter/">スターター</a><a href="/builds/">ビルド一覧</a><a href="/gear-check/">装備診断</a><a href="/beginner-guide/">初心者ガイド</a></nav></header>
+  <nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/builds/">ビルド一覧</a></li><li><a id="breadcrumb-class" href="/classes/${build.classSlug}/">${escapeHtml(build.className)}</a></li><li id="breadcrumb-name">${escapeHtml(build.name)}</li></ol></nav>
   <main id="main">
     <section class="build-hero">
       <div class="build-hero-grid">
@@ -62,7 +68,8 @@ function detailPage(build) {
       <section class="trouble-card" aria-labelledby="trouble-title"><p class="section-kicker">TROUBLE CHECK</p><h2 id="trouble-title">困ったとき</h2><p>現在のビルドとLvに合わせて、最初に確認する3項目を表示します。</p><div id="trouble-buttons" class="trouble-buttons"><button type="button" data-trouble="death">すぐ死ぬ</button><button type="button" data-trouble="damage">火力が出ない</button><button type="button" data-trouble="mana">マナが足りない</button><button type="button" data-trouble="boss">ボスに勝てない</button><button type="button" data-trouble="speed">周回が遅い</button><button type="button" data-trouble="gear">装備が分からない</button></div><div id="trouble-result" class="trouble-result" aria-live="polite"><p>困りごとを選んでください。</p></div></section>
       <section id="roadmap" aria-labelledby="roadmap-title"><div class="section-head"><p class="section-kicker">LEVELING ROADMAP</p><h2 id="roadmap-title">Lv1 → Endgame育成ロードマップ</h2><p>各段階を選んで確認できます。</p></div><div id="stage-nav" class="stage-nav" aria-label="育成段階"></div><article class="stage-card"><p id="stage-status" class="pending">ビルド固有データ確認中</p><h2 id="stage-heading">Lv1〜10</h2><p id="stage-next" class="disclaimer"></p><div id="stage-grid" class="stage-grid"></div></article></section>
       <div class="pros-cons"><section class="info-card"><h2>おすすめな人</h2><ul id="strength-list"></ul></section><section class="info-card"><h2>弱点</h2><ul id="weakness-list"></ul></section></div>
-    <section class="related"><h2>関連する次のページ</h2><div id="related-links" class="related-links"></div></section>
+      <section class="build-faq" aria-labelledby="faq-title"><h2 id="faq-title">よくある質問</h2><details><summary>このビルドはどんな人向け？</summary><p>${escapeHtml(build.audience)}</p></details><details><summary>始める前に知る弱点は？</summary><p>${escapeHtml(build.weaknesses?.[0] || "確認中")}</p></details><details><summary>今のレベルで何をすればいい？</summary><p>ページ上部の現在Lvへ入力すると、該当する育成段階と優先行動3つが自動表示されます。</p></details></section>
+      <section class="related"><h2>関連ビルドと次のページ</h2><div id="related-links" class="related-links">${relatedHtml}</div><div class="section-cta"><a class="button-secondary" href="/tier-list/">Tierで比較</a><a class="button-secondary" href="/league-starter/">スターターを比較</a><a class="button-secondary" href="/guides/beginner-build/">初心者向けの選び方</a></div></section>
       <section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">確認した情報源</h2><p>文章は転載せず、掲載資料を確認して初心者向けの手順へ再構成しています。</p><ul id="source-list" class="source-list"></ul></section>
     </div>
   </main>
@@ -96,3 +103,4 @@ for (const classData of classes) {
 
 console.log(`Generated ${builds.length} build detail pages and ${classes.length} class pages.`);
 await import('./generate-static-content.mjs');
+await import('./generate-discovery-pages.mjs');

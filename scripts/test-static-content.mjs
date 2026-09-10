@@ -6,7 +6,7 @@ const builds=JSON.parse(await read('data/builds.json'));
 const home=await read('index.html'),catalog=await read('builds/index.html');
 assert.equal((home.match(/data-class-slug=/g)||[]).length,8);
 assert.equal((catalog.match(/class="catalog-card"/g)||[]).length,builds.length);
-for(const b of builds){assert(catalog.includes(b.name));const page=await read(`builds/${b.classSlug}/${b.slug}/index.html`);assert.equal((page.match(/<details>/g)||[]).length,8);for(const s of b.levelingStages)assert(page.includes(s.nowActions[0].replaceAll('&','&amp;')));}
+for(const b of builds){assert(catalog.includes(b.name));const page=await read(`builds/${b.classSlug}/${b.slug}/index.html`);const roadmap=page.match(/<section id="static-roadmap">([\s\S]*?)<section id="roadmap"/)?.[1]||'';assert.equal((roadmap.match(/<details>/g)||[]).length,8);for(const s of b.levelingStages)assert(page.includes(s.nowActions[0].replaceAll('&','&amp;')));}
 const sitemap=await read('sitemap.xml');
 let count=0;
 for(const [,url] of sitemap.matchAll(/<loc>(.*?)<\/loc>/g)){

@@ -38,8 +38,8 @@ async function enhance(dir=''){
   if(!entry.name.endsWith('.html')||entry.name.startsWith('google'))continue;
   let html=await read(path);
   if(!html.includes('</head>'))continue;
-  html=html.replace(/\/assets\/(styles\.css|app\.js|detail\.js|catalog-static\.js|gear-check\.js)(\?[^"']*)?/g,'/assets/$1?v=static-mobile-2');
-  if(!html.includes('/assets/mobile.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/mobile.css?v=static-mobile-1"></head>');
+  html=html.replace(/\/assets\/(styles\.css|mobile\.css|app\.js|detail\.js|catalog-static\.js|gear-check\.js)(\?[^"']*)?/g,'/assets/$1?v=discovery-1');
+  if(!html.includes('/assets/mobile.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/mobile.css?v=discovery-1"></head>');
   const title=html.match(/<title>(.*?)<\/title>/)?.[1];
   const desc=html.match(/name="description" content="([^"]*)"/)?.[1];
   const canonical=html.match(/rel="canonical" href="([^"]*)"/)?.[1];
