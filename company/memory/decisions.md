@@ -69,3 +69,29 @@
   ユーザーからの報告待ち。承認が下りた広告主が具体的に分かった時点で、
   privacy/index.htmlへのアフィリエイト開示文言の追加と、該当記事への
   リンク掲載・PR表記の実装に進む。
+
+## 2026-09-10: 別セッションによる本番サイトの大幅拡張（確認済み・このセッション外で実施）
+
+- 内容: このセッションの外（コミット履歴上は author `poe2-build-navi-jp
+  <alones_aqua@icloud.com>`、コミット`660fc07`「feat: add beginner
+  diagnostics and learning paths」、`539ec6b`「fix: render core content
+  statically and stabilize mobile controls」）で、以下がmainに直接pushされていた。
+  このセッションは2026-09-10にpullして初めて把握した：
+  - **ビルドが8→10本に増加**：mercenaryに`grenade-gemling`、witchに
+    `ed-contagion-lich`が追加された。結果、mercenaryとwitchはそれぞれ
+    2ビルド持つクラスになった。両方とも情報源1件・`ssf: null`の状態
+    （他ビルドを深掘りしたときと同じ「手薄」な初期状態）。
+  - 新規ページ群：`guides/`配下に13本の初心者ガイド、`dictionary/`配下に
+    12本の用語辞典ページ、`class-check/`という職業診断ツールを追加。
+  - モバイル対応の強化（`assets/mobile.css`、`assets/class-check.js`等）。
+  - テストスイート拡充：`scripts/test-static-content.mjs`を新設し、
+    56ページの静的コンテンツとリンク切れを検証。`scripts/test-site.mjs`も
+    ビルド数の想定を8→10に更新済み。
+  - 2026-09-10時点で `node scripts/test-site.mjs` と
+    `node scripts/test-static-content.mjs` の両方がPASSすることを確認済み。
+- 影響: `rules.md`にあった「8クラス・8ビルド構成を維持し、新規ビルド追加より
+  深掘りを優先する」という方針は、この変更により実態と合わなくなった。
+  ビルドを複数持つクラスがあること自体は禁止されていないとみなし、
+  ルール側を更新する。
+- 未確認事項: このpushの経緯（誰が・どのセッションから・どんな意図で行ったか）
+  は本会話では未確認。内容自体はテストが通っており、健全な拡張に見える。

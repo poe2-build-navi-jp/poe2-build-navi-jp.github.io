@@ -15,6 +15,9 @@
   全てにMaxroll等の2件目・3件目の情報源をWebFetchで直接検証のうえ追加した。
   現在は全ビルドが2件以上（mercenary/huntress=2、warrior/monk/ranger/witch=3、
   sorceress/druid=4）。優先度の高い「1件のみ」ビルドは無くなった。
+  - **2026-09-10追記**: このセッション外で新規ビルドが2本追加され
+    （mercenary/grenade-gemling、witch/ed-contagion-lich）、両方とも
+    情報源1件・`ssf: null`の手薄な状態。次に深掘りする最優先候補。
 - **ssf（ソロセルフファウンド適性）が半数で未設定**:
   monk, mercenary, huntress, druid の4ビルドで `ssf: null`。
   SSFプレイヤー向けの需要は根強いため、検証して埋める価値がある。

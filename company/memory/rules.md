@@ -15,10 +15,13 @@
 - `tools/generate-pages.mjs` の `baseUrl`（`https://poe2-build-navi-jp.github.io`）は
   変更しない。ドメインを変えるとGoogle Search Console・AdSenseの評価が崩れる。
 - data構造の変更（`data/classes.json`, `data/builds.json`）を行った後は、必ず
-  `node scripts/test-site.mjs` を実行してPASSを確認してからコミットする。
-- 8クラス・8ビルドという構成は維持する。新規ビルド追加より、既存ビルドの
-  深掘り・裏付け強化（sources追加、SSF可否検証、装備優先度の具体化、評価指標の
-  設計など）を優先する方針（2026-09-08時点）。
+  `node scripts/test-site.mjs` と `node scripts/test-static-content.mjs`
+  （2026-09-10に追加）の両方を実行してPASSを確認してからコミットする。
+- 8クラスの構成は維持するが、ビルド数は8固定ではない（2026-09-10更新：
+  mercenary・witchは既に2ビルド持つ状態になっている）。新規ビルド追加自体は
+  禁止しないが、追加した直後のビルドは情報源1件・ssf未検証など手薄な状態に
+  なりやすいので、追加後は既存ビルドと同様に深掘り・裏付け強化を行う
+  （`ideas.md`のバックログに追加する）。
 - about/privacy/termsページの既存の運営方針（お問い合わせ窓口を設けない、
   未確認情報は断定しない、掲載方針として「確認中」「準備中」と明示する等）を
   変更する場合は、変更内容をユーザーに提示してから行う。
