@@ -2,5 +2,5 @@
 const paths={home:'/',builds:'/builds/',detail:'/builds/monk/whirling-assault/',gear:'/gear-check/',tier:'/tier-list/',starter:'/league-starter/',beginner:'/guides/beginner-build/',one:'/poe2-1-0/'};
 const path=paths[new URLSearchParams(location.search).get('page')]||'/';
 const frames=document.getElementById('frames');
-for(const width of [320,375,390,430]){const title=document.createElement('h2');title.textContent=width+'px';const frame=document.createElement('iframe');frame.id='width-'+width;frame.title=width+'px';frame.width=width+15;frame.height=800;frame.src=path;frame.style.border='0';frames.append(title,frame);}
+for(const width of [320,375,390,430]){const title=document.createElement('h2');title.textContent=width+'px';const frame=document.createElement('iframe');frame.id='width-'+width;frame.title=width+'px';frame.width=width+15;frame.height=800;frame.src=path+(path.includes('?')?'&':'?')+'qa='+Date.now();frame.style.border='0';frames.append(title,frame);}
 </script></body></html>
