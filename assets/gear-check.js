@@ -55,11 +55,13 @@ function render() {
 fetch("/data/builds.json").then((response) => response.json()).then((data) => {
   builds = data;
   [...new Set(builds.map((build) => build.className))].forEach((name) => byId("gear-class").append(new Option(name, name)));
-  const savedBuild = localStorage.getItem("poe2:navi:gear-build") || "";
-  const savedClass = localStorage.getItem("poe2:navi:gear-class") || builds.find((build) => build.id === savedBuild)?.className || "";
+  const params=new URLSearchParams(location.search);
+  const savedBuild = params.get('build') || localStorage.getItem("poe2:navi:selected-build") || localStorage.getItem("poe2:navi:gear-build") || "";
+  const savedClass = builds.find((build) => build.id === savedBuild)?.className || localStorage.getItem("poe2:navi:gear-class") || "";
   byId("gear-class").value = savedClass;
   populateBuilds(savedClass, savedBuild);
-  byId("gear-level").value = localStorage.getItem("poe2:navi:gear-level") || 1;
+  byId("gear-level").value = params.get('level') || localStorage.getItem('poe2:navi:quick-level') || localStorage.getItem("poe2:navi:gear-level") || 1;
+  if(Object.hasOwn(common,params.get('concern')))byId('gear-concern').value=params.get('concern');
   render();
 });
 byId("gear-class").addEventListener("change", (event) => {

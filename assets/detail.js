@@ -173,6 +173,7 @@ function renderTrouble(type) {
   plans[type].forEach(([rank, action]) => { const li=document.createElement("li"); const b=document.createElement("b"); const span=document.createElement("span"); b.textContent=rank; span.textContent=action; li.append(b,span); list.append(li); });
   const note=document.createElement("p"); note.className="disclaimer"; note.textContent=`${stage.label}の確認済みデータを基準に表示しています。一般項目はその旨を明記しています。`;
   result.append(list,note);
+  const gearLink=document.createElement('a');gearLink.className='button';gearLink.href=`/gear-check/?build=${encodeURIComponent(build.id)}&level=${level}&concern=${type==='gear'?'purchase':type}`;gearLink.textContent='予算も指定して装備を確認';result.append(gearLink);
   localStorage.setItem(`poe2:navi:trouble:${build.id}`, type);
 }
 
