@@ -1468,8 +1468,9 @@
     "difficulty": "低〜中（マナ管理あり）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": null,
+    "ssf": true,
     "strengths": [
+      "Maxrollのガイドで「ユニークアイテムを必要としない」と明記され、SSFキャンペーンの目安時間（約5時間）も示されており、SSFでの成立が確認できる。",
       "ContagionとEssence Drainを中心にLv1からEndgameまで段階別構成がある。",
       "通常敵の集団処理と安全な位置取りを両立しやすいと書面ガイドで説明されている。",
       "キャンペーン、T1〜T15、フルライフ、ローライフの各構成が分けて提示されている。"
@@ -1612,6 +1613,12 @@
         "url": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit",
         "checkedAt": "2026-09-09",
         "type": "海外書面レベリング・Endgameガイド"
+      },
+      {
+        "name": "Maxroll: Essence Drain Lich Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+        "checkedAt": "2026-09-11",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
       }
     ],
     "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者"
@@ -1635,8 +1642,9 @@
     "difficulty": "中（複数グレネード）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": null,
+    "ssf": true,
     "strengths": [
+      "Maxrollのガイドで「SSF Fresh Start Leaguestart Viable」と明記されており、SSFでの成立が確認できる。必須のユニークアイテムもなく、クエスト報酬で自動的にもらえる無料ユニーク以外は不要。",
       "Lv1からEndgameまでグレネードを軸にする段階別の書面ガイドがある。",
       "Explosive、Flash、Gas、Oil、Cluster Grenadeを状況別に使える。",
       "ACT 1からUber Endgameまで構成が分けて提示されている。"
@@ -1779,6 +1787,12 @@
         "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
         "checkedAt": "2026-09-09",
         "type": "海外書面レベリング・Endgameガイド"
+      },
+      {
+        "name": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "checkedAt": "2026-09-11",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
       }
     ],
     "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者"
