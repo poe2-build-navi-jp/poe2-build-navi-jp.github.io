@@ -7,7 +7,7 @@ const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
 
-const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "class-check/index.html", "NOTE_CONTENT_MAP.md"];
+const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "class-check/index.html", "NOTE_CONTENT_MAP.md"];
 for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
@@ -19,6 +19,7 @@ const builds = JSON.parse(buildsText);
 const classes = JSON.parse(await read("data/classes.json"));
 const guides = JSON.parse(await read("data/guides.json"));
 const terms = JSON.parse(await read("data/dictionary.json"));
+const seoPages = JSON.parse(await read("data/seo-pages.json"));
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
 assert(builds.length === 10, "build count must be 10");
@@ -82,7 +83,7 @@ for (const page of ["builds/", "classes/", "gear-check/", "class-check/", "tier-
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
 for (const page of [
-  ["tier-list/", "PoE2 最新ビルドTierリスト"],
+  ["tier-list/", "PoE2 0.5.5初心者向けビルドTier"],
   ["league-starter/", "PoE2 リーグスターターおすすめビルド"],
   ["guides/beginner-build/", "PoE2初心者おすすめビルド"],
   ["poe2-1-0/", "PoE2 1.0 最新情報"]
@@ -91,6 +92,16 @@ for (const page of [
   assert(html.includes(`<h1>${page[1]}</h1>`), `${page[0]} initial H1 missing`);
   assert(html.includes(`<link rel="canonical" href="${baseUrl}/${page[0]}">`), `${page[0]} self canonical missing`);
   assert(html.includes('application/ld+json') && html.includes('BreadcrumbList'), `${page[0]} breadcrumb data missing`);
+}
+assert(seoPages.length === 8, "targeted SEO page count must be 8");
+for (const page of seoPages) {
+  const localPath = `${page.path.slice(1)}index.html`;
+  assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
+  const html = await read(localPath);
+  assert(html.includes(`<h1>${page.h1}</h1>`), `${page.path}: initial H1 missing`);
+  assert(html.includes(`<link rel="canonical" href="${baseUrl}${page.path}">`), `${page.path}: self canonical missing`);
+  assert(html.includes("まずやること3つ"), `${page.path}: immediate actions missing`);
+  assert(html.includes("BreadcrumbList"), `${page.path}: breadcrumb data missing`);
 }
 assert(!sitemap.match(/<loc>[^<]+<\/loc>/g).some((url, index, all) => all.indexOf(url) !== index), "sitemap URLs must be unique");
 assert(guides.length === 13, "beginner guide must have 13 chapters");

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10",
+  "updatedAt": "2026-09-12",
   "patchVersion": "0.5.5",
   "featuredBuildIds": [
     "ranger-ice-shot-deadeye",
@@ -48,11 +48,11 @@
       },
       {
         "id": "witch-ed-contagion-lich",
-        "reason": "Lv1から育成できますが、複数スキルとマナ管理が必要で、現在の確認資料は1件です。"
+        "reason": "Lv1から育成できますが、複数スキルとマナ管理が必要です。段階別資料と補助資料を照合しています。"
       },
       {
         "id": "mercenary-grenade-gemling",
-        "reason": "同じ攻撃軸で進めますが、複数グレネードの操作があり、現在の確認資料は1件です。"
+        "reason": "同じ攻撃軸で進めますが、複数グレネードの使い分けと起爆順の理解が必要です。"
       }
     ],
     "C": []
@@ -82,11 +82,11 @@
   "poe2One": {
     "releaseDate": "2026-12-11",
     "sourceName": "Path of Exile 2 公式サイト",
-    "sourceUrl": "https://pathofexile2.com/",
-    "checkedAt": "2026-09-10",
+    "sourceUrl": "https://www.pathofexile.com/forum/view-thread/3999858",
+    "checkedAt": "2026-09-12",
     "confirmed": [
       "正式版1.0は2026年12月11日に公開予定です。",
-      "正式版は基本プレイ無料で提供予定です。"
+      "Duelistは正式版1.0で追加予定です。"
     ],
     "unconfirmed": [
       "1.0環境の最強ビルドやTierは、正式なパッチノートと実プレイ情報を確認するまで掲載しません。",

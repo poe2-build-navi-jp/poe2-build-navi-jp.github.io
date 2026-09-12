@@ -34,3 +34,4 @@ await writeFile(resolve(root, "dictionary/index.html"), `<!doctype html><html la
 
 console.log(`Generated ${guides.length} guide pages and ${terms.length} dictionary pages.`);
 await import('./generate-discovery-pages.mjs');
+await import('./generate-seo-pages.mjs');
