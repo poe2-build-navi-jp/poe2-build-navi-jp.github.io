@@ -107,6 +107,8 @@ const noteRows = [
   ["PoE2 ボスに勝てない", "/guides/cant-beat-boss/", "cant_beat_boss"],
   ["PoE2 周回が遅い", "/guides/slow-mapping/", "slow_mapping"],
   ["PoE2 Mapping初心者", "/guides/mapping/", "mapping_beginner"],
+  ["PoE2 パッシブの振り方", "/guides/passive-tree/", "passive_tree"],
+  ["PoE2 耐性・すぐ死ぬ", "/guides/resistance/", "resistance"],
   ["PoE2 1.0 公開日", "/poe2-1-0/release-date/", "poe2_1_0_release"],
   ["PoE2 Duelist", "/poe2-1-0/duelist/", "poe2_duelist"],
   ...builds.map((build) => [build.name, buildUrl(build), build.id])

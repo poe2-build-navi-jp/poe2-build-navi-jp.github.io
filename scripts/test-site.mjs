@@ -96,7 +96,7 @@ for (const page of [
   assert(html.includes(`<link rel="canonical" href="${baseUrl}/${page[0]}">`), `${page[0]} self canonical missing`);
   assert(html.includes('application/ld+json') && html.includes('BreadcrumbList'), `${page[0]} breadcrumb data missing`);
 }
-assert(seoPages.length === 11, "targeted SEO page count must be 11");
+assert(seoPages.length === 13, "targeted SEO page count must be 13");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
@@ -108,6 +108,9 @@ for (const page of seoPages) {
 }
 for (const path of ["/guides/why-i-die/", "/guides/increase-damage/", "/guides/mana-problem/", "/guides/cant-beat-boss/", "/guides/slow-mapping/", "/guides/gear-upgrade/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: trouble SEO page missing`);
+}
+for (const path of ["/guides/passive-tree/", "/guides/resistance/"]) {
+  assert(seoPages.some((page) => page.path === path), `${path}: core beginner SEO page missing`);
 }
 assert(gearCheck.includes('id="gear-example-title"'), "gear check verified static example missing");
 assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concern=damage"), "gear check sample context link missing");

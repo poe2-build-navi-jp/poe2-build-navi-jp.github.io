@@ -176,5 +176,39 @@
     ],
     "related": [{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0公開予定日を見る","url":"/poe2-1-0/release-date/"},{"label":"現在の8職業を見る","url":"/classes/"}],
     "sources": [{"name":"Path of Exile 2公式：Duelistと1.0の発表","url":"https://www.pathofexile.com/forum/view-thread/3999858","checkedAt":"2026-09-12"}]
+  },
+  {
+    "path": "/guides/passive-tree/",
+    "kicker": "BEGINNER GUIDE / PASSIVE TREE",
+    "title": "PoE2パッシブの振り方｜初心者が迷わない確認順",
+    "description": "PoE2初心者向けに、パッシブツリーで最初に確認する3点、育成途中と完成形の違い、現在Lvに合う取得方針を案内します。",
+    "h1": "PoE2のパッシブはどう振る？",
+    "answer": "完成形のツリーを最初から追わず、現在Lvのロードマップにある『次のパッシブ目標』を優先してください。主力スキル、防御、能力条件の順に照合すると、育成途中の取り違えを減らせます。",
+    "quickActions": ["使っているビルドと現在Lvを確認する", "現在段階のパッシブ方針と進む方向を見る", "次のスキル・装備切替条件まで取ったら再確認する"],
+    "sections": [
+      {"heading":"最初に見る3点","bullets":["今使っている主力スキルに合う攻撃・スペル・属性の方針か","現在段階で必要な生存手段や能力条件を外していないか","完成形ではなく、次の育成段階までの経路になっているか"]},
+      {"heading":"育成途中の振り方","paragraphs":["パッシブはビルド詳細の8段階ロードマップと一緒に確認します。各段階には、進む方向、優先する系統、次段階へ移る目安を掲載しています。正確なノード名を資料で確認できない箇所は推測せず、方針だけを表示します。"]},
+      {"heading":"よくある失敗","bullets":["完成ツリーだけを見て、育成中に必要な経路を飛ばす","主力スキルを切り替える前に旧スキル向けの方針を外す","火力だけを取り、防御や能力条件が不足する","古いパッチのツリーを現行パッチ向けと思い込む"]},
+      {"heading":"確認済みビルドで現在Lvから見る","buildIds":["monk-whirling-assault","ranger-ice-shot-deadeye","mercenary-twister-gemling"]}
+    ],
+    "related": [{"label":"パッシブツリーとは","url":"/dictionary/passive-tree/"},{"label":"火力が出ない原因","url":"/guides/increase-damage/"},{"label":"全ビルドから現在Lvを入力","url":"/builds/"}],
+    "sources": []
+  },
+  {
+    "path": "/guides/resistance/",
+    "kicker": "BEGINNER GUIDE / RESISTANCE",
+    "title": "PoE2耐性の確認方法｜初心者がすぐ死ぬ時の見直し順",
+    "description": "PoE2初心者向けに、耐性を確認する順番、装備交換時の注意、すぐ死ぬ時に耐性と他の防御を切り分ける方法を案内します。",
+    "h1": "PoE2の耐性はどこから確認する？",
+    "answer": "まずゲーム内のキャラクター画面で各耐性を確認し、苦戦している敵の属性と不足している耐性を切り分けます。装備は一度に全部替えず、交換で別の耐性や生存力を失わないか比較してください。",
+    "quickActions": ["キャラクター画面で不足している耐性を確認する", "苦戦する攻撃の属性と現在の防御を照合する", "装備を1部位ずつ比較し、交換後の耐性も確認する"],
+    "sections": [
+      {"heading":"耐性を確認する順番","bullets":["火炎・冷気・雷など、表示されている各耐性","苦戦している敵や攻撃の属性","装備交換前後で失う耐性","ビルドが使うライフ・ES・アーマー・回避など他の生存手段"]},
+      {"heading":"耐性だけで決めない","paragraphs":["死亡原因は耐性だけとは限りません。回復が間に合わない、装備が現在Lvに追いついていない、危険な攻撃を受け続けている場合は、すぐ死ぬ原因ガイドとビルド詳細の現在段階も確認してください。"]},
+      {"heading":"装備交換でよくある失敗","bullets":["1つの耐性だけを上げて別の耐性を大きく失う","必要な能力条件や移動速度を同時に失う","複数部位を同時に替えて原因が分からなくなる","固定相場だけを見て現在Lvに合わない装備を買う"]},
+      {"heading":"確認済みビルドで現在Lvから見る","buildIds":["warrior-shield-wall-smith","ranger-ice-shot-deadeye","witch-minion-infernalist"]}
+    ],
+    "related": [{"label":"耐性とは","url":"/dictionary/resistance/"},{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"装備診断を開く","url":"/gear-check/"}],
+    "sources": []
   }
 ]
