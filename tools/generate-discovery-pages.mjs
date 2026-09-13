@@ -104,6 +104,9 @@ const noteRows = [
   ["PoE2 すぐ死ぬ", "/guides/why-i-die/", "dying_too_much"],
   ["PoE2 装備更新", "/guides/gear-upgrade/", "gear_upgrade"],
   ["PoE2 マナ不足", "/guides/mana-problem/", "mana_problem"],
+  ["PoE2 ボスに勝てない", "/guides/cant-beat-boss/", "cant_beat_boss"],
+  ["PoE2 周回が遅い", "/guides/slow-mapping/", "slow_mapping"],
+  ["PoE2 Mapping初心者", "/guides/mapping/", "mapping_beginner"],
   ["PoE2 1.0 公開日", "/poe2-1-0/release-date/", "poe2_1_0_release"],
   ["PoE2 Duelist", "/poe2-1-0/duelist/", "poe2_duelist"],
   ...builds.map((build) => [build.name, buildUrl(build), build.id])

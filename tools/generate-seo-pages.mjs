@@ -47,13 +47,18 @@ function structuredData(page, crumbs) {
 }
 
 function buildList() {
-  return `<div class="seo-build-list">${builds.map((build) => `<article><p>${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><span>主力：${esc(build.mainSkill)}</span><a href="${buildUrl(build)}">現在Lvから育てる</a></article>`).join("")}</div>`;
+  return buildCards(builds.filter((build) => build.status === "verified"));
+}
+
+function buildCards(items) {
+  return `<div class="seo-build-list">${items.map((build) => `<article><p>${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><span>主力：${esc(build.mainSkill)}</span><a href="${buildUrl(build)}">現在Lvから育てる</a></article>`).join("")}</div>`;
 }
 
 function renderSection(section) {
   const paragraphs = (section.paragraphs ?? []).map((paragraph) => `<p>${esc(paragraph)}</p>`).join("");
   const bullets = section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : "";
-  const buildsHtml = section.buildList === "all" ? buildList() : "";
+  const selectedBuilds = (section.buildIds ?? []).map((id) => builds.find((build) => build.id === id)).filter((build) => build?.status === "verified");
+  const buildsHtml = section.buildList === "all" ? buildList() : selectedBuilds.length ? buildCards(selectedBuilds) : "";
   return `<section><h2>${esc(section.heading)}</h2>${paragraphs}${bullets}${buildsHtml}</section>`;
 }
 

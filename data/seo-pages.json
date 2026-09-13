@@ -42,7 +42,8 @@
     "sections": [
       {"heading": "最初に確認する7項目", "bullets": ["火炎・冷気・雷など、現在のコンテンツで必要な耐性", "ライフやエナジーシールドなど、ビルドが使う耐久の土台", "アーマー・回避など、採用している防御手段", "フラスコやスキルによる回復が戦闘中に機能しているか", "防具の更新が現在Lvに追いついているか", "危険な床や大技を止まって受けていないか", "ビルドの切替前提を満たさず先の構成へ移っていないか"]},
       {"heading": "よくある失敗", "paragraphs": ["火力だけを優先して防御装備を長く更新しない、数字を確認せず一度に複数箇所を交換する、育成途中なのに完成構成だけを真似する、という失敗が起きやすいです。", "防御の正解はビルドごとに異なります。ビルド固有情報がない場合は一般的な確認として扱い、詳細ページの注意点を優先してください。"]},
-      {"heading": "自分のビルドで確認する", "paragraphs": ["装備診断では、ビルド・現在Lv・悩み・予算を選び、最初に確認する部位を最大3つ表示します。リアルタイム相場は断定しません。"]}
+      {"heading": "自分のビルドで確認する", "paragraphs": ["装備診断では、ビルド・現在Lv・悩み・予算を選び、最初に確認する部位を最大3つ表示します。リアルタイム相場は断定しません。"]},
+      {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["warrior-shield-wall-smith", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
     ],
     "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"耐性の意味を確認","url":"/dictionary/resistance/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"}],
     "sources": []
@@ -58,7 +59,8 @@
     "sections": [
       {"heading": "最初に確認する7項目", "bullets": ["武器の種類と能力が主力スキルに合っているか", "主力スキルが現在の育成段階で推奨されるものか", "サポートジェムが主力スキルへ正しく作用しているか", "パッシブが別の攻撃種類や古い育成スキル向けのままではないか", "マナなどの不足で攻撃が止まっていないか", "主力へ切り替えるための条件を満たしているか", "単体戦と集団戦で必要な補助スキルを使い分けているか"]},
       {"heading": "表示DPSだけで決めない", "paragraphs": ["ゲーム内の表示値だけでは、効果時間、敵への当てやすさ、攻撃できる時間、補助効果の有無まで比較できない場合があります。特定のDPS目標は装備条件が揃わないため、このサイトでは固定値として掲載しません。"]},
-      {"heading": "よくある失敗", "paragraphs": ["高価そうな装備を先に買う、対応していないサポートを付ける、育成用スキルから早く切り替える、という順番違いを避けてください。まず現在段階の3行動を終えてから再確認します。"]}
+      {"heading": "よくある失敗", "paragraphs": ["高価そうな装備を先に買う、対応していないサポートを付ける、育成用スキルから早く切り替える、という順番違いを避けてください。まず現在段階の3行動を終えてから再確認します。"]},
+      {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["ranger-ice-shot-deadeye", "mercenary-twister-gemling", "monk-whirling-assault"]}
     ],
     "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"サポートジェムを確認","url":"/dictionary/support-gem/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"}],
     "sources": []
@@ -93,6 +95,54 @@
       {"heading": "固定値を目標にしない", "paragraphs": ["必要なマナ量や回復量は主力スキル、サポート、攻撃頻度で変わります。このページでは未確認の数値目標を作りません。"]}
     ],
     "related": [{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"装備更新の順番を見る","url":"/guides/gear-upgrade/"},{"label":"火力が出ない原因を見る","url":"/guides/increase-damage/"}],
+    "sources": []
+  },
+  {
+    "path": "/guides/cant-beat-boss/",
+    "kicker": "BEGINNER TROUBLE / BOSS",
+    "title": "PoE2でボスに勝てない時の確認順｜初心者向け",
+    "description": "PoE2でボスに勝てない初心者向けに、単体用スキル、サポート、操作順、防御、育成段階を確認する順番を案内します。",
+    "h1": "PoE2でボスに勝てないときの確認順",
+    "answer": "最初に単体戦で使うスキルとサポート、次に攻撃できる時間と回避、最後に現在Lvの切替条件を確認します。装備を買う前に、周回用と単体用の操作が分かれていないか見てください。",
+    "quickActions": ["現在段階の単体用スキルを確認する", "ボスへ攻撃する前後の操作順を確認する", "同じ攻撃で倒されるなら防御と回避を切り分ける"],
+    "sections": [
+      {"heading": "まず確認する3つ", "bullets": ["周回用ではなく単体戦で使う主力・補助スキル", "サポートが主力へ作用し、必要条件を満たしているか", "大技を避けた後に安全に攻撃へ戻れるか"]},
+      {"heading": "よくある原因", "paragraphs": ["育成用スキルから早く切り替える、単体用の補助を使わない、攻撃を続けて危険行動を受ける、という原因を順に切り分けます。特定DPSを合格ラインとして断定しません。"]},
+      {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["ranger-ice-shot-deadeye", "monk-whirling-assault", "witch-minion-infernalist"]}
+    ],
+    "related": [{"label":"火力が出ない原因","url":"/guides/increase-damage/"},{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"装備診断","url":"/gear-check/"}],
+    "sources": []
+  },
+  {
+    "path": "/guides/slow-mapping/",
+    "kicker": "BEGINNER TROUBLE / MAPPING SPEED",
+    "title": "PoE2で周回が遅い時の確認順｜初心者向け",
+    "description": "PoE2で周回が遅い初心者向けに、移動、範囲、通常敵への操作回数、装備、Mapping移行条件を確認する順番を案内します。",
+    "h1": "PoE2で周回が遅いときの確認順",
+    "answer": "最初に移動と通常敵への攻撃回数、次に主力の範囲と操作順、最後に現在Lvの装備優先度を確認します。ボス用の最大操作を通常敵へ毎回使っていないか見直してください。",
+    "quickActions": ["移動を止める原因を1つ特定する", "通常敵へ使う主力と操作回数を確認する", "現在段階のブーツ・武器・切替条件を見る"],
+    "sections": [
+      {"heading": "まず確認する3つ", "bullets": ["移動速度と移動スキルの使い方", "通常敵を処理する範囲と必要な攻撃回数", "ボス用の補助操作を通常敵へ使いすぎていないか"]},
+      {"heading": "速さと安全を分けない", "paragraphs": ["速度だけを上げて死亡が増えると、結果として周回は遅くなります。低い難度で主力の動作、防御、回復を確認し、原因を1つずつ変えてください。"]},
+      {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["mercenary-twister-gemling", "ranger-ice-shot-deadeye", "sorceress-sand-fire"]}
+    ],
+    "related": [{"label":"Mapping初心者ガイド","url":"/guides/mapping/"},{"label":"火力が出ない原因","url":"/guides/increase-damage/"},{"label":"装備更新の順番","url":"/guides/gear-upgrade/"}],
+    "sources": []
+  },
+  {
+    "path": "/guides/mapping/",
+    "kicker": "BEGINNER GUIDE / MAPPING",
+    "title": "PoE2 Mapping初心者ガイド｜開始前の確認と進め方",
+    "description": "PoE2のMappingを始める初心者向けに、耐性、生存力、主力スキル、装備、移行条件を確認する順番を案内します。",
+    "h1": "PoE2 Mappingを始める前に確認すること",
+    "answer": "キャンペーン終了直後は、耐性と生存力、主力スキル、現在段階の装備を確認してから低い難度で動作を試します。死亡と火力不足を同時に直そうとせず、原因を分けてください。",
+    "quickActions": ["ビルド詳細のMapping開始段階を開く", "耐性・生存力・主力スキルを確認する", "低い難度で死亡原因と処理速度を分けて記録する"],
+    "sections": [
+      {"heading": "Mapping開始前チェック", "bullets": ["現在のコンテンツで不足している耐性", "ビルドが使うライフ・ES・アーマー・回避などの生存手段", "主力スキルとサポートが現在段階どおりか", "武器・防具・移動速度が育成段階に追いついているか", "アセンダンシーやビルド切替の条件を満たしているか"]},
+      {"heading": "最初に何をするか", "paragraphs": ["最初は低い難度で主力の操作と防御を確認します。すぐ死ぬ場合は防御と回避、処理が遅い場合は武器・主力・サポート・パッシブの順に切り分けます。"]},
+      {"heading": "ビルド別のMapping移行目安", "paragraphs": ["移行条件はビルドごとに異なります。確認済みロードマップのMapping開始段階を開き、現在Lvと切替条件を優先してください。"], "buildIds": ["monk-whirling-assault", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
+    ],
+    "related": [{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"周回が遅い原因","url":"/guides/slow-mapping/"},{"label":"装備診断","url":"/gear-check/"}],
     "sources": []
   },
   {

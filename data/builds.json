@@ -8,7 +8,7 @@
     "ascendancy": "マーシャルアーティスト",
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
-    "dataStatus": "reviewed",
+    "status": "verified",
     "mainSkill": "ワーリングアサルト（Whirling Assault）",
     "beginnerRating": null,
     "damageRating": null,
@@ -358,7 +358,7 @@
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新）"
       }
     ],
-    "dataStatus": "reviewed",
+    "status": "verified",
     "audience": "序盤からツイスターを使い、武器セットを切り替えて進めたい人"
   },
   {
@@ -535,7 +535,7 @@
         "type": "海外アセンダンシー解説（2026年6月17日更新。Shield Wall自体への言及はないが、耐性キャップの取りやすさなど本ビルドの前提となる耐性面の裏付けとして参照）"
       }
     ],
-    "dataStatus": "reviewed",
+    "status": "verified",
     "audience": "装備を整えやすい耐久型のリーグスターターを探している人"
   },
   {
@@ -718,7 +718,7 @@
         "type": "海外Endgameガイド"
       }
     ],
-    "dataStatus": "reviewed",
+    "status": "verified",
     "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人"
   },
   {
@@ -896,7 +896,7 @@
         "type": "海外Endgameガイド（対応パッチ0.5.4、2026年6月26日更新）"
       }
     ],
-    "dataStatus": "reviewed",
+    "status": "verified",
     "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人"
   },
   {
@@ -908,7 +908,7 @@
     "ascendancy": "デッドアイ",
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
-    "dataStatus": "reviewed",
+    "status": "verified",
     "mainSkill": "アイスショット（Ice Shot）",
     "beginnerRating": null,
     "damageRating": null,
@@ -1087,7 +1087,7 @@
     "ascendancy": "インファーナリスト",
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
-    "dataStatus": "reviewed",
+    "status": "verified",
     "mainSkill": "スケルタルスナイパー / スペクター",
     "beginnerRating": null,
     "damageRating": null,
@@ -1266,7 +1266,7 @@
     "ascendancy": "オラクル",
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
-    "dataStatus": "reviewed",
+    "status": "verified",
     "mainSkill": "Entangle / Thrashing Vines",
     "beginnerRating": null,
     "damageRating": null,
@@ -1458,7 +1458,7 @@
     "ascendancy": "リッチ",
     "version": "0.5.5",
     "updatedAt": "2026-09-09",
-    "dataStatus": "reviewed",
+    "status": "verified",
     "mainSkill": "Essence Drain + Contagion",
     "beginnerRating": null,
     "damageRating": null,
@@ -1632,7 +1632,7 @@
     "ascendancy": "ジェムリング・リージョネア",
     "version": "0.5.5",
     "updatedAt": "2026-09-09",
-    "dataStatus": "reviewed",
+    "status": "verified",
     "mainSkill": "Explosive Grenade",
     "beginnerRating": null,
     "damageRating": null,

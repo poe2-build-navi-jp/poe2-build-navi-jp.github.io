@@ -75,13 +75,14 @@ function renderStage(index, scroll = false) {
   [
     ["今使うメインスキル", data?.mainSkill],
     ["サポートジェム", data?.supports],
-    ["次に取るパッシブ", data?.passivePriority],
+    ["次のパッシブ目標", data?.passivePriority],
     ["装備で優先する能力", data?.gearPriority],
     ["交換すべき装備", data?.replaceGear],
     ["注意点・移行条件", data ? `${data.caution} 移行条件：${data.transitionCondition}` : null]
   ].forEach(([label, value]) => grid.append(stageItem(label, value)));
-  byId("stage-status").textContent = data ? "掲載資料を確認済み" : "ビルド固有データ確認中";
-  byId("stage-status").className = data ? "verified" : "pending";
+  const stageVerified = build.status === "verified" && data;
+  byId("stage-status").textContent = stageVerified ? "この段階の主要情報を確認済み" : data ? "確認済み範囲を表示中" : "この段階は確認中";
+  byId("stage-status").className = stageVerified ? "verified" : "pending";
   if (scroll) byId("roadmap").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -95,7 +96,7 @@ function renderNow(index) {
     "確認済みのスキル・パッシブ情報が登録されるまで『確認中』を目印にする",
     "装備更新前に必要レベルと、このビルドの対応パッチを確認する"
   ];
-  byId("now-source-label").textContent = verifiedActions ? "掲載資料から整理した優先行動" : "一般的な確認項目（ビルド固有データ確認中）";
+  byId("now-source-label").textContent = verifiedActions ? "掲載資料から整理した優先行動" : "この段階は確認中";
   document.querySelectorAll("[data-now-action]").forEach((element, actionIndex) => { element.textContent = actions[actionIndex]; });
 }
 
@@ -223,7 +224,7 @@ function renderBuild(builds) {
   const facts = byId("fact-grid");
   facts.replaceChildren();
   [
-    ["対応パッチ", build.version], ["最終確認日", build.updatedAt], ["確認済み段階", `${build.levelingStages?.length || 0}/8`],
+    ["対応パッチ", build.version], ["最終確認日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "一部確認済み" : "再確認中"], ["確認済み段階", `${build.levelingStages?.length || 0}/8`],
     ["予算", build.budget], ["操作難易度", build.difficulty], ["火力", build.damageRating === null ? null : `${build.damageRating}/5`],
     ["耐久", build.defenseRating === null ? null : `${build.defenseRating}/5`], ["周回", build.mappingRating === null ? null : `${build.mappingRating}/5`],
     ["ボス", build.bossRating === null ? null : `${build.bossRating}/5`]
@@ -252,7 +253,7 @@ function renderBuild(builds) {
     link.textContent = label;
     related.append(link);
   };
-  builds.filter((item) => item.className === build.className && item.id !== build.id).slice(0, 3).forEach((item) => {
+  builds.filter((item) => item.status !== "draft" && item.className === build.className && item.id !== build.id).slice(0, 3).forEach((item) => {
     addRelated(`/builds/${item.classSlug}/${item.slug}/`, item.name);
   });
   if (!related.childElementCount) {

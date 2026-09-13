@@ -7,13 +7,20 @@ const classes = JSON.parse(await readFile(resolve(root, "data/classes.json"), "u
 const publisher = "ca-pub-7738997902416481";
 const baseUrl = "https://poe2-build-navi-jp.github.io";
 const escapeHtml = (value) => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+const publicBuilds = builds.filter((build) => build.status !== "draft");
+const statusLabels = {
+  verified: "Lv1〜Endgameの主要情報を確認済み",
+  partial: "一部確認済み・未確認項目だけ確認中",
+  "needs-review": "パッチ変更のため再確認中",
+  draft: "下書き"
+};
 
 function detailPage(build) {
   const title = `PoE2 ${build.name} ビルド｜Lv1からEndgame`;
   const description = `PoE2 ${build.name}のスキル・サポート・パッシブ・装備とLv1からEndgameまでの育成手順。現在Lvから次にやることを3つ確認できます。`;
   const url = `${baseUrl}/builds/${build.classSlug}/${build.slug}/`;
-  const reviewed = build.dataStatus === "reviewed";
-  const indexable = ["reviewed", "source-checked"].includes(build.dataStatus);
+  const verified = build.status === "verified";
+  const indexable = ["verified", "partial"].includes(build.status);
   const breadcrumb = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -25,8 +32,8 @@ function detailPage(build) {
     ]
   });
   const relatedBuilds = [
-    ...builds.filter((item) => item.classSlug === build.classSlug && item.id !== build.id),
-    ...builds.filter((item) => item.classSlug !== build.classSlug && item.id !== build.id)
+    ...publicBuilds.filter((item) => item.classSlug === build.classSlug && item.id !== build.id),
+    ...publicBuilds.filter((item) => item.classSlug !== build.classSlug && item.id !== build.id)
   ].slice(0, 3);
   const relatedHtml = relatedBuilds.map((item) => `<a href="/builds/${item.classSlug}/${item.slug}/">${escapeHtml(item.name)}</a>`).join("");
   return `<!doctype html>
@@ -58,15 +65,15 @@ function detailPage(build) {
   <main id="main">
     <section class="build-hero">
       <div class="build-hero-grid">
-        <div><p id="build-class" class="eyebrow">${escapeHtml(build.className)} / ${escapeHtml(build.ascendancy)}</p><h1 id="build-name">${escapeHtml(build.name)}</h1><p id="build-skill" class="lead">メインスキル：${escapeHtml(build.mainSkill)}</p><p class="status-note">${reviewed ? "Lv1〜Endgameの8段階を確認済み" : `確認済み育成段階 ${build.levelingStages.length}/8・未登録項目は推測で補いません`}</p><div id="fact-grid" class="fact-grid"></div></div>
+        <div><p id="build-class" class="eyebrow">${escapeHtml(build.className)} / ${escapeHtml(build.ascendancy)}</p><h1 id="build-name">${escapeHtml(build.name)}</h1><p id="build-skill" class="lead">メインスキル：${escapeHtml(build.mainSkill)}</p><p class="status-note" data-build-status="${escapeHtml(build.status)}">${escapeHtml(statusLabels[build.status] || "状態未登録")}</p><div id="fact-grid" class="fact-grid"></div></div>
         <section class="level-card" aria-labelledby="level-title"><div class="level-number"><h2 id="level-title">現在Lv</h2><output id="level-output" for="level-input level-range">Lv1</output></div><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="level-input" type="number" inputmode="numeric" min="1" max="100" value="1" aria-label="現在レベル"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><input id="level-range" type="range" min="1" max="100" value="1" aria-label="現在レベルのスライダー"><div class="range-labels"><span>Lv1</span><span>Lv100</span></div><p class="disclaimer">この端末に自動保存されます。</p></section>
       </div>
     </section>
     <div class="detail-main">
-      <section id="now" class="now-panel" aria-labelledby="now-title"><div class="now-stage"><small>あなたは現在ここ</small><strong id="now-stage">Lv1〜10</strong></div><div class="now-actions"><p id="now-source-label" class="section-kicker">一般的な確認項目（ビルド固有データ確認中）</p><h2 id="now-title">今やること</h2><div class="priority-list"><div class="priority-item"><b>最優先</b><span data-now-action></span></div><div class="priority-item"><b>次</b><span data-now-action></span></div><div class="priority-item"><b>その次</b><span data-now-action></span></div></div><p id="now-next" class="disclaimer"></p></div></section>
+      <section id="now" class="now-panel" aria-labelledby="now-title"><div class="now-stage"><small>あなたは現在ここ</small><strong id="now-stage">Lv1〜10</strong></div><div class="now-actions"><p id="now-source-label" class="section-kicker">${verified ? "掲載資料から整理した優先行動" : "確認済み範囲から整理した優先行動"}</p><h2 id="now-title">今やること</h2><div class="priority-list"><div class="priority-item"><b>最優先</b><span data-now-action></span></div><div class="priority-item"><b>次</b><span data-now-action></span></div><div class="priority-item"><b>その次</b><span data-now-action></span></div></div><p id="now-next" class="disclaimer"></p></div></section>
       <section class="progress-card" aria-labelledby="progress-title"><div class="progress-head"><div><p class="section-kicker">MY PROGRESS</p><h2 id="progress-title">現在段階のチェック進捗</h2></div><strong id="progress-percent">0%</strong></div><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div id="progress-checks" class="progress-checks"></div><p id="progress-next" class="next-advice"></p><p class="disclaimer">ビルド全体の強さではなく、現在段階で確認する7項目の進捗です。チェック状態はこの端末に保存されます。</p></section>
       <section class="trouble-card" aria-labelledby="trouble-title"><p class="section-kicker">TROUBLE CHECK</p><h2 id="trouble-title">困ったとき</h2><p>現在のビルドとLvに合わせて、最初に確認する3項目を表示します。</p><div id="trouble-buttons" class="trouble-buttons"><button type="button" data-trouble="death">すぐ死ぬ</button><button type="button" data-trouble="damage">火力が出ない</button><button type="button" data-trouble="mana">マナが足りない</button><button type="button" data-trouble="boss">ボスに勝てない</button><button type="button" data-trouble="speed">周回が遅い</button><button type="button" data-trouble="gear">装備が分からない</button></div><div id="trouble-result" class="trouble-result" aria-live="polite"><p>困りごとを選んでください。</p></div></section>
-      <section id="roadmap" aria-labelledby="roadmap-title"><div class="section-head"><p class="section-kicker">LEVELING ROADMAP</p><h2 id="roadmap-title">Lv1 → Endgame育成ロードマップ</h2><p>各段階を選んで確認できます。</p></div><div id="stage-nav" class="stage-nav" aria-label="育成段階"></div><article class="stage-card"><p id="stage-status" class="pending">ビルド固有データ確認中</p><h2 id="stage-heading">Lv1〜10</h2><p id="stage-next" class="disclaimer"></p><div id="stage-grid" class="stage-grid"></div></article></section>
+      <section id="roadmap" aria-labelledby="roadmap-title"><div class="section-head"><p class="section-kicker">LEVELING ROADMAP</p><h2 id="roadmap-title">Lv1 → Endgame育成ロードマップ</h2><p>各段階を選んで確認できます。サイト内の方針を先に読み、原典はノード位置の照合に使えます。</p></div><div id="stage-nav" class="stage-nav" aria-label="育成段階"></div><article class="stage-card"><p id="stage-status" class="${verified ? "verified" : "pending"}">${verified ? "この段階の主要情報を確認済み" : "未確認項目だけ確認中"}</p><h2 id="stage-heading">Lv1〜10</h2><p id="stage-next" class="disclaimer"></p><div id="stage-grid" class="stage-grid"></div></article></section>
       <div class="pros-cons"><section class="info-card"><h2>おすすめな人</h2><ul id="strength-list"></ul></section><section class="info-card"><h2>弱点</h2><ul id="weakness-list"></ul></section></div>
       <section class="build-faq" aria-labelledby="faq-title"><h2 id="faq-title">よくある質問</h2><details><summary>このビルドはどんな人向け？</summary><p>${escapeHtml(build.audience)}</p></details><details><summary>始める前に知る弱点は？</summary><p>${escapeHtml(build.weaknesses?.[0] || "確認中")}</p></details><details><summary>今のレベルで何をすればいい？</summary><p>ページ上部の現在Lvへ入力すると、該当する育成段階と優先行動3つが自動表示されます。</p></details></section>
       <section class="related"><h2>関連ビルドと次のページ</h2><div id="related-links" class="related-links">${relatedHtml}</div><div class="section-cta"><a class="button-secondary" href="/tier-list/">Tierで比較</a><a class="button-secondary" href="/league-starter/">スターターを比較</a><a class="button-secondary" href="/guides/beginner-build/">初心者向けの選び方</a></div></section>
@@ -86,7 +93,7 @@ for (const build of builds) {
 }
 
 function classPage(classData) {
-  const classBuilds = builds.filter((build) => build.classSlug === classData.slug);
+  const classBuilds = publicBuilds.filter((build) => build.classSlug === classData.slug);
   const title = `POE2 ${classData.name}おすすめビルド・育成ガイド｜POE2ビルドナビ`;
   const description = `${classData.name}の特徴と初心者向けビルドを確認し、現在Lvから育成を始められます。対応パッチ0.5.5。`;
   const url = `${baseUrl}/classes/${classData.slug}/`;
@@ -104,3 +111,5 @@ for (const classData of classes) {
 console.log(`Generated ${builds.length} build detail pages and ${classes.length} class pages.`);
 await import('./generate-static-content.mjs');
 await import('./generate-discovery-pages.mjs');
+await import('./generate-seo-pages.mjs');
+await import('./enhance-residual-pages.mjs');

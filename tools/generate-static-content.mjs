@@ -3,7 +3,7 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const save=(p,t)=>writeFile(resolve(root,p),t);
-const builds=JSON.parse(await read('data/builds.json')), classes=JSON.parse(await read('data/classes.json'));
+const allBuilds=JSON.parse(await read('data/builds.json')), builds=allBuilds.filter(b=>b.status!=="draft"), classes=JSON.parse(await read('data/classes.json'));
 const esc=v=>String(v??'確認中').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const url=b=>`/builds/${b.classSlug}/${b.slug}/`;
 const list=vs=>vs.map(v=>`<li>${esc(v)}</li>`).join('');
@@ -26,7 +26,7 @@ for(const b of builds){
  p=p.replace(/(<div id="fact-grid"[^>]*>).*?(<\/div>)/,`$1<div class="fact">対応パッチ：${esc(b.version)}</div><div class="fact">資料確認日：${esc(b.updatedAt)}</div>$2`);
  p=p.replace('一般的な確認項目（ビルド固有データ確認中）','掲載資料から整理した優先行動');
  p=p.replace(/(<ul id="strength-list"[^>]*>).*?(<\/ul>)/,`$1${list(b.strengths)}$2`).replace(/(<ul id="weakness-list"[^>]*>).*?(<\/ul>)/,`$1${list(b.weaknesses)}$2`);
- if(!p.includes('id="static-roadmap"'))p=p.replace('<section id="roadmap"',`<section id="static-roadmap"><h2>全8段階の育成手順</h2><p>対応パッチ ${esc(b.version)}・資料確認日 ${esc(b.updatedAt)}。固有名が未登録の項目は参考資料で確認してください。</p>${b.levelingStages.map(s=>`<details><summary>${esc(s.label)}</summary><ol>${list(s.nowActions)}</ol><dl>${[['主力',s.mainSkill],['サポート',s.supports],['パッシブ',s.passivePriority],['優先装備・能力',s.gearPriority],['交換候補',s.replaceGear],['注意点',s.caution],['移行条件',s.transitionCondition]].map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></details>`).join('')}<h3>参考資料</h3><ul>${b.sources.map(s=>`<li><a href="${esc(s.url)}">${esc(s.name)}</a>・${esc(s.checkedAt)}</li>`).join('')}</ul><a href="/editorial-policy/">編集方針</a></section><section id="roadmap"`);
+ if(!p.includes('id="static-roadmap"'))p=p.replace('<section id="roadmap"',`<section id="static-roadmap"><h2>全8段階の育成手順</h2><p>対応パッチ ${esc(b.version)}・資料確認日 ${esc(b.updatedAt)}。各段階のパッシブ方針を先に確認し、原典ツリーは正確なノード位置の照合に使用してください。</p>${b.levelingStages.map(s=>`<details><summary>${esc(s.label)}</summary><ol>${list(s.nowActions)}</ol><dl>${[['主力',s.mainSkill],['サポート',s.supports],['次のパッシブ目標',s.passivePriority],['優先装備・能力',s.gearPriority],['交換候補',s.replaceGear],['注意点',s.caution],['移行条件',s.transitionCondition]].map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></details>`).join('')}<h3>原典で細部を照合</h3><p>ノード位置や段階別ツリーの詳細確認用です。本文だけでも次に進む方向が分かるよう要点を整理しています。</p><ul>${b.sources.map(s=>`<li><a href="${esc(s.url)}">${esc(s.name)}</a>・${esc(s.checkedAt)}</li>`).join('')}</ul><a href="/editorial-policy/">編集方針</a></section><section id="roadmap"`);
  await save(`builds/${b.classSlug}/${b.slug}/index.html`,p);
 }
 console.log(`Static content: ${builds.length} builds, ${classes.length} classes`);

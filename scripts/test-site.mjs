@@ -40,7 +40,8 @@ for (const build of builds) {
   for (const field of ["id", "slug", "classSlug", "name", "className", "ascendancy", "version", "updatedAt", "mainSkill", "levelingStages", "gearPriorities", "sources"]) {
     assert(Object.hasOwn(build, field), `${build.id}: missing ${field}`);
   }
-  assert(build.dataStatus === "reviewed", `${build.id}: roadmap must be reviewed`);
+  assert(["verified", "partial", "needs-review", "draft"].includes(build.status), `${build.id}: invalid status`);
+  assert(build.status === "verified", `${build.id}: public roadmap must be verified`);
   assert(build.levelingStages.length === 8, `${build.id}: roadmap must have 8 stages`);
   assert(build.levelingStages.every((stage, index) => stage.label === stageLabels[index]), `${build.id}: stage labels/order mismatch`);
   for (const stage of build.levelingStages) {
@@ -53,11 +54,13 @@ for (const build of builds) {
   try {
     const page = await read(pagePath);
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/">`), `${pagePath}: canonical mismatch`);
-    const expectedRobots = ["reviewed", "source-checked"].includes(build.dataStatus) ? 'content="index,follow"' : 'content="noindex,follow"';
+    const expectedRobots = ["verified", "partial"].includes(build.status) ? 'content="index,follow"' : 'content="noindex,follow"';
     assert(page.includes(expectedRobots), `${pagePath}: robots status mismatch`);
     assert(page.includes('id="trouble-buttons"'), `${pagePath}: trouble diagnosis missing`);
     assert(page.includes('id="faq-title"'), `${pagePath}: FAQ missing`);
     assert(page.includes('id="related-links"') && page.includes('/tier-list/'), `${pagePath}: static internal links missing`);
+    assert(page.includes('data-build-status="verified"'), `${pagePath}: verified status missing`);
+    assert(!page.includes('<p id="stage-status" class="pending">ビルド固有データ確認中</p>'), `${pagePath}: verified/confirming contradiction`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -93,7 +96,7 @@ for (const page of [
   assert(html.includes(`<link rel="canonical" href="${baseUrl}/${page[0]}">`), `${page[0]} self canonical missing`);
   assert(html.includes('application/ld+json') && html.includes('BreadcrumbList'), `${page[0]} breadcrumb data missing`);
 }
-assert(seoPages.length === 8, "targeted SEO page count must be 8");
+assert(seoPages.length === 11, "targeted SEO page count must be 11");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
@@ -103,6 +106,13 @@ for (const page of seoPages) {
   assert(html.includes("まずやること3つ"), `${page.path}: immediate actions missing`);
   assert(html.includes("BreadcrumbList"), `${page.path}: breadcrumb data missing`);
 }
+for (const path of ["/guides/why-i-die/", "/guides/increase-damage/", "/guides/mana-problem/", "/guides/cant-beat-boss/", "/guides/slow-mapping/", "/guides/gear-upgrade/"]) {
+  assert(seoPages.some((page) => page.path === path), `${path}: trouble SEO page missing`);
+}
+assert(gearCheck.includes('id="gear-example-title"'), "gear check verified static example missing");
+assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concern=damage"), "gear check sample context link missing");
+const oneHub = await read("poe2-1-0/index.html");
+assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
 assert(!sitemap.match(/<loc>[^<]+<\/loc>/g).some((url, index, all) => all.indexOf(url) !== index), "sitemap URLs must be unique");
 assert(guides.length === 13, "beginner guide must have 13 chapters");
 for (const guide of guides) {

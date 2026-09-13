@@ -31,9 +31,9 @@ function render() {
   byId("gear-result-title").textContent = build ? `${build.name} / Lv${level}` : `Lv${level}の装備チェック`;
   byId("gear-context").textContent = `${stageLabel}・悩み：${concernLabels[concern]}・予算：${budget}`;
   const items = stage ? [
-    ["最優先", stage.replaceGear || base[0], stage.gearPriority || base[1]],
-    ["次", "主力スキルと装備条件", stage.caution || base[2]],
-    ["その次", "次の段階へ進む条件", stage.transitionCondition]
+    ["最優先", stage.replaceGear || base[0], `確認する能力：${stage.gearPriority || base[1]}`],
+    ["次", "主力スキルと装備条件", `理由：${stage.caution || base[2]}`],
+    ["その次", "次の段階へ進む条件", `更新目安：${stage.transitionCondition}`]
   ] : [
     ["最優先", base[0], base[1]], ["次", base[2], "ビルド固有の数値ではなく一般確認です。"], ["その次", "公式トレードで比較", "固定相場を前提にせず、同条件の複数出品を比較してください。"]
   ];
@@ -53,7 +53,7 @@ function render() {
 }
 
 fetch("/data/builds.json").then((response) => response.json()).then((data) => {
-  builds = data;
+  builds = data.filter((build) => build.status !== "draft");
   [...new Set(builds.map((build) => build.className))].forEach((name) => byId("gear-class").append(new Option(name, name)));
   const params=new URLSearchParams(location.search);
   const savedBuild = params.get('build') || localStorage.getItem("poe2:navi:selected-build") || localStorage.getItem("poe2:navi:gear-build") || "";

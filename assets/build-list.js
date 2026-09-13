@@ -15,7 +15,7 @@ function render() {
   filtered.forEach((build) => {
     const article = document.createElement("article");
     article.className = "catalog-card";
-    article.innerHTML = `<div><span class="verified">${build.version}</span><p class="class"></p><h2></h2><p class="skill"></p></div><div class="catalog-fit"><small>こんな人向け</small><strong></strong><small>先に知る弱点</small><p></p></div><dl><div><dt>操作</dt><dd></dd></div><div><dt>予算</dt><dd></dd></div><div><dt>確認済み段階</dt><dd>${build.levelingStages?.length || 0}/8</dd></div></dl><a class="button" href="${url(build)}">${build.dataStatus === "reviewed" ? "Lv1から育てる" : "確認済み手順を見る"}</a>`;
+    article.innerHTML = `<div><span class="verified">${build.version}</span><p class="class"></p><h2></h2><p class="skill"></p></div><div class="catalog-fit"><small>こんな人向け</small><strong></strong><small>先に知る弱点</small><p></p></div><dl><div><dt>操作</dt><dd></dd></div><div><dt>予算</dt><dd></dd></div><div><dt>確認済み段階</dt><dd>${build.levelingStages?.length || 0}/8</dd></div></dl><a class="button" href="${url(build)}">${build.status === "verified" ? "Lv1から育てる" : "確認済み手順を見る"}</a>`;
     article.querySelector(".class").textContent = `${build.className} / ${build.ascendancy}`;
     article.querySelector("h2").textContent = build.name;
     article.querySelector(".skill").textContent = `主力：${build.mainSkill}`;
