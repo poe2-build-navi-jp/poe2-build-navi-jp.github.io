@@ -27,9 +27,9 @@ assert(new Set(builds.map((build) => build.className)).size === 8, "each playabl
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
 assert(index.includes('id="class-grid"'), "homepage class cards container missing");
-assert(index.indexOf('id="featured-builds"') < index.indexOf('id="choose-class"'), "homepage must show recommended builds before classes");
 assert(index.indexOf('id="choose-class"') < index.indexOf('id="quick-start"'), "homepage must show class selection before resume controls");
-assert(index.includes("現在のレベルを入力すると、次にやることが分かります"), "homepage action-first message missing");
+assert(index.indexOf('id="quick-start"') < index.indexOf('id="featured-builds"'), "homepage must show recommended builds after class/build/level flow");
+assert(index.includes("職業とビルドを選び、現在Lvを入力すると次にやることが分かります"), "homepage action-first message missing");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
 assert(gearCheck.indexOf('id="gear-class"') < gearCheck.indexOf('id="gear-build"') && gearCheck.indexOf('id="gear-build"') < gearCheck.indexOf('id="gear-level"'), "gear flow must be class -> build -> level");
@@ -61,6 +61,9 @@ for (const build of builds) {
     assert(page.includes('id="related-links"') && page.includes('/tier-list/'), `${pagePath}: static internal links missing`);
     assert(page.includes('data-build-status="verified"'), `${pagePath}: verified status missing`);
     assert(!page.includes('<p id="stage-status" class="pending">ビルド固有データ確認中</p>'), `${pagePath}: verified/confirming contradiction`);
+    assert((page.match(/id="roadmap"/g) || []).length === 1, `${pagePath}: roadmap must appear once`);
+    assert((page.match(/data-stage-index=/g) || []).length === 8, `${pagePath}: all 8 roadmap stages must be present in HTML`);
+    assert(page.includes("この段階のパッシブツリーを見る"), `${pagePath}: stage passive source CTA missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 

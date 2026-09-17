@@ -7,11 +7,12 @@ const allBuilds=JSON.parse(await read('data/builds.json')), builds=allBuilds.fil
 const esc=v=>String(v??'確認中').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const url=b=>`/builds/${b.classSlug}/${b.slug}/`;
 const list=vs=>vs.map(v=>`<li>${esc(v)}</li>`).join('');
-const cards=builds.map(b=>`<article class="catalog-card" data-class="${esc(b.className)}"><div><p>${esc(b.className)} / ${esc(b.ascendancy)}</p><h2>${esc(b.name)}</h2><p>主力：${esc(b.mainSkill)}</p></div><div class="catalog-fit"><strong>${esc(b.audience)}</strong><p>特徴：${esc(b.strengths[0])}</p><p>弱点：${esc(b.weaknesses[0])}</p></div><p>操作：${esc(b.difficulty)}<br>予算：${esc(b.budget)}</p><a class="button" href="${url(b)}">Lv1から育てる</a></article>`).join('');
+const ssf=b=>b.ssf===true?'確認済み':b.ssf===false?'非対応':'未確認';
+const cards=builds.map(b=>`<article class="catalog-card" data-class="${esc(b.className)}"><div><p>${esc(b.className)} / ${esc(b.ascendancy)}</p><h2>${esc(b.name)}</h2><p>主力：${esc(b.mainSkill)}</p></div><div class="catalog-fit"><strong>おすすめ：${esc(b.audience)}</strong><p>弱点：${esc(b.weaknesses[0])}</p></div><dl><div><dt>操作</dt><dd>${esc(b.difficulty)}</dd></div><div><dt>SSF</dt><dd>${ssf(b)}</dd></div><div><dt>対応</dt><dd>${esc(b.version)}</dd></div></dl><a class="button" href="${url(b)}">Lv1から育てる</a></article>`).join('');
 let catalog=await read('builds/index.html');
-catalog=catalog.replace(/(<div id="build-list"[^>]*>)[\s\S]*?(<\/div><\/section><\/main>)/,`$1${cards}$2`).replaceAll('/assets/build-list.js','/assets/catalog-static.js').replaceAll('ビルド8選',`ビルド${builds.length}選`).replaceAll('各1件掲載','掲載').replaceAll('8職業を1件ずつ比較できる育成ナビ。','職業別に特徴と弱点を比較できる育成ナビ。').replace(/(<span id="result-count">).*?(<\/span>)/,`$1${builds.length}件$2`);
+catalog=catalog.replace(/(<div id="build-list"[^>]*>)[\s\S]*?(<\/div><\/section><\/main>)/,`$1${cards}$2`).replaceAll('/assets/build-list.js','/assets/catalog-static.js').replaceAll('ビルド8選',`ビルド${builds.length}選`).replaceAll('各1件掲載','掲載').replaceAll('8職業を1件ずつ比較できる育成ナビ。','職業別に特徴と弱点を比較できる育成ナビ。').replace(/(<span id="result-count">).*?(<\/span>)/,`$1${builds.length}件$2`).replace(/<p class="budget-policy">[\s\S]*?<\/p>/,'').replace('<p class="filter-note">','<p class="budget-policy">装備価格はリーグ時期で変動するため、固定相場は掲載していません。</p><p class="filter-note">');
 await save('builds/index.html',catalog);
-const classCards=classes.map(c=>`<article class="class-card" data-class-slug="${c.slug}"><h3>${esc(c.name)}</h3><p class="class-tagline">${esc(c.tagline)}</p><p class="class-description">${esc(c.description)}</p><a class="button" href="/classes/${c.slug}/">この職業のビルドを見る</a></article>`).join('');
+const classCards=classes.map(c=>`<article class="class-card" data-class-slug="${c.slug}"><h3>${esc(c.name)}</h3><p class="class-tagline">${esc(c.tagline)}</p><a class="button" href="/classes/${c.slug}/">この職業のビルドを見る</a></article>`).join('');
 let home=await read('index.html');
 home=home.replace(/(<div id="class-grid"[^>]*>)[\s\S]*?(<\/div><div class="class-helper">)/,`$1${classCards}$2`);
 if(!home.includes('id="real-example"')){const b=builds[0];home=home.replace('</main>',`<section id="real-example" class="section"><h2>実際の案内例：Lv37</h2><p>${esc(b.name)}</p><ol>${list(b.levelingStages[3].nowActions)}</ol><a class="button" href="${url(b)}?level=37#now">この段階を見る</a></section></main>`);}
@@ -23,10 +24,8 @@ for(const b of builds){
  let p=await read(`builds/${b.classSlug}/${b.slug}/index.html`);
  let actionIndex=0;
  p=p.replace(/(<span data-now-action>).*?(<\/span>)/g,(_,a,z)=>a+esc(b.levelingStages[0].nowActions[actionIndex++])+z);
- p=p.replace(/(<div id="fact-grid"[^>]*>).*?(<\/div>)/,`$1<div class="fact">対応パッチ：${esc(b.version)}</div><div class="fact">資料確認日：${esc(b.updatedAt)}</div>$2`);
  p=p.replace('一般的な確認項目（ビルド固有データ確認中）','掲載資料から整理した優先行動');
  p=p.replace(/(<ul id="strength-list"[^>]*>).*?(<\/ul>)/,`$1${list(b.strengths)}$2`).replace(/(<ul id="weakness-list"[^>]*>).*?(<\/ul>)/,`$1${list(b.weaknesses)}$2`);
- if(!p.includes('id="static-roadmap"'))p=p.replace('<section id="roadmap"',`<section id="static-roadmap"><h2>全8段階の育成手順</h2><p>対応パッチ ${esc(b.version)}・資料確認日 ${esc(b.updatedAt)}。各段階のパッシブ方針を先に確認し、原典ツリーは正確なノード位置の照合に使用してください。</p>${b.levelingStages.map(s=>`<details><summary>${esc(s.label)}</summary><ol>${list(s.nowActions)}</ol><dl>${[['主力',s.mainSkill],['サポート',s.supports],['次のパッシブ目標',s.passivePriority],['優先装備・能力',s.gearPriority],['交換候補',s.replaceGear],['注意点',s.caution],['移行条件',s.transitionCondition]].map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></details>`).join('')}<h3>原典で細部を照合</h3><p>ノード位置や段階別ツリーの詳細確認用です。本文だけでも次に進む方向が分かるよう要点を整理しています。</p><ul>${b.sources.map(s=>`<li><a href="${esc(s.url)}">${esc(s.name)}</a>・${esc(s.checkedAt)}</li>`).join('')}</ul><a href="/editorial-policy/">編集方針</a></section><section id="roadmap"`);
  await save(`builds/${b.classSlug}/${b.slug}/index.html`,p);
 }
 console.log(`Static content: ${builds.length} builds, ${classes.length} classes`);

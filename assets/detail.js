@@ -62,28 +62,15 @@ function stageItem(label, value) {
 }
 
 function renderStage(index, scroll = false) {
-  const stage = STAGES[index];
-  document.querySelectorAll(".stage-button").forEach((button, buttonIndex) => {
-    if (buttonIndex === index) button.setAttribute("aria-current", "step");
-    else button.removeAttribute("aria-current");
+  const details = [...document.querySelectorAll("#roadmap details[data-stage-index]")];
+  details.forEach((item, itemIndex) => {
+    const current = itemIndex === index;
+    item.open = current;
+    item.toggleAttribute("data-current", current);
+    const marker = item.querySelector(".current-stage-marker");
+    if (marker) marker.hidden = !current;
   });
-  byId("stage-heading").textContent = stage.label;
-  byId("stage-next").textContent = `次の目標：${stage.next}`;
-  const grid = byId("stage-grid");
-  grid.replaceChildren();
-  const data = build.levelingStages?.find((item) => item.label === stage.label);
-  [
-    ["今使うメインスキル", data?.mainSkill],
-    ["サポートジェム", data?.supports],
-    ["次のパッシブ目標", data?.passivePriority],
-    ["装備で優先する能力", data?.gearPriority],
-    ["交換すべき装備", data?.replaceGear],
-    ["注意点・移行条件", data ? `${data.caution} 移行条件：${data.transitionCondition}` : null]
-  ].forEach(([label, value]) => grid.append(stageItem(label, value)));
-  const stageVerified = build.status === "verified" && data;
-  byId("stage-status").textContent = stageVerified ? "この段階の主要情報を確認済み" : data ? "確認済み範囲を表示中" : "この段階は確認中";
-  byId("stage-status").className = stageVerified ? "verified" : "pending";
-  if (scroll) byId("roadmap").scrollIntoView({ behavior: "smooth", block: "start" });
+  if (scroll) details[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function renderNow(index) {
@@ -224,26 +211,10 @@ function renderBuild(builds) {
   const facts = byId("fact-grid");
   facts.replaceChildren();
   [
-    ["対応パッチ", build.version], ["最終確認日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "一部確認済み" : "再確認中"], ["確認済み段階", `${build.levelingStages?.length || 0}/8`],
-    ["予算", build.budget], ["操作難易度", build.difficulty], ["火力", build.damageRating === null ? null : `${build.damageRating}/5`],
-    ["耐久", build.defenseRating === null ? null : `${build.defenseRating}/5`], ["周回", build.mappingRating === null ? null : `${build.mappingRating}/5`],
-    ["ボス", build.bossRating === null ? null : `${build.bossRating}/5`]
+    ["対応パッチ", build.version], ["最終確認日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "不足箇所を各段階に表示" : "対応パッチを再確認中"], ["確認済み段階", `${build.levelingStages?.length || 0}/8`]
   ].forEach(([label, value]) => facts.append(fact(label, value)));
-  fillList("strength-list", build.strengths, "確認中：検証後に、このビルドをおすすめできる人を掲載します。");
-  fillList("weakness-list", build.weaknesses, "確認中：強みだけでなく、弱点も検証して掲載します。");
   renderSources();
   renderProgress();
-
-  const nav = byId("stage-nav");
-  nav.replaceChildren();
-  STAGES.forEach((stage, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "stage-button";
-    button.textContent = stage.label;
-    button.addEventListener("click", () => renderStage(index, true));
-    nav.append(button);
-  });
 
   const related = byId("related-links");
   const addRelated = (href, label) => {
@@ -270,8 +241,10 @@ function renderBuild(builds) {
 
 function bindEvents() {
   const savedStages=JSON.parse(localStorage.getItem(`poe2:navi:stages:${build.id}`)||'{}');
-  document.querySelectorAll('#static-roadmap details').forEach((details,index)=>{
-    const label=document.createElement('label'),check=document.createElement('input');check.type='checkbox';check.checked=Boolean(savedStages[index]);label.className='progress-check';label.append(check,document.createTextNode('この育成段階を完了した'));details.append(label);
+  document.querySelectorAll('#roadmap details').forEach((details,index)=>{
+    const check=details.querySelector('.stage-complete input');
+    if(!check)return;
+    check.checked=Boolean(savedStages[index]);
     check.addEventListener('change',()=>{savedStages[index]=check.checked;localStorage.setItem(`poe2:navi:stages:${build.id}`,JSON.stringify(savedStages));});
   });
   byId("level-input").addEventListener("input", (event) => setLevel(event.target.value));
