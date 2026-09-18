@@ -27,9 +27,10 @@ assert(new Set(builds.map((build) => build.className)).size === 8, "each playabl
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
 assert(index.includes('id="class-grid"'), "homepage class cards container missing");
+assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="choose-class"'), "homepage must show purpose picks before class selection");
 assert(index.indexOf('id="choose-class"') < index.indexOf('id="quick-start"'), "homepage must show class selection before resume controls");
 assert(index.indexOf('id="quick-start"') < index.indexOf('id="featured-builds"'), "homepage must show recommended builds after class/build/level flow");
-assert(index.includes("職業とビルドを選び、現在Lvを入力すると次にやることが分かります"), "homepage action-first message missing");
+assert(index.includes("PoE2 0.5.5 初心者向けおすすめビルド") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
 assert(gearCheck.indexOf('id="gear-class"') < gearCheck.indexOf('id="gear-build"') && gearCheck.indexOf('id="gear-build"') < gearCheck.indexOf('id="gear-level"'), "gear flow must be class -> build -> level");
@@ -64,6 +65,8 @@ for (const build of builds) {
     assert((page.match(/id="roadmap"/g) || []).length === 1, `${pagePath}: roadmap must appear once`);
     assert((page.match(/data-stage-index=/g) || []).length === 8, `${pagePath}: all 8 roadmap stages must be present in HTML`);
     assert(page.includes("この段階のパッシブツリーを見る"), `${pagePath}: stage passive source CTA missing`);
+    assert(page.includes(`<title>PoE2 ${build.version} ${build.name}ビルド｜Lv1〜Endgame育成</title>`), `${pagePath}: search-focused title missing`);
+    assert(page.includes(`PoE2 ${build.name}のLv1〜Endgame育成手順`), `${pagePath}: build-specific roadmap heading missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -75,6 +78,8 @@ for (const classData of classes) {
     const page = await read(pagePath);
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/classes/${classData.slug}/">`), `${pagePath}: canonical mismatch`);
     assert(page.includes("このビルドで育てる"), `${pagePath}: build CTA missing`);
+    assert(page.includes(`<h1>PoE2 ${classData.name}おすすめビルド・育成</h1>`), `${pagePath}: search-focused class H1 missing`);
+    assert(page.includes("最終確認"), `${pagePath}: update status missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -99,6 +104,13 @@ for (const page of [
   assert(html.includes(`<link rel="canonical" href="${baseUrl}/${page[0]}">`), `${page[0]} self canonical missing`);
   assert(html.includes('application/ld+json') && html.includes('BreadcrumbList'), `${page[0]} breadcrumb data missing`);
 }
+const beginnerGuide = await read("beginner-guide/index.html");
+assert(beginnerGuide.includes("<h1>PoE2初心者攻略ガイド｜始め方からEndgameまで</h1>"), "beginner guide search-focused H1 missing");
+assert(beginnerGuide.includes('/guides/poe2-0-5-5-builds/') && beginnerGuide.includes('/tier-list/') && beginnerGuide.includes('/league-starter/'), "beginner guide core navigation missing");
+const tierPage = await read("tier-list/index.html");
+const starterPage = await read("league-starter/index.html");
+assert(tierPage.includes("結論だけ知りたい人向け"), "tier purpose conclusion missing");
+assert(starterPage.includes("迷ったらこの候補"), "league starter purpose conclusion missing");
 assert(seoPages.length === 13, "targeted SEO page count must be 13");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;

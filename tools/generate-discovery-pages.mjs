@@ -42,22 +42,33 @@ function shell({ title, description, path, current, kicker, h1, intro, content, 
   return `<!doctype html><html lang="ja"><head>${head({ title, description, path, crumbs })}</head><body><a class="skip-link" href="#main">本文へ移動</a>${header(current)}<main id="main" class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol>${crumbs.map((item, index) => `<li>${index === crumbs.length - 1 ? esc(item.name) : `<a href="${item.path}">${esc(item.name)}</a>`}</li>`).join("")}</ol></nav><section class="page-hero discovery-hero"><p class="section-kicker">${esc(kicker)}</p><h1>${esc(h1)}</h1><p>${esc(intro)}</p><div class="update-strip"><span>対応：${esc(discovery.patchVersion)}</span><span>最終確認：${esc(discovery.updatedAt)}</span></div></section><article class="article-page discovery-page">${content}</article></main></body></html>`;
 }
 
-function compactBuildCard(build, label = "Lv1から育てる") {
+function compactBuildCard(build, label = "現在Lvから今やることを見る") {
   const ssf = build.ssf === true ? "確認済み" : build.ssf === false ? "非対応" : "未確認";
   return `<article class="discovery-card"><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><p><b>主力：</b>${esc(build.mainSkill)}</p><p><b>おすすめ：</b>${esc(build.audience)}</p><p><b>弱点：</b>${esc(build.weaknesses?.[0])}</p><dl><div><dt>操作</dt><dd>${esc(build.difficulty)}</dd></div><div><dt>SSF</dt><dd>${ssf}</dd></div><div><dt>対応</dt><dd>${esc(build.version)}・${esc(build.updatedAt)}</dd></div></dl><a class="button" href="${buildUrl(build)}">${esc(label)}</a></article>`;
 }
 
+function choiceCard(label, buildId, reason) {
+  const build = byId(buildId);
+  return `<article class="purpose-card"><p class="section-kicker">${esc(label)}</p><h3>${esc(build.name)}</h3><p>${esc(reason)}</p><a class="button" href="${buildUrl(build)}">現在Lvから今やることを見る</a></article>`;
+}
+
 const featured = discovery.featuredBuildIds.map(byId);
 const featuredHtml = `<section id="featured-builds" class="section featured-builds" aria-labelledby="featured-title"><div class="section-head"><p class="section-kicker">BEGINNER PICKS</p><h2 id="featured-title">初心者におすすめのビルド</h2><p>強さの順位ではなく、0.5.5の段階別資料と初心者向けの育成導線を確認できる候補です。</p></div><div class="discovery-grid">${featured.map((build) => compactBuildCard(build)).join("")}</div><div class="section-cta"><a class="button" href="/builds/">全10ビルドを見る</a><a class="button-secondary" href="/tier-list/">目的別Tierを見る</a><a class="button-secondary" href="/league-starter/">リーグスターターを見る</a></div></section>`;
+const topChoices = `<section id="purpose-picks" class="section section-soft" aria-labelledby="purpose-picks-title"><div class="section-head"><p class="section-kicker">QUICK ANSWER</p><h2 id="purpose-picks-title">迷ったらこの4つ</h2><p>最強1位ではなく、遊び方と育成条件から選べる候補です。</p></div><div class="purpose-grid">${[
+  choiceCard("初心者・安全重視", "witch-minion-infernalist", "ミニオンに攻撃を任せやすく、自分は回避と位置取りへ集中できます。"),
+  choiceCard("弓で遊びたい", "ranger-ice-shot-deadeye", "Lv31からアイスショットへ切り替える時期と、序盤の育成手順が明確です。"),
+  choiceCard("近接で遊びたい", "monk-whirling-assault", "移動しながら攻撃でき、Lv41の主力切替まで段階別に確認できます。"),
+  choiceCard("SSF・必須ユニークなし", "witch-ed-contagion-lich", "SSFで成立し、必須ユニークを必要としないことを確認済みです。")
+].join("")}</div><div class="section-cta"><a class="button-secondary" href="/tier-list/">用途別Tierで比較する</a><a class="button-secondary" href="/league-starter/">リーグスターターを見る</a></div></section>`;
 
 let home = await readFile(resolve(root, "index.html"), "utf8");
 home = home.replace(/<section id="featured-builds"[\s\S]*?<\/section>/g, "");
 home = home
-  .replace(/<title>.*?<\/title>/, "<title>PoE2 最新ビルドサイト｜初心者向け日本語育成ナビ</title>")
-  .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="PoE2 0.5.5対応の日本語ビルドサイト。10ビルドから選び、現在Lvを入力すると、Lv1からEndgameまで次にやること3つが分かります。">')
-  .replace(/<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="PoE2 最新ビルドサイト｜初心者向け日本語育成ナビ">')
-  .replace(/<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="海外の強ビルドを日本語でLv1から確認。現在Lvから次にやることを3つに絞ります。">')
-  .replace(/<section class="hero"[\s\S]*?<\/section>\s*(?:<section id="featured-builds"[\s\S]*?<\/section>\s*)?<section id="choose-class"/, `<section class="hero" aria-labelledby="hero-title"><div><p class="eyebrow">PATH OF EXILE 2 / JAPANESE BUILD GUIDE</p><h1 id="hero-title">PoE2ビルドナビ</h1><p class="lead">初心者でもLv1からそのまま進められる日本語ビルドガイド。職業とビルドを選び、現在Lvを入力すると次にやることが分かります。</p><div class="journey-steps" aria-label="使い方"><span><b>1</b>職業を選ぶ</span><span><b>2</b>ビルドを選ぶ</span><span><b>3</b>現在Lvを入力</span><span><b>4</b>今やること3つ</span></div><div class="hero-actions"><a class="button" href="#choose-class">職業から選ぶ</a><a class="button-secondary" href="#featured-builds">おすすめビルドを見る</a></div><div class="status-note">対応パッチ <span id="site-version">${esc(discovery.patchVersion)}</span>・最終更新 <span id="last-updated">${esc(discovery.updatedAt)}</span></div></div><aside class="hero-guide"><strong>検索目的から選ぶ</strong><ul><li><a href="/guides/poe2-0-5-5-builds/">0.5.5対応ビルド</a></li><li><a href="/guides/forbidden-rites-beginner/">Forbidden Rites初心者</a></li><li><a href="/tier-list/">初心者向けTier</a></li><li><a href="/league-starter/">リーグスターター</a></li><li><a href="/poe2-1-0/">PoE2 1.0情報</a></li></ul></aside></section><section id="choose-class"`)
+  .replace(/<title>.*?<\/title>/, "<title>PoE2 0.5.5 おすすめビルド｜初心者向け育成ナビ</title>")
+  .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="PoE2 0.5.5対応。初心者向けおすすめビルドを比較し、現在Lvを入力するとスキル・装備・パッシブの「今やること」を3つ表示します。">')
+  .replace(/<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="PoE2 0.5.5 おすすめビルド｜初心者向け育成ナビ">')
+  .replace(/<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="初心者向けビルドを目的別に比較。現在Lvから今やること3つを確認できます。">')
+  .replace(/<section class="hero"[\s\S]*?<\/section>\s*(?:<section id="purpose-picks"[\s\S]*?<\/section>\s*)?(?:<section id="featured-builds"[\s\S]*?<\/section>\s*)?<section id="choose-class"/, `<section class="hero" aria-labelledby="hero-title"><div><p class="eyebrow">PATH OF EXILE 2 / JAPANESE BUILD GUIDE</p><h1 id="hero-title">PoE2 0.5.5 初心者向けおすすめビルド</h1><p class="lead">目的別にビルドを選び、現在Lvを入力すると、スキル・装備・パッシブの「今やること」を3つ表示します。</p><div class="journey-steps" aria-label="使い方"><span><b>1</b>おすすめを選ぶ</span><span><b>2</b>ビルドを開く</span><span><b>3</b>現在Lvを入力</span><span><b>4</b>今やること3つ</span></div><div class="hero-actions"><a class="button" href="#purpose-picks">迷ったらこの4つ</a><a class="button-secondary" href="#choose-class">職業から選ぶ</a></div><div class="status-note">対応パッチ <span id="site-version">${esc(discovery.patchVersion)}</span>・最終確認 <span id="last-updated">${esc(discovery.updatedAt)}</span></div></div><aside class="hero-guide"><strong>検索目的から選ぶ</strong><ul><li><a href="/guides/poe2-0-5-5-builds/">0.5.5対応ビルド</a></li><li><a href="/tier-list/">目的別ビルドTier</a></li><li><a href="/league-starter/">リーグスターター</a></li><li><a href="/beginner-guide/">初心者攻略ガイド</a></li><li><a href="/poe2-1-0/">PoE2 1.0情報</a></li></ul></aside></section>${topChoices}<section id="choose-class"`)
   .replace("<h2 id=\"classes-title\">まず職業を選んでください</h2>", "<h2 id=\"classes-title\">職業から探す</h2>")
   .replace(/<p>おすすめを見ても決められない場合は、好きな戦い方から職業を選べます。<\/p>|<p>ビルド名が分からなくても大丈夫です。好きな戦い方から職業を選べます。<\/p>/, "<p>好きな戦い方から職業を選び、掲載ビルドへ進めます。</p>")
   .replace(/(<section id="quick-start"[\s\S]*?<\/section>)/, `$1${featuredHtml}`)
@@ -73,12 +84,24 @@ const tierSections = ["S", "A", "B", "C"].map((tier) => {
   return `<section class="tier-section" aria-labelledby="tier-${tier.toLowerCase()}"><h2 id="tier-${tier.toLowerCase()}">${tier} Tier</h2>${cards}</section>`;
 }).join("");
 
-const tierContent = `<section class="content-action"><h2>このTierの見方</h2><p><b>強さの断定順位ではありません。</b>現在掲載している0.5.5のビルドを、初心者がLv1から育成を始めやすいか、操作や途中切替が分かりやすいか、確認資料が揃っているかで暫定分類しています。火力・周回・ボス・防御の数値比較は、同条件の検証がないため採点していません。</p></section>${tierSections}<section><h2>評価基準</h2><ul><li>同じパッチ0.5.5の資料であること</li><li>8段階の育成手順を確認できること</li><li>初心者が注意すべき操作・切替・弱点が明記されていること</li><li>資料が不足する候補は上位へ断定しないこと</li></ul><p><a href="/editorial-policy/">編集方針と情報確認方法を見る</a></p></section>`;
+const tierChoices = `<section class="content-action choice-summary"><h2>結論だけ知りたい人向け</h2><div class="purpose-grid">${[
+  choiceCard("初心者・弓", "ranger-ice-shot-deadeye", "序盤からLv31のアイスショット切替まで手順が明確です。"),
+  choiceCard("安全性重視", "warrior-shield-wall-smith", "盾を軸に育成でき、主力へ移るLv22も確認できます。"),
+  choiceCard("召喚で安全に", "witch-minion-infernalist", "攻撃をミニオンへ任せ、回避と位置取りへ集中しやすい構成です。"),
+  choiceCard("近接・機動力", "monk-whirling-assault", "移動攻撃を使い、近接でテンポよく進めたい人向けです。")
+].join("")}</div></section>`;
+const tierContent = `${tierChoices}<section class="content-action"><h2>このTierの見方</h2><p>育成しやすさ、操作、途中切替、確認資料を基準に比較しています。上の目的別候補で絞った後、Tier表で強みと弱点を確認してください。</p></section>${tierSections}<section><h2>評価基準</h2><ul><li>同じパッチ0.5.5の資料であること</li><li>8段階の育成手順を確認できること</li><li>初心者が注意すべき操作・切替・弱点が明記されていること</li><li>資料が不足する候補は上位へ断定しないこと</li></ul><p><a href="/editorial-policy/">編集方針と情報確認方法を見る</a></p></section>`;
 await mkdir(resolve(root, "tier-list"), { recursive: true });
 await writeFile(resolve(root, "tier-list/index.html"), shell({ title: "PoE2 0.5.5初心者向けビルドTier｜育てやすさ比較", description: "PoE2 0.5.5の初心者向けビルドを、育成の始めやすさ・操作・構成切替・資料確認状況で暫定比較。各ビルドは現在Lvから育成できます。", path: "/tier-list/", current: "tier", kicker: "TIER LIST / PATCH 0.5.5", h1: "PoE2 0.5.5初心者向けビルドTier", intro: "初心者が最初の1体を選ぶための暫定Tierです。強さだけの順位ではなく、Lv1から迷わず進められるかを重視します。", content: tierContent, crumbs: [{ name: "ホーム", path: "/" }, { name: "Tierリスト", path: "/tier-list/" }] }));
 
-const starterCards = builds.filter((build) => build.leagueStarter).map((build) => `<article class="starter-card"><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h2>${esc(build.name)}</h2><p>${esc(build.audience)}</p><ul><li>主力：${esc(build.mainSkill)}</li><li>操作：${esc(build.difficulty)}</li><li>${build.ssf === true ? "SSF対応の根拠を確認済み" : "SSF適性は確認中"}</li><li>価格：固定相場を断定しません</li></ul><p><b>先に知る弱点：</b>${esc(build.weaknesses[0])}</p></div><a class="button" href="${buildUrl(build)}">Lv1から育てる</a></article>`).join("");
-const starterContent = `<section class="content-action"><h2>選定条件</h2><p>掲載資料でリーグ開始から育成できることを確認できる候補です。高額ユニークへの依存やSSF適性が確認できない場合は、そのまま明記しています。</p></section><div class="starter-list">${starterCards}</div><aside class="next-box"><b>決められない場合</b><p>遠距離・近接・操作・重視項目から4問で候補を絞れます。</p><a class="button" href="/class-check/">4問診断を始める</a></aside>`;
+const starterCards = builds.filter((build) => build.leagueStarter).map((build) => `<article class="starter-card"><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h2>${esc(build.name)}</h2><p>${esc(build.audience)}</p><ul><li>主力：${esc(build.mainSkill)}</li><li>操作：${esc(build.difficulty)}</li><li>${build.ssf === true ? "SSF対応の根拠を確認済み" : "SSF適性は確認中"}</li><li>価格：固定相場を断定しません</li></ul><p><b>先に知る弱点：</b>${esc(build.weaknesses[0])}</p></div><a class="button" href="${buildUrl(build)}">現在Lvから今やることを見る</a></article>`).join("");
+const starterChoices = `<section class="content-action choice-summary"><h2>迷ったらこの候補</h2><div class="purpose-grid">${[
+  choiceCard("初心者", "witch-minion-infernalist", "ミニオンへ攻撃を任せやすく、回避へ集中できます。"),
+  choiceCard("弓", "ranger-ice-shot-deadeye", "序盤構成とLv31の主力切替が明確です。"),
+  choiceCard("近接・耐久", "warrior-shield-wall-smith", "盾を使い、耐久を意識して進めたい人向けです。"),
+  choiceCard("SSF", "witch-ed-contagion-lich", "SSF成立と必須ユニークなしを確認済みです。")
+].join("")}</div></section>`;
+const starterContent = `${starterChoices}<section class="content-action"><h2>選定条件</h2><p>掲載資料でリーグ開始から育成できることを確認できる候補です。高額ユニークへの依存やSSF適性が確認できない場合は、そのまま明記しています。</p></section><div class="starter-list">${starterCards}</div><aside class="next-box"><b>決められない場合</b><p>遠距離・近接・操作・重視項目から4問で候補を絞れます。</p><a class="button" href="/class-check/">4問診断を始める</a></aside>`;
 await mkdir(resolve(root, "league-starter"), { recursive: true });
 await writeFile(resolve(root, "league-starter/index.html"), shell({ title: "PoE2 リーグスターターおすすめ｜初心者・低予算ビルド", description: "PoE2初心者向けリーグスターターを比較。装備依存・操作難易度・育成切替を確認し、Lv1からEndgameまでの手順へ進めます。", path: "/league-starter/", current: "starter", kicker: "LEAGUE STARTER", h1: "PoE2 リーグスターターおすすめビルド", intro: "最初のキャラクターで育成を始められる、0.5.5対応の候補を比較します。固定価格や未確認の強さは断定しません。", content: starterContent, crumbs: [{ name: "ホーム", path: "/" }, { name: "リーグスターター", path: "/league-starter/" }] }));
 
