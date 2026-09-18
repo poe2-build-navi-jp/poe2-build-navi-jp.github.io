@@ -8,6 +8,13 @@
     "druid-plant-oracle",
     "monk-whirling-assault"
   ],
+  "featuredBuildTags": {
+    "ranger-ice-shot-deadeye": ["初心者", "遠距離", "SSF"],
+    "warrior-shield-wall-smith": ["近接", "耐久重視", "SSF"],
+    "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
+    "druid-plant-oracle": ["操作少なめ", "Lv1から主力継続"],
+    "monk-whirling-assault": ["近接", "機動力", "SSF"]
+  },
   "tiers": {
     "S": [
       {

@@ -71,3 +71,4 @@ img,svg{display:block;max-width:100%}
 .budget-policy{max-width:1050px;margin:14px auto;padding:12px 15px;background:#fff6df;border-left:4px solid var(--gold);color:var(--muted)}.diagnosis-guide{padding-top:10px}.diagnosis-guide>p,.diagnosis-guide>li{color:#475159}
 @media(max-width:680px){.static-roadmap dl{grid-template-columns:1fr}.static-roadmap dt{padding-bottom:2px}.static-roadmap dd{padding-top:2px;border-top:0}.static-roadmap summary{align-items:flex-start}.current-stage-marker{white-space:nowrap}.passive-source .button-secondary{width:100%}.build-hero .fact-grid{grid-template-columns:1fr 1fr}}
 .purpose-card h3{font:700 1.35rem/1.35 Georgia,"Yu Mincho",serif;margin:7px 0 12px}
+.build-tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.build-tags span{padding:4px 9px;background:#f3e8d4;color:#7a421f;border:1px solid #dfc69d;font-size:.75rem;font-weight:900}

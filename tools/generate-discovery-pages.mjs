@@ -42,9 +42,10 @@ function shell({ title, description, path, current, kicker, h1, intro, content, 
   return `<!doctype html><html lang="ja"><head>${head({ title, description, path, crumbs })}</head><body><a class="skip-link" href="#main">本文へ移動</a>${header(current)}<main id="main" class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol>${crumbs.map((item, index) => `<li>${index === crumbs.length - 1 ? esc(item.name) : `<a href="${item.path}">${esc(item.name)}</a>`}</li>`).join("")}</ol></nav><section class="page-hero discovery-hero"><p class="section-kicker">${esc(kicker)}</p><h1>${esc(h1)}</h1><p>${esc(intro)}</p><div class="update-strip"><span>対応：${esc(discovery.patchVersion)}</span><span>最終確認：${esc(discovery.updatedAt)}</span></div></section><article class="article-page discovery-page">${content}</article></main></body></html>`;
 }
 
-function compactBuildCard(build, label = "現在Lvから今やることを見る") {
+function compactBuildCard(build, label = "現在Lvから今やることを見る", tags = []) {
   const ssf = build.ssf === true ? "確認済み" : build.ssf === false ? "非対応" : "未確認";
-  return `<article class="discovery-card"><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><p><b>主力：</b>${esc(build.mainSkill)}</p><p><b>おすすめ：</b>${esc(build.audience)}</p><p><b>弱点：</b>${esc(build.weaknesses?.[0])}</p><dl><div><dt>操作</dt><dd>${esc(build.difficulty)}</dd></div><div><dt>SSF</dt><dd>${ssf}</dd></div><div><dt>対応</dt><dd>${esc(build.version)}・${esc(build.updatedAt)}</dd></div></dl><a class="button" href="${buildUrl(build)}">${esc(label)}</a></article>`;
+  const tagsHtml = tags.length ? `<div class="build-tags" aria-label="用途">${tags.map((tag) => `<span>${esc(tag)}</span>`).join("")}</div>` : "";
+  return `<article class="discovery-card"><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3>${tagsHtml}<p><b>おすすめ：</b>${esc(build.audience)}</p><p><b>弱点：</b>${esc(build.weaknesses?.[0])}</p><dl><div><dt>主力</dt><dd>${esc(build.mainSkill)}</dd></div><div><dt>操作</dt><dd>${esc(build.difficulty)}</dd></div><div><dt>SSF</dt><dd>${ssf}</dd></div><div><dt>対応</dt><dd>${esc(build.version)}・${esc(build.updatedAt)}</dd></div></dl><a class="button" href="${buildUrl(build)}">${esc(label)}</a></article>`;
 }
 
 function choiceCard(label, buildId, reason) {
@@ -53,7 +54,7 @@ function choiceCard(label, buildId, reason) {
 }
 
 const featured = discovery.featuredBuildIds.map(byId);
-const featuredHtml = `<section id="featured-builds" class="section featured-builds" aria-labelledby="featured-title"><div class="section-head"><p class="section-kicker">BEGINNER PICKS</p><h2 id="featured-title">初心者におすすめのビルド</h2><p>強さの順位ではなく、0.5.5の段階別資料と初心者向けの育成導線を確認できる候補です。</p></div><div class="discovery-grid">${featured.map((build) => compactBuildCard(build)).join("")}</div><div class="section-cta"><a class="button" href="/builds/">全10ビルドを見る</a><a class="button-secondary" href="/tier-list/">目的別Tierを見る</a><a class="button-secondary" href="/league-starter/">リーグスターターを見る</a></div></section>`;
+const featuredHtml = `<section id="featured-builds" class="section featured-builds" aria-labelledby="featured-title"><div class="section-head"><p class="section-kicker">BEGINNER PICKS</p><h2 id="featured-title">初心者におすすめのビルド</h2><p>強さの順位ではなく、0.5.5の段階別資料と初心者向けの育成導線を確認できる候補です。</p></div><div class="discovery-grid">${featured.map((build) => compactBuildCard(build, undefined, discovery.featuredBuildTags?.[build.id] ?? [])).join("")}</div><div class="section-cta"><a class="button" href="/builds/">全10ビルドを見る</a><a class="button-secondary" href="/tier-list/">目的別Tierを見る</a><a class="button-secondary" href="/league-starter/">リーグスターターを見る</a></div></section>`;
 const topChoices = `<section id="purpose-picks" class="section section-soft" aria-labelledby="purpose-picks-title"><div class="section-head"><p class="section-kicker">QUICK ANSWER</p><h2 id="purpose-picks-title">迷ったらこの4つ</h2><p>最強1位ではなく、遊び方と育成条件から選べる候補です。</p></div><div class="purpose-grid">${[
   choiceCard("初心者・安全重視", "witch-minion-infernalist", "ミニオンに攻撃を任せやすく、自分は回避と位置取りへ集中できます。"),
   choiceCard("弓で遊びたい", "ranger-ice-shot-deadeye", "Lv31からアイスショットへ切り替える時期と、序盤の育成手順が明確です。"),
@@ -72,6 +73,7 @@ home = home
   .replace("<h2 id=\"classes-title\">まず職業を選んでください</h2>", "<h2 id=\"classes-title\">職業から探す</h2>")
   .replace(/<p>おすすめを見ても決められない場合は、好きな戦い方から職業を選べます。<\/p>|<p>ビルド名が分からなくても大丈夫です。好きな戦い方から職業を選べます。<\/p>/, "<p>好きな戦い方から職業を選び、掲載ビルドへ進めます。</p>")
   .replace(/(<section id="quick-start"[\s\S]*?<\/section>)/, `$1${featuredHtml}`)
+  .replace(/(<a id="quick-link"[^>]*>)[^<]*(<\/a>)/, "$1現在Lvから今やることを見る$2")
   .replace(/<section class="section section-soft" aria-labelledby="quality-title">[\s\S]*?<\/section>/, `<section class="section section-soft" aria-labelledby="quality-title"><div class="section-head"><p class="section-kicker">SEARCH GUIDES</p><h2 id="quality-title">目的から探す</h2><p>検索した悩みから、ビルド詳細のLv入力まで迷わず進めます。</p></div><div class="tool-grid"><a class="tool-card" href="/guides/poe2-0-5-5-builds/"><span>PATCH 0.5.5</span><strong>対応ビルドを選ぶ</strong><p>10ビルドを同じ基準で確認します。</p></a><a class="tool-card" href="/guides/forbidden-rites-beginner/"><span>FORBIDDEN RITES</span><strong>イベントを始める</strong><p>初心者が最初にする3つを確認します。</p></a><a class="tool-card" href="/guides/increase-damage/"><span>DAMAGE</span><strong>火力が出ない</strong><p>武器・スキル・パッシブを順番に確認します。</p></a><a class="tool-card" href="/guides/why-i-die/"><span>DEFENCE</span><strong>すぐ死ぬ</strong><p>耐性・回復・装備を切り分けます。</p></a><a class="tool-card" href="/guides/gear-upgrade/"><span>GEAR</span><strong>装備更新を決める</strong><p>ビルドと現在Lvから交換候補を絞ります。</p></a><a class="tool-card" href="/poe2-1-0/"><span>POE2 1.0</span><strong>正式版情報</strong><p>確定情報と未発表情報を分けて掲載します。</p></a></div></section>`);
 await writeFile(resolve(root, "index.html"), home);
 
@@ -79,7 +81,7 @@ const tierSections = ["S", "A", "B", "C"].map((tier) => {
   const entries = discovery.tiers[tier];
   const cards = entries.length ? entries.map(({ id, reason }) => {
     const build = byId(id);
-    return `<article class="tier-card"><div class="tier-badge tier-${tier.toLowerCase()}">${tier}</div><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><p class="tier-reason">${esc(reason)}</p><div class="tier-columns"><div><b>強み</b><p>${esc(build.strengths[0])}</p></div><div><b>弱み</b><p>${esc(build.weaknesses[0])}</p></div></div><ul class="tier-facts"><li>初心者適性：${esc(build.audience)}</li><li>周回・ボス・防御：同条件の数値比較は未採点</li><li>予算：${esc(build.budget)}</li><li>操作：${esc(build.difficulty)}</li></ul><a class="button" href="${buildUrl(build)}">現在Lvから進める</a></div></article>`;
+    return `<article class="tier-card"><div class="tier-badge tier-${tier.toLowerCase()}">${tier}</div><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><p class="tier-reason">${esc(reason)}</p><div class="tier-columns"><div><b>強み</b><p>${esc(build.strengths[0])}</p></div><div><b>弱み</b><p>${esc(build.weaknesses[0])}</p></div></div><ul class="tier-facts"><li>初心者適性：${esc(build.audience)}</li><li>周回・ボス・防御：同条件の数値比較は未採点</li><li>予算：${esc(build.budget)}</li><li>操作：${esc(build.difficulty)}</li></ul><a class="button" href="${buildUrl(build)}">現在Lvから今やることを見る</a></div></article>`;
   }).join("") : '<p class="empty-tier">現在、この基準でCに分類したビルドはありません。</p>';
   return `<section class="tier-section" aria-labelledby="tier-${tier.toLowerCase()}"><h2 id="tier-${tier.toLowerCase()}">${tier} Tier</h2>${cards}</section>`;
 }).join("");

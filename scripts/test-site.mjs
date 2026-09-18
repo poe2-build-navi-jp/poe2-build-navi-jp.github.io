@@ -31,6 +31,7 @@ assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="choose-class"'),
 assert(index.indexOf('id="choose-class"') < index.indexOf('id="quick-start"'), "homepage must show class selection before resume controls");
 assert(index.indexOf('id="quick-start"') < index.indexOf('id="featured-builds"'), "homepage must show recommended builds after class/build/level flow");
 assert(index.includes("PoE2 0.5.5 初心者向けおすすめビルド") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
+assert((index.match(/class="build-tags"/g) || []).length === 5, "homepage featured build purpose tags missing");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
 assert(gearCheck.indexOf('id="gear-class"') < gearCheck.indexOf('id="gear-build"') && gearCheck.indexOf('id="gear-build"') < gearCheck.indexOf('id="gear-level"'), "gear flow must be class -> build -> level");
@@ -66,7 +67,9 @@ for (const build of builds) {
     assert((page.match(/data-stage-index=/g) || []).length === 8, `${pagePath}: all 8 roadmap stages must be present in HTML`);
     assert(page.includes("この段階のパッシブツリーを見る"), `${pagePath}: stage passive source CTA missing`);
     assert(page.includes(`<title>PoE2 ${build.version} ${build.name}ビルド｜Lv1〜Endgame育成</title>`), `${pagePath}: search-focused title missing`);
+    assert(page.includes(`<h1 id="build-name">PoE2 ${build.name}ビルド｜${build.version}育成</h1>`), `${pagePath}: search-focused H1 missing`);
     assert(page.includes(`PoE2 ${build.name}のLv1〜Endgame育成手順`), `${pagePath}: build-specific roadmap heading missing`);
+    assert(page.includes(`/classes/${build.classSlug}/`), `${pagePath}: class hub link missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
