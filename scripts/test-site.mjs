@@ -7,7 +7,7 @@ const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
 
-const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "class-check/index.html", "NOTE_CONTENT_MAP.md"];
+const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "assets/leveling.js", "class-check/index.html", "leveling/index.html", "NOTE_CONTENT_MAP.md"];
 for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
@@ -82,6 +82,8 @@ for (const classData of classes) {
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/classes/${classData.slug}/">`), `${pagePath}: canonical mismatch`);
     assert(page.includes("このビルドで育てる"), `${pagePath}: build CTA missing`);
     assert(page.includes(`<h1>PoE2 ${classData.name}おすすめビルド・育成</h1>`), `${pagePath}: search-focused class H1 missing`);
+    assert(page.includes(`${classData.name}の序盤Lv1〜30の育て方`), `${pagePath}: early leveling guide missing`);
+    assert(page.includes("/leveling/"), `${pagePath}: leveling hub link missing`);
     assert(page.includes("最終確認"), `${pagePath}: update status missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
@@ -92,13 +94,14 @@ assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
-for (const page of ["builds/", "classes/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
+for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
   assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
 for (const page of [
   ["tier-list/", "PoE2 0.5.5初心者向けビルドTier"],
-  ["league-starter/", "PoE2 リーグスターターおすすめビルド"],
+  ["league-starter/", "PoE2リーグスターター・序盤おすすめビルド"],
+  ["leveling/", "PoE2レベリングガイド｜現在Lvから次にやること"],
   ["guides/beginner-build/", "PoE2初心者おすすめビルド"],
   ["poe2-1-0/", "PoE2 1.0 最新情報"]
 ]) {
@@ -108,8 +111,14 @@ for (const page of [
   assert(html.includes('application/ld+json') && html.includes('BreadcrumbList'), `${page[0]} breadcrumb data missing`);
 }
 const beginnerGuide = await read("beginner-guide/index.html");
-assert(beginnerGuide.includes("<h1>PoE2初心者攻略ガイド｜始め方からEndgameまで</h1>"), "beginner guide search-focused H1 missing");
-assert(beginnerGuide.includes('/guides/poe2-0-5-5-builds/') && beginnerGuide.includes('/tier-list/') && beginnerGuide.includes('/league-starter/'), "beginner guide core navigation missing");
+assert(beginnerGuide.includes("<h1>PoE2初心者向けおすすめビルド・育成ガイド</h1>"), "beginner guide search-focused H1 missing");
+assert(beginnerGuide.includes('初心者はまずここから') && beginnerGuide.includes('/classes/') && beginnerGuide.includes('/class-check/') && beginnerGuide.includes('/leveling/'), "beginner guide core navigation missing");
+const classHub = await read("classes/index.html");
+assert(classHub.includes("<h1>PoE2おすすめクラス・職業｜初心者向け選び方</h1>"), "class hub search-focused H1 missing");
+assert(classHub.includes("4問で自分に合う職業を見る"), "class diagnosis CTA missing");
+const levelingPage = await read("leveling/index.html");
+assert(levelingPage.includes('id="leveling-class"') && levelingPage.includes('id="leveling-build"') && levelingPage.includes('id="leveling-level"'), "leveling selection flow missing");
+assert(levelingPage.includes("現在Lvから今やることを見る"), "leveling CTA missing");
 const tierPage = await read("tier-list/index.html");
 const starterPage = await read("league-starter/index.html");
 assert(tierPage.includes("結論だけ知りたい人向け"), "tier purpose conclusion missing");

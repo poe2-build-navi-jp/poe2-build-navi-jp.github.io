@@ -5,6 +5,7 @@ const root = resolve(import.meta.dirname, "..");
 const guides = JSON.parse(await readFile(resolve(root, "data/guides.json"), "utf8"));
 const terms = JSON.parse(await readFile(resolve(root, "data/dictionary.json"), "utf8"));
 const site = JSON.parse(await readFile(resolve(root, "data/site.json"), "utf8"));
+const builds = JSON.parse(await readFile(resolve(root, "data/builds.json"), "utf8"));
 const base = "https://poe2-build-navi-jp.github.io";
 const publisher = "ca-pub-7738997902416481";
 const esc = (v) => String(v).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -36,7 +37,17 @@ const problemCards = [
   ["装備を更新したい", "/guides/gear-upgrade/", "交換する部位を1つに絞ります。"],
   ["Mappingを始めたい", "/guides/mapping/", "開始前の確認項目を順に進めます。"]
 ].map(([title, url, summary]) => `<a class="content-card" href="${url}"><strong>${title}</strong><span>${summary}</span></a>`).join("");
-await writeFile(resolve(root, "beginner-guide/index.html"), `<!doctype html><html lang="ja"><head>${head("PoE2初心者攻略ガイド｜始め方からEndgameまで", "PoE2初心者向け攻略ガイド全13章。職業・ビルド・スキル・装備・Mappingを順に学び、現在Lvから今やること3つへ進めます。", `${base}/beginner-guide/`)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li>初心者ガイド</li></ol></nav><article class="article-page wide-article"><p class="section-kicker">BEGINNER GUIDE / 13 CHAPTERS</p><h1>PoE2初心者攻略ガイド｜始め方からEndgameまで</h1><p>一度に全部読む必要はありません。今困っている項目から開き、最後にビルド詳細の「今やること」へ戻ってください。</p><div class="update-strip"><span>対応：${esc(site.siteVersion)}</span><span>最終確認：${esc(site.lastUpdated)}</span></div><section class="content-action" aria-labelledby="beginner-next-title"><h2 id="beginner-next-title">ビルド選びへ進む</h2><p>目的に合う候補を比較してから、ビルド詳細へ現在Lvを入力してください。</p><div class="section-cta"><a class="button" href="/guides/poe2-0-5-5-builds/">0.5.5おすすめビルド</a><a class="button-secondary" href="/tier-list/">目的別Tier</a><a class="button-secondary" href="/league-starter/">リーグスターター</a><a class="button-secondary" href="/builds/">全ビルド</a></div></section><section aria-labelledby="problem-guides-title"><h2 id="problem-guides-title">困りごとから探す</h2><p>検索した悩みに直接答えるページから、関連ビルドと現在Lvナビへ進めます。</p><div class="content-grid">${problemCards}</div></section><section aria-labelledby="chapters-title"><h2 id="chapters-title">基礎から学ぶ13章</h2><div class="content-grid">${guideCards}</div></section></article></main></body></html>`);
+const beginnerPicks = [
+  ["遠距離で始めたい", "ranger-ice-shot-deadeye", "弓で距離を取り、Lv31の主力切替まで順番に確認できます。"],
+  ["耐久を重視したい", "warrior-shield-wall-smith", "盾を軸に、Lv22からのシールドウォール切替へ進めます。"],
+  ["操作を簡単にしたい", "druid-plant-oracle", "Lv1からEntangleを主力にし、基本操作を少なく進められます。"],
+  ["近接で始めたい", "monk-whirling-assault", "移動しながら戦い、Lv41の主力切替まで段階別に確認できます。"]
+].map(([label, id, reason]) => {
+  const build = builds.find((item) => item.id === id);
+  if (!build) throw new Error(`Unknown beginner build: ${id}`);
+  return `<article class="purpose-card"><p class="section-kicker">${esc(label)}</p><h3>${esc(build.name)}</h3><p>${esc(reason)}</p><a class="button" href="/builds/${build.classSlug}/${build.slug}/?level=1#now">現在Lvから今やることを見る</a></article>`;
+}).join("");
+await writeFile(resolve(root, "beginner-guide/index.html"), `<!doctype html><html lang="ja"><head>${head("PoE2初心者向けおすすめビルド・育成ガイド", "PoE2初心者向けのおすすめビルドと序盤の育成ガイド。クラスとビルドを選び、現在Lvから今やること3つを確認できます。", `${base}/beginner-guide/`)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li>初心者ガイド</li></ol></nav><article class="article-page wide-article"><p class="section-kicker">BEGINNER GUIDE / 13 CHAPTERS</p><h1>PoE2初心者向けおすすめビルド・育成ガイド</h1><p>初めてなら、遊びたい戦い方から候補を1つ選び、ビルド詳細へ現在Lvを入力してください。</p><div class="update-strip"><span>対応：${esc(site.siteVersion)}</span><span>最終確認：${esc(site.lastUpdated)}</span></div><section class="content-action choice-summary" aria-labelledby="beginner-next-title"><h2 id="beginner-next-title">初心者はまずここから</h2><div class="purpose-grid">${beginnerPicks}</div><div class="section-cta"><a class="button" href="/classes/">おすすめクラスを選ぶ</a><a class="button-secondary" href="/class-check/">4問で自分に合う職業を見る</a><a class="button-secondary" href="/leveling/">現在Lvから育成を見る</a><a class="button-secondary" href="/builds/">全ビルドを見る</a></div></section><section aria-labelledby="problem-guides-title"><h2 id="problem-guides-title">困りごとから探す</h2><p>検索した悩みに直接答えるページから、関連ビルドと現在Lvナビへ進めます。</p><div class="content-grid">${problemCards}</div></section><section aria-labelledby="chapters-title"><h2 id="chapters-title">基礎から学ぶ13章</h2><div class="content-grid">${guideCards}</div></section></article></main></body></html>`);
 
 const termCards = terms.map((t) => `<a class="content-card" href="/dictionary/${t.slug}/"><strong>${esc(t.term)}</strong><span>${esc(t.oneLine)}</span></a>`).join("");
 await writeFile(resolve(root, "dictionary/index.html"), `<!doctype html><html lang="ja"><head>${head("POE2初心者用語辞典｜独立解説ページ", "POE2初心者が別サイトへ戻らず理解できる、DPS、スキル、耐性、Mappingなどの用語辞典。", `${base}/dictionary/`)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li>用語辞典</li></ol></nav><article class="article-page wide-article"><p class="section-kicker">DICTIONARY</p><h1>分からない言葉を、その場で確認</h1><p>各用語は独立URLで詳しく説明し、次に読むガイドへつなげています。</p><div class="content-grid dictionary-cards">${termCards}</div></article></main></body></html>`);
