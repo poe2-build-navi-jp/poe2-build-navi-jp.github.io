@@ -44,15 +44,15 @@ function shell({ title, description, path, current, kicker, h1, intro, content, 
   return `<!doctype html><html lang="ja"><head>${head({ title, description, path, crumbs })}</head><body><a class="skip-link" href="#main">本文へ移動</a>${header(current)}<main id="main" class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol>${crumbs.map((item, index) => `<li>${index === crumbs.length - 1 ? esc(item.name) : `<a href="${item.path}">${esc(item.name)}</a>`}</li>`).join("")}</ol></nav><section class="page-hero discovery-hero"><p class="section-kicker">${esc(kicker)}</p><h1>${esc(h1)}</h1><p>${esc(intro)}</p><div class="update-strip"><span>対応：${esc(discovery.patchVersion)}</span><span>最終確認：${esc(discovery.updatedAt)}</span></div></section><article class="article-page discovery-page">${content}</article></main></body></html>`;
 }
 
-function compactBuildCard(build, label = "現在Lvから今やることを見る", tags = []) {
+function compactBuildCard(build, label = "ビルド詳細を見る", tags = []) {
   const ssf = build.ssf === true ? "確認済み" : build.ssf === false ? "非対応" : "未確認";
   const tagsHtml = tags.length ? `<div class="build-tags" aria-label="用途">${tags.map((tag) => `<span>${esc(tag)}</span>`).join("")}</div>` : "";
   return `<article class="discovery-card"><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3>${tagsHtml}<p><b>おすすめ：</b>${esc(build.audience)}</p><p><b>弱点：</b>${esc(build.weaknesses?.[0])}</p><dl><div><dt>主力</dt><dd>${esc(build.mainSkill)}</dd></div><div><dt>操作</dt><dd>${esc(build.difficulty)}</dd></div><div><dt>SSF</dt><dd>${ssf}</dd></div><div><dt>対応</dt><dd>${esc(build.version)}・${esc(build.updatedAt)}</dd></div></dl><a class="button" href="${buildUrl(build)}">${esc(label)}</a></article>`;
 }
 
-function choiceCard(label, buildId, reason) {
+function choiceCard(label, buildId, reason, cta = "このビルドを確認する") {
   const build = byId(buildId);
-  return `<article class="purpose-card"><p class="section-kicker">${esc(label)}</p><h3>${esc(build.name)}</h3><p>${esc(reason)}</p><a class="button" href="${buildUrl(build)}">現在Lvから今やることを見る</a></article>`;
+  return `<article class="purpose-card"><p class="section-kicker">${esc(label)}</p><h3>${esc(build.name)}</h3><p>${esc(reason)}</p><a class="button" href="${buildUrl(build)}">${esc(cta)}</a></article>`;
 }
 
 const featured = discovery.featuredBuildIds.map(byId);
@@ -83,7 +83,7 @@ const tierSections = ["S", "A", "B", "C"].map((tier) => {
   const entries = discovery.tiers[tier];
   const cards = entries.length ? entries.map(({ id, reason }) => {
     const build = byId(id);
-    return `<article class="tier-card"><div class="tier-badge tier-${tier.toLowerCase()}">${tier}</div><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><p class="tier-reason">${esc(reason)}</p><div class="tier-columns"><div><b>強み</b><p>${esc(build.strengths[0])}</p></div><div><b>弱み</b><p>${esc(build.weaknesses[0])}</p></div></div><ul class="tier-facts"><li>初心者適性：${esc(build.audience)}</li><li>周回・ボス・防御：同条件の数値比較は未採点</li><li>予算：${esc(build.budget)}</li><li>操作：${esc(build.difficulty)}</li></ul><a class="button" href="${buildUrl(build)}">現在Lvから今やることを見る</a></div></article>`;
+    return `<article class="tier-card"><div class="tier-badge tier-${tier.toLowerCase()}">${tier}</div><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><p class="tier-reason">${esc(reason)}</p><div class="tier-columns"><div><b>強み</b><p>${esc(build.strengths[0])}</p></div><div><b>弱み</b><p>${esc(build.weaknesses[0])}</p></div></div><ul class="tier-facts"><li>初心者適性：${esc(build.audience)}</li><li>周回・ボス・防御：同条件の数値比較は未採点</li><li>予算：${esc(build.budget)}</li><li>操作：${esc(build.difficulty)}</li></ul><a class="button" href="${buildUrl(build)}?level=1#now">このビルドをLv1から育てる</a></div></article>`;
   }).join("") : '<p class="empty-tier">現在、この基準でCに分類したビルドはありません。</p>';
   return `<section class="tier-section" aria-labelledby="tier-${tier.toLowerCase()}"><h2 id="tier-${tier.toLowerCase()}">${tier} Tier</h2>${cards}</section>`;
 }).join("");
