@@ -199,8 +199,8 @@ function renderSources() {
 }
 
 function renderBuild(builds) {
-  document.title = `PoE2 ${build.version} ${build.name}ビルド｜Lv1〜Endgame育成`;
-  byId("build-name").textContent = `PoE2 ${build.name}ビルド｜${build.version}育成`;
+  document.title = `PoE2 ${build.version} ${build.name} ビルド｜Lv1〜Endgame育成`;
+  byId("build-name").textContent = `PoE2 ${build.name} ビルド｜${build.version}育成`;
   byId("build-class").textContent = `${build.className} / ${text(build.ascendancy)}`;
   byId("build-skill").textContent = `メインスキル：${text(build.mainSkill)}`;
   byId("breadcrumb-name").textContent = build.name;

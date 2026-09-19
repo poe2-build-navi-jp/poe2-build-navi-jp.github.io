@@ -31,7 +31,7 @@ form.addEventListener("submit", async (event) => {
     const title=document.createElement("h3"); title.textContent=item.name;
     const why=document.createElement("p"); why.textContent=`理由：${reasons.join("・") || item.tagline}`;
     const build=document.createElement("p"); build.textContent=`掲載ビルド：${builds.map(x=>x.name).join("、") || "確認中"}`;
-    const link=document.createElement("a"); link.className="button"; link.href=`/classes/${item.slug}/`; link.textContent="この職業を見る";
+    const link=document.createElement("a"); link.className="button"; link.href=`/classes/${item.slug}/`; link.textContent="この職業のおすすめビルドを見る";
     card.append(title,why,build,link); cards.append(card);
   });
   const wrapper=document.getElementById("class-check-result"); wrapper.hidden=false; wrapper.scrollIntoView({behavior:"smooth",block:"start"});

@@ -66,8 +66,9 @@ for (const build of builds) {
     assert((page.match(/id="roadmap"/g) || []).length === 1, `${pagePath}: roadmap must appear once`);
     assert((page.match(/data-stage-index=/g) || []).length === 8, `${pagePath}: all 8 roadmap stages must be present in HTML`);
     assert(page.includes("この段階のパッシブツリーを見る"), `${pagePath}: stage passive source CTA missing`);
-    assert(page.includes(`<title>PoE2 ${build.version} ${build.name}ビルド｜Lv1〜Endgame育成</title>`), `${pagePath}: search-focused title missing`);
-    assert(page.includes(`<h1 id="build-name">PoE2 ${build.name}ビルド｜${build.version}育成</h1>`), `${pagePath}: search-focused H1 missing`);
+    assert(page.includes(`<title>PoE2 ${build.version} ${build.name} ビルド｜Lv1〜Endgame育成</title>`), `${pagePath}: search-focused title missing`);
+    assert(page.includes(`<h1 id="build-name">PoE2 ${build.name} ビルド｜${build.version}育成</h1>`), `${pagePath}: search-focused H1 missing`);
+    assert(page.includes(`${build.name}ビルドのよくある質問`), `${pagePath}: build-specific FAQ H2 missing`);
     assert(page.includes(`PoE2 ${build.name}のLv1〜Endgame育成手順`), `${pagePath}: build-specific roadmap heading missing`);
     assert(page.includes(`/classes/${build.classSlug}/`), `${pagePath}: class hub link missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
@@ -116,6 +117,8 @@ assert(beginnerGuide.includes('初心者はまずここから') && beginnerGuide
 const classHub = await read("classes/index.html");
 assert(classHub.includes("<h1>PoE2おすすめクラス・職業｜初心者向け選び方</h1>"), "class hub search-focused H1 missing");
 assert(classHub.includes("4問で自分に合う職業を見る"), "class diagnosis CTA missing");
+const classCheck = await read("class-check/index.html");
+assert(classCheck.includes("<h1>PoE2初心者向け職業・クラス診断｜4問でおすすめを絞る</h1>"), "class check search-focused H1 missing");
 const levelingPage = await read("leveling/index.html");
 assert(levelingPage.includes('id="leveling-class"') && levelingPage.includes('id="leveling-build"') && levelingPage.includes('id="leveling-level"'), "leveling selection flow missing");
 assert(levelingPage.includes("現在Lvから今やることを見る"), "leveling CTA missing");
