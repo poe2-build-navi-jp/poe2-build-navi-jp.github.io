@@ -20,6 +20,7 @@ const classes = JSON.parse(await read("data/classes.json"));
 const guides = JSON.parse(await read("data/guides.json"));
 const terms = JSON.parse(await read("data/dictionary.json"));
 const seoPages = JSON.parse(await read("data/seo-pages.json"));
+const site = JSON.parse(await read("data/site.json"));
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
 assert(builds.length === 10, "build count must be 10");
@@ -96,6 +97,15 @@ assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
+assert(/^G-[A-Z0-9]+$/.test(site.googleAnalyticsMeasurementId), "Google Analytics measurement ID is invalid");
+for (const [, pageUrl] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+  const pathname = new URL(pageUrl).pathname;
+  const pagePath = pathname === "/" ? "index.html" : `${pathname.slice(1)}index.html`;
+  const page = await read(pagePath);
+  const loader = `https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsMeasurementId}`;
+  assert((page.match(new RegExp(loader.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || []).length === 1, `${pagePath}: Google Analytics loader must appear once`);
+  assert((page.match(new RegExp(`gtag\\('config','${site.googleAnalyticsMeasurementId}'\\)`, "g")) || []).length === 1, `${pagePath}: Google Analytics config must appear once`);
+}
 for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
   assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }

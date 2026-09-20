@@ -127,3 +127,4 @@ await import('./generate-static-content.mjs');
 await import('./generate-discovery-pages.mjs');
 await import('./generate-seo-pages.mjs');
 await import('./enhance-residual-pages.mjs');
+await import('./inject-analytics.mjs');
