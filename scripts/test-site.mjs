@@ -130,6 +130,8 @@ assert(classHub.includes("<h1>PoE2おすすめクラス・職業｜初心者向�
 assert(classHub.includes("4問で自分に合う職業を見る"), "class diagnosis CTA missing");
 const classCheck = await read("class-check/index.html");
 assert(classCheck.includes("<h1>PoE2初心者向け職業・クラス診断｜4問でおすすめを絞る</h1>"), "class check search-focused H1 missing");
+const privacyPage = await read("privacy/index.html");
+assert(privacyPage.includes("<h2>Google Analytics</h2>") && privacyPage.includes("policies.google.com/technologies/partner-sites?hl=ja"), "privacy policy must disclose Google Analytics");
 const levelingPage = await read("leveling/index.html");
 assert(levelingPage.includes('id="leveling-class"') && levelingPage.includes('id="leveling-build"') && levelingPage.includes('id="leveling-level"'), "leveling selection flow missing");
 assert(levelingPage.includes("現在Lvから今やることを見る"), "leveling CTA missing");

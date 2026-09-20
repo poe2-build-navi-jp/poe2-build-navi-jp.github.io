@@ -26,9 +26,14 @@ async function inject(directory = "") {
     const file = resolve(root, path);
     const original = await readFile(file, "utf8");
     if (!original.includes("</head>")) continue;
-    const html = marker.test(original)
+    let html = marker.test(original)
       ? original.replace(marker, tag)
       : original.replace(/<head([^>]*)>/, `<head$1>${tag}`);
+    if (path === "privacy/index.html" && !html.includes("<h2>Google Analytics</h2>")) {
+      html = html
+        .replace("<h2>広告配信</h2>", '<h2>Google Analytics</h2><p>本サイトは利用状況を把握し改善するため、Google Analyticsを使用します。Google AnalyticsはCookie等を利用し、閲覧ページや利用環境などの情報を収集する場合があります。収集情報の取り扱いは、Googleの<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">サービス利用サイトから収集した情報の使用について</a>をご確認ください。</p><h2>広告配信</h2>')
+        .replace("最終更新：2026年9月8日。", "最終更新：2026年9月20日。");
+    }
     await writeFile(file, html);
     pageCount += 1;
   }
