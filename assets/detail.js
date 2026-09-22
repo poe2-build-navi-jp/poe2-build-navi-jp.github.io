@@ -133,6 +133,15 @@ function setLevel(value) {
   byId("level-output").value = `Lv${level}`;
   localStorage.setItem(`poe2:navi:level:${build.id}`, String(level));
   localStorage.setItem("poe2:navi:quick-level", String(level));
+  const gearCheckLink = byId("gear-check-link");
+  if (gearCheckLink) {
+    gearCheckLink.href = `/gear-check/?build=${encodeURIComponent(build.id)}&level=${level}&concern=purchase`;
+  }
+  const currentUrl = new URL(location.href);
+  if (currentUrl.searchParams.get("level") !== String(level)) {
+    currentUrl.searchParams.set("level", String(level));
+    history.replaceState(history.state, "", currentUrl);
+  }
   const index = stageIndexFor(level);
   renderNow(index);
   renderStage(index);

@@ -12,8 +12,8 @@ for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
 
-const [index, buildList, gearCheck, robots, sitemap, ads, verification, buildsText] = await Promise.all([
-  read("index.html"), read("builds/index.html"), read("gear-check/index.html"), read("robots.txt"), read("sitemap.xml"), read("ads.txt"), read("googlebaa56ffa7c50bcfb.html"), read("data/builds.json")
+const [index, buildList, gearCheck, robots, sitemap, ads, verification, buildsText, detailJs, styles] = await Promise.all([
+  read("index.html"), read("builds/index.html"), read("gear-check/index.html"), read("robots.txt"), read("sitemap.xml"), read("ads.txt"), read("googlebaa56ffa7c50bcfb.html"), read("data/builds.json"), read("assets/detail.js"), read("assets/styles.css")
 ]);
 const builds = JSON.parse(buildsText);
 const classes = JSON.parse(await read("data/classes.json"));
@@ -32,10 +32,16 @@ assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="choose-class"'),
 assert(index.indexOf('id="choose-class"') < index.indexOf('id="quick-start"'), "homepage must show class selection before resume controls");
 assert(index.indexOf('id="quick-start"') < index.indexOf('id="featured-builds"'), "homepage must show recommended builds after class/build/level flow");
 assert(index.includes("PoE2 0.5.5 初心者向けおすすめビルド") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
+assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ</title>"), "homepage CTR-focused title missing");
+assert(index.includes("PoE2 0.5.5対応の日本語ビルドサイト"), "homepage Japanese build-site description missing");
+assert(index.includes('class="hero hero-focused"') && !index.includes('class="hero-guide"'), "homepage hero choices must be focused without duplicated guide links");
 assert((index.match(/class="build-tags"/g) || []).length === 5, "homepage featured build purpose tags missing");
 assert((index.match(/現在Lvから今やることを見る/g) || []).length <= 2, "homepage primary CTA must not be repeated excessively");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
+assert(buildList.includes("<h1>PoE2 0.5.5 職業別ビルド一覧</h1>"), "build catalog search-focused H1 missing");
+assert(detailJs.includes('byId("gear-check-link")') && detailJs.includes("history.replaceState"), "level changes must update the gear-check link and shareable URL");
+assert(styles.includes("align-items:start") && styles.includes(".level-card{align-self:start"), "build hero must not stretch the level card");
 assert(gearCheck.indexOf('id="gear-class"') < gearCheck.indexOf('id="gear-build"') && gearCheck.indexOf('id="gear-build"') < gearCheck.indexOf('id="gear-level"'), "gear flow must be class -> build -> level");
 assert(!index.includes("読込中") && !index.includes("PHASE"), "development wording must not appear on homepage");
 assert(new Set(builds.map((build) => build.id)).size === builds.length, "build ids must be unique");
@@ -71,6 +77,7 @@ for (const build of builds) {
     assert(page.includes(`<title>PoE2 ${build.version} ${build.name} ビルド｜Lv1〜Endgame育成</title>`), `${pagePath}: search-focused title missing`);
     assert(page.includes(`<h1 id="build-name">PoE2 ${build.name} ビルド｜${build.version}育成</h1>`), `${pagePath}: search-focused H1 missing`);
     assert(page.includes(`${build.name}ビルドのよくある質問`), `${pagePath}: build-specific FAQ H2 missing`);
+    assert(page.includes('id="gear-check-link"'), `${pagePath}: level-aware gear check link missing`);
     assert(page.includes(`PoE2 ${build.name}のLv1〜Endgame育成手順`), `${pagePath}: build-specific roadmap heading missing`);
     assert(page.includes(`/classes/${build.classSlug}/`), `${pagePath}: class hub link missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
