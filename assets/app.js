@@ -117,7 +117,7 @@ async function init() {
     state.classes = await classResponse.json();
     state.builds = await buildResponse.json();
     byId("site-version").textContent = site.siteVersion;
-    byId("last-updated").textContent = site.lastUpdated;
+        byId("last-updated").textContent = site.latestPatchCheckedAt || site.lastUpdated;
     state.classes.forEach((item) => byId("quick-class").append(new Option(item.name, item.name)));
     state.selectedBuild = localStorage.getItem("poe2:navi:selected-build") || "";
     const restoredBuild = state.builds.find((build) => build.id === state.selectedBuild);
