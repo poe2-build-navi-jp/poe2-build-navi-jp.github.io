@@ -4,7 +4,8 @@
 
 | 投稿テーマ | リンク先 | note用UTMリンク | X用UTMリンク |
 |---|---|---|---|
-| PoE2 最強ビルド・Tier | /tier-list/ | https://poe2-build-navi-jp.github.io/tier-list/?utm_source=note&utm_medium=referral&utm_campaign=poe2_tier | https://poe2-build-navi-jp.github.io/tier-list/?utm_source=x&utm_medium=social&utm_campaign=poe2_tier |
+| PoE2 最強・おすすめビルド | /best-builds/ | https://poe2-build-navi-jp.github.io/best-builds/?utm_source=note&utm_medium=referral&utm_campaign=best_builds | https://poe2-build-navi-jp.github.io/best-builds/?utm_source=x&utm_medium=social&utm_campaign=best_builds |
+| PoE2 初心者向けTier | /tier-list/ | https://poe2-build-navi-jp.github.io/tier-list/?utm_source=note&utm_medium=referral&utm_campaign=poe2_tier | https://poe2-build-navi-jp.github.io/tier-list/?utm_source=x&utm_medium=social&utm_campaign=poe2_tier |
 | PoE2 初心者おすすめ | /guides/beginner-build/ | https://poe2-build-navi-jp.github.io/guides/beginner-build/?utm_source=note&utm_medium=referral&utm_campaign=beginner_build | https://poe2-build-navi-jp.github.io/guides/beginner-build/?utm_source=x&utm_medium=social&utm_campaign=beginner_build |
 | PoE2 リーグスターター | /league-starter/ | https://poe2-build-navi-jp.github.io/league-starter/?utm_source=note&utm_medium=referral&utm_campaign=league_starter | https://poe2-build-navi-jp.github.io/league-starter/?utm_source=x&utm_medium=social&utm_campaign=league_starter |
 | PoE2 1.0 | /poe2-1-0/ | https://poe2-build-navi-jp.github.io/poe2-1-0/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0 | https://poe2-build-navi-jp.github.io/poe2-1-0/?utm_source=x&utm_medium=social&utm_campaign=poe2_1_0 |

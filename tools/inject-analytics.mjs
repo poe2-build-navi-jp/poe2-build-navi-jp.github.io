@@ -11,6 +11,8 @@ if (!/^G-[A-Z0-9]+$/.test(measurementId)) {
 
 const tag = `<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=${measurementId}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${measurementId}');</script><!-- /Google tag -->`;
 const marker = /<!-- Google tag \(gtag\.js\) -->[\s\S]*?<!-- \/Google tag -->/;
+const eventTag = '<script defer src="/assets/analytics-events.js?v=20260923-1"></script>';
+const eventMarker = /<script defer src="\/assets\/analytics-events\.js[^\"]*"><\/script>/g;
 const ignoredDirectories = new Set([".git", "_next", "company", "node_modules", "scripts", "tests", "tools"]);
 let pageCount = 0;
 
@@ -29,6 +31,14 @@ async function inject(directory = "") {
     let html = marker.test(original)
       ? original.replace(marker, tag)
       : original.replace(/<head([^>]*)>/, `<head$1>${tag}`);
+    const tracksEvents = path === "index.html"
+      || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(path)
+      || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(path);
+    if (tracksEvents && !html.includes("/assets/analytics-events.js")) {
+      html = html.replace("</head>", `${eventTag}</head>`);
+    } else if (!tracksEvents) {
+      html = html.replace(eventMarker, "");
+    }
     const usesUpdatedLayout = path === "index.html" || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(path);
     if (usesUpdatedLayout) {
       html = html.replace(

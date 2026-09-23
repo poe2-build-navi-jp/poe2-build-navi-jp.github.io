@@ -1,6 +1,9 @@
 {
-  "updatedAt": "2026-09-13",
+  "updatedAt": "2026-09-23",
   "patchVersion": "0.5.5",
+  "latestPatch": "0.5.5c",
+  "latestPatchCheckedAt": "2026-09-23",
+  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4006357",
   "featuredBuildIds": [
     "ranger-ice-shot-deadeye",
     "warrior-shield-wall-smith",
@@ -14,6 +17,18 @@
     "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
     "druid-plant-oracle": ["操作少なめ", "Lv1から主力継続"],
     "monk-whirling-assault": ["近接", "機動力", "SSF"]
+  },
+  "buildTags": {
+    "monk-whirling-assault": ["近接", "機動力", "SSF"],
+    "mercenary-twister-gemling": ["遠距離", "武器切替", "操作多め"],
+    "warrior-shield-wall-smith": ["近接", "耐久重視", "SSF"],
+    "sorceress-sand-fire": ["召喚", "魔法", "SSF"],
+    "huntress-companion": ["相棒", "遠近両用", "構成切替"],
+    "ranger-ice-shot-deadeye": ["初心者", "遠距離", "SSF"],
+    "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
+    "druid-plant-oracle": ["初心者", "操作少なめ", "Lv1から主力"],
+    "witch-ed-contagion-lich": ["遠距離", "DoT", "SSF"],
+    "mercenary-grenade-gemling": ["遠距離", "グレネード", "SSF"]
   },
   "tiers": {
     "S": [
@@ -89,10 +104,12 @@
   "poe2One": {
     "releaseDate": "2026-12-11",
     "sourceName": "Path of Exile 2 公式サイト",
-    "sourceUrl": "https://www.pathofexile.com/forum/view-thread/3999858",
-    "checkedAt": "2026-09-12",
+    "sourceUrl": "https://www.pathofexile.com/forum/view-thread/3999366",
+    "duelistSourceUrl": "https://www.pathofexile.com/forum/view-thread/3999858",
+    "checkedAt": "2026-09-23",
     "confirmed": [
       "正式版1.0は2026年12月11日に公開予定です。",
+      "正式版1.0の公開時に基本プレイ無料へ移行予定です。",
       "Duelistは正式版1.0で追加予定です。"
     ],
     "unconfirmed": [

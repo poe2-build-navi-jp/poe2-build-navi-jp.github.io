@@ -7,7 +7,7 @@ const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
 
-const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "assets/leveling.js", "class-check/index.html", "leveling/index.html", "NOTE_CONTENT_MAP.md"];
+const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "assets/leveling.js", "assets/analytics-events.js", "class-check/index.html", "leveling/index.html", "best-builds/index.html", "NOTE_CONTENT_MAP.md"];
 for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
@@ -80,6 +80,9 @@ for (const build of builds) {
     assert(page.includes('id="gear-check-link"'), `${pagePath}: level-aware gear check link missing`);
     assert(page.includes(`PoE2 ${build.name}のLv1〜Endgame育成手順`), `${pagePath}: build-specific roadmap heading missing`);
     assert(page.includes(`/classes/${build.classSlug}/`), `${pagePath}: class hub link missing`);
+    assert(page.includes("現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。"), `${pagePath}: level-value summary missing`);
+    assert(page.includes("最新確認 0.5.5c") && page.includes("最終確認 2026-09-23"), `${pagePath}: latest patch review missing`);
+    assert(page.includes('/best-builds/'), `${pagePath}: purpose comparison link missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -91,10 +94,12 @@ for (const classData of classes) {
     const page = await read(pagePath);
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/classes/${classData.slug}/">`), `${pagePath}: canonical mismatch`);
     assert(page.includes("このビルドで育てる"), `${pagePath}: build CTA missing`);
-    assert(page.includes(`<h1>PoE2 ${classData.name}おすすめビルド・育成</h1>`), `${pagePath}: search-focused class H1 missing`);
+    assert(page.includes(`<h1>PoE2 ${classData.name}おすすめビルド・育成｜0.5.5</h1>`), `${pagePath}: search-focused class H1 missing`);
     assert(page.includes(`${classData.name}の序盤Lv1〜30の育て方`), `${pagePath}: early leveling guide missing`);
     assert(page.includes("/leveling/"), `${pagePath}: leveling hub link missing`);
     assert(page.includes("最終確認"), `${pagePath}: update status missing`);
+    assert(page.includes("最新確認 0.5.5c"), `${pagePath}: latest patch status missing`);
+    assert(page.includes('class="build-tags"'), `${pagePath}: purpose tags missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
 
@@ -112,8 +117,12 @@ for (const [, pageUrl] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   const loader = `https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsMeasurementId}`;
   assert((page.match(new RegExp(loader.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || []).length === 1, `${pagePath}: Google Analytics loader must appear once`);
   assert((page.match(new RegExp(`gtag\\('config','${site.googleAnalyticsMeasurementId}'\\)`, "g")) || []).length === 1, `${pagePath}: Google Analytics config must appear once`);
+  const tracksEvents = pagePath === "index.html"
+    || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(pagePath)
+    || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(pagePath);
+  assert((page.match(/\/assets\/analytics-events\.js/g) || []).length === (tracksEvents ? 1 : 0), `${pagePath}: analytics event script scope mismatch`);
 }
-for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
+for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "best-builds/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
   assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
@@ -122,7 +131,8 @@ for (const page of [
   ["league-starter/", "PoE2リーグスターター・序盤おすすめビルド"],
   ["leveling/", "PoE2レベリングガイド｜現在Lvから次にやること"],
   ["guides/beginner-build/", "PoE2初心者おすすめビルド"],
-  ["poe2-1-0/", "PoE2 1.0 最新情報"]
+  ["best-builds/", "PoE2 0.5.5おすすめ・最強ビルド｜目的別比較"],
+  ["poe2-1-0/", "PoE2 1.0 正式版｜初心者向け最新情報"]
 ]) {
   const html = await read(`${page[0]}index.html`);
   assert(html.includes(`<h1>${page[1]}</h1>`), `${page[0]} initial H1 missing`);
@@ -144,8 +154,11 @@ assert(levelingPage.includes('id="leveling-class"') && levelingPage.includes('id
 assert(levelingPage.includes("現在Lvから今やることを見る"), "leveling CTA missing");
 const tierPage = await read("tier-list/index.html");
 const starterPage = await read("league-starter/index.html");
+const bestPage = await read("best-builds/index.html");
 assert(tierPage.includes("結論だけ知りたい人向け"), "tier purpose conclusion missing");
 assert(starterPage.includes("迷ったらこの候補"), "league starter purpose conclusion missing");
+assert(bestPage.includes("結論：目的別のおすすめ候補") && bestPage.includes("Tier・リーグスターターとの違い"), "best builds purpose comparison missing");
+assert((bestPage.match(/現在Lvから今やることを見る/g) || []).length === 6, "best builds must link six purpose candidates to level navigation");
 assert(seoPages.length === 13, "targeted SEO page count must be 13");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
@@ -166,6 +179,13 @@ assert(gearCheck.includes('id="gear-example-title"'), "gear check verified stati
 assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concern=damage"), "gear check sample context link missing");
 const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
+assert(oneHub.includes("基本プレイ無料化について") && oneHub.includes("新職業・新要素") && oneHub.includes("初心者におすすめの職業"), "1.0 search-intent sections missing");
+const noteMap = await read("NOTE_CONTENT_MAP.md");
+assert(noteMap.includes("/best-builds/") && noteMap.includes("utm_source=note"), "note purpose mapping missing");
+const analyticsEvents = await read("assets/analytics-events.js");
+for (const eventName of ["best_build_click", "tier_build_click", "league_build_click", "poe2_1_0_build_click", "level_input", "note_referral"]) {
+  assert(analyticsEvents.includes(eventName), `analytics event missing: ${eventName}`);
+}
 assert(!sitemap.match(/<loc>[^<]+<\/loc>/g).some((url, index, all) => all.indexOf(url) !== index), "sitemap URLs must be unique");
 assert(guides.length === 13, "beginner guide must have 13 chapters");
 for (const guide of guides) {
