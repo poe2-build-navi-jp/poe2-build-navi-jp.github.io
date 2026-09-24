@@ -2,6 +2,19 @@
 
 同じ本文を転載せず、noteでは特徴・選び方を説明し、サイトではLv1からの手順と現在Lv入力を提供します。トップではなく、投稿テーマに一致するURLへ直接送ります。
 
+## 公開済みnote記事からの優先リンク
+
+| note記事 | 記事URL | 最適なリンク先 | 計測用URL |
+|---|---|---|---|
+| Spirit Walker（ハントレス）ツイスタービルド完全ガイド | https://note.com/fresh_okapi3816/n/nbe96101eda53 | /builds/huntress/twister-spirit-walker/ | https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/?utm_source=note&utm_medium=referral&utm_campaign=huntress_twister_spirit_walker |
+| グレネード・ジェムリング解説 | https://note.com/fresh_okapi3816/n/nfd9d6bfbb0d8 | /builds/mercenary/grenade-gemling/ | https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/?utm_source=note&utm_medium=referral&utm_campaign=mercenary_grenade_gemling |
+| 0.5.5 Tier比較 | https://note.com/fresh_okapi3816/n/n5c499efd7391 | /tier-list/ | https://poe2-build-navi-jp.github.io/tier-list/?utm_source=note&utm_medium=referral&utm_campaign=poe2_tier_055 |
+| 1.0正式版の確認済み情報 | https://note.com/fresh_okapi3816/n/ne5263724eb0f | /poe2-1-0/ | https://poe2-build-navi-jp.github.io/poe2-1-0/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_confirmed |
+
+ウィッチハンター比較・ストームウィーバー比較は、単一の育成手順と一致する個別ビルドがまだないため、無関係な個別ページへは送りません。
+
+## 投稿テーマ別リンク
+
 | 投稿テーマ | リンク先 | note用UTMリンク | X用UTMリンク |
 |---|---|---|---|
 | PoE2 最強・おすすめビルド | /best-builds/ | https://poe2-build-navi-jp.github.io/best-builds/?utm_source=note&utm_medium=referral&utm_campaign=best_builds | https://poe2-build-navi-jp.github.io/best-builds/?utm_source=x&utm_medium=social&utm_campaign=best_builds |
@@ -32,6 +45,7 @@
 | 植物オラクル | /builds/druid/plant-oracle/ | https://poe2-build-navi-jp.github.io/builds/druid/plant-oracle/?utm_source=note&utm_medium=referral&utm_campaign=druid-plant-oracle | https://poe2-build-navi-jp.github.io/builds/druid/plant-oracle/?utm_source=x&utm_medium=social&utm_campaign=druid-plant-oracle |
 | ED・コンテージョン リッチ | /builds/witch/ed-contagion-lich/ | https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/?utm_source=note&utm_medium=referral&utm_campaign=witch-ed-contagion-lich | https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/?utm_source=x&utm_medium=social&utm_campaign=witch-ed-contagion-lich |
 | グレネード・ジェムリング | /builds/mercenary/grenade-gemling/ | https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/?utm_source=note&utm_medium=referral&utm_campaign=mercenary-grenade-gemling | https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/?utm_source=x&utm_medium=social&utm_campaign=mercenary-grenade-gemling |
+| ツイスター・スピリットウォーカー | /builds/huntress/twister-spirit-walker/ | https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/?utm_source=note&utm_medium=referral&utm_campaign=huntress-twister-spirit-walker | https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/?utm_source=x&utm_medium=social&utm_campaign=huntress-twister-spirit-walker |
 
 CTA例：
 

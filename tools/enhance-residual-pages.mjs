@@ -22,7 +22,7 @@ await updateOnce(
   "poe2-1-0/index.html",
   'id="one-build-impact"',
   '<section><h2>正式版前にできること</h2>',
-  `<section id="one-build-impact"><h2>現在のビルドへの影響</h2><p>掲載中の10ビルドは0.5.5向けです。1.0向けに再確認済みのビルドはまだありません。公式パッチノートと段階別資料を確認するまで、0.5.5の手順を1.0対応とは表示しません。</p></section><section><h2>更新履歴</h2><ul><li>2026-09-13：0.5.5ビルドとの区別と再確認状況を追記</li><li>2026-09-12：公開予定日とDuelistの公式確認ページを追加</li></ul></section>`
+  `<section id="one-build-impact"><h2>現在のビルドへの影響</h2><p>現在の掲載ビルドは0.5.5向けです。1.0向けに再確認済みのビルドはまだありません。公式パッチノートと段階別資料を確認するまで、0.5.5の手順を1.0対応とは表示しません。</p></section>`
 );
 
 console.log("Enhanced gear example and 1.0 update hub.");

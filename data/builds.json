@@ -4,6 +4,8 @@
     "slug": "whirling-assault",
     "classSlug": "monk",
     "name": "ワーリングアサルト・マーシャルアーティスト",
+    "seoTitle": "PoE2 ワーリングアサルト ビルド｜Lv41切替・育成・装備",
+    "seoDescription": "PoE2 0.5.5対応。ワーリングアサルト・マーシャルアーティストのLv41切替、スキル、装備、パッシブをLv1〜Endgameまで整理。現在Lvから今やること3つを確認できます。",
     "className": "モンク",
     "ascendancy": "マーシャルアーティスト",
     "version": "0.5.5",
@@ -190,6 +192,8 @@
     "slug": "twister-gemling",
     "classSlug": "mercenary",
     "name": "ツイスター・ジェムリング",
+    "seoTitle": "PoE2 ツイスター・ジェムリング ビルド｜レベリング・装備",
+    "seoDescription": "PoE2 0.5.5対応。ツイスター・ジェムリングの武器セット、スキル順、装備、パッシブをLv1〜Endgameまで整理。現在Lvから次の3行動を確認できます。",
     "className": "マーセナリー",
     "ascendancy": "ジェムリング・リージョネア",
     "version": "0.5.5",
@@ -366,6 +370,8 @@
     "slug": "shield-wall-smith",
     "classSlug": "warrior",
     "name": "シールドウォール・スミス",
+    "seoTitle": "PoE2 シールドウォール・スミス ビルド｜序盤育成・装備",
+    "seoDescription": "PoE2 0.5.5対応。シールドウォール・スミスの序盤スキル、Lv22切替、耐久装備、パッシブを段階別に案内。現在Lvから今やること3つを確認できます。",
     "className": "ウォリアー",
     "ascendancy": "スミス・オブ・キタヴァ",
     "version": "0.5.5",
@@ -543,6 +549,8 @@
     "slug": "sand-and-fire",
     "classSlug": "sorceress",
     "name": "砂と炎のヴァラシュタ",
+    "seoTitle": "PoE2 砂と炎のヴァラシュタ ビルド｜育成・装備・パッシブ",
+    "seoDescription": "PoE2 0.5.5対応。砂と炎のヴァラシュタの育成スキル、構成切替、装備、パッシブをLv1〜Endgameまで整理。現在Lvから次の3行動を確認できます。",
     "className": "ソーサレス",
     "ascendancy": "ディサイプル・オブ・ヴァラシュタ",
     "version": "0.5.5",
@@ -726,6 +734,8 @@
     "slug": "companion",
     "classSlug": "huntress",
     "name": "相棒スピリットウォーカー",
+    "seoTitle": "PoE2 相棒スピリットウォーカー ビルド｜テイムビースト育成",
+    "seoDescription": "PoE2 0.5.5対応。相棒スピリットウォーカーのテイムビースト育成、Act 3の構成切替、装備とパッシブを段階別に確認できます。",
     "className": "ハントレス",
     "ascendancy": "スピリットウォーカー",
     "version": "0.5.5",
@@ -904,6 +914,8 @@
     "slug": "ice-shot-deadeye",
     "classSlug": "ranger",
     "name": "アイスショット・デッドアイ",
+    "seoTitle": "PoE2 アイスショット・デッドアイ ビルド｜Lv31切替・装備",
+    "seoDescription": "PoE2 0.5.5対応。アイスショット・デッドアイの序盤スキル、Lv31の切替時期、サポート、装備、パッシブを現在Lvごとに確認できます。",
     "className": "レンジャー",
     "ascendancy": "デッドアイ",
     "version": "0.5.5",
@@ -1083,6 +1095,8 @@
     "slug": "minion-infernalist",
     "classSlug": "witch",
     "name": "スナイパーミニオン・インファーナリスト",
+    "seoTitle": "PoE2 ミニオン・インファーナリスト ビルド｜序盤育成・装備",
+    "seoDescription": "PoE2 0.5.5対応。スナイパーミニオン・インファーナリストの召喚スキル、序盤育成、装備、パッシブをLv1〜Endgameまで段階別に案内します。",
     "className": "ウィッチ",
     "ascendancy": "インファーナリスト",
     "version": "0.5.5",
@@ -1262,6 +1276,8 @@
     "slug": "plant-oracle",
     "classSlug": "druid",
     "name": "植物オラクル",
+    "seoTitle": "PoE2 植物オラクル ビルド｜Lv1からの育成・装備",
+    "seoDescription": "PoE2 0.5.5対応。植物オラクルをLv1から育てるスキル、サポート、装備、パッシブを段階別に整理。現在Lvから今やること3つを確認できます。",
     "className": "ドルイド",
     "ascendancy": "オラクル",
     "version": "0.5.5",
@@ -1454,6 +1470,8 @@
     "slug": "ed-contagion-lich",
     "classSlug": "witch",
     "name": "ED・コンテージョン リッチ",
+    "seoTitle": "PoE2 ED・コンテージョン リッチ ビルド｜序盤育成・装備",
+    "seoDescription": "PoE2 0.5.5対応。ED・コンテージョン リッチの序盤育成、DoTスキルの使い分け、装備、パッシブをLv1〜Endgameまで確認できます。",
     "className": "ウィッチ",
     "ascendancy": "リッチ",
     "version": "0.5.5",
@@ -1628,6 +1646,8 @@
     "slug": "grenade-gemling",
     "classSlug": "mercenary",
     "name": "グレネード・ジェムリング",
+    "seoTitle": "PoE2 グレネード・ジェムリング ビルド｜レベリング・装備",
+    "seoDescription": "PoE2 0.5.5対応。グレネード・ジェムリングの序盤レベリング、起爆順、スキル、装備、パッシブを現在Lvごとに確認できます。",
     "className": "マーセナリー",
     "ascendancy": "ジェムリング・リージョネア",
     "version": "0.5.5",
@@ -1796,5 +1816,148 @@
       }
     ],
     "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者"
+  },
+  {
+    "id": "huntress-twister-spirit-walker",
+    "slug": "twister-spirit-walker",
+    "classSlug": "huntress",
+    "name": "ツイスター・スピリットウォーカー",
+    "seoTitle": "PoE2 ツイスター・スピリットウォーカー ビルド｜0.5.5育成",
+    "seoDescription": "PoE2 0.5.5対応。ツイスター・スピリットウォーカーの序盤スキル、武器セット、ツイスター連携、装備とパッシブをLv1〜Endgameまで確認できます。",
+    "className": "ハントレス",
+    "ascendancy": "スピリットウォーカー",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-24",
+    "status": "verified",
+    "mainSkill": "ツイスター（Twister）",
+    "beginnerRating": null,
+    "damageRating": null,
+    "defenseRating": null,
+    "mappingRating": null,
+    "bossRating": null,
+    "difficulty": "中（武器セット2種と連携操作）",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "必須ユニークなしで育成を始められると掲載資料で案内されている。",
+      "Whirling Slashで作った旋風をTwisterで飛ばし、範囲攻撃へつなげられる。",
+      "キャンペーン序盤からEndgameまでの段階別手順を2つの書面資料で照合できる。"
+    ],
+    "weaknesses": [
+      "武器セット2種と複数スキルの割り当てが必要で、完全な1ボタン構成ではない。",
+      "Whirling Slash、Ice-Tipped Arrows、Twisterの順番を練習する必要がある。",
+      "Endgameのユニーク候補は任意であり、基礎装備と耐性を先に整える必要がある。"
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1〜10",
+        "mainSkill": "PounceとShredを中心に進め、入手後はWhirling SlashとTwisterの準備を始める。",
+        "supports": "序盤は物理ダメージと攻撃速度を伸ばすサポートを優先し、未入手の名称は原典の段階表で確認。",
+        "passivePriority": "原典のEarly Game段階。投射物・攻撃速度・冷気へつながるルートを確認する。",
+        "gearPriority": "槍の物理ダメージ、ブーツの移動速度、防具のライフと耐性。",
+        "replaceGear": "現在レベルに対して物理ダメージが低い槍と、移動速度のないブーツを優先して交換。",
+        "caution": "Whirling Slashはダメージ目的ではなく旋風生成に使うため、原典ではLv1維持が案内されている。",
+        "transitionCondition": "Lv11到達。槍の更新とPounce・Shredの基本操作が安定していること。",
+        "nowActions": ["物理ダメージの高い槍を探す", "PounceとShredで序盤を進める", "移動速度付きブーツと耐性を確保する"]
+      },
+      {
+        "label": "Lv11〜20",
+        "mainSkill": "Whirling Slashで旋風を作り、Twisterで敵集団へ飛ばす。",
+        "supports": "Twisterのダメージと範囲を優先。War Bannerは入手後に補助として使う。",
+        "passivePriority": "原典のEarly Game段階を継続し、投射物・攻撃速度・冷気の順で確認する。",
+        "gearPriority": "槍の物理ダメージ、ライフ、耐性、回避。ブーツは移動速度を維持。",
+        "replaceGear": "火力が止まったら槍、防御が不安なら耐性とライフの不足部位を交換。",
+        "caution": "Whirling Slashをレベルアップしすぎず、Twister側の更新を優先する。",
+        "transitionCondition": "Lv21到達。旋風を作ってTwisterで飛ばす基本連携を再現できること。",
+        "nowActions": ["Whirling Slashで旋風を作る", "Twisterで旋風を敵へ飛ばす", "Twister側のジェム更新を優先する"]
+      },
+      {
+        "label": "Lv21〜30",
+        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Twister。単体戦はBarrageを追加。",
+        "supports": "TwisterとIce-Tipped Arrowsを優先し、Barrageは単体戦用として段階的に追加。",
+        "passivePriority": "原典のMid Campaign段階。Spirit Walker取得後はPrimal Bountyを含む現行ルートを確認。",
+        "gearPriority": "武器セット2種を用意し、槍の物理ダメージ、冷気追加、ライフ、耐性を確認。",
+        "replaceGear": "2つの武器セットで主力スキルを正しく使えるよう、スキル割り当てと装備条件を先に整える。",
+        "caution": "アセンダンシー取得時期は進行状況で変わるため、取得前に名称だけを先行して適用しない。",
+        "transitionCondition": "Lv31到達。武器セット切替と3スキルの連携が安定していること。",
+        "nowActions": ["Ice-Tipped Arrowsを連携へ加える", "武器セット2種を設定する", "単体戦用Barrageを準備する"]
+      },
+      {
+        "label": "Lv31〜40",
+        "mainSkill": "Whirling Slashを複数回使い、Ice-Tipped Arrows、Twister、Barrageへつなぐ。",
+        "supports": "Twister、Barrage、Ice-Tipped Arrowsを優先して更新し、旋風生成用Whirling SlashはLv1を維持。",
+        "passivePriority": "原典のMid Campaign段階。投射物・冷気・攻撃速度を伸ばし、防御は回避とDeflectを確認。",
+        "gearPriority": "高物理ダメージの槍、移動速度、ライフ、耐性、回避。",
+        "replaceGear": "武器を最優先し、次に耐性不足と移動速度不足を解消する。",
+        "caution": "旋風生成数とスキル順が崩れると火力が落ちるため、単体戦で操作を確認する。",
+        "transitionCondition": "Lv41到達。周回と単体戦の両方で連携を再現できること。",
+        "nowActions": ["旋風を複数作ってから攻撃する", "TwisterとBarrageを優先更新する", "回避・Deflect・耐性を確認する"]
+      },
+      {
+        "label": "Lv41〜キャンペーン終了",
+        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Twister → Barrage。移動・補助にThunderous Leapなどを使用。",
+        "supports": "原典のMid/Late Campaign構成に合わせ、主力3種のリンクを優先して完成させる。",
+        "passivePriority": "原典のMid/Late Campaign段階。Dance with Deathを採用する現行ルートと武器セット割当を確認。",
+        "gearPriority": "槍の物理ダメージ、ライフ、耐性、回避、移動速度。Spiritは必要スキル分を確保。",
+        "replaceGear": "キャンペーン終了前に属性耐性の不足部位と古い槍を更新する。",
+        "caution": "武器セットごとのスキル割り当てを崩さず、任意ユニークより基礎防御を優先する。",
+        "transitionCondition": "キャンペーン終了。耐性を整え、基本連携で通常敵とボスへ対応できること。",
+        "nowActions": ["武器セット別のスキルを固定する", "キャンペーン終了前に耐性を整える", "任意ユニークより槍と防具を更新する"]
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "Whirling Slashで旋風を3回前後作り、Ice-Tipped Arrows、Twister、Barrageへつなぐ。",
+        "supports": "主力スキルのリンクを優先し、Spirit不足がない状態で補助スキルを維持する。",
+        "passivePriority": "原典のEarly Endgame段階へ移行。攻撃速度・冷気・クリティカルと回避系防御を確認。",
+        "gearPriority": "属性耐性、ライフ、回避、槍の物理・追加ダメージ、移動速度。",
+        "replaceGear": "耐性未達、防御不足、槍の火力不足の順に1部位ずつ更新する。",
+        "caution": "マップ開始直後からEndgame用ユニークを前提にせず、レア装備で耐性と防御を先に整える。",
+        "transitionCondition": "低Tierマップで連携が安定し、耐性と防御を維持できること。",
+        "nowActions": ["属性耐性と回避を先に整える", "槍の物理・追加ダメージを更新する", "旋風からBarrageまでの連携を固定する"]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Twisterを主力に、BarrageとIce-Tipped Arrowsで単体火力を補う。",
+        "supports": "主力リンクを完成させ、必要Spiritを確保して補助効果を維持する。",
+        "passivePriority": "原典のEndgame段階。クリティカル、冷気、攻撃速度を伸ばし、回避・エナジーシールドとの両立を確認。",
+        "gearPriority": "槍の高い物理・追加ダメージ、Spirit、ライフまたはエナジーシールド、回避、耐性。",
+        "replaceGear": "基礎防御を落とさない範囲で、火力とSpiritを同時に更新できる部位を選ぶ。",
+        "caution": "掲載資料のEndgame装備は目標例であり、同一アイテムが必須とは限らない。",
+        "transitionCondition": "Endgame構成のスキルとSpiritを維持しながら、防御と火力を両立できること。",
+        "nowActions": ["Endgame段階のパッシブを確認する", "必要Spiritを確保する", "防御を落とさず槍と装備を更新する"]
+      },
+      {
+        "label": "Endgame完成",
+        "mainSkill": "Twister + Ice-Tipped Arrows + Barrage。Whirling Slashで旋風を供給する。",
+        "supports": "採用中のEndgame段階と同じサポート構成へ揃え、入手状況に応じて順次更新する。",
+        "passivePriority": "原典のEndgameツリーを確認し、クリティカル・冷気・攻撃速度と回避系防御を同じ段階へ揃える。",
+        "gearPriority": "高性能の槍、必要Spirit、耐性、回避、ライフまたはエナジーシールド。任意ユニークは基礎装備完成後に検討。",
+        "replaceGear": "防御を維持したまま火力が伸びる部位から1つずつ比較し、任意ユニークを無理に固定しない。",
+        "caution": "1.0では未確認。正式版公開後はパッチノートと段階別資料を再確認する。",
+        "transitionCondition": "使用中の0.5.5段階が揃い、変更前後をゲーム内で比較できる状態。",
+        "nowActions": ["Endgame構成と装備段階を揃える", "防御を保ったまま1部位ずつ更新する", "1.0移行前に対応表示を再確認する"]
+      }
+    ],
+    "gearPriorities": [
+      "槍：物理ダメージ、追加ダメージ、攻撃速度",
+      "防具：ライフまたはエナジーシールド、回避、耐性、Deflect",
+      "補助：必要Spiritとブーツの移動速度"
+    ],
+    "sources": [
+      {
+        "name": "note: Spirit Walker（ハントレス）ツイスタービルド完全ガイド",
+        "url": "https://note.com/fresh_okapi3816/n/nbe96101eda53",
+        "checkedAt": "2026-09-24",
+        "type": "日本語書面ガイド（序盤・スキル連携・装備・パッシブ方針）"
+      },
+      {
+        "name": "Path of Exile 2 Guide: Spirit Walker Elemental Twister Build",
+        "url": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
+        "checkedAt": "2026-09-24",
+        "type": "海外書面ガイド（Early Game・Campaign・Endgame段階）"
+      }
+    ],
+    "audience": "必須ユニークなしで始め、ツイスターによる範囲周回を段階的に育てたい人"
   }
 ]

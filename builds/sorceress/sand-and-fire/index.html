@@ -3,16 +3,16 @@
 <head><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQ4RYVHPC"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZTQ4RYVHPC');</script><!-- /Google tag -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>PoE2 0.5.5 砂と炎のヴァラシュタ ビルド｜Lv1〜Endgame育成</title>
-  <meta name="description" content="PoE2 0.5.5対応、砂と炎のヴァラシュタのスキル・サポート・パッシブ・装備とLv1〜Endgame育成手順。現在Lvから今やること3つを確認できます。">
+  <title>PoE2 砂と炎のヴァラシュタ ビルド｜育成・装備・パッシブ</title>
+  <meta name="description" content="PoE2 0.5.5対応。砂と炎のヴァラシュタの育成スキル、構成切替、装備、パッシブをLv1〜Endgameまで整理。現在Lvから次の3行動を確認できます。">
   <meta name="robots" content="index,follow">
   <meta name="google-adsense-account" content="ca-pub-7738997902416481">
   <link rel="canonical" href="https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="POE2ビルドナビ">
-  <meta property="og:title" content="PoE2 0.5.5 砂と炎のヴァラシュタ ビルド｜Lv1〜Endgame育成">
-  <meta property="og:description" content="PoE2 0.5.5対応、砂と炎のヴァラシュタのスキル・サポート・パッシブ・装備とLv1〜Endgame育成手順。現在Lvから今やること3つを確認できます。">
+  <meta property="og:title" content="PoE2 砂と炎のヴァラシュタ ビルド｜育成・装備・パッシブ">
+  <meta property="og:description" content="PoE2 0.5.5対応。砂と炎のヴァラシュタの育成スキル、構成切替、装備、パッシブをLv1〜Endgameまで整理。現在Lvから次の3行動を確認できます。">
   <meta property="og:url" content="https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/">
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="/assets/styles.css?v=20260922-1">
@@ -28,10 +28,11 @@
     <section class="build-hero">
       <div class="build-hero-grid">
         <div><p id="build-class" class="eyebrow">ソーサレス / ディサイプル・オブ・ヴァラシュタ</p><h1 id="build-name">PoE2 砂と炎のヴァラシュタ ビルド｜0.5.5育成</h1><p id="build-skill" class="lead">メインスキル：ケラリの幻惑 / ルザンの罠</p><p>現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。</p><p class="status-note" data-build-status="verified">Lv1〜Endgameの主要情報を確認済み</p><p class="status-note">対応環境 0.5.5・<a href="https://www.pathofexile.com/forum/view-thread/4006357" target="_blank" rel="noopener noreferrer">最新確認 0.5.5c</a>・最終確認 2026-09-23</p><div class="build-overview"><p><b>おすすめ：</b>召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人</p><p><b>弱点：</b>最初のアセンダンシー取得までは本来の構成にならない。</p><p><b>操作：</b>最初のアセンダンシーで構成切替　<b>SSF：</b>確認済み</p></div><div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：0.5.5</div><div class="fact">資料確認日：2026-09-07</div></div></div>
-        <section class="level-card" aria-labelledby="level-title"><div class="level-number"><h2 id="level-title">現在Lv</h2><output id="level-output" for="level-input level-range">Lv1</output></div><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="level-input" type="number" inputmode="numeric" min="1" max="100" value="1" aria-label="現在レベル"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><input id="level-range" type="range" min="1" max="100" value="1" aria-label="現在レベルのスライダー"><div class="range-labels"><span>Lv1</span><span>Lv100</span></div><p class="disclaimer">この端末に自動保存されます。</p></section>
+        <section id="level-card" class="level-card" aria-labelledby="level-title"><div class="level-number"><h2 id="level-title">現在Lv</h2><output id="level-output" for="level-input level-range">Lv1</output></div><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="level-input" type="number" inputmode="numeric" min="1" max="100" value="1" aria-label="現在レベル"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><input id="level-range" type="range" min="1" max="100" value="1" aria-label="現在レベルのスライダー"><div class="range-labels"><span>Lv1</span><span>Lv100</span></div><p class="disclaimer">この端末に自動保存されます。</p></section>
       </div>
     </section>
     <div class="detail-main">
+      <aside id="note-referral-guide" class="note-referral-guide" hidden><p class="section-kicker">noteからお越しの方へ</p><h2>続きは現在Lvから確認できます</h2><p>記事で選んだビルドのまま、今そろえるスキル・装備・パッシブを3つに絞ります。</p><a class="button" href="#level-card">現在Lvを入力する</a></aside>
       <section id="now" class="now-panel" aria-labelledby="now-title"><div class="now-stage"><small>あなたは現在ここ</small><strong id="now-stage">Lv1〜10</strong></div><div class="now-actions"><p id="now-source-label" class="section-kicker">掲載資料から整理した優先行動</p><h2 id="now-title">今やること</h2><div class="priority-list"><div class="priority-item"><b>最優先</b><span data-now-action>Lv6でEssence Drainへ移行する</span></div><div class="priority-item"><b>次</b><span data-now-action>Frost BombでExposureを付ける</span></div><div class="priority-item"><b>その次</b><span data-now-action>アーマーと耐性を確認する</span></div></div><p id="now-next" class="disclaimer"></p></div></section>
       <section class="progress-card" aria-labelledby="progress-title"><div class="progress-head"><div><p class="section-kicker">MY PROGRESS</p><h2 id="progress-title">現在段階のチェック進捗</h2></div><strong id="progress-percent">0%</strong></div><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div id="progress-checks" class="progress-checks"></div><p id="progress-next" class="next-advice"></p><p class="disclaimer">ビルド全体の強さではなく、現在段階で確認する7項目の進捗です。チェック状態はこの端末に保存されます。</p></section>
       <section class="trouble-card" aria-labelledby="trouble-title"><p class="section-kicker">TROUBLE CHECK</p><h2 id="trouble-title">困ったとき</h2><p>現在のビルドとLvに合わせて、最初に確認する3項目を表示します。</p><div id="trouble-buttons" class="trouble-buttons"><button type="button" data-trouble="death">すぐ死ぬ</button><button type="button" data-trouble="damage">火力が出ない</button><button type="button" data-trouble="mana">マナが足りない</button><button type="button" data-trouble="boss">ボスに勝てない</button><button type="button" data-trouble="speed">周回が遅い</button><button type="button" data-trouble="gear">装備が分からない</button></div><div id="trouble-result" class="trouble-result" aria-live="polite"><p>困りごとを選んでください。</p></div></section>

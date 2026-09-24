@@ -208,7 +208,7 @@ function renderSources() {
 }
 
 function renderBuild(builds) {
-  document.title = `PoE2 ${build.version} ${build.name} ビルド｜Lv1〜Endgame育成`;
+  document.title = build.seoTitle || `PoE2 ${build.version} ${build.name} ビルド｜Lv1〜Endgame育成`;
   byId("build-name").textContent = `PoE2 ${build.name} ビルド｜${build.version}育成`;
   byId("build-class").textContent = `${build.className} / ${text(build.ascendancy)}`;
   byId("build-skill").textContent = `メインスキル：${text(build.mainSkill)}`;
@@ -268,6 +268,13 @@ function bindEvents() {
   });
 }
 
+function revealNoteReferral() {
+  const params = new URLSearchParams(location.search);
+  const fromNote = params.get("utm_source") === "note" || document.referrer.startsWith("https://note.com/");
+  const guide = byId("note-referral-guide");
+  if (fromNote && guide) guide.hidden = false;
+}
+
 async function init() {
   try {
     const response = await fetch("/data/builds.json");
@@ -281,6 +288,7 @@ async function init() {
     }
     renderBuild(builds);
     bindEvents();
+    revealNoteReferral();
     const savedTrouble = localStorage.getItem(`poe2:navi:trouble:${build.id}`);
     if (savedTrouble) renderTrouble(savedTrouble);
   } catch (error) {
