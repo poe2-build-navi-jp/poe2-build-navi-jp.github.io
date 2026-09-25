@@ -164,6 +164,8 @@ assert(starterPage.includes("迷ったらこの候補"), "league starter purpose
 assert(bestPage.includes("結論：目的別のおすすめ候補") && bestPage.includes("Tier・リーグスターターとの違い"), "best builds purpose comparison missing");
 assert((bestPage.match(/現在Lvから今やることを見る/g) || []).length === 6, "best builds must link six purpose candidates to level navigation");
 assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲載ビルドの確認済み特徴を比較") && bestPage.includes("高投資時の伸び代"), "best builds evidence-based comparison missing");
+assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
+assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
 assert(seoPages.length === 13, "targeted SEO page count must be 13");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
