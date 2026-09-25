@@ -21,7 +21,6 @@ jobs:
             base64 -d site-update.patch.gz.b64 | gzip -d > /tmp/site-update.patch
             git apply /tmp/site-update.patch
             rm site-update.patch.gz.b64
-            printf '%s' 'bmFtZTogQXBwbHkgb25lLXRpbWUgc2l0ZSB1cGRhdGUKCm9uOgogIHdvcmtmbG93X2Rpc3BhdGNoOgoKcGVybWlzc2lvbnM6CiAgY29udGVudHM6IHdyaXRlCgpqb2JzOgogIGRlcGxveToKICAgIHJ1bnMtb246IHVidW50dS1sYXRlc3QKICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAdjQKICAgICAgLSBuYW1lOiBBcHBseSB2ZXJpZmllZCBzaXRlIGZpbGVzCiAgICAgICAgcnVuOiB8CiAgICAgICAgICB0ZXN0IC1mIHNpdGUtdXBkYXRlLnppcAogICAgICAgICAgdW56aXAgLW8gc2l0ZS11cGRhdGUuemlwCiAgICAgICAgICBybSBzaXRlLXVwZGF0ZS56aXAKICAgICAgICAgIGdpdCBjb25maWcgdXNlci5uYW1lICJnaXRodWItYWN0aW9uc1tib3RdIgogICAgICAgICAgZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICI0MTg5ODI4MitnaXRodWItYWN0aW9uc1tib3RdQHVzZXJzLm5vcmVwbHkuZ2l0aHViLmNvbSIKICAgICAgICAgIGdpdCBhZGQgLUEKICAgICAgICAgIGdpdCBkaWZmIC0tY2FjaGVkIC0tcXVpZXQgfHwgZ2l0IGNvbW1pdCAtbSAiRGVwbG95IFNFTyBodWJzIGFuZCBwYXRjaCB0cmFja2luZyIKICAgICAgICAgIGdpdCBwdXNoCg==' | base64 -d > .github/workflows/apply-site-update.yml
           fi
           git config user.name "github-actions[bot]"
           git config user.email "4189828+github-actions[bot]@users.noreply.github.com"
