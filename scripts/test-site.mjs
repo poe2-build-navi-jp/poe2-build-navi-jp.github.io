@@ -165,6 +165,7 @@ assert(bestPage.includes("結論：目的別のおすすめ候補") && bestPage.
 assert((bestPage.match(/現在Lvから今やることを見る/g) || []).length === 6, "best builds must link six purpose candidates to level navigation");
 assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲載ビルドの確認済み特徴を比較") && bestPage.includes("高投資時の伸び代"), "best builds evidence-based comparison missing");
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
+assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
 assert(seoPages.length === 13, "targeted SEO page count must be 13");
 for (const page of seoPages) {
@@ -188,8 +189,10 @@ const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
 assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");
 assert(oneHub.includes("Early Accessから何が変わる？") && oneHub.includes("1.0を待たず、今から始めてもいい？") && oneHub.includes("1.0までに覚えておきたいこと") && oneHub.includes("現在選べる初心者向けビルド"), "1.0 beginner hub sections missing");
+assert(oneHub.includes("1.0から始める人が今やること") && oneHub.includes("初心者向けビルドを見る") && oneHub.includes("今使えるおすすめビルドを見る") && oneHub.includes("リーグスターターを見る"), "1.0 next-action section missing");
 const noteMap = await read("NOTE_CONTENT_MAP.md");
 assert(noteMap.includes("/best-builds/") && noteMap.includes("utm_source=note") && noteMap.includes("/builds/huntress/twister-spirit-walker/"), "note purpose mapping missing");
+assert(noteMap.includes("nbd2ce44d8585") && noteMap.includes("n09f92db3dc1a") && noteMap.includes("nb6f6a2709e4a"), "recent note direct-link mapping missing");
 assert(noteMap.includes("公開済み記事の修正候補") && noteMap.includes("未設定URL") && noteMap.includes("/builds/ranger/ice-shot-deadeye/"), "note placeholder link audit missing");
 const analyticsEvents = await read("assets/analytics-events.js");
 for (const eventName of ["best_build_click", "tier_build_click", "league_build_click", "poe2_1_0_build_click", "level_input", "note_referral"]) {

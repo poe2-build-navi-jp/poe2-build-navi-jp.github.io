@@ -13,6 +13,9 @@
 | 1.0無料化・初心者向けクラス | https://note.com/fresh_okapi3816/n/ne5263724eb0f | /classes/ | https://poe2-build-navi-jp.github.io/classes/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_beginner_classes |
 | 0.5.5レベリング効率化 | https://note.com/fresh_okapi3816/n/nf6f8c2db6ed1 | /leveling/ | https://poe2-build-navi-jp.github.io/leveling/?utm_source=note&utm_medium=referral&utm_campaign=leveling_055 |
 | 装備の優先順位 | https://note.com/fresh_okapi3816/n/n63f105b8740d | /guides/gear-upgrade/ | https://poe2-build-navi-jp.github.io/guides/gear-upgrade/?utm_source=note&utm_medium=referral&utm_campaign=gear_priority |
+| マッピング最強ビルド3選 | https://note.com/fresh_okapi3816/n/nbd2ce44d8585 | /best-builds/ | https://poe2-build-navi-jp.github.io/best-builds/?utm_source=note&utm_medium=referral&utm_campaign=mapping_best_builds |
+| 低予算ビルド3選 | https://note.com/fresh_okapi3816/n/n09f92db3dc1a | /best-builds/ | https://poe2-build-navi-jp.github.io/best-builds/?utm_source=note&utm_medium=referral&utm_campaign=budget_best_builds |
+| ボスで詰まった時に見直す5項目 | https://note.com/fresh_okapi3816/n/nb6f6a2709e4a | /guides/cant-beat-boss/ | https://poe2-build-navi-jp.github.io/guides/cant-beat-boss/?utm_source=note&utm_medium=referral&utm_campaign=cant_beat_boss |
 
 ## 公開済み記事の修正候補
 
