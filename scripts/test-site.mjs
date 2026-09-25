@@ -40,6 +40,8 @@ assert((index.match(/現在Lvから今やることを見る/g) || []).length <= 
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
 assert(buildList.includes("<h1>PoE2 0.5.5 職業別ビルド一覧</h1>"), "build catalog search-focused H1 missing");
+assert(buildList.includes("<title>PoE2 0.5.5 職業別おすすめビルド一覧｜初心者向け育成ナビ</title>"), "build catalog count-free title missing");
+assert(!/ビルド\d+(?:選|本)/.test(buildList), "build catalog must not hardcode build count in SEO copy");
 assert(detailJs.includes('byId("gear-check-link")') && detailJs.includes("history.replaceState"), "level changes must update the gear-check link and shareable URL");
 assert(styles.includes("align-items:start") && styles.includes(".level-card{align-self:start"), "build hero must not stretch the level card");
 assert(gearCheck.indexOf('id="gear-class"') < gearCheck.indexOf('id="gear-build"') && gearCheck.indexOf('id="gear-build"') < gearCheck.indexOf('id="gear-level"'), "gear flow must be class -> build -> level");
@@ -161,6 +163,7 @@ assert(tierPage.includes("結論だけ知りたい人向け"), "tier purpose con
 assert(starterPage.includes("迷ったらこの候補"), "league starter purpose conclusion missing");
 assert(bestPage.includes("結論：目的別のおすすめ候補") && bestPage.includes("Tier・リーグスターターとの違い"), "best builds purpose comparison missing");
 assert((bestPage.match(/現在Lvから今やることを見る/g) || []).length === 6, "best builds must link six purpose candidates to level navigation");
+assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲載ビルドの確認済み特徴を比較") && bestPage.includes("高投資時の伸び代"), "best builds evidence-based comparison missing");
 assert(seoPages.length === 13, "targeted SEO page count must be 13");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
@@ -181,9 +184,11 @@ assert(gearCheck.includes('id="gear-example-title"'), "gear check verified stati
 assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concern=damage"), "gear check sample context link missing");
 const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
-assert(oneHub.includes("基本プレイ無料化について") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");
+assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");
+assert(oneHub.includes("Early Accessから何が変わる？") && oneHub.includes("1.0を待たず、今から始めてもいい？") && oneHub.includes("1.0までに覚えておきたいこと") && oneHub.includes("現在選べる初心者向けビルド"), "1.0 beginner hub sections missing");
 const noteMap = await read("NOTE_CONTENT_MAP.md");
 assert(noteMap.includes("/best-builds/") && noteMap.includes("utm_source=note") && noteMap.includes("/builds/huntress/twister-spirit-walker/"), "note purpose mapping missing");
+assert(noteMap.includes("公開済み記事の修正候補") && noteMap.includes("未設定URL") && noteMap.includes("/builds/ranger/ice-shot-deadeye/"), "note placeholder link audit missing");
 const analyticsEvents = await read("assets/analytics-events.js");
 for (const eventName of ["best_build_click", "tier_build_click", "league_build_click", "poe2_1_0_build_click", "level_input", "note_referral"]) {
   assert(analyticsEvents.includes(eventName), `analytics event missing: ${eventName}`);

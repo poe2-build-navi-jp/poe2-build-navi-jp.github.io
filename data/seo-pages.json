@@ -2,16 +2,16 @@
   {
     "path": "/guides/poe2-0-5-5-builds/",
     "kicker": "PATCH 0.5.5 / BUILD GUIDE",
-    "title": "PoE2 0.5.5 おすすめビルド10選｜初心者向け育成",
-    "description": "PoE2 0.5.5のおすすめビルド10選。初心者・弓・近接・SSFなど目的別に選び、現在Lvから今やること3つとEndgameまでの育成手順を確認できます。",
-    "h1": "PoE2 0.5.5おすすめビルド10選",
+    "title": "PoE2 0.5.5 おすすめビルド一覧｜初心者向け育成",
+    "description": "PoE2 0.5.5のおすすめビルドを職業・初心者・弓・近接・SSFなどから比較。現在Lvから今やること3つとEndgameまでの育成手順を確認できます。",
+    "h1": "PoE2 0.5.5おすすめビルド一覧",
     "answer": "迷ったら、初心者はミニオン、弓はアイスショット、近接は旋風強襲、SSFはエッセンスドレインから選べます。各ビルドで現在Lvを入力すると、今やること3つを確認できます。",
     "quickActions": ["近接・遠距離・召喚など、続けたい戦い方を決める", "ビルド詳細を開いて現在Lvを入力する", "表示された「今やること」3つから進める"],
     "sections": [
       {"heading": "迷ったら目的別に選ぶ", "paragraphs": ["最強1位を断定するのではなく、操作方法と育成条件で4候補に絞りました。各カードから現在Lvに合う育成手順へ進めます。"], "buildIds": ["witch-minion-infernalist", "ranger-ice-shot-deadeye", "monk-whirling-assault", "witch-ed-contagion-lich"]},
       {"heading": "0.5.5で最初に確認すること", "paragraphs": ["0.5.5はForbidden Ritesイベントリーグを含む更新です。イベント開始日は公式発表で2026年9月4日と確認しています。", "掲載ビルドは対応パッチ、最終確認日、強み、弱み、8段階ロードマップを分けて表示します。固定DPSや固定相場は同条件で検証できないため断定しません。"]},
       {"heading": "初心者が選ぶ基準", "bullets": ["途中で主力スキルが変わる時期を理解できるか", "苦手な状況や操作上の弱点を許容できるか", "現在Lvの段階に必要な装備・スキル・パッシブ方針を確認できるか", "リーグスターターやSSFの表示に確認根拠があるか"]},
-      {"heading": "10ビルドから選ぶ", "buildList": "all"}
+      {"heading": "掲載中のビルドから選ぶ", "buildList": "all"}
     ],
     "related": [{"label":"初心者向けTierを見る","url":"/tier-list/"},{"label":"リーグスターターを見る","url":"/league-starter/"},{"label":"全ビルドを見る","url":"/builds/"}],
     "sources": [{"name":"Path of Exile 2公式：Content Update 0.5.0と0.5.5イベント","url":"https://www.pathofexile.com/forum/view-thread/3999858","checkedAt":"2026-09-12"}]

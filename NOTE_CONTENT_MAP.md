@@ -9,7 +9,20 @@
 | Spirit Walker（ハントレス）ツイスタービルド完全ガイド | https://note.com/fresh_okapi3816/n/nbe96101eda53 | /builds/huntress/twister-spirit-walker/ | https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/?utm_source=note&utm_medium=referral&utm_campaign=huntress_twister_spirit_walker |
 | グレネード・ジェムリング解説 | https://note.com/fresh_okapi3816/n/nfd9d6bfbb0d8 | /builds/mercenary/grenade-gemling/ | https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/?utm_source=note&utm_medium=referral&utm_campaign=mercenary_grenade_gemling |
 | 0.5.5 Tier比較 | https://note.com/fresh_okapi3816/n/n5c499efd7391 | /tier-list/ | https://poe2-build-navi-jp.github.io/tier-list/?utm_source=note&utm_medium=referral&utm_campaign=poe2_tier_055 |
-| 1.0正式版の確認済み情報 | https://note.com/fresh_okapi3816/n/ne5263724eb0f | /poe2-1-0/ | https://poe2-build-navi-jp.github.io/poe2-1-0/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_confirmed |
+| 1.0正式版の速報 | https://note.com/fresh_okapi3816/n/n8e50e45e6c73 | /poe2-1-0/ | https://poe2-build-navi-jp.github.io/poe2-1-0/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_news |
+| 1.0無料化・初心者向けクラス | https://note.com/fresh_okapi3816/n/ne5263724eb0f | /classes/ | https://poe2-build-navi-jp.github.io/classes/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_beginner_classes |
+| 0.5.5レベリング効率化 | https://note.com/fresh_okapi3816/n/nf6f8c2db6ed1 | /leveling/ | https://poe2-build-navi-jp.github.io/leveling/?utm_source=note&utm_medium=referral&utm_campaign=leveling_055 |
+| 装備の優先順位 | https://note.com/fresh_okapi3816/n/n63f105b8740d | /guides/gear-upgrade/ | https://poe2-build-navi-jp.github.io/guides/gear-upgrade/?utm_source=note&utm_medium=referral&utm_campaign=gear_priority |
+
+## 公開済み記事の修正候補
+
+| 記事 | 残存箇所 | 差し替え先 |
+|---|---|---|
+| [1.0無料化・初心者向けクラス](https://note.com/fresh_okapi3816/n/ne5263724eb0f) | 「Ice Shot Deadeye 完全ロードマップ」の未設定URL | https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_ice_shot |
+| 同上 | 「Spirit Walker（ハントレス）ツイスター完全ガイド」の未設定URL | https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_spirit_walker |
+| 同上 | 「ミニオン系初心者ビルドの選び方」の未設定URL | https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/?utm_source=note&utm_medium=referral&utm_campaign=poe2_1_0_minion |
+
+今回の公開検索で確認できたPoE2記事には、「有料記事」と誤解させる表記は見つかりませんでした。上の未設定URLは誤解や離脱につながるため、note側で差し替えが必要です。
 
 ウィッチハンター比較・ストームウィーバー比較は、単一の育成手順と一致する個別ビルドがまだないため、無関係な個別ページへは送りません。
 
