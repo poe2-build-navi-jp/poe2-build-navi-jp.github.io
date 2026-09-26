@@ -73,10 +73,17 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  await new Promise(r=>setTimeout(r,60));
  const guidance=minion.window.document.getElementById('now-action-guidance');
  assert.equal(guidance.hidden,false);assert.match(guidance.textContent,/Act 3 - Vaal Guard Spectres/);
+ assert.match(minion.window.document.querySelector('[data-now-action]').textContent,/Act 3の切替地点に到達したら/);
+ assert.match(minion.window.document.querySelector('[data-now-action]').textContent,/未到達ならスナイパーを継続/);
  assert.equal(guidance.querySelector('a').href,data.find(b=>b.id==='witch-minion-infernalist').sources[0].url);
  minion.window.document.getElementById('level-input').value='42';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('input'));
  assert.equal(guidance.hidden,true);
  console.log('PASS: minion Lv37 shows precise guide section and link; unrelated stage hides it');
+ const shieldPage=new JSDOM(fs.readFileSync('builds/warrior/shield-wall-smith/index.html','utf8'));
+ const shieldStages=[...shieldPage.window.document.querySelectorAll('.static-roadmap details')];
+ assert.equal(shieldStages.length,8);
+ assert.equal(shieldStages.slice(2).filter(stage=>stage.textContent.includes('この段階のサポートを原典で確認')).length,6);
+ assert.match(shieldStages[2].textContent,/切替後のサポート名は未確認/);
  async function home(storage){
   const page=new JSDOM(fs.readFileSync('index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/'});
   Object.entries(storage).forEach(([key,value])=>page.window.localStorage.setItem(key,value));

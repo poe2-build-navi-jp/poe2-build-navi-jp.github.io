@@ -547,7 +547,8 @@
       {
         "label": "Lv21〜30",
         "mainSkill": "Lv22からシールドウォールへ切替。",
-        "supports": "正式な段階別サポートは原典のAct 2 - Shield Wall Swapで確認。安全に抽出できない名称は断定しない。",
+        "supports": "Lv22まではローリングスラム＋ボーンシャッター（単体はPerfect Strike）を維持。切替時は盾とシールドウォールを用意し、原典「Skill Gems」→「Act 2 - Shield Wall Swap」で各スキルのサポート枠を確認する。切替後のサポート名は未確認。",
+        "supportSourceStage": "Act 2 - Shield Wall Swap",
         "passivePriority": "原典のAct 2 - Shield Wall Swap段階別ツリーへ移行。",
         "gearPriority": "Lv22以降はアーマー値が高い盾を最優先。防具はライフと耐性。",
         "replaceGear": "シールドウォール切替時に盾を最優先で更新。",
@@ -562,7 +563,8 @@
       {
         "label": "Lv31〜40",
         "mainSkill": "シールドウォールを主力として継続。",
-        "supports": "原典のAct 3段階別構成へ進む。サポートはリンク先の現行表示を確認して交換。",
+        "supports": "シールドウォールを継続。原典「Skill Gems」→「Act 3」でサポートを確認し、現在の構成と異なる枠だけ入れ替える。段階固有のサポート名は未確認。",
+        "supportSourceStage": "Act 3",
         "passivePriority": "原典のAct 3段階別ツリーを使用。Smithの防御効果と装備要求を優先。",
         "gearPriority": "盾のアーマー、胴装備の防御、ライフ、不足耐性、移動速度。",
         "replaceGear": "火力と壁の性能に直結する盾を先に比較し、防御不足なら胴装備を更新。",
@@ -577,7 +579,8 @@
       {
         "label": "Lv41〜キャンペーン終了",
         "mainSkill": "シールドウォールを周回・単体の中心に使用。",
-        "supports": "原典のAct 4、Interludes段階別構成を順に使用。未確認の名称は原典を優先。",
+        "supports": "原典「Skill Gems」→「Act 4」、次に「Interludes」の順でシールドウォールと補助スキルのサポートを確認する。段階固有のサポート名は未確認。",
+        "supportSourceStage": "Act 4 → Interludes",
         "passivePriority": "Act 4からInterludes段階別ツリーへ進み、キャンペーン後のMapsへ接続。",
         "gearPriority": "高アーマー盾、アーマー防具、ライフ、属性耐性、移動速度。",
         "replaceGear": "キャンペーン終了時に不足する耐性と、性能が停滞した盾を優先。",
@@ -592,7 +595,8 @@
       {
         "label": "Mapping開始",
         "mainSkill": "シールドウォールで進路と敵集団を制御しながら起爆。",
-        "supports": "原典のMaps段階別構成へ切り替える。変更後は操作感と消費リソースを確認。",
+        "supports": "原典「Skill Gems」→「Maps」でシールドウォールと周回用スキルのサポートを確認する。原典本文では周回時に壁＋ウォークライまたはシールドチャージを使用。段階固有のサポート名は未確認。",
+        "supportSourceStage": "Maps",
         "passivePriority": "Maps段階別ツリーを使用し、キャンペーン用から一括で推測変更しない。",
         "gearPriority": "耐性とライフを安定させ、高アーマー盾と胴防具を更新。",
         "replaceGear": "死亡が多い場合は防具、壁の火力不足なら盾を最優先。",
@@ -607,7 +611,8 @@
       {
         "label": "Early Endgame",
         "mainSkill": "シールドウォールを主力に、周回とボスで配置を切り替える。",
-        "supports": "Maps後半からEndgameガイドの構成へ段階的に移行。確認できない枠は原典で照合。",
+        "supports": "まず原典「Skill Gems」→「Maps」を確認。高投資構成へ移る場合は「Giga Endgame」のスキルとサポート、装備前提を一緒に確認する。段階固有のサポート名は未確認。",
+        "supportSourceStage": "Maps → Giga Endgame",
         "passivePriority": "Mapsツリーを完成させ、装備が揃ってからEndgame側へ移る。",
         "gearPriority": "盾のアーマー、防具のアーマー、ライフ、耐性、移動速度。",
         "replaceGear": "単体火力なら盾、防御不足なら胴と不足耐性の部位を更新。",
@@ -622,7 +627,8 @@
       {
         "label": "Endgame完成",
         "mainSkill": "シールドウォールを主力とし、地形・敵サイズに合わせて設置と起爆を反復。",
-        "supports": "原典のGiga EndgameおよびAvatar of Fire版を候補として比較し、装備前提を満たす方だけ採用。",
+        "supports": "原典「Skill Gems」→「Giga Endgame」で完成形のサポートを確認。Avatar of Fire版へ変更する場合は別原典のスキル・装備・ツリーをまとめて照合する。段階固有のサポート名は未確認。",
+        "supportSourceStage": "Giga Endgame（Avatar of Fire版は別原典）",
         "passivePriority": "Giga Endgame段階別ツリーを基準にする。Avatar of Fire版への変更は原典の装備前提を確認後に行う。",
         "gearPriority": "高性能盾、アーマー、防御、ライフ、耐性を不足順で更新。",
         "replaceGear": "固定価格を使わず、現在の盾・防具と同条件出品の性能差で判断。",
@@ -662,6 +668,12 @@
     ],
     "status": "verified",
     "audience": "装備を整えやすい耐久型のリーグスターターを探している人",
+    "changeHistory": [
+      {
+        "date": "2026-09-27",
+        "summary": "Lv22以降に原典で確認するSkill Gems段階と切替順を明記。段階別サポート名は未確認として維持。原典本文のMaps操作を反映。"
+      }
+    ],
     "ratingEvidence": {
       "checkedAt": "2026-09-27",
       "beginner": {
@@ -1501,7 +1513,7 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Vaal Guard Spectreへ段階的に切替",
+        "mainSkill": "Act 3の切替地点に到達し、対象と必要Spiritを揃えたらVaal Guard Spectreへ段階的に切替。未到達ならスケルタルスナイパーを継続",
         "supports": "原典のAct 3 - Vaal Guard Spectres構成を使用。確認できない名称は原典表示を優先。",
         "passivePriority": "Act 3 - Vaal Guard Spectres段階別ツリーへ移行。",
         "gearPriority": "ミニオンレベル、Spirit、防御、耐性。",
@@ -1509,7 +1521,7 @@
         "caution": "召喚対象、サポート、Spiritを揃えてから切り替え、途中構成を長く残さない。",
         "transitionCondition": "Lv41到達。Vaal Guard Spectreと補助ミニオンの役割が安定している。",
         "nowActions": [
-          "Vaal Guard Spectreを確保する",
+          "Act 3の切替地点に到達したらVaal Guard Spectreを確保する（未到達ならスナイパーを継続）",
           "必要Spiritを確認する",
           "切替後のサポートを原典と照合する"
         ],
@@ -1607,6 +1619,12 @@
       }
     ],
     "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者",
+    "changeHistory": [
+      {
+        "date": "2026-09-27",
+        "summary": "Lv31〜40のVaal Guard Spectre切替はLvだけでは決まらず、Act 3の該当地点とSpirit・召喚対象の準備が必要と明記。"
+      }
+    ],
     "ratingEvidence": {
       "checkedAt": "2026-09-27",
       "beginner": {
