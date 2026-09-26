@@ -57,21 +57,25 @@ p{font-size:30px;line-height:1.4;color:#cbd5e1}
 <div class="foot"><span class="patch">PATCH ${esc(site.siteVersion)}</span><span class="site">POE2ビルドナビ｜日本語ビルド育成ナビ</span></div>
 <script>const h=document.querySelector('h1'),box=document.querySelector('.box');let s=64;while(box.scrollHeight>box.clientHeight&&s>34){s-=2;h.style.fontSize=s+'px';}</script></body></html>`;
 
-const browser=await chromium.launch(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{});
-const page=await browser.newPage({viewport:{width:1200,height:630}});
-await mkdir(resolve(root,'images/poe2/og'),{recursive:true});
 let written=0;
-for(const p of pages){
- await page.setContent(template(p),{waitUntil:'load'});
- const png=await page.screenshot({type:'png'});
- const dataUrl=await page.evaluate(async src=>{const img=new Image();img.src=src;await img.decode();const c=document.createElement('canvas');c.width=1200;c.height=630;c.getContext('2d').drawImage(img,0,0);return c.toDataURL('image/webp',0.82);},`data:image/png;base64,${png.toString('base64')}`);
- if(!dataUrl.startsWith('data:image/webp'))throw new Error('Chromium could not encode WebP');
- const webp=Buffer.from(dataUrl.split(',')[1],'base64');
- const target=resolve(root,p.image.slice(1));
- const old=await readFile(target).catch(()=>null);
- if(!old||!old.equals(webp)){await writeFile(target,webp);written++;}
+if(process.env.OG_METADATA_ONLY==='1'){
+ for(const p of pages)await readFile(resolve(root,p.image.slice(1))); // Reuse an existing image when its title has not changed.
+}else{
+ const browser=await chromium.launch(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{});
+ const page=await browser.newPage({viewport:{width:1200,height:630}});
+ await mkdir(resolve(root,'images/poe2/og'),{recursive:true});
+ for(const p of pages){
+  await page.setContent(template(p),{waitUntil:'load'});
+  const png=await page.screenshot({type:'png'});
+  const dataUrl=await page.evaluate(async src=>{const img=new Image();img.src=src;await img.decode();const c=document.createElement('canvas');c.width=1200;c.height=630;c.getContext('2d').drawImage(img,0,0);return c.toDataURL('image/webp',0.82);},`data:image/png;base64,${png.toString('base64')}`);
+  if(!dataUrl.startsWith('data:image/webp'))throw new Error('Chromium could not encode WebP');
+  const webp=Buffer.from(dataUrl.split(',')[1],'base64');
+  const target=resolve(root,p.image.slice(1));
+  const old=await readFile(target).catch(()=>null);
+  if(!old||!old.equals(webp)){await writeFile(target,webp);written++;}
+ }
+ await browser.close();
 }
-await browser.close();
 
 for(const p of pages){
  let html=await read(p.file);

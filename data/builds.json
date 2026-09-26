@@ -355,7 +355,7 @@
         "mainSkill": "広範囲のツイスターを周回主力にし、War BannerとFangs of Frostを強敵用に使用。",
         "supports": "原典のEarly Atlas構成へ移行。未確認のサポート名は原典で確認。",
         "passivePriority": "Early Atlas段階別ツリーへ移る。キャンペーン用ツリーを一括で推測変更しない。",
-        "gearPriority": "まずライフと耐性、次に攻撃用槍のダメージと移動速度。",
+        "gearPriority": "防具のライフ・耐性、ブーツ移動速度と攻撃用槍の追加ダメージを比較。速度用／攻撃用の武器セットを分け、移動と攻撃の不足を確認する。",
         "replaceGear": "マップで倒される場合は火力装備より不足耐性・ライフの部位を先に更新。",
         "caution": "視認性が下がりやすい構成なので、危険床やボス動作を見失わない。",
         "transitionCondition": "低Tierマップを安定周回でき、強敵への操作順を再現できる。",
@@ -370,7 +370,7 @@
         "mainSkill": "ツイスターを周回と単体の主力にし、パリィ・Fangs of Frost・War Bannerを状況別に追加。",
         "supports": "Atlas ProgressionからEarly Endgameの原典構成へ進む。変更前後のマナ消費を確認。",
         "passivePriority": "Atlas Progression、Late Atlas、Early Endgameの順で段階別ツリーを追う。",
-        "gearPriority": "攻撃用槍、ライフ、耐性、防御、移動速度。更新効果を1部位ずつ比較。",
+        "gearPriority": "まずライフと耐性、次に攻撃用槍の追加ダメージと速度用槍・ブーツの移動速度を比較。原典のEarly／Mid Endgame装備タブで採用版と照合。",
         "replaceGear": "単体火力不足なら攻撃用槍、死亡が多いなら防具を優先。",
         "caution": "装備依存度が高いため、固定価格やDPSではなく不足項目で比較する。",
         "transitionCondition": "周回・単体・防御のどこがボトルネックか判断できる。",
@@ -385,9 +385,9 @@
         "mainSkill": "ワーリングスラッシュ×3 → ツイスター。必要時にパリィ → Fangs of Frost → War Bannerを組み込む。",
         "supports": "Mid EndgameからLate Endgameの原典構成を基準に、装備とマナに合わせて調整。",
         "passivePriority": "Mid Endgame、Late Endgame段階別ツリーを順に完成。正確なノード名は原典を確認。",
-        "gearPriority": "攻撃用槍の実性能、防御、ライフ、耐性、移動速度を現在の不足順で更新。",
-        "replaceGear": "表示価格ではなく、同条件の出品と現在装備の差を比較して更新。",
-        "caution": "複数ボタンと武器切替が必要。簡略操作時と最大火力時を分けて考える。",
+        "gearPriority": "①防具のライフ・耐性、②攻撃用槍・手袋・指輪の追加ダメージ、③速度用槍とブーツの移動速度を不足に応じて比較。高投資版固有の装備条件は原典Late Endgameで確認。",
+        "replaceGear": "死亡が多ければ防具のライフ・耐性、火力不足なら攻撃用槍と追加ダメージ付きの手袋・指輪、移動が遅ければ速度用セットとブーツから比較する。",
+        "caution": "原典はEndgame火力を装備依存かつ操作量の多い構成と説明。序盤の追加ダメージ優先をLate Endgameの最適値と読み替えず、装備・ジェム・ツリーを同じ採用版で照合。",
         "transitionCondition": "完成後は火力・防御・操作性の不足を1項目ずつ改善する。",
         "nowActions": [
           "最大火力の操作順を安定させる",
@@ -409,7 +409,7 @@
       {
         "name": "Mobalytics: 0.5.5 Twister Gemling Legionnaire",
         "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
-        "checkedAt": "2026-09-07",
+        "checkedAt": "2026-09-27",
         "type": "海外レベリング・Endgameガイド"
       },
       {
@@ -471,7 +471,13 @@
         "checkedAt": "2026-09-26",
         "note": "短所に「壁がない場所では単体火力が落ちる」とある。"
       }
-    }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-27",
+        "summary": "原典の序盤装備優先と武器セット運用をもとに後半の装備交換順を整理。Late Endgame固有の装備閾値は未確認。"
+      }
+    ]
   },
   {
     "id": "warrior-shield-wall-smith",
@@ -1009,12 +1015,12 @@
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Act 3・2回目の試練まではツイスター型を継続。条件達成後にテイムビーストへ移行。",
+        "mainSkill": "Act 3で2回目の試練を終えるまではツイスター＋ワーリングスラッシュ。Tame Beastのレベル7ジェムと再振り分けの準備後、Act 3 SWAPへ移行。候補はAct 3のMighty Silverfist。",
         "supports": "相棒用サポートは原典のAct 3 SWAP段階を確認。安全に抽出できない名称は断定しない。",
         "passivePriority": "2回目の試練後、原典のAct 3 SWAP段階別ツリーへまとめて振り直す。",
         "gearPriority": "相棒ダメージ、ミニオンスキルレベル、ライフ、回避・ディフレクション、耐性。",
         "replaceGear": "切替後に槍中心の装備から相棒向け装備へ段階的に更新。",
-        "caution": "原典では振り直しに約20,000ゴールドの目安。価格ではなく切替資金の参考値として扱う。",
+        "caution": "原典はAct 3・2回目の試練後の切替を推奨。Lvだけで切り替えず、Tame Beastのレベル7ジェムとパッシブ再振り分け用の資金を確認する。",
         "transitionCondition": "Tier 7ジェム、2回目の試練、振り直し資金が揃う。",
         "nowActions": [
           "2回目の試練を終える",
@@ -1024,8 +1030,8 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "テイムした相棒を主力にし、自身は位置取りと補助を担当。",
-        "supports": "原典のAct 3 SWAPからAct 4段階へ進む。相棒ごとのサポートは原典表示を確認。",
+        "mainSkill": "原典が単体火力の候補に挙げるAct 3のJungle RuinsにいるMighty Silverfistなど、取得できた固有相棒を主力にする。他の固有相棒でも進行できると原典は説明する。",
+        "supports": "原典のSkill Gems → Act 3 SWAPで選んだ相棒の構成を確認。槍育成のサポートをそのまま相棒用に流用しない。",
         "passivePriority": "Act 3 SWAP後の相棒用段階別ツリーを使用。",
         "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ライフ、回避、耐性。",
         "replaceGear": "相棒へ寄与しない槍育成装備を、相棒・防御に有効な部位から交換。",
@@ -1054,12 +1060,12 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "相棒を主力に、マップでは敵集団へ安全に接近させる。",
+        "mainSkill": "取得済みの固有相棒を主力にする。単体を重視するならMighty Silverfistが原典の候補。マップではAIと通路での動きも確認する。",
         "supports": "原典のRed Maps前段階へ進む。相棒固有サポートはテイム対象と現行ガイドを照合。",
         "passivePriority": "マップ開始用の相棒・防御ツリーへ移る。",
         "gearPriority": "属性・混沌耐性、ライフ、回避・ディフレクション、相棒ダメージ、ミニオンのジェムレベル。",
         "replaceGear": "低Tierマップで倒されるなら防具、処理が遅いなら相棒に有効な装備を確認。",
-        "caution": "相棒AIが狙った敵を攻撃しない場合がある。火力だけでなく誘導しやすさも確認。",
+        "caution": "相棒の種類と付与効果を確認する。原典は単体向けにMighty Silverfist、希少な個体の例としてTemporal Bubbleなど防御効果を持つPlague Harvesterを挙げる。後者の効果は固定ではなく個体ごとに確認。",
         "transitionCondition": "低Tierマップで相棒の生存と自身の防御が安定する。",
         "nowActions": [
           "属性と混沌耐性を確認する",
@@ -1069,7 +1075,7 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "用途に合う相棒を主力にし、自身は位置取りと補助に専念。",
+        "mainSkill": "単体を重視するなら原典のMighty Silverfist。別の固有相棒も成立するため、実際の入手状況とAIの扱いやすさで選ぶ。",
         "supports": "Red MapsからEndgame段階別構成へ進む。テイム対象に合わないサポートを混在させない。",
         "passivePriority": "Red Maps、Endgameの順に段階別ツリーを追う。",
         "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ES、回避、防御、耐性。",
@@ -1084,12 +1090,12 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "選んだ相棒を主力として、敵の誘導・位置取り・補助操作を安定させる。",
+        "mainSkill": "原典Endgame版では単体向けにMighty Silverfistを候補とする。Zoo版など別構成では採用した相棒に合わせて補助・防御・位置取りを整える。",
         "supports": "EndgameまたはZoo段階の原典構成を選び、テイム対象と装備前提に合わせる。",
         "passivePriority": "EndgameとZooを混ぜず、選んだ段階別ツリーを基準に不足防御を調整。",
         "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ES、回避・ディフレクション、耐性。",
         "replaceGear": "固定相場やDPSを使わず、自身と相棒の不足へ効果がある部位だけ更新。",
-        "caution": "相棒のボディブロックとAIは残る弱点。数値だけでなく実戦での扱いやすさを評価する。",
+        "caution": "Mighty Silverfistを全場面の唯一の正解とは扱わない。相棒のボディブロックとAIは残る弱点。単体火力と周回時の扱いやすさを別に確認する。",
         "transitionCondition": "完成後は相棒火力、自身の防御、AI対策を1項目ずつ改善する。",
         "nowActions": [
           "EndgameかZooの方針を決める",
@@ -1107,7 +1113,7 @@
       {
         "name": "Mobalytics: Spirit Walker Beast Master 0.5.5",
         "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
-        "checkedAt": "2026-09-07",
+        "checkedAt": "2026-09-27",
         "type": "海外検証済みレベリング・Endgameガイド"
       },
       {
@@ -1158,7 +1164,13 @@
         "basis": "未評価",
         "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
       }
-    }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-27",
+        "summary": "原典が挙げるJungle RuinsのMighty Silverfist、レア個体の効果例とAct 3・2回目の試練後の切替条件を明記。個体別サポートの詳細は採用した原典段階で確認。"
+      }
+    ]
   },
   {
     "id": "ranger-ice-shot-deadeye",
@@ -1687,7 +1699,7 @@
       {
         "label": "Lv1〜10",
         "mainSkill": "Entangle。ボスには手持ちの単体補助スペルも使用",
-        "supports": "Entangleの序盤構成は原典のレベリング表示を使用。安全に抽出できない名称は原典で確認。",
+        "supports": "EntangleはLv1から使用。原典のSkill Gems欄はLv20ジェムの構成例で、掲載サポートをキャラクターLv1で全取得できる意味ではない。序盤の入手枠は原典の育成手順で確認。",
         "passivePriority": "原典の序盤段階別ツリーを使用。正確なノード名はリンク先で確認。",
         "gearPriority": "+物理/全スペルレベル、スペル/物理スペル威力、ライフ、ESまたはアーマー、耐性、移動速度。",
         "replaceGear": "+スペルレベルまたはスペル威力のない武器を優先して比較。",
@@ -1717,7 +1729,7 @@
       {
         "label": "Lv21〜30",
         "mainSkill": "Entangle。強敵には植物系の単体補助を準備",
-        "supports": "育成ガイドの中盤構成を使用。",
+        "supports": "原典の育成用Skill GemsではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Considered Castingを掲載。ただしLv20ジェムの構成例で、キャラクターLv21での全枠解禁を意味しない。",
         "passivePriority": "中盤の段階別ツリーへ進み、アセンダンシー取得後の導線へ接続。",
         "gearPriority": "スペルレベル、物理スペル威力、追加雷ダメージ、キャスト速度、ライフ、耐性。",
         "replaceGear": "火力不足なら武器、死亡が多いなら防具を1部位ずつ更新。",
@@ -1732,7 +1744,7 @@
       {
         "label": "Lv31〜40",
         "mainSkill": "Entangleを周回主力、Thrashing Vinesを強敵用に追加",
-        "supports": "原典の中盤構成へ進み、強敵用サポートはリンク先表示を確認。",
+        "supports": "原典の育成用構成ではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Considered Casting、Thrashing VinesにConcentrated Area・Explosive Growth II・Rapid Casting IIを掲載。入手と枠数に応じて採用。",
         "passivePriority": "中盤のオラクル段階別ツリーを使用。",
         "gearPriority": "スペルレベル、キャスト速度、ライフ、ES/アーマー、耐性、移動速度。",
         "replaceGear": "Thrashing Vines追加で必要能力値が不足する部位を先に調整。",
@@ -1762,7 +1774,7 @@
       {
         "label": "Mapping開始",
         "mainSkill": "Entangle + Thrashing Vines。条件達成後にCast on Critical + Thunderstormを追加",
-        "supports": "原典ではForced Outcome後、Cast on CriticalからThunderstormを発動して植物を強化する。",
+        "supports": "Forced Outcome取得後、Cast on CriticalにThunderstormをセット。原典の育成用構成にはShock・Magnified Area IIも掲載。アセンダンシー未取得なら自動発動済みと扱わない。",
         "passivePriority": "マップ開始用のオラクル段階別ツリーへ移行。",
         "gearPriority": "耐性、ライフ/ES、混沌耐性、スペルレベル、Spirit、キャスト速度。",
         "replaceGear": "マップで倒される場合は武器より防具と耐性、自動発動しない場合はSpiritとジェム条件を確認。",
@@ -1777,7 +1789,7 @@
       {
         "label": "Early Endgame",
         "mainSkill": "Entangleを周回主力、Thrashing Vinesを単体用、Thunderstormを自動発動",
-        "supports": "EndgameガイドのCheap構成を基準にする。",
+        "supports": "原典Cheap版ではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Heft・Physical Mastery、Thrashing VinesにRapid Casting II・Physical Mastery・Considered Casting・Concentrated Area・Heftを掲載。枠数・能力値を確認。",
         "passivePriority": "Cheap段階のEndgameツリーを使用し、装備が揃う前に高額版へ移らない。",
         "gearPriority": "ES、混沌耐性、スペルレベル、クリティカル、キャスト速度、Spirit、マナ維持。",
         "replaceGear": "長い戦闘でマナ不足なら火力装備より、マナ維持と防御の不足部位を先に確認。",
@@ -1792,11 +1804,11 @@
       {
         "label": "Endgame完成",
         "mainSkill": "Entangle + Thrashing Vines + 自動Thunderstorm",
-        "supports": "Expensive、Mirror Tierは装備前提を満たす場合だけ検討。基本はCheap構成から不足を更新。",
+        "supports": "原典Cheap版ではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Heft・Physical Mastery。Cast on CriticalにThunderstorm・Shock・Efficiency II・Boundless Energy II・Zenith II。高投資版と混在させない。",
         "passivePriority": "Endgameガイドの採用段階を1つ選び、装備とツリーを同じ段階へ揃える。",
         "gearPriority": "ES、混沌耐性、スペルレベル、クリティカル、キャスト速度、Spirit、マナ維持。",
         "replaceGear": "固定価格ではなく、現在の不足へ効く装備を同条件出品と比較。",
-        "caution": "高額版を部分的に混ぜない。長期戦のマナ不足と装備依存の防御は完成後も確認する。",
+        "caution": "原典はCast on Critical内のThunderstormを装備の+スキル込みでLv18に調整してマナ負担を減らす説明がある。Expensive／Mirror Tierと混ぜず、長期戦のマナ・混沌耐性を確認。",
         "transitionCondition": "完成後は単体火力、ES/混沌耐性、マナのボトルネックを1項目ずつ改善する。",
         "nowActions": [
           "採用するEndgame段階を決める",
@@ -1814,13 +1826,13 @@
       {
         "name": "Mobalytics: Plant Oracle Druid Leveling 0.5.5",
         "url": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide",
-        "checkedAt": "2026-09-07",
+        "checkedAt": "2026-09-27",
         "type": "海外検証済みレベリングガイド"
       },
       {
         "name": "Mobalytics: Plant Oracle Druid Endgame 0.5.5",
         "url": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
-        "checkedAt": "2026-09-07",
+        "checkedAt": "2026-09-27",
         "type": "海外検証済みEndgameガイド"
       },
       {
@@ -1889,7 +1901,13 @@
         "checkedAt": "2026-09-26",
         "note": "短所に「最上位ボスには装備投資が必要」とある。"
       }
-    }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-27",
+        "summary": "原典で確認できた育成・Cheap Endgameのサポートを追加。原典のLv20ジェム表記をキャラクターLvでの解禁と混同しない注記を追加。"
+      }
+    ]
   },
   {
     "id": "witch-ed-contagion-lich",
@@ -2166,7 +2184,7 @@
       {
         "label": "Lv11〜20",
         "mainSkill": "Explosive Grenade + Flash Grenade。入手後Gas Grenade",
-        "supports": "書面ガイドのACT 1〜2表示構成を使用。",
+        "supports": "Explosive Grenade：Multishot I・Elemental Armament I。Flash／Gas Grenade：Multishot I。GasにはElemental Armament Iも採用。Herald of Ashを使う場合はMagnified Area I・Swift Affliction I（原典ACT 1の取得順）。",
         "passivePriority": "ACT 2段階ツリーへ進み、Repeating Explosivesへの導線を確認。",
         "gearPriority": "クロスボウ、手袋・指輪の追加ダメージ、ライフ、耐性、移動速度。",
         "replaceGear": "火力不足はクロスボウ、防御不足は胴・兜を優先。",
@@ -2181,7 +2199,7 @@
       {
         "label": "Lv21〜30",
         "mainSkill": "Explosive Grenade + Flash/Gas Grenade",
-        "supports": "ACT 2〜3の表示構成を使用。",
+        "supports": "序盤に確認できたExplosive GrenadeのMultishot I・Elemental Armament Iを起点とする。追加枠は原典のSkill Gems → ACT 2／3で採用した段階を確認。",
         "passivePriority": "ACT 3段階ツリー。Demolitionist、Grenadier、Repeating Explosivesの取得順は掲載ツリーで確認。",
         "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、ライフ、アーマー、耐性。",
         "replaceGear": "古いクロスボウ、次にライフ/耐性不足の防具。",
@@ -2225,8 +2243,8 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "書面ガイドのEarly Endgameグレネード構成",
-        "supports": "Early Endgame表示のサポート構成を使用。",
+        "mainSkill": "Explosive Grenadeを主力、Flash・Gas Grenadeを補助にする。Oil・Cluster Grenadeの採用は原典のEarly Endgameタブで確認する。",
+        "supports": "原典のSkill Gems → Early Endgameで現在のグレネードとサポートを照合。ACT 1のサポート構成がそのままEndgameの完成形とは限らない。",
         "passivePriority": "Early Endgame段階ツリーへ移行。",
         "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、ライフ、アーマー、耐性。",
         "replaceGear": "倒されるなら防具、処理が遅いならクロスボウとサポート。",
@@ -2240,8 +2258,8 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "書面ガイドのMid Endgameグレネード構成",
-        "supports": "Mid Endgame表示のサポートを使用。",
+        "mainSkill": "Explosive Grenadeを主軸に、原典Mid Endgame版のFlash・Gas・Oil・Cluster Grenadeの採用枠を確認して進める。",
+        "supports": "原典のSkill Gems → Mid Endgameで主力・補助のリンクを確認。EquipmentとPassive Treeも同じMid Endgame版に揃える。",
         "passivePriority": "Mid Endgame段階ツリーを使用。",
         "gearPriority": "クロスボウ、追加ダメージ、投射物レベル、防御、必要能力。",
         "replaceGear": "火力・防御の不足を分け、最も効果が高い1部位から更新。",
@@ -2255,12 +2273,12 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "書面ガイドのUber Endgameグレネード構成",
-        "supports": "Uber Endgame表示のサポート構成を、条件を満たす場合だけ使用。",
+        "mainSkill": "Explosive Grenadeを軸にした原典Uber Endgame版。Flash・Gas・Oil・Cluster Grenadeの採用枠をUber EndgameのSkill Gems欄で確認する。",
+        "supports": "原典のSkill Gems → Uber Endgameで各グレネードのサポートを照合。必要能力値・装備・パッシブもUber版に揃えられる場合だけ切り替える。",
         "passivePriority": "Uber Endgame段階ツリーを使用。",
         "gearPriority": "採用版のクロスボウ、投射物レベル、追加ダメージ、防御、必要能力。",
         "replaceGear": "固定相場を使わず、現在の不足へ効く部位を同条件で比較。",
-        "caution": "Early/Mid/Uberの装備とツリーを部分的に混ぜない。",
+        "caution": "Early／Mid／Uberの装備とツリーを部分的に混ぜない。次段階に必要な装備数値は原典の採用版で確認し、満たす前は現在成立している構成を維持する。",
         "transitionCondition": "採用した段階の主力、補助、防御が役割どおり動く。",
         "nowActions": [
           "採用するEndgame段階を決める",
@@ -2278,7 +2296,7 @@
       {
         "name": "Mobalytics: Grenades Gemling League Starter",
         "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
-        "checkedAt": "2026-09-09",
+        "checkedAt": "2026-09-27",
         "type": "海外書面レベリング・Endgameガイド"
       },
       {
@@ -2339,7 +2357,13 @@
         "checkedAt": "2026-09-26",
         "note": "長所に単体火力の高さが挙げられている。"
       }
-    }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-27",
+        "summary": "原典の序盤サポート取得順と後半3構成の確認場所を一部段階に追加。後半各枠の正確なサポート・装備閾値は未照合。"
+      }
+    ]
   },
   {
     "id": "huntress-twister-spirit-walker",
