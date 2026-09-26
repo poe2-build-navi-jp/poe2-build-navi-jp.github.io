@@ -49,8 +49,9 @@ for(const b of builds){
  const path=`builds/${b.classSlug}/${b.slug}/index.html`;
  let html=await read(path);
  html=html.replace(/対応環境 [^<]+・<a href="[^"]+" target="_blank" rel="noopener noreferrer">最新確認 [^<]+<\/a>・最終確認 [^<]+/,`対応環境 ${esc(b.version)}・育成手順の原典照合 ${esc(b.updatedAt)}・<a href="${esc(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式パッチノート確認 ${esc(site.latestPatchCheckedAt)}</a>`);
- html=html.replace(/<div id="fact-grid" class="fact-grid">[\s\S]*?<\/div><\/div>/,`<div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${esc(b.version)}</div><div class="fact">育成手順の原典照合：${esc(b.updatedAt)}</div></div></div>`);
- if(!html.includes('id="now-action-guidance"'))html=html.replace('<p id="now-next"', '<p id="now-action-guidance" class="disclaimer" hidden></p><p id="now-next"');
+ html=html.replace(/<div id="fact-grid" class="fact-grid">[\s\S]*?(?=<section id="level-card")/,`<div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${esc(b.version)}</div><div class="fact">育成手順の原典照合：${esc(b.updatedAt)}</div></div></div>\n        `);
+ if(!html.includes('id="now-action-guidance"'))html=html.replace('<p id="now-next"', '<p id="now-action-guidance" class="next-advice" hidden></p><p id="now-next"');
+ html=html.replace('id="now-action-guidance" class="disclaimer"','id="now-action-guidance" class="next-advice"');
  html=html.replace(/<!-- build-history:start -->[\s\S]*?<!-- build-history:end -->/g,'');
  if(b.reviewedFacts?.ssfNote)html=html.replace(/(<b>SSF：<\/b>)未確認/,`$1${esc(b.reviewedFacts.ssfNote)}`);
  const records=(b.changeHistory||[]).map(r=>`<li><time>${esc(r.date)}</time> ${esc(r.summary)}</li>`).join('');

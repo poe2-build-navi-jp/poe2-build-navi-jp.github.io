@@ -32,6 +32,9 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  const discovery=JSON.parse(fs.readFileSync('data/discovery.json','utf8'));
  for(const build of data){
   assert.deepEqual(validateRatings(build),[],`${build.id}: rating evidence`);
+  const detailDoc=new JSDOM(fs.readFileSync(`builds/${build.classSlug}/${build.slug}/index.html`,'utf8')).window.document;
+  assert.equal(detailDoc.getElementById('fact-grid').parentElement.parentElement.className,'build-hero-grid',`${build.id}: fact grid wrapper must be balanced`);
+  assert.equal(detailDoc.getElementById('level-card').parentElement.className,'build-hero-grid',`${build.id}: level card must remain beside build facts`);
   const facts=rows(build,discovery);
   const p=`/builds/${build.classSlug}/${build.slug}/`;
   for(const page of ['builds/index.html','tier-list/index.html','league-starter/index.html']){
