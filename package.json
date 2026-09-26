@@ -1,11 +1,12 @@
 {
   "name": "poe2-build-navi-jp",
   "private": true,
-  "description": "Static site for POE2ビルドナビ. Dependencies are test-only; nothing is bundled into the site.",
+  "description": "Static site for POE2ビルドナビ. Dependencies are dev-only (tests and OG image generation); nothing is bundled into the site.",
   "scripts": {
     "test": "node scripts/test-site.mjs && node scripts/test-seo.mjs && node scripts/test-static-content.mjs && node scripts/test-build-ux.cjs"
   },
   "devDependencies": {
-    "jsdom": "^26.1.0"
+    "jsdom": "^26.1.0",
+    "playwright-core": "^1.56.1"
   }
 }

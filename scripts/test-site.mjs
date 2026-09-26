@@ -242,6 +242,13 @@ for (const path of [...new Set([...sitemap.matchAll(/<loc>https:\/\/poe2-build-n
   }
 }
 for (const [name, paths] of staleAssets) failures.push(`/assets/${name}: stale ?v= on ${paths.length} page(s), e.g. ${paths[0]} (run node tools/sync-asset-versions.mjs)`);
+for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => `${m[1]}index.html`)) {
+  const html = await read(path);
+  const image = html.match(/<meta property="og:image" content="https:\/\/poe2-build-navi-jp\.github\.io\/([^"]+)">/)?.[1];
+  assert(image, `${path}: og:image missing (run node tools/generate-og-images.mjs)`);
+  if (image) await access(resolve(root, image)).catch(() => failures.push(`${path}: og:image file missing: ${image}`));
+  assert(html.includes('<meta name="twitter:card" content="summary_large_image">') && (html.match(/name="twitter:card"/g) || []).length === 1, `${path}: needs exactly one summary_large_image twitter:card`);
+}
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);
