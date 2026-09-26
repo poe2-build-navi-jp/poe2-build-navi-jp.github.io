@@ -46,3 +46,14 @@
 4. 本文と画像内情報、alt、OGP、画像サイトマップが一致していることをテストする。
 
 公式素材を将来追加する場合は、元URL、Press Kit名、取得日、対象媒体での利用条件、クレジット要否、改変可否、使用ページを個別に追記する。
+
+## 2026-09-26：実用図解の読みやすさ改善
+
+- 主要5ビルドの既存 `*-leveling-roadmap.svg` を番号付きの8段階図へ更新。
+- 同じ5ビルドに `*-leveling-roadmap-mobile.svg` を追加。スマホでは専用の縦型図を表示。
+- `poe2-leveling-guide.svg` と `poe2-leveling-guide-mobile.svg` で、Lv37 → Lv31〜40 → 今やること3つの案内例を表示。
+- 生成元：`data/builds.json` の `levelingStages.label`・`nowActions[0]`、既存のLv段階対応。
+- 生成処理：`tools/improve-practical-images.mjs`。通常の画像生成の最後にも実行する。
+- 外部画像・ゲーム公式アート・新しいビルド評価は使用しない。提供元・制作：POE2ビルドナビ。改変可、外部素材クレジット不要。
+- 画像URLを維持し、SEO対象のデスクトップ画像は既存画像サイトマップに継続掲載。
+- SVGは内容を省略せず自動改行する。スマホ用画像は720px幅、本文30px（390px表示時は約16px）。

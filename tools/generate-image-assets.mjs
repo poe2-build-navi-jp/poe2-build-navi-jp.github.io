@@ -113,3 +113,6 @@ for (const id of priorityBuildIds) {
 }
 
 console.log("Generated 18 original SVG image assets from verified site data.");
+
+// Replace practical diagrams with readable desktop/mobile compositions.
+await import("./improve-practical-images.mjs");

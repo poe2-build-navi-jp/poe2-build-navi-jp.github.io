@@ -18,7 +18,20 @@ const pages = [
 for (const item of classes) pages.push({file:`classes/${item.slug}/index.html`,path:`/classes/${item.slug}/`,image:`/images/poe2/classes/poe2-${item.slug}.svg`,og:`/images/poe2/og/poe2-${item.slug}-og.webp`,alt:`Path of Exile 2 ${item.name}`,caption:`${item.name}の戦い方と掲載ビルドを確認するための独自クラス図解`,classHero:true});
 for (const build of builds.filter((item)=>priority.has(item.id))) pages.push({file:`builds/${build.classSlug}/${build.slug}/index.html`,path:`/builds/${build.classSlug}/${build.slug}/`,image:`/images/poe2/builds/poe2-${build.slug}-leveling-roadmap.svg`,og:`/images/poe2/og/poe2-${build.slug}-og.webp`,alt:`PoE2 ${build.name}のLv1からEndgameまでの育成ロードマップ`,caption:`${build.name}のLv1〜Endgame育成ロードマップ`,build:true,height:840});
 
-const figure = (page) => `<!-- image-visual:start --><figure class="seo-visual"><img src="${page.image}" width="1200" height="${page.height || 630}" loading="${page.path === "/" ? "eager" : "lazy"}" decoding="async" alt="${esc(page.alt)}"><figcaption>${esc(page.caption)}</figcaption></figure><!-- image-visual:end -->`;
+// Read actual dimensions; mobile compositions keep text readable without horizontal scrolling.
+for (const page of pages) {
+  const svg = await readFile(resolve(root, page.image.slice(1)), "utf8");
+  const dimensions = svg.match(/viewBox="0 0 (\d+) (\d+)"/);
+  page.width = Number(dimensions?.[1] || 1200);
+  page.height = Number(dimensions?.[2] || page.height || 630);
+  if (page.build || page.path === "/leveling/") {
+    page.mobile = page.image.replace(".svg", "-mobile.svg");
+    const mobileSvg = await readFile(resolve(root, page.mobile.slice(1)), "utf8");
+    page.mobileHeight = Number(mobileSvg.match(/viewBox="0 0 720 (\d+)"/)[1]);
+  }
+}
+const figure = (page) => `<!-- image-visual:start --><figure class="seo-visual">${page.mobile ? `<picture><source media="(max-width: 600px)" srcset="${page.mobile}" width="720" height="${page.mobileHeight}">` : ""}<img src="${page.image}" width="${page.width}" height="${page.height}" loading="lazy" decoding="async" alt="${esc(page.alt)}">${page.mobile ? "</picture>" : ""}<figcaption>${esc(page.caption)}${page.build ? "。各段階の最優先行動を抜粋。スキル・装備の詳しい条件は下の育成手順で確認してください。" : ""}</figcaption></figure><!-- image-visual:end -->`;
+
 
 for (const page of pages) {
   const location = resolve(root,page.file);
@@ -33,7 +46,7 @@ for (const page of pages) {
   html = html.replace('</head>',`${meta}</head>`);
   if (page.boundary && html.includes(page.boundary)) html = html.replace(page.boundary,`</section>${figure(page)}<section id="choose-class"`);
   else if (page.classHero) html = html.replace(/(<section class="class-page-hero"[\s\S]*?<div class="status-note">[\s\S]*?<\/div>)(<\/section>)/,`$1${figure(page)}$2`);
-  else if (page.build) html = html.replace('</section>\n    <div class="detail-main">',`</section>${figure(page)}\n    <div class="detail-main">`);
+  else if (page.build) html = html.replace('<section id="roadmap"',`${figure(page)}<section id="roadmap"`);
   else if (page.article) html = html.replace(/(<article class="article-page[^>]*>)/,`$1${figure(page)}`);
   await writeFile(location,html);
 }
