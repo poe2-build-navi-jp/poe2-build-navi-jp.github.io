@@ -114,3 +114,13 @@
 - 追加した情報源: sorceress に Maxroll Disciple of Varashta Minion、ranger に Maxroll
   Ice Shot Deadeye（どちらも2026-09-26にPros/Cons原文を確認）。
 - ルールと検証は `tools/build-ratings.mjs` の `validateRatings`、`scripts/test-site.mjs` で担保。
+
+## 2026-09-26: PoE2 1.0（2026-12-11予定）に向けた準備（確認済み・ユーザー依頼で実施）
+
+- `data/site.json` に `gameVersion`（公開中のゲーム版）・`nextGameVersion`・
+  `nextGameVersionReleaseDate` を追加。`siteVersion`（サイトの対応版）とは分けて管理する。
+- `tools/enhance-version-notice.mjs`：ビルドの`version`が`gameVersion`と違うときだけ
+  「1.0では未確認」表示・ハブページのバナーを出す。現在は一致しているため何も表示しない。
+- 判断: リリース当日に未確認ビルドをnoindexにしたり削除したりせず、未確認と明示して残す
+  （検索流入を保ちつつ、断定しない方針を守る）。
+- 手順は `tools/RELEASE_1_0.md`、残作業は `node tools/release-readiness.mjs` で確認できる。

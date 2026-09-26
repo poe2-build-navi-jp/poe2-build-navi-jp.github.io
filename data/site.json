@@ -1,6 +1,9 @@
 {
   "siteName": "POE2ビルドナビ",
   "siteVersion": "0.5.5",
+  "gameVersion": "0.5.5",
+  "nextGameVersion": "1.0",
+  "nextGameVersionReleaseDate": "2026-12-11",
   "lastUpdated": "2026-09-13",
   "latestPatch": "0.5.5c",
   "latestPatchCheckedAt": "2026-09-23",

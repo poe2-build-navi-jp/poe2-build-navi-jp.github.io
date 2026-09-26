@@ -51,6 +51,7 @@ axes the quoted source statement, URL and date). `beginnerRating` is always
 node tools/enhance-ratings.mjs
 node tools/enhance-build-ux.mjs
 node tools/generate-sitemap.mjs
+node tools/enhance-version-notice.mjs
 node tools/generate-og-images.mjs   # needs npm install + local Chromium
 node tools/inject-analytics.mjs
 node tools/sync-asset-versions.mjs
@@ -59,3 +60,10 @@ npm test
 
 `generate-og-images.mjs` gives every sitemap page without an `image-seo` block its own
 Japanese OG image from the page `<title>`; run it after any title change or new page.
+
+## Game version notices
+
+`data/site.json` `gameVersion` is the live game version; each build's `version` is the version its
+data was verified for. `tools/enhance-version-notice.mjs` shows a "not verified" notice on build pages
+(and a banner on hub pages) only when they differ. See `tools/RELEASE_1_0.md` for the 1.0 runbook and
+`node tools/release-readiness.mjs` for the remaining work.
