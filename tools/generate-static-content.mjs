@@ -33,7 +33,7 @@ for(const b of builds){
 console.log(`Static content: ${builds.length} builds, ${classes.length} classes`);
 async function enhance(dir=''){
  for(const entry of await readdir(resolve(root,dir),{withFileTypes:true})){
-  if(entry.name.startsWith('.')||['_next','company','node_modules','tests','tools','scripts'].includes(entry.name))continue;
+  if(entry.name.startsWith('.')||['company','node_modules','tests','tools','scripts'].includes(entry.name))continue;
   const path=dir?`${dir}/${entry.name}`:entry.name;
   if(entry.isDirectory()){await enhance(path);continue;}
   if(!entry.name.endsWith('.html')||entry.name.startsWith('google'))continue;

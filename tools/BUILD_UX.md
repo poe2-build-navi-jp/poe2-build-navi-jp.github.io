@@ -8,13 +8,17 @@ Validation:
 
 ```
 node tools/enhance-build-ux.mjs
-node scripts/test-site.mjs
-node scripts/test-seo.mjs
-node scripts/test-static-content.mjs
-NODE_PATH=/path/to/test-only/node_modules node scripts/test-build-ux.cjs
+node tools/sync-asset-versions.mjs
+npm install   # once; installs the test-only jsdom dependency
+npm test
 ```
 
 `test-build-ux.cjs` uses jsdom only in the test environment; no browser dependency is shipped.
+
+Always run `node tools/sync-asset-versions.mjs` last after any generator or any edit under
+`assets/`. It rewrites every `/assets/*.css|js` reference to `?v=<content hash>`, so the
+hard-coded `?v=` values inside individual generators do not matter. `npm test` fails if a
+page carries a stale version.
 
 For future verified content changes, optionally append `changeHistory` entries
 with `date` and `summary` to the relevant existing build record. Update `version`,
@@ -48,5 +52,6 @@ node tools/enhance-ratings.mjs
 node tools/enhance-build-ux.mjs
 node tools/generate-sitemap.mjs
 node tools/inject-analytics.mjs
-node scripts/test-site.mjs
+node tools/sync-asset-versions.mjs
+npm test
 ```

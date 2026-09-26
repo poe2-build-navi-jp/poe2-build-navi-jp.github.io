@@ -13,7 +13,7 @@ const tag = `<!-- Google tag (gtag.js) --><script async src="https://www.googlet
 const marker = /<!-- Google tag \(gtag\.js\) -->[\s\S]*?<!-- \/Google tag -->/;
 const eventTag = '<script defer src="/assets/analytics-events.js?v=20260923-1"></script>';
 const eventMarker = /<script defer src="\/assets\/analytics-events\.js[^\"]*"><\/script>/g;
-const ignoredDirectories = new Set([".git", "_next", "company", "node_modules", "scripts", "tests", "tools"]);
+const ignoredDirectories = new Set([".git", "company", "node_modules", "scripts", "tests", "tools"]);
 let pageCount = 0;
 
 async function inject(directory = "") {
