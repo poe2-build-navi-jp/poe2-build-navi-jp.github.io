@@ -66,7 +66,7 @@ for (const build of builds) {
   try {
     const page = await read(pagePath);
     assert(page.includes(`<link rel="canonical" href="https://poe2-build-navi-jp.github.io/builds/${build.classSlug}/${build.slug}/">`), `${pagePath}: canonical mismatch`);
-    const expectedRobots = ["verified", "partial"].includes(build.status) ? 'content="index,follow"' : 'content="noindex,follow"';
+    const expectedRobots = ["verified", "partial"].includes(build.status) ? 'content="index,follow' : 'content="noindex,follow"';
     assert(page.includes(expectedRobots), `${pagePath}: robots status mismatch`);
     assert(page.includes('id="trouble-buttons"'), `${pagePath}: trouble diagnosis missing`);
     assert(page.includes('id="faq-title"'), `${pagePath}: FAQ missing`);
@@ -110,7 +110,10 @@ for (const classData of classes) {
 assert(index.includes('ca-pub-7738997902416481'), "AdSense publisher id missing from index");
 assert(index.includes('<link rel="canonical" href="https://poe2-build-navi-jp.github.io/">'), "root canonical missing");
 assert(robots.includes("Allow: /"), "robots must allow crawling");
+assert(!/Disallow:\s*\/images/i.test(robots), "robots must not block image assets");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
+assert(sitemap.includes('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'), "image sitemap namespace missing");
+assert((sitemap.match(/<image:image>/g) || []).length === 18, "image sitemap must contain 18 priority images");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
 assert(/^G-[A-Z0-9]+$/.test(site.googleAnalyticsMeasurementId), "Google Analytics measurement ID is invalid");

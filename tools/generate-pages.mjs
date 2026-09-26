@@ -53,7 +53,7 @@ function detailPage(build) {
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
-  <meta name="robots" content="${indexable ? "index,follow" : "noindex,follow"}">
+  <meta name="robots" content="${indexable ? "index,follow,max-image-preview:large" : "noindex,follow"}">
   <meta name="google-adsense-account" content="${publisher}">
   <link rel="canonical" href="${url}">
   <meta property="og:type" content="article">
@@ -130,4 +130,6 @@ await import('./generate-static-content.mjs');
 await import('./generate-discovery-pages.mjs');
 await import('./generate-seo-pages.mjs');
 await import('./enhance-residual-pages.mjs');
+await import('./generate-image-assets.mjs');
+await import('./enhance-image-seo.mjs');
 await import('./inject-analytics.mjs');

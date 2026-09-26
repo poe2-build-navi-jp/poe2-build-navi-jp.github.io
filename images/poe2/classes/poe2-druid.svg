@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 630" width="1200" height="630">
+  <title id="title">Path of Exile 2 ドルイド</title><desc id="desc">POE2ビルドナビが既存の確認済みデータから作成した独自図解です。</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101827"/><stop offset="1" stop-color="#242037"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity=".24"/></filter></defs>
+  <rect width="1200" height="630" rx="34" fill="url(#bg)"/><circle cx="1090" cy="105" r="210" fill="#cc9b4b" opacity=".09"/><circle cx="90" cy="600" r="180" fill="#6e8fa8" opacity=".11"/>
+  <text x="64" y="74" fill="#d4a95d" font-family="sans-serif" font-size="22" font-weight="700" letter-spacing="3">CLASS GUIDE</text><text x="64" y="132" fill="#f8fafc" font-family="sans-serif" font-size="43" font-weight="800">PoE2 ドルイド</text><text x="64" y="174" fill="#c9d4df" font-family="sans-serif" font-size="24">自然の力と変身を扱うプライマルタイプ</text><path d="M600 470c-100-25-145-142-78-220 31 62 92 50 115-20 76 75 55 206-37 240zM600 462c5-94 38-143 95-190M600 462c-14-75-54-115-115-140" fill="none" stroke="#85c7a3" stroke-width="17" stroke-linecap="round"/><g><rect x="64" y="492" width="1072" height="72" rx="18" fill="#182436"/><text x="600" y="538" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="24">魔法 ・ 変身</text></g>
+  <text x="64" y="596" fill="#9fb0c3" font-family="sans-serif" font-size="20">POE2ビルドナビ独自図解 ・ Patch 0.5.5</text>
+</svg>

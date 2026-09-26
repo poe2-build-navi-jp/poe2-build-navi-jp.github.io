@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://poe2-build-navi-jp.github.io/</loc><lastmod>2026-09-23</lastmod><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://poe2-build-navi-jp.github.io/</loc><lastmod>2026-09-23</lastmod><priority>1.0</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-beginner-recommended-builds.svg</image:loc><image:title>PoE2初心者向けおすすめビルド比較</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/</loc><lastmod>2026-09-13</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/</loc><lastmod>2026-09-13</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/leveling/</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/</loc><lastmod>2026-09-13</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-recommended-classes.svg</image:loc><image:title>PoE2おすすめクラス・職業</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/leveling/</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-leveling-guide.svg</image:loc><image:title>PoE2レベリングガイド</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/gear-check/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/class-check/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/beginner-guide/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/beginner-build/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/tier-list/</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/league-starter/</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/tier-list/</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-beginner-build-tier.svg</image:loc><image:title>PoE2初心者向けビルドTier比較</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/league-starter/</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-league-starter-builds.svg</image:loc><image:title>PoE2リーグスターター比較</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/best-builds/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/poe2-1-0/</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/about/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/editorial-policy/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/privacy/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/terms/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/monk/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/mercenary/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/warrior/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/sorceress/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/huntress/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/ranger/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/witch/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/classes/druid/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/monk/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-monk.svg</image:loc><image:title>Path of Exile 2 モンク</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/mercenary/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-mercenary.svg</image:loc><image:title>Path of Exile 2 マーセナリー</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/warrior/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-warrior.svg</image:loc><image:title>Path of Exile 2 ウォリアー</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/sorceress/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-sorceress.svg</image:loc><image:title>Path of Exile 2 ソーサレス</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/huntress/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-huntress.svg</image:loc><image:title>Path of Exile 2 ハントレス</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/ranger/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-ranger.svg</image:loc><image:title>Path of Exile 2 レンジャー</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/witch/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-witch.svg</image:loc><image:title>Path of Exile 2 ウィッチ</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/classes/druid/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/classes/poe2-druid.svg</image:loc><image:title>Path of Exile 2 ドルイド</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-whirling-assault-leveling-roadmap.svg</image:loc><image:title>PoE2 ワーリングアサルト・マーシャルアーティストの育成ロードマップ</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/mercenary/twister-gemling/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-shield-wall-smith-leveling-roadmap.svg</image:loc><image:title>PoE2 シールドウォール・スミスの育成ロードマップ</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/huntress/companion/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-ice-shot-deadeye-leveling-roadmap.svg</image:loc><image:title>PoE2 アイスショット・デッドアイの育成ロードマップ</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-minion-infernalist-leveling-roadmap.svg</image:loc><image:title>PoE2 スナイパーミニオン・インファーナリストの育成ロードマップ</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/druid/plant-oracle/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-ed-contagion-lich-leveling-roadmap.svg</image:loc><image:title>PoE2 ED・コンテージョン リッチの育成ロードマップ</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/getting-started/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
