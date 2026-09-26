@@ -103,3 +103,14 @@
   このセッション外で追加された。`node scripts/test-site.mjs`（10ビルド）と
   `node scripts/test-static-content.mjs`（59ページ）は両方PASS確認済み。
   詳細な中身の精査はしていないが、テストが通っている範囲では健全。
+
+## 2026-09-26: 5項目評価の採点基準を公開（確認済み・ユーザー依頼で実施）
+
+- 内容: `/rating-criteria/` を新設し、全11ビルドの beginner/damage/defense/mapping/boss
+  評価を `data/builds.json` に入力。各ビルドページに評価と根拠のセクションを追加。
+- 判断: 編集方針「根拠と確認日を示せない評価は掲載しない」に合わせ、点数は元ガイドの
+  長所・短所の原文だけで付ける。初心者向けは4つのチェック項目から計算。根拠のない項目は
+  推測せず未評価（null）。資料間で割れた場合は低い方を採用。
+- 追加した情報源: sorceress に Maxroll Disciple of Varashta Minion、ranger に Maxroll
+  Ice Shot Deadeye（どちらも2026-09-26にPros/Cons原文を確認）。
+- ルールと検証は `tools/build-ratings.mjs` の `validateRatings`、`scripts/test-site.mjs` で担保。

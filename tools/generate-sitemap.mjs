@@ -6,7 +6,7 @@ const base=site.baseUrl;
 const defaultDate=site.lastUpdated;
 const changedDate=site.latestPatchCheckedAt;
 const indexableBuilds=builds.filter(x=>x.status==="verified");
-const urls=[...new Set(["/","/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/guides/beginner-build/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])];
+const urls=[...new Set(["/","/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/guides/beginner-build/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])];
 const changedPaths=new Set(["/","/leveling/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`)]);
 const priorityBuildIds=new Set(["ranger-ice-shot-deadeye","witch-minion-infernalist","warrior-shield-wall-smith","monk-whirling-assault","witch-ed-contagion-lich"]);
 const imageMap=new Map([

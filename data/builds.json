@@ -12,11 +12,11 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "ワーリングアサルト（Whirling Assault）",
-    "beginnerRating": null,
-    "damageRating": null,
-    "defenseRating": null,
-    "mappingRating": null,
-    "bossRating": null,
+    "beginnerRating": 2,
+    "damageRating": 5,
+    "defenseRating": 3,
+    "mappingRating": 4,
+    "bossRating": 5,
     "difficulty": "中（Lv41で構成切替）",
     "budget": "固定価格なし",
     "leagueStarter": true,
@@ -185,7 +185,56 @@
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
       }
     ],
-    "audience": "近接で移動しながら戦い、Lv1からEndgameまで同じページで進めたい人"
+    "audience": "近接で移動しながら戦い、Lv1からEndgameまで同じページで進めたい人",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": false,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": false
+        },
+        "note": "主力のワーリングアサルトはLv41から。Endgameは完全な1ボタン構成ではなく、原典の短所に「Don't Get Hit Playstyle」がある。",
+        "score": 2
+      },
+      "damage": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Spin to Win ONE-Shot Bosses",
+        "source": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "sourceName": "Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5",
+        "checkedAt": "2026-09-07",
+        "note": "ガイド題名で「ボスを一撃」と強調されている。"
+      },
+      "defense": {
+        "score": 3,
+        "basis": "長所と短所が両方",
+        "quote": "Large ES Pool / Don't Get Hit Playstyle",
+        "source": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
+        "sourceName": "Maxroll: Whirling Assault Martial Artist Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に大きなES、短所に「被弾しない立ち回りが前提」とある。"
+      },
+      "mapping": {
+        "score": 4,
+        "basis": "長所",
+        "quote": "Strong AoE Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
+        "sourceName": "Maxroll: Whirling Assault Martial Artist Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に範囲殲滅の強さが挙げられている。"
+      },
+      "boss": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Spin to Win ONE-Shot Bosses",
+        "source": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "sourceName": "Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5",
+        "checkedAt": "2026-09-07",
+        "note": "ガイド題名で「ボスを一撃」と強調されている。"
+      }
+    }
   },
   {
     "id": "mercenary-twister-gemling",
@@ -199,11 +248,11 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "ツイスター（Twister）",
-    "beginnerRating": null,
-    "damageRating": null,
+    "beginnerRating": 3,
+    "damageRating": 5,
     "defenseRating": null,
-    "mappingRating": null,
-    "bossRating": null,
+    "mappingRating": 5,
+    "bossRating": 2,
     "difficulty": "複数スキルの順番管理",
     "reviewedFacts": {
       "difficulty": "複数操作（原典に記載）",
@@ -370,7 +419,52 @@
       }
     ],
     "status": "verified",
-    "audience": "序盤からツイスターを使い、武器セットを切り替えて進めたい人"
+    "audience": "序盤からツイスターを使い、武器セットを切り替えて進めたい人",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
+        },
+        "note": "ツイスターはLv1から主力。原典の短所に「More Than 1 Button」があり、SSF可否は未確認。",
+        "score": 3
+      },
+      "damage": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Insane DPS",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所で火力が強調されている。"
+      },
+      "defense": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Very Fast Mobility",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所で移動の速さが強調されている。"
+      },
+      "boss": {
+        "score": 2,
+        "basis": "短所",
+        "quote": "No Walls Hurts Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "短所に「壁がない場所では単体火力が落ちる」とある。"
+      }
+    }
   },
   {
     "id": "warrior-shield-wall-smith",
@@ -384,10 +478,10 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "シールドウォール（Shield Wall）",
-    "beginnerRating": null,
-    "damageRating": null,
-    "defenseRating": null,
-    "mappingRating": null,
+    "beginnerRating": 5,
+    "damageRating": 2,
+    "defenseRating": 5,
+    "mappingRating": 2,
     "bossRating": null,
     "difficulty": "Lv22で主力を切替",
     "reviewedFacts": {
@@ -554,7 +648,52 @@
       }
     ],
     "status": "verified",
-    "audience": "装備を整えやすい耐久型のリーグスターターを探している人"
+    "audience": "装備を整えやすい耐久型のリーグスターターを探している人",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": true
+        },
+        "note": "主力はLv22から。操作多め・被弾前提の短所の記載はなく、SSF確認済み。",
+        "score": 5
+      },
+      "damage": {
+        "score": 2,
+        "basis": "短所",
+        "quote": "高額装備帯では他構成ほど火力が伸びない",
+        "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "sourceName": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "checkedAt": "2026-09-07",
+        "note": "原典で、高額装備帯の火力の伸びが弱点として説明されている。"
+      },
+      "defense": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "can become extremely resilient to elemental damage",
+        "source": "https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview",
+        "sourceName": "Maxroll: Smith of Kitava Ascendancy Overview",
+        "checkedAt": "2026-09-26",
+        "note": "アセンダンシー解説で、属性ダメージへの非常に高い耐性が強調されている。"
+      },
+      "mapping": {
+        "score": 2,
+        "basis": "短所",
+        "quote": "高額装備帯では他構成ほど周回が伸びない",
+        "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "sourceName": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "checkedAt": "2026-09-07",
+        "note": "原典で、高額装備帯の周回の伸びが弱点として説明されている。"
+      },
+      "boss": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+      }
+    }
   },
   {
     "id": "sorceress-sand-fire",
@@ -568,9 +707,9 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "ケラリの幻惑 / ルザンの罠",
-    "beginnerRating": null,
-    "damageRating": null,
-    "defenseRating": null,
+    "beginnerRating": 3,
+    "damageRating": 5,
+    "defenseRating": 5,
     "mappingRating": null,
     "bossRating": null,
     "difficulty": "最初のアセンダンシーで構成切替",
@@ -736,10 +875,57 @@
         "url": "https://mobalytics.gg/poe-2/builds/sandscorcher-disciple-of-varashta",
         "checkedAt": "2026-09-07",
         "type": "海外Endgameガイド"
+      },
+      {
+        "name": "Maxroll: Disciple of Varashta Minion Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
+        "checkedAt": "2026-09-26",
+        "type": "海外キャンペーン・Endgameガイド（対応パッチ0.5.5、2026年9月21日更新。評価の根拠として参照）"
       }
     ],
     "status": "verified",
-    "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人"
+    "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": false,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": true
+        },
+        "note": "本来の構成は最初のアセンダンシー後（Lv22以下では未確認）。原典に「Can be button intensive」とある。SSF確認済み。",
+        "score": 3
+      },
+      "damage": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Very high damage",
+        "source": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
+        "sourceName": "Maxroll: Disciple of Varashta Minion Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所で火力の高さが強調されている。"
+      },
+      "defense": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Very tanky",
+        "source": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
+        "sourceName": "Maxroll: Disciple of Varashta Minion Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所で耐久の高さが強調されている。"
+      },
+      "mapping": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+      },
+      "boss": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+      }
+    }
   },
   {
     "id": "huntress-companion",
@@ -753,7 +939,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "テイムビースト（Tame Beast）",
-    "beginnerRating": null,
+    "beginnerRating": 3,
     "damageRating": null,
     "defenseRating": null,
     "mappingRating": null,
@@ -924,7 +1110,40 @@
       }
     ],
     "status": "verified",
-    "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人"
+    "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
+        },
+        "note": "相棒型への切替はAct 3以降。操作多め・被弾前提の短所の記載はない。SSF可否は全段階では未確認。",
+        "score": 3
+      },
+      "damage": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+      },
+      "defense": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+      },
+      "mapping": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+      },
+      "boss": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+      }
+    }
   },
   {
     "id": "ranger-ice-shot-deadeye",
@@ -939,11 +1158,11 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "アイスショット（Ice Shot）",
-    "beginnerRating": null,
-    "damageRating": null,
-    "defenseRating": null,
-    "mappingRating": null,
-    "bossRating": null,
+    "beginnerRating": 3,
+    "damageRating": 4,
+    "defenseRating": 3,
+    "mappingRating": 5,
+    "bossRating": 4,
     "difficulty": "Lv31で主力を切替",
     "budget": "固定価格なし",
     "leagueStarter": true,
@@ -1103,9 +1322,64 @@
         "url": "https://note.com/dybotiam/n/n20fcbdab59e4",
         "checkedAt": "2026-09-07",
         "type": "日本語プレイ記録"
+      },
+      {
+        "name": "Maxroll: Ice Shot Deadeye Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "checkedAt": "2026-09-26",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。評価の根拠として参照）"
       }
     ],
-    "audience": "弓で遠距離から戦い、周回と単体攻撃を使い分けたい初心者"
+    "audience": "弓で遠距離から戦い、周回と単体攻撃を使い分けたい初心者",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": false,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": true
+        },
+        "note": "主力のアイスショットはLv31から。原典の短所に「Snipe can be tricky」がある。SSF確認済み。",
+        "score": 3
+      },
+      "damage": {
+        "score": 4,
+        "basis": "長所",
+        "quote": "Chunky Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に単体火力の高さが挙げられている。"
+      },
+      "defense": {
+        "score": 3,
+        "basis": "長所と短所が両方",
+        "quote": "Avoids most damage / Weak to Damage Over Time",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に「多くの攻撃を避ける」、短所に「継続ダメージに弱い」とある。"
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Fast / Great Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所で速さと殲滅力が強調されている。"
+      },
+      "boss": {
+        "score": 4,
+        "basis": "長所",
+        "quote": "Chunky Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に単体火力の高さが挙げられている。"
+      }
+    }
   },
   {
     "id": "witch-minion-infernalist",
@@ -1120,7 +1394,7 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "スケルタルスナイパー / スペクター",
-    "beginnerRating": null,
+    "beginnerRating": 5,
     "damageRating": null,
     "defenseRating": null,
     "mappingRating": null,
@@ -1291,7 +1565,40 @@
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月3日更新）"
       }
     ],
-    "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者"
+    "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": true
+        },
+        "note": "スケルタルスナイパーをLv1から使用。操作多め・被弾前提の短所の記載はなく、SSF確認済み。",
+        "score": 5
+      },
+      "damage": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+      },
+      "defense": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+      },
+      "mapping": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+      },
+      "boss": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+      }
+    }
   },
   {
     "id": "druid-plant-oracle",
@@ -1306,11 +1613,11 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "Entangle / Thrashing Vines",
-    "beginnerRating": null,
+    "beginnerRating": 4,
     "damageRating": null,
     "defenseRating": null,
-    "mappingRating": null,
-    "bossRating": null,
+    "mappingRating": 4,
+    "bossRating": 2,
     "difficulty": "主力はLv1から継続、後半に自動発動を追加",
     "budget": "固定価格なし",
     "leagueStarter": true,
@@ -1492,7 +1799,48 @@
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新）"
       }
     ],
-    "audience": "Lv1から同じ主力を使い、少ない基本操作で植物ビルドを育てたい初心者"
+    "audience": "Lv1から同じ主力を使い、少ない基本操作で植物ビルドを育てたい初心者",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
+        },
+        "note": "EntangleをLv1から継続し、操作少なめ。SSF可否は未確認。",
+        "score": 4
+      },
+      "damage": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+      },
+      "defense": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+      },
+      "mapping": {
+        "score": 4,
+        "basis": "長所",
+        "quote": "Easy Map Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
+        "sourceName": "Maxroll: Entangle Oracle Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所にマップ殲滅の容易さが挙げられている。"
+      },
+      "boss": {
+        "score": 2,
+        "basis": "短所",
+        "quote": "Pinnacles Require Investment",
+        "source": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
+        "sourceName": "Maxroll: Entangle Oracle Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "短所に「最上位ボスには装備投資が必要」とある。"
+      }
+    }
   },
   {
     "id": "witch-ed-contagion-lich",
@@ -1507,10 +1855,10 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Essence Drain + Contagion",
-    "beginnerRating": null,
+    "beginnerRating": 3,
     "damageRating": null,
-    "defenseRating": null,
-    "mappingRating": null,
+    "defenseRating": 3,
+    "mappingRating": 5,
     "bossRating": null,
     "difficulty": "低〜中（マナ管理あり）",
     "budget": "固定価格なし",
@@ -1668,7 +2016,48 @@
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
       }
     ],
-    "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者"
+    "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": false
+        },
+        "note": "ContagionをLv1から使用。単体戦で役割の違う操作が増え、原典の短所に「Don't Get Hit Playstyle」がある。",
+        "score": 3
+      },
+      "damage": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+      },
+      "defense": {
+        "score": 3,
+        "basis": "長所と短所が両方",
+        "quote": "Large ES Pool / Don't Get Hit Playstyle",
+        "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+        "sourceName": "Maxroll: Essence Drain Lich Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に大きなES、短所に「被弾しない立ち回りが前提」とある。"
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "Amazing AoE Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+        "sourceName": "Maxroll: Essence Drain Lich Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所で範囲殲滅が強調されている。"
+      },
+      "boss": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+      }
+    }
   },
   {
     "id": "mercenary-grenade-gemling",
@@ -1683,11 +2072,11 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Explosive Grenade",
-    "beginnerRating": null,
-    "damageRating": null,
-    "defenseRating": null,
+    "beginnerRating": 3,
+    "damageRating": 4,
+    "defenseRating": 2,
     "mappingRating": null,
-    "bossRating": null,
+    "bossRating": 4,
     "difficulty": "中（複数グレネード）",
     "budget": "固定価格なし",
     "leagueStarter": true,
@@ -1844,7 +2233,52 @@
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
       }
     ],
-    "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者"
+    "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": false
+        },
+        "note": "グレネードをLv1から使用。複数グレネードの使い分けが必要で、原典の短所に「Don't Get Hit Playstyle」がある。",
+        "score": 3
+      },
+      "damage": {
+        "score": 4,
+        "basis": "長所",
+        "quote": "High Single Target Damage",
+        "source": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "sourceName": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に単体火力の高さが挙げられている（短所の「Delayed Damage」は火力の量ではなく発生の遅れ）。"
+      },
+      "defense": {
+        "score": 2,
+        "basis": "短所",
+        "quote": "Don't Get Hit Playstyle",
+        "source": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "sourceName": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "短所に「被弾しない立ち回りが前提」とある。"
+      },
+      "mapping": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+      },
+      "boss": {
+        "score": 4,
+        "basis": "長所",
+        "quote": "High Single Target Damage",
+        "source": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "sourceName": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "長所に単体火力の高さが挙げられている。"
+      }
+    }
   },
   {
     "id": "huntress-twister-spirit-walker",
@@ -1859,10 +2293,10 @@
     "updatedAt": "2026-09-24",
     "status": "verified",
     "mainSkill": "ツイスター（Twister）",
-    "beginnerRating": null,
+    "beginnerRating": 3,
     "damageRating": null,
     "defenseRating": null,
-    "mappingRating": null,
+    "mappingRating": 5,
     "bossRating": null,
     "difficulty": "中（武器セット2種と連携操作）",
     "budget": "固定価格なし",
@@ -1888,7 +2322,11 @@
         "replaceGear": "現在レベルに対して物理ダメージが低い槍と、移動速度のないブーツを優先して交換。",
         "caution": "Whirling Slashはダメージ目的ではなく旋風生成に使うため、原典ではLv1維持が案内されている。",
         "transitionCondition": "Lv11到達。槍の更新とPounce・Shredの基本操作が安定していること。",
-        "nowActions": ["物理ダメージの高い槍を探す", "PounceとShredで序盤を進める", "移動速度付きブーツと耐性を確保する"]
+        "nowActions": [
+          "物理ダメージの高い槍を探す",
+          "PounceとShredで序盤を進める",
+          "移動速度付きブーツと耐性を確保する"
+        ]
       },
       {
         "label": "Lv11〜20",
@@ -1899,7 +2337,11 @@
         "replaceGear": "火力が止まったら槍、防御が不安なら耐性とライフの不足部位を交換。",
         "caution": "Whirling Slashをレベルアップしすぎず、Twister側の更新を優先する。",
         "transitionCondition": "Lv21到達。旋風を作ってTwisterで飛ばす基本連携を再現できること。",
-        "nowActions": ["Whirling Slashで旋風を作る", "Twisterで旋風を敵へ飛ばす", "Twister側のジェム更新を優先する"]
+        "nowActions": [
+          "Whirling Slashで旋風を作る",
+          "Twisterで旋風を敵へ飛ばす",
+          "Twister側のジェム更新を優先する"
+        ]
       },
       {
         "label": "Lv21〜30",
@@ -1910,7 +2352,11 @@
         "replaceGear": "2つの武器セットで主力スキルを正しく使えるよう、スキル割り当てと装備条件を先に整える。",
         "caution": "アセンダンシー取得時期は進行状況で変わるため、取得前に名称だけを先行して適用しない。",
         "transitionCondition": "Lv31到達。武器セット切替と3スキルの連携が安定していること。",
-        "nowActions": ["Ice-Tipped Arrowsを連携へ加える", "武器セット2種を設定する", "単体戦用Barrageを準備する"]
+        "nowActions": [
+          "Ice-Tipped Arrowsを連携へ加える",
+          "武器セット2種を設定する",
+          "単体戦用Barrageを準備する"
+        ]
       },
       {
         "label": "Lv31〜40",
@@ -1921,7 +2367,11 @@
         "replaceGear": "武器を最優先し、次に耐性不足と移動速度不足を解消する。",
         "caution": "旋風生成数とスキル順が崩れると火力が落ちるため、単体戦で操作を確認する。",
         "transitionCondition": "Lv41到達。周回と単体戦の両方で連携を再現できること。",
-        "nowActions": ["旋風を複数作ってから攻撃する", "TwisterとBarrageを優先更新する", "回避・Deflect・耐性を確認する"]
+        "nowActions": [
+          "旋風を複数作ってから攻撃する",
+          "TwisterとBarrageを優先更新する",
+          "回避・Deflect・耐性を確認する"
+        ]
       },
       {
         "label": "Lv41〜キャンペーン終了",
@@ -1932,7 +2382,11 @@
         "replaceGear": "キャンペーン終了前に属性耐性の不足部位と古い槍を更新する。",
         "caution": "武器セットごとのスキル割り当てを崩さず、任意ユニークより基礎防御を優先する。",
         "transitionCondition": "キャンペーン終了。耐性を整え、基本連携で通常敵とボスへ対応できること。",
-        "nowActions": ["武器セット別のスキルを固定する", "キャンペーン終了前に耐性を整える", "任意ユニークより槍と防具を更新する"]
+        "nowActions": [
+          "武器セット別のスキルを固定する",
+          "キャンペーン終了前に耐性を整える",
+          "任意ユニークより槍と防具を更新する"
+        ]
       },
       {
         "label": "Mapping開始",
@@ -1943,7 +2397,11 @@
         "replaceGear": "耐性未達、防御不足、槍の火力不足の順に1部位ずつ更新する。",
         "caution": "マップ開始直後からEndgame用ユニークを前提にせず、レア装備で耐性と防御を先に整える。",
         "transitionCondition": "低Tierマップで連携が安定し、耐性と防御を維持できること。",
-        "nowActions": ["属性耐性と回避を先に整える", "槍の物理・追加ダメージを更新する", "旋風からBarrageまでの連携を固定する"]
+        "nowActions": [
+          "属性耐性と回避を先に整える",
+          "槍の物理・追加ダメージを更新する",
+          "旋風からBarrageまでの連携を固定する"
+        ]
       },
       {
         "label": "Early Endgame",
@@ -1954,7 +2412,11 @@
         "replaceGear": "基礎防御を落とさない範囲で、火力とSpiritを同時に更新できる部位を選ぶ。",
         "caution": "掲載資料のEndgame装備は目標例であり、同一アイテムが必須とは限らない。",
         "transitionCondition": "Endgame構成のスキルとSpiritを維持しながら、防御と火力を両立できること。",
-        "nowActions": ["Endgame段階のパッシブを確認する", "必要Spiritを確保する", "防御を落とさず槍と装備を更新する"]
+        "nowActions": [
+          "Endgame段階のパッシブを確認する",
+          "必要Spiritを確保する",
+          "防御を落とさず槍と装備を更新する"
+        ]
       },
       {
         "label": "Endgame完成",
@@ -1965,7 +2427,11 @@
         "replaceGear": "防御を維持したまま火力が伸びる部位から1つずつ比較し、任意ユニークを無理に固定しない。",
         "caution": "1.0では未確認。正式版公開後はパッチノートと段階別資料を再確認する。",
         "transitionCondition": "使用中の0.5.5段階が揃い、変更前後をゲーム内で比較できる状態。",
-        "nowActions": ["Endgame構成と装備段階を揃える", "防御を保ったまま1部位ずつ更新する", "1.0移行前に対応表示を再確認する"]
+        "nowActions": [
+          "Endgame構成と装備段階を揃える",
+          "防御を保ったまま1部位ずつ更新する",
+          "1.0移行前に対応表示を再確認する"
+        ]
       }
     ],
     "gearPriorities": [
@@ -1987,6 +2453,43 @@
         "type": "海外書面ガイド（Early Game・Campaign・Endgame段階）"
       }
     ],
-    "audience": "必須ユニークなしで始め、ツイスターによる範囲周回を段階的に育てたい人"
+    "audience": "必須ユニークなしで始め、ツイスターによる範囲周回を段階的に育てたい人",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-26",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
+        },
+        "note": "TwisterはLv11〜20段階から主力。原典に「It does take some practice」とあり、完全な1ボタン構成ではない。SSF可否は未確認。",
+        "score": 3
+      },
+      "damage": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+      },
+      "defense": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "This build can clear maps incredibly fast",
+        "source": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
+        "sourceName": "Path of Exile 2 Guide: Spirit Walker Elemental Twister Build",
+        "checkedAt": "2026-09-26",
+        "note": "マップ周回の速さが強調されている（資料は0.5時点・2026-07-17公開）。"
+      },
+      "boss": {
+        "score": null,
+        "basis": "未評価",
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+      }
+    }
   }
 ]
