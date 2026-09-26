@@ -1,4 +1,5 @@
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 import { validateRatings } from "../tools/build-ratings.mjs";
 
@@ -229,6 +230,18 @@ for (const build of builds) {
   const page = await read(`builds/${build.classSlug}/${build.slug}/index.html`);
   assert((page.match(/id="build-rating"/g) || []).length === 1 && page.includes('href="/rating-criteria/"'), `${build.id}: rating section missing`);
 }
+const assetHashes = new Map();
+const staleAssets = new Map();
+for (const name of await readdir(resolve(root, "assets"))) {
+  if (/\.(css|js)$/.test(name)) assetHashes.set(name, createHash("sha256").update(await readFile(resolve(root, "assets", name))).digest("hex").slice(0, 10));
+}
+for (const path of [...new Set([...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => `${m[1]}index.html`)), "404.html"]) {
+  const html = await read(path);
+  for (const [, name, version] of html.matchAll(/\/assets\/([A-Za-z0-9_-]+\.(?:css|js))(?:\?v=([^"'\s)>]*))?/g)) {
+    if (version !== assetHashes.get(name)) staleAssets.set(name, [...(staleAssets.get(name) || []), path]);
+  }
+}
+for (const [name, paths] of staleAssets) failures.push(`/assets/${name}: stale ?v= on ${paths.length} page(s), e.g. ${paths[0]} (run node tools/sync-asset-versions.mjs)`);
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);
