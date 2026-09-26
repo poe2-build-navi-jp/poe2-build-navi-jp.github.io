@@ -48,6 +48,7 @@ for(const page of pages){
   const filters=`<!-- comparison:start --><section id="advanced-filters" hidden><h2>条件で絞る・最大3ビルドを比較</h2><p>未評価は低評価を意味しません。解禁Lvは既存資料で確認できるものだけで絞ります。</p><div class="ux-filters">${selects.map(([id,label,options])=>`<label>${label}<select id="filter-${id}"><option value="">すべて</option>${options.map(o=>`<option>${o}</option>`).join('')}</select></label>`).join('')}</div><button type="button" id="reset-filters">全ビルドを見る</button><p id="filter-empty" hidden>条件に一致するビルドはありません。<button type="button" id="relax-filter">条件を1つ外す</button></p><p id="compare-status" role="status" aria-live="polite">比較：0 / 3件</p><button type="button" id="show-compare">選択したビルドを比較</button><section id="build-comparison" tabindex="-1" hidden><h2>選択したビルドの比較</h2><div id="comparison-cards" class="ux-comparison"></div></section></section><!-- comparison:end -->`;
   html=html.replace('<div id="build-list"',`${filters}<div id="build-list"`);
  }
+ html=html.replace(/\/assets\/(app|catalog-static)\.js(?:\?[^"']*)?/g,'/assets/$1.js?v=ux-20260926');
  await save(page,html);
 }
 for(const b of builds){
@@ -57,6 +58,7 @@ for(const b of builds){
  const records=(b.changeHistory||[]).map(r=>`<li><time>${esc(r.date)}</time> ${esc(r.summary)}</li>`).join('');
  html=html.replace('</main>',`<!-- build-history:start --><section id="update-history" class="section"><h2>資料確認・更新履歴</h2><p>ビルド資料確認日：${esc(b.updatedAt)}／対応 ${esc(b.version)}。過去の具体的な変更理由は記録されていません。</p>${records?`<ul>${records}</ul>`:''}<p>2026-09-26：比較項目・再訪導線を整備。ゲーム内の育成内容を再検証した日ではありません。</p><a href="/builds/#advanced-filters">他のビルドと比較する</a> ・ <a href="/leveling/">別のLv・ビルドから探す</a></section><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-history:end --></main>`);
  html=html.replace(/<p id="build-update-notice"[^>]*><\/p>/g,'').replace('<section id="now"','<p id="build-update-notice" role="status" hidden></p><section id="now"');
+ html=html.replace(/\/assets\/detail\.js(?:\?[^"']*)?/g,'/assets/detail.js?v=ux-20260926');
  await save(path,html);
 }
 console.log('Build UX: shared cards, filters, comparison, history, resume');
