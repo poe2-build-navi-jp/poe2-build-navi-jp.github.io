@@ -12,9 +12,9 @@ export const AXES=[
 ];
 export const BEGINNER_CHECKS=[
  ['earlyMainSkill','主力スキルをLv22以下（最初のアセンダンシー前後）から使える'],
- ['moderateOperation','当サイトの記録・原典で「操作が多い／要練習」と書かれていない'],
+ ['moderateOperation','原典が操作の簡単さを長所として明記している'],
  ['ssfConfirmed','SSF（トレードなし）での成立を資料で確認済み'],
- ['noDodgeRequirement','原典の短所に「被弾しない立ち回りが前提」（Don\'t Get Hit Playstyle）がない']
+ ['noDodgeRequirement','原典が防御や安全な立ち回りを長所として明記している']
 ];
 export const SOURCE_SCALE=[
  [5,'長所（強調）','原典の長所として、Very・Insane・Amazing・Great・Incredibly・Extremely・One-Shotなどの強調語付きで挙げられている'],
@@ -35,7 +35,8 @@ export const scoreText=score=>score==null?'未評価':`${score}/5`;
 const meter=score=>score==null?'<span class="rating-meter is-empty" aria-hidden="true">―</span>':`<span class="rating-meter" aria-hidden="true">${'<i class="on"></i>'.repeat(score)}${'<i></i>'.repeat(5-score)}</span>`;
 
 export function beginnerScore(evidence){
- return 1+BEGINNER_CHECKS.filter(([key])=>evidence.checks[key]===true).length;
+ const confirmed=BEGINNER_CHECKS.filter(([key])=>evidence.checks[key]===true).length;
+ return confirmed ? 1+confirmed : null;
 }
 
 export function ratingSectionHtml(build){
@@ -44,7 +45,7 @@ export function ratingSectionHtml(build){
   const e=ev[axis.key];const score=build[axis.field];
   let body;
   if(axis.key==='beginner'){
-   body=`<p>${esc(e.note)}</p><ul class="rating-checks">${BEGINNER_CHECKS.map(([key,label])=>`<li class="${e.checks[key]?'ok':'ng'}"><span aria-hidden="true">${e.checks[key]?'✓':'—'}</span>${esc(label)}</li>`).join('')}</ul>`;
+   body=`<p>${esc(e.note)}</p><ul class="rating-checks">${BEGINNER_CHECKS.map(([key,label])=>`<li class="${e.checks[key]?'ok':'ng'}"><span aria-hidden="true">${e.checks[key]?'✓':'—'}</span>${esc(label)}${e.checks[key]?`：${esc(e.verifiedChecks[key].basis)} <a href="${esc(e.verifiedChecks[key].source)}" target="_blank" rel="noopener noreferrer">元ガイド</a>`:''}</li>`).join('')}</ul>`;
   }else if(score==null){
    body=`<p>${esc(e.note)}</p>`;
   }else{
@@ -66,7 +67,8 @@ export function validateRatings(build){
   if(!e.note)errors.push(`${axis.key}: note missing`);
   if(axis.key==='beginner'){
    if(BEGINNER_CHECKS.some(([key])=>typeof e.checks?.[key]!=='boolean'))errors.push('beginner: checks incomplete');
-   else if(beginnerScore(e)!==score)errors.push(`beginner: score must be 1 + passed checks (${beginnerScore(e)})`);
+   else if(beginnerScore(e)!==score)errors.push(`beginner: score must be 1 + passed checks (${beginnerScore(e)}) or null when none`);
+   for(const [key] of BEGINNER_CHECKS)if(e.checks?.[key]&&!(e.verifiedChecks?.[key]?.basis&&/^https:\/\//.test(e.verifiedChecks?.[key]?.source||'')))errors.push(`beginner: ${key} needs explicit basis and source`);
    continue;
   }
   const scale=SOURCE_SCALE.find(([s])=>s===score);

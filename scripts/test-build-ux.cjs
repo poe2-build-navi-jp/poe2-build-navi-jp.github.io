@@ -27,6 +27,26 @@ assert.equal(initial.querySelectorAll('.catalog-card').length,11);assert.equal(i
 console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recovery, compare max 3, remove, focus, Lv1 links, JS-off content');
 (async()=>{
  const data=JSON.parse(fs.readFileSync('data/builds.json','utf8'));
+ const {rows}=await import('../tools/build-facts.mjs');
+ const {validateRatings}=await import('../tools/build-ratings.mjs');
+ const discovery=JSON.parse(fs.readFileSync('data/discovery.json','utf8'));
+ for(const build of data){
+  assert.deepEqual(validateRatings(build),[],`${build.id}: rating evidence`);
+  const facts=rows(build,discovery);
+  const p=`/builds/${build.classSlug}/${build.slug}/`;
+  for(const page of ['builds/index.html','tier-list/index.html','league-starter/index.html']){
+   const document=new JSDOM(fs.readFileSync(page,'utf8')).window.document;
+   if(page!=='builds/index.html'&&!document.querySelector(`a[href="${p}"]`))continue;
+   const card=[...document.querySelectorAll('article:not(.article-page)')].find(article=>article.querySelector(`a[href="${p}"]`)&&article.querySelector('.unified-facts'));
+   assert(card,`${page}: card missing for ${build.id}`);
+   const visible=[...card.querySelectorAll('.unified-facts div')].map(el=>[el.querySelector('dt').textContent,el.querySelector('dd').textContent]);
+   assert.deepEqual(visible,facts,`${page}: inconsistent facts for ${build.id}`);
+  }
+ }
+ const ice=data.find(b=>b.id==='ranger-ice-shot-deadeye');
+ assert.match(rows(ice,discovery).find(([name])=>name==='主力スキル使用条件')[1],/Lv31.*レベル9/);
+ assert.match(rows(ice,discovery).find(([name])=>name==='主力への切替目安')[1],/Lv31以降/);
+ console.log('PASS: 11 builds share the same card facts and ratings on builds, Tier and starter; skill requirement differs from recommended switch');
  const html=fs.readFileSync('builds/ranger/ice-shot-deadeye/index.html','utf8');
  const detail=new JSDOM(html,{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/?level=37'});
  detail.window.fetch=async()=>({ok:true,json:async()=>data});
@@ -41,4 +61,26 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  dd.getElementById('level-plus').click();assert.equal(dd.getElementById('level-input').value,'38');
  assert.equal(dd.querySelectorAll('.static-roadmap details').length,8);
  console.log('PASS: Lv37 restores, three actions render, increment works, resume level/stage persists, 8 roadmap stages remain');
+ const minion=new JSDOM(fs.readFileSync('builds/witch/minion-infernalist/index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/?level=37'});
+ minion.window.fetch=async()=>({ok:true,json:async()=>data});minion.window.eval(fs.readFileSync('assets/detail.js','utf8'));
+ await new Promise(r=>setTimeout(r,60));
+ const guidance=minion.window.document.getElementById('now-action-guidance');
+ assert.equal(guidance.hidden,false);assert.match(guidance.textContent,/Act 3 - Vaal Guard Spectres/);
+ assert.equal(guidance.querySelector('a').href,data.find(b=>b.id==='witch-minion-infernalist').sources[0].url);
+ minion.window.document.getElementById('level-input').value='42';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('input'));
+ assert.equal(guidance.hidden,true);
+ console.log('PASS: minion Lv37 shows precise guide section and link; unrelated stage hides it');
+ async function home(storage){
+  const page=new JSDOM(fs.readFileSync('index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/'});
+  Object.entries(storage).forEach(([key,value])=>page.window.localStorage.setItem(key,value));
+  page.window.fetch=async(url)=>({ok:true,json:async()=>url.includes('classes.json')?JSON.parse(fs.readFileSync('data/classes.json','utf8')):url.includes('builds.json')?data:JSON.parse(fs.readFileSync('data/site.json','utf8'))});
+  page.window.eval(fs.readFileSync('assets/app.js','utf8'));
+  await new Promise(r=>setTimeout(r,60));
+  return page.window.document.querySelector('.hero-actions a:last-child').href;
+ }
+ assert.equal(await home({}),'https://poe2-build-navi-jp.github.io/leveling/');
+ assert.equal(await home({'poe2:navi:selected-build':'ranger-ice-shot-deadeye','poe2:navi:quick-level':'37'}),'https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/?level=37#now');
+ assert.equal(await home({'poe2:navi:selected-build':'removed-build','poe2:navi:quick-level':'37'}),'https://poe2-build-navi-jp.github.io/leveling/');
+ assert.equal(await home({'poe2:navi:selected-build':'ranger-ice-shot-deadeye','poe2:navi:quick-level':'999'}),'https://poe2-build-navi-jp.github.io/leveling/');
+ console.log('PASS: no history, valid Lv37 one-click resume, removed build and invalid level safely fall back');
 })().catch(error=>{console.error(error);process.exitCode=1;});

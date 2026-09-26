@@ -12,7 +12,7 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "ワーリングアサルト（Whirling Assault）",
-    "beginnerRating": 2,
+    "beginnerRating": null,
     "damageRating": 5,
     "defenseRating": 3,
     "mappingRating": 4,
@@ -187,16 +187,17 @@
     ],
     "audience": "近接で移動しながら戦い、Lv1からEndgameまで同じページで進めたい人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": false,
           "moderateOperation": false,
-          "ssfConfirmed": true,
+          "ssfConfirmed": false,
           "noDodgeRequirement": false
         },
-        "note": "主力のワーリングアサルトはLv41から。Endgameは完全な1ボタン構成ではなく、原典の短所に「Don't Get Hit Playstyle」がある。",
-        "score": 2
+        "note": "加点できる条件の原典記述が不足しているため未評価です。",
+        "score": null,
+        "verifiedChecks": {}
       },
       "damage": {
         "score": 5,
@@ -248,7 +249,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "ツイスター（Twister）",
-    "beginnerRating": 3,
+    "beginnerRating": 2,
     "damageRating": 5,
     "defenseRating": null,
     "mappingRating": 5,
@@ -421,16 +422,22 @@
     "status": "verified",
     "audience": "序盤からツイスターを使い、武器セットを切り替えて進めたい人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
           "moderateOperation": false,
           "ssfConfirmed": false,
-          "noDodgeRequirement": true
+          "noDodgeRequirement": false
         },
-        "note": "ツイスターはLv1から主力。原典の短所に「More Than 1 Button」があり、SSF可否は未確認。",
-        "score": 3
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "元ガイドの序盤構成に掲載された「ワーリングスラッシュ×3 → ツイスター」を参照",
+            "source": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire"
+          }
+        }
       },
       "damage": {
         "score": 5,
@@ -478,7 +485,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "シールドウォール（Shield Wall）",
-    "beginnerRating": 5,
+    "beginnerRating": 3,
     "damageRating": 2,
     "defenseRating": 5,
     "mappingRating": 2,
@@ -650,16 +657,26 @@
     "status": "verified",
     "audience": "装備を整えやすい耐久型のリーグスターターを探している人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": true,
-          "ssfConfirmed": true,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
           "noDodgeRequirement": true
         },
-        "note": "主力はLv22から。操作多め・被弾前提の短所の記載はなく、SSF確認済み。",
-        "score": 5
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "元ガイドの序盤構成に掲載された「ローリングスラム + ボーンシャッター」を参照",
+            "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr"
+          },
+          "noDodgeRequirement": {
+            "basis": "原典の長所に最初の昇華後のキャンペーン耐久を明記",
+            "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr"
+          }
+        }
       },
       "damage": {
         "score": 2,
@@ -707,7 +724,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "ケラリの幻惑 / ルザンの罠",
-    "beginnerRating": 3,
+    "beginnerRating": null,
     "damageRating": 5,
     "defenseRating": 5,
     "mappingRating": null,
@@ -886,16 +903,17 @@
     "status": "verified",
     "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": false,
           "moderateOperation": false,
-          "ssfConfirmed": true,
-          "noDodgeRequirement": true
+          "ssfConfirmed": false,
+          "noDodgeRequirement": false
         },
-        "note": "本来の構成は最初のアセンダンシー後（Lv22以下では未確認）。原典に「Can be button intensive」とある。SSF確認済み。",
-        "score": 3
+        "note": "加点できる条件の原典記述が不足しているため未評価です。",
+        "score": null,
+        "verifiedChecks": {}
       },
       "damage": {
         "score": 5,
@@ -939,7 +957,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "テイムビースト（Tame Beast）",
-    "beginnerRating": 3,
+    "beginnerRating": null,
     "damageRating": null,
     "defenseRating": null,
     "mappingRating": null,
@@ -1112,16 +1130,17 @@
     "status": "verified",
     "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": false,
-          "moderateOperation": true,
+          "moderateOperation": false,
           "ssfConfirmed": false,
-          "noDodgeRequirement": true
+          "noDodgeRequirement": false
         },
-        "note": "相棒型への切替はAct 3以降。操作多め・被弾前提の短所の記載はない。SSF可否は全段階では未確認。",
-        "score": 3
+        "note": "加点できる条件の原典記述が不足しているため未評価です。",
+        "score": null,
+        "verifiedChecks": {}
       },
       "damage": {
         "score": null,
@@ -1158,7 +1177,7 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "アイスショット（Ice Shot）",
-    "beginnerRating": 3,
+    "beginnerRating": null,
     "damageRating": 4,
     "defenseRating": 3,
     "mappingRating": 5,
@@ -1332,16 +1351,17 @@
     ],
     "audience": "弓で遠距離から戦い、周回と単体攻撃を使い分けたい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": false,
           "moderateOperation": false,
-          "ssfConfirmed": true,
-          "noDodgeRequirement": true
+          "ssfConfirmed": false,
+          "noDodgeRequirement": false
         },
-        "note": "主力のアイスショットはLv31から。原典の短所に「Snipe can be tricky」がある。SSF確認済み。",
-        "score": 3
+        "note": "加点できる条件の原典記述が不足しているため未評価です。",
+        "score": null,
+        "verifiedChecks": {}
       },
       "damage": {
         "score": 4,
@@ -1379,6 +1399,13 @@
         "checkedAt": "2026-09-26",
         "note": "長所に単体火力の高さが挙げられている。"
       }
+    },
+    "mainSkillTiming": {
+      "available": "Lv31（レベル9のスキルジェムの必要キャラクターレベル）",
+      "recommendedSwitch": "Lv31以降、ジェムと必要なSpirit・装備を用意してから",
+      "source": "https://poe2db.tw/us/Ice_Shot",
+      "guide": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
+      "checkedAt": "2026-09-27"
     }
   },
   {
@@ -1394,7 +1421,7 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "スケルタルスナイパー / スペクター",
-    "beginnerRating": 5,
+    "beginnerRating": 4,
     "damageRating": null,
     "defenseRating": null,
     "mappingRating": null,
@@ -1477,7 +1504,13 @@
           "Vaal Guard Spectreを確保する",
           "必要Spiritを確認する",
           "切替後のサポートを原典と照合する"
-        ]
+        ],
+        "actionGuidance": {
+          "actionIndex": 2,
+          "where": "元ガイド「Skill Gems」→「Act 3 - Vaal Guard Spectres」段階",
+          "what": "Vaal Guard Spectreのサポート構成と必要Spirit",
+          "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+        }
       },
       {
         "label": "Lv41〜キャンペーン終了",
@@ -1567,16 +1600,30 @@
     ],
     "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": true,
+          "moderateOperation": false,
           "ssfConfirmed": true,
           "noDodgeRequirement": true
         },
-        "note": "スケルタルスナイパーをLv1から使用。操作多め・被弾前提の短所の記載はなく、SSF確認済み。",
-        "score": 5
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "score": 4,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "元ガイドの序盤構成に掲載された「スケルタルスナイパー + Flame Wall。Contagion + Unearthを周回補助に使用」を参照",
+            "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+          },
+          "ssfConfirmed": {
+            "basis": "原典がSSF向けの全行程と明記",
+            "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+          },
+          "noDodgeRequirement": {
+            "basis": "原典の長所にES・ブロック・ミニオンによる防御を明記（0.5のES変更にも注意）",
+            "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+          }
+        }
       },
       "damage": {
         "score": null,
@@ -1613,7 +1660,7 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "Entangle / Thrashing Vines",
-    "beginnerRating": 4,
+    "beginnerRating": 2,
     "damageRating": null,
     "defenseRating": null,
     "mappingRating": 4,
@@ -1801,16 +1848,22 @@
     ],
     "audience": "Lv1から同じ主力を使い、少ない基本操作で植物ビルドを育てたい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": true,
+          "moderateOperation": false,
           "ssfConfirmed": false,
-          "noDodgeRequirement": true
+          "noDodgeRequirement": false
         },
-        "note": "EntangleをLv1から継続し、操作少なめ。SSF可否は未確認。",
-        "score": 4
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "元ガイドの序盤構成に掲載された「Entangle。ボスには手持ちの単体補助スペルも使用」を参照",
+            "source": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide"
+          }
+        }
       },
       "damage": {
         "score": null,
@@ -1855,7 +1908,7 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Essence Drain + Contagion",
-    "beginnerRating": 3,
+    "beginnerRating": 2,
     "damageRating": null,
     "defenseRating": 3,
     "mappingRating": 5,
@@ -2018,16 +2071,22 @@
     ],
     "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
           "moderateOperation": false,
-          "ssfConfirmed": true,
+          "ssfConfirmed": false,
           "noDodgeRequirement": false
         },
-        "note": "ContagionをLv1から使用。単体戦で役割の違う操作が増え、原典の短所に「Don't Get Hit Playstyle」がある。",
-        "score": 3
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "元ガイドの序盤構成に掲載された「Contagion。単体はVolcanoからEssence Drainへ移行」を参照",
+            "source": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit"
+          }
+        }
       },
       "damage": {
         "score": null,
@@ -2072,7 +2131,7 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Explosive Grenade",
-    "beginnerRating": 3,
+    "beginnerRating": 2,
     "damageRating": 4,
     "defenseRating": 2,
     "mappingRating": null,
@@ -2235,16 +2294,22 @@
     ],
     "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
           "moderateOperation": false,
-          "ssfConfirmed": true,
+          "ssfConfirmed": false,
           "noDodgeRequirement": false
         },
-        "note": "グレネードをLv1から使用。複数グレネードの使い分けが必要で、原典の短所に「Don't Get Hit Playstyle」がある。",
-        "score": 3
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "元ガイドの序盤構成に掲載された「Explosive Grenade。補助にFrost BombとFlash Grenade」を参照",
+            "source": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter"
+          }
+        }
       },
       "damage": {
         "score": 4,
@@ -2293,7 +2358,7 @@
     "updatedAt": "2026-09-24",
     "status": "verified",
     "mainSkill": "ツイスター（Twister）",
-    "beginnerRating": 3,
+    "beginnerRating": 2,
     "damageRating": null,
     "defenseRating": null,
     "mappingRating": 5,
@@ -2455,16 +2520,22 @@
     ],
     "audience": "必須ユニークなしで始め、ツイスターによる範囲周回を段階的に育てたい人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-26",
+      "checkedAt": "2026-09-27",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
           "moderateOperation": false,
           "ssfConfirmed": false,
-          "noDodgeRequirement": true
+          "noDodgeRequirement": false
         },
-        "note": "TwisterはLv11〜20段階から主力。原典に「It does take some practice」とあり、完全な1ボタン構成ではない。SSF可否は未確認。",
-        "score": 3
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "元ガイドの序盤構成に掲載された「PounceとShredを中心に進め、入手後はWhirling SlashとTwisterの準備を始める。」を参照",
+            "source": "https://note.com/fresh_okapi3816/n/nbe96101eda53"
+          }
+        }
       },
       "damage": {
         "score": null,

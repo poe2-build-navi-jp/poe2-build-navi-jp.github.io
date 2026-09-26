@@ -77,7 +77,8 @@ function renderNow(index) {
   const stage = STAGES[index];
   byId("now-stage").textContent = stage.label;
   byId("now-next").textContent = `次の目標：${stage.next}`;
-  const verifiedActions = build.levelingStages?.find((item) => item.label === stage.label)?.nowActions;
+  const currentStage = build.levelingStages?.find((item) => item.label === stage.label);
+  const verifiedActions = currentStage?.nowActions;
   const actions = verifiedActions || [
     "現在レベルと育成段階が合っているか確認する",
     "確認済みのスキル・パッシブ情報が登録されるまで『確認中』を目印にする",
@@ -85,6 +86,21 @@ function renderNow(index) {
   ];
   byId("now-source-label").textContent = verifiedActions ? "掲載資料から整理した優先行動" : "この段階は確認中";
   document.querySelectorAll("[data-now-action]").forEach((element, actionIndex) => { element.textContent = actions[actionIndex]; });
+  const guidance = byId("now-action-guidance");
+  if (guidance) {
+    guidance.replaceChildren();
+    const detail = currentStage?.actionGuidance;
+    guidance.hidden = !detail || !verifiedActions?.[detail.actionIndex];
+    if (!guidance.hidden) {
+      guidance.append(document.createTextNode(`「${verifiedActions[detail.actionIndex]}」：${detail.what}。${detail.where}を開いて確認。`));
+      const link = document.createElement("a");
+      link.href = detail.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "該当する元ガイドを見る";
+      guidance.append(" ", link);
+    }
+  }
 }
 
 function renderProgress() {
@@ -221,7 +237,7 @@ function renderBuild(builds) {
   const facts = byId("fact-grid");
   facts.replaceChildren();
   [
-    ["対応パッチ", build.version], ["最終確認日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "不足箇所を各段階に表示" : "対応パッチを再確認中"], ["確認済み段階", `${build.levelingStages?.length || 0}/8`]
+    ["対応パッチ", build.version], ["育成手順の原典照合日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "不足箇所を各段階に表示" : "対応パッチを再確認中"], ["確認済み段階", `${build.levelingStages?.length || 0}/8`]
   ].forEach(([label, value]) => facts.append(fact(label, value)));
   renderSources();
   renderProgress();

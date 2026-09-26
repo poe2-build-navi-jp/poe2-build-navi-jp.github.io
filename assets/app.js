@@ -120,20 +120,25 @@ async function init() {
         byId("last-updated").textContent = site.latestPatchCheckedAt || site.lastUpdated;
     state.classes.forEach((item) => byId("quick-class").append(new Option(item.name, item.name)));
     state.selectedBuild = localStorage.getItem("poe2:navi:selected-build") || "";
-    const restoredBuild = state.builds.find((build) => build.id === state.selectedBuild);
-    state.selectedClass = localStorage.getItem("poe2:navi:selected-class") || restoredBuild?.className || "";
-    state.level = Math.max(1, Math.min(100, Number(localStorage.getItem("poe2:navi:quick-level")) || 1));
+    const restoredBuild = state.builds.find((build) => build.id === state.selectedBuild && build.status !== "draft");
+    const savedLevel = Number(localStorage.getItem("poe2:navi:quick-level"));
+    const validResume = Boolean(restoredBuild && Number.isInteger(savedLevel) && savedLevel >= 1 && savedLevel <= 100);
+    if (!validResume) localStorage.removeItem("poe2:navi:selected-build");
+    if (!restoredBuild) state.selectedBuild = "";
+    state.selectedClass = restoredBuild?.className || localStorage.getItem("poe2:navi:selected-class") || "";
+    if (!state.classes.some((item) => item.name === state.selectedClass)) state.selectedClass = "";
+    state.level = validResume ? savedLevel : 1;
     byId("quick-class").value = state.selectedClass;
     populateQuickBuilds();
     setLevel(state.level);
     renderClassCards();
-    if (restoredBuild) {
-      const checks=JSON.parse(localStorage.getItem(`poe2:navi:stages:${restoredBuild.id}`)||'{}');
+    if (validResume) {
+      let checks={};try{checks=JSON.parse(localStorage.getItem(`poe2:navi:stages:${restoredBuild.id}`)||'{}');}catch{}
       const count=Object.values(checks).filter(Boolean).length;
       byId('resume-copy').textContent=`${restoredBuild.className}「${restoredBuild.name}」Lv${state.level}・育成ロードマップ進捗 ${Math.round(count/8*100)}%`;
       byId('quick-link').textContent=`Lv${state.level}から再開`;
       const shortcutTarget=document.querySelector('.hero-actions a[href="/leveling/"]');
-      if(shortcutTarget){shortcutTarget.href='#quick-start';shortcutTarget.textContent=`Lv${state.level}から続きを見る`;}
+      if(shortcutTarget){shortcutTarget.href=`${buildUrl(restoredBuild)}?level=${state.level}#now`;shortcutTarget.textContent=`Lv${state.level}から続きを見る`;}
 
     }
     bindEvents();

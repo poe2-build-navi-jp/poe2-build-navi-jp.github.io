@@ -87,7 +87,7 @@ for (const build of builds) {
     assert(page.includes(`/classes/${build.classSlug}/`), `${pagePath}: class hub link missing`);
     assert(page.includes("現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。"), `${pagePath}: level-value summary missing`);
     assert(page.includes('id="note-referral-guide"') && page.includes('href="#level-card"'), `${pagePath}: note referral handoff missing`);
-    assert(page.includes("最新確認 0.5.5c") && page.includes("最終確認 2026-09-23"), `${pagePath}: latest patch review missing`);
+    assert(page.includes("公式パッチノート確認 2026-09-23") && page.includes(`育成手順の原典照合 ${build.updatedAt}`), `${pagePath}: patch/build review dates must be separate`);
     assert(page.includes('/best-builds/'), `${pagePath}: purpose comparison link missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
