@@ -486,9 +486,9 @@
     "updatedAt": "2026-09-07",
     "mainSkill": "シールドウォール（Shield Wall）",
     "beginnerRating": 3,
-    "damageRating": 2,
+    "damageRating": null,
     "defenseRating": 5,
-    "mappingRating": 2,
+    "mappingRating": 4,
     "bossRating": null,
     "difficulty": "Lv22で主力を切替",
     "reviewedFacts": {
@@ -679,13 +679,9 @@
         }
       },
       "damage": {
-        "score": 2,
-        "basis": "短所",
-        "quote": "高額装備帯では他構成ほど火力が伸びない",
-        "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
-        "sourceName": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
-        "checkedAt": "2026-09-07",
-        "note": "原典で、高額装備帯の火力の伸びが弱点として説明されている。"
+        "score": null,
+        "basis": "未評価",
+        "note": "原典にはFortifying Cry変更に伴う単体ダメージの減少が記されていますが、ビルド全体の火力量を比較できる長所・短所の記述としては採点しません。"
       },
       "defense": {
         "score": 5,
@@ -697,13 +693,13 @@
         "note": "アセンダンシー解説で、属性ダメージへの非常に高い耐性が強調されている。"
       },
       "mapping": {
-        "score": 2,
-        "basis": "短所",
-        "quote": "高額装備帯では他構成ほど周回が伸びない",
+        "score": 4,
+        "basis": "長所",
+        "note": "原典がEndgame構成の画面全域の殲滅を長所として記載。周回速度の数値比較ではありません。",
+        "quote": "Screen wide clear with the endgame setup",
         "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
         "sourceName": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
-        "checkedAt": "2026-09-07",
-        "note": "原典で、高額装備帯の周回の伸びが弱点として説明されている。"
+        "checkedAt": "2026-09-27"
       },
       "boss": {
         "score": null,
