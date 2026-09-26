@@ -33,3 +33,20 @@ The card links to that guide. A partial SSF guide is described by its covered
 stage rather than marking the full Endgame build SSF verified. Gem levels are
 not treated as character unlock levels. The original `updatedAt` remains the
 date of the full build-data review.
+
+## Build ratings
+
+`beginnerRating` / `damageRating` / `defenseRating` / `mappingRating` / `bossRating`
+follow the rubric in `tools/build-ratings.mjs` and are published at `/rating-criteria/`.
+Each build carries `ratingEvidence` (checkedAt, per-axis note, and for non-beginner
+axes the quoted source statement, URL and date). `beginnerRating` is always
+1 + the number of passed `checks`. Axes without a pros/cons statement stay `null`
+(未評価), never guessed. After editing ratings run:
+
+```
+node tools/enhance-ratings.mjs
+node tools/enhance-build-ux.mjs
+node tools/generate-sitemap.mjs
+node tools/inject-analytics.mjs
+node scripts/test-site.mjs
+```

@@ -1,5 +1,6 @@
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { validateRatings } from "../tools/build-ratings.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const baseUrl = "https://poe2-build-navi-jp.github.io";
@@ -219,6 +220,15 @@ for (const removed of ["builds/druid/wolf/index.html", "builds/witch/spark-comet
 assert(ads.includes("pub-7738997902416481"), "ads.txt publisher missing");
 assert(verification.trim() === "google-site-verification: googlebaa56ffa7c50bcfb.html", "Search Console verification file changed");
 
+const ratingCriteria = await read("rating-criteria/index.html").catch(() => "");
+assert(ratingCriteria.includes("<h1>PoE2ビルドの評価基準と採点方法</h1>"), "rating criteria page missing");
+assert(sitemap.includes(`${baseUrl}/rating-criteria/`), "rating criteria page missing from sitemap");
+for (const build of builds) {
+  for (const error of validateRatings(build)) failures.push(`${build.id}: rating ${error}`);
+  assert(ratingCriteria.includes(`href="/builds/${build.classSlug}/${build.slug}/#build-rating"`), `${build.id}: missing from rating criteria table`);
+  const page = await read(`builds/${build.classSlug}/${build.slug}/index.html`);
+  assert((page.match(/id="build-rating"/g) || []).length === 1 && page.includes('href="/rating-criteria/"'), `${build.id}: rating section missing`);
+}
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);
