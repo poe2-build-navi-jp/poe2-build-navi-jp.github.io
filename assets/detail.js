@@ -143,6 +143,7 @@ function setLevel(value) {
     history.replaceState(history.state, "", currentUrl);
   }
   const index = stageIndexFor(level);
+  localStorage.setItem("poe2:navi:lastViewedStage", String(index));
   renderNow(index);
   renderStage(index);
   renderProgress();

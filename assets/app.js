@@ -132,9 +132,9 @@ async function init() {
       const count=Object.values(checks).filter(Boolean).length;
       byId('resume-copy').textContent=`${restoredBuild.className}「${restoredBuild.name}」Lv${state.level}・育成ロードマップ進捗 ${Math.round(count/8*100)}%`;
       byId('quick-link').textContent=`Lv${state.level}から再開`;
-            const shortcut=document.createElement('a');shortcut.className='button';shortcut.href='#quick-start';shortcut.textContent=`Lv${state.level}から続ける`;
-      const shortcutTarget=document.querySelector('.hero-actions')||document.querySelector('.hero-guide');
-      shortcutTarget?.prepend(shortcut);
+      const shortcutTarget=document.querySelector('.hero-actions a[href="/leveling/"]');
+      if(shortcutTarget){shortcutTarget.href='#quick-start';shortcutTarget.textContent=`Lv${state.level}から続きを見る`;}
+
     }
     bindEvents();
   } catch (error) {

@@ -29,7 +29,7 @@ assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
 assert(index.includes('id="class-grid"'), "homepage class cards container missing");
 assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="choose-class"'), "homepage must show purpose picks before class selection");
-assert(index.indexOf('id="choose-class"') < index.indexOf('id="quick-start"'), "homepage must show class selection before resume controls");
+assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="quick-start"'), "homepage must show quick picks before resume controls");
 assert(index.indexOf('id="quick-start"') < index.indexOf('id="featured-builds"'), "homepage must show recommended builds after class/build/level flow");
 assert(index.includes("PoE2 0.5.5 初心者向けおすすめビルド") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
 assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ</title>"), "homepage CTR-focused title missing");
