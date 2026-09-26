@@ -249,6 +249,13 @@ for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.gith
   if (image) await access(resolve(root, image)).catch(() => failures.push(`${path}: og:image file missing: ${image}`));
   assert(html.includes('<meta name="twitter:card" content="summary_large_image">') && (html.match(/name="twitter:card"/g) || []).length === 1, `${path}: needs exactly one summary_large_image twitter:card`);
 }
+assert(site.gameVersion && site.nextGameVersion && /^\d{4}-\d{2}-\d{2}$/.test(site.nextGameVersionReleaseDate || ""), "site.json: gameVersion / nextGameVersion / nextGameVersionReleaseDate required");
+for (const build of builds) {
+  const page = await read(`builds/${build.classSlug}/${build.slug}/index.html`);
+  const outdated = build.version !== site.gameVersion;
+  assert(page.includes('class="version-notice"') === outdated, `${build.id}: version notice must appear only when build version ${build.version} != game ${site.gameVersion} (run node tools/enhance-version-notice.mjs)`);
+}
+assert(index.includes('class="version-banner"') === builds.some((build) => build.version !== site.gameVersion), "homepage version banner out of sync with site.gameVersion");
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);
