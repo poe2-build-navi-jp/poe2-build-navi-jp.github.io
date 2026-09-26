@@ -15,7 +15,7 @@ for(const page of pages){
   if(/class="article-page/.test(article))return article; // Outer guide container handled below.
   const b=builds.find(b=>article.includes(`href="${url(b)}`));
   if(!b)return article;
-  article=article.replace(/<dl\b[^>]*>[\s\S]*?<\/dl>/g,'');
+  article=article.replace(/<dl\b[^>]*>[\s\S]*?<\/dl>/g,'').replace(/<p class="fact-source">[\s\S]*?<\/p>/g,'');
   article=article.replace(/<button[^>]*data-compare[^>]*>[\s\S]*?<\/button>/g,'');
   article=article.replace('</article>',`${factsHtml(b,discovery)}${page==='builds/index.html'?`<button type="button" data-compare="${esc(b.id)}" aria-pressed="false" hidden>比較に追加</button>`:''}</article>`);
   if(page==='builds/index.html'){
@@ -28,7 +28,7 @@ for(const page of pages){
  html=html.replace(/<article class="(?:discovery-card|purpose-card|tier-card|starter-card)"[\s\S]*?<\/article>/g,article=>{
   const b=builds.find(b=>article.includes(`href="${url(b)}`));
   if(!b||article.includes('unified-facts'))return article;
-  return article.replace(/<dl\b[^>]*>[\s\S]*?<\/dl>/g,'').replace('</article>',`${factsHtml(b,discovery)}</article>`);
+  return article.replace(/<dl\b[^>]*>[\s\S]*?<\/dl>/g,'').replace(/<p class="fact-source">[\s\S]*?<\/p>/g,'').replace('</article>',`${factsHtml(b,discovery)}</article>`);
  });
  html=html.replace(/<!-- build-ux:start -->[\s\S]*?<!-- build-ux:end -->/g,'');
  html=html.replace('</head>','<!-- build-ux:start --><link rel="stylesheet" href="/assets/build-ux.css?v=1"><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-ux:end --></head>');
@@ -55,8 +55,12 @@ for(const b of builds){
  const path=`builds/${b.classSlug}/${b.slug}/index.html`;
  let html=await read(path);
  html=html.replace(/<!-- build-history:start -->[\s\S]*?<!-- build-history:end -->/g,'');
+ if(b.reviewedFacts?.ssfNote)html=html.replace(/(<b>SSF：<\/b>)未確認/,`$1${esc(b.reviewedFacts.ssfNote)}`);
  const records=(b.changeHistory||[]).map(r=>`<li><time>${esc(r.date)}</time> ${esc(r.summary)}</li>`).join('');
- html=html.replace('</main>',`<!-- build-history:start --><section id="update-history" class="section"><h2>資料確認・更新履歴</h2><p>ビルド資料確認日：${esc(b.updatedAt)}／対応 ${esc(b.version)}。過去の具体的な変更理由は記録されていません。</p>${records?`<ul>${records}</ul>`:''}<p>2026-09-26：比較項目・再訪導線を整備。ゲーム内の育成内容を再検証した日ではありません。</p><a href="/builds/#advanced-filters">他のビルドと比較する</a> ・ <a href="/leveling/">別のLv・ビルドから探す</a></section><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-history:end --></main>`);
+ const review=b.reviewedFacts;
+ const reviewedItems=review?[['操作難易度',review.difficulty],['操作量',review.operation],['装備の条件',review.gearDependence],['SSF',review.ssfNote]].filter(([,value])=>value).map(([label,value])=>`<li>${esc(label)}：${esc(value)}</li>`).join(''):'';
+ const reviewHtml=review?`<p>${esc(review.checkedAt)}：元ガイドの比較項目を追加確認しました。育成8段階の全内容を再検証した日付ではありません。</p><ul>${reviewedItems}</ul><p><a href="${esc(review.source)}" target="_blank" rel="noopener noreferrer">確認した元ガイドを見る</a></p>`:'';
+ html=html.replace('</main>',`<!-- build-history:start --><section id="update-history" class="section"><h2>資料確認・更新履歴</h2><p>ビルド資料確認日：${esc(b.updatedAt)}／対応 ${esc(b.version)}。過去の具体的な変更理由は記録されていません。</p>${records?`<ul>${records}</ul>`:''}${reviewHtml}<p>2026-09-26：比較項目・再訪導線を整備。ゲーム内の育成内容を再検証した日ではありません。</p><a href="/builds/#advanced-filters">他のビルドと比較する</a> ・ <a href="/leveling/">別のLv・ビルドから探す</a></section><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-history:end --></main>`);
  html=html.replace(/<p id="build-update-notice"[^>]*><\/p>/g,'').replace('<section id="now"','<p id="build-update-notice" role="status" hidden></p><section id="now"');
  html=html.replace(/\/assets\/detail\.js(?:\?[^"']*)?/g,'/assets/detail.js?v=ux-20260926');
  await save(path,html);

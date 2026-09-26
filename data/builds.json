@@ -205,6 +205,13 @@
     "mappingRating": null,
     "bossRating": null,
     "difficulty": "複数スキルの順番管理",
+    "reviewedFacts": {
+      "difficulty": "複数操作（原典に記載）",
+      "operation": "多め（複数スキルの連携）",
+      "gearDependence": "高（後半の火力と効果の強化）",
+      "source": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+      "checkedAt": "2026-09-26"
+    },
     "budget": "固定価格なし",
     "leagueStarter": true,
     "ssf": null,
@@ -383,6 +390,11 @@
     "mappingRating": null,
     "bossRating": null,
     "difficulty": "Lv22で主力を切替",
+    "reviewedFacts": {
+      "gearDependence": "マップ序盤は装備を整えやすい",
+      "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+      "checkedAt": "2026-09-26"
+    },
     "budget": "固定価格なし",
     "leagueStarter": true,
     "ssf": true,
@@ -750,6 +762,11 @@
     "budget": "固定価格なし",
     "leagueStarter": true,
     "ssf": null,
+    "reviewedFacts": {
+      "ssfNote": "序盤〜Early EndgameのSSFガイドあり（掲載Endgame構成は未確認）",
+      "source": "https://mobalytics.gg/poe-2/builds/companion-huntress-league-starter",
+      "checkedAt": "2026-09-26"
+    },
     "strengths": [
       "固有ビーストを主力にする明確なEndgame方針がある。",
       "Act 1〜3の育成ルートと相棒型への切替条件が説明されている。",
@@ -1109,6 +1126,11 @@
     "mappingRating": null,
     "bossRating": null,
     "difficulty": "Act 3とLv67前後で召喚対象を切替",
+    "reviewedFacts": {
+      "gearDependence": "装備更新が分かりやすい（原典記載）",
+      "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+      "checkedAt": "2026-09-26"
+    },
     "budget": "固定価格なし",
     "leagueStarter": true,
     "ssf": true,
@@ -1293,6 +1315,13 @@
     "budget": "固定価格なし",
     "leagueStarter": true,
     "ssf": null,
+    "reviewedFacts": {
+      "difficulty": "低（通常周回は主力中心）",
+      "operation": "少なめ（主力中心）",
+      "gearDependence": "防御は装備依存（低予算構成あり）",
+      "source": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+      "checkedAt": "2026-09-26"
+    },
     "strengths": [
       "Lv1からEndgameまでEntangleを主力として継続できる。",
       "周回の基本操作を少なくしやすく、植物による足止めも使える。",

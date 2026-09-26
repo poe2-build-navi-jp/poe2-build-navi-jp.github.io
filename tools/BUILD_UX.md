@@ -26,3 +26,10 @@ A 1.0 release uses these same build URLs and fields, without copied SEO pages.
 Equipment dependence remains unrated until supported. Unlock filtering only uses
 an explicit main-skill transition level or explicit Lv1 continuation in the source.
 Mixed/unknown operation ratings remain unclassified instead of inferred.
+
+When a guide explicitly supports a comparison fact, add `reviewedFacts` to its
+existing build record with the precise claim, `source` URL and `checkedAt` date.
+The card links to that guide. A partial SSF guide is described by its covered
+stage rather than marking the full Endgame build SSF verified. Gem levels are
+not treated as character unlock levels. The original `updatedAt` remains the
+date of the full build-data review.
