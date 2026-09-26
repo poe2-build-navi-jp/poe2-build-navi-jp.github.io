@@ -45,7 +45,7 @@ function shell({ title, description, path, current, kicker, h1, intro, content, 
 }
 
 function compactBuildCard(build, label = "ビルド詳細を見る", tags = []) {
-  const ssf = build.ssf === true ? "確認済み" : build.ssf === false ? "非対応" : "未確認";
+  const ssf = build.reviewedFacts?.ssfNote || (build.ssf === true ? "確認済み" : build.ssf === false ? "非対応" : "未確認");
   const tagsHtml = tags.length ? `<div class="build-tags" aria-label="用途">${tags.map((tag) => `<span>${esc(tag)}</span>`).join("")}</div>` : "";
   return `<article class="discovery-card"><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3>${tagsHtml}<p><b>おすすめ：</b>${esc(build.audience)}</p><p><b>弱点：</b>${esc(build.weaknesses?.[0])}</p><dl><div><dt>主力</dt><dd>${esc(build.mainSkill)}</dd></div><div><dt>操作</dt><dd>${esc(build.difficulty)}</dd></div><div><dt>SSF</dt><dd>${ssf}</dd></div><div><dt>対応</dt><dd>${esc(build.version)}・${esc(build.updatedAt)}</dd></div></dl><a class="button" href="${buildUrl(build)}">${esc(label)}</a></article>`;
 }
@@ -61,7 +61,7 @@ const topChoices = `<section id="purpose-picks" class="section section-soft" ari
   choiceCard("初心者・安全重視", "witch-minion-infernalist", "ミニオンに攻撃を任せやすく、自分は回避と位置取りへ集中できます。"),
   choiceCard("弓で遊びたい", "ranger-ice-shot-deadeye", "Lv31からアイスショットへ切り替える時期と、序盤の育成手順が明確です。"),
   choiceCard("近接で遊びたい", "monk-whirling-assault", "移動しながら攻撃でき、Lv41の主力切替まで段階別に確認できます。"),
-  choiceCard("SSF・必須ユニークなし", "witch-ed-contagion-lich", "SSFで成立し、必須ユニークを必要としないことを確認済みです。")
+  choiceCard("継続ダメージ", "witch-ed-contagion-lich", "継続ダメージを広げる構成。SSFでの完成形は未確認です。")
 ].join("")}</div><div class="section-cta"><a class="button-secondary" href="/best-builds/">目的別おすすめを見る</a><a class="button-secondary" href="/tier-list/">初心者Tierで比較する</a><a class="button-secondary" href="/league-starter/">リーグスターターを見る</a></div></section>`;
 
 let home = await readFile(resolve(root, "index.html"), "utf8");
@@ -101,12 +101,12 @@ const tierContent = `${tierChoices}<section class="content-action"><h2>このTie
 await mkdir(resolve(root, "tier-list"), { recursive: true });
 await writeFile(resolve(root, "tier-list/index.html"), shell({ title: "PoE2 0.5.5初心者向けビルドTier｜育てやすさ比較", description: "PoE2 0.5.5の初心者向けビルドを、育成の始めやすさ・操作・構成切替・資料確認状況で暫定比較。各ビルドは現在Lvから育成できます。", path: "/tier-list/", current: "tier", kicker: "TIER LIST / PATCH 0.5.5", h1: "PoE2 0.5.5初心者向けビルドTier", intro: "初心者が最初の1体を選ぶための暫定Tierです。強さだけの順位ではなく、Lv1から迷わず進められるかを重視します。", content: tierContent, crumbs: [{ name: "ホーム", path: "/" }, { name: "Tierリスト", path: "/tier-list/" }] }));
 
-const starterCards = builds.filter((build) => build.leagueStarter).map((build) => `<article class="starter-card"><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h2>${esc(build.name)}</h2><p>${esc(build.audience)}</p><ul><li>主力：${esc(build.mainSkill)}</li><li>操作：${esc(build.difficulty)}</li><li>${build.ssf === true ? "SSF対応の根拠を確認済み" : "SSF適性は確認中"}</li><li>価格：固定相場を断定しません</li></ul><p><b>序盤の使いやすさ：</b>Lv1〜10は${esc(build.levelingStages[0].mainSkill)}で進めます。</p><p><b>先に知る弱点：</b>${esc(build.weaknesses[0])}</p></div><a class="button" href="${buildUrl(build)}?level=1#roadmap">Lv1〜10の育成を見る</a></article>`).join("");
+const starterCards = builds.filter((build) => build.leagueStarter).map((build) => `<article class="starter-card"><div><p class="build-meta">${esc(build.className)} / ${esc(build.ascendancy)}</p><h2>${esc(build.name)}</h2><p>${esc(build.audience)}</p><ul><li>主力：${esc(build.mainSkill)}</li><li>操作：${esc(build.difficulty)}</li><li>SSF：${esc(build.reviewedFacts?.ssfNote || (build.ssf === true ? "確認済み" : "未確認"))}</li><li>価格：固定相場を断定しません</li></ul><p><b>序盤の使いやすさ：</b>Lv1〜10は${esc(build.levelingStages[0].mainSkill)}で進めます。</p><p><b>先に知る弱点：</b>${esc(build.weaknesses[0])}</p></div><a class="button" href="${buildUrl(build)}?level=1#roadmap">Lv1〜10の育成を見る</a></article>`).join("");
 const starterChoices = `<section class="content-action choice-summary"><h2>迷ったらこの候補</h2><div class="purpose-grid">${[
   choiceCard("初心者", "witch-minion-infernalist", "ミニオンへ攻撃を任せやすく、回避へ集中できます。"),
   choiceCard("弓", "ranger-ice-shot-deadeye", "序盤構成とLv31の主力切替が明確です。"),
   choiceCard("近接・耐久", "warrior-shield-wall-smith", "盾を使い、耐久を意識して進めたい人向けです。"),
-  choiceCard("SSF", "witch-ed-contagion-lich", "SSF成立と必須ユニークなしを確認済みです。")
+  choiceCard("SSF", "witch-minion-infernalist", "原典がSSF向けの序盤からEndgameまでの育成を案内しています。")
 ].join("")}</div></section>`;
 const starterContent = `${starterChoices}<section class="content-action"><h2>選定条件</h2><p>掲載資料でリーグ開始から育成できることを確認できる候補です。高額ユニークへの依存やSSF適性が確認できない場合は、そのまま明記しています。</p></section><div class="starter-list">${starterCards}</div><aside class="next-box"><b>決められない場合</b><p>遠距離・近接・操作・重視項目から4問で候補を絞れます。</p><a class="button" href="/class-check/">4問診断を始める</a></aside><section class="related"><h2>別の基準で選ぶ</h2><div class="related-links"><a href="/best-builds/">目的別おすすめを見る</a><a href="/tier-list/">初心者向けTierを見る</a><a href="/leveling/">現在Lvから育成を見る</a></div></section>`;
 await mkdir(resolve(root, "league-starter"), { recursive: true });
@@ -124,7 +124,7 @@ const bestBuilds = [
   { label: "周回", id: "ranger-ice-shot-deadeye", reason: "遠距離から攻撃し、周回用アイスショットと単体用スナイプを使い分けます。" },
   { label: "ボス", id: "monk-whirling-assault", reason: "移動攻撃に加え、単体戦で使うFalling Thunderの手順を段階別に確認できます。" },
   { label: "初心者", id: "witch-minion-infernalist", reason: "攻撃をミニオンへ任せやすく、自分は敵の動きと回避へ集中しやすい構成です。" },
-  { label: "低装備依存・SSF", id: "witch-ed-contagion-lich", reason: "SSF成立と、必須ユニークを必要としないことを掲載資料で確認済みです。" },
+  { label: "SSF", id: "witch-minion-infernalist", reason: "原典にSSF向けの育成手順がキャンペーンからEndgameまで掲載されています。" },
   { label: "防御重視", id: "warrior-shield-wall-smith", reason: "盾を軸に進め、耐久を優先するスターター候補として掲載しています。" },
   { label: "操作少なめ", id: "druid-plant-oracle", reason: "Lv1から主力を継続しやすく、基本操作を増やしすぎずに育成できます。" }
 ];
@@ -141,7 +141,7 @@ const bestComparisonRows = builds.map((build) => {
   const mapping = purpose === "周回" || tags.includes("周回") ? "周回候補" : "未評価";
   const boss = purpose === "ボス" ? "ボス候補" : "未評価";
   const defence = purpose === "防御重視" || tags.includes("耐久重視") ? "防御候補" : "未評価";
-  const starter = build.ssf === true ? "SSF確認済み" : build.leagueStarter ? "スターター掲載・SSF未確認" : "未評価";
+  const starter = build.ssf === true ? "SSF確認済み" : build.reviewedFacts?.ssfNote || (build.leagueStarter ? "スターター掲載・SSF未確認" : "未評価");
   return `<tr><th scope="row"><a href="${buildUrl(build)}?level=1#now">${esc(build.name)}</a><small>${esc(build.ascendancy)}</small><a class="comparison-cta" href="${buildUrl(build)}?level=1#now">現在Lvから育成を見る</a></th><td data-label="職業">${esc(build.className)}</td><td data-label="総合用途">${esc(purpose ? `${purpose}候補` : "育成手順掲載")}</td><td data-label="マッピング">${mapping}</td><td data-label="ボス">${boss}</td><td data-label="初心者">初心者Tier ${esc(tierByBuildId.get(build.id) ?? "未評価")}</td><td data-label="低資産・SSF">${starter}</td><td data-label="防御">${defence}</td><td data-label="操作">${esc(build.difficulty)}</td></tr>`;
 }).join("");
 const bestComparison = `<section aria-labelledby="best-compare-title"><h2 id="best-compare-title">掲載ビルドの確認済み特徴を比較</h2><p>星や推測点数は使わず、現在の掲載資料にある用途・初心者Tier・SSF・操作条件だけを並べます。「未評価」は弱いという意味ではなく、同じ条件で比較できる資料がない項目です。</p><div class="comparison-scroll" tabindex="0" aria-label="掲載ビルド比較表。横にスクロールできます"><table class="comparison-table"><thead><tr><th>ビルド</th><th>職業</th><th>総合用途</th><th>マッピング</th><th>ボス</th><th>初心者</th><th>低資産・SSF</th><th>防御</th><th>操作</th></tr></thead><tbody>${bestComparisonRows}</tbody></table></div><p class="comparison-note"><b>高投資時の伸び代：</b>全ビルドを同じ装備予算・同じ条件で比較できる資料がないため、現在は順位を付けていません。</p></section>`;

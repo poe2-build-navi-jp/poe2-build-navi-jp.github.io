@@ -32,6 +32,9 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  const discovery=JSON.parse(fs.readFileSync('data/discovery.json','utf8'));
  for(const build of data){
   assert.deepEqual(validateRatings(build),[],`${build.id}: rating evidence`);
+  assert.equal(build.ssf===true,build.ratingEvidence.beginner.checks.ssfConfirmed,`${build.id}: SSF badge and rating evidence must agree`);
+  for(const tags of [discovery.buildTags?.[build.id]||[],discovery.featuredBuildTags?.[build.id]||[]])assert(!tags.includes('SSF')||build.ssf===true,`${build.id}: unverified SSF badge`);
+  if(build.ssf===true)assert.match(build.ratingEvidence.beginner.verifiedChecks.ssfConfirmed.source,/^https:\/\//);
   const detailDoc=new JSDOM(fs.readFileSync(`builds/${build.classSlug}/${build.slug}/index.html`,'utf8')).window.document;
   assert.equal(detailDoc.getElementById('fact-grid').parentElement.parentElement.className,'build-hero-grid',`${build.id}: fact grid wrapper must be balanced`);
   assert.equal(detailDoc.getElementById('level-card').parentElement.className,'build-hero-grid',`${build.id}: level card must remain beside build facts`);
@@ -67,6 +70,8 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.equal(detail.window.localStorage.getItem('poe2:navi:lastViewedStage'),'3');
  dd.getElementById('level-plus').click();assert.equal(dd.getElementById('level-input').value,'38');
  assert.equal(dd.querySelectorAll('.static-roadmap details').length,8);
+ assert.match(dd.getElementById('fact-grid').textContent,/掲載中の育成段階8\/8/);
+ assert.doesNotMatch(dd.getElementById('fact-grid').textContent,/確認済み段階/);
  console.log('PASS: Lv37 restores, three actions render, increment works, resume level/stage persists, 8 roadmap stages remain');
  const minion=new JSDOM(fs.readFileSync('builds/witch/minion-infernalist/index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/?level=37'});
  minion.window.fetch=async()=>({ok:true,json:async()=>data});minion.window.eval(fs.readFileSync('assets/detail.js','utf8'));
@@ -77,8 +82,12 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.match(minion.window.document.querySelector('[data-now-action]').textContent,/未到達ならスナイパーを継続/);
  assert.equal(guidance.querySelector('a').href,data.find(b=>b.id==='witch-minion-infernalist').sources[0].url);
  minion.window.document.getElementById('level-input').value='42';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('input'));
+ assert.equal(guidance.hidden,false);
+ assert.match(guidance.textContent,/When do I swap to Vaal Guards/);
+ assert.match(minion.window.document.querySelector('[data-now-action]').textContent,/Utzaal.*50 Spirit.*スナイパーを維持/);
+ minion.window.document.getElementById('level-input').value='70';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('input'));
  assert.equal(guidance.hidden,true);
- console.log('PASS: minion Lv37 shows precise guide section and link; unrelated stage hides it');
+ console.log('PASS: minion Lv37 and Lv42 show switch conditions and original guide sections; unrelated stage hides them');
  const shieldPage=new JSDOM(fs.readFileSync('builds/warrior/shield-wall-smith/index.html','utf8'));
  const shieldStages=[...shieldPage.window.document.querySelectorAll('.static-roadmap details')];
  assert.equal(shieldStages.length,8);

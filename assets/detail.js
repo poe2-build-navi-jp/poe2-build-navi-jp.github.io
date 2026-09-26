@@ -237,7 +237,7 @@ function renderBuild(builds) {
   const facts = byId("fact-grid");
   facts.replaceChildren();
   [
-    ["対応パッチ", build.version], ["育成手順の原典照合日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "不足箇所を各段階に表示" : "対応パッチを再確認中"], ["確認済み段階", `${build.levelingStages?.length || 0}/8`]
+    ["対応パッチ", build.version], ["育成手順の原典照合日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "不足箇所を各段階に表示" : "対応パッチを再確認中"], ["掲載中の育成段階", `${build.levelingStages?.length || 0}/8`]
   ].forEach(([label, value]) => facts.append(fact(label, value)));
   renderSources();
   renderProgress();

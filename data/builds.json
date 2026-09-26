@@ -20,12 +20,11 @@
     "difficulty": "中（Lv41で構成切替）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": true,
+    "ssf": null,
     "strengths": [
       "ワーリングアサルトで移動しながら攻撃でき、マップを進みやすい。",
       "フォーリングサンダーを組み合わせ、チャージを単体火力や広範囲攻撃へ変換できる。",
-      "Lv1からLv41までの育成用ルートが用意されている。",
-      "Maxrollのガイドで「ユニークアイテムを必要としない」と明記されており、SSFでも成立しやすい。武器は物理DPS400以上のクォータースタッフをドロップ/クラフトで揃えるのが主な条件。"
+      "Lv1からLv41までの育成用ルートが用意されている。"
     ],
     "weaknesses": [
       "ワーリングアサルトはLv41まで使えないため、キャンペーン途中でスキルを切り替える必要がある。",
@@ -182,7 +181,7 @@
         "name": "Maxroll: Whirling Assault Martial Artist Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
         "checkedAt": "2026-09-08",
-        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF成立範囲は再確認待ち）"
       }
     ],
     "audience": "近接で移動しながら戦い、Lv1からEndgameまで同じページで進めたい人",
@@ -499,12 +498,13 @@
     "difficulty": "Lv22で主力を切替",
     "reviewedFacts": {
       "gearDependence": "マップ序盤は装備を整えやすい",
+      "ssfNote": "原典作者は大部分でSSF可能と説明（完成形は未確認）",
       "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
-      "checkedAt": "2026-09-26"
+      "checkedAt": "2026-09-27"
     },
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": true,
+    "ssf": null,
     "strengths": [
       "最初のアセンダンシー取得後はキャンペーンで耐久を得やすい。",
       "段階別のAct・Maps・Endgame構成が公開されている。"
@@ -727,7 +727,7 @@
     }
   },
   {
-    "id": "sorceress-sand-fire",
+  "id": "sorceress-sand-fire",
     "slug": "sand-and-fire",
     "classSlug": "sorceress",
     "name": "砂と炎のヴァラシュタ",
@@ -738,7 +738,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "ケラリの幻惑 / ルザンの罠",
-    "beginnerRating": null,
+    "beginnerRating": 2,
     "damageRating": 5,
     "defenseRating": 5,
     "mappingRating": null,
@@ -922,12 +922,17 @@
         "checks": {
           "earlyMainSkill": false,
           "moderateOperation": false,
-          "ssfConfirmed": false,
+          "ssfConfirmed": true,
           "noDodgeRequirement": false
         },
-        "note": "加点できる条件の原典記述が不足しているため未評価です。",
-        "score": null,
-        "verifiedChecks": {}
+        "note": "キャンペーン向けとEndgame向けの原典がいずれもSSFと明記。操作量など別の条件は確認できないため加点していません。",
+        "score": 2,
+        "verifiedChecks": {
+          "ssfConfirmed": {
+            "basis": "キャンペーン向けSSFガイドと、(HC) SSF向けのEndgameまでのガイドを照合",
+            "source": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide"
+          }
+        }
       },
       "damage": {
         "score": 5,
@@ -1205,7 +1210,12 @@
     "difficulty": "Lv31で主力を切替",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": true,
+    "ssf": null,
+    "reviewedFacts": {
+      "ssfNote": "原典はMapping序盤の装備をSSFで入手可能と説明（完成形は未確認）",
+      "source": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+      "checkedAt": "2026-09-27"
+    },
     "strengths": [
       "Lv1〜30の育成構成と、Lv31以降のアイスショット構成が段階別に公開されている。",
       "周回用のアイスショットと単体用のスナイプを役割分担できる。",
@@ -1519,7 +1529,7 @@
         "gearPriority": "ミニオンレベル、Spirit、防御、耐性。",
         "replaceGear": "スペクターの必要Spiritを満たせない場合は、Spirit部位を優先して見直す。",
         "caution": "召喚対象、サポート、Spiritを揃えてから切り替え、途中構成を長く残さない。",
-        "transitionCondition": "Lv41到達。Vaal Guard Spectreと補助ミニオンの役割が安定している。",
+        "transitionCondition": "Lv41到達。Act 3の切替条件が未達ならスナイパーを維持し、達成後にVaal Guard Spectreへ移行。",
         "nowActions": [
           "Act 3の切替地点に到達したらVaal Guard Spectreを確保する（未到達ならスナイパーを継続）",
           "必要Spiritを確認する",
@@ -1534,18 +1544,24 @@
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Vaal Guard Spectreを主力にキャンペーンを進行",
-        "supports": "End of Act 4、End of Interludes構成を順に使用。",
-        "passivePriority": "End of Act 4からEnd of Interludes段階別ツリーへ進む。",
+        "mainSkill": "Act 3のUtzaalで召喚対象と必要Spiritが揃うまではスケルタルスナイパーを継続。切替後はVaal Guard Spectreを主力にキャンペーンを進行",
+        "supports": "切替前は原典のAct 3 - Before Spectre Swapを維持。切替後はAct 3 - Vaal Guard SpectresからEnd of Act 4、End of Interludesへ順に進む。",
+        "passivePriority": "切替前はAct 3 - Before Spectre Swap、切替後はAct 3 - Vaal Guard SpectresからEnd of Act 4、End of Interludesの段階別ツリーを使用。",
         "gearPriority": "ミニオンレベル、Spirit、ライフ・ES、ブロックに関係する装備、耐性。",
         "replaceGear": "死亡が多い場合はミニオン火力より自身の防具・盾・耐性を先に確認。",
         "caution": "ミニオンが狭い通路で遅れる場合は、自分の位置を変えて再誘導する。",
         "transitionCondition": "キャンペーンとInterlude終了。Lv67前後の次のスペクター切替を準備できる。",
         "nowActions": [
-          "Act 4→Interludesの順に進める",
+          "Act 3のUtzaalでVaal Guard（50 Spirit）を確保するまではスナイパーを維持し、切替後にAct 4→Interludesへ進む",
           "自身の防御と耐性を整える",
           "Lv67用スペクター切替を準備する"
-        ]
+        ],
+        "actionGuidance": {
+          "actionIndex": 0,
+          "where": "元ガイド「FAQ」→「When do I swap to Vaal Guards?」および「Act 3 - Before Spectre Swap」",
+          "what": "Utzaalへの到達と50 SpiritのVaal Guard。未到達ならSkeletal Sniperを継続",
+          "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+        }
       },
       {
         "label": "Mapping開始",
@@ -1620,6 +1636,10 @@
     ],
     "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者",
     "changeHistory": [
+      {
+        "date": "2026-09-27",
+        "summary": "Lv41以降もAct 3の切替地点・召喚対象・Spiritを満たすまではスナイパー構成を維持する条件を追加。"
+      },
       {
         "date": "2026-09-27",
         "summary": "Lv31〜40のVaal Guard Spectre切替はLvだけでは決まらず、Act 3の該当地点とSpirit・召喚対象の準備が必要と明記。"
@@ -1948,9 +1968,8 @@
     "difficulty": "低〜中（マナ管理あり）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": true,
+    "ssf": null,
     "strengths": [
-      "Maxrollのガイドで「ユニークアイテムを必要としない」と明記され、SSFキャンペーンの目安時間（約5時間）も示されており、SSFでの成立が確認できる。",
       "ContagionとEssence Drainを中心にLv1からEndgameまで段階別構成がある。",
       "通常敵の集団処理と安全な位置取りを両立しやすいと書面ガイドで説明されている。",
       "キャンペーン、T1〜T15、フルライフ、ローライフの各構成が分けて提示されている。"
@@ -2098,7 +2117,7 @@
         "name": "Maxroll: Essence Drain Lich Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
         "checkedAt": "2026-09-11",
-        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
+        "type": "海外Endgameガイド（過去のSSF記述は今回再確認できず、全行程の成立範囲は未確認）"
       }
     ],
     "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者",
@@ -2171,9 +2190,8 @@
     "difficulty": "中（複数グレネード）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": true,
+    "ssf": null,
     "strengths": [
-      "Maxrollのガイドで「SSF Fresh Start Leaguestart Viable」と明記されており、SSFでの成立が確認できる。必須のユニークアイテムもなく、クエスト報酬で自動的にもらえる無料ユニーク以外は不要。",
       "Lv1からEndgameまでグレネードを軸にする段階別の書面ガイドがある。",
       "Explosive、Flash、Gas、Oil、Cluster Grenadeを状況別に使える。",
       "ACT 1からUber Endgameまで構成が分けて提示されている。"
@@ -2321,7 +2339,7 @@
         "name": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
         "checkedAt": "2026-09-11",
-        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF可否を明記）"
+        "type": "海外Endgameガイド（過去のSSF記述は今回再確認できず、全行程の成立範囲は未確認）"
       }
     ],
     "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者",

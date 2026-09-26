@@ -59,7 +59,7 @@ await guideVisual("PoE2 初心者おすすめビルド", "遊び方から最初�
   {label:"遠距離",title:byId("ranger-ice-shot-deadeye").name,detail:"Lv31で主力へ切替",color:"#79b7dd"},
   {label:"耐久",title:byId("warrior-shield-wall-smith").name,detail:"盾を軸に育成",color:"#9fb6c8"},
   {label:"ミニオン",title:byId("witch-minion-infernalist").name,detail:"位置取りへ集中",color:"#b28adb"},
-  {label:"DoT・SSF",title:byId("witch-ed-contagion-lich").name,detail:"必須ユニークなし",color:"#85c7a3"}
+  {label:"継続ダメージ",title:byId("witch-ed-contagion-lich").name,detail:"序盤から段階別に育成",color:"#85c7a3"}
 ], "poe2-beginner-recommended-builds.svg");
 
 await guideVisual("PoE2 初心者向けビルドTier", "強さだけでなく育てやすさと操作条件で比較", discovery.tiers.S.map(({id}, index) => ({label:`S TIER ${index + 1}`,title:byId(id).name,detail:byId(id).audience,color:"#d4a95d"})), "poe2-beginner-build-tier.svg");

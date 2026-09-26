@@ -17,7 +17,7 @@ const statusLabels = {
   draft: "下書き"
 };
 
-const ssfLabel = (build) => build.ssf === true ? "確認済み" : build.ssf === false ? "非対応" : "未確認";
+const ssfLabel = (build) => build.reviewedFacts?.ssfNote || (build.ssf === true ? "確認済み" : build.ssf === false ? "非対応" : "未確認");
 const passiveSource = (build) => build.sources?.find((source) => /レベリング|build|guide|Mobalytics|Maxroll/i.test(`${source.name} ${source.type}`)) || build.sources?.[0];
 
 function roadmapHtml(build) {

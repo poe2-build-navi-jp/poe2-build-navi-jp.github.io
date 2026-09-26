@@ -12,23 +12,23 @@
     "monk-whirling-assault"
   ],
   "featuredBuildTags": {
-    "ranger-ice-shot-deadeye": ["初心者", "遠距離", "SSF"],
-    "warrior-shield-wall-smith": ["近接", "耐久重視", "SSF"],
+    "ranger-ice-shot-deadeye": ["初心者", "遠距離"],
+    "warrior-shield-wall-smith": ["近接", "耐久重視"],
     "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
     "druid-plant-oracle": ["操作少なめ", "Lv1から主力継続"],
-    "monk-whirling-assault": ["近接", "機動力", "SSF"]
+    "monk-whirling-assault": ["近接", "機動力"]
   },
   "buildTags": {
-    "monk-whirling-assault": ["近接", "機動力", "SSF"],
+    "monk-whirling-assault": ["近接", "機動力"],
     "mercenary-twister-gemling": ["遠距離", "武器切替", "操作多め"],
-    "warrior-shield-wall-smith": ["近接", "耐久重視", "SSF"],
+    "warrior-shield-wall-smith": ["近接", "耐久重視"],
     "sorceress-sand-fire": ["召喚", "魔法", "SSF"],
     "huntress-companion": ["相棒", "遠近両用", "構成切替"],
-    "ranger-ice-shot-deadeye": ["初心者", "遠距離", "SSF"],
+    "ranger-ice-shot-deadeye": ["初心者", "遠距離"],
     "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
     "druid-plant-oracle": ["初心者", "操作少なめ", "Lv1から主力"],
-    "witch-ed-contagion-lich": ["遠距離", "DoT", "SSF"],
-    "mercenary-grenade-gemling": ["遠距離", "グレネード", "SSF"]
+    "witch-ed-contagion-lich": ["遠距離", "DoT"],
+    "mercenary-grenade-gemling": ["遠距離", "グレネード"]
     ,"huntress-twister-spirit-walker": ["遠距離", "周回", "必須ユニークなし"]
   },
   "tiers": {
