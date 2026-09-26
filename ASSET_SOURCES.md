@@ -37,6 +37,7 @@
 | images/poe2/classes/poe2-{class}.svg | classes | 可 | 各職業ページ |
 | images/poe2/builds/poe2-{build}-leveling-roadmap.svg | builds.levelingStages | 可 | 主要5ビルド |
 | images/poe2/og/*.webp | 上記独自図解とページ役割 | 可 | 主要18ページのOGP |
+| images/poe2/og/poe2-{page}-og.webp | 各ページの`<title>`と`data/builds.json`の職業名 | 可 | 上記以外の全サイトマップページのOGP |
 
 ## 更新手順
 
@@ -57,3 +58,11 @@
 - 外部画像・ゲーム公式アート・新しいビルド評価は使用しない。提供元・制作：POE2ビルドナビ。改変可、外部素材クレジット不要。
 - 画像URLを維持し、SEO対象のデスクトップ画像は既存画像サイトマップに継続掲載。
 - SVGは内容を省略せず自動改行する。スマホ用画像は720px幅、本文30px（390px表示時は約16px）。
+
+## 2026-09-26：全ページのOG画像
+
+- `og:image` がなかったサイトマップ上の53ページに、ページごとの独自OG画像（1200×630、WebP）を追加。
+- 生成元：各ページの `<title>`（「｜」の前を見出し、後を補足）と、ビルドページは `data/builds.json` の職業・アセンダンシー名。
+- 生成処理：`tools/generate-og-images.mjs`（開発用依存 `playwright-core` とローカルのChromiumで描画し、WebPに変換）。
+- 文字フォントはIPA Pゴシック（IPAフォントライセンス）。外部画像・ゲーム公式アートは使用しない。提供元・制作：POE2ビルドナビ。改変可、外部素材クレジット不要。
+- `image-seo` ブロックを持つ主要18ページは従来どおり `tools/enhance-image-seo.mjs` の画像を使う。

@@ -51,7 +51,11 @@ axes the quoted source statement, URL and date). `beginnerRating` is always
 node tools/enhance-ratings.mjs
 node tools/enhance-build-ux.mjs
 node tools/generate-sitemap.mjs
+node tools/generate-og-images.mjs   # needs npm install + local Chromium
 node tools/inject-analytics.mjs
 node tools/sync-asset-versions.mjs
 npm test
 ```
+
+`generate-og-images.mjs` gives every sitemap page without an `image-seo` block its own
+Japanese OG image from the page `<title>`; run it after any title change or new page.
