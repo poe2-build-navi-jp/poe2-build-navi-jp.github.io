@@ -1,7 +1,7 @@
 import { access, readFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { resolve } from "node:path";
-import { validateRatings } from "../tools/build-ratings.mjs";
+import { validateRatings, AXES } from "../tools/build-ratings.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const baseUrl = "https://poe2-build-navi-jp.github.io";
@@ -229,6 +229,19 @@ for (const build of builds) {
   assert(ratingCriteria.includes(`href="/builds/${build.classSlug}/${build.slug}/#build-rating"`), `${build.id}: missing from rating criteria table`);
   const page = await read(`builds/${build.classSlug}/${build.slug}/index.html`);
   assert((page.match(/id="build-rating"/g) || []).length === 1 && page.includes('href="/rating-criteria/"'), `${build.id}: rating section missing`);
+  const ratedAxes = AXES.filter((axis) => build[axis.field] != null);
+  const reviewMatch = page.match(/<!-- review-schema:start --><script type="application\/ld\+json">([\s\S]*?)<\/script><!-- review-schema:end -->/);
+  if (ratedAxes.length >= 3) {
+    assert(reviewMatch, `${build.id}: review schema missing despite ${ratedAxes.length} rated axes`);
+    if (reviewMatch) {
+      const review = JSON.parse(reviewMatch[1].replaceAll("\\u003c", "<"));
+      const expectedAvg = Math.round((ratedAxes.reduce((sum, axis) => sum + build[axis.field], 0) / ratedAxes.length) * 10) / 10;
+      assert(review["@type"] === "Review" && review.itemReviewed?.url === `${baseUrl}/builds/${build.classSlug}/${build.slug}/`, `${build.id}: review schema itemReviewed mismatch`);
+      assert(review.reviewRating?.ratingValue === expectedAvg, `${build.id}: review schema ratingValue ${review.reviewRating?.ratingValue} != expected ${expectedAvg}`);
+    }
+  } else {
+    assert(!reviewMatch, `${build.id}: review schema present with only ${ratedAxes.length} rated axes (< 3)`);
+  }
 }
 const assetHashes = new Map();
 const staleAssets = new Map();

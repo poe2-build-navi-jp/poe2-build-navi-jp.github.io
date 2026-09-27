@@ -16,6 +16,26 @@ const errors=builds.flatMap(b=>validateRatings(b).map(e=>`${b.id}: ${e}`));
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 const checkedAt=builds.map(b=>b.ratingEvidence.checkedAt).sort().at(-1);
 
+// Review structured data: only once at least 3 of the 5 axes have a real score, so the
+// averaged ratingValue reflects a page that actually shows several rated axes, not one or
+// two. Uses a single Review (not AggregateRating) because this is one editorial assessment
+// across axes, not an aggregation of separate reviewers.
+const MIN_RATED_AXES=3;
+function reviewSchema(b){
+ const rated=AXES.filter(a=>b[a.field]!=null);
+ if(rated.length<MIN_RATED_AXES)return '';
+ const avg=Math.round((rated.reduce((sum,a)=>sum+b[a.field],0)/rated.length)*10)/10;
+ const schema=JSON.stringify({
+  "@context":"https://schema.org",
+  "@type":"Review",
+  itemReviewed:{"@type":"HowTo",name:`${b.name}のLv1〜Endgame育成ロードマップ`,url:`${base}${url(b)}`},
+  reviewRating:{"@type":"Rating",ratingValue:avg,bestRating:5,worstRating:1},
+  author:{"@type":"Organization",name:"POE2ビルドナビ",url:base},
+  datePublished:b.ratingEvidence.checkedAt
+ });
+ return `<!-- review-schema:start --><script type="application/ld+json">${schema.replaceAll('<','\\u003c')}</script><!-- review-schema:end -->`;
+}
+
 // Build detail pages: rating block before the FAQ, static source list synced with data.
 for(const b of builds){
  const path=`builds/${b.classSlug}/${b.slug}/index.html`;
@@ -24,6 +44,9 @@ for(const b of builds){
  html=html.replace('<section class="build-faq"',`${ratingSectionHtml(b)}<section class="build-faq"`);
  const sources=b.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>${esc(s.type)}・確認日 ${esc(s.checkedAt)}</span></li>`).join('');
  html=html.replace(/(<ul id="source-list" class="source-list">)[\s\S]*?(<\/ul>)/,`$1${sources}$2`);
+ html=html.replace(/<!-- review-schema:start -->[\s\S]*?<!-- review-schema:end -->/g,'');
+ const schemaTag=reviewSchema(b);
+ if(schemaTag)html=html.replace('</head>',`${schemaTag}</head>`);
  await save(path,html);
 }
 
