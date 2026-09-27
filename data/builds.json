@@ -978,8 +978,8 @@
     "mainSkill": "テイムビースト（Tame Beast）",
     "beginnerRating": null,
     "damageRating": null,
-    "defenseRating": null,
-    "mappingRating": null,
+    "defenseRating": 2,
+    "mappingRating": 2,
     "bossRating": null,
     "difficulty": "Act 3で大きく構成切替",
     "budget": "固定価格なし",
@@ -1167,14 +1167,22 @@
         "note": "確認した資料に、火力の長所・短所としての記述がない。"
       },
       "defense": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+        "score": 2,
+        "basis": "短所",
+        "quote": "Starts off a little weak defensively, so requires more defensive positioning",
+        "source": "https://www.poe-vault.com/poe2/huntress/spirit-walker/tamed-boss-beast-build-guide",
+        "sourceName": "PoE Vault: Spiritwalker Boss Companion Endgame Build",
+        "checkedAt": "2026-09-27",
+        "note": "Weaknesses欄に耐久面の弱さが明記されている（レベリング用資料では相棒が被弾を肩代わりする点が長所とされており、資料間で評価が割れるため低い方を採用）。"
       },
       "mapping": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+        "score": 2,
+        "basis": "短所",
+        "quote": "Will be a bit slower than the Twister playstyle that you start with",
+        "source": "https://www.poe-vault.com/poe2/huntress/spirit-walker/companion-leveling-build",
+        "sourceName": "PoE Vault: Spiritwalker Companion Leveling Build",
+        "checkedAt": "2026-09-27",
+        "note": "Weaknesses欄に、序盤のツイスター運用より周回が遅くなるとの記述がある。"
       },
       "boss": {
         "score": null,
@@ -2414,15 +2422,15 @@
     "updatedAt": "2026-09-24",
     "status": "verified",
     "mainSkill": "ツイスター（Twister）",
-    "beginnerRating": 2,
-    "damageRating": null,
-    "defenseRating": null,
+    "beginnerRating": 3,
+    "damageRating": 4,
+    "defenseRating": 2,
     "mappingRating": 5,
-    "bossRating": null,
+    "bossRating": 4,
     "difficulty": "中（武器セット2種と連携操作）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": null,
+    "ssf": true,
     "strengths": [
       "必須ユニークなしで育成を始められると掲載資料で案内されている。",
       "Whirling Slashで作った旋風をTwisterで飛ばし、範囲攻撃へつなげられる。",
@@ -2572,6 +2580,12 @@
         "url": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
         "checkedAt": "2026-09-24",
         "type": "海外書面ガイド（Early Game・Campaign・Endgame段階）"
+      },
+      {
+        "name": "Maxroll: Spirit Walker Twisters Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "checkedAt": "2026-09-27",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新。Pros/Cons形式でSSF可否を明記）"
       }
     ],
     "audience": "必須ユニークなしで始め、ツイスターによる範囲周回を段階的に育てたい人",
@@ -2581,27 +2595,39 @@
         "checks": {
           "earlyMainSkill": true,
           "moderateOperation": false,
-          "ssfConfirmed": false,
+          "ssfConfirmed": true,
           "noDodgeRequirement": false
         },
         "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
-        "score": 2,
+        "score": 3,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「PounceとShredを中心に進め、入手後はWhirling SlashとTwisterの準備を始める。」を参照",
             "source": "https://note.com/fresh_okapi3816/n/nbe96101eda53"
+          },
+          "ssfConfirmed": {
+            "basis": "Maxrollのガイドに「This build does not require any uniques to function, making it a great league starter」と明記",
+            "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters"
           }
         }
       },
       "damage": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+        "score": 4,
+        "basis": "長所",
+        "quote": "Big Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "sourceName": "Maxroll: Spirit Walker Twisters Build Guide",
+        "checkedAt": "2026-09-27",
+        "note": "Pros欄に単体火力の高さが挙げられている（同じ記述はボスの根拠にも使用）。"
       },
       "defense": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+        "score": 2,
+        "basis": "短所",
+        "quote": "Can be vulnerable due to long setup time for damage",
+        "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "sourceName": "Maxroll: Spirit Walker Twisters Build Guide",
+        "checkedAt": "2026-09-27",
+        "note": "Cons欄に、火力を出すまでの準備時間が長く隙が生まれるとの記述がある。"
       },
       "mapping": {
         "score": 5,
@@ -2613,9 +2639,13 @@
         "note": "マップ周回の速さが強調されている（資料は0.5時点・2026-07-17公開）。"
       },
       "boss": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+        "score": 4,
+        "basis": "長所",
+        "quote": "Big Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "sourceName": "Maxroll: Spirit Walker Twisters Build Guide",
+        "checkedAt": "2026-09-27",
+        "note": "Pros欄に単体火力の高さが挙げられている（同じ記述は火力の根拠にも使用）。"
       }
     }
   }
