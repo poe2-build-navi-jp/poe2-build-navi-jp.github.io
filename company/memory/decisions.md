@@ -124,3 +124,29 @@
 - 判断: リリース当日に未確認ビルドをnoindexにしたり削除したりせず、未確認と明示して残す
   （検索流入を保ちつつ、断定しない方針を守る）。
 - 手順は `tools/RELEASE_1_0.md`、残作業は `node tools/release-readiness.mjs` で確認できる。
+
+## 2026-09-27: サイト改善4件を実施（確認済み・ユーザー依頼で実施）
+
+- 背景: ユーザーから改善点を聞かれ、ライブサイトとリポジトリ（49コミット分の外部変更を
+  含む）を確認したうえで提案し、承認された4件を実施した。
+- **評価の空欄埋め**: huntress/companion（PoE Vaultの未使用ソースからWebFetchで直接検証、
+  defense=2/mapping=2を追加）、huntress/twister-spirit-walker（Maxrollの
+  Spirit Walker Twistersガイドを3件目の情報源として追加、damage=4/defense=2/boss=4を
+  追加、`ssf: true`に更新）。damage・boss等、根拠のない項目は引き続き未評価のまま
+  （推測しない方針を継続）。
+- **Review構造化データ**: `tools/enhance-ratings.mjs`に実装。5項目中3項目以上に
+  実際のスコアがあるビルドだけ、平均値で`schema.org/Review`を出力する
+  （`AggregateRating`ではなく単一`Review`を採用：これは1つの編集部評価を5軸に
+  分解したものであり、複数レビュアーの集計ではないため、`ratingCount`等の意味が
+  合わない）。itemReviewedは`HowTo`型（レビュースニペット対応型）。
+  **注記（Googleポリシーへの配慮）**: Googleのレビュースニペット構造化データガイドラインは
+  「自社が販売・運営するもの自体への自己レビュー」を禁止している。ここでの
+  レビュー対象はサイト自身ではなく「PoE2のビルド攻略という第三者ゲームの戦略」であり、
+  レシピサイトが自作レシピを評価するのと同様の構成と判断して実装した。ただし
+  Google側の解釈次第でリッチリザルトが認められない可能性は残る。表示状況を
+  Search Consoleで定期確認することが望ましい。
+- **preconnect/dns-prefetch追加**: `tools/inject-analytics.mjs`で全ページに
+  google tag manager・google analytics・adsbygoogleへのpreconnectを追加。軽微な
+  表示速度改善。
+- 検証: `node scripts/test-site.mjs`にReview構造化データの整合性チェック
+  （3軸以上→schema必須、平均値一致）を追加。`npm test`（4スイート）全PASS確認済み。
