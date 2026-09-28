@@ -10,7 +10,6 @@ function clampLevel(value) {
 
 function updateLink() {
   const level = clampLevel(levelInput.value);
-  levelInput.value = String(level);
   cta.href = `${buildSelect.value}?level=${level}#now`;
 }
 
@@ -23,6 +22,10 @@ function updateBuilds() {
 classSelect.addEventListener("change", updateBuilds);
 buildSelect.addEventListener("change", updateLink);
 levelInput.addEventListener("input", updateLink);
+levelInput.addEventListener("change", () => {
+  levelInput.value = String(clampLevel(levelInput.value));
+  updateLink();
+});
 document.querySelectorAll("[data-level]").forEach((button) => button.addEventListener("click", () => {
   levelInput.value = button.dataset.level;
   updateLink();

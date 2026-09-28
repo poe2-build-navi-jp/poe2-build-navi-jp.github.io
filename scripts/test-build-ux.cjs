@@ -116,6 +116,7 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  win.eval(fs.readFileSync('assets/leveling.js','utf8'));
  const cls=doc.querySelector('#leveling-class'),lvl=doc.querySelector('#leveling-level'),cta=doc.querySelector('#leveling-cta');
  cls.value='ranger';cls.dispatchEvent(new win.Event('change'));
+ lvl.value='';lvl.dispatchEvent(new win.Event('input'));assert.equal(lvl.value,'');
  lvl.value='37';lvl.dispatchEvent(new win.Event('input'));
  assert.equal(cta.pathname,'/builds/ranger/ice-shot-deadeye/');assert.equal(cta.search,'?level=37');assert.equal(cta.hash,'#now');
  cls.value='witch';cls.dispatchEvent(new win.Event('change'));
