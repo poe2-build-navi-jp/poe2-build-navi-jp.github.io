@@ -21,7 +21,7 @@ function diagram(title,subtitle,steps,mobile,patch){
  const height=y+78;
  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${height}" viewBox="0 0 ${w} ${height}" role="img" aria-labelledby="title desc"><title id="title">${esc(title)}</title><desc id="desc">${esc(subtitle)}。${steps.map((s,i)=>esc(`${i+1} ${s.label}：${s.action}`)).join('。')}</desc><g font-family="sans-serif"><rect width="${w}" height="${height}" rx="24" fill="#0d1724"/><path d="M${pad} 36h70" stroke="#e6b45f" stroke-width="5"/>${text(['POE2 BUILD NAVI'],pad+86,43,19,'#e6b45f',700)}${text(titleLines,pad,104,38,'#ffffff',700)}${text(wrap(subtitle,mobile?24:45),pad,104+titleLines.length*54,25,'#bdcbd9')}${body}${text([`Patch ${patch} · 掲載データに基づく独自図解`],pad,height-39,21,'#a7b9cc')}</g></svg>`;
 }
-const ids=['ranger-ice-shot-deadeye','witch-minion-infernalist','warrior-shield-wall-smith','monk-whirling-assault','witch-ed-contagion-lich'];
+const {ROADMAP_BUILD_IDS:ids}=await import('./roadmap-builds.mjs');
 for(const b of builds.filter(b=>ids.includes(b.id))){
  const steps=b.levelingStages.map(s=>({label:s.label,action:s.nowActions[0]}));
  for(const mobile of [false,true])await writeFile(resolve(root,`images/poe2/builds/poe2-${b.slug}-leveling-roadmap${mobile?'-mobile':''}.svg`),diagram(b.name,'育成順序と各段階で最初に確認すること',steps,mobile,b.version));
@@ -29,4 +29,4 @@ for(const b of builds.filter(b=>ids.includes(b.id))){
 const site=JSON.parse(await readFile(resolve(root,'data/site.json'),'utf8'));
 const steps=[{label:'職業・ビルド',action:'使っている職業とビルドを選ぶ'},{label:'現在Lv',action:'例：Lv37と入力する'},{label:'対応する段階',action:'Lv31〜40の育成手順を開く'},{label:'今やること3つ',action:'スキル・装備・パッシブの優先行動を確認する'}];
 for(const mobile of [false,true])await writeFile(resolve(root,`images/poe2/guides/poe2-leveling-guide${mobile?'-mobile':''}.svg`),diagram('現在Lvから育成を再開','Lv37を入力した場合の案内例',steps,mobile,site.siteVersion));
-console.log('Improved 6 practical diagrams, with 6 separate mobile compositions.');
+console.log(`Improved ${ids.length+1} practical diagrams, with ${ids.length+1} separate mobile compositions.`);

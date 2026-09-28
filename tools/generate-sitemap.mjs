@@ -12,7 +12,8 @@ const buildLastmod=new Map(indexableBuilds.map(build=>[
 ]));
 const urls=[...new Set(["/","/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/guides/beginner-build/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])];
 const changedPaths=new Set(["/","/leveling/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`)]);
-const priorityBuildIds=new Set(["ranger-ice-shot-deadeye","witch-minion-infernalist","warrior-shield-wall-smith","monk-whirling-assault","witch-ed-contagion-lich"]);
+const {ROADMAP_BUILD_IDS}=await import("./roadmap-builds.mjs");
+const priorityBuildIds=new Set(ROADMAP_BUILD_IDS);
 const imageMap=new Map([
   ["/",["/images/poe2/guides/poe2-beginner-recommended-builds.svg","PoE2初心者向けおすすめビルド比較"]],
   ["/tier-list/",["/images/poe2/guides/poe2-beginner-build-tier.svg","PoE2初心者向けビルドTier比較"]],

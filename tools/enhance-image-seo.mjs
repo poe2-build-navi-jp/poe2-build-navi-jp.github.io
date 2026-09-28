@@ -5,7 +5,8 @@ const root = resolve(import.meta.dirname, "..");
 const base = "https://poe2-build-navi-jp.github.io";
 const builds = JSON.parse(await readFile(resolve(root, "data/builds.json"), "utf8"));
 const classes = JSON.parse(await readFile(resolve(root, "data/classes.json"), "utf8"));
-const priority = new Set(["ranger-ice-shot-deadeye","witch-minion-infernalist","warrior-shield-wall-smith","monk-whirling-assault","witch-ed-contagion-lich"]);
+const { ROADMAP_BUILD_IDS, ROADMAP_OG_BUILD_IDS } = await import("./roadmap-builds.mjs");
+const roadmapBuilds = new Set(ROADMAP_BUILD_IDS);
 const esc = (value) => String(value).replaceAll("&", "&amp;").replaceAll('"', "&quot;");
 
 const pages = [
@@ -16,7 +17,9 @@ const pages = [
   {file:"classes/index.html",path:"/classes/",image:"/images/poe2/guides/poe2-recommended-classes.svg",og:"/images/poe2/og/poe2-classes-og.webp",alt:"PoE2初心者向けおすすめクラスと職業の選び方",caption:"遠距離・召喚・近接・耐久から選ぶおすすめクラス早見図",article:true}
 ];
 for (const item of classes) pages.push({file:`classes/${item.slug}/index.html`,path:`/classes/${item.slug}/`,image:`/images/poe2/classes/poe2-${item.slug}.svg`,og:`/images/poe2/og/poe2-${item.slug}-og.webp`,alt:`Path of Exile 2 ${item.name}`,caption:`${item.name}の戦い方と掲載ビルドを確認するための独自クラス図解`,classHero:true});
-for (const build of builds.filter((item)=>priority.has(item.id))) pages.push({file:`builds/${build.classSlug}/${build.slug}/index.html`,path:`/builds/${build.classSlug}/${build.slug}/`,image:`/images/poe2/builds/poe2-${build.slug}-leveling-roadmap.svg`,og:`/images/poe2/og/poe2-${build.slug}-og.webp`,alt:`PoE2 ${build.name}のLv1からEndgameまでの育成ロードマップ`,caption:`${build.name}のLv1〜Endgame育成ロードマップ`,build:true,height:840});
+// Builds outside ROADMAP_OG_BUILD_IDS keep the Japanese OG image from generate-og-images.mjs,
+// so they only get the figure and image structured data here (schemaOnly).
+for (const build of builds.filter((item)=>roadmapBuilds.has(item.id))) pages.push({file:`builds/${build.classSlug}/${build.slug}/index.html`,path:`/builds/${build.classSlug}/${build.slug}/`,image:`/images/poe2/builds/poe2-${build.slug}-leveling-roadmap.svg`,og:`/images/poe2/og/poe2-${build.slug}-og.webp`,alt:`PoE2 ${build.name}のLv1からEndgameまでの育成ロードマップ`,caption:`${build.name}のLv1〜Endgame育成ロードマップ`,build:true,height:840,schemaOnly:!ROADMAP_OG_BUILD_IDS.includes(build.id)});
 
 // Read actual dimensions; mobile compositions keep text readable without horizontal scrolling.
 for (const page of pages) {
@@ -36,13 +39,16 @@ const figure = (page) => `<!-- image-visual:start --><figure class="seo-visual">
 for (const page of pages) {
   const location = resolve(root,page.file);
   let html = await readFile(location,"utf8");
-  html = html.replace(/<!-- image-visual:start -->[\s\S]*?<!-- image-visual:end -->/g,"").replace(/<!-- image-seo:start -->[\s\S]*?<!-- image-seo:end -->/g,"");
-  html = html.replace(/<meta name="twitter:card" content="[^"]*">/g,"").replace(/<meta name="robots" content="index,follow">/, '<meta name="robots" content="index,follow,max-image-preview:large">');
+  html = html.replace(/<!-- image-visual:start -->[\s\S]*?<!-- image-visual:end -->/g,"").replace(/<!-- image-seo:start -->[\s\S]*?<!-- image-seo:end -->/g,"").replace(/<!-- image-schema:start -->[\s\S]*?<!-- image-schema:end -->/g,"");
+  if (!page.schemaOnly) html = html.replace(/<meta name="twitter:card" content="[^"]*">/g,"");
+  html = html.replace(/<meta name="robots" content="index,follow">/, '<meta name="robots" content="index,follow,max-image-preview:large">');
   html = html.replace(/\n[ \t]+\n/g,"\n");
   const absolute = `${base}${page.image}`;
   const absoluteOg = `${base}${page.og}`;
   const schema = JSON.stringify({"@context":"https://schema.org","@type":"WebPage","url":`${base}${page.path}`,"image":[absolute],"primaryImageOfPage":{"@type":"ImageObject","contentUrl":absolute,"caption":page.caption}}).replaceAll("<","\\u003c");
-  const meta = `<!-- image-seo:start --><meta property="og:image" content="${absoluteOg}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(page.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${absoluteOg}"><script type="application/ld+json">${schema}</script><!-- image-seo:end -->`;
+  const meta = page.schemaOnly
+    ? `<!-- image-schema:start --><script type="application/ld+json">${schema}</script><!-- image-schema:end -->`
+    : `<!-- image-seo:start --><meta property="og:image" content="${absoluteOg}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(page.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${absoluteOg}"><script type="application/ld+json">${schema}</script><!-- image-seo:end -->`;
   html = html.replace('</head>',`${meta}</head>`);
   if (page.boundary && html.includes(page.boundary)) html = html.replace(page.boundary,`</section>${figure(page)}<section id="choose-class"`);
   else if (page.classHero) html = html.replace(/(<section class="class-page-hero"[\s\S]*?<div class="status-note">[\s\S]*?<\/div>)(<\/section>)/,`$1${figure(page)}$2`);

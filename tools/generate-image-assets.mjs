@@ -100,8 +100,8 @@ for (const item of classes) {
   renderOg(`poe2-${item.slug}-og.webp`, `POE2 ${item.slug.toUpperCase()}`, "Builds and leveling guide");
 }
 
-const priorityBuildIds = ["ranger-ice-shot-deadeye","witch-minion-infernalist","warrior-shield-wall-smith","monk-whirling-assault","witch-ed-contagion-lich"];
-for (const id of priorityBuildIds) {
+const { ROADMAP_BUILD_IDS, ROADMAP_OG_BUILD_IDS } = await import("./roadmap-builds.mjs");
+for (const id of ROADMAP_BUILD_IDS) {
   const build = byId(id);
   const rows = build.levelingStages.map((stage,index) => {
     const col = index % 2, row = Math.floor(index / 2), x = 64 + col * 556, y = 202 + row * 142;
@@ -109,7 +109,7 @@ for (const id of priorityBuildIds) {
   }).join("");
   const body = header("BUILD ROADMAP", `PoE2 ${build.name}`, "Lv1 → Campaign → Mapping → Endgame", 840) + rows;
   await writeFile(resolve(out, "builds", `poe2-${build.slug}-leveling-roadmap.svg`), svg(body, `PoE2 ${build.name}の育成ロードマップ`, 840));
-  renderOg(`poe2-${build.slug}-og.webp`, build.slug.replaceAll("-", " ").toUpperCase(), "Level 1 to Endgame roadmap");
+  if (ROADMAP_OG_BUILD_IDS.includes(id)) renderOg(`poe2-${build.slug}-og.webp`, build.slug.replaceAll("-", " ").toUpperCase(), "Level 1 to Endgame roadmap");
 }
 
 console.log("Generated 18 original SVG image assets from verified site data.");

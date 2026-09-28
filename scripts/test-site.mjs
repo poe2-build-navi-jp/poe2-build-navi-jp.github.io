@@ -116,7 +116,9 @@ assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(!/Disallow:\s*\/images/i.test(robots), "robots must not block image assets");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'), "image sitemap namespace missing");
-assert((sitemap.match(/<image:image>/g) || []).length === 18, "image sitemap must contain 18 priority images");
+// 5 guide/hub images + 8 class images + one roadmap per listed build.
+const expectedSitemapImages = 13 + builds.filter((build) => build.status === "verified").length;
+assert((sitemap.match(/<image:image>/g) || []).length === expectedSitemapImages, `image sitemap must contain ${expectedSitemapImages} images`);
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
 assert(/^G-[A-Z0-9]+$/.test(site.googleAnalyticsMeasurementId), "Google Analytics measurement ID is invalid");
@@ -208,6 +210,25 @@ for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2
 }
 assert(gearCheck.includes('id="gear-example-title"'), "gear check verified static example missing");
 assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concern=damage"), "gear check sample context link missing");
+// Every listed build has a leveling roadmap diagram (desktop + mobile) shown on its page;
+// only the original five use the English roadmap OG image, the rest keep the Japanese one.
+{
+  const { ROADMAP_BUILD_IDS, ROADMAP_OG_BUILD_IDS } = await import("../tools/roadmap-builds.mjs");
+  const sitemapXml = await read("sitemap.xml");
+  for (const build of builds.filter((item) => item.status === "verified")) {
+    assert(ROADMAP_BUILD_IDS.includes(build.id), `${build.id}: roadmap diagram missing from the build list`);
+    const image = `/images/poe2/builds/poe2-${build.slug}-leveling-roadmap`;
+    for (const suffix of ["", "-mobile"]) {
+      const svg = await read(`${image.slice(1)}${suffix}.svg`).catch(() => "");
+      assert(svg.includes("<svg") && build.levelingStages.every((stage) => svg.includes(stage.label.replaceAll("&", "&amp;"))), `${build.id}: roadmap${suffix} SVG must list every leveling stage`);
+    }
+    const page = await read(`builds/${build.classSlug}/${build.slug}/index.html`);
+    assert(page.includes(`src="${image}.svg"`) && page.includes(`srcset="${image}-mobile.svg"`), `${build.id}: roadmap figure missing on the build page`);
+    assert(sitemapXml.includes(`${image}.svg</image:loc>`), `${build.id}: roadmap image missing from the sitemap`);
+    const englishOg = ROADMAP_OG_BUILD_IDS.includes(build.id);
+    assert(englishOg ? page.includes("<!-- image-seo:start -->") : page.includes("<!-- image-schema:start -->") && page.includes("<!-- og-image:start -->") && !page.includes("<!-- image-seo:start -->"), `${build.id}: wrong OG image handling for its roadmap`);
+  }
+}
 const buildStatusPage = await read("poe2-1-0/build-status/index.html");
 assert((buildStatusPage.match(/作成時の版：/g) || []).length === builds.filter((build) => build.status === "verified").length, "1.0 build status page must list every verified build");
 for (const build of builds.filter((item) => item.status === "verified")) {
