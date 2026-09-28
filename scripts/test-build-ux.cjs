@@ -108,3 +108,22 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.equal(await home({'poe2:navi:selected-build':'ranger-ice-shot-deadeye','poe2:navi:quick-level':'999'}),'https://poe2-build-navi-jp.github.io/leveling/');
  console.log('PASS: no history, valid Lv37 one-click resume, removed build and invalid level safely fall back');
 })().catch(error=>{console.error(error);process.exitCode=1;});
+
+// The leveling hub must send the selected build and level to its actionable stage.
+{
+ const page=new JSDOM(fs.readFileSync('leveling/index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/leveling/'});
+ const win=page.window,doc=win.document;
+ win.eval(fs.readFileSync('assets/leveling.js','utf8'));
+ const cls=doc.querySelector('#leveling-class'),lvl=doc.querySelector('#leveling-level'),cta=doc.querySelector('#leveling-cta');
+ cls.value='ranger';cls.dispatchEvent(new win.Event('change'));
+ lvl.value='37';lvl.dispatchEvent(new win.Event('input'));
+ assert.equal(cta.pathname,'/builds/ranger/ice-shot-deadeye/');assert.equal(cta.search,'?level=37');assert.equal(cta.hash,'#now');
+ cls.value='witch';cls.dispatchEvent(new win.Event('change'));
+ assert([...doc.querySelector('#leveling-build').options].every(o=>o.dataset.class==='witch'));
+ const stageRanges=fs.readFileSync('assets/detail.js','utf8').matchAll(/\{ min: (\d+), max: (\d+), label:/g);
+ const buttons=[...doc.querySelectorAll('[data-level]')];
+ assert.deepEqual(buttons.map(b=>Number(b.dataset.level)),[...stageRanges].map(m=>Number(m[1])));
+ buttons.at(-1).click();assert.equal(cta.search,'?level=91');assert.equal(doc.activeElement,cta);
+ lvl.value='999';lvl.dispatchEvent(new win.Event('input'));assert.equal(cta.search,'?level=100');
+ console.log('PASS: leveling class/build selection, Lv37 target, all eight stage boundaries, CTA focus and level limit');
+}
