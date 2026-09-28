@@ -210,6 +210,11 @@ assert(gearCheck.includes('id="gear-example-title"'), "gear check verified stati
 assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concern=damage"), "gear check sample context link missing");
 const buildStatusPage = await read("poe2-1-0/build-status/index.html");
 assert((buildStatusPage.match(/作成時の版：/g) || []).length === builds.filter((build) => build.status === "verified").length, "1.0 build status page must list every verified build");
+for (const build of builds.filter((item) => item.status === "verified")) {
+  const page = await read(`builds/${build.classSlug}/${build.slug}/index.html`);
+  const profile = page.match(/<section class="sources build-profile"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert((profile.match(/<li>/g) || []).length === build.strengths.length + build.weaknesses.length + build.gearPriorities.length, `${build.id}: strengths, weaknesses and gear priorities must all be shown on the build page`);
+}
 const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
 assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");

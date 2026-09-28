@@ -727,7 +727,7 @@
     }
   },
   {
-  "id": "sorceress-sand-fire",
+    "id": "sorceress-sand-fire",
     "slug": "sand-and-fire",
     "classSlug": "sorceress",
     "name": "砂と炎のヴァラシュタ",
@@ -976,7 +976,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "テイムビースト（Tame Beast）",
-    "beginnerRating": null,
+    "beginnerRating": 3,
     "damageRating": null,
     "defenseRating": 2,
     "mappingRating": 2,
@@ -986,18 +986,23 @@
     "leagueStarter": true,
     "ssf": null,
     "reviewedFacts": {
-      "ssfNote": "序盤〜Early EndgameのSSFガイドあり（掲載Endgame構成は未確認）",
+      "ssfNote": "序盤〜Early EndgameのSSFガイドあり。Maxroll（0.5.5）はユニーク不要と明記。Endgame構成のSSF成立は未確認",
       "source": "https://mobalytics.gg/poe-2/builds/companion-huntress-league-starter",
       "checkedAt": "2026-09-26"
     },
     "strengths": [
       "固有ビーストを主力にする明確なEndgame方針がある。",
       "Act 1〜3の育成ルートと相棒型への切替条件が説明されている。",
-      "主力のコンパニオン（テイムしたビースト）はトレード不要のドロップ/捕獲要素。Maxrollのガイドでもこのビルドはユニークアイテムを必要としないと明記されており、SSF環境でも比較的成立しやすいと考えられる（ただし『SSF対応』と明言されているわけではなく、マーケットプレイスでビーストの強さを事前確認する機能はSSFで使用不可という注記がある）。"
+      "操作が簡単：Maxroll（0.5.5）は「ミニオンに任せて見ていられる、とてもシンプルな操作」と紹介している。",
+      "相棒が敵の注意を引き攻撃を受け止めるため、自分は位置取りと安全確保に集中できる（PoE Vault）。",
+      "Maxroll（0.5.5）はユニークアイテムなしで成立すると明記している。ただし「SSF対応」とは明言しておらず、マップでビーストの能力を確認するためにMarketplaceのホットキーで一時停止する方法はSSFでは使えないと注記している。"
     ],
     "weaknesses": [
-      "テイムビーストはTier 7ジェムまで使えず、相棒型への切替はAct 3・2回目の試練後が推奨されている。",
-      "ツイスター型から相棒型への振り直し用ゴールドを残す必要がある。"
+      "テイムビーストはTier 7ジェムのため序盤は使えず、相棒型への切替はAct 3・2回目の試練後が推奨されている。",
+      "ツイスター型から相棒型への振り直し用ゴールドを残す必要がある。",
+      "切替後は序盤のツイスター運用より周回が遅くなる（PoE Vault）。",
+      "Endgame版は序盤の耐久が低めで、立ち位置に気を配る必要がある（PoE Vault）。",
+      "最適なボス相棒（良いModを持つ個体）を探す作業は周回が必要になる。ただし最大限まで詰める場合の話とされている（PoE Vault）。"
     ],
     "levelingStages": [
       {
@@ -1122,9 +1127,14 @@
       }
     ],
     "gearPriorities": [
-      "育成前半：槍・手袋・指輪の追加ダメージ",
-      "切替後：相棒ダメージとミニオンスキルレベル",
-      "防御：ライフ、回避/ディフレクション、耐性"
+      "育成前半（Act 3の切替まで）の武器：槍の物理ダメージ増加・追加ダメージ・命中・クリティカル。手袋・指輪は追加ダメージ（PoE Vault）。",
+      "切替後の武器：セプター＋盾。セプターは「+ミニオンスキルレベル」「周囲の味方のダメージ増加（Allies in your Presence deal increased Damage）」を優先（Maxroll 0.5.5）。",
+      "兜・アミュレット：+ミニオンスキルレベル。兜とセプターはAct 2から探しておく（PoE Vault）。",
+      "盾・胴・手袋・ブーツ：最大ライフと耐性。PoE VaultのEndgame版は回避ベースで、手袋・ブーツに「回避の一部をディフレクションとして得る」を狙う。",
+      "ブーツ：移動速度。",
+      "マップ開始時：元素耐性75%を確保（混沌耐性はあれば良い）。装備を替えるときも耐性上限と必要能力値を割らない（Maxroll・PoE Vault）。",
+      "Endgameのメインハンド：アセンダンシー「The Catha's Balance」でメインハンド武器のダメージが相棒に加わるため、ユニーク「Tyranny's Grip」（耐久寄りならTrenchtimbre）をVerisium Anvilで強化して使う。ユニークなしでも成立する（Maxroll 0.5.5）。",
+      "指輪・ベルト：Breachクラフトのミニオン系Modも有効だが、先に必要能力値と耐性を満たす（PoE Vault）。"
     ],
     "sources": [
       {
@@ -1142,29 +1152,50 @@
       {
         "name": "Maxroll: Companion Spirit Walker Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/companion-spirit-walker-build-guide",
-        "checkedAt": "2026-09-08",
-        "type": "海外Endgameガイド（対応パッチ0.5.4、2026年6月26日更新）"
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月17日更新）"
+      },
+      {
+        "name": "PoE Vault: Spiritwalker Companion Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/huntress/spirit-walker/companion-leveling-build",
+        "checkedAt": "2026-09-28",
+        "type": "海外レベリングガイド（0.5対応、2026年5月30日更新）"
+      },
+      {
+        "name": "PoE Vault: Spiritwalker Boss Companion Endgame Build",
+        "url": "https://www.poe-vault.com/poe2/huntress/spirit-walker/tamed-boss-beast-build-guide",
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（0.5対応）"
       }
     ],
     "status": "verified",
     "audience": "相棒を主力にし、育成途中の大きな構成変更も楽しめる人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": false,
-          "moderateOperation": false,
+          "moderateOperation": true,
           "ssfConfirmed": false,
-          "noDodgeRequirement": false
+          "noDodgeRequirement": true
         },
-        "note": "加点できる条件の原典記述が不足しているため未評価です。",
-        "score": null,
-        "verifiedChecks": {}
+        "note": "加点した条件だけを原典と結び付けています。主力のテイムビーストはTier 7ジェムのため序盤からは使えず、SSFはEndgame構成まで確認できていないため加点しません。",
+        "score": 3,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "Maxroll（0.5.5、2026年9月17日更新）の紹介文に「a very simple playstyle where you can sit back and let your minions do the job for you」と明記",
+            "source": "https://maxroll.gg/poe2/build-guides/companion-spirit-walker-build-guide"
+          },
+          "noDodgeRequirement": {
+            "basis": "PoE VaultのStrengths欄に「Minions take agro and block incoming attacks」「You can focus on positioning and safety while your minions deal damage」と明記",
+            "source": "https://www.poe-vault.com/poe2/huntress/spirit-walker/companion-leveling-build"
+          }
+        }
       },
       "damage": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+        "note": "確認した資料に、火力そのものの長所・短所としての記述がない。PoE VaultのStrengths欄の「Has a very high potential ceiling with investment」は投資による伸びしろの記述で、火力の評価には使わない。"
       },
       "defense": {
         "score": 2,
@@ -1187,10 +1218,14 @@
       "boss": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。PoE Vaultの「You get to tame huge, powerful bosses」はボスを相棒にできる点の記述で、ボス戦の強さの評価には使わない。"
       }
     },
     "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Maxroll（0.5.5更新版）とPoE Vaultを再確認。初心者向け評価に「操作が簡単」「安全な立ち回り」を加点（3/5）、装備優先度を部位別に具体化、長所・短所と出典を追加。火力・ボスは根拠となる記述がなく未評価のまま。"
+      },
       {
         "date": "2026-09-27",
         "summary": "原典が挙げるJungle RuinsのMighty Silverfist、レア個体の効果例とAct 3・2回目の試練後の切替条件を明記。個体別サポートの詳細は採用した原典段階で確認。"
