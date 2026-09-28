@@ -1494,11 +1494,11 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "スケルタルスナイパー / スペクター",
-    "beginnerRating": 4,
-    "damageRating": null,
+    "beginnerRating": 5,
+    "damageRating": 5,
     "defenseRating": null,
     "mappingRating": null,
-    "bossRating": null,
+    "bossRating": 5,
     "difficulty": "Act 3とLv67前後で召喚対象を切替",
     "reviewedFacts": {
       "gearDependence": "装備更新が分かりやすい（原典記載）",
@@ -1511,12 +1511,17 @@
     "strengths": [
       "各Act、Interlude、Lv67〜90まで段階別資料が公開されている。",
       "ミニオンが攻撃を担当するため、プレイヤーはボスの動作確認に集中しやすい。",
-      "ミニオンレベル、Spirit、防御という装備目標が分かりやすい。"
+      "ミニオンレベル、Spirit、防御という装備目標が分かりやすい。",
+      "PoE Vaultの育成版は「ほぼ自動で攻撃する、安全な遠距離の立ち回り」と紹介している。",
+      "Endgameのスペクター版について、PoE Vaultは「操作が簡単」「単体火力が非常に高い」と紹介している（0.5対応の資料）。",
+      "Maxroll（0.5.5）はユニークアイテムなしで成立すると明記している。"
     ],
     "weaknesses": [
-      "移動速度は高速周回型より遅く、狭い場所ではミニオンAIが詰まる場合がある。",
+      "移動速度は高速周回型より遅く、狭い場所ではミニオンAIが詰まる場合がある（PoE Vaultも短所にミニオンAIの問題を挙げている）。",
       "Act 3とLv67前後でスペクター構成を切り替える必要がある。",
-      "後半の耐久はES、ブロック、耐性など複数項目の装備更新に依存する。"
+      "後半の耐久はES、ブロック、耐性など複数項目の装備更新に依存する。",
+      "スペクター運用を始めるには一定量のSpiritが必要（PoE Vault）。",
+      "Endgameで使うLineageサポートジェムは高価（PoE Vault）。"
     ],
     "levelingStages": [
       {
@@ -1653,9 +1658,13 @@
       }
     ],
     "gearPriorities": [
-      "セプター・兜・アミュレット：ミニオンスキルレベル",
-      "セプター・アミュレット・胴：Spirit",
-      "自身の防御：ライフ、ES、ブロック、耐性"
+      "セプター：Spirit増加・ミニオンダメージ増加・+全ミニオンスキルレベル。序盤からRattling Sceptreを確認する（PoE Vault）。",
+      "オフハンド：PoE VaultのEndgameスペクター版はフォーカス（ES、+全ミニオンスキルレベル）。Maxroll版はブロック率の高い盾（ES・ライフ・耐性）。",
+      "兜・アミュレット：+全ミニオンスキルレベル、ES、ライフ。兜は予約効率、アミュレットはSpiritも有効（PoE Vault）。",
+      "胴：Spiritが付いたES装備。手袋：ES・ライフ・耐性（PoE Vault）。Maxrollも胴・ブーツ・兜・手袋・アミュレットのESをできるだけ多くと案内。",
+      "耐性・能力値：部位を固定せず、装備全体の合計で元素耐性75%と必要能力値を満たす（Maxroll）。",
+      "指輪：ライフ・耐性、ミニオンダメージやミニオンの攻撃・詠唱速度（PoE Vault）。",
+      "ユニークは必須ではない（Maxroll）。ブーツ「Bones of Ullr」（アンデッドミニオンの予約効率）はPoE Vaultが最優先で狙う装備とし、Maxrollも有用と紹介。キャンペーン中にExalted/Chaos Orbが手に入ったら、Enfolding Dawnなどの購入に使う案もある（Maxroll）。"
     ],
     "sources": [
       {
@@ -1673,12 +1682,28 @@
       {
         "name": "Maxroll: Skeletal Sniper Infernalist Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/skeletal-sniper-infernalist-build-guide",
-        "checkedAt": "2026-09-08",
+        "checkedAt": "2026-09-28",
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月3日更新）"
+      },
+      {
+        "name": "PoE Vault: Infernalist Minion Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/witch/infernalist/minion-leveling-build",
+        "checkedAt": "2026-09-28",
+        "type": "海外レベリングガイド（0.5対応。スナイパー→Act 3 UtzaalでVaal Guardスペクターへ切替）"
+      },
+      {
+        "name": "PoE Vault: Infernalist Spectre Build Guide",
+        "url": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（Powered Zealotスペクター版、0.5対応・2026年6月24日更新）"
       }
     ],
     "audience": "召喚した仲間に攻撃を任せ、敵の動きと回避へ集中したい初心者",
     "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "PoE Vaultの育成版・スペクター版とMaxroll（0.5.5）を確認。火力・ボスを5/5（「Incredible single target damage」）、初心者向けを4→5（「Easy to play」）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。耐久・周回は根拠となる記述がなく未評価のまま。"
+      },
       {
         "date": "2026-09-27",
         "summary": "Lv41以降もAct 3の切替地点・召喚対象・Spiritを満たすまではスナイパー構成を維持する条件を追加。"
@@ -1689,16 +1714,16 @@
       }
     ],
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": false,
+          "moderateOperation": true,
           "ssfConfirmed": true,
           "noDodgeRequirement": true
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
-        "score": 4,
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。4条件すべてを資料で確認できたため5/5です。",
+        "score": 5,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「スケルタルスナイパー + Flame Wall。Contagion + Unearthを周回補助に使用」を参照",
@@ -1709,30 +1734,42 @@
             "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
           },
           "noDodgeRequirement": {
-            "basis": "原典の長所にES・ブロック・ミニオンによる防御を明記（0.5のES変更にも注意）",
-            "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+            "basis": "PoE Vault（育成版）のStrengths欄に「Safe, ranged playstyle.」「Allows you to focus on avoiding damage.」と明記",
+            "source": "https://www.poe-vault.com/poe2/witch/infernalist/minion-leveling-build"
+          },
+          "moderateOperation": {
+            "basis": "PoE Vault（Powered Zealotスペクター版、0.5対応）のStrengths欄に「Easy to play.」と明記",
+            "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide"
           }
         }
       },
       "damage": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+        "score": 5,
+        "basis": "長所（強調）",
+        "note": "Strengths欄に、強調語付きで単体火力の高さが挙げられている。資料はEndgameのPowered Zealotスペクター版（0.5対応・2026年6月24日更新）で、同じ記述はボスの根拠にも使用。",
+        "quote": "Incredible single target damage.",
+        "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "sourceName": "PoE Vault: Infernalist Spectre Build Guide",
+        "checkedAt": "2026-09-28"
       },
       "defense": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+        "note": "確認した資料に、耐久の長所・短所としての記述がない。PoE Vaultの「Safe, ranged playstyle」「Automated damage allows you to stay safe」は立ち回りの安全さの記述のため、初心者向けの条件に使い、耐久の評価には使わない。"
       },
       "mapping": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+        "note": "確認した資料に、周回の長所・短所としての記述がない。Maxrollの「Gargantuan Waspスペクターが処理速度を上げる」は構成要素の説明で、周回の評価には使わない。"
       },
       "boss": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+        "score": 5,
+        "basis": "長所（強調）",
+        "note": "Strengths欄に、強調語付きで単体火力の高さが挙げられている（同じ記述は火力の根拠にも使用。資料は0.5対応）。",
+        "quote": "Incredible single target damage.",
+        "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "sourceName": "PoE Vault: Infernalist Spectre Build Guide",
+        "checkedAt": "2026-09-28"
       }
     }
   },
