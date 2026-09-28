@@ -57,11 +57,28 @@ function buildCards(items) {
   return `<div class="seo-build-list">${items.map((build) => `<article><p>${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><span>主力：${esc(build.mainSkill)}</span><a href="${buildUrl(build)}">現在Lvから育てる</a></article>`).join("")}</div>`;
 }
 
+// 1.0 status of every listed build, derived from builds.json so it never goes stale.
+function buildStatus() {
+  const next = site.nextGameVersion;
+  const released = site.gameVersion === next;
+  const listed = builds.filter((build) => build.status === "verified");
+  const done = listed.filter((build) => build.version === next);
+  const waiting = listed.filter((build) => build.version !== next);
+  const card = (build) => {
+    const state = build.version === next ? `${next}で確認済み（${build.updatedAt}）` : released ? `${next}では確認中` : `${next}公開後に確認`;
+    return `<article><p>${esc(build.className)} / ${esc(build.ascendancy)}</p><h3>${esc(build.name)}</h3><span>作成時の版：${esc(build.version)}／${esc(state)}</span><a href="${buildUrl(build)}">ビルドを見る</a></article>`;
+  };
+  const summary = `<p class="build-status-summary"><b>${next}で確認済み：${done.length} / ${listed.length}ビルド</b>${!released && !done.length ? `（${next}は未公開のため、確認済みのビルドはまだありません）` : ""}</p>`;
+  const doneHtml = done.length ? `<h3>${next}で確認済み</h3><div class="seo-build-list">${done.map(card).join("")}</div>` : "";
+  const waitingHtml = waiting.length ? `<h3>確認待ち</h3><div class="seo-build-list">${waiting.map(card).join("")}</div>` : "";
+  return `${summary}${doneHtml}${waitingHtml}`;
+}
+
 function renderSection(section) {
   const paragraphs = (section.paragraphs ?? []).map((paragraph) => `<p>${esc(paragraph)}</p>`).join("");
   const bullets = section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : "";
   const selectedBuilds = (section.buildIds ?? []).map((id) => builds.find((build) => build.id === id)).filter((build) => build?.status === "verified");
-  const buildsHtml = section.buildList === "all" ? buildList() : selectedBuilds.length ? buildCards(selectedBuilds) : "";
+  const buildsHtml = section.buildStatus ? buildStatus() : section.buildList === "all" ? buildList() : selectedBuilds.length ? buildCards(selectedBuilds) : "";
   return `<section><h2>${esc(section.heading)}</h2>${paragraphs}${bullets}${buildsHtml}</section>`;
 }
 

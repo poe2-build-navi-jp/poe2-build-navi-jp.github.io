@@ -281,6 +281,24 @@
     "sources": [{"name":"Steamニュース（公式）：Path of Exile 2 Full Release Registration FAQ（2026年8月26日）","url":"https://store.steampowered.com/news/app/2694490/view/686389356312658148","checkedAt":"2026-09-28"},{"name":"Steamニュース（公式）：Full Release Registration - New Reward Unlocked（2026年9月21日）","url":"https://store.steampowered.com/news/app/2694490/view/705531556791321468","checkedAt":"2026-09-28"},{"name":"Steamニュース（公式）：Path of Exile 2 Full Release Registration（2026年9月3日）","url":"https://store.steampowered.com/news/app/2694490/view/686389990174753361","checkedAt":"2026-09-28"},{"name":"Path of Exile 2公式：事前登録ページ","url":"https://pathofexile2.com/register","checkedAt":"2026-09-28"}]
   },
   {
+    "path": "/poe2-1-0/build-status/",
+    "kicker": "POE2 1.0 / BUILD STATUS",
+    "title": "PoE2 1.0おすすめビルドの対応状況｜確認済みビルド一覧",
+    "description": "PoE2正式版1.0で使えると確認できたビルドを一覧で案内します。0.5.5向けビルドの1.0対応状況と、確認の基準・順番をまとめています。",
+    "h1": "PoE2 1.0のビルド対応状況",
+    "answer": "本サイトは、1.0で確認できたビルドだけを「1.0で確認済み」として案内します。確認前のビルドは削除せず、0.5.5の手順を残したまま状況を表示します。各ビルドの状況は下の一覧で確認できます。",
+    "quickActions": ["下の一覧で、遊びたいビルドが1.0で確認済みか見る", "確認待ちのビルドは、スキル名や解禁Lvが変わっている可能性を前提に読む", "1.0の変更点は公式パッチノートとあわせて確認する"],
+    "sections": [
+      {"heading": "ビルドごとの1.0対応状況", "buildStatus": true},
+      {"heading": "「1.0で確認済み」にする基準", "bullets": ["主力スキルとサポートジェムが1.0に存在し、名前と解禁Lvが一致する", "アセンダンシーと主要なパッシブが削除・大幅変更されていない", "必須のユニークや装備条件、SSFでの成立可否が元ガイドと一致する", "元ガイドが1.0対応と明記している"], "paragraphs": ["次のすべてを確認できたビルドだけを「1.0で確認済み」にします。1つでも確認できない場合は確認待ちのままです。"]},
+      {"heading": "「1.0最強ビルド」を載せない理由", "paragraphs": ["1.0の公開直後は、公式パッチノートと実際のプレイ結果がそろうまで、各ビルドの強さを判断できません。本サイトは予想のランキングを確定情報のように載せず、確認できたものから順に更新します。"]},
+      {"heading": "確認の順番", "paragraphs": ["1.0対応の元ガイド（Maxroll・Mobalyticsなど）が出たビルドから、1本ずつ確認します。大きく変わって元ガイドが見つからないビルドは、掲載を見直します。"]}
+    ],
+    "faq": [{"q":"PoE2 1.0のおすすめビルドは？","a":"1.0で確認できたビルドから順に、このページで「確認済み」として案内します。確認前のビルドの強さは断定しません。"}, {"q":"0.5.5のビルドは1.0でもそのまま使える？","a":"確認できるまで断定できません。スキル名・解禁Lv・装備条件が変わっている可能性があるため、確認できたものから順に更新します。"}],
+    "related": [{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"Duelistの確認済み情報","url":"/poe2-1-0/duelist/"},{"label":"現在の初心者向けTier","url":"/tier-list/"},{"label":"職業別ビルド一覧","url":"/builds/"}],
+    "sources": [{"name":"Path of Exile 2公式：正式版1.0の発表","url":"https://www.pathofexile.com/forum/view-thread/3999366","checkedAt":"2026-09-27"}]
+  },
+  {
     "path": "/poe2-1-0/duelist/",
     "kicker": "POE2 1.0 / DUELIST",
     "title": "PoE2 Duelist最新情報｜1.0で追加予定の新職業",

@@ -74,5 +74,19 @@ for(const group of [['tools','tools/'],['data','data/'],['assets','assets/'],['H
 }
 
 line('');
+// Future-tense wording ("公開予定" etc.) written by hand in the 1.0 data and generators.
+// It is correct before release and wrong after it, so it becomes pending once gameVersion reaches the target.
+// enhance-one-hub.mjs switches its own wording automatically and is not listed.
+const futureFiles=['data/seo-pages.json','data/discovery.json','tools/generate-discovery-pages.mjs'];
+const future=[];
+for(const path of futureFiles){const count=((await read(path)).match(/公開予定|追加予定|移行予定/g)||[]).length;if(count)future.push({path,count});}
+const futureTotal=future.reduce((n,f)=>n+f.count,0);
+line('');
+line(`## 「予定」表記（${futureTotal}箇所）`);
+line('');
+line(site.gameVersion===target?`${target}は公開済みです。公開日を確認してから「公開済み」「追加済み」などへ書き換える。`:`${target}の公開前は正しい表記です。公開当日に書き換える。`);
+for(const f of future)line(`- ${f.path}: ${f.count}`);
+if(site.gameVersion===target&&futureTotal)pending.push('future-wording');
+line('');
 line(pending.length?`**未完了: ${pending.length}項目**（${pending.slice(0,5).join(', ')}${pending.length>5?' …':''}）`:'**すべて完了**');
 if(strict&&pending.length)process.exit(1);

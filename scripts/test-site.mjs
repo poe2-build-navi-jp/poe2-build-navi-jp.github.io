@@ -2,6 +2,7 @@ import { access, readFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 import { validateRatings, AXES } from "../tools/build-ratings.mjs";
+import { releaseTitle, applyVersionTitle } from "../tools/version-title.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const baseUrl = "https://poe2-build-navi-jp.github.io";
@@ -172,7 +173,7 @@ assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲�
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
 assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
-assert(seoPages.length === 19, "targeted SEO page count must be 19");
+assert(seoPages.length === 20, "targeted SEO page count must be 20");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
@@ -188,15 +189,31 @@ for (const path of ["/guides/why-i-die/", "/guides/increase-damage/", "/guides/m
 for (const path of ["/guides/passive-tree/", "/guides/resistance/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: core beginner SEO page missing`);
 }
-for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/microtransactions/", "/poe2-1-0/controller/", "/poe2-1-0/pre-registration/", "/poe2-1-0/duelist/"]) {
+// Release-day titles: old version dropped, "checking" suffix added, fully reversible.
+for (const [before, after] of [
+  ["PoE2 モンクおすすめビルド・育成｜0.5.5", "PoE2 モンクおすすめビルド・育成【1.0対応確認中】"],
+  ["PoE2 0.5.5初心者向けビルドTier｜育てやすさ比較", "PoE2 初心者向けビルドTier｜育てやすさ比較【1.0対応確認中】"],
+  ["PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ", "PoE2 ビルド｜おすすめ・初心者向け日本語育成ナビ【1.0対応確認中】"],
+  ["PoE2 植物オラクル 0.5.5｜Lv1〜Endgame育成", "PoE2 植物オラクル｜Lv1〜Endgame育成【1.0対応確認中】"]
+]) assert(releaseTitle(before, "0.5.5", "1.0") === after, `release title for "${before}" must be "${after}"`);
+{
+  const sample = '<head><title>PoE2 0.5.5 一覧｜ナビ</title><meta property="og:title" content="PoE2 0.5.5 一覧 &quot;A&quot;"></head>';
+  const switched = applyVersionTitle(sample, "0.5.5", "1.0");
+  assert(switched.includes("<title>PoE2 一覧｜ナビ【1.0対応確認中】</title>") && !/og:title" content="[^"]*0\.5\.5/.test(switched), "release title must replace title and og:title");
+  assert(applyVersionTitle(switched, "0.5.5", "1.0") === switched, "release title must be idempotent");
+  assert(applyVersionTitle(switched, null, "0.5.5") === sample, "release title must restore the original title and og:title");
+}
+for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/microtransactions/", "/poe2-1-0/controller/", "/poe2-1-0/pre-registration/", "/poe2-1-0/build-status/", "/poe2-1-0/duelist/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: 1.0 SEO page missing`);
 }
 assert(gearCheck.includes('id="gear-example-title"'), "gear check verified static example missing");
 assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concern=damage"), "gear check sample context link missing");
+const buildStatusPage = await read("poe2-1-0/build-status/index.html");
+assert((buildStatusPage.match(/作成時の版：/g) || []).length === builds.filter((build) => build.status === "verified").length, "1.0 build status page must list every verified build");
 const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
 assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");
-assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"') && oneHub.includes('href="/poe2-1-0/pre-registration/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
+assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"') && oneHub.includes('href="/poe2-1-0/pre-registration/"') && oneHub.includes('href="/poe2-1-0/build-status/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
 for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1])) {
   const html = await read(`${path}index.html`);
   const excluded = path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria)\//.test(path);
@@ -286,6 +303,7 @@ for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.gith
   assert(html.includes('<meta name="twitter:card" content="summary_large_image">') && (html.match(/name="twitter:card"/g) || []).length === 1, `${path}: needs exactly one summary_large_image twitter:card`);
 }
 assert(site.gameVersion && site.nextGameVersion && /^\d{4}-\d{2}-\d{2}$/.test(site.nextGameVersionReleaseDate || ""), "site.json: gameVersion / nextGameVersion / nextGameVersionReleaseDate required");
+for (const build of builds.filter((item) => item.version === site.nextGameVersion)) assert(!/(?<![\d.])0\.5\.5(?!\d)/.test(build.seoTitle ?? ""), `${build.id}: verified for ${site.nextGameVersion} but seoTitle still names 0.5.5`);
 for (const build of builds) {
   const page = await read(`builds/${build.classSlug}/${build.slug}/index.html`);
   const outdated = build.version !== site.gameVersion;

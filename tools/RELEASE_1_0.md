@@ -17,19 +17,33 @@ node tools/release-readiness.mjs
   `data/discovery.json` `poe2One` と `/poe2-1-0/` 系ページを更新する。
 - 1.0対応の元ガイド（Maxroll・Mobalytics等）が各ビルドで出ているかを定期的に確認する。
 
+## リリース前（12/1〜12/10）
+
+- `/poe2-1-0/build-status/`（ビルドごとの1.0対応状況）は `data/builds.json` の `version` から自動生成される。
+  リリース前は全ビルド「1.0公開後に確認」、リリース後は「1.0では確認中」、確認が済んだビルドは「1.0で確認済み（日付）」になる。
+- 公式に公開日の変更がないか確認する（`data/site.json` `nextGameVersionReleaseDate`）。
+- `node tools/release-readiness.mjs` で、当日に書き換える「予定」表記の件数を確認しておく。
+
 ## リリース当日
 
 1. 公式サイトで1.0の公開を確認する（予定日の変更に注意）。
 2. `data/site.json` の `gameVersion` を `"1.0"` にする。`siteVersion` はまだ変えない
    （サイトの主な内容が1.0対応になった時点で変える）。
-3. 次を実行する。全ビルドページに「1.0では未確認」、一覧・Tier・職業ページ等に案内バナーが出る。
+3. 全ページを生成し直す（`enhance-version-notice.mjs` だけでは、対応状況ページと1.0ボックスの見出しが切り替わらない）。
    ```
-   node tools/enhance-version-notice.mjs
-   node tools/sync-asset-versions.mjs
-   npm test
+   node tools/generate-pages.mjs && node tools/generate-sitemap.mjs && node tools/enhance-ratings.mjs && node tools/enhance-build-ux.mjs && node tools/enhance-version-notice.mjs && CHROMIUM_PATH=/opt/pw-browsers/chromium node tools/generate-og-images.mjs && node tools/sync-asset-versions.mjs && npm test
    ```
-4. `/poe2-1-0/` に「公開済み」と確認日を反映する。
-5. PRを作ってマージし、本番で表示を確認する。
+   これで自動的に次のように切り替わる。
+   - 全ビルドページに「1.0では未確認」、一覧・Tier・職業ページ等に案内バナー。
+   - タイトルに「0.5.5」を含む一覧・Tier・職業・ビルドページ（17ページ）は、「0.5.5」を外して末尾に「【1.0対応確認中】」
+     （`tools/version-title.mjs`。確認済みにしたビルドは、`data/builds.json` の `seoTitle` の「0.5.5」を1.0へ書き換える。書き換え忘れはテストで検出される）。
+     0.5.5そのものが主題の `/guides/poe2-0-5-5-builds/` と `/guides/forbidden-rites-beginner/` は変えない。
+   - 全ページ下部の1.0ボックスの見出しが「PoE2 正式版1.0の情報」に。
+   - `/poe2-1-0/build-status/` が「1.0では確認中」に。
+4. `node tools/release-readiness.mjs` の「予定」表記（`data/seo-pages.json`・`data/discovery.json`・
+   `tools/generate-discovery-pages.mjs`）を「公開済み」「追加済み」などへ書き換え、手順3を再実行する。
+   `/poe2-1-0/` に「公開済み」と確認日を反映する。
+5. 変更をpushし、本番で表示を確認する。
 
 ## ビルドごとの再確認（1本ずつ）
 
