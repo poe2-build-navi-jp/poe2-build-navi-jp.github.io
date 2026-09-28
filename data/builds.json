@@ -769,10 +769,10 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "mainSkill": "ケラリの幻惑 / ルザンの罠",
-    "beginnerRating": 2,
+    "beginnerRating": 3,
     "damageRating": 5,
     "defenseRating": 5,
-    "mappingRating": null,
+    "mappingRating": 2,
     "bossRating": null,
     "difficulty": "最初のアセンダンシーで構成切替",
     "budget": "固定価格なし",
@@ -780,11 +780,15 @@
     "ssf": true,
     "strengths": [
       "Lv1からキャンペーン、Endgameまでの段階別ガイドが公開されている。",
-      "最初のアセンダンシー取得後にケラリの指示スキルへ移行できる。"
+      "最初のアセンダンシー取得後にケラリの指示スキルへ移行できる（PoE VaultはLv21〜22での取得を推奨）。",
+      "Maxroll（0.5.5）はメリットに「非常に硬い」「火力が非常に高い」を挙げている。",
+      "ジンは倒されないため、ミニオンの生存に投資しなくてよい。指示スキルのマナコストも非常に低い（PoE Vault）。"
     ],
     "weaknesses": [
       "最初のアセンダンシー取得までは本来の構成にならない。",
-      "指示スキルのクールダウンと複数の操作を管理する必要がある。"
+      "指示スキルのクールダウンと複数の操作を管理する必要がある。PoE Vaultは「操作回数（APM）が多く、一般的な召喚ビルドの感覚とは違う」、Maxrollも「ボタン操作が多くなりうる」としている。",
+      "ジンの攻撃は範囲が広くなく、散らばった敵の処理に手間がかかる（PoE Vault）。",
+      "Maxrollはデメリットにミニオン関連と画面の見やすさ（Visual Clarity）を挙げている。"
     ],
     "levelingStages": [
       {
@@ -909,9 +913,13 @@
       }
     ],
     "gearPriorities": [
-      "キャンペーン：アーマーと耐性",
-      "Mapping以降：エナジーシールド移行は原典の段階に合わせる",
-      "構成切替用の必要能力値"
+      "武器：セプターは必須。+ミニオンスキルレベル、Spirit、「周囲の味方のダメージ増加」「周囲の味方のクリティカルダメージボーナス増加」を優先（PoE Vault）。",
+      "オフハンド：フォーカス推奨。盾でも防御面は同程度（PoE Vault）。",
+      "防具：キャンペーン中はアーマー・ライフ・不足耐性（元ガイド）。PoE VaultはES重視、MaxrollのEndgame構成はES・ESの回復・ブロック率を積む。ESへの移行は原典の段階に合わせる。",
+      "耐性：ルーンは耐性上限の維持を最優先（PoE Vault）。",
+      "Act 4以降：Spirit、ES、+ミニオンスキルレベルの3つを探す（PoE Vault）。ブーツは移動速度。",
+      "ユニークは必須ではない（Maxroll）。Enfolding Dawn（Runeforgeで強化するのが最良）とBones of Ullrが有用。防御ではLv36のSoul MantleやLv51のWaveshaperも候補（Maxroll）。",
+      "構成切替用の必要能力値。"
     ],
     "sources": [
       {
@@ -941,24 +949,40 @@
       {
         "name": "Maxroll: Disciple of Varashta Minion Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
-        "checkedAt": "2026-09-26",
-        "type": "海外キャンペーン・Endgameガイド（対応パッチ0.5.5、2026年9月21日更新。評価の根拠として参照）"
+        "checkedAt": "2026-09-28",
+        "type": "海外キャンペーン・Endgameガイド（対応パッチ0.5.5、2026年9月27日更新。評価の根拠として参照）"
+      },
+      {
+        "name": "PoE Vault: Djinn Commander Disciple of Varashta Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build",
+        "checkedAt": "2026-09-28",
+        "type": "海外レベリングガイド（ケラリ・ルザンの指示構成。0.5.5対応、2026年8月28日更新）"
       }
     ],
     "status": "verified",
     "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人",
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "PoE Vault（Djinn Commander、0.5.5）とMaxroll（9月27日更新版）を確認。周回を未評価→2/5（ジンの攻撃範囲の短所）、初心者向けを2→3（主力をLv21〜22のアセンダンシーから使える）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。ボスは根拠となる記述がなく未評価のまま。"
+      }
+    ],
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
-          "earlyMainSkill": false,
+          "earlyMainSkill": true,
           "moderateOperation": false,
           "ssfConfirmed": true,
           "noDodgeRequirement": false
         },
-        "note": "キャンペーン向けとEndgame向けの原典がいずれもSSFと明記。操作量など別の条件は確認できないため加点していません。",
-        "score": 2,
+        "note": "加点した条件だけを原典と結び付けています。操作の簡単さは、PoE Vaultが長所に「Very few unique buttons」、短所に「High APM」を挙げ、Maxrollも「Can be button intensive」と書いているため加点しません。",
+        "score": 3,
         "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "PoE Vault（0.5.5）に「Trial of SekhemasはLevel 21かLevel 22で。ここから本来のヴァラシュタの戦い方になる」と明記。ケラリ・ルザンの指示をLv22以下の最初のアセンダンシーから使える",
+            "source": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build"
+          },
           "ssfConfirmed": {
             "basis": "キャンペーン向けSSFガイドと、(HC) SSF向けのEndgameまでのガイドを照合",
             "source": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide"
@@ -971,8 +995,8 @@
         "quote": "Very high damage",
         "source": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
         "sourceName": "Maxroll: Disciple of Varashta Minion Build Guide",
-        "checkedAt": "2026-09-26",
-        "note": "長所で火力の高さが強調されている。"
+        "checkedAt": "2026-09-28",
+        "note": "長所で火力の高さが強調されている（Maxroll、0.5.5・2026年9月27日更新）。"
       },
       "defense": {
         "score": 5,
@@ -980,18 +1004,22 @@
         "quote": "Very tanky",
         "source": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
         "sourceName": "Maxroll: Disciple of Varashta Minion Build Guide",
-        "checkedAt": "2026-09-26",
-        "note": "長所で耐久の高さが強調されている。"
+        "checkedAt": "2026-09-28",
+        "note": "長所で耐久の高さが強調されている（Maxroll、0.5.5・2026年9月27日更新）。"
       },
       "mapping": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+        "score": 2,
+        "basis": "短所",
+        "quote": "Djinn attacks don’t have great AoE coverage. Enemies that are spread out may require more effort to kill than a traditional spellcaster build.",
+        "source": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build",
+        "sourceName": "PoE Vault: Djinn Commander Disciple of Varashta Leveling Build",
+        "checkedAt": "2026-09-28",
+        "note": "Weaknesses欄に、ジンの攻撃範囲が狭く散らばった敵の処理に手間がかかるとある。本文の「map clearing infinitely faster」は指示スキル同士の比較で、ビルドの長所としては挙げられていない。資料は育成（キャンペーン）用。"
       },
       "boss": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。PoE Vaultの長所「High burst damage with little effort」は瞬間火力の記述で、ボス戦に限った評価ではないため使わない。"
       }
     }
   },
