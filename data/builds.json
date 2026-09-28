@@ -1845,8 +1845,8 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "Entangle / Thrashing Vines",
-    "beginnerRating": 2,
-    "damageRating": null,
+    "beginnerRating": 3,
+    "damageRating": 2,
     "defenseRating": null,
     "mappingRating": 4,
     "bossRating": 2,
@@ -1864,13 +1864,17 @@
     "strengths": [
       "Lv1からEndgameまでEntangleを主力として継続できる。",
       "周回の基本操作を少なくしやすく、植物による足止めも使える。",
-      "育成ガイドとEndgameガイドが同じ作成者から公開されている。"
+      "育成ガイドとEndgameガイドが同じ作成者から公開されている。",
+      "Maxroll（0.5.5）はメリットに「マップ殲滅が容易」「自動で狙いがつく」「リーグ開始時に安く始められる」を挙げている。",
+      "パック処理能力が高く、操作が少ない（Gamerch）。"
     ],
     "weaknesses": [
       "防御は装備依存で、後半はESと混沌耐性を整える必要がある。",
       "長いボス戦ではマナ不足に注意が必要。",
       "第二アセンダンシー以降の自動発動構成は、必要ジェムとSpiritを揃えてから切り替える必要がある。",
-      "SSFでの成立可否は情報源に明記されていない。序盤は安価に始められると案内される一方、Maxrollのガイドはエンドゲームで複数のユニークアイテム（Atalui's Bloodletting等）を重要な強化先として挙げており、終盤の完成度はSSFでは下がる可能性がある。"
+      "動き回るボスにダメージが入りづらく、瞬間火力は低め（Gamerch）。Maxrollも最上位ボスには装備投資が必要としている。",
+      "画面が見づらくなりやすい（Maxrollのデメリット「Visual Clutter」）。",
+      "SSFでの成立可否は情報源に明記されていない。Maxrollは安く始められることを長所に挙げる一方、最上位ボスには装備投資が必要と短所に挙げている。"
     ],
     "levelingStages": [
       {
@@ -1995,9 +1999,12 @@
       }
     ],
     "gearPriorities": [
-      "武器：+物理/全スペルレベル、スペル威力、キャスト速度",
-      "防具：ライフ、ES/アーマー、属性耐性、移動速度",
-      "Endgame：ES、混沌耐性、Spirit、マナ維持"
+      "武器（スタッフ）：接尾辞は+物理スペルスキルレベルが最優先、次にクリティカル率・クリティカルダメージボーナス・キャスト速度。接頭辞は物理スペルダメージ増加・「ダメージの一部を追加ダメージとして得る」・スペルダメージ増加（Gamerch）。",
+      "キャンペーン：店で+物理スペル／+スペルスキルレベルの武器を確認する。Maxrollはライフ型で、アーマーと「アーマーを元素ダメージにも適用」で被ダメージを減らす構成。",
+      "防具：ES、ブーツの移動速度、胴のSpirit、最大マナ。手袋はクリティカルダメージ。耐性は混沌耐性も含めて確保（Gamerch）。",
+      "アミュレット：ES、+スペルスキルレベル、クリティカルダメージ、耐性（Gamerch）。",
+      "安価なユニーク：手袋「Nightscale」はクリティカル率とマナ回復を補えて育成中から使える。胴「Waveshaper」は育成からEndgameまで使える（Gamerch）。",
+      "Endgame：ES、混沌耐性、Spirit、マナ維持。MaxrollのEndgame構成は、ライフでスペルを使う構成（Atalui's BloodlettingやLifetapのサポートジェム）でMind Over MatterとEldritch Batteryを両立する。"
     ],
     "sources": [
       {
@@ -2021,44 +2028,52 @@
       {
         "name": "Gamerch: 0.5.5 プラントオラクル解説",
         "url": "https://gamerch.com/poe2/954990",
-        "checkedAt": "2026-09-07",
-        "type": "日本語攻略資料"
+        "checkedAt": "2026-09-28",
+        "type": "日本語攻略資料（2026年9月18日更新。長所・短所と装備MODの優先度を参照）"
       },
       {
         "name": "Maxroll: Entangle Oracle Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
-        "checkedAt": "2026-09-08",
+        "checkedAt": "2026-09-28",
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新）"
       }
     ],
     "audience": "Lv1から同じ主力を使い、少ない基本操作で植物ビルドを育てたい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": false,
+          "moderateOperation": true,
           "ssfConfirmed": false,
           "noDodgeRequirement": false
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
-        "score": 2,
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の防御・SSF条件は加点しません。",
+        "score": 3,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「Entangle。ボスには手持ちの単体補助スペルも使用」を参照",
             "source": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide"
+          },
+          "moderateOperation": {
+            "basis": "Gamerch（2026年9月18日更新）の長所に「操作が少ない」と明記。Maxroll（0.5.5）もメリットに「Auto Targetting」を挙げている",
+            "source": "https://gamerch.com/poe2/954990"
           }
         }
       },
       "damage": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+        "score": 2,
+        "basis": "短所",
+        "quote": "瞬間火力は低め",
+        "source": "https://gamerch.com/poe2/954990",
+        "sourceName": "Gamerch: プラントオラクルビルドの評価と解説",
+        "checkedAt": "2026-09-28",
+        "note": "短所欄に瞬間火力の低さが挙げられている（同じ欄に「動き回るボスにダメージが入りづらい」もある）。火力の長所としての記述は確認できなかった。"
       },
       "defense": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+        "note": "確認した資料（Maxroll 0.5.5・Gamerch）に、耐久の長所・短所としての記述がない。"
       },
       "mapping": {
         "score": 4,
@@ -2066,8 +2081,8 @@
         "quote": "Easy Map Clear",
         "source": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
         "sourceName": "Maxroll: Entangle Oracle Build Guide",
-        "checkedAt": "2026-09-26",
-        "note": "長所にマップ殲滅の容易さが挙げられている。"
+        "checkedAt": "2026-09-28",
+        "note": "長所にマップ殲滅の容易さが挙げられている。Gamerchも長所に「パック処理能力が高い」を挙げている。"
       },
       "boss": {
         "score": 2,
@@ -2075,11 +2090,15 @@
         "quote": "Pinnacles Require Investment",
         "source": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
         "sourceName": "Maxroll: Entangle Oracle Build Guide",
-        "checkedAt": "2026-09-26",
-        "note": "短所に「最上位ボスには装備投資が必要」とある。"
+        "checkedAt": "2026-09-28",
+        "note": "短所に「最上位ボスには装備投資が必要」とある。Gamerchも短所に「動き回るボスにダメージが入りづらい」を挙げている。"
       }
     },
     "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Maxroll（0.5.5）とGamerch（9月18日更新）を確認。火力を未評価→2/5（瞬間火力は低め）、初心者向けを2→3（操作が少ない）に更新。装備優先度を部位別に具体化し、長所・短所を追加。「Atalui's Bloodlettingはユニークアイテム」という誤記を修正（サポートジェム）。耐久は根拠となる記述がなく未評価のまま。"
+      },
       {
         "date": "2026-09-27",
         "summary": "原典で確認できた育成・Cheap Endgameのサポートを追加。原典のLv20ジェム表記をキャラクターLvでの解禁と混同しない注記を追加。"
