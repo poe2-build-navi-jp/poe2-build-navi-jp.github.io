@@ -9,7 +9,9 @@ const root = resolve(import.meta.dirname, "..");
 const read = (p) => readFile(resolve(root, p), "utf8");
 const site = JSON.parse(await read("data/site.json"));
 const sitemap = await read("sitemap.xml");
-const paths = [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]);
+// seo-pages.json too: this runs before generate-sitemap, so a newly added page is not in sitemap.xml yet.
+const seoPaths = JSON.parse(await read("data/seo-pages.json")).map((page) => page.path.replace(/^\//, ""));
+const paths = [...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]), ...seoPaths])];
 
 const released = site.gameVersion === site.nextGameVersion;
 const [y, m, d] = site.nextGameVersionReleaseDate.split("-").map(Number);

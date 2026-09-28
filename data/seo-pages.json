@@ -179,7 +179,7 @@
       {"heading": "まだ公式に確認できていないこと", "bullets": ["アーリーアクセスのキャラクター・リーグが1.0でどう扱われるか", "正式版でのMac対応（公式FAQではアーリーアクセス開始時は非対応。現在のSteamストアにはmacOSの動作環境が掲載されています）や、スタンドアロン版PCクライアントの扱い", "正式版のアカウント作成・連携の具体的な手順"], "paragraphs": ["ExileCon 2026（11月7〜8日）などの公式発表を確認し、確認できたものから追記します。"]}
     ],
     "faq": [{"q":"PoE2は無料で遊べる？","a":"正式版1.0（2026年12月11日公開予定）から基本プレイ無料です。現在のアーリーアクセス中は、Steamではサポーターパックの購入が必要です。"}, {"q":"どの機種で遊べる？","a":"正式版はPC（Steam・Epic Games Store）、PS5、Xbox Seriesで公開予定と報じられています。"}, {"q":"機種をまたいで遊べる？","a":"PC・PS5・Xbox Seriesの間でクロスプレイでき、同じアカウントなら進行を引き継げます。"}],
-    "related": [{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2を始めたら（初心者ガイド）","url":"/guides/getting-started/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
+    "related": [{"label":"事前登録のやり方と報酬","url":"/poe2-1-0/pre-registration/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2を始めたら（初心者ガイド）","url":"/guides/getting-started/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
     "sources": [{"name":"Path of Exile 2公式：1.0・基本無料化の発表（2026年8月25日）","url":"https://www.pathofexile.com/forum/view-thread/3999366","checkedAt":"2026-09-27"},{"name":"Steamストア：Path of Exile 2（価格・無料化の記載・動作環境）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-27"},{"name":"Gematsu：Path of Exile II launches December 11（対応機種）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"},{"name":"Path of Exile 2公式：Early Access FAQ（配信プラットフォーム・Mac）","url":"https://www.pathofexile.com/forum/view-thread/3587981","checkedAt":"2026-09-28"}]
   },
   {
@@ -261,6 +261,26 @@
     "sources": [{"name":"Steamストア：Path of Exile 2（コントローラー対応）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-28"},{"name":"PCGamesN：Path of Exile 2 controller support explained（2024年12月6日）","url":"https://www.pcgamesn.com/path-of-exile-2/controller-support","checkedAt":"2026-09-28"},{"name":"Gematsu：Path of Exile II launches December 11（対応機種）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"}]
   },
   {
+    "path": "/poe2-1-0/pre-registration/",
+    "kicker": "POE2 1.0 / PRE-REGISTRATION",
+    "title": "PoE2 事前登録のやり方と報酬｜正式版1.0の限定コスメと締め切り",
+    "description": "PoE2正式版1.0の事前登録（メール登録）のやり方、もらえる限定コスメ報酬、締め切り、コードの受け取り方を公式発表をもとに案内します。",
+    "h1": "PoE2の事前登録のやり方と報酬",
+    "answer": "公式の登録ページ（pathofexile2.com/register）でメールアドレスを入力し、届いた確認メールで登録を完了させると、正式版1.0の公開後に限定コスメのコードがメールで届きます。2026年9月21日の公式発表時点で、登録者全員が少なくとも2つを受け取れます。",
+    "quickActions": ["pathofexile2.com/registerでメールアドレスを入力する", "届いた確認メールで登録を完了させる（確認しないと登録されません）", "1.0公開後に届くコードを、Path of Exileのアカウントで引き換える"],
+    "sections": [
+      {"heading": "事前登録のやり方", "bullets": ["公式の登録ページ（pathofexile2.com/register）にメールアドレスを入力します。", "送られてくる確認メールで登録を確定させます。公式は、以前に入力した人も確認メールが届いていないか受信箱を確認するよう案内しています。", "Path of Exileのアカウントに登録したメールアドレスでなくても登録できます。"]},
+      {"heading": "もらえる報酬", "bullets": ["報酬はこのキャンペーン限定の課金アイテム（見た目を変えるコスメ）で、ストアでは販売されません。", "登録者は最低1つを受け取れ、登録者数の節目（全4段階）を達成するごとに増えます。4段階すべて達成すると合計5つです。", "2026年9月21日に武器エフェクト「Soulflame」が解放され、登録者全員が少なくとも2つを受け取れることになりました。同日時点で残りは3段階です。"]},
+      {"heading": "締め切り", "paragraphs": ["2026年9月21日の公式発表では、登録の締め切りは12月11日（太平洋標準時）です。9月3日の発表では「12月10日まで」と案内されていたため、確実に受け取るには12月10日までに登録を済ませるのがおすすめです。"]},
+      {"heading": "報酬の受け取り方", "bullets": ["正式版1.0の公開（2026年12月11日）後、登録したメールアドレスにコードが送られます。配布開始は公式SNSでも告知されます。", "コードは公式サイトで引き換えます。受け取りにはPath of Exileのアカウントが必要です（持っていない場合は作成が必要です）。", "コードは1回だけ使えて、1つのアカウントで引き換えられるのは1つまでです。友人に譲ることもできます。", "Steam・Epic・PlayStation・Xboxが対象です。公式サイトのアカウント設定（連携）で、遊ぶプラットフォームとアカウントを連携しておく必要があります。", "コードの配布前にメールの配信を停止すると、報酬を受け取れなくなります。"]},
+      {"heading": "登録すると届くメール", "paragraphs": ["公式によると、ExileCon 2026（11月7〜8日、ニュージーランド時間）での発表内容や、正式版1.0の重要なお知らせがメールで届きます。メールアドレスは公式の委託先（Brevo）と共有され、Path of Exile関連の連絡にのみ使われると案内されています。"]},
+      {"heading": "まだ確認できていないこと", "bullets": ["残り3つの報酬の内容と、各段階に必要な登録者数", "コードのメール配布が完了する具体的な日"], "paragraphs": ["公式の発表を確認できたものから追記します。"]}
+    ],
+    "faq": [{"q":"PoE2の事前登録はどこでできる？","a":"公式の登録ページ（pathofexile2.com/register）でメールアドレスを入力し、確認メールで登録を完了させます。"}, {"q":"事前登録の報酬は何？","a":"このキャンペーン限定のコスメ（課金アイテム）です。2026年9月21日時点で登録者全員が少なくとも2つを受け取れ、登録者数の節目をすべて達成すると合計5つになります。"}, {"q":"締め切りはいつ？","a":"最新の公式発表では12月11日（太平洋標準時）までです。以前の発表では12月10日までとされていたため、12月10日までの登録が確実です。"}, {"q":"すでにPoEを遊んでいても対象？","a":"はい。新規・既存を問わず、対応するすべてのプラットフォームのプレイヤーが対象です。"}],
+    "related": [{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"1.0公開予定日を見る","url":"/poe2-1-0/release-date/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
+    "sources": [{"name":"Steamニュース（公式）：Path of Exile 2 Full Release Registration FAQ（2026年8月26日）","url":"https://store.steampowered.com/news/app/2694490/view/686389356312658148","checkedAt":"2026-09-28"},{"name":"Steamニュース（公式）：Full Release Registration - New Reward Unlocked（2026年9月21日）","url":"https://store.steampowered.com/news/app/2694490/view/705531556791321468","checkedAt":"2026-09-28"},{"name":"Steamニュース（公式）：Path of Exile 2 Full Release Registration（2026年9月3日）","url":"https://store.steampowered.com/news/app/2694490/view/686389990174753361","checkedAt":"2026-09-28"},{"name":"Path of Exile 2公式：事前登録ページ","url":"https://pathofexile2.com/register","checkedAt":"2026-09-28"}]
+  },
+  {
     "path": "/poe2-1-0/duelist/",
     "kicker": "POE2 1.0 / DUELIST",
     "title": "PoE2 Duelist最新情報｜1.0で追加予定の新職業",
@@ -270,11 +290,12 @@
     "quickActions": ["追加時期は1.0公開予定日と一緒に確認する", "未発表のビルド予想を確定情報として扱わない", "公開後は対応パッチと最終確認日を確認する"],
     "sections": [
       {"heading": "公式に確認できること", "paragraphs": ["公式発表ではDuelistがPath of Exile 2の正式版1.0に加わることが案内されています。1.0の公開予定日は2026年12月11日です。"]},
+      {"heading": "ExileCon 2026で発表予定", "paragraphs": ["公式は、ExileCon 2026を11月7〜8日（ニュージーランド時間）にオークランドで開催し、大型発表を行うと案内しています。Duelistの詳細が発表された場合は、公式情報で確認してから追記します。"]},
       {"heading": "現在は未登録の情報", "bullets": ["初心者向けDuelistビルド", "Lv1からEndgameまでの8段階ロードマップ", "正確なスキルとサポート構成", "正確なパッシブノード", "装備優先度、DPS、Tier、相場"]},
       {"heading": "公開後に確認する順番", "paragraphs": ["公式パッチノート、ゲーム内仕様、複数の段階別書面資料を確認し、初心者が再現できるものだけを職業ページとビルド詳細へ追加します。確認前の仮ビルドは作りません。"]}
     ],
     "related": [{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0公開予定日を見る","url":"/poe2-1-0/release-date/"},{"label":"現在の8職業を見る","url":"/classes/"}],
-    "sources": [{"name":"Path of Exile 2公式：Duelistと1.0の発表","url":"https://www.pathofexile.com/forum/view-thread/3999858","checkedAt":"2026-09-12"}]
+    "sources": [{"name":"Path of Exile 2公式：Duelistと1.0の発表","url":"https://www.pathofexile.com/forum/view-thread/3999858","checkedAt":"2026-09-12"},{"name":"Steamニュース（公式）：ExileCon 2026（2026年1月28日）","url":"https://store.steampowered.com/news/app/2694490/view/523114848066732372","checkedAt":"2026-09-28"}]
   },
   {
     "path": "/guides/passive-tree/",
