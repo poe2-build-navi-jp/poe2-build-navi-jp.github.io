@@ -2457,7 +2457,7 @@
     "updatedAt": "2026-09-24",
     "status": "verified",
     "mainSkill": "ツイスター（Twister）",
-    "beginnerRating": 3,
+    "beginnerRating": 2,
     "damageRating": 4,
     "defenseRating": 2,
     "mappingRating": 5,
@@ -2465,7 +2465,7 @@
     "difficulty": "中（武器セット2種と連携操作）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": true,
+    "ssf": null,
     "strengths": [
       "必須ユニークなしで育成を始められると掲載資料で案内されている。",
       "Whirling Slashで作った旋風をTwisterで飛ばし、範囲攻撃へつなげられる。",
@@ -2619,30 +2619,26 @@
       {
         "name": "Maxroll: Spirit Walker Twisters Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
-        "checkedAt": "2026-09-27",
-        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新。Pros/Cons形式でSSF可否を明記）"
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新。Pros/Cons形式）"
       }
     ],
     "audience": "必須ユニークなしで始め、ツイスターによる範囲周回を段階的に育てたい人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
           "moderateOperation": false,
-          "ssfConfirmed": true,
+          "ssfConfirmed": false,
           "noDodgeRequirement": false
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
-        "score": 3,
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。Maxrollの「ユニーク不要」の記述は、SSFでの成立を明記したものではないため加点しません。",
+        "score": 2,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「PounceとShredを中心に進め、入手後はWhirling SlashとTwisterの準備を始める。」を参照",
             "source": "https://note.com/fresh_okapi3816/n/nbe96101eda53"
-          },
-          "ssfConfirmed": {
-            "basis": "Maxrollのガイドに「This build does not require any uniques to function, making it a great league starter」と明記",
-            "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters"
           }
         }
       },
@@ -2682,6 +2678,17 @@
         "checkedAt": "2026-09-27",
         "note": "Pros欄に単体火力の高さが挙げられている（同じ記述は火力の根拠にも使用）。"
       }
-    }
+    },
+    "reviewedFacts": {
+      "ssfNote": "Maxrollはユニーク不要と明記（SSF向けとは明記なし）。SSFでの成立は未確認",
+      "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+      "checkedAt": "2026-09-28"
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "SSF可の基準を「資料がSSF向けと明記している場合」に統一。Maxrollの「ユニーク不要」だけではSSF可としないため、SSF可を外し初心者向け評価を3→2に変更。"
+      }
+    ]
   }
 ]

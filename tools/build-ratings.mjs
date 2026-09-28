@@ -13,7 +13,7 @@ export const AXES=[
 export const BEGINNER_CHECKS=[
  ['earlyMainSkill','主力スキルをLv22以下（最初のアセンダンシー前後）から使える'],
  ['moderateOperation','原典が操作の簡単さを長所として明記している'],
- ['ssfConfirmed','SSF（トレードなし）での成立を資料で確認済み'],
+ ['ssfConfirmed','資料がSSF（トレードなし）での成立を明記している（「ユニーク不要」だけでは加点しない）'],
  ['noDodgeRequirement','原典が防御や安全な立ち回りを長所として明記している']
 ];
 export const SOURCE_SCALE=[
