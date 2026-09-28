@@ -159,6 +159,7 @@
       {"heading": "まだ断定できないこと", "bullets": ["1.0環境の最強ビルド", "正式版のTier順位", "各ビルドの正確なレベリング順", "正式版経済での装備相場", "未公開のパッチ変更"]},
       {"heading": "このサイトの更新方針", "paragraphs": ["公式パッチノートと段階別資料を確認後、対応パッチ、最終確認日、8段階ロードマップを更新します。0.5.5向け情報をそのまま1.0向けとして表示しません。"]}
     ],
+    "faq": [{"q":"PoE2 1.0はいつ公開？","a":"2026年12月11日（PST）に公開予定です。公式フォーラムの2026年8月25日付の発表で案内されています。"}, {"q":"1.0の最強ビルドはもう決まっている？","a":"まだ断定できません。公式パッチノートと段階別の資料を確認してから更新します。"}],
     "related": [{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"Duelistの確認済み情報","url":"/poe2-1-0/duelist/"},{"label":"現在の0.5.5ビルド","url":"/guides/poe2-0-5-5-builds/"}],
     "sources": [{"name":"Path of Exile 2公式：1.0公開予定日・基本無料化の発表（2026年8月25日）","url":"https://www.pathofexile.com/forum/view-thread/3999366","checkedAt":"2026-09-27"}]
   },
@@ -177,6 +178,7 @@
       {"heading": "機種をまたいで遊べる？", "bullets": ["PC・PS5・Xbox Seriesの間でクロスプレイでき、同じパーティーで遊べます。", "同じアカウントでログインしていれば、キャラクターの進行とアイテムは機種間で引き継がれます。", "課金アイテムは、PlayStationで購入したものはPlayStation専用です。PC版とXbox版の間では共有されます。"]},
       {"heading": "まだ公式に確認できていないこと", "bullets": ["アーリーアクセスのキャラクター・リーグが1.0でどう扱われるか", "正式版でのMac対応（公式FAQではアーリーアクセス開始時は非対応。現在のSteamストアにはmacOSの動作環境が掲載されています）や、スタンドアロン版PCクライアントの扱い", "正式版のアカウント作成・連携の具体的な手順"], "paragraphs": ["ExileCon 2026（11月7〜8日）などの公式発表を確認し、確認できたものから追記します。"]}
     ],
+    "faq": [{"q":"PoE2は無料で遊べる？","a":"正式版1.0（2026年12月11日公開予定）から基本プレイ無料です。現在のアーリーアクセス中は、Steamではサポーターパックの購入が必要です。"}, {"q":"どの機種で遊べる？","a":"正式版はPC（Steam・Epic Games Store）、PS5、Xbox Seriesで公開予定と報じられています。"}, {"q":"機種をまたいで遊べる？","a":"PC・PS5・Xbox Seriesの間でクロスプレイでき、同じアカウントなら進行を引き継げます。"}],
     "related": [{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2を始めたら（初心者ガイド）","url":"/guides/getting-started/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
     "sources": [{"name":"Path of Exile 2公式：1.0・基本無料化の発表（2026年8月25日）","url":"https://www.pathofexile.com/forum/view-thread/3999366","checkedAt":"2026-09-27"},{"name":"Steamストア：Path of Exile 2（価格・無料化の記載・動作環境）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-27"},{"name":"Gematsu：Path of Exile II launches December 11（対応機種）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"},{"name":"Path of Exile 2公式：Early Access FAQ（配信プラットフォーム・Mac）","url":"https://www.pathofexile.com/forum/view-thread/3587981","checkedAt":"2026-09-28"}]
   },
@@ -197,6 +199,7 @@
       {"heading": "日本語とコントローラー（Steamストアの記載）", "bullets": ["対応言語に日本語があります。音声のフル対応は英語のみです。設定方法は日本語対応のページで確認できます。", "フルコントローラー対応で、DualShock・DualSenseにも対応しています。操作の詳細はコントローラーのページで確認できます。"]},
       {"heading": "スペックが足りない場合", "paragraphs": ["正式版1.0はPS5とXbox Seriesでも公開予定です。PC・PS5・Xbox Seriesの間でクロスプレイでき、同じアカウントなら進行を引き継げます。詳しくは始め方のページで確認できます。"]}
     ],
+    "faq": [{"q":"PoE2の最低スペックは？","a":"Steamストアの記載では、Windows 10、メモリ8GB、VRAM 3GB以上のGPU（GeForce GTX 960 3GBなど）、DirectX 12、空き容量100GBです。"}, {"q":"PoE2の推奨スペックは？","a":"Steamストアの記載では、メモリ16GB、GeForce RTX 2060クラスのGPUで、SSDが推奨されています。"}, {"q":"Macで遊べる？","a":"現在のSteamストアにはmacOSの動作環境が掲載されていますが、公式FAQではアーリーアクセス開始時はMac非対応とされていました。正式版での対応は確認中です。"}],
     "related": [{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"日本語対応と設定","url":"/poe2-1-0/japanese/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
     "sources": [{"name":"Steamストア：Path of Exile 2（動作環境・対応言語・コントローラー）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-28"},{"name":"Path of Exile 2公式：Early Access FAQ（配信プラットフォーム・Mac）","url":"https://www.pathofexile.com/forum/view-thread/3587981","checkedAt":"2026-09-28"}]
   },
@@ -214,6 +217,7 @@
       {"heading": "攻略情報は英語名が多い", "bullets": ["海外の主要ガイド（Maxroll、Mobalyticsなど）は、スキルやアイテムを英語名で書いています。", "このサイトのビルドページでは、主力スキルを「ワーリングアサルト（Whirling Assault）」のように日本語名と英語名で併記しています。", "英語名と日本語名の対応は、PoE2DB日本語版で調べられます。", "よく出る用語は、このサイトの用語辞典でまとめています。"]},
       {"heading": "まだ確認できていないこと", "bullets": ["PS5版・Xbox Series版での日本語表示と設定方法", "1.0で日本語音声が追加されるかどうか", "日本語訳の誤りを公式に報告する方法"], "paragraphs": ["公式の案内を確認できたものから追記します。"]}
     ],
+    "faq": [{"q":"PoE2は日本語に対応している？","a":"Steamストアの記載では日本語に対応しています。音声のフル対応は英語のみで、日本語は文字表示の対応です。"}, {"q":"日本語に切り替えるには？","a":"PC版では、オプションのインターフェース設定で言語を日本語にし、ゲームを再起動します（2024年12月時点の解説記事に基づく手順です）。"}],
     "related": [{"label":"PoE2初心者用語辞典","url":"/dictionary/"},{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
     "sources": [{"name":"Steamストア：Path of Exile 2（対応言語）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-28"},{"name":"DigiStatement：Path of Exile 2: How to change Language（2024年12月27日、PC版）","url":"https://digistatement.com/path-of-exile-2-how-to-change-language/","checkedAt":"2026-09-28"},{"name":"PoE2DB日本語版（英語名と日本語名の対応）","url":"https://poe2db.tw/jp/","checkedAt":"2026-09-28"}]
   },
@@ -233,6 +237,7 @@
       {"heading": "機種ごとの注意", "bullets": ["PlayStationで買った課金アイテムはPlayStation専用です。PC版とXbox版の間では共有されます。", "スタッシュタブを持っていない機種でログインすると、そのタブは取り出し専用になります（公式FAQ）。"]},
       {"heading": "まだ確認できていないこと", "bullets": ["正式版1.0での課金アイテムの価格やショップ内容の変更", "無料化にあたって、アーリーアクセス購入者に特別な扱いがあるか", "公式FAQの内容が1.0で変わるかどうか"], "paragraphs": ["公式の案内を確認できたものから追記します。"]}
     ],
+    "faq": [{"q":"課金しないと遊べない？","a":"正式版1.0は基本プレイ無料で、課金しなくても遊べます。課金アイテムは見た目の装飾とスタッシュタブが中心です。"}, {"q":"最初に買うならどれ？","a":"海外の主要ガイドでは、Currency Tab（通貨タブ）が最優先で勧められています。"}, {"q":"PoE1で買ったスタッシュタブは使える？","a":"公式のアーリーアクセスFAQでは、PoE2に関係するタブは使えるとされています。リーグ専用のタブなどは使えない場合があります。"}],
     "related": [{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"日本語対応と設定","url":"/poe2-1-0/japanese/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
     "sources": [{"name":"Path of Exile 2公式：Early Access FAQ（PoE1の課金・スタッシュタブの扱い）","url":"https://www.pathofexile.com/forum/view-thread/3587981","checkedAt":"2026-09-28"},{"name":"Maxroll：Stash Tab Guide（2026年5月22日更新）","url":"https://maxroll.gg/poe2/resources/stash-tab-guide","checkedAt":"2026-09-28"},{"name":"Gematsu：Path of Exile II launches December 11（基本無料・pay to winにしない方針）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained（機種間の課金共有）","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"}]
   },
@@ -251,6 +256,7 @@
       {"heading": "PS5・Xbox Seriesで遊ぶ場合", "bullets": ["正式版1.0は、PS5とXbox Seriesでも2026年12月11日に公開予定と報じられています。", "PC・PS5・Xbox Seriesの間でクロスプレイでき、同じアカウントなら進行を引き継げます。", "PlayStationで買った課金アイテムはPlayStation専用です。"]},
       {"heading": "まだ確認できていないこと", "bullets": ["PCでキーボード・マウスとコントローラーを切り替える具体的な手順（確認できる資料が取れなかったため未掲載）", "正式版1.0でのボタン配置や操作の変更", "Xbox用コントローラーなど、DualShock・DualSense以外の個別の対応状況"], "paragraphs": ["公式の案内を確認できたものから追記します。"]}
     ],
+    "faq": [{"q":"PC版はコントローラーで遊べる？","a":"Steamストアの記載では、フルコントローラー対応で、DualShock・DualSenseにも対応しています。"}, {"q":"キーボードでも遊びやすい？","a":"キーボードのWASDキーでの移動にも対応しています。"}],
     "related": [{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
     "sources": [{"name":"Steamストア：Path of Exile 2（コントローラー対応）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-28"},{"name":"PCGamesN：Path of Exile 2 controller support explained（2024年12月6日）","url":"https://www.pcgamesn.com/path-of-exile-2/controller-support","checkedAt":"2026-09-28"},{"name":"Gematsu：Path of Exile II launches December 11（対応機種）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"}]
   },

@@ -133,3 +133,4 @@ await import('./enhance-residual-pages.mjs');
 await import('./generate-image-assets.mjs');
 await import('./enhance-image-seo.mjs');
 await import('./inject-analytics.mjs');
+await import('./enhance-one-hub.mjs');

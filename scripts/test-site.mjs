@@ -197,6 +197,25 @@ const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
 assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");
 assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
+for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1])) {
+  const html = await read(`${path}index.html`);
+  const excluded = path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria)\//.test(path);
+  const boxes = (html.match(/<!-- one-link:start -->/g) || []).length;
+  assert(boxes === (excluded ? 0 : 1), `${path || "/"}: 1.0 link box count ${boxes}, expected ${excluded ? 0 : 1}`);
+  if (!excluded) {
+    const main = html.slice(html.indexOf("<main"), html.lastIndexOf("</main>"));
+    assert(/<!-- one-link:start -->[\s\S]*href="\/poe2-1-0\/"[\s\S]*<!-- one-link:end -->/.test(main), `${path}: 1.0 link box must link the hub inside <main>`);
+  }
+  if (path.startsWith("poe2-1-0/")) {
+    const visible = [...((html.match(/<h2>よくある質問<\/h2>([\s\S]*?)<\/section>/) || [])[1] || "").matchAll(/<summary>([\s\S]*?)<\/summary>/g)].map((m) => m[1]);
+    const schema = html.match(/<!-- one-faq:start --><script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+    if (visible.length) {
+      assert(schema, `${path}: FAQPage structured data missing`);
+      if (schema) { const faq = JSON.parse(schema[1].replaceAll("\\u003c", "<")); assert(faq["@type"] === "FAQPage" && faq.mainEntity.length === visible.length, `${path}: FAQPage must match the ${visible.length} visible questions`); }
+    }
+  }
+}
+for (const page of seoPages.filter((item) => item.path.startsWith("/poe2-1-0/") && item.path !== "/poe2-1-0/duelist/")) assert(page.faq?.length >= 2, `${page.path}: 1.0 page needs at least 2 FAQ items`);
 assert(oneHub.includes("Early Accessから何が変わる？") && oneHub.includes("1.0を待たず、今から始めてもいい？") && oneHub.includes("1.0までに覚えておきたいこと") && oneHub.includes("現在選べる初心者向けビルド"), "1.0 beginner hub sections missing");
 assert(oneHub.includes("1.0から始める人が今やること") && oneHub.includes("初心者向けビルドを見る") && oneHub.includes("今使えるおすすめビルドを見る") && oneHub.includes("リーグスターターを見る"), "1.0 next-action section missing");
 const noteMap = await read("NOTE_CONTENT_MAP.md");
