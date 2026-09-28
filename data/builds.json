@@ -269,7 +269,7 @@
     "mainSkill": "ツイスター（Twister）",
     "beginnerRating": 2,
     "damageRating": 5,
-    "defenseRating": null,
+    "defenseRating": 3,
     "mappingRating": 5,
     "bossRating": 2,
     "difficulty": "複数スキルの順番管理",
@@ -285,12 +285,14 @@
     "ssf": null,
     "strengths": [
       "キャンペーン開始からツイスターを主力にできる。",
-      "段階別の装備・スキル・パッシブ構成が公開されている。"
+      "段階別の装備・スキル・パッシブ構成が公開されている。",
+      "殲滅力が高いため、被弾すること自体がほとんどない（Maxroll）。"
     ],
     "weaknesses": [
       "ワーリングスラッシュはマナ消費を抑えるためLv1維持が推奨され、誤って上げない注意が必要。",
       "武器セット別のスキル割り当てとローテーションを覚える必要がある。",
-      "SSF（ソロセルフファウンド）での成立可否は情報源に明記されていない。Maxrollのガイドではユニークアイテムを前提にした最適化ルートも紹介されており、SSFでは代替装備の検討が必要になる可能性がある。"
+      "SSF（ソロセルフファウンド）での成立可否は情報源に明記されていない。Maxrollのガイドではユニークアイテムを前提にした最適化ルートも紹介されており、SSFでは代替装備の検討が必要になる可能性がある。",
+      "柔らかく感じる場合は、火力のパッシブを減らして回避・回避/ESのパッシブを取る必要がある（MaxrollのFAQ）。"
     ],
     "levelingStages": [
       {
@@ -440,7 +442,7 @@
     "status": "verified",
     "audience": "序盤からツイスターを使い、武器セットを切り替えて進めたい人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
@@ -467,9 +469,13 @@
         "note": "長所で火力が強調されている。"
       },
       "defense": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料（Maxroll 0.5.5・2026年9月19日更新版、IGGMの0.5.5解説記事）に、耐久の長所・短所としての記述がない。Maxrollの「耐久に困るなら胴を回避にすると硬くなる」やIGGMのDeflect目標値は装備の選び方の説明で、ビルドの長所・短所ではないため使わない。"
+        "score": 3,
+        "basis": "長所と短所が両方",
+        "quote": "Defensively the build goes for Evasion and Deflection, but with the screen clear potential rarely ever gets hit at all. ／ I feel squishy, what can I do?",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "まとめの本文で、殲滅力が高いため被弾がほとんどないことを長所としている一方、FAQで「柔らかく感じる場合」を取り上げ、火力を削って回避を取るよう案内している（本文とFAQの記述。0.5.5・2026年9月19日更新）。"
       },
       "mapping": {
         "score": 5,
@@ -491,6 +497,10 @@
       }
     },
     "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Maxroll（0.5.5、9月19日更新）の本文とFAQを確認し、耐久を未評価→3/5（被弾がほとんどない長所と、柔らかさへの対処を案内するFAQの両方）に更新。"
+      },
       {
         "date": "2026-09-27",
         "summary": "原典の序盤装備優先と武器セット運用をもとに後半の装備交換順を整理。Late Endgame固有の装備閾値は未確認。"
@@ -1633,7 +1643,7 @@
     "mainSkill": "スケルタルスナイパー / スペクター",
     "beginnerRating": 5,
     "damageRating": 5,
-    "defenseRating": null,
+    "defenseRating": 5,
     "mappingRating": null,
     "bossRating": 5,
     "difficulty": "Act 3とLv67前後で召喚対象を切替",
@@ -1651,7 +1661,8 @@
       "ミニオンレベル、Spirit、防御という装備目標が分かりやすい。",
       "PoE Vaultの育成版は「ほぼ自動で攻撃する、安全な遠距離の立ち回り」と紹介している。",
       "Endgameのスペクター版について、PoE Vaultは「操作が簡単」「単体火力が非常に高い」と紹介している（0.5対応の資料）。",
-      "Maxroll（0.5.5）はユニークアイテムなしで成立すると明記している。"
+      "Maxroll（0.5.5）はユニークアイテムなしで成立すると明記している。",
+      "ESに特化した防御で大きな被弾に耐え、素早く回復できる。PoE Vaultは「very durable」に感じられるとしている。"
     ],
     "weaknesses": [
       "移動速度は高速周回型より遅く、狭い場所ではミニオンAIが詰まる場合がある（PoE Vaultも短所にミニオンAIの問題を挙げている）。",
@@ -1839,6 +1850,10 @@
     "changeHistory": [
       {
         "date": "2026-09-28",
+        "summary": "PoE Vault（スペクター版）の本文を確認し、耐久を未評価→5/5（「very durable」、大きな被弾に耐えるESの防御）に更新。"
+      },
+      {
+        "date": "2026-09-28",
         "summary": "PoE Vaultの育成版・スペクター版とMaxroll（0.5.5）を確認。火力・ボスを5/5（「Incredible single target damage」）、初心者向けを4→5（「Easy to play」）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。耐久・周回は根拠となる記述がなく未評価のまま。"
       },
       {
@@ -1890,9 +1905,13 @@
         "checkedAt": "2026-09-28"
       },
       "defense": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、耐久の長所・短所としての記述がない。PoE Vaultの「Safe, ranged playstyle」「Automated damage allows you to stay safe」は立ち回りの安全さの記述のため、初心者向けの条件に使い、耐久の評価には使わない。GamerchのミニオンインファーナリストのページはGamerch自身が「0.5.0未対応」としているため使わない。"
+        "score": 5,
+        "basis": "長所（強調）",
+        "quote": "a purely Energy Shield focused defense that will let you absorb large hits and recover with rapid Recharge Delay and Recharge Rate. ／ the build should feel very durable.",
+        "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "sourceName": "PoE Vault: Infernalist Spectre Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "本文（Build MechanicsとAscendancyの説明）で、大きな被弾に耐えてESを素早く回復できること、ビルドが「very durable」に感じられることを長所として説明している（長所欄ではなく本文の記述）。資料はEndgameのPowered Zealotスペクター版で0.5対応。"
       },
       "mapping": {
         "score": null,
@@ -2151,7 +2170,7 @@
       "defense": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料（Maxroll 0.5.5・Gamerch）に、耐久の長所・短所としての記述がない。検索結果の要約にあった耐久面の記述は、元の文章を確認できなかったため使わない。"
+        "note": "確認した資料（Maxroll 0.5.5・Gamerch）に、耐久の長所・短所としての記述がない。boostmatchの「混沌耐性が明確な弱点」は、理由とされるゲーム仕様を一次資料で確認できず著者も不明なため、TimesaverはAI作成のデータと明記されているため使わない。"
       },
       "mapping": {
         "score": 4,
