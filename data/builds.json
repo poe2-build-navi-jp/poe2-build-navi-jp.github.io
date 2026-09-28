@@ -491,10 +491,10 @@
     "updatedAt": "2026-09-07",
     "mainSkill": "シールドウォール（Shield Wall）",
     "beginnerRating": 3,
-    "damageRating": null,
+    "damageRating": 3,
     "defenseRating": 5,
     "mappingRating": 4,
-    "bossRating": null,
+    "bossRating": 3,
     "difficulty": "Lv22で主力を切替",
     "reviewedFacts": {
       "gearDependence": "マップ序盤は装備を整えやすい",
@@ -507,11 +507,15 @@
     "ssf": null,
     "strengths": [
       "最初のアセンダンシー取得後はキャンペーンで耐久を得やすい。",
-      "段階別のAct・Maps・Endgame構成が公開されている。"
+      "段階別のAct・Maps・Endgame構成が公開されている。",
+      "スミス・オブ・キタヴァは耐性を揃えやすく、属性ダメージに非常に強くなれる（Maxroll）。",
+      "装備への投資が少なくても成立し、マップ序盤から装備枠をアイテムレアリティに回しやすい（Kami-labs）。"
     ],
     "weaknesses": [
-      "主力のシールドウォールはLv22まで使えない。",
-      "高額装備帯では他構成ほど火力と周回が伸びないと原典で説明されている。"
+      "主力のシールドウォールはLv22まで使えない（Tier 7ジェム。Lv22で装備できる）。",
+      "高額装備帯では他構成ほど火力と周回が伸びないと原典で説明されている。",
+      "0.5でFortifying Cryの仕様が変わり、Act 3以降の単体火力が最悪の場合30%下がる（Kami-labs）。",
+      "Act 1のローリングスラム→ボーンシャッターはアニメーションキャンセルの練習が必要。Lv14のPerfect Strikeはタイミングを外すとダメージが出ない（Kami-labs）。"
     ],
     "levelingStages": [
       {
@@ -642,9 +646,12 @@
       }
     ],
     "gearPriorities": [
-      "Lv22以降：アーマー値の高い盾",
-      "キャンペーンとEndgame：耐性",
-      "現在レベルに合う防具"
+      "盾（最重要）：アーマー値とアーマー増加%。シールドウォールは盾のアーマー15ごとに物理ダメージ5〜7が加算されるため、火力も盾で決まる（poe2db。0.5.0で6〜8から変更）。使用にはアーマー系の盾が必要。",
+      "Lv22の切替時：アーマー値の高い盾を先に用意しておく。",
+      "耐性：アセンダンシー「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わるため、火耐性を優先すると耐性を揃えやすい（Maxroll）。",
+      "耐性に使わずに済んだ接尾辞は、火力やアイテムレアリティに回せる（Maxroll・Kami-labs）。",
+      "マップ序盤：ユニーク「Thrillsteel」で常時Onslaught（加速）を得て周回を速くする案がある（Kami-labs）。",
+      "防具：ライフと不足耐性。現在レベルに合う防具を使う。"
     ],
     "sources": [
       {
@@ -662,20 +669,36 @@
       {
         "name": "Maxroll: Smith of Kitava Ascendancy Overview",
         "url": "https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview",
-        "checkedAt": "2026-09-08",
+        "checkedAt": "2026-09-28",
         "type": "海外アセンダンシー解説（2026年6月17日更新。Shield Wall自体への言及はないが、耐性キャップの取りやすさなど本ビルドの前提となる耐性面の裏付けとして参照）"
+      },
+      {
+        "name": "Kami-labs: Build Guerrier Shieldwall Smith Kitava（Saison 5）",
+        "url": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-guerrier-shieldwall-smith-kitava-saison-5/",
+        "checkedAt": "2026-09-28",
+        "type": "海外解説記事（Mobalyticsの元ガイドと同じ8段階構成を解説。0.5、2026年5月28日公開）"
+      },
+      {
+        "name": "poe2db: Shield Wall",
+        "url": "https://poe2db.tw/us/Shield_Wall",
+        "checkedAt": "2026-09-28",
+        "type": "ゲームデータ（ジェムのTier・盾アーマーによる加算ダメージ・変更履歴）"
       }
     ],
     "status": "verified",
     "audience": "装備を整えやすい耐久型のリーグスターターを探している人",
     "changeHistory": [
       {
+        "date": "2026-09-28",
+        "summary": "Kami-labsの解説記事とpoe2dbを確認。火力・ボスを未評価→3/5（ボス火力の長所と0.5の単体火力低下の短所が両方）に更新。盾アーマーが火力を決める仕様を装備優先度に明記し、長所・短所と出典を追加。Maxrollのアセンダンシー解説を再確認。"
+      },
+      {
         "date": "2026-09-27",
         "summary": "Lv22以降に原典で確認するSkill Gems段階と切替順を明記。段階別サポート名は未確認として維持。原典本文のMaps操作を反映。"
       }
     ],
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
@@ -683,7 +706,7 @@
           "ssfConfirmed": false,
           "noDodgeRequirement": true
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。Kami-labsは序盤のコンボとPerfect Strikeに練習が必要と短所に挙げているため、操作の簡単さは加点しません。",
         "score": 3,
         "verifiedChecks": {
           "earlyMainSkill": {
@@ -697,9 +720,13 @@
         }
       },
       "damage": {
-        "score": null,
-        "basis": "未評価",
-        "note": "原典にはFortifying Cry変更に伴う単体ダメージの減少が記されていますが、ビルド全体の火力量を比較できる長所・短所の記述としては採点しません。"
+        "score": 3,
+        "basis": "長所と短所が両方",
+        "quote": "Boss obliteration : Shield Wall was already destroying bosses in 0.4 with very little investment ／ Nerf to Fortifying Cry in 0.5 : -30% single target damage in the worst case after Act 3",
+        "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-guerrier-shieldwall-smith-kitava-saison-5/",
+        "sourceName": "Kami-labs: Shieldwall Smith Kitava（Mobalyticsの元ガイドを解説した記事、0.5）",
+        "checkedAt": "2026-09-28",
+        "note": "同じ資料のStrengths欄にボスを倒す火力の高さ、Weaknesses欄に0.5での単体火力の低下（最悪30%）が挙げられている。同じ記述はボスの根拠にも使用。"
       },
       "defense": {
         "score": 5,
@@ -707,7 +734,7 @@
         "quote": "can become extremely resilient to elemental damage",
         "source": "https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview",
         "sourceName": "Maxroll: Smith of Kitava Ascendancy Overview",
-        "checkedAt": "2026-09-26",
+        "checkedAt": "2026-09-28",
         "note": "アセンダンシー解説で、属性ダメージへの非常に高い耐性が強調されている。"
       },
       "mapping": {
@@ -720,9 +747,13 @@
         "checkedAt": "2026-09-27"
       },
       "boss": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+        "score": 3,
+        "basis": "長所と短所が両方",
+        "quote": "Boss obliteration : Shield Wall was already destroying bosses in 0.4 with very little investment ／ Nerf to Fortifying Cry in 0.5 : -30% single target damage in the worst case after Act 3",
+        "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-guerrier-shieldwall-smith-kitava-saison-5/",
+        "sourceName": "Kami-labs: Shieldwall Smith Kitava（Mobalyticsの元ガイドを解説した記事、0.5）",
+        "checkedAt": "2026-09-28",
+        "note": "同じ資料に、ボス火力の長所と、0.5での単体火力低下の短所が両方挙げられている（同じ記述は火力の根拠にも使用）。"
       }
     }
   },

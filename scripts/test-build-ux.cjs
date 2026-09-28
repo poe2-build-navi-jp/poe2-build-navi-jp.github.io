@@ -51,7 +51,8 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  }
  const ice=data.find(b=>b.id==='ranger-ice-shot-deadeye');
  const shield=data.find(b=>b.id==='warrior-shield-wall-smith');
- assert.equal(shield.damageRating,null);
+ assert.equal(shield.damageRating,3);
+ assert.match(shield.ratingEvidence.damage.quote,/Boss obliteration[\s\S]*-30% single target/);
  assert.equal(shield.mappingRating,4);
  assert.match(shield.ratingEvidence.mapping.quote,/Screen wide clear/);
  assert.match(rows(ice,discovery).find(([name])=>name==='主力スキル使用条件')[1],/Lv31.*レベル9/);
