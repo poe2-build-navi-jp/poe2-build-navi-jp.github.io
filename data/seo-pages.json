@@ -177,7 +177,7 @@
       {"heading": "機種をまたいで遊べる？", "bullets": ["PC・PS5・Xbox Seriesの間でクロスプレイでき、同じパーティーで遊べます。", "同じアカウントでログインしていれば、キャラクターの進行とアイテムは機種間で引き継がれます。", "課金アイテムは、PlayStationで購入したものはPlayStation専用です。PC版とXbox版の間では共有されます。"]},
       {"heading": "まだ公式に確認できていないこと", "bullets": ["アーリーアクセスのキャラクター・リーグが1.0でどう扱われるか", "正式版でのMac対応（現在のSteamストアにはmacOSの動作環境も掲載されています）や、Steam・Epic以外のPC向け配布方法", "正式版のアカウント作成・連携の具体的な手順"], "paragraphs": ["ExileCon 2026（11月7〜8日）などの公式発表を確認し、確認できたものから追記します。"]}
     ],
-    "related": [{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2を始めたら（初心者ガイド）","url":"/guides/getting-started/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
+    "related": [{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2を始めたら（初心者ガイド）","url":"/guides/getting-started/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
     "sources": [{"name":"Path of Exile 2公式：1.0・基本無料化の発表（2026年8月25日）","url":"https://www.pathofexile.com/forum/view-thread/3999366","checkedAt":"2026-09-27"},{"name":"Steamストア：Path of Exile 2（価格・無料化の記載・動作環境）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-27"},{"name":"Gematsu：Path of Exile II launches December 11（対応機種）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"}]
   },
   {
@@ -216,6 +216,25 @@
     ],
     "related": [{"label":"PoE2初心者用語辞典","url":"/dictionary/"},{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
     "sources": [{"name":"Steamストア：Path of Exile 2（対応言語）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-28"},{"name":"DigiStatement：Path of Exile 2: How to change Language（2024年12月27日、PC版）","url":"https://digistatement.com/path-of-exile-2-how-to-change-language/","checkedAt":"2026-09-28"},{"name":"PoE2DB日本語版（英語名と日本語名の対応）","url":"https://poe2db.tw/jp/","checkedAt":"2026-09-28"}]
+  },
+  {
+    "path": "/poe2-1-0/microtransactions/",
+    "kicker": "POE2 1.0 / SHOP",
+    "title": "PoE2の課金はどれを買う？｜無料プレイで最初に買うスタッシュタブ",
+    "description": "PoE2は正式版から基本無料で、課金は見た目と収納・取引の便利機能が中心です。最初に買うならどのスタッシュタブか、PoE1で課金した人の扱い、機種ごとの注意点を公式情報を基に案内します。",
+    "h1": "PoE2の課金はどれを買えばいい？",
+    "answer": "PoE2は正式版1.0から基本無料で、課金しなくても遊べます。課金アイテムは見た目の装飾と、アイテムを整理・出品するスタッシュタブが中心です。海外の主要ガイドでは、最初に買うならCurrency Tab（通貨タブ）が勧められています。",
+    "quickActions": ["まずは課金せずにキャンペーンを遊ぶ", "最初に買うならCurrency Tab（通貨タブ）を検討する", "スタッシュタブはセールを待ってから買う"],
+    "sections": [
+      {"heading": "課金しないと遊べない？", "bullets": ["正式版1.0は基本プレイ無料です。", "開発元は、PoE2を「pay to win（課金で強くなる）」にはしないと述べていると報じられています。", "課金アイテムは、見た目の装飾（コスメ）と、アイテムを整理・出品するスタッシュタブが中心です。海外ガイドでも、タブが多い人が実質的に有利になるわけではないと説明されています。"]},
+      {"heading": "最初に買うならどのスタッシュタブ？", "bullets": ["Currency Tab（通貨タブ）：大量に拾う通貨をまとめて整理できるため、最優先で勧められています。", "Map Stash Tab（マップタブ）：Endgameで集まるマップの整理用です。", "Merchant's Tab または Premium Stash Tab：他のプレイヤーへ出品するのに必要です。通常のタブは出品に使えません。"], "paragraphs": ["優先順位はMaxrollのスタッシュタブ解説（2026年5月更新、0.5時点）に基づきます。価格は変わることがあるため、購入前に公式ショップで確認してください。"]},
+      {"heading": "買う前に知っておきたいこと", "bullets": ["スタッシュタブは、大型アップデートの直後などにセールで割引されることが多いと案内されています。", "どのタブが必要かは、遊んで何がたまるかを見てから決めても遅くありません。", "取引をしないなら、出品用のタブは急いで買う必要はありません。"]},
+      {"heading": "PoE1で課金した人は？（公式アーリーアクセスFAQ）", "bullets": ["PoE1のアカウントでそのままPoE2を遊べます。", "PoE1で買ったスタッシュタブは、PoE2に関係するものは使えます。リーグ専用のタブなど、PoE2にない内容のタブは使えない場合があります。", "PoE1の見た目アイテムは順次対応中で、まだ使えないものもあります。"], "paragraphs": ["これはアーリーアクセス時点の公式FAQの内容です。1.0で変更がないか、公開時に確認します。"]},
+      {"heading": "機種ごとの注意", "bullets": ["PlayStationで買った課金アイテムはPlayStation専用です。PC版とXbox版の間では共有されます。", "スタッシュタブを持っていない機種でログインすると、そのタブは取り出し専用になります（公式FAQ）。"]},
+      {"heading": "まだ確認できていないこと", "bullets": ["正式版1.0での課金アイテムの価格やショップ内容の変更", "無料化にあたって、アーリーアクセス購入者に特別な扱いがあるか", "公式FAQの内容が1.0で変わるかどうか"], "paragraphs": ["公式の案内を確認できたものから追記します。"]}
+    ],
+    "related": [{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"日本語対応と設定","url":"/poe2-1-0/japanese/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
+    "sources": [{"name":"Path of Exile 2公式：Early Access FAQ（PoE1の課金・スタッシュタブの扱い）","url":"https://www.pathofexile.com/forum/view-thread/3587981","checkedAt":"2026-09-28"},{"name":"Maxroll：Stash Tab Guide（2026年5月22日更新）","url":"https://maxroll.gg/poe2/resources/stash-tab-guide","checkedAt":"2026-09-28"},{"name":"Gematsu：Path of Exile II launches December 11（基本無料・pay to winにしない方針）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained（機種間の課金共有）","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"}]
   },
   {
     "path": "/poe2-1-0/duelist/",
