@@ -157,3 +157,6 @@
 - 適用結果：SSF可はソーサレス砂と炎・スナイパーミニオン インファーナリストの2本（どちらも原典がSSF向けと明記）。
   ツイスター・スピリットウォーカーはSSF可を外し初心者評価3→2。相棒スピリットウォーカーは未確認のまま。
 - 評価基準の文言（`tools/build-ratings.mjs` BEGINNER_CHECKS）にも明記。
+- 同日追記：EDコンテージョン・リッチをSSF可に追加。Maxroll（0.5.5）のメリット欄に
+  「SSF Campaign ~5Hours, Arbiter ~10 Hours」、育成ガイドに「SSF Fresh Start Leaguestart Viable」と明記されていたため
+  （基準どおり）。SSF可は計3本。

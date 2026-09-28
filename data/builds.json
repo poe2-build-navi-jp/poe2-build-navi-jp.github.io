@@ -2118,24 +2118,28 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Essence Drain + Contagion",
-    "beginnerRating": 2,
-    "damageRating": null,
+    "beginnerRating": 4,
+    "damageRating": 2,
     "defenseRating": 3,
     "mappingRating": 5,
     "bossRating": null,
     "difficulty": "低〜中（マナ管理あり）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": null,
+    "ssf": true,
     "strengths": [
       "ContagionとEssence Drainを中心にLv1からEndgameまで段階別構成がある。",
       "通常敵の集団処理と安全な位置取りを両立しやすいと書面ガイドで説明されている。",
-      "キャンペーン、T1〜T15、フルライフ、ローライフの各構成が分けて提示されている。"
+      "キャンペーン、T1〜T15、フルライフ、ローライフの各構成が分けて提示されている。",
+      "Maxroll（0.5.5）はメリットに「SSFでキャンペーン約5時間、Arbiterまで約10時間」「範囲殲滅が非常に強い」「大きなESプール」を挙げている。",
+      "殲滅が爽快で、安全な遠距離の立ち回りができる（PoE Vault）。"
     ],
     "weaknesses": [
       "スキルを複数使うため、マナ消費が重くなりやすい。",
       "単体戦ではBonestorm、Dark Effigy、Despairなど役割の違う操作が増える。",
-      "ローライフ版は必要条件が多いため、序盤から部分的に混ぜない。"
+      "ローライフ版は必要条件が多いため、序盤から部分的に混ぜない。",
+      "被弾しない立ち回りが前提（Maxrollのデメリット「Don't Get Hit Playstyle」）。",
+      "火力はまともな武器を入手・クラフトできるかに大きく左右され、継続ダメージは効くまでに時間がかかる（PoE Vault）。"
     ],
     "levelingStages": [
       {
@@ -2260,9 +2264,13 @@
       }
     ],
     "gearPriorities": [
-      "ワンド：+Chaos Spell Skills、Spell Damage、Cast Speed",
-      "防具：ライフ/ES、耐性、移動速度",
-      "Endgame：採用版の防御条件とマナ維持"
+      "キャンペーン：ワンド・フォーカス・アミュレットに+混沌／スペル／投射物スキルレベル。ライフ・ES・耐性の装備と、移動速度20〜30%のブーツ（Maxroll）。",
+      "武器の重要度が高い：PoE Vaultは、火力がまともな武器を入手・クラフトできるかに大きく左右されると短所に挙げている。ワンドは+Chaos Spell Skills、Spell Damage、Cast Speed。",
+      "キャンペーン後：店とギャンブル店で弱い部位を更新し、まず耐性上限を確保する（Maxroll）。",
+      "マップ以降：ES装備を更新し、アイテムレアリティ100%を早めに目指す。ジュエルは最大ES%増加と、マナ維持用に「キル時に最大マナの%回復」を1つ以上（Maxroll）。",
+      "Spirit：ConvalescenceとRavenous Swarmを両方使うには、アミュレットと胴で合計+50のSpiritが必要（Maxroll）。",
+      "Endgame：+全スキルレベル、ES、アイテムレアリティ、移動速度の高いブーツ、Lv20〜21・品質20%のジェム。ローライフ版はEternal Life取得後にユニーク「Atziri's Disdain」を早めに装備（Maxroll）。",
+      "ユニークは必須ではない（Maxroll）。"
     ],
     "sources": [
       {
@@ -2274,33 +2282,63 @@
       {
         "name": "Maxroll: Essence Drain Lich Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
-        "checkedAt": "2026-09-11",
-        "type": "海外Endgameガイド（過去のSSF記述は今回再確認できず、全行程の成立範囲は未確認）"
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。メリット欄にSSFでのキャンペーン・Arbiterまでの所要時間を明記）"
+      },
+      {
+        "name": "Maxroll: Essence Drain Lich Leveling Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-leveling-build-guide",
+        "checkedAt": "2026-09-28",
+        "type": "海外レベリングガイド（対応パッチ0.5.5、2026年9月4日更新。メリット欄に「SSF Fresh Start Leaguestart Viable」）"
+      },
+      {
+        "name": "PoE Vault: Witch Chaos Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
+        "checkedAt": "2026-09-28",
+        "type": "海外レベリングガイド（Essence Drain＋Contagion構成。0.5.1対応、2026年6月4日更新）"
       }
     ],
     "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者",
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Maxroll（本編・育成、0.5.5）とPoE Vaultを確認。MaxrollのメリットにSSFでの成立（キャンペーン約5時間・Arbiterまで約10時間）が明記されていたためSSF可に変更。初心者向けを2→4（SSF・安全な遠距離の立ち回り）、火力を未評価→2/5（武器依存・継続ダメージの立ち上がり）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。ボスは根拠となる記述がなく未評価のまま。"
+      }
+    ],
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
           "moderateOperation": false,
-          "ssfConfirmed": false,
-          "noDodgeRequirement": false
+          "ssfConfirmed": true,
+          "noDodgeRequirement": true
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
-        "score": 2,
+        "note": "加点した条件だけを原典・段階別手順と結び付けています。操作の簡単さを長所として明記した資料は確認できないため加点しません。",
+        "score": 4,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「Contagion。単体はVolcanoからEssence Drainへ移行」を参照",
             "source": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit"
+          },
+          "ssfConfirmed": {
+            "basis": "Maxroll（0.5.5）のメリット欄に「SSF Campaign ~5Hours, Arbiter ~10 Hours」、育成ガイドのメリット欄に「SSF Fresh Start Leaguestart Viable」と明記",
+            "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide"
+          },
+          "noDodgeRequirement": {
+            "basis": "PoE VaultのStrengths欄に「Safe, ranged playstyle.」と明記",
+            "source": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build"
           }
         }
       },
       "damage": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、火力の長所・短所としての記述がない。"
+        "score": 2,
+        "basis": "短所",
+        "quote": "Damage output is highly dependent on obtaining/crafting a decent weapon. / Damage Over Time needs to ramp up.",
+        "source": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
+        "sourceName": "PoE Vault: Witch Chaos Leveling Build",
+        "checkedAt": "2026-09-28",
+        "note": "Weaknesses欄に、火力が武器に大きく依存することと、継続ダメージの立ち上がりに時間がかかることが挙げられている。火力の長所としての記述は確認できなかった。資料は育成用（0.5.1対応）。"
       },
       "defense": {
         "score": 3,
@@ -2308,7 +2346,7 @@
         "quote": "Large ES Pool / Don't Get Hit Playstyle",
         "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
         "sourceName": "Maxroll: Essence Drain Lich Build Guide",
-        "checkedAt": "2026-09-26",
+        "checkedAt": "2026-09-28",
         "note": "長所に大きなES、短所に「被弾しない立ち回りが前提」とある。"
       },
       "mapping": {
@@ -2317,13 +2355,13 @@
         "quote": "Amazing AoE Clear",
         "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
         "sourceName": "Maxroll: Essence Drain Lich Build Guide",
-        "checkedAt": "2026-09-26",
-        "note": "長所で範囲殲滅が強調されている。"
+        "checkedAt": "2026-09-28",
+        "note": "長所で範囲殲滅が強調されている。PoE Vaultも長所に「Fantastic and satisfying clear」を挙げている。"
       },
       "boss": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。"
+        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。Maxrollの「Arbiter ~10 Hours」はSSFで最上位ボスに到達するまでの時間の記述で、ボス戦の強さの評価には使わない。"
       }
     }
   },
