@@ -160,3 +160,5 @@
 - 同日追記：EDコンテージョン・リッチをSSF可に追加。Maxroll（0.5.5）のメリット欄に
   「SSF Campaign ~5Hours, Arbiter ~10 Hours」、育成ガイドに「SSF Fresh Start Leaguestart Viable」と明記されていたため
   （基準どおり）。SSF可は計3本。
+- 同日追記：ワーリングアサルト・モンクをSSF可に追加。Maxroll（0.5.5）のメリット欄に
+  「SSF Campaign ~4Hours, Arbiter ~8Hours」と明記。SSF可は計4本。

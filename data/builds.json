@@ -12,7 +12,7 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "ワーリングアサルト（Whirling Assault）",
-    "beginnerRating": null,
+    "beginnerRating": 2,
     "damageRating": 5,
     "defenseRating": 3,
     "mappingRating": 4,
@@ -20,16 +20,18 @@
     "difficulty": "中（Lv41で構成切替）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": null,
+    "ssf": true,
     "strengths": [
       "ワーリングアサルトで移動しながら攻撃でき、マップを進みやすい。",
       "フォーリングサンダーを組み合わせ、チャージを単体火力や広範囲攻撃へ変換できる。",
-      "Lv1からLv41までの育成用ルートが用意されている。"
+      "Lv1からLv41までの育成用ルートが用意されている。",
+      "Maxroll（0.5.5）はメリットに「SSFでキャンペーン約4時間、Arbiterまで約8時間」を挙げている。"
     ],
     "weaknesses": [
       "ワーリングアサルトはLv41まで使えないため、キャンペーン途中でスキルを切り替える必要がある。",
       "序盤のGlacial Cascadeルートは耐久が低いと案内されており、防具更新と回避操作が重要。",
-      "Endgameでは最初のパワーチャージ生成とCharged Staff維持が必要で、完全な1ボタン構成ではない。"
+      "Endgameでは最初のパワーチャージ生成とCharged Staff維持が必要で、完全な1ボタン構成ではない。",
+      "主力のワーリングアサルトはTier 11ジェムで、使えるのはLv41から（poe2db）。それまでは別のスキルで進める。"
     ],
     "levelingStages": [
       {
@@ -180,23 +182,34 @@
       {
         "name": "Maxroll: Whirling Assault Martial Artist Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
-        "checkedAt": "2026-09-08",
-        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。SSF成立範囲は再確認待ち）"
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。メリット欄にSSFでのキャンペーン・Arbiterまでの所要時間を明記）"
+      },
+      {
+        "name": "poe2db: Whirling Assault",
+        "url": "https://poe2db.tw/us/Whirling_Assault",
+        "checkedAt": "2026-09-28",
+        "type": "ゲームデータ（ジェムのTier 11・各レベルの必要キャラクターレベル）"
       }
     ],
     "audience": "近接で移動しながら戦い、Lv1からEndgameまで同じページで進めたい人",
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": false,
           "moderateOperation": false,
-          "ssfConfirmed": false,
+          "ssfConfirmed": true,
           "noDodgeRequirement": false
         },
-        "note": "加点できる条件の原典記述が不足しているため未評価です。",
-        "score": null,
-        "verifiedChecks": {}
+        "note": "加点した条件だけを原典と結び付けています。主力のワーリングアサルトはTier 11ジェムで、使えるのはLv41から（poe2db）のため序盤条件は加点しません。Maxrollはデメリットに「Don't Get Hit Playstyle」を挙げており、安全な立ち回りも加点しません。操作の簡単さを長所として明記した資料は確認できませんでした。",
+        "score": 2,
+        "verifiedChecks": {
+          "ssfConfirmed": {
+            "basis": "Maxroll（0.5.5、2026年9月4日更新）のメリット欄に「SSF Campaign ~4Hours, Arbiter ~8Hours」と明記",
+            "source": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide"
+          }
+        }
       },
       "damage": {
         "score": 5,
@@ -234,7 +247,13 @@
         "checkedAt": "2026-09-07",
         "note": "ガイド題名で「ボスを一撃」と強調されている。"
       }
-    }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Maxroll（0.5.5）のメリット欄にSSFでの成立（キャンペーン約4時間・Arbiterまで約8時間）が明記されていたためSSF可に変更し、初心者向けを未評価→2/5に更新。poe2dbでワーリングアサルトの解禁Lv41を確認。"
+      }
+    ]
   },
   {
     "id": "mercenary-twister-gemling",
@@ -1330,7 +1349,7 @@
     "updatedAt": "2026-09-07",
     "status": "verified",
     "mainSkill": "アイスショット（Ice Shot）",
-    "beginnerRating": null,
+    "beginnerRating": 2,
     "damageRating": 4,
     "defenseRating": 3,
     "mappingRating": 5,
@@ -1352,7 +1371,8 @@
     "weaknesses": [
       "アイスショットはLv31まで解禁されないため、序盤はライトニングアローとライトニングロッドを使う。",
       "後半の防御やクリティカル移行は装備依存で、完成形へ早く切り替えると不安定になりやすい。",
-      "単体戦ではスナイプの溜めとマナ管理が必要になる。"
+      "単体戦ではスナイプの溜めとマナ管理が必要になる。",
+      "対ボス用のスナイプは離すタイミングに慣れが必要（Maxroll「Snipe can be tricky」・Gamerch）。"
     ],
     "levelingStages": [
       {
@@ -1503,23 +1523,34 @@
       {
         "name": "Maxroll: Ice Shot Deadeye Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
-        "checkedAt": "2026-09-26",
+        "checkedAt": "2026-09-28",
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月4日更新。評価の根拠として参照）"
+      },
+      {
+        "name": "Gamerch: アイスショットビルドのジェムとおすすめクラス",
+        "url": "https://gamerch.com/poe2/955377",
+        "checkedAt": "2026-09-28",
+        "type": "日本語攻略資料（2026年9月18日更新。長所・短所と装備の優先度を参照）"
       }
     ],
     "audience": "弓で遠距離から戦い、周回と単体攻撃を使い分けたい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": false,
           "moderateOperation": false,
           "ssfConfirmed": false,
-          "noDodgeRequirement": false
+          "noDodgeRequirement": true
         },
-        "note": "加点できる条件の原典記述が不足しているため未評価です。",
-        "score": null,
-        "verifiedChecks": {}
+        "note": "加点した条件だけを原典と結び付けています。主力のアイスショットはLv31から（poe2db）のため序盤条件は加点しません。Maxrollがデメリットに「Snipe can be tricky」、Gamerchが短所に「スナイプのタイミングに慣れる必要がある」を挙げているため、操作の簡単さも加点しません。SSFは元ガイドがMapping序盤の装備までしか言及しておらず、加点しません。",
+        "score": 2,
+        "verifiedChecks": {
+          "noDodgeRequirement": {
+            "basis": "Maxroll（0.5.5、2026年9月4日更新）のメリット欄に「Avoids most damage」と明記",
+            "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide"
+          }
+        }
       },
       "damage": {
         "score": 4,
@@ -1564,7 +1595,13 @@
       "source": "https://poe2db.tw/us/Ice_Shot",
       "guide": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
       "checkedAt": "2026-09-27"
-    }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Maxroll（0.5.5）とGamerch（9月18日更新）を確認。Maxrollのメリット「Avoids most damage」で安全な立ち回りを加点し、初心者向けを未評価→2/5に更新。"
+      }
+    ]
   },
   {
     "id": "witch-minion-infernalist",
