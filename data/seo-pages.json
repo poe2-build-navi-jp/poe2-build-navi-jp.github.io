@@ -194,11 +194,28 @@
       {"heading": "Macの動作環境（Steamストア掲載）", "bullets": ["最低：macOS 10.13、2.6GHzクアッドコア Intel Core i7、メモリ8GB、Radeon Pro 450", "推奨：macOS 10.13、2.6GHzヘキサコア Intel Core i7、メモリ16GB、Radeon Pro 555X、SSD推奨"], "paragraphs": ["現在のSteamストアにはmacOSの動作環境も掲載されています。正式版1.0でのMac対応は、公式発表で改めて確認してから追記します。"]},
       {"heading": "見落としやすい点", "bullets": ["VRAM（GPUのメモリ）が3GB未満のGPUでは、最低動作環境を満たしません。", "空き容量は100GB必要です。SSDが推奨されています。", "オンライン専用のため、ブロードバンド接続が必要です。", "上記は現在のアーリーアクセス版の記載です。1.0公開時に変更がないか確認して更新します。"]},
       {"heading": "自分のPCの確認方法（Windows）", "bullets": ["CPUとメモリ：「設定」→「システム」→「バージョン情報」で確認できます。", "GPUとVRAM：「dxdiag」を実行し、「ディスプレイ」タブで確認できます。", "空き容量：エクスプローラーの「PC」で、インストール先ドライブの空き容量を確認します。"]},
-      {"heading": "日本語とコントローラー（Steamストアの記載）", "bullets": ["対応言語に日本語があります。音声のフル対応は英語のみです。", "フルコントローラー対応で、DualShock・DualSenseにも対応しています。"]},
+      {"heading": "日本語とコントローラー（Steamストアの記載）", "bullets": ["対応言語に日本語があります。音声のフル対応は英語のみです。設定方法は日本語対応のページで確認できます。", "フルコントローラー対応で、DualShock・DualSenseにも対応しています。"]},
       {"heading": "スペックが足りない場合", "paragraphs": ["正式版1.0はPS5とXbox Seriesでも公開予定です。PC・PS5・Xbox Seriesの間でクロスプレイでき、同じアカウントなら進行を引き継げます。詳しくは始め方のページで確認できます。"]}
     ],
-    "related": [{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
+    "related": [{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"日本語対応と設定","url":"/poe2-1-0/japanese/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
     "sources": [{"name":"Steamストア：Path of Exile 2（動作環境・対応言語・コントローラー）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-28"}]
+  },
+  {
+    "path": "/poe2-1-0/japanese/",
+    "kicker": "POE2 1.0 / JAPANESE",
+    "title": "PoE2は日本語対応？｜日本語化の設定と英語名の調べ方",
+    "description": "PoE2は日本語表示に対応しています（音声のフル対応は英語のみ）。PC版での日本語への切り替え方と、海外ガイドの英語名を日本語名と照らし合わせる方法を案内します。",
+    "h1": "PoE2は日本語で遊べる？日本語対応の範囲と設定",
+    "answer": "Steamストアの記載では、Path of Exile 2は日本語に対応しています。ただし音声のフル対応は英語のみで、日本語は文字表示の対応です。PC版ではオプションのインターフェース設定から言語を変更できると案内されています。",
+    "quickActions": ["オプションのインターフェース設定で言語を日本語にする", "言語を変えたらゲームを再起動する", "海外ガイドを読むときはスキルの英語名も控えておく"],
+    "sections": [
+      {"heading": "日本語対応の範囲（Steamストアの記載）", "bullets": ["対応言語に日本語があります。", "音声のフル対応は英語のみです。日本語は文字表示の対応です。", "対応言語は英語、フランス語、ドイツ語、スペイン語、日本語、韓国語、ポルトガル語（ブラジル）、ロシア語、タイ語の9言語です。"]},
+      {"heading": "日本語への切り替え方（PC版）", "bullets": ["ゲーム中はEscキーでメニューを開き、「Options（オプション）」を選びます。ログイン画面では左上の歯車アイコンから開けます。", "「Interface（インターフェース）」の項目で言語を「日本語」に変更します。", "言語の変更にはゲームの再起動が必要です。"], "paragraphs": ["手順は2024年12月（アーリーアクセス開始時）のPC版の解説記事に基づきます。1.0でメニューの名前や場所が変わっていないか、公開後に確認して更新します。"]},
+      {"heading": "攻略情報は英語名が多い", "bullets": ["海外の主要ガイド（Maxroll、Mobalyticsなど）は、スキルやアイテムを英語名で書いています。", "このサイトのビルドページでは、主力スキルを「ワーリングアサルト（Whirling Assault）」のように日本語名と英語名で併記しています。", "英語名と日本語名の対応は、PoE2DB日本語版で調べられます。", "よく出る用語は、このサイトの用語辞典でまとめています。"]},
+      {"heading": "まだ確認できていないこと", "bullets": ["PS5版・Xbox Series版での日本語表示と設定方法", "1.0で日本語音声が追加されるかどうか", "日本語訳の誤りを公式に報告する方法"], "paragraphs": ["公式の案内を確認できたものから追記します。"]}
+    ],
+    "related": [{"label":"PoE2初心者用語辞典","url":"/dictionary/"},{"label":"無料化後の始め方","url":"/poe2-1-0/how-to-start/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"}],
+    "sources": [{"name":"Steamストア：Path of Exile 2（対応言語）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-28"},{"name":"DigiStatement：Path of Exile 2: How to change Language（2024年12月27日、PC版）","url":"https://digistatement.com/path-of-exile-2-how-to-change-language/","checkedAt":"2026-09-28"},{"name":"PoE2DB日本語版（英語名と日本語名の対応）","url":"https://poe2db.tw/jp/","checkedAt":"2026-09-28"}]
   },
   {
     "path": "/poe2-1-0/duelist/",

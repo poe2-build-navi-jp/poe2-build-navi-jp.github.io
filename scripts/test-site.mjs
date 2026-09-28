@@ -172,7 +172,7 @@ assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲�
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
 assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
-assert(seoPages.length === 15, "targeted SEO page count must be 15");
+assert(seoPages.length === 16, "targeted SEO page count must be 16");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
@@ -188,7 +188,7 @@ for (const path of ["/guides/why-i-die/", "/guides/increase-damage/", "/guides/m
 for (const path of ["/guides/passive-tree/", "/guides/resistance/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: core beginner SEO page missing`);
 }
-for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/duelist/"]) {
+for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/duelist/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: 1.0 SEO page missing`);
 }
 assert(gearCheck.includes('id="gear-example-title"'), "gear check verified static example missing");
@@ -196,7 +196,7 @@ assert(gearCheck.includes("build=ranger-ice-shot-deadeye&amp;level=37&amp;concer
 const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
 assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");
-assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
+assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
 assert(oneHub.includes("Early Accessから何が変わる？") && oneHub.includes("1.0を待たず、今から始めてもいい？") && oneHub.includes("1.0までに覚えておきたいこと") && oneHub.includes("現在選べる初心者向けビルド"), "1.0 beginner hub sections missing");
 assert(oneHub.includes("1.0から始める人が今やること") && oneHub.includes("初心者向けビルドを見る") && oneHub.includes("今使えるおすすめビルドを見る") && oneHub.includes("リーグスターターを見る"), "1.0 next-action section missing");
 const noteMap = await read("NOTE_CONTENT_MAP.md");
