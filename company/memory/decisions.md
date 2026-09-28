@@ -162,3 +162,6 @@
   （基準どおり）。SSF可は計3本。
 - 同日追記：ワーリングアサルト・モンクをSSF可に追加。Maxroll（0.5.5）のメリット欄に
   「SSF Campaign ~4Hours, Arbiter ~8Hours」と明記。SSF可は計4本。
+- 同日追記：グレネード・ジェムリングをSSF可に追加。aoeah（0.5.5）が「Act IからArbiter of DivinityまでSSFでテスト済み」と明記し、
+  Maxrollの育成ガイドもメリット欄に「SSF Fresh Start Leaguestart Viable」。SSF可は計5本。
+  ※Maxrollの育成ガイドの記述だけ（キャンペーン範囲）ではSSF可にしない。Endgameまでの明記が必要（相棒スピリットウォーカーと同じ扱い）。

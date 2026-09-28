@@ -433,8 +433,8 @@
       {
         "name": "Maxroll: Gemling Legionnaire Twister Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
-        "checkedAt": "2026-09-08",
-        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新）"
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月19日更新）"
       }
     ],
     "status": "verified",
@@ -469,7 +469,7 @@
       "defense": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、耐久の長所・短所としての記述がない。"
+        "note": "確認した資料（Maxroll 0.5.5・2026年9月19日更新版、IGGMの0.5.5解説記事）に、耐久の長所・短所としての記述がない。Maxrollの「耐久に困るなら胴を回避にすると硬くなる」やIGGMのDeflect目標値は装備の選び方の説明で、ビルドの長所・短所ではないため使わない。"
       },
       "mapping": {
         "score": 5,
@@ -792,7 +792,7 @@
     "damageRating": 5,
     "defenseRating": 5,
     "mappingRating": 2,
-    "bossRating": null,
+    "bossRating": 4,
     "difficulty": "最初のアセンダンシーで構成切替",
     "budget": "固定価格なし",
     "leagueStarter": true,
@@ -801,7 +801,8 @@
       "Lv1からキャンペーン、Endgameまでの段階別ガイドが公開されている。",
       "最初のアセンダンシー取得後にケラリの指示スキルへ移行できる（PoE VaultはLv21〜22での取得を推奨）。",
       "Maxroll（0.5.5）はメリットに「非常に硬い」「火力が非常に高い」を挙げている。",
-      "ジンは倒されないため、ミニオンの生存に投資しなくてよい。指示スキルのマナコストも非常に低い（PoE Vault）。"
+      "ジンは倒されないため、ミニオンの生存に投資しなくてよい。指示スキルのマナコストも非常に低い（PoE Vault）。",
+      "パッシブ「不死のアルコン」で指示スキルのクールダウンを大きく短縮でき、ボスを連打で倒しやすい（Gamerch）。"
     ],
     "weaknesses": [
       "最初のアセンダンシー取得までは本来の構成にならない。",
@@ -976,11 +977,21 @@
         "url": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build",
         "checkedAt": "2026-09-28",
         "type": "海外レベリングガイド（ケラリ・ルザンの指示構成。0.5.5対応、2026年8月28日更新）"
+      },
+      {
+        "name": "Gamerch: ミニオンヴァラシュタの装備とツリー",
+        "url": "https://gamerch.com/poe2/954611",
+        "checkedAt": "2026-09-28",
+        "type": "日本語攻略資料（ケラリの指示を主力にする構成。0.5.5対応、2026年9月18日更新）"
       }
     ],
     "status": "verified",
     "audience": "召喚型でも、自分で指示スキルを使う術師風の操作を楽しみたい人",
     "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Gamerch（ミニオンヴァラシュタ、0.5.5対応）を確認。ボスを未評価→4/5（ボスを連打で簡単に倒せるとの本文記述）に更新。"
+      },
       {
         "date": "2026-09-28",
         "summary": "PoE Vault（Djinn Commander、0.5.5）とMaxroll（9月27日更新版）を確認。周回を未評価→2/5（ジンの攻撃範囲の短所）、初心者向けを2→3（主力をLv21〜22のアセンダンシーから使える）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。ボスは根拠となる記述がなく未評価のまま。"
@@ -1036,9 +1047,13 @@
         "note": "Weaknesses欄に、ジンの攻撃範囲が狭く散らばった敵の処理に手間がかかるとある。本文の「map clearing infinitely faster」は指示スキル同士の比較で、ビルドの長所としては挙げられていない。資料は育成（キャンペーン）用。"
       },
       "boss": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。PoE Vaultの長所「High burst damage with little effort」は瞬間火力の記述で、ボス戦に限った評価ではないため使わない。"
+        "score": 4,
+        "basis": "長所",
+        "quote": "パッシブ「不死のアルコン」でCT解消レートを爆上げできるので、ボスを欺き連打で簡単に倒せるのが強い。",
+        "source": "https://gamerch.com/poe2/954611",
+        "sourceName": "Gamerch: ミニオンヴァラシュタの装備とツリー",
+        "checkedAt": "2026-09-28",
+        "note": "主力スキル「ケラリの欺き」の解説本文で、ボスを簡単に倒せることを長所として説明している（長所欄ではなく本文の記述。強調語はないため4）。資料は0.5.5対応（2026年9月18日更新）で、星評価も「ボス攻略★★★」。"
       }
     }
   },
@@ -1877,7 +1892,7 @@
       "defense": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料に、耐久の長所・短所としての記述がない。PoE Vaultの「Safe, ranged playstyle」「Automated damage allows you to stay safe」は立ち回りの安全さの記述のため、初心者向けの条件に使い、耐久の評価には使わない。"
+        "note": "確認した資料に、耐久の長所・短所としての記述がない。PoE Vaultの「Safe, ranged playstyle」「Automated damage allows you to stay safe」は立ち回りの安全さの記述のため、初心者向けの条件に使い、耐久の評価には使わない。GamerchのミニオンインファーナリストのページはGamerch自身が「0.5.0未対応」としているため使わない。"
       },
       "mapping": {
         "score": null,
@@ -2136,7 +2151,7 @@
       "defense": {
         "score": null,
         "basis": "未評価",
-        "note": "確認した資料（Maxroll 0.5.5・Gamerch）に、耐久の長所・短所としての記述がない。"
+        "note": "確認した資料（Maxroll 0.5.5・Gamerch）に、耐久の長所・短所としての記述がない。検索結果の要約にあった耐久面の記述は、元の文章を確認できなかったため使わない。"
       },
       "mapping": {
         "score": 4,
@@ -2185,7 +2200,7 @@
     "damageRating": 2,
     "defenseRating": 3,
     "mappingRating": 5,
-    "bossRating": null,
+    "bossRating": 2,
     "difficulty": "低〜中（マナ管理あり）",
     "budget": "固定価格なし",
     "leagueStarter": true,
@@ -2202,7 +2217,8 @@
       "単体戦ではBonestorm、Dark Effigy、Despairなど役割の違う操作が増える。",
       "ローライフ版は必要条件が多いため、序盤から部分的に混ぜない。",
       "被弾しない立ち回りが前提（Maxrollのデメリット「Don't Get Hit Playstyle」）。",
-      "火力はまともな武器を入手・クラフトできるかに大きく左右され、継続ダメージは効くまでに時間がかかる（PoE Vault）。"
+      "火力はまともな武器を入手・クラフトできるかに大きく左右され、継続ダメージは効くまでに時間がかかる（PoE Vault）。",
+      "単体戦は微妙で、スケーリングと瞬間火力は控えめ。火力はワンドとフォーカスの性能に左右される（Gamerch）。"
     ],
     "levelingStages": [
       {
@@ -2359,10 +2375,20 @@
         "url": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
         "checkedAt": "2026-09-28",
         "type": "海外レベリングガイド（Essence Drain＋Contagion構成。0.5.1対応、2026年6月4日更新）"
+      },
+      {
+        "name": "Gamerch: 混沌リッチの装備とツリー",
+        "url": "https://gamerch.com/poe2/914451",
+        "checkedAt": "2026-09-28",
+        "type": "日本語攻略資料（ContagionとEssence Drainを主軸にしたリッチ。0.5.5対応、2026年9月18日更新）"
       }
     ],
     "audience": "遠距離から継続ダメージを広げ、段階別にEndgameへ進みたい初心者",
     "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Gamerch（混沌リッチ、0.5.5対応）を確認。ボスを未評価→2/5（「対単体は微妙」）に更新。"
+      },
       {
         "date": "2026-09-28",
         "summary": "Maxroll（本編・育成、0.5.5）とPoE Vaultを確認。MaxrollのメリットにSSFでの成立（キャンペーン約5時間・Arbiterまで約10時間）が明記されていたためSSF可に変更。初心者向けを2→4（SSF・安全な遠距離の立ち回り）、火力を未評価→2/5（武器依存・継続ダメージの立ち上がり）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。ボスは根拠となる記述がなく未評価のまま。"
@@ -2422,9 +2448,13 @@
         "note": "長所で範囲殲滅が強調されている。PoE Vaultも長所に「Fantastic and satisfying clear」を挙げている。"
       },
       "boss": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、ボス・単体戦の長所・短所としての記述がない。Maxrollの「Arbiter ~10 Hours」はSSFで最上位ボスに到達するまでの時間の記述で、ボス戦の強さの評価には使わない。"
+        "score": 2,
+        "basis": "短所",
+        "quote": "対単体は微妙だが、集団にはかなり強い",
+        "source": "https://gamerch.com/poe2/914451",
+        "sourceName": "Gamerch: 混沌リッチの装備とツリー",
+        "checkedAt": "2026-09-28",
+        "note": "評価欄で、集団戦の強さと対比して単体戦が「微妙」とされている（0.5.5対応、2026年9月18日更新）。同じページの短所に「スケーリングと瞬間火力は控えめ」、星評価も「ボス攻略★☆☆」。"
       }
     }
   },
@@ -2441,24 +2471,27 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Explosive Grenade",
-    "beginnerRating": 2,
+    "beginnerRating": 4,
     "damageRating": 4,
     "defenseRating": 2,
-    "mappingRating": null,
+    "mappingRating": 4,
     "bossRating": 4,
     "difficulty": "中（複数グレネード）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": null,
+    "ssf": true,
     "strengths": [
       "Lv1からEndgameまでグレネードを軸にする段階別の書面ガイドがある。",
       "Explosive、Flash、Gas、Oil、Cluster Grenadeを状況別に使える。",
-      "ACT 1からUber Endgameまで構成が分けて提示されている。"
+      "ACT 1からUber Endgameまで構成が分けて提示されている。",
+      "Oil GrenadeとExplosive Grenadeの1〜2ボタンで簡単に殲滅でき、始めるのに費用がかからない（PoE Vault）。",
+      "SSFでAct IからEndgameの最上位ボスArbiterまでテストされた構成と紹介されている（aoeah）。"
     ],
     "weaknesses": [
       "複数のグレネードを使うため、画面上の効果が多くなりやすい。",
       "クロスボウと各部位の攻撃性能を段階的に更新する必要がある。",
-      "Endgame版を序盤へ部分的に持ち込まず、段階を揃える必要がある。"
+      "Endgame版を序盤へ部分的に持ち込まず、段階を揃える必要がある。",
+      "ボスを一撃で倒すには密着する必要があり、Berserkのためライフ自動回復を高くする必要がある（PoE Vault）。"
     ],
     "levelingStages": [
       {
@@ -2597,26 +2630,46 @@
       {
         "name": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
         "url": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
-        "checkedAt": "2026-09-11",
-        "type": "海外Endgameガイド（過去のSSF記述は今回再確認できず、全行程の成立範囲は未確認）"
+        "checkedAt": "2026-09-28",
+        "type": "海外レベリングガイド（対応パッチ0.5.5、2026年9月4日更新。メリット欄に「SSF Fresh Start Leaguestart Viable」）"
+      },
+      {
+        "name": "PoE Vault: Grenadier Gemling Legionnaire Build Guide",
+        "url": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide",
+        "checkedAt": "2026-09-28",
+        "type": "海外Endgameガイド（Cluster・Oil・Explosive Grenade構成。0.5対応、2026年7月15日更新）"
+      },
+      {
+        "name": "aoeah: PoE 2 0.5.5 Best Gemling Build",
+        "url": "https://www.aoeah.com/news/4788--poe-2-055-best-gemling-build--top-3-best-league-start--endgame-gemling-builds",
+        "checkedAt": "2026-09-28",
+        "type": "海外解説記事（0.5.5。Grenade GemlingをSSFでAct IからArbiter of Divinityまでテスト済みと紹介）"
       }
     ],
     "audience": "遠距離からグレネードを使い、同じ攻撃軸でLv1から進めたい初心者",
     "ratingEvidence": {
-      "checkedAt": "2026-09-27",
+      "checkedAt": "2026-09-28",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": false,
-          "ssfConfirmed": false,
+          "moderateOperation": true,
+          "ssfConfirmed": true,
           "noDodgeRequirement": false
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。",
-        "score": 2,
+        "note": "加点した条件だけを原典と結び付けています。PoE Vaultは長所に「Built in defensives」を挙げていますが、Maxrollがデメリットに「Don't Get Hit Playstyle」を挙げているため、安全な立ち回りは加点しません。",
+        "score": 4,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「Explosive Grenade。補助にFrost BombとFlash Grenade」を参照",
             "source": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter"
+          },
+          "moderateOperation": {
+            "basis": "PoE VaultのStrengths欄に「Easy 1/2 button clear with Oil Grenade and Explosive Grenade.」と明記",
+            "source": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide"
+          },
+          "ssfConfirmed": {
+            "basis": "aoeah（0.5.5）が「Act IからArbiter of DivinityまでSSFでテストされた」と明記。Maxrollの育成ガイドもメリット欄に「SSF Fresh Start Leaguestart Viable」",
+            "source": "https://www.aoeah.com/news/4788--poe-2-055-best-gemling-build--top-3-best-league-start--endgame-gemling-builds"
           }
         }
       },
@@ -2639,9 +2692,13 @@
         "note": "短所に「被弾しない立ち回りが前提」とある。"
       },
       "mapping": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、周回の長所・短所としての記述がない。"
+        "score": 4,
+        "basis": "長所",
+        "quote": "Easy 1/2 button clear with Oil Grenade and Explosive Grenade.",
+        "source": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide",
+        "sourceName": "PoE Vault: Grenadier Gemling Legionnaire Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "Strengths欄に、Oil GrenadeとExplosive Grenadeの1〜2ボタンで簡単に殲滅できるとある（強調語なし）。資料は0.5対応（2026年7月）。"
       },
       "boss": {
         "score": 4,
@@ -2654,6 +2711,10 @@
       }
     },
     "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "PoE Vault（Grenadier、0.5）・aoeah（0.5.5）・Maxroll（0.5.5）を確認。周回を未評価→4/5（1〜2ボタンで簡単に殲滅）に更新。SSFでArbiterまでテスト済みと明記されていたためSSF可に変更し、初心者向けを2→4（操作が簡単・SSF）に更新。"
+      },
       {
         "date": "2026-09-27",
         "summary": "原典の序盤サポート取得順と後半3構成の確認場所を一部段階に追加。後半各枠の正確なサポート・装備閾値は未照合。"
