@@ -142,7 +142,18 @@ function updateProgress(saved) {
   byId("progress-next").textContent = next ? `次にやること：${next[1]}` : "現在段階の確認は完了です。次のロードマップ段階へ進みましょう。";
 }
 
-function setLevel(value) {
+// Keeps ?level= in the address bar only when it carries information: after the reader changes
+// the level, or when they arrived with one. Opening a page never adds it, and Lv1 (the default)
+// is dropped, so shared links and analytics stay on the clean canonical URL.
+function syncLevelParam(fromUser) {
+  const currentUrl = new URL(location.href);
+  if (!fromUser && !currentUrl.searchParams.has("level")) return;
+  if (level === 1) currentUrl.searchParams.delete("level");
+  else currentUrl.searchParams.set("level", String(level));
+  if (currentUrl.href !== location.href) history.replaceState(history.state, "", currentUrl);
+}
+
+function setLevel(value, fromUser = true) {
   level = Math.max(1, Math.min(100, Math.trunc(Number(value) || 1)));
   byId("level-input").value = level;
   byId("level-range").value = level;
@@ -153,11 +164,7 @@ function setLevel(value) {
   if (gearCheckLink) {
     gearCheckLink.href = `/gear-check/?build=${encodeURIComponent(build.id)}&level=${level}&concern=purchase`;
   }
-  const currentUrl = new URL(location.href);
-  if (currentUrl.searchParams.get("level") !== String(level)) {
-    currentUrl.searchParams.set("level", String(level));
-    history.replaceState(history.state, "", currentUrl);
-  }
+  syncLevelParam(fromUser);
   const index = stageIndexFor(level);
   localStorage.setItem("poe2:navi:lastViewedStage", String(index));
   renderNow(index);
@@ -262,7 +269,7 @@ function renderBuild(builds) {
 
   const urlLevel = Number(new URLSearchParams(location.search).get("level"));
   const savedLevel = Number(localStorage.getItem(`poe2:navi:level:${build.id}`));
-  setLevel(urlLevel || savedLevel || 1);
+  setLevel(urlLevel || savedLevel || 1, false);
 }
 
 function bindEvents() {

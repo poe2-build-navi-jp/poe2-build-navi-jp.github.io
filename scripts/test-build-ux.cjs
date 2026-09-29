@@ -80,7 +80,16 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.equal(dd.querySelectorAll('.static-roadmap details').length,8);
  assert.match(dd.getElementById('fact-grid').textContent,/掲載中の育成段階8\/8/);
  assert.doesNotMatch(dd.getElementById('fact-grid').textContent,/確認済み段階/);
+ assert.equal(detail.window.location.search,'?level=38');
+ dd.getElementById('level-input').value='1';dd.getElementById('level-input').dispatchEvent(new detail.window.Event('input'));
+ assert.equal(detail.window.location.search,'');
+ const openDetail=async(url,saved={})=>{const w=new JSDOM(html,{runScripts:'outside-only',url}).window;for(const [k,v] of Object.entries(saved))w.localStorage.setItem(k,v);w.fetch=async()=>({ok:true,json:async()=>data});w.eval(fs.readFileSync('assets/detail.js','utf8'));await new Promise(r=>setTimeout(r,60));return w;};
+ const clean=await openDetail('https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/',{'poe2:navi:level:ranger-ice-shot-deadeye':'37'});
+ assert.equal(clean.document.getElementById('level-input').value,'37');assert.equal(clean.location.search,'');
+ assert.equal((await openDetail('https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/?level=1#now')).location.href,'https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/#now');
+ assert.equal((await openDetail('https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/?level=999&utm_source=note')).location.search,'?level=100&utm_source=note');
  console.log('PASS: Lv37 restores, three actions render, increment works, resume level/stage persists, 8 roadmap stages remain');
+ console.log('PASS: opening a build page never adds ?level=; user changes and incoming links keep it, Lv1 drops it');
  const minion=new JSDOM(fs.readFileSync('builds/witch/minion-infernalist/index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/?level=37'});
  minion.window.fetch=async()=>({ok:true,json:async()=>data});minion.window.eval(fs.readFileSync('assets/detail.js','utf8'));
  await new Promise(r=>setTimeout(r,60));
