@@ -1,14 +1,6 @@
 {
   "note": "中身が薄いため書き直し・統合まで検索対象から外すページ（2026-09-29）。ページは残し、サイト内リンクからは閲覧できる。書き直したらここから外す。",
   "paths": [
-    "/dictionary/build/",
-    "/dictionary/dps/",
-    "/dictionary/skill-gem/",
-    "/dictionary/support-gem/",
-    "/dictionary/passive-tree/",
-    "/dictionary/mapping/",
-    "/dictionary/endgame/",
-    "/dictionary/league-starter/",
     "/guides/getting-started/",
     "/guides/choosing-a-class/",
     "/guides/what-is-a-build/",
