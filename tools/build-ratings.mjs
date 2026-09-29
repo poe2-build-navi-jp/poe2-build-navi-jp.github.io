@@ -1,6 +1,6 @@
-// 5-axis build ratings. Scores are stored in data/builds.json and must follow
-// the rubric below; every non-null score needs a quoted source statement.
-import {esc} from './build-facts.mjs';
+// Evidence for five comparison topics. Legacy scores in builds.json are retained
+// for historical consistency only; they do not describe comparable performance.
+const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 
 export const CRITERIA_URL='/rating-criteria/';
 export const AXES=[
@@ -13,16 +13,8 @@ export const AXES=[
 export const BEGINNER_CHECKS=[
  ['earlyMainSkill','主力スキルをLv22以下（最初のアセンダンシー前後）から使える'],
  ['moderateOperation','原典が操作の簡単さを長所として明記している'],
- ['ssfConfirmed','資料がSSF（トレードなし）での成立を明記している（「ユニーク不要」だけでは加点しない）'],
+ ['ssfConfirmed','資料がSSF（トレードなし）での成立を明記している（「ユニーク不要」だけでは確認済みとしない）'],
  ['noDodgeRequirement','原典が防御や安全な立ち回りを長所として明記している']
-];
-export const SOURCE_SCALE=[
- [5,'長所（強調）','原典の長所として、Very・Insane・Amazing・Great・Incredibly・Extremely・One-Shotなどの強調語付きで挙げられている'],
- [4,'長所','原典の長所として挙げられている（強調語なし）'],
- [3,'長所と短所が両方','同じ項目について、長所と短所の両方が挙げられている'],
- [2,'短所','原典の短所・弱点として挙げられている'],
- [1,'短所（強調）','原典で強い短所、または成立しないと明記されている'],
- [null,'未評価','確認した資料に、その項目の長所・短所の記述がない（低評価ではありません）']
 ];
 export const AXIS_SCOPE={
  damage:'DPS・ダメージ量そのものへの言及（単体火力の言及も含む）',
@@ -31,8 +23,22 @@ export const AXIS_SCOPE={
  boss:'ボス・単体戦への言及'
 };
 
-export const scoreText=score=>score==null?'未評価':`${score}/5`;
-const meter=score=>score==null?'<span class="rating-meter is-empty" aria-hidden="true">―</span>':`<span class="rating-meter" aria-hidden="true">${'<i class="on"></i>'.repeat(score)}${'<i></i>'.repeat(5-score)}</span>`;
+// Legacy numeric scores in builds.json record the old editorial rubric. They are not
+// comparable performance measurements and must not be rendered as such.
+export const evidenceLabel=(axis,evidence)=>{
+ if(axis==='beginner'){
+  const count=BEGINNER_CHECKS.filter(([key])=>evidence.checks[key]===true).length;
+  return count?`確認済み条件 ${count}/4`:'確認できた条件なし';
+ }
+ if(!evidence.quote)return '原典の記述を確認中';
+ if(evidence.basis==='長所と短所が両方')return '原典に長所と弱点の両方';
+ if(evidence.basis?.startsWith('長所'))return '原典で長所として紹介';
+ if(evidence.basis?.startsWith('短所'))return '原典で弱点として紹介';
+ return '原典の記述を確認中';
+};
+export const evidenceNote=(axis,evidence)=>axis==='beginner'
+ ? evidence.note.replaceAll('加点した条件','確認した条件').replaceAll('加点しません','確認済み条件に含めません').replaceAll('5/5です','4条件を確認しました')
+ : evidence.note;
 
 export function beginnerScore(evidence){
  const confirmed=BEGINNER_CHECKS.filter(([key])=>evidence.checks[key]===true).length;
@@ -45,15 +51,15 @@ export function ratingSectionHtml(build){
   const e=ev[axis.key];const score=build[axis.field];
   let body;
   if(axis.key==='beginner'){
-   body=`<p>${esc(e.note)}</p><ul class="rating-checks">${BEGINNER_CHECKS.map(([key,label])=>`<li class="${e.checks[key]?'ok':'ng'}"><span aria-hidden="true">${e.checks[key]?'✓':'—'}</span>${esc(label)}${e.checks[key]?`：${esc(e.verifiedChecks[key].basis)} <a href="${esc(e.verifiedChecks[key].source)}" target="_blank" rel="noopener noreferrer">元ガイド</a>`:''}</li>`).join('')}</ul>`;
+   body=`<p>${esc(evidenceNote(axis.key,e))}</p><ul class="rating-checks">${BEGINNER_CHECKS.map(([key,label])=>`<li class="${e.checks[key]?'ok':'ng'}"><span aria-hidden="true">${e.checks[key]?'✓':'—'}</span>${esc(label)}${e.checks[key]?`：${esc(e.verifiedChecks[key].basis)} <a href="${esc(e.verifiedChecks[key].source)}" target="_blank" rel="noopener noreferrer">元ガイド</a>`:''}</li>`).join('')}</ul>`;
   }else if(score==null){
    body=`<p>${esc(e.note)}</p>`;
   }else{
    body=`<p>${esc(e.note)}</p><p class="rating-quote"><span>${esc(e.basis)}</span>「${esc(e.quote)}」— <a href="${esc(e.source)}" target="_blank" rel="noopener noreferrer">${esc(e.sourceName)}</a>（確認日 ${esc(e.checkedAt)}）</p>`;
   }
-  return `<div class="rating-row"><dt>${esc(axis.label)}</dt><dd><div class="rating-score" aria-label="${esc(axis.label)}：${score==null?'未評価':`5段階中${score}`}">${meter(score)}<strong>${scoreText(score)}</strong></div>${body}</dd></div>`;
+  return `<div class="rating-row"><dt>${esc(axis.label)}</dt><dd><div class="rating-score"><strong>${esc(evidenceLabel(axis.key,e))}</strong></div>${body}</dd></div>`;
  }).join('');
- return `<!-- build-rating:start --><section id="build-rating" class="rating-card" aria-labelledby="rating-title"><p class="section-kicker">RATING</p><h2 id="rating-title">${esc(build.name)}の5項目評価</h2><p>点数は<a href="${CRITERIA_URL}">公開している評価基準</a>に沿い、元ガイドの長所・短所の記述だけで付けています。同じ条件で測ったDPSや順位ではありません。「未評価」は低評価ではなく、根拠となる記述を確認できていない状態です。</p><dl class="rating-list">${rows}</dl><p class="disclaimer">評価の確認日：${esc(ev.checkedAt)}／対応 ${esc(build.version)}</p></section><!-- build-rating:end -->`;
+ return `<!-- build-rating:start --><section id="build-rating" class="rating-card" aria-labelledby="rating-title"><p class="section-kicker">SOURCE EVIDENCE</p><h2 id="rating-title">${esc(build.name)}の5項目の原典確認</h2><p>初心者向けは<a href="${CRITERIA_URL}">共通の4条件</a>の確認件数を表示します。火力・耐久・周回・ボスは、元ガイドが長所・弱点として挙げた内容を分類します。同一条件の性能測定ではありません。更新履歴に残る点数は旧方式の記録です。</p><dl class="rating-list">${rows}</dl><p class="disclaimer">原典の確認日：${esc(ev.checkedAt)}／対応 ${esc(build.version)}</p></section><!-- build-rating:end -->`;
 }
 
 export function validateRatings(build){
@@ -71,8 +77,7 @@ export function validateRatings(build){
    for(const [key] of BEGINNER_CHECKS)if(e.checks?.[key]&&!(e.verifiedChecks?.[key]?.basis&&/^https:\/\//.test(e.verifiedChecks?.[key]?.source||'')))errors.push(`beginner: ${key} needs explicit basis and source`);
    continue;
   }
-  const scale=SOURCE_SCALE.find(([s])=>s===score);
-  if(scale&&e.basis!==scale[1])errors.push(`${axis.key}: basis "${e.basis}" does not match score ${score}`);
+  if(score!==null&&!['長所（強調）','長所','長所と短所が両方','短所','短所（強調）'].includes(e.basis))errors.push(`${axis.key}: unknown source characterization ${e.basis}`);
   if(score!==null&&!(e.quote&&/^https:\/\//.test(e.source||'')&&e.sourceName&&/^\d{4}-\d{2}-\d{2}$/.test(e.checkedAt||'')))errors.push(`${axis.key}: quote/source/checkedAt required`);
  }
  return errors;
