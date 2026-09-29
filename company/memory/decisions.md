@@ -200,3 +200,7 @@
 - getting-started・beginner-build → /beginner-guide/、choosing-a-class → /class-check/、what-is-a-build → /dictionary/build/、guides/endgame → /dictionary/endgame/。
 - 旧URLには data/moved.json から生成する移動ページ（canonical＋meta refresh＋location.replaceでUTMを保持）だけを残し、サイトマップから外す。公開済みnote記事のリンクはそのまま機能する。
 - 初心者ガイドの章は13章→9章。
+
+## 2026-09-29 壊れた流入URLの修復
+- 末尾に「)」などの記号が付いたURL（例 /builds/ranger/ice-shot-deadeye/)）は、404.html の path-repair スクリプトが記号を外して正しいURLへ移動する（クエリのUTMは保持）。
+- 旧URL /builds/warrior/shield-wall/ は data/moved.json で /builds/warrior/shield-wall-smith/ へ移動。

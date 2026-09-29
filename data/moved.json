@@ -1,10 +1,11 @@
 {
-  "note": "統合して役目を終えたページ（2026-09-29）。旧URLには統合先へ移動するページだけを残す（GitHub Pagesはサーバー側のリダイレクトが使えないため、canonical・meta refresh・JavaScriptで移動）。サイトマップには載せない。",
+  "note": "統合して役目を終えたページと、外部から古いURLで流入しているページ（2026-09-29）。旧URLには統合先へ移動するページだけを残す（GitHub Pagesはサーバー側のリダイレクトが使えないため、canonical・meta refresh・JavaScriptで移動）。サイトマップには載せない。",
   "pages": {
     "/guides/getting-started/": "/beginner-guide/",
     "/guides/choosing-a-class/": "/class-check/",
     "/guides/what-is-a-build/": "/dictionary/build/",
     "/guides/endgame/": "/dictionary/endgame/",
-    "/guides/beginner-build/": "/beginner-guide/"
+    "/guides/beginner-build/": "/beginner-guide/",
+    "/builds/warrior/shield-wall/": "/builds/warrior/shield-wall-smith/"
   }
 }

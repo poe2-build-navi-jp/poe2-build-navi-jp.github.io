@@ -271,6 +271,18 @@ for (const eventName of ["best_build_click", "tier_build_click", "league_build_c
 }
 assert(!sitemap.match(/<loc>[^<]+<\/loc>/g).some((url, index, all) => all.indexOf(url) !== index), "sitemap URLs must be unique");
 assert(guides.length === 9, "beginner guide must have 9 chapters");
+// 404.html repairs links that picked up trailing punctuation (seen in Analytics: /builds/ranger/ice-shot-deadeye/)).
+const notFound = await read("404.html");
+const repairSource = notFound.match(/<!-- path-repair:start --><script>([\s\S]*?)<\/script>/)?.[1];
+assert(repairSource, "404 path repair script missing");
+for (const [broken, fixed] of [["/builds/ranger/ice-shot-deadeye/)", "/builds/ranger/ice-shot-deadeye/"], ["/builds/ranger/ice-shot-deadeye）", "/builds/ranger/ice-shot-deadeye/"], ["/guides/mapping/。", "/guides/mapping/"]]) {
+  let target = null;
+  new Function("location", repairSource)({ pathname: encodeURI(broken), search: "?utm_source=note", hash: "", replace: (url) => { target = url; } });
+  assert(target === `${fixed}?utm_source=note`, `404 repair: ${broken} -> ${target}`);
+}
+let repairedValid = null;
+new Function("location", repairSource)({ pathname: "/builds/", search: "", hash: "", replace: (url) => { repairedValid = url; } });
+assert(repairedValid === null, "404 repair must not touch a clean path");
 // Merged pages (data/moved.json) keep a small page at the old URL that points to the new one.
 for (const [from, to] of Object.entries(JSON.parse(await read("data/moved.json")).pages)) {
   assert(!sitemap.includes(`<loc>${baseUrl}${from}</loc>`), `${from}: moved page must not be in the sitemap`);
