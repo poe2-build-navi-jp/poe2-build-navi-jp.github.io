@@ -130,6 +130,7 @@ console.log(`Generated ${builds.length} build detail pages and ${classes.length}
 await import('./generate-static-content.mjs');
 await import('./generate-content-pages.mjs');
 await import('./generate-discovery-pages.mjs');
+await import('./generate-moved-pages.mjs');
 await import('./generate-seo-pages.mjs');
 await import('./enhance-residual-pages.mjs');
 await import('./generate-image-assets.mjs');

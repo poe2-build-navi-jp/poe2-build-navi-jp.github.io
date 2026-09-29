@@ -151,13 +151,6 @@ const bestEvidence = `<section aria-labelledby="best-evidence-title"><h2 id="bes
 await mkdir(resolve(root, "best-builds"), { recursive: true });
 await writeFile(resolve(root, "best-builds/index.html"), shell({ title: "PoE2 0.5.5おすすめ・最強ビルド｜目的別に比較", description: "PoE2 0.5.5のおすすめビルドを、周回・ボス・初心者・低装備依存・防御・操作量で比較。選んだ後は現在Lvから今やること3つを確認できます。", path: "/best-builds/", current: "", kicker: "BEST BUILDS BY PURPOSE", h1: "PoE2 0.5.5おすすめ・最強ビルド｜目的別比較", intro: "絶対的な1位ではなく、遊びたい目的と育成条件に合う候補を選ぶページです。", content: bestContent + bestEvidence, crumbs: [{ name: "ホーム", path: "/" }, { name: "目的別おすすめビルド", path: "/best-builds/" }], assetVersion: "discovery-4" }));
 
-const purposeCards = discovery.beginnerPurposes.map(({ label, buildId }) => {
-  const build = byId(buildId);
-  return `<article class="purpose-card"><p class="section-kicker">${esc(label)}</p><h2>${esc(build.name)}</h2><p>${esc(build.audience)}</p><p><b>注意：</b>${esc(build.weaknesses[0])}</p><a class="button" href="${buildUrl(build)}">このビルドをLv1から見る</a></article>`;
-}).join("");
-const beginnerContent = `<section class="content-action"><h2>初めてなら、この順で選ぶ</h2><ol><li>近接・遠距離・召喚など、続けやすい戦い方を選ぶ</li><li>途中で主力スキルが変わる時期を確認する</li><li>ビルド詳細で現在Lvを入力し、今やること3つを見る</li></ol></section><div class="purpose-grid">${purposeCards}</div><aside class="next-box"><b>まだ決められない場合</b><p>4問の軽量診断は既存ビルドデータだけで候補を絞ります。</p><a class="button" href="/class-check/">4問診断を始める</a></aside>`;
-await mkdir(resolve(root, "guides/beginner-build"), { recursive: true });
-await writeFile(resolve(root, "guides/beginner-build/index.html"), shell({ title: "PoE2初心者おすすめビルド｜最初に選ぶならどれ？", description: "PoE2初心者が最初に選ぶビルドを、戦い方・操作・育成切替から比較。選んだ後は現在Lvを入力して次の行動を確認できます。", path: "/guides/beginner-build/", current: "", kicker: "BEGINNER BUILD", h1: "PoE2初心者おすすめビルド", intro: "最強という言葉だけで選ばず、操作しやすさと育成途中の切替から自分に合う候補を選びます。", content: beginnerContent, crumbs: [{ name: "ホーム", path: "/" }, { name: "初心者ガイド", path: "/beginner-guide/" }, { name: "初心者おすすめビルド", path: "/guides/beginner-build/" }] }));
 
 const one = discovery.poe2One;
 const oneBeginnerIds = ["witch-minion-infernalist", "ranger-ice-shot-deadeye", "warrior-shield-wall-smith", "druid-plant-oracle"];
@@ -176,7 +169,7 @@ await writeFile(resolve(root, "poe2-1-0/index.html"), shell({ title: "PoE2 1.0�
 const noteRows = [
   ["PoE2 最強・おすすめビルド", "/best-builds/", "best_builds"],
   ["PoE2 初心者向けTier", "/tier-list/", "poe2_tier"],
-  ["PoE2 初心者おすすめ", "/guides/beginner-build/", "beginner_build"],
+  ["PoE2 初心者おすすめ", "/beginner-guide/", "beginner_build"],
   ["PoE2 リーグスターター", "/league-starter/", "league_starter"],
   ["PoE2 1.0", "/poe2-1-0/", "poe2_1_0"],
   ["PoE2 0.5.5ビルド", "/guides/poe2-0-5-5-builds/", "poe2_0_5_5"],

@@ -135,7 +135,7 @@ for (const [, pageUrl] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   assert((page.match(/\/assets\/analytics-events\.js/g) || []).length === (tracksEvents ? 1 : 0), `${pagePath}: analytics event script scope mismatch`);
 }
 const noindexListed = new Set(JSON.parse(await read("data/noindex.json")).paths);
-for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "best-builds/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
+for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "best-builds/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
   assert(noindexListed.has(`/${page}`) || sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
@@ -143,7 +143,6 @@ for (const page of [
   ["tier-list/", "PoE2 0.5.5初心者向けビルドTier"],
   ["league-starter/", "PoE2リーグスターター・序盤おすすめビルド"],
   ["leveling/", "PoE2レベリングガイド｜現在Lvから次にやること"],
-  ["guides/beginner-build/", "PoE2初心者おすすめビルド"],
   ["best-builds/", "PoE2 0.5.5おすすめ・最強ビルド｜目的別比較"],
   ["poe2-1-0/", "PoE2 1.0はいつ？正式リリース・無料化の確定情報"]
 ]) {
@@ -271,7 +270,15 @@ for (const eventName of ["best_build_click", "tier_build_click", "league_build_c
   assert(analyticsEvents.includes(eventName), `analytics event missing: ${eventName}`);
 }
 assert(!sitemap.match(/<loc>[^<]+<\/loc>/g).some((url, index, all) => all.indexOf(url) !== index), "sitemap URLs must be unique");
-assert(guides.length === 13, "beginner guide must have 13 chapters");
+assert(guides.length === 9, "beginner guide must have 9 chapters");
+// Merged pages (data/moved.json) keep a small page at the old URL that points to the new one.
+for (const [from, to] of Object.entries(JSON.parse(await read("data/moved.json")).pages)) {
+  assert(!sitemap.includes(`<loc>${baseUrl}${from}</loc>`), `${from}: moved page must not be in the sitemap`);
+  assert(sitemap.includes(`<loc>${baseUrl}${to}</loc>`), `${from}: move target ${to} must be in the sitemap`);
+  assert(!guides.some((guide) => `/guides/${guide.slug}/` === from), `${from}: moved page must not stay a guide chapter`);
+  const html = await read(`${from.slice(1)}index.html`);
+  assert(html.includes(`<link rel="canonical" href="${baseUrl}${to}">`) && html.includes(`url=${to}"`) && html.includes("location.search"), `${from}: must point to ${to}`);
+}
 // Thin pages listed in data/noindex.json stay reachable but out of search until rewritten.
 const noindexPaths = new Set(JSON.parse(await read("data/noindex.json")).paths);
 const mainTextLength = (html) => (html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "").replace(/<!-- one-link:start -->[\s\S]*?<!-- one-link:end -->/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, "").length;

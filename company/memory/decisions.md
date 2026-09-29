@@ -195,3 +195,8 @@
 - 変更: ページを開いただけではURLを変えない。Lvを操作したときと、`?level=` 付きのリンクで来たときだけ
   URLに反映し、Lv1（初期値）は外す。保存Lvの復元はこれまでどおり。共有用の `?level=37` リンクも有効。
 - テスト: `scripts/test-build-ux.cjs` に、開いただけ・保存Lv復元・`?level=1` 流入・範囲外の値・他のパラメータ維持を追加。
+
+## 2026-09-29 薄いガイド5ページの統合
+- getting-started・beginner-build → /beginner-guide/、choosing-a-class → /class-check/、what-is-a-build → /dictionary/build/、guides/endgame → /dictionary/endgame/。
+- 旧URLには data/moved.json から生成する移動ページ（canonical＋meta refresh＋location.replaceでUTMを保持）だけを残し、サイトマップから外す。公開済みnote記事のリンクはそのまま機能する。
+- 初心者ガイドの章は13章→9章。

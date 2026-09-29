@@ -29,7 +29,7 @@
       {"heading": "ビルド選びで迷ったら", "bullets": ["初めてなら操作の簡単さと切替時期を優先する", "低予算という表現だけで選ばず、必須装備の有無を確認する", "人気と強さを同じ意味として扱わない", "詳細ページで弱点を先に読む"]},
       {"heading": "開始後の進め方", "paragraphs": ["ビルド詳細にはLv1〜10からEndgame完成まで8段階があります。現在Lvに対応する段階だけを先に表示し、必要な行動を最大3つに絞ります。"]}
     ],
-    "related": [{"label":"0.5.5ビルドを見る","url":"/guides/poe2-0-5-5-builds/"},{"label":"初心者向けビルド選び","url":"/guides/beginner-build/"},{"label":"現在のビルド一覧","url":"/builds/"}],
+    "related": [{"label":"0.5.5ビルドを見る","url":"/guides/poe2-0-5-5-builds/"},{"label":"初心者向けビルド選び","url":"/beginner-guide/"},{"label":"現在のビルド一覧","url":"/builds/"}],
     "sources": [{"name":"Path of Exile 2公式：Forbidden Ritesイベント発表","url":"https://www.pathofexile.com/forum/view-thread/3999858","checkedAt":"2026-09-12"}]
   },
   {
@@ -179,7 +179,7 @@
       {"heading": "まだ公式に確認できていないこと", "bullets": ["アーリーアクセスのキャラクター・リーグが1.0でどう扱われるか", "正式版でのMac対応（公式FAQではアーリーアクセス開始時は非対応。現在のSteamストアにはmacOSの動作環境が掲載されています）や、スタンドアロン版PCクライアントの扱い", "正式版のアカウント作成・連携の具体的な手順"], "paragraphs": ["ExileCon 2026（11月7〜8日）などの公式発表を確認し、確認できたものから追記します。"]}
     ],
     "faq": [{"q":"PoE2は無料で遊べる？","a":"正式版1.0（2026年12月11日公開予定）から基本プレイ無料です。現在のアーリーアクセス中は、Steamではサポーターパックの購入が必要です。"}, {"q":"どの機種で遊べる？","a":"正式版はPC（Steam・Epic Games Store）、PS5、Xbox Seriesで公開予定と報じられています。"}, {"q":"機種をまたいで遊べる？","a":"PC・PS5・Xbox Seriesの間でクロスプレイでき、同じアカウントなら進行を引き継げます。"}],
-    "related": [{"label":"事前登録のやり方と報酬","url":"/poe2-1-0/pre-registration/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"PoE2を始めたら（初心者ガイド）","url":"/guides/getting-started/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
+    "related": [{"label":"事前登録のやり方と報酬","url":"/poe2-1-0/pre-registration/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"初心者ガイド（ビルド選びと基礎）","url":"/beginner-guide/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
     "sources": [{"name":"Path of Exile 2公式：1.0・基本無料化の発表（2026年8月25日）","url":"https://www.pathofexile.com/forum/view-thread/3999366","checkedAt":"2026-09-27"},{"name":"Steamストア：Path of Exile 2（価格・無料化の記載・動作環境）","url":"https://store.steampowered.com/app/2694490/Path_of_Exile_2/","checkedAt":"2026-09-27"},{"name":"Gematsu：Path of Exile II launches December 11（対応機種）","url":"https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11","checkedAt":"2026-09-27"},{"name":"PoE Vault：Crossplay and Cross-Progression Explained","url":"https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained","checkedAt":"2026-09-27"},{"name":"Path of Exile 2公式：Early Access FAQ（配信プラットフォーム・Mac）","url":"https://www.pathofexile.com/forum/view-thread/3587981","checkedAt":"2026-09-28"}]
   },
   {
