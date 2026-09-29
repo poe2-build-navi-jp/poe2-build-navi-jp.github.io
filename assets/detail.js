@@ -301,9 +301,11 @@ function revealNoteReferral() {
 
 async function init() {
   try {
-    const response = await fetch("/data/builds.json");
-    if (!response.ok) throw new Error("ビルドデータを読み込めませんでした");
-    const builds = await response.json();
+    // Shared with build-ux.js so builds.json is downloaded once per page.
+    const builds = await (window.poe2BuildsRequest ||= fetch("/data/builds.json").then((response) => {
+      if (!response.ok) throw new Error("ビルドデータを読み込めませんでした");
+      return response.json();
+    }));
     const info = pathInfo();
     build = builds.find((item) => item.classSlug === info.classSlug && item.slug === info.slug);
     if (!build) {
