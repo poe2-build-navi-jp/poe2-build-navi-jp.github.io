@@ -204,3 +204,8 @@
 ## 2026-09-29 壊れた流入URLの修復
 - 末尾に「)」などの記号が付いたURL（例 /builds/ranger/ice-shot-deadeye/)）は、404.html の path-repair スクリプトが記号を外して正しいURLへ移動する（クエリのUTMは保持）。
 - 旧URL /builds/warrior/shield-wall/ は data/moved.json で /builds/warrior/shield-wall-smith/ へ移動。
+
+## 2026-09-29 GA4キーイベント
+- キーイベントに設定：level_input・best_build_click・tier_build_click・league_build_click（管理 > イベントでスター）。
+- poe2_1_0_build_click はまだ一度も記録されておらず一覧に出ないため未設定。記録されたら同じ画面でスターを付ける。
+- note_referral は流入元の記録なので対象外。
