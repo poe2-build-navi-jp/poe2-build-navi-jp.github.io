@@ -90,6 +90,13 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.equal((await openDetail('https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/?level=999&utm_source=note')).location.search,'?level=100&utm_source=note');
  console.log('PASS: Lv37 restores, three actions render, increment works, resume level/stage persists, 8 roadmap stages remain');
  console.log('PASS: opening a build page never adds ?level=; user changes and incoming links keep it, Lv1 drops it');
+ const once=new JSDOM(html,{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/'}).window;
+ let requests=0;once.fetch=async()=>{requests++;return {ok:true,json:async()=>data};};
+ once.eval(fs.readFileSync('assets/detail.js','utf8'));once.eval(fs.readFileSync('assets/build-ux.js','utf8'));
+ await new Promise(r=>setTimeout(r,60));
+ assert.equal(requests,1);assert.equal(once.document.querySelectorAll('[data-now-action]').length,3);
+ assert.ok(once.localStorage.getItem('poe2:navi:seen-revision:ranger-ice-shot-deadeye'));
+ console.log('PASS: detail.js and build-ux.js share one builds.json request');
  const minion=new JSDOM(fs.readFileSync('builds/witch/minion-infernalist/index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/?level=37'});
  minion.window.fetch=async()=>({ok:true,json:async()=>data});minion.window.eval(fs.readFileSync('assets/detail.js','utf8'));
  await new Promise(r=>setTimeout(r,60));

@@ -12,7 +12,8 @@ if('IntersectionObserver' in window){
 }
 // Reuse existing saved build/level keys, and keep material revision detection separate from visits.
 const notice=document.getElementById('build-update-notice');
-if(notice)fetch('/data/builds.json').then(r=>r.json()).then(builds=>{
+// Shares detail.js's request (window.poe2BuildsRequest) so builds.json is downloaded once per page.
+if(notice)(window.poe2BuildsRequest||=fetch('/data/builds.json').then(r=>{if(!r.ok)throw new Error(`builds.json ${r.status}`);return r.json();})).then(builds=>{
  const build=builds.find(b=>location.pathname===`/builds/${b.classSlug}/${b.slug}/`);if(!build)return;
  try{
   const key=`poe2:navi:seen-revision:${build.id}`;
