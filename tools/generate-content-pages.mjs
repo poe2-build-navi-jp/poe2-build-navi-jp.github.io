@@ -12,16 +12,7 @@ const esc = (v) => String(v).replaceAll("&", "&amp;").replaceAll("<", "&lt;").re
 const head = (title, description, url) => `<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow"><meta name="google-adsense-account" content="${publisher}"><link rel="canonical" href="${url}"><meta property="og:type" content="article"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="POE2ビルドナビ"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${url}"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/assets/styles.css?v=discovery-2"><link rel="stylesheet" href="/assets/mobile.css?v=discovery-2"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisher}" crossorigin="anonymous"></script>`;
 const header = `<header class="site-header"><a class="brand" href="/"><span class="brand-mark">P2</span><span>POE2<br>ビルドナビ</span></a><nav class="site-nav page-nav"><a href="/builds/">ビルド</a><a href="/class-check/">職業診断</a><a href="/beginner-guide/">初心者ガイド</a><a href="/dictionary/">用語辞典</a></nav></header>`;
 
-for (const guide of guides) {
-  const dir = resolve(root, "guides", guide.slug);
-  const url = `${base}/guides/${guide.slug}/`;
-  const actions = guide.actions.map((x, i) => `<li><b>${["最優先", "次", "その次"][i]}</b><span>${esc(x)}</span></li>`).join("");
-  const details = guide.details.map((x) => `<p>${esc(x)}</p>`).join("");
-  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${guide.title}｜初心者ガイド`, guide.summary, url)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li><a href="/beginner-guide/">初心者ガイド</a></li><li>${esc(guide.title)}</li></ol></nav><article class="article-page"><p class="section-kicker">BEGINNER GUIDE</p><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.summary)}</p><section class="content-action"><h2>今日確認すること</h2><ol>${actions}</ol></section><section><h2>初心者向け説明</h2>${details}</section><aside class="next-box"><b>次の行動</b><p>関連する画面を開いて、今の自分に必要な項目を確認してください。</p><a class="button" href="${guide.related}">関連ページへ</a></aside><p><a href="/beginner-guide/">13章の一覧へ戻る</a></p></article></main></body></html>`;
-  await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
-}
-
-// Optional rich fields on a term: sections [{heading, paragraphs, bullets}], buildExamples
+// Optional rich fields on a term or guide: sections [{heading, paragraphs, bullets}], buildExamples
 // [{id, text}] (linked to the build page), sources [{name, url, checkedAt}], version.
 const termSections = (term) => (term.sections || []).map((s) => `<h2>${esc(s.heading)}</h2>${(s.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join("")}${s.bullets?.length ? `<ul>${s.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}`).join("");
 const termExamples = (term) => term.buildExamples?.length ? `<h2>このサイトのビルドでの例</h2><ul>${term.buildExamples.map((ex) => {
@@ -30,6 +21,15 @@ const termExamples = (term) => term.buildExamples?.length ? `<h2>このサイト
   return `<li><a href="/builds/${build.classSlug}/${build.slug}/">${esc(build.name)}</a>：${esc(ex.text)}</li>`;
 }).join("")}</ul>` : "";
 const termSources = (term) => term.sources?.length ? `<section class="sources"><h2>確認した情報源</h2><p>数値や仕様はPath of Exile 2 ${esc(term.version || site.gameVersion)}時点のものです。正式版1.0で変わる可能性があります。</p><ul class="source-list">${term.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>確認日 ${esc(s.checkedAt)}</span></li>`).join("")}</ul></section>` : "";
+
+for (const guide of guides) {
+  const dir = resolve(root, "guides", guide.slug);
+  const url = `${base}/guides/${guide.slug}/`;
+  const actions = guide.actions.map((x, i) => `<li><b>${["最優先", "次", "その次"][i]}</b><span>${esc(x)}</span></li>`).join("");
+  const details = guide.details.map((x) => `<p>${esc(x)}</p>`).join("");
+  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${guide.title}｜初心者ガイド`, guide.metaDescription || guide.summary, url)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li><a href="/beginner-guide/">初心者ガイド</a></li><li>${esc(guide.title)}</li></ol></nav><article class="article-page"><p class="section-kicker">BEGINNER GUIDE</p><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.summary)}</p><section class="content-action"><h2>今日確認すること</h2><ol>${actions}</ol></section><section><h2>初心者向け説明</h2>${details}</section>${termSections(guide)}${termExamples(guide)}${termSources(guide)}<aside class="next-box"><b>次の行動</b><p>${esc(guide.nextText || "関連する画面を開いて、今の自分に必要な項目を確認してください。")}</p><a class="button" href="${guide.related}">${esc(guide.relatedLabel || "関連ページへ")}</a>${(guide.links || []).map((l) => `<a class="button button-ghost" href="${esc(l.href)}">${esc(l.label)}</a>`).join("")}</aside><p><a href="/beginner-guide/">13章の一覧へ戻る</a></p></article></main></body></html>`;
+  await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
+}
 
 for (const term of terms) {
   const dir = resolve(root, "dictionary", term.slug);
