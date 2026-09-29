@@ -67,3 +67,11 @@ Japanese OG image from the page `<title>`; run it after any title change or new 
 data was verified for. `tools/enhance-version-notice.mjs` shows a "not verified" notice on build pages
 (and a banner on hub pages) only when they differ. See `tools/RELEASE_1_0.md` for the 1.0 runbook and
 `node tools/release-readiness.mjs` for the remaining work.
+
+## Text contrast
+
+Color tokens in `assets/styles.css` meet WCAG AA on light backgrounds: `--orange` (#b04a1c),
+`--gold-ink` (#7d5f1a, section kickers) and `--muted` (#565f66). Dark sections (hero, header,
+class cards, etc.) keep the light `--gold` kicker and `--orange-bright` outline via the override
+block at the end of `styles.css`. After any color or layout change run `npm run test:contrast`
+(axe-core + a gradient-background pass on every page at 1280px and 375px).
