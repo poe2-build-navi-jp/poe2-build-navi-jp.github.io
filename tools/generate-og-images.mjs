@@ -22,7 +22,9 @@ const imageName=path=>{
 };
 
 const sitemap=await read('sitemap.xml');
-const paths=[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map(m=>m[1]);
+// Noindex pages are still shared from internal links and note, so they keep an OG image too.
+const noindexPaths=JSON.parse(await read('data/noindex.json')).paths.map(p=>p.replace(/^\//,''));
+const paths=[...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map(m=>m[1]),...noindexPaths])];
 const pages=[];
 for(const path of paths){
  const file=`${path}index.html`;

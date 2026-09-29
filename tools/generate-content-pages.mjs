@@ -21,10 +21,20 @@ for (const guide of guides) {
   await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
 }
 
+// Optional rich fields on a term: sections [{heading, paragraphs, bullets}], buildExamples
+// [{id, text}] (linked to the build page), sources [{name, url, checkedAt}], version.
+const termSections = (term) => (term.sections || []).map((s) => `<h2>${esc(s.heading)}</h2>${(s.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join("")}${s.bullets?.length ? `<ul>${s.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}`).join("");
+const termExamples = (term) => term.buildExamples?.length ? `<h2>このサイトのビルドでの例</h2><ul>${term.buildExamples.map((ex) => {
+  const build = builds.find((item) => item.id === ex.id);
+  if (!build) throw new Error(`${term.slug}: unknown build ${ex.id}`);
+  return `<li><a href="/builds/${build.classSlug}/${build.slug}/">${esc(build.name)}</a>：${esc(ex.text)}</li>`;
+}).join("")}</ul>` : "";
+const termSources = (term) => term.sources?.length ? `<section class="sources"><h2>確認した情報源</h2><p>数値や仕様はPath of Exile 2 ${esc(term.version || site.gameVersion)}時点のものです。正式版1.0で変わる可能性があります。</p><ul class="source-list">${term.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>確認日 ${esc(s.checkedAt)}</span></li>`).join("")}</ul></section>` : "";
+
 for (const term of terms) {
   const dir = resolve(root, "dictionary", term.slug);
   const url = `${base}/dictionary/${term.slug}/`;
-  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${term.term}とは｜初心者用語辞典`, `${term.term}をPOE2初心者向けに説明。${term.oneLine}`, url)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li><a href="/dictionary/">用語辞典</a></li><li>${esc(term.term)}</li></ol></nav><article class="article-page"><p class="section-kicker">DICTIONARY</p><h1>${esc(term.term)}</h1><section class="term-lead"><h2>一言でいうと</h2><p>${esc(term.oneLine)}</p></section><h2>初心者向け説明</h2><p>${esc(term.description)}</p><h2>なぜ重要？</h2><p>${esc(term.importance)}</p><h2>次にすること</h2><p>${esc(term.action)}</p><div class="section-cta"><a class="button" href="${term.guide}">関連ガイド</a><a class="button button-ghost" href="/dictionary/">用語一覧</a></div></article></main></body></html>`;
+  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${term.term}とは｜初心者用語辞典`, term.metaDescription || `${term.term}をPOE2初心者向けに説明。${term.oneLine}`, url)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs"><ol><li><a href="/">ホーム</a></li><li><a href="/dictionary/">用語辞典</a></li><li>${esc(term.term)}</li></ol></nav><article class="article-page"><p class="section-kicker">DICTIONARY</p><h1>${esc(term.term)}</h1><section class="term-lead"><h2>一言でいうと</h2><p>${esc(term.oneLine)}</p></section><h2>初心者向け説明</h2><p>${esc(term.description)}</p>${termSections(term)}<h2>なぜ重要？</h2><p>${esc(term.importance)}</p>${termExamples(term)}<h2>次にすること</h2><p>${esc(term.action)}</p>${termSources(term)}<div class="section-cta"><a class="button" href="${term.guide}">関連ガイド</a><a class="button button-ghost" href="/dictionary/">用語一覧</a></div></article></main></body></html>`;
   await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
 }
 

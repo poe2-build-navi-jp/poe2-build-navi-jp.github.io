@@ -128,6 +128,7 @@ for (const classData of classes) {
 
 console.log(`Generated ${builds.length} build detail pages and ${classes.length} class pages.`);
 await import('./generate-static-content.mjs');
+await import('./generate-content-pages.mjs');
 await import('./generate-discovery-pages.mjs');
 await import('./generate-seo-pages.mjs');
 await import('./enhance-residual-pages.mjs');

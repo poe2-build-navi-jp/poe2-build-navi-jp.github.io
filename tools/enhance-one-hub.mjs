@@ -11,7 +11,14 @@ const site = JSON.parse(await read("data/site.json"));
 const sitemap = await read("sitemap.xml");
 // seo-pages.json too: this runs before generate-sitemap, so a newly added page is not in sitemap.xml yet.
 const seoPaths = JSON.parse(await read("data/seo-pages.json")).map((page) => page.path.replace(/^\//, ""));
-const paths = [...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]), ...seoPaths])];
+// Pages kept out of search (data/noindex.json) are still visited from internal links,
+// and dictionary/guide pages may be (re)listed after this runs, so include them explicitly.
+const noindexPaths = JSON.parse(await read("data/noindex.json")).paths.map((path) => path.replace(/^\//, ""));
+const contentPaths = [
+  ...JSON.parse(await read("data/dictionary.json")).map((term) => `dictionary/${term.slug}/`),
+  ...JSON.parse(await read("data/guides.json")).map((guide) => `guides/${guide.slug}/`)
+];
+const paths = [...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]), ...seoPaths, ...noindexPaths, ...contentPaths])];
 
 const released = site.gameVersion === site.nextGameVersion;
 const [y, m, d] = site.nextGameVersionReleaseDate.split("-").map(Number);
