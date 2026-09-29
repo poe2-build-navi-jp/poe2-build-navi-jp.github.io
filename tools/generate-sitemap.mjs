@@ -10,7 +10,8 @@ const buildLastmod=new Map(indexableBuilds.map(build=>[
   `/builds/${build.classSlug}/${build.slug}/`,
   [changedDate,build.updatedAt,...(build.changeHistory||[]).map(entry=>entry.date)].filter(Boolean).sort().at(-1)
 ]));
-const urls=[...new Set(["/","/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/guides/beginner-build/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])];
+const noindex=new Set(JSON.parse(await readFile(resolve(root,"data/noindex.json"),"utf8")).paths);
+const urls=[...new Set(["/","/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/guides/beginner-build/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])].filter(path=>!noindex.has(path));
 const changedPaths=new Set(["/","/leveling/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`)]);
 const {ROADMAP_BUILD_IDS}=await import("./roadmap-builds.mjs");
 const priorityBuildIds=new Set(ROADMAP_BUILD_IDS);

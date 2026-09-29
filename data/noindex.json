@@ -1,0 +1,27 @@
+{
+  "note": "中身が薄いため書き直し・統合まで検索対象から外すページ（2026-09-29）。ページは残し、サイト内リンクからは閲覧できる。書き直したらここから外す。",
+  "paths": [
+    "/dictionary/build/",
+    "/dictionary/dps/",
+    "/dictionary/skill-gem/",
+    "/dictionary/support-gem/",
+    "/dictionary/passive-tree/",
+    "/dictionary/resistance/",
+    "/dictionary/mapping/",
+    "/dictionary/endgame/",
+    "/dictionary/league-starter/",
+    "/dictionary/ssf/",
+    "/dictionary/ascendancy/",
+    "/dictionary/spirit/",
+    "/dictionary/energy-shield/",
+    "/guides/getting-started/",
+    "/guides/choosing-a-class/",
+    "/guides/what-is-a-build/",
+    "/guides/skill-gems/",
+    "/guides/support-gems/",
+    "/guides/equipment-basics/",
+    "/guides/after-campaign/",
+    "/guides/endgame/",
+    "/guides/beginner-build/"
+  ]
+}

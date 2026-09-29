@@ -134,8 +134,9 @@ for (const [, pageUrl] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
     || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(pagePath);
   assert((page.match(/\/assets\/analytics-events\.js/g) || []).length === (tracksEvents ? 1 : 0), `${pagePath}: analytics event script scope mismatch`);
 }
+const noindexListed = new Set(JSON.parse(await read("data/noindex.json")).paths);
 for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "best-builds/", "guides/beginner-build/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
-  assert(sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
+  assert(noindexListed.has(`/${page}`) || sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
 for (const page of [
@@ -271,13 +272,26 @@ for (const eventName of ["best_build_click", "tier_build_click", "league_build_c
 }
 assert(!sitemap.match(/<loc>[^<]+<\/loc>/g).some((url, index, all) => all.indexOf(url) !== index), "sitemap URLs must be unique");
 assert(guides.length === 13, "beginner guide must have 13 chapters");
+// Thin pages listed in data/noindex.json stay reachable but out of search until rewritten.
+const noindexPaths = new Set(JSON.parse(await read("data/noindex.json")).paths);
+const mainTextLength = (html) => (html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "").replace(/<!-- one-link:start -->[\s\S]*?<!-- one-link:end -->/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, "").length;
+for (const path of noindexPaths) {
+  assert(!sitemap.includes(`<loc>${baseUrl}${path}</loc>`), `${path}: noindex page must not be in the sitemap`);
+  try { assert((await read(`${path.slice(1)}index.html`)).includes('<meta name="robots" content="noindex,follow">'), `${path}: noindex robots tag missing`); } catch { failures.push(`missing noindex page: ${path}`); }
+}
 for (const guide of guides) {
-  assert(sitemap.includes(`${baseUrl}/guides/${guide.slug}/`), `${guide.slug}: guide missing from sitemap`);
+  const path = `/guides/${guide.slug}/`;
+  assert(noindexPaths.has(path) || sitemap.includes(`${baseUrl}${path}`), `${guide.slug}: guide missing from sitemap`);
   try { const page=await read(`guides/${guide.slug}/index.html`); assert(page.includes(`<link rel="canonical" href="${baseUrl}/guides/${guide.slug}/">`), `${guide.slug}: guide canonical mismatch`); } catch { failures.push(`missing guide: ${guide.slug}`); }
 }
 for (const term of terms) {
-  assert(sitemap.includes(`${baseUrl}/dictionary/${term.slug}/`), `${term.slug}: term missing from sitemap`);
-  try { await access(resolve(root, "dictionary", term.slug, "index.html")); } catch { failures.push(`missing term: ${term.slug}`); }
+  const path = `/dictionary/${term.slug}/`;
+  assert(noindexPaths.has(path) || sitemap.includes(`${baseUrl}${path}`), `${term.slug}: term missing from sitemap`);
+  try {
+    const page = await read(`dictionary/${term.slug}/index.html`);
+    // A term page that is back in search must no longer be thin.
+    if (!noindexPaths.has(path)) assert(mainTextLength(page) >= 600, `${term.slug}: indexable term page is too thin (${mainTextLength(page)} chars)`);
+  } catch { failures.push(`missing term: ${term.slug}`); }
 }
 const allText = [index, buildsText, JSON.stringify(guides), JSON.stringify(terms)].join("\n");
 assert(!/(youtube\.com|youtu\.be)/i.test(allText), "YouTube references must not appear");
