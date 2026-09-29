@@ -28,7 +28,7 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
 (async()=>{
  const data=JSON.parse(fs.readFileSync('data/builds.json','utf8'));
  const {rows}=await import('../tools/build-facts.mjs');
- const {validateRatings}=await import('../tools/build-ratings.mjs');
+ const {validateRatings,BEGINNER_CHECKS}=await import('../tools/build-ratings.mjs');
  const discovery=JSON.parse(fs.readFileSync('data/discovery.json','utf8'));
  for(const build of data){
   assert.deepEqual(validateRatings(build),[],`${build.id}: rating evidence`);
@@ -55,6 +55,12 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.match(shield.ratingEvidence.damage.quote,/Boss obliteration[\s\S]*-30% single target/);
  assert.equal(shield.mappingRating,4);
  assert.match(shield.ratingEvidence.mapping.quote,/Screen wide clear/);
+ assert.match(BEGINNER_CHECKS[0][1],/代替スキルは対象外/);
+ assert.match(shield.ratingEvidence.beginner.verifiedChecks.earlyMainSkill.basis,/シールドウォール.*Lv22/);
+ assert.match(shield.ratingEvidence.beginner.verifiedChecks.earlyMainSkill.basis,/ローリングスラム.*代替/);
+ assert.equal(shield.ratingEvidence.defense.source,'https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr');
+ assert.match(shield.ratingEvidence.defense.note,/最初のアセンダンシー取得後のキャンペーン/);
+ assert.match(data.find(b=>b.id==='huntress-twister-spirit-walker').ratingEvidence.beginner.verifiedChecks.earlyMainSkill.basis,/ツイスター.*Lv1〜10のPounceとShredは切替前の代替/);
  assert.match(rows(ice,discovery).find(([name])=>name==='主力スキル使用条件')[1],/Lv31.*レベル9/);
  assert.match(rows(ice,discovery).find(([name])=>name==='主力への切替目安')[1],/Lv31以降/);
  console.log('PASS: 11 builds share the same card facts and ratings on builds, Tier and starter; skill requirement differs from recommended switch');

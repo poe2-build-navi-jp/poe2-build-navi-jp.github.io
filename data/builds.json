@@ -521,7 +521,7 @@
     "mainSkill": "シールドウォール（Shield Wall）",
     "beginnerRating": 3,
     "damageRating": 3,
-    "defenseRating": 5,
+    "defenseRating": 4,
     "mappingRating": 4,
     "bossRating": 3,
     "difficulty": "Lv22で主力を切替",
@@ -537,7 +537,7 @@
     "strengths": [
       "最初のアセンダンシー取得後はキャンペーンで耐久を得やすい。",
       "段階別のAct・Maps・Endgame構成が公開されている。",
-      "スミス・オブ・キタヴァは耐性を揃えやすく、属性ダメージに非常に強くなれる（Maxroll）。",
+      "スミス・オブ・キタヴァの耐性補助は取得ノードと装備の耐性が前提。アセンダンシー全般の潜在力は、このビルドの完成時の耐久を保証しない。",
       "装備への投資が少なくても成立し、マップ序盤から装備枠をアイテムレアリティに回しやすい（Kami-labs）。"
     ],
     "weaknesses": [
@@ -677,8 +677,8 @@
     "gearPriorities": [
       "盾（最重要）：アーマー値とアーマー増加%。シールドウォールは盾のアーマー15ごとに物理ダメージ5〜7が加算されるため、火力も盾で決まる（poe2db。0.5.0で6〜8から変更）。使用にはアーマー系の盾が必要。",
       "Lv22の切替時：アーマー値の高い盾を先に用意しておく。",
-      "耐性：アセンダンシー「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わるため、火耐性を優先すると耐性を揃えやすい（Maxroll）。",
-      "耐性に使わずに済んだ接尾辞は、火力やアイテムレアリティに回せる（Maxroll・Kami-labs）。",
+      "耐性：Coal Stokerを取得する構成なら、火耐性の50%が冷気・雷耐性にも加わる（Maxroll）。実際の取得ノードは原典の段階別ツリーで確認し、未取得ならこの効果を前提に装備を組まない。",
+      "必要な耐性を確保できた後なら、余った接尾辞を火力やアイテムレアリティに回せる（Maxroll・Kami-labs）。",
       "マップ序盤：ユニーク「Thrillsteel」で常時Onslaught（加速）を得て周回を速くする案がある（Kami-labs）。",
       "防具：ライフと不足耐性。現在レベルに合う防具を使う。"
     ],
@@ -699,7 +699,7 @@
         "name": "Maxroll: Smith of Kitava Ascendancy Overview",
         "url": "https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview",
         "checkedAt": "2026-09-28",
-        "type": "海外アセンダンシー解説（2026年6月17日更新。Shield Wall自体への言及はないが、耐性キャップの取りやすさなど本ビルドの前提となる耐性面の裏付けとして参照）"
+        "type": "アセンダンシー共通の参考資料。Shield Wallの掲載構成で取得済みのノードや耐久性能の根拠には使わない"
       },
       {
         "name": "Kami-labs: Build Guerrier Shieldwall Smith Kitava（Saison 5）",
@@ -718,6 +718,10 @@
     "audience": "装備を整えやすい耐久型のリーグスターターを探している人",
     "changeHistory": [
       {
+        "date": "2026-09-29",
+        "summary": "評価根拠を再照合。耐久はアセンダンシー一般論から本ビルド原典の『最初の昇華後、キャンペーンで高い耐久』へ変更。Lv22の早期主力条件はローリングスラムでなくシールドウォールの切替に紐付け、装備・耐性の条件を明記。育成8段階の再検証ではない。"
+      },
+      {
         "date": "2026-09-28",
         "summary": "Kami-labsの解説記事とpoe2dbを確認。火力・ボスを未評価→3/5（ボス火力の長所と0.5の単体火力低下の短所が両方）に更新。盾アーマーが火力を決める仕様を装備優先度に明記し、長所・短所と出典を追加。Maxrollのアセンダンシー解説を再確認。"
       },
@@ -727,7 +731,7 @@
       }
     ],
     "ratingEvidence": {
-      "checkedAt": "2026-09-28",
+      "checkedAt": "2026-09-29",
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
@@ -735,11 +739,11 @@
           "ssfConfirmed": false,
           "noDodgeRequirement": true
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。Kami-labsは序盤のコンボとPerfect Strikeに練習が必要と短所に挙げているため、操作の簡単さは加点しません。",
+        "note": "確認した条件だけを原典・段階別手順と結び付けています。SSFは未確認です。Kami-labsは序盤のコンボとPerfect Strikeに練習が必要と短所に挙げているため、操作の簡単さは確認済み条件に含めません。",
         "score": 3,
         "verifiedChecks": {
           "earlyMainSkill": {
-            "basis": "元ガイドの序盤構成に掲載された「ローリングスラム + ボーンシャッター」を参照",
+            "basis": "掲載ビルドの主力シールドウォールはLv22で使用可能。元ガイドはAct 2のLv22切替までローリングスラム＋ボーンシャッターを代替として使うと明記",
             "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr"
           },
           "noDodgeRequirement": {
@@ -758,13 +762,13 @@
         "note": "同じ資料のStrengths欄にボスを倒す火力の高さ、Weaknesses欄に0.5での単体火力の低下（最悪30%）が挙げられている。同じ記述はボスの根拠にも使用。"
       },
       "defense": {
-        "score": 5,
-        "basis": "長所（強調）",
-        "quote": "can become extremely resilient to elemental damage",
-        "source": "https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview",
-        "sourceName": "Maxroll: Smith of Kitava Ascendancy Overview",
-        "checkedAt": "2026-09-28",
-        "note": "アセンダンシー解説で、属性ダメージへの非常に高い耐性が強調されている。"
+        "score": 4,
+        "basis": "長所",
+        "quote": "Very tanky in campaign after you ascend the first time",
+        "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "sourceName": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "checkedAt": "2026-09-29",
+        "note": "掲載ビルドの原典が、最初のアセンダンシー取得後のキャンペーン耐久を長所としている。取得前やマップ以降にも同じ耐久があるとの断定ではない。アセンダンシー共通の属性耐性の可能性はこの判定に含めない。"
       },
       "mapping": {
         "score": 4,
@@ -2933,7 +2937,7 @@
         "score": 2,
         "verifiedChecks": {
           "earlyMainSkill": {
-            "basis": "元ガイドの序盤構成に掲載された「PounceとShredを中心に進め、入手後はWhirling SlashとTwisterの準備を始める。」を参照",
+            "basis": "元ガイドのLv11〜20段階では、掲載ビルドの主力ツイスターをWhirling Slashと組み合わせて使用。Lv1〜10のPounceとShredは切替前の代替として扱う",
             "source": "https://note.com/fresh_okapi3816/n/nbe96101eda53"
           }
         }

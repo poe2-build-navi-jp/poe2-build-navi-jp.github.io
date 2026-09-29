@@ -11,7 +11,7 @@ export const AXES=[
  {key:'boss',field:'bossRating',label:'ボス・単体',short:'ボス'}
 ];
 export const BEGINNER_CHECKS=[
- ['earlyMainSkill','主力スキルをLv22以下（最初のアセンダンシー前後）から使える'],
+ ['earlyMainSkill','掲載ビルドの主力スキルの少なくとも1つをLv22以下から使える（序盤の代替スキルは対象外）'],
  ['moderateOperation','原典が操作の簡単さを長所として明記している'],
  ['ssfConfirmed','資料がSSF（トレードなし）での成立を明記している（「ユニーク不要」だけでは確認済みとしない）'],
  ['noDodgeRequirement','原典が防御や安全な立ち回りを長所として明記している']
