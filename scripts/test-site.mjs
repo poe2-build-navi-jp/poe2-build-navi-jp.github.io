@@ -368,6 +368,7 @@ for (const build of builds) {
   assert(page.includes('class="version-notice"') === outdated, `${build.id}: version notice must appear only when build version ${build.version} != game ${site.gameVersion} (run node tools/enhance-version-notice.mjs)`);
 }
 assert(index.includes('class="version-banner"') === builds.some((build) => build.version !== site.gameVersion), "homepage version banner out of sync with site.gameVersion");
+for (const name of ["combat", "priority", "control", "theme"]) assert(classCheck.includes(`<legend id="q-${name}">`) && classCheck.includes(`<select name="${name}" required aria-labelledby="q-${name}">`), `class-check: ${name} select needs an accessible name`);
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);
