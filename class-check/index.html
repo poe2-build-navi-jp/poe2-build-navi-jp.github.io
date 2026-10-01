@@ -50,8 +50,8 @@
 <section class="section compact-section">
 <form id="class-check-form" class="quiz-form">
 <fieldset>
-<legend>Q1 どんな戦い方が好き？</legend>
-<select name="combat" required>
+<legend id="q-combat">Q1 どんな戦い方が好き？</legend>
+<select name="combat" required aria-labelledby="q-combat">
 <option value="">選んでください</option>
 <option value="melee">近接</option>
 <option value="ranged">遠距離</option>
@@ -61,8 +61,8 @@
 </select>
 </fieldset>
 <fieldset>
-<legend>Q2 何を重視する？</legend>
-<select name="priority" required>
+<legend id="q-priority">Q2 何を重視する？</legend>
+<select name="priority" required aria-labelledby="q-priority">
 <option value="">選んでください</option>
 <option value="simple">分かりやすさ</option>
 <option value="safe">距離・防御</option>
@@ -71,8 +71,8 @@
 </select>
 </fieldset>
 <fieldset>
-<legend>Q3 操作量は？</legend>
-<select name="control" required>
+<legend id="q-control">Q3 操作量は？</legend>
+<select name="control" required aria-labelledby="q-control">
 <option value="">選んでください</option>
 <option value="simple">簡単がいい</option>
 <option value="medium">少し複雑でもよい</option>
@@ -80,8 +80,8 @@
 </select>
 </fieldset>
 <fieldset>
-<legend>Q4 好きなテーマは？</legend>
-<select name="theme" required>
+<legend id="q-theme">Q4 好きなテーマは？</legend>
+<select name="theme" required aria-labelledby="q-theme">
 <option value="">選んでください</option>
 <option value="weapon">武器・盾</option>
 <option value="spell">呪文</option>
