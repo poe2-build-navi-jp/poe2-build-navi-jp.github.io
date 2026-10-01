@@ -5,6 +5,7 @@
 // "よくある質問" <details> so the markup can never drift from what readers see.
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { insertBlock } from "./block-order.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const read = (p) => readFile(resolve(root, p), "utf8");
@@ -46,9 +47,7 @@ for (const path of paths) {
     html = `${html.slice(0, at - "</div>".length)}<!-- poe2-intro:start --><p class="hero-intro"><a href="/what-is-poe2/">はじめての方へ：PoE2とは？どんなゲームかを見る</a></p><!-- poe2-intro:end --></div>${html.slice(at)}`;
   }
   if (!skip(path)) {
-    const at = html.lastIndexOf("</main>");
-    if (at === -1) throw new Error(`${file}: </main> not found`);
-    html = `${html.slice(0, at)}${box}${html.slice(at)}`;
+    html = insertBlock(html, "</main>", "one-link", box);
     linked++;
   }
   if (path.startsWith("poe2-1-0/") || seoPaths.includes(path)) {
@@ -60,9 +59,7 @@ for (const path of paths) {
         "@type": "FAQPage",
         mainEntity: items.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } }))
       }).replaceAll("<", "\\u003c");
-      // Always before the OG block (generate-og-images appends at </head>), so run order doesn't matter.
-      const faqBlock = `<!-- one-faq:start --><script type="application/ld+json">${schema}</script><!-- one-faq:end -->`;
-      html = html.includes("<!-- og-image:start -->") ? html.replace("<!-- og-image:start -->", `${faqBlock}<!-- og-image:start -->`) : html.replace("</head>", `${faqBlock}</head>`);
+      html = insertBlock(html, "</head>", "one-faq", `<!-- one-faq:start --><script type="application/ld+json">${schema}</script><!-- one-faq:end -->`);
       faqPages++;
     }
   }

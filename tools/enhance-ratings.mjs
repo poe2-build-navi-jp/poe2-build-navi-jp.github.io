@@ -4,6 +4,7 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {esc} from './build-facts.mjs';
 import {AXES,BEGINNER_CHECKS,AXIS_SCOPE,CRITERIA_URL,ratingSectionHtml,validateRatings,evidenceLabel,evidenceNote} from './build-ratings.mjs';
+import {insertBlock} from './block-order.mjs';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const save=(p,s)=>writeFile(resolve(root,p),s);
@@ -40,9 +41,13 @@ const body=`<main id="main" class="page-main"><nav class="breadcrumbs" aria-labe
 const page=`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><meta name="google-adsense-account" content="ca-pub-7738997902416481"><link rel="canonical" href="${pageUrl}"><meta property="og:type" content="article"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="POE2ビルドナビ"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${pageUrl}"><link rel="stylesheet" href="/assets/styles.css?v=rating-1"><link rel="stylesheet" href="/assets/mobile.css?v=rating-1"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7738997902416481" crossorigin="anonymous"></script><script type="application/ld+json">${breadcrumb}</script></head><body><a class="skip-link" href="#main">本文へ移動</a><header class="site-header"><a class="brand" href="/" aria-label="POE2ビルドナビ ホーム"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></a><nav class="site-nav page-nav" aria-label="メインメニュー"><a href="/tier-list/">Tier</a><a href="/league-starter/">スターター</a><a href="/builds/">ビルド</a><a href="/beginner-guide/">初心者ガイド</a></nav></header>${body}</body></html>\n`;
 await mkdir(resolve(root,'rating-criteria'),{recursive:true});
 let existing='';try{existing=await read('rating-criteria/index.html');}catch{}
-const gtag=existing.match(/<!-- Google tag \(gtag\.js\) -->[\s\S]*?<!-- \/Google tag -->/)?.[0]||'';
+// Keep what later tools added (preconnect + Google tag at the top of <head>, the OG block),
+// so this rebuild gives the same page whichever order the tools run in.
+const headStart=(existing.match(/<head>([\s\S]*?)<meta charset/)?.[1]||'').replace(/<meta (?:property="og:image(?::[a-z]+)?"|name="twitter:card") content="[^"]*">/g,'');
+const ogBlock=existing.match(/<!-- og-image:start -->[\s\S]*?<!-- og-image:end -->/)?.[0];
 const imageTags=`<meta property="og:image" content="${base}/images/poe2/og/poe2-rating-criteria-og.webp"><meta name="twitter:card" content="summary_large_image">`;
-await save('rating-criteria/index.html',page.replace('<head>',`<head>${gtag}${imageTags}`));
+const rebuilt=page.replace('<head>',`<head>${headStart}${ogBlock?'':imageTags}`);
+await save('rating-criteria/index.html',ogBlock?insertBlock(rebuilt,'</head>','og-image',ogBlock):rebuilt);
 
 // Link the criteria from the editorial policy and hub pages.
 let policy=await read('editorial-policy/index.html');

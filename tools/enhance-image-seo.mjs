@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { insertBlock } from "./block-order.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const base = "https://poe2-build-navi-jp.github.io";
@@ -49,7 +50,7 @@ for (const page of pages) {
   const meta = page.schemaOnly
     ? `<!-- image-schema:start --><script type="application/ld+json">${schema}</script><!-- image-schema:end -->`
     : `<!-- image-seo:start --><meta property="og:image" content="${absoluteOg}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(page.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${absoluteOg}"><script type="application/ld+json">${schema}</script><!-- image-seo:end -->`;
-  html = html.replace('</head>',`${meta}</head>`);
+  html = insertBlock(html, '</head>', page.schemaOnly ? 'image-schema' : 'image-seo', meta);
   if (page.boundary && html.includes(page.boundary)) html = html.replace(page.boundary,`</section>${figure(page)}<section id="choose-class"`);
   else if (page.classHero) html = html.replace(/(<section class="class-page-hero"[\s\S]*?<div class="status-note">[\s\S]*?<\/div>)(<\/section>)/,`$1${figure(page)}$2`);
   else if (page.build) html = html.replace('<section id="roadmap"',`${figure(page)}<section id="roadmap"`);
