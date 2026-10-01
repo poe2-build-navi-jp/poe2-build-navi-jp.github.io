@@ -91,3 +91,6 @@ img,svg{display:block;max-width:100%}
 .hero .seo-visual figcaption,.build-hero .seo-visual figcaption,.page-hero .seo-visual figcaption,.class-page-hero .seo-visual figcaption{color:#b7c5cc}
 .article-page .lead{color:#3a434a}.class-card h3{color:#fff}.section .class-helper .filter-note,.class-helper .filter-note{color:#d4dde1}
 .site-header .button-secondary,.hero .button-secondary,.section-dark .button-secondary,.build-card .button-secondary,.diagnosis-form .button-secondary,.site-footer .button-secondary,.build-hero .button-secondary,.page-hero .button-secondary,.next-box .button-secondary,.class-card .button-secondary,.class-helper .button-secondary,.class-page-hero .button-secondary,.seo-answer .button-secondary{border-color:var(--orange-bright)}
+.facts-table{min-width:0}.facts-table tbody th{width:28%}.facts-table td{white-space:normal;overflow-wrap:anywhere}.term-links{padding-left:1.2em}.term-links li{margin:.35rem 0}
+@media(max-width:680px){.facts-table td::before{content:none}.facts-table tbody th{width:auto;padding:10px 14px}.facts-table td{display:block;padding:10px 14px}}
+.hero-intro{margin:14px 0 0}.hero-intro a{color:#f2d17d;font-weight:700;text-decoration:underline;text-underline-offset:3px}

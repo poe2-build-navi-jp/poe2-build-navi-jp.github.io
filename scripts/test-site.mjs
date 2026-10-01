@@ -175,19 +175,23 @@ assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲�
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
 assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
-assert(seoPages.length === 20, "targeted SEO page count must be 20");
+assert(seoPages.length === 21, "targeted SEO page count must be 21");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
   const html = await read(localPath);
   assert(html.includes(`<h1>${page.h1}</h1>`), `${page.path}: initial H1 missing`);
   assert(html.includes(`<link rel="canonical" href="${baseUrl}${page.path}">`), `${page.path}: self canonical missing`);
-  assert(html.includes("まずやること3つ"), `${page.path}: immediate actions missing`);
+  assert(html.includes(page.actionsHeading ?? "まずやること3つ"), `${page.path}: immediate actions missing`);
+  if (page.faq?.length) assert(html.includes('"@type":"FAQPage"') && page.faq.every((item) => html.includes(item.q)), `${page.path}: visible FAQ and FAQPage data must match`);
   assert(html.includes("BreadcrumbList"), `${page.path}: breadcrumb data missing`);
 }
 for (const path of ["/guides/why-i-die/", "/guides/increase-damage/", "/guides/mana-problem/", "/guides/cant-beat-boss/", "/guides/slow-mapping/", "/guides/gear-upgrade/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: trouble SEO page missing`);
 }
+const whatIs = await read("what-is-poe2/index.html");
+assert(whatIs.includes("<title>PoE2とは？") && whatIs.includes('"@type":"VideoGame"') && whatIs.includes('<p class="seo-answer">PoE2（Path of Exile 2）とは、'), "/what-is-poe2/: title, VideoGame data and definition-first answer required");
+assert(index.includes('href="/what-is-poe2/"') && buildList.includes('href="/what-is-poe2/"'), "PoE2とは page must be linked from the home hero and the 1.0 box");
 for (const path of ["/guides/passive-tree/", "/guides/resistance/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: core beginner SEO page missing`);
 }
