@@ -6,6 +6,7 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {chromium} from 'playwright-core';
+import {insertBlock} from './block-order.mjs';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const site=JSON.parse(await read('data/site.json'));
@@ -86,7 +87,7 @@ for(const p of pages){
   .replace(/<meta property="og:image(?::[a-z]+)?" content="[^"]*">/g,'');
  const abs=`${base}${p.image}`;
  const meta=`<!-- og-image:start --><meta property="og:image" content="${abs}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(p.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${abs}"><!-- og-image:end -->`;
- html=html.replace('</head>',`${meta}</head>`);
+ html=insertBlock(html,'</head>','og-image',meta);
  await writeFile(resolve(root,p.file),html);
 }
 console.log(`OG images: ${pages.length} pages, ${written} images written`);

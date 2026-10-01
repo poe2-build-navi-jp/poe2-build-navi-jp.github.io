@@ -1,6 +1,7 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {esc,facts,factsHtml} from './build-facts.mjs';
+import {insertBlock} from './block-order.mjs';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const save=(p,s)=>writeFile(resolve(root,p),s);
@@ -25,7 +26,7 @@ for(const page of pages){
   return article;
  });
  html=html.replace(/<!-- build-ux:start -->[\s\S]*?<!-- build-ux:end -->/g,'');
- html=html.replace('</head>','<!-- build-ux:start --><link rel="stylesheet" href="/assets/build-ux.css?v=1"><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-ux:end --></head>');
+ html=insertBlock(html,'</head>','build-ux','<!-- build-ux:start --><link rel="stylesheet" href="/assets/build-ux.css?v=1"><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-ux:end -->');
  if(page==='index.html'){
   html=html.replace(/<div class="hero-actions">[\s\S]*?<\/div>/,`<div class="hero-actions" aria-label="まず何をしたい？"><a class="button" href="#purpose-picks">おすすめをすぐ決める</a><a class="button-secondary" href="/classes/">自分に合う職業を選ぶ</a><a class="button-secondary" href="/leveling/">現在Lvから続きを見る</a></div>`);
   const quick=html.match(/<section id="quick-start"[\s\S]*?<\/section>/)?.[0];
@@ -58,7 +59,7 @@ for(const b of builds){
  const review=b.reviewedFacts;
  const reviewedItems=review?[['操作難易度',review.difficulty],['操作量',review.operation],['装備の条件',review.gearDependence],['SSF',review.ssfNote]].filter(([,value])=>value).map(([label,value])=>`<li>${esc(label)}：${esc(value)}</li>`).join(''):'';
  const reviewHtml=review?`<p>${esc(review.checkedAt)}：元ガイドの比較項目を追加確認しました。育成8段階の全内容を再検証した日付ではありません。</p><ul>${reviewedItems}</ul><p><a href="${esc(review.source)}" target="_blank" rel="noopener noreferrer">確認した元ガイドを見る</a></p>`:'';
- html=html.replace('</main>',`<!-- build-history:start --><section id="update-history" class="section"><h2>資料確認・更新履歴</h2><p>ビルド資料確認日：${esc(b.updatedAt)}／対応 ${esc(b.version)}。過去の具体的な変更理由は記録されていません。</p>${records?`<ul>${records}</ul>`:''}${reviewHtml}<p>2026-09-26：比較項目・再訪導線を整備。ゲーム内の育成内容を再検証した日ではありません。</p><a href="/builds/#advanced-filters">他のビルドと比較する</a> ・ <a href="/leveling/">別のLv・ビルドから探す</a></section><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-history:end --></main>`);
+ html=insertBlock(html,'</main>','build-history',`<!-- build-history:start --><section id="update-history" class="section"><h2>資料確認・更新履歴</h2><p>ビルド資料確認日：${esc(b.updatedAt)}／対応 ${esc(b.version)}。過去の具体的な変更理由は記録されていません。</p>${records?`<ul>${records}</ul>`:''}${reviewHtml}<p>2026-09-26：比較項目・再訪導線を整備。ゲーム内の育成内容を再検証した日ではありません。</p><a href="/builds/#advanced-filters">他のビルドと比較する</a> ・ <a href="/leveling/">別のLv・ビルドから探す</a></section><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-history:end -->`);
  html=html.replace(/<p id="build-update-notice"[^>]*><\/p>/g,'').replace('<section id="now"','<p id="build-update-notice" role="status" hidden></p><section id="now"');
  html=html.replace(/\/assets\/detail\.js(?:\?[^"']*)?/g,'/assets/detail.js?v=ux-20260926');
  await save(path,html);

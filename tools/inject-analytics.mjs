@@ -1,5 +1,6 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { insertBlock } from "./block-order.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const site = JSON.parse(await readFile(resolve(root, "data/site.json"), "utf8"));
@@ -42,7 +43,7 @@ async function inject(directory = "") {
       || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(path)
       || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(path);
     if (tracksEvents && !html.includes("/assets/analytics-events.js")) {
-      html = html.replace("</head>", `${eventTag}</head>`);
+      html = insertBlock(html, "</head>", "analytics-events", eventTag);
     } else if (!tracksEvents) {
       html = html.replace(eventMarker, "");
     }

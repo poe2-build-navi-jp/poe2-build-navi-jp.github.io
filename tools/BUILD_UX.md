@@ -88,3 +88,12 @@ with `faq` gets FAQPage data from `enhance-one-hub.mjs`, placed before the OG bl
 order does not change the output. After editing the JSON run generate-seo-pages, enhance-one-hub,
 generate-sitemap, generate-og-images, inject-analytics, sync-asset-versions, then `npm test`.
 Keep the answer paragraph definition-first ("〜とは、…です。") and back every fact with a source.
+
+## Block order (generator run order)
+
+Enhancers that append blocks before `</head>` or `</main>` go through `insertBlock()` in
+`tools/block-order.mjs`, which fixes the order (`image-seo`/`image-schema` → analytics script →
+`build-ux` → `one-faq` → `og-image`; `build-history` → `one-link`). A new appended block must be
+added to those lists. `enhance-ratings.mjs` rebuilds `/rating-criteria/` but keeps the head
+blocks other tools added. `npm run test:order` runs the enhancers in four different orders on
+throwaway copies and fails if any HTML differs (needs Chromium, about a minute).
