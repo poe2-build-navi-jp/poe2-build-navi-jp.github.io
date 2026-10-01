@@ -348,5 +348,305 @@
     ],
     "related": [{"label":"耐性とは","url":"/dictionary/resistance/"},{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"装備診断を開く","url":"/gear-check/"}],
     "sources": []
+  },
+  {
+    "path": "/what-is-poe2/",
+    "topLevel": true,
+    "crumb": "PoE2とは",
+    "kicker": "WHAT IS POE2",
+    "title": "PoE2とは？Path of Exile 2はどんなゲームか初心者向けに解説",
+    "description": "PoE2（Path of Exile 2）とは、Grinding Gear GamesのアクションRPG。2026年12月11日の正式版1.0から基本無料。対応機種、日本語対応、PoE1との違い、8つの職業、始め方を公式情報をもとに解説します。",
+    "h1": "PoE2とは？Path of Exile 2を初心者向けに解説",
+    "answer": "PoE2（Path of Exile 2）とは、Grinding Gear Gamesが開発・販売するアクションRPGです。2024年12月6日にアーリーアクセス（早期アクセス）が始まり、2026年12月11日の正式版1.0から基本プレイ無料になる予定です。PC・PS5・Xbox Seriesに対応し、最大6人で協力プレイできます。",
+    "about": {
+      "@type": "VideoGame",
+      "name": "Path of Exile 2",
+      "alternateName": [
+        "PoE2",
+        "POE2",
+        "パスオブエグザイル2"
+      ],
+      "genre": [
+        "アクションRPG"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Grinding Gear Games"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Grinding Gear Games"
+      },
+      "gamePlatform": [
+        "PC",
+        "PlayStation 5",
+        "Xbox Series X|S"
+      ],
+      "playMode": [
+        "SinglePlayer",
+        "CoOp",
+        "MultiPlayer"
+      ],
+      "sameAs": [
+        "https://pathofexile2.com/",
+        "https://store.steampowered.com/app/2694490/Path_of_Exile_2/"
+      ]
+    },
+    "actionsHeading": "初めての人がやること3つ",
+    "quickActions": [
+      "遊ぶ機種と、今から始めるか12月11日の無料化を待つかを決める",
+      "4問の職業診断で、好きな戦い方に合う職業を1つ選ぶ",
+      "選んだビルドのページで現在Lvを入力し、今やること3つを確認する"
+    ],
+    "sections": [
+      {
+        "id": "facts",
+        "heading": "PoE2の基本情報（早見表）",
+        "table": [
+          [
+            "正式名称",
+            "Path of Exile 2（略称：PoE2・POE2）"
+          ],
+          [
+            "ジャンル",
+            "アクションRPG（最大6人の協力プレイ）"
+          ],
+          [
+            "開発・販売",
+            "Grinding Gear Games"
+          ],
+          [
+            "アーリーアクセス開始",
+            "2024年12月6日"
+          ],
+          [
+            "正式版（1.0）",
+            "2026年12月11日（PST）公開予定"
+          ],
+          [
+            "価格",
+            "正式版1.0から基本プレイ無料（アーリーアクセス中はSteamでサポーターパックの購入が必要）"
+          ],
+          [
+            "対応機種",
+            "PC（Steam・Epic Games Store）、PS5、Xbox Series"
+          ],
+          [
+            "クロスプレイ",
+            "PC・PS5・Xbox Seriesの間で可能。同じアカウントなら進行を引き継げる"
+          ],
+          [
+            "日本語",
+            "文字表示は日本語対応（音声のフル対応は英語のみ）"
+          ],
+          [
+            "職業",
+            "現在8職業。正式版1.0でDuelist（デュエリスト）が追加予定"
+          ]
+        ],
+        "paragraphs": [
+          "表の内容は、公式発表・Steamストア・報道で確認できたものです。確認日はページ下の「確認した情報源」に記載しています。"
+        ]
+      },
+      {
+        "heading": "PoE2はどんなゲーム？3つの特徴",
+        "bullets": [
+          "敵を倒して装備を集めるアクションRPG：キャンペーン（物語）を進めたあと、エンドゲームでマップを周回しながらキャラクターを強くしていきます。",
+          "育成の自由度が高い：スキルジェム・サポートジェム・パッシブツリー・装備の組み合わせ（ビルド）で、同じ職業でも戦い方が大きく変わります。",
+          "専門職（アセンダンシー）がある：試練（Ascension Trial）をクリアすると職業ごとの専門職を選び、固有の能力を取得できます。"
+        ],
+        "termLinks": [
+          "build",
+          "skill-gem",
+          "support-gem",
+          "passive-tree",
+          "ascendancy",
+          "mapping",
+          "endgame"
+        ],
+        "termIntro": "初めて出てくる言葉は、次の用語辞典で1ページずつ説明しています。"
+      },
+      {
+        "heading": "PoE1（初代Path of Exile）との違い",
+        "paragraphs": [
+          "初代のPath of Exile（2013年10月23日発売）とPoE2は、Steamでも別のタイトルとして配信されています。PoE1を遊んでいなくても、PoE2だけを入手して始められます。",
+          "Steamストアの紹介文では、PoE2の舞台はオリジナルのPath of Exileから数年後のレイクラストとされています。",
+          "アーリーアクセス時点の公式FAQでは、PoE1のアカウントでそのままPoE2を遊べ、PoE1で購入したスタッシュタブのうちPoE2に関係するものは使えると案内されています。"
+        ],
+        "links": [
+          {
+            "label": "PoE1で課金した人の扱いを見る",
+            "url": "/poe2-1-0/microtransactions/"
+          }
+        ]
+      },
+      {
+        "heading": "PoE2は無料？値段は？",
+        "paragraphs": [
+          "正式版1.0（2026年12月11日公開予定）から基本プレイ無料です。現在のアーリーアクセス中は、Steamではサポーターパックの購入が必要です。",
+          "課金アイテムは、見た目の装飾（コスメ）と、アイテムを整理・出品するスタッシュタブが中心です。開発元はPoE2を「pay to win（課金で強くなる）」にはしないと述べていると報じられています。"
+        ],
+        "links": [
+          {
+            "label": "課金はどれを買うべきか",
+            "url": "/poe2-1-0/microtransactions/"
+          },
+          {
+            "label": "無料化での始め方",
+            "url": "/poe2-1-0/how-to-start/"
+          }
+        ]
+      },
+      {
+        "heading": "対応機種と日本語対応",
+        "bullets": [
+          "対応機種：PC（Steam・Epic Games Store）、PlayStation 5、Xbox Series。",
+          "クロスプレイ：PC・PS5・Xbox Seriesの間で同じパーティーを組めます。PlayStationで購入した課金アイテムはPlayStation専用です。",
+          "日本語：メニューや文字は日本語で表示できます。音声のフル対応は英語のみです。",
+          "PC版の必要スペック：Windows 10、DirectX 12、空き容量100GB、VRAM 3GB以上など。",
+          "Mac：アーリーアクセス開始時の公式FAQでは非対応とされています。"
+        ],
+        "links": [
+          {
+            "label": "必要スペック・推奨スペック",
+            "url": "/poe2-1-0/system-requirements/"
+          },
+          {
+            "label": "日本語対応と切り替え方",
+            "url": "/poe2-1-0/japanese/"
+          },
+          {
+            "label": "コントローラー・コンソール操作",
+            "url": "/poe2-1-0/controller/"
+          }
+        ]
+      },
+      {
+        "id": "classes",
+        "heading": "PoE2の職業（クラス）一覧",
+        "paragraphs": [
+          "現在は8つの職業から選べます。正式版1.0ではDuelist（デュエリスト）が追加予定です。職業ごとの特徴と、当サイトで育成手順を確認済みのビルドは各職業ページにまとめています。"
+        ],
+        "classList": true,
+        "links": [
+          {
+            "label": "4問の職業診断で選ぶ",
+            "url": "/class-check/"
+          },
+          {
+            "label": "Duelistの確認済み情報",
+            "url": "/poe2-1-0/duelist/"
+          }
+        ]
+      },
+      {
+        "heading": "初心者におすすめのビルド",
+        "paragraphs": [
+          "当サイトでは、Lv1〜Endgameの育成手順を資料で確認できたビルドだけを掲載しています。現在の内容は0.5.5の資料に基づくため、1.0の公開後に確認し直します。"
+        ],
+        "buildIds": [
+          "witch-minion-infernalist",
+          "ranger-ice-shot-deadeye",
+          "warrior-shield-wall-smith",
+          "druid-plant-oracle"
+        ]
+      },
+      {
+        "heading": "今から始める？1.0の無料化を待つ？",
+        "paragraphs": [
+          "1.0を待たずに操作や育成の流れに慣れたいなら、アーリーアクセスで今から始められます。ただし、現在の0.5.5の育成手順が1.0でも同じとは限りません。",
+          "費用をかけずに始めたい場合や、1.0で追加されるDuelistを最初に遊びたい場合は、2026年12月11日の正式版を待つ選択もあります。"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "PoE2とは何ですか？",
+        "a": "Grinding Gear Gamesが開発・販売するアクションRPG「Path of Exile 2」の略称です。2024年12月6日にアーリーアクセスが始まり、2026年12月11日に正式版1.0が公開予定です。"
+      },
+      {
+        "q": "PoE2は無料で遊べますか？",
+        "a": "正式版1.0（2026年12月11日公開予定）から基本プレイ無料です。現在のアーリーアクセス中は、Steamではサポーターパックの購入が必要です。"
+      },
+      {
+        "q": "PoE2の正式リリースはいつですか？",
+        "a": "2026年12月11日（PST）に正式版1.0が公開予定です。公式フォーラムの2026年8月25日付の発表で案内されています。"
+      },
+      {
+        "q": "PoE1を遊んでいなくてもPoE2を始められますか？",
+        "a": "始められます。PoE2は初代Path of Exileとは別のタイトルとして配信されており、PoE2だけを入手して遊べます。"
+      },
+      {
+        "q": "PoE2は日本語で遊べますか？",
+        "a": "文字表示は日本語に対応しています。音声のフル対応は英語のみです。"
+      },
+      {
+        "q": "PoE2はPS5やXboxでも遊べますか？",
+        "a": "正式版はPC（Steam・Epic Games Store）、PS5、Xbox Seriesで公開予定です。機種をまたいだクロスプレイもできます。"
+      },
+      {
+        "q": "PoE2の最初の職業はどれがいいですか？",
+        "a": "好きな戦い方で選ぶのがおすすめです。遠距離・近接・魔法・召喚のどれが好きかを、当サイトの4問の職業診断で絞れます。"
+      }
+    ],
+    "related": [
+      {
+        "label": "無料化での始め方",
+        "url": "/poe2-1-0/how-to-start/"
+      },
+      {
+        "label": "4問の職業診断",
+        "url": "/class-check/"
+      },
+      {
+        "label": "初心者向けおすすめビルド",
+        "url": "/beginner-guide/"
+      },
+      {
+        "label": "PoE2用語辞典",
+        "url": "/dictionary/"
+      },
+      {
+        "label": "PoE2 1.0の確定情報",
+        "url": "/poe2-1-0/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Steamストア：Path of Exile 2（開発・販売、アーリーアクセス開始日、紹介文、対応言語）",
+        "url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/",
+        "checkedAt": "2026-09-29"
+      },
+      {
+        "name": "Steamストア：Path of Exile（初代、発売日）",
+        "url": "https://store.steampowered.com/app/238960/Path_of_Exile/",
+        "checkedAt": "2026-09-29"
+      },
+      {
+        "name": "Path of Exile 2公式：1.0・基本無料化の発表（2026年8月25日）",
+        "url": "https://www.pathofexile.com/forum/view-thread/3999366",
+        "checkedAt": "2026-09-27"
+      },
+      {
+        "name": "Path of Exile 2公式：Duelistと1.0の発表",
+        "url": "https://www.pathofexile.com/forum/view-thread/3999858",
+        "checkedAt": "2026-09-12"
+      },
+      {
+        "name": "Path of Exile 2公式：Early Access FAQ（PoE1アカウント・Mac）",
+        "url": "https://www.pathofexile.com/forum/view-thread/3587981",
+        "checkedAt": "2026-09-28"
+      },
+      {
+        "name": "Gematsu：Path of Exile II launches December 11（対応機種・pay to winにしない方針）",
+        "url": "https://www.gematsu.com/2026/08/path-of-exile-ii-launches-december-11",
+        "checkedAt": "2026-09-27"
+      },
+      {
+        "name": "PoE Vault：Crossplay and Cross-Progression Explained",
+        "url": "https://www.poe-vault.com/poe2/news/path-of-exile-2-crossplay-and-cross-progression-explained",
+        "checkedAt": "2026-09-27"
+      }
+    ]
   }
 ]
