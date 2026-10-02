@@ -20,7 +20,7 @@ const buttons=cards.map(c=>c.querySelector('[data-compare]'));
 buttons.slice(0,3).forEach(b=>b.click());assert.equal(buttons[3].disabled,true);buttons[3].click();assert.equal(d.querySelectorAll('.ux-compare-card').length,3);
 d.getElementById('show-compare').click();assert.equal(d.getElementById('build-comparison').hidden,false);assert.equal(d.activeElement.id,'build-comparison');
 d.querySelector('.ux-compare-card button').click();assert.equal(buttons[3].disabled,false);assert.equal(d.querySelectorAll('.ux-compare-card').length,2);
-assert([...d.querySelectorAll('.ux-compare-card a')].every(a=>a.search==='?level=1'&&a.hash==='#now'));
+assert([...d.querySelectorAll('.ux-compare-card > a')].every(a=>a.search==='?level=1'&&a.hash==='#now'));
 buttons.filter(b=>b.getAttribute('aria-pressed')==='true').forEach(b=>b.click());assert.equal(d.getElementById('show-compare').disabled,true);
 const initial=new JSDOM(fs.readFileSync('builds/index.html','utf8')).window.document;
 assert.equal(initial.querySelectorAll('.catalog-card').length,11);assert.equal(initial.getElementById('advanced-filters').hidden,true);
