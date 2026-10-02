@@ -1,6 +1,6 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
-import {esc,facts,factsHtml} from './build-facts.mjs';
+import {esc,facts,factsHtml,rows} from './build-facts.mjs';
 import {insertBlock} from './block-order.mjs';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
@@ -16,6 +16,12 @@ for(const page of pages){
   if(/class="early-build-card/.test(article))return article.replace(/<dl class="unified-facts">[\s\S]*?<\/dl>/g,'');
   const b=builds.find(b=>article.includes(`href="${url(b)}`));
   if(!b)return article;
+  if(page==='index.html' && /class="purpose-card"/.test(article)){
+   const heading=article.match(/<p class="section-kicker">[\s\S]*?<\/h3>/)?.[0] || `<h3>${esc(b.name)}</h3>`;
+   const values=new Map(rows(b,discovery));
+   const compact=[['向いている人',b.audience],['弱点',b.weaknesses[0]],['切替時期',values.get('主力への切替目安')]];
+   return `<article class="purpose-card">${heading}<dl class="quick-choice-facts">${compact.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl><a class="button" href="${url(b)}">このビルドを確認する</a><details class="quick-choice-sources"><summary>確認資料・詳しい条件</summary>${factsHtml(b,discovery)}<p><a href="${url(b)}#source-list">原典一覧を確認する</a></p></details></article>`;
+  }
   article=article.replace(/<dl\b[^>]*>[\s\S]*?<\/dl>/g,'').replace(/<p class="fact-source">[\s\S]*?<\/p>/g,'');
   article=article.replace(/<button[^>]*data-compare[^>]*>[\s\S]*?<\/button>/g,'');
   article=article.replace('</article>',`${factsHtml(b,discovery)}${page==='builds/index.html'?`<button type="button" data-compare="${esc(b.id)}" aria-pressed="false" hidden>比較に追加</button>`:''}</article>`);
@@ -34,7 +40,8 @@ for(const page of pages){
   html=html.replace('id="quality-title">目的から探す','id="quality-title">もっと詳しく探す');
   html=html.replace(/<!-- recent-builds:start -->[\s\S]*?<!-- recent-builds:end -->/g,'');
   const recent=[...builds].sort((a,b)=>b.updatedAt.localeCompare(a.updatedAt)).slice(0,3);
-  const recentHtml=`<!-- recent-builds:start --><section class="section"><h2>最近のビルド資料確認</h2><p>過去の変更理由が未記録の資料は、その旨を表示しています。</p><ul>${recent.map(b=>`<li><a href="${url(b)}#update-history">${esc(b.name)}</a>：${esc(b.updatedAt)} 資料確認。個別変更理由は未記録。</li>`).join('')}</ul></section><!-- recent-builds:end -->`;
+  const changes=builds.flatMap(b=>(b.changeHistory||[]).filter(r=>r.date&&r.summary?.trim()).map(r=>({b,...r}))).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
+  const recentHtml=`<!-- recent-builds:start --><section class="section" id="recent-changes"><h2>最近の変更</h2><p>表示・評価を変更した日と理由です。育成手順全体の資料確認日とは別に記録しています。</p><ul>${changes.map(r=>`<li><time datetime="${esc(r.date)}">${esc(r.date)}</time> <a href="${url(r.b)}#update-history">${esc(r.b.name)}</a>：${esc(r.summary)}</li>`).join('')}</ul><details><summary>最近のビルド資料確認</summary><p>以下は育成資料の確認日です。個別の修正日は上の「最近の変更」を参照してください。</p><ul>${recent.map(b=>`<li><a href="${url(b)}#update-history">${esc(b.name)}</a>：${esc(b.updatedAt)} 資料確認</li>`).join('')}</ul></details></section><!-- recent-builds:end -->`;
   html=html.replace(/(<section id="quick-start"[\s\S]*?<\/section>)/,`$1${recentHtml}`);
  }
  if(page==='builds/index.html'){
@@ -50,7 +57,7 @@ for(const b of builds){
  const path=`builds/${b.classSlug}/${b.slug}/index.html`;
  let html=await read(path);
  html=html.replace(/対応環境 [^<]+・<a href="[^"]+" target="_blank" rel="noopener noreferrer">最新確認 [^<]+<\/a>・最終確認 [^<]+/,`対応環境 ${esc(b.version)}・育成手順の原典照合 ${esc(b.updatedAt)}・<a href="${esc(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式パッチノート確認 ${esc(site.latestPatchCheckedAt)}</a>`);
- html=html.replace(/<div id="fact-grid" class="fact-grid">[\s\S]*?(?=<section id="level-card")/,`<div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${esc(b.version)}</div><div class="fact">育成手順の原典照合：${esc(b.updatedAt)}</div></div></div>\n        `);
+ html=html.replace(/<div id="fact-grid" class="fact-grid">[\s\S]*?(?=<section id="level-card")/,`<div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${esc(b.version)}</div><div class="fact">育成手順の原典照合：${esc(b.updatedAt)}</div>${b.mainSkillTiming?`<div class="fact"><small>主力スキル使用条件</small><b>${esc(b.mainSkillTiming.available)}</b></div><div class="fact"><small>主力への切替目安</small><b>${esc(b.mainSkillTiming.recommendedSwitch)}</b></div>`:''}</div></div>\n        `);
  if(!html.includes('id="now-action-guidance"'))html=html.replace('<p id="now-next"', '<p id="now-action-guidance" class="next-advice" hidden></p><p id="now-next"');
  html=html.replace('id="now-action-guidance" class="disclaimer"','id="now-action-guidance" class="next-advice"');
  html=html.replace(/<!-- build-history:start -->[\s\S]*?<!-- build-history:end -->/g,'');

@@ -85,14 +85,21 @@ function renderNow(index) {
     "装備更新前に必要レベルと、このビルドの対応パッチを確認する"
   ];
   byId("now-source-label").textContent = verifiedActions ? "掲載資料から整理した優先行動" : "この段階は確認中";
-  document.querySelectorAll("[data-now-action]").forEach((element, actionIndex) => { element.textContent = actions[actionIndex]; });
+  const actionElements = [...document.querySelectorAll("[data-now-action]")];
+  actionElements.forEach((element, actionIndex) => { element.textContent = actions[actionIndex]; });
   const guidance = byId("now-action-guidance");
   if (guidance) {
     guidance.replaceChildren();
     const detail = currentStage?.actionGuidance;
-    guidance.hidden = !detail || !verifiedActions?.[detail.actionIndex];
+    const action = Number.isInteger(detail?.actionIndex) ? actionElements[detail.actionIndex] : null;
+    guidance.hidden = !action || !verifiedActions?.[detail.actionIndex] || !detail.what || !detail.where || !detail.url;
     if (!guidance.hidden) {
-      guidance.append(document.createTextNode(`「${verifiedActions[detail.actionIndex]}」：${detail.what}。${detail.where}を開いて確認。`));
+      // Keep the source and its exact guide stage with the action they explain.
+      // Spanning the complete row also works with the one-column mobile layout.
+      action.parentElement.append(guidance);
+      guidance.style.gridColumn = "1 / -1";
+      guidance.style.margin = "0";
+      guidance.append(document.createTextNode(`確認する段階・箇所：${detail.where}。${detail.what}を確認。`));
       const link = document.createElement("a");
       link.href = detail.url;
       link.target = "_blank";
@@ -246,6 +253,9 @@ function renderBuild(builds) {
   [
     ["対応パッチ", build.version], ["育成手順の原典照合日", build.updatedAt], ["確認状態", build.status === "verified" ? "主要情報確認済み" : build.status === "partial" ? "不足箇所を各段階に表示" : "対応パッチを再確認中"], ["掲載中の育成段階", `${build.levelingStages?.length || 0}/8`]
   ].forEach(([label, value]) => facts.append(fact(label, value)));
+  if (build.mainSkillTiming) {
+    facts.append(fact("主力スキル使用条件", build.mainSkillTiming.available), fact("主力への切替目安", build.mainSkillTiming.recommendedSwitch));
+  }
   renderSources();
   renderProgress();
 

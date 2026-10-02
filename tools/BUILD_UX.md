@@ -97,3 +97,20 @@ Enhancers that append blocks before `</head>` or `</main>` go through `insertBlo
 added to those lists. `enhance-ratings.mjs` rebuilds `/rating-criteria/` but keeps the head
 blocks other tools added. `npm run test:order` runs the enhancers in four different orders on
 throwaway copies and fails if any HTML differs (needs Chromium, about a minute).
+
+## Choice clarity
+
+- Home quick choices render audience, weakness and switch timing directly; the shared
+  fact list and source links stay inside a native, initially closed `details` element
+- The comparison keeps switch timing, operation, equipment/skill requirements, SSF
+  and weakness first. Other equal values are grouped once after the selected cards
+- Home `最近の変更` takes the latest three nonempty `changeHistory` records; it does
+  not turn `updatedAt` (full leveling review) into a change date
+- `mainSkillTiming.available` is the skill requirement, while `recommendedSwitch`
+  is the guide's transition recommendation. Both appear on build details as well
+- A stage's optional `actionGuidance` has `actionIndex`, `what`, `where`, and `url`.
+  Its source is placed directly below that action and cleared when the stage changes
+
+`npm test` includes the compact cards/comparison/history regression checks and
+inline action source tests. For enhancer-order checks without rerendering unchanged
+OG artwork, run `OG_METADATA_ONLY=1 npm run test:order`. This is not a visual test.

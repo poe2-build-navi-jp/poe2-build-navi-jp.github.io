@@ -23,6 +23,15 @@ function compare(){
  document.getElementById('compare-status').textContent=`比較：${selected.size} / 3件${selected.size===3?'（上限です。外すと変更できます）':''}`;
  document.getElementById('show-compare').disabled=selected.size===0;
  const container=document.getElementById('comparison-cards');container.replaceChildren();
+ const selectedCards=cards.filter(card=>selected.has(card.dataset.buildId));
+ const readFacts=card=>new Map([...card.querySelectorAll('.unified-facts>div')].map(row=>[row.querySelector('dt').textContent,row.querySelector('dd').textContent]));
+ const allFacts=selectedCards.map(readFacts);
+ const priority=[['切替時期',['主力への切替目安']],['操作',['操作量','構成切替・操作の注意']],['装備・使用条件',['主力スキル使用条件','装備依存']],['SSF',['SSF']],['弱点',['弱点']]];
+ const used=new Set([...priority.flatMap(([,keys])=>keys),'操作難易度']);
+ const shared=allFacts.length>1?[...allFacts[0]].filter(([key,value])=>!used.has(key)&&allFacts.every(f=>f.get(key)===value)):[];
+ const sharedKeys=new Set(shared.map(([key])=>key));
+ const makeRow=(label,value)=>{const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;row.append(dt,dd);return row;};
+ document.getElementById('comparison-shared')?.remove();
  cards.forEach(card=>{
   const button=card.querySelector('[data-compare]'),active=selected.has(card.dataset.buildId);
   button.setAttribute('aria-pressed',String(active));button.textContent=active?'比較から外す':'比較に追加';
@@ -32,9 +41,25 @@ function compare(){
    const title=document.createElement('h3');title.textContent=card.querySelector('h2').textContent;
    const link=card.querySelector('a[href]').cloneNode(true);link.textContent='このビルドをLv1から育てる';link.href=link.pathname+'?level=1#now';
    const remove=document.createElement('button');remove.type='button';remove.textContent='比較から外す';remove.addEventListener('click',()=>{selected.delete(card.dataset.buildId);compare();});
-   article.append(title,card.querySelector('.unified-facts').cloneNode(true),link,remove);container.append(article);
+   const values=readFacts(card),primary=document.createElement('dl');primary.className='unified-facts comparison-priority';
+   priority.forEach(([label,keys])=>{
+    const value=keys.map(k=>values.get(k)||'未確認').join('／');
+    const row=makeRow(label,value);
+    if(allFacts.length>1&&allFacts.some(f=>keys.map(k=>f.get(k)||'未確認').join('／')!==value))row.className='comparison-difference';
+    primary.append(row);
+   });
+   const extra=document.createElement('details'),summary=document.createElement('summary'),secondary=document.createElement('dl');
+   summary.textContent='その他の情報・確認資料';secondary.className='unified-facts';
+   [...values].filter(([key])=>!used.has(key)&&!sharedKeys.has(key)).forEach(([key,value])=>secondary.append(makeRow(key,value)));
+   extra.append(summary,secondary);const source=card.querySelector('.fact-source');if(source)extra.append(source.cloneNode(true));
+   article.append(title,primary,link,remove,extra);container.append(article);
   }
  });
+ if(shared.length){
+  const common=document.createElement('details'),summary=document.createElement('summary'),list=document.createElement('dl');
+  common.id='comparison-shared';common.className='comparison-shared';summary.textContent='選択したビルドに共通する情報';list.className='unified-facts';
+  shared.forEach(([key,value])=>list.append(makeRow(key,value)));common.append(summary,list);container.after(common);
+ }
  if(!selected.size)document.getElementById('build-comparison').hidden=true;
 }
 document.getElementById('advanced-filters').hidden=false;
