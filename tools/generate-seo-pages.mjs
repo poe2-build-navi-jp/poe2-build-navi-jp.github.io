@@ -36,8 +36,13 @@ function structuredData(page, crumbs) {
       headline: page.h1,
       description: page.description,
       inLanguage: "ja",
-      dateModified: checkedDate(page),
+      ...(page.publishedAt ? { datePublished: page.publishedAt } : {}),
+      // Never before the publish date (the visible "最終確認" stays the source check date).
+      dateModified: [checkedDate(page), page.publishedAt].filter(Boolean).sort().at(-1),
       mainEntityOfPage: absolute(page.path),
+      // Same file generate-og-images writes for this path.
+      image: absolute(`/images/poe2/og/poe2-${page.path.replace(/^\/|\/$/g, "").replaceAll("/", "-")}-og.webp`),
+      author: { "@type": "Organization", name: site.operatorName ?? site.siteName, url: absolute("/about/") },
       publisher: { "@type": "Organization", name: site.siteName, url: `${base}/` },
       ...(page.about ? { about: page.about } : {})
     },

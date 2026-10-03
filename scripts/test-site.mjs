@@ -369,6 +369,14 @@ for (const build of builds) {
 }
 assert(index.includes('class="version-banner"') === builds.some((build) => build.version !== site.gameVersion), "homepage version banner out of sync with site.gameVersion");
 for (const name of ["combat", "priority", "control", "theme"]) assert(classCheck.includes(`<legend id="q-${name}">`) && classCheck.includes(`<select name="${name}" required aria-labelledby="q-${name}">`), `class-check: ${name} select needs an accessible name`);
+// Article structured data needs author, image (an existing file) and a publish date.
+for (const page of seoPages) {
+  const html = await read(`${page.path.slice(1)}index.html`);
+  const article = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].flatMap((m) => [].concat(JSON.parse(m[1]))).find((item) => item["@type"] === "Article");
+  assert(article?.author?.name && article.author.url && article.datePublished && article.datePublished <= article.dateModified, `${page.path}: Article needs author, datePublished <= dateModified`);
+  if (article?.image) await access(resolve(root, article.image.replace(`${baseUrl}/`, ""))).catch(() => failures.push(`${page.path}: Article image file missing`));
+  else failures.push(`${page.path}: Article image missing`);
+}
 // Every sitemap page needs inbound links; glossary terms need several (enhance-term-links.mjs).
 const inbound = new Map();
 const sitemapPaths = [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]);

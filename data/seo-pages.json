@@ -1,6 +1,7 @@
 [
   {
     "path": "/guides/poe2-0-5-5-builds/",
+    "publishedAt": "2026-09-12",
     "kicker": "PATCH 0.5.5 / BUILD GUIDE",
     "title": "PoE2 0.5.5 おすすめビルド一覧｜初心者向け育成",
     "description": "PoE2 0.5.5のおすすめビルドを職業・初心者・弓・近接・SSFなどから比較。現在Lvから今やること3つとEndgameまでの育成手順を確認できます。",
@@ -18,6 +19,7 @@
   },
   {
     "path": "/guides/forbidden-rites-beginner/",
+    "publishedAt": "2026-09-12",
     "kicker": "FORBIDDEN RITES / BEGINNER",
     "title": "PoE2 Forbidden Rites初心者ガイド｜0.5.5で最初にすること",
     "description": "PoE2 Forbidden Ritesを始める初心者向けに、0.5.5で最初に確認すること、ビルド選び、現在Lvから育成を再開する方法を案内します。",
@@ -34,6 +36,7 @@
   },
   {
     "path": "/guides/why-i-die/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER TROUBLE / DEFENCE",
     "title": "PoE2ですぐ死ぬ原因｜初心者が最初に確認する7項目",
     "description": "PoE2ですぐ死ぬ初心者向けに、防御値、耐性、回復、装備、立ち回り、コンテンツ難度、育成段階の7項目を確認する順番を案内します。",
@@ -51,6 +54,7 @@
   },
   {
     "path": "/guides/increase-damage/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER TROUBLE / DAMAGE",
     "title": "PoE2で火力が出ない原因｜初心者が確認する7項目",
     "description": "PoE2で火力が出ない初心者向けに、武器、メインスキル、サポート、パッシブ、リソース、切替時期、敵との相性を確認する順番を案内します。",
@@ -68,6 +72,7 @@
   },
   {
     "path": "/guides/gear-upgrade/",
+    "publishedAt": "2026-09-12",
     "kicker": "BEGINNER TROUBLE / GEAR",
     "title": "PoE2装備更新のやり方｜初心者が交換する順番",
     "description": "PoE2初心者向けに、装備更新で最初に確認する部位と交換順を解説。ビルド・現在Lv・悩み・予算から次の候補を絞れます。",
@@ -84,6 +89,7 @@
   },
   {
     "path": "/guides/mana-problem/",
+    "publishedAt": "2026-09-12",
     "kicker": "BEGINNER TROUBLE / MANA",
     "title": "PoE2でマナが足りない時の確認順｜初心者向け",
     "description": "PoE2でマナ不足になる初心者向けに、スキルコスト、サポート、回復、攻撃頻度、育成段階を確認する順番を案内します。",
@@ -100,6 +106,7 @@
   },
   {
     "path": "/guides/cant-beat-boss/",
+    "publishedAt": "2026-09-13",
     "kicker": "BEGINNER TROUBLE / BOSS",
     "title": "PoE2でボスに勝てない時の確認順｜初心者向け",
     "description": "PoE2でボスに勝てない初心者向けに、単体用スキル、サポート、操作順、防御、育成段階を確認する順番を案内します。",
@@ -116,6 +123,7 @@
   },
   {
     "path": "/guides/slow-mapping/",
+    "publishedAt": "2026-09-13",
     "kicker": "BEGINNER TROUBLE / MAPPING SPEED",
     "title": "PoE2で周回が遅い時の確認順｜初心者向け",
     "description": "PoE2で周回が遅い初心者向けに、移動、範囲、通常敵への操作回数、装備、Mapping移行条件を確認する順番を案内します。",
@@ -132,6 +140,7 @@
   },
   {
     "path": "/guides/mapping/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER GUIDE / MAPPING",
     "title": "PoE2 Mapping初心者ガイド｜開始前の確認と進め方",
     "description": "PoE2のMappingを始める初心者向けに、耐性、生存力、主力スキル、装備、移行条件を確認する順番を案内します。",
@@ -148,6 +157,7 @@
   },
   {
     "path": "/poe2-1-0/release-date/",
+    "publishedAt": "2026-09-12",
     "kicker": "POE2 1.0 / OFFICIAL DATE",
     "title": "PoE2 1.0正式版はいつ？｜公開予定日と確認済み情報",
     "description": "PoE2 1.0正式版の公開予定日は2026年12月11日です。公式発表で確認できる情報と、未発表のビルド情報を分けて案内します。",
@@ -165,6 +175,7 @@
   },
   {
     "path": "/poe2-1-0/how-to-start/",
+    "publishedAt": "2026-09-27",
     "kicker": "POE2 1.0 / HOW TO START",
     "title": "PoE2の始め方｜12月11日から基本無料・対応機種と準備",
     "description": "PoE2は2026年12月11日の正式版1.0から基本無料です。対応機種（PC・PS5・Xbox Series）、入手先、クロスプレイ、今のうちに決めておくことを公式情報を基に案内します。",
@@ -184,6 +195,7 @@
   },
   {
     "path": "/poe2-1-0/system-requirements/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / SYSTEM REQUIREMENTS",
     "title": "PoE2の必要スペック・推奨スペック｜PC・Mac動作環境",
     "description": "PoE2のPC必要スペック（最低）と推奨スペック、Mac動作環境をSteamストアの記載そのままに整理。VRAM 3GB以上・空き容量100GB・SSD推奨など、無料化前に確認しておく点を案内します。",
@@ -205,6 +217,7 @@
   },
   {
     "path": "/poe2-1-0/japanese/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / JAPANESE",
     "title": "PoE2は日本語対応？｜日本語化の設定と英語名の調べ方",
     "description": "PoE2は日本語表示に対応しています（音声のフル対応は英語のみ）。PC版での日本語への切り替え方と、海外ガイドの英語名を日本語名と照らし合わせる方法を案内します。",
@@ -223,6 +236,7 @@
   },
   {
     "path": "/poe2-1-0/microtransactions/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / SHOP",
     "title": "PoE2の課金はどれを買う？｜無料プレイで最初に買うスタッシュタブ",
     "description": "PoE2は正式版から基本無料で、課金は見た目と収納・取引の便利機能が中心です。最初に買うならどのスタッシュタブか、PoE1で課金した人の扱い、機種ごとの注意点を公式情報を基に案内します。",
@@ -243,6 +257,7 @@
   },
   {
     "path": "/poe2-1-0/controller/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / CONTROLLER",
     "title": "PoE2はコントローラーで遊べる？｜PC・PS5・Xboxの操作と対応",
     "description": "PoE2はPC版もフルコントローラー対応で、DualShock・DualSenseにも対応しています。コントローラーでの操作感、キーボードのWASD移動、PS5・Xbox Seriesで遊ぶ場合の注意を案内します。",
@@ -262,6 +277,7 @@
   },
   {
     "path": "/poe2-1-0/pre-registration/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / PRE-REGISTRATION",
     "title": "PoE2 事前登録のやり方と報酬｜正式版1.0の限定コスメと締め切り",
     "description": "PoE2正式版1.0の事前登録（メール登録）のやり方、もらえる限定コスメ報酬、締め切り、コードの受け取り方を公式発表をもとに案内します。",
@@ -282,6 +298,7 @@
   },
   {
     "path": "/poe2-1-0/build-status/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / BUILD STATUS",
     "title": "PoE2 1.0おすすめビルドの対応状況｜確認済みビルド一覧",
     "description": "PoE2正式版1.0で使えると確認できたビルドを一覧で案内します。0.5.5向けビルドの1.0対応状況と、確認の基準・順番をまとめています。",
@@ -300,6 +317,7 @@
   },
   {
     "path": "/poe2-1-0/duelist/",
+    "publishedAt": "2026-09-12",
     "kicker": "POE2 1.0 / DUELIST",
     "title": "PoE2 Duelist最新情報｜1.0で追加予定の新職業",
     "description": "PoE2 1.0で追加予定のDuelistについて、公式発表で確認できる情報と未発表のビルド情報を分けて案内します。",
@@ -317,6 +335,7 @@
   },
   {
     "path": "/guides/passive-tree/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER GUIDE / PASSIVE TREE",
     "title": "PoE2パッシブの振り方｜初心者が迷わない確認順",
     "description": "PoE2初心者向けに、パッシブツリーで最初に確認する3点、育成途中と完成形の違い、現在Lvに合う取得方針を案内します。",
@@ -334,6 +353,7 @@
   },
   {
     "path": "/guides/resistance/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER GUIDE / RESISTANCE",
     "title": "PoE2耐性の確認方法｜初心者がすぐ死ぬ時の見直し順",
     "description": "PoE2初心者向けに、耐性を確認する順番、装備交換時の注意、すぐ死ぬ時に耐性と他の防御を切り分ける方法を案内します。",
@@ -351,6 +371,7 @@
   },
   {
     "path": "/what-is-poe2/",
+    "publishedAt": "2026-10-01",
     "topLevel": true,
     "crumb": "PoE2とは",
     "kicker": "WHAT IS POE2",
