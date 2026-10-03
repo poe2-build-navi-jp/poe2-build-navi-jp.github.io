@@ -26,7 +26,7 @@ const seoPages = JSON.parse(await read("data/seo-pages.json"));
 const site = JSON.parse(await read("data/site.json"));
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
-assert(builds.length === 11, "build count must be 11");
+assert(builds.length === 12, "build count must be 12");
 assert(new Set(builds.map((build) => build.className)).size === 8, "each playable class must have a build");
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");

@@ -121,3 +121,29 @@ Build pages load `data/builds/<classSlug>/<slug>.json` (the build plus up to thr
 related builds, ~20KB) instead of the whole `data/builds.json`. After editing `data/builds.json`
 run `node tools/generate-build-data.mjs`; `npm test` fails while those files are out of date.
 `detail.js` and `build-ux.js` still accept the full array, so older data keeps working.
+
+## Adding a build
+
+1. Add the record to `data/builds.json` (8 `levelingStages`, sources, `ratingEvidence`, optional
+   `reviewedFacts`) and its tags/Tier to `data/discovery.json`. Update the build counts in
+   `scripts/test-site.mjs` and `scripts/test-build-ux.cjs`.
+2. Run the whole chain. `generate-pages.mjs` needs ImageMagick (`convert`) for the roadmap/OG art:
+
+```
+node tools/generate-pages.mjs
+node tools/generate-sitemap.mjs
+node tools/enhance-image-seo.mjs
+node tools/enhance-ratings.mjs
+node tools/enhance-build-ux.mjs
+node tools/enhance-version-notice.mjs
+node tools/enhance-one-hub.mjs
+node tools/enhance-term-links.mjs
+node tools/generate-build-data.mjs
+node tools/generate-og-images.mjs
+node tools/inject-analytics.mjs
+node tools/sync-asset-versions.mjs
+npm test && npm run test:contrast && npm run test:order
+```
+
+On an unchanged checkout this chain reproduces the committed pages, apart from an empty line
+left in the `<head>` of a few build pages; drop that line instead of committing it.

@@ -69,6 +69,7 @@
 | ED・コンテージョン リッチ | /builds/witch/ed-contagion-lich/ | https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/?utm_source=note&utm_medium=referral&utm_campaign=witch-ed-contagion-lich | https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/?utm_source=x&utm_medium=social&utm_campaign=witch-ed-contagion-lich |
 | グレネード・ジェムリング | /builds/mercenary/grenade-gemling/ | https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/?utm_source=note&utm_medium=referral&utm_campaign=mercenary-grenade-gemling | https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/?utm_source=x&utm_medium=social&utm_campaign=mercenary-grenade-gemling |
 | ツイスター・スピリットウォーカー | /builds/huntress/twister-spirit-walker/ | https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/?utm_source=note&utm_medium=referral&utm_campaign=huntress-twister-spirit-walker | https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/?utm_source=x&utm_medium=social&utm_campaign=huntress-twister-spirit-walker |
+| スパーク・ストームウィーバー | /builds/sorceress/spark-stormweaver/ | https://poe2-build-navi-jp.github.io/builds/sorceress/spark-stormweaver/?utm_source=note&utm_medium=referral&utm_campaign=sorceress-spark-stormweaver | https://poe2-build-navi-jp.github.io/builds/sorceress/spark-stormweaver/?utm_source=x&utm_medium=social&utm_campaign=sorceress-spark-stormweaver |
 
 CTA例：
 
