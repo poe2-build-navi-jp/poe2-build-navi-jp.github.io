@@ -9,11 +9,11 @@ w.eval(fs.readFileSync('assets/catalog-static.js','utf8'));
 const cards=[...d.querySelectorAll('.catalog-card')];
 const visible=()=>cards.filter(c=>!c.hidden);
 const choose=(id,value)=>{d.getElementById(id).value=value;d.getElementById(id).dispatchEvent(new w.Event('change'));};
-assert.equal(cards.length,11);assert.equal(visible().length,11);
-choose('filter-unlock','Lv40まで');assert.deepEqual(visible().map(c=>c.dataset.buildId).sort(),['druid-plant-oracle','ranger-ice-shot-deadeye','warrior-shield-wall-smith']);
+assert.equal(cards.length,12);assert.equal(visible().length,12);
+choose('filter-unlock','Lv40まで');assert.deepEqual(visible().map(c=>c.dataset.buildId).sort(),['druid-plant-oracle','ranger-ice-shot-deadeye','sorceress-spark-stormweaver','warrior-shield-wall-smith']);
 choose('filter-style','召喚');assert.equal(visible().length,0);assert.equal(d.getElementById('filter-empty').hidden,false);
-d.getElementById('relax-filter').click();assert.equal(visible().length,3);
-d.getElementById('reset-filters').click();assert.equal(visible().length,11);
+d.getElementById('relax-filter').click();assert.equal(visible().length,4);
+d.getElementById('reset-filters').click();assert.equal(visible().length,12);
 choose('filter-ssf','確認済のみ');assert(visible().every(c=>c.dataset.ssf==='true'));
 d.getElementById('reset-filters').click();
 const buttons=cards.map(c=>c.querySelector('[data-compare]'));
@@ -23,8 +23,8 @@ d.querySelector('.ux-compare-card button').click();assert.equal(buttons[3].disab
 assert([...d.querySelectorAll('.ux-compare-card > a')].every(a=>a.search==='?level=1'&&a.hash==='#now'));
 buttons.filter(b=>b.getAttribute('aria-pressed')==='true').forEach(b=>b.click());assert.equal(d.getElementById('show-compare').disabled,true);
 const initial=new JSDOM(fs.readFileSync('builds/index.html','utf8')).window.document;
-assert.equal(initial.querySelectorAll('.catalog-card').length,11);assert.equal(initial.getElementById('advanced-filters').hidden,true);
-console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recovery, compare max 3, remove, focus, Lv1 links, JS-off content');
+assert.equal(initial.querySelectorAll('.catalog-card').length,12);assert.equal(initial.getElementById('advanced-filters').hidden,true);
+console.log('PASS: 12 static cards, unlock/SSF/style filters, zero results recovery, compare max 3, remove, focus, Lv1 links, JS-off content');
 (async()=>{
  const data=JSON.parse(fs.readFileSync('data/builds.json','utf8'));
  const {rows}=await import('../tools/build-facts.mjs');
@@ -64,7 +64,7 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.match(fs.readFileSync('builds/huntress/twister-spirit-walker/index.html','utf8'),/主力ツイスターをWhirling Slashと組み合わせて使用。Lv1〜10のPounceとShredは切替前の代替/);
  assert.match(rows(ice,discovery).find(([name])=>name==='主力スキル使用条件')[1],/Lv31.*レベル9/);
  assert.match(rows(ice,discovery).find(([name])=>name==='主力への切替目安')[1],/Lv31以降/);
- console.log('PASS: 11 builds share the same card facts and ratings on builds, Tier and starter; skill requirement differs from recommended switch');
+ console.log('PASS: 12 builds share the same card facts and ratings on builds, Tier and starter; skill requirement differs from recommended switch');
  const html=fs.readFileSync('builds/ranger/ice-shot-deadeye/index.html','utf8');
  const detail=new JSDOM(html,{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/?level=37'});
  detail.window.fetch=async()=>({ok:true,json:async()=>data});

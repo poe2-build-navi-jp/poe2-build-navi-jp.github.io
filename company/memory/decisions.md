@@ -209,3 +209,10 @@
 - キーイベントに設定：level_input・best_build_click・tier_build_click・league_build_click（管理 > イベントでスター）。
 - poe2_1_0_build_click はまだ一度も記録されておらず一覧に出ないため未設定。記録されたら同じ画面でスターを付ける。
 - note_referral は流入元の記録なので対象外。
+
+## 2026-10-03 検索需要の高い未掲載ビルドの追加（ユーザー依頼）
+- 調査：Google日本語サジェスト（「ソーサレス ビルド 氷」など）と poe.ninja（Forbidden Rites）の使用率で、
+  Spark・Comet系のストームウィーバーが上位で、サイトに未掲載だった。
+- `sorceress-spark-stormweaver`（スパーク・ストームウィーバー）を追加。原典は PoE Vault の育成（0.5、SSF可と明記）・
+  Endgame（0.5.5）と pathofexile.gg。SSFはキャンペーンのみ明記のため ssf=null、ssfNote に範囲を記載。Tier A。
+- 次の候補（未着手）：ドルイドの熊・狼・ワイバーン型、ウィッチのブラッドメイジ。

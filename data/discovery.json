@@ -30,6 +30,7 @@
     "witch-ed-contagion-lich": ["遠距離", "DoT"],
     "mercenary-grenade-gemling": ["遠距離", "グレネード"]
     ,"huntress-twister-spirit-walker": ["遠距離", "周回", "必須ユニークなし"]
+    ,"sorceress-spark-stormweaver": ["魔法", "遠距離", "Lv1から主力"]
   },
   "tiers": {
     "S": [
@@ -58,6 +59,10 @@
       {
         "id": "sorceress-sand-fire",
         "reason": "育成資料は揃っていますが、最初のアセンダンシー取得時に構成が変わります。"
+      },
+      {
+        "id": "sorceress-spark-stormweaver",
+        "reason": "Lv1から同じ主力を使え、操作の簡単さも原典に明記されています。Endgameの自動発動コメットにはSpirit 121以上が必要です。"
       }
     ],
     "B": [
