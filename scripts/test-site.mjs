@@ -386,6 +386,12 @@ for (const page of seoPages) {
 // Every sitemap page needs inbound links; glossary terms need several (enhance-term-links.mjs).
 const inbound = new Map();
 const sitemapPaths = [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]);
+// Landmarks: every nav needs a name, and build pages keep the sticky shortcut inside a nav.
+for (const path of sitemapPaths) {
+  const html = await read(`${path}index.html`);
+  assert(!/<nav(?![^>]*aria-label)[^>]*>/.test(html), `/${path}: every <nav> needs an aria-label`);
+  if (/^builds\/[^/]+\/[^/]+\/$/.test(path)) assert(html.includes('<nav class="mobile-sticky-nav" aria-label="ページ内の移動"><a class="mobile-sticky"'), `/${path}: sticky shortcut must sit in a labelled nav`);
+}
 for (const path of sitemapPaths) {
   const html = await read(`${path}index.html`);
   for (const href of new Set([...html.matchAll(/href="\/([^"#?]*)/g)].map((m) => m[1]))) if (href !== path) inbound.set(href, (inbound.get(href) ?? 0) + 1);
