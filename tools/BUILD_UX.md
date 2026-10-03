@@ -114,3 +114,10 @@ throwaway copies and fails if any HTML differs (needs Chromium, about a minute).
 `npm test` includes the compact cards/comparison/history regression checks and
 inline action source tests. For enhancer-order checks without rerendering unchanged
 OG artwork, run `OG_METADATA_ONLY=1 npm run test:order`. This is not a visual test.
+
+## Per-build data files
+
+Build pages load `data/builds/<classSlug>/<slug>.json` (the build plus up to three same-class
+related builds, ~20KB) instead of the whole `data/builds.json`. After editing `data/builds.json`
+run `node tools/generate-build-data.mjs`; `npm test` fails while those files are out of date.
+`detail.js` and `build-ux.js` still accept the full array, so older data keeps working.

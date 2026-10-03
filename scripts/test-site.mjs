@@ -369,6 +369,12 @@ for (const build of builds) {
 }
 assert(index.includes('class="version-banner"') === builds.some((build) => build.version !== site.gameVersion), "homepage version banner out of sync with site.gameVersion");
 for (const name of ["combat", "priority", "control", "theme"]) assert(classCheck.includes(`<legend id="q-${name}">`) && classCheck.includes(`<select name="${name}" required aria-labelledby="q-${name}">`), `class-check: ${name} select needs an accessible name`);
+// Per-build data files must match data/builds.json (tools/generate-build-data.mjs).
+for (const build of builds.filter((item) => item.status !== "draft")) {
+  const file = await read(`data/builds/${build.classSlug}/${build.slug}.json`).catch(() => null);
+  const expectedRelated = builds.filter((item) => item.status !== "draft" && item.className === build.className && item.id !== build.id).slice(0, 3).map(({ name, classSlug, slug }) => ({ name, classSlug, slug }));
+  assert(file && JSON.stringify(JSON.parse(file)) === JSON.stringify({ build, related: expectedRelated }), `data/builds/${build.classSlug}/${build.slug}.json is missing or stale (run node tools/generate-build-data.mjs)`);
+}
 // Article structured data needs author, image (an existing file) and a publish date.
 for (const page of seoPages) {
   const html = await read(`${page.path.slice(1)}index.html`);
