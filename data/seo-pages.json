@@ -13,7 +13,7 @@
       {"heading": "初心者が選ぶ基準", "bullets": ["途中で主力スキルが変わる時期を理解できるか", "苦手な状況や操作上の弱点を許容できるか", "現在Lvの段階に必要な装備・スキル・パッシブ方針を確認できるか", "リーグスターターやSSFの表示に確認根拠があるか"]},
       {"heading": "掲載中のビルドから選ぶ", "buildList": "all"}
     ],
-    "related": [{"label":"初心者向けTierを見る","url":"/tier-list/"},{"label":"リーグスターターを見る","url":"/league-starter/"},{"label":"全ビルドを見る","url":"/builds/"}],
+    "related": [{"label":"初心者向けTierを見る","url":"/tier-list/"},{"label":"リーグスターターを見る","url":"/league-starter/"},{"label":"全ビルドを見る","url":"/builds/"},{"label":"Forbidden Rites初心者ガイド","url":"/guides/forbidden-rites-beginner/"}],
     "sources": [{"name":"Path of Exile 2公式：Content Update 0.5.0と0.5.5イベント","url":"https://www.pathofexile.com/forum/view-thread/3999858","checkedAt":"2026-09-12"}]
   },
   {
@@ -46,7 +46,7 @@
       {"heading": "自分のビルドで確認する", "paragraphs": ["装備診断では、ビルド・現在Lv・悩み・予算を選び、最初に確認する部位を最大3つ表示します。リアルタイム相場は断定しません。"]},
       {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["warrior-shield-wall-smith", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
     ],
-    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"耐性の意味を確認","url":"/dictionary/resistance/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"}],
+    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"耐性の意味を確認","url":"/dictionary/resistance/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
     "sources": []
   },
   {
@@ -63,7 +63,7 @@
       {"heading": "よくある失敗", "paragraphs": ["高価そうな装備を先に買う、対応していないサポートを付ける、育成用スキルから早く切り替える、という順番違いを避けてください。まず現在段階の3行動を終えてから再確認します。"]},
       {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["ranger-ice-shot-deadeye", "mercenary-twister-gemling", "monk-whirling-assault"]}
     ],
-    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"サポートジェムを確認","url":"/dictionary/support-gem/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"}],
+    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"サポートジェムを確認","url":"/dictionary/support-gem/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
     "sources": []
   },
   {
@@ -143,7 +143,7 @@
       {"heading": "最初に何をするか", "paragraphs": ["最初は低い難度で主力の操作と防御を確認します。すぐ死ぬ場合は防御と回避、処理が遅い場合は武器・主力・サポート・パッシブの順に切り分けます。"]},
       {"heading": "ビルド別のMapping移行目安", "paragraphs": ["移行条件はビルドごとに異なります。確認済みロードマップのMapping開始段階を開き、現在Lvと切替条件を優先してください。"], "buildIds": ["monk-whirling-assault", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
     ],
-    "related": [{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"周回が遅い原因","url":"/guides/slow-mapping/"},{"label":"装備診断","url":"/gear-check/"}],
+    "related": [{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"周回が遅い原因","url":"/guides/slow-mapping/"},{"label":"装備診断","url":"/gear-check/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
     "sources": []
   },
   {

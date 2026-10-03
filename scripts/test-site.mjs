@@ -369,6 +369,15 @@ for (const build of builds) {
 }
 assert(index.includes('class="version-banner"') === builds.some((build) => build.version !== site.gameVersion), "homepage version banner out of sync with site.gameVersion");
 for (const name of ["combat", "priority", "control", "theme"]) assert(classCheck.includes(`<legend id="q-${name}">`) && classCheck.includes(`<select name="${name}" required aria-labelledby="q-${name}">`), `class-check: ${name} select needs an accessible name`);
+// Every sitemap page needs inbound links; glossary terms need several (enhance-term-links.mjs).
+const inbound = new Map();
+const sitemapPaths = [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]);
+for (const path of sitemapPaths) {
+  const html = await read(`${path}index.html`);
+  for (const href of new Set([...html.matchAll(/href="\/([^"#?]*)/g)].map((m) => m[1]))) if (href !== path) inbound.set(href, (inbound.get(href) ?? 0) + 1);
+}
+for (const path of sitemapPaths.filter((p) => p)) assert((inbound.get(path) ?? 0) >= 1, `/${path}: no internal page links to it`);
+for (const path of sitemapPaths.filter((p) => /^dictionary\/[^/]+\/$/.test(p))) assert((inbound.get(path) ?? 0) >= 5, `/${path}: glossary term needs at least 5 internal links`);
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);

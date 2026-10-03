@@ -13,6 +13,7 @@ export const HEAD_BLOCKS = [
   ["og-image", marker("og-image")]
 ];
 export const MAIN_END_BLOCKS = [
+  ["term-links", marker("term-links")],
   ["build-history", marker("build-history")],
   ["one-link", marker("one-link")]
 ];
