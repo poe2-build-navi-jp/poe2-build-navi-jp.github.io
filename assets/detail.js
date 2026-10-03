@@ -238,7 +238,16 @@ function renderSources() {
   });
 }
 
-function renderBuild(builds) {
+// Accepts the per-build file ({build, related}, data/builds/<class>/<slug>.json) or the full
+// builds.json array, and returns the page's build with its same-class related builds.
+function pickBuild(data, info) {
+  if (!data) return {};
+  if (!Array.isArray(data)) return data.build?.classSlug === info.classSlug && data.build?.slug === info.slug ? data : {};
+  const found = data.find((item) => item.classSlug === info.classSlug && item.slug === info.slug);
+  return { build: found, related: found ? data.filter((item) => item.status !== "draft" && item.className === found.className && item.id !== found.id).slice(0, 3) : [] };
+}
+
+function renderBuild(relatedBuilds) {
   document.title = build.seoTitle || `PoE2 ${build.version} ${build.name} ビルド｜Lv1〜Endgame育成`;
   byId("build-name").textContent = `PoE2 ${build.name} ビルド｜${build.version}育成`;
   byId("build-class").textContent = `${build.className} / ${text(build.ascendancy)}`;
@@ -267,7 +276,7 @@ function renderBuild(builds) {
     link.textContent = label;
     related.append(link);
   };
-  builds.filter((item) => item.status !== "draft" && item.className === build.className && item.id !== build.id).slice(0, 3).forEach((item) => {
+  relatedBuilds.forEach((item) => {
     addRelated(`/builds/${item.classSlug}/${item.slug}/`, item.name);
   });
   if (!related.childElementCount) {
@@ -311,18 +320,20 @@ function revealNoteReferral() {
 
 async function init() {
   try {
-    // Shared with build-ux.js so builds.json is downloaded once per page.
-    const builds = await (window.poe2BuildsRequest ||= fetch("/data/builds.json").then((response) => {
+    const info = pathInfo();
+    // Only this build's data (~20KB); shared with build-ux.js so it is downloaded once per page.
+    const data = await (window.poe2BuildsRequest ||= fetch(`/data/builds/${info.classSlug}/${info.slug}.json`).then((response) => {
+      if (response.status === 404) return null;
       if (!response.ok) throw new Error("ビルドデータを読み込めませんでした");
       return response.json();
     }));
-    const info = pathInfo();
-    build = builds.find((item) => item.classSlug === info.classSlug && item.slug === info.slug);
+    const picked = pickBuild(data, info);
+    build = picked.build;
     if (!build) {
       location.replace("/404.html");
       return;
     }
-    renderBuild(builds);
+    renderBuild(picked.related ?? []);
     bindEvents();
     revealNoteReferral();
     const savedTrouble = localStorage.getItem(`poe2:navi:trouble:${build.id}`);

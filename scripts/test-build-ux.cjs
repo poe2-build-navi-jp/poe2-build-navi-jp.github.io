@@ -97,6 +97,15 @@ console.log('PASS: 11 static cards, unlock/SSF/style filters, zero results recov
  assert.equal(requests,1);assert.equal(once.document.querySelectorAll('[data-now-action]').length,3);
  assert.ok(once.localStorage.getItem('poe2:navi:seen-revision:ranger-ice-shot-deadeye'));
  console.log('PASS: detail.js and build-ux.js share one builds.json request');
+ const perBuild=JSON.parse(fs.readFileSync('data/builds/ranger/ice-shot-deadeye.json','utf8'));
+ const single=new JSDOM(html,{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/'}).window;
+ const urls=[];single.fetch=async(url)=>{urls.push(url);return {ok:true,status:200,json:async()=>perBuild};};
+ single.eval(fs.readFileSync('assets/detail.js','utf8'));single.eval(fs.readFileSync('assets/build-ux.js','utf8'));
+ await new Promise(r=>setTimeout(r,60));
+ assert.deepEqual(urls,['/data/builds/ranger/ice-shot-deadeye.json']);
+ assert.equal(single.document.querySelectorAll('[data-now-action]').length,3);
+ assert.ok(single.localStorage.getItem('poe2:navi:seen-revision:ranger-ice-shot-deadeye'));
+ console.log('PASS: build pages load only their own data file (one request) and render from it');
  const minion=new JSDOM(fs.readFileSync('builds/witch/minion-infernalist/index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/?level=37'});
  minion.window.fetch=async()=>({ok:true,json:async()=>data});minion.window.eval(fs.readFileSync('assets/detail.js','utf8'));
  await new Promise(r=>setTimeout(r,60));

@@ -369,6 +369,35 @@ for (const build of builds) {
 }
 assert(index.includes('class="version-banner"') === builds.some((build) => build.version !== site.gameVersion), "homepage version banner out of sync with site.gameVersion");
 for (const name of ["combat", "priority", "control", "theme"]) assert(classCheck.includes(`<legend id="q-${name}">`) && classCheck.includes(`<select name="${name}" required aria-labelledby="q-${name}">`), `class-check: ${name} select needs an accessible name`);
+// Per-build data files must match data/builds.json (tools/generate-build-data.mjs).
+for (const build of builds.filter((item) => item.status !== "draft")) {
+  const file = await read(`data/builds/${build.classSlug}/${build.slug}.json`).catch(() => null);
+  const expectedRelated = builds.filter((item) => item.status !== "draft" && item.className === build.className && item.id !== build.id).slice(0, 3).map(({ name, classSlug, slug }) => ({ name, classSlug, slug }));
+  assert(file && JSON.stringify(JSON.parse(file)) === JSON.stringify({ build, related: expectedRelated }), `data/builds/${build.classSlug}/${build.slug}.json is missing or stale (run node tools/generate-build-data.mjs)`);
+}
+// Article structured data needs author, image (an existing file) and a publish date.
+for (const page of seoPages) {
+  const html = await read(`${page.path.slice(1)}index.html`);
+  const article = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].flatMap((m) => [].concat(JSON.parse(m[1]))).find((item) => item["@type"] === "Article");
+  assert(article?.author?.name && article.author.url && article.datePublished && article.datePublished <= article.dateModified, `${page.path}: Article needs author, datePublished <= dateModified`);
+  if (article?.image) await access(resolve(root, article.image.replace(`${baseUrl}/`, ""))).catch(() => failures.push(`${page.path}: Article image file missing`));
+  else failures.push(`${page.path}: Article image missing`);
+}
+// Every sitemap page needs inbound links; glossary terms need several (enhance-term-links.mjs).
+const inbound = new Map();
+const sitemapPaths = [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]);
+// Landmarks: every nav needs a name, and build pages keep the sticky shortcut inside a nav.
+for (const path of sitemapPaths) {
+  const html = await read(`${path}index.html`);
+  assert(!/<nav(?![^>]*aria-label)[^>]*>/.test(html), `/${path}: every <nav> needs an aria-label`);
+  if (/^builds\/[^/]+\/[^/]+\/$/.test(path)) assert(html.includes('<nav class="mobile-sticky-nav" aria-label="ページ内の移動"><a class="mobile-sticky"'), `/${path}: sticky shortcut must sit in a labelled nav`);
+}
+for (const path of sitemapPaths) {
+  const html = await read(`${path}index.html`);
+  for (const href of new Set([...html.matchAll(/href="\/([^"#?]*)/g)].map((m) => m[1]))) if (href !== path) inbound.set(href, (inbound.get(href) ?? 0) + 1);
+}
+for (const path of sitemapPaths.filter((p) => p)) assert((inbound.get(path) ?? 0) >= 1, `/${path}: no internal page links to it`);
+for (const path of sitemapPaths.filter((p) => /^dictionary\/[^/]+\/$/.test(p))) assert((inbound.get(path) ?? 0) >= 5, `/${path}: glossary term needs at least 5 internal links`);
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);

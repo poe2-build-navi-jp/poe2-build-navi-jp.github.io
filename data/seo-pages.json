@@ -1,6 +1,7 @@
 [
   {
     "path": "/guides/poe2-0-5-5-builds/",
+    "publishedAt": "2026-09-12",
     "kicker": "PATCH 0.5.5 / BUILD GUIDE",
     "title": "PoE2 0.5.5 おすすめビルド一覧｜初心者向け育成",
     "description": "PoE2 0.5.5のおすすめビルドを職業・初心者・弓・近接・SSFなどから比較。現在Lvから今やること3つとEndgameまでの育成手順を確認できます。",
@@ -13,11 +14,12 @@
       {"heading": "初心者が選ぶ基準", "bullets": ["途中で主力スキルが変わる時期を理解できるか", "苦手な状況や操作上の弱点を許容できるか", "現在Lvの段階に必要な装備・スキル・パッシブ方針を確認できるか", "リーグスターターやSSFの表示に確認根拠があるか"]},
       {"heading": "掲載中のビルドから選ぶ", "buildList": "all"}
     ],
-    "related": [{"label":"初心者向けTierを見る","url":"/tier-list/"},{"label":"リーグスターターを見る","url":"/league-starter/"},{"label":"全ビルドを見る","url":"/builds/"}],
+    "related": [{"label":"初心者向けTierを見る","url":"/tier-list/"},{"label":"リーグスターターを見る","url":"/league-starter/"},{"label":"全ビルドを見る","url":"/builds/"},{"label":"Forbidden Rites初心者ガイド","url":"/guides/forbidden-rites-beginner/"}],
     "sources": [{"name":"Path of Exile 2公式：Content Update 0.5.0と0.5.5イベント","url":"https://www.pathofexile.com/forum/view-thread/3999858","checkedAt":"2026-09-12"}]
   },
   {
     "path": "/guides/forbidden-rites-beginner/",
+    "publishedAt": "2026-09-12",
     "kicker": "FORBIDDEN RITES / BEGINNER",
     "title": "PoE2 Forbidden Rites初心者ガイド｜0.5.5で最初にすること",
     "description": "PoE2 Forbidden Ritesを始める初心者向けに、0.5.5で最初に確認すること、ビルド選び、現在Lvから育成を再開する方法を案内します。",
@@ -34,6 +36,7 @@
   },
   {
     "path": "/guides/why-i-die/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER TROUBLE / DEFENCE",
     "title": "PoE2ですぐ死ぬ原因｜初心者が最初に確認する7項目",
     "description": "PoE2ですぐ死ぬ初心者向けに、防御値、耐性、回復、装備、立ち回り、コンテンツ難度、育成段階の7項目を確認する順番を案内します。",
@@ -46,11 +49,12 @@
       {"heading": "自分のビルドで確認する", "paragraphs": ["装備診断では、ビルド・現在Lv・悩み・予算を選び、最初に確認する部位を最大3つ表示します。リアルタイム相場は断定しません。"]},
       {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["warrior-shield-wall-smith", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
     ],
-    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"耐性の意味を確認","url":"/dictionary/resistance/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"}],
+    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"耐性の意味を確認","url":"/dictionary/resistance/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
     "sources": []
   },
   {
     "path": "/guides/increase-damage/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER TROUBLE / DAMAGE",
     "title": "PoE2で火力が出ない原因｜初心者が確認する7項目",
     "description": "PoE2で火力が出ない初心者向けに、武器、メインスキル、サポート、パッシブ、リソース、切替時期、敵との相性を確認する順番を案内します。",
@@ -63,43 +67,186 @@
       {"heading": "よくある失敗", "paragraphs": ["高価そうな装備を先に買う、対応していないサポートを付ける、育成用スキルから早く切り替える、という順番違いを避けてください。まず現在段階の3行動を終えてから再確認します。"]},
       {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["ranger-ice-shot-deadeye", "mercenary-twister-gemling", "monk-whirling-assault"]}
     ],
-    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"サポートジェムを確認","url":"/dictionary/support-gem/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"}],
+    "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"サポートジェムを確認","url":"/dictionary/support-gem/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
     "sources": []
   },
   {
     "path": "/guides/gear-upgrade/",
+    "publishedAt": "2026-09-12",
     "kicker": "BEGINNER TROUBLE / GEAR",
     "title": "PoE2装備更新のやり方｜初心者が交換する順番",
     "description": "PoE2初心者向けに、装備更新で最初に確認する部位と交換順を解説。ビルド・現在Lv・悩み・予算から次の候補を絞れます。",
     "h1": "PoE2初心者の装備更新は何から交換する？",
     "answer": "最優先の部位はビルドと悩みで変わります。火力不足なら主力に影響する武器や能力、死にやすいなら防御値・耐性・回復に関係する部位から確認してください。",
-    "quickActions": ["火力・耐久・マナなど、今の問題を1つ選ぶ", "現在Lvとビルドを確認する", "効果が大きい部位を1つだけ交換して変化を見る"],
-    "sections": [
-      {"heading": "交換順を固定しすぎない", "paragraphs": ["同じレベルでもビルドと手持ち装備で最優先は変わります。一般論として武器、胴、防具、ブーツなどを並べるだけではなく、主力スキルと困りごとに影響する部位から見ます。"]},
-      {"heading": "購入前のチェック", "bullets": ["その能力が主力スキルへ作用するか", "交換で必要な耐性や能力条件を失わないか", "現在Lvで装備できるか", "次の育成段階ですぐ切り替える装備ではないか", "表示価格を固定相場と思い込まず、現在の出品を確認したか"]},
-      {"heading": "このサイトで絞り込む", "paragraphs": ["装備診断へビルド、現在Lv、困りごと、予算を入力すると、最初に確認する部位と理由を最大3件に絞ります。未登録のビルド固有情報は一般的な改善策と明示します。"]}
+    "quickActions": [
+      "火力・耐久・マナなど、今の問題を1つ選ぶ",
+      "現在Lvとビルドを確認する",
+      "効果が大きい部位を1つだけ交換して変化を見る"
     ],
-    "related": [{"label":"装備診断を始める","url":"/gear-check/"},{"label":"すぐ死ぬ原因を見る","url":"/guides/why-i-die/"},{"label":"火力が出ない原因を見る","url":"/guides/increase-damage/"}],
-    "sources": []
+    "sections": [
+      {
+        "heading": "交換順を固定しすぎない",
+        "paragraphs": [
+          "同じレベルでもビルドと手持ち装備で最優先は変わります。一般論として武器、胴、防具、ブーツなどを並べるだけではなく、主力スキルと困りごとに影響する部位から見ます。"
+        ]
+      },
+      {
+        "heading": "購入前のチェック",
+        "bullets": [
+          "その能力が主力スキルへ作用するか",
+          "交換で必要な耐性や能力条件を失わないか",
+          "現在Lvで装備できるか",
+          "次の育成段階ですぐ切り替える装備ではないか",
+          "表示価格を固定相場と思い込まず、現在の出品を確認したか"
+        ]
+      },
+      {
+        "heading": "このサイトで絞り込む",
+        "paragraphs": [
+          "装備診断へビルド、現在Lv、困りごと、予算を入力すると、最初に確認する部位と理由を最大3件に絞ります。未登録のビルド固有情報は一般的な改善策と明示します。"
+        ]
+      },
+      {
+        "heading": "ビルド別：最初に見る装備（元ガイドの優先度）",
+        "paragraphs": [
+          "掲載ビルドの装備優先度のうち、先頭の2項目です。武器・防具の何を見るかはビルドで大きく違うため、自分のビルドの行を確認してください。"
+        ],
+        "buildGear": 2
+      },
+      {
+        "heading": "交換のたびに耐性と防御を確認する",
+        "bullets": [
+          "PoE2の装備の主な防御は、アーマー・回避・エナジーシールドの3種類。どれを重視するかはビルドで違う。",
+          "Act 4までの各Actの終わりごろに元素耐性が10%ずつ下がり、エンドゲームでは合計-60%になる。Actを進めたあとの装備更新では、耐性が足りているかを必ず確認する。",
+          "交換で耐性が下がった分は、ほかの部位で補えるかを先に確かめる。"
+        ],
+        "termLinks": [
+          "resistance",
+          "energy-shield"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "装備診断を始める",
+        "url": "/gear-check/"
+      },
+      {
+        "label": "すぐ死ぬ原因を見る",
+        "url": "/guides/why-i-die/"
+      },
+      {
+        "label": "火力が出ない原因を見る",
+        "url": "/guides/increase-damage/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PoE2 Wiki（コミュニティWiki）：Resistance（キャンペーンの耐性ペナルティ）",
+        "url": "https://www.poe2wiki.net/wiki/Resistance",
+        "checkedAt": "2026-09-29"
+      },
+      {
+        "name": "PoE2 Wiki（コミュニティWiki）：Energy shield（主な防御の種類）",
+        "url": "https://www.poe2wiki.net/wiki/Energy_shield",
+        "checkedAt": "2026-09-29"
+      }
+    ],
+    "faq": [
+      {
+        "q": "装備はどの部位から替えればいい？",
+        "a": "今の困りごとに一番効く部位からです。火力不足なら武器、死にやすいなら耐性と防具から確認し、1部位ずつ替えて変化を見ます。"
+      },
+      {
+        "q": "装備を替えたら急に死にやすくなったのはなぜ？",
+        "a": "交換で耐性やライフが下がった可能性があります。Actを進めると元素耐性も下がるため、交換前後でキャラクター画面の耐性を比べてください。"
+      }
+    ]
   },
   {
     "path": "/guides/mana-problem/",
+    "publishedAt": "2026-09-12",
     "kicker": "BEGINNER TROUBLE / MANA",
     "title": "PoE2でマナが足りない時の確認順｜初心者向け",
     "description": "PoE2でマナ不足になる初心者向けに、スキルコスト、サポート、回復、攻撃頻度、育成段階を確認する順番を案内します。",
     "h1": "PoE2でマナが足りないときの確認順",
     "answer": "最初に主力スキル1回のコストと連続使用回数を確認し、次にサポート構成、回復手段、攻撃の使い方を見直します。火力装備の購入より先に、攻撃が止まる原因を特定してください。",
-    "quickActions": ["主力スキルを何回使うと止まるか確認する", "サポート変更前後で消費が増えていないか確認する", "現在の育成段階にあるマナ対策を確認する"],
-    "sections": [
-      {"heading": "確認する順番", "bullets": ["主力スキルと補助スキルの消費量", "追加したサポートによる消費の変化", "マナ回復や回収が実際の戦闘で間に合うか", "必要以上にスキルを連打していないか", "ビルドの主力切替を早く行っていないか", "装備変更で必要な能力や回復手段を失っていないか"]},
-      {"heading": "一時対応と恒久対応を分ける", "paragraphs": ["一時的に操作間隔を調整する方法と、装備・パッシブ・スキル構成を見直す方法は分けて考えます。正確な対策はビルドごとに異なるため、詳細ページの現在段階を優先してください。"]},
-      {"heading": "固定値を目標にしない", "paragraphs": ["必要なマナ量や回復量は主力スキル、サポート、攻撃頻度で変わります。このページでは未確認の数値目標を作りません。"]}
+    "quickActions": [
+      "主力スキルを何回使うと止まるか確認する",
+      "サポート変更前後で消費が増えていないか確認する",
+      "現在の育成段階にあるマナ対策を確認する"
     ],
-    "related": [{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"装備更新の順番を見る","url":"/guides/gear-upgrade/"},{"label":"火力が出ない原因を見る","url":"/guides/increase-damage/"}],
-    "sources": []
+    "sections": [
+      {
+        "heading": "確認する順番",
+        "bullets": [
+          "主力スキルと補助スキルの消費量",
+          "追加したサポートによる消費の変化",
+          "マナ回復や回収が実際の戦闘で間に合うか",
+          "必要以上にスキルを連打していないか",
+          "ビルドの主力切替を早く行っていないか",
+          "装備変更で必要な能力や回復手段を失っていないか"
+        ]
+      },
+      {
+        "heading": "一時対応と恒久対応を分ける",
+        "paragraphs": [
+          "一時的に操作間隔を調整する方法と、装備・パッシブ・スキル構成を見直す方法は分けて考えます。正確な対策はビルドごとに異なるため、詳細ページの現在段階を優先してください。"
+        ]
+      },
+      {
+        "heading": "固定値を目標にしない",
+        "paragraphs": [
+          "必要なマナ量や回復量は主力スキル、サポート、攻撃頻度で変わります。このページでは未確認の数値目標を作りません。"
+        ]
+      },
+      {
+        "heading": "ビルド別：マナの注意点（元ガイドの記載）",
+        "paragraphs": [
+          "掲載ビルドの長所・弱点のうち、マナに触れている記載です。マナ不足の原因と対策はビルドで違うため、自分のビルドの記載を先に確認してください。"
+        ],
+        "buildNotes": "マナ|Mana"
+      },
+      {
+        "heading": "補助スキルのレベルにも注意",
+        "paragraphs": [
+          "補助として使うスキルは、レベルを上げることでマナ消費が増える場合があります。たとえばツイスター・ジェムリングの元ガイドでは、ワーリングスラッシュをマナ消費を抑えるためにLv1のまま維持するよう案内されています。"
+        ],
+        "termLinks": [
+          "skill-gem",
+          "support-gem"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "ビルド一覧から現在Lvを入力",
+        "url": "/builds/"
+      },
+      {
+        "label": "装備更新の順番を見る",
+        "url": "/guides/gear-upgrade/"
+      },
+      {
+        "label": "火力が出ない原因を見る",
+        "url": "/guides/increase-damage/"
+      }
+    ],
+    "sources": [],
+    "faq": [
+      {
+        "q": "マナが足りないとき、最初に何をする？",
+        "a": "主力スキルを何回使うと止まるかを確認し、次にサポートの変更で消費が増えていないかを見ます。装備を買う前に、攻撃が止まる原因を特定してください。"
+      },
+      {
+        "q": "どのビルドがマナ不足になりやすい？",
+        "a": "当サイトの掲載ビルドでは、ED・コンテージョン リッチ（複数スキルで消費が重くなりやすい）や植物オラクル（長いボス戦）などの元ガイドがマナに注意するよう書いています。このページの『ビルド別：マナの注意点』で確認できます。"
+      }
+    ]
   },
   {
     "path": "/guides/cant-beat-boss/",
+    "publishedAt": "2026-09-13",
     "kicker": "BEGINNER TROUBLE / BOSS",
     "title": "PoE2でボスに勝てない時の確認順｜初心者向け",
     "description": "PoE2でボスに勝てない初心者向けに、単体用スキル、サポート、操作順、防御、育成段階を確認する順番を案内します。",
@@ -116,22 +263,95 @@
   },
   {
     "path": "/guides/slow-mapping/",
+    "publishedAt": "2026-09-13",
     "kicker": "BEGINNER TROUBLE / MAPPING SPEED",
     "title": "PoE2で周回が遅い時の確認順｜初心者向け",
     "description": "PoE2で周回が遅い初心者向けに、移動、範囲、通常敵への操作回数、装備、Mapping移行条件を確認する順番を案内します。",
     "h1": "PoE2で周回が遅いときの確認順",
     "answer": "最初に移動と通常敵への攻撃回数、次に主力の範囲と操作順、最後に現在Lvの装備優先度を確認します。ボス用の最大操作を通常敵へ毎回使っていないか見直してください。",
-    "quickActions": ["移動を止める原因を1つ特定する", "通常敵へ使う主力と操作回数を確認する", "現在段階のブーツ・武器・切替条件を見る"],
-    "sections": [
-      {"heading": "まず確認する3つ", "bullets": ["移動速度と移動スキルの使い方", "通常敵を処理する範囲と必要な攻撃回数", "ボス用の補助操作を通常敵へ使いすぎていないか"]},
-      {"heading": "速さと安全を分けない", "paragraphs": ["速度だけを上げて死亡が増えると、結果として周回は遅くなります。低い難度で主力の動作、防御、回復を確認し、原因を1つずつ変えてください。"]},
-      {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["mercenary-twister-gemling", "ranger-ice-shot-deadeye", "sorceress-sand-fire"]}
+    "quickActions": [
+      "移動を止める原因を1つ特定する",
+      "通常敵へ使う主力と操作回数を確認する",
+      "現在段階のブーツ・武器・切替条件を見る"
     ],
-    "related": [{"label":"Mapping初心者ガイド","url":"/guides/mapping/"},{"label":"火力が出ない原因","url":"/guides/increase-damage/"},{"label":"装備更新の順番","url":"/guides/gear-upgrade/"}],
-    "sources": []
+    "sections": [
+      {
+        "heading": "まず確認する3つ",
+        "bullets": [
+          "移動速度と移動スキルの使い方",
+          "通常敵を処理する範囲と必要な攻撃回数",
+          "ボス用の補助操作を通常敵へ使いすぎていないか"
+        ]
+      },
+      {
+        "heading": "速さと安全を分けない",
+        "paragraphs": [
+          "速度だけを上げて死亡が増えると、結果として周回は遅くなります。低い難度で主力の動作、防御、回復を確認し、原因を1つずつ変えてください。"
+        ]
+      },
+      {
+        "heading": "確認済みビルドで現在Lvから見る",
+        "buildIds": [
+          "mercenary-twister-gemling",
+          "ranger-ice-shot-deadeye",
+          "sorceress-sand-fire"
+        ]
+      },
+      {
+        "heading": "ビルド別：周回の強み・弱み（元ガイドの記載）",
+        "paragraphs": [
+          "掲載ビルドの長所・弱点のうち、周回・殲滅・移動に触れている記載です。周回の速さはビルドの得意不得意が大きく出ます。"
+        ],
+        "buildNotes": "周回|殲滅|移動速度|範囲"
+      },
+      {
+        "heading": "Waystoneの追加効果を見直す",
+        "bullets": [
+          "Waystoneの追加効果（モッド）が多いほど、マップは難しくなり報酬も増える。",
+          "追加効果が多いほど、マップ内で復活できる回数が減る（追加効果なしで6回、6個以上で0回）。",
+          "倒されて周回が止まるなら、追加効果の少ないWaystoneや低いTierで、主力の動作と防御を先に安定させる。"
+        ],
+        "termLinks": [
+          "mapping",
+          "endgame"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "Mapping初心者ガイド",
+        "url": "/guides/mapping/"
+      },
+      {
+        "label": "火力が出ない原因",
+        "url": "/guides/increase-damage/"
+      },
+      {
+        "label": "装備更新の順番",
+        "url": "/guides/gear-upgrade/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PoE2 Wiki（コミュニティWiki）：Waystone（追加効果と復活回数）",
+        "url": "https://www.poe2wiki.net/wiki/Waystone",
+        "checkedAt": "2026-09-29"
+      }
+    ],
+    "faq": [
+      {
+        "q": "周回が遅いとき、最初に何を見る？",
+        "a": "移動を止める原因と、通常敵を倒すのに必要な攻撃回数を確認します。ボス用の操作を通常敵に毎回使っていないかも見直してください。"
+      },
+      {
+        "q": "周回が速いビルドは？",
+        "a": "元ガイドで周回や殲滅の強さが書かれているビルドは、このページの『ビルド別：周回の強み・弱み』で確認できます。"
+      }
+    ]
   },
   {
     "path": "/guides/mapping/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER GUIDE / MAPPING",
     "title": "PoE2 Mapping初心者ガイド｜開始前の確認と進め方",
     "description": "PoE2のMappingを始める初心者向けに、耐性、生存力、主力スキル、装備、移行条件を確認する順番を案内します。",
@@ -143,11 +363,12 @@
       {"heading": "最初に何をするか", "paragraphs": ["最初は低い難度で主力の操作と防御を確認します。すぐ死ぬ場合は防御と回避、処理が遅い場合は武器・主力・サポート・パッシブの順に切り分けます。"]},
       {"heading": "ビルド別のMapping移行目安", "paragraphs": ["移行条件はビルドごとに異なります。確認済みロードマップのMapping開始段階を開き、現在Lvと切替条件を優先してください。"], "buildIds": ["monk-whirling-assault", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
     ],
-    "related": [{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"周回が遅い原因","url":"/guides/slow-mapping/"},{"label":"装備診断","url":"/gear-check/"}],
+    "related": [{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"周回が遅い原因","url":"/guides/slow-mapping/"},{"label":"装備診断","url":"/gear-check/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
     "sources": []
   },
   {
     "path": "/poe2-1-0/release-date/",
+    "publishedAt": "2026-09-12",
     "kicker": "POE2 1.0 / OFFICIAL DATE",
     "title": "PoE2 1.0正式版はいつ？｜公開予定日と確認済み情報",
     "description": "PoE2 1.0正式版の公開予定日は2026年12月11日です。公式発表で確認できる情報と、未発表のビルド情報を分けて案内します。",
@@ -165,6 +386,7 @@
   },
   {
     "path": "/poe2-1-0/how-to-start/",
+    "publishedAt": "2026-09-27",
     "kicker": "POE2 1.0 / HOW TO START",
     "title": "PoE2の始め方｜12月11日から基本無料・対応機種と準備",
     "description": "PoE2は2026年12月11日の正式版1.0から基本無料です。対応機種（PC・PS5・Xbox Series）、入手先、クロスプレイ、今のうちに決めておくことを公式情報を基に案内します。",
@@ -184,6 +406,7 @@
   },
   {
     "path": "/poe2-1-0/system-requirements/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / SYSTEM REQUIREMENTS",
     "title": "PoE2の必要スペック・推奨スペック｜PC・Mac動作環境",
     "description": "PoE2のPC必要スペック（最低）と推奨スペック、Mac動作環境をSteamストアの記載そのままに整理。VRAM 3GB以上・空き容量100GB・SSD推奨など、無料化前に確認しておく点を案内します。",
@@ -205,6 +428,7 @@
   },
   {
     "path": "/poe2-1-0/japanese/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / JAPANESE",
     "title": "PoE2は日本語対応？｜日本語化の設定と英語名の調べ方",
     "description": "PoE2は日本語表示に対応しています（音声のフル対応は英語のみ）。PC版での日本語への切り替え方と、海外ガイドの英語名を日本語名と照らし合わせる方法を案内します。",
@@ -223,6 +447,7 @@
   },
   {
     "path": "/poe2-1-0/microtransactions/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / SHOP",
     "title": "PoE2の課金はどれを買う？｜無料プレイで最初に買うスタッシュタブ",
     "description": "PoE2は正式版から基本無料で、課金は見た目と収納・取引の便利機能が中心です。最初に買うならどのスタッシュタブか、PoE1で課金した人の扱い、機種ごとの注意点を公式情報を基に案内します。",
@@ -243,6 +468,7 @@
   },
   {
     "path": "/poe2-1-0/controller/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / CONTROLLER",
     "title": "PoE2はコントローラーで遊べる？｜PC・PS5・Xboxの操作と対応",
     "description": "PoE2はPC版もフルコントローラー対応で、DualShock・DualSenseにも対応しています。コントローラーでの操作感、キーボードのWASD移動、PS5・Xbox Seriesで遊ぶ場合の注意を案内します。",
@@ -262,6 +488,7 @@
   },
   {
     "path": "/poe2-1-0/pre-registration/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / PRE-REGISTRATION",
     "title": "PoE2 事前登録のやり方と報酬｜正式版1.0の限定コスメと締め切り",
     "description": "PoE2正式版1.0の事前登録（メール登録）のやり方、もらえる限定コスメ報酬、締め切り、コードの受け取り方を公式発表をもとに案内します。",
@@ -282,6 +509,7 @@
   },
   {
     "path": "/poe2-1-0/build-status/",
+    "publishedAt": "2026-09-28",
     "kicker": "POE2 1.0 / BUILD STATUS",
     "title": "PoE2 1.0おすすめビルドの対応状況｜確認済みビルド一覧",
     "description": "PoE2正式版1.0で使えると確認できたビルドを一覧で案内します。0.5.5向けビルドの1.0対応状況と、確認の基準・順番をまとめています。",
@@ -300,6 +528,7 @@
   },
   {
     "path": "/poe2-1-0/duelist/",
+    "publishedAt": "2026-09-12",
     "kicker": "POE2 1.0 / DUELIST",
     "title": "PoE2 Duelist最新情報｜1.0で追加予定の新職業",
     "description": "PoE2 1.0で追加予定のDuelistについて、公式発表で確認できる情報と未発表のビルド情報を分けて案内します。",
@@ -317,6 +546,7 @@
   },
   {
     "path": "/guides/passive-tree/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER GUIDE / PASSIVE TREE",
     "title": "PoE2パッシブの振り方｜初心者が迷わない確認順",
     "description": "PoE2初心者向けに、パッシブツリーで最初に確認する3点、育成途中と完成形の違い、現在Lvに合う取得方針を案内します。",
@@ -334,6 +564,7 @@
   },
   {
     "path": "/guides/resistance/",
+    "publishedAt": "2026-09-10",
     "kicker": "BEGINNER GUIDE / RESISTANCE",
     "title": "PoE2耐性の確認方法｜初心者がすぐ死ぬ時の見直し順",
     "description": "PoE2初心者向けに、耐性を確認する順番、装備交換時の注意、すぐ死ぬ時に耐性と他の防御を切り分ける方法を案内します。",
@@ -351,6 +582,7 @@
   },
   {
     "path": "/what-is-poe2/",
+    "publishedAt": "2026-10-01",
     "topLevel": true,
     "crumb": "PoE2とは",
     "kicker": "WHAT IS POE2",
