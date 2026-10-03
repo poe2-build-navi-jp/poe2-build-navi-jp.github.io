@@ -111,6 +111,19 @@ function buildTable(columns) {
   return `<div class="comparison-scroll"><table class="comparison-table facts-table"><thead><tr><th scope="col">ビルド</th>${columns.map((column) => `<th scope="col">${esc(column.label)}</th>`).join("")}</tr></thead><tbody>${listed.map((build) => `<tr><th scope="row"><a href="${buildUrl(build)}">${esc(build.name)}</a></th>${columns.map((column) => `<td data-label="${esc(column.label)}">${esc(build[column.field])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
 }
 
+// Per build, the strengths/weaknesses sentences matching a regex (buildNotes) or the first
+// n gear priorities (buildGear), each linked to the build page.
+function buildNoteList(items) {
+  return `<ul class="build-notes">${items.map(([build, lines]) => `<li><a href="${buildUrl(build)}">${esc(build.name)}</a><ul>${lines.map((line) => `<li>${esc(line)}</li>`).join("")}</ul></li>`).join("")}</ul>`;
+}
+function buildNotes(regex) {
+  const pattern = new RegExp(regex);
+  return buildNoteList(builds.filter((build) => build.status === "verified").map((build) => [build, [...build.strengths, ...build.weaknesses].filter((line) => pattern.test(line))]).filter(([, lines]) => lines.length));
+}
+function buildGear(count) {
+  return buildNoteList(builds.filter((build) => build.status === "verified").map((build) => [build, build.gearPriorities.slice(0, count)]));
+}
+
 function classCards() {
   return `<div class="seo-build-list">${classes.map((item) => `<article><p>${esc([].concat(item.combatStyle ?? []).join("・"))}</p><h3>${esc(item.name)}</h3><span>${esc(item.tagline)}</span><a href="/classes/${item.slug}/">${esc(item.name)}のビルドを見る</a></article>`).join("")}</div>`;
 }
@@ -129,10 +142,11 @@ function renderSection(section) {
   const matchedNote = section.buildMatch && section.matchedNote ? `<p>${esc(section.matchedNote.replace("{count}", matched.length).replace("{total}", builds.filter((build) => build.status === "verified").length))}</p>` : "";
   const table = section.table ? factTable(section.table) : "";
   const classHtml = section.classList ? classCards() : "";
+  const notesHtml = section.buildNotes ? buildNotes(section.buildNotes) : section.buildGear ? buildGear(section.buildGear) : "";
   const buildTableHtml = section.buildTable ? buildTable(section.buildTable) : "";
   const termHtml = section.termLinks ? `${section.termIntro ? `<p>${esc(section.termIntro)}</p>` : ""}${termLinks(section.termLinks)}` : "";
   const links = section.links?.length ? `<div class="related-links">${section.links.map((item) => `<a href="${item.url}">${esc(item.label)}</a>`).join("")}</div>` : "";
-  return `<section${section.id ? ` id="${esc(section.id)}"` : ""}><h2>${esc(section.heading)}</h2>${paragraphs}${table}${bullets}${matchedNote}${buildsHtml}${buildTableHtml}${classHtml}${termHtml}${links}</section>`;
+  return `<section${section.id ? ` id="${esc(section.id)}"` : ""}><h2>${esc(section.heading)}</h2>${paragraphs}${table}${bullets}${matchedNote}${buildsHtml}${buildTableHtml}${notesHtml}${classHtml}${termHtml}${links}</section>`;
 }
 
 for (const page of pages) {
