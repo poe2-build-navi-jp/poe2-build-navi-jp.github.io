@@ -3,6 +3,7 @@
 import {readFile,writeFile,readdir} from 'node:fs/promises';
 import {resolve,join} from 'node:path';
 import {insertBlock} from './block-order.mjs';
+import {ICON_BLOCK,FOOTER} from './site-chrome.mjs';
 const root=resolve(import.meta.dirname,'..');
 const skip=new Set(['.git','node_modules','assets','data','images','scripts','tools','tests','company']);
 async function htmlFiles(dir,out=[]){
@@ -14,8 +15,6 @@ async function htmlFiles(dir,out=[]){
  }
  return out;
 }
-export const ICON_BLOCK='<!-- site-icon:start --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- site-icon:end -->';
-export const FOOTER='<footer class="site-footer"><div class="footer-row"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></div><nav class="footer-links" aria-label="サイト情報"><a href="/about/">運営者情報</a><a href="/editorial-policy/">編集方針</a><a href="/privacy/">プライバシー</a><a href="/terms/">利用規約</a></nav></div><p class="fine">Path of Exile 2 is a trademark of Grinding Gear Games. This site is not affiliated with or endorsed by Grinding Gear Games.</p></footer>';
 let icons=0,footers=0;
 for(const file of await htmlFiles(root)){
  const before=await readFile(file,'utf8');

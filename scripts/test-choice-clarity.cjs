@@ -6,7 +6,7 @@ const builds=JSON.parse(read('data/builds.json'));
 const shield=builds.find(b=>b.id==='warrior-shield-wall-smith');
 const home=new JSDOM(read('index.html'),{url:'https://poe2-build-navi-jp.github.io/'}).window.document;
 const quick=[...home.querySelectorAll('#purpose-picks .purpose-card')];
-assert.equal(quick.length,4);
+assert.equal(quick.length,5);
 assert.match(quick[0].querySelector('.quick-choice-facts').textContent,/Act 3とLv67前後で召喚対象を切替/);
 for(const card of quick){
  assert.deepEqual([...card.querySelectorAll('.quick-choice-facts dt')].map(n=>n.textContent),['向いている人','弱点','切替時期']);
@@ -45,4 +45,4 @@ for(const path of ['builds/index.html','classes/warrior/index.html','beginner-gu
  assert(read(path).includes('筋力41'),path);
 }
 assert.equal(shield.updatedAt,'2026-09-07','Do not change the full leveling review date');
-console.log('PASS: compact four choices, collapsed sources, five comparison priorities, shared facts, distinct Shield Wall requirements, real latest change reasons');
+console.log('PASS: compact five choices, collapsed sources, five comparison priorities, shared facts, distinct Shield Wall requirements, real latest change reasons');

@@ -140,6 +140,7 @@ node tools/enhance-term-links.mjs
 node tools/enhance-site-chrome.mjs
 node tools/generate-build-data.mjs
 node tools/generate-sitemap.mjs
+node tools/enhance-page-schema.mjs
 node tools/generate-og-images.mjs
 node tools/inject-analytics.mjs
 node tools/sync-asset-versions.mjs
@@ -160,3 +161,10 @@ rendered from `favicon.svg` by `node tools/generate-site-icons.mjs` (Chromium + 
 changes, that page's date becomes today (JST, or `SITEMAP_DATE`), and lastmod is the later of it
 and the data-based date. Run it after the enhancers that change `<main>`; `npm test` fails while
 a page's fingerprint is out of date.
+
+## Structured data for generator-less pages
+
+`tools/enhance-page-schema.mjs` adds a `page-schema` head block: BreadcrumbList built from the
+visible breadcrumb (sitemap pages without one), Article on the `data/guides.json` chapters and
+DefinedTerm / DefinedTermSet on the dictionary pages. Article `dateModified` comes from
+`data/page-dates.json`, so run it after `generate-sitemap.mjs`.

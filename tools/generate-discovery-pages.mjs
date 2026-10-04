@@ -57,10 +57,11 @@ function choiceCard(label, buildId, reason, cta = "このビルドを確認す�
 
 const featured = discovery.featuredBuildIds.map(byId);
 const featuredHtml = `<section id="featured-builds" class="section featured-builds" aria-labelledby="featured-title"><div class="section-head"><p class="section-kicker">BEGINNER PICKS / 詳細比較</p><h2 id="featured-title">初心者におすすめのビルド</h2><p><b>詳細比較用：</b>おすすめ理由・弱点・操作・SSFを見比べてから選べます。</p></div><div class="discovery-grid">${featured.map((build) => compactBuildCard(build, undefined, discovery.featuredBuildTags?.[build.id] ?? [])).join("")}</div><div class="section-cta"><a class="button" href="/builds/">全${builds.length}ビルドを見る</a><a class="button-secondary" href="/tier-list/">目的別Tierを見る</a><a class="button-secondary" href="/league-starter/">リーグスターターを見る</a></div></section>`;
-const topChoices = `<section id="purpose-picks" class="section section-soft" aria-labelledby="purpose-picks-title"><div class="section-head"><p class="section-kicker">QUICK ANSWER / 即決</p><h2 id="purpose-picks-title">迷ったらこの4つ</h2><p><b>即決用：</b>最強1位ではなく、遊び方と育成条件から候補をすぐ選べます。</p></div><div class="purpose-grid">${[
+const topChoices = `<section id="purpose-picks" class="section section-soft" aria-labelledby="purpose-picks-title"><div class="section-head"><p class="section-kicker">QUICK ANSWER / 即決</p><h2 id="purpose-picks-title">迷ったらこの5つ</h2><p><b>即決用：</b>最強1位ではなく、遊び方と育成条件から候補をすぐ選べます。</p></div><div class="purpose-grid">${[
   choiceCard("初心者・安全重視", "witch-minion-infernalist", "ミニオンに攻撃を任せやすく、自分は回避と位置取りへ集中できます。"),
   choiceCard("弓で遊びたい", "ranger-ice-shot-deadeye", "Lv31からアイスショットへ切り替える時期と、序盤の育成手順が明確です。"),
   choiceCard("近接で遊びたい", "monk-whirling-assault", "移動しながら攻撃でき、Lv41の主力切替まで段階別に確認できます。"),
+  choiceCard("魔法で遊びたい", "sorceress-spark-stormweaver", "Lv1から同じSparkを撃ち続けられ、操作の簡単さも原典に明記されています。Endgameの自動発動コメットにはSpirit 121以上が必要です。"),
   choiceCard("継続ダメージ", "witch-ed-contagion-lich", "継続ダメージを広げる構成。SSFでの完成形は未確認です。")
 ].join("")}</div><div class="section-cta"><a class="button-secondary" href="/best-builds/">目的別おすすめを見る</a><a class="button-secondary" href="/tier-list/">初心者Tierで比較する</a><a class="button-secondary" href="/league-starter/">リーグスターターを見る</a></div></section>`;
 
@@ -80,6 +81,10 @@ home = home
 const buildAnswers = `<section id="build-answers" class="section section-soft" aria-labelledby="build-answers-title"><div class="section-head"><h2 id="build-answers-title">PoE2のビルド選びでよくある質問</h2></div><div class="guide-grid"><article class="info-card"><h3>PoE2のビルドとは？</h3><p>Path of Exile 2（PoE2）のビルドとは、主力スキル・サポート・パッシブ・装備を組み合わせたキャラクターの育成構成です。完成時の装備だけでなく、序盤のスキルと途中の切替手順も確認して選びます。</p><a href="/beginner-guide/">初心者向けの選び方を見る</a></article><article class="info-card"><h3>初心者はどのビルドを選ぶ？</h3><p>当サイトの掲載候補では、召喚ならミニオン・インファーナリスト、弓ならアイスショット・デッドアイ、盾を使うならシールドウォール・スミスを案内しています。主力の解禁Lv・操作量・装備条件を比較してください。</p><a href="/tier-list/">初心者向けの比較と注意点を見る</a></article><article class="info-card"><h3>現在Lvから何が分かる？</h3><p>使うビルドと現在Lvを選ぶと、その育成段階のスキル・装備・パッシブから優先する行動を3つ表示します。各ビルドにはLv1〜Endgameの8段階と、パッシブを確認する原典リンクがあります。</p><a href="/leveling/">現在Lvに合う育成手順を探す</a></article></div><p>掲載内容は各ビルドの資料・対応パッチに基づきます。ゲームの公式運営サイトではありません。<a href="/editorial-policy/">情報の確認方法と編集方針</a></p></section>`;
 home = home.replace(/<section id="build-answers"[\s\S]*?<\/section>/g, "");
 home = home.replace('</main>', `${buildAnswers}</main>`);
+// enhance-build-ux moves the resume section right after the quick picks, so the hero pattern above
+// no longer matches on a regenerated page; refresh the quick picks on their own.
+home = home.replace(/<section id="purpose-picks"[\s\S]*?<\/section>/, topChoices);
+home = home.replace(/<a href="[^"]+" target="_blank" rel="noopener noreferrer">最新確認 [^<]+<\/a>・最終確認 <span id="last-updated">[^<]+<\/span>/, `<a href="${esc(discovery.latestPatchSource)}" target="_blank" rel="noopener noreferrer">最新確認 ${esc(discovery.latestPatch)}</a>・最終確認 <span id="last-updated">${esc(discovery.latestPatchCheckedAt)}</span>`);
 await writeFile(resolve(root, "index.html"), home);
 
 const tierSections = ["S", "A", "B", "C"].map((tier) => {

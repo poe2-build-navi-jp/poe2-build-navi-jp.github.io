@@ -1,22 +1,24 @@
 {
   "updatedAt": "2026-09-25",
   "patchVersion": "0.5.5",
-  "latestPatch": "0.5.5c",
-  "latestPatchCheckedAt": "2026-09-23",
-  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4006357",
+  "latestPatch": "0.5.5d",
+  "latestPatchCheckedAt": "2026-10-04",
+  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4008534",
   "featuredBuildIds": [
     "ranger-ice-shot-deadeye",
     "warrior-shield-wall-smith",
     "witch-minion-infernalist",
     "druid-plant-oracle",
-    "monk-whirling-assault"
+    "monk-whirling-assault",
+    "sorceress-spark-stormweaver"
   ],
   "featuredBuildTags": {
     "ranger-ice-shot-deadeye": ["初心者", "遠距離"],
     "warrior-shield-wall-smith": ["近接", "耐久重視"],
     "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
     "druid-plant-oracle": ["操作少なめ", "Lv1から主力継続"],
-    "monk-whirling-assault": ["近接", "機動力"]
+    "monk-whirling-assault": ["近接", "機動力"],
+    "sorceress-spark-stormweaver": ["魔法", "Lv1から主力継続"]
   },
   "buildTags": {
     "monk-whirling-assault": ["近接", "機動力"],
