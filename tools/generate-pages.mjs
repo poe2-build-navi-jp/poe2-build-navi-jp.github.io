@@ -139,3 +139,4 @@ await import('./inject-analytics.mjs');
 await import('./enhance-one-hub.mjs');
 await import('./enhance-noindex.mjs');
 await import('./enhance-site-chrome.mjs');
+await import('./enhance-page-schema.mjs');

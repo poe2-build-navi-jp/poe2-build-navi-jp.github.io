@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { validateRatings, AXES, evidenceLabel } from "../tools/build-ratings.mjs";
 import { releaseTitle, applyVersionTitle } from "../tools/version-title.mjs";
 import { contentHash } from "../tools/page-content.mjs";
-import { ICON_BLOCK } from "../tools/enhance-site-chrome.mjs";
+import { ICON_BLOCK } from "../tools/site-chrome.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const baseUrl = "https://poe2-build-navi-jp.github.io";
@@ -40,7 +40,7 @@ assert(index.includes("PoE2 0.5.5 初心者向けおすすめビルド") && inde
 assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ</title>"), "homepage CTR-focused title missing");
 assert(index.includes("PoE2 0.5.5対応の日本語ビルドサイト"), "homepage Japanese build-site description missing");
 assert(index.includes('class="hero hero-focused"') && !index.includes('class="hero-guide"'), "homepage hero choices must be focused without duplicated guide links");
-assert((index.match(/class="build-tags"/g) || []).length === 5, "homepage featured build purpose tags missing");
+assert((index.match(/class="build-tags"/g) || []).length === 6, "homepage featured build purpose tags missing");
 assert((index.match(/現在Lvから今やることを見る/g) || []).length <= 2, "homepage primary CTA must not be repeated excessively");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
@@ -90,7 +90,7 @@ for (const build of builds) {
     assert(page.includes(`/classes/${build.classSlug}/`), `${pagePath}: class hub link missing`);
     assert(page.includes("現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。"), `${pagePath}: level-value summary missing`);
     assert(page.includes('id="note-referral-guide"') && page.includes('href="#level-card"'), `${pagePath}: note referral handoff missing`);
-    assert(page.includes("公式パッチノート確認 2026-09-23") && page.includes(`育成手順の原典照合 ${build.updatedAt}`), `${pagePath}: patch/build review dates must be separate`);
+    assert(page.includes(`公式パッチノート確認 ${site.latestPatchCheckedAt}`) && page.includes(`育成手順の原典照合 ${build.updatedAt}`), `${pagePath}: patch/build review dates must be separate`);
     assert(page.includes('/best-builds/'), `${pagePath}: purpose comparison link missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
@@ -107,7 +107,7 @@ for (const classData of classes) {
     assert(page.includes(`${classData.name}の序盤Lv1〜30の育て方`), `${pagePath}: early leveling guide missing`);
     assert(page.includes("/leveling/"), `${pagePath}: leveling hub link missing`);
     assert(page.includes("最終確認"), `${pagePath}: update status missing`);
-    assert(page.includes("最新確認 0.5.5c"), `${pagePath}: latest patch status missing`);
+    assert(page.includes(`最新確認 ${site.latestPatch}`), `${pagePath}: latest patch status missing`);
     assert(page.includes('class="build-tags"'), `${pagePath}: purpose tags missing`);
   } catch { failures.push(`missing: ${pagePath}`); }
 }
@@ -411,6 +411,17 @@ for (const path of datedPaths) {
   assert(lastmod && lastmod >= pageDates[path].date, `${path}: sitemap lastmod older than the page content`);
   assert(html.includes(ICON_BLOCK), `${path}: site icons missing`);
   assert((html.match(/<footer class="site-footer">/g) || []).length === 1 && ["/about/", "/editorial-policy/", "/privacy/", "/terms/"].every((link) => html.includes(`<footer class="site-footer">`) && html.slice(html.indexOf('<footer class="site-footer">')).includes(`href="${link}"`)), `${path}: one site footer with operator/policy links required`);
+}
+
+// Structured data: valid JSON-LD everywhere, a BreadcrumbList wherever a breadcrumb is shown,
+// Article on guide chapters and DefinedTerm on dictionary pages (enhance-page-schema.mjs).
+for (const path of datedPaths) {
+  const html = await read(`${path.slice(1)}index.html`);
+  const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => { try { return JSON.parse(match[1]); } catch { failures.push(`${path}: invalid JSON-LD`); return {}; } });
+  const types = new Set(blocks.flatMap((block) => [].concat(block).map((item) => item["@type"])));
+  if (html.includes('<nav class="breadcrumbs"')) assert(types.has("BreadcrumbList"), `${path}: visible breadcrumb without BreadcrumbList`);
+  if (guides.some((guide) => path === `/guides/${guide.slug}/`)) assert(types.has("Article"), `${path}: guide chapter without Article`);
+  if (terms.some((term) => path === `/dictionary/${term.slug}/`)) assert(types.has("DefinedTerm"), `${path}: dictionary page without DefinedTerm`);
 }
 for (const icon of ["favicon.ico", "favicon.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.png"]) {
   try { await access(resolve(root, icon)); } catch { failures.push(`missing: ${icon}`); }
