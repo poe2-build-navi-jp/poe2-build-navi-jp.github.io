@@ -50,8 +50,8 @@ axes the quoted source statement, URL and date). `beginnerRating` is always
 ```
 node tools/enhance-ratings.mjs
 node tools/enhance-build-ux.mjs
-node tools/generate-sitemap.mjs
 node tools/enhance-version-notice.mjs
+node tools/generate-sitemap.mjs
 node tools/generate-og-images.mjs   # needs npm install + local Chromium
 node tools/inject-analytics.mjs
 node tools/sync-asset-versions.mjs
@@ -131,19 +131,32 @@ run `node tools/generate-build-data.mjs`; `npm test` fails while those files are
 
 ```
 node tools/generate-pages.mjs
-node tools/generate-sitemap.mjs
 node tools/enhance-image-seo.mjs
 node tools/enhance-ratings.mjs
 node tools/enhance-build-ux.mjs
 node tools/enhance-version-notice.mjs
 node tools/enhance-one-hub.mjs
 node tools/enhance-term-links.mjs
+node tools/enhance-site-chrome.mjs
 node tools/generate-build-data.mjs
+node tools/generate-sitemap.mjs
 node tools/generate-og-images.mjs
 node tools/inject-analytics.mjs
 node tools/sync-asset-versions.mjs
 npm test && npm run test:contrast && npm run test:order
 ```
 
-On an unchanged checkout this chain reproduces the committed pages, apart from an empty line
-left in the `<head>` of a few build pages; drop that line instead of committing it.
+On an unchanged checkout this chain reproduces the committed pages exactly.
+
+## Site icons, footer and sitemap dates
+
+`tools/enhance-site-chrome.mjs` puts the `site-icon` head block (favicon.ico / favicon.svg /
+apple-touch-icon.png) and, on pages without one, the shared `site-footer` (運営者情報・編集方針・
+プライバシー・利用規約) after `</main>`. `generate-pages.mjs` runs it at the end. The icons are
+rendered from `favicon.svg` by `node tools/generate-site-icons.mjs` (Chromium + ImageMagick).
+
+`generate-sitemap.mjs` keeps a fingerprint of each page's main content in `data/page-dates.json`
+(`tools/page-content.mjs`; the shared 1.0 box and version notice are ignored). When a fingerprint
+changes, that page's date becomes today (JST, or `SITEMAP_DATE`), and lastmod is the later of it
+and the data-based date. Run it after the enhancers that change `<main>`; `npm test` fails while
+a page's fingerprint is out of date.

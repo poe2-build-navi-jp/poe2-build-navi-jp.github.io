@@ -10,7 +10,8 @@ export const HEAD_BLOCKS = [
   ["analytics-events", (html) => html.search(/<script defer src="\/assets\/analytics-events\.js/)],
   ["build-ux", marker("build-ux")],
   ["one-faq", marker("one-faq")],
-  ["og-image", marker("og-image")]
+  ["og-image", marker("og-image")],
+  ["site-icon", marker("site-icon")]
 ];
 export const MAIN_END_BLOCKS = [
   ["term-links", marker("term-links")],

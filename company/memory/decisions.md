@@ -216,3 +216,9 @@
 - `sorceress-spark-stormweaver`（スパーク・ストームウィーバー）を追加。原典は PoE Vault の育成（0.5、SSF可と明記）・
   Endgame（0.5.5）と pathofexile.gg。SSFはキャンペーンのみ明記のため ssf=null、ssfNote に範囲を記載。Tier A。
 - 次の候補（未着手）：ドルイドの熊・狼・ワイバーン型、ウィッチのブラッドメイジ。
+
+## 2026-10-04 サイトアイコン・共通フッター・サイトマップ更新日（ユーザー依頼）
+- ファビコン未設定で全ページ404だったため、「P2」ロゴからfavicon.ico/svg・apple-touch-icon・manifestアイコンを追加。
+- プライバシー等へのリンクが74ページ中12ページだけだったため、全ページに共通フッター（`enhance-site-chrome.mjs`）。
+- サイトマップのlastmodが49ページで09-13のままだったため、本文の指紋（`data/page-dates.json`）で実際の更新日を出す方式に変更。
+  初期値はgit履歴で本文が最後に変わったコミット日。

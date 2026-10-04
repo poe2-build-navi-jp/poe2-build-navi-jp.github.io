@@ -84,7 +84,8 @@ for(const p of pages){
  let html=await read(p.file);
  html=html.replace(/<!-- og-image:start -->[\s\S]*?<!-- og-image:end -->/g,'')
   .replace(/<meta name="twitter:card" content="[^"]*">/g,'')
-  .replace(/<meta property="og:image(?::[a-z]+)?" content="[^"]*">/g,'');
+  .replace(/<meta property="og:image(?::[a-z]+)?" content="[^"]*">/g,'')
+  .replace(/\n[ \t]+\n/g,'\n'); // Lines whose only tag was removed above.
  const abs=`${base}${p.image}`;
  const meta=`<!-- og-image:start --><meta property="og:image" content="${abs}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(p.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${abs}"><!-- og-image:end -->`;
  html=insertBlock(html,'</head>','og-image',meta);
