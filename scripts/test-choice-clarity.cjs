@@ -20,7 +20,7 @@ const changes=[...home.querySelectorAll('#recent-changes > ul > li')];
 const expected=builds.flatMap(b=>(b.changeHistory||[]).map(r=>({b,...r}))).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
 assert.equal(changes.length,3);
 changes.forEach((li,i)=>{assert(li.textContent.includes(expected[i].summary));assert.equal(li.querySelector('time').dateTime,expected[i].date);assert.equal(li.querySelector('a').hash,'#update-history');});
-assert(changes.some(li=>li.textContent.includes('2026-09-29')));
+assert(changes.some(li=>li.textContent.includes(expected[0].date)));
 assert.equal(home.querySelector('#recent-changes details').open,false);
 const page=new JSDOM(read('builds/index.html'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/builds/'}),w=page.window,d=w.document;
 w.HTMLElement.prototype.scrollIntoView=function(){};
