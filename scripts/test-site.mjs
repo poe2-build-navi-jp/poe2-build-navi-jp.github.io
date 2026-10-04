@@ -3,6 +3,8 @@ import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 import { validateRatings, AXES, evidenceLabel } from "../tools/build-ratings.mjs";
 import { releaseTitle, applyVersionTitle } from "../tools/version-title.mjs";
+import { contentHash } from "../tools/page-content.mjs";
+import { ICON_BLOCK } from "../tools/enhance-site-chrome.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const baseUrl = "https://poe2-build-navi-jp.github.io";
@@ -398,6 +400,22 @@ for (const path of sitemapPaths) {
 }
 for (const path of sitemapPaths.filter((p) => p)) assert((inbound.get(path) ?? 0) >= 1, `/${path}: no internal page links to it`);
 for (const path of sitemapPaths.filter((p) => /^dictionary\/[^/]+\/$/.test(p))) assert((inbound.get(path) ?? 0) >= 5, `/${path}: glossary term needs at least 5 internal links`);
+// Sitemap lastmod follows each page's content (data/page-dates.json), and every page carries the
+// site icons and a footer linking the operator, editorial, privacy and terms pages.
+const pageDates = JSON.parse(await read("data/page-dates.json"));
+const datedPaths = [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io(\/[^<]*)<\/loc>/g)].map((match) => match[1]);
+for (const path of datedPaths) {
+  const html = await read(`${path.slice(1)}index.html`);
+  assert(pageDates[path]?.hash === contentHash(html), `${path}: content changed; run node tools/generate-sitemap.mjs after the enhancers`);
+  const lastmod = sitemap.match(new RegExp(`<loc>${baseUrl}${path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</loc><lastmod>([^<]+)`))?.[1];
+  assert(lastmod && lastmod >= pageDates[path].date, `${path}: sitemap lastmod older than the page content`);
+  assert(html.includes(ICON_BLOCK), `${path}: site icons missing`);
+  assert((html.match(/<footer class="site-footer">/g) || []).length === 1 && ["/about/", "/editorial-policy/", "/privacy/", "/terms/"].every((link) => html.includes(`<footer class="site-footer">`) && html.slice(html.indexOf('<footer class="site-footer">')).includes(`href="${link}"`)), `${path}: one site footer with operator/policy links required`);
+}
+for (const icon of ["favicon.ico", "favicon.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.png"]) {
+  try { await access(resolve(root, icon)); } catch { failures.push(`missing: ${icon}`); }
+}
+
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);

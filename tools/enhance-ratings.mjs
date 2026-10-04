@@ -45,9 +45,14 @@ let existing='';try{existing=await read('rating-criteria/index.html');}catch{}
 // so this rebuild gives the same page whichever order the tools run in.
 const headStart=(existing.match(/<head>([\s\S]*?)<meta charset/)?.[1]||'').replace(/<meta (?:property="og:image(?::[a-z]+)?"|name="twitter:card") content="[^"]*">/g,'');
 const ogBlock=existing.match(/<!-- og-image:start -->[\s\S]*?<!-- og-image:end -->/)?.[0];
+const iconBlock=existing.match(/<!-- site-icon:start -->[\s\S]*?<!-- site-icon:end -->/)?.[0];
 const imageTags=`<meta property="og:image" content="${base}/images/poe2/og/poe2-rating-criteria-og.webp"><meta name="twitter:card" content="summary_large_image">`;
 const rebuilt=page.replace('<head>',`<head>${headStart}${ogBlock?'':imageTags}`);
-await save('rating-criteria/index.html',ogBlock?insertBlock(rebuilt,'</head>','og-image',ogBlock):rebuilt);
+let criteria=ogBlock?insertBlock(rebuilt,'</head>','og-image',ogBlock):rebuilt;
+if(iconBlock)criteria=insertBlock(criteria,'</head>','site-icon',iconBlock);
+const footerBlock=existing.match(/<!-- site-footer:start -->[\s\S]*?<!-- site-footer:end -->/)?.[0];
+if(footerBlock)criteria=criteria.replace(/<\/main>(?![\s\S]*<\/main>)/,`</main>${footerBlock}`);
+await save('rating-criteria/index.html',criteria);
 
 // Link the criteria from the editorial policy and hub pages.
 let policy=await read('editorial-policy/index.html');
