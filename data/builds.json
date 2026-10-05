@@ -706,7 +706,7 @@
     "gearPriorities": [
       "盾（最重要）：アーマー値とアーマー増加%。シールドウォールは盾のアーマー15ごとに物理ダメージ5〜7が加算されるため、火力も盾で決まる（poe2db。0.5.0で6〜8から変更）。使用にはアーマー系の盾が必要。",
       "Lv22の切替時：アーマー値の高い盾を先に用意しておく。",
-      "耐性：Coal Stokerを取得する構成なら、火耐性の50%が冷気・雷耐性にも加わる（Maxroll）。実際の取得ノードは原典の段階別ツリーで確認し、未取得ならこの効果を前提に装備を組まない。",
+      "耐性：Coal Stokerを取得する構成なら、火耐性の修正値の50%が冷気・雷耐性にも加わる（PoE2DBの現行効果文）。実際の取得ノードは原典の段階別ツリーで確認し、未取得ならこの効果を前提に装備を組まない。",
       "必要な耐性を確保できた後なら、余った接尾辞を火力やアイテムレアリティに回せる（Maxroll・Kami-labs）。",
       "マップ序盤：ユニーク「Thrillsteel」で常時Onslaught（加速）を得て周回を速くする案がある（Kami-labs）。",
       "防具：ライフと不足耐性。現在レベルに合う防具を使う。"
@@ -741,6 +741,11 @@
         "url": "https://poe2db.tw/us/Shield_Wall",
         "checkedAt": "2026-09-28",
         "type": "ゲームデータ（ジェムのTier・盾アーマーによる加算ダメージ・変更履歴）"
+      },
+      {
+        "name": "PoE2DB：Smith of KitavaのCoal Stoker（火耐性の修正値）",
+        "url": "https://poe2db.tw/us/Smith_of_Kitava",
+        "checkedAt": "2026-10-06"
       }
     ],
     "status": "verified",
@@ -2456,7 +2461,7 @@
       "武器の重要度が高い：PoE Vaultは、火力がまともな武器を入手・クラフトできるかに大きく左右されると短所に挙げている。ワンドは+Chaos Spell Skills、Spell Damage、Cast Speed。",
       "キャンペーン後：店とギャンブル店で弱い部位を更新し、まず耐性上限を確保する（Maxroll）。",
       "マップ以降：ES装備を更新し、アイテムレアリティ100%を早めに目指す。ジュエルは最大ES%増加と、マナ維持用に「キル時に最大マナの%回復」を1つ以上（Maxroll）。",
-      "Spirit：ConvalescenceとRavenous Swarmを両方使うには、アミュレットと胴で合計+50のSpiritが必要（Maxroll）。",
+      "Spirit：ConvalescenceとRavenous Swarmの併用に「アミュレットと胴で合計+50 Spiritが必要」というMaxroll由来の条件は、原典を取得できず再確認できていない。",
       "Endgame：+全スキルレベル、ES、アイテムレアリティ、移動速度の高いブーツ、Lv20〜21・品質20%のジェム。ローライフ版はEternal Life取得後にユニーク「Atziri's Disdain」を早めに装備（Maxroll）。",
       "ユニークは必須ではない（Maxroll）。"
     ],
