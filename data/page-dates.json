@@ -188,8 +188,8 @@
   "date": "2026-10-06"
  },
  "/dictionary/dps/": {
-  "hash": "c6a4d30acfe91002",
-  "date": "2026-10-03"
+  "hash": "889b0ba2f7bbb894",
+  "date": "2026-10-06"
  },
  "/dictionary/skill-gem/": {
   "hash": "2bffb4aa9cd4633c",
@@ -216,15 +216,15 @@
   "date": "2026-10-06"
  },
  "/dictionary/league-starter/": {
-  "hash": "7d60a56f0bb6ea22",
-  "date": "2026-10-03"
+  "hash": "cf0be4cd3ab65f25",
+  "date": "2026-10-06"
  },
  "/dictionary/ssf/": {
-  "hash": "43b451c27f34c9af",
-  "date": "2026-10-03"
+  "hash": "af68531b97183508",
+  "date": "2026-10-06"
  },
  "/dictionary/ascendancy/": {
-  "hash": "34bb6ba56eeec28b",
+  "hash": "2db775a6338fe3ca",
   "date": "2026-10-06"
  },
  "/dictionary/spirit/": {
@@ -260,7 +260,7 @@
   "date": "2026-10-06"
  },
  "/poe2-1-0/release-date/": {
-  "hash": "090e8b21eb2f20bd",
+  "hash": "91f34b2eb7641f5e",
   "date": "2026-10-06"
  },
  "/poe2-1-0/how-to-start/": {
@@ -268,7 +268,7 @@
   "date": "2026-10-06"
  },
  "/poe2-1-0/system-requirements/": {
-  "hash": "c442e7df502f81ec",
+  "hash": "c2038a94b2c4934d",
   "date": "2026-10-06"
  },
  "/poe2-1-0/japanese/": {
