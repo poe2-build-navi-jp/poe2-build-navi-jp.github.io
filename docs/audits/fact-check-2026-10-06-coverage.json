@@ -1,0 +1,841 @@
+{
+  "checkedAt": "2026-10-06 JST",
+  "baseCommit": "586ba159c56b247031bf683a6e4aa05b2ae9ebc3",
+  "indexedPages": 75,
+  "completeFactualCertification": false,
+  "pages": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "claimIds": [
+        "R05",
+        "R38"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/",
+      "claimIds": [
+        "R05"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/",
+      "claimIds": [
+        "R38"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/leveling/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/gear-check/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/class-check/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/beginner-guide/",
+      "claimIds": [
+        "R01",
+        "R02",
+        "R05"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/tier-list/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/league-starter/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/best-builds/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/",
+      "claimIds": [
+        "R01",
+        "R02"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/about/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/editorial-policy/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/rating-criteria/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/privacy/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/terms/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/monk/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/mercenary/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/warrior/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/sorceress/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/huntress/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/ranger/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/witch/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/druid/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/",
+      "claimIds": [],
+      "buildId": "monk-whirling-assault",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/mercenary/twister-gemling/",
+      "claimIds": [],
+      "buildId": "mercenary-twister-gemling",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/",
+      "claimIds": [],
+      "buildId": "warrior-shield-wall-smith",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/",
+      "claimIds": [],
+      "buildId": "sorceress-sand-fire",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/huntress/companion/",
+      "claimIds": [],
+      "buildId": "huntress-companion",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/",
+      "claimIds": [],
+      "buildId": "ranger-ice-shot-deadeye",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/",
+      "claimIds": [],
+      "buildId": "witch-minion-infernalist",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/druid/plant-oracle/",
+      "claimIds": [],
+      "buildId": "druid-plant-oracle",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/",
+      "claimIds": [],
+      "buildId": "witch-ed-contagion-lich",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/",
+      "claimIds": [],
+      "buildId": "mercenary-grenade-gemling",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/",
+      "claimIds": [],
+      "buildId": "huntress-twister-spirit-walker",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/sorceress/spark-stormweaver/",
+      "claimIds": [],
+      "buildId": "sorceress-spark-stormweaver",
+      "status": "原典確認・残る制限はビルド台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/skill-gems/",
+      "claimIds": [
+        "guides/skill-gems:1",
+        "guides/skill-gems:2",
+        "guides/skill-gems:3",
+        "guides/skill-gems:4",
+        "guides/skill-gems:5",
+        "guides/skill-gems:6",
+        "guides/skill-gems:7",
+        "guides/skill-gems:8",
+        "guides/skill-gems:9",
+        "guides/skill-gems:10",
+        "guides/skill-gems:11",
+        "guides/skill-gems:12",
+        "guides/skill-gems:13",
+        "guides/skill-gems:14",
+        "guides/skill-gems:15",
+        "guides/skill-gems:16",
+        "guides/skill-gems:17",
+        "guides/skill-gems:18",
+        "guides/skill-gems:19",
+        "guides/skill-gems:20",
+        "guides/skill-gems:21",
+        "guides/skill-gems:22",
+        "guides/skill-gems:23"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/support-gems/",
+      "claimIds": [
+        "guides/support-gems:1",
+        "guides/support-gems:2",
+        "guides/support-gems:3",
+        "guides/support-gems:4",
+        "guides/support-gems:5",
+        "guides/support-gems:6",
+        "guides/support-gems:7",
+        "guides/support-gems:8",
+        "guides/support-gems:9",
+        "guides/support-gems:10",
+        "guides/support-gems:11",
+        "guides/support-gems:12",
+        "guides/support-gems:13"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/passive-tree/",
+      "claimIds": [
+        "guides/passive-tree:1",
+        "guides/passive-tree:2"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/equipment-basics/",
+      "claimIds": [
+        "guides/equipment-basics:1",
+        "guides/equipment-basics:2",
+        "guides/equipment-basics:3",
+        "guides/equipment-basics:4",
+        "guides/equipment-basics:5",
+        "guides/equipment-basics:6",
+        "guides/equipment-basics:7",
+        "guides/equipment-basics:8",
+        "guides/equipment-basics:9",
+        "guides/equipment-basics:10",
+        "guides/equipment-basics:11",
+        "guides/equipment-basics:12",
+        "guides/equipment-basics:13",
+        "guides/equipment-basics:14",
+        "guides/equipment-basics:15",
+        "guides/equipment-basics:16",
+        "guides/equipment-basics:17",
+        "guides/equipment-basics:18",
+        "guides/equipment-basics:19",
+        "guides/equipment-basics:20"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/resistance/",
+      "claimIds": [
+        "guides/resistance:1",
+        "guides/resistance:2"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/increase-damage/",
+      "claimIds": [
+        "guides/increase-damage:1",
+        "guides/increase-damage:2"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/why-i-die/",
+      "claimIds": [
+        "guides/why-i-die:1",
+        "guides/why-i-die:2"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/after-campaign/",
+      "claimIds": [
+        "guides/after-campaign:1",
+        "guides/after-campaign:2",
+        "guides/after-campaign:3",
+        "guides/after-campaign:4",
+        "guides/after-campaign:5",
+        "guides/after-campaign:6",
+        "guides/after-campaign:7",
+        "guides/after-campaign:8",
+        "guides/after-campaign:9",
+        "guides/after-campaign:10",
+        "guides/after-campaign:11",
+        "guides/after-campaign:12",
+        "guides/after-campaign:13",
+        "guides/after-campaign:14",
+        "guides/after-campaign:15",
+        "guides/after-campaign:16",
+        "guides/after-campaign:17",
+        "guides/after-campaign:18",
+        "guides/after-campaign:19"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/mapping/",
+      "claimIds": [
+        "guides/mapping:1",
+        "guides/mapping:2",
+        "seo/guides/mapping/:0:bullets:0",
+        "seo/guides/mapping/:0:bullets:1",
+        "seo/guides/mapping/:0:bullets:2",
+        "seo/guides/mapping/:0:bullets:3",
+        "seo/guides/mapping/:0:bullets:4",
+        "seo/guides/mapping/:1:paragraphs:0",
+        "seo/guides/mapping/:2:paragraphs:0"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/build/",
+      "claimIds": [
+        "dictionary/build:1",
+        "dictionary/build:2",
+        "dictionary/build:3",
+        "dictionary/build:4",
+        "dictionary/build:5",
+        "dictionary/build:6",
+        "dictionary/build:7",
+        "dictionary/build:8",
+        "dictionary/build:9",
+        "dictionary/build:10",
+        "dictionary/build:11",
+        "dictionary/build:12",
+        "dictionary/build:13",
+        "dictionary/build:14"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/dps/",
+      "claimIds": [
+        "dictionary/dps:1",
+        "dictionary/dps:2",
+        "dictionary/dps:3",
+        "dictionary/dps:4",
+        "dictionary/dps:5",
+        "dictionary/dps:6",
+        "dictionary/dps:7",
+        "dictionary/dps:8",
+        "dictionary/dps:9",
+        "dictionary/dps:10",
+        "dictionary/dps:11"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/skill-gem/",
+      "claimIds": [
+        "dictionary/skill-gem:1",
+        "dictionary/skill-gem:2",
+        "dictionary/skill-gem:3",
+        "dictionary/skill-gem:4",
+        "dictionary/skill-gem:5",
+        "dictionary/skill-gem:6",
+        "dictionary/skill-gem:7",
+        "dictionary/skill-gem:8",
+        "dictionary/skill-gem:9",
+        "dictionary/skill-gem:10",
+        "dictionary/skill-gem:11",
+        "dictionary/skill-gem:12",
+        "dictionary/skill-gem:13"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/support-gem/",
+      "claimIds": [
+        "dictionary/support-gem:1",
+        "dictionary/support-gem:2",
+        "dictionary/support-gem:3",
+        "dictionary/support-gem:4",
+        "dictionary/support-gem:5",
+        "dictionary/support-gem:6",
+        "dictionary/support-gem:7",
+        "dictionary/support-gem:8",
+        "dictionary/support-gem:9",
+        "dictionary/support-gem:10",
+        "dictionary/support-gem:11"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/passive-tree/",
+      "claimIds": [
+        "dictionary/passive-tree:1",
+        "dictionary/passive-tree:2",
+        "dictionary/passive-tree:3",
+        "dictionary/passive-tree:4",
+        "dictionary/passive-tree:5",
+        "dictionary/passive-tree:6",
+        "dictionary/passive-tree:7",
+        "dictionary/passive-tree:8",
+        "dictionary/passive-tree:9",
+        "dictionary/passive-tree:10",
+        "dictionary/passive-tree:11",
+        "dictionary/passive-tree:12"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/resistance/",
+      "claimIds": [
+        "dictionary/resistance:1",
+        "dictionary/resistance:2",
+        "dictionary/resistance:3",
+        "dictionary/resistance:4",
+        "dictionary/resistance:5",
+        "dictionary/resistance:6",
+        "dictionary/resistance:7",
+        "dictionary/resistance:8",
+        "dictionary/resistance:9",
+        "dictionary/resistance:10",
+        "dictionary/resistance:11",
+        "dictionary/resistance:12",
+        "dictionary/resistance:13"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/mapping/",
+      "claimIds": [
+        "dictionary/mapping:1",
+        "dictionary/mapping:2",
+        "dictionary/mapping:3",
+        "dictionary/mapping:4",
+        "dictionary/mapping:5",
+        "dictionary/mapping:6",
+        "dictionary/mapping:7",
+        "dictionary/mapping:8",
+        "dictionary/mapping:9",
+        "dictionary/mapping:10",
+        "dictionary/mapping:11",
+        "dictionary/mapping:12"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/endgame/",
+      "claimIds": [
+        "dictionary/endgame:1",
+        "dictionary/endgame:2",
+        "dictionary/endgame:3",
+        "dictionary/endgame:4",
+        "dictionary/endgame:5",
+        "dictionary/endgame:6",
+        "dictionary/endgame:7",
+        "dictionary/endgame:8",
+        "dictionary/endgame:9",
+        "dictionary/endgame:10",
+        "dictionary/endgame:11"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/league-starter/",
+      "claimIds": [
+        "dictionary/league-starter:1",
+        "dictionary/league-starter:2",
+        "dictionary/league-starter:3",
+        "dictionary/league-starter:4",
+        "dictionary/league-starter:5",
+        "dictionary/league-starter:6",
+        "dictionary/league-starter:7",
+        "dictionary/league-starter:8",
+        "dictionary/league-starter:9",
+        "dictionary/league-starter:10",
+        "dictionary/league-starter:11",
+        "dictionary/league-starter:12",
+        "dictionary/league-starter:13"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/ssf/",
+      "claimIds": [
+        "dictionary/ssf:1",
+        "dictionary/ssf:2",
+        "dictionary/ssf:3",
+        "dictionary/ssf:4",
+        "dictionary/ssf:5",
+        "dictionary/ssf:6",
+        "dictionary/ssf:7",
+        "dictionary/ssf:8",
+        "dictionary/ssf:9",
+        "dictionary/ssf:10",
+        "dictionary/ssf:11",
+        "dictionary/ssf:12",
+        "dictionary/ssf:13"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/ascendancy/",
+      "claimIds": [
+        "dictionary/ascendancy:1",
+        "dictionary/ascendancy:2",
+        "dictionary/ascendancy:3",
+        "dictionary/ascendancy:4",
+        "dictionary/ascendancy:5",
+        "dictionary/ascendancy:6",
+        "dictionary/ascendancy:7",
+        "dictionary/ascendancy:8",
+        "dictionary/ascendancy:9",
+        "dictionary/ascendancy:10",
+        "dictionary/ascendancy:11"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/spirit/",
+      "claimIds": [
+        "dictionary/spirit:1",
+        "dictionary/spirit:2",
+        "dictionary/spirit:3",
+        "dictionary/spirit:4",
+        "dictionary/spirit:5",
+        "dictionary/spirit:6",
+        "dictionary/spirit:7",
+        "dictionary/spirit:8",
+        "dictionary/spirit:9",
+        "dictionary/spirit:10",
+        "dictionary/spirit:11",
+        "dictionary/spirit:12",
+        "dictionary/spirit:13",
+        "dictionary/spirit:14",
+        "dictionary/spirit:15"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/energy-shield/",
+      "claimIds": [
+        "dictionary/energy-shield:1",
+        "dictionary/energy-shield:2",
+        "dictionary/energy-shield:3",
+        "dictionary/energy-shield:4",
+        "dictionary/energy-shield:5",
+        "dictionary/energy-shield:6",
+        "dictionary/energy-shield:7",
+        "dictionary/energy-shield:8",
+        "dictionary/energy-shield:9",
+        "dictionary/energy-shield:10",
+        "dictionary/energy-shield:11",
+        "dictionary/energy-shield:12"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/poe2-0-5-5-builds/",
+      "claimIds": [
+        "R04"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/forbidden-rites-beginner/",
+      "claimIds": [
+        "R04"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/gear-upgrade/",
+      "claimIds": [
+        "seo/guides/gear-upgrade/:0:paragraphs:0",
+        "seo/guides/gear-upgrade/:1:bullets:0",
+        "seo/guides/gear-upgrade/:1:bullets:1",
+        "seo/guides/gear-upgrade/:1:bullets:2",
+        "seo/guides/gear-upgrade/:1:bullets:3",
+        "seo/guides/gear-upgrade/:1:bullets:4",
+        "seo/guides/gear-upgrade/:2:paragraphs:0",
+        "seo/guides/gear-upgrade/:3:paragraphs:0",
+        "seo/guides/gear-upgrade/:4:bullets:0",
+        "seo/guides/gear-upgrade/:4:bullets:1",
+        "seo/guides/gear-upgrade/:4:bullets:2"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/mana-problem/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/cant-beat-boss/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/slow-mapping/",
+      "claimIds": [],
+      "buildId": null,
+      "status": "共通データ・編集上の案内・機能説明を照合"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/release-date/",
+      "claimIds": [
+        "R01",
+        "R03",
+        "R04",
+        "R06",
+        "R07",
+        "R12",
+        "R13",
+        "R28",
+        "R29",
+        "R40"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/how-to-start/",
+      "claimIds": [
+        "R01",
+        "R06",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R20"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/system-requirements/",
+      "claimIds": [
+        "R14",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R25"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/japanese/",
+      "claimIds": [
+        "R22",
+        "R23",
+        "R24"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/microtransactions/",
+      "claimIds": [
+        "R16",
+        "R31",
+        "R32",
+        "R33",
+        "R34",
+        "R35"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/controller/",
+      "claimIds": [
+        "R14",
+        "R15",
+        "R16",
+        "R25",
+        "R26",
+        "R27"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/pre-registration/",
+      "claimIds": [
+        "R06",
+        "R28",
+        "R29",
+        "R30"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/build-status/",
+      "claimIds": [
+        "R11"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/duelist/",
+      "claimIds": [
+        "R01",
+        "R06",
+        "R07",
+        "R08",
+        "R09",
+        "R10"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/what-is-poe2/",
+      "claimIds": [
+        "R01",
+        "R02",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R18",
+        "R20",
+        "R22",
+        "R31",
+        "R35",
+        "R36",
+        "R37",
+        "R38",
+        "R39"
+      ],
+      "buildId": null,
+      "status": "個別主張の判定は台帳参照"
+    }
+  ]
+}
