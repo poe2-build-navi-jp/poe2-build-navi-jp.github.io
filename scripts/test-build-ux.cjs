@@ -60,8 +60,8 @@ console.log('PASS: 12 static cards, unlock/SSF/style filters, zero results recov
  assert.match(shield.ratingEvidence.beginner.verifiedChecks.earlyMainSkill.basis,/ローリングスラム.*代替/);
  assert.equal(shield.ratingEvidence.defense.source,'https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr');
  assert.match(shield.ratingEvidence.defense.note,/最初のアセンダンシー取得後のキャンペーン/);
- assert.match(data.find(b=>b.id==='huntress-twister-spirit-walker').ratingEvidence.beginner.verifiedChecks.earlyMainSkill.basis,/ツイスター.*Lv1〜10のPounceとShredは切替前の代替/);
- assert.match(fs.readFileSync('builds/huntress/twister-spirit-walker/index.html','utf8'),/主力ツイスターをWhirling Slashと組み合わせて使用。Lv1〜10のPounceとShredは切替前の代替/);
+ assert.match(data.find(b=>b.id==='huntress-twister-spirit-walker').ratingEvidence.beginner.verifiedChecks.earlyMainSkill.basis,/PoE2DBでTwisterはTier 1/);
+ assert.match(fs.readFileSync('builds/huntress/twister-spirit-walker/index.html','utf8'),/PoE2DBでTwisterはTier 1/);
  assert.match(rows(ice,discovery).find(([name])=>name==='主力スキル使用条件')[1],/Lv31.*レベル9/);
  assert.match(rows(ice,discovery).find(([name])=>name==='主力への切替目安')[1],/Lv31以降/);
  console.log('PASS: 12 builds share the same card facts and ratings on builds, Tier and starter; skill requirement differs from recommended switch');

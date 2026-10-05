@@ -106,7 +106,7 @@ for (const classData of classes) {
     assert(page.includes(`<h1>PoE2 ${classData.name}おすすめビルド・育成｜0.5.5</h1>`), `${pagePath}: search-focused class H1 missing`);
     assert(page.includes(`${classData.name}の序盤Lv1〜30の育て方`), `${pagePath}: early leveling guide missing`);
     assert(page.includes("/leveling/"), `${pagePath}: leveling hub link missing`);
-    assert(page.includes("最終確認"), `${pagePath}: update status missing`);
+    assert(page.includes("パッチ確認"), `${pagePath}: patch-only check status missing`);
     assert(page.includes(`最新確認 ${site.latestPatch}`), `${pagePath}: latest patch status missing`);
     assert(page.includes('class="build-tags"'), `${pagePath}: purpose tags missing`);
   } catch { failures.push(`missing: ${pagePath}`); }

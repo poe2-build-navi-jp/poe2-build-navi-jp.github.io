@@ -51,7 +51,7 @@
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Glacial Cascade + Frozen Locus。ボスのみTempest Flurryを使用。",
+        "mainSkill": "Glacial Cascade + Frozen Locus。Lv14以降、必要条件を満たしたTempest Flurryをボスのショック付与に追加。",
         "supports": "序盤構成を継続。Tempest FlurryにはShockを付け、ボスへのショック付与用として使う。",
         "passivePriority": "「Glacial 1-22」段階別ツリーを継続。冷気・アタック系の導線から外れない。",
         "gearPriority": "武器：物理増加・追加ダメージ。ブーツ：移動速度。その他：耐性・ライフ・回避。",
@@ -97,7 +97,7 @@
       {
         "label": "Lv41〜キャンペーン終了",
         "mainSkill": "ワーリングアサルト + フォーリングサンダー + Charged Staff。",
-        "supports": "ワーリングアサルト：Magnified Area II、Elemental Armament II、Rage III、Ancestral Call II、Efficiency IIを順次追加。",
+        "supports": "原典の「Leveling Whirling 41+」のサポートと入手条件を確認する。Magnified Area II・Elemental Armament II・Rage III・Ancestral Call II・Efficiency IIの5枠はLate Endgameで確認した候補で、Lv41時点で全て用意できることは未確認。",
         "passivePriority": "0.5.5ガイドの「Leveling Whirling 41+」ツリーへ切り替える。",
         "gearPriority": "クォータースタッフは追加ダメージ、ダメージ増加、近接/アタックスキルレベル、クリティカル、攻撃速度。防具は耐性・ライフ・回避。",
         "replaceGear": "良いクォータースタッフがHollow Palmを上回る場合は武器型へ戻す。",
@@ -112,7 +112,7 @@
       {
         "label": "Mapping開始",
         "mainSkill": "Killing Palm → Charged Staff → ワーリングアサルト → フォーリングサンダー。",
-        "supports": "ワーリングアサルトの5枠を揃え、フォーリングサンダーはFist of War III、Culmination II、Nova Projectilesを優先候補にする。",
+        "supports": "原典の「Early Endgame Whirling」で、所持ジェムと枠数に合うサポートを確認する。Late Endgameの5枠やFalling Thunder用の高Tierサポートが、マップ開始時に揃うとは扱わない。",
         "passivePriority": "「Early Endgame Whirling」ツリーへ移行。アセンダンシーはWay of the Stonefistを含む現行ガイドを確認。",
         "gearPriority": "まず耐性と防御を安定させ、次にクォータースタッフの火力、近接スキルレベル、クリティカル、攻撃速度を伸ばす。",
         "replaceGear": "耐性不足の防具、移動速度不足のブーツ、火力が停滞したクォータースタッフの順で確認。",
@@ -202,7 +202,7 @@
           "ssfConfirmed": true,
           "noDodgeRequirement": false
         },
-        "note": "加点した条件だけを原典と結び付けています。主力のワーリングアサルトはTier 11ジェムで、使えるのはLv41から（poe2db）のため序盤条件は加点しません。Maxrollはデメリットに「Don't Get Hit Playstyle」を挙げており、安全な立ち回りも加点しません。操作の簡単さを長所として明記した資料は確認できませんでした。",
+        "note": "加点した条件だけを原典と結び付けています。主力ワーリングアサルトの切替はLv41からのため、序盤条件は加点しません。NickTewの育成ガイドはGlacial Cascade構成を操作が簡単と説明していますが、完成形は最初のパワーチャージ生成とCharged Staff維持が必要です。育成用の操作評価を完成形へ広げず、操作条件は加点していません。MaxrollのSSF・防御に関する記述は従来の確認根拠であり、今回の監査では原文を再取得できていません。",
         "score": 2,
         "verifiedChecks": {
           "ssfConfirmed": {
@@ -252,6 +252,10 @@
       {
         "date": "2026-09-28",
         "summary": "Maxroll（0.5.5）のメリット欄にSSFでの成立（キャンペーン約4時間・Arbiterまで約8時間）が明記されていたためSSF可に変更し、初心者向けを未評価→2/5に更新。poe2dbでワーリングアサルトの解禁Lv41を確認。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ]
   },
@@ -284,7 +288,7 @@
     "leagueStarter": true,
     "ssf": null,
     "strengths": [
-      "キャンペーン開始からツイスターを主力にできる。",
+      "Act 1で必要なジェムを入手後、Whirling SlashとTwisterの連携を主力にできる。",
       "段階別の装備・スキル・パッシブ構成が公開されている。",
       "殲滅力が高いため、被弾すること自体がほとんどない（Maxroll）。"
     ],
@@ -387,7 +391,7 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "ツイスターを周回と単体の主力にし、パリィ・Fangs of Frost・War Bannerを状況別に追加。",
+        "mainSkill": "ツイスターを主力に、原典Early／Mid EndgameのSkill Gemsと操作順を同じ版で確認する。序盤のパリィ・Fangs of Frost・War Banner構成を自動的に完成形へ持ち越さない。",
         "supports": "Atlas ProgressionからEarly Endgameの原典構成へ進む。変更前後のマナ消費を確認。",
         "passivePriority": "Atlas Progression、Late Atlas、Early Endgameの順で段階別ツリーを追う。",
         "gearPriority": "まずライフと耐性、次に攻撃用槍の追加ダメージと速度用槍・ブーツの移動速度を比較。原典のEarly／Mid Endgame装備タブで採用版と照合。",
@@ -402,17 +406,17 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "ワーリングスラッシュ×3 → ツイスター。必要時にパリィ → Fangs of Frost → War Bannerを組み込む。",
+        "mainSkill": "原典Endgameの基本順：Sniper's Mark → ワーリングスラッシュを3回以上 → Ice-Tipped ArrowsとBarrage → ツイスター。バックラー採用時は攻撃前のパリィを追加候補にする。",
         "supports": "Mid EndgameからLate Endgameの原典構成を基準に、装備とマナに合わせて調整。",
         "passivePriority": "Mid Endgame、Late Endgame段階別ツリーを順に完成。正確なノード名は原典を確認。",
         "gearPriority": "①防具のライフ・耐性、②攻撃用槍・手袋・指輪の追加ダメージ、③速度用槍とブーツの移動速度を不足に応じて比較。高投資版固有の装備条件は原典Late Endgameで確認。",
         "replaceGear": "死亡が多ければ防具のライフ・耐性、火力不足なら攻撃用槍と追加ダメージ付きの手袋・指輪、移動が遅ければ速度用セットとブーツから比較する。",
-        "caution": "原典はEndgame火力を装備依存かつ操作量の多い構成と説明。序盤の追加ダメージ優先をLate Endgameの最適値と読み替えず、装備・ジェム・ツリーを同じ採用版で照合。",
+        "caution": "原典は2026-10-03にLate Endgameのサポートと胴防具のAugmentを更新し、必要Spiritが増えたと記載。必要総量は採用する最新版の全スキルで確認する。序盤のFangs of Frost・War Banner構成を完成形へそのまま流用しない。",
         "transitionCondition": "完成後は火力・防御・操作性の不足を1項目ずつ改善する。",
         "nowActions": [
-          "最大火力の操作順を安定させる",
-          "Late Endgameツリーを原典で確認する",
-          "固定相場を使わず更新効果を比較する"
+          "Sniper's MarkからBarrage・ツイスターまでの順番を確認する",
+          "Late Endgame版のサポートと胴防具・必要Spiritを一緒に照合する",
+          "不足する能力値と防御を維持して1部位ずつ更新する"
         ]
       }
     ],
@@ -423,7 +427,7 @@
       "武器セット1（移動用）：攻撃速度を重視し、ワーリングスラッシュでの立ち回りを優先する。",
       "武器セット2（火力用）：基礎ダメージを重視し、ツイスターの威力を伸ばす。",
       "防御はライフに加えてエヴェージョン（回避）も確保する。",
-      "Maxrollの最適化ルートでは、ユニークアミュレット「The Taming」の入手を早期の最優先目標として挙げている。SSFなど入手困難な環境では代替アミュレットの検討が必要。"
+      "ユニーク「The Taming」はアミュレットではなくPrismatic Ring（指輪）。採用時は指輪枠の耐性・能力値との交換条件を確認する。入手順位は採用する原典の段階に従い、SSFでの入手を保証しない。"
     ],
     "sources": [
       {
@@ -437,6 +441,12 @@
         "url": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
         "checkedAt": "2026-09-28",
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月19日更新）"
+      },
+      {
+        "name": "PoE2DB: The Taming",
+        "url": "https://poe2db.tw/us/The_Taming",
+        "checkedAt": "2026-10-06",
+        "type": "アイテム種別（Prismatic Ring・指輪）"
       }
     ],
     "status": "verified",
@@ -504,6 +514,10 @@
       {
         "date": "2026-09-27",
         "summary": "原典の序盤装備優先と武器セット運用をもとに後半の装備交換順を整理。Late Endgame固有の装備閾値は未確認。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "The Tamingの種別をアミュレットから指輪へ訂正。更新後のMobalytics原典に合わせ、Endgameの操作順とLate EndgameのSpirit再確認を追記。全8段階の再検証日ではありません。"
       }
     ]
   },
@@ -527,9 +541,10 @@
     "difficulty": "Lv22で主力を切替",
     "reviewedFacts": {
       "gearDependence": "マップ序盤は装備を整えやすい",
-      "ssfNote": "原典作者は大部分でSSF可能と説明（完成形は未確認）",
+      "ssfNote": "別構成のLexd版はTier 1〜5・Tier 5〜10のマップ段階をSSF向けと明記。掲載するLundburgerr版の完成形までのSSF成立は未確認。",
       "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
-      "checkedAt": "2026-09-27"
+      "checkedAt": "2026-09-27",
+      "ssfSource": "https://mobalytics.gg/poe-2/builds/avatar-of-fire-smith-of-kitava-lexd"
     },
     "budget": "固定価格なし",
     "leagueStarter": true,
@@ -550,7 +565,7 @@
       {
         "label": "Lv1〜10",
         "mainSkill": "ローリングスラム + ボーンシャッター",
-        "supports": "ローリングスラム：Rapid Attacks、Brink。ボーンシャッター：Impact Shockwave、Magnified Area。",
+        "supports": "ローリングスラム：Rapid Attacks。Brinkはスタン蓄積が不足する場合の任意枠。ボーンシャッター：Impact Shockwave、Magnified Area。",
         "passivePriority": "原典のAct 1段階別ツリーを使用。正確な取得ノードはリンク先で確認。",
         "gearPriority": "メイスと防具を現在レベルに合わせ、ライフと耐性を優先。",
         "replaceGear": "スタン蓄積や火力が不足する場合はメイスを更新。",
@@ -738,6 +753,10 @@
       {
         "date": "2026-09-27",
         "summary": "Lv22以降に原典で確認するSkill Gems段階と切替順を明記。段階別サポート名は未確認として維持。原典本文のMaps操作を反映。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ],
     "ratingEvidence": {
@@ -822,7 +841,7 @@
     "beginnerRating": 3,
     "damageRating": 5,
     "defenseRating": 5,
-    "mappingRating": 2,
+    "mappingRating": 3,
     "bossRating": 4,
     "difficulty": "最初のアセンダンシーで構成切替",
     "budget": "固定価格なし",
@@ -849,7 +868,7 @@
         "passivePriority": "原典のAct 1段階別ツリーを使用。正確な取得ノードはリンク先で確認。",
         "gearPriority": "キャンペーン中はアーマー、ライフ、不足耐性を優先。",
         "replaceGear": "防御が不足する防具を更新。",
-        "caution": "Lv6以降はFrost BombとVolcano、Raging Spiritsも加える。",
+        "caution": "Frost BombとVolcanoを補助に使用。Raging SpiritsはTier 4のSpiritジェムと予約用Spiritを確保してから追加する。ジェムLv4版にはキャラクターLv10・知性21、基礎予約30 Spiritが必要で、Lv6到達だけでは追加できない。",
         "transitionCondition": "Lv11到達。Essence DrainとContagionの連携が安定している。",
         "nowActions": [
           "Lv6でEssence Drainへ移行する",
@@ -1014,6 +1033,12 @@
         "url": "https://gamerch.com/poe2/954611",
         "checkedAt": "2026-09-28",
         "type": "日本語攻略資料（ケラリの指示を主力にする構成。0.5.5対応、2026年9月18日更新）"
+      },
+      {
+        "name": "PoE2DB: Raging Spirits",
+        "url": "https://poe2db.tw/us/Raging_Spirits",
+        "checkedAt": "2026-10-06",
+        "type": "スキル条件（Tier 4・ジェムLv4の必要Lv10/知性21・基礎予約30 Spirit）"
       }
     ],
     "status": "verified",
@@ -1026,6 +1051,10 @@
       {
         "date": "2026-09-28",
         "summary": "PoE Vault（Djinn Commander、0.5.5）とMaxroll（9月27日更新版）を確認。周回を未評価→2/5（ジンの攻撃範囲の短所）、初心者向けを2→3（主力をLv21〜22のアセンダンシーから使える）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。ボスは根拠となる記述がなく未評価のまま。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "序盤のRaging Spirits追加案内を、Lv6という育成の目安からジェム・能力値・Spiritの実際の使用条件へ修正。"
       }
     ],
     "ratingEvidence": {
@@ -1041,8 +1070,8 @@
         "score": 3,
         "verifiedChecks": {
           "earlyMainSkill": {
-            "basis": "PoE Vault（0.5.5）に「Trial of SekhemasはLevel 21かLevel 22で。ここから本来のヴァラシュタの戦い方になる」と明記。ケラリ・ルザンの指示をLv22以下の最初のアセンダンシーから使える",
-            "source": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build"
+            "basis": "PhazePlaysの育成ガイド（2026年9月1日更新、0.5.5 FRタグ／本文0.5）は、Lv22以降の初回アセンダンシーでケラリとKelari’s Deceptionへ移行すると説明。ルザンとRuzhan’s TrapはLv40以降・2回目のアセンダンシーの段階であり、初回から両方使える意味ではない。",
+            "source": "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide"
           },
           "ssfConfirmed": {
             "basis": "キャンペーン向けSSFガイドと、(HC) SSF向けのEndgameまでのガイドを照合",
@@ -1069,13 +1098,13 @@
         "note": "長所で耐久の高さが強調されている（Maxroll、0.5.5・2026年9月27日更新）。"
       },
       "mapping": {
-        "score": 2,
-        "basis": "短所",
+        "score": 3,
+        "basis": "長所と短所が両方",
         "quote": "Djinn attacks don’t have great AoE coverage. Enemies that are spread out may require more effort to kill than a traditional spellcaster build.",
         "source": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build",
         "sourceName": "PoE Vault: Djinn Commander Disciple of Varashta Leveling Build",
         "checkedAt": "2026-09-28",
-        "note": "Weaknesses欄に、ジンの攻撃範囲が狭く散らばった敵の処理に手間がかかるとある。本文の「map clearing infinitely faster」は指示スキル同士の比較で、ビルドの長所としては挙げられていない。資料は育成（キャンペーン）用。"
+        "note": "引用はPoE Vaultの育成用ガイド（0.5.5）の短所で、散らばった敵の処理に手間がかかるとの評価です。一方、PhazePlaysのEndgameガイドは周回の快適さを長所としています。育成とEndgame、作者の構成ごとに評価の範囲が異なります。"
       },
       "boss": {
         "score": 4,
@@ -1102,7 +1131,7 @@
     "mainSkill": "テイムビースト（Tame Beast）",
     "beginnerRating": 3,
     "damageRating": 5,
-    "defenseRating": 2,
+    "defenseRating": 3,
     "mappingRating": 2,
     "bossRating": 4,
     "difficulty": "Act 3で大きく構成切替",
@@ -1340,13 +1369,13 @@
         "note": "PROS欄に、強調語付きで火力の高さが挙げられている。資料は0.5.0向け（2026年6月4日作成）で、Mighty Silverfistを主力にする構成。"
       },
       "defense": {
-        "score": 2,
-        "basis": "短所",
+        "score": 3,
+        "basis": "長所と短所が両方",
         "quote": "Starts off a little weak defensively, so requires more defensive positioning",
         "source": "https://www.poe-vault.com/poe2/huntress/spirit-walker/tamed-boss-beast-build-guide",
         "sourceName": "PoE Vault: Spiritwalker Boss Companion Endgame Build",
         "checkedAt": "2026-09-27",
-        "note": "Weaknesses欄に耐久面の弱さが明記されている（レベリング用資料では相棒が被弾を肩代わりする点が長所とされており、資料間で評価が割れるため低い方を採用）。"
+        "note": "引用はPoE VaultのEndgame開始時の防御の弱さについての記述。装備完成後まで一律に耐久が低いという意味ではない。引用済みのCaptainLance9ガイドは耐久を長所に、Odealoも生存力を長所に挙げているため、育成・装備段階と構成を分けて読む必要がある。"
       },
       "mapping": {
         "score": 2,
@@ -1379,6 +1408,10 @@
       {
         "date": "2026-09-27",
         "summary": "原典が挙げるJungle RuinsのMighty Silverfist、レア個体の効果例とAct 3・2回目の試練後の切替条件を明記。個体別サポートの詳細は採用した原典段階で確認。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ]
   },
@@ -1473,7 +1506,7 @@
         "passivePriority": "lvl 31-41段階別ツリーへ移る。完成ツリーへ一括変更しない。",
         "gearPriority": "冷気または物理の追加アタックダメージ、弓DPS、矢筒、ライフ、耐性。",
         "replaceGear": "切替後に通常敵を処理できない場合は、サポートより先に弓と矢筒を比較する。",
-        "caution": "日本語プレイ記録ではLv31直後はSpiritジェム条件に注意が必要とされる。揃わない場合は切替を数レベル遅らせる。",
+        "caution": "日本語プレイ記録にはLv31直後のSpiritジェム不足と、条件次第でLv36まで移行を待つ案がある。ただし2026年5月23日の0.4環境でのテスト記録であり、現在の取得条件は現行ガイドとゲーム内で確認する。",
         "transitionCondition": "Lv41到達。アイスショットで周回し、スナイプを単体用に使い分けられる。",
         "nowActions": [
           "Lv31でアイスショットへの切替を判断する",
@@ -1576,7 +1609,7 @@
         "name": "Gamerch: アイスショットビルドのジェムとおすすめクラス",
         "url": "https://gamerch.com/poe2/955377",
         "checkedAt": "2026-09-28",
-        "type": "日本語攻略資料（2026年9月18日更新。長所・短所と装備の優先度を参照）"
+        "type": "日本語攻略資料（原典は0.5.0対応、2026年9月14日14:39更新。長所・短所と装備の優先度を参照。サイト共通ナビゲーションの0.5.5表記とは区別）"
       }
     ],
     "audience": "弓で遠距離から戦い、周回と単体攻撃を使い分けたい初心者",
@@ -1646,6 +1679,10 @@
       {
         "date": "2026-09-28",
         "summary": "Maxroll（0.5.5）とGamerch（9月18日更新）を確認。Maxrollのメリット「Avoids most damage」で安全な立ち回りを加点し、初心者向けを未評価→2/5に更新。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ]
   },
@@ -1665,7 +1702,7 @@
     "beginnerRating": 5,
     "damageRating": 5,
     "defenseRating": 5,
-    "mappingRating": null,
+    "mappingRating": 3,
     "bossRating": 5,
     "difficulty": "Act 3とLv67前後で召喚対象を切替",
     "reviewedFacts": {
@@ -1884,6 +1921,10 @@
       {
         "date": "2026-09-27",
         "summary": "Lv31〜40のVaal Guard Spectre切替はLvだけでは決まらず、Act 3の該当地点とSpirit・召喚対象の準備が必要と明記。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ],
     "ratingEvidence": {
@@ -1935,9 +1976,13 @@
         "note": "本文（Build MechanicsとAscendancyの説明）で、大きな被弾に耐えてESを素早く回復できること、ビルドが「very durable」に感じられることを長所として説明している（長所欄ではなく本文の記述）。資料はEndgameのPowered Zealotスペクター版で0.5対応。"
       },
       "mapping": {
-        "score": null,
-        "basis": "未評価",
-        "note": "確認した資料に、周回の長所・短所としての記述がない。Maxrollの「Gargantuan Waspスペクターが処理速度を上げる」は構成要素の説明で、周回の評価には使わない。 2026-10-04にMaxroll（0.5.5）・PoE Vaultの育成ガイドとスペクター版を再確認したが、周回の長所・短所としての記述は見つからなかった。"
+        "score": 3,
+        "basis": "長所と短所が両方",
+        "note": "ThyのSSF Minion Infernalistガイド（0.5.5、2026年9月4日更新）は、マップ処理とボス戦を両立することを長所に挙げる一方、他の多くのビルドより遅いこととミニオンの追従の遅れを短所としています。この育成・SSFルートについての作者の評価です。",
+        "quote": "clears maps and melts bosses / Slower than most builds",
+        "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+        "sourceName": "Mobalytics: Thy's Detailed SSF Minion Infernalist Guide for 0.5.5",
+        "checkedAt": "2026-10-06"
       },
       "boss": {
         "score": 5,
@@ -2012,7 +2057,7 @@
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Entangleを主力として継続",
+        "mainSkill": "Entangleを主力として継続。処刑人撃破後にThunderstormを取得できたら、植物に手動で重ねて過成長とShockを付与する。",
         "supports": "原典の育成構成を段階的に追加。未確認のサポート名は原典を優先。",
         "passivePriority": "レベリングガイドの現在レベルに近い段階別ツリーを使用。",
         "gearPriority": "+物理/全スペルレベル、スペル威力、キャスト速度、防御、耐性。",
@@ -2027,7 +2072,7 @@
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Entangle。強敵には植物系の単体補助を準備",
+        "mainSkill": "Entangle + 手動Thunderstorm。強敵にはThunderstormを植物に重ね、単体補助手段も準備する。",
         "supports": "原典の育成用Skill GemsではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Considered Castingを掲載。ただしLv20ジェムの構成例で、キャラクターLv21での全枠解禁を意味しない。",
         "passivePriority": "中盤の段階別ツリーへ進み、アセンダンシー取得後の導線へ接続。",
         "gearPriority": "スペルレベル、物理スペル威力、追加雷ダメージ、キャスト速度、ライフ、耐性。",
@@ -2042,7 +2087,7 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Entangleを周回主力、Thrashing Vinesを強敵用に追加",
+        "mainSkill": "Entangleを周回主力、Thrashing Vinesを強敵用に追加。自動化まではThunderstormを手動で植物に重ねる。",
         "supports": "原典の育成用構成ではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Considered Casting、Thrashing VinesにConcentrated Area・Explosive Growth II・Rapid Casting IIを掲載。入手と枠数に応じて採用。",
         "passivePriority": "中盤のオラクル段階別ツリーを使用。",
         "gearPriority": "スペルレベル、キャスト速度、ライフ、ES/アーマー、耐性、移動速度。",
@@ -2057,12 +2102,12 @@
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Entangle + Thrashing Vines",
+        "mainSkill": "Entangle + Thrashing Vines + 手動Thunderstorm。キャンペーン終盤にCast on Criticalの条件が揃ったらThunderstormを自動化する。",
         "supports": "レベリングガイド後半の構成を使用し、第二アセンダンシー後の自動発動を準備。",
         "passivePriority": "キャンペーン後半の段階別ツリーを使用。",
         "gearPriority": "スペルレベル、キャスト速度、ライフ、ES/アーマー、三属性耐性、移動速度。",
         "replaceGear": "キャンペーン終了時に不足する耐性と、火力が停滞した武器を優先。",
-        "caution": "Cast on CriticalとThunderstormは必要条件が揃ってから追加し、先に現在の主力を外さない。",
+        "caution": "Thunderstormは自動化前から手動で使う。原典はキャンペーン最終盤にCast on Criticalへ移行すると説明している。第二アセンダンシー、必要ジェムとSpiritが揃うまでは手動で植物に重ねる。",
         "transitionCondition": "キャンペーン終了。第二アセンダンシーと自動発動構成の準備ができる。",
         "nowActions": [
           "キャンペーン後半ツリーを確認する",
@@ -2144,10 +2189,10 @@
         "type": "日本語プレイ記録"
       },
       {
-        "name": "Gamerch: 0.5.5 プラントオラクル解説",
+        "name": "Gamerch: プラントオラクルの評価と解説",
         "url": "https://gamerch.com/poe2/954990",
         "checkedAt": "2026-09-28",
-        "type": "日本語攻略資料（2026年9月18日更新。長所・短所と装備MODの優先度を参照）"
+        "type": "日本語攻略資料（2026年9月1日12:17更新。長所・短所と装備MODの優先度を参照。記事固有の対応パッチ表記は未確認）"
       },
       {
         "name": "Maxroll: Entangle Oracle Build Guide",
@@ -2174,7 +2219,7 @@
             "source": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide"
           },
           "moderateOperation": {
-            "basis": "Gamerch（2026年9月18日更新）の長所に「操作が少ない」と明記。Maxroll（0.5.5）もメリットに「Auto Targetting」を挙げている",
+            "basis": "Gamerch（2026年9月1日更新）の長所に「操作が少ない」と明記。Raxxの現行育成・Endgameガイドも少ない操作を長所としている。ただしキャンペーン中の強敵にはThunderstormの手動使用が必要。",
             "source": "https://gamerch.com/poe2/954990"
           }
         }
@@ -2228,6 +2273,10 @@
       {
         "date": "2026-10-04",
         "summary": "耐久の原典を追加。Raxx氏のEndgameガイド（0.5.5）が長所にエナジーシールドの防御、短所に「防御は装備次第」を挙げているため、耐久を「原典に長所と弱点の両方」に更新。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ]
   },
@@ -2244,7 +2293,7 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Essence Drain + Contagion",
-    "beginnerRating": 4,
+    "beginnerRating": 5,
     "damageRating": 2,
     "defenseRating": 3,
     "mappingRating": 5,
@@ -2440,6 +2489,10 @@
       {
         "date": "2026-09-28",
         "summary": "Maxroll（本編・育成、0.5.5）とPoE Vaultを確認。MaxrollのメリットにSSFでの成立（キャンペーン約5時間・Arbiterまで約10時間）が明記されていたためSSF可に変更。初心者向けを2→4（SSF・安全な遠距離の立ち回り）、火力を未評価→2/5（武器依存・継続ダメージの立ち上がり）に更新。装備優先度を部位別に具体化し、長所・短所と出典を追加。ボスは根拠となる記述がなく未評価のまま。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ],
     "ratingEvidence": {
@@ -2447,12 +2500,12 @@
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": false,
+          "moderateOperation": true,
           "ssfConfirmed": true,
           "noDodgeRequirement": true
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。操作の簡単さを長所として明記した資料は確認できないため加点しません。",
-        "score": 4,
+        "note": "掲載ルートの原典DEADRABB1T（0.5.5、2026年9月27日更新）は操作の簡潔さを長所に挙げています。序盤から主力を使う条件とあわせ、確認できた範囲を根拠にしています。SSFに関するMaxrollの記述は従来の確認記録であり、今回の監査では原文を再取得できていません。",
+        "score": 5,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「Contagion。単体はVolcanoからEssence Drainへ移行」を参照",
@@ -2465,6 +2518,10 @@
           "noDodgeRequirement": {
             "basis": "PoE VaultのStrengths欄に「Safe, ranged playstyle.」と明記",
             "source": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build"
+          },
+          "moderateOperation": {
+            "basis": "DEADRABB1TのED Contagion Lichガイド（0.5.5、2026年9月27日更新）のStrengths欄に「Simplicity」と明記。",
+            "source": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit"
           }
         }
       },
@@ -2519,27 +2576,27 @@
     "updatedAt": "2026-09-09",
     "status": "verified",
     "mainSkill": "Explosive Grenade",
-    "beginnerRating": 4,
+    "beginnerRating": 3,
     "damageRating": 4,
-    "defenseRating": 2,
+    "defenseRating": 3,
     "mappingRating": 4,
     "bossRating": 4,
     "difficulty": "中（複数グレネード）",
     "budget": "固定価格なし",
     "leagueStarter": true,
-    "ssf": true,
+    "ssf": null,
     "strengths": [
       "Lv1からEndgameまでグレネードを軸にする段階別の書面ガイドがある。",
       "Explosive、Flash、Gas、Oil、Cluster Grenadeを状況別に使える。",
       "ACT 1からUber Endgameまで構成が分けて提示されている。",
-      "Oil GrenadeとExplosive Grenadeの1〜2ボタンで簡単に殲滅でき、始めるのに費用がかからない（PoE Vault）。",
+      "別構成のPoE Vault版（0.5）は、Oil GrenadeとExplosive Grenadeの1〜2ボタンで周回でき、低予算で開始できると作者が説明している。",
       "SSFでAct IからEndgameの最上位ボスArbiterまでテストされた構成と紹介されている（aoeah）。"
     ],
     "weaknesses": [
       "複数のグレネードを使うため、画面上の効果が多くなりやすい。",
       "クロスボウと各部位の攻撃性能を段階的に更新する必要がある。",
       "Endgame版を序盤へ部分的に持ち込まず、段階を揃える必要がある。",
-      "ボスを一撃で倒すには密着する必要があり、Berserkのためライフ自動回復を高くする必要がある（PoE Vault）。"
+      "別構成のPoE Vault版（0.5）でCluster Grenadeの一撃を狙う場合は、ボスへの密着とBerserkを支える高いライフ自動回復が必要とされる。掲載する育成ルートの全段階に共通する条件ではない。"
     ],
     "levelingStages": [
       {
@@ -2700,24 +2757,24 @@
       "beginner": {
         "checks": {
           "earlyMainSkill": true,
-          "moderateOperation": true,
-          "ssfConfirmed": true,
-          "noDodgeRequirement": false
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
         },
-        "note": "加点した条件だけを原典と結び付けています。PoE Vaultは長所に「Built in defensives」を挙げていますが、Maxrollがデメリットに「Don't Get Hit Playstyle」を挙げているため、安全な立ち回りは加点しません。",
-        "score": 4,
+        "note": "掲載ルートと同じ原典で、序盤からの主力と防御の長所を確認。別のPoE Vault構成の1〜2ボタン評価は操作条件に含めません。SSF紹介記事と掲載構成の一致は未確認のため、SSF条件にも含めません。",
+        "score": 3,
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "元ガイドの序盤構成に掲載された「Explosive Grenade。補助にFrost BombとFlash Grenade」を参照",
             "source": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter"
           },
           "moderateOperation": {
-            "basis": "PoE VaultのStrengths欄に「Easy 1/2 button clear with Oil Grenade and Explosive Grenade.」と明記",
+            "basis": "PoE Vaultの別構成（0.5）はOil Grenade＋Explosive Grenadeの周回が1〜2ボタンと説明。掲載するDEADRABB1Tの育成ルート全体やボス操作の簡単さを確認した根拠ではない。",
             "source": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide"
           },
-          "ssfConfirmed": {
-            "basis": "aoeah（0.5.5）が「Act IからArbiter of DivinityまでSSFでテストされた」と明記。Maxrollの育成ガイドもメリット欄に「SSF Fresh Start Leaguestart Viable」",
-            "source": "https://www.aoeah.com/news/4788--poe-2-055-best-gemling-build--top-3-best-league-start--endgame-gemling-builds"
+          "noDodgeRequirement": {
+            "basis": "掲載ルートのDEADRABB1T原典（0.5.5、2026年9月22日更新）が長所に「Fast and Tanky」と明記。防御の長所を紹介した作者の評価で、被弾不要・不死身という意味ではない。",
+            "source": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter"
           }
         }
       },
@@ -2731,13 +2788,13 @@
         "note": "長所に単体火力の高さが挙げられている（短所の「Delayed Damage」は火力の量ではなく発生の遅れ）。"
       },
       "defense": {
-        "score": 2,
-        "basis": "短所",
+        "score": 3,
+        "basis": "長所と短所が両方",
         "quote": "Don't Get Hit Playstyle",
         "source": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
         "sourceName": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
         "checkedAt": "2026-09-26",
-        "note": "短所に「被弾しない立ち回りが前提」とある。"
+        "note": "引用はMaxrollの育成ガイドの短所です。一方、掲載ルートの原典DEADRABB1Tは耐久を長所に挙げ、別構成のPoE Vaultも防御上の長所を記載しています。段階・構成で評価が異なり、掲載ルート全体の耐久が低いと断定する根拠にはなりません。Maxroll原文は今回再取得できていません。"
       },
       "mapping": {
         "score": 4,
@@ -2746,7 +2803,7 @@
         "source": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide",
         "sourceName": "PoE Vault: Grenadier Gemling Legionnaire Build Guide",
         "checkedAt": "2026-09-28",
-        "note": "Strengths欄に、Oil GrenadeとExplosive Grenadeの1〜2ボタンで簡単に殲滅できるとある（強調語なし）。資料は0.5対応（2026年7月）。"
+        "note": "PoE Vaultの別構成（KingdomTwelve、0.5、2026年7月15日更新）の周回操作についての記述。掲載するDEADRABB1Tの各育成段階へ、そのまま適用する根拠にはしていません。"
       },
       "boss": {
         "score": 4,
@@ -2766,8 +2823,15 @@
       {
         "date": "2026-09-27",
         "summary": "原典の序盤サポート取得順と後半3構成の確認場所を一部段階に追加。後半各枠の正確なサポート・装備閾値は未照合。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。 初心者条件は原典の耐久の長所を採用し、同一構成の根拠が不足するSSFと別構成の操作評価は除外。"
       }
-    ]
+    ],
+    "reviewedFacts": {
+      "ssfNote": "紹介記事にAct I〜ArbiterのSSF実績あり。元の実測記録と掲載した完成装備の一致は未確認"
+    }
   },
   {
     "id": "huntress-twister-spirit-walker",
@@ -2794,7 +2858,7 @@
     "strengths": [
       "必須ユニークなしで育成を始められると掲載資料で案内されている。",
       "Whirling Slashで作った旋風をTwisterで飛ばし、範囲攻撃へつなげられる。",
-      "キャンペーン序盤からEndgameまでの段階別手順を2つの書面資料で照合できる。"
+      "序盤・キャンペーン・Endgameの方針は海外ガイドを参照。数値のLv帯は本サイトの整理用の目安で、原典が各Lvでの移行を保証するものではない。"
     ],
     "weaknesses": [
       "武器セット2種と複数スキルの割り当てが必要で、完全な1ボタン構成ではない。",
@@ -2804,16 +2868,16 @@
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "PounceとShredを中心に進め、入手後はWhirling SlashとTwisterの準備を始める。",
+        "mainSkill": "槍と必要ジェムを入手後、Whirling Slashで旋風を作りTwisterへつなぐ。Pounceは移動、Shredは人狼化の補助候補で、掲載ルートの主力としては扱わない。",
         "supports": "序盤は物理ダメージと攻撃速度を伸ばすサポートを優先し、未入手の名称は原典の段階表で確認。",
         "passivePriority": "原典のEarly Game段階。投射物・攻撃速度・冷気へつながるルートを確認する。",
         "gearPriority": "槍の物理ダメージ、ブーツの移動速度、防具のライフと耐性。",
         "replaceGear": "現在レベルに対して物理ダメージが低い槍と、移動速度のないブーツを優先して交換。",
         "caution": "Whirling Slashはダメージ目的ではなく旋風生成に使うため、原典ではLv1維持が案内されている。",
-        "transitionCondition": "Lv11到達。槍の更新とPounce・Shredの基本操作が安定していること。",
+        "transitionCondition": "Lv11付近の進行目安。槍の更新とWhirling Slash・Twisterの基本連携を確認する。",
         "nowActions": [
-          "物理ダメージの高い槍を探す",
-          "PounceとShredで序盤を進める",
+          "槍とWhirling Slash・Twisterのジェムを用意する",
+          "Whirling SlashをLv1に保ち、Twisterへつなぐ",
           "移動速度付きブーツと耐性を確保する"
         ]
       },
@@ -2834,7 +2898,7 @@
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Twister。単体戦はBarrageを追加。",
+        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → ツイスター。Barrageを採用する場合は、強化したいツイスターを撃つ前に使用する。",
         "supports": "TwisterとIce-Tipped Arrowsを優先し、Barrageは単体戦用として段階的に追加。",
         "passivePriority": "原典のMid Campaign段階。Spirit Walker取得後はPrimal Bountyを含む現行ルートを確認。",
         "gearPriority": "武器セット2種を用意し、槍の物理ダメージ、冷気追加、ライフ、耐性を確認。",
@@ -2849,7 +2913,7 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Whirling Slashを複数回使い、Ice-Tipped Arrows、Twister、Barrageへつなぐ。",
+        "mainSkill": "Whirling Slashを3回以上使い、Ice-Tipped ArrowsとBarrageで準備してからツイスターを撃つ。",
         "supports": "Twister、Barrage、Ice-Tipped Arrowsを優先して更新し、旋風生成用Whirling SlashはLv1を維持。",
         "passivePriority": "原典のMid Campaign段階。投射物・冷気・攻撃速度を伸ばし、防御は回避とDeflectを確認。",
         "gearPriority": "高物理ダメージの槍、移動速度、ライフ、耐性、回避。",
@@ -2864,7 +2928,7 @@
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Twister → Barrage。移動・補助にThunderous Leapなどを使用。",
+        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Barrage → ツイスター。移動・補助は原典の武器セット割当を確認する。",
         "supports": "原典のMid/Late Campaign構成に合わせ、主力3種のリンクを優先して完成させる。",
         "passivePriority": "原典のMid/Late Campaign段階。Dance with Deathを採用する現行ルートと武器セット割当を確認。",
         "gearPriority": "槍の物理ダメージ、ライフ、耐性、回避、移動速度。Spiritは必要スキル分を確保。",
@@ -2879,7 +2943,7 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Whirling Slashで旋風を3回前後作り、Ice-Tipped Arrows、Twister、Barrageへつなぐ。",
+        "mainSkill": "Whirling Slashを3回以上使い、Ice-Tipped ArrowsとBarrageを使用してからツイスターへつなぐ。",
         "supports": "主力スキルのリンクを優先し、Spirit不足がない状態で補助スキルを維持する。",
         "passivePriority": "原典のEarly Endgame段階へ移行。攻撃速度・冷気・クリティカルと回避系防御を確認。",
         "gearPriority": "属性耐性、ライフ、回避、槍の物理・追加ダメージ、移動速度。",
@@ -2889,7 +2953,7 @@
         "nowActions": [
           "属性耐性と回避を先に整える",
           "槍の物理・追加ダメージを更新する",
-          "旋風からBarrageまでの連携を固定する"
+          "Barrageをツイスターの前に使う連携を確認する"
         ]
       },
       {
@@ -2909,7 +2973,7 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "Twister + Ice-Tipped Arrows + Barrage。Whirling Slashで旋風を供給する。",
+        "mainSkill": "Whirling Slashで旋風を準備し、Ice-Tipped ArrowsとBarrageで次の攻撃を強化してからツイスターを撃つ。",
         "supports": "採用中のEndgame段階と同じサポート構成へ揃え、入手状況に応じて順次更新する。",
         "passivePriority": "原典のEndgameツリーを確認し、クリティカル・冷気・攻撃速度と回避系防御を同じ段階へ揃える。",
         "gearPriority": "高性能の槍、必要Spirit、耐性、回避、ライフまたはエナジーシールド。任意ユニークは基礎装備完成後に検討。",
@@ -2933,7 +2997,7 @@
         "name": "note: Spirit Walker（ハントレス）ツイスタービルド完全ガイド",
         "url": "https://note.com/fresh_okapi3816/n/nbe96101eda53",
         "checkedAt": "2026-09-24",
-        "type": "日本語書面ガイド（序盤・スキル連携・装備・パッシブ方針）"
+        "type": "日本語補助記事（本サイトへのリンクあり。独立した裏付けや数値Lv帯の根拠としては扱わない）"
       },
       {
         "name": "Path of Exile 2 Guide: Spirit Walker Elemental Twister Build",
@@ -2946,6 +3010,18 @@
         "url": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
         "checkedAt": "2026-09-28",
         "type": "海外Endgameガイド（対応パッチ0.5.5、2026年9月2日更新。Pros/Cons形式）"
+      },
+      {
+        "name": "PoE2DB: Barrage",
+        "url": "https://poe2db.tw/us/Barrage",
+        "checkedAt": "2026-10-06",
+        "type": "スキル仕様（次の対応する弓・槍アタックを強化）"
+      },
+      {
+        "name": "PoE2DB: Twister",
+        "url": "https://poe2db.tw/us/Twister",
+        "checkedAt": "2026-10-06",
+        "type": "スキル使用条件（Tier 1・槍）"
       }
     ],
     "audience": "必須ユニークなしで始め、ツイスターによる範囲周回を段階的に育てたい人",
@@ -2958,12 +3034,12 @@
           "ssfConfirmed": false,
           "noDodgeRequirement": false
         },
-        "note": "加点した条件だけを原典・段階別手順と結び付けています。未確認の操作・防御・SSF条件は加点しません。Maxrollの「ユニーク不要」の記述は、SSFでの成立を明記したものではないため加点しません。",
+        "note": "加点条件は確認できた範囲に限定しています。note記事は操作を簡単と説明する一方、海外ガイドは連携に練習が必要と案内しています。武器セットと複数スキルを使うため、操作条件は加点していません。「ユニーク不要」はSSFでの成立を明記したものではないため、SSF条件も加点しません。",
         "score": 2,
         "verifiedChecks": {
           "earlyMainSkill": {
-            "basis": "元ガイドのLv11〜20段階では、掲載ビルドの主力ツイスターをWhirling Slashと組み合わせて使用。Lv1〜10のPounceとShredは切替前の代替として扱う",
-            "source": "https://note.com/fresh_okapi3816/n/nbe96101eda53"
+            "basis": "PoE2DBでTwisterはTier 1・ジェムLv1からの槍スキルと確認。原典の数値Lv帯としてではなく、スキルの使用条件に基づく確認。",
+            "source": "https://poe2db.tw/us/Twister"
           }
         }
       },
@@ -3013,6 +3089,10 @@
       {
         "date": "2026-09-28",
         "summary": "SSF可の基準を「資料がSSF向けと明記している場合」に統一。Maxrollの「ユニーク不要」だけではSSF可としないため、SSF可を外し初心者向け評価を3→2に変更。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Barrageをツイスターの後に使う誤った操作順を訂正。原典にないLv11〜20という出典説明を修正し、主力の序盤使用条件はPoE2DBへ変更。 Pounce・Shredを主力とした序盤案内も、原典の移動・変身補助という役割に訂正。"
       }
     ]
   },
@@ -3046,7 +3126,7 @@
     "weaknesses": [
       "火力は杖（スタッフ）の性能に大きく左右されると、育成ガイドの弱点欄にある。",
       "ボス戦ではFrost Bomb・Orb of Storms・Flame Wallなどを順に使う、複数ボタンの手順が必要。",
-      "コメットの自動発動にはSpirit 121以上が必要。マナを積む完成形は会心率90%以上・最大マナ5,000以上が目安で、低予算では組みにくい。"
+      "CoC Cometを追加する海外ガイドの構成ではSpirit 121以上が目安。別構成のマナスタック完成形では会心率90%以上・最大マナ5,000以上と装備・ツリーの組み替えが必要で、低予算では組みにくい。"
     ],
     "levelingStages": [
       {
@@ -3106,7 +3186,7 @@
         "nowActions": [
           "SparkのサポートをZenith IIへ上げる",
           "Spirit 60でBlasphemyに替える",
-          "Ultimatumを終えて2点目を取る"
+          "Trial of Chaosを終え、アセンダンシーポイントをさらに2点得る"
         ]
       },
       {
@@ -3156,12 +3236,12 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "マナを積む完成形。周回はSparkのみ、ボスはFrost Bomb → Spark。コメットはCast on Criticalで自動発動する。",
+        "mainSkill": "別の高予算マナスタック構成へ組み替える選択肢。周回はSpark、ボスはFrost Bomb → Spark。コメットはCast on Criticalで自動発動する。",
         "supports": "Sparkの会心率を90%以上に保つ。サポートは原典のジェム表の優先順に強化し、各スキルの品質も上げる。",
         "passivePriority": "アセンダンシーはConstant Gale・Force of Will・Tempest Caller・Multiplying Squalls。ジュエルは会心率・会心ダメージ・スペルダメージを優先。",
         "gearPriority": "最大マナ（5,000以上が目安）、会心率、Spirit。Absent Amulet（Cast on Critical付き）がない場合は笏でSpiritを補う。",
         "replaceGear": "Cloak of Defianceは必須ではない。通常のエナジーシールド鎧にする場合はパッシブでMind Over Matterを取る。",
-        "caution": "原典の完成装備にはMageblood等の高額品が含まれ、低予算の開始向けではないと明記されている。1.0では未確認。",
+        "caution": "前段のMaligaro’s Virtuosityを使う構成とは別の作者・装備・パッシブ・アセンダンシーです。マナを増やすだけで移行できるとは限りません。必要な振り直しとジェム・装備をまとめて照合してください。高額装備を含み、低予算の開始向けではないと原典に明記。1.0では未確認。",
         "transitionCondition": "使用中の0.5.5段階が揃い、変更前後をゲーム内で比較できる状態。",
         "nowActions": [
           "最大マナ5,000以上を目指す",
@@ -3178,9 +3258,9 @@
     "sources": [
       {
         "name": "PoE Vault: Spark Sorceress or Witch Leveling Build",
-        "url": "https://www.poe-vault.com/poe2/witch/blood-mage/spark-leveling-build",
+        "url": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
         "checkedAt": "2026-10-03",
-        "type": "海外書面ガイド（Act 1〜4・インタールードの育成手順。Patch 0.5、2026年6月4日更新）"
+        "type": "海外書面育成ガイド（本文はPatch 0.5。変更履歴に2026年6月4日の0.5.1ツリー更新、ページ更新表示は2026年9月3日。Act別の手順をLv帯の目安へ整理）"
       },
       {
         "name": "Path of Exile 2 Guide: Stormweaver - CoC Comet Spark Build",
@@ -3210,7 +3290,7 @@
         "verifiedChecks": {
           "earlyMainSkill": {
             "basis": "育成ガイドのAct 1で、ソーサレスは開始地点のジェム箱で得たSparkを主力にすると案内されている",
-            "source": "https://www.poe-vault.com/poe2/witch/blood-mage/spark-leveling-build"
+            "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build"
           },
           "moderateOperation": {
             "basis": "元ガイドが「This build is beginner-friendly and easy to play.」と、初心者向けで操作が簡単なことを長所に挙げている",
@@ -3222,7 +3302,7 @@
         "score": 3,
         "basis": "長所と短所が両方",
         "quote": "Spark bounces off walls to deal high single-target damage to quickly kill bosses. ／ Less damage output than Ice Nova or Arc builds.",
-        "source": "https://www.poe-vault.com/poe2/witch/blood-mage/spark-leveling-build",
+        "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
         "sourceName": "PoE Vault: Spark Sorceress or Witch Leveling Build",
         "checkedAt": "2026-10-03",
         "note": "育成ガイドのStrengths欄に壁で跳ね返るSparkの高い単体火力、Weaknesses欄にIce NovaやArcのビルドより火力が低いことが挙げられている（キャンペーン中の記述。同じ長所の記述はボスの根拠にも使用）。"
@@ -3249,7 +3329,7 @@
         "score": 4,
         "basis": "長所",
         "quote": "Spark bounces off walls to deal high single-target damage to quickly kill bosses.",
-        "source": "https://www.poe-vault.com/poe2/witch/blood-mage/spark-leveling-build",
+        "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
         "sourceName": "PoE Vault: Spark Sorceress or Witch Leveling Build",
         "checkedAt": "2026-10-03",
         "note": "育成ガイドのStrengths欄に、壁で跳ね返るSparkの単体火力でボスを素早く倒せるとある。同じ資料のWeaknesses欄には、ボス戦が複数ボタンの手順になることも挙げられている。"
@@ -3259,13 +3339,17 @@
       "operation": "周回は少なめ（Spark中心）・ボスは複数スキル（原典に記載）",
       "gearDependence": "高（火力は杖の性能に大きく左右されると原典に記載）",
       "ssfNote": "キャンペーン用の育成ガイドはSSFで成立と明記（PoE Vault）。Endgame完成形のSSF成立は未確認",
-      "source": "https://www.poe-vault.com/poe2/witch/blood-mage/spark-leveling-build",
+      "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
       "checkedAt": "2026-10-03"
     },
     "changeHistory": [
       {
         "date": "2026-10-03",
         "summary": "新規掲載。PoE Vault（0.5の育成・0.5.5のEndgame）とpathofexile.ggの段階別資料で、Lv1〜Endgameの手順を確認。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
       }
     ]
   }
