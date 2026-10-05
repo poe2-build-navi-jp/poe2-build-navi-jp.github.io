@@ -19,7 +19,7 @@
 - [75公開URLの一覧](fact-check-2026-10-06-coverage.json)、[53件のビルド原典](fact-check-2026-10-06-builds.csv)、[96段階の育成台帳](fact-check-2026-10-06-stages.csv) も参照できます。後二つの判定は初回点検時点であり、[追加点検](follow-up-2026-10-06.md) の更新が優先します。
 - 初回の `unverified` は「今回、一次資料で全条件を確認できなかった」を含みます。誤り確定件数ではありません。過去の134件という数を、現行の未解決の独立した事実の数として使用しないでください。
 - `confirmed_as_scoped` は出典の範囲で確認、`secondary_corroborated` はゲームデータ・二次資料で裏付け、`corrected_or_qualified` は訂正または適用範囲を限定、`creator_route_confirmed` は作者の段階説明を確認、`qualified_source_attribution` は紹介記事の帰属のみ確認です。実測保証ではありません。
-- `editorial_advice` は助言、`documentation_confirmed` は文書上の手順確認です。今回追補の `supported`・`narrowed`・`corrected`・`reasoned_unverifiable` は上記41行の判定です。`unresolved_rule`・`client_verification_not_performed` と、理由付き未確認は根拠確認の制限として残しています。全情報の検証完了を表す台帳ではありません。
+- `editorial_advice` は助言、`documentation_confirmed` は文書上の手順確認です。今回追補の `supported`・`narrowed`・`corrected`・`reasoned_unverifiable` は上記41行の判定です。`qualified_unresolved`（断定を外し、確認未完了と明記）・`unresolved_rule`・`client_verification_not_performed` と、理由付き未確認は根拠確認の制限として残しています。全情報の検証完了を表す台帳ではありません。
 
 ## 前回抽出した文献確認（追補前の対象一覧）
 
@@ -42,3 +42,9 @@
 - 運営者・プライバシー・利用規約ページはサイトの自己説明です。法的適合性を認証したものではありません。
 
 この点検では、裏付けのある訂正と出典の適用範囲を反映しました。全75ページの全ての文、全ビルド、全ての将来の仕様が確認済みとはしていません。
+
+## サポートジェムの断定表現の追補
+
+`guides/support-gems:11` と `dictionary/support-gem:7` は、レベル上げ・コラプトが全種類で不可能という断定を外し、現行の共通ルールを確認し終えていないことを本文にも明記しました。台帳は `qualified_unresolved` です。可否が逆だと確認したものではありません。
+
+[公式0.3.0パッチノート](https://www.pathofexile.com/forum/view-thread/3826682/filter-account-type/staff)のサポートの段階制と、[Herbalism Iの個別データ](https://poe2db.tw/us/Herbalism_I)を再確認しましたが、全種類のレベル上げ・コラプト可否の根拠には拡張できません。他の制限・出典確認日・ページ更新日は変更していません。ゲーム内実測と全情報の確認完了は主張していません。
