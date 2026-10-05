@@ -1,0 +1,1905 @@
+{
+  "checkedAt": "2026-10-06 JST",
+  "baseCommit": "fd7632d42a1ebd15df64781aca59562cb8a1eed2",
+  "scope": "前回台帳のevidence_gap41掲載位置。重複する仕様を含み、独立した41個のゲーム仕様を意味しません。",
+  "completeFactualCertification": false,
+  "counts": {
+    "narrowed": 17,
+    "supported": 17,
+    "corrected": 3,
+    "reasoned_unverifiable": 4
+  },
+  "records": [
+    {
+      "claimId": "guides/equipment-basics:4",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/0/bullets/0",
+      "assessment": "narrowed",
+      "previousText": "ノーマル（白）：追加の効果（接頭辞・接尾辞）がない。",
+      "currentText": "ノーマル（白〜灰）：接頭辞・接尾辞による追加効果がない。ベース固有の効果を持つものはある。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "ノーマルの色",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Item_Rarity"
+          ]
+        },
+        {
+          "clause": "接頭辞・接尾辞がない",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Rarity"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Item_Rarity",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Rarity",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text; no repeated direct-page access attempt"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/3/sections/0/bullets/0",
+          "currentText": "ノーマル（白〜灰）：接頭辞・接尾辞による追加効果がない。ベース固有の効果を持つものはある。"
+        }
+      ]
+    },
+    {
+      "claimId": "guides/equipment-basics:5",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/0/bullets/1",
+      "assessment": "supported",
+      "previousText": "マジック（青）：接頭辞1つと接尾辞1つまで。",
+      "currentText": "マジック（青）：接頭辞1つと接尾辞1つまで。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "マジックは青",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Item_Rarity"
+          ]
+        },
+        {
+          "clause": "接頭辞1・接尾辞1まで",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Item_Rarity"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Item_Rarity",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/equipment-basics:6",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/0/bullets/2",
+      "assessment": "narrowed",
+      "previousText": "レア（黄）：最大6つ（接頭辞3・接尾辞3）。ジュエルなど一部は4つまで。",
+      "currentText": "レア（黄）：通常は最大6つ（接頭辞3・接尾辞3）。ジュエルは通常4つまでで、コラプトなどによる例外がある。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "レア黄・通常6枠、接頭辞3/接尾辞3",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Item_Rarity"
+          ]
+        },
+        {
+          "clause": "ジュエルは4つまで",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Jewel"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Item_Rarity",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Jewel",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text; no exact game-build stamp"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/3/sections/0/bullets/2",
+          "currentText": "レア（黄）：通常は最大6つ（接頭辞3・接尾辞3）。ジュエルは通常4つまでで、コラプトなどによる例外がある。"
+        }
+      ]
+    },
+    {
+      "claimId": "guides/equipment-basics:7",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/0/bullets/3",
+      "assessment": "narrowed",
+      "previousText": "ユニーク（茶）：決まった効果を持つ特別な装備。ビルドの要になるものがある。",
+      "currentText": "ユニーク（茶）：固有の効果を持つ特別な装備。ビルドの要になるものがある。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "ユニークは茶",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Item_Rarity"
+          ]
+        },
+        {
+          "clause": "決まった効果",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Rarity",
+            "https://poe2db.tw/us/Quality"
+          ]
+        },
+        {
+          "clause": "ビルドの要になるものがある",
+          "assessment": "editorial",
+          "sourceUrls": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Item_Rarity",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Rarity",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text; no repeated direct-page access attempt"
+        },
+        {
+          "url": "https://poe2db.tw/us/Quality",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/3/sections/0/bullets/3",
+          "currentText": "ユニーク（茶）：固有の効果を持つ特別な装備。ビルドの要になるものがある。"
+        }
+      ]
+    },
+    {
+      "claimId": "guides/equipment-basics:9",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/1/paragraphs/0",
+      "assessment": "narrowed",
+      "previousText": "装備には必要レベルと、必要な能力値があります。Path of Exile 2 Wikiでは、アーマーの防具には主に筋力、回避の防具には器用さ、エナジーシールド（ES）の防具には知性が必要と説明されています。",
+      "currentText": "装備によって、必要レベルや能力値の条件があります。通常、アーマー中心の防具は主に筋力、回避中心の防具は器用さ、エナジーシールド（ES）中心の防具は知性を要求します。混合防御の防具は複数の能力値を要求することがあります。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "装備には必要レベルと必要能力値がある",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Keywords",
+            "https://poe2db.tw/us/Body_Armours"
+          ]
+        },
+        {
+          "clause": "アーマー/回避/ESが筋力/器用さ/知性に対応",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Body_Armours"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Keywords",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://poe2db.tw/us/Body_Armours",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/3/sections/1/paragraphs/0",
+          "currentText": "装備によって、必要レベルや能力値の条件があります。通常、アーマー中心の防具は主に筋力、回避中心の防具は器用さ、エナジーシールド（ES）中心の防具は知性を要求します。混合防御の防具は複数の能力値を要求することがあります。"
+        }
+      ]
+    },
+    {
+      "claimId": "guides/equipment-basics:11",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/2/bullets/0",
+      "assessment": "supported",
+      "previousText": "アイテムレベルは、付く可能性のある効果とその強さを決める。敵から落ちた装備は、基本的にそのエリアのレベルと同じになる。",
+      "currentText": "アイテムレベルは、付く可能性のある効果とその強さを決める。敵から落ちた装備は、基本的にそのエリアのレベルと同じになる。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "付く可能性のある効果と強さ",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Item_level"
+          ]
+        },
+        {
+          "clause": "敵から落ちる装備は基本的にエリアレベル",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Item_level"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.poe2wiki.net/wiki/Item_level",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text retrieved; no direct-page retry"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/equipment-basics:12",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/2/bullets/1",
+      "assessment": "supported",
+      "previousText": "品質は最大20%が基本。物理攻撃用の武器はBlacksmith's Whetstone、防具はArmourer's Scrapで上げられ、1%ごとに武器の物理ダメージや防具の防御値が上がる。",
+      "currentText": "品質は最大20%が基本。物理攻撃用の武器はBlacksmith's Whetstone、防具はArmourer's Scrapで上げられ、1%ごとに武器の物理ダメージや防具の防御値が上がる。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "品質の基本上限20%",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Quality"
+          ]
+        },
+        {
+          "clause": "WhetstoneとScrapの対象",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Quality",
+            "https://poe2db.tw/us/Currency_Tab"
+          ]
+        },
+        {
+          "clause": "品質1%ごとに物理ダメージや防御値上昇",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Quality"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Quality",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://poe2db.tw/us/Currency_Tab",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/equipment-basics:13",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/3/bullets/0",
+      "assessment": "supported",
+      "previousText": "Orb of Transmutation：ノーマルをマジックにする（効果1つ）。Orb of Augmentationで2つ目を追加できる。",
+      "currentText": "Orb of Transmutation：ノーマルをマジックにする（効果1つ）。Orb of Augmentationで2つ目を追加できる。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Transmutationは白→青、1効果",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Currency_Tab"
+          ]
+        },
+        {
+          "clause": "Augmentationで2つ目",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Currency_Tab",
+            "https://poe2db.tw/us/Item_Rarity"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Currency_Tab",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://poe2db.tw/us/Item_Rarity",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/equipment-basics:14",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/3/bullets/1",
+      "assessment": "supported",
+      "previousText": "Regal Orb：マジックをレアにし、効果を1つ追加する。",
+      "currentText": "Regal Orb：マジックをレアにし、効果を1つ追加する。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Regalは青→レア、1追加",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Currency_Tab"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Currency_Tab",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/equipment-basics:15",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/3/bullets/2",
+      "assessment": "supported",
+      "previousText": "Exalted Orb：効果が上限未満のレアに、効果を1つ追加する。",
+      "currentText": "Exalted Orb：効果が上限未満のレアに、効果を1つ追加する。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Exaltedはレアへ1追加",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Currency_Tab"
+          ]
+        },
+        {
+          "clause": "上限未満という条件",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Item_Rarity"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Currency_Tab",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://poe2db.tw/us/Item_Rarity",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/equipment-basics:16",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/3/bullets/3",
+      "assessment": "supported",
+      "previousText": "Orb of Alchemy：ノーマルを効果4つのレアにする。",
+      "currentText": "Orb of Alchemy：ノーマルを効果4つのレアにする。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Alchemyは白→4効果のレア",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Currency_Tab"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Currency_Tab",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/equipment-basics:17",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/3/sections/4/paragraphs/0",
+      "assessment": "narrowed",
+      "previousText": "キャラクターは武器セットを2つ持てます。スキルごとに使う武器セットを指定でき、指定した側へ自動で持ち替えます。手動の切り替えはXキーが初期設定です。武器セットごとに、専用のパッシブポイントを別々に振ることもできます。",
+      "currentText": "キャラクターは武器セットを2つ持てます。スキルごとに使う武器セットを指定でき、指定した側へ自動で持ち替えます。PC版の標準キー設定では、手動の切り替えはXキーです。武器セットごとに、専用のパッシブポイントを別々に振ることもできます。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "武器セット2つ",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Weapon_Sets"
+          ]
+        },
+        {
+          "clause": "スキルごとに選択・自動切替",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Weapon_Sets"
+          ]
+        },
+        {
+          "clause": "手動Xキー",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Weapon_set"
+          ]
+        },
+        {
+          "clause": "セット別専用パッシブ配分",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Weapon_Sets"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Weapon_Sets",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Weapon_set",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text; default keyboard mapping only, not an actual-client test"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/3/sections/4/paragraphs/0",
+          "currentText": "キャラクターは武器セットを2つ持てます。スキルごとに使う武器セットを指定でき、指定した側へ自動で持ち替えます。PC版の標準キー設定では、手動の切り替えはXキーです。武器セットごとに、専用のパッシブポイントを別々に振ることもできます。"
+        }
+      ]
+    },
+    {
+      "claimId": "guides/after-campaign:4",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/7/sections/0/bullets/0",
+      "assessment": "supported",
+      "previousText": "Interludeは3つあり、どの順番で進めてもよい。",
+      "currentText": "Interludeは3つあり、どの順番で進めてもよい。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Interludeは3つ",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.pathofexile.com/forum/view-thread/3826682/filter-account-type/staff"
+          ]
+        },
+        {
+          "clause": "どの順番でもよい",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Interludes"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3826682/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "Historical 0.3.0 patch notes; posted 2025-08-20; expansion released 2025-08-29",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Interludes",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text; current implementation and future plan are different claims"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/after-campaign:5",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/7/sections/0/bullets/1",
+      "assessment": "narrowed",
+      "previousText": "他のInterludeのボスを倒すほど、残りのInterludeのエリアレベルが上がる（他を1つ終えるごとに+4）。",
+      "currentText": "Path of Exile 2 Wikiでは、他のInterludeで対象のボスを倒すなど進行が進むと、エリアレベルが上がると説明されています。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "他Interludeの進行でエリアレベル上昇",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Interludes"
+          ]
+        },
+        {
+          "clause": "他を1つ終えるごとに+4",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Interludes"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.poe2wiki.net/wiki/Interludes",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text; current implementation and future plan are different claims"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/7/sections/0/bullets/1",
+          "currentText": "Path of Exile 2 Wikiでは、他のInterludeで対象のボスを倒すなど進行が進むと、エリアレベルが上がると説明されています。"
+        }
+      ]
+    },
+    {
+      "claimId": "guides/after-campaign:6",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/7/sections/0/bullets/2",
+      "assessment": "narrowed",
+      "previousText": "Path of Exile 2 Wikiによると、InterludeはEarly Access期間の一時的なもので、Act 5・6の追加で削除される予定。1.0での扱いは公式発表を確認する。",
+      "currentText": "Interludeは0.3.0の公式パッチノートで一時的なコンテンツとして導入されました。Act 5・6追加時や1.0での扱いは、今後の公式発表を確認してください。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "一時的なInterlude",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.pathofexile.com/forum/view-thread/3826682/filter-account-type/staff"
+          ]
+        },
+        {
+          "clause": "WikiがAct5/6追加時の削除予定と記す",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Interludes"
+          ]
+        },
+        {
+          "clause": "将来の置き換えと1.0での実装",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3826682/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "Historical 0.3.0 patch notes; posted 2025-08-20; expansion released 2025-08-29",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Interludes",
+          "evidenceTier": "secondary",
+          "sourceVersion": "Search-indexed community Wiki text; crawler reports approximately three months old; no exact current build certification",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Search-indexed text; current implementation and future plan are different claims"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/7/sections/0/bullets/2",
+          "currentText": "Interludeは0.3.0の公式パッチノートで一時的なコンテンツとして導入されました。Act 5・6追加時や1.0での扱いは、今後の公式発表を確認してください。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/mapping:4",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/6/sections/0/bullets/0",
+      "assessment": "supported",
+      "previousText": "Waystoneのティアは1〜16。ティアが高いほどエリアレベル（敵の強さ）が上がる。ティア1でエリアレベル65、ティア15で79。",
+      "currentText": "Waystoneのティアは1〜16。ティアが高いほどエリアレベル（敵の強さ）が上がる。ティア1でエリアレベル65、ティア15で79。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Waystone tier1〜16",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Waystones"
+          ]
+        },
+        {
+          "clause": "上のtierほどエリアレベルと難度上昇",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Waystones"
+          ]
+        },
+        {
+          "clause": "tier1=65、tier15=79",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Waystones"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Waystones",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "dictionary/mapping:12",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/6/buildExamples/1/text",
+      "assessment": "supported",
+      "previousText": "Endgameの相棒候補Zekoa, the HeadcrusherはRiversideかRuptureのマップのボスとして出る。",
+      "currentText": "Endgameの相棒候補Zekoa, the HeadcrusherはRiversideかRuptureのマップのボスとして出る。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "RiversideでZekoaボス",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Waystones",
+            "https://poe2db.tw/us/Riverside"
+          ]
+        },
+        {
+          "clause": "RuptureでZekoaボス",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Waystones",
+            "https://poe2db.tw/Rupture"
+          ]
+        },
+        {
+          "clause": "Endgameの相棒候補",
+          "assessment": "editorial",
+          "sourceUrls": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Waystones",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://poe2db.tw/us/Riverside",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        },
+        {
+          "url": "https://poe2db.tw/Rupture",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted game tooltip/data; exact game build not stamped on page",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "Live page text retrieved through web tool"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/skill-gems:6",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/0/sections/0/bullets/2",
+      "assessment": "supported",
+      "previousText": "作ったジェムは、別のUncut Skill Gemを使ってレベル20まで上げられる。装備中のジェムは「Equipped Gems」の欄から選べる。",
+      "currentText": "作ったジェムは、別のUncut Skill Gemを使ってレベル20まで上げられる。装備中のジェムは「Equipped Gems」の欄から選べる。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "別のUncut Skill Gemを使ってレベル20まで上げられる。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Uncut_Skill_Gems"
+          ]
+        },
+        {
+          "clause": "装備中のジェムは「Equipped Gems」の欄から選べる。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.pathofexile.com/forum/view-thread/3762929/filter-account-type/staff"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Uncut_Skill_Gems",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted item/tooltips; no explicit client-build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3762929/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "0.2.0f",
+          "sourceDate": "2025-04-16",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "guides/skill-gems:20",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/0/sections/3/bullets/2",
+      "assessment": "narrowed",
+      "previousText": "主力が使えるLvを確認せず、早い段階で作ろうとして一覧に出てこない。",
+      "currentText": "Uncut Skill GemのレベルやGemcuttingのカテゴリを確認せず、主力スキルを作ろうとする。使うためのキャラクターLv・能力値の条件も別に確認する。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "主力が使えるLvを確認せず、早い段階で作ろうとして一覧に出てこない。",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Uncut_Skill_Gems",
+            "https://www.poe2wiki.net/wiki/Engrave",
+            "https://poe2db.tw/us/Shield_Wall"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Uncut_Skill_Gems",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted item/tooltips; no explicit client-build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Engrave",
+          "evidenceTier": "secondary_documentation",
+          "sourceVersion": "Retrieved 2026-10-05; index says crawled about three months earlier",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://poe2db.tw/us/Shield_Wall",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted tooltip/data retrieved in earlier bounded mechanics pass on 2026-10-05; no explicit build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/0/sections/3/bullets/2",
+          "currentText": "Uncut Skill GemのレベルやGemcuttingのカテゴリを確認せず、主力スキルを作ろうとする。使うためのキャラクターLv・能力値の条件も別に確認する。"
+        }
+      ]
+    },
+    {
+      "claimId": "guides/support-gems:13",
+      "sourceFile": "data/guides.json",
+      "jsonPointer": "/1/buildExamples/0/text",
+      "assessment": "corrected",
+      "previousText": "ミニオン系はSpiritを予約するため、サポートを増やすと予約が増えることに注意する。",
+      "currentText": "Spiritを予約するミニオンでは、サポートによって必要なSpiritが増えることがある。すべてのミニオンやサポートに当てはまるわけではないため、組み合わせを変えたら予約量を確認する。",
+      "scope": "出典と一致しない文言を訂正。",
+      "clauses": [
+        {
+          "clause": "ミニオン系はSpiritを予約する。",
+          "assessment": "corrected",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Unearth",
+            "https://poe2db.tw/us/Skeletal_Arsonist"
+          ]
+        },
+        {
+          "clause": "サポートを増やすと予約が増える。",
+          "assessment": "corrected",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Cathas_Brilliance",
+            "https://poe2db.tw/us/Last_Gasp"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Unearth",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted tooltip/data retrieved 2026-10-05; no explicit build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://poe2db.tw/us/Skeletal_Arsonist",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted tooltip/data retrieved 2026-10-05; no explicit build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://poe2db.tw/us/Cathas_Brilliance",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted tooltip/data retrieved 2026-10-05; version history introduces this support in 0.5.0",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://poe2db.tw/us/Last_Gasp",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted data retrieved 2026-10-05; no explicit build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/guides.json",
+          "pointer": "/1/buildExamples/0/text",
+          "currentText": "Spiritを予約するミニオンでは、サポートによって必要なSpiritが増えることがある。すべてのミニオンやサポートに当てはまるわけではないため、組み合わせを変えたら予約量を確認する。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/skill-gem:7",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/2/sections/0/bullets/3",
+      "assessment": "supported",
+      "previousText": "作ったジェムは、Uncut Skill Gemを使ってレベル20まで上げられる。品質はGemcutter's Prismで5%ずつ、20%まで上げられる。",
+      "currentText": "作ったジェムは、Uncut Skill Gemを使ってレベル20まで上げられる。品質はGemcutter's Prismで5%ずつ、20%まで上げられる。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Uncut Skill Gemを使ってレベル20まで上げられる。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Uncut_Skill_Gems"
+          ]
+        },
+        {
+          "clause": "品質はGemcutter's Prismで5%ずつ上げられる。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.pathofexile.com/forum/view-thread/3611708/filter-account-type/staff"
+          ]
+        },
+        {
+          "clause": "Gemcutter's Prismでは品質20%まで上げられる。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Gemcutter%27s_Prism"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Uncut_Skill_Gems",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Live extracted item/tooltips; no explicit client-build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3611708/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "0.1.0c",
+          "sourceDate": "2024-12-09",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Gemcutter%27s_Prism",
+          "evidenceTier": "secondary_documentation",
+          "sourceVersion": "Search-indexed page revision oldid=105493 retrieved 2026-10-05; crawler about three months old",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "dictionary/ssf:1",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/oneLine",
+      "assessment": "narrowed",
+      "previousText": "取引もパーティもせず、自分で拾ったアイテムだけで進めるモード。",
+      "currentText": "他のプレイヤーとの取引やパーティを利用せず、自力で進めるモード。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "取引もパーティもせず進める。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://pathofexile2.com/ladder/Solo%2520Self-Found",
+            "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide",
+            "https://www.pathofexile.com/forum/view-thread/3888728/filter-account-type/staff"
+          ]
+        },
+        {
+          "clause": "自分で拾ったアイテムだけで進める。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://pathofexile2.com/ladder/Solo%2520Self-Found",
+          "evidenceTier": "official_GGG_search_index",
+          "sourceVersion": "Official current ladder rules indexed about one week before retrieval on 2026-10-05",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide",
+          "evidenceTier": "secondary_documentation",
+          "sourceVersion": "Search-indexed revision oldid=131001; guide says last updated 2026-06-21",
+          "sourceDate": "2026-06-21",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3888728/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "Ayelen_GGG support response",
+          "sourceDate": "2025-12-15",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/9/oneLine",
+          "currentText": "他のプレイヤーとの取引やパーティを利用せず、自力で進めるモード。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ssf:2",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/description",
+      "assessment": "supported",
+      "previousText": "SSF（Solo Self-Found、ソロセルフファウンド）は、キャラクター作成時に選べるモードです。他のプレイヤーとの取引やパーティができず、自分で拾ったりクラフトしたりしたアイテムだけで進めます。",
+      "currentText": "SSF（Solo Self-Found、ソロセルフファウンド）は、キャラクター作成時に選べるモードです。他のプレイヤーとの取引やパーティができず、自分で拾ったりクラフトしたりしたアイテムだけで進めます。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "キャラクター作成時に選べる。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide"
+          ]
+        },
+        {
+          "clause": "他のプレイヤーとの取引やパーティができない。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://pathofexile2.com/ladder/Solo%2520Self-Found",
+            "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide",
+            "https://www.pathofexile.com/forum/view-thread/3888728/filter-account-type/staff"
+          ]
+        },
+        {
+          "clause": "自分で拾ったりクラフトしたりしたアイテムだけで進める。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide",
+          "evidenceTier": "secondary_documentation",
+          "sourceVersion": "Search-indexed revision oldid=131001; guide says last updated 2026-06-21",
+          "sourceDate": "2026-06-21",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://pathofexile2.com/ladder/Solo%2520Self-Found",
+          "evidenceTier": "official_GGG_search_index",
+          "sourceVersion": "Official current ladder rules indexed about one week before retrieval on 2026-10-05",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3888728/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "Ayelen_GGG support response",
+          "sourceDate": "2025-12-15",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "dictionary/ssf:4",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/sections/0/bullets/0",
+      "assessment": "supported",
+      "previousText": "他のプレイヤーとパーティを組めない。",
+      "currentText": "他のプレイヤーとパーティを組めない。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "他のプレイヤーとパーティを組めない。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://pathofexile2.com/ladder/Solo%2520Self-Found"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://pathofexile2.com/ladder/Solo%2520Self-Found",
+          "evidenceTier": "official_GGG_search_index",
+          "sourceVersion": "Official current ladder rules indexed about one week before retrieval on 2026-10-05",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": []
+    },
+    {
+      "claimId": "dictionary/ssf:7",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/sections/0/bullets/3",
+      "assessment": "narrowed",
+      "previousText": "SSFのキャラクターは、いつでも同じリーグのトレードリーグへ移せる。ただし移した後に戻すことはできない。",
+      "currentText": "SSFのキャラクターは、対応するトレード可能な親リーグへ移せる。移行は一方通行で、同じキャラクターをSSFへ戻すことはできない。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "SSFのキャラクターはいつでも同じリーグのトレードリーグへ移せる。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://www.pathofexile.com/forum/view-thread/3765328/filter-account-type/staff",
+            "https://www.pathofexile.com/forum/view-thread/3781218/filter-account-type/staff",
+            "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide"
+          ]
+        },
+        {
+          "clause": "移した後に戻すことはできない。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3765328/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "BenMH_GGG support response",
+          "sourceDate": "2025-04-17",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3781218/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "0.2.0h announcement",
+          "sourceDate": "2025-05-14",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.poe2wiki.net/wiki/Solo_Self_Found_Guide",
+          "evidenceTier": "secondary_documentation",
+          "sourceVersion": "Search-indexed revision oldid=131001; guide says last updated 2026-06-21",
+          "sourceDate": "2026-06-21",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/9/sections/0/bullets/3",
+          "currentText": "SSFのキャラクターは、対応するトレード可能な親リーグへ移せる。移行は一方通行で、同じキャラクターをSSFへ戻すことはできない。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ascendancy:4",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/10/sections/0/bullets/0",
+      "assessment": "narrowed",
+      "previousText": "アセンション試練は4段階あり、1段階ごとに2ポイント、合計8ポイントを得られる。",
+      "currentText": "アセンダンシーポイントの獲得は4段階で、対応する試練の条件を達成するごとに2ポイント、合計8ポイントを得られる。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "アセンション試練は4段階あり。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Ascendancy_Points",
+            "https://www.pathofexile.com/forum/view-thread/3621299/filter-account-type/staff"
+          ]
+        },
+        {
+          "clause": "1段階ごとに2ポイント、合計8ポイントを得られる。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Ascendancy_Points"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Ascendancy_Points",
+          "evidenceTier": "extracted_game_data_keyword",
+          "sourceVersion": "Live reproduced game keyword retrieved 2026-10-05; no explicit client-build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3621299/filter-account-type/staff",
+          "evidenceTier": "official_GGG",
+          "sourceVersion": "0.1.0d",
+          "sourceDate": "2024-12-11",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/10/sections/0/bullets/0",
+          "currentText": "アセンダンシーポイントの獲得は4段階で、対応する試練の条件を達成するごとに2ポイント、合計8ポイントを得られる。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ascendancy:6",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/10/sections/0/bullets/2",
+      "assessment": "narrowed",
+      "previousText": "アセンダンシーのツリーは、パッシブツリー画面の中央からいつでも確認できる。",
+      "currentText": "アセンダンシーを選ぶと、専用のスキルツリーにアセンダンシーポイントを割り振れる。",
+      "scope": "正確な画面位置と常時閲覧可否は未確認のため削除し、専用ツリーへのポイント割当という確認できた説明に限定。実機未検証。",
+      "clauses": [
+        {
+          "clause": "アセンダンシーのツリーを使える。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Ascendancy_Points"
+          ]
+        },
+        {
+          "clause": "パッシブツリー画面の中央からいつでも確認できる。",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": []
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Ascendancy_Points",
+          "evidenceTier": "extracted_game_data_keyword",
+          "sourceVersion": "Live reproduced game keyword retrieved 2026-10-05; no explicit client-build stamp",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "documentary evidence"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/10/sections/0/bullets/2",
+          "currentText": "アセンダンシーを選ぶと、専用のスキルツリーにアセンダンシーポイントを割り振れる。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/support-gem:10",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/3/buildExamples/0/text",
+      "assessment": "supported",
+      "previousText": "Endgameで使うLineageサポートジェムは高価だと資料に書かれている。",
+      "currentText": "PoE VaultのPowered Zealot型Endgameガイド（0.5・2026年6月24日更新）は、上位構成のLineageサポートを高価と評している。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "Endgameで使うLineageサポートジェムは高価だと資料に書かれている。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5 changelog; Powered Zealot endgame variant",
+          "sourceDate": "2026-06-24",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/3/buildExamples/0/text",
+          "currentText": "PoE VaultのPowered Zealot型Endgameガイド（0.5・2026年6月24日更新）は、上位構成のLineageサポートを高価と評している。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/passive-tree:12",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/4/buildExamples/1/text",
+      "assessment": "narrowed",
+      "previousText": "オラクルのEntwined Realitiesで、取得済みのキーストーン近くの強いノードを少ないポイントで取れる。",
+      "currentText": "オラクルのEntwined Realitiesは、取得済みキーストーンの中範囲内にある、キーストーン以外のパッシブを、ツリーにつながっていなくても取得できる。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "オラクルのEntwined Realitiesで、取得済みのキーストーン近くの強いノードを少ないポイントで取れる。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Oracle"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Oracle",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted tooltip as checked; page does not expose a pinned patch version",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/4/buildExamples/1/text",
+          "currentText": "オラクルのEntwined Realitiesは、取得済みキーストーンの中範囲内にある、キーストーン以外のパッシブを、ツリーにつながっていなくても取得できる。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/resistance:11",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/5/buildExamples/0/text",
+      "assessment": "corrected",
+      "previousText": "アセンダンシーの「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わるため、火耐性を優先すると揃えやすい。",
+      "currentText": "「Coal Stoker」を取得すると、火耐性の修正値の50%が冷気・雷耐性にも加わる。火耐性を増やす装備は、冷気・雷耐性を補う助けにもなる。",
+      "scope": "出典と一致しない文言を訂正。",
+      "clauses": [
+        {
+          "clause": "アセンダンシーの「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わるため、火耐性を優先すると揃えやすい。",
+          "assessment": "corrected",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Smith_of_Kitava"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Smith_of_Kitava",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted tooltip as checked; page does not expose a pinned patch version",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/5/buildExamples/0/text",
+          "currentText": "「Coal Stoker」を取得すると、火耐性の修正値の50%が冷気・雷耐性にも加わる。火耐性を増やす装備は、冷気・雷耐性を補う助けにもなる。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/endgame:10",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/7/buildExamples/0/text",
+      "assessment": "reasoned_unverifiable",
+      "previousText": "Maxrollによると、SSFでキャンペーン約5時間、Arbiterまで約10時間で進められる。",
+      "currentText": "Maxroll由来として掲載していたSSFでの所要時間は、原典を取得できず再確認できていない。現行版や初心者の所要時間の目安にはしない。",
+      "scope": "原典の再取得ができず、この条件は再確認できていません。誤り確定とは扱いません。",
+      "clauses": [
+        {
+          "clause": "Maxrollによると、SSFでキャンペーン約5時間、Arbiterまで約10時間で進められる。",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": [
+            "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "Unknown: original date, patch and tested conditions could not be reverified",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "previously_unavailable_not_retried"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/7/buildExamples/0/text",
+          "currentText": "Maxroll由来として掲載していたSSFでの所要時間は、原典を取得できず再確認できていない。現行版や初心者の所要時間の目安にはしない。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ssf:9",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/buildExamples/0/text",
+      "assessment": "reasoned_unverifiable",
+      "previousText": "Maxrollがメリットに「SSFでキャンペーン約5時間、Arbiterまで約10時間」と明記。",
+      "currentText": "Maxroll由来のSSF所要時間は、原典を取得できず再確認できていない。この記述だけでは、現行構成のSSF成立を確認済みとはしない。",
+      "scope": "原典の再取得ができず、この条件は再確認できていません。誤り確定とは扱いません。",
+      "clauses": [
+        {
+          "clause": "Maxrollがメリットに「SSFでキャンペーン約5時間、Arbiterまで約10時間」と明記。",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": [
+            "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "Unknown: original date, patch and tested conditions could not be reverified",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "previously_unavailable_not_retried"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/9/buildExamples/0/text",
+          "currentText": "Maxroll由来のSSF所要時間は、原典を取得できず再確認できていない。この記述だけでは、現行構成のSSF成立を確認済みとはしない。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ssf:10",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/buildExamples/1/text",
+      "assessment": "reasoned_unverifiable",
+      "previousText": "Maxrollがメリットに「SSFでキャンペーン約4時間、Arbiterまで約8時間」と明記。",
+      "currentText": "Maxroll由来のSSF所要時間は、原典を取得できず再確認できていない。この記述だけでは、現行構成のSSF成立を確認済みとはしない。",
+      "scope": "原典の再取得ができず、この条件は再確認できていません。誤り確定とは扱いません。",
+      "clauses": [
+        {
+          "clause": "Maxrollがメリットに「SSFでキャンペーン約4時間、Arbiterまで約8時間」と明記。",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": [
+            "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "Unknown: original date, patch and tested conditions could not be reverified",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "previously_unavailable_not_retried"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/9/buildExamples/1/text",
+          "currentText": "Maxroll由来のSSF所要時間は、原典を取得できず再確認できていない。この記述だけでは、現行構成のSSF成立を確認済みとはしない。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ssf:11",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/buildExamples/2/text",
+      "assessment": "narrowed",
+      "previousText": "元ガイドがSSF向けの全行程と明記。",
+      "currentText": "Thyのガイド（2026年9月4日更新）は、キャンペーンからEndgameまでの掲載ルートをSSFで進めたと明記している。別の著者の構成や高価な追加装備まで同じ条件で揃うという保証ではない。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "元ガイドがSSF向けの全行程と明記。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5.5 title/tag; older 0.5 text and variants remain",
+          "sourceDate": "2026-09-04",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/9/buildExamples/2/text",
+          "currentText": "Thyのガイド（2026年9月4日更新）は、キャンペーンからEndgameまでの掲載ルートをSSFで進めたと明記している。別の著者の構成や高価な追加装備まで同じ条件で揃うという保証ではない。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ssf:12",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/9/buildExamples/3/text",
+      "assessment": "narrowed",
+      "previousText": "キャンペーン向けとEndgameまでのSSFガイドを照合。",
+      "currentText": "PhazePlaysのキャンペーン用ガイドと、BlazeworksTVのHC／SSF向けガイドを参照。後者はキャンペーンからT15マップ・ピナクルボスまでを対象にしているが、両者を組み合わせた当サイトの全構成をSSFで実証したものではない。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "キャンペーン向けとEndgameまでのSSFガイドを照合。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide",
+            "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5 title/body; 0.5.5 FR tag",
+          "sourceDate": "2026-09-01",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        },
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5.5 title/tag",
+          "sourceDate": "2026-09-28",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/9/buildExamples/3/text",
+          "currentText": "PhazePlaysのキャンペーン用ガイドと、BlazeworksTVのHC／SSF向けガイドを参照。後者はキャンペーンからT15マップ・ピナクルボスまでを対象にしているが、両者を組み合わせた当サイトの全構成をSSFで実証したものではない。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ascendancy:9",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/10/buildExamples/1/text",
+      "assessment": "corrected",
+      "previousText": "スミス・オブ・キタヴァ。アセンダンシーの「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わる。",
+      "currentText": "スミス・オブ・キタヴァ。「Coal Stoker」は、火耐性の修正値の50%を冷気・雷耐性にも加える。",
+      "scope": "出典と一致しない文言を訂正。",
+      "clauses": [
+        {
+          "clause": "スミス・オブ・キタヴァ。アセンダンシーの「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わる。",
+          "assessment": "corrected",
+          "sourceUrls": [
+            "https://poe2db.tw/us/Smith_of_Kitava"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://poe2db.tw/us/Smith_of_Kitava",
+          "evidenceTier": "extracted_game_data",
+          "sourceVersion": "Current extracted tooltip as checked; page does not expose a pinned patch version",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/10/buildExamples/1/text",
+          "currentText": "スミス・オブ・キタヴァ。「Coal Stoker」は、火耐性の修正値の50%を冷気・雷耐性にも加える。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ascendancy:10",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/10/buildExamples/2/text",
+      "assessment": "supported",
+      "previousText": "スピリットウォーカー。相棒型への切替はAct 3・2回目の試練の後が推奨されている。",
+      "currentText": "スピリットウォーカー。CaptainLance9のガイド（0.5表題・2026年9月15日更新）は、相棒型への切替をAct 3の2回目の試練後に推奨している。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "スピリットウォーカー。相棒型への切替はAct 3・2回目の試練の後が推奨されている。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5 title; 0.5.5 FR tag",
+          "sourceDate": "2026-09-15",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/10/buildExamples/2/text",
+          "currentText": "スピリットウォーカー。CaptainLance9のガイド（0.5表題・2026年9月15日更新）は、相棒型への切替をAct 3の2回目の試練後に推奨している。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/ascendancy:11",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/10/buildExamples/3/text",
+      "assessment": "narrowed",
+      "previousText": "インファーナリスト。アセンダンシーでSpiritとESを伸ばしてスペクターを運用する。",
+      "currentText": "インファーナリスト。PoE VaultのPowered Zealot型ガイド（0.5・2026年6月24日更新）は、アセンダンシーでSpiritとESを伸ばしてスペクターを運用する構成。",
+      "scope": "確認できる条件・著者・版・対象に限定。元の広い断定を確認済みとはしません。",
+      "clauses": [
+        {
+          "clause": "インファーナリスト。アセンダンシーでSpiritとESを伸ばしてスペクターを運用する。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5 changelog; Powered Zealot endgame variant",
+          "sourceDate": "2026-06-24",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/10/buildExamples/3/text",
+          "currentText": "インファーナリスト。PoE VaultのPowered Zealot型ガイド（0.5・2026年6月24日更新）は、アセンダンシーでSpiritとESを伸ばしてスペクターを運用する構成。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/spirit:12",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/11/buildExamples/0/text",
+      "assessment": "supported",
+      "previousText": "スペクター運用を始めるには一定量のSpiritが必要。装備ではセプター・アミュレット・胴のSpiritを優先する。",
+      "currentText": "PoE VaultのPowered Zealot型ガイド（0.5・2026年6月24日更新）は、開始にSpiritの確保が必要とし、セプター・アミュレット・胴でSpiritを優先している。",
+      "scope": "出典の範囲内で文言を確認。実測・全構成の保証ではありません。",
+      "clauses": [
+        {
+          "clause": "スペクター運用を始めるには一定量のSpiritが必要。装備ではセプター・アミュレット・胴のSpiritを優先する。",
+          "assessment": "supported",
+          "sourceUrls": [
+            "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5 changelog; Powered Zealot endgame variant",
+          "sourceDate": "2026-06-24",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/11/buildExamples/0/text",
+          "currentText": "PoE VaultのPowered Zealot型ガイド（0.5・2026年6月24日更新）は、開始にSpiritの確保が必要とし、セプター・アミュレット・胴でSpiritを優先している。"
+        }
+      ]
+    },
+    {
+      "claimId": "dictionary/spirit:13",
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/11/buildExamples/1/text",
+      "assessment": "reasoned_unverifiable",
+      "previousText": "ConvalescenceとRavenous Swarmを両方使うには、アミュレットと胴で合計+50のSpiritが必要。",
+      "currentText": "ConvalescenceとRavenous Swarmの併用に「装備で合計+50 Spiritが必要」という条件は、参照元のMaxrollを取得できず再確認できていない。",
+      "scope": "原典の再取得ができず、この条件は再確認できていません。誤り確定とは扱いません。",
+      "clauses": [
+        {
+          "clause": "ConvalescenceとRavenous Swarmを両方使うには、アミュレットと胴で合計+50のSpiritが必要。",
+          "assessment": "reasoned_unverifiable",
+          "sourceUrls": [
+            "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+            "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "Unknown: original date, patch, supports and reservation conditions not reverified",
+          "sourceDate": null,
+          "assessmentDate": "2026-10-06 JST",
+          "access": "previously_unavailable_not_retried"
+        },
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit",
+          "evidenceTier": "creator_guide",
+          "sourceVersion": "0.5.5 title/tag; default ACT 1 extracted",
+          "sourceDate": "2026-09-27",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/dictionary.json",
+          "pointer": "/11/buildExamples/1/text",
+          "currentText": "ConvalescenceとRavenous Swarmの併用に「装備で合計+50 Spiritが必要」という条件は、参照元のMaxrollを取得できず再確認できていない。"
+        }
+      ]
+    },
+    {
+      "claimId": "R17",
+      "sourceFile": "data/seo-pages.json",
+      "jsonPointer": "/10/answer",
+      "assessment": "narrowed",
+      "previousText": "Path of Exile 2は2026年12月11日（PST）の正式版1.0から基本プレイ無料になる予定です。PC（Steam・Epic Games Store）、PS5、Xbox Seriesで遊べると発表されており、正式版以降は各ストアから無料で入手できます。",
+      "currentText": "Path of Exile 2は、2026年8月25日の公式発表で、12月11日（PST）に正式版として基本プレイ無料で公開予定と案内されています。各ストアでの最終的な入手・アカウント作成手順は未確認のため、公開時の公式案内と利用するストアの表示を確認してください。",
+      "scope": "基本無料の公開予定だけを公式発表で確認。各ストアの最終手順・将来の実装は未確認。",
+      "clauses": [
+        {
+          "clause": "Path of Exile 2は2026年12月11日（PST）の正式版1.0から基本プレイ無料になる予定です。PC（Steam・Epic Games Store）、PS5、Xbox Seriesで遊べると発表されており、正式版以降は各ストアから無料で入手できます。",
+          "assessment": "narrowed",
+          "sourceUrls": [
+            "https://www.pathofexile.com/forum/view-thread/3999366",
+            "https://www.pathofexile.com/forum/view-thread/3587981",
+            "https://www.pathofexile.com/forum/view-thread/3999673"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3999366",
+          "evidenceTier": "official_announcement",
+          "sourceVersion": "Announcement for planned 1.0 launch on 2026-12-11 PST",
+          "sourceDate": "2026-08-25",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3587981",
+          "evidenceTier": "official_documentation",
+          "sourceVersion": "Historical Early Access launch FAQ; December 6, 2024",
+          "sourceDate": "2024-11-22",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        },
+        {
+          "url": "https://www.pathofexile.com/forum/view-thread/3999673",
+          "evidenceTier": "official_announcement",
+          "sourceVersion": "Full Release Registration rewards FAQ",
+          "sourceDate": "2026-08-26",
+          "assessmentDate": "2026-10-06 JST",
+          "access": "readable_original"
+        }
+      ],
+      "affectedLocations": [
+        {
+          "file": "data/seo-pages.json",
+          "pointer": "/10/answer",
+          "currentText": "Path of Exile 2は、2026年8月25日の公式発表で、12月11日（PST）に正式版として基本プレイ無料で公開予定と案内されています。各ストアでの最終的な入手・アカウント作成手順は未確認のため、公開時の公式案内と利用するストアの表示を確認してください。"
+        },
+        {
+          "file": "data/seo-pages.json",
+          "pointer": "/10/quickActions/1",
+          "currentText": "公開予定日の12月11日前後に、公式案内と利用するストアで入手方法を確認する"
+        },
+        {
+          "file": "data/seo-pages.json",
+          "pointer": "/10/sections/2/bullets/1",
+          "currentText": "正式版の公開時に、利用するプラットフォームの公式案内とストア表示で、入手・インストール方法を確認する。各ストアの最終手順は未確認。"
+        }
+      ]
+    }
+  ],
+  "synchronizedMirrors": [
+    {
+      "sourceFile": "data/builds.json",
+      "jsonPointer": "/2/gearPriorities/2",
+      "currentText": "耐性：Coal Stokerを取得する構成なら、火耐性の修正値の50%が冷気・雷耐性にも加わる（PoE2DBの現行効果文）。実際の取得ノードは原典の段階別ツリーで確認し、未取得ならこの効果を前提に装備を組まない。",
+      "assessment": "corrected",
+      "sourceUrls": [
+        "https://poe2db.tw/us/Smith_of_Kitava"
+      ]
+    },
+    {
+      "sourceFile": "data/builds.json",
+      "jsonPointer": "/8/gearPriorities/4",
+      "currentText": "Spirit：ConvalescenceとRavenous Swarmの併用に「アミュレットと胴で合計+50 Spiritが必要」というMaxroll由来の条件は、原典を取得できず再確認できていない。",
+      "assessment": "reasoned_unverifiable",
+      "sourceUrls": [
+        "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide"
+      ]
+    }
+  ],
+  "mechanicalCountCorrections": [
+    {
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/0/metaDescription",
+      "currentText": "PoE2のビルドとは何かを初心者向けに解説。ビルドを決める4つの要素、途中で主力が変わる理由、初心者がビルドを選ぶときの見方と、このサイトの12ビルドの例を紹介。"
+    },
+    {
+      "sourceFile": "data/dictionary.json",
+      "jsonPointer": "/10/metaDescription",
+      "currentText": "PoE2のアセンダンシーとは何かを初心者向けに解説。試練で得るポイントの数（最大8）、最初に取れる時期、やり直し方、このサイトの12ビルドが選ぶアセンダンシーを紹介。"
+    }
+  ],
+  "limits": [
+    "原典未取得のMaxroll12件および既に取得できなかったMobalyticsの段階タブは再確認していません。",
+    "ゲームプレイ・実機UI・現在相場・1.0の最終実装を検証したものではありません。",
+    "2箇所に残るサポートジェムのCorrupt不可の一般化は、この41件の対象外で未解決のままです。"
+  ]
+}

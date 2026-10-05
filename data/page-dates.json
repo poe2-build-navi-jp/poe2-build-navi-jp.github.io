@@ -28,7 +28,7 @@
   "date": "2026-10-06"
  },
  "/dictionary/": {
-  "hash": "a68fca80fe1b1751",
+  "hash": "0db607327ee7e867",
   "date": "2026-10-06"
  },
  "/tier-list/": {
@@ -68,91 +68,91 @@
   "date": "2026-09-07"
  },
  "/classes/monk/": {
-  "hash": "f8a4303a081a5970",
+  "hash": "de1b3960f59391d4",
   "date": "2026-10-06"
  },
  "/classes/mercenary/": {
-  "hash": "daef30fabee65cdf",
+  "hash": "52463a73e88ca5c8",
   "date": "2026-10-06"
  },
  "/classes/warrior/": {
-  "hash": "fa6a6947f90f42df",
+  "hash": "1410b83593520b95",
   "date": "2026-10-06"
  },
  "/classes/sorceress/": {
-  "hash": "d7f80e8e659b7e41",
+  "hash": "47b736583219f40b",
   "date": "2026-10-06"
  },
  "/classes/huntress/": {
-  "hash": "ef8f62386c2aa368",
+  "hash": "3442de1e9c549273",
   "date": "2026-10-06"
  },
  "/classes/ranger/": {
-  "hash": "2b99364548b5fc62",
+  "hash": "ae7d6b9be3e69178",
   "date": "2026-10-06"
  },
  "/classes/witch/": {
-  "hash": "7358c0339fa8e816",
+  "hash": "bf0ab5d6ebb65523",
   "date": "2026-10-06"
  },
  "/classes/druid/": {
-  "hash": "abbb2be8448a4d25",
+  "hash": "8ea6dc4b286b08f7",
   "date": "2026-10-06"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "717710e6946c8023",
+  "hash": "0d7bac4a81d02e2e",
   "date": "2026-10-06"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "7d409df1de0ab4c0",
+  "hash": "bf561da5a2f7a4ee",
   "date": "2026-10-06"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "d45b90956bf33477",
+  "hash": "608d0d1b48cdf5af",
   "date": "2026-10-06"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "523c3ac14b100394",
+  "hash": "335d4110e663f6e4",
   "date": "2026-10-06"
  },
  "/builds/huntress/companion/": {
-  "hash": "d145f6cd07fa40f5",
+  "hash": "f2a8ae517ba01174",
   "date": "2026-10-06"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "5128ff4f8f07deef",
+  "hash": "4036ecb342ed5ec9",
   "date": "2026-10-06"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "7a3b2429ca0dbce3",
+  "hash": "f3050195e065f560",
   "date": "2026-10-06"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "a11a1e1b3878dce0",
+  "hash": "51c3bc7020fee386",
   "date": "2026-10-06"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "7a4eeafc03b4ee7d",
+  "hash": "cbe2d4053c3d3361",
   "date": "2026-10-06"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "0e7beb967e966aa1",
+  "hash": "4fc822ac2b2d111e",
   "date": "2026-10-06"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "3deeb5e4c62efae8",
+  "hash": "9d1ca9b8499d0093",
   "date": "2026-10-06"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "63c3de26ecf77850",
+  "hash": "33a462b543fffb96",
   "date": "2026-10-06"
  },
  "/guides/skill-gems/": {
-  "hash": "13c065734bc1e545",
+  "hash": "5edc93011f24cf58",
   "date": "2026-10-06"
  },
  "/guides/support-gems/": {
-  "hash": "f1640daf779e9840",
+  "hash": "e9c267f21365f77e",
   "date": "2026-10-06"
  },
  "/guides/passive-tree/": {
@@ -160,7 +160,7 @@
   "date": "2026-10-03"
  },
  "/guides/equipment-basics/": {
-  "hash": "6f87e9f5c8719dcc",
+  "hash": "ddd8ad7161d40079",
   "date": "2026-10-06"
  },
  "/guides/resistance/": {
@@ -176,7 +176,7 @@
   "date": "2026-10-06"
  },
  "/guides/after-campaign/": {
-  "hash": "59f2664e177d6fc7",
+  "hash": "660711c64ed36f16",
   "date": "2026-10-06"
  },
  "/guides/mapping/": {
@@ -184,7 +184,7 @@
   "date": "2026-10-06"
  },
  "/dictionary/build/": {
-  "hash": "c031cb267ff4ab19",
+  "hash": "43ba11e22407abde",
   "date": "2026-10-06"
  },
  "/dictionary/dps/": {
@@ -192,43 +192,43 @@
   "date": "2026-10-06"
  },
  "/dictionary/skill-gem/": {
-  "hash": "2bffb4aa9cd4633c",
+  "hash": "b407c32a050e55f2",
   "date": "2026-10-06"
  },
  "/dictionary/support-gem/": {
-  "hash": "ed0f6d4009c92e63",
+  "hash": "4b0fe6498cafce7e",
   "date": "2026-10-06"
  },
  "/dictionary/passive-tree/": {
-  "hash": "c28427596412fb5b",
+  "hash": "4d70b9aa9593437a",
   "date": "2026-10-06"
  },
  "/dictionary/resistance/": {
-  "hash": "21e81d0a4aca7cc1",
+  "hash": "9233e6feaeee56e0",
   "date": "2026-10-06"
  },
  "/dictionary/mapping/": {
-  "hash": "f844798ef160a7d1",
+  "hash": "65e19cdf350d44b5",
   "date": "2026-10-06"
  },
  "/dictionary/endgame/": {
-  "hash": "fe631824fc2a8e36",
+  "hash": "27f61fe832783adb",
   "date": "2026-10-06"
  },
  "/dictionary/league-starter/": {
-  "hash": "cf0be4cd3ab65f25",
+  "hash": "7954016ab5ec9fba",
   "date": "2026-10-06"
  },
  "/dictionary/ssf/": {
-  "hash": "af68531b97183508",
+  "hash": "4ae1c41bc5dbb1c5",
   "date": "2026-10-06"
  },
  "/dictionary/ascendancy/": {
-  "hash": "2db775a6338fe3ca",
+  "hash": "417db1e3f76d713f",
   "date": "2026-10-06"
  },
  "/dictionary/spirit/": {
-  "hash": "ba371a4ed0bbeabc",
+  "hash": "75bcd076df58f424",
   "date": "2026-10-06"
  },
  "/dictionary/energy-shield/": {
@@ -236,7 +236,7 @@
   "date": "2026-10-06"
  },
  "/guides/poe2-0-5-5-builds/": {
-  "hash": "81b930b8d892674a",
+  "hash": "ce198845ef9882a3",
   "date": "2026-10-06"
  },
  "/guides/forbidden-rites-beginner/": {
@@ -252,11 +252,11 @@
   "date": "2026-10-06"
  },
  "/guides/cant-beat-boss/": {
-  "hash": "df133075b3f02b9b",
+  "hash": "fbc06ba2fbd2a1fe",
   "date": "2026-10-06"
  },
  "/guides/slow-mapping/": {
-  "hash": "07bbb0f807cd7eaa",
+  "hash": "2ca20e62b358c162",
   "date": "2026-10-06"
  },
  "/poe2-1-0/release-date/": {
@@ -264,7 +264,7 @@
   "date": "2026-10-06"
  },
  "/poe2-1-0/how-to-start/": {
-  "hash": "f5ee9a99a3df91ca",
+  "hash": "5d4d23c72198f1d9",
   "date": "2026-10-06"
  },
  "/poe2-1-0/system-requirements/": {
