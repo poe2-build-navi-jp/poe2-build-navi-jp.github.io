@@ -77,3 +77,17 @@ assert.equal(new Set(clauseAudit.records.map(x=>x.claimId)).size,41);
 assert.equal(clauseAudit.completeFactualCertification,false);
 assert.deepEqual(clauseAudit.counts,{narrowed:17,supported:17,corrected:3,reasoned_unverifiable:4});
 console.log('PASS: clause-scoped mechanics, unresolved-source warnings, build-count mirrors and41-record audit structure');
+
+// An evidence gap must be visible in both the sources and generated pages.
+for (const [entry, page] of [
+  [guides.find(x => x.slug === 'support-gems'), 'guides/support-gems/index.html'],
+  [dictionary.find(x => x.slug === 'support-gem'), 'dictionary/support-gem/index.html']
+]) {
+  const sourceText = JSON.stringify(entry);
+  const html = await readFile(new URL('../' + page, import.meta.url), 'utf8');
+  for (const text of [sourceText, html]) {
+    assert.doesNotMatch(text, /サポートジェムはレベルを上げられず、コラプトもできない|サポートジェムはレベルを上げたり、コラプトしたりできない/);
+    assert.match(text, /レベル上げ・コラプトの可否について、当サイトでは全種類に共通する現行ルールの確認を完了していません/);
+  }
+}
+console.log('PASS: unresolved support-gem rules are qualified in source data and generated pages');
