@@ -478,7 +478,7 @@
       {
         "heading": "確認済みの公開予定日",
         "paragraphs": [
-          "Path of Exile 2公式フォーラムとSteamの公式ニュース（2026年8月25日付）で、1.0は2026年12月11日（PST）に「基本プレイ無料のアクションRPG」として公開されると発表されています。発表はドイツ・ケルンのgamescom Opening Night Liveで、新職業Duelistのトレーラーと同時に行われました。",
+          "Path of Exile 2公式フォーラムの2026年8月25日付の発表で、1.0は2026年12月11日（PST）に「基本プレイ無料のアクションRPG」として公開されると発表されています。発表はドイツ・ケルンのgamescom Opening Night Liveで、新職業Duelistのトレーラーと同時に行われました。",
           "公式の表記はPST（太平洋標準時）基準の日付です。確認した公式発表には開始時刻の記載がないため、日本時間での開始時刻はこのページでは断定しません。"
         ]
       },
@@ -544,7 +544,7 @@
     "faq": [
       {
         "q": "PoE2 1.0はいつ公開？",
-        "a": "2026年12月11日（PST）に公開予定です。公式フォーラムとSteamの公式ニュースの2026年8月25日付の発表で案内されています。"
+        "a": "2026年12月11日（PST）に公開予定です。Path of Exile 2公式フォーラムの2026年8月25日付の発表で案内されています。"
       },
       {
         "q": "日本時間では何時から遊べる？",
@@ -727,6 +727,21 @@
       {
         "name": "Microsoft公式：Windowsデバイス情報の確認",
         "url": "https://support.microsoft.com/en-us/windows/experience/find-information-about-your-windows-device",
+        "checkedAt": "2026-10-06"
+      },
+      {
+        "name": "Microsoft公式：DirectX診断ツールでディスプレイアダプターを確認",
+        "url": "https://support.microsoft.com/en-us/windows/hardware/display-graphics/microsoft-basic-display-adapter-in-windows",
+        "checkedAt": "2026-10-06"
+      },
+      {
+        "name": "HP公式：dxdiagでGPUとVRAMを確認",
+        "url": "https://www.hp.com/us-en/tech-takes/desktops/explainer/how-to-check-pc-specs-what-they-mean.html",
+        "checkedAt": "2026-10-06"
+      },
+      {
+        "name": "Microsoft公式：エクスプローラーでドライブの空き容量を確認",
+        "url": "https://support.microsoft.com/en-us/windows/experience/storage-filemanagement/free-up-drive-space-in-windows",
         "checkedAt": "2026-10-06"
       }
     ]

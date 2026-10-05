@@ -43,3 +43,21 @@ assert.match(ice.levelingStages[2].mainSkill,/Lv24.*未確認/);
 assert.match(ice.levelingStages[2].nowActions[0],/Lv6・Lv7/);
 assert.match(ice.levelingStages[3].supports,/Lv31.*Herald of Ice/);
 console.log('PASS: baseline exceptions, ES-loss trigger and source-specific transition preparation');
+const dps=dictionary.find(x=>x.slug==='dps'),league=dictionary.find(x=>x.slug==='league-starter');
+assert.doesNotMatch(dps.sections[0].bullets[0],/^継続ダメージは、効き始めるまでに時間がかかる/);
+assert.match(dps.sections[0].bullets[1],/別の評価項目/);
+assert.doesNotMatch(dps.sections[1].paragraphs[0],/採点/);
+assert.match(dps.buildExamples[2].text,/Lundburgerr.*Endgame.*見積も/);
+assert.doesNotMatch(JSON.stringify(league),/およそ4か月ごと|Early Access Standardという別|新しいキャラクターは作れません/);
+assert.match(league.sections[0].bullets[2],/Runes of Aldur.*並行/);
+for(const slug of ['league-starter','ssf']) {
+ const example=dictionary.find(x=>x.slug===slug).buildExamples.find(x=>x.id==='mercenary-grenade-gemling');
+ assert.match(example.text,/未確認/);
+}
+const sandExample=dictionary.find(x=>x.slug==='ascendancy').buildExamples.find(x=>x.id==='sorceress-sand-fire');
+assert.match(sandExample.text,/最初.*ケラリ.*Lv40.*2回目.*ルザン/);
+assert.doesNotMatch(JSON.stringify(seo),/公式フォーラムとSteamの公式ニュース（2026年8月25日付）|公式フォーラムとSteamの公式ニュースの2026年8月25日付/);
+assert.match(JSON.stringify(seo),/microsoft-basic-display-adapter-in-windows/);
+assert.match(JSON.stringify(seo),/free-up-drive-space-in-windows/);
+assert.match(JSON.stringify(seo),/how-to-check-pc-specs-what-they-mean/);
+console.log('PASS: DPS scope, league migration, repeated route claims and documentation provenance');

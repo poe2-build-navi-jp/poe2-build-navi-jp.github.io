@@ -1,6 +1,37 @@
 [
   {"slug":"build","term":"ビルド","oneLine":"スキル・サポート・パッシブ・装備をどう組み合わせて育てるかの方針。","description":"ビルドは、キャラクターをどう育てるかの方針です。どのスキルを主力にし、どのサポートジェムを付け、パッシブツリーのどこを取り、どんな装備を優先するかを1つにまとめたものを指します。同じ職業でも、選ぶビルドで戦い方も必要な装備も大きく変わります。","importance":"職業を決めただけでは、次に取るスキルも装備も決まりません。ビルドを1つに決めておくと、今のレベルで何を優先すればいいかが分かり、迷ってスキルや装備を取り直す回数が減ります。","action":"職業ページかビルド一覧からビルドを1つ選び、現在Lvを入力して「今やること」を確認します。","guide":"/beginner-guide/","metaDescription":"PoE2のビルドとは何かを初心者向けに解説。ビルドを決める4つの要素、途中で主力が変わる理由、初心者がビルドを選ぶときの見方と、このサイトの11ビルドの例を紹介。","sections":[{"heading":"ビルドを決める4つの要素","bullets":["主力スキル：攻撃の中心になるスキルジェム。","サポートジェム：主力スキルに付けて効果を変える。","パッシブツリーとアセンダンシー：能力値や特別な効果を取る。","装備：武器の種類、防御の種類（アーマー・回避・ES）、耐性。"]},{"heading":"途中で主力が変わることがある","paragraphs":["ビルドの完成形で使うスキルが、序盤から使えるとは限りません。スキルジェムにはレベルの条件があり、アセンダンシーの取得を境に戦い方が変わるビルドもあります。そのため多くのビルドは、序盤は別のスキルで進め、条件を満たした段階で主力を切り替えます。"]},{"heading":"初心者がビルドを選ぶときの見方","bullets":["主力スキルを何Lvから使えるか（切替が遅いほど、それまでの手順を覚える必要がある）。","操作の量（1つのスキルで周回できるか、複数のスキルを順番に使うか）。","装備やユニークへの依存度、SSFでの成立が資料で確認できるか。"]}],"buildExamples":[{"id":"druid-plant-oracle","text":"Lv1から最後までEntangleを主力として使い続けるビルド。"},{"id":"warrior-shield-wall-smith","text":"序盤はローリングスラム＋ボーンシャッターで進め、Lv22でシールドウォールへ切り替える。"},{"id":"monk-whirling-assault","text":"主力のワーリングアサルトはLv41から。それまでは別のスキルで進める。"}],"version":"0.5.5","sources":[{"name":"POE2ビルドナビ：評価基準（ビルドの選び方と評価の根拠）","url":"https://poe2-build-navi-jp.github.io/rating-criteria/","checkedAt":"2026-09-29"}]},
-  {"slug":"dps","term":"DPS","oneLine":"1秒あたりに与えるダメージ（Damage Per Second）の目安。","description":"DPSはDamage Per Secondの略で、1秒あたりにどれだけのダメージを与えられるかを表す目安です。火力の高さを話すときによく使われますが、同じ数字でも実際の戦いやすさは大きく違います。","importance":"「火力が出ない」と感じたときは、数字より先に、単体と範囲のどちらが足りないのか、継続ダメージの立ち上がりが遅いだけなのかを切り分けると、直すべき装備やスキルが分かります。","action":"火力に困ったら、単体と範囲のどちらが足りないかを決めてから、「火力が出ない」ガイドの確認順に進みます。","guide":"/guides/increase-damage/","metaDescription":"PoE2のDPSとは何かを初心者向けに解説。DPSの数字だけでは強さを比べられない理由（継続ダメージの立ち上がり、瞬間火力、単体と範囲）と、このサイトの評価でDPSを使わない理由を紹介。","sections":[{"heading":"DPSの数字だけでは比べられない理由","bullets":["継続ダメージは、効き始めるまでに時間がかかる。敵がすぐ倒れる場面では、数字ほどの火力を感じにくい。","瞬間火力（短い時間に出せるダメージ）が低いと、動き回るボスや、すぐ離れる敵に当てにくい。","単体への火力と、集団をまとめて倒す力は別物。ボス向けとマップ周回向けで評価が分かれるビルドもある。","装備や条件（呪い、露出など）が違えば数字も変わる。他人のDPSの数字は、同じ条件で測ったものとは限らない。"]},{"heading":"このサイトでの扱い","paragraphs":["このサイトのビルド評価は、同じ条件で測ったDPSや順位ではありません。元ガイドの長所・短所の記述をもとに「火力」「ボス・単体」を採点しています。DPSの具体的な数値は掲載していません。"]}],"buildExamples":[{"id":"witch-ed-contagion-lich","text":"継続ダメージのビルド。火力は武器に大きく左右され、効くまでに時間がかかると資料に書かれている。"},{"id":"druid-plant-oracle","text":"集団の処理は得意だが、瞬間火力は低めで、動き回るボスに当てにくいとされている。"},{"id":"warrior-shield-wall-smith","text":"0.5でFortifying Cryの仕様が変わり、Act 3以降の単体火力が最悪の場合30%下がるとされている。"}],"version":"0.5.5","sources":[{"name":"POE2ビルドナビ：評価基準（火力・ボスの採点方法）","url":"https://poe2-build-navi-jp.github.io/rating-criteria/","checkedAt":"2026-09-29"},{"name":"PoE Vault: Witch Chaos Leveling Build（継続ダメージの短所）","url":"https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build","checkedAt":"2026-09-28"},{"name":"Gamerch: プラントオラクルビルドの評価と解説（瞬間火力の短所）","url":"https://gamerch.com/poe2/954990","checkedAt":"2026-09-28"}]},
+  {"slug":"dps","term":"DPS","oneLine":"1秒あたりに与えるダメージ（Damage Per Second）の目安。","description":"DPSはDamage Per Secondの略で、1秒あたりにどれだけのダメージを与えられるかを表す目安です。火力の高さを話すときによく使われますが、同じ数字でも実際の戦いやすさは大きく違います。","importance":"「火力が出ない」と感じたときは、単体と範囲のどちらが足りないのか、火力を出すための準備に時間がかかっているのかを切り分けるのがおすすめです。装備やスキルを見直す手がかりになります。","action":"火力に困ったら、単体と範囲のどちらが足りないかを決めてから、「火力が出ない」ガイドの確認順に進みます。","guide":"/guides/increase-damage/","metaDescription":"PoE2のDPSとは何かを初心者向けに解説。DPSの数字だけでは強さを比べられない理由（火力を出すまでの準備、瞬間火力、単体と範囲）と、このサイトの比較方法を紹介。","sections":[{"heading":"DPSの数字だけでは比べられない理由","bullets":["継続ダメージは、時間をかけてダメージを与える。ビルドによっては火力を伸ばす準備が必要だが、すべての継続ダメージに「効き始めるまでの待ち時間」があるわけではない。","瞬間火力（短い時間に出せるダメージ）と、動く敵への当てやすさは別の評価項目。Gamerchのプラントオラクル解説では、瞬間火力の低さと動き回るボスへのダメージの入りづらさを、それぞれ短所に挙げている。","単体への火力と、集団をまとめて倒す力は別物。ボス向けとマップ周回向けで評価が分かれるビルドもある。","装備や条件（呪い、露出など）が違えば数字も変わる。他人のDPSの数字は、同じ条件で測ったものとは限らない。"]},{"heading":"このサイトでの扱い","paragraphs":["このサイトのビルド比較は、同じ条件で測ったDPSや順位ではありません。「火力」「ボス・単体」などは、元ガイドが長所・短所のどちらとして説明しているかを出典付きで整理しています。DPSの具体的な比較数値は掲載していません。"]}],"buildExamples":[{"id":"witch-ed-contagion-lich","text":"PoE VaultのChaos Witch育成ガイドでは、武器への火力依存と、火力の立ち上がりを短所に挙げている。Witchの育成構成に対する評価で、Lichの完成形すべてに共通する性質ではない。"},{"id":"druid-plant-oracle","text":"Gamerchの掲載構成では、集団処理を長所、瞬間火力の低さと動き回るボスへのダメージの入りづらさを短所に挙げている。"},{"id":"warrior-shield-wall-smith","text":"Lundburgerrは、0.5のFortifying Cry変更により、この構成のEndgame単体火力が従来比で最悪約30%下がると見積もっている。"}],"version":"0.5.5","sources":[
+    {
+      "name": "POE2ビルドナビ：評価基準（火力・ボスの比較方法）",
+      "url": "https://poe2-build-navi-jp.github.io/rating-criteria/",
+      "checkedAt": "2026-09-29"
+    },
+    {
+      "name": "PoE Vault: Chaos Witch Leveling Build（0.5.1育成構成への評価）",
+      "url": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "Gamerch: プラントオラクルの評価と解説（掲載構成への評価）",
+      "url": "https://gamerch.com/poe2/954990",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "PoE2DB: Essence Drain（継続ダメージのゲーム内説明）",
+      "url": "https://poe2db.tw/us/Essence_Drain",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "GGG: 0.5.0パッチノート（Fortifying Cry）",
+      "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "Mobalytics: LundburgerrのShield Wall Smith（単体火力の見積もり）",
+      "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+      "checkedAt": "2026-10-06"
+    }
+  ]},
   {"slug":"skill-gem","term":"スキルジェム","oneLine":"スキルパネルにはめて、攻撃や魔法などのスキルを使えるようにするジェム。","description":"スキルジェムは、スキルパネルにはめて攻撃や魔法などのスキルを使えるようにするジェムです。はめたスキルはキーに割り当てて使います。常駐するバフや永続ミニオンを使うSpiritジェムもスキルジェムの一種です。","importance":"スキルジェムのレベル条件を知らないと、「主力スキルがまだ使えない」理由が分からずに迷います。ジェムのレベルは火力に直結するため、Uncut Skill Gemを主力に優先して使うことも大切です。","action":"自分のビルドの主力スキルを何Lvから使えるかをビルドページで確認し、それまでに使うスキルとUncut Skill Gemの使い道を決めます。","guide":"/guides/skill-gems/","metaDescription":"PoE2のスキルジェムとは何かを初心者向けに解説。同時にセットできる数、レベルと能力値の条件、Uncut Skill Gemでの作り方と上げ方、主力スキルが使えるまでのLvの例を紹介。","sections":[{"heading":"基本のしくみ","bullets":["同時にセットできるスキルジェムは通常9個まで。Unset Ring（指輪のベースタイプ）などでスキル枠を増やせる。","使うには、ジェムのレベル条件と能力値（筋力・器用さ・知性）の条件を満たす必要がある。ジェムのレベルが上がるほど条件も上がる。","スキルジェムはUncut Skill Gemから作る。作ったジェムのレベルは、使ったUncut Skill Gemのレベルになる。","作ったジェムは、Uncut Skill Gemを使ってレベル20まで上げられる。品質はGemcutter's Prismで5%ずつ、20%まで上げられる。","Spiritジェムは、Uncut Spirit Gemからしか作れない。"]},{"heading":"主力が使えるまでの時間","paragraphs":["強力なスキルほど、使えるようになるまでのレベルが高いことがあります。ビルドによっては、主力を使える条件がそろうまで別のスキルで進めます。"]}],"buildExamples":[{"id":"warrior-shield-wall-smith","text":"シールドウォールはTier 7のジェムで、使えるのはLv22から。"},{"id":"ranger-ice-shot-deadeye","text":"アイスショットは、レベル9のジェムの必要キャラクターレベルであるLv31から。"},{"id":"monk-whirling-assault","text":"ワーリングアサルトはTier 11のジェムで、使えるのはLv41から。"},{"id":"huntress-companion","text":"テイムビーストはTier 7のジェムで、序盤は使えない。"}],"version":"0.5.5","sources":[
     {
       "name": "Path of Exile 2 Wiki: Gem（スキルジェム・サポートジェム）",
@@ -112,9 +143,82 @@
     }
   ]},
   {"slug":"endgame","term":"Endgame","oneLine":"キャンペーンを終えた後に遊ぶ、Atlas（アトラス）でのマップ攻略と強敵との戦い。","description":"Endgameは、キャンペーン（Act 1〜4とInterlude）を終えた後に遊ぶ部分です。Atlas（アトラス）と呼ばれる広い地図の上でマップを攻略しながら、装備を集め、強いボスに挑みます。","importance":"キャンペーンは進めたのにEndgameで急に倒れやすくなるのは、耐性ペナルティと敵の強さが大きく上がるためです。ビルドのEndgame段階に合わせて、防御と装備を先に整える必要があります。","action":"キャンペーンを終えたら、ビルドページの「Mapping開始」の段階を開き、耐性と装備を確認してから最初のマップへ進みます。","guide":"/guides/after-campaign/","metaDescription":"PoE2のEndgameとは何かを初心者向けに解説。Atlasの始まり（The Ziggurat Refuge）、マップ攻略、Atlasパッシブ、各コンテンツのピナクルボス、始める前に確認することを紹介。","sections":[{"heading":"Endgameの流れ","bullets":["Atlasの出発点はThe Ziggurat Refuge。ここ（または自分のハイドアウト）のマップデバイスでWaystoneを使い、マップへ入る。","Atlasは自分専用の進行で、パーティを組んでも他のプレイヤーと共有されない。","Precursor Fortress（先駆者の要塞）のボスを倒すとAtlasパッシブのポイントを得られる。要塞の最奥ではArbiter of Divinityと戦う。","Breach・Ritual・Expedition・Abyss・Deliriumなどのコンテンツには、それぞれ最後に挑むピナクルボスがいる。"]},{"heading":"始める前に確認すること","bullets":["エリアレベル65以上では、元素耐性に-60%のペナルティがかかる。","ビルドの多くは、キャンペーン用とEndgame用で構成や装備が変わる。自分のビルドのEndgame段階を確認する。"]}],"buildExamples":[{"id":"witch-ed-contagion-lich","text":"Maxrollによると、SSFでキャンペーン約5時間、Arbiterまで約10時間で進められる。"},{"id":"sorceress-sand-fire","text":"Endgameに向けて、キャンペーン用のアーマー装備からES装備へ1部位ずつ移行する。"}],"version":"0.5.5","sources":[{"name":"Path of Exile 2 Wiki: Atlas","url":"https://www.poe2wiki.net/wiki/Atlas","checkedAt":"2026-09-29"},{"name":"Path of Exile 2 Wiki: Map","url":"https://www.poe2wiki.net/wiki/Map","checkedAt":"2026-09-29"},{"name":"Path of Exile 2 Wiki: Resistance","url":"https://www.poe2wiki.net/wiki/Resistance","checkedAt":"2026-09-29"}]},
-  {"slug":"league-starter","term":"リーグスターター","oneLine":"新しいリーグが始まった直後、装備が何もない状態から進めやすいビルド。","description":"リーグスターターは、新しいリーグが始まった直後に、何も持っていない状態から育てやすいビルドのことです。高価な装備やユニークがなくても成立し、キャンペーンから序盤のマップまで安定して進められるビルドがこう呼ばれます。","importance":"リーグ開始直後は装備も通貨も少ないため、完成形が強くても序盤に進めないビルドは育てにくくなります。初めて遊ぶ人や、1.0からゼロで始める人ほど、序盤から安定するビルドを選ぶと進めやすくなります。","action":"リーグスターター一覧から、序盤の育てやすさと操作量で候補を絞り、1つのビルドをLv1から進めます。","guide":"/league-starter/","metaDescription":"PoE2のリーグスターターとは何かを初心者向けに解説。約4か月ごとに始まるチャレンジリーグの仕組み、リーグスターターに向く条件、正式版1.0での扱い、このサイトの例を紹介。","sections":[{"heading":"リーグとは","bullets":["PoE2では、およそ4か月ごとに新しいチャレンジリーグが始まる。キャラクターも取引の市場もゼロからのスタートになる。","リーグが終わると、そのキャラクターは対応する常設のリーグ（Standardなど）へ移される。","0.5.5のリーグはForbidden Rites（2026年9月4日開始）。"]},{"heading":"リーグスターターに向く条件","bullets":["特定のユニーク装備がなくても成立する。","レア装備を少しずつ更新するだけで、キャンペーンと序盤のマップを進められる。","SSFでの成立が確認できれば、取引をしなくても進めやすい。"]},{"heading":"正式版1.0との関係","paragraphs":["アーリーアクセス期間のキャラクターは、1.0の公開前にEarly Access Standardという別のリーグへ移される予定です（新しいキャラクターは作れません）。1.0からは多くのプレイヤーがゼロから始めるため、リーグスターターの選び方が特に大切になります。"]}],"buildExamples":[{"id":"warrior-shield-wall-smith","text":"装備への投資が少なくても成立し、最初のアセンダンシー後はとても硬くなる、とされている。"},{"id":"druid-plant-oracle","text":"Maxrollがメリットに「Cheap Leaguestart」（安く始められる）を挙げている。"},{"id":"mercenary-grenade-gemling","text":"MaxrollがメリットにSSFでのリーグ開始を挙げ、SSFでArbiterまでテストされた構成と紹介されている。"}],"version":"0.5.5","sources":[{"name":"Path of Exile 2 Wiki: League","url":"https://www.poe2wiki.net/wiki/Solo_Self-Found","checkedAt":"2026-09-29"}]},
-  {"slug":"ssf","term":"SSF","oneLine":"取引もパーティもせず、自分で拾ったアイテムだけで進めるモード。","description":"SSF（Solo Self-Found、ソロセルフファウンド）は、キャラクター作成時に選べるモードです。他のプレイヤーとの取引やパーティができず、自分で拾ったりクラフトしたりしたアイテムだけで進めます。","importance":"SSFでは必要な装備を自分で揃えるしかないため、特定のユニークに頼るビルドは完成しにくくなります。SSFで遊ぶなら、資料でSSFでの成立が確認できるビルドを選ぶと進めやすくなります。","action":"SSFで遊ぶなら、ビルド一覧の「SSF」で絞り込み、SSFでの成立が確認できるビルドから選びます。","guide":"/class-check/","metaDescription":"PoE2のSSF（Solo Self-Found）とは何かを初心者向けに解説。できないこと、報酬の違い、トレードリーグへの移動、このサイトでSSF可と判断している5ビルドと判断基準を紹介。","sections":[{"heading":"SSFでできないこと・違い","bullets":["他のプレイヤーとパーティを組めない。","他のプレイヤーとの取引や、非同期取引などの取引機能を使えない。","SSFを選んでも、ゲーム内で追加の報酬や特典はない。","SSFのキャラクターは、いつでも同じリーグのトレードリーグへ移せる。ただし移した後に戻すことはできない。"]},{"heading":"このサイトの「SSF可」の基準","paragraphs":["このサイトでは、元ガイドなどの資料がSSFでの成立を明記している場合だけ「SSF可」と表示します。「ユニーク不要」「リーグスターター向け」という記述や、キャンペーンまでの範囲しか書かれていない記述だけでは「SSF可」にしません。"]}],"buildExamples":[{"id":"witch-ed-contagion-lich","text":"Maxrollがメリットに「SSFでキャンペーン約5時間、Arbiterまで約10時間」と明記。"},{"id":"monk-whirling-assault","text":"Maxrollがメリットに「SSFでキャンペーン約4時間、Arbiterまで約8時間」と明記。"},{"id":"witch-minion-infernalist","text":"元ガイドがSSF向けの全行程と明記。"},{"id":"sorceress-sand-fire","text":"キャンペーン向けとEndgameまでのSSFガイドを照合。"},{"id":"mercenary-grenade-gemling","text":"Act IからArbiter of DivinityまでSSFでテストされた構成と紹介されている。"}],"version":"0.5.5","sources":[{"name":"Path of Exile 2 Wiki: League（Solo Self-Found）","url":"https://www.poe2wiki.net/wiki/Solo_Self-Found","checkedAt":"2026-09-29"}]},
-  {"slug":"ascendancy","term":"アセンダンシー","oneLine":"職業ごとに選べる上位クラス。試練を突破して専用のパッシブを取る。","description":"アセンダンシーは、職業の中からさらに特化した上位クラスを選ぶ仕組みです。アセンション試練を初めて突破したときに1つを選ぶと専用のスキルツリーが開き、試練で得たポイントで特別な効果やスキルを取れます。","importance":"同じ職業でも、アセンダンシーで主力スキルや防御の仕組みが大きく変わります。多くのビルドは最初のアセンダンシー取得を境に構成を切り替えるため、取得時期が育成の区切りになります。","action":"自分のビルドが選ぶアセンダンシーと、切替を始める試練の段階をビルドページで確認し、そのレベル帯までに試練へ挑む準備をします。","guide":"/classes/","metaDescription":"PoE2のアセンダンシーとは何かを初心者向けに解説。試練で得るポイントの数（最大8）、最初に取れる時期、やり直し方、このサイトの11ビルドが選ぶアセンダンシーを紹介。","sections":[{"heading":"ポイントの数と取得時期","bullets":["アセンション試練は4段階あり、1段階ごとに2ポイント、合計8ポイントを得られる。","最初の試練はAct 2のTrial of the Sekhemasで挑める。PoE Vaultの育成ガイドは、取得をLv20〜30、早いビルドではLv21〜22で済ませるよう勧めている。","アセンダンシーのツリーは、パッシブツリー画面の中央からいつでも確認できる。"]},{"heading":"選び直したいとき","paragraphs":["選んだアセンダンシーは、アセンダンシーのポイントを0にした状態で、今と同じ数のポイントが得られる試練をもう一度突破すると選び直せます。ポイントの払い戻しはBalbalaまたはThe Trialmasterに話しかけて行います。"]}],"buildExamples":[{"id":"sorceress-sand-fire","text":"ディサイプル・オブ・ヴァラシュタ。最初のアセンダンシー取得後にケラリ・ルザンの指示スキルへ切り替える。"},{"id":"warrior-shield-wall-smith","text":"スミス・オブ・キタヴァ。アセンダンシーの「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わる。"},{"id":"huntress-companion","text":"スピリットウォーカー。相棒型への切替はAct 3・2回目の試練の後が推奨されている。"},{"id":"witch-minion-infernalist","text":"インファーナリスト。アセンダンシーでSpiritとESを伸ばしてスペクターを運用する。"}],"version":"0.5.5","sources":[{"name":"Path of Exile 2 Wiki: Ascendancy class","url":"https://www.poe2wiki.net/wiki/Ascendancy_class","checkedAt":"2026-09-29"},{"name":"PoE Vault: Infernalist Minion Leveling Build（アセンダンシー取得時期）","url":"https://www.poe-vault.com/poe2/witch/infernalist/minion-leveling-build","checkedAt":"2026-09-28"},{"name":"PoE Vault: Djinn Commander Disciple of Varashta Leveling Build","url":"https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build","checkedAt":"2026-09-28"}]},
+  {"slug":"league-starter","term":"リーグスターター","oneLine":"新しいリーグが始まった直後、装備が何もない状態から進めやすいビルド。","description":"リーグスターターは、新しいリーグで、装備や通貨を持ち込まない状態から育てやすいビルドのことです。選ぶときは、高価な装備がなくても進められるか、キャンペーンから序盤のマップまでの育成手順が示されているかを目安にします。","importance":"リーグ開始直後は装備も通貨も少ないため、完成形が強くても序盤に進めないビルドは育てにくくなります。初めて遊ぶ人や、1.0からゼロで始める人ほど、序盤から安定するビルドを選ぶと進めやすくなります。","action":"リーグスターター一覧から、序盤の育てやすさと操作量で候補を絞り、1つのビルドをLv1から進めます。","guide":"/league-starter/","metaDescription":"PoE2のリーグスターターとは何かを初心者向けに解説。新しいリーグでのスタート、リーグスターターを選ぶ目安、アーリーアクセスのキャラクターの扱いと、このサイトの例を紹介。","sections":[{"heading":"リーグとは","bullets":["新しいリーグに参加する場合は、そのリーグで新規キャラクターを作り、新しい取引市場で始める。開始日や開催期間は、リーグごとの公式告知で確認する。","リーグ終了時の移行先・時期は、そのリーグの公式告知で確認する。アーリーアクセスのキャラクターは、正式版Standardとは別のEarly Accessリーグに残す方針が公表されている。","0.5.5ではForbidden Ritesイベントリーグが2026年9月4日13:00 PDT（日本時間9月5日5:00）に開始。Runes of Aldurと並行して、1.0公開まで続く予定。"]},{"heading":"リーグスターター選びの目安（このサイトの助言）","bullets":["特定のユニーク装備がなくても成立する。","装備を少しずつ更新しながら進められ、必要なスキル・サポートや切替条件もガイドで確認できる。","SSFでの成立が確認できれば、取引をしなくても進めやすい。"]},{"heading":"正式版1.0との関係","paragraphs":["公式のアーリーアクセスFAQでは、キャラクターを削除せず、正式版Standardとは別のEarly Accessリーグに残し、正式版の公開後も保持する方針です。移行の細部は1.0前後の公式告知で確認してください。1.0から新規キャラクターで始める場合も、序盤の育てやすさを基準にビルドを選ぶのがおすすめです。"]}],"buildExamples":[{"id":"warrior-shield-wall-smith","text":"MobalyticsのLundburgerrは、マップ序盤の装備を整えやすく、最初のアセンダンシー取得後のキャンペーンで高い耐久を得られる構成と説明している。"},{"id":"druid-plant-oracle","text":"Raxxの0.5.5ガイドにはLv1からの育成手順があり、Endgameには高価な装備を必要としないと作者が説明するCheap版がある。"},{"id":"mercenary-grenade-gemling","text":"SSFの紹介は別々の資料に基づく。MaxrollのSSF向けレベリング評価は原文の再確認が未完了。AOEAHはAct IからArbiterまでSSFで試したと紹介しているが、掲載するDEADRABB1T版との一致と元検証は未確認。"}],"version":"0.5.5","sources":[
+    {
+      "name": "GGG: Forbidden Rites FAQ（新規キャラクター・新経済・開催期間）",
+      "url": "https://www.pathofexile.com/forum/view-thread/4000430",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "GGG: Path of Exile 2 Early Access FAQ（キャラクター保持方針）",
+      "url": "https://www.pathofexile.com/forum/view-thread/3587981",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "Mobalytics: LundburgerrのShield Wall Smith（リーグ開始向けという作者評価）",
+      "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "Mobalytics: RaxxのPlant Oracle育成ガイド（0.5.5）",
+      "url": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "Mobalytics: RaxxのPlant Oracle Endgameガイド（Cheap版）",
+      "url": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "Mobalytics: DEADRABB1TのGrenades Gemling League Starter（0.5.5）",
+      "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "AOEAH: 0.5.5 Gemling紹介（SSF実績の紹介。掲載構成との一致・元検証は未確認）",
+      "url": "https://www.aoeah.com/news/4788--poe-2-055-best-gemling-build--top-3-best-league-start--endgame-gemling-builds",
+      "checkedAt": "2026-10-06"
+    },
+    {
+      "name": "Maxroll: Grenade Mercenary育成ガイド（過去の参照先。今回は原文未確認）",
+      "url": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+      "checkedAt": "2026-09-28"
+    }
+  ]},
+  {"slug":"ssf","term":"SSF","oneLine":"取引もパーティもせず、自分で拾ったアイテムだけで進めるモード。","description":"SSF（Solo Self-Found、ソロセルフファウンド）は、キャラクター作成時に選べるモードです。他のプレイヤーとの取引やパーティができず、自分で拾ったりクラフトしたりしたアイテムだけで進めます。","importance":"SSFでは必要な装備を自分で揃えるしかないため、特定のユニークに頼るビルドは完成しにくくなります。SSFで遊ぶなら、資料でSSFでの成立が確認できるビルドを選ぶと進めやすくなります。","action":"SSFで遊ぶなら、ビルド一覧の「SSF」で絞り込み、SSFでの成立が確認できるビルドから選びます。","guide":"/class-check/","metaDescription":"PoE2のSSF（Solo Self-Found）とは何かを初心者向けに解説。できないこと、報酬の違い、トレードリーグへの移動、このサイトでSSF可と判断している5ビルドと判断基準を紹介。","sections":[{"heading":"SSFでできないこと・違い","bullets":["他のプレイヤーとパーティを組めない。","他のプレイヤーとの取引や、非同期取引などの取引機能を使えない。","SSFを選んでも、ゲーム内で追加の報酬や特典はない。","SSFのキャラクターは、いつでも同じリーグのトレードリーグへ移せる。ただし移した後に戻すことはできない。"]},{"heading":"このサイトの「SSF可」の基準","paragraphs":["このサイトでは、元ガイドなどの資料がSSFでの成立を明記している場合だけ「SSF可」と表示します。「ユニーク不要」「リーグスターター向け」という記述や、キャンペーンまでの範囲しか書かれていない記述だけでは「SSF可」にしません。"]}],"buildExamples":[{"id":"witch-ed-contagion-lich","text":"Maxrollがメリットに「SSFでキャンペーン約5時間、Arbiterまで約10時間」と明記。"},{"id":"monk-whirling-assault","text":"Maxrollがメリットに「SSFでキャンペーン約4時間、Arbiterまで約8時間」と明記。"},{"id":"witch-minion-infernalist","text":"元ガイドがSSF向けの全行程と明記。"},{"id":"sorceress-sand-fire","text":"キャンペーン向けとEndgameまでのSSFガイドを照合。"},{"id":"mercenary-grenade-gemling","text":"紹介記事にはAct IからArbiter of DivinityまでのSSFテストへの言及がありますが、このサイト掲載の育成ルートとの一致は未確認です。"}],"version":"0.5.5","sources":[
+    {
+      "name": "Path of Exile 2 Wiki: League（Solo Self-Found）",
+      "url": "https://www.poe2wiki.net/wiki/Solo_Self-Found",
+      "checkedAt": "2026-09-29"
+    },
+    {
+      "name": "AOEAH: Grenade GemlingのSSF紹介（掲載ルートとの一致は未確認）",
+      "url": "https://www.aoeah.com/news/4788--poe-2-055-best-gemling-build--top-3-best-league-start--endgame-gemling-builds",
+      "checkedAt": "2026-10-06"
+    }
+  ]},
+  {"slug":"ascendancy","term":"アセンダンシー","oneLine":"職業ごとに選べる上位クラス。試練を突破して専用のパッシブを取る。","description":"アセンダンシーは、職業の中からさらに特化した上位クラスを選ぶ仕組みです。アセンション試練を初めて突破したときに1つを選ぶと専用のスキルツリーが開き、試練で得たポイントで特別な効果やスキルを取れます。","importance":"同じ職業でも、アセンダンシーで主力スキルや防御の仕組みが大きく変わります。多くのビルドは最初のアセンダンシー取得を境に構成を切り替えるため、取得時期が育成の区切りになります。","action":"自分のビルドが選ぶアセンダンシーと、切替を始める試練の段階をビルドページで確認し、そのレベル帯までに試練へ挑む準備をします。","guide":"/classes/","metaDescription":"PoE2のアセンダンシーとは何かを初心者向けに解説。試練で得るポイントの数（最大8）、最初に取れる時期、やり直し方、このサイトの11ビルドが選ぶアセンダンシーを紹介。","sections":[{"heading":"ポイントの数と取得時期","bullets":["アセンション試練は4段階あり、1段階ごとに2ポイント、合計8ポイントを得られる。","最初の試練はAct 2のTrial of the Sekhemasで挑める。PoE Vaultの育成ガイドは、取得をLv20〜30、早いビルドではLv21〜22で済ませるよう勧めている。","アセンダンシーのツリーは、パッシブツリー画面の中央からいつでも確認できる。"]},{"heading":"選び直したいとき","paragraphs":["選んだアセンダンシーは、アセンダンシーのポイントを0にした状態で、今と同じ数のポイントが得られる試練をもう一度突破すると選び直せます。ポイントの払い戻しはBalbalaまたはThe Trialmasterに話しかけて行います。"]}],"buildExamples":[{"id":"sorceress-sand-fire","text":"ディサイプル・オブ・ヴァラシュタ。PhazePlaysの育成ガイドでは、最初のアセンダンシーでケラリ、Lv40以降・2回目でルザンの指示スキルを導入する。"},{"id":"warrior-shield-wall-smith","text":"スミス・オブ・キタヴァ。アセンダンシーの「Coal Stoker」で火耐性の50%が冷気・雷耐性にも加わる。"},{"id":"huntress-companion","text":"スピリットウォーカー。相棒型への切替はAct 3・2回目の試練の後が推奨されている。"},{"id":"witch-minion-infernalist","text":"インファーナリスト。アセンダンシーでSpiritとESを伸ばしてスペクターを運用する。"}],"version":"0.5.5","sources":[
+    {
+      "name": "Path of Exile 2 Wiki: Ascendancy class",
+      "url": "https://www.poe2wiki.net/wiki/Ascendancy_class",
+      "checkedAt": "2026-09-29"
+    },
+    {
+      "name": "PoE Vault: Infernalist Minion Leveling Build（アセンダンシー取得時期）",
+      "url": "https://www.poe-vault.com/poe2/witch/infernalist/minion-leveling-build",
+      "checkedAt": "2026-09-28"
+    },
+    {
+      "name": "PoE Vault: Djinn Commander Disciple of Varashta Leveling Build",
+      "url": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build",
+      "checkedAt": "2026-09-28"
+    },
+    {
+      "name": "Mobalytics: PhazePlaysの育成ガイド（KelariとRuzhanの導入段階）",
+      "url": "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide",
+      "checkedAt": "2026-10-06"
+    }
+  ]},
   {"slug":"spirit","term":"Spirit","oneLine":"常駐バフ・永続ミニオン・自動発動用ジェムを動かすために予約する力。","description":"Spiritは、常駐するバフ、倒されても残る永続ミニオン、スキルを自動で発動させるメタジェムを使うときに「予約」する力です。予約したSpiritは使っている間ずっと埋まり、合計がSpiritの最大値を超えるスキルは同時に使えません。","importance":"ミニオン・常駐バフ・自動発動を使うビルドでは、Spiritが足りないと主力の構成そのものが組めません。育成手順の切替条件に「必要なSpiritを揃えてから」と書かれている段階は、Spiritの確認が最優先です。","action":"今のSpiritの最大値と、使いたい常駐スキル・ミニオンの予約量を確認します。足りなければ、3つのクエスト報酬を取ったか、胴・アミュレット・セプターのSpiritを見直します。","guide":"/guides/equipment-basics/","metaDescription":"PoE2のSpiritとは何かを初心者向けに解説。初期値0から増やす方法（キャンペーンで最大100）、装備で伸ばす部位、ミニオン・常駐スキルで不足しやすいビルドの例を紹介。","sections":[{"heading":"Spiritの増やし方","paragraphs":["キャラクターは最初Spiritを持っていません。キャンペーン中のクエスト報酬で合計100まで永続的に増え、それ以上は主に装備とアセンダンシーで増やします。"],"bullets":["Act 1：Freythornの「The King in the Mists」が落とすGembloom Skullで+30","Act 3：The Azak Bogの「Ignagduk, the Bog Witch」が落とすGemrot Skullで+30","Interlude 3：Kriar Villageの「Lythara, the Wayward Spear」が落とすGemcrust Skullで+40","装備：胴とアミュレットに「+Spirit」、セプターに「Spirit増加%」が付くことがある"]},{"heading":"初心者がつまずきやすい点","bullets":["セプターなどの装備やアセンダンシーから付与される常駐スキル・ミニオンは、Spiritを予約しない。","武器セットごとに使えるSpiritが変わることがある。武器を持ち替えたら常駐スキルが止まっていないか確認する。","Spiritが足りないときは、スキルのレベルを上げる前にクエスト報酬の取り逃しと、胴・アミュレットのSpiritを確認する。"]}],"buildExamples":[{"id":"witch-minion-infernalist","text":"スペクター運用を始めるには一定量のSpiritが必要。装備ではセプター・アミュレット・胴のSpiritを優先する。"},{"id":"witch-ed-contagion-lich","text":"ConvalescenceとRavenous Swarmを両方使うには、アミュレットと胴で合計+50のSpiritが必要。"},{"id":"sorceress-sand-fire","text":"Act 4以降はSpirit・ES・+ミニオンスキルレベルの3つを探して装備を更新する。"},{"id":"druid-plant-oracle","text":"第二アセンダンシー以降の自動発動構成は、必要なジェムとSpiritを揃えてから切り替える。"}],"version":"0.5.5","sources":[{"name":"Path of Exile 2 Wiki: Spirit","url":"https://www.poe2wiki.net/wiki/Spirit","checkedAt":"2026-09-29"}]},
   {"slug":"energy-shield","term":"エナジーシールド","oneLine":"ライフより先にダメージを受け止め、ESを失わない状態が続くと自動で回復する防御。","description":"エナジーシールド（ES）は、ライフの上に重なる追加の耐久値です。ダメージはまずESが受け止め、ESがなくなるとライフが減ります。知性に関係する防御で、主に知性系の防具から得られます。","importance":"ESを主な防御にするビルドでは、ESを失い続けると通常のリチャージが始まらず、一気に削られます。攻撃を避けて回復の時間を作る立ち回りと、混沌耐性の確保がセットで必要です。","action":"ESを使うビルドなら、最大ESと混沌耐性を確認します。ESへ移行する段階では、耐性と実際の防御を維持したまま1部位ずつ装備を替えます。","guide":"/guides/why-i-die/","metaDescription":"PoE2のエナジーシールド（ES）とは何かを初心者向けに解説。4秒後に毎秒12.5%回復する仕組み、混沌ダメージは2倍削れる・出血と毒は貫通する注意点、ESを使うビルドの例を紹介。","sections":[{"heading":"回復のしくみ","bullets":["通常、ESを失わない状態が4秒続くと、ESは最大値の毎秒12.5%の速さで回復（リチャージ）を始める。","通常、リチャージ中にESを失うと回復が止まり、4秒の待ち時間がやり直しになる。","装備やパッシブの「ESリチャージ開始が早くなる」「リチャージ速度が上がる」効果で短縮できる。"]},{"heading":"注意点","bullets":["混沌ダメージはESを通常の2倍削る。","出血と毒のダメージはESを無視して直接ライフを減らす。","ESは耐性の後に計算される。耐性が足りないと、同じ攻撃でESが大きく削れる。"]}],"buildExamples":[{"id":"witch-minion-infernalist","text":"ESに特化した防御で大きな被弾に耐え、素早く回復する。胴・兜・手袋などのESを優先する。"},{"id":"witch-ed-contagion-lich","text":"大きなESプールが長所。マップ以降はES装備を更新し、ジュエルでも最大ES%を伸ばす。"},{"id":"sorceress-sand-fire","text":"キャンペーンはアーマーで進め、Endgameに向けてES装備へ1部位ずつ移行する。"}],"version":"0.5.5","sources":[
     {
