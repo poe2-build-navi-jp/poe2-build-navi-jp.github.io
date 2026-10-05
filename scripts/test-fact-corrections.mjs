@@ -29,3 +29,17 @@ assert.doesNotMatch(JSON.stringify(seo),/Steamではサポーターパックの�
 assert.match(JSON.stringify(seo),/同じサブアカウント/);
 assert.match(JSON.stringify(seo),/12月11日（PST）/);
 console.log('PASS: equipment types, pre-attack buffs, source scope, gem exceptions and access-rights regressions');
+const passive=dictionary.find(x=>x.slug==='passive-tree'),es=dictionary.find(x=>x.slug==='energy-shield'),mapping=dictionary.find(x=>x.slug==='mapping');
+assert.match(passive.metaDescription,/基本123/);
+assert.doesNotMatch(passive.metaDescription,/最大123/);
+assert.match(passive.sections[0].bullets[0],/追加ポイントは別/);
+assert.doesNotMatch(es.sections[0].bullets.join(' '),/ライフかES|回復中にダメージ/);
+assert.match(es.importance,/ESを失い続ける/);
+assert.match(es.sections[0].bullets[0],/ESを失わない.*4秒.*12.5%/);
+assert.match(mapping.sections[1].bullets[1],/通常0回.*Stitch the Flesh/);
+assert.doesNotMatch(by('monk-whirling-assault').levelingStages[4].nowActions.join(' '),/マナ不足ならEfficiency IIを使う/);
+const ice=by('ranger-ice-shot-deadeye');
+assert.match(ice.levelingStages[2].mainSkill,/Lv24.*未確認/);
+assert.match(ice.levelingStages[2].nowActions[0],/Lv6・Lv7/);
+assert.match(ice.levelingStages[3].supports,/Lv31.*Herald of Ice/);
+console.log('PASS: baseline exceptions, ES-loss trigger and source-specific transition preparation');
