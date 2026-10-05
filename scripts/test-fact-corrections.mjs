@@ -16,6 +16,7 @@ assert.equal(by('mercenary-grenade-gemling').ratingEvidence.beginner.checks.mode
 assert.equal(by('mercenary-grenade-gemling').ratingEvidence.beginner.checks.ssfConfirmed,false);
 assert.equal(by('mercenary-grenade-gemling').ratingEvidence.beginner.checks.noDodgeRequirement,true);
 assert.equal(by('mercenary-grenade-gemling').ssf,null);
+assert.doesNotMatch(by('mercenary-grenade-gemling').strengths.join(' '),/SSF.*Arbiter/);
 assert.doesNotMatch(spirit.levelingStages[0].mainSkill,/PounceとShredを中心/);
 assert.equal(by('witch-ed-contagion-lich').ratingEvidence.beginner.checks.moderateOperation,true);
 assert.match(by('druid-plant-oracle').levelingStages[2].mainSkill,/手動Thunderstorm/);
