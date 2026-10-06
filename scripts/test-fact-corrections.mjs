@@ -39,9 +39,9 @@ assert.match(es.sections[0].bullets[0],/ESを失わない.*4秒.*12.5%/);
 assert.match(mapping.sections[1].bullets[1],/通常0回.*Stitch the Flesh/);
 assert.doesNotMatch(by('monk-whirling-assault').levelingStages[4].nowActions.join(' '),/マナ不足ならEfficiency IIを使う/);
 const ice=by('ranger-ice-shot-deadeye');
-assert.match(ice.levelingStages[2].mainSkill,/Lv24.*未確認/);
-assert.match(ice.levelingStages[2].nowActions[0],/Lv6・Lv7/);
-assert.match(ice.levelingStages[3].supports,/Lv31.*Herald of Ice/);
+assert.match(ice.levelingStages[2].mainSkill,/lvl 24-30.*ライトニングアロー.*Freezing Mark/);
+assert.match(ice.levelingStages[2].nowActions[0],/Lv7ジェム1個.*Lv5または6ジェム2個/);
+assert.match(ice.levelingStages[3].supports,/lvl 31-41.*Herald of Ice/);
 console.log('PASS: baseline exceptions, ES-loss trigger and source-specific transition preparation');
 const dps=dictionary.find(x=>x.slug==='dps'),league=dictionary.find(x=>x.slug==='league-starter');
 assert.doesNotMatch(dps.sections[0].bullets[0],/^継続ダメージは、効き始めるまでに時間がかかる/);
@@ -91,3 +91,44 @@ for (const [entry, page] of [
   }
 }
 console.log('PASS: unresolved support-gem rules are qualified in source data and generated pages');
+
+// Selected-stage evidence must not be replaced by a shared Endgame rotation.
+const monk41=by('monk-whirling-assault').levelingStages[4];
+assert.match(monk41.mainSkill,/Staggering Palm.*Tempest Bell.*Mantra of Destruction/);
+assert.doesNotMatch(monk41.mainSkill+' '+monk41.transitionCondition+' '+monk41.nowActions.join(' '),/フォーリングサンダー|Falling Thunder|Charged Staff/);
+assert.match(monk41.supports,/Magnified Area II.*Rage II.*Heavy Swing.*Pursuit II/);
+assert.doesNotMatch(monk41.supports+' '+monk41.caution,/Efficiency II|Rage III/);
+assert.match(monk41.caution,/Conservative Casting.*Pounce.*Mark of Siphoning/);
+assert.match(ice.levelingStages[3].supports,/Rapid Attacks I.*Elemental Armament II.*Ice Bite I/);
+assert.match(ice.levelingStages[3].caution,/Freezing Mark.*セット2.*セット1/);
+const shield=by('warrior-shield-wall-smith');
+assert.match(shield.levelingStages[2].supports,/Rapid Attacks I.*Magnified Area I.*Fire Attunement/);
+assert.match(shield.levelingStages[2].gearPriority,/作者.*80以上.*目安/);
+assert.match(shield.levelingStages[3].supports,/Fortifying Cry.*Close Combat I.*Sunder.*Prolonged Duration II/);
+assert.match(twister.levelingStages[5].mainSkill,/ワーリングスラッシュのジェムLv1.*セット1.*ツイスターのジェムLv16.*セット2/);
+assert.match(twister.levelingStages[5].supports,/Rage III.*Blazing Critical.*Prolonged Duration II.*Pinpoint Critical/);
+assert.match(twister.levelingStages[5].caution,/War Banner・Fangs of Frostはない/);
+const stageAudit=await read('docs/audits/stage-tabs-2026-10-06.json');
+assert.equal(stageAudit.records.length,6);
+assert.deepEqual(stageAudit.counts,{corrected_stage_attribution:1,source_coverage_expanded:5});
+assert.equal(stageAudit.completeFactualCertification,false);
+for(const record of stageAudit.records){
+ const source=await read(record.sourceFile);
+ const index=Number(record.jsonPointer.split('/').at(-1));
+ assert.deepEqual(source.build.levelingStages[index],record.current);
+ assert.ok(record.sourceUrl.includes('activeVariantId%2C'));
+}
+const site=await read('data/site.json');
+assert.equal(site.latestPatch,'0.5.5e');
+assert.equal(site.latestPatchSource,'https://www.pathofexile.com/forum/view-thread/4009785');
+assert.equal(by('monk-whirling-assault').updatedAt,'2026-09-07');
+console.log('PASS: six selected-stage records, one corrected attribution, patch freshness and preserved historical dates');
+
+const discovery=await read('data/discovery.json');
+for(const key of ['latestPatch','latestPatchSource','latestPatchCheckedAt']) assert.equal(discovery[key],site[key]);
+for(const path of ['index.html','league-starter/index.html','tier-list/index.html','leveling/index.html','poe2-1-0/index.html','best-builds/index.html']) {
+ const html=await readFile(new URL('../'+path,import.meta.url),'utf8');
+ assert.match(html,/最新確認[^<]*0\.5\.5e/);
+ assert.doesNotMatch(html,/最新確認[^<]*0\.5\.5d/);
+}
+console.log('PASS: patch metadata and discovery-page latest-patch labels stay aligned');

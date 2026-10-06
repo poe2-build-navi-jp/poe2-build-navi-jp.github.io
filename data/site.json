@@ -6,10 +6,10 @@
   "nextGameVersion": "1.0",
   "nextGameVersionReleaseDate": "2026-12-11",
   "lastUpdated": "2026-09-13",
-  "latestPatch": "0.5.5d",
+  "latestPatch": "0.5.5e",
   "latestPatchCheckedAt": "2026-10-06",
-  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4008534",
-  "latestPatchImpact": "0.5.5d公式パッチノートと各掲載資料を基に、掲載ビルドの対応環境を個別に表示しています。",
+  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4009785",
+  "latestPatchImpact": "0.5.5e公式パッチノートは低VRAM向け設定と不具合修正を掲載。ビルドやサポート共通ルールの変更根拠としては扱っていません。",
   "baseUrl": "https://poe2-build-navi-jp.github.io",
   "googleAnalyticsMeasurementId": "G-ZTQ4RYVHPC"
 }
