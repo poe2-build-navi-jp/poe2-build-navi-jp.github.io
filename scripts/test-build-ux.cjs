@@ -125,7 +125,9 @@ console.log('PASS: 12 static cards, unlock/SSF/style filters, zero results recov
  const shieldStages=[...shieldPage.window.document.querySelectorAll('.static-roadmap details')];
  assert.equal(shieldStages.length,8);
  assert.equal(shieldStages.slice(2).filter(stage=>stage.textContent.includes('この段階のサポートを原典で確認')).length,6);
- assert.match(shieldStages[2].textContent,/切替後のサポート名は未確認/);
+ assert.match(shieldStages[2].textContent,/Rapid Attacks I.*Magnified Area I.*Fire Attunement/);
+ assert.match(shieldStages[3].textContent,/Fortifying Cry.*Sunder/);
+ assert.match(shieldStages[4].textContent,/段階固有のサポート名は未確認/);
  async function home(storage){
   const page=new JSDOM(fs.readFileSync('index.html','utf8'),{runScripts:'outside-only',url:'https://poe2-build-navi-jp.github.io/'});
   Object.entries(storage).forEach(([key,value])=>page.window.localStorage.setItem(key,value));

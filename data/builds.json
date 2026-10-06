@@ -96,17 +96,17 @@
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "ワーリングアサルト + フォーリングサンダー + Charged Staff。",
-        "supports": "原典の「Leveling Whirling 41+」のサポートと入手条件を確認する。Magnified Area II・Elemental Armament II・Rage III・Ancestral Call II・Efficiency IIの5枠はLate Endgameで確認した候補で、Lv41時点で全て用意できることは未確認。",
+        "mainSkill": "ワーリングアサルトを主力に、Staggering Palm・Tempest Bell・Mantra of Destructionを組み合わせる。",
+        "supports": "原典の育成タブはMagnified Area II、Rage II、Heavy Swing、Pursuit IIを掲載。Pursuit IIの追加はGreater Jeweller’s Orbの優先先として案内されている。枠・所持ジェム・要求能力値を満たしてから追加する。",
         "passivePriority": "0.5.5ガイドの「Leveling Whirling 41+」ツリーへ切り替える。",
         "gearPriority": "クォータースタッフは追加ダメージ、ダメージ増加、近接/アタックスキルレベル、クリティカル、攻撃速度。防具は耐性・ライフ・回避。",
         "replaceGear": "良いクォータースタッフがHollow Palmを上回る場合は武器型へ戻す。",
-        "caution": "Late Endgameではマナ不足にEfficiency IIを使う案があります。Lv41では「(Leveling) Whirling 41+」の構成と、手持ちジェム・能力値要求を確認して選んでください。",
-        "transitionCondition": "キャンペーン終了。ワーリングアサルトで周回し、フォーリングサンダーでチャージを消費できる。",
+        "caution": "育成タブはマナ対策にConservative Casting、マナリーチ、またはPounceとMark of Siphoningを使う案を掲載。手持ちジェムと要求能力値を確認して選ぶ。",
+        "transitionCondition": "キャンペーン終了。ワーリングアサルトで周回し、Staggering Palm・Tempest Bell・Mantra of Destructionを使い分けられる。",
         "nowActions": [
           "ワーリングアサルトへ切り替える",
           "育成用構成でマナとサポート要求を確認する",
-          "フォーリングサンダーをチャージ消費用に設定する"
+          "ボス用のTempest BellとMantra of Destructionを設定する"
         ]
       },
       {
@@ -260,6 +260,10 @@
       {
         "date": "2026-10-06",
         "summary": "原典の本文と段階別タブの確認範囲を分離。別段階のサポート・操作をそのまま推奨せず、取得条件と未確認箇所を明記。正確な全ロードアウトの再検証ではありません。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "選択した段階タブを再取得し、Lv41育成の主力・補助スキルの取り違えを訂正。サポートとマナ対策を育成タブの記述に限定しました。"
       }
     ]
   },
@@ -380,12 +384,12 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "ツイスターを主力に、原典のEarly Atlasで補助スキルと操作順を照合する。この段階のWar Banner・Fangs of Frost採用とローテーションは未確認。",
-        "supports": "原典のEarly Atlas構成へ移行。未確認のサポート名は原典で確認。",
+        "mainSkill": "Early Atlasの掲載構成は、ワーリングスラッシュのジェムLv1を武器セット1、ツイスターのジェムLv16をセット2で使用。Barrage、Ice-Tipped Arrows、Sniper’s Mark、Combat Frenzy、Charge Regulation、Wind Dancer、Ghost Dance、Parryも掲載。",
+        "supports": "ワーリングスラッシュ：Rage III、Rapid Attacks III、Knockback、Blazing Critical。ツイスター：Prolonged Duration II、Projectile Acceleration III、Salvo、Pinpoint Critical。原典の掲載構成であり、マップ開始時の入手を保証しない。枠・所持ジェム・要求能力値を満たしてから採用する。",
         "passivePriority": "Early Atlas段階別ツリーへ移る。キャンペーン用ツリーを一括で推測変更しない。",
         "gearPriority": "防具のライフ・耐性、ブーツ移動速度と攻撃用槍の追加ダメージを比較。速度用／攻撃用の武器セットを分け、移動と攻撃の不足を確認する。",
         "replaceGear": "マップで倒される場合は火力装備より不足耐性・ライフの部位を先に更新。",
-        "caution": "視認性が下がりやすい構成なので、危険床やボス動作を見失わない。",
+        "caution": "Early Atlasの掲載スキル一覧にはWar Banner・Fangs of Frostはない。原典の共通操作説明と段階固有の一覧を区別して参照する。危険床やボス動作を見失わない。",
         "transitionCondition": "低Tierマップを安定周回でき、強敵への操作順を再現できる。",
         "nowActions": [
           "Early Atlasツリーへ移る",
@@ -526,6 +530,10 @@
       {
         "date": "2026-10-06",
         "summary": "原典の本文と段階別タブの確認範囲を分離。別段階のサポート・操作をそのまま推奨せず、取得条件と未確認箇所を明記。正確な全ロードアウトの再検証ではありません。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "段階別タブの掲載内容を追加確認し、未取得だったスキル・サポート案内を具体化。装備全条件・ゲーム内実走の確認ではありません。"
       }
     ]
   },
@@ -603,10 +611,10 @@
       {
         "label": "Lv21〜30",
         "mainSkill": "Lv22からシールドウォールへ切替。",
-        "supports": "Lv22まではローリングスラム＋ボーンシャッター（単体はPerfect Strike）を維持。切替時は盾とシールドウォールを用意し、原典「Skill Gems」→「Act 2 - Shield Wall Swap」で各スキルのサポート枠を確認する。切替後のサポート名は未確認。",
+        "supports": "Lv22まではローリングスラム＋ボーンシャッター（単体はPerfect Strike）を維持。Act 2 - Shield Wall Swapでは、シールドウォール：Rapid Attacks I、Magnified Area I、Fire Attunement。Infernal Cry：Tireless、Raging Cry。Freezing Mark：Mark for Death、Mark of Siphoning。",
         "supportSourceStage": "Act 2 - Shield Wall Swap",
         "passivePriority": "原典のAct 2 - Shield Wall Swap段階別ツリーへ移行。",
-        "gearPriority": "Lv22以降はアーマー値が高い盾を最優先。防具はライフと耐性。",
+        "gearPriority": "作者はLv22・盾アーマー80以上を切替の目安としている。ゲームの使用条件や実測保証ではない。防具はライフと耐性も確認する。",
         "replaceGear": "シールドウォール切替時に盾を最優先で更新。",
         "caution": "Lv22前に主力を外さず、切替後は壁を起爆する操作を練習する。",
         "transitionCondition": "シールドウォールを設置して起爆する操作が安定する。",
@@ -618,13 +626,13 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "シールドウォールを主力として継続。",
-        "supports": "シールドウォールを継続。原典「Skill Gems」→「Act 3」でサポートを確認し、現在の構成と異なる枠だけ入れ替える。段階固有のサポート名は未確認。",
+        "mainSkill": "シールドウォールを主力として継続。原典は最初のLv9以上ジェムでFortifying Cry、次にSunderを追加する案を掲載。",
+        "supports": "Act 3ではシールドウォールのMagnified AreaをIIへ更新。Fortifying Cry：Raging Cry、Fire Attunement、Close Combat I。Sunder：Prolonged Duration II、Rapid Attacks I。所持ジェム・枠・要求能力値を確認する。",
         "supportSourceStage": "Act 3",
         "passivePriority": "原典のAct 3段階別ツリーを使用。Smithの防御効果と装備要求を優先。",
         "gearPriority": "盾のアーマー、胴装備の防御、ライフ、不足耐性、移動速度。",
         "replaceGear": "火力と壁の性能に直結する盾を先に比較し、防御不足なら胴装備を更新。",
-        "caution": "主力の性能が盾に強く依存するため、武器だけを更新し続けない。",
+        "caution": "主力の性能が盾に強く依存するため、武器だけを更新し続けない。原典はスキル枠不足時にLeap Slamを一時的に外す案を掲載。",
         "transitionCondition": "Lv41到達。通常敵とボスで壁の置き方を使い分けられる。",
         "nowActions": [
           "盾のアーマー値を比較する",
@@ -770,6 +778,10 @@
       {
         "date": "2026-10-06",
         "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "段階別タブの掲載内容を追加確認し、未取得だったスキル・サポート案内を具体化。装備全条件・ゲーム内実走の確認ではありません。"
       }
     ],
     "ratingEvidence": {
@@ -1499,27 +1511,27 @@
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Lv23まではライトニングアロー＋ライトニングロッド。現行ガイドはLv24に小規模なスキル切替を案内しているため、「lvl 24-30」を確認して移行する。切替後の正確な構成は未確認。",
-        "supports": "Lv24切替に備え、Lv6・Lv7の未カットスキルジェムを使い切らず、サポートも残す。切替先は原典「lvl 24-30」で確認する。段階固有のサポート名は未確認。",
+        "mainSkill": "Lv23まではライトニングアロー＋ライトニングロッド。原典のlvl 24-30ではライトニングアローを継続し、Freezing Mark・Freezing Salvo・Ice-Tipped Arrowsなどを追加する。",
+        "supports": "原典は切替用にLv7スキルジェム1個、Lv5または6を2個、サポート4〜5個を案内。Lv7はFreezing Markを優先し、次のLv7でスナイプを追加。スナイプ：Concentrated Area、Window of Opportunity I、Elemental Armament II。",
         "passivePriority": "lvl 24-30段階別ツリーを使用し、Lv31の切替地点へ接続。",
         "gearPriority": "弓、矢筒、ライフ、耐性、移動速度。必要な知性も確認。",
         "replaceGear": "Lv31切替後も使える防具を優先し、短期間だけの装備へ過剰投資しない。",
-        "caution": "Lv24の切替先ジェムと必要条件が揃うまでは、現在成立している主力を残す。Lv31のIce Shot切替とは別の準備として確認する。",
+        "caution": "Lv24の切替先ジェムと必要条件が揃うまでは、現在成立している主力を残す。原典のジェム準備案であり、Lv31のアイスショット切替とは分けて確認する。",
         "transitionCondition": "Lv31到達。アイスショットと切替後のサポートを用意できる。",
         "nowActions": [
-          "Lv24切替用のLv6・Lv7未カットジェムを残す",
-          "原典のlvl 24-30で切替先を確認する",
+          "切替用のLv7ジェム1個とLv5または6ジェム2個を残す",
+          "Freezing Markを優先し、次のLv7でスナイプを追加する",
           "Lv31用Ice ShotとHerald of Iceの条件を準備する"
         ]
       },
       {
         "label": "Lv31〜40",
         "mainSkill": "アイスショットへ切替。単体にはスナイプを使用",
-        "supports": "原典「lvl 31-41」のスキルとサポートを確認する。現行ガイドはLv31のIce Shot切替時にHerald of Ice用Spiritジェムを用意する想定。所持ジェム・Spirit・能力値を確認して移行する。正確なサポート構成は未確認。",
+        "supports": "原典のlvl 31-41では、アイスショットにRapid Attacks I、Elemental Armament II、Ice Bite Iを掲載。Herald of ThunderをHerald of Iceへ交換する。所持ジェム・Spirit・能力値を確認して移行する。",
         "passivePriority": "lvl 31-41段階別ツリーへ移る。完成ツリーへ一括変更しない。",
         "gearPriority": "冷気または物理の追加アタックダメージ、弓DPS、矢筒、ライフ、耐性。",
         "replaceGear": "切替後に通常敵を処理できない場合は、サポートより先に弓と矢筒を比較する。",
-        "caution": "日本語プレイ記録にはLv31直後のSpiritジェム不足と、条件次第でLv36まで移行を待つ案がある。ただし2026年5月23日の0.4環境でのテスト記録であり、現在の取得条件は現行ガイドとゲーム内で確認する。",
+        "caution": "原典はFreezing Markを武器セット2、それ以外をセット1に割り当てる。操作を減らしたい場合、Freezing Salvoは省略可能。日本語プレイ記録のLv36まで待つ案は0.4環境の記録であり、現在の取得条件は現行ガイドとゲーム内で確認する。",
         "transitionCondition": "Lv41到達。アイスショットで周回し、スナイプを単体用に使い分けられる。",
         "nowActions": [
           "Lv31でアイスショットへの切替を判断する",
@@ -1700,6 +1712,10 @@
       {
         "date": "2026-10-06",
         "summary": "現行原典本文のLv24ミニ切替とLv31でのHerald of Ice準備を反映。数値Lv帯だけで即移行せず所持ジェム・Spiritを確認する案内に修正。正確な段階別タブは未確認。"
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "段階別タブの掲載内容を追加確認し、未取得だったスキル・サポート案内を具体化。装備全条件・ゲーム内実走の確認ではありません。"
       }
     ]
   },

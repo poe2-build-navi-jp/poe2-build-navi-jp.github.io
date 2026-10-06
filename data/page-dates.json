@@ -1,6 +1,6 @@
 {
  "/": {
-  "hash": "58ba8b740f053b23",
+  "hash": "6d0da22f72320e22",
   "date": "2026-10-06"
  },
  "/builds/": {
@@ -8,11 +8,11 @@
   "date": "2026-10-06"
  },
  "/classes/": {
-  "hash": "81f424d767612fd0",
+  "hash": "4f802d62cc08ed77",
   "date": "2026-10-06"
  },
  "/leveling/": {
-  "hash": "fea8eeb4311669ff",
+  "hash": "5ff5c012cc49a1e1",
   "date": "2026-10-06"
  },
  "/gear-check/": {
@@ -24,7 +24,7 @@
   "date": "2026-09-19"
  },
  "/beginner-guide/": {
-  "hash": "023eb3f6ab9cfc64",
+  "hash": "f223c93532edf834",
   "date": "2026-10-06"
  },
  "/dictionary/": {
@@ -32,19 +32,19 @@
   "date": "2026-10-06"
  },
  "/tier-list/": {
-  "hash": "e2b0c87ebffb104f",
+  "hash": "ca680d63a0dbd338",
   "date": "2026-10-06"
  },
  "/league-starter/": {
-  "hash": "ef7d6e4187188ff9",
+  "hash": "8dba9bab1a2fc592",
   "date": "2026-10-06"
  },
  "/best-builds/": {
-  "hash": "aef19cb31d3e1e7d",
+  "hash": "60a78fd733d90638",
   "date": "2026-10-06"
  },
  "/poe2-1-0/": {
-  "hash": "2838581e7e8a4ec8",
+  "hash": "c3075809673c6319",
   "date": "2026-10-06"
  },
  "/about/": {
@@ -68,47 +68,47 @@
   "date": "2026-09-07"
  },
  "/classes/monk/": {
-  "hash": "de1b3960f59391d4",
+  "hash": "7810101e6549affe",
   "date": "2026-10-06"
  },
  "/classes/mercenary/": {
-  "hash": "52463a73e88ca5c8",
+  "hash": "e0dd263569dab4fb",
   "date": "2026-10-06"
  },
  "/classes/warrior/": {
-  "hash": "1410b83593520b95",
+  "hash": "0b0a936643493f8b",
   "date": "2026-10-06"
  },
  "/classes/sorceress/": {
-  "hash": "47b736583219f40b",
+  "hash": "304f271bc64cdffe",
   "date": "2026-10-06"
  },
  "/classes/huntress/": {
-  "hash": "3442de1e9c549273",
+  "hash": "0dff34be62881ba5",
   "date": "2026-10-06"
  },
  "/classes/ranger/": {
-  "hash": "ae7d6b9be3e69178",
+  "hash": "2bc887c82a215df2",
   "date": "2026-10-06"
  },
  "/classes/witch/": {
-  "hash": "bf0ab5d6ebb65523",
+  "hash": "3c956b911696f112",
   "date": "2026-10-06"
  },
  "/classes/druid/": {
-  "hash": "8ea6dc4b286b08f7",
+  "hash": "73af8dea10dc7282",
   "date": "2026-10-06"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "0d7bac4a81d02e2e",
+  "hash": "512957a1c30f6b9b",
   "date": "2026-10-06"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "bf561da5a2f7a4ee",
+  "hash": "d55b5557e620c13b",
   "date": "2026-10-06"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "608d0d1b48cdf5af",
+  "hash": "488557107e6a4491",
   "date": "2026-10-06"
  },
  "/builds/sorceress/sand-and-fire/": {
@@ -120,7 +120,7 @@
   "date": "2026-10-06"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "4036ecb342ed5ec9",
+  "hash": "d47df25c0d1a2150",
   "date": "2026-10-06"
  },
  "/builds/witch/minion-infernalist/": {
