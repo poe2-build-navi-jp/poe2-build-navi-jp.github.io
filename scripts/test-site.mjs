@@ -36,9 +36,19 @@ assert(index.includes('id="class-grid"'), "homepage class cards container missin
 assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="choose-class"'), "homepage must show purpose picks before class selection");
 assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="quick-start"'), "homepage must show quick picks before resume controls");
 assert(index.indexOf('id="quick-start"') < index.indexOf('id="featured-builds"'), "homepage must show recommended builds after class/build/level flow");
-assert(index.includes("PoE2 0.5.5 初心者向けおすすめビルド") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
+assert(index.includes("PoE2 0.5.5 おすすめビルド｜職業別・初心者向け") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
 assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ</title>"), "homepage CTR-focused title missing");
 assert(index.includes("PoE2 0.5.5対応の日本語ビルドサイト"), "homepage Japanese build-site description missing");
+const homeRoutes = index.match(/<p id="home-build-routes">([\s\S]*?)<\/p>/)?.[1] || "";
+assert((index.match(/id="home-build-routes"/g) || []).length === 1, "homepage comparison routes must be present once after regeneration");
+assert(homeRoutes.includes('href="/builds/"') && homeRoutes.includes('href="/best-builds/"'), "broad build searches need catalog and purpose-comparison routes");
+assert(index.indexOf('id="home-build-routes"') < index.indexOf('id="purpose-picks"'), "comparison routes must precede detailed choices");
+assert(index.includes(`掲載${builds.length}ビルドを職業・戦い方で比較`), "homepage catalog count must follow public build data");
+assert(index.includes("全ビルドを同じ予算・条件で実測した最強順位ではありません") && index.includes("この日付は全ビルドの再検証日ではありません"), "latest/strongest search intent must retain evidence limits");
+const bestLanding = await read("best-builds/index.html");
+assert(bestLanding.includes("Endgame構成ではワーリングアサルトとFalling Thunder") && bestLanding.includes("Lv41の育成構成とは異なる"), "boss comparison must distinguish Endgame from the Lv41 variant");
+assert(!bestLanding.includes("単体戦で使うFalling Thunderの手順を段階別に"), "unscoped boss-mechanic summary must not return");
+
 assert(index.includes('class="hero hero-focused"') && !index.includes('class="hero-guide"'), "homepage hero choices must be focused without duplicated guide links");
 assert((index.match(/class="build-tags"/g) || []).length === 6, "homepage featured build purpose tags missing");
 assert((index.match(/現在Lvから今やることを見る/g) || []).length <= 2, "homepage primary CTA must not be repeated excessively");
