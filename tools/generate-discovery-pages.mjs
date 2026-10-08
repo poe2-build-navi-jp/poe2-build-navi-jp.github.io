@@ -1,3 +1,4 @@
+import { restoreMobileSummary } from './mobile-summary.mjs';
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
@@ -67,7 +68,7 @@ const topChoices = `<section id="purpose-picks" class="section section-soft" ari
 
 const beginnerEntry = `<section id="purpose-picks" class="section section-soft beginner-builds-entry" aria-labelledby="purpose-picks-title"><span id="featured-builds" class="legacy-anchor" aria-hidden="true"></span><div class="section-head"><p class="section-kicker">BEGINNER BUILDS</p><h2 id="purpose-picks-title">初心者おすすめビルドを選ぶ</h2><p>戦い方別の5候補と、おすすめ理由・弱点・切替時期の詳しい比較を専用ページにまとめました。</p></div><div class="section-cta"><a class="button" href="/beginner-builds/">初心者おすすめビルドを見る</a><a class="button-secondary" href="/beginner-builds/#featured-builds">詳しく比較する</a></div></section>`;
 
-let home = await readFile(resolve(root, "index.html"), "utf8");
+let home = restoreMobileSummary(await readFile(resolve(root, "index.html"), "utf8"));
 home = home.replace(/<section id="featured-builds"[\s\S]*?<\/section>/g, "");
 home = home
   .replace(/<title>.*?<\/title>/, "<title>PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ</title>")

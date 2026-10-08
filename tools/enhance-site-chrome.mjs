@@ -1,3 +1,4 @@
+import { applyMobileSummary } from './mobile-summary.mjs';
 // Idempotent: gives every page the site icons (head) and the shared site footer
 // (運営者情報・編集方針・プライバシー・利用規約) that the home and build pages already carry.
 import {readFile,writeFile,readdir} from 'node:fs/promises';
@@ -34,6 +35,7 @@ for(const file of await htmlFiles(root)){
   html=html.includes('</main>')?html.replace(/<\/main>(?![\s\S]*<\/main>)/,`</main>${block}`):html.replace('</body>',`${block}</body>`);
   footers++;
  }
+ if(file===join(root,'index.html') || file===join(root,'beginner-builds/index.html')) html=applyMobileSummary(html,file===join(root,'beginner-builds/index.html'));
  if(html!==before)await writeFile(file,html);
 }
 console.log(`Site chrome: icons on ${icons} pages, shared footer added to ${footers} pages`);

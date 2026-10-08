@@ -1,3 +1,4 @@
+import {applyMobileSummary} from './mobile-summary.mjs';
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {esc,facts,factsHtml,rows} from './build-facts.mjs';
@@ -51,6 +52,7 @@ for(const page of pages){
   html=html.replace('<div id="build-list"',`${filters}<div id="build-list"`);
  }
  html=html.replace(/\/assets\/(app|catalog-static)\.js(?:\?[^"']*)?/g,'/assets/$1.js?v=ux-20260926');
+ if(page==='index.html' || page==='beginner-builds/index.html') html=applyMobileSummary(html,page==='beginner-builds/index.html');
  await save(page,html);
 }
 for(const b of builds){
