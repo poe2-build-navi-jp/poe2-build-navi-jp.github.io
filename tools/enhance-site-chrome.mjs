@@ -20,6 +20,8 @@ for(const file of await htmlFiles(root)){
  const before=await readFile(file,'utf8');
  let html=before.replace(/<!-- site-icon:start -->[\s\S]*?<!-- site-icon:end -->/g,'').replace(/<!-- site-footer:start -->[\s\S]*?<!-- site-footer:end -->/g,'');
  if(!html.includes('</head>'))continue;
+ html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>
+  links.includes('href="/guides/"')?nav:`${start}<a href="/guides/"${file===join(root,'guides/index.html')?' aria-current="page"':''}>攻略ガイド</a>${links}${end}`);
  html=insertBlock(html,'</head>','site-icon',ICON_BLOCK);icons++;
  // Pages generated with their own footer keep it; the rest get the shared one after </main>.
  if(!html.includes('<footer class="site-footer">')){
