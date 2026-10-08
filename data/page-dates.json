@@ -1,6 +1,6 @@
 {
  "/": {
-  "hash": "bac54935712a8623",
+  "hash": "1b9dda2106fef5b3",
   "date": "2026-10-08"
  },
  "/builds/": {
@@ -64,8 +64,8 @@
   "date": "2026-10-06"
  },
  "/privacy/": {
-  "hash": "4f6d44367cfed7e8",
-  "date": "2026-09-20"
+  "hash": "cd97af8139a17c63",
+  "date": "2026-10-08"
  },
  "/terms/": {
   "hash": "c72fbd9156d6b97b",
@@ -104,52 +104,52 @@
   "date": "2026-10-06"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "512957a1c30f6b9b",
-  "date": "2026-10-06"
+  "hash": "2fac443a6ffdbe08",
+  "date": "2026-10-08"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "d55b5557e620c13b",
-  "date": "2026-10-06"
+  "hash": "110fab0c4a754a76",
+  "date": "2026-10-08"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "488557107e6a4491",
-  "date": "2026-10-06"
+  "hash": "10be1c89e69babed",
+  "date": "2026-10-08"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "335d4110e663f6e4",
-  "date": "2026-10-06"
+  "hash": "6e5453630d4f005e",
+  "date": "2026-10-08"
  },
  "/builds/huntress/companion/": {
-  "hash": "f2a8ae517ba01174",
-  "date": "2026-10-06"
+  "hash": "e4e60a392822c1d7",
+  "date": "2026-10-08"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "d47df25c0d1a2150",
-  "date": "2026-10-06"
+  "hash": "434d2ec260414a05",
+  "date": "2026-10-08"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "f3050195e065f560",
-  "date": "2026-10-06"
+  "hash": "d1c5c698eeb4b262",
+  "date": "2026-10-08"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "51c3bc7020fee386",
-  "date": "2026-10-06"
+  "hash": "0b4bbb55f2279cca",
+  "date": "2026-10-08"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "cbe2d4053c3d3361",
-  "date": "2026-10-06"
+  "hash": "601fdbee6d2df95b",
+  "date": "2026-10-08"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "4fc822ac2b2d111e",
-  "date": "2026-10-06"
+  "hash": "11dc3666f8e4243a",
+  "date": "2026-10-08"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "9d1ca9b8499d0093",
-  "date": "2026-10-06"
+  "hash": "109efe5abc73644e",
+  "date": "2026-10-08"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "33a462b543fffb96",
-  "date": "2026-10-06"
+  "hash": "8e8f11c54abdb298",
+  "date": "2026-10-08"
  },
  "/guides/skill-gems/": {
   "hash": "f076527f1cbfa582",

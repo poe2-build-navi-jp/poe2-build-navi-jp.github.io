@@ -1,0 +1,11 @@
+.practical-next{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.practical-next a{white-space:normal;text-align:left}
+.practical-guide p,.practical-guide a,.practical-feedback{overflow-wrap:anywhere}
+.practical-feedback summary{cursor:pointer;font-weight:700;padding:12px 0}
+.practical-feedback form{max-width:600px;display:grid;gap:12px;margin:18px 0}
+.practical-feedback form[hidden]{display:none}
+.practical-feedback select{width:100%;min-height:44px;padding:10px;font:inherit;color:#172536;background:#fff;border:1px solid #687785;border-radius:4px}
+.practical-feedback button{justify-self:start;white-space:normal}
+.practical-feedback :is(select,button,summary):focus-visible{outline:3px solid #b04a1c;outline-offset:3px}
+[id^="roadmap-stage-"]{scroll-margin-top:90px}
+@media(max-width:680px){.practical-next{display:grid}.practical-next a{width:100%;box-sizing:border-box}.practical-feedback button{width:100%}}

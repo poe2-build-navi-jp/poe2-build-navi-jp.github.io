@@ -8,6 +8,7 @@ export const HEAD_BLOCKS = [
   ["image-schema", marker("image-schema")],
   // inject-analytics adds this script without a marker.
   ["analytics-events", (html) => html.search(/<script defer src="\/assets\/analytics-events\.js/)],
+  ["practical-assets", marker("practical-assets")],
   ["build-ux", marker("build-ux")],
   ["one-faq", marker("one-faq")],
   ["page-schema", marker("page-schema")],
@@ -15,6 +16,7 @@ export const HEAD_BLOCKS = [
   ["site-icon", marker("site-icon")]
 ];
 export const MAIN_END_BLOCKS = [
+  ["build-feedback", marker("build-feedback")],
   ["term-links", marker("term-links")],
   ["build-history", marker("build-history")],
   ["one-link", marker("one-link")]

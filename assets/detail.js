@@ -78,6 +78,8 @@ function renderNow(index) {
   byId("now-stage").textContent = stage.label;
   byId("now-next").textContent = `次の目標：${stage.next}`;
   const currentStage = build.levelingStages?.find((item) => item.label === stage.label);
+  const stageLink = byId("now-stage-detail");
+  if (stageLink) stageLink.href = `#roadmap-stage-${index}`;
   const verifiedActions = currentStage?.nowActions;
   const actions = verifiedActions || [
     "現在レベルと育成段階が合っているか確認する",

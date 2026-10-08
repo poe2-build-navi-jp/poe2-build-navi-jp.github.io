@@ -782,6 +782,10 @@
       {
         "date": "2026-10-06",
         "summary": "段階別タブの掲載内容を追加確認し、未取得だったスキル・サポート案内を具体化。装備全条件・ゲーム内実走の確認ではありません。"
+      },
+      {
+        "date": "2026-10-08",
+        "summary": "元ガイドの切替条件・困りごとへの回答を追加確認し、現在段階の詳細へ進む導線を追加。育成8段階の全面再検証や実機プレイの確認日ではありません。"
       }
     ],
     "ratingEvidence": {
@@ -849,6 +853,34 @@
       "source": "https://poe2db.tw/us/Shield_Wall",
       "guide": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
       "checkedAt": "2026-10-02"
+    },
+    "practicalGuide": {
+      "checkedAt": "2026-10-08",
+      "heading": "シールドウォールの使用条件・起爆・ボス戦で迷ったら",
+      "scope": "Lundburgerrの育成ガイド本文（タイトル0.5、タグ0.5.5 FR）とPoE2DBの使用条件を照合。後半の全サポート名と実機動作は再検証していません。",
+      "questions": [
+        {
+          "question": "シールドウォールがLv22でも使えないときは？",
+          "answer": "Tier 7・ジェムLv7版はキャラクターLv22、筋力41、アーマーを持つ盾が必要です。上位ジェムの要求値は異なります。装備中の盾とゲーム内のジェム表示を確認し、条件不足なら前段階の構成を維持します。",
+          "stageIndex": 2,
+          "sourceIndex": 4,
+          "where": "Requires / Level Effect → Level 7"
+        },
+        {
+          "question": "シールドウォールは置くだけで攻撃する？",
+          "answer": "原典の周回手順は壁を置き、ウォークライまたはシールドチャージを使う構成です。ゲームデータも自身の対応スキルによる破壊を説明しています。壁の設置と起爆を分けて、現在段階で採用しているスキルを確認します。",
+          "stageIndex": 3,
+          "sourceIndex": 0,
+          "where": "How it Plays → When clearing"
+        },
+        {
+          "question": "ボス戦でSunderを使うタイミングは？",
+          "answer": "原典はアーマーブレイク後にSunderを使う手順を案内しています。未取得なら完成形をそのまま真似せず、現在段階の構成を確認します。Fortifying Cryも取得後に加える補助です。",
+          "stageIndex": 3,
+          "sourceIndex": 0,
+          "where": "How it Plays → Against bosses"
+        }
+      ]
     }
   },
   {
@@ -1716,8 +1748,40 @@
       {
         "date": "2026-10-06",
         "summary": "段階別タブの掲載内容を追加確認し、未取得だったスキル・サポート案内を具体化。装備全条件・ゲーム内実走の確認ではありません。"
+      },
+      {
+        "date": "2026-10-08",
+        "summary": "元ガイドの切替条件・困りごとへの回答を追加確認し、現在段階の詳細へ進む導線を追加。育成8段階の全面再検証や実機プレイの確認日ではありません。"
       }
-    ]
+    ],
+    "practicalGuide": {
+      "checkedAt": "2026-10-08",
+      "heading": "アイスショットの切替・序盤火力で迷ったら",
+      "scope": "Fubgunの育成ガイド本文（タイトル0.5、タグ0.5.5 FR）。動的な全サポート構成と実機動作は再検証していません。",
+      "questions": [
+        {
+          "question": "アイスショットはLv31になったら必ず切り替える？",
+          "answer": "Lv31は使用開始の目安です。必要なジェム・Spirit・装備が揃うことと、Lvに達することを分けて確認します。不足がある場合は、切替前のライトニングアロー＋ライトニングロッド構成を残します。",
+          "stageIndex": 3,
+          "sourceIndex": 0,
+          "where": "Build Overview / Skill Gems → lvl 31-41"
+        },
+        {
+          "question": "アイスショット切替前に火力が出ないときは？",
+          "answer": "原典は序盤の弓・矢筒などの追加アタックダメージを重視しています。まず現在の武器を比較し、サポート不足時はボス用ライトニングロッド側への付け替えを確認します。序盤のDPS判断を、完成形の最適装備の証明には使いません。",
+          "stageIndex": 0,
+          "sourceIndex": 0,
+          "where": "Equipment / Skill Gems の序盤説明"
+        },
+        {
+          "question": "育成用とEndgame用の構成はどこで分ける？",
+          "answer": "育成原典はキャンペーン後にEndgameガイドへ進むよう案内しています。序盤の装備を完成形として使い続けず、現在段階のサポート・装備・移行条件をまとめて確認します。",
+          "stageIndex": 5,
+          "sourceIndex": 0,
+          "where": "Build Overview → Endgame Guide"
+        }
+      ]
+    }
   },
   {
     "id": "witch-minion-infernalist",
@@ -1958,6 +2022,10 @@
       {
         "date": "2026-10-06",
         "summary": "原典の記述・対象段階・出典情報を再照合し、取り違えと過剰な一般化を修正。確認できない原典や動的構成は再検証済みと扱わず、育成全体の確認日は変更していません。"
+      },
+      {
+        "date": "2026-10-08",
+        "summary": "元ガイドの切替条件・困りごとへの回答を追加確認し、現在段階の詳細へ進む導線を追加。育成8段階の全面再検証や実機プレイの確認日ではありません。"
       }
     ],
     "ratingEvidence": {
@@ -2026,6 +2094,34 @@
         "sourceName": "PoE Vault: Infernalist Spectre Build Guide",
         "checkedAt": "2026-09-28"
       }
+    },
+    "practicalGuide": {
+      "checkedAt": "2026-10-08",
+      "heading": "ミニオンのSpirit不足・スペクター切替で迷ったら",
+      "scope": "Thyの0.5.5ガイドのFAQ・装備方針を照合。全段階の動的サポート構成と実機動作は再検証していません。",
+      "questions": [
+        {
+          "question": "Lv37なのにVaal Guardへ切り替えられない？",
+          "answer": "Lvだけでは切り替えません。原典はAct 3のUtzaalに到達後、手榴弾を投げる50 SpiritのVaal Guardを対象にしています。対象と必要なSpiritが揃うまでは、スケルタルスナイパー構成を維持します。",
+          "stageIndex": 3,
+          "sourceIndex": 0,
+          "where": "FAQ → When do I swap to Vaal Guards?"
+        },
+        {
+          "question": "ミニオンのSpiritが足りないとき、どの装備を見る？",
+          "answer": "原典はSpiritを持つ部位としてセプター・アミュレット・胴を挙げています。使いたい召喚対象の必要量と現在の装備を比較し、火力用のミニオンレベルと自分の防御も併せて確認します。",
+          "stageIndex": 3,
+          "sourceIndex": 0,
+          "where": "Equipment → Spirit is found on"
+        },
+        {
+          "question": "Powered ZealotはLv67ならすぐ切り替えていい？",
+          "answer": "原典作者はLv65〜70を切替目安とし、5リンクと必要サポートが揃ってから移ることを勧めています。4リンクならVaal Guardを優先するという作者の判断です。Lvだけを必須条件や切替の保証として扱いません。",
+          "stageIndex": 5,
+          "sourceIndex": 0,
+          "where": "FAQ → When do I swap to Powered Zealots?"
+        }
+      ]
     }
   },
   {
