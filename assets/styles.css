@@ -18,7 +18,7 @@ img,svg{display:block;max-width:100%}
 .site-header{min-height:72px;padding:10px clamp(18px,6vw,88px);display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--dark);color:#fff;position:sticky;top:0;z-index:40;border-bottom:1px solid #ffffff18}
 .brand,.footer-brand{display:flex;align-items:center;gap:12px;font-size:.78rem;font-weight:800;line-height:1.15}
 .brand-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold);font:800 1rem Georgia,serif}
-.site-nav{display:flex;gap:28px;font-size:.9rem;font-weight:800}.site-nav a:hover{color:var(--gold)}
+.site-nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px 20px;font-size:.9rem;font-weight:800}.site-nav a:hover{color:var(--gold)}
 .menu-button{display:none;border:0;background:transparent;color:#fff;padding:10px}
 .hero{padding:54px clamp(20px,8vw,124px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:52px;align-items:center;color:#fff;background:radial-gradient(circle at 78% 10%,#30485a,transparent 35%),linear-gradient(120deg,#0c141b,#17232d)}.hero-focused{grid-template-columns:minmax(0,860px);justify-content:center}.hero-focused>div{width:100%}
 .eyebrow,.section-kicker{margin:0;color:var(--gold-ink);font-size:.78rem;font-weight:900;letter-spacing:.16em}
@@ -97,3 +97,6 @@ img,svg{display:block;max-width:100%}
 .term-links-block{box-sizing:border-box;max-width:960px;margin:28px auto 0;padding:0 16px}.term-links-block h2{font-size:1.15rem}.trouble-guides{margin:14px 0 0;font-size:.9rem;line-height:1.8}.trouble-guides a{color:#a94320;font-weight:700}
 .term-links a{color:#a94320;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .build-notes{padding-left:1.2em}.build-notes>li{margin:.6rem 0}.build-notes>li>a{color:#a94320;font-weight:700}.build-notes ul{margin:.3rem 0 0;padding-left:1.2em;color:var(--muted)}
+
+/* The beginner comparison moved off the home page; keep legacy links useful. */
+.beginner-builds-entry{position:relative;padding-block:40px}.beginner-builds-entry .section-head{margin-bottom:20px}.legacy-anchor{display:block;scroll-margin-top:100px}.discovery-page>.section{padding:38px 0}.discovery-page>.section-soft{padding-inline:20px}

@@ -12,7 +12,7 @@ const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
 
-const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "assets/leveling.js", "assets/analytics-events.js", "class-check/index.html", "leveling/index.html", "best-builds/index.html", "NOTE_CONTENT_MAP.md"];
+const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "assets/leveling.js", "assets/analytics-events.js", "class-check/index.html", "leveling/index.html", "best-builds/index.html", "beginner-builds/index.html", "NOTE_CONTENT_MAP.md"];
 for (const path of required) {
   try { await access(resolve(root, path)); } catch { failures.push(`missing: ${path}`); }
 }
@@ -26,6 +26,7 @@ const guides = JSON.parse(await read("data/guides.json"));
 const terms = JSON.parse(await read("data/dictionary.json"));
 const seoPages = JSON.parse(await read("data/seo-pages.json"));
 const site = JSON.parse(await read("data/site.json"));
+const beginnerLanding = await read("beginner-builds/index.html");
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
 assert(builds.length === 12, "build count must be 12");
@@ -33,16 +34,22 @@ assert(new Set(builds.map((build) => build.className)).size === 8, "each playabl
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
 assert(index.includes('id="class-grid"'), "homepage class cards container missing");
-assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="choose-class"'), "homepage must show purpose picks before class selection");
-assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="quick-start"'), "homepage must show quick picks before resume controls");
-assert(index.indexOf('id="quick-start"') < index.indexOf('id="featured-builds"'), "homepage must show recommended builds after class/build/level flow");
+const beginnerCta = index.match(/<section id="purpose-picks"[^>]*>([\s\S]*?)<\/section>/)?.[1] || "";
+assert(beginnerCta.includes('id="featured-builds"') && beginnerCta.includes('href="/beginner-builds/#featured-builds"'), "homepage must retain both legacy anchors and link to the beginner comparison page");
+assert((index.match(/id="purpose-picks"/g) || []).length === 1 && (index.match(/id="featured-builds"/g) || []).length === 1, "homepage legacy recommendation anchors must appear once");
+assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="choose-class"'), "homepage beginner CTA must precede class selection");
+assert(index.indexOf('id="purpose-picks"') < index.indexOf('id="quick-start"'), "homepage beginner CTA must precede resume controls");
+assert(!/class="(?:purpose-card|discovery-card)"/.test(index), "homepage must not duplicate the detailed beginner cards");
+assert((beginnerLanding.match(/class="purpose-card"/g) || []).length === 5, "beginner page must retain five quick choices");
+assert((beginnerLanding.match(/class="discovery-card"/g) || []).length === 6, "beginner page must retain six featured choices");
+assert(beginnerLanding.indexOf('id="purpose-picks"') < beginnerLanding.indexOf('id="featured-builds"'), "beginner page must show quick choices before detailed comparison");
 assert(index.includes("PoE2 0.5.5 おすすめビルド｜職業別・初心者向け") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
 assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ</title>"), "homepage CTR-focused title missing");
 assert(index.includes("PoE2 0.5.5対応の日本語ビルドサイト"), "homepage Japanese build-site description missing");
 const homeRoutes = index.match(/<p id="home-build-routes">([\s\S]*?)<\/p>/)?.[1] || "";
 assert((index.match(/id="home-build-routes"/g) || []).length === 1, "homepage comparison routes must be present once after regeneration");
 assert(homeRoutes.includes('href="/builds/"') && homeRoutes.includes('href="/best-builds/"'), "broad build searches need catalog and purpose-comparison routes");
-assert(index.indexOf('id="home-build-routes"') < index.indexOf('id="purpose-picks"'), "comparison routes must precede detailed choices");
+assert(index.indexOf('id="home-build-routes"') < index.indexOf('id="purpose-picks"'), "comparison routes must precede the beginner CTA");
 assert(index.includes(`掲載${builds.length}ビルドを職業・戦い方で比較`), "homepage catalog count must follow public build data");
 assert(index.includes("全ビルドを同じ予算・条件で実測した最強順位ではありません") && index.includes("この日付は全ビルドの再検証日ではありません"), "latest/strongest search intent must retain evidence limits");
 const bestLanding = await read("best-builds/index.html");
@@ -50,7 +57,7 @@ assert(bestLanding.includes("Endgame構成ではワーリングアサルトとFa
 assert(!bestLanding.includes("単体戦で使うFalling Thunderの手順を段階別に"), "unscoped boss-mechanic summary must not return");
 
 assert(index.includes('class="hero hero-focused"') && !index.includes('class="hero-guide"'), "homepage hero choices must be focused without duplicated guide links");
-assert((index.match(/class="build-tags"/g) || []).length === 6, "homepage featured build purpose tags missing");
+assert((beginnerLanding.match(/class="build-tags"/g) || []).length === 6, "beginner page featured build purpose tags missing");
 assert((index.match(/現在Lvから今やることを見る/g) || []).length <= 2, "homepage primary CTA must not be repeated excessively");
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
@@ -147,7 +154,7 @@ for (const [, pageUrl] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   assert((page.match(/\/assets\/analytics-events\.js/g) || []).length === (tracksEvents ? 1 : 0), `${pagePath}: analytics event script scope mismatch`);
 }
 const noindexListed = new Set(JSON.parse(await read("data/noindex.json")).paths);
-for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "best-builds/", "poe2-1-0/", "beginner-guide/", "dictionary/"]) {
+for (const page of ["builds/", "classes/", "leveling/", "gear-check/", "class-check/", "tier-list/", "league-starter/", "best-builds/", "poe2-1-0/", "beginner-guide/", "beginner-builds/", "dictionary/"]) {
   assert(noindexListed.has(`/${page}`) || sitemap.includes(`https://poe2-build-navi-jp.github.io/${page}`), `${page} missing from sitemap`);
   try { await access(resolve(root, page, "index.html")); } catch { failures.push(`missing: ${page}index.html`); }
 }
