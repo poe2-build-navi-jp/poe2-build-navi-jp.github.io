@@ -17,7 +17,7 @@ for(const card of quick){
  assert.equal(card.querySelectorAll(':scope > a.button').length,1);
 }
 assert(!read('assets/build-ux.css').includes('.purpose-card .unified-facts>div:nth-child'));
-const changes=[...home.querySelectorAll('#recent-changes > ul > li')];
+const changes=[...home.querySelectorAll('#recent-changes > details[data-mobile-summary] > ul > li')];
 const expected=builds.flatMap(b=>(b.changeHistory||[]).map(r=>({b,...r}))).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3);
 assert.equal(changes.length,3);
 changes.forEach((li,i)=>{assert(li.textContent.includes(expected[i].summary));assert.equal(li.querySelector('time').dateTime,expected[i].date);assert.equal(li.querySelector('a').hash,'#update-history');});

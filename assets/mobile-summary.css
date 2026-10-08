@@ -1,0 +1,62 @@
+/* Entry pages: real, keyboard-accessible disclosures retain all guide content. */
+.summary-page .content-disclosure{margin:12px 0;border:1px solid #b8b2a7;border-radius:8px;padding:0 14px;min-width:0}
+.summary-page .content-disclosure>summary{cursor:pointer;min-height:48px;padding:12px 0;font-weight:700;line-height:1.5;overflow-wrap:anywhere}
+.summary-page .content-disclosure>summary small{display:block;font-weight:400;font-size:.85rem;margin-left:1em}
+.summary-page .content-disclosure[open]{padding-bottom:14px}
+.summary-page .content-disclosure>summary:focus-visible{outline:3px solid #b87516;outline-offset:4px}
+.summary-page .hero .content-disclosure{color:#fff;border-color:#788897}
+.summary-page .hero .content-disclosure a{color:#f1d49a}
+.summary-page .hero .mobile-lead{font-size:1.05rem;line-height:1.6}
+.summary-page .hero .content-disclosure .lead{font-size:1rem}
+.summary-page .site-header>.content-disclosure{color:white;margin:0}
+.summary-page .site-header>.content-disclosure .site-nav{display:flex}
+.summary-page .section-dark .content-disclosure{border-color:#788897}
+.summary-page .compact-entry{padding-block:22px}
+.summary-page .compact-entry .section-head{margin-bottom:12px}
+@media(min-width:681px){
+ .summary-page .site-header>.content-disclosure{max-width:760px}
+}
+@media(max-width:680px){
+ .summary-page .hero{padding:24px 16px;gap:16px}
+ .summary-page .hero h1{font-size:1.65rem;line-height:1.4;margin:10px 0}
+ .summary-page .hero .eyebrow{font-size:.65rem;letter-spacing:.08em}
+ .summary-page .hero .mobile-lead{margin:10px 0 14px}
+ .summary-page .hero-actions{gap:8px;margin:12px 0}
+ .summary-page .hero-actions a{min-height:44px;padding:10px 12px}
+ .summary-page .section{padding:24px 16px}
+ .summary-page .section-head{margin-bottom:14px}
+ .summary-page .section-head h2,.summary-page .section>h2{font-size:1.25rem;margin:6px 0 10px;line-height:1.5}
+ .summary-page .section-head p{margin:6px 0;font-size:.9rem}
+ .summary-page .compact-entry{padding-block:16px}
+ .summary-page .compact-entry .section-cta{gap:8px;margin-top:10px}
+ .summary-page .compact-entry .section-cta a{padding:9px 12px;min-height:44px}
+ .summary-page .resume-section .section-head{margin-bottom:12px}
+ .summary-page .tool-grid{gap:8px}
+ .summary-page .tool-card{padding:14px}
+ .summary-page .tool-card p{margin:4px 0;font-size:.9rem}
+ .summary-page .discovery-hero{padding:20px 16px}
+ .summary-page .discovery-hero h1{font-size:1.6rem;line-height:1.4;margin:8px 0}
+ .summary-page .discovery-page{padding:0 16px}
+ .summary-page .discovery-page>.section{padding:20px 0}
+ .summary-page .discovery-page>.section-soft{padding:16px 12px}
+ .summary-page .compact-page-links{margin:12px 0;gap:8px}
+ .summary-page .compact-page-links a{min-height:44px;padding:9px 12px}
+ .summary-page .purpose-grid{gap:12px}
+ .summary-page .purpose-card{padding:14px;min-width:0}
+ .summary-page .purpose-card h3{font-size:1.12rem;line-height:1.5;margin:6px 0}
+ .summary-page .quick-choice-facts{font-size:.88rem;line-height:1.55;margin:8px 0}
+ .summary-page .quick-choice-facts>div{display:grid;grid-template-columns:5.8em minmax(0,1fr);gap:8px;margin:6px 0}
+ .summary-page .quick-choice-facts dd{margin:0;overflow-wrap:anywhere}
+ .summary-page .purpose-card>.button{min-height:44px;padding:10px 12px}
+ .summary-page .quick-choice-sources{margin-top:8px;font-size:.9rem}
+ .summary-page .quick-choice-sources>summary{min-height:44px;padding:10px 0}
+ .summary-page .site-header{position:relative;align-items:center}
+ .summary-page .site-header>.content-disclosure{flex:1 1 140px;padding:0 10px}
+ .summary-page .site-header>.content-disclosure>summary{min-height:44px;padding:8px 0;font-size:.9rem}
+ .summary-page .site-header>.content-disclosure>summary small{font-size:.72rem}
+ .summary-page .site-header>.content-disclosure[open]{flex-basis:100%}
+ .summary-page .content-disclosure .discovery-grid{gap:12px}
+ .summary-page .content-disclosure .discovery-card{padding:12px;min-width:0}
+ .summary-page .content-disclosure .class-grid{gap:12px}
+ .summary-page .content-disclosure a,.summary-page .content-disclosure dd{overflow-wrap:anywhere}
+}
