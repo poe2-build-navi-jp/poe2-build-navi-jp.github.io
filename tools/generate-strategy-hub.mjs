@@ -40,7 +40,7 @@ for(const file of ['beginner-guide/index.html',...groups.flatMap(x=>x.slugs).map
  let html=(await read(file)).replace(marker,'');
  const link=wrap('<p class="trouble-guides"><a href="/guides/">困りごと・育成段階から攻略を探す</a></p>');
  if(file==='beginner-guide/index.html')html=html.replace('<h1>PoE2初心者向けおすすめビルド・育成ガイド</h1>',`<h1>PoE2初心者向けおすすめビルド・育成ガイド</h1>${link}`);
- else html=html.replace('</article>',`${link}</article>`);
+ else {const end=html.lastIndexOf('</article>');if(end<0)throw new Error(`Article missing: ${file}`);html=html.slice(0,end)+link+html.slice(end);}
  await save(file,html);
 }
 console.log('Generated /guides/ and contextual links; existing guide content and build navigation preserved.');

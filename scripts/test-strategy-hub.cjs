@@ -11,7 +11,7 @@ assert.equal(doc.querySelector('link[rel="canonical"]').href,'https://poe2-build
 const cards=[...doc.querySelectorAll('.content-card')];
 assert.equal(cards.length,13);
 assert.equal(new Set(cards.map(a=>a.href)).size,13);
-for(const a of cards){assert(a.querySelector('strong').textContent.trim());assert(a.querySelector('span').textContent.trim());const p=a.getAttribute('href');assert(fs.existsSync(path.join(root,p,'index.html')),p);const guide=read(`${p.slice(1)}index.html`);assert.equal((guide.match(/<!-- strategy-link:start -->/g)||[]).length,1);}
+for(const a of cards){assert(a.querySelector('strong').textContent.trim());assert(a.querySelector('span').textContent.trim());const p=a.getAttribute('href');assert(fs.existsSync(path.join(root,p,'index.html')),p);const guide=read(`${p.slice(1)}index.html`);assert.equal((guide.match(/<!-- strategy-link:start -->/g)||[]).length,1);const gd=new JSDOM(guide).window.document;assert(!gd.querySelector('.trouble-guides').closest('.build-card,.build-option'));assert(guide.indexOf('<!-- strategy-link:start -->')>guide.lastIndexOf('<article'));}
 assert.equal(doc.querySelectorAll('a[href="/leveling/"]').length,3);
 for(const a of doc.querySelectorAll('nav[aria-label="攻略カテゴリ"] a'))assert(doc.querySelector(a.getAttribute('href')));
 const data=[...doc.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent));
