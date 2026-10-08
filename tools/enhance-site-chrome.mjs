@@ -22,6 +22,11 @@ for(const file of await htmlFiles(root)){
  if(!html.includes('</head>'))continue;
  html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>
   links.includes('href="/guides/"')?nav:`${start}<a href="/guides/"${file===join(root,'guides/index.html')?' aria-current="page"':''}>攻略ガイド</a>${links}${end}`);
+ html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>{
+  links=links.replace(/<a\b[^>]*href="\/beginner-builds\/"[^>]*>[\s\S]*?<\/a>/g,'');
+  const link=`<a href="/beginner-builds/"${file===join(root,'beginner-builds/index.html')?' aria-current="page"':''}>初心者おすすめ</a>`;
+  return `${start}${links.replace(/(<a\b[^>]*href="\/guides\/"[^>]*>[\s\S]*?<\/a>)/,`$1${link}`)}${end}`;
+ });
  html=insertBlock(html,'</head>','site-icon',ICON_BLOCK);icons++;
  // Pages generated with their own footer keep it; the rest get the shared one after </main>.
  if(!html.includes('<footer class="site-footer">')){

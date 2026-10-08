@@ -9,14 +9,14 @@ const builds=JSON.parse(await read('data/builds.json')).filter(b=>b.status!=='dr
 const discovery=JSON.parse(await read('data/discovery.json'));
 const site=JSON.parse(await read('data/site.json'));
 const url=b=>`/builds/${b.classSlug}/${b.slug}/`;
-const pages=['index.html','builds/index.html','tier-list/index.html','league-starter/index.html','classes/index.html','leveling/index.html',...[...new Set(builds.map(b=>b.classSlug))].map(c=>`classes/${c}/index.html`)];
+const pages=['index.html','beginner-builds/index.html','builds/index.html','tier-list/index.html','league-starter/index.html','classes/index.html','leveling/index.html',...[...new Set(builds.map(b=>b.classSlug))].map(c=>`classes/${c}/index.html`)];
 for(const page of pages){
  let html=await read(page);
  html=html.replace(/<article\b(?=[^>]*class="(?:catalog-card|class-build-card|build-card|quick-pick-card|discovery-card|purpose-card|tier-card|starter-card)\b)[^>]*>[\s\S]*?<\/article>/g,article=>{
   if(/class="early-build-card/.test(article))return article.replace(/<dl class="unified-facts">[\s\S]*?<\/dl>/g,'');
   const b=builds.find(b=>article.includes(`href="${url(b)}`));
   if(!b)return article;
-  if(page==='index.html' && /class="purpose-card"/.test(article)){
+  if(page==='beginner-builds/index.html' && /class="purpose-card"/.test(article)){
    const heading=article.match(/<p class="section-kicker">[\s\S]*?<\/h3>/)?.[0] || `<h3>${esc(b.name)}</h3>`;
    const values=new Map(rows(b,discovery));
    const compact=[['向いている人',b.audience],['弱点',b.weaknesses[0]],['切替時期',values.get('主力への切替目安')]];
@@ -34,7 +34,7 @@ for(const page of pages){
  html=html.replace(/<!-- build-ux:start -->[\s\S]*?<!-- build-ux:end -->/g,'');
  html=insertBlock(html,'</head>','build-ux','<!-- build-ux:start --><link rel="stylesheet" href="/assets/build-ux.css?v=1"><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-ux:end -->');
  if(page==='index.html'){
-  html=html.replace(/<div class="hero-actions">[\s\S]*?<\/div>/,`<div class="hero-actions" aria-label="まず何をしたい？"><a class="button" href="#purpose-picks">おすすめをすぐ決める</a><a class="button-secondary" href="/classes/">自分に合う職業を選ぶ</a><a class="button-secondary" href="/leveling/">現在Lvから続きを見る</a></div>`);
+  html=html.replace(/<div class="hero-actions"[^>]*>[\s\S]*?<\/div>/,`<div class="hero-actions" aria-label="まず何をしたい？"><a class="button" href="/beginner-builds/">初心者おすすめビルド</a><a class="button-secondary" href="/classes/">自分に合う職業を選ぶ</a><a class="button-secondary" href="/leveling/">現在Lvから続きを見る</a></div>`);
   const quick=html.match(/<section id="quick-start"[\s\S]*?<\/section>/)?.[0];
   if(quick){html=html.replace(quick,'').replace(/(<section id="purpose-picks"[\s\S]*?<\/section>)/,`$1${quick}`);}
   html=html.replace('id="quality-title">目的から探す','id="quality-title">もっと詳しく探す');

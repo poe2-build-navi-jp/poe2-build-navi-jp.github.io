@@ -1,6 +1,6 @@
 {
  "/": {
-  "hash": "7c86c25ac337563e",
+  "hash": "fc9a889091b3ac2d",
   "date": "2026-10-08"
  },
  "/builds/": {
@@ -25,6 +25,10 @@
  },
  "/beginner-guide/": {
   "hash": "31ab97ab349b7e25",
+  "date": "2026-10-08"
+ },
+ "/beginner-builds/": {
+  "hash": "e201c8e637c2bd10",
   "date": "2026-10-08"
  },
  "/guides/": {

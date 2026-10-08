@@ -11,6 +11,7 @@ const roadmapBuilds = new Set(ROADMAP_BUILD_IDS);
 const esc = (value) => String(value).replaceAll("&", "&amp;").replaceAll('"', "&quot;");
 
 const pages = [
+  {file:"beginner-builds/index.html",path:"/beginner-builds/",image:"/images/poe2/guides/poe2-beginner-recommended-builds.svg",og:"/images/poe2/og/poe2-recommended-builds-og.webp",alt:"PoE2初心者向けおすすめビルド比較",caption:"初心者向けおすすめビルドの戦い方・弱点・切替時期の比較"},
   {file:"index.html",path:"/",image:"/images/poe2/guides/poe2-beginner-recommended-builds.svg",og:"/images/poe2/og/poe2-recommended-builds-og.webp",alt:"PoE2初心者向けおすすめビルド比較",caption:"遠距離・耐久・ミニオン・DoTから選ぶ、初心者向けおすすめビルド早見図",boundary:'</section><section id="choose-class"'},
   {file:"tier-list/index.html",path:"/tier-list/",image:"/images/poe2/guides/poe2-beginner-build-tier.svg",og:"/images/poe2/og/poe2-build-tier-og.webp",alt:"PoE2初心者向けビルドTier比較",caption:"育てやすさ・操作・切替条件を基準にした初心者向けビルドTier",article:true},
   {file:"league-starter/index.html",path:"/league-starter/",image:"/images/poe2/guides/poe2-league-starter-builds.svg",og:"/images/poe2/og/poe2-league-starter-og.webp",alt:"PoE2リーグスターターと序盤おすすめビルド比較",caption:"序盤の育てやすさから選ぶPoE2リーグスターター早見図",article:true},

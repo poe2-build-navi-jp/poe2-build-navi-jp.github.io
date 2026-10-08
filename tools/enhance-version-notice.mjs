@@ -30,7 +30,7 @@ for(const b of builds){
  await save(path,html);
 }
 
-const hubs=['index.html','builds/index.html','tier-list/index.html','best-builds/index.html','league-starter/index.html','leveling/index.html','classes/index.html',...[...new Set(builds.map(b=>b.classSlug))].map(c=>`classes/${c}/index.html`)];
+const hubs=['index.html','beginner-builds/index.html','builds/index.html','tier-list/index.html','best-builds/index.html','league-starter/index.html','leveling/index.html','classes/index.html',...[...new Set(builds.map(b=>b.classSlug))].map(c=>`classes/${c}/index.html`)];
 for(const path of hubs){
  let html=strip(await read(path));
  html=applyVersionTitle(html,outdated.length?outdated[0].version:null,game);

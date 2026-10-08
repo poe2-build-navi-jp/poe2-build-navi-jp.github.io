@@ -5,7 +5,8 @@ const read=path=>fs.readFileSync(path,'utf8');
 const builds=JSON.parse(read('data/builds.json'));
 const shield=builds.find(b=>b.id==='warrior-shield-wall-smith');
 const home=new JSDOM(read('index.html'),{url:'https://poe2-build-navi-jp.github.io/'}).window.document;
-const quick=[...home.querySelectorAll('#purpose-picks .purpose-card')];
+const beginner=new JSDOM(read('beginner-builds/index.html'),{url:'https://poe2-build-navi-jp.github.io/beginner-builds/'}).window.document;
+const quick=[...beginner.querySelectorAll('#purpose-picks .purpose-card')];
 assert.equal(quick.length,5);
 assert.match(quick[0].querySelector('.quick-choice-facts').textContent,/Act 3とLv67前後で召喚対象を切替/);
 for(const card of quick){
