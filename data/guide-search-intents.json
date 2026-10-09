@@ -298,7 +298,24 @@
     "h1": "PoE2 Act3攻略｜進行ルート・水路と過去への行き方、ドリヤニ対策",
     "description": "PoE2 Act3の進め方を開始から最終ボスまで解説。現行の水路ルート、ソウルコア、ケツーリ後の儀式、ナプアツィとドリヤニ対策、スピリットなどの任意報酬、Act4への進み方を確認できます。",
     "answer": "Act3は大型ソウルコアを回収してジャングルの遺跡から水路を解放し、神殿の鍵とケツーリ後の儀式を済ませて過去へ進みます。最終ボスは黒の間のドリヤニです。現在・過去の行き先と未完了のクエスト条件を分けて確認しましょう。",
-    "boundary": "Act3の主線・時代切替・任意強化・ナプアツィ/ドリヤニ対策とAct4移行。Act2はact-2-walkthrough、混沌の試練の詳しい継続/報酬はtrial-of-chaos、Act4の島条件はcampaign-progression。",
+    "boundary": "Act3の主線・時代切替・任意強化・ナプアツィ/ドリヤニ対策とAct4移行。Act2はact-2-walkthrough、Act4はact-4-walkthrough、混沌の試練の詳しい継続/報酬はtrial-of-chaos。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "act-4-walkthrough",
+    "path": "/guides/act-4-walkthrough/",
+    "primaryIntent": "Act4の島探索・武器部品回収から最終タヴァカイまでの進行と対処",
+    "searchExamples": [
+      "PoE2 Act4 攻略",
+      "PoE2 Act4 島 順番",
+      "PoE2 武器部品 集め方",
+      "PoE2 タヴァカイ 倒せない"
+    ],
+    "title": "PoE2 Act4攻略｜島の進め方・武器部品の回収とタヴァカイ対策",
+    "h1": "PoE2 Act4攻略｜島の進め方・武器部品の回収とタヴァカイ対策",
+    "description": "PoE2 Act4の進行ルートを開始から最終ボスまで解説。船の契約書と島の解放、武器部品の回収、必須と任意の寄り道、トーヴィアン・ベネディクタス・タヴァカイ対策、クリア後のInterludeを確認できます。",
+    "answer": "Act4は船の契約書をマコルへ提出して島を巡り、武器部品3個を回収します。アラスタスと発掘現場を攻略した後、ナカヌから最終ボスのタヴァカイへ進みましょう。島の探索順は自由ですが、部品の回収イベントと会話は省略できません。クリア後は3地域のInterludeへ続きます。",
+    "boundary": "Act4の主線・島の目的・任意報酬・終盤ボスとInterlude移行。進行停止の総合診断はcampaign-progression、前章はact-3-walkthrough、Interlude各地域の詳細は扱わない。",
     "editedAt": "2026-10-09"
   }
 ]

@@ -32,7 +32,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "f31c68edfa0206cd",
+  "hash": "75b73df941818369",
   "date": "2026-10-09"
  },
  "/dictionary/": {
@@ -220,7 +220,11 @@
   "date": "2026-10-09"
  },
  "/guides/act-3-walkthrough/": {
-  "hash": "33113e200a90ce90",
+  "hash": "a5756299c40828f4",
+  "date": "2026-10-09"
+ },
+ "/guides/act-4-walkthrough/": {
+  "hash": "c7dce546a8b8f83c",
   "date": "2026-10-09"
  },
  "/dictionary/build/": {
