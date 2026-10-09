@@ -32,7 +32,7 @@ const entry=slug=>{
  const path=`/guides/${slug}/`,g=extra.find(x=>x.slug===slug)||guides.find(x=>x.slug===slug),p=pages.find(x=>x.path===path);
  if(!g&&!p)throw new Error(`Guide missing from shared data: ${path}`);
  const intent=intents.find(i=>i.path===path);
- return {path,title:intent?.h1?.replace(/^PoE2\s*/, '')||g?.title||p.h1,summary:intent?.description||g?.summary||p?.description,keywords:[...(g?.keywords||[]),...(intent?.searchExamples||[])]};
+ return {path,title:intent?.h1||g?.title||p.h1,summary:intent?.description||g?.summary||p?.description,keywords:[...(g?.keywords||[]),...(intent?.searchExamples||[])]};
 };
 const total=seen.size;
 const sections=activeGroups.map((group,index)=>`<section class="guide-group" id="${group.id}" data-guide-group="${group.id}" aria-labelledby="${group.id}-title"><div class="guide-section-heading"><div><p class="guide-eyebrow">${String(index+1).padStart(2,'0')} / ${esc(group.label)}</p><h2 id="${group.id}-title">${group.title}</h2><p>${group.intro}</p></div><span class="guide-section-count" data-group-count>${group.slugs.length}記事</span></div><div class="content-grid">${group.slugs.map(slug=>{const g=entry(slug);return `<a class="content-card" href="${g.path}" data-guide-card data-category="${group.id}" data-search="${esc([g.title,g.summary,group.label,...(Array.isArray(g.keywords)?g.keywords:[g.keywords])].join(' '))}"><small>${esc(group.label)}</small><strong>${esc(g.title)}</strong><span>${esc(g.summary)}</span><span class="guide-card-action" aria-hidden="true">攻略を読む <b>→</b></span></a>`;}).join('')}</div></section>`).join('');
