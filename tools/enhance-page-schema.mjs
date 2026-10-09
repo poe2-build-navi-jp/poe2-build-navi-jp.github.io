@@ -8,7 +8,7 @@ import {resolve} from 'node:path';
 import {insertBlock} from './block-order.mjs';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
-const [site,guides,terms,pageDates]=await Promise.all(['site','guides','dictionary','page-dates'].map(n=>read(`data/${n}.json`).then(JSON.parse)));
+const [site,guides,terms,pageDates,intents]=await Promise.all(['site','guides','dictionary','page-dates','guide-search-intents'].map(n=>read(`data/${n}.json`).then(JSON.parse)));
 const base=site.baseUrl;
 // The guide chapters and dictionary pages were first published together (git: 2026-09-10).
 const FIRST_PUBLISHED='2026-09-10';
@@ -22,6 +22,9 @@ let count=0;
 for(const path of paths){
  const file=`${path.slice(1)}index.html`;
  let html=(await read(file)).replace(/<!-- page-schema:start -->[\s\S]*?<!-- page-schema:end -->/g,'');
+ // enhance-guide-search-intents adds a bare Article only when none exists yet; the guide chapters
+ // get the fuller one below instead, whichever of the two tools ran first.
+ if(guides.some(g=>path===`/guides/${g.slug}/`))html=html.replace(/<!-- guide-search-schema:start -->[\s\S]*?<!-- guide-search-schema:end -->/g,'');
  const data=[];
  const meta=name=>html.match(new RegExp(`<meta (?:name|property)="${name}" content="([^"]*)"`))?.[1];
  const h1=text(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1]??'');
@@ -32,7 +35,7 @@ for(const path of paths){
  }
  const guide=guides.find(g=>path===`/guides/${g.slug}/`);
  if(guide&&!html.includes('"@type":"Article"')){
-  data.push({"@context":"https://schema.org","@type":"Article",headline:h1,description:meta('description'),inLanguage:'ja',datePublished:FIRST_PUBLISHED,dateModified:[FIRST_PUBLISHED,pageDates[path]?.date].filter(Boolean).sort().at(-1),mainEntityOfPage:`${base}${path}`,image:`${base}/images/poe2/og/poe2-${path.replace(/^\/|\/$/g,'').replaceAll('/','-')}-og.webp`, // Same file generate-og-images writes.
+  data.push({"@context":"https://schema.org","@type":"Article",headline:h1,description:meta('description'),inLanguage:'ja',datePublished:FIRST_PUBLISHED,dateModified:[FIRST_PUBLISHED,pageDates[path]?.date,intents.find(i=>i.path===path)?.editedAt].filter(Boolean).sort().at(-1),mainEntityOfPage:`${base}${path}`,image:`${base}/images/poe2/og/poe2-${path.replace(/^\/|\/$/g,'').replaceAll('/','-')}-og.webp`, // Same file generate-og-images writes.
   author:org,publisher});
  }
  const term=terms.find(t=>path===`/dictionary/${t.slug}/`);

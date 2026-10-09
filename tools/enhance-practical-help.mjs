@@ -33,8 +33,10 @@ for(const b of builds){
 }
 // A lower-page entry, keeping the existing hero and quick choices intact.
 let home=strip(await read('index.html'),'practical-entry');
-const title='<h2 id="quality-title">もっと詳しく探す</h2>';
-if(!home.includes(title))throw new Error('Home discovery section missing');
+// The heading reads 目的から探す straight from generate-discovery-pages and もっと詳しく探す
+// after enhance-build-ux, so match the section id rather than the wording.
+const title=home.match(/<h2 id="quality-title">[^<]*<\/h2>/)?.[0];
+if(!title)throw new Error('Home discovery section missing');
 home=home.replace(title,title+block('practical-entry',`<p>主力への切替で迷ったら：${builds.filter(b=>b.practicalGuide).map(b=>`<a href="/builds/${b.classSlug}/${b.slug}/#practical-guide">${esc(b.name)}の条件・困りごと</a>`).join(' ／ ')}</p>`));
 await save('index.html',home);
 let privacy=strip(await read('privacy/index.html'),'build-feedback-privacy');
