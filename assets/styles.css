@@ -100,3 +100,7 @@ img,svg{display:block;max-width:100%}
 
 /* The beginner comparison moved off the home page; keep legacy links useful. */
 .beginner-builds-entry{position:relative;padding-block:40px}.beginner-builds-entry .section-head{margin-bottom:20px}.legacy-anchor{display:block;scroll-margin-top:100px}.discovery-page>.section{padding:38px 0}.discovery-page>.section-soft{padding-inline:20px}
+
+/* White related cards inside dark next-step panels need their own text color. */
+.next-box .related-links a{color:var(--ink)}
+.next-box .related-links a:hover,.next-box .related-links a:focus-visible{text-decoration:underline}
