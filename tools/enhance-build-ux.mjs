@@ -23,9 +23,13 @@ for(const page of pages){
    const compact=[['向いている人',b.audience],['弱点',b.weaknesses[0]],['切替時期',values.get('主力への切替目安')]];
    return `<article class="purpose-card">${heading}<dl class="quick-choice-facts">${compact.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl><a class="button" href="${url(b)}">このビルドを確認する</a><details class="quick-choice-sources"><summary>確認資料・詳しい条件</summary>${factsHtml(b,discovery)}<p><a href="${url(b)}#source-list">原典一覧を確認する</a></p></details></article>`;
   }
+  article=article.replace(/<details class="card-facts"><summary>[^<]*<\/summary>([\s\S]*?)<\/details>/g,'$1');
   article=article.replace(/<dl\b[^>]*>[\s\S]*?<\/dl>/g,'').replace(/<p class="fact-source">[\s\S]*?<\/p>/g,'');
   article=article.replace(/<button[^>]*data-compare[^>]*>[\s\S]*?<\/button>/g,'');
-  article=article.replace('</article>',`${factsHtml(b,discovery)}${page==='builds/index.html'?`<button type="button" data-compare="${esc(b.id)}" aria-pressed="false" hidden>比較に追加</button>`:''}</article>`);
+  // Tier and starter cards already summarise each build, so the full fact list starts closed there.
+  const collapse=page==='tier-list/index.html'||page==='league-starter/index.html';
+  const factBlock=collapse?`<details class="card-facts"><summary>詳しい条件・確認資料を見る</summary>${factsHtml(b,discovery)}</details>`:factsHtml(b,discovery);
+  article=article.replace('</article>',`${factBlock}${page==='builds/index.html'?`<button type="button" data-compare="${esc(b.id)}" aria-pressed="false" hidden>比較に追加</button>`:''}</article>`);
   if(page==='builds/index.html'){
    const f=facts(b,discovery);
    article=article.replace(/ data-(build-id|styles|beginner|operation|ssf|unlock)="[^"]*"/g,'').replace('<article ',`<article data-build-id="${b.id}" data-styles="${f.styles.join(',')}" data-beginner="${f.beginner}" data-operation="${f.operation}" data-ssf="${b.ssf===true}" data-unlock="${f.switchLevel||''}" `);

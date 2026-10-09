@@ -12,8 +12,8 @@
   "date": "2026-10-06"
  },
  "/leveling/": {
-  "hash": "5ff5c012cc49a1e1",
-  "date": "2026-10-06"
+  "hash": "71496d561f0e265c",
+  "date": "2026-10-09"
  },
  "/gear-check/": {
   "hash": "abd23193ffbf30ca",
@@ -40,12 +40,12 @@
   "date": "2026-10-06"
  },
  "/tier-list/": {
-  "hash": "ca680d63a0dbd338",
-  "date": "2026-10-06"
+  "hash": "6265e007606a34fa",
+  "date": "2026-10-09"
  },
  "/league-starter/": {
-  "hash": "8dba9bab1a2fc592",
-  "date": "2026-10-06"
+  "hash": "2de69041ab50ace0",
+  "date": "2026-10-09"
  },
  "/best-builds/": {
   "hash": "7dd1c40b2b777653",
@@ -108,52 +108,52 @@
   "date": "2026-10-06"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "2fac443a6ffdbe08",
-  "date": "2026-10-08"
+  "hash": "a58befa5e601e2f3",
+  "date": "2026-10-09"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "110fab0c4a754a76",
-  "date": "2026-10-08"
+  "hash": "77354622f087d1d2",
+  "date": "2026-10-09"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "10be1c89e69babed",
-  "date": "2026-10-08"
+  "hash": "d843bdf0f73a72f8",
+  "date": "2026-10-09"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "6e5453630d4f005e",
-  "date": "2026-10-08"
+  "hash": "1e3ba29c61683f91",
+  "date": "2026-10-09"
  },
  "/builds/huntress/companion/": {
-  "hash": "e4e60a392822c1d7",
-  "date": "2026-10-08"
+  "hash": "80813ab6bc04b053",
+  "date": "2026-10-09"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "434d2ec260414a05",
-  "date": "2026-10-08"
+  "hash": "cae59ef5f748c94d",
+  "date": "2026-10-09"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "d1c5c698eeb4b262",
-  "date": "2026-10-08"
+  "hash": "8ee8a047d36df506",
+  "date": "2026-10-09"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "0b4bbb55f2279cca",
-  "date": "2026-10-08"
+  "hash": "f0d239545054b58b",
+  "date": "2026-10-09"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "601fdbee6d2df95b",
-  "date": "2026-10-08"
+  "hash": "e9b8061b073c976b",
+  "date": "2026-10-09"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "11dc3666f8e4243a",
-  "date": "2026-10-08"
+  "hash": "cf9ffe8aa109c689",
+  "date": "2026-10-09"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "109efe5abc73644e",
-  "date": "2026-10-08"
+  "hash": "f073e22195f9d45a",
+  "date": "2026-10-09"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "8e8f11c54abdb298",
-  "date": "2026-10-08"
+  "hash": "c6fbdb6329359d78",
+  "date": "2026-10-09"
  },
  "/guides/skill-gems/": {
   "hash": "fe67c9c212bd6bc5",
@@ -184,63 +184,63 @@
   "date": "2026-10-09"
  },
  "/guides/after-campaign/": {
-  "hash": "43669bc7cf053cfe",
+  "hash": "1a407bf28a72833e",
   "date": "2026-10-09"
  },
  "/guides/mapping/": {
-  "hash": "0495e59e87867ec7",
+  "hash": "3b98bec94e8bd956",
   "date": "2026-10-09"
  },
  "/guides/campaign-progression/": {
-  "hash": "a802abf7345bcf2c",
+  "hash": "f2643f5e092d2641",
   "date": "2026-10-09"
  },
  "/guides/trial-of-chaos/": {
-  "hash": "6ec815d771ecee4d",
+  "hash": "e8c5423c904631d2",
   "date": "2026-10-09"
  },
  "/guides/atlas-progression/": {
-  "hash": "28f6cf7212bf02a3",
+  "hash": "65497a58527a470a",
   "date": "2026-10-09"
  },
  "/guides/waystones-tablets/": {
-  "hash": "d5565b9648649d5f",
+  "hash": "3d507699f8ba3248",
   "date": "2026-10-09"
  },
  "/guides/expedition/": {
-  "hash": "6d40b30f23b0bd9d",
+  "hash": "bbf672a271c18eb1",
   "date": "2026-10-09"
  },
  "/guides/act-1-walkthrough/": {
-  "hash": "385b05dd7c127eba",
+  "hash": "661e3478be8f50a1",
   "date": "2026-10-09"
  },
  "/guides/act-2-walkthrough/": {
-  "hash": "8227a9292894f63d",
+  "hash": "b5663b17827bcb4a",
   "date": "2026-10-09"
  },
  "/guides/act-3-walkthrough/": {
-  "hash": "a5756299c40828f4",
+  "hash": "ffc3dfa45b36b18f",
   "date": "2026-10-09"
  },
  "/guides/act-4-walkthrough/": {
-  "hash": "185fe1dd7ffc2f2e",
+  "hash": "14179a9fd286bf95",
   "date": "2026-10-09"
  },
  "/guides/interlude-walkthrough/": {
-  "hash": "cc5099ed332628dc",
+  "hash": "a6655cc965bcc422",
   "date": "2026-10-09"
  },
  "/guides/endgame-contents/": {
-  "hash": "4b427be126b37ae9",
+  "hash": "84e8ce78015284d0",
   "date": "2026-10-09"
  },
  "/guides/endgame-items/": {
-  "hash": "7f82c2814029d6ec",
+  "hash": "886f6bd4ae94b1f5",
   "date": "2026-10-09"
  },
  "/guides/atlas-passive-trees/": {
-  "hash": "8340a7b6cbf47a63",
+  "hash": "6b457f922728feee",
   "date": "2026-10-09"
  },
  "/dictionary/build/": {
@@ -316,7 +316,7 @@
   "date": "2026-10-09"
  },
  "/guides/slow-mapping/": {
-  "hash": "a20257e49c845a56",
+  "hash": "4554273e9d0d90a6",
   "date": "2026-10-09"
  },
  "/poe2-1-0/release-date/": {

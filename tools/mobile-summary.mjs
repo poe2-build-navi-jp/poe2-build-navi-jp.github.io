@@ -9,8 +9,11 @@ function unwrap(document) {
   }
   document.querySelectorAll('[data-mobile-added]').forEach(node => node.remove());
 }
+// jsdom writes boolean attributes as name="". Keep the spelling inject-analytics uses for its
+// preconnect and gtag tags, so the page is the same whichever of the two tools runs last.
+const serialize = (dom) => dom.serialize().replaceAll(' crossorigin="">', ' crossorigin>').replaceAll('<script async="" src="https://www.googletagmanager.com', '<script async src="https://www.googletagmanager.com');
 export function restoreMobileSummary(html) {
-  const dom = parse(html); unwrap(dom.window.document); return dom.serialize();
+  const dom = parse(html); unwrap(dom.window.document); return serialize(dom);
 }
 export function applyMobileSummary(html, beginner) {
   const dom = parse(html), d = dom.window.document;
@@ -63,5 +66,5 @@ export function applyMobileSummary(html, beginner) {
   const head = d.head;
   const css = d.createElement('link'); css.rel='stylesheet'; css.href='/assets/mobile-summary.css'; css.dataset.mobileAdded=''; head.append(css);
   const script = d.createElement('script'); script.src='/assets/mobile-summary.js'; script.defer=true; script.dataset.mobileAdded=''; head.append(script);
-  return dom.serialize();
+  return serialize(dom);
 }
