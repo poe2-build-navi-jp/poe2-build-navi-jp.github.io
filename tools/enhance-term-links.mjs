@@ -3,7 +3,8 @@
 //     in the sitemap, lists the dictionary terms that appear in the page's own main text.
 // (2) On build pages, a static list of the six trouble guides and the basics guides inside the
 //     "困ったとき" card, so those guides are reachable without JavaScript.
-// (3) On the build-choice hubs, links to the event-league guide and the 1.0 build status.
+// (3) On the build-choice hubs, links to the event-league guide and the 1.0 build status;
+//     on /leveling/ and the campaign guide, links to the Act walkthroughs.
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {insertBlock} from './block-order.mjs';
@@ -19,8 +20,10 @@ const ALIASES={build:['ビルド'],dps:['DPS'],'skill-gem':['スキルジェム'
 const patterns=Object.fromEntries(Object.entries(ALIASES).map(([slug,words])=>[slug,new RegExp(words.map(w=>/^[A-Za-z]+$/.test(w)?`(?<![A-Za-z])${w}(?![A-Za-z])`:w).join('|'))]));
 const TROUBLE=[['すぐ死ぬ','/guides/why-i-die/'],['火力が出ない','/guides/increase-damage/'],['マナが足りない','/guides/mana-problem/'],['ボスに勝てない','/guides/cant-beat-boss/'],['周回が遅い','/guides/slow-mapping/'],['装備の更新','/guides/gear-upgrade/']];
 const BASICS=[['スキルジェム','/guides/skill-gems/'],['サポートジェム','/guides/support-gems/'],['装備の見方','/guides/equipment-basics/'],['キャンペーン終了後','/guides/after-campaign/']];
+const ACTS=[['Act 1','/guides/act-1-walkthrough/'],['Act 2','/guides/act-2-walkthrough/'],['Act 3','/guides/act-3-walkthrough/'],['Act 4','/guides/act-4-walkthrough/'],['間幕','/guides/interlude-walkthrough/']];
+const ACT_LINKS=ACTS.map(([label,url])=>[`${label}攻略`,url]);
 const HUB_LINKS=[['Forbidden Rites初心者ガイド','/guides/forbidden-rites-beginner/'],['1.0のビルド対応状況','/poe2-1-0/build-status/']];
-const HUBS={'league-starter/index.html':HUB_LINKS,'tier-list/index.html':HUB_LINKS,'best-builds/index.html':HUB_LINKS,'leveling/index.html':[['キャンペーン終了後にすること','/guides/after-campaign/'],...HUB_LINKS]};
+const HUBS={'league-starter/index.html':HUB_LINKS,'tier-list/index.html':HUB_LINKS,'best-builds/index.html':HUB_LINKS,'leveling/index.html':[['キャンペーン終了後にすること','/guides/after-campaign/'],...HUB_LINKS,...ACT_LINKS],'guides/campaign-progression/index.html':ACT_LINKS};
 const strip=html=>html.replace(/<!-- term-links:start -->[\s\S]*?<!-- term-links:end -->/g,'').replace(/<!-- trouble-guides:start -->[\s\S]*?<!-- trouble-guides:end -->/g,'');
 let linked=0;
 for(const path of paths){
@@ -38,7 +41,7 @@ for(const path of paths){
   const card=html.indexOf('<section class="trouble-card"');
   const end=card===-1?-1:html.indexOf('</section>',card);
   if(end===-1)throw new Error(`${file}: trouble card not found`);
-  html=`${html.slice(0,end)}<!-- trouble-guides:start --><p class="trouble-guides">困りごと別のガイド：${TROUBLE.map(([label,url])=>`<a href="${url}">${label}</a>`).join('・')}</p><p class="trouble-guides">基本の確認：${BASICS.map(([label,url])=>`<a href="${url}">${label}</a>`).join('・')}</p><!-- trouble-guides:end -->${html.slice(end)}`;
+  html=`${html.slice(0,end)}<!-- trouble-guides:start --><p class="trouble-guides">困りごと別のガイド：${TROUBLE.map(([label,url])=>`<a href="${url}">${label}</a>`).join('・')}</p><p class="trouble-guides">基本の確認：${BASICS.map(([label,url])=>`<a href="${url}">${label}</a>`).join('・')}</p><p class="trouble-guides">キャンペーン攻略：${ACTS.map(([label,url])=>`<a href="${url}">${label}</a>`).join('・')}</p><!-- trouble-guides:end -->${html.slice(end)}`;
  }
  await writeFile(resolve(root,file),html);
 }
