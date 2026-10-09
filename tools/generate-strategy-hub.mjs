@@ -17,7 +17,7 @@ const groups=[
  {id:'campaign',label:'キャンペーン',title:'キャンペーンの進め方',intro:'進行の区切りと、先へ進む前の確認ポイント。',slugs:[]},
  {id:'trials',label:'試練・転職',title:'試練の進め方',intro:'挑戦前の準備と、報酬条件を確認します。',slugs:[]},
  {id:'crafting',label:'通貨・クラフト',title:'通貨と装備づくり',intro:'素材を使う前に、装備更新の目的を決めます。',slugs:[]},
- {id:'progress',label:'エンドゲーム',title:'キャンペーン後・エンドゲーム',intro:'Mappingの準備から、個別コンテンツの入口へ。',slugs:['after-campaign','mapping']},
+ {id:'progress',label:'エンドゲーム',title:'キャンペーン後・エンドゲーム',intro:'初回の進め方、専用アイテム、Atlasツリーと個別コンテンツを確認。',slugs:['after-campaign','mapping']},
  {id:'updates',label:'更新・パッチ',title:'アップデートを確認する',intro:'公式の変更内容と、自分のビルドへの影響を分けて読みます。',slugs:[]}
 ];
 const defaults={'campaign-progression':'campaign','trial-of-chaos':'trials','atlas-progression':'progress','waystones-tablets':'progress','campaign-route':'campaign','ascendancy-trials':'trials','currency-crafting':'crafting','atlas-waystones':'progress','expedition':'progress','patch-notes-guide':'updates'};
@@ -26,6 +26,8 @@ for(const g of extra){if(!g.slug||seen.has(g.slug))continue;const id=defaults[g.
 const activeGroups=groups.filter(g=>g.slugs.length).sort((a,b)=>(a.id==='campaign'?-1:b.id==='campaign'?1:0));
 const campaign=activeGroups.find(g=>g.id==='campaign');
 if(campaign){const order=['act-1-walkthrough','act-2-walkthrough','act-3-walkthrough','act-4-walkthrough','interlude-walkthrough'];campaign.slugs.sort((a,b)=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99));}
+const progress=activeGroups.find(g=>g.id==='progress');
+if(progress){const order=['after-campaign','mapping','endgame-contents','endgame-items','atlas-progression','atlas-passive-trees','waystones-tablets','expedition'];progress.slugs.sort((a,b)=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99));}
 const entry=slug=>{
  const path=`/guides/${slug}/`,g=extra.find(x=>x.slug===slug)||guides.find(x=>x.slug===slug),p=pages.find(x=>x.path===path);
  if(!g&&!p)throw new Error(`Guide missing from shared data: ${path}`);

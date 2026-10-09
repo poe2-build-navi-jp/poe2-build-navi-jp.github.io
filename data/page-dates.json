@@ -32,7 +32,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "4867a8b720eba1fe",
+  "hash": "32630fa571c2b68a",
   "date": "2026-10-09"
  },
  "/dictionary/": {
@@ -184,11 +184,11 @@
   "date": "2026-10-09"
  },
  "/guides/after-campaign/": {
-  "hash": "e0e11f88223a599d",
+  "hash": "43669bc7cf053cfe",
   "date": "2026-10-09"
  },
  "/guides/mapping/": {
-  "hash": "31017730969215a1",
+  "hash": "0495e59e87867ec7",
   "date": "2026-10-09"
  },
  "/guides/campaign-progression/": {
@@ -200,15 +200,15 @@
   "date": "2026-10-09"
  },
  "/guides/atlas-progression/": {
-  "hash": "cd20d790754b254f",
+  "hash": "28f6cf7212bf02a3",
   "date": "2026-10-09"
  },
  "/guides/waystones-tablets/": {
-  "hash": "9a56c4cd6bc5185d",
+  "hash": "d5565b9648649d5f",
   "date": "2026-10-09"
  },
  "/guides/expedition/": {
-  "hash": "403840cff6efdbe4",
+  "hash": "6d40b30f23b0bd9d",
   "date": "2026-10-09"
  },
  "/guides/act-1-walkthrough/": {
@@ -228,7 +228,19 @@
   "date": "2026-10-09"
  },
  "/guides/interlude-walkthrough/": {
-  "hash": "848a74044542eb2a",
+  "hash": "cc5099ed332628dc",
+  "date": "2026-10-09"
+ },
+ "/guides/endgame-contents/": {
+  "hash": "4b427be126b37ae9",
+  "date": "2026-10-09"
+ },
+ "/guides/endgame-items/": {
+  "hash": "7f82c2814029d6ec",
+  "date": "2026-10-09"
+ },
+ "/guides/atlas-passive-trees/": {
+  "hash": "8340a7b6cbf47a63",
   "date": "2026-10-09"
  },
  "/dictionary/build/": {

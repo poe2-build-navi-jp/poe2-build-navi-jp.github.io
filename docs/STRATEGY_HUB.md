@@ -2,7 +2,7 @@
 
 `/guides/` は既存の攻略記事へ送る一覧です。ゲーム仕様、ビルド評価、攻略本文を複製しません。カテゴリには既存slugだけを置き、見出し・説明は `data/guides.json`・`data/seo-pages.json`・`data/strategy-guides.json` を参照します。
 
-トップの「もっと詳しく探す」、初心者ガイド、掲載23記事に一覧への導線を追加します。最初のビルド選択、現在Lv、比較、保存、note導線は変更しません。
+トップの「もっと詳しく探す」、初心者ガイド、掲載26記事に一覧への導線を追加します。最初のビルド選択、現在Lv、比較、保存、note導線は変更しません。
 
 元記事の生成後に実行：
 
@@ -26,3 +26,5 @@ node scripts/test-strategy-hub.cjs
 Act2追加の範囲は [ACT2_WALKTHROUGH.md](ACT2_WALKTHROUGH.md) を参照。
 
 Act3追加の範囲は [ACT3_WALKTHROUGH.md](ACT3_WALKTHROUGH.md) を参照。
+
+エンドゲームカテゴリは移行準備→各コンテンツ→専用アイテム→Atlas進行/ツリー→入場操作の順で表示します。検索語から素材名を探す場合は専用アイテム記事の目次を利用できます。

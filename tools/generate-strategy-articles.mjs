@@ -26,8 +26,8 @@ for(const g of guides){
 console.log(`Generated ${guides.length} source-backed strategy articles.`);
 // Contextual routes from existing beginner/troubleshooting articles, with no rewritten facts.
 const connections={
- 'after-campaign':['interlude-walkthrough','atlas-progression','waystones-tablets'],
- mapping:['atlas-progression','waystones-tablets','expedition'],
+ 'after-campaign':['interlude-walkthrough','endgame-contents','atlas-progression','waystones-tablets'],
+ mapping:['endgame-contents','endgame-items','atlas-progression','waystones-tablets','expedition'],
  'cant-beat-boss':['campaign-progression','trial-of-chaos'],
  'why-i-die':['trial-of-chaos','waystones-tablets'],
  'slow-mapping':['waystones-tablets','atlas-progression'],
