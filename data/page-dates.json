@@ -1,7 +1,7 @@
 {
  "/": {
   "hash": "72a642a3680fed46",
-  "date": "2026-10-08"
+  "date": "2026-10-09"
  },
  "/builds/": {
   "hash": "7818a18e6dd604fa",
@@ -32,8 +32,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "12f53d342a2d62f0",
-  "date": "2026-10-08"
+  "hash": "bb023eb8bae34fe7",
+  "date": "2026-10-09"
  },
  "/dictionary/": {
   "hash": "0db607327ee7e867",
@@ -156,40 +156,64 @@
   "date": "2026-10-08"
  },
  "/guides/skill-gems/": {
-  "hash": "f076527f1cbfa582",
-  "date": "2026-10-08"
+  "hash": "fe67c9c212bd6bc5",
+  "date": "2026-10-09"
  },
  "/guides/support-gems/": {
-  "hash": "ff781d564618f220",
-  "date": "2026-10-08"
+  "hash": "765bdff5f3e253fd",
+  "date": "2026-10-09"
  },
  "/guides/passive-tree/": {
-  "hash": "fd2679e8114b04b4",
-  "date": "2026-10-08"
+  "hash": "50d241e113a3b573",
+  "date": "2026-10-09"
  },
  "/guides/equipment-basics/": {
-  "hash": "408f316417b58f6b",
-  "date": "2026-10-08"
+  "hash": "a68fb68a2023b039",
+  "date": "2026-10-09"
  },
  "/guides/resistance/": {
-  "hash": "10a9444c0945ee3e",
-  "date": "2026-10-08"
+  "hash": "d95a4ccc1ceb8a79",
+  "date": "2026-10-09"
  },
  "/guides/increase-damage/": {
-  "hash": "5ed6b54981a942b6",
-  "date": "2026-10-08"
+  "hash": "8a76db188f0abb7d",
+  "date": "2026-10-09"
  },
  "/guides/why-i-die/": {
-  "hash": "a757ffb8d692b5fe",
-  "date": "2026-10-08"
+  "hash": "c4634c35f5aea440",
+  "date": "2026-10-09"
  },
  "/guides/after-campaign/": {
-  "hash": "07d110350a02b4bf",
-  "date": "2026-10-08"
+  "hash": "24e53fe93a7a5ef2",
+  "date": "2026-10-09"
  },
  "/guides/mapping/": {
-  "hash": "0fc5c546a4d6b6f2",
-  "date": "2026-10-08"
+  "hash": "31017730969215a1",
+  "date": "2026-10-09"
+ },
+ "/guides/campaign-progression/": {
+  "hash": "a802abf7345bcf2c",
+  "date": "2026-10-09"
+ },
+ "/guides/trial-of-chaos/": {
+  "hash": "6ec815d771ecee4d",
+  "date": "2026-10-09"
+ },
+ "/guides/atlas-progression/": {
+  "hash": "cd20d790754b254f",
+  "date": "2026-10-09"
+ },
+ "/guides/waystones-tablets/": {
+  "hash": "9a56c4cd6bc5185d",
+  "date": "2026-10-09"
+ },
+ "/guides/expedition/": {
+  "hash": "403840cff6efdbe4",
+  "date": "2026-10-09"
+ },
+ "/guides/act-1-walkthrough/": {
+  "hash": "9916fa6c75b14ce7",
+  "date": "2026-10-09"
  },
  "/dictionary/build/": {
   "hash": "43ba11e22407abde",
@@ -252,20 +276,20 @@
   "date": "2026-10-06"
  },
  "/guides/gear-upgrade/": {
-  "hash": "b6dfcc4326597fa1",
-  "date": "2026-10-08"
+  "hash": "bf8bb061737e5fc8",
+  "date": "2026-10-09"
  },
  "/guides/mana-problem/": {
-  "hash": "130fe7aa626062a3",
-  "date": "2026-10-08"
+  "hash": "fa22745ffab83bb7",
+  "date": "2026-10-09"
  },
  "/guides/cant-beat-boss/": {
-  "hash": "5877d829e2ab5758",
-  "date": "2026-10-08"
+  "hash": "598614bfd0bfce93",
+  "date": "2026-10-09"
  },
  "/guides/slow-mapping/": {
-  "hash": "82c5f62005cce378",
-  "date": "2026-10-08"
+  "hash": "a20257e49c845a56",
+  "date": "2026-10-09"
  },
  "/poe2-1-0/release-date/": {
   "hash": "91f34b2eb7641f5e",

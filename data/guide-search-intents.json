@@ -1,0 +1,270 @@
+[
+  {
+    "slug": "skill-gems",
+    "path": "/guides/skill-gems/",
+    "primaryIntent": "スキルジェムの作り方と使用条件",
+    "searchExamples": [
+      "PoE2 スキルジェム 使い方"
+    ],
+    "title": "PoE2スキルジェムの使い方｜作り方と必要レベル",
+    "h1": "PoE2スキルジェムの使い方｜作り方と必要レベル",
+    "description": "Uncut Skill Gemでスキルを作る手順と、使用に必要なキャラクターLv・能力値を確認します。主力を使えるまでの育成と、ジェムを上げる前の注意点も解説。",
+    "answer": "Uncut Skill Gemを使ってスキルを選び、作ったジェムをスキルパネルにはめると使えます。作成前に主力スキルの必要Lvと能力値を確認し、使える段階になるまでは育成ロードマップの代替スキルで進めましょう。",
+    "boundary": "ジェムの作成・使用条件を担当。サポートの装着制限やビルド全体の火力診断は別記事。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "support-gems",
+    "path": "/guides/support-gems/",
+    "primaryIntent": "サポートジェムを付けられない原因の確認",
+    "searchExamples": [
+      "PoE2 サポートジェム 付けられない"
+    ],
+    "title": "PoE2サポートジェムが付けられない時は？枠・能力値・制限の確認",
+    "h1": "PoE2サポートジェムが付けられない時は？枠・能力値・制限の確認",
+    "description": "PoE2でサポートジェムが付けられない時の確認順。スキル側の枠、能力値による上限、同じ種類の制限を確認し、付け替え後の消費も見直します。",
+    "answer": "サポートジェムが付けられない時は、スキル側の空き枠、対応する能力値、同じ種類の装着制限を確認します。付け替えた後は、スキルの挙動だけでなくマナ消費やSpiritの残りも確認してください。",
+    "boundary": "サポートの装着条件が中心。通常スキルの作成はskill-gems、継続的なマナ不足はmana-problem。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "passive-tree",
+    "path": "/guides/passive-tree/",
+    "primaryIntent": "育成途中のパッシブの振り方",
+    "searchExamples": [
+      "PoE2 パッシブ 振り方 初心者"
+    ],
+    "title": "PoE2パッシブの振り方｜初心者が現在Lvで見るポイント",
+    "h1": "PoE2パッシブの振り方｜初心者が現在Lvで見るポイント",
+    "description": "PoE2のパッシブは完成形を先取りせず、現在Lvの育成方針から確認。主力スキル・防御・能力条件と、次の段階までの取得方針を整理します。",
+    "answer": "パッシブは完成形のツリーを最初から追わず、現在Lvのロードマップにある次の目標を優先します。主力スキル、防御、装備やジェムの能力条件と噛み合っているかを照合してください。",
+    "boundary": "キャラクターの育成ツリーを担当。Atlasパッシブの入手条件はatlas-progression。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "equipment-basics",
+    "path": "/guides/equipment-basics/",
+    "primaryIntent": "拾った装備の性能と必要条件の読み方",
+    "searchExamples": [
+      "PoE2 装備 見方 初心者"
+    ],
+    "title": "PoE2装備の見方｜レアリティ・必要条件・防御の基本",
+    "h1": "PoE2装備の見方｜レアリティ・必要条件・防御の基本",
+    "description": "PoE2で拾った装備を使うか迷った時の見方。レアリティ・必要条件・アイテムレベルを読み、防御タイプと交換後の耐性を確認します。",
+    "answer": "拾った装備はレアリティ、必要条件、アイテムレベルを確認し、自分のビルドに合う防御タイプかを見ます。交換は1部位ずつ行い、装備できる条件や耐性を失っていないか比較してください。",
+    "boundary": "装備の読み方を担当。どの部位から買い替えるかはgear-upgrade。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "resistance",
+    "path": "/guides/resistance/",
+    "primaryIntent": "不足した耐性を装備で補う確認順",
+    "searchExamples": [
+      "PoE2 耐性 上げ方"
+    ],
+    "title": "PoE2耐性の上げ方｜不足の確認と装備交換の注意点",
+    "h1": "PoE2耐性の上げ方｜不足の確認と装備交換の注意点",
+    "description": "PoE2の耐性を上げたい時は、キャラクター画面で不足を確認して装備を比較。1属性だけ上げて他の耐性や防御を失わないための確認順を解説します。",
+    "answer": "耐性を上げたい時は、まずキャラクター画面で不足している属性を確認し、その耐性を補える装備を1部位ずつ比較します。交換後は他の耐性や生存力、必要な能力条件を失っていないかも確認してください。",
+    "boundary": "耐性不足と交換前後の確認に集中。死亡全般の診断はwhy-i-die、全部位の更新優先度はgear-upgrade。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "increase-damage",
+    "path": "/guides/increase-damage/",
+    "primaryIntent": "火力不足の原因を切り分ける",
+    "searchExamples": [
+      "PoE2 火力 出ない"
+    ],
+    "title": "PoE2で火力が出ない原因｜武器・スキルなど7項目の確認順",
+    "h1": "PoE2で火力が出ない原因｜武器・スキルなど7項目の確認順",
+    "description": "PoE2で火力が出ない時に、武器・主力スキル・サポート・パッシブなど7項目を順に確認。現在の育成段階に合う構成かを切り分けます。",
+    "answer": "火力が出ない時は、今使っている主力スキルと対応するサポートを確認し、現在段階の武器やパッシブの方針と照合します。マナなどで攻撃が止まる場合は、火力とリソースの問題を分けて見直しましょう。",
+    "boundary": "ダメージ不足の総合診断。周回速度の移動・操作問題はslow-mapping、ボス戦全般はcant-beat-boss。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "why-i-die",
+    "path": "/guides/why-i-die/",
+    "primaryIntent": "すぐ死ぬ原因を切り分ける",
+    "searchExamples": [
+      "PoE2 すぐ死ぬ 原因"
+    ],
+    "title": "PoE2ですぐ死ぬ原因｜耐性・防御・回復など7項目の確認順",
+    "h1": "PoE2ですぐ死ぬ原因｜耐性・防御・回復など7項目の確認順",
+    "description": "PoE2ですぐ死ぬ時は、耐性・防御・回復・装備・立ち回りを順番に確認。育成段階や挑戦難度も合わせ、死亡原因を切り分けます。",
+    "answer": "すぐ死ぬ時は、不足している耐性と現在段階の防具を確認し、同じ攻撃で倒されていないか観察します。耐性だけで決めず、回復、立ち回り、コンテンツの難度も順に切り分けてください。",
+    "boundary": "死亡原因の総合診断。耐性だけの改善手順はresistance、特定ボスの準備はcant-beat-boss。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "after-campaign",
+    "path": "/guides/after-campaign/",
+    "primaryIntent": "キャンペーン後にまず準備すること",
+    "searchExamples": [
+      "PoE2 キャンペーン クリア後 何する"
+    ],
+    "title": "PoE2キャンペーン終了後は何をする？エンドゲーム前の準備",
+    "h1": "PoE2キャンペーン終了後は何をする？エンドゲーム前の準備",
+    "description": "PoE2のキャンペーン終了後に確認する耐性・主力スキル・育成段階を整理。Mappingへ進む前に、低TierのWaystoneで安定して戦えるか確認します。",
+    "answer": "キャンペーン終了後は耐性と主力スキルを整え、ビルドページのMapping開始段階を確認します。まずTier 1のWaystoneで、死なずにボスまで進めるかを試してください。",
+    "boundary": "キャンペーン終了時の移行判断。実際の初回周回チェックはmapping、Atlasの進行報酬はatlas-progression。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "mapping",
+    "path": "/guides/mapping/",
+    "primaryIntent": "Mapping開始前のビルド準備と初回確認",
+    "searchExamples": [
+      "PoE2 マッピング 始め方"
+    ],
+    "title": "PoE2マッピングの始め方｜開始前の準備と低難度での確認",
+    "h1": "PoE2マッピングの始め方｜開始前の準備と低難度での確認",
+    "description": "PoE2のMapping開始前に、耐性・生存力・主力スキル・装備を確認。低い難度で死亡原因と処理速度を分けて調べる手順をまとめます。",
+    "answer": "マッピングは耐性、生存力、主力スキル、現在段階の装備を確認してから低い難度で試します。死亡が多いのか、敵の処理が遅いのかを分け、使っているビルドのMapping移行条件と照合してください。",
+    "boundary": "周回を始めるビルド準備が中心。素材の操作はwaystones-tablets、ポイント獲得の進行はatlas-progression。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "gear-upgrade",
+    "path": "/guides/gear-upgrade/",
+    "primaryIntent": "装備を交換する部位の優先度",
+    "searchExamples": [
+      "PoE2 装備更新 順番"
+    ],
+    "title": "PoE2装備更新の順番｜初心者はどの部位から替える？",
+    "h1": "PoE2装備更新の順番｜初心者はどの部位から替える？",
+    "description": "PoE2の装備更新は火力・耐久・マナの悩みから優先部位を選択。現在Lvとビルドに合わせ、交換で耐性や必要条件を失わないか確認します。",
+    "answer": "装備更新は、火力不足なら主力に影響する武器や能力、死にやすいなら防御・耐性・回復に関係する部位から確認します。優先順位はビルドで変わるため、現在Lvに合う候補を1部位ずつ交換して変化を見てください。",
+    "boundary": "購入・交換の優先部位を担当。装備欄の意味はequipment-basics、耐性だけの補強はresistance。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "mana-problem",
+    "path": "/guides/mana-problem/",
+    "primaryIntent": "マナが足りず攻撃が止まる原因の確認",
+    "searchExamples": [
+      "PoE2 マナ 足りない"
+    ],
+    "title": "PoE2でマナが足りない時は？消費・サポート・回復の確認順",
+    "h1": "PoE2でマナが足りない時は？消費・サポート・回復の確認順",
+    "description": "PoE2でマナが足りない時は、主力スキルのコストと連続使用回数から確認。サポート、回復、攻撃頻度、育成段階を順に見直します。",
+    "answer": "マナが足りない時は、主力スキル1回のコストと何回使うと止まるかを確認します。次にサポート変更による消費増加、回復手段、攻撃頻度を見直し、現在の育成段階にある対策と照合してください。",
+    "boundary": "マナ消費と回復の切り分け。サポート自体が装着できない問題はsupport-gems。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "cant-beat-boss",
+    "path": "/guides/cant-beat-boss/",
+    "primaryIntent": "ボスに勝てない時の準備と操作の確認",
+    "searchExamples": [
+      "PoE2 ボス 勝てない"
+    ],
+    "title": "PoE2でボスに勝てない時は？単体火力・防御・操作の確認順",
+    "h1": "PoE2でボスに勝てない時は？単体火力・防御・操作の確認順",
+    "description": "PoE2でボスに勝てない時の確認順。単体用スキル、サポート、操作、防御、育成段階を照合し、まず直す項目を切り分けます。",
+    "answer": "ボスに勝てない時は、単体用スキルとサポート、使う操作順、防御が現在の育成段階に合っているか確認します。削れないのか、攻撃を受けて倒れるのかを分けて、先に直す項目を決めましょう。",
+    "boundary": "ボス共通の準備と原因診断。各Act固有の道順や攻撃パターンの攻略とは分ける。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "slow-mapping",
+    "path": "/guides/slow-mapping/",
+    "primaryIntent": "マップ周回が遅い原因の確認",
+    "searchExamples": [
+      "PoE2 マップ 周回 遅い"
+    ],
+    "title": "PoE2でマップ周回が遅い原因｜移動・範囲・操作回数の確認順",
+    "h1": "PoE2でマップ周回が遅い原因｜移動・範囲・操作回数の確認順",
+    "description": "PoE2でマップ周回が遅い時に、移動速度・攻撃範囲・通常敵への操作回数を確認。装備とMapping移行条件を合わせて見直します。",
+    "answer": "周回が遅い時は、移動に時間がかかるのか、通常敵を倒す操作回数が多いのかを分けます。移動速度、攻撃範囲、主力とサポートを確認し、ビルドのMapping移行条件と照合してください。",
+    "boundary": "移動と集団処理の時間に集中。単純なダメージ不足はincrease-damage、開始前準備はmapping。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "campaign-progression",
+    "path": "/guides/campaign-progression/",
+    "primaryIntent": "Act 4の島に行けない進行条件の確認",
+    "searchExamples": [
+      "PoE2 Act4 島 行けない"
+    ],
+    "title": "PoE2キャンペーンが進まない時の確認順｜Act 4の島へ行けない場合も",
+    "h1": "PoE2キャンペーンが進まない時の確認順｜Act 4の島へ行けない場合も",
+    "description": "PoE2でキャンペーンが進まない時はクエスト条件を確認。Act 4の島への移動、Makoruへの提出、ボス撃破後の案内を確認します。",
+    "answer": "Act 4の島へ行けない時は、Boat CharterをMakoruへ渡したかを確認してください。他のキャラクターで行けたことだけで判断せず、今のキャラクターの進行条件を照合します。",
+    "boundary": "Act 4を中心とした進行条件・行き詰まり。Act 1のボスまでの順路は新規Act 1記事へ分離。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "trial-of-chaos",
+    "path": "/guides/trial-of-chaos/",
+    "primaryIntent": "混沌の試練の中断・再開と失敗後の扱い",
+    "searchExamples": [
+      "PoE2 混沌の試練 中断 再開"
+    ],
+    "title": "PoE2混沌の試練は中断できる？再開・失敗後の再挑戦",
+    "h1": "PoE2混沌の試練は中断できる？再開・失敗後の再挑戦",
+    "description": "PoE2の混沌の試練は途中退出して同じ部屋から再開可能。死亡時との違い、Chimeral入場アイテムの再入手、部屋ごとの報酬を確認します。",
+    "answer": "0.5.5の混沌の試練は途中で退出し、後から同じ部屋で再開できます。中断と死亡後の扱いは別なので、失敗した場合は入場アイテムの種類と再入手条件を確認してください。",
+    "boundary": "Trial of Chaosの中断と再挑戦を担当。全試練や全アセンダンシーポイントの取得条件は対象外。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "atlas-progression",
+    "path": "/guides/atlas-progression/",
+    "primaryIntent": "Atlasパッシブポイントが増えない時の進行確認",
+    "searchExamples": [
+      "PoE2 Atlas パッシブ 増えない"
+    ],
+    "title": "PoE2アトラスの進め方｜パッシブポイントの入手方法",
+    "h1": "PoE2アトラスの進め方｜パッシブポイントの入手方法",
+    "description": "PoE2のAtlasパッシブポイントは、最初のTowerからFortress内のMapを進めて取得。増えない時の進行先、Origin Coreの種類、鍵の条件を確認します。",
+    "answer": "0.5.0以降のAtlasパッシブポイントは、最初のTowerを完了して現れるFortress内のMapを進めて得ます。ポイントが増えない時は周回数だけでなく、進行対象の場所が完了しているかを確認してください。",
+    "boundary": "Atlas進行と報酬条件を担当。キャラクターのパッシブはpassive-tree、Map入場操作はwaystones-tablets。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "waystones-tablets",
+    "path": "/guides/waystones-tablets/",
+    "primaryIntent": "Waystone・Tabletを使えない時の操作確認",
+    "searchExamples": [
+      "PoE2 ウェイストーン 使えない"
+    ],
+    "title": "PoE2ウェイストーン・タブレットの使い方｜使えない時の確認",
+    "h1": "PoE2ウェイストーン・タブレットの使い方｜使えない時の確認",
+    "description": "PoE2のウェイストーンは起動前に鑑定が必要。タブレットが適用されない時の表示、Mapの種類、追加効果を起動前に確認します。",
+    "answer": "ウェイストーンを使えない時は、Map Deviceで起動する前に鑑定が済んでいるかを確認します。タブレットは選んだMapに適用できるか、グレー表示や赤い数字が出ていないかも確認してください。",
+    "boundary": "入場素材とMap Deviceの操作を担当。Atlas報酬進行はatlas-progression、特定リーグのTablet入手可否はexpedition。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "expedition",
+    "path": "/guides/expedition/",
+    "primaryIntent": "Expeditionの解放条件とリーグ差の確認",
+    "searchExamples": [
+      "PoE2 エクスペディション 解放条件"
+    ],
+    "title": "PoE2エクスペディションの始め方｜解放条件とリーグの違い",
+    "h1": "PoE2エクスペディションの始め方｜解放条件とリーグの違い",
+    "description": "PoE2のエクスペディションはAct 4以降とAtlasで遭遇。The Runeseekerによる設備の解放と、リーグごとのTablet入手可否を整理します。",
+    "answer": "0.5.5ではエクスペディションにAct 4以降とAtlasで遭遇できます。Runes of Aldur以外でVerisium Anvilを解放するには、Act 4のThe Runeseekerを完了してください。",
+    "boundary": "Expedition固有の解放・リーグ差を担当。Tabletの一般操作はwaystones-tablets、最適な稼ぎ方やボス網羅は対象外。",
+    "editedAt": "2026-10-09"
+  },
+  {
+    "slug": "act-1-walkthrough",
+    "path": "/guides/act-1-walkthrough/",
+    "primaryIntent": "Act1開始から最終ボスまでの進行とボス対策",
+    "searchExamples": [
+      "PoE2 Act1 攻略",
+      "PoE2 ジオノール 倒し方",
+      "PoE2 Act1 墓地 鍵"
+    ],
+    "title": "PoE2 Act1攻略｜進行ルートとジオノール伯爵の倒し方",
+    "h1": "PoE2 Act1攻略｜進行ルートとジオノール伯爵の倒し方",
+    "description": "PoE2のAct1開始から最終ボスまで。魂の木・墓地の鍵・オガム村の進め方、寄り道で取る強化報酬、ジオノール伯爵の霧と冷気攻撃への対処をまとめます。",
+    "answer": "Act1の最終ボスは、オガムの邸宅のジオノール伯爵（Count Geonor）です。魂の木の解放、墓地で2つの鍵の回収、オガム村から邸宅への進行を順に進め、ボス前に冷気耐性と主力スキルを確認しましょう。",
+    "boundary": "Act1の開始から最終ボス撃破までの主線・任意報酬・個別攻撃への対応。Act4など他Actの進行停止はcampaign-progression、全般的なボス準備はcant-beat-boss。",
+    "editedAt": "2026-10-09"
+  }
+]

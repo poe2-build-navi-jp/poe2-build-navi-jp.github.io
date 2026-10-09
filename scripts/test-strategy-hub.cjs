@@ -4,27 +4,76 @@ const path=require('node:path');
 const {JSDOM}=require('jsdom');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-const dom=new JSDOM(read('guides/index.html'));
+const html=read('guides/index.html');
+const dom=new JSDOM(html,{url:'https://poe2-build-navi-jp.github.io/guides/',runScripts:'outside-only'});
 const doc=dom.window.document;
+const extraPath=path.join(root,'data/strategy-guides.json');
+const raw=fs.existsSync(extraPath)?JSON.parse(fs.readFileSync(extraPath,'utf8')):[];
+const extra=Array.isArray(raw)?raw:raw.guides;
+const original=['why-i-die','increase-damage','mana-problem','cant-beat-boss','slow-mapping','gear-upgrade','skill-gems','support-gems','passive-tree','equipment-basics','resistance','after-campaign','mapping'];
+const expected=new Set([...original,...extra.map(g=>g.slug)]).size;
 assert.equal(doc.querySelectorAll('h1').length,1);
 assert.equal(doc.querySelector('link[rel="canonical"]').href,'https://poe2-build-navi-jp.github.io/guides/');
 const cards=[...doc.querySelectorAll('.content-card')];
-assert.equal(cards.length,13);
-assert.equal(new Set(cards.map(a=>a.href)).size,13);
-for(const a of cards){assert(a.querySelector('strong').textContent.trim());assert(a.querySelector('span').textContent.trim());const p=a.getAttribute('href');assert(fs.existsSync(path.join(root,p,'index.html')),p);const guide=read(`${p.slice(1)}index.html`);assert.equal((guide.match(/<!-- strategy-link:start -->/g)||[]).length,1);const gd=new JSDOM(guide).window.document;assert(!gd.querySelector('.trouble-guides').closest('.build-card,.build-option'));assert(guide.indexOf('<!-- strategy-link:start -->')>guide.lastIndexOf('<article'));}
+assert.equal(cards.length,expected);
+assert.equal(new Set(cards.map(a=>a.href)).size,expected);
+assert(doc.querySelector('[data-guide-controls]').hidden,'Non-functional controls hidden without JS');
+for(const a of cards){
+  assert(a.querySelector('strong').textContent.trim());assert(a.querySelector('span').textContent.trim());assert(!a.hidden,'All articles available without JS');
+  const p=a.getAttribute('href');assert(fs.existsSync(path.join(root,p,'index.html')),p);
+  const guide=read(`${p.slice(1)}index.html`);
+  assert.equal((guide.match(/<!-- strategy-link:start -->/g)||[]).length,1);
+  const gd=new JSDOM(guide).window.document;
+  assert(!gd.querySelector('.trouble-guides').closest('.build-card,.build-option'));
+  assert(guide.indexOf('<!-- strategy-link:start -->')>guide.lastIndexOf('<article'));
+}
 assert.equal(doc.querySelectorAll('a[href="/leveling/"]').length,3);
 for(const a of doc.querySelectorAll('nav[aria-label="攻略カテゴリ"] a'))assert(doc.querySelector(a.getAttribute('href')));
+for(const id of ['problems','basics','progress'])assert(doc.getElementById(id),'Original anchors preserved');
 const data=[...doc.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent));
-const collection=data.find(s=>s['@type']==='CollectionPage');
-assert.equal(collection.mainEntity.itemListElement.length,cards.length);
+assert.equal(data.find(s=>s['@type']==='CollectionPage').mainEntity.itemListElement.length,cards.length);
 assert(read('sitemap.xml').includes('<loc>https://poe2-build-navi-jp.github.io/guides/</loc>'));
-assert(read('index.html').includes('PoE2攻略ガイドを見る'));
-assert(read('beginner-guide/index.html').includes('href="/guides/"'));
 const homeDoc=new JSDOM(read('index.html')).window.document;
 assert.equal(homeDoc.querySelectorAll('.hero a[href="/guides/"]').length,1);
+assert(read('beginner-guide/index.html').includes('href="/guides/"'));
 for(const file of ['index.html','builds/index.html','guides/index.html','builds/witch/minion-infernalist/index.html']){
- const page=new JSDOM(read(file)).window.document;
- assert.equal(page.querySelectorAll('.site-nav a[href="/guides/"]').length,1,'Guide is available once in the main menu');
+  const page=new JSDOM(read(file)).window.document;
+  assert.equal(page.querySelectorAll('.site-nav a[href="/guides/"]').length,1,'Guide is available once in main menu');
 }
-assert(!doc.querySelector('form')); // Reuse the existing leveling form rather than duplicating it.
-console.log('PASS: 13 JS-off guide cards, existing routes, category anchors, return links, CollectionPage and sitemap');
+assert(!doc.querySelector('form'),'No duplicate leveling form');
+const site=JSON.parse(read('data/site.json'));
+assert(doc.querySelector('.guide-patch').textContent.includes(site.latestPatchCheckedAt));
+assert(doc.querySelector(`.guide-patch a[href="${site.latestPatchSource}"]`));
+assert(doc.querySelector('.guide-sources').textContent.includes('全記事の再検証日'));
+// Exercise the same browser script with real DOM and URL history.
+dom.window.eval(read('assets/guide-hub.js'));
+assert(!doc.querySelector('[data-guide-controls]').hidden);
+const search=doc.querySelector('#guide-search');
+const visible=()=>cards.filter(c=>!c.hidden);
+function query(value){search.value=value;search.dispatchEvent(new dom.window.Event('input',{bubbles:true}));}
+query('ジェム');
+assert(visible().length>0&&visible().length<cards.length);
+assert.equal(new URL(dom.window.location.href).searchParams.get('q'),'ジェム');
+const basics=doc.querySelector('[data-filter="basics"]');basics.click();
+assert.equal(basics.getAttribute('aria-pressed'),'true');
+assert(visible().every(c=>c.dataset.category==='basics'));
+assert.equal(new URL(dom.window.location.href).searchParams.get('category'),'basics');
+query('該当しない検索zzzz');
+assert.equal(visible().length,0);assert(!doc.querySelector('[data-guide-empty]').hidden);
+assert(doc.querySelector('[data-guide-status]').textContent.includes('0件'));
+doc.querySelector('[data-guide-empty] [data-guide-reset]').click();
+assert.equal(visible().length,cards.length);assert(doc.querySelector('[data-guide-empty]').hidden);
+assert.equal(doc.activeElement,search);assert.equal(dom.window.location.search,'');
+dom.window.history.replaceState(null,'','?q=ジェム&category=basics#basics');
+dom.window.dispatchEvent(new dom.window.PopStateEvent('popstate'));
+assert.equal(search.value,'ジェム');assert.equal(basics.getAttribute('aria-pressed'),'true');assert.equal(dom.window.location.hash,'#basics');
+assert(visible().every(c=>c.dataset.category==='basics'));
+dom.window.history.replaceState(null,'','?category=unknown#progress');dom.window.dispatchEvent(new dom.window.PopStateEvent('popstate'));
+assert.equal(visible().length,cards.length,'Unknown category falls back safely');
+query('ジェム');
+doc.querySelector('.guide-category-nav a[href="#progress"]').addEventListener('click',e=>e.preventDefault());
+doc.querySelector('.guide-category-nav a[href="#progress"]').click();
+assert.equal(visible().length,cards.length,'Category anchors expose their destinations');
+assert.equal(search.value,'');
+console.log(`PASS: ${expected} JS-off cards, routes, source note, search/filter/reset, query restoration, legacy anchors, schema and return links`);
+dom.window.close();

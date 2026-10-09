@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://poe2-build-navi-jp.github.io/</loc><lastmod>2026-10-08</lastmod><priority>1.0</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-beginner-recommended-builds.svg</image:loc><image:title>PoE2初心者向けおすすめビルド比較</image:title></image:image></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/</loc><lastmod>2026-10-09</lastmod><priority>1.0</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-beginner-recommended-builds.svg</image:loc><image:title>PoE2初心者向けおすすめビルド比較</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/</loc><lastmod>2026-10-06</lastmod><priority>0.9</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/classes/</loc><lastmod>2026-10-06</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-recommended-classes.svg</image:loc><image:title>PoE2おすすめクラス・職業</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/leveling/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-leveling-guide.svg</image:loc><image:title>PoE2レベリングガイド</image:title></image:image></url>
@@ -8,7 +8,7 @@
   <url><loc>https://poe2-build-navi-jp.github.io/class-check/</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/beginner-guide/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/beginner-builds/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/tier-list/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-beginner-build-tier.svg</image:loc><image:title>PoE2初心者向けビルドTier比較</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/league-starter/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-league-starter-builds.svg</image:loc><image:title>PoE2リーグスターター比較</image:title></image:image></url>
@@ -39,15 +39,21 @@
   <url><loc>https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-grenade-gemling-leveling-roadmap.svg</image:loc><image:title>PoE2 グレネード・ジェムリングの育成ロードマップ</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-twister-spirit-walker-leveling-roadmap.svg</image:loc><image:title>PoE2 ツイスター・スピリットウォーカーの育成ロードマップ</image:title></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/builds/sorceress/spark-stormweaver/</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/builds/poe2-spark-stormweaver-leveling-roadmap.svg</image:loc><image:title>PoE2 スパーク・ストームウィーバーの育成ロードマップ</image:title></image:image></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/skill-gems/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/support-gems/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/passive-tree/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/equipment-basics/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/resistance/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/increase-damage/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/why-i-die/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/after-campaign/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/mapping/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/skill-gems/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/support-gems/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/passive-tree/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/equipment-basics/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/resistance/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/increase-damage/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/why-i-die/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/after-campaign/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/mapping/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/campaign-progression/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/trial-of-chaos/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/atlas-progression/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/waystones-tablets/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/expedition/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/act-1-walkthrough/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/build/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/dps/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/skill-gem/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
@@ -63,10 +69,10 @@
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/energy-shield/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/poe2-0-5-5-builds/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/forbidden-rites-beginner/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/gear-upgrade/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/mana-problem/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/cant-beat-boss/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/slow-mapping/</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/gear-upgrade/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/mana-problem/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/cant-beat-boss/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/slow-mapping/</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/poe2-1-0/release-date/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/poe2-1-0/how-to-start/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/poe2-1-0/system-requirements/</loc><lastmod>2026-10-06</lastmod><priority>0.7</priority></url>
