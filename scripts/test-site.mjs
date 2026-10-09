@@ -25,6 +25,7 @@ const classes = JSON.parse(await read("data/classes.json"));
 const guides = JSON.parse(await read("data/guides.json"));
 const terms = JSON.parse(await read("data/dictionary.json"));
 const seoPages = JSON.parse(await read("data/seo-pages.json"));
+const guideIntents = JSON.parse(await read("data/guide-search-intents.json"));
 const site = JSON.parse(await read("data/site.json"));
 const beginnerLanding = await read("beginner-builds/index.html");
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
@@ -199,7 +200,7 @@ for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
   const html = await read(localPath);
-  assert(html.includes(`<h1>${page.h1}</h1>`), `${page.path}: initial H1 missing`);
+  assert(html.includes(`<h1>${guideIntents.find(intent=>intent.path===page.path)?.h1 || page.h1}</h1>`), `${page.path}: initial H1 missing`);
   assert(html.includes(`<link rel="canonical" href="${baseUrl}${page.path}">`), `${page.path}: self canonical missing`);
   assert(html.includes(page.actionsHeading ?? "まずやること3つ"), `${page.path}: immediate actions missing`);
   if (page.faq?.length) assert(html.includes('"@type":"FAQPage"') && page.faq.every((item) => html.includes(item.q)), `${page.path}: visible FAQ and FAQPage data must match`);

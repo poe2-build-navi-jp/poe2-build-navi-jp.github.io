@@ -1,0 +1,772 @@
+[
+  {
+    "slug": "campaign-progression",
+    "title": "キャンペーン攻略｜進め方と行き詰まった時の確認順",
+    "summary": "道に迷ったら、現在のクエストと進行条件を確認。Act 4の島に入れない場合や、古い攻略とルートが違う場合の確認先をまとめます。",
+    "category": "campaign",
+    "actions": [
+      "世界地図で現在のActとクエストの目的を確認する",
+      "入口が見つからないのか、ボスに勝てないのかを分ける",
+      "現在Lvの育成手順と進行条件を照合する"
+    ],
+    "sections": [
+      {
+        "id": "route",
+        "heading": "まずはActとクエストを確認する",
+        "paragraphs": [
+          "0.3.0でCruel難易度が撤廃され、Act 4と3つのInterludeが導入されました。公式ではInterludeを経てLv65前後でEndgameに進む構成と案内されています。[source:1]",
+          "Lvだけを上げてもクエスト条件を満たしたことにはなりません。世界地図の現在地、クエストの指示、所持しているクエストアイテムの順に確認しましょう。進行ルートと、ビルドの主力スキルを切り替えるLvは別々に扱います。"
+        ],
+        "bullets": [
+          "道が分からない：世界地図とクエストを確認",
+          "敵を倒せない：火力・生存・ボス対策を確認",
+          "スキルを使えない：ジェムと能力値の条件を確認"
+        ]
+      },
+      {
+        "id": "old-route",
+        "heading": "古い攻略と道が違うとき",
+        "paragraphs": [
+          "0.5.0ではAct 2のThe Dreadnaught Vanguardが削除され、Act 2ボスはThe Dreadnaughtに移りました。Act 3でもエリア順が調整されています。[source:2]",
+          "旧動画にあるエリア名が見つからない場合は、同じ道を探し続ける前に動画の対応パッチを確認してください。現在のクエスト指示を優先し、旧ルートの場所名をそのまま検索するだけで判断しないのがおすすめです。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "act-four",
+        "heading": "Act 4の島へ入れないとき",
+        "paragraphs": [
+          "0.5.5cでは、Act 4の島へ入る条件としてBoat CharterをMakoruへ渡すことが必要になりました。変更前から条件を満たさず進んでいた既存キャラクターは影響を受けません。[source:3]",
+          "新しいキャラクターで移動できない場合は、まずMakoruへの提出が済んでいるかを確認します。ほかのキャラクターで行けたことだけを根拠に、不具合だと決めつけないようにしましょう。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "after-boss",
+        "heading": "ボスを倒したのに先へ進めないとき",
+        "paragraphs": [
+          "0.5.5bではTemple of KopecのKetzuli撃破後、Ritualの完了へ進む案内が追加されました。[source:4]",
+          "ボス撃破後も目的が残っている場合は、周辺のイベント、会話、クエスト表示を確認してください。この変更は該当地点の案内です。すべてのボスでRitualが必須という意味ではありません。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "next",
+        "heading": "攻略とビルド育成を行き来する",
+        "paragraphs": [
+          "道順の問題を解決したら、現在Lvの育成手順に戻ります。主力スキルの解禁、装備の必要能力値、耐性を順番に確認し、次のボスまでに直す項目を1つ決めましょう。",
+          "このページは進行条件と変更点を扱うガイドです。全エリアの最短ルート、恒久報酬の完全一覧、各ボスの攻撃パターンを網羅するものではありません。"
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG: 0.3.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3826682",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.5c パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4006357",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.5b パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4004106",
+        "checkedAt": "2026-10-09"
+      }
+    ],
+    "related": [
+      {
+        "href": "/leveling/",
+        "label": "現在Lvから育成を見る"
+      },
+      {
+        "href": "/guides/cant-beat-boss/",
+        "label": "ボスに勝てない時の確認順"
+      },
+      {
+        "href": "/guides/after-campaign/",
+        "label": "キャンペーン終了後にすること"
+      }
+    ]
+  },
+  {
+    "slug": "trial-of-chaos",
+    "title": "混沌の試練攻略｜中断・報酬・失敗後の再挑戦",
+    "summary": "Trial of Chaosの現行ルールを確認。部屋ごとの報酬、途中再開、クエスト用入場アイテムの再入手を分けて案内します。",
+    "category": "campaign",
+    "actions": [
+      "入場アイテムと挑戦する試練の内容を確認する",
+      "部屋の追加効果を読み、苦手な条件を重ねない",
+      "失敗した入場アイテムがChimeralか確認する"
+    ],
+    "sections": [
+      {
+        "id": "before",
+        "heading": "挑戦前に決めておくこと",
+        "paragraphs": [
+          "まず、クエストを進めるための挑戦か、報酬を得るための繰り返し挑戦かを分けます。所持アイテムに書かれた条件を読み、使っているビルドの単体火力、回復、苦手な追加効果を確認してください。",
+          "このページは0.5.5系で変更されたTrial of Chaosの進め方を扱います。全アセンダンシーポイントの獲得条件やTrial of the Sekhemasの完全攻略とは分けて読んでください。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "rewards",
+        "heading": "部屋ごとの報酬を確認する",
+        "paragraphs": [
+          "0.5.5で各部屋の最後に報酬箱が設置されました。最後まで成功しなければ報酬をすべて失う、という旧来の前提で考える必要はありません。[source:1]",
+          "まずは安定して部屋を終えることを優先しましょう。追加効果を選ぶ時は、報酬だけでなく自分が避けにくい攻撃や移動の制約に注目します。選んだ効果を覚えておくと、失敗した理由も切り分けやすくなります。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "resume",
+        "heading": "途中で離れて後から再開できる",
+        "paragraphs": [
+          "0.5.5ではTrial of Chaosの途中で退出し、後から同じ部屋で再開できるようになりました。[source:1]",
+          "中断して再開することと、死亡後の扱いは同じではありません。「離れても続けられる」ことを、失敗しても無条件でやり直せるという意味にはしないでください。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "retry",
+        "heading": "Chimeralを失敗した場合の再入手先",
+        "paragraphs": [
+          "Chimeral Inscribed Ultimatumで失敗した場合、The Temple of Chaos入口のTrialmasterから代わりを受け取れます。0.5.5bで案内された変更です。[source:2]",
+          "再入手できない時は、まずアイテム名を照合しましょう。この案内はChimeral Inscribed Ultimatumに対するものです。すべての入場アイテムが無料で補充されるとは限りません。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "continue",
+        "heading": "連続挑戦は追加効果の持ち越しに注意",
+        "paragraphs": [
+          "10 TrialsのInscribed Ultimatumを完了すると、新しい入場アイテムを使わずに追加2回まで続行できます。続行では選択済みの追加効果と報酬品質を持ち越します。[source:1]",
+          "最初のクリアがぎりぎりだったなら、追加報酬だけを見て続行を選ばず、回復が追いつくか、苦手な条件を抱えていないかを見直しましょう。安定クリアを優先するのは当サイトの進め方の提案です。"
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG: 0.5.5 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.5b パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4004106",
+        "checkedAt": "2026-10-09"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/cant-beat-boss/",
+        "label": "ボス戦の準備を見る"
+      },
+      {
+        "href": "/guides/why-i-die/",
+        "label": "すぐ死ぬ原因を確認"
+      },
+      {
+        "href": "/leveling/",
+        "label": "自分の育成段階へ戻る"
+      }
+    ]
+  },
+  {
+    "slug": "atlas-progression",
+    "title": "Atlas攻略｜Fortressとパッシブポイントの進め方",
+    "summary": "最初のTowerからFortressへ。0.5系で変わったAtlas進行、クエスト版と周回版、鍵を拾えない時の条件を確認します。",
+    "category": "endgame",
+    "actions": [
+      "Atlasで最初のTowerとクエストの目的地を確認する",
+      "Fortress内の未完了Mapを確認する",
+      "Origin Coreがクエスト版かどうかを分ける"
+    ],
+    "sections": [
+      {
+        "id": "tower",
+        "heading": "最初のTowerからFortressへ",
+        "paragraphs": [
+          "0.5.0以降、最初のTowerを完了するとFortressが現れ、内部のMapを進めてAtlasパッシブポイントを得ます。以前のポイント取得方法を置き換える変更です。[source:1]",
+          "ポイントが増えない時は、単にMapを何周したかではなく、進行対象の場所を完了したかを確認します。まず世界地図で未完了の目的地を見つけ、無理なく攻略できるビルド状態かを照合してください。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "fortress",
+        "heading": "進行と周回を分けて考える",
+        "paragraphs": [
+          "進行中は「次の目的地を開く」、装備集め中は「安定して繰り返せる」を別の目標にすると迷いにくくなります。何度も死亡する時は、目的地への移動を急ぐよりWaystoneの追加効果や防御を見直しましょう。",
+          "古いAtlas攻略にあるポイント取得表を流用せず、このページと公式の変更内容を照合してください。通常の周回準備はMappingガイド、入場素材はWaystone・Tabletガイドで確認できます。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "origin-core",
+        "heading": "Origin Coreの種類で完了扱いが違う",
+        "paragraphs": [
+          "0.5.5では、非クエスト版Origin CoreでArbiter of Divinityを倒すと、Map所有者のFortress全体が完了します。クエスト版で倒してもFortressの区画完了にはなりません。[source:2]",
+          "同名ボスを倒しただけで同じ進行になるとは限りません。使った入場アイテム、クエスト版かどうか、Map所有者が誰かを確認してください。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "quest-items",
+        "heading": "鍵を拾えない・クエストが進まないとき",
+        "paragraphs": [
+          "0.5.5cで、Origin SparkとOrigin CradleはPatriarch Halls・Matriarch Hallsのボス死亡時にその場にいたことが取得条件となりました。対象のEnigma ChamberのFragmentにも同様の条件があります。[source:3]",
+          "パーティーで後から現地へ移動した場合は、単なる取り忘れと決めつけず、ボス撃破時に参加していたかを確認しましょう。対象クエストとアイテム名を控えると、公式修正の該当項目を探しやすくなります。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "nexus",
+        "heading": "Corrupted Nexusで失敗した場合",
+        "paragraphs": [
+          "0.5.5で、失敗したCorrupted Nexus Mapは再挑戦できるようになりました。[source:2]",
+          "ただ再び入る前に、何で失敗したかを1つ直しましょう。敵の攻撃で倒れたなら耐性と回復、倒すまでが長いなら単体火力、Map全体が厳しいなら追加効果を確認します。"
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG: 0.5.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.5 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.5c パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4006357",
+        "checkedAt": "2026-10-09"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/waystones-tablets/",
+        "label": "Waystone・Tabletの使い方"
+      },
+      {
+        "href": "/guides/mapping/",
+        "label": "Mapping開始前チェック"
+      },
+      {
+        "href": "/guides/resistance/",
+        "label": "耐性を確認する"
+      }
+    ]
+  },
+  {
+    "slug": "waystones-tablets",
+    "title": "Waystone・Tablet攻略｜使い方と入れない時の確認",
+    "summary": "鑑定、追加効果、Tabletの有効な枠を確認。Map Deviceで止まった時と、周回が急に難しくなった時に読むガイドです。",
+    "category": "endgame",
+    "actions": [
+      "Waystoneを鑑定してからMap Deviceに入れる",
+      "追加効果を読み、苦手な条件が重なっていないか見る",
+      "Tabletが選んだMapに適用されているか確認する"
+    ],
+    "sections": [
+      {
+        "id": "identify",
+        "heading": "起動前にWaystoneを鑑定する",
+        "paragraphs": [
+          "0.5.0以降、WaystoneはMap Deviceで起動する前に鑑定が必要です。[source:1]",
+          "入れない時は、まず未鑑定かどうかを確認しましょう。Tierだけを見て進めず、鑑定後に追加効果も読みます。報酬を増やす前に、自分のビルドで安全に戦える条件かを確認するのが当サイトの推奨順です。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "modifiers",
+        "heading": "周回が急に難しい時は追加効果を読む",
+        "paragraphs": [
+          "同じような場所でも追加効果が変われば、普段と同じ操作で安定するとは限りません。「直前に何を変えたか」を比べ、敵が硬いのか、自分が倒れやすいのかを分けます。",
+          "苦手な効果が複数重なった時は、火力不足のまま高い難度へ進むより、扱いやすい条件で装備やスキルの改善を試しましょう。固定の最高効率やWaystone維持率を保証する案内ではありません。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "tablet",
+        "heading": "同種Tabletと空き枠の意味",
+        "paragraphs": [
+          "0.5.0では同種Tabletを併用できるようになり、空いているTablet枠はランダムな追加コンテンツの出現に寄与する仕組みになりました。[source:1]",
+          "すべての枠を埋めることだけが目的ではありません。特定コンテンツを遊びたいのか、いろいろな遭遇を探したいのかを決めてから使いましょう。同種を重ねた時の効果は、各コンテンツの説明で確認します。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "invalid",
+        "heading": "Tabletが適用されないMap",
+        "paragraphs": [
+          "0.5.5dでは、Matriarch Halls・Patriarch HallsやGrand Expeditionなどの使用できない枠へTabletをCtrlクリックで入れてしまう問題が修正されました。適用されない時はグレー表示と赤い数字で示されます。[source:2]",
+          "通常のMapと特殊なMapを同じ扱いにしないでください。Tabletを選んだつもりでも、起動前の画面で実際に適用されているかを確認します。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "checklist",
+        "heading": "起動前の短いチェック",
+        "paragraphs": [
+          "準備の確認を毎回同じ順番にすると、失敗した原因を追いやすくなります。"
+        ],
+        "bullets": [
+          "Waystoneは鑑定したか",
+          "追加効果に苦手な条件がないか",
+          "選んだTabletは適用されているか",
+          "主力スキルと回復は使えるか",
+          "今回は進行目的か、装備集め目的か"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG: 0.5.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.5d パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4008534",
+        "checkedAt": "2026-10-09"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/atlas-progression/",
+        "label": "Atlasの進行を確認"
+      },
+      {
+        "href": "/guides/slow-mapping/",
+        "label": "周回が遅い原因を確認"
+      },
+      {
+        "href": "/guides/expedition/",
+        "label": "Expeditionのリーグ別仕様"
+      }
+    ]
+  },
+  {
+    "slug": "expedition",
+    "title": "Expedition攻略｜始め方とリーグごとの違い",
+    "summary": "Act 4以降の遭遇とVerisium Anvilの解放を確認。Standard・Forbidden Rites・Runes of Aldurで異なる条件を整理します。",
+    "category": "endgame",
+    "actions": [
+      "今遊んでいるリーグを確認する",
+      "Act 4のThe Runeseekerの進行を確認する",
+      "Tabletの入手可否をリーグごとに照合する"
+    ],
+    "sections": [
+      {
+        "id": "league",
+        "heading": "まずリーグ名を確認する",
+        "paragraphs": [
+          "Expeditionの解放やアイテムの案内を読む前に、現在のキャラクターがどのリーグにいるかを確認します。旧リーグの序盤攻略を、そのまま別リーグの手順として使うと迷う原因になります。",
+          "ここでは0.5.5系のStandard・Forbidden Rites・Runes of Aldurの違いを扱います。ボスごとの戦闘パターンや最適な稼ぎ方のランキングは含めません。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "start",
+        "heading": "Act 4以降とAtlasで遭遇する",
+        "paragraphs": [
+          "0.5.5でExpeditionはStandardを含むAtlasのコアコンテンツとなり、Act 4以降でも遭遇できるようになりました。[source:1]",
+          "まだキャンペーン中なら、まずクエストを進めながら解放条件を確認しましょう。Endgameの周回手順だけを見て、現在持っていない素材を先に揃えようとしないのがおすすめです。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "anvil",
+        "heading": "Verisium Anvilの解放条件",
+        "paragraphs": [
+          "Runes of Aldur以外では、Act 4のThe Runeseekerを完了するとVerisium Anvilが解放されます。[source:1]",
+          "設備を使えない時は、クエストの完了状況と現在のリーグを照合してください。Runes of Aldurの序盤向け手順を、すべてのリーグに共通する解放方法として扱わないようにしましょう。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "tablets",
+        "heading": "Expedition Tabletを探す前に",
+        "paragraphs": [
+          "Expedition TabletはStandardとForbidden Ritesで入手でき、Runes of Aldurでは入手できません。[source:1]",
+          "Tabletが出ない場合、まず対象リーグか確認します。その上で通常のMapに適用する手順はWaystone・Tabletガイドを参照してください。ドロップする可能性があることと、次の周回で必ず得られることは別です。"
+        ],
+        "bullets": []
+      },
+      {
+        "id": "fixes",
+        "heading": "「出現しない」という古い報告に注意",
+        "paragraphs": [
+          "0.5.5bではEndgameにExpeditionが自然出現しない不具合が修正され、Expedition・Temple・Delirium Tabletのドロップ率も増加しました。[source:2]",
+          "過去の不具合報告を読む時は投稿日と対応パッチを確認しましょう。修正済みだから必ず毎回出現する、という意味ではありません。現行のリーグと条件を確認してから、必要なら公式の新しい情報を見直してください。"
+        ],
+        "bullets": []
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG: 0.5.5 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-09"
+      },
+      {
+        "name": "GGG: 0.5.5b パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4004106",
+        "checkedAt": "2026-10-09"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/campaign-progression/",
+        "label": "キャンペーンの進め方"
+      },
+      {
+        "href": "/guides/waystones-tablets/",
+        "label": "Tabletの使い方"
+      },
+      {
+        "href": "/guides/gear-upgrade/",
+        "label": "装備更新の優先順"
+      }
+    ]
+  },
+  {
+    "slug": "act-1-walkthrough",
+    "title": "PoE2 Act1攻略｜進行ルートとジオノール伯爵の倒し方",
+    "summary": "PoE2のAct1開始から最終ボスまで。魂の木・墓地の鍵・オガム村の進め方、寄り道で取る強化報酬、ジオノール伯爵の霧と冷気攻撃への対処をまとめます。",
+    "category": "campaign",
+    "actions": [
+      "魂の木の解放→墓地の鍵2種→オガムの邸宅の順に進める",
+      "任意の恒久強化と鍛冶道具を回収し、受け取り・使用まで確認する",
+      "ジオノール戦前に冷気耐性と主力スキルを見直し、霧では生存を優先する"
+    ],
+    "scope": "対象はAct 1開始からキャンペーン版Count Geonor撃破後まで。2026年10月9日に資料を確認（現行0.5.5e）。進行・名称・攻撃概要にはWiki／DB等の二次資料を使用し、変更点はGGG公式パッチノートで照合しています。戦い方は資料から組み立てた提案で、全クラスでの実測・最短ルート・全任意イベントの網羅を保証しません。日本語名はPoE2DB表記を参考に英語名を併記しています。",
+    "sections": [
+      {
+        "id": "quick-answer",
+        "heading": "Act1はどこまで？まず進め方の結論",
+        "paragraphs": [
+          "Act 1の最終ボスは、オガムの邸宅（Ogham Manor）のジオノール伯爵（Count Geonor）です。初見では「魂の木を解放する」「墓地で2つの鍵を集める」「村から邸宅へ進む」の3段階で考えると、行き先を整理できます。[source:2][source:9]",
+          "本記事は0.5.5e公開後の資料確認に基づきます。ボスを倒すだけでなく、落としたクエスト品の回収と街での会話も進行の一部です。入口が開かない時は、新しい地形を探す前にクエスト表示を確認しましょう。[source:1]"
+        ],
+        "bullets": [],
+        "steps": []
+      },
+      {
+        "id": "route",
+        "heading": "Act1の進行ルート早見表",
+        "paragraphs": [
+          "以下は主線の順序です。エリアのつながりとクエストの依存関係を示したもので、固定の方角や一本道を表すものではありません。[source:2]"
+        ],
+        "bullets": [
+          "序盤：川岸 → クリアフェルの野営地 → クリアフェル → グレルウッド",
+          "魂の木：グレルウッド → 赤き谷 → 街のレンリー → グレルウッド → 街のウーナ",
+          "墓地：不気味なもつれ → 永遠なる帝国の墓地 → 法務官の霊廟・妃の墓所 → 墓地 → 街",
+          "邸宅：狩場 → オガムの農地 → オガム村 → 邸宅の城壁 → オガムの邸宅 → ジオノール伯爵",
+          "任意の寄り道：泥の巣穴、フレイソーン、各地の強化報酬。主線と混同しない。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "riverbank",
+        "heading": "1. 川岸からクリアフェルへ",
+        "paragraphs": [
+          "川岸（The Riverbank）は装備・スキル・フラスコの操作を覚える区間です。チュートリアルで得た武器とスキルを装備してから、腐乱した粉屋（The Bloated Miller）へ進みます。撃破後は野営地へ入り、レンリーの会話と報酬を確認しましょう。[source:2][source:6][source:14]"
+        ],
+        "bullets": [
+          "粉屋：丸太を構える動作を見たら攻撃を止め、前方の衝撃波や突進の軸から横へ移動する。避けた後に短く反撃する。[source:14]",
+          "クリアフェルの腐りし群れのベイラ（Beira of the Rotten Pack）は任意。冷気耐性の恒久強化があるため、最終ボスの準備として回収候補にする。[source:6]",
+          "泥の巣穴（Mud Burrow）のデヴァウラーは任意。サポートジェムの報酬が欲しい時に寄り、討伐後の依頼報告も確認する。[source:6]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "tree-of-souls",
+        "heading": "2. グレルウッドと赤き谷：魂の木を解放する",
+        "paragraphs": [
+          "グレルウッド（The Grelwood）では魂の木（Tree of Souls）とウェイポイントを確認。赤き谷（The Red Vale）で必要品を集めてから戻る流れです。根が通路を塞いでいても、探索の失敗とは限りません。[source:3][source:4]"
+        ],
+        "bullets": [
+          "錆の王（The Rust King）：武器を飛ばす攻撃と増援に注意。足を止める時間を短くし、囲まれそうなら増援を減らして移動先を作る、という順がおすすめです。[source:15]",
+          "グレルウッドの任意ボスを全員倒すことと、魂の木の進行は別です。先へ進めない場合は主線のクエスト品と会話を確認します。[source:6]"
+        ],
+        "steps": [
+          "赤き谷で3つの錆のオベリスクを調べ、敵と錆の王を倒してクエスト品を回収する。",
+          "野営地のレンリーへ渡し、ルーンの釘（Runed Spikes）を受け取る。",
+          "魂の木へ戻り、ウーナを呼んで封印に釘を使い、会話を進める。",
+          "野営地でもウーナと話す。その後、不気味なもつれ（The Grim Tangle）の根の前でウーナを呼び、道を開く。[source:3][source:4]"
+        ]
+      },
+      {
+        "id": "cemetery",
+        "heading": "3. 墓地：鍵を2つ集めてラクランを倒す",
+        "paragraphs": [
+          "不気味なもつれを抜けると、永遠なる帝国の墓地（Cemetery of the Eternals）へ到着します。ラクランとの会話後、法務官の霊廟（Mausoleum of the Praetor）と妃の墓所（Tomb of the Consort）の両方を攻略します。片方だけでは鍵が揃いません。[source:5]",
+          "街でフードをかぶった者が利用できるようになると、所持装備の一括鑑定とゴールドを使うパッシブの振り直しが可能です。育成を修正する場合は、費用と必要能力値を確認してから変更しましょう。[source:19]"
+        ],
+        "bullets": [
+          "ドレイヴン（Draven）：近接の連打に付き合わず、攻撃が終わってから短く反撃。幽霊と騎士の死体が重なると騎士が再出現するため、増援で動けなくなる前に位置を変える。[source:17]",
+          "アシニア（Asinia）：足元の印が出たらその場所から離れる。骨の檻に捕まった場合は一部分を壊して脱出し、檻の中で攻撃を続けない。[source:16]",
+          "ラクラン（Lachlann）：振り下ろしに合わせて正面を空け、逃げ場を確保する。大きな体の近くに居続けて攻撃を連打するより、動作ごとに距離を取り直すのがおすすめ。[source:18]"
+        ],
+        "steps": [
+          "ドレイヴンとアシニアを倒し、それぞれの鍵の欠片を拾う。順番よりも、両方の回収を優先する。",
+          "墓地へ戻り、追憶の門とラクランのイベントを進める。",
+          "ラクラン撃破後に指輪を回収して野営地へ戻り、ウーナとフードをかぶった者（The Hooded One）の関連会話を進める。[source:4][source:5]"
+        ]
+      },
+      {
+        "id": "optional-rewards",
+        "heading": "4. 狩場から農地：強化につながる寄り道",
+        "paragraphs": [
+          "狩場（Hunting Grounds）からオガムの農地（Ogham Farmlands）へ進みます。以下は主線を進めるための必須ボス一覧ではなく、キャラクター強化につながる寄り道です。報酬の固定数値は掲載せず、取得時のゲーム内表示を確認してください。[source:6]"
+        ],
+        "bullets": [
+          "狩場のクロウベル（The Crowbell）：パッシブポイントの報酬。主力スキルに合う育成を進めたい時の候補。[source:6]",
+          "狩場から分岐するフレイソーン（Freythorn）の霧の王（The King in the Mists）：スピリットの恒久強化。スピリットを予約するスキルを使う構成なら、優先的に確認する。[source:6]",
+          "オガムの農地のウーナの家：リュートを回収して野営地のウーナへ返す。報酬の本を受け取り、使用するところまで確認する。[source:7]",
+          "後で訪れるオガムの邸宅のキャンドルマス（Candlemass, the Living Rite）：最大ライフの恒久強化。ジオノール前の見直し候補。[source:6]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "village",
+        "heading": "5. オガム村：鍛冶道具と処刑人",
+        "paragraphs": [
+          "オガム村（Ogham Village）では、主線の処刑人（The Executioner）と任意依頼の鍛冶道具を分けて確認します。レンリーの工房で道具を拾って街へ持ち帰ると、サルベージベンチの解放につながります。[source:8]"
+        ],
+        "bullets": [
+          "処刑人が斧を振り上げたら攻撃を切り上げ、前方の直線と地面の危険範囲から離れる。着地直後も次の攻撃がないか確認してから反撃する。[source:15]",
+          "ギロチンの予兆が出たら、攻撃の継続より着弾地点からの退避を優先する。回避ボタンを押すだけでその場の範囲攻撃を防げる、と考えない。[source:15]",
+          "倒したら近くに捕らわれているレイティス（Leitis）を解放し、現地と野営地で会話を進める。その後、邸宅の城壁（The Manor Ramparts）からオガムの邸宅へ向かう。[source:20][source:9]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "manor",
+        "heading": "6. オガムの邸宅：最後の戦いへ進む",
+        "paragraphs": [
+          "邸宅内では下へ進む道を探し、クエスト「オガムの狂狼（The Mad Wolf of Ogham）」に沿ってジオノールへ向かいます。一本道を前提にせず、現在の階層と未探索の出口を確認しましょう。[source:9]"
+        ],
+        "bullets": [
+          "回復が足りない：フラスコの回復量と残りチャージを確認し、補給してから再挑戦する。",
+          "通常攻撃でも大きく削られる：ライフと防御付き装備を見直す。冷気耐性だけで全攻撃を防げるわけではない。",
+          "戦闘が長引く：主力スキルのレベル・使えるサポート・装備条件を確認する。攻撃型は武器、スペル型は対応するスキルを伸ばす修飾語を中心に比較する。",
+          "スキルを使えない：武器交換後の条件、能力値、マナ、スピリットの予約状況を確認する。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "count-geonor",
+        "heading": "ジオノール伯爵（Count Geonor）の倒し方：霧と冷気への対処",
+        "paragraphs": [
+          "人型から狼を主体とする戦いへ移り、終盤は霧で視界と移動できる範囲が制限されます。冷気耐性を見直しつつ、地面の予兆から出ること、霧の中で攻撃を欲張らないことを優先してください。[source:10]",
+          "0.5.3ではMoonbeamのダメージ・範囲・凍結蓄積と、Reverse Cleaveのダメージが引き下げられました。古い動画の被ダメージを現在の必要装備の基準にしないようにしましょう。[source:11]"
+        ],
+        "bullets": [
+          "人型の突進・直線攻撃：正面から横へ移動。突進を避けた直後にも薙ぎ払いがあるため、すぐ背後に密着して連打しない。",
+          "氷の壁：壁の間に留まって攻撃を続けず、叩きつけの進路から出る。",
+          "姿を消して赤い円が出た時：落下攻撃の目印。円の外へ移動してから攻撃を再開する。",
+          "地面の氷や降り注ぐ光：足元を見て安全な場所へ移動する。終盤も、倒し切ろうとして危険範囲に留まらない。",
+          "霧の時間：ボスを追って外へ出ず、見える範囲で雑魚に囲まれない位置を保つ。台詞と突進の動きを手掛かりに回避し、生存を優先する。[source:10]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "after-geonor",
+        "heading": "ジオノールを倒した後にやること",
+        "paragraphs": [
+          "討伐後は野営地へ戻り、フードをかぶった者と話して次の地域へ向かう準備を進めます。ボスの部屋で次の出口を探し続けるより、クエストの帰還指示を確認してください。[source:9]"
+        ],
+        "bullets": [
+          "クエスト品・報酬の受け取り漏れを確認する。",
+          "本や恒久強化アイテムを持っている場合は、その説明を読んで必要な使用・提出を済ませる。",
+          "次のActへ進む前に、主力スキルと装備を一度整理する。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "league-difference",
+        "heading": "古いAct1攻略と違う？Farrow・ルーン鍛造の注意",
+        "paragraphs": [
+          "0.5.0のRunes of Aldurでは、Act 1にVerisium Runeforgingの解放がありました。しかし0.5.5では、Runes of Aldur以外はAct 4のThe RuneseekerでVerisium Anvilを解放する仕様になっています。[source:12][source:13]",
+          "そのためStandardやForbidden RitesのAct 1で、旧攻略と同じFarrowの導線を探し続ける必要はありません。リーグ名を確認し、主線と追加クラフトの依頼を分けて進めてください。Runes of Aldurのキャラクターでは、そのリーグのクエスト表示を優先します。[source:13]"
+        ],
+        "bullets": [],
+        "steps": []
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：0.5.5e パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4009785",
+        "checkedAt": "2026-10-09",
+        "supports": "確認時点の現行パッチ。個別ルートの根拠ではありません。"
+      },
+      {
+        "name": "PoE2 Wiki：Act 1（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/Act_1",
+        "checkedAt": "2026-10-09",
+        "supports": "Act 1のエリア接続・必須進行の概要。"
+      },
+      {
+        "name": "PoE2DB：闇の中の秘密（二次資料）",
+        "url": "https://poe2db.tw/jp/Secrets_in_the_Dark",
+        "checkedAt": "2026-10-09",
+        "supports": "赤き谷・ルーンの釘・魂の木の進行条件。"
+      },
+      {
+        "name": "PoE2DB：謎めいた陰（二次資料）",
+        "url": "https://poe2db.tw/jp/The_Mysterious_Shade",
+        "checkedAt": "2026-10-09",
+        "supports": "不気味なもつれの開通とラクランの指輪に関わる進行。"
+      },
+      {
+        "name": "PoE2DB：石の中の悲しみ（二次資料）",
+        "url": "https://poe2db.tw/jp/Sorrow_Among_Stones",
+        "checkedAt": "2026-10-09",
+        "supports": "アシニア・ドレイヴンの鍵と墓地の進行。"
+      },
+      {
+        "name": "PoE2DB：Act 1（二次資料）",
+        "url": "https://poe2db.tw/jp/Act_1",
+        "checkedAt": "2026-10-09",
+        "supports": "日本語名称、任意ボス・恒久報酬の種類。数値は本記事で固定していません。"
+      },
+      {
+        "name": "PoE2DB：失くしたリュート（二次資料）",
+        "url": "https://poe2db.tw/jp/The_Lost_Lute",
+        "checkedAt": "2026-10-09",
+        "supports": "リュート回収・ウーナへの提出・報酬の使用。"
+      },
+      {
+        "name": "PoE2DB：鍜治場探し（二次資料）",
+        "url": "https://poe2db.tw/jp/Finding_the_Forge",
+        "checkedAt": "2026-10-09",
+        "supports": "オガム村の鍛冶道具とサルベージベンチ解放。"
+      },
+      {
+        "name": "PoE2DB：オガムの狂狼（二次資料）",
+        "url": "https://poe2db.tw/jp/The_Mad_Wolf_of_Ogham",
+        "checkedAt": "2026-10-09",
+        "supports": "邸宅の探索、ジオノール撃破、帰還後の会話。"
+      },
+      {
+        "name": "PoE2 Wiki：Count Geonor（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/Count_Geonor",
+        "checkedAt": "2026-10-09",
+        "supports": "人型・狼型、氷・霧・落下攻撃の挙動。"
+      },
+      {
+        "name": "GGG公式：0.5.3 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3968601",
+        "checkedAt": "2026-10-09",
+        "supports": "ジオノールのMoonbeamとReverse Cleaveの弱体化。"
+      },
+      {
+        "name": "GGG公式：0.5.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-09",
+        "supports": "道順の視覚的な手掛かり、当時のAct 1ルーン鍛造導入。"
+      },
+      {
+        "name": "GGG公式：0.5.5 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-09",
+        "supports": "Runes of Aldur以外のVerisium Anvil解放がAct 4であること。"
+      },
+      {
+        "name": "PoE2 Wiki：The Bloated Miller（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/The_Bloated_Miller",
+        "checkedAt": "2026-10-09",
+        "supports": "最初のボスの突進・前方衝撃波。"
+      },
+      {
+        "name": "PoE Vault：Act 1 Boss Guide（二次資料）",
+        "url": "https://www.poe-vault.com/poe2/guides/act-1-boss-guide",
+        "checkedAt": "2026-10-09",
+        "supports": "錆の王と処刑人の攻撃の概要。旧版の発動HP・数値は採用していません。"
+      },
+      {
+        "name": "Game8：Asinia Boss Guide（二次資料）",
+        "url": "https://game8.co/games/Path-of-Exile-2/archives/488404",
+        "checkedAt": "2026-10-09",
+        "supports": "アシニアの地面の印と骨の檻。"
+      },
+      {
+        "name": "PoE2 Wiki：Draven（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/Draven%2C_the_Eternal_Praetor",
+        "checkedAt": "2026-10-09",
+        "supports": "ドレイヴン戦の幽霊と騎士の再出現。"
+      },
+      {
+        "name": "PoE2 Wiki：Lachlann（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/Lachlann_of_Endless_Lament",
+        "checkedAt": "2026-10-09",
+        "supports": "ラクランの近接攻撃と指輪。"
+      },
+      {
+        "name": "PoE2 Wiki：The Hooded One（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/Hooded_One",
+        "checkedAt": "2026-10-09",
+        "supports": "装備一括鑑定とゴールドでのパッシブ振り直し。"
+      },
+      {
+        "name": "PoE2DB：穢れの痕跡（二次資料）",
+        "url": "https://poe2db.tw/jp/The_Trail_of_Corruption",
+        "checkedAt": "2026-10-09",
+        "supports": "処刑人撃破後の囚人救出と野営地での会話。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/cant-beat-boss/",
+        "label": "ボスに勝てない時の確認順"
+      },
+      {
+        "href": "/leveling/",
+        "label": "現在Lvから育成を見る"
+      },
+      {
+        "href": "/guides/campaign-progression/",
+        "label": "他のActで進めない時の確認順"
+      }
+    ],
+    "faq": [
+      {
+        "question": "不気味なもつれの根が邪魔で進めません",
+        "answer": "赤き谷の必要品回収、レンリーからの釘の受け取り、魂の木の封印、ウーナとの現地・街での会話を確認します。その後、根の前でウーナを呼ぶ進行です。[source:3][source:4]"
+      },
+      {
+        "question": "墓地の門が開きません。どちらの墓を先に攻略しますか？",
+        "answer": "必要なのはドレイヴンとアシニアの両方の鍵の欠片です。片方の撃破だけで進めず、拾い忘れがないかも確認します。見つけた墓から攻略し、もう一方へ戻る流れで整理できます。[source:5]"
+      },
+      {
+        "question": "攻略画像と出口の位置が違います",
+        "answer": "固定の左右だけで判断せず、未探索部分・ウェイポイント・現在のクエストを確認してください。0.5.0では進路を示す視覚的な手掛かりも追加されています。本記事のルートはエリア接続の一覧で、毎回同じ座標を保証する地図ではありません。[source:12]"
+      },
+      {
+        "question": "ジオノールに勝てません。何レベルが必要ですか？",
+        "answer": "このガイドでは一律の必要レベルは設けていません。まず「冷気攻撃で倒れる」「霧で囲まれる」「火力不足で長引く」のどれかを整理し、耐性と装備、立ち位置、主力スキルの順に該当箇所を見直します。前のエリアへ戻って装備と育成を整えてからの再挑戦も選択肢です。"
+      },
+      {
+        "question": "任意ボスは全部倒す必要がありますか？",
+        "answer": "主線を進めるために全任意ボスを倒す必要はありません。ただしベイラ、クロウベル、霧の王、キャンドルマスなどは強化報酬の候補です。今のビルドに足りない耐性・パッシブ・スピリット・ライフを補う寄り道として考えましょう。[source:6]"
+      }
+    ],
+    "version": "0.5.5e"
+  }
+]
