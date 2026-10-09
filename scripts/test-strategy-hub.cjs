@@ -15,6 +15,7 @@ const expected=new Set([...original,...extra.map(g=>g.slug)]).size;
 assert.equal(doc.querySelectorAll('h1').length,1);
 assert.equal(doc.querySelector('link[rel="canonical"]').href,'https://poe2-build-navi-jp.github.io/guides/');
 const cards=[...doc.querySelectorAll('.content-card')];
+const intents=JSON.parse(read('data/guide-search-intents.json'));
 assert.equal(cards.length,expected);
 assert.equal(new Set(cards.map(a=>a.href)).size,expected);
 assert(doc.querySelector('[data-guide-controls]').hidden,'Non-functional controls hidden without JS');
@@ -24,6 +25,11 @@ for(const a of cards){
   const guide=read(`${p.slice(1)}index.html`);
   assert.equal((guide.match(/<!-- strategy-link:start -->/g)||[]).length,1);
   const gd=new JSDOM(guide).window.document;
+  const label=a.querySelector('strong').textContent.trim();
+  assert.equal(label,gd.querySelector('h1').textContent.trim(),'Card must preserve the full article title, including PoE2 before particles');
+  assert.equal(label,intents.find(i=>i.path===p).h1);
+  assert(!/^で/.test(label),'No orphaned leading particle');
+  assert(a.getAttribute('data-search').startsWith(label),'Search retains the complete title');
   assert(!gd.querySelector('.trouble-guides').closest('.build-card,.build-option'));
   assert(guide.indexOf('<!-- strategy-link:start -->')>guide.lastIndexOf('<article'));
 }
@@ -31,7 +37,9 @@ assert.equal(doc.querySelectorAll('a[href="/leveling/"]').length,3);
 for(const a of doc.querySelectorAll('nav[aria-label="攻略カテゴリ"] a'))assert(doc.querySelector(a.getAttribute('href')));
 for(const id of ['problems','basics','progress'])assert(doc.getElementById(id),'Original anchors preserved');
 const data=[...doc.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent));
-assert.equal(data.find(s=>s['@type']==='CollectionPage').mainEntity.itemListElement.length,cards.length);
+const items=data.find(s=>s['@type']==='CollectionPage').mainEntity.itemListElement;
+assert.equal(items.length,cards.length);
+for(const card of cards)assert.equal(items.find(i=>i.url===card.href).name,card.querySelector('strong').textContent,'ItemList matches visible card');
 assert(read('sitemap.xml').includes('<loc>https://poe2-build-navi-jp.github.io/guides/</loc>'));
 const homeDoc=new JSDOM(read('index.html')).window.document;
 assert.equal(homeDoc.querySelectorAll('.hero a[href="/guides/"]').length,1);
@@ -75,5 +83,6 @@ doc.querySelector('.guide-category-nav a[href="#progress"]').addEventListener('c
 doc.querySelector('.guide-category-nav a[href="#progress"]').click();
 assert.equal(visible().length,cards.length,'Category anchors expose their destinations');
 assert.equal(search.value,'');
-console.log(`PASS: ${expected} JS-off cards, routes, source note, search/filter/reset, query restoration, legacy anchors, schema and return links`);
+for(const card of cards)assert.equal(card.querySelector('strong').textContent,intents.find(i=>i.path===card.getAttribute('href')).h1,'Client-side filtering must preserve full titles');
+console.log(`PASS: ${expected} full-title JS-off cards, routes, source note, search/filter/reset, query restoration, legacy anchors, schema and return links`);
 dom.window.close();
