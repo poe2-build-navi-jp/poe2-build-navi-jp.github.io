@@ -25,7 +25,7 @@ const seen=new Set(groups.flatMap(g=>g.slugs));
 for(const g of extra){if(!g.slug||seen.has(g.slug))continue;const id=defaults[g.slug]||({endgame:'progress'}[g.category]||g.category);const group=groups.find(x=>x.id===id)||groups.find(x=>x.id==='basics');group.slugs.push(g.slug);seen.add(g.slug);}
 const activeGroups=groups.filter(g=>g.slugs.length).sort((a,b)=>(a.id==='campaign'?-1:b.id==='campaign'?1:0));
 const campaign=activeGroups.find(g=>g.id==='campaign');
-if(campaign){const order=['act-1-walkthrough','act-2-walkthrough'];campaign.slugs.sort((a,b)=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99));}
+if(campaign){const order=['act-1-walkthrough','act-2-walkthrough','act-3-walkthrough'];campaign.slugs.sort((a,b)=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99));}
 const entry=slug=>{
  const path=`/guides/${slug}/`,g=extra.find(x=>x.slug===slug)||guides.find(x=>x.slug===slug),p=pages.find(x=>x.path===path);
  if(!g&&!p)throw new Error(`Guide missing from shared data: ${path}`);
@@ -41,7 +41,7 @@ const schema=[{'@context':'https://schema.org','@type':'CollectionPage',name:tit
 const header='<header class="site-header"><a class="brand" href="/" aria-label="POE2ビルドナビ ホーム"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></a><nav class="site-nav page-nav" aria-label="メインメニュー"><a href="/guides/" aria-current="page">攻略ガイド</a><a href="/beginner-builds/">初心者おすすめ</a><a href="/builds/">ビルド</a><a href="/leveling/">レベリング</a><a href="/beginner-guide/">初心者ガイド</a></nav></header>';
 const route=slug=>seen.has(slug)?entry(slug).path:'/beginner-guide/';
 const roadmap=[['01','始める','職業とビルドを決める','/beginner-guide/'],['02','育てる','キャンペーンを進める',route(seen.has('act-1-walkthrough')?'act-1-walkthrough':seen.has('campaign-progression')?'campaign-progression':'campaign-route')],['03','整える','試練・装備を確認する',route(seen.has('trial-of-chaos')?'trial-of-chaos':'ascendancy-trials')],['04','広げる','エンドゲームへ進む','/guides/after-campaign/']];
-const actLinks=[['act-1-walkthrough','Act1'],['act-2-walkthrough','Act2']].filter(([slug])=>seen.has(slug));
+const actLinks=[['act-1-walkthrough','Act1'],['act-2-walkthrough','Act2'],['act-3-walkthrough','Act3']].filter(([slug])=>seen.has(slug));
 const featured=actLinks.length?`<div class="guide-featured"><span>CAMPAIGN</span><div>${actLinks.map(([slug,label])=>`<a href="/guides/${slug}/">${label}攻略 →</a>`).join(' ／ ')}</div></div>`:'';
 const patch=site.latestPatch?`<p class="guide-patch"><span class="guide-status-dot" aria-hidden="true"></span><b>公式パッチ ${esc(site.latestPatch)}</b><span>資料確認：${esc(site.latestPatchCheckedAt||'未記載')}</span>${site.latestPatchSource?`<a href="${esc(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式情報 ↗<span class="guide-sr-only">（新しいタブ）</span></a>`:''}</p>`:'';
 await mkdir(resolve(root,'guides'),{recursive:true});
