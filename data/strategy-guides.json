@@ -257,6 +257,10 @@
     ],
     "related": [
       {
+        "href": "/guides/atlas-passive-trees/",
+        "label": "アトラス各ツリーの効果と取得優先順位"
+      },
+      {
         "href": "/guides/waystones-tablets/",
         "label": "Waystone・Tabletの使い方"
       },
@@ -346,6 +350,10 @@
     ],
     "related": [
       {
+        "href": "/guides/endgame-items/",
+        "label": "ボス鍵・専用素材の入手方法と使用場所"
+      },
+      {
         "href": "/guides/atlas-progression/",
         "label": "Atlasの進行を確認"
       },
@@ -429,6 +437,10 @@
       }
     ],
     "related": [
+      {
+        "href": "/guides/endgame-items/",
+        "label": "Logbook・Sagaなど専用アイテムの使い方"
+      },
       {
         "href": "/guides/campaign-progression/",
         "label": "キャンペーンの進め方"
@@ -2344,6 +2356,10 @@
     ],
     "related": [
       {
+        "href": "/guides/endgame-contents/",
+        "label": "間幕クリア後のエンドゲーム初心者ガイド"
+      },
+      {
         "href": "/guides/act-4-walkthrough/",
         "label": "前章のAct4攻略・島とタヴァカイ"
       },
@@ -2366,6 +2382,1527 @@
       {
         "href": "/guides/cant-beat-boss/",
         "label": "ボスに勝てない時の装備・防御の見直し"
+      }
+    ]
+  },
+  {
+    "slug": "endgame-contents",
+    "title": "エンドゲーム初心者ガイド｜Atlasと各コンテンツの遊び方",
+    "summary": "Atlasで何を目指す？Breach・Delirium・Ritual・Abyss・Expedition・アツィリの寺院を、始める場所、遊ぶ手順、報酬、次のボスまでの流れで解説します。",
+    "category": "endgame",
+    "version": "0.5.5e",
+    "scope": "2026年10月9日、0.5.5e時点で資料確認。0.5系のエンドゲーム入門と主要6コンテンツが対象です。変更点はGGG公式、操作先とクエスト名はPoE2DBの現行ゲームデータを照合しています。実ゲームを操作した検証ではありません。初心者向けの順番・戦い方は編集部の提案で、最高効率・ドロップ保証・全ボスの攻撃パターンを示すものではありません。英語名を併記し、クエスト版と周回版を区別します。",
+    "actions": [
+      "最初のTowerを完了し、Fortressの進行を始める",
+      "欲しい報酬に合うコンテンツを1つ選び、導入クエストを進める",
+      "鍵を使う前にクエスト版・周回版と使用場所を確認する"
+    ],
+    "sections": [
+      {
+        "id": "quick-answer",
+        "heading": "最初はFortressを進め、気になるコンテンツを1つ試す",
+        "paragraphs": [
+          "Atlas（アトラス）は、エンドゲームで行き先を選ぶ大きな地図です。Mapは実際に探索するエリア、WaystoneはMapを開く素材、Tabletは追加コンテンツなどを指定する補助アイテム、と覚えると整理しやすくなります。Fortressを進めるとAtlasパッシブが増え、各コンテンツには導入から大ボスへ続くクエストがあります。[source:1][source:2]",
+          "初心者には、通常Mapを安定してクリアできる状態を作り、Fortressの未完了Mapを進めながら1つのコンテンツを覚える順をおすすめします。「鍵が落ちたからすぐ最難関へ」より、まずその仕組みの通常遭遇を理解しましょう。装備の準備はMapping記事、ポイントの取り方はAtlas進行記事に分けてあります。"
+        ],
+        "bullets": [],
+        "steps": []
+      },
+      {
+        "id": "first-route",
+        "heading": "初心者向けの進め方：その日の目標を1つ決める",
+        "paragraphs": [
+          "全部を同時に覚える必要はありません。次の順番は安全に仕組みを覚えるための提案です。好みのコンテンツが決まっているなら、通常Mapが安定した段階でその導入を先に進めても構いません。"
+        ],
+        "bullets": [],
+        "steps": [
+          "通常Mapで、ボスに対する火力・回復・耐性を確認する。死亡が続くならTierと追加効果を見直す。",
+          "最初のTowerからFortressへ進み、未完了の目的地を1つ攻略する。Fortress内のMap完了がAtlasポイントにつながります。[source:1]",
+          "報酬で寄り道を選ぶ。アクセサリ作成ならBreach、アミュレットやJewelの強化ならDelirium、OmenならRitual、骨による装備クラフトならAbyss、ルーンやRuneforgingならExpedition、特殊なVaalクラフトならTempleが入口です。[source:2]",
+          "選んだ拠点で会話と導入クエストを進め、専用素材の用途を確認する。貴重な素材を追加投入するのは、通常遭遇の完了が安定してから。",
+          "初回のクエストボスを目指す。周回用の非クエスト版は、初回版より難しいことを前提に準備し直しましょう。[source:1]"
+        ]
+      },
+      {
+        "id": "hub-map",
+        "heading": "行き先早見：Atlas上の拠点を探す",
+        "paragraphs": [
+          "位置はAtlasの開始地点を基準にした目安です。現在地からの東西ではありません。地図の検索とクエスト表示で拠点名を照合すると、遠くへ進んだ後でも戻りやすくなります。[source:1]"
+        ],
+        "bullets": [
+          "Breach：開始地点の南にMonastery of the Keepers。Ailithのクエストを進めます。[source:1][source:3]",
+          "Delirium：南西にThe Withered Willow。霧と鏡の導入拠点です。[source:1]",
+          "Ritual：西にCaer Tarth。AoifeとEffigyを使う進行の拠点です。[source:1][source:4]",
+          "Expedition：南東にThe Ruins of Kingsmarch。Farrowたちに会い、海域探索へ進みます。[source:1][source:5]",
+          "Temple：北東のLira VaalにAtziri’s Temple。Vaal BeaconとEnergised Crystalが入口です。[source:1][source:6]",
+          "Abyss：Atlasの大きな裂け目をたどる進行。裂け目上のMapとAbyssal Depthsを確認します。0.5.5では各地に大型Ravineも現れます。[source:1][source:7]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "fortress",
+        "heading": "Fortress：Atlas全体を育てるメイン進行",
+        "paragraphs": [
+          "まずは最初のTowerの完了を目指します。その後はFortress内部の未完了Map、Gateway、Enigma Chamberを進め、Arbiter of Ash、さらにArbiter of Divinityへ向かう流れです。鍵を集めた後も、現地の装置を動かすことやDoryaniとの会話が残る場合があります。[source:8]",
+          "初回クエストの進行と、通常版のボス周回は区別してください。0.5.5では非クエスト版Origin CoreでArbiter of Divinityを倒した場合にMap所有者のFortress全体が完了します。初回のクエスト版で同じ短縮が起こるわけではありません。[source:7]"
+        ],
+        "bullets": [],
+        "steps": []
+      },
+      {
+        "id": "breach",
+        "heading": "Breach：敵を倒して裂け目を安定させる",
+        "paragraphs": [
+          "Breach（ブリーチ）は時間内に群れを処理する戦闘です。Unstable Breachは敵を倒すと開いている時間が延び、安定化すると中心部に強い敵が現れます。ゲージを満たした後は、その場を離れず中心の追加戦闘まで確認しましょう。[source:9]",
+          "主な素材はHiveblood、Wombgift、Breach Splinter。MonasteryのGenesis Treeでアクセサリや通貨を作るのが報酬の使い道です。HiveではAilithの護衛も必要になるため、敵の数を増やす仕掛けは処理能力に合わせて選ぶのがおすすめです。[source:10][source:9]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Ailithに会い、Breachを開いて安定化し、出てきた敵を倒す。",
+          "Monastery of the KeepersでGenesis Treeの導入を終える。[source:3]",
+          "クエストで受け取ったBreachstone、または素材から作ったBreachstoneでAtlasのBreach領域を公開する。内部でAilithを守りながら先へ進み、It That Was EshとIt That Was Tulを倒す。[source:3]",
+          "Breachlord Sacを回収し、MonasteryのThe Dreamerへ渡してTwisted Domainへ。ここでXeshtに挑みます。Breachstoneを作った段階とXeshtへの鍵を得た段階を区別してください。[source:3]"
+        ]
+      },
+      {
+        "id": "delirium",
+        "heading": "Delirium：霧を追い、Grand MirrorからSimulacrumへ",
+        "paragraphs": [
+          "Delirium（デリリウム）は鏡を通って霧を広げる戦闘です。霧から外れると遭遇が終わるため、近くの敵を倒しながら霧の進行に合わせて移動します。鏡の破片から追加遭遇が出るので、視界の悪い場所で敵を増やしすぎないようにしましょう。[source:11]",
+          "報酬のLiquid Emotionsはアミュレットへのパッシブ付与やJewelのクラフトに使えます。100% Deliriousに到達する進行は、単に通常Mapへ鏡を追加することとは別です。[source:12][source:13]"
+        ],
+        "bullets": [],
+        "steps": [
+          "The Withered Willow周辺の導入を進め、Map内のDeliriumを完了する。[source:1]",
+          "AtlasにGrand Mirrorが現れたら、そのMapで本体と複製のMapボスを倒す。周辺へDeliriumの霧を広げる段階に進みます。[source:13]",
+          "霧の中のMapを攻略してDeliriousnessを高め、100%で現れるSimulacrumを目指す。Simulacrumは0.5系では7波の連戦です。[source:13][source:1]",
+          "完了してRaven’s Reflectionを得たら、The Withered Willowの鏡へ持っていく。これがDelirium最終ボスへの鍵です。[source:1][source:11]"
+        ]
+      },
+      {
+        "id": "ritual",
+        "heading": "Ritual：供物を報酬かボス進行に使う",
+        "paragraphs": [
+          "Ritual（リチュアル／儀式）は、祭壇の円内で倒した敵を復活させて再び倒す戦闘です。獲得したTribute（供物）でFavours（報酬）を購入し、足りなければ繰り延べを検討します。報酬の再抽選にもTributeが必要なので、先に欲しい品と繰り延べ費用を確認しましょう。[source:14]",
+          "現在のエンドゲーム報酬画面はUniqueとOmenが中心です。使わなかったTributeは王へ捧げ、An Audience with the Kingの獲得を進められます。購入、繰り延べ、王への進捗のどれを優先するか、最後の祭壇を終えてから決めると判断しやすくなります。[source:1]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Aoifeの導入を進め、Caer Tarthへ行く。Map内の祭壇を最後まで完了し、王へのTributeをためる。[source:4]",
+          "An Audience with the KingでAtlasのCrux of Nothingnessを公開し、The King in the Mistsを倒す。[source:4]",
+          "Head of the KingをCaer Tarthの未完成のEffigyに置き、Rite of the Namelessの5Mapを選ぶ。各Mapの全祭壇を終えて部品を回収します。[source:4][source:15]",
+          "5種類の部品をEffigyへ戻し、Riteを実行してThe Bodachへ。連続Ritualは以前の敵やボスが加わるため、後半まで戦える条件を選びましょう。[source:4][source:1]"
+        ]
+      },
+      {
+        "id": "abyss",
+        "heading": "Abyss：裂け目を閉じ、深部のボスを目指す",
+        "paragraphs": [
+          "Abyss（アビス／深淵）は、穴から伸びる裂け目の周辺で敵を倒して進めます。裂け目が閉じると坑から敵が現れ、それらを倒すと報酬箱などにつながります。出現するAbyssの敵は周辺で倒した敵のModを受け継ぐため、最初の群れを倒せたから後半も安全とは限りません。[source:16]",
+          "主な用途は骨を使うDesecrationクラフトです。隠されたModを装備に付け、Well of Soulsで候補を選んで解放します。装備を強化したい場合も、先に骨の対応部位と既存Modを失う条件を確認しましょう。[source:17][source:16]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Atlasの裂け目の進行対象Mapを選び、現地のAbyssを閉じる。大型Ravine上のMapにはAbyssが保証されます。[source:7]",
+          "AtlasのAbyss進行を終えるとAbyssal Depthsとボス戦につながります。[source:1]",
+          "AbyssボスからKulemak’s Invitationを得たら、インベントリに持ってWell of Soulsの「Jump In」を確認する。[source:18]",
+          "Vessel of Kulemak戦では報酬を受け取って終えるか、さらに挑むかを判断する。Atlasポイントは指輪を受け取るか最終形態を倒してMapを完了した時に付与されます。[source:19]"
+        ]
+      },
+      {
+        "id": "expedition",
+        "heading": "Expedition：爆破する順番を決め、海域を探索する",
+        "paragraphs": [
+          "Expedition（エクスペディション／探検）は、埋まった敵や宝箱を爆薬で掘り起こします。Remnantの効果は同じ爆薬とそれ以降の爆薬で出現する敵・宝箱へ及ぶため、爆破順が重要です。報酬を増やす効果だけでなく、敵へ追加される条件も上から読みましょう。[source:20]",
+          "0.5.5以降はStandardやForbidden Ritesでもコアコンテンツとして遊べます。Runes of AldurとはTabletやAnvilの解放条件に違いがあるため、リーグ別の入口は既存Expedition記事を確認してください。[source:7]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Farrowの案内からThe Ruins of Kingsmarchへ行き、DannigとMakoruに話す。[source:5]",
+          "Makoru’s Logbookを受け取り、Atlasで海域と島を公開する。[source:5]",
+          "島の探索とGrand Expeditionを進め、Medved、Vorana、Uhtred、Olrothのクエストを順に確認する。通常のExpedition LogbookもAtlasのOcean Biomeを公開する素材です。[source:5][source:21]",
+          "Olroth後はShattered TriskelionとDannigの会話を確認。The Triskelion Reforgedを得て、Aurora MayのMakoruからVerisium Craterへ進みます。[source:5]"
+        ]
+      },
+      {
+        "id": "temple",
+        "heading": "Atziri’s Temple：結晶を集め、自分で寺院を組み立てる",
+        "paragraphs": [
+          "Fate of the Vaalの寺院は、Vaal BeaconでEnergised Crystalを集め、Vaal RuinsのTemple Consoleで部屋を配置して挑むコンテンツです。Consoleの起動には結晶6個が必要です。まず入口から目的の部屋まで通じる配置を作り、各部屋の報酬と追加難度を確認します。[source:6][source:22]",
+          "ボスへのクエストでは、Lv75以上の寺院でRoyal Architectを倒す段階があり、Xipocado’s ConsoleからRoyal Access Chamberを配置してAtziriへ向かいます。報酬部屋を増やすことと、ボスへの道をつなぐことを分けて考えると配置に迷いにくくなります。[source:23]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Lira VaalやTemple Tabletを使ったMapなどでVaal Beaconを完了し、結晶を集める。[source:1][source:6]",
+          "Vaal RuinsのConsoleで部屋の接続を確認して配置する。Medallionがあれば対応する操作に使う。[source:22][source:24]",
+          "ポータルを開き、部屋の報酬とRoyal Architectへの道を攻略する。[source:22][source:23]",
+          "退出後に配置を見直す。0.5系では部屋の削除を完全に防ぐ旧「snake」構築はできず、入れる状態のRestricted Roomは退出時に不安定化します。古い固定配置をそのまま再現しないでください。[source:1]"
+        ]
+      },
+      {
+        "id": "wildwood",
+        "heading": "Forbidden Rites限定：Sacred BloomからViridian Wildwoodへ",
+        "paragraphs": [
+          "Forbidden RitesリーグではRitual報酬にSacred Bloomが現れます。AtlasのMapへ使うと、そのMapと接続しているMapにViridian Wildwoodを追加します。Standardを含む全リーグ共通の追加要素ではありません。[source:7][source:25]",
+          "Wildwood内で光の道をたどり、Wispを集めてから元のMapへ戻ると、敵と報酬が強化されます。初めては低めの難度で変化を確認するのがおすすめです。旧Viridian Wildwood Unique Mapは無効化されているので、古い固有Mapの入手方法と混同しないでください。[source:7]"
+        ],
+        "bullets": [],
+        "steps": []
+      },
+      {
+        "id": "masters",
+        "heading": "Atlas Masters：Mapへ行く前に支援を選ぶ",
+        "paragraphs": [
+          "Atlas MastersはDoryani、Hilda、Jadoの依頼で解放する別系統の支援です。メインAtlasやBreachなどの専用ツリーとは別枠で、Mapに出る前に選択を確認します。個別効果と優先候補はAtlasツリー記事で解説します。[source:1]"
+        ],
+        "bullets": [
+          "Doryani：Corrupted Nexusのクリアが導入。[source:1]",
+          "Hilda：開始地点のやや南西にあるHilda’s Campsiteを訪れる。[source:1]",
+          "Jado：開始地点付近のAnomaly Mapを完了する。[source:1]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "other-content",
+        "heading": "試練とMap中の寄り道は、必要な報酬から選ぶ",
+        "paragraphs": [
+          "Trial of the SekhemasやTrial of Chaosはキャンペーンで触れる仕組みですが、高レベルの入場アイテムを使う周回もあります。通常Mapとは準備が違うため、「Atlasを進める日」と「試練の報酬を狙う日」を分けるのがおすすめです。[source:26][source:27]"
+        ],
+        "bullets": [
+          "Sekhemas：Honourを守りながら部屋を選ぶ試練。開始時にRelic AltarへRelicを配置し、専用の補助効果を準備します。[source:26]",
+          "Chaos：試練ごとの追加効果を選ぶ連戦。0.5.5では各部屋末尾に報酬箱があり、途中退出後の再開や10 Trials完了後の継続が追加されています。細部は混沌の試練記事へ。[source:7]",
+          "Essence・Strongbox・Shrine・Azmeri Spiritなどは、通常Mapへ追加される小規模な遭遇です。現在はメインAtlasの専門化とも関わるため、必要な素材が決まってから投資先を選びましょう。[source:1]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "before-spending",
+        "heading": "貴重な素材を使う前のチェック",
+        "paragraphs": [
+          "同じコンテンツでも「導入クエストを進める」「素材を集める」「周回版ボスに挑む」では必要な準備が変わります。起動前に次の5点を確認してください。"
+        ],
+        "bullets": [
+          "今の目的：ポイント解放、装備作成、ボス挑戦のどれか。",
+          "素材の用途：地図を公開する物、拠点の装置へ渡す物、装備に使う物のどれか。",
+          "クエスト版か通常版か：同じ名前でも進行用と周回用がある。[source:1]",
+          "難度：MapのMod、専用ツリーの難化効果、選択中のMasterをまとめて読む。",
+          "残りの資源：失敗しても装備更新や次の通常Mapに困らない範囲で使う。"
+        ],
+        "steps": []
+      }
+    ],
+    "faq": [
+      {
+        "question": "どのコンテンツが初心者に一番おすすめ？",
+        "answer": "まず通常MapとFortressを進め、欲しい報酬が分かりやすいものを1つ試すのがおすすめです。Breachはアクセサリ作成、DeliriumはEmotions、RitualはUniqueとOmen、Abyssは骨クラフト、Expeditionはルーン系、TempleはVaalクラフトが目印です。固定の稼ぎ順位ではありません。[source:2]"
+      },
+      {
+        "question": "King in the MistsやSimulacrumを終えたら、そのコンテンツは終わり？",
+        "answer": "0.5系ではさらに先があります。RitualはHead of the KingからRite of the Namelessを経てThe Bodachへ、DeliriumはSimulacrum後のRaven’s Reflectionから最終ボスへ進みます。[source:4][source:1][source:11]"
+      },
+      {
+        "question": "Ritualが開始できない、Tomb of the Fallen Knightへ入れない時は？",
+        "answer": "0.5.5eで特定ボス撃破後のRitual開始不能と、Tomb of the Fallen Knightへの入場不能が修正されています。まずクライアント更新と現在のクエスト条件を確認してください。修正済みの不具合を、恒常的な入場条件と誤解しないようにしましょう。[source:28]"
+      },
+      {
+        "question": "拾った鍵は全部Map Deviceに入れるの？",
+        "answer": "使用先は違います。BreachstoneやLogbookはAtlasの領域公開、Breachlord SacやHead of the Kingは拠点での進行に使います。名前から探せる専用アイテム記事で、使用場所とクエスト版の違いを確認してください。[source:3][source:4][source:21]"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/endgame-items/",
+        "label": "専用アイテムの入手方法と使う場所"
+      },
+      {
+        "href": "/guides/atlas-passive-trees/",
+        "label": "アトラスツリーの効果と取得優先順位"
+      },
+      {
+        "href": "/guides/atlas-progression/",
+        "label": "アトラスの進行とポイントの入手方法"
+      },
+      {
+        "href": "/guides/mapping/",
+        "label": "マッピング開始前の装備・ビルド準備"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：0.5.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-09",
+        "supports": "0.5系の導入クエスト、拠点位置、Breach・Delirium・Ritual・Temple再編と旧システムの廃止。後続パッチを優先。"
+      },
+      {
+        "name": "PoE2DB：Atlas",
+        "url": "https://poe2db.tw/us/Atlas",
+        "checkedAt": "2026-10-09",
+        "supports": "0.5系のAtlas Fortressと各コンテンツの目的・報酬体系。旧PoE1装飾品の表は使用しない。"
+      },
+      {
+        "name": "PoE2DB：Keepers of the Flame",
+        "url": "https://poe2db.tw/us/Keepers_of_the_Flame",
+        "checkedAt": "2026-10-09",
+        "supports": "現行クエストのBreachstone取得・Atlas公開、Esh/Tul、Breachlord SacをThe Dreamerへ渡す手順。"
+      },
+      {
+        "name": "PoE2DB：Legacy of the Maji",
+        "url": "https://poe2db.tw/us/Legacy_of_the_Maji",
+        "checkedAt": "2026-10-09",
+        "supports": "AudienceのAtlas使用、HeadのEffigy設置、5Mapと5種類のクエスト部品、The Bodachへの手順。"
+      },
+      {
+        "name": "PoE2DB：The Grand Expedition",
+        "url": "https://poe2db.tw/us/The_Grand_Expedition",
+        "checkedAt": "2026-10-09",
+        "supports": "現行クエストのMakoru’s Logbook、各勢力ボス、Shattered Triskelion、Dannigと船からの進行。"
+      },
+      {
+        "name": "PoE2DB：Energised Crystal",
+        "url": "https://poe2db.tw/us/Energised_Crystal",
+        "checkedAt": "2026-10-09",
+        "supports": "Vaal Beaconから入手しTemple Consoleの起動に6個必要。旧収納拡張Medallionは使用しない。"
+      },
+      {
+        "name": "GGG公式：0.5.5 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-09",
+        "supports": "Expeditionのコア復帰とリーグ差、非クエストOrigin Core、Abyssal Ravine、Trial of Chaos改修。"
+      },
+      {
+        "name": "PoE2DB：Legacy of the Precursors",
+        "url": "https://poe2db.tw/us/Legacy_of_the_Precursors",
+        "checkedAt": "2026-10-09",
+        "supports": "現行クエストの手順。Western/Eastern Enigma、Halls、Precursor ReactorとOrigin Core設置場所。古いNPC会話は使用しない。"
+      },
+      {
+        "name": "PoE2DB：Breach",
+        "url": "https://poe2db.tw/us/Breach",
+        "checkedAt": "2026-10-09",
+        "supports": "現行キーワードのUnstable Breach・Hive・Ailith護衛、Wombgift、Breach Splinterの300スタック。旧PoE1 Mod表を除く。"
+      },
+      {
+        "name": "PoE2DB：The Genesis Tree",
+        "url": "https://poe2db.tw/us/The_Genesis_Tree",
+        "checkedAt": "2026-10-09",
+        "supports": "5種類のWombgiftを対応するwombに置く手順とクラフト対象。"
+      },
+      {
+        "name": "PoE2DB：Delirium",
+        "url": "https://poe2db.tw/us/Delirium",
+        "checkedAt": "2026-10-09",
+        "supports": "現行の霧・鏡・Raven’s Reflectionの使用先。旧Simulacrum攻略文を除く。"
+      },
+      {
+        "name": "PoE2DB：Liquid Emotions",
+        "url": "https://poe2db.tw/us/Liquid_Emotions",
+        "checkedAt": "2026-10-09",
+        "supports": "アミュレットInstil、取得済みパッシブの重複不可、Rare JewelのランダムMod置換とAncient系の対象。"
+      },
+      {
+        "name": "PoE2DB：Grand Mirror",
+        "url": "https://poe2db.tw/us/Grand_Mirror",
+        "checkedAt": "2026-10-09",
+        "supports": "複製Mapボス、霧の拡大、100%でSimulacrum生成の現行キーワード。"
+      },
+      {
+        "name": "PoE2DB：Ritual",
+        "url": "https://poe2db.tw/us/Ritual",
+        "checkedAt": "2026-10-09",
+        "supports": "祭壇・Tribute・購入・繰り延べのキーワード。旧Realmgate説明と旧報酬本文は使用しない。"
+      },
+      {
+        "name": "PoE2DB：Rite of the Nameless",
+        "url": "https://poe2db.tw/us/Rite_of_the_Nameless",
+        "checkedAt": "2026-10-09",
+        "supports": "各Mapの全祭壇完了でEffigy Piece、Caer TarthのEffigyへの設置。"
+      },
+      {
+        "name": "PoE2DB：Abyss",
+        "url": "https://poe2db.tw/us/Abyss",
+        "checkedAt": "2026-10-09",
+        "supports": "現行キーワードの裂け目・坑・報酬、骨の対象部位とWell of Soulsでの選択式クラフト。"
+      },
+      {
+        "name": "PoE2DB：Desecrated Modifiers",
+        "url": "https://poe2db.tw/us/Desecrated_Modifiers",
+        "checkedAt": "2026-10-09",
+        "supports": "未解放Modの付与、Mod上限時のランダム除去、Well of Soulsでの解放。"
+      },
+      {
+        "name": "PoE2DB：Kulemak’s Invitation",
+        "url": "https://poe2db.tw/us/Kulemaks_Invitation",
+        "checkedAt": "2026-10-09",
+        "supports": "Abyssボスからの入手、所持してWell of SoulsのJump Inを使う。古い「結果不明」の一文は使用しない。"
+      },
+      {
+        "name": "GGG公式：0.5.5 Hotfix 10",
+        "url": "https://www.pathofexile.com/forum/view-thread/4002822",
+        "checkedAt": "2026-10-09",
+        "supports": "KulemakのAtlasパッシブ付与は指輪の取得または最終形態撃破によるMap完了時。"
+      },
+      {
+        "name": "PoE2DB：Expedition",
+        "url": "https://poe2db.tw/us/Expedition",
+        "checkedAt": "2026-10-09",
+        "supports": "現行キーワードの爆破順・後続へのRemnant効果、LogbookのAtlas使用、Runic Monsterのドロップ。旧NPC取引本文は使用しない。"
+      },
+      {
+        "name": "PoE2DB：Expedition Logbook",
+        "url": "https://poe2db.tw/us/Expedition_Logbook",
+        "checkedAt": "2026-10-09",
+        "supports": "AtlasのOcean Biome公開。旧NPC・旧Artifact一覧を除く。"
+      },
+      {
+        "name": "PoE2DB：Vaal Beacon",
+        "url": "https://poe2db.tw/us/Vaal_Beacon",
+        "checkedAt": "2026-10-09",
+        "supports": "Vaal RuinsのConsoleで寺院配置を操作しポータルを起動する現行キーワード。"
+      },
+      {
+        "name": "PoE2DB：Fate of the Vaal",
+        "url": "https://poe2db.tw/us/Fate_of_the_Vaal",
+        "checkedAt": "2026-10-09",
+        "supports": "Royal ArchitectをLv75以上で倒しRoyal Access ChamberからAtziriへ進むクエスト。特殊通貨の破壊・置換効果。"
+      },
+      {
+        "name": "PoE2DB：Atziri’s Temple",
+        "url": "https://poe2db.tw/us/Atziris_Temple",
+        "checkedAt": "2026-10-09",
+        "supports": "部屋・Medallion・持ち帰るクラフト通貨の対応。0.5.0以降の公式変更を優先。"
+      },
+      {
+        "name": "PoE2DB：Forbidden Rites",
+        "url": "https://poe2db.tw/us/Forbidden_Rites",
+        "checkedAt": "2026-10-09",
+        "supports": "Sacred Bloomが対象Mapと接続するMapにViridian Wildwoodを追加するアイテム説明。リーグ制限はGGG 0.5.5を優先。"
+      },
+      {
+        "name": "PoE2DB：Trial of the Sekhemas",
+        "url": "https://poe2db.tw/us/Trial_of_the_Sekhemas",
+        "checkedAt": "2026-10-09",
+        "supports": "HonourとRelic Altar、4階層の試練。"
+      },
+      {
+        "name": "PoE2DB：Inscribed Ultimatum",
+        "url": "https://poe2db.tw/us/Inscribed_Ultimatum",
+        "checkedAt": "2026-10-09",
+        "supports": "試練入場アイテム、4/7/10 Trialsの区分。最新変更は0.5.5を優先。"
+      },
+      {
+        "name": "GGG公式：0.5.5e パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4009785",
+        "checkedAt": "2026-10-09",
+        "supports": "現行確認。Ritual開始不能とTomb of the Fallen Knight入場不能の不具合修正。"
+      }
+    ]
+  },
+  {
+    "slug": "endgame-items",
+    "title": "エンドゲーム専用アイテム辞典｜入手方法・使う場所・消費前の注意",
+    "summary": "Breachstone、Simulacrum、王への謁見、Origin Core、Logbook、骨、結晶などを拾ったら？素材ごとの入手元、使用場所、起動手順、失敗や装備変更の注意点をまとめます。",
+    "category": "endgame",
+    "version": "0.5.5e",
+    "scope": "2026年10月9日、0.5.5e時点の主要な進行素材・入場アイテム・専用クラフト素材を対象にした辞典です。キャンペーンでも入手する共通素材は、エンドゲームで迷いやすい用途を補足しています。全Uniqueや全通貨の網羅ではありません。GGG公式変更を優先し、アイテム・クエストデータで使用先を照合しました。実ゲームでの操作検証ではなく、操作名は英語UIを併記しています。",
+    "actions": [
+      "拾った名前を目次で探し、Atlas・拠点・装備のどこに使うか確認する",
+      "クエスト版、通常版、対象リーグ、必要個数を確かめる",
+      "消費対象と変更される装備を見直してから起動する"
+    ],
+    "sections": [
+      {
+        "id": "read-first",
+        "heading": "最初に：鍵・材料・強化素材を分ける",
+        "paragraphs": [
+          "アイテムを拾ったら、まず名前と説明文を読みます。「地図上に領域を公開する」「拠点の装置へ渡す」「装備を変更する」は別の操作です。同じ名前でもクエスト版と通常の周回版があるので、色だけでなくQuest Item表示とクエスト目的を確認してください。[source:1][source:2]",
+          "この辞典の「消費前の注意」は、起動やクラフトを確定する直前の確認です。失敗時の鍵返却を一律には期待せず、残り回数・対象・難度を画面で確かめましょう。使用場所へ行っても反応しない時は、先に導入クエストの会話や装置操作が残っていないか確認します。"
+        ],
+        "bullets": [
+          "Atlasに使う：Breachstone、Expedition Logbook、An Audience with the Kingなど。[source:3][source:4][source:5]",
+          "特定の拠点・装置へ持っていく：Origin Core、Breachlord Sac、Raven’s Reflection、Head of the Kingなど。[source:6][source:3][source:7][source:5]",
+          "装備やクラフト画面に使う：Liquid Emotions、Catalyst、Abyssの骨など。[source:8][source:9][source:10]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "waystone-tablet",
+        "heading": "Waystone・Tablet：Map Deviceで使う",
+        "paragraphs": [
+          "WaystoneはMapへの入場、Tabletは追加コンテンツなどの指定に使います。Breach、Ritual、Delirium、Abyss、Templeなどは対応する遭遇から専用Tabletを集めるのが基本です。Tabletの種類によって保証する内容が違うので、名前だけでなく効果を読んでください。[source:1]",
+          "使う場所はMap DeviceのMap選択後の枠です。Waystoneを鑑定し、使用可能なTablet枠へ置いて起動します。同種のTabletを複数置けますが、追加コンテンツ不可のMapには使えません。起動前に表示される残り使用回数を確認しましょう。詳しい画面操作はWaystone・Tablet記事へ。[source:1][source:11]"
+        ],
+        "bullets": [
+          "Expedition Tabletは0.5.5時点ではStandardとForbidden Rites向けです。Runes of Aldurで同じ入手条件を想定しないでください。[source:12]",
+          "使えない枠はグレー表示され、残り回数の表示も赤くなります。無理に別の枠へ入れるより、MapとTabletの条件を読み直しましょう。[source:11]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "crisis-fragments",
+        "heading": "Crisis Fragment：Burning Monolithへの鍵",
+        "paragraphs": [
+          "初回FortressではWestern Enigma ChamberのCount GeonorからAncient Crisis Fragment、Eastern Enigma ChamberのDoryaniからWeathered Crisis Fragmentを得るクエストです。ボスを倒した後、Ancient Enigmaへ戻って鍵を拾う段階まで確認します。[source:6]",
+          "通常の周回用は3種類です。Iron CitadelからAncient、Copper CitadelからFaded、Stone CitadelからWeatheredを集め、The Burning Monolithで使います。通常CitadelはTier 15以上のWaystoneが入口です。初回の2つのEnigmaと、周回用の3種類を混ぜて数えないようにしましょう。[source:13]"
+        ],
+        "bullets": [],
+        "steps": [
+          "クエスト版なら両Enigmaの目的を完了し、鍵を回収する。0.5.5c以降は、そのボスが死亡する時にエリアにいる必要があります。[source:14]",
+          "The Burning Monolithへ戻り、Doryaniとの会話とSealed Passagewayの操作を進める。所持しているだけで次の戦闘が自動開始するわけではありません。[source:6]",
+          "周回版を使う時は3種類がそろっていることと、入口の要求を確認してから確定する。Arbiter of Ashの初回討伐後も、Fortressの先には別の鍵の進行があります。[source:13][source:6]"
+        ]
+      },
+      {
+        "id": "origin-core",
+        "heading": "Origin Spark・Origin Cradle・Origin Core：Origin Towerの装置へ",
+        "paragraphs": [
+          "Origin SparkとOrigin Cradleは、Arbiter of Divinityに会うための部品です。初回はPatriarch HallsのPhyx、Matriarch HallsのPhyaを倒し、それぞれのAncient Curiosityを作動させて回収します。通常版Coreにも、SparkとCradleを各1個使うレシピがあります。[source:6][source:2]"
+        ],
+        "bullets": [
+          "クエスト版Coreと通常版Coreは用途の段階が違います。0.5.5でFortress全体の完了扱いになるのは、非クエスト版でArbiter of Divinityを倒した時のMap所有者です。初回版へ同じ効果を期待しないでください。[source:12]"
+        ],
+        "steps": [
+          "両Hallsのボス撃破とAncient Curiosityの操作を終え、SparkとCradleを持つ。初回の取得にはボス死亡時の立ち会いが必要です。[source:6][source:14]",
+          "The Origin Towerで下へ降り、Precursor ReactorにSparkとCradleを配置して起動する。[source:6]",
+          "作られたOrigin Coreを拾い、塔を上がって指定の場所へ設置する。クエストの残りの会話・操作を終えてボス戦へ進む。[source:6]"
+        ]
+      },
+      {
+        "id": "wombgifts",
+        "heading": "Hiveblood・Wombgift：MonasteryのGenesis Treeで使う",
+        "paragraphs": [
+          "BreachやHiveで集める素材です。使用先はMonastery of the KeepersにあるThe Genesis Tree。Wombgiftは作る物の種類を選ぶ種、Hivebloodは生成に使う資源、と分けて覚えましょう。生成を確定する前に対象と表示コストを確認します。[source:15][source:16][source:1]"
+        ],
+        "bullets": [
+          "Lavish Wombgift：通貨用のwombへ。[source:16]",
+          "Signet Wombgift：Ring用のwombへ。[source:16]",
+          "Ornate Wombgift：Amulet用のwombへ。[source:16]",
+          "Banded Wombgift：Belt用のwombへ。[source:16]",
+          "Revelatory Wombgift：Breachstone用のwombへ。[source:16]"
+        ],
+        "steps": [
+          "Ailithの導入を進めてGenesis Treeを使える状態にする。[source:3]",
+          "対応するwombを開き、作りたい物に合うWombgiftを置く。別種のwombへ適当に入れない。[source:16]",
+          "生成物の条件とHiveblood消費を確認し、生成を確定して受け取る。Tree側の強化も結果に関わるため、貴重な種の使用前に設定を見直す。[source:1]"
+        ]
+      },
+      {
+        "id": "breach-keys",
+        "heading": "Breach Splinter・Breachstone・Breachlord Sac：3段階で使う",
+        "paragraphs": [
+          "Breach SplinterはBreachで集める破片です。300個のフルスタックからRevelatory Wombgiftとなり、Genesis TreeでBreachstoneを作ります。破片から直接Xeshtへ行く鍵になるわけではありません。初回クエストではAilithから受け取るBreachstoneもあります。[source:15][source:1][source:3]"
+        ],
+        "bullets": [],
+        "steps": [
+          "破片をまとめたRevelatory WombgiftをMonasteryのBreachstone用wombで育てる。[source:16]",
+          "BreachstoneをAtlasで使ってBreach領域を公開する。Hiveを進め、It That Was EshとIt That Was Tulを倒す。[source:3]",
+          "Breachlord Sacを回収したら、Monastery of the Keepersへ戻る。導入クエストの会話を進め、The Dreamerへ渡す。[source:3]",
+          "開いたTwisted DomainでXeshtへ挑む。BreachstoneとSacは別の段階の素材なので、一度のBreachstone使用だけで全ボスへの準備が終わると考えない。[source:3]"
+        ]
+      },
+      {
+        "id": "simulacrum-reflection",
+        "heading": "Simulacrum・Raven’s Reflection：霧のMapとWillowの鏡へ",
+        "paragraphs": [
+          "Simulacrum SplinterはDeliriumで集める破片で、300個が1個のSimulacrumになります。アイテム版Simulacrumは、AtlasでDeliriumの霧に覆われた100%以上DeliriousなMapへ使い、遭遇を追加します。対象Mapの条件を確認してから使いましょう。[source:7][source:17]",
+          "Grand Mirrorから霧を広げて100%に到達すると現れるSimulacrumと、手持ちのSimulacrumアイテムを使って追加する操作は区別します。現行Simulacrumは7波。完了後のRaven’s ReflectionはThe Withered Willowの鏡へ持っていく次段階の鍵です。[source:18][source:1][source:7]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Atlasで対象MapのDeliriousnessが100%以上か確認する。通常のDelirium Mirrorを入れただけのMapと混同しない。[source:17]",
+          "Simulacrumを対象へ適用し、Mapの条件を確認して連戦を開始する。[source:17]",
+          "完了後にRaven’s Reflectionを回収できたら、The Withered Willowの鏡へ持参し、最終ボスに挑む準備をして使う。[source:7]"
+        ]
+      },
+      {
+        "id": "king-keys",
+        "heading": "An Audience with the King・Head of the King：AtlasからCaer Tarthへ",
+        "paragraphs": [
+          "An Audience with the King（王への謁見）は、Ritualで使わなかったTributeを王へ捧げて獲得を進める鍵です。使う場所はAtlasで、Crux of Nothingnessを公開します。そこでThe King in the Mistsを倒すとHead of the Kingが次の進行につながります。[source:1][source:5]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Ritual報酬の購入・繰り延べ・再抽選を先に検討し、余ったTributeを王へ捧げる。[source:19][source:1]",
+          "Audienceを入手したらAtlasで使用し、Crux of Nothingnessへ進む。[source:5]",
+          "King撃破後のHeadをCaer Tarthの未完成Effigyへ置く。[source:5]",
+          "Rite of the Namelessの5Mapを選ぶ。後半には前のRitualの敵やボスが加わり、Modも重なるため、選択肢の危険な効果を読んでから確定する。[source:5][source:1]"
+        ]
+      },
+      {
+        "id": "effigy-pieces",
+        "heading": "Effigyの部品・Call of the Shadows：5つをCaer Tarthへ",
+        "paragraphs": [
+          "Rite of the Namelessでは各Mapの全Ritualを完了してEffigyの部品を集めます。初回クエストの部品はTangled Torso、Mossy Arm、Frayed Cloth、Brittle Arm、Ragged Cloth。回収した部品をCaer Tarthへ戻してEffigyに取り付け、Riteを実行してThe Bodachへ進みます。[source:5][source:20]",
+          "通常周回の鍵はCall of the Shadowsです。5個をCaer TarthのEffigyへ取り付ける使用説明になっています。初回の名前付きQuest Itemを、売買する通常品と同じ在庫として数えないでください。[source:21]"
+        ],
+        "bullets": [
+          "「祭壇を1つ終えた」だけで部品回収済みと思わず、そのMapの全祭壇と報酬の確認まで進める。[source:20]",
+          "部品がそろったら使用先はCaer TarthのEffigy。Map DeviceのWaystone枠ではありません。[source:5][source:21]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "abyss-invitation",
+        "heading": "Kulemak’s Invitation：所持してWell of Soulsへ",
+        "paragraphs": [
+          "Abyssのボスから得る、Vessel of Kulemakへの招待です。インベントリに入れてWell of Soulsへ行き、「Jump In」の選択肢から進みます。骨を装備へ使う操作とは別なので、クラフト用の対象枠へ入れようとしないでください。[source:22]",
+          "戦闘を続けるか、指輪を受け取って終えるか判断する場面があります。Atlasポイント目的でも最初の撃破直後には終わりと考えず、指輪取得または最終形態撃破でMapを完了させます。これは0.5.5 Hotfix 10で修正された付与タイミングです。[source:23]"
+        ],
+        "bullets": [],
+        "steps": []
+      },
+      {
+        "id": "abyss-bones",
+        "heading": "Jawbone・Rib・Collarbone：装備に使い、Well of Soulsで解放",
+        "paragraphs": [
+          "Abyssで集める骨はDesecration用のクラフト素材です。対応するRare装備へ未解放のModを付け、Well of Soulsで候補から選んで解放します。通常の通貨と違い、「使った直後には完成していない」と覚えましょう。[source:10][source:24]"
+        ],
+        "bullets": [
+          "Jawbone：Rare WeaponまたはQuiver。[source:10]",
+          "Rib：Rare Armour。[source:10]",
+          "Collarbone：Rare Amulet、Ring、Belt。[source:10]",
+          "Gnawed系はアイテムレベル64以下の対象。Preserved系やAncient系と条件が違い、AncientはModレベル40以上という条件があります。名前の前半と対象制限も読む。[source:10]",
+          "Mod枠が埋まっている装備へ使うと、既存Modがランダムに1つ除去されます。完成装備で試す前に、失って困るModがないか確認する。[source:24]"
+        ],
+        "steps": [
+          "Act2のMastodon BadlandsからLightless Passageへ進む導入を終え、Well of Soulsの解放機能を利用できる状態にする。[source:25]",
+          "対象のRare装備と対応する骨を用意し、説明文を確認して骨を使用する。[source:10]",
+          "Well of SoulsでDesecrated Modを解放し、提示された3候補から選ぶ。候補を読まずに確定しない。[source:10][source:24]"
+        ]
+      },
+      {
+        "id": "logbook-saga",
+        "heading": "Expedition Logbook・Saga：Atlasで海域を公開する前に準備",
+        "paragraphs": [
+          "Expedition LogbookはExpeditionで集め、AtlasにOcean Biomeを公開するために使います。初回はMakoru’s Logbookから始まるクエスト導線があります。NPCへ古いArtifact通貨を渡す説明とは分けてください。[source:26][source:4][source:27]",
+          "Sagaは「次に使うLogbook」に効果を付けるアイテムです。Medved、Vorana、Uhtred、OlrothのSagaは、公開する海域に対応ボスを保証します。インベントリで有効化してからLogbookを使う順番なので、次の1冊を決めてから準備しましょう。[source:28]"
+        ],
+        "bullets": [
+          "Aldur’s Sagaは0.5.5時点でRunes of Aldur以外では入手できません。Standard・Forbidden RitesのGrand Expeditionでは、そのModが自然出現する形です。[source:12]",
+          "Grand Expedition内のBuried StrongboxにはCryptic Keyを使えません。0.5.5dで明確化された対象制限です。[source:11]"
+        ],
+        "steps": [
+          "Logbookの種類とクエスト目的を確認する。初回のMakoru’s Logbookはクエスト表示に従う。[source:27]",
+          "Sagaを使う場合は、狙うボスと一致するSagaをインベントリで有効化する。[source:28]",
+          "AtlasでLogbookを使い、公開された海域へ進む。次のLogbook用の効果を意図せず消費しないよう、有効なSagaを確認してから確定する。[source:28][source:4]"
+        ]
+      },
+      {
+        "id": "triskelion",
+        "heading": "Shattered Triskelion・The Triskelion Reforged：Dannigから船へ",
+        "paragraphs": [
+          "Expeditionの初回最終段階で使う進行アイテムです。Olroth後にShattered Triskelionを回収し、Dannigとの会話からThe Triskelion Reforgedを受け取ります。次はAtlasの汎用枠へ入れるのではなく、Aurora MayのMakoruを訪ねる段階です。[source:27]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Olroth撃破後の回収物とDannigのクエスト会話を確認する。[source:27]",
+          "The Triskelion Reforgedを受け取り、Aurora MayのMakoruからVerisium Craterへ向かう。[source:27]",
+          "現地のTriskelion Flameに置いて障壁の先へ進み、The Aberrationに挑む。進行物を拾っただけで次の島が自動完了になるわけではありません。[source:27]"
+        ]
+      },
+      {
+        "id": "verisium",
+        "heading": "Verisium・Exceptional Verisium・Crest：解放済みAnvilで使う",
+        "paragraphs": [
+          "Expedition系のVerisiumはRuneforgingの素材です。Anvilで対象装備とレシピを選び、表示される素材を消費して加工します。Exceptional VerisiumやCrestを要求するレシピもあり、すべての装備が同じ素材・同じ個数で加工できるわけではありません。[source:29][source:26]"
+        ],
+        "bullets": [
+          "CrestはMedved’s Crest of the Circle、Vorana’s Crest of the Scythe、Uhtred’s Crest of the Chalice、Olroth’s Crest of the Sunの4系統。対応するレシピをAnvilで確認する。[source:29]",
+          "Runes of Aldur以外ではAct4のThe RuneseekerからAnvilを解放します。古いリーグ攻略の「Act1へ行く」をそのまま適用しないでください。[source:12]",
+          "加工前に出力側の防御値とRunic Wardを比較し、今の装備より本当に使いやすくなるか確認するのがおすすめです。[source:29]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "emotions-catalysts",
+        "heading": "Liquid Emotions・Catalyst：対象装備を間違えない",
+        "paragraphs": [
+          "Liquid EmotionsはDeliriumの報酬です。Instilling画面でアミュレットと必要な組み合わせを用意すると、対応するNotableパッシブを付与できます。素材を確定する前にプレビューのパッシブ名を確認してください。ツリーで既に取得済みの同じNotableは、二重に効きません。[source:8]",
+          "現行EmotionsにはJewelのクラフト用途もあります。Rareの基本Jewelでは既存Modをランダムに除去して対応Modへ変更するため、アミュレットへの付与と同じ感覚で完成Jewelへ使わないでください。Ancient系EmotionsはTime-Lost Jewel用です。[source:8]"
+        ],
+        "bullets": [
+          "Catalystの入手：0.5系ではGenesis Treeで生成します。古い「Breachの敵から直接落ちる」という説明を前提に集めない。[source:1]",
+          "通常のCatalystの基本対象はRingまたはAmulet。Refined系はJewelです。アイテム側に個別の使用許可がある例外を除き、説明に書かれた対象へ使います。[source:9]",
+          "Catalystは対応する種類のModをQualityで強化します。別種のCatalyst Qualityは置き換わり、複数種類のQualityが同時に積み上がるわけではありません。[source:9]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "omens",
+        "heading": "Omen：インベントリで有効化し、次の対象操作に使う",
+        "paragraphs": [
+          "OmenはRitualで狙える消費アイテムです。多くはインベントリで有効化すると「次の対応する操作」に働くため、対象装備へ直接貼り付ける素材とは扱いが違います。効果文のnext以降を読んでから操作しましょう。[source:28][source:1]"
+        ],
+        "bullets": [
+          "効果の強いOmenほど安全とは限りません。Omen of PutrefactionはMod全体をDesecrated Modへ置き換え、装備をCorruptします。単に良いModが1個増える効果ではありません。[source:28]"
+        ],
+        "steps": [
+          "使いたいOmenの対象操作を読む。例えばSinistral Exaltationは次のExalted OrbをPrefix限定に、Dextral ExaltationはSuffix限定にします。[source:28]",
+          "対象装備と通貨を用意し、必要なOmenだけをインベントリで有効化する。[source:28]",
+          "最後に対象を確認して通貨を使う。発動条件を満たす別の装備で試すと、予定していたOmenをそこで消費してしまうので注意する。[source:28]"
+        ]
+      },
+      {
+        "id": "temple-items",
+        "heading": "Energised Crystal・Medallion：Vaal RuinsのTemple Consoleへ",
+        "paragraphs": [
+          "Energised CrystalはVaal Beaconを完了して集め、6個でTemple Consoleを起動します。Lira VaalやTemple Tablet付きMapで集めたらVaal Ruinsへ戻り、部屋の配置と接続を決めて寺院へ入ります。[source:30][source:31]",
+          "Medallionは寺院の配置などへ作用するアイテムです。PuhuarteはRestricted以外の部屋候補の再抽選、HayoxiはRestricted候補の再抽選、Quipolatlは部屋Tierの強化など、名前ごとに役割が違います。対象の部屋と効果を確認してConsoleで使います。[source:32]"
+        ],
+        "bullets": [
+          "Medallionは寺院の部屋から入手し、Royal Architect撃破で利用を解放します。[source:32]",
+          "部屋変更用Medallionは、既に入っている寺院の内部では使えません。入場前の配置段階で使うか判断する。[source:1]",
+          "現行の保持上限はCrystal 60、Medallion 6。貯める時は画面の上限と現在数を確認する。[source:1]",
+          "寺院のレベルは結晶を集めた場所のレベルに影響されます。高レベルのRoyal Architectを目指すなら、結晶の入手先も見直す。[source:1]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "vaal-currency",
+        "heading": "寺院の特殊通貨：対象を変える、壊す効果に注意",
+        "paragraphs": [
+          "寺院の報酬部屋では特殊クラフト用の通貨を得られます。持ち帰ったアイテムは説明に合う対象へ使います。どれも対象と結果を読み、元に戻せる通常の強化だと思って使わないでください。[source:32][source:33]"
+        ],
+        "bullets": [
+          "Orb of Extraction：装備自体を破壊し、Socket-boundではない装着Augmentを取り出す用途。残したい装備に使わない。[source:33]",
+          "Architect’s Orb：Corrupted装備やJewelへ使う変化アイテム。結果によって対象を破壊する可能性があります。[source:33]",
+          "Ancient Infuser：Tabletを対象に、不確定な変更とCorruptを行います。装備のQuality用Vaal Infuserとは別です。[source:33]",
+          "Core Destabiliser：Soul Coreを変更する素材。破壊する可能性があるため、装備に入れたい唯一のCoreで試す前に代替を考えましょう。[source:33]",
+          "Crystallised Corruption：Corrupted Skill Gemを対象にし、変化または破壊につながります。装備用のOrbではありません。[source:33]",
+          "Vaal Infuser：Armourer’sは防具、Blacksmith’sはMartial Weapon、Arcanist’sはWand・Staff・Sceptre、CatalysingはRing・Amulet用です。対象装備を読み、Quality 20%以上という条件を満たしてから使います。Qualityを伸ばす一方、Corruptする可能性があります。[source:33][source:1]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "sacred-bloom",
+        "heading": "Sacred Bloom：Forbidden RitesのAtlasへ使う",
+        "paragraphs": [
+          "Sacred BloomはForbidden RitesリーグのRitual報酬に追加されたアイテムです。AtlasのMapへ使うと、そのMapと接続しているMapにViridian Wildwoodを追加します。StandardやRunes of Aldurでも同じように拾える共通素材ではありません。[source:12][source:34]"
+        ],
+        "bullets": [],
+        "steps": [
+          "Atlasで実際に回りたいMapと、その周囲に接続するMapを確認する。[source:34]",
+          "Sacred Bloomを対象Mapへ適用する。1つのMapだけの効果だと考えず、隣接先まで見てから使う。[source:34]",
+          "対象MapでWildwoodに入り、光をたどってWispを集め、強化された元のMapを攻略する。報酬だけでなく敵も強化されるので、最初は余裕のある難度で試す。[source:12]"
+        ]
+      },
+      {
+        "id": "trial-items",
+        "heading": "Djinn Barya・Ultimatum・Fate：試練の入口と最終扉へ",
+        "paragraphs": [
+          "試練の入場素材はキャンペーンでも登場しますが、高レベル品はエンドゲーム周回にも使います。入場前にArea LevelとNumber of Trialsを確認し、普段のMapとは別の準備をしましょう。[source:35][source:36]"
+        ],
+        "bullets": [
+          "Djinn Barya：Trial of the SekhemasのRelic Altarへ持参。Relicを配置してから開始します。途中階層のTest Baryaは進行を保存した別アイテムで、同じAltarから再開します。[source:37][source:38][source:35]",
+          "Inscribed Ultimatum：Temple of Chaosの入口でTrial of Chaosを開始。0.5.5では10 Trials完了後、追加のUltimatumなしでさらに2回継続でき、前のModを引き継ぎます。長く続けるほど安全とは限りません。[source:39][source:12]",
+          "Deadly Fate・Cowardly Fate・Victorious Fate：3種類を試練最終部の扉へ入れ、Trialmaster’s Towerへ進む鍵です。通常のMap Deviceへ入れる素材ではありません。[source:40]",
+          "Fateは10 Trialsの成功報酬から集めます。現行の連続挑戦では成功ごとに別種のFragmentが得られるため、古い「3回成功しても同じ種類だけになる」を前提に必要数を数えないでください。[source:12]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "keep-safe",
+        "heading": "使う前の最後の確認：5つだけ読む",
+        "paragraphs": [],
+        "bullets": [
+          "場所：Atlas、専用拠点、装備、試練のどこへ使う品か。",
+          "種類：Quest Item、通常周回品、リーグ限定品のどれか。",
+          "消費：素材1個、フルスタック、残り使用回数、装備そのもののどれを失うか。",
+          "変更：置換、Corrupt、破壊の可能性があるか。",
+          "準備：今の装備で戦えるか、消費しても次の装備更新・通常Mapに困らないか。"
+        ],
+        "steps": []
+      }
+    ],
+    "faq": [
+      {
+        "question": "古い動画ではRealmgateに入れているのに、この記事と違うのはなぜ？",
+        "answer": "0.5系でコンテンツの進行が再編され、Atlasの領域公開や専用拠点の装置を使う形が増えました。Breachstone、Audience、Logbook、Raven’s Reflectionなどは現在のアイテム説明とクエストを優先してください。[source:1][source:3][source:5][source:4][source:7]"
+      },
+      {
+        "question": "鍵を拾ったのにNPCや装置が反応しません。",
+        "answer": "クエスト版と通常版、所持場所、残りの会話・装置操作を確認してください。Originの部品は合成後のCoreを拾って別の場所に設置する段階があり、RitualのHeadはAtlasではなくCaer TarthのEffigyへ置きます。[source:6][source:5]"
+      },
+      {
+        "question": "高価な素材なら、手に入れたらすぐ使うべき？",
+        "answer": "価格だけで使用は決まりません。用途が分からない段階では保管し、現在の装備・欲しい報酬・失う物を確認してから使うのがおすすめです。特にMod置換や装備破壊があるクラフト素材は、完成装備で試さないようにしましょう。[source:24][source:33]"
+      },
+      {
+        "question": "Primary・Secondary・Tertiary Calamity Fragmentはどこで集める？",
+        "answer": "0.5.0でこれらのCalamity Fragmentは新たに入手できなくなりました。現行のArbiter進行はCrisis FragmentやOrigin系の鍵を確認してください。古い攻略の鍵名をそのまま探し続ける必要はありません。[source:1][source:6]"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/endgame-contents/",
+        "label": "各エンドゲームコンテンツの遊び方"
+      },
+      {
+        "href": "/guides/waystones-tablets/",
+        "label": "ウェイストーン・タブレットの操作"
+      },
+      {
+        "href": "/guides/atlas-passive-trees/",
+        "label": "報酬を選ぶアトラスツリー"
+      },
+      {
+        "href": "/guides/expedition/",
+        "label": "エクスペディションのリーグ別解放条件"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：0.5.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-09",
+        "supports": "0.5系の導入クエスト、拠点位置、Breach・Delirium・Ritual・Temple再編と旧システムの廃止。後続パッチを優先。"
+      },
+      {
+        "name": "PoE2DB：Origin Core",
+        "url": "https://poe2db.tw/us/Origin_Core",
+        "checkedAt": "2026-10-09",
+        "supports": "クエスト版・通常版の別データ、SparkとCradle各1個をThe Origin Towerで合成するレシピ。"
+      },
+      {
+        "name": "PoE2DB：Keepers of the Flame",
+        "url": "https://poe2db.tw/us/Keepers_of_the_Flame",
+        "checkedAt": "2026-10-09",
+        "supports": "現行クエストのBreachstone取得・Atlas公開、Esh/Tul、Breachlord SacをThe Dreamerへ渡す手順。"
+      },
+      {
+        "name": "PoE2DB：Expedition Logbook",
+        "url": "https://poe2db.tw/us/Expedition_Logbook",
+        "checkedAt": "2026-10-09",
+        "supports": "AtlasのOcean Biome公開。旧NPC・旧Artifact一覧を除く。"
+      },
+      {
+        "name": "PoE2DB：Legacy of the Maji",
+        "url": "https://poe2db.tw/us/Legacy_of_the_Maji",
+        "checkedAt": "2026-10-09",
+        "supports": "AudienceのAtlas使用、HeadのEffigy設置、5Mapと5種類のクエスト部品、The Bodachへの手順。"
+      },
+      {
+        "name": "PoE2DB：Legacy of the Precursors",
+        "url": "https://poe2db.tw/us/Legacy_of_the_Precursors",
+        "checkedAt": "2026-10-09",
+        "supports": "現行クエストの手順。Western/Eastern Enigma、Halls、Precursor ReactorとOrigin Core設置場所。古いNPC会話は使用しない。"
+      },
+      {
+        "name": "PoE2DB：Delirium",
+        "url": "https://poe2db.tw/us/Delirium",
+        "checkedAt": "2026-10-09",
+        "supports": "現行の霧・鏡・Raven’s Reflectionの使用先。旧Simulacrum攻略文を除く。"
+      },
+      {
+        "name": "PoE2DB：Liquid Emotions",
+        "url": "https://poe2db.tw/us/Liquid_Emotions",
+        "checkedAt": "2026-10-09",
+        "supports": "アミュレットInstil、取得済みパッシブの重複不可、Rare JewelのランダムMod置換とAncient系の対象。"
+      },
+      {
+        "name": "PoE2DB：Catalysts",
+        "url": "https://poe2db.tw/us/Catalysts",
+        "checkedAt": "2026-10-09",
+        "supports": "通常品はRing/Amulet、Refined系はJewelを対象とし、別種のQualityを置換する説明。旧ドロップ説明とPoE1表は不採用。"
+      },
+      {
+        "name": "PoE2DB：Abyss",
+        "url": "https://poe2db.tw/us/Abyss",
+        "checkedAt": "2026-10-09",
+        "supports": "現行キーワードの裂け目・坑・報酬、骨の対象部位とWell of Soulsでの選択式クラフト。"
+      },
+      {
+        "name": "GGG公式：0.5.5d パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4008534",
+        "checkedAt": "2026-10-09",
+        "supports": "Tablet無効枠の表示、Ritual繰り延べ費用表示、Cryptic Keyの対象制限。"
+      },
+      {
+        "name": "GGG公式：0.5.5 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-09",
+        "supports": "Expeditionのコア復帰とリーグ差、非クエストOrigin Core、Abyssal Ravine、Trial of Chaos改修。"
+      },
+      {
+        "name": "PoE2DB：Keywords",
+        "url": "https://poe2db.tw/us/Keywords",
+        "checkedAt": "2026-10-09",
+        "supports": "3種類の通常Citadel、対応するCrisis FragmentとBurning Monolithの鍵。初回Fortressは現行クエスト手順を優先。"
+      },
+      {
+        "name": "GGG公式：0.5.5c パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4006357",
+        "checkedAt": "2026-10-09",
+        "supports": "Enigma ChamberとHallsのクエストアイテム取得にはボス死亡時の立ち会いが必要。"
+      },
+      {
+        "name": "PoE2DB：Breach",
+        "url": "https://poe2db.tw/us/Breach",
+        "checkedAt": "2026-10-09",
+        "supports": "現行キーワードのUnstable Breach・Hive・Ailith護衛、Wombgift、Breach Splinterの300スタック。旧PoE1 Mod表を除く。"
+      },
+      {
+        "name": "PoE2DB：The Genesis Tree",
+        "url": "https://poe2db.tw/us/The_Genesis_Tree",
+        "checkedAt": "2026-10-09",
+        "supports": "5種類のWombgiftを対応するwombに置く手順とクラフト対象。"
+      },
+      {
+        "name": "PoE2DB：Simulacrum",
+        "url": "https://poe2db.tw/us/Simulacrum",
+        "checkedAt": "2026-10-09",
+        "supports": "アイテム版SimulacrumをAtlas上の100%以上Deliriousな霧内Mapへ適用する条件。"
+      },
+      {
+        "name": "PoE2DB：Grand Mirror",
+        "url": "https://poe2db.tw/us/Grand_Mirror",
+        "checkedAt": "2026-10-09",
+        "supports": "複製Mapボス、霧の拡大、100%でSimulacrum生成の現行キーワード。"
+      },
+      {
+        "name": "PoE2DB：Ritual",
+        "url": "https://poe2db.tw/us/Ritual",
+        "checkedAt": "2026-10-09",
+        "supports": "祭壇・Tribute・購入・繰り延べのキーワード。旧Realmgate説明と旧報酬本文は使用しない。"
+      },
+      {
+        "name": "PoE2DB：Rite of the Nameless",
+        "url": "https://poe2db.tw/us/Rite_of_the_Nameless",
+        "checkedAt": "2026-10-09",
+        "supports": "各Mapの全祭壇完了でEffigy Piece、Caer TarthのEffigyへの設置。"
+      },
+      {
+        "name": "アイテム説明の補助照合：Call of the Shadows",
+        "url": "https://poe2dictionary.com/currency/call-of-the-shadows/",
+        "checkedAt": "2026-10-09",
+        "supports": "現行アイテムの使用説明：5個をCaer TarthのEffigyへ。クエスト部品と区別。"
+      },
+      {
+        "name": "PoE2DB：Kulemak’s Invitation",
+        "url": "https://poe2db.tw/us/Kulemaks_Invitation",
+        "checkedAt": "2026-10-09",
+        "supports": "Abyssボスからの入手、所持してWell of SoulsのJump Inを使う。古い「結果不明」の一文は使用しない。"
+      },
+      {
+        "name": "GGG公式：0.5.5 Hotfix 10",
+        "url": "https://www.pathofexile.com/forum/view-thread/4002822",
+        "checkedAt": "2026-10-09",
+        "supports": "KulemakのAtlasパッシブ付与は指輪の取得または最終形態撃破によるMap完了時。"
+      },
+      {
+        "name": "PoE2DB：Desecrated Modifiers",
+        "url": "https://poe2db.tw/us/Desecrated_Modifiers",
+        "checkedAt": "2026-10-09",
+        "supports": "未解放Modの付与、Mod上限時のランダム除去、Well of Soulsでの解放。"
+      },
+      {
+        "name": "PoE2DB：The Well of Souls",
+        "url": "https://poe2db.tw/us/The_Well_of_Souls",
+        "checkedAt": "2026-10-09",
+        "supports": "Act2のクラフト解放と、エンドゲームVessel of Kulemakエリアが別データであること。"
+      },
+      {
+        "name": "PoE2DB：Expedition",
+        "url": "https://poe2db.tw/us/Expedition",
+        "checkedAt": "2026-10-09",
+        "supports": "現行キーワードの爆破順・後続へのRemnant効果、LogbookのAtlas使用、Runic Monsterのドロップ。旧NPC取引本文は使用しない。"
+      },
+      {
+        "name": "PoE2DB：The Grand Expedition",
+        "url": "https://poe2db.tw/us/The_Grand_Expedition",
+        "checkedAt": "2026-10-09",
+        "supports": "現行クエストのMakoru’s Logbook、各勢力ボス、Shattered Triskelion、Dannigと船からの進行。"
+      },
+      {
+        "name": "PoE2DB：Omen",
+        "url": "https://poe2db.tw/us/Omen",
+        "checkedAt": "2026-10-09",
+        "supports": "インベントリ内で有効化して次の対応行為に適用するOmenとSagaの効果。"
+      },
+      {
+        "name": "PoE2DB：Verisium Runeforging",
+        "url": "https://poe2db.tw/us/Runeforging",
+        "checkedAt": "2026-10-09",
+        "supports": "Verisium・Exceptional Verisium・4種類のCrestを使うレシピ。リーグ別のAnvil解放は0.5.5を優先。"
+      },
+      {
+        "name": "PoE2DB：Energised Crystal",
+        "url": "https://poe2db.tw/us/Energised_Crystal",
+        "checkedAt": "2026-10-09",
+        "supports": "Vaal Beaconから入手しTemple Consoleの起動に6個必要。旧収納拡張Medallionは使用しない。"
+      },
+      {
+        "name": "PoE2DB：Vaal Beacon",
+        "url": "https://poe2db.tw/us/Vaal_Beacon",
+        "checkedAt": "2026-10-09",
+        "supports": "Vaal RuinsのConsoleで寺院配置を操作しポータルを起動する現行キーワード。"
+      },
+      {
+        "name": "PoE2DB：Atziri’s Temple",
+        "url": "https://poe2db.tw/us/Atziris_Temple",
+        "checkedAt": "2026-10-09",
+        "supports": "部屋・Medallion・持ち帰るクラフト通貨の対応。0.5.0以降の公式変更を優先。"
+      },
+      {
+        "name": "PoE2DB：Fate of the Vaal",
+        "url": "https://poe2db.tw/us/Fate_of_the_Vaal",
+        "checkedAt": "2026-10-09",
+        "supports": "Royal ArchitectをLv75以上で倒しRoyal Access ChamberからAtziriへ進むクエスト。特殊通貨の破壊・置換効果。"
+      },
+      {
+        "name": "PoE2DB：Forbidden Rites",
+        "url": "https://poe2db.tw/us/Forbidden_Rites",
+        "checkedAt": "2026-10-09",
+        "supports": "Sacred Bloomが対象Mapと接続するMapにViridian Wildwoodを追加するアイテム説明。リーグ制限はGGG 0.5.5を優先。"
+      },
+      {
+        "name": "PoE2 Wiki：Barya",
+        "url": "https://www.poe2wiki.net/wiki/Barya",
+        "checkedAt": "2026-10-09",
+        "supports": "Djinn Baryaと途中経過を保存したTest Baryaのアイテム説明。"
+      },
+      {
+        "name": "PoE2DB：Inscribed Ultimatum",
+        "url": "https://poe2db.tw/us/Inscribed_Ultimatum",
+        "checkedAt": "2026-10-09",
+        "supports": "試練入場アイテム、4/7/10 Trialsの区分。最新変更は0.5.5を優先。"
+      },
+      {
+        "name": "PoE2DB：Ascent to Power",
+        "url": "https://poe2db.tw/us/Ascent_to_Power",
+        "checkedAt": "2026-10-09",
+        "supports": "Trial of the SekhemasのRelic AltarにBaryaを置いて開始する現行クエスト。"
+      },
+      {
+        "name": "PoE2DB：Trial of the Sekhemas",
+        "url": "https://poe2db.tw/us/Trial_of_the_Sekhemas",
+        "checkedAt": "2026-10-09",
+        "supports": "HonourとRelic Altar、4階層の試練。"
+      },
+      {
+        "name": "PoE2 Wiki：Inscribed Ultimatum",
+        "url": "https://www.poe2wiki.net/wiki/Inscribed_Ultimatum",
+        "checkedAt": "2026-10-09",
+        "supports": "Temple of Chaosへ持参して試練へ入るアイテム説明。"
+      },
+      {
+        "name": "PoE2DB：The Trialmaster",
+        "url": "https://poe2db.tw/us/The_Trialmaster",
+        "checkedAt": "2026-10-09",
+        "supports": "3種類のFateを試練最終部の扉に入れTrialmaster’s Towerへ進む手順。報酬取得条件は0.5.5を優先。"
+      }
+    ]
+  },
+  {
+    "slug": "atlas-passive-trees",
+    "title": "PoE2アトラスパッシブツリー攻略｜優先ノードと6専用ツリーの選び方",
+    "summary": "最初に取る候補、各専用ツリーの効果とポイント条件、後回しにしたい危険なノードまで。0.5系の再振り分け制限とAtlas Masterも整理します。",
+    "category": "endgame",
+    "actions": [
+      "通常ノードは払い戻せない前提で、効果と解放条件を確認する",
+      "地図不足ならWaystone数量、失敗が多いなら安全を優先する",
+      "よく遊ぶ専用ツリーを1つ選び、報酬側の候補から伸ばす"
+    ],
+    "scope": "対象はPoE2の0.5系Atlas。2026年10月9日に現行0.5.5eまでの公式パッチとPoE2DBのゲームデータ欄を確認。メインの主要分岐、6専用系統、3人のAtlas Masterを扱います。英語名は資料表記で、本文の取得優先・見送る条件は初心者向けの編集提案です。実ゲームでの操作検証、全ノードの最短接続順、各専用ツリーの総ポイント上限、相場に基づく最高収益の断定はしていません。",
+    "version": "0.5.5e",
+    "sections": [
+      {
+        "id": "first-priorities",
+        "heading": "結論：最初は地図の維持、次に普段遊ぶコンテンツ",
+        "paragraphs": [
+          "初めてAtlasに入った人は、Waystoneを切らさずMapを完了できる状態を最優先にします。次に、毎回きちんと攻略するコンテンツの報酬を伸ばし、敵の硬さ・追加ボス・長い連戦を増やすノードは装備が整ってから検討するのがおすすめです。",
+          "以下の順位は、効果と失敗時の損失から考えた初心者向けの編集提案です。ツリー上のクリック順や全ビルド共通の最適解ではありません。現在地から必要な経路、未達成のクエスト条件、適用されるエリアレベルを先に確認してください。"
+        ],
+        "bullets": [
+          "Waystone不足：PathkeepersやAtop the Worldなど、Map BossからのWaystone数量を増やす候補を確認する。探索も進めたいならAtop the Worldの役割が大きい。[source:5]",
+          "死亡・失敗が多い：報酬倍率より完了率を優先。選択ノードの難度上昇を避け、Atlas MasterではDoryaniのStitch the Fleshも候補にする。[source:21]",
+          "周回が安定：Ritualなら取り置き、BreachならGenesis Tree、Deliriumなら時間と素材など、実際に使う報酬経路を先に育てる。使わない専用ツリーのために、序盤から遠回りする必要はない。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "current-system",
+        "heading": "0.5系の前提：メイン、専用ツリー、Masterを分ける",
+        "paragraphs": [
+          "2026年10月9日の確認時点では、最新掲載パッチは0.5.5eです。この記事の名称・効果は0.5系を対象にしています。[source:1]",
+          "メインAtlasはFortress内のMap完了でポイントを増やし、最終的に全ノードを取得できる設計です。0.5.0で旧取得方法が置き換わっています。以前の「メイン40点」「専用8点」という上限表やNexus中心の配分を、この版へそのまま持ち込まないでください。[source:2]",
+          "本記事ではメインの主要分岐に加え、Breach・Ritual・Delirium・Expedition・Temple・Abyssの6専用系統を解説します。旧Map Boss専用10点ルートは現行の取得手順として案内せず、現行データで確認できるボス報酬ノードを別節で扱います。Atlas Masterも独立した選択システムとして最後に整理します。[source:4]"
+        ],
+        "bullets": [],
+        "steps": [
+          "メインの不足ポイントはFortress進行を確認する。詳しい地図の進め方は「Atlas攻略｜Fortressとパッシブポイントの進め方」を参照する。",
+          "専用ポイントは、そのコンテンツの拠点周辺やボス進行を確認する。メインのポイントで自由に全専用ツリーへ振り分ける前提で考えない。",
+          "取得できないノードは、接続だけでなくRequires欄も読む。ポイント不足とボス未撃破は別の問題。"
+        ]
+      },
+      {
+        "id": "read-nodes",
+        "heading": "効果を読むときの4つの注意",
+        "paragraphs": [
+          "Area Level 70+／75+は、その効果が適用されるエリアのレベル条件です。自分のキャラクターレベルだけを上げても条件を満たしたことにはなりません。多くのメインノードにはGatewayやBurning Monolithなどの完了条件もあります。[source:4]"
+        ],
+        "bullets": [
+          "「100% increased chance」は確定出現とは限らない。ほかの補正がない仮の例で、元の確率が10%なら100%増加後は20%。ゲーム内の実際の基礎確率を10%と断定する例ではない。",
+          "Item Rarityはドロップ側、Monster Rarityは敵側の指標。後者はMagic・Rare化やRare敵の追加MODにも関わるので、単純な報酬だけの増加として扱わない。[source:12]",
+          "Effectivenessは敵のToughnessと経験値・ドロップ数量を変える。火力不足で敵を倒す時間が伸びる段階では、報酬増加が周回時間の悪化を埋めるとは限らない。[source:6]",
+          "複数の候補が並ぶ選択ノードは、選択中の効果を確認する。全部の候補を同時に得ると読み違えない。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "waystone-priority",
+        "heading": "メイン最優先候補：Waystoneの維持と探索",
+        "paragraphs": [
+          "いずれも「取れば毎回地図が増える」という保証はありません。まずボスまで倒してMapを完了できる難度で使い、在庫が減り続けるかを確認します。WaystoneのRarity、数量、Tierは別の概念です。"
+        ],
+        "bullets": [
+          "Pathkeepers：Map Bossが落とすWaystoneの数量15%増加。地図在庫に困る人が、取得可能な経路にあるか最初に確認したい候補。[source:5]",
+          "Atop the World：Towerの地図公開半径33%増加と、Map BossからのWaystone数量10%増加。探索と地図維持の両方に使える。EasternまたはWestern Gateway完了が必要で、対象はエリアLv70以上。[source:5]",
+          "Valuable Paths：見つかるWaystoneのRarity50%増加、Map Bossからの数量10%増加。Gateway完了・エリアLv70以上が条件。Tier上昇を保証する効果ではない。[source:5]",
+          "Archaeological Interest：Map BossからのWaystone数量10%増加とTablet数量15%増加。Gateway完了・エリアLv70以上で、地図とTabletの両方を使い続けたい人向け。[source:5]"
+        ],
+        "steps": [
+          "在庫不足なら、手の届くWaystone数量候補を優先する。",
+          "目的地が見つからないなら、Atop the Worldを取得できる条件を先に進める。",
+          "在庫に十分な余裕ができたら、数量候補だけに固執せず使うコンテンツへ進む。"
+        ]
+      },
+      {
+        "id": "main-content",
+        "heading": "メインのコンテンツ選択：Shrine・Essenceから考える",
+        "paragraphs": [
+          "The Chosen PathではEssence、Rogue Exile、Summoning Circle、Shrine、Strongbox、Azmeri Spiritから対象を選び、その出現確率を100%増加させます。Gateway完了・エリアLv70以上が条件です。報酬名の人気より、見つけたら毎回攻略するものを選ぶ方が序盤の投資を活かせます。[source:4]"
+        ],
+        "bullets": [
+          "Shrine中心：Seasonal BlessingはShrineバフの持続時間50%増加。バフを取ってから先へ進む周回と相性がよい。バフを拾わない、移動に時間がかかる場合は効果を活かしにくい。[source:7]",
+          "Shrineの選択注意：Fabled Showdownには25%の確率でボス部屋入場時に自分へバフを再付与する候補と、25%の確率でボスへバフを与えて追加報酬を得る候補がある。初見ボスでは後者を安易に選ばない。[source:7]",
+          "Essence中心：Flawless PatternsはPerfect Essence発見確率30%増加。Gateway完了・エリアLv70以上。素材収集が目的なら候補になるが、Essence敵を安定して倒せることを先に確認する。[source:8]",
+          "Crystalline OvergrowthはEssence敵に15%の確率でEssenceを1つ追加。素材は増やせるが、閉じ込められた敵の追加効果も読む。素材名だけを見て開放しない。[source:8]",
+          "Rogue Exile・Summoning Circle・Azmeri Spirit・Strongboxは、途中に強敵や追加戦闘を増やす分岐もある。単体火力が不足する人は、出現率と敵強化を一度に大量取得せず、攻略時間を見て増やす。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "tablets-biomes",
+        "heading": "中盤のメイン：Tablet解放と地形特化",
+        "paragraphs": [
+          "Tabletを使う資金と在庫ができた段階で、加工・節約・対象コンテンツの強化を考えます。効果を受ける地図が少ないうちは、遠い地形限定ノードより普段の周回で働く効果を優先してください。"
+        ],
+        "bullets": [
+          "Reverse Transcription：Burning Monolith完了後、TabletをRareへ強化できるようになり、最大MOD数が1増える。加工して使う予定があるなら重要。ノードを取るだけで手持ちTabletが自動でRareになるわけではない。[source:9]",
+          "Partial Translation：FortressのPinnacle Boss撃破が解放条件。こちらもTabletのRare化と最大MOD数+1に関わるため、序盤の初手候補ではない。[source:9]",
+          "Curiously Durable Stone：FortressのPinnacle Boss撃破後、エリアLv75以上でMapを開く際に8%の確率でTablet使用回数を消費しない。継続的にTabletを使う人向けで、消費が少ない人は優先度が下がる。[source:9]",
+          "Mountain Mastery：Burning Monolith完了・エリアLv75以上。MountainでTablet数量50%増加、Rune数量50%増加、Item Rarity6%増加から選ぶ。Mountainを回らない時は働かない。[source:10]",
+          "Forest Mastery：同じくBurning Monolith完了・エリアLv75以上。ForestでUncut Gem発見、Lineage Support発見、Rare敵の増加から選ぶ。装備更新目的と敵の増量を分けて選ぶ。[source:10]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "boss-branches",
+        "heading": "ボス向け分岐：まず倒せるボスの報酬を増やす",
+        "paragraphs": [
+          "ボス特化を始める目安は、現在のMapボスを安定して倒せることです。初回撃破のための装備強化と、撃破後のドロップ強化を混同しないでください。Atlasの報酬ノードだけではキャラクターの単体火力不足を解消できません。"
+        ],
+        "bullets": [
+          "Fit for a King：Map Bossが落とすアイテムのRarity20%増加。[source:11]",
+          "Hard-Won Treasures：Map Bossのアイテム数量15%増加。Matriarch Halls完了、エリアLv75以上という条件があるため、最初から取れる報酬として計算しない。[source:11]",
+          "Map Bossと書かれた効果を、すべてのPinnacle Boss戦に自動で広げて解釈しない。対象がMap Boss、Powerful Map Boss、Pinnacle Bossのどれかを確認する。",
+          "最初の練習では、追加ボスやボス強化を重ねるより簡単な条件で戦闘を覚える。報酬ノードを取っても倒し切れなければ、その周の利益に結びつかない。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "dangerous-main",
+        "heading": "初心者が急いで取らなくてよいメインノード",
+        "paragraphs": [
+          "報酬が大きく見えるノードでも、敵の性質を変えるものは後回しにできます。以下は弱いと断定するリストではなく、装備・火力が足りない段階で優先しない候補です。"
+        ],
+        "bullets": [
+          "No Simple Battles：Rare敵のMODを最低3個にする。MODごとのRarity増加もあるが、複合効果を持つ敵が増える。通常Rare敵ですでに苦戦している場合は急がない。[source:12]",
+          "Mutating Monsters／Adaptive Biology：Rare敵のMOD付与確率を増やし、最大MOD数も1増やす。報酬だけのボタンとして扱わない。[source:12]",
+          "Enigmatic Intensification：Tablet1つにつきWaystoneの明示MOD効果3%増加。Patriarch Halls完了・エリアLv75以上。危険な地図MODも強めるため、手持ちのWaystoneを選別できる人向け。[source:9]",
+          "The Journey Ahead：Pack Size、Effectiveness、Rarityを選ぶノード。まずは敵の処理速度を見て選び、Effectivenessを報酬だけの増加として選ばない。[source:4][source:6]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "special-points",
+        "heading": "専用ツリーのポイントはどこで得る？",
+        "paragraphs": [
+          "BreachはMonastery of the Keepers、RitualはCaer Tarth、DeliriumはWithered Willow、TempleはVaal Ruins周辺、AbyssはWell of Souls周辺の対象Map完了が入口です。ExpeditionはExpeditionボスの撃破がポイント条件として記載されています。通常Mapを無関係に周回し続けても、目的の専用ポイントが増えるとは限りません。[source:4]",
+          "現行データではBreach・Ritual・Delirium・Temple・Abyssの対象Pinnacle Bossについて、エリア所有者へ撃破ごとに6ポイントを得る説明があります。これは各ツリーの総上限が6点という意味ではありません。既得ポイント、対象クエスト、所有者をゲーム画面で照合してください。[source:4]",
+          "Abyssは例外的な付与タイミングに注意。Vessel of Kulemak戦では最初にボスを倒した瞬間ではなく、指輪を取るか最終形態を倒してMapを完了した時点でポイントが付与されます。[source:20]"
+        ],
+        "bullets": [],
+        "steps": []
+      },
+      {
+        "id": "breach",
+        "heading": "Breach：Genesis Treeを使うか、戦闘数を増やすか",
+        "paragraphs": [
+          "入口はMonastery of the Keepers周辺です。最初はUnstable Breachを最後まで処理し、得た素材をGenesis Treeで使える状態を作る方針がおすすめ。Breachのポイントと、Genesis Treeの各Wombに割り振るポイントは区別します。[source:4]"
+        ],
+        "bullets": [
+          "Diverse Control：Genesis Treeの各Womb用ポイントが2増える。複数の作成先を使う人の優先候補。Atlas全体のポイントが増える効果ではない。[source:13]",
+          "Growing Wealth：Currency Womb用ポイントが5増える。通貨作成を続ける目的なら候補になる。これだけで特定の高額通貨を確定入手できるとは考えない。[source:13]",
+          "Reality Wound：ゲージを満たした後、Unstable Breachが崩壊するまでを10秒延ばす。最後の処理時間が足りない人向け。ゲージを満たす前の火力不足まで解消する効果ではない。[source:13]",
+          "Moment of Risk：Mapの明示MODごとにWombgiftが1レベル高く落ちる確率を5%加え、安定化時のRare敵を2体増やす。安定化後に押し負ける人は後回し。[source:13]",
+          "Reactive Hiveseeding：Stronghold公開が条件。Breach完了時に10%の確率で近隣MapへHiveを加える。Hive攻略を増やしたい時に検討し、短いUnstable Breachだけを回したい人は急いで取得しない。[source:13]"
+        ],
+        "steps": [
+          "Genesis Treeを使うなら作成側のポイント、時間切れならReality Woundを優先候補にする。",
+          "通常Breachを安定して処理してから、追加Rare・Hive・連戦へ広げる。",
+          "素材を使わない、Breach自体を避ける場合は専用進行を後回しにする。"
+        ]
+      },
+      {
+        "id": "ritual",
+        "heading": "Ritual：取り置きの負担を下げてから候補数を増やす",
+        "paragraphs": [
+          "入口はCaer Tarth周辺です。欲しい報酬を買い切れないことが多い初心者には、Tributeの使い方を助けるノードを先に勧めます。Reroll回数の追加、無料Reroll、取り置き費用の軽減はそれぞれ違う効果です。[source:4]"
+        ],
+        "bullets": [
+          "Patient Devotion：取り置きに必要なTributeを50%減らし、取り置き品の再出現を早める。高い報酬を複数回で確保する方針の優先候補。何Map後に必ず出るという保証ではない。[source:14]",
+          "Tempting Offers：報酬のRerollが1回増える。追加の1回が無料になる効果ではないので、欲しい品の購入・取り置き分を残してから使う。[source:14]",
+          "Magnanimous Offerings：RitualのPinnacle Boss撃破が条件。Reroll時に20%の確率でFree Rerollを得る。追加回数を活かせる周回段階で検討。[source:14]",
+          "Royal Lenience：Rite of the Nameless開始後に解放。王へ捧げたTributeを取り置きに使えるが、その費用は通常より500%増加、つまり6倍。通常の取り置き費用と同じ感覚で使わず、貴重品を逃さないための選択肢として考える。[source:14][source:3]",
+          "Invigorated Sacrifices：Pinnacle撃破後の選択ノード。祭壇スキルのダメージや復活敵の硬さ・ダメージを上げる候補もある。まだ祭壇内で倒れるなら、報酬を増やす高難度側の選択は急がない。[source:14]"
+        ],
+        "steps": [
+          "取り置き費用が苦しいならPatient Devotionを検討する。",
+          "Tributeに余裕ができたらTempting Offersなどで選択肢を増やす。",
+          "狭い範囲の連戦を安定して生き残れるようになってから、敵・祭壇の強化へ進む。"
+        ]
+      },
+      {
+        "id": "delirium",
+        "heading": "Delirium：まず霧を維持し、次に欲しい素材を増やす",
+        "paragraphs": [
+          "入口はWithered Willow周辺です。霧に追いつけない人と、時間は足りるが報酬を伸ばしたい人では初手候補が変わります。Grand Mirror起動、Simulacrum完了、Pinnacle撃破で解放されるノードもあるため、入手済みポイントだけでは選べないものがあります。[source:4][source:15]"
+        ],
+        "bullets": [
+          "You can't just wake up from this one.：霧が消える速度を30%遅くする。SimulacrumのWave間には選択用Shardも加わる。通常の霧がすぐ終わる人の優先候補。[source:15]",
+          "I know your childhood fears...：敵からのLiquid Emotion数量25%増加、見つけたEmotionがAncientになる確率20%。素材集め向け。0.5.5で表示どおり20%になるよう不具合が修正されており、旧50%の実績を前提にしない。[source:15][source:3]",
+          "Is this about me... or you?：Simulacrum完了後、エリアLv75以上のMapでDelirium敵からSimulacrum Splinterを得られるようになる。見つかるMegalomaniacには10%の確率でNotableパッシブ3個を割り当てる結果が付く。入場素材を自力で集める段階の候補。[source:15]",
+          "Recurring Nightmares：Pinnacle撃破後、霧内MapのDeliriousness+30%と、霧を追加4Mapへ広げる候補から選ぶ。敵が硬いなら難度を上げる側を機械的に選ばない。[source:15]",
+          "追加ボスやDelirium MODを増やす分岐は、霧の中でもRare敵とMapボスを処理できるようになってから検討する。"
+        ],
+        "steps": [
+          "時間不足なら霧の維持、素材目的ならEmotion関連を優先する。",
+          "Simulacrumなどの解放条件を進め、目的の報酬が出る段階を作る。",
+          "通常Mapの時点で敵が硬すぎる場合は、霧の濃さを上乗せする前に火力を見直す。"
+        ]
+      },
+      {
+        "id": "expedition",
+        "heading": "Expedition：安全に掘れる範囲とLogbook供給を整える",
+        "paragraphs": [
+          "専用ポイントはExpeditionボス進行で得ます。0.5.5でExpeditionはStandardを含むコアコンテンツへ戻り、0.5.5bでエンドゲームの自然出現不具合も修正されています。0.5.0時点の「Standardでは停止中」という説明は現行へ流用しません。[source:4][source:3][source:24]"
+        ],
+        "bullets": [
+          "Strategic Advantage：Runic敵が追加で20%のライフを失った状態で出現する候補と、敵を50%倒した時点で次の爆発へ進める候補を選ぶ。火力に不安があれば前者、敵を素早く倒せるなら後者を検討。[source:16]",
+          "Steady Development：ExplosiveかVerisium Remnantを追加。広く掘りたいなら爆薬、Remnantの仕組みを活かしたいならRemnant側。増やした範囲すべてを必ず起爆する必要はない。[source:16]",
+          "Sown Seeds：Runic MODごとに、Runic敵がLogbookを落とす確率50%増加。Logbookを補充したい時の候補。ただしMODを増やすために倒せない敵を作るのは避ける。[source:16]",
+          "Double or Nothing：後続RemnantへRunic MODを追加しない候補、通常どおり1つ加える候補、追加を狙う候補を選ぶ。安全側へ切り替えると、Runic MOD数を条件にする報酬効果も伸びにくくなる。[source:16]",
+          "The Quest Continues：Grand Expeditionの最大MOD数を3にし、エリアレベルを1上げる。初めてGrand Expeditionへ進む時に無条件で優先する必要はない。[source:16]"
+        ],
+        "steps": [
+          "まず通常ExpeditionでRemnantの効果を読めるようにする。",
+          "火力不足なら敵の初期ライフを減らす選択、素材不足ならLogbook供給の候補を確認する。",
+          "連戦を安定して終えられるようになってから、MOD数やエリアレベルを増やす。"
+        ]
+      },
+      {
+        "id": "temple",
+        "heading": "Temple／Fate of the Vaal：部屋を育てる仕組みを先に解放",
+        "paragraphs": [
+          "入口はVaal Ruins周辺の対象Mapです。データ上のSubTree: Incursionは、このPoE2のTemple系統を指す表記として扱います。PoE1のAlvaやIncursionの取得手順をそのまま当てはめないでください。[source:4]",
+          "Templeを定期的に使うなら、部屋を育てる選択肢と報酬機会を優先する方針がおすすめです。部屋をどう配置・維持するかが分からない段階で、敵の強化だけを重ねないようにします。"
+        ],
+        "bullets": [
+          "Stolen Authority：Medallionの発見量35%増加。Templeの変更にMedallionを使う人に向く候補。部屋の組み替えを実際に行わないなら優先度は下がる。[source:18]",
+          "Transcendent Progress：部屋をTier 4へ育てられるようにする。すでにTier 3の部屋を作れる人の優先候補。取得だけで全室がTier 4になる効果ではない。[source:4]",
+          "Expanded Designs：Architect撃破時に置けるRestricted Roomを1つ追加。Architectを繰り返し倒して報酬部屋を活かす段階で検討する。[source:4]",
+          "Royal Prerogative：Architect撃破が解放条件。Restricted Roomが15%の確率でDestabilisationを回避する。部屋を必ず残せる保証にはならない。[source:17]",
+          "Reduced Destabilization：小ノード1つにつきDestabilisationを1%減らす。維持の補助として読み、特定の報酬部屋を永久保存できると考えない。[source:17]",
+          "Training and Preparation：Templeのエリアレベル+1。周回が苦しい間は後回し。部屋効果を強める分岐も、敵への効果を含めて確認する。[source:4]"
+        ],
+        "steps": [
+          "Medallionを使った運用をするならStolen Authority、Tier 3が育つならTranscendent Progressを優先候補にする。",
+          "Architectを倒せる段階でRestricted Room関連を伸ばす。",
+          "通路・部屋配置と戦闘が安定してから、部屋効果やエリアレベルを強化する。"
+        ]
+      },
+      {
+        "id": "abyss",
+        "heading": "Abyss：狙う素材を決めてからPitと敵を増やす",
+        "paragraphs": [
+          "入口はWell of Souls周辺です。Desecration用の素材、Abyss固有報酬、地下エリアへの進行など、何を集めるかを先に決めます。敵やPitを増やすだけでは、希望する報酬の種類を絞ったことにはなりません。[source:4]"
+        ],
+        "bullets": [
+          "Rotting Bones：Ancient Desecrated Currencyの発見確率25%増加。該当素材を使う・集める人の初手候補。[source:19]",
+          "Vile Treasures：Abyssal Eye、Omen、Lineage Supportの対象を選び、発見確率を50%増やす候補。欲しい種類を確認して選ぶ。特定アイテムの確定ドロップではない。[source:4]",
+          "From Below：AbyssのPitを1つ追加。追加戦闘を最後まで処理できる人向け。時間がかかる、囲まれて倒れる場合は素材寄りの効果を先に考える。[source:4]",
+          "Balance of Power：Fissure Abyss以外で遭遇する陣営を選べる。狙う陣営が決まってから検討し、すべてのAbyssやボスを任意に変えられると読まない。[source:4]",
+          "Ghastly Relics：Pitの大型Abyssal ChestをAbyssal Strongboxへ変える。箱を開ける周回へ寄せたい場合の候補。0.5.5では最後の箱だけでなく該当する大型箱すべてへ適用するよう変更された。[source:4][source:3]",
+          "Close to the Surface：Waystoneの明示MODを地下のAbyssal Depthsにも適用する。地上の危険なMODを地下へ持ち込むことになるため、地下で苦戦している初心者は後回し。[source:5]"
+        ],
+        "steps": [
+          "素材目的ならRotting Bonesや報酬選択から考える。",
+          "Pit追加、敵増加、箱への置き換えは、同じ難度を安定して終えられてから検討する。",
+          "Vessel of Kulemakを最初に倒してもポイントが増えない時は、指輪取得または最終形態撃破まで含めたMap完了を確認する。[source:20]"
+        ]
+      },
+      {
+        "id": "atlas-masters",
+        "heading": "Atlas Masterも別枠で確認：Doryani・Jado・Hilda",
+        "paragraphs": [
+          "Masterはそれぞれ12ノードから4つを選ぶ仕組みで、クエストを進めて選択肢を解放します。3人分の設定を用意し、Mapの間に使うMasterを切り替えられます。3人の全効果を同時に受ける前提では組まないでください。[source:2]",
+          "入口はDoryaniがCorrupted Nexus、HildaがHilda's Campsite、Jadoが開始地点付近のAnomaly Mapです。メインのAtlasポイントを得るためのFortress進行とは分けて確認します。[source:2]"
+        ],
+        "bullets": [
+          "Doryani：安定重視の入口。Stitch the FleshはMapの復活回数を1増やすが上限は6。失敗しやすい通常Mapの練習候補で、Hardcoreの死亡対策として頼らない。[source:21]",
+          "Doryaniの注意：Improved CalibrationはWaystoneのPrefixまたはSuffix効果を25% moreにする。報酬のために選ぶ場合も、元の地図MODを必ず読む。[source:21]",
+          "Jado：箱・探索・特定報酬に合わせる。Trove SeekersはRare Chestの量とStrongboxのUnique化確率をそれぞれ100%増加させる。In The Wrong HandsはPowerful Map BossからUniqueアイテムを1つ追加。通常の弱いボスすべてに適用すると読み違えない。[source:21]",
+          "Jadoの注意：Unexpected MissionsはCorrupted Waystone使用時に通常Mapの行き先をランダム化し、ランダムMODを1つ追加する。地形を固定して練習する時や未知のMODが怖い時は優先しない。[source:21]",
+          "Hilda：敵・ボスを積極的に狩れる人向け。Mighty PreyはMap Bossを25%の確率でPowerfulへ強化する。ボス戦が安定してから候補にする。Rare敵の数やMODを増やす選択もあり、初心者全員への無条件推奨ではない。[source:21]"
+        ],
+        "steps": []
+      },
+      {
+        "id": "respec",
+        "heading": "払い戻しと変更：普通のノードは試し振りしない",
+        "paragraphs": [
+          "0.5.0の公式説明では、全取得できる設計への変更に伴い通常のAtlas再振り分けがなくなり、複数候補を持つ選択ノードはいつでも変更できます。DoryaniへGoldを払えば全Atlasを簡単に戻せる、という旧手順で試し振りしないでください。[source:2]",
+          "全取得できることと、今すぐすべて取ることは別です。難度が上がる固定ノードを押す前に、内容・適用条件・普段遊ぶコンテンツを確認しましょう。分からない効果は保留にして、必要なノードと装備更新を先に進めても構いません。",
+          "すでに難しくなった場合は、変更できる選択ノードを安全側へ戻し、Master設定、WaystoneのMOD、Tabletの重ね方を順に見直します。固定ノードを外せる前提で復旧手順を組まず、攻略可能な条件へ下げて次のポイントと装備を集めます。"
+        ],
+        "bullets": [],
+        "steps": [
+          "取得前：効果の対象、エリアレベル、クエスト条件、敵強化の有無を読む。",
+          "設定変更：選択ノードとMasterは、次のMapで遊ぶ内容に合わせる。",
+          "確認：Map開始前に最終MODを読み、普段より敵が硬い・連戦が長い場合は強化を重ねすぎていないか調べる。"
+        ]
+      },
+      {
+        "id": "goal-routes",
+        "heading": "目的別の進め方：自分に近いものを選ぶ",
+        "paragraphs": [],
+        "bullets": [
+          "初Atlas・地図不足：Fortress進行 → 手が届くWaystone数量候補 → 探索補助 → よく遊ぶ専用ツリー。強敵を増やす前にボス完了率を上げる。",
+          "レベル上げ・死亡回避：Shrineの利用と持続、Doryaniの復活補助を候補にする。敵のMOD・エリアレベル・霧の濃さを同時に上げない。",
+          "自力クラフト：EssenceやBreachのGenesis Tree、Abyssの対象素材、TempleのMedallionなど、実際に使う加工経路へ寄せる。買い取り相場だけで決めない。",
+          "通貨周回：報酬の種類、1Mapの時間、死亡、Tablet消費を同じ条件で比較する。売れ残る品の合計価格だけで「時給」を決めない。",
+          "ボス練習：報酬より撃破の再現性を先に作る。通常Mapのボス報酬ノードとPinnacle専用効果を分け、初見から追加ボスや危険なMasterを重ねない。"
+        ],
+        "steps": []
+      },
+      {
+        "id": "troubleshooting",
+        "heading": "効いていない・進まない時のチェック",
+        "paragraphs": [],
+        "bullets": [
+          "ポイントが増えない：対象拠点周辺／Fortress内の進行か、専用ポイントか、対象ボスと所有者条件を確認する。",
+          "ノードを取れない：残りポイントだけでなく、Gateway・Monolith・Architect・Simulacrumなど指定された解放条件を読む。",
+          "Tabletが反映されない：0.5.5dで非対応MapのTabletは灰色化や赤い数字で分かりやすくなった。スロットへ見えているだけで適用済みと思わない。[source:22]",
+          "Ritual取り置きの費用がおかしい：0.5.5dで表示不具合が修正された。Royal Lenienceによる追加費用と、通常の取り置きを区別して確認する。[source:22][source:14]",
+          "特定ボス後のRitualが始まらない／Tomb of the Fallen Knightに入れない：0.5.5eに修正がある。古い手順でノード不足と決めつけず、クライアントの版も確認する。[source:23]"
+        ],
+        "steps": []
+      }
+    ],
+    "faq": [
+      {
+        "question": "何を最優先で取ればよいですか？",
+        "answer": "Waystoneが不足するなら、まず取得可能なPathkeepersやAtop the WorldなどのMap Boss由来のWaystone数量候補です。安定してMapを完了できるようになったら、普段攻略する専用コンテンツの報酬へ進みます。固定の最初の10点として押す順序ではなく、解放条件と現在の問題に合わせる優先候補です。[source:5]"
+      },
+      {
+        "question": "専用ツリーを全部先に完成させる必要がありますか？",
+        "answer": "普段使うコンテンツから進めるのがおすすめです。Breachをほとんど遊ばないのにGenesis Tree関連を急ぐ、といった配分は効果を活かしにくくなります。メインと各専用の取得条件を分け、今必要な報酬を選んでください。"
+      },
+      {
+        "question": "Atlasのポイントを間違って振ったら払い戻せますか？",
+        "answer": "現行0.5系では通常Atlasノードの払い戻しを前提にできません。公式に変更可能とされているのは複数候補を持つ選択ノードです。難度を上げる固定ノードは内容を確認してから取得してください。[source:2]"
+      },
+      {
+        "question": "WaystoneのRarityを増やすとTierも上がりますか？",
+        "answer": "Rarity・数量・Tierは別です。たとえばValuable PathsのRarity50%増加とMap Boss由来の数量10%増加を、Waystoneが必ず1Tier上になる効果として読まないでください。[source:5]"
+      },
+      {
+        "question": "300以上のノードを全部取るのが常に正解ですか？",
+        "answer": "全取得できる設計でも、敵強化や遭遇内容の変更が今の周回に合うとは限りません。最初は必要な報酬・探索・維持を優先し、難度を変える固定ノードは後で判断する方針がおすすめです。[source:2]"
+      },
+      {
+        "question": "記事の英語ノード名がゲームの日本語表示と違います。",
+        "answer": "英語名は確認したデータ上の名前です。未確認の日本語訳を正式名称として付けず、本文で効果を日本語説明しています。効果・数値・解放条件を併せて照合してください。データベースには古い説明も残るため、本記事は0.5系公式変更と現行ノード欄を優先しています。"
+      },
+      {
+        "question": "どのツリーが一番稼げますか？",
+        "answer": "相場、ビルド、Mapの完了率、周回時間、Tablet費用で変わります。本記事の優先順位は初心者が進行と報酬を安定させるための提案で、最高収益を保証するものではありません。同じ条件を続けて比べ、無理なく最後まで回せる内容を選びましょう。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：早期アクセス パッチノート一覧",
+        "url": "https://www.pathofexile.com/forum/view-forum/2212",
+        "checkedAt": "2026-10-09",
+        "supports": "確認日時点の最新掲載は0.5.5e。"
+      },
+      {
+        "name": "GGG公式：0.5.0 Return of the Ancients",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-09",
+        "supports": "Fortressによるメインポイント取得、全取得可能な設計、通常払い戻し撤廃と選択ノード変更、各コンテンツ拠点、Mastersの仕組み。"
+      },
+      {
+        "name": "GGG公式：0.5.5 Forbidden Rites",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-09",
+        "supports": "Expeditionのコア復帰、Royal Lenience、非クエスト版Origin CoreによるFortress完了、DeliriumやMasterの現行変更。"
+      },
+      {
+        "name": "PoE2DB：Atlas Tree Modifiers／現行ゲームデータ（二次資料）",
+        "url": "https://poe2db.tw/us/Atlas_passive_skill",
+        "checkedAt": "2026-10-09",
+        "supports": "各専用ツリーのポイント条件、メイン選択ノード、Temple・Abyssの主要ノードと解放条件。下部Community Wikiの旧40点／8点表は採用しない。"
+      },
+      {
+        "name": "PoE2DB：Waystone関連パッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Waystones",
+        "checkedAt": "2026-10-09",
+        "supports": "Pathkeepers、Atop the World、Valuable Paths、Archaeological Interestの数値と適用条件。 Close to the Surfaceの地下へのMap MOD適用。"
+      },
+      {
+        "name": "PoE2DB：Monster Effectiveness（二次資料）",
+        "url": "https://poe2db.tw/us/Monster_Effectiveness",
+        "checkedAt": "2026-10-09",
+        "supports": "Effectivenessが敵のToughness・獲得経験値・ドロップ数量を変えること。"
+      },
+      {
+        "name": "PoE2DB：Shrine関連パッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Shrine",
+        "checkedAt": "2026-10-09",
+        "supports": "Seasonal Blessing、Fabled Showdownなど、Shrine強化の対象と効果。"
+      },
+      {
+        "name": "PoE2DB：Essence関連パッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Essence",
+        "checkedAt": "2026-10-09",
+        "supports": "Flawless Patterns、Crystalline Overgrowth、Essenceの追加難度に関するデータ。"
+      },
+      {
+        "name": "PoE2DB：Tablets関連パッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Tablets",
+        "checkedAt": "2026-10-09",
+        "supports": "Reverse Transcription、Partial Translation、Curiously Durable Stone、Enigmatic Intensificationの数値と条件。"
+      },
+      {
+        "name": "PoE2DB：Biome関連パッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Biome",
+        "checkedAt": "2026-10-09",
+        "supports": "地形限定効果、Mountain Mastery、Forest Masteryの選択肢と解放条件。"
+      },
+      {
+        "name": "PoE2DB：Map Boss関連パッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Map_Boss",
+        "checkedAt": "2026-10-09",
+        "supports": "Fit for a King、Hard-Won Treasures、ボス報酬の適用対象。旧Community Wikiのボスポイント手順は採用しない。"
+      },
+      {
+        "name": "PoE2DB：Monster Modifiers（二次資料）",
+        "url": "https://poe2db.tw/us/Monster_Modifiers",
+        "checkedAt": "2026-10-09",
+        "supports": "No Simple Battles、Mutating Monsters、Adaptive Biology、Monster Rarityの効果。"
+      },
+      {
+        "name": "PoE2DB：Breachの現行Atlasパッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Breach",
+        "checkedAt": "2026-10-09",
+        "supports": "Diverse Control、Growing Wealth、Reality Wound、Moment of Risk、Reactive Hiveseedingの現行効果。"
+      },
+      {
+        "name": "PoE2DB：Ritualの現行Atlasパッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Ritual",
+        "checkedAt": "2026-10-09",
+        "supports": "Patient Devotion、Tempting Offers、Magnanimous Offerings、Royal LenienceとInvigorated Sacrifices。"
+      },
+      {
+        "name": "PoE2DB：Deliriumの現行Atlasパッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Delirium",
+        "checkedAt": "2026-10-09",
+        "supports": "霧の時間延長、Liquid Emotions、Simulacrum Splinter解放、Recurring Nightmaresの現行選択肢。"
+      },
+      {
+        "name": "PoE2DB：Expeditionの現行Atlasパッシブ（二次資料）",
+        "url": "https://poe2db.tw/us/Expedition",
+        "checkedAt": "2026-10-09",
+        "supports": "Strategic Advantage、Steady Development、Sown Seeds、Double or Nothing、The Quest Continues。旧Standard停止記載は0.5.5公式で上書き。"
+      },
+      {
+        "name": "PoE2DB：Temple Destabilisation（二次資料）",
+        "url": "https://poe2db.tw/us/Temple_Destabilisation",
+        "checkedAt": "2026-10-09",
+        "supports": "Reduced DestabilizationとRoyal Prerogative、部屋消失に関する例外条件。"
+      },
+      {
+        "name": "PoE2DB：Medallions（二次資料）",
+        "url": "https://poe2db.tw/us/Medallions",
+        "checkedAt": "2026-10-09",
+        "supports": "Stolen AuthorityのMedallion発見量35%増加とMedallionの用途。"
+      },
+      {
+        "name": "PoE2DB：Desecrated Modifiers（二次資料）",
+        "url": "https://poe2db.tw/us/Desecrated_Modifiers",
+        "checkedAt": "2026-10-09",
+        "supports": "Rotting BonesのAncient Desecrated Currency発見確率25%増加。"
+      },
+      {
+        "name": "GGG公式：0.5.5 Hotfix 10",
+        "url": "https://www.pathofexile.com/forum/view-thread/4002822",
+        "checkedAt": "2026-10-09",
+        "supports": "Vessel of Kulemak戦のAbyssポイントは指輪取得または最終形態撃破によるMap完了時に付与。"
+      },
+      {
+        "name": "PoE2DB：Masters of the Atlas（二次資料）",
+        "url": "https://poe2db.tw/us/Atlas_Masters",
+        "checkedAt": "2026-10-09",
+        "supports": "Doryani、Jado、Hildaの現行Masterノード。復活・追加ユニーク・ボス強化・危険な選択肢。"
+      },
+      {
+        "name": "GGG公式：0.5.5d",
+        "url": "https://www.pathofexile.com/forum/view-thread/4008534",
+        "checkedAt": "2026-10-09",
+        "supports": "使用不可Tabletの灰色・赤色表示、Ritualの取り置き費用表示修正。"
+      },
+      {
+        "name": "GGG公式：0.5.5e",
+        "url": "https://www.pathofexile.com/forum/view-thread/4009785",
+        "checkedAt": "2026-10-09",
+        "supports": "特定ボス撃破後にRitualを開始できない不具合、Tomb of the Fallen Knightの入場不具合を修正。"
+      },
+      {
+        "name": "GGG公式：0.5.5b",
+        "url": "https://www.pathofexile.com/forum/view-thread/4004106",
+        "checkedAt": "2026-10-09",
+        "supports": "Expedition自然出現不具合の修正。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/atlas-progression/",
+        "label": "アトラスの進行とポイントの入手方法"
+      },
+      {
+        "href": "/guides/endgame-contents/",
+        "label": "各コンテンツの遊び方"
+      },
+      {
+        "href": "/guides/endgame-items/",
+        "label": "専用アイテムの入手・使う場所"
+      },
+      {
+        "href": "/guides/waystones-tablets/",
+        "label": "ウェイストーン・タブレットの使い方"
       }
     ]
   }

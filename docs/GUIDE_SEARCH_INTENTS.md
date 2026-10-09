@@ -1,6 +1,6 @@
 # 攻略記事の検索意図と分担
 
-既存13本と新規10本の計23記事にそれぞれ1つの主検索意図を割り当てます。検索例は狙う疑問の表現であり、検索ボリュームや順位を確認した値ではありません。既存本文で回答できる範囲だけを要約し、近似ページは増やしません。
+既存13本と新規13本の計26記事にそれぞれ1つの主検索意図を割り当てます。検索例は狙う疑問の表現であり、検索ボリュームや順位を確認した値ではありません。既存本文で回答できる範囲だけを要約し、近似ページは増やしません。
 
 | 主検索意図 | 検索例 | URL | 他記事との分界 |
 |---|---|---|---|
@@ -32,6 +32,10 @@
 | Act4の島探索・武器部品回収から最終タヴァカイまでの進行と対処 | PoE2 Act4 攻略 | [act-4-walkthrough](/guides/act-4-walkthrough/) | Act4の主線・島の目的・任意報酬・終盤ボスとInterlude移行。進行停止の総合診断はcampaign-progression、前章はact-3-walkthrough、Interlude各地域の詳細は扱わない。 |
 
 | 間幕3地域の進行順・必須ボス・任意報酬とエンドゲームへの移行 | PoE2 間幕 攻略 | [interlude-walkthrough](/guides/interlude-walkthrough/) | Act4後の3地域の主線、必須ボス、任意強化、完了報告とエンドゲーム導入。Act4本編はact-4-walkthrough、移行後の準備はafter-campaign、Atlas進行はatlas-progression。 |
+
+| エンドゲーム各コンテンツの開始場所・遊び方・報酬を初心者向けに選ぶ | PoE2 エンドゲーム 初心者 | [endgame-contents](/guides/endgame-contents/) | 各コンテンツの入口・遊ぶ流れ・主報酬。ビルド準備はmapping、素材の個別操作はendgame-items、ノード配分はatlas-passive-trees。 |
+| エンドゲーム専用アイテムの入手元と使用先・消費前の注意を調べる | PoE2 エンドゲーム アイテム 使い方 | [endgame-items](/guides/endgame-items/) | 専用アイテムの個別操作と損失リスク。コンテンツ全体の遊び方はendgame-contents、Map入場の詳細はwaystones-tablets、汎用通貨全種の辞典ではない。 |
+| アトラス各ツリーの効果と初心者向けノード取得優先順位を選ぶ | PoE2 アトラス パッシブ 優先順位 | [atlas-passive-trees](/guides/atlas-passive-trees/) | メイン主要分岐・6専用ツリー・Masterの効果と配分判断。ポイント進行はatlas-progression、全ノード最短接続・収益保証・未確認の専用上限は対象外。 |
 
 ## 反映方法
 
