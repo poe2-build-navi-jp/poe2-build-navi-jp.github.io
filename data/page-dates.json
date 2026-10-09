@@ -32,7 +32,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "75b73df941818369",
+  "hash": "4867a8b720eba1fe",
   "date": "2026-10-09"
  },
  "/dictionary/": {
@@ -184,7 +184,7 @@
   "date": "2026-10-09"
  },
  "/guides/after-campaign/": {
-  "hash": "24e53fe93a7a5ef2",
+  "hash": "e0e11f88223a599d",
   "date": "2026-10-09"
  },
  "/guides/mapping/": {
@@ -224,7 +224,11 @@
   "date": "2026-10-09"
  },
  "/guides/act-4-walkthrough/": {
-  "hash": "c7dce546a8b8f83c",
+  "hash": "185fe1dd7ffc2f2e",
+  "date": "2026-10-09"
+ },
+ "/guides/interlude-walkthrough/": {
+  "hash": "848a74044542eb2a",
   "date": "2026-10-09"
  },
  "/dictionary/build/": {
