@@ -18,7 +18,8 @@ const seoPaths = JSON.parse(await read("data/seo-pages.json")).map((page) => pag
 const noindexPaths = JSON.parse(await read("data/noindex.json")).paths.map((path) => path.replace(/^\//, ""));
 const contentPaths = [
   ...JSON.parse(await read("data/dictionary.json")).map((term) => `dictionary/${term.slug}/`),
-  ...JSON.parse(await read("data/guides.json")).map((guide) => `guides/${guide.slug}/`)
+  ...JSON.parse(await read("data/guides.json")).map((guide) => `guides/${guide.slug}/`),
+  ...JSON.parse(await read("data/strategy-guides.json")).map((guide) => `guides/${guide.slug}/`)
 ];
 const paths = [...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]), ...seoPaths, ...noindexPaths, ...contentPaths])];
 

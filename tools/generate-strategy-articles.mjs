@@ -12,7 +12,7 @@ const text=s=>esc(s).replace(/\[source:(\d+)\]/g,(_,n)=>`<sup><a href="#source-$
 const nav='<header class="site-header"><a class="brand" href="/" aria-label="POE2ビルドナビ ホーム"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>ビルドナビ</span></a><nav class="site-nav page-nav" aria-label="メインメニュー"><a href="/guides/">攻略ガイド</a><a href="/beginner-builds/">初心者おすすめ</a><a href="/builds/">ビルド</a><a href="/leveling/">レベリング</a><a href="/beginner-guide/">初心者ガイド</a></nav></header>';
 for(const g of guides){
  if(!/^[a-z0-9-]+$/.test(g.slug)||g.actions.length!==3||g.sections.length<4||!g.sources.length)throw Error(`Incomplete article: ${g.slug}`);
- const url=`${site.baseUrl}/guides/${g.slug}/`,image=`${site.baseUrl}/images/poe2/og/poe2-beginner-guide-og.webp`;
+ const url=`${site.baseUrl}/guides/${g.slug}/`,image=`${site.baseUrl}${g.ogImage||'/images/poe2/og/poe2-beginner-guide-og.webp'}`;
  const date=g.checkedAt||g.sources.map(s=>s.checkedAt).sort().at(-1);
  const schema=[{'@context':'https://schema.org','@type':'Article',headline:g.title,description:g.summary,inLanguage:'ja',datePublished:g.publishedAt||date,dateModified:g.updatedAt||date,mainEntityOfPage:url,image,author:{'@type':'Organization',name:site.operatorName,url:`${site.baseUrl}/about/`},publisher:{'@type':'Organization',name:site.siteName,url:`${site.baseUrl}/`}}, {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'ホーム',item:`${site.baseUrl}/`},{'@type':'ListItem',position:2,name:'攻略ガイド',item:`${site.baseUrl}/guides/`},{'@type':'ListItem',position:3,name:g.title,item:url}]}];
  const sections=g.sections.map((s,i)=>`<section id="${esc(s.id||`section-${i+1}`)}" class="strategy-section"><h2>${esc(s.heading)}</h2>${(s.paragraphs||[]).map(p=>`<p>${text(p)}</p>`).join('')}${s.bullets?.length?`<ul>${s.bullets.map(b=>`<li>${text(b)}</li>`).join('')}</ul>`:''}${s.steps?.length?`<ol>${s.steps.map(b=>`<li>${text(b)}</li>`).join('')}</ol>`:''}${refs(s,g)}</section>`).join('');
@@ -28,10 +28,11 @@ console.log(`Generated ${guides.length} source-backed strategy articles.`);
 const connections={
  'after-campaign':['interlude-walkthrough','endgame-contents','atlas-progression','waystones-tablets'],
  mapping:['endgame-contents','endgame-items','atlas-progression','waystones-tablets','expedition'],
- 'cant-beat-boss':['campaign-progression','trial-of-chaos'],
+ 'cant-beat-boss':['pinnacle-bosses','campaign-progression','ascendancy-trials','trial-of-chaos'],
  'why-i-die':['trial-of-chaos','waystones-tablets'],
  'slow-mapping':['waystones-tablets','atlas-progression'],
- 'equipment-basics':['expedition']
+ 'equipment-basics':['budget-gear-crafting','expedition'],
+ 'gear-upgrade':['budget-gear-crafting']
 };
 for(const [slug,targets] of Object.entries(connections)){
  const file=`guides/${slug}/index.html`;let html=await read(file);

@@ -1,6 +1,6 @@
 # 攻略記事の検索意図と分担
 
-既存13本と新規13本の計26記事にそれぞれ1つの主検索意図を割り当てます。検索例は狙う疑問の表現であり、検索ボリュームや順位を確認した値ではありません。既存本文で回答できる範囲だけを要約し、近似ページは増やしません。
+既存13本と新規17本の計30記事にそれぞれ1つの主検索意図を割り当てます。検索例は狙う疑問の表現であり、検索ボリュームや順位を確認した値ではありません。既存本文で回答できる範囲だけを要約し、近似ページは増やしません。
 
 | 主検索意図 | 検索例 | URL | 他記事との分界 |
 |---|---|---|---|
@@ -36,6 +36,11 @@
 | エンドゲーム各コンテンツの開始場所・遊び方・報酬を初心者向けに選ぶ | PoE2 エンドゲーム 初心者 | [endgame-contents](/guides/endgame-contents/) | 各コンテンツの入口・遊ぶ流れ・主報酬。ビルド準備はmapping、素材の個別操作はendgame-items、ノード配分はatlas-passive-trees。 |
 | エンドゲーム専用アイテムの入手元と使用先・消費前の注意を調べる | PoE2 エンドゲーム アイテム 使い方 | [endgame-items](/guides/endgame-items/) | 専用アイテムの個別操作と損失リスク。コンテンツ全体の遊び方はendgame-contents、Map入場の詳細はwaystones-tablets、汎用通貨全種の辞典ではない。 |
 | アトラス各ツリーの効果と初心者向けノード取得優先順位を選ぶ | PoE2 アトラス パッシブ 優先順位 | [atlas-passive-trees](/guides/atlas-passive-trees/) | メイン主要分岐・6専用ツリー・Masterの効果と配分判断。ポイント進行はatlas-progression、全ノード最短接続・収益保証・未確認の専用上限は対象外。 |
+
+| 初回転職から追加アセンダンシーポイント取得までの試練の進め方 | PoE2 転職 試練 攻略 | [ascendancy-trials](/guides/ascendancy-trials/) | 初回と追加ポイントの取得・試練準備・部屋選択。混沌の中断/再開の詳細はtrial-of-chaos、通常パッシブの恒久報酬はpermanent-rewards。 |
+| Act1から間幕までの恒久報酬の取り忘れを点検する | PoE2 恒久報酬 一覧 | [permanent-rewards](/guides/permanent-rewards/) | 全Actの恒久強化点検。主線ルートは各Act記事、転職専用8ポイントはascendancy-trials、装備から得る数値は対象外。 |
+| 必要条件で装備を検索購入し低予算クラフトの続行と中止を判断する | PoE2 装備 買い方 検索 | [budget-gear-crafting](/guides/budget-gear-crafting/) | 検索購入と低予算制作の実践。装備の見方はequipment-basics、交換部位の優先順位はgear-upgrade、専用素材はendgame-items。 |
+| 代表終盤ボスの危険な予兆と回避後の反撃判断を知る | PoE2 灰のアービター 攻略 | [pinnacle-bosses](/guides/pinnacle-bosses/) | 代表2ボスの戦闘判断。現行の到達ルートはendgame-contents、必要鍵はendgame-items、全ボス網羅や未検証フェーズは対象外。 |
 
 ## 反映方法
 

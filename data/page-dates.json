@@ -32,8 +32,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "3554f1a649f6ed34",
-  "date": "2026-10-09"
+  "hash": "f4747033619d7d6c",
+  "date": "2026-10-10"
  },
  "/dictionary/": {
   "hash": "0db607327ee7e867",
@@ -168,8 +168,8 @@
   "date": "2026-10-09"
  },
  "/guides/equipment-basics/": {
-  "hash": "a68fb68a2023b039",
-  "date": "2026-10-09"
+  "hash": "8490bfb024326dab",
+  "date": "2026-10-10"
  },
  "/guides/resistance/": {
   "hash": "d95a4ccc1ceb8a79",
@@ -196,8 +196,8 @@
   "date": "2026-10-09"
  },
  "/guides/trial-of-chaos/": {
-  "hash": "e8c5423c904631d2",
-  "date": "2026-10-09"
+  "hash": "55033dcddd8f3da5",
+  "date": "2026-10-10"
  },
  "/guides/atlas-progression/": {
   "hash": "65497a58527a470a",
@@ -212,36 +212,52 @@
   "date": "2026-10-09"
  },
  "/guides/act-1-walkthrough/": {
-  "hash": "661e3478be8f50a1",
-  "date": "2026-10-09"
+  "hash": "2ade2b70938a0fb2",
+  "date": "2026-10-10"
  },
  "/guides/act-2-walkthrough/": {
-  "hash": "b5663b17827bcb4a",
-  "date": "2026-10-09"
+  "hash": "cb271fd7b404840c",
+  "date": "2026-10-10"
  },
  "/guides/act-3-walkthrough/": {
-  "hash": "ffc3dfa45b36b18f",
-  "date": "2026-10-09"
+  "hash": "80cc15808b817681",
+  "date": "2026-10-10"
  },
  "/guides/act-4-walkthrough/": {
-  "hash": "14179a9fd286bf95",
-  "date": "2026-10-09"
+  "hash": "cbc910f5b61a2b20",
+  "date": "2026-10-10"
  },
  "/guides/interlude-walkthrough/": {
-  "hash": "a6655cc965bcc422",
-  "date": "2026-10-09"
+  "hash": "6b470d76fa710fe2",
+  "date": "2026-10-10"
  },
  "/guides/endgame-contents/": {
-  "hash": "84e8ce78015284d0",
-  "date": "2026-10-09"
+  "hash": "5f5dbc58f52d667f",
+  "date": "2026-10-10"
  },
  "/guides/endgame-items/": {
-  "hash": "886f6bd4ae94b1f5",
-  "date": "2026-10-09"
+  "hash": "0759d04a8dfa3bdb",
+  "date": "2026-10-10"
  },
  "/guides/atlas-passive-trees/": {
   "hash": "6b457f922728feee",
   "date": "2026-10-09"
+ },
+ "/guides/ascendancy-trials/": {
+  "hash": "d93f15d88fb1a175",
+  "date": "2026-10-10"
+ },
+ "/guides/permanent-rewards/": {
+  "hash": "9546a53283f251c4",
+  "date": "2026-10-10"
+ },
+ "/guides/budget-gear-crafting/": {
+  "hash": "ec332acba7b056c4",
+  "date": "2026-10-10"
+ },
+ "/guides/pinnacle-bosses/": {
+  "hash": "79918a08da3dd6a7",
+  "date": "2026-10-10"
  },
  "/dictionary/build/": {
   "hash": "43ba11e22407abde",
@@ -304,16 +320,16 @@
   "date": "2026-10-06"
  },
  "/guides/gear-upgrade/": {
-  "hash": "bf8bb061737e5fc8",
-  "date": "2026-10-09"
+  "hash": "350894ad4220e79c",
+  "date": "2026-10-10"
  },
  "/guides/mana-problem/": {
   "hash": "fa22745ffab83bb7",
   "date": "2026-10-09"
  },
  "/guides/cant-beat-boss/": {
-  "hash": "598614bfd0bfce93",
-  "date": "2026-10-09"
+  "hash": "cc402d3c5fde411e",
+  "date": "2026-10-10"
  },
  "/guides/slow-mapping/": {
   "hash": "4554273e9d0d90a6",
