@@ -11,6 +11,7 @@ const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const site=JSON.parse(await read('data/site.json'));
 const builds=JSON.parse(await read('data/builds.json'));
+const strategyGuides=JSON.parse(await read('data/strategy-guides.json'));
 const base=site.baseUrl;
 const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const unesc=v=>String(v).replaceAll('&quot;','"').replaceAll('&gt;','>').replaceAll('&lt;','<').replaceAll('&amp;','&');
@@ -37,7 +38,9 @@ for(const path of paths){
  if(heading.length>20&&q>0&&q<heading.length-1){sub=heading.slice(q+1);heading=heading.slice(0,q+1);}
  const build=builds.find(b=>path===`builds/${b.classSlug}/${b.slug}/`);
  const subtitle=build?`${build.className} / ${build.ascendancy}\nLv1〜Endgame育成`:sub.replace(/POE2ビルドナビ/,'').trim();
- pages.push({path,file,heading,subtitle,category:category(path),image:`/images/poe2/og/${imageName(path)}`,alt:`${heading}${subtitle?`｜${subtitle.replace('\n','　')}`:''}`});
+ const reuseImage=strategyGuides.find(g=>path===`guides/${g.slug}/`)?.ogImage;
+ if(reuseImage&&!/^\/images\/poe2\/og\/[a-z0-9-]+\.webp$/.test(reuseImage))throw Error(`Invalid shared OG image: ${path}`);
+ pages.push({path,file,heading,subtitle,reuseImage,category:category(path),image:reuseImage||`/images/poe2/og/${imageName(path)}`,alt:reuseImage?'PoE2攻略・育成ガイド':`${heading}${subtitle?`｜${subtitle.replace('\n','　')}`:''}`});
 }
 
 const template=p=>`<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>
@@ -68,6 +71,7 @@ if(process.env.OG_METADATA_ONLY==='1'){
  const page=await browser.newPage({viewport:{width:1200,height:630}});
  await mkdir(resolve(root,'images/poe2/og'),{recursive:true});
  for(const p of pages){
+  if(p.reuseImage){await readFile(resolve(root,p.image.slice(1)));continue;}
   await page.setContent(template(p),{waitUntil:'load'});
   const png=await page.screenshot({type:'png'});
   const dataUrl=await page.evaluate(async src=>{const img=new Image();img.src=src;await img.decode();const c=document.createElement('canvas');c.width=1200;c.height=630;c.getContext('2d').drawImage(img,0,0);return c.toDataURL('image/webp',0.82);},`data:image/png;base64,${png.toString('base64')}`);
