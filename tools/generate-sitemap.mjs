@@ -4,6 +4,7 @@ import { contentHash } from "./page-content.mjs";
 const root=resolve(import.meta.dirname,"..");
 const [builds,classes,guides,terms,seoPages,site]=await Promise.all(["builds","classes","guides","dictionary","seo-pages","site"].map(name=>readFile(resolve(root,`data/${name}.json`),"utf8").then(JSON.parse)));
 const strategyGuides=JSON.parse(await readFile(resolve(root,"data/strategy-guides.json"),"utf8"));
+const coreEntities=JSON.parse(await readFile(resolve(root,'data/core-entities.json'),'utf8'));
 const base=site.baseUrl;
 const defaultDate=site.lastUpdated;
 const changedDate=site.latestPatchCheckedAt;
@@ -13,7 +14,7 @@ const buildLastmod=new Map(indexableBuilds.map(build=>[
   [changedDate,build.updatedAt,...(build.changeHistory||[]).map(entry=>entry.date)].filter(Boolean).sort().at(-1)
 ]));
 const noindex=new Set(JSON.parse(await readFile(resolve(root,"data/noindex.json"),"utf8")).paths);
-const urls=[...new Set(["/","/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/beginner-builds/","/guides/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...strategyGuides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])].filter(path=>!noindex.has(path));
+const urls=[...new Set(["/","/search/","/name-index/","/skills/","/equipment/",...coreEntities.map(e=>`/${e.kind==='skill'?'skills':'equipment'}/${e.slug}/`),"/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/beginner-builds/","/guides/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...strategyGuides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])].filter(path=>!noindex.has(path));
 const changedPaths=new Set(["/","/leveling/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`)]);
 const {ROADMAP_BUILD_IDS}=await import("./roadmap-builds.mjs");
 const priorityBuildIds=new Set(ROADMAP_BUILD_IDS);

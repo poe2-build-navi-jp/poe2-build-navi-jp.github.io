@@ -1,0 +1,326 @@
+[
+  {
+    "slug": "whirling-assault",
+    "kind": "skill",
+    "name": "ワーリングアサルト",
+    "englishName": "Whirling Assault",
+    "aliases": [
+      "WhirlingAssault"
+    ],
+    "summary": "前進しながら周囲を連続して攻撃する、クォータースタッフ用の近接スキル。",
+    "effect": [
+      "回転する連続攻撃で、移動方向の周囲にいる敵を攻撃する。[source:1]"
+    ],
+    "requirements": [
+      "クォータースタッフと、ジェムに表示された器用さ・知性が必要。[source:1]",
+      "選択ティアは11。レベル11ジェムの必要キャラクターレベルは41。高レベルのジェムでは条件が上がる。[source:1]"
+    ],
+    "acquisition": [
+      "対応するレベルのスキルジェムの原石で、クォータースタッフ系のワーリングアサルトを選択する。[source:3]"
+    ],
+    "cautions": [
+      "使用可能になるLv41と、掲載ビルドへ安全に切り替えられる時期は別。原典には複数の育成・Endgame構成があるため、現在段階を選ぶ。[source:4]",
+      "品質やサポートの古い数値を流用せず、ゲーム内表示を確認する。[source:1]"
+    ],
+    "buildIds": [
+      "monk-whirling-assault"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Whirling Assault（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Whirling_Assault",
+        "checkedAt": "2026-10-10",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Whirling Assault",
+        "url": "https://poe2db.tw/jp/Whirling_Assault",
+        "checkedAt": "2026-10-10",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-10",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "Mobalytics: ScorpiusのWhirling Assault構成",
+        "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "checkedAt": "2026-10-10",
+        "supports": "掲載ビルドでの採用。41+育成構成とEndgame構成の区別。"
+      }
+    ]
+  },
+  {
+    "slug": "shield-wall",
+    "kind": "skill",
+    "name": "シールドウォール",
+    "englishName": "Shield Wall",
+    "aliases": [
+      "ShieldWall"
+    ],
+    "summary": "アーマー系の盾で土の壁を作り、壊した壁の爆発で攻撃するスキル。",
+    "effect": [
+      "壁の部分が壊れると周囲へダメージを与える。自分のスラム、ウォークライ、シールドチャージでも壁を壊せる。[source:1]",
+      "盾のアーマーが追加物理ダメージに関わるため、武器だけでなく盾の性能を確認する。[source:1]"
+    ],
+    "requirements": [
+      "アーマー系の盾と、ジェムに表示された筋力が必要。[source:1]",
+      "選択ティアは7。レベル7ジェムの必要キャラクターレベルは22。[source:1]"
+    ],
+    "acquisition": [
+      "対応するレベルのスキルジェムの原石からシールドウォールを選択する。[source:3]"
+    ],
+    "cautions": [
+      "装備できる盾なら何でもよいわけではない。スキルの武器条件に合う盾を用意する。[source:1]",
+      "掲載原典ではLv22以前に別スキルで育てる。Lv到達だけで完成構成へ変更せず、盾・サポート・現在段階を合わせる。[source:4]"
+    ],
+    "buildIds": [
+      "warrior-shield-wall-smith"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Shield Wall（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Shield_Wall",
+        "checkedAt": "2026-10-10",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Shield Wall",
+        "url": "https://poe2db.tw/jp/Shield_Wall",
+        "checkedAt": "2026-10-10",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-10",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "Mobalytics: LundburgerrのShield Wall Smith",
+        "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "checkedAt": "2026-10-10",
+        "supports": "掲載ビルドでの採用とLv22の切替目安。タイトル0.5、タグ0.5.5 FR。"
+      }
+    ]
+  },
+  {
+    "slug": "twister",
+    "kind": "skill",
+    "name": "ツイスター",
+    "englishName": "Twister",
+    "aliases": [],
+    "summary": "槍から竜巻を放つアタック。ワールウィンドや元素領域との組合せを確認するスキル。",
+    "effect": [
+      "竜巻が不規則に前進し、範囲内の敵へ繰り返しヒットして盲目を与える。[source:1]",
+      "他のスキルのワールウィンドを消費して追加の竜巻を作る。元素領域を通るか元素のワールウィンドを消費すると、その元素の追加ダメージを得る。[source:1]"
+    ],
+    "requirements": [
+      "槍と、ジェムに表示された器用さが必要。選択ティアは1。[source:1]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石から、槍系のツイスターを選択する。[source:3]"
+    ],
+    "cautions": [
+      "ツイスター単体の使用条件と、掲載ビルドの連携・武器セット・Spirit条件は別。自分の職業の育成段階を確認する。[source:4][source:5]",
+      "同時に放った竜巻には同一対象へのヒット間隔がある。竜巻の数だけ無制限に同時ヒットすると考えない。[source:1]"
+    ],
+    "buildIds": [
+      "mercenary-twister-gemling",
+      "huntress-twister-spirit-walker"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Twister（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Twister",
+        "checkedAt": "2026-10-10",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Twister",
+        "url": "https://poe2db.tw/jp/Twister",
+        "checkedAt": "2026-10-10",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-10",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "Mobalytics: Twister Gemling Legionnaire",
+        "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+        "checkedAt": "2026-10-10",
+        "supports": "Gemling版での採用と序盤のWhirling Slash連携。2026-10-04更新表示。"
+      },
+      {
+        "name": "Pathofexile.gg: Spirit Walker Elemental Twister Build（0.5）",
+        "url": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
+        "checkedAt": "2026-10-10",
+        "supports": "Spirit Walker版のTwister採用、武器セット別運用。Endgame段階でThe Tamingへの交換案を掲載。2026-07-17公開の原典本文を確認。"
+      }
+    ]
+  },
+  {
+    "slug": "spark",
+    "kind": "skill",
+    "name": "スパーク",
+    "englishName": "Spark",
+    "aliases": [],
+    "summary": "地面を不規則に進む雷の投射物を放つスペル。掲載ストームウィーバーの育成主力。",
+    "effect": [
+      "複数の雷の投射物を放ち、敵への命中や持続時間の終了まで地面を移動させる。[source:1]",
+      "冷気の注入（Cold Infusion）があれば消費し、円状に多数の投射物を放つ強化形になる。[source:1]"
+    ],
+    "requirements": [
+      "ジェムに表示された知性が必要。選択ティアは1。スキル自体に特定武器の要求は掲載されていない。[source:1]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石から元素系のスパークを選択する。[source:3]"
+    ],
+    "cautions": [
+      "武器指定がないことと、どの武器でも同じ火力になることは別。掲載育成ガイドは武器性能とボス用の複数スキル操作を注意点に挙げる。[source:4]",
+      "ジェムレベルを上げる前に必要知性とマナコストを確認する。[source:1]"
+    ],
+    "buildIds": [
+      "sorceress-spark-stormweaver"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Spark（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Spark",
+        "checkedAt": "2026-10-10",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Spark",
+        "url": "https://poe2db.tw/jp/Spark",
+        "checkedAt": "2026-10-10",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-10",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "PoE Vault: Spark Sorceress or Witch Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
+        "checkedAt": "2026-10-10",
+        "supports": "掲載育成ビルドでの採用、Cold Infusionの利用、武器依存とボス操作の注意。本文Patch 0.5の資料。"
+      }
+    ]
+  },
+  {
+    "slug": "the-taming",
+    "kind": "equipment",
+    "name": "テイミング",
+    "englishName": "The Taming",
+    "aliases": [
+      "Taming"
+    ],
+    "summary": "元素領域で強化されるウィンドスキルと相性を確認したいユニーク指輪。",
+    "effect": [
+      "全元素耐性を持ち、敵に付与した元素系状態異常の種類に応じてダメージが増加する。[source:1]",
+      "元素領域で強化できるウィンドスキルを複数の領域で強化可能にし、発火・感電・冷却領域で強化されたものとして扱う。[source:1]"
+    ],
+    "requirements": [
+      "Prismatic Ring（プリズムの指輪）をベースとする指輪。確認した英語DBの必要レベルは42。実際に使う個体の表示を確認する。[source:1][source:2]",
+      "領域強化の効果は対応するウィンドスキルが対象。すべてのアタックやスペルに同じ効果が付くものではない。[source:1]"
+    ],
+    "acquisition": [
+      "PoE2DBはAzmerian Rangesの祭壇にBerek’s Grip・Berek’s Pass・Berek’s Respiteを各1個入れるレシピを掲載している。コミュニティ記述に基づく入手案で、今回公式資料や実機では確認していない。[source:1]"
+    ],
+    "cautions": [
+      "掲載ツイスター系の装備候補。Spirit Walker原典はEndgameで交換する案を掲載している。全段階・全ツイスタービルドで必須とは扱わない。[source:3][source:4]",
+      "PoE1にも同名装備があるため、PoE2用の種別・効果を確認する。材料の確保、SSFでの入手、相場や出品は保証しない。",
+      "祭壇へ素材を投入する前に、ゲーム内で対象レシピ・必要素材・消費される個体と結果表示を確認する。今回の資料確認だけで作成成功を保証するものではない。[source:1]"
+    ],
+    "buildIds": [
+      "mercenary-twister-gemling",
+      "huntress-twister-spirit-walker"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: The Taming（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/The_Taming",
+        "checkedAt": "2026-10-10",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: The Taming",
+        "url": "https://poe2db.tw/jp/The_Taming",
+        "checkedAt": "2026-10-10",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "当サイト: ツイスター・ジェムリングの掲載装備方針",
+        "url": "https://poe2-build-navi-jp.github.io/builds/mercenary/twister-gemling/",
+        "checkedAt": "2026-10-06",
+        "supports": "既存掲載データのgearPrioritiesで採用を確認。今回、元ガイドの動的装備欄は再検証できていない。"
+      },
+      {
+        "name": "Pathofexile.gg: Spirit Walker Elemental Twister Build（0.5）",
+        "url": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
+        "checkedAt": "2026-10-10",
+        "supports": "Spirit Walker版のTwister採用、武器セット別運用。Endgame段階でThe Tamingへの交換案を掲載。2026-07-17公開の原典本文を確認。"
+      }
+    ]
+  },
+  {
+    "slug": "thrillsteel",
+    "kind": "equipment",
+    "name": "スリルスティール",
+    "englishName": "Thrillsteel",
+    "aliases": [],
+    "summary": "Onslaught（猛攻／オンスロート）を得るユニーク兜。シールドウォールの周回用候補として掲載。",
+    "effect": [
+      "装備中にOnslaughtを得る。Onslaughtはスキル速度と移動速度を高める。[source:1][source:3]",
+      "参照ビルド解説ではマップ開始時の周回速度を補う候補として紹介されている。[source:4]"
+    ],
+    "requirements": [
+      "Spired Greathelm（尖塔のグレートヘルム）をベースとする兜。装備する現物の必要レベル・筋力を確認する。[source:1][source:2]",
+      "今回のDB表示には通常品とRuneforging関連の条件が混在するため、単一の必要レベルを確定値として案内しない。[source:1][source:2][source:3]"
+    ],
+    "acquisition": [
+      "参照ガイドには購入して採用する案がある。トレード利用可能な環境で出品・個体の条件を確認する。特定ボスの確定ドロップや購入可能性は今回確認していない。[source:4]"
+    ],
+    "cautions": [
+      "速度を得る候補であり、ライフ・耐性などを補えるレア兜より常に優れるとは限らない。交換後の防御も確認する。",
+      "PoE1の同名装備のベース種・必要レベルを流用しない。SSFで確実に入手できる前提にしない。"
+    ],
+    "buildIds": [
+      "warrior-shield-wall-smith"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Thrillsteel（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Thrillsteel",
+        "checkedAt": "2026-10-10",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Thrillsteel",
+        "url": "https://poe2db.tw/jp/Thrillsteel",
+        "checkedAt": "2026-10-10",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Onslaught",
+        "url": "https://poe2db.tw/us/Onslaught",
+        "checkedAt": "2026-10-10",
+        "supports": "Onslaughtの定性的効果。Thrillsteel通常品の必要条件が他のDB表示と一致しないため数値は保留。"
+      },
+      {
+        "name": "Kami-labs: Shieldwall Smith Kitava（0.5）",
+        "url": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-guerrier-shieldwall-smith-kitava-saison-5/",
+        "checkedAt": "2026-10-10",
+        "supports": "マップ開始時のThrillsteel採用・購入案。2026-05-28公開のビルド解説であり、現行全ロードアウトの検証ではない。"
+      }
+    ]
+  }
+]

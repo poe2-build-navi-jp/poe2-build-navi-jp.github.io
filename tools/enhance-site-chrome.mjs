@@ -28,6 +28,7 @@ for(const file of await htmlFiles(root)){
   const link=`<a href="/beginner-builds/"${file===join(root,'beginner-builds/index.html')?' aria-current="page"':''}>初心者おすすめ</a>`;
   return `${start}${links.replace(/(<a\b[^>]*href="\/guides\/"[^>]*>[\s\S]*?<\/a>)/,`$1${link}`)}${end}`;
  });
+ html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>links.includes('href="/search/"')?nav:`${start}${links}<a href="/search/"${file===join(root,'search/index.html')?' aria-current="page"':''}>全体検索</a>${end}`);
  html=insertBlock(html,'</head>','site-icon',ICON_BLOCK);icons++;
  // Pages generated with their own footer keep it; the rest get the shared one after </main>.
  if(!html.includes('<footer class="site-footer">')){

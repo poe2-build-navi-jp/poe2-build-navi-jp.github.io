@@ -17,6 +17,8 @@ const seoPaths = JSON.parse(await read("data/seo-pages.json")).map((page) => pag
 // and dictionary/guide pages may be (re)listed after this runs, so include them explicitly.
 const noindexPaths = JSON.parse(await read("data/noindex.json")).paths.map((path) => path.replace(/^\//, ""));
 const contentPaths = [
+  "search/","name-index/","skills/","equipment/",
+  ...JSON.parse(await read("data/core-entities.json")).map(e=>`${e.kind==='skill'?'skills':'equipment'}/${e.slug}/`),
   ...JSON.parse(await read("data/dictionary.json")).map((term) => `dictionary/${term.slug}/`),
   ...JSON.parse(await read("data/guides.json")).map((guide) => `guides/${guide.slug}/`),
   ...JSON.parse(await read("data/strategy-guides.json")).map((guide) => `guides/${guide.slug}/`)

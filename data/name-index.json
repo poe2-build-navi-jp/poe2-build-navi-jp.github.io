@@ -1,0 +1,756 @@
+[
+  {
+    "slug": "bloated-miller",
+    "kind": "boss",
+    "name": "腐乱した粉屋",
+    "englishName": "The Bloated Miller",
+    "aliases": [
+      "粉屋",
+      "Bloated Miller"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "riverbank",
+    "summary": "川岸のボス。戦闘と撃破後の会話を確認。"
+  },
+  {
+    "slug": "beira",
+    "kind": "boss",
+    "name": "腐りし群れのベイラ",
+    "englishName": "Beira of the Rotten Pack",
+    "aliases": [
+      "ベイラ",
+      "Beira"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "riverbank",
+    "summary": "クリアフェルの任意ボスと恒久強化。"
+  },
+  {
+    "slug": "rust-king",
+    "kind": "boss",
+    "name": "錆の王",
+    "englishName": "The Rust King",
+    "aliases": [
+      "Rust King"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "tree-of-souls",
+    "summary": "赤き谷のクエスト品から魂の木へ進む手順。"
+  },
+  {
+    "slug": "draven",
+    "kind": "boss",
+    "name": "ドレイヴン",
+    "englishName": "Draven",
+    "aliases": [],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "cemetery",
+    "summary": "墓地で集める2つの鍵のうち、法務官の霊廟側。"
+  },
+  {
+    "slug": "asinia",
+    "kind": "boss",
+    "name": "アシニア",
+    "englishName": "Asinia",
+    "aliases": [],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "cemetery",
+    "summary": "墓地の鍵と、骨の檻への対処。"
+  },
+  {
+    "slug": "lachlann",
+    "kind": "boss",
+    "name": "ラクラン",
+    "englishName": "Lachlann",
+    "aliases": [],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "cemetery",
+    "summary": "2つの鍵を揃えた後の墓地の進行。"
+  },
+  {
+    "slug": "crowbell",
+    "kind": "boss",
+    "name": "クロウベル",
+    "englishName": "The Crowbell",
+    "aliases": [
+      "Crowbell"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "optional-rewards",
+    "summary": "狩場の寄り道とパッシブ報酬。"
+  },
+  {
+    "slug": "king-in-mists",
+    "kind": "boss",
+    "name": "霧の王",
+    "englishName": "The King in the Mists",
+    "aliases": [
+      "King in the Mists"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "optional-rewards",
+    "summary": "Act1のフレイソーンで得られる恒久強化。"
+  },
+  {
+    "slug": "candlemass",
+    "kind": "boss",
+    "name": "キャンドルマス",
+    "englishName": "Candlemass, the Living Rite",
+    "aliases": [
+      "Candlemass"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "optional-rewards",
+    "summary": "オガムの邸宅で確認する最大ライフの恒久強化。"
+  },
+  {
+    "slug": "executioner",
+    "kind": "boss",
+    "name": "処刑人",
+    "englishName": "The Executioner",
+    "aliases": [
+      "Executioner"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "village",
+    "summary": "オガム村の戦闘と、レイティス救出後の会話。"
+  },
+  {
+    "slug": "count-geonor",
+    "kind": "boss",
+    "name": "ジオノール伯爵",
+    "englishName": "Count Geonor",
+    "aliases": [
+      "ジオノール",
+      "Geonor"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "count-geonor",
+    "summary": "Act1最終戦の霧・冷気・突進への対処。"
+  },
+  {
+    "slug": "rathbreaker",
+    "kind": "boss",
+    "name": "ラスブレイカー",
+    "englishName": "Rathbreaker",
+    "aliases": [],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "caravan",
+    "summary": "ヴァスティリ郊外からキャラバンへ進む手順。"
+  },
+  {
+    "slug": "rudja",
+    "kind": "boss",
+    "name": "恐怖の技師、ルジャ",
+    "englishName": "Rudja, the Dread Engineer",
+    "aliases": [
+      "ルジャ",
+      "Rudja"
+    ],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "mawdun",
+    "summary": "採石場・鉱山の戦闘後にリスを救出する。"
+  },
+  {
+    "slug": "jamanra-gates",
+    "kind": "boss",
+    "name": "復活した王、ジャマンラ",
+    "englishName": "Jamanra, the Risen King",
+    "aliases": [
+      "ジャマンラ",
+      "Jamanra",
+      "ハラニの門"
+    ],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "halani",
+    "summary": "Act2の門で戦うジャマンラ。最終戦とは別の戦闘。"
+  },
+  {
+    "slug": "balbala",
+    "kind": "boss",
+    "name": "裏切り者、バルバラ",
+    "englishName": "Balbala, the Traitor",
+    "aliases": [
+      "バルバラ",
+      "Balbala"
+    ],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "ascendancy",
+    "summary": "バルバラのバリャを拾い、セケマの試練と祭壇まで進む。"
+  },
+  {
+    "slug": "rattlecage",
+    "kind": "boss",
+    "name": "大地を砕く者、ラトルケージ",
+    "englishName": "Rattlecage, the Earthbreaker",
+    "aliases": [
+      "ラトルケージ",
+      "Rattlecage"
+    ],
+    "guideSlug": "ascendancy-trials",
+    "sectionId": "sekhemas-bosses",
+    "summary": "セケマ第1階層の連続爆発・火山への対処。"
+  },
+  {
+    "slug": "kabala",
+    "kind": "boss",
+    "name": "大蛇の女王、カバラ",
+    "englishName": "Kabala, Constrictor Queen",
+    "aliases": [
+      "カバラ",
+      "Kabala"
+    ],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "permanent-rewards",
+    "summary": "ケスの任意ボスとパッシブ報酬。"
+  },
+  {
+    "slug": "tor-gul",
+    "kind": "boss",
+    "name": "冒涜者、トール・ガル",
+    "englishName": "Tor Gul, the Defiler",
+    "aliases": [
+      "トールガル",
+      "トール・ガル",
+      "Tor Gul"
+    ],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "deshar",
+    "summary": "デシャールの尖塔の戦闘と、撃破後のキャラバンの会話。"
+  },
+  {
+    "slug": "jamanra",
+    "kind": "boss",
+    "name": "アボミネーション、ジャマンラ",
+    "englishName": "Jamanra, the Abomination",
+    "aliases": [
+      "ジャマンラ",
+      "Jamanra"
+    ],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "jamanra",
+    "summary": "Act2最終戦の砂嵐・雷の線・竜巻への対処。"
+  },
+  {
+    "slug": "xyclucian",
+    "kind": "boss",
+    "name": "キメラ、ザイクルシアン",
+    "englishName": "Xyclucian, the Chimera",
+    "aliases": [
+      "ザイクルシアン",
+      "キメラ",
+      "Xyclucian",
+      "Chimera"
+    ],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "chimera",
+    "summary": "マシナリウムへ進むためのボスと試練用アイテム。"
+  },
+  {
+    "slug": "blackjaw",
+    "kind": "boss",
+    "name": "亡霊、黒き顎",
+    "englishName": "Blackjaw, the Remnant",
+    "aliases": [
+      "黒き顎",
+      "Blackjaw"
+    ],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "soul-core",
+    "summary": "マシナリウムの任意ボスと火耐性の恒久強化。"
+  },
+  {
+    "slug": "ignagduk",
+    "kind": "boss",
+    "name": "沼地の魔女、イグナグドゥク",
+    "englishName": "Ignagduk, the Bog Witch",
+    "aliases": [
+      "イグナグドゥク",
+      "Ignagduk"
+    ],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "permanent-rewards",
+    "summary": "アザク湿原のスピリット恒久強化。"
+  },
+  {
+    "slug": "ketzuli",
+    "kind": "boss",
+    "name": "太陽の大祭司、ケツーリ",
+    "englishName": "Ketzuli, High Priest of the Sun",
+    "aliases": [
+      "ケツーリ",
+      "Ketzuli"
+    ],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "kopec",
+    "summary": "コペク神殿の撃破後は儀式を完了する。"
+  },
+  {
+    "slug": "viper-napuatzi",
+    "kind": "boss",
+    "name": "ヴァイパー・ナプアツィ",
+    "englishName": "Viper Napuatzi",
+    "aliases": [
+      "ナプアツィ",
+      "ヴァイパーナプアツィ",
+      "Napuatzi"
+    ],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "past-viper",
+    "summary": "過去のウトザール。兵士の槍と毒の床への対処。"
+  },
+  {
+    "slug": "doryani-boss",
+    "kind": "boss",
+    "name": "宮廷魔術師、ドリヤニ",
+    "englishName": "Doryani, Royal Thaumaturge",
+    "aliases": [
+      "ドリヤニ",
+      "Doryani"
+    ],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "doryani",
+    "summary": "Act3最終戦の光線・爆発・追尾雷への対処。"
+  },
+  {
+    "slug": "scourge-of-skies",
+    "kind": "boss",
+    "name": "空のスカージ",
+    "englishName": "Scourge of the Skies",
+    "aliases": [
+      "スカージ"
+    ],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "shrike",
+    "summary": "モズの島のボスから主線の武器部品を探す。"
+  },
+  {
+    "slug": "prisoner",
+    "kind": "boss",
+    "name": "囚人",
+    "englishName": "The Prisoner",
+    "aliases": [
+      "Prisoner"
+    ],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "prison",
+    "summary": "放棄された監獄の奥、監禁独房での戦闘。"
+  },
+  {
+    "slug": "krutog",
+    "kind": "boss",
+    "name": "キンの領主、クルトォグ",
+    "englishName": "Krutog, Lord of Kin",
+    "aliases": [
+      "クルトォグ",
+      "Krutog"
+    ],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "kin",
+    "summary": "キンの島から火山地帯へ進む手順。"
+  },
+  {
+    "slug": "zarokh",
+    "kind": "boss",
+    "name": "Zarokh",
+    "englishName": "Zarokh",
+    "aliases": [
+      "ザロク"
+    ],
+    "guideSlug": "ascendancy-trials",
+    "sectionId": "sekhemas-bosses",
+    "summary": "セケマ第4階層。砂時計と名誉の変更点。"
+  },
+  {
+    "slug": "trialmaster-boss",
+    "kind": "boss",
+    "name": "試練の達人",
+    "englishName": "Trialmaster",
+    "aliases": [
+      "トライアルマスター"
+    ],
+    "guideSlug": "ascendancy-trials",
+    "sectionId": "trialmaster",
+    "summary": "混沌の試練の最終段階。3種類のFateと扉の先を確認。"
+  },
+  {
+    "slug": "arbiter-of-ash",
+    "kind": "boss",
+    "name": "灰のアービター",
+    "englishName": "Arbiter of Ash",
+    "aliases": [
+      "アービター"
+    ],
+    "guideSlug": "pinnacle-bosses",
+    "sectionId": "arbiter",
+    "summary": "円内への退避、剣の直線攻撃、炎の隙間を区別する。"
+  },
+  {
+    "slug": "xesht",
+    "kind": "boss",
+    "name": "一つの我ら、ゼシュト",
+    "englishName": "Xesht, We That Are One",
+    "aliases": [
+      "ゼシュト",
+      "Xesht"
+    ],
+    "guideSlug": "pinnacle-bosses",
+    "sectionId": "xesht",
+    "summary": "追尾する射撃と、頭上の手・床の影を見分ける。"
+  },
+  {
+    "slug": "tavakai",
+    "kind": "boss",
+    "name": "族長、タヴァカイ",
+    "englishName": "Tavakai, the Chieftain",
+    "aliases": [
+      "タヴァカイ",
+      "Tavakai",
+      "Tavakai, Tukohama Chieftain"
+    ],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "tavakai",
+    "summary": "Act4最終戦は3段階を通して進める。",
+    "sourceUrl": "https://poe2db.tw/us/Heart_of_the_Tribe",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "slug": "thane-wulfric",
+    "kind": "boss",
+    "name": "ウルフリック族長",
+    "englishName": "Thane Wulfric",
+    "aliases": [
+      "ウルフリック",
+      "Wulfric"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "ogham-finale",
+    "summary": "ホルテンの豪邸の2体。撃破後はレンリーへ報告。",
+    "sourceUrl": "https://poe2db.tw/us/Interlude_Curse_of_Holten",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "slug": "lady-elswyth",
+    "kind": "boss",
+    "name": "エルズウィス婦人",
+    "englishName": "Lady Elswyth",
+    "aliases": [
+      "エルズウィス",
+      "Elswyth"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "ogham-finale",
+    "summary": "ホルテンの豪邸の2体。残った相手の強化と骨の檻に注意。",
+    "sourceUrl": "https://poe2db.tw/us/Interlude_Curse_of_Holten",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "slug": "azmadi",
+    "kind": "boss",
+    "name": "ファリドゥンの王子、アズマディ",
+    "englishName": "Azmadi, the Faridun Prince",
+    "aliases": [
+      "アズマディ",
+      "Azmadi"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "qimah",
+    "summary": "ヴァスティリの最終戦。グランドバリャとジャドの会話まで進む。",
+    "sourceUrl": "https://poe2db.tw/us/Recruit_the_Maraketh",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "slug": "lythara",
+    "kind": "boss",
+    "name": "放浪の槍、リサラ",
+    "englishName": "Lythara, the Wayward Spear",
+    "aliases": [
+      "リサラ",
+      "Lythara",
+      "錯乱したアズメリ",
+      "Crazed Azmeri"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "kriar-lythara",
+    "summary": "クリアール村の主線ボス。頭蓋骨の回収と使用を確認。",
+    "sourceUrl": "https://poe2db.tw/us/Kriar_Village",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "slug": "zolin",
+    "kind": "boss",
+    "name": "血の司祭、ゾリン",
+    "englishName": "Zolin",
+    "aliases": [
+      "ゾリン"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "vaal-twins",
+    "summary": "クリアール最終戦の2体。撃破後にドリヤニを呼ぶ。",
+    "sourceUrl": "https://poe2db.tw/us/Recruit_the_Vaal",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "slug": "zelina",
+    "kind": "boss",
+    "name": "血の巫女、ゼリナ",
+    "englishName": "Zelina",
+    "aliases": [
+      "ゼリナ"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "vaal-twins",
+    "summary": "クリアール最終戦の2体。床の予兆と連撃を避ける。",
+    "sourceUrl": "https://poe2db.tw/us/Recruit_the_Vaal",
+    "checkedAt": "2026-10-10"
+  },
+  {
+    "slug": "mad-wolf-of-ogham",
+    "kind": "quest",
+    "name": "オガムの狂狼",
+    "englishName": "The Mad Wolf of Ogham",
+    "aliases": [
+      "Mad Wolf of Ogham"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "manor",
+    "summary": "オガムの邸宅からジオノールへ向かう主線。"
+  },
+  {
+    "slug": "ancient-vows",
+    "kind": "quest",
+    "name": "古代の誓い",
+    "englishName": "Ancient Vows",
+    "aliases": [],
+    "guideSlug": "act-2-walkthrough",
+    "sectionId": "permanent-rewards",
+    "summary": "2つの遺物をタイタンの谷へ持ち込み、報酬を選ぶ。"
+  },
+  {
+    "slug": "legacy-of-vaal",
+    "kind": "quest",
+    "name": "ヴァールの遺産",
+    "englishName": "Legacy of the Vaal",
+    "aliases": [],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "jungle",
+    "summary": "ジャングルの遺跡からコアを探すAct3の主線。"
+  },
+  {
+    "slug": "the-search",
+    "kind": "quest",
+    "name": "捜索",
+    "englishName": "The Search",
+    "aliases": [],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "island-order",
+    "summary": "Act4の武器部品集めとマティキ救出を分けて確認。"
+  },
+  {
+    "slug": "dark-mists",
+    "kind": "quest",
+    "name": "闇の霧",
+    "englishName": "Dark Mists",
+    "aliases": [],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "dark-mists",
+    "summary": "ケッジ湾から旅の終わりへ。救出後の会話も確認。"
+  },
+  {
+    "slug": "trial-of-ancestors",
+    "kind": "quest",
+    "name": "先祖の試練",
+    "englishName": "Trial of the Ancestors",
+    "aliases": [],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "hinekora",
+    "summary": "マティキ救出後、ヒネコラの目と死者の殿堂へ。"
+  },
+  {
+    "slug": "tribal-medicine",
+    "kind": "quest",
+    "name": "部族の薬",
+    "englishName": "Tribal Medicine",
+    "aliases": [
+      "鮫のヒレ"
+    ],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "shark-fin",
+    "summary": "鮫のヒレをカイマナへ渡す任意の進行。"
+  },
+  {
+    "slug": "runeseeker",
+    "kind": "quest",
+    "name": "ルーンシーカー",
+    "englishName": "The Runeseeker",
+    "aliases": [
+      "Runeseeker"
+    ],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "runeseeker",
+    "summary": "宝の地図4枚と、リーグごとの金床解放条件。"
+  },
+  {
+    "slug": "recruit-ezomytes",
+    "kind": "quest",
+    "name": "エゾマイトを仲間に加える",
+    "englishName": "Recruit the Ezomytes",
+    "aliases": [
+      "オガムの間幕"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "ogham-darkness",
+    "summary": "オガムで闇を通るための巨石群と会話の手順。"
+  },
+  {
+    "slug": "recruit-maraketh",
+    "kind": "quest",
+    "name": "マラケスを仲間に加える",
+    "englishName": "Recruit the Maraketh",
+    "aliases": [
+      "ヴァスティリの間幕"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "vastiri-sanctuary",
+    "summary": "聖域からガライの門へ進む間幕の主線。"
+  },
+  {
+    "slug": "recruit-vaal",
+    "kind": "quest",
+    "name": "ヴァールを仲間に加える",
+    "englishName": "Recruit the Vaal",
+    "aliases": [
+      "クリアールの間幕"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "kriar-lythara",
+    "summary": "クリアール村から山を越える間幕の主線。"
+  },
+  {
+    "slug": "clearing-the-way",
+    "kind": "quest",
+    "name": "道を掃討",
+    "englishName": "Clearing the Way",
+    "aliases": [],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "vastiri-bonuses",
+    "summary": "ヴァスティリの任意報酬を回収する。"
+  },
+  {
+    "slug": "howling-winds",
+    "kind": "quest",
+    "name": "吠える風",
+    "englishName": "Howling Winds",
+    "aliases": [
+      "氷の牙"
+    ],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "yeti",
+    "summary": "吠える洞窟で氷の牙を拾い、ヒルダへ報告。"
+  },
+  {
+    "slug": "siege-of-oriath",
+    "kind": "quest",
+    "name": "オリアスの包囲",
+    "englishName": "Siege of Oriath",
+    "aliases": [],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "after-interlude",
+    "summary": "間幕3地域完了後、特化の書と次の移動を確認。"
+  },
+  {
+    "slug": "hooded-one",
+    "kind": "npc",
+    "name": "フードをかぶった者",
+    "englishName": "The Hooded One",
+    "aliases": [
+      "Hooded One"
+    ],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "cemetery",
+    "summary": "墓地後の会話、鑑定とパッシブ振り直しの案内。"
+  },
+  {
+    "slug": "leitis",
+    "kind": "npc",
+    "name": "レイティス",
+    "englishName": "Leitis",
+    "aliases": [],
+    "guideSlug": "act-1-walkthrough",
+    "sectionId": "village",
+    "summary": "処刑人の撃破後に救出し、現地と野営地で会話する。"
+  },
+  {
+    "slug": "doryani",
+    "kind": "npc",
+    "name": "ドリヤニ",
+    "englishName": "Doryani",
+    "aliases": [],
+    "guideSlug": "act-3-walkthrough",
+    "sectionId": "after-act3",
+    "summary": "Act3クリア後の会話からAct4へ進む。"
+  },
+  {
+    "slug": "makoru",
+    "kind": "npc",
+    "name": "マコル",
+    "englishName": "Makoru",
+    "aliases": [],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "boat-charter",
+    "summary": "船の契約書を提出し、島へ行ける状態にする。"
+  },
+  {
+    "slug": "rog",
+    "kind": "npc",
+    "name": "ログ",
+    "englishName": "Rog",
+    "aliases": [],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "boat-charter",
+    "summary": "キングスマーチで船の契約書を受け取る。"
+  },
+  {
+    "slug": "rhodri",
+    "kind": "npc",
+    "name": "ロードリ",
+    "englishName": "Rhodri",
+    "aliases": [],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "excavation",
+    "summary": "発掘現場のイベント後に会話し、ナカヌへ向かう。"
+  },
+  {
+    "slug": "farrow",
+    "kind": "npc",
+    "name": "ファロウ",
+    "englishName": "Farrow",
+    "aliases": [],
+    "guideSlug": "act-4-walkthrough",
+    "sectionId": "runeseeker",
+    "summary": "ルーンシーカーの進行とリーグごとの解放条件。"
+  },
+  {
+    "slug": "hilda",
+    "kind": "npc",
+    "name": "ヒルダ",
+    "englishName": "Hilda",
+    "aliases": [],
+    "guideSlug": "interlude-walkthrough",
+    "sectionId": "yeti",
+    "summary": "氷の牙を届けて報酬の本を受け取り、使用する。"
+  },
+  {
+    "slug": "trialmaster",
+    "kind": "npc",
+    "name": "試練の達人（混沌の神殿入口）",
+    "englishName": "Trialmaster",
+    "aliases": [
+      "試練の達人",
+      "トライアルマスター"
+    ],
+    "guideSlug": "trial-of-chaos",
+    "sectionId": "retry",
+    "summary": "失敗したChimeral Inscribed Ultimatumの再入手先。"
+  }
+]
