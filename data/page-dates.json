@@ -3,6 +3,46 @@
   "hash": "72a642a3680fed46",
   "date": "2026-10-09"
  },
+ "/search/": {
+  "hash": "2f2fe3c7ed587c03",
+  "date": "2026-10-10"
+ },
+ "/name-index/": {
+  "hash": "986d0019a8e5e4d2",
+  "date": "2026-10-10"
+ },
+ "/skills/": {
+  "hash": "9c401699d4b1a42a",
+  "date": "2026-10-10"
+ },
+ "/equipment/": {
+  "hash": "4ecd4839474095d8",
+  "date": "2026-10-10"
+ },
+ "/skills/whirling-assault/": {
+  "hash": "02b78d50f7bdd415",
+  "date": "2026-10-10"
+ },
+ "/skills/shield-wall/": {
+  "hash": "038a7b9e2f6267de",
+  "date": "2026-10-10"
+ },
+ "/skills/twister/": {
+  "hash": "aa9d6d2f184e8424",
+  "date": "2026-10-10"
+ },
+ "/skills/spark/": {
+  "hash": "3b33c1ab52651a24",
+  "date": "2026-10-10"
+ },
+ "/equipment/the-taming/": {
+  "hash": "017ff2c59b69047c",
+  "date": "2026-10-10"
+ },
+ "/equipment/thrillsteel/": {
+  "hash": "2633bd33775cc4b8",
+  "date": "2026-10-10"
+ },
  "/builds/": {
   "hash": "7818a18e6dd604fa",
   "date": "2026-10-06"
@@ -32,7 +72,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "f4747033619d7d6c",
+  "hash": "ef234d78f72e8ca2",
   "date": "2026-10-10"
  },
  "/dictionary/": {
@@ -108,16 +148,16 @@
   "date": "2026-10-06"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "a58befa5e601e2f3",
-  "date": "2026-10-09"
+  "hash": "4abd1fd7828b2eb4",
+  "date": "2026-10-10"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "77354622f087d1d2",
-  "date": "2026-10-09"
+  "hash": "1e82b22968976480",
+  "date": "2026-10-10"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "d843bdf0f73a72f8",
-  "date": "2026-10-09"
+  "hash": "b45ac3dc6b61a789",
+  "date": "2026-10-10"
  },
  "/builds/sorceress/sand-and-fire/": {
   "hash": "1e3ba29c61683f91",
@@ -148,16 +188,16 @@
   "date": "2026-10-09"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "f073e22195f9d45a",
-  "date": "2026-10-09"
+  "hash": "f14a326a72680ed6",
+  "date": "2026-10-10"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "c6fbdb6329359d78",
-  "date": "2026-10-09"
+  "hash": "1da1248b8db0e409",
+  "date": "2026-10-10"
  },
  "/guides/skill-gems/": {
-  "hash": "fe67c9c212bd6bc5",
-  "date": "2026-10-09"
+  "hash": "3c5919b95dbf236b",
+  "date": "2026-10-10"
  },
  "/guides/support-gems/": {
   "hash": "765bdff5f3e253fd",
@@ -168,7 +208,7 @@
   "date": "2026-10-09"
  },
  "/guides/equipment-basics/": {
-  "hash": "8490bfb024326dab",
+  "hash": "4bdd9d9a7e6ee216",
   "date": "2026-10-10"
  },
  "/guides/resistance/": {

@@ -1,0 +1,61 @@
+/* Discovery-only rules. Existing guide filters and build UI are unchanged. */
+.site-discovery{background:#10151b;color:#e7e9ec;--discovery-muted:#b7c2ce;--discovery-line:#3c4856;--discovery-gold:#eed29d}
+.site-discovery .breadcrumbs{max-width:1120px;margin:auto;padding:20px 24px 0;color:var(--discovery-muted)}
+.site-discovery .breadcrumbs a{color:var(--discovery-muted)}
+.site-discovery [hidden]{display:none!important}
+.site-discovery .discovery-article{max-width:1120px;margin:0 auto;min-width:0}
+.site-discovery .discovery-heading h1{font:800 clamp(1.65rem,4vw,2.55rem)/1.4 system-ui,sans-serif;margin:12px 0}
+.site-discovery .discovery-heading .lead{font-size:.95rem;line-height:1.8;color:var(--discovery-muted);max-width:760px;margin:0 0 20px}
+.site-discovery .section-kicker{color:var(--discovery-gold);font-size:.68rem;letter-spacing:.08em}
+.site-discovery .discovery-shortcuts,.site-discovery .search-jump-links{display:flex;flex-wrap:wrap;gap:4px 20px;margin:16px 0}
+.site-discovery .discovery-shortcuts a,.site-discovery .search-jump-links a{color:var(--discovery-gold);font-size:.8rem;display:flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:3px}
+.site-discovery .site-search-controls{background:#18212b;border:1px solid var(--discovery-line);padding:18px;border-radius:5px}
+.site-discovery .site-search-controls label{display:block;color:#eef1f5;font-size:.86rem;font-weight:750;margin-bottom:8px}
+.site-discovery .site-search-row{display:flex;gap:8px;min-width:0}
+.site-discovery .site-search-row input{min-width:0;width:100%;flex:1 1 0;border:1px solid #6a7b8e;background:#0e151c;color:#f0f2f5;border-radius:4px;padding:10px 12px;font:inherit;font-size:16px;min-height:44px;box-sizing:border-box}
+.site-discovery .site-search-row input::placeholder{color:#acb8c5}
+.site-discovery button{font:inherit;font-size:.8rem;min-height:44px;max-width:100%;padding:8px 12px;background:#253240;color:#edf0f5;border:1px solid #647489;border-radius:4px;cursor:pointer}
+.site-discovery .site-search-row button{flex:0 0 auto}
+.site-discovery button:hover{border-color:var(--discovery-gold);background:#34424f}
+.site-discovery :is(a,button,input):focus-visible{outline:3px solid #f4d48e;outline-offset:3px}
+.site-discovery .search-help{color:var(--discovery-muted);font-size:.73rem;margin:8px 0 12px;line-height:1.7}
+.site-discovery .site-search-types{display:flex;flex-wrap:wrap;gap:7px}
+.site-discovery .site-search-types button{font-size:.76rem;background:#101923;border-color:#566579}
+.site-discovery .site-search-types button[aria-pressed=true]{background:#e7c588;color:#191c21;border-color:#e7c588;font-weight:800}
+.site-discovery .search-status{font-size:.8rem;color:#dde4ec;margin:12px 0 0;overflow-wrap:anywhere}
+.site-discovery .search-group,.site-discovery .name-group{margin-top:28px;scroll-margin-top:100px}
+.site-discovery .search-group h2,.site-discovery .name-group h2{font:750 1.15rem/1.5 system-ui,sans-serif;color:#f0f3f7;margin:0 0 12px;display:flex;align-items:center;gap:12px}
+.site-discovery .search-group-count{font-size:.76rem;font-weight:400;color:var(--discovery-muted)}
+.site-discovery .search-results-list,.site-discovery .name-index-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.site-discovery .search-result,.site-discovery .name-index-list>li{min-width:0;margin:0;border:1px solid var(--discovery-line);background:#18212b;border-radius:4px;overflow-wrap:anywhere}
+.site-discovery .search-result>a{display:flex;flex-direction:column;gap:6px;padding:16px;height:100%;box-sizing:border-box;color:#edf1f7;text-decoration:none}
+.site-discovery .search-result>a:hover{background:#222d38}
+.site-discovery .search-result strong{font-size:.97rem;line-height:1.65}
+.site-discovery .search-english{font-size:.79rem;color:var(--discovery-gold);line-height:1.6}
+.site-discovery .search-summary{font-size:.8rem;line-height:1.8;color:var(--discovery-muted)}
+.site-discovery .search-context{font-size:.72rem;color:var(--discovery-gold);margin-top:auto;padding-top:3px}
+.site-discovery .search-empty{background:#18212b;border:1px dashed #71829a;padding:24px;margin:22px 0;text-align:center}
+.site-discovery .search-empty h2{font-size:1.1rem}.site-discovery .search-empty p{font-size:.86rem;color:var(--discovery-muted)}
+.site-discovery .discovery-note,.site-discovery .search-category-pending{font-size:.79rem;line-height:1.9;color:var(--discovery-muted);margin:22px 0 0}
+.site-discovery .name-index-list>li{padding:16px;scroll-margin-top:100px}
+.site-discovery .name-index-link{display:flex;flex-direction:column;gap:4px;min-height:44px;color:#f0deb9;text-decoration:underline;text-underline-offset:3px}
+.site-discovery .name-index-link strong{font-size:.96rem;line-height:1.6}.site-discovery .name-index-link span{font-size:.81rem}
+.site-discovery .name-index-list p{font-size:.8rem;line-height:1.8;color:var(--discovery-muted);margin:8px 0 0}
+.site-discovery .name-index-list .name-aliases{font-size:.73rem;color:#ccd4de}
+.site-discovery .name-index-list .name-destination{font-size:.72rem;border-top:1px solid var(--discovery-line);padding-top:8px}
+@media(max-width:600px){
+ .site-discovery .breadcrumbs{padding:16px 18px 0;font-size:.75rem}
+ .site-discovery .discovery-article{padding:20px 18px 40px}
+ .site-discovery .discovery-heading h1{font-size:1.6rem}
+ .site-discovery .discovery-heading .lead{font-size:.82rem;margin-bottom:14px}
+ .site-discovery .site-search-controls{padding:13px}
+ .site-discovery .site-search-row{gap:6px}
+ .site-discovery .site-search-row input{padding:10px 8px}
+ .site-discovery .site-search-row button{font-size:.73rem;padding:8px}
+ .site-discovery .site-search-types{gap:6px}
+ .site-discovery .site-search-types button{padding:8px 10px;font-size:.73rem}
+ .site-discovery .search-results-list,.site-discovery .name-index-list{grid-template-columns:minmax(0,1fr)}
+ .site-discovery .discovery-shortcuts,.site-discovery .search-jump-links{gap:0 16px;margin:10px 0}
+ .site-discovery .discovery-shortcuts a,.site-discovery .search-jump-links a{font-size:.73rem}
+ .site-discovery .search-result>a,.site-discovery .name-index-list>li{padding:14px}
+}

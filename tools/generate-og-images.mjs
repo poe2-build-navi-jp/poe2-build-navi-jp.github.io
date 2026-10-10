@@ -38,7 +38,7 @@ for(const path of paths){
  if(heading.length>20&&q>0&&q<heading.length-1){sub=heading.slice(q+1);heading=heading.slice(0,q+1);}
  const build=builds.find(b=>path===`builds/${b.classSlug}/${b.slug}/`);
  const subtitle=build?`${build.className} / ${build.ascendancy}\nLv1〜Endgame育成`:sub.replace(/POE2ビルドナビ/,'').trim();
- const reuseImage=strategyGuides.find(g=>path===`guides/${g.slug}/`)?.ogImage;
+ const reuseImage=/^(skills|equipment|search|name-index)\//.test(path)?'/images/poe2/og/poe2-beginner-guide-og.webp':strategyGuides.find(g=>path===`guides/${g.slug}/`)?.ogImage;
  if(reuseImage&&!/^\/images\/poe2\/og\/[a-z0-9-]+\.webp$/.test(reuseImage))throw Error(`Invalid shared OG image: ${path}`);
  pages.push({path,file,heading,subtitle,reuseImage,category:category(path),image:reuseImage||`/images/poe2/og/${imageName(path)}`,alt:reuseImage?'PoE2攻略・育成ガイド':`${heading}${subtitle?`｜${subtitle.replace('\n','　')}`:''}`});
 }
