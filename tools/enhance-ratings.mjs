@@ -22,7 +22,10 @@ for(const b of builds){
  const path=`builds/${b.classSlug}/${b.slug}/index.html`;
  let html=await read(path);
  html=html.replace(/<!-- build-rating:start -->[\s\S]*?<!-- build-rating:end -->/g,'');
- html=html.replace('<section class="build-faq"',`${ratingSectionHtml(b)}<section class="build-faq"`);
+ // Above the practical Q&A when enhance-practical-help has added it, so the order is the same
+ // whichever of the two runs first.
+ const anchor=html.includes('<!-- practical-questions:start -->')?'<!-- practical-questions:start -->':'<section class="build-faq"';
+ html=html.replace(anchor,()=>`${ratingSectionHtml(b)}${anchor}`);
  const sources=b.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>${esc(s.type)}・確認日 ${esc(s.checkedAt)}</span></li>`).join('');
  html=html.replace(/(<ul id="source-list" class="source-list">)[\s\S]*?(<\/ul>)/,`$1${sources}$2`);
  html=html.replace(/<!-- review-schema:start -->[\s\S]*?<!-- review-schema:end -->/g,'');

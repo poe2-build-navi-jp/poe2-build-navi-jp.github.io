@@ -127,25 +127,15 @@ run `node tools/generate-build-data.mjs`; `npm test` fails while those files are
 1. Add the record to `data/builds.json` (8 `levelingStages`, sources, `ratingEvidence`, optional
    `reviewedFacts`) and its tags/Tier to `data/discovery.json`. Update the build counts in
    `scripts/test-site.mjs` and `scripts/test-build-ux.cjs`.
-2. Run the whole chain. `generate-pages.mjs` needs ImageMagick (`convert`) for the roadmap/OG art:
+2. Rebuild everything with one command (ImageMagick `convert` and a local Chromium are needed):
 
 ```
-node tools/generate-pages.mjs
-node tools/enhance-image-seo.mjs
-node tools/enhance-ratings.mjs
-node tools/enhance-build-ux.mjs
-node tools/enhance-version-notice.mjs
-node tools/enhance-one-hub.mjs
-node tools/enhance-term-links.mjs
-node tools/enhance-site-chrome.mjs
-node tools/generate-build-data.mjs
-node tools/generate-sitemap.mjs
-node tools/enhance-page-schema.mjs
-node tools/generate-og-images.mjs
-node tools/inject-analytics.mjs
-node tools/sync-asset-versions.mjs
+npm run build        # tools/build-site.mjs: generate-pages, the enhancers, sitemap, schema, OG, assets
 npm test && npm run test:contrast && npm run test:order
 ```
+
+`tools/build-site.mjs` holds the step order. `generate-pages.mjs` also runs the strategy articles,
+the guide hub and the guide search-intent pass, so a new generator goes into one of those two files.
 
 On an unchanged checkout this chain reproduces the committed pages exactly.
 

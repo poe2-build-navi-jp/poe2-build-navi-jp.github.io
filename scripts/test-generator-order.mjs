@@ -7,8 +7,8 @@ import {createHash} from 'node:crypto';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 const root=resolve(import.meta.dirname,'..');
-const tools=['enhance-page-schema','enhance-site-chrome','enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice','enhance-one-hub','enhance-term-links','generate-og-images','inject-analytics'];
-const orders=[tools,[...tools].reverse(),['inject-analytics','enhance-page-schema','generate-og-images','enhance-site-chrome','enhance-term-links','enhance-one-hub','enhance-build-ux','enhance-image-seo','enhance-version-notice','enhance-ratings'],['enhance-one-hub','enhance-build-ux','enhance-site-chrome','enhance-page-schema','inject-analytics','enhance-ratings','generate-og-images','enhance-image-seo','enhance-term-links','enhance-version-notice']];
+const tools=['enhance-practical-help','enhance-page-schema','enhance-site-chrome','enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice','enhance-one-hub','enhance-term-links','generate-og-images','inject-analytics'];
+const orders=[tools,[...tools].reverse(),['inject-analytics','enhance-practical-help','enhance-page-schema','generate-og-images','enhance-site-chrome','enhance-term-links','enhance-one-hub','enhance-build-ux','enhance-image-seo','enhance-version-notice','enhance-ratings'],['enhance-one-hub','enhance-build-ux','enhance-site-chrome','enhance-page-schema','inject-analytics','enhance-practical-help','enhance-ratings','generate-og-images','enhance-image-seo','enhance-term-links','enhance-version-notice']];
 const skip=new Set(['.git','node_modules']);
 async function htmlHashes(dir,base=dir,out=new Map()){
  for(const e of await readdir(dir,{withFileTypes:true})){

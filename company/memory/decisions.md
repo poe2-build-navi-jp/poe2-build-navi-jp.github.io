@@ -243,3 +243,10 @@
 - 新しく増えたガイド14ページに専用OG画像を生成（借り物の画像だった）。タイトル変更後の既存14枚も作り直し。
 - mobile-summary（jsdom）が属性の書き方を変えるため、生成順で結果が変わっていたのを修正。test:orderが再び通る。
 - 注意：generate-pages.mjs は現在「Home discovery section missing」で止まる（他セッションのトップ改修後）。全体再生成はできないため個別のenhancerで更新。
+
+## 2026-10-10 サイト全体の再生成を復旧（ユーザー依頼）
+- generate-pages.mjs が「Home discovery section missing」で停止していた。原因はenhance-practical-helpがトップの見出し文言で
+  位置を探していたこと（生成直後は「目的から探す」、enhance-build-ux後は「もっと詳しく探す」）。idで探すよう修正。
+- 攻略記事・攻略ハブ・検索意図の3ツールが再生成の手順に入っておらず、全体再生成で他セッションの記事が古い内容に戻っていた。
+  generate-pages.mjsに追加し、全手順を `npm run build`（tools/build-site.mjs）にまとめた。
+- 評価ブロックと実践Q&Aの並び、ガイドのArticleが実行順で変わっていたのを修正。クリーンな作業ツリーで2回実行して現行サイトと完全一致。
