@@ -4,8 +4,8 @@
   "date": "2026-10-09"
  },
  "/search/": {
-  "hash": "2f2fe3c7ed587c03",
-  "date": "2026-10-10"
+  "hash": "be1c6b0f1d25d754",
+  "date": "2026-10-12"
  },
  "/name-index/": {
   "hash": "986d0019a8e5e4d2",
@@ -72,8 +72,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "ef234d78f72e8ca2",
-  "date": "2026-10-10"
+  "hash": "975a8fbcc44eb674",
+  "date": "2026-10-12"
  },
  "/dictionary/": {
   "hash": "0db607327ee7e867",
@@ -148,52 +148,52 @@
   "date": "2026-10-06"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "4abd1fd7828b2eb4",
-  "date": "2026-10-10"
+  "hash": "fda54d3ddf0c8c36",
+  "date": "2026-10-12"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "1e82b22968976480",
-  "date": "2026-10-10"
+  "hash": "2220ca654ea06600",
+  "date": "2026-10-12"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "b45ac3dc6b61a789",
-  "date": "2026-10-10"
+  "hash": "a069bf1677ac4119",
+  "date": "2026-10-12"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "1e3ba29c61683f91",
-  "date": "2026-10-09"
+  "hash": "51caf45c0ebe7e7c",
+  "date": "2026-10-12"
  },
  "/builds/huntress/companion/": {
-  "hash": "80813ab6bc04b053",
-  "date": "2026-10-09"
+  "hash": "88b6a4c723a4f77e",
+  "date": "2026-10-12"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "cae59ef5f748c94d",
-  "date": "2026-10-09"
+  "hash": "b6faa965a0918140",
+  "date": "2026-10-12"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "8ee8a047d36df506",
-  "date": "2026-10-09"
+  "hash": "e4d3661807467846",
+  "date": "2026-10-12"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "f0d239545054b58b",
-  "date": "2026-10-09"
+  "hash": "8ea0e41fbbe17cd4",
+  "date": "2026-10-12"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "e9b8061b073c976b",
-  "date": "2026-10-09"
+  "hash": "babe7d62b9102cfb",
+  "date": "2026-10-12"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "cf9ffe8aa109c689",
-  "date": "2026-10-09"
+  "hash": "d664310a6717483f",
+  "date": "2026-10-12"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "f14a326a72680ed6",
-  "date": "2026-10-10"
+  "hash": "71c232c7324756f4",
+  "date": "2026-10-12"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "1da1248b8db0e409",
-  "date": "2026-10-10"
+  "hash": "55bf5f0f3928aafd",
+  "date": "2026-10-12"
  },
  "/guides/skill-gems/": {
   "hash": "3c5919b95dbf236b",
@@ -298,6 +298,10 @@
  "/guides/pinnacle-bosses/": {
   "hash": "79918a08da3dd6a7",
   "date": "2026-10-10"
+ },
+ "/guides/unique-gear/": {
+  "hash": "180074f426b8a575",
+  "date": "2026-10-12"
  },
  "/dictionary/build/": {
   "hash": "43ba11e22407abde",

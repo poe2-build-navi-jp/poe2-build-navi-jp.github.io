@@ -1,0 +1,8 @@
+.unique-gear-card{background:#fffdf8;border:1px solid #c7bfae;border-radius:10px;padding:1.1rem;margin:1rem 0;overflow-wrap:anywhere}
+.unique-gear-card h3{margin:0 0 .5rem;font-size:1.2rem;line-height:1.5}
+.unique-gear-card .unique-gear-context{font-weight:700;margin:.4rem 0}
+.unique-gear-basis{font-size:.85rem;color:#565f66}
+.unique-gear-card dl{margin:.8rem 0}
+.unique-gear-card dl>div{display:grid;grid-template-columns:145px minmax(0,1fr);gap:.8rem;padding:.7rem 0;border-top:1px solid #ded7ca}
+.unique-gear-card dt{font-weight:700}.unique-gear-card dd{margin:0;line-height:1.85}
+@media(max-width:600px){.unique-gear-card{padding:1rem}.unique-gear-card dl>div{grid-template-columns:1fr;gap:.25rem}.unique-gear-card h3{font-size:1.1rem}}
