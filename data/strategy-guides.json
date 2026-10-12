@@ -4887,31 +4887,57 @@
       "The Taming",
       "Darkness Enthroned",
       "Thrillsteel",
-      "Headhunter",
       "Nascent Hope",
       "Enfolding Dawn",
       "Tyranny’s Grip",
       "Trenchtimbre",
       "Heart of the Well",
       "Against the Darkness",
-      "Headhunter",
       "Bones of Ullr",
-      "Darkness Enthroned",
       "Ventor’s Gamble",
       "Nightscale",
-      "Headhunter",
       "Heroic Tragedy",
       "Atziri’s Disdain",
       "Redemption",
-      "Headhunter",
       "Morior Invictus",
       "Skysliver",
-      "The Taming",
       "Guiding Palm of the Eye",
       "Maligaro’s Virtuosity",
       "Cloak of Defiance",
       "Kalandra’s Touch",
-      "Mageblood"
+      "Mageblood",
+      "ヘッドハンター",
+      "創造力",
+      "シャヴロンの鞄",
+      "テイミング",
+      "タングルタン",
+      "アジスの標",
+      "即位した闇",
+      "スリルスティール",
+      "希望の芽吹き",
+      "包み込む夜明け",
+      "圧政の手",
+      "トレンチティンバー",
+      "井戸の心臓",
+      "闇との対立",
+      "ウルルの骨",
+      "ヴェンターのギャンブル",
+      "ナイトスケール",
+      "英雄の悲劇",
+      "アッツィリの軽蔑",
+      "贖罪",
+      "不屈なる者として死す",
+      "スカイシルバー",
+      "目の導きの掌",
+      "マリガロの妙技",
+      "反抗のクローク",
+      "カランドラの接触",
+      "メイジブラッド",
+      "オルロスの決意",
+      "兄弟の証",
+      "キツネのアイドル",
+      "エラミアのアイドル",
+      "ララケシュのタリスマン"
     ],
     "actions": [
       "目次から、使っているビルドを選ぶ",
@@ -4925,7 +4951,7 @@
         "heading": "「最強ユニーク」は構成と目的で変わる",
         "paragraphs": [
           "万能の1位を決める同条件の比較実測はありません。ここでは原典で採用された装備、原典が挙げる候補、効果から検討する候補を区別します。掲載ビルドの主力・防御・Spiritを満たす装備を選ぶための比較です。",
-          "育成・周回・ボス戦で必要な効果は違います。以下の「段階」は原典の構成名であり、同じLvになれば自動的に装備できるという意味ではありません。装備名は購入時に照合しやすい英語で掲載しています。"
+          "育成・周回・ボス戦で必要な効果は違います。以下の「段階」は原典の構成名であり、同じLvになれば自動的に装備できるという意味ではありません。装備名はPoE2DB日本語ページの装備データ本文で確認した日本語名と、取引検索・海外ガイドと照合できる英語名を併記しています。"
         ]
       },
       {
@@ -4959,7 +4985,8 @@
               29,
               2
             ],
-            "basis": "原典で候補として紹介"
+            "basis": "原典で候補として紹介",
+            "nameJa": "創造力"
           },
           {
             "name": "Shavronne’s Satchel",
@@ -4973,7 +5000,8 @@
               29,
               3
             ],
-            "basis": "原典で候補として紹介"
+            "basis": "原典で候補として紹介",
+            "nameJa": "シャヴロンの鞄"
           },
           {
             "name": "Headhunter",
@@ -4987,7 +5015,8 @@
               29,
               1
             ],
-            "basis": "原典で候補として紹介"
+            "basis": "原典で候補として紹介",
+            "nameJa": "ヘッドハンター"
           }
         ],
         "sourceRefs": [
@@ -5008,14 +5037,15 @@
             "phase": "Atlas Progression〜Early Endgame",
             "purpose": "会心への移行を支える組合せ",
             "conditions": "会心ツリーと、他部位の追加ダメージを用意。",
-            "tradeoff": "Tangletongue自体のDPSが低いので、2品だけの交換で火力向上を保証しない。",
+            "tradeoff": "タングルタン（Tangletongue）自体のDPSが低いので、2品だけの交換で火力向上を保証しない。",
             "rareAlternative": "高ダメージのレア槍と、Spirit・能力値のレアアミュレット",
             "sourceRefs": [
               30,
               5,
               6
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "タングルタン ＋ アジスの標"
           },
           {
             "name": "The Taming",
@@ -5029,21 +5059,25 @@
               30,
               4
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "テイミング"
           },
           {
             "name": "Darkness Enthroned",
             "slot": "ベルト",
             "phase": "Early Endgame",
             "purpose": "ソケット効果でスピード・構成条件を補助する",
-            "conditions": "原典が指定する胴扱いのソケット効果版と、Fox Idol・Idol of Eramirの組合せ。",
+            "conditions": "原典が指定する胴扱いのソケット効果版と、キツネのアイドル（Fox Idol）・エラミアのアイドル（Idol of Eramir）の組合せ。",
             "tradeoff": "兜扱いの版などを同じ効果とみなさない。ソケット品も必要。",
             "rareAlternative": "耐性・能力値のレアベルトで現行の育成構成を維持",
             "sourceRefs": [
               30,
-              7
+              7,
+              47,
+              48
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "即位した闇"
           }
         ],
         "sourceRefs": [
@@ -5070,7 +5104,8 @@
               31,
               8
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "スリルスティール"
           },
           {
             "name": "Headhunter",
@@ -5084,7 +5119,8 @@
               31,
               1
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ヘッドハンター"
           }
         ],
         "sourceRefs": [
@@ -5111,7 +5147,8 @@
               32,
               9
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "希望の芽吹き"
           },
           {
             "name": "Enfolding Dawn",
@@ -5125,7 +5162,8 @@
               33,
               10
             ],
-            "basis": "効果から検討する候補・掲載構成の採用未確認"
+            "basis": "効果から検討する候補・掲載構成の採用未確認",
+            "nameJa": "包み込む夜明け"
           }
         ],
         "sourceRefs": [
@@ -5138,7 +5176,7 @@
         "heading": "相棒スピリットウォーカーのユニーク装備",
         "buildId": "huntress-companion",
         "paragraphs": [
-          "メインハンドのダメージを相棒へ渡すThe Catha’s Balanceが前提。MobalyticsのRed Maps／EndgameとPoE Vaultの2武器比較を照合しました。"
+          "メインハンドのダメージを相棒へ渡すThe Catha's Balanceが前提。MobalyticsのRed Maps／EndgameとPoE Vaultの2武器比較を照合しました。"
         ],
         "gearOptions": [
           {
@@ -5153,14 +5191,15 @@
               34,
               11
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "圧政の手"
           },
           {
             "name": "Trenchtimbre",
             "slot": "片手メイス",
             "phase": "Red Maps／Endgame",
             "purpose": "ミニオンレベルと武器ダメージを使う",
-            "conditions": "PoE Vault版は1回強化。The Catha’s Balanceと必要能力値を確認。",
+            "conditions": "PoE Vault版は1回強化。The Catha's Balanceと必要能力値を確認。",
             "tradeoff": "同原典はTyrannyより能力値の負担が増すと説明。現物の強化状態・ロールで比較。",
             "rareAlternative": "相棒の現行段階で指定されたレア武器／セプター",
             "sourceRefs": [
@@ -5168,7 +5207,8 @@
               35,
               12
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "トレンチティンバー"
           }
         ],
         "sourceRefs": [
@@ -5196,7 +5236,8 @@
               36,
               13
             ],
-            "basis": "原典で候補として紹介"
+            "basis": "原典で候補として紹介",
+            "nameJa": "井戸の心臓"
           },
           {
             "name": "Against the Darkness",
@@ -5210,7 +5251,8 @@
               36,
               14
             ],
-            "basis": "原典で候補として紹介"
+            "basis": "原典で候補として紹介",
+            "nameJa": "闇との対立"
           },
           {
             "name": "Headhunter",
@@ -5224,7 +5266,8 @@
               36,
               1
             ],
-            "basis": "原典で候補として紹介"
+            "basis": "原典で候補として紹介",
+            "nameJa": "ヘッドハンター"
           }
         ],
         "sourceRefs": [
@@ -5251,21 +5294,24 @@
               37,
               15
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ウルルの骨"
           },
           {
             "name": "Darkness Enthroned",
             "slot": "ベルト",
             "phase": "Powered Zealot Endgame",
             "purpose": "ソケット効果で予約効率を補助する",
-            "conditions": "この原典は兜扱いのソケット効果版とTalisman of Ralakeshを指定。",
+            "conditions": "この原典は兜扱いのソケット効果版とララケシュのタリスマン（Talisman of Ralakesh）を指定。",
             "tradeoff": "胴扱いなど他のタイプを代用しない。購入時に現物の文言を確認。",
             "rareAlternative": "ライフ・必要能力値・耐性のレアベルト",
             "sourceRefs": [
               37,
-              7
+              7,
+              49
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "即位した闇"
           },
           {
             "name": "Ventor’s Gamble",
@@ -5279,7 +5325,8 @@
               37,
               16
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ヴェンターのギャンブル"
           }
         ],
         "sourceRefs": [
@@ -5292,7 +5339,7 @@
         "heading": "植物オラクルのユニーク装備",
         "buildId": "druid-plant-oracle",
         "paragraphs": [
-          "原典のCheap、Expensive、Mirror Tierを区別。Nightscaleは安価型の装備欄で確認できましたが、マナ維持の条件を見落とさないでください。"
+          "原典のCheap、Expensive、Mirror Tierを区別。ナイトスケール（Nightscale）は安価型の装備欄で確認できましたが、マナ維持の条件を見落とさないでください。"
         ],
         "gearOptions": [
           {
@@ -5307,7 +5354,8 @@
               39,
               17
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ナイトスケール"
           },
           {
             "name": "Headhunter",
@@ -5321,7 +5369,8 @@
               39,
               1
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ヘッドハンター"
           },
           {
             "name": "Heroic Tragedy",
@@ -5335,7 +5384,8 @@
               39,
               18
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "英雄の悲劇"
           }
         ],
         "sourceRefs": [
@@ -5347,7 +5397,7 @@
         "heading": "ED・コンテージョン リッチのユニーク装備",
         "buildId": "witch-ed-contagion-lich",
         "paragraphs": [
-          "DEADRABB1Tの防御構成ではAtziri’s DisdainをSoulless Form・Eternal Life・Heavy Bufferなどと組み合わせます。兜だけで同じ耐久を得る案内ではありません。"
+          "DEADRABB1Tの防御構成ではアッツィリの軽蔑（Atziri's Disdain）をSoulless Form・Eternal Life・Heavy Bufferなどと組み合わせます。兜だけで同じ耐久を得る案内ではありません。"
         ],
         "gearOptions": [
           {
@@ -5362,7 +5412,8 @@
               40,
               19
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "アッツィリの軽蔑"
           }
         ],
         "sourceRefs": [
@@ -5374,7 +5425,7 @@
         "heading": "グレネード・ジェムリングのユニーク装備",
         "buildId": "mercenary-grenade-gemling",
         "paragraphs": [
-          "DEADRABB1T版はMid EndgameにRedemption、Uber EndgameにHeadhunterを採用。Morior Invictusは別のPoE Vault版の候補なので、構成全体を確認します。"
+          "DEADRABB1T版はMid Endgameに贖罪（Redemption）、Uber Endgameにヘッドハンター（Headhunter）を採用。不屈なる者として死す（Morior Invictus）は別のPoE Vault版の候補なので、構成全体を確認します。"
         ],
         "gearOptions": [
           {
@@ -5389,7 +5440,8 @@
               41,
               20
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "贖罪"
           },
           {
             "name": "Headhunter",
@@ -5403,12 +5455,13 @@
               41,
               1
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ヘッドハンター"
           },
           {
             "name": "Morior Invictus",
             "slot": "胴",
-            "phase": "別原典のRedemption Endgame",
+            "phase": "別原典の贖罪（Redemption） Endgame",
             "purpose": "ソケットに応じた防御・耐性・Spiritを揃える",
             "conditions": "PoE Vault版が指定するModの組合せと、実際に埋めるソケットを確認。",
             "tradeoff": "全ての同名個体に同じModは付かない。Berserkのライフ維持も別に必要。",
@@ -5417,7 +5470,8 @@
               42,
               21
             ],
-            "basis": "別原典の専用構成で採用"
+            "basis": "別原典の専用構成で採用",
+            "nameJa": "不屈なる者として死す"
           }
         ],
         "sourceRefs": [
@@ -5445,7 +5499,8 @@
               43,
               22
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "スカイシルバー"
           },
           {
             "name": "The Taming",
@@ -5459,7 +5514,8 @@
               43,
               4
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "テイミング"
           },
           {
             "name": "Guiding Palm of the Eye",
@@ -5473,7 +5529,8 @@
               43,
               23
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "目の導きの掌"
           }
         ],
         "sourceRefs": [
@@ -5500,7 +5557,8 @@
               44,
               24
             ],
-            "basis": "原典の該当構成で採用"
+            "basis": "原典の該当構成で採用",
+            "nameJa": "マリガロの妙技"
           },
           {
             "name": "Cloak of Defiance",
@@ -5514,7 +5572,8 @@
               45,
               25
             ],
-            "basis": "別原典の任意候補"
+            "basis": "別原典の任意候補",
+            "nameJa": "反抗のクローク"
           },
           {
             "name": "Kalandra’s Touch",
@@ -5528,7 +5587,8 @@
               45,
               26
             ],
-            "basis": "別原典の専用構成で採用"
+            "basis": "別原典の専用構成で採用",
+            "nameJa": "カランドラの接触"
           },
           {
             "name": "Mageblood",
@@ -5542,7 +5602,8 @@
               45,
               27
             ],
-            "basis": "別原典の専用構成で採用"
+            "basis": "別原典の専用構成で採用",
+            "nameJa": "メイジブラッド"
           }
         ],
         "sourceRefs": [
@@ -5554,13 +5615,13 @@
         "id": "avoid-mistakes",
         "heading": "古い推奨・装備名の取り違えを避ける",
         "paragraphs": [
-          "Olroth’s Resolveを「即時ライフ回復」のフラスコとして推奨する説明は、本記事では採用しません。PoE2DBの0.5.1履歴はRunic Wardの再生と効果終了時のGuardへ変わったと記録しており、掲載原典の旧説明とは条件が異なります。[source:28]",
-          "同名装備の変種・強化状態・ジュエルのロールを区別します。Rakiata’s FlowやAtalui’s Bloodlettingはサポートジェム、Obliterator Bowなどは武器ベースで、ユニーク装備の購入リストと混ぜません。"
+          "オルロスの決意（Olroth's Resolve）を「即時ライフ回復」のフラスコとして推奨する説明は、本記事では採用しません。PoE2DBの0.5.1履歴はRunic Wardの再生と効果終了時のGuardへ変わったと記録しており、掲載原典の旧説明とは条件が異なります。[source:28]",
+          "同名装備の変種・強化状態・ジュエルのロールを区別します。Rakiata's FlowやAtalui's Bloodlettingはサポートジェム、Obliterator Bowなどは武器ベースで、ユニーク装備の購入リストと混ぜません。"
         ],
         "bullets": [
-          "The Tamingは指輪、Beacon of Azisはアミュレット。",
-          "Darkness Enthronedの「胴扱い」「兜扱い」はソケット効果の種類。装備する部位はベルト。",
-          "Bones of Ullrの効果はアンデッドを生成するスキルが対象。ジンなど全ての召喚へ拡張しない。",
+          "テイミング（The Taming）は指輪、アジスの標（Beacon of Azis）はアミュレット。",
+          "即位した闇（Darkness Enthroned）の「胴扱い」「兜扱い」はソケット効果の種類。装備する部位はベルト。",
+          "ウルルの骨（Bones of Ullr）の効果はアンデッドを生成するスキルが対象。ジンなど全ての召喚へ拡張しない。",
           "本記事は原典と装備データの照合。運営者の実機プレイや同条件DPS測定ではありません。"
         ],
         "sourceRefs": [
@@ -5574,172 +5635,200 @@
     ],
     "sources": [
       {
-        "name": "PoE2DB: Headhunter",
+        "name": "PoE2DB: ヘッドハンター（Headhunter）",
         "url": "https://poe2db.tw/us/Headhunter",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Headhunter"
       },
       {
-        "name": "PoE2DB: Ingenuity",
+        "name": "PoE2DB: 創造力（Ingenuity）",
         "url": "https://poe2db.tw/us/Ingenuity",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Ingenuity"
       },
       {
-        "name": "PoE2DB: Shavronne's Satchel",
+        "name": "PoE2DB: シャヴロンの鞄（Shavronne's Satchel）",
         "url": "https://poe2db.tw/us/Shavronnes_Satchel",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Shavronnes_Satchel"
       },
       {
-        "name": "PoE2DB: The Taming",
+        "name": "PoE2DB: テイミング（The Taming）",
         "url": "https://poe2db.tw/us/The_Taming",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/The_Taming"
       },
       {
-        "name": "PoE2DB: Tangletongue",
+        "name": "PoE2DB: タングルタン（Tangletongue）",
         "url": "https://poe2db.tw/us/Tangletongue",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Tangletongue"
       },
       {
-        "name": "PoE2DB: Beacon of Azis",
+        "name": "PoE2DB: アジスの標（Beacon of Azis）",
         "url": "https://poe2db.tw/us/Beacon_of_Azis",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Beacon_of_Azis"
       },
       {
-        "name": "PoE2DB: Darkness Enthroned",
+        "name": "PoE2DB: 即位した闇（Darkness Enthroned）",
         "url": "https://poe2db.tw/us/Darkness_Enthroned",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Darkness_Enthroned"
       },
       {
-        "name": "PoE2DB: Thrillsteel",
+        "name": "PoE2DB: スリルスティール（Thrillsteel）",
         "url": "https://poe2db.tw/us/Thrillsteel",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Thrillsteel"
       },
       {
-        "name": "PoE2DB: Nascent Hope",
+        "name": "PoE2DB: 希望の芽吹き（Nascent Hope）",
         "url": "https://poe2db.tw/us/Nascent_Hope",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Nascent_Hope"
       },
       {
-        "name": "PoE2DB: Enfolding Dawn",
+        "name": "PoE2DB: 包み込む夜明け（Enfolding Dawn）",
         "url": "https://poe2db.tw/us/Enfolding_Dawn",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Enfolding_Dawn"
       },
       {
-        "name": "PoE2DB: Tyranny's Grip",
+        "name": "PoE2DB: 圧政の手（Tyranny's Grip）",
         "url": "https://poe2db.tw/us/Tyrannys_Grip",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Tyrannys_Grip"
       },
       {
-        "name": "PoE2DB: Trenchtimbre",
+        "name": "PoE2DB: トレンチティンバー（Trenchtimbre）",
         "url": "https://poe2db.tw/us/Trenchtimbre",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Trenchtimbre"
       },
       {
-        "name": "PoE2DB: Heart of the Well",
+        "name": "PoE2DB: 井戸の心臓（Heart of the Well）",
         "url": "https://poe2db.tw/us/Heart_of_the_Well",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Heart_of_the_Well"
       },
       {
-        "name": "PoE2DB: Against the Darkness",
+        "name": "PoE2DB: 闇との対立（Against the Darkness）",
         "url": "https://poe2db.tw/us/Against_the_Darkness",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Against_the_Darkness"
       },
       {
-        "name": "PoE2DB: Bones of Ullr",
+        "name": "PoE2DB: ウルルの骨（Bones of Ullr）",
         "url": "https://poe2db.tw/us/Bones_of_Ullr",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Bones_of_Ullr"
       },
       {
-        "name": "PoE2DB: Ventor's Gamble",
+        "name": "PoE2DB: ヴェンターのギャンブル（Ventor's Gamble）",
         "url": "https://poe2db.tw/us/Ventors_Gamble",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Ventors_Gamble"
       },
       {
-        "name": "PoE2DB: Nightscale",
+        "name": "PoE2DB: ナイトスケール（Nightscale）",
         "url": "https://poe2db.tw/us/Nightscale",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Nightscale"
       },
       {
-        "name": "PoE2DB: Heroic Tragedy",
+        "name": "PoE2DB: 英雄の悲劇（Heroic Tragedy）",
         "url": "https://poe2db.tw/us/Heroic_Tragedy",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Heroic_Tragedy"
       },
       {
-        "name": "PoE2DB: Atziri's Disdain",
+        "name": "PoE2DB: アッツィリの軽蔑（Atziri's Disdain）",
         "url": "https://poe2db.tw/us/Atziris_Disdain",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Atziris_Disdain"
       },
       {
-        "name": "PoE2DB: Redemption",
+        "name": "PoE2DB: 贖罪（Redemption）",
         "url": "https://poe2db.tw/us/Redemption",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Redemption"
       },
       {
-        "name": "PoE2DB: Morior Invictus",
+        "name": "PoE2DB: 不屈なる者として死す（Morior Invictus）",
         "url": "https://poe2db.tw/us/Morior_Invictus",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Morior_Invictus"
       },
       {
-        "name": "PoE2DB: Skysliver",
+        "name": "PoE2DB: スカイシルバー（Skysliver）",
         "url": "https://poe2db.tw/us/Skysliver",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Skysliver"
       },
       {
-        "name": "PoE2DB: Guiding Palm of the Eye",
+        "name": "PoE2DB: 目の導きの掌（Guiding Palm of the Eye）",
         "url": "https://poe2db.tw/us/Guiding_Palm_of_the_Eye",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Guiding_Palm_of_the_Eye"
       },
       {
-        "name": "PoE2DB: Maligaro's Virtuosity",
+        "name": "PoE2DB: マリガロの妙技（Maligaro's Virtuosity）",
         "url": "https://poe2db.tw/us/Maligaros_Virtuosity",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Maligaros_Virtuosity"
       },
       {
-        "name": "PoE2DB: Cloak of Defiance",
+        "name": "PoE2DB: 反抗のクローク（Cloak of Defiance）",
         "url": "https://poe2db.tw/us/Cloak_of_Defiance",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Cloak_of_Defiance"
       },
       {
-        "name": "PoE2DB: Kalandra's Touch",
+        "name": "PoE2DB: カランドラの接触（Kalandra's Touch）",
         "url": "https://poe2db.tw/us/Kalandras_Touch",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Kalandras_Touch"
       },
       {
-        "name": "PoE2DB: Mageblood",
+        "name": "PoE2DB: メイジブラッド（Mageblood）",
         "url": "https://poe2db.tw/us/Mageblood",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Mageblood"
       },
       {
-        "name": "PoE2DB: Olroth's Resolve",
+        "name": "PoE2DB: オルロスの決意（Olroth's Resolve）",
         "url": "https://poe2db.tw/us/Olroths_Resolve",
         "checkedAt": "2026-10-12",
-        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。"
+        "supports": "装備種別と効果・変種・変更履歴。データベースの個別Modの「Req. level」は装備要求Lvとして使わず、通常品とRuneforgedの表示を区別。 日本語名は日本語ページの装備データ本文で確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Olroths_Resolve"
       },
       {
         "name": "Scorpius: Whirling Assault（0.5.5）",
@@ -5842,9 +5931,37 @@
         "url": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-comet-stormweaver-mana-stacking-endgame-build",
         "checkedAt": "2026-10-12",
         "supports": "Unique Items・Gearing。Cloak of Defianceは任意、Kalandra’s Touchは反対側のマナ指輪、MagebloodはLegacyの組合せを指定。DotGGの杖型と混ぜない。"
+      },
+      {
+        "name": "PoE2DB: 兄弟の証（Call of the Brotherhood）",
+        "url": "https://poe2db.tw/us/Call_of_the_Brotherhood",
+        "japaneseUrl": "https://poe2db.tw/jp/Call_of_the_Brotherhood",
+        "checkedAt": "2026-10-12",
+        "supports": "本文で言及するアイテムの日本語名を日本語ページのデータ本文で確認。今回、採用条件や効果の再評価は行っていません。"
+      },
+      {
+        "name": "PoE2DB: キツネのアイドル（Fox Idol）",
+        "url": "https://poe2db.tw/us/Fox_Idol",
+        "japaneseUrl": "https://poe2db.tw/jp/Fox_Idol",
+        "checkedAt": "2026-10-12",
+        "supports": "本文で言及するアイテムの日本語名を日本語ページのデータ本文で確認。今回、採用条件や効果の再評価は行っていません。"
+      },
+      {
+        "name": "PoE2DB: エラミアのアイドル（Idol of Eramir）",
+        "url": "https://poe2db.tw/us/Idol_of_Eramir",
+        "japaneseUrl": "https://poe2db.tw/jp/Idol_of_Eramir",
+        "checkedAt": "2026-10-12",
+        "supports": "本文で言及するアイテムの日本語名を日本語ページのデータ本文で確認。今回、採用条件や効果の再評価は行っていません。"
+      },
+      {
+        "name": "PoE2DB: ララケシュのタリスマン（Talisman of Ralakesh）",
+        "url": "https://poe2db.tw/us/Talisman_of_Ralakesh",
+        "japaneseUrl": "https://poe2db.tw/jp/Talisman_of_Ralakesh",
+        "checkedAt": "2026-10-12",
+        "supports": "本文で言及するアイテムの日本語名を日本語ページのデータ本文で確認。今回、採用条件や効果の再評価は行っていません。"
       }
     ],
-    "scope": "2026-10-12に各原典の本文・公開HTML内の構成別装備データとPoE2DBを照合。原典採用品・別原典の候補・効果から検討する候補を区別しています。ゲーム内実測、全装備の同条件比較、相場調査、各ビルドの育成8段階の全面再検証は行っていません。Maxrollは取得できなかったため今回の採用確認には使用していません。装備データの仕様と、原典作者による推奨・運営者の選び方を分けて記載。文章や画像の転載はしません。",
+    "scope": "2026-10-12に各原典の本文・公開HTML内の構成別装備データとPoE2DBを照合。原典採用品・別原典の候補・効果から検討する候補を区別しています。ゲーム内実測、全装備の同条件比較、相場調査、各ビルドの育成8段階の全面再検証は行っていません。Maxrollは取得できなかったため今回の採用確認には使用していません。装備データの仕様と、原典作者による推奨・運営者の選び方を分けて記載。文章や画像の転載はしません。 日本語名はPoE2DB日本語ページの装備データ本文で照合。検索結果のタイトルに同名パッシブが混ざる場合は、装備種別とアイコンを確認して区別しています。",
     "faq": [
       {
         "question": "全ビルドで一番強いユニークはどれ？",

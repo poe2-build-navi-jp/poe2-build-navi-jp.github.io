@@ -1,5 +1,6 @@
 .unique-gear-card{background:#fffdf8;border:1px solid #c7bfae;border-radius:10px;padding:1.1rem;margin:1rem 0;overflow-wrap:anywhere}
 .unique-gear-card h3{margin:0 0 .5rem;font-size:1.2rem;line-height:1.5}
+.unique-gear-name-en{display:block;font-size:.9em;font-weight:400;color:#565f66;margin-top:.15rem}
 .unique-gear-card .unique-gear-context{font-weight:700;margin:.4rem 0}
 .unique-gear-basis{font-size:.85rem;color:#565f66}
 .unique-gear-card dl{margin:.8rem 0}
