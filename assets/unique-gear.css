@@ -5,6 +5,9 @@
 .unique-gear-summary li{border:1px solid #c7bfae;border-radius:10px;padding:1rem;overflow-wrap:anywhere;background:#fffdf8}
 .unique-gear-summary h3{font-size:1rem;line-height:1.6;margin:0 0 .5rem}.unique-gear-summary p{margin:.5rem 0}
 .unique-summary-names{font-weight:700}.unique-gear-editorial{font-size:.9rem;line-height:1.8;color:#565f66}
+.unique-gear-visual{margin:1.4rem auto;max-width:680px;min-width:0}
+.unique-gear-visual img{display:block;width:100%;max-width:100%;height:auto;border-radius:12px}
+.unique-gear-visual figcaption{margin:.6rem 0;font-size:.9rem;line-height:1.8;color:#40545d;overflow-wrap:anywhere}
 @media(max-width:600px){.unique-gear-summary{grid-template-columns:1fr}}
 .unique-gear-card .unique-gear-context{font-weight:700;margin:.4rem 0}
 .unique-gear-basis{font-size:.85rem;color:#565f66}

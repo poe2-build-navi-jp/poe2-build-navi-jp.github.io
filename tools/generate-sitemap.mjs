@@ -27,6 +27,7 @@ const imageMap=new Map([
   ...classes.map(item=>[`/classes/${item.slug}/`,[`/images/poe2/classes/poe2-${item.slug}.svg`,`Path of Exile 2 ${item.name}`]]),
   ...indexableBuilds.filter(item=>priorityBuildIds.has(item.id)).map(item=>[`/builds/${item.classSlug}/${item.slug}/`,[`/images/poe2/builds/poe2-${item.slug}-leveling-roadmap.svg`,`PoE2 ${item.name}の育成ロードマップ`]])
 ]);
+const strategyImages=new Map(strategyGuides.map(g=>[`/guides/${g.slug}/`,[...new Set([g.heroVisual,...g.sections.map(s=>s.visual)].filter(Boolean).map(v=>v.src))]]));
 // lastmod also follows the page's own content: data/page-dates.json keeps a fingerprint of each
 // page's main content and the date it last changed. Run this after the enhancers.
 const today=process.env.SITEMAP_DATE||new Date().toLocaleDateString("sv-SE",{timeZone:"Asia/Tokyo"});
@@ -40,6 +41,6 @@ for(const path of urls){
 await writeFile(datesFile,`${JSON.stringify(pageDates,null,1)}\n`);
 const lastmod=path=>[buildLastmod.get(path)||(changedPaths.has(path)?changedDate:defaultDate),pageDates[path].date].sort().at(-1);
 const xmlEscape=value=>String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
-const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map((path,i)=>{const image=imageMap.get(path);return `  <url><loc>${base}${path}</loc><lastmod>${lastmod(path)}</lastmod><priority>${i===0?"1.0":path==="/best-builds/"||path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority>${image?`<image:image><image:loc>${base}${image[0]}</image:loc><image:title>${xmlEscape(image[1])}</image:title></image:image>`:""}</url>`}).join("\n")}\n</urlset>\n`;
+const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map((path,i)=>{const image=imageMap.get(path);return `  <url><loc>${base}${path}</loc><lastmod>${lastmod(path)}</lastmod><priority>${i===0?"1.0":path==="/best-builds/"||path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority>${image?`<image:image><image:loc>${base}${image[0]}</image:loc><image:title>${xmlEscape(image[1])}</image:title></image:image>`:""}${(strategyImages.get(path)||[]).map(src=>`<image:image><image:loc>${base}${xmlEscape(src)}</image:loc></image:image>`).join("")}</url>`}).join("\n")}\n</urlset>\n`;
 await writeFile(resolve(root,"sitemap.xml"),xml);
 console.log(`Generated sitemap with ${urls.length} URLs.`);

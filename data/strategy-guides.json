@@ -4971,7 +4971,15 @@
           "必要な効果の種類とロールを確認する。同じ名前でも目的のModがないものは代わりにならない。",
           "交換後の元素耐性・ライフ／ES・Spirit・マナ維持と武器セットを確認する。",
           "今のレア装備と1部位ずつ比較する。価格・ドロップ・SSFでの入手は保証しない。"
-        ]
+        ],
+        "visual": {
+          "src": "/images/poe2/guides/poe2-unique-gear-buying-checklist.webp",
+          "smallSrc": "/images/poe2/guides/poe2-unique-gear-buying-checklist-720.webp",
+          "width": 1200,
+          "height": 1380,
+          "alt": "PoE2のユニーク装備購入前に確認する5項目。原典の構成、現物の条件、必要なMod、交換後の防御、今の装備との比較。",
+          "caption": "ユニークを買う前は、構成・現物・効果・交換後の防御・現在の装備を順に比較。詳しい条件は下の確認リストにまとめています。"
+        }
       },
       {
         "id": "monk-whirling-assault",
@@ -5092,7 +5100,15 @@
         "sourceRefs": [
           30
         ],
-        "quickAnswer": "会心移行のタングルタン＋アジスの標と、元素地面で強化するテイミングを段階別に比較。別段階の完成形を部分的に混ぜないようにします。"
+        "quickAnswer": "会心移行のタングルタン＋アジスの標と、元素地面で強化するテイミングを段階別に比較。別段階の完成形を部分的に混ぜないようにします。",
+        "visual": {
+          "src": "/images/poe2/guides/poe2-twister-unique-gear-weapon-sets.webp",
+          "smallSrc": "/images/poe2/guides/poe2-twister-unique-gear-weapon-sets-720.webp",
+          "width": 1200,
+          "height": 1420,
+          "alt": "PoE2ツイスター装備の図解。ジェムリングのタングルタンとアジスの標、指輪テイミング、スピリットウォーカーのスカイシルバーと目の導きの掌の武器セットを比較。",
+          "caption": "ジェムリングの会心移行、テイミングを使う段階、スピリットウォーカーの武器セットを区別。スピリットウォーカーはセット1にスカイシルバー、セット2に目の導きの掌を使う原典です。"
+        }
       },
       {
         "id": "warrior-shield-wall-smith",
@@ -6028,6 +6044,14 @@
     ],
     "ogImage": "/images/poe2/og/poe2-guides-unique-gear-og.webp",
     "showEditorialNote": true,
-    "structuredCitations": true
+    "structuredCitations": true,
+    "heroVisual": {
+      "src": "/images/poe2/guides/poe2-unique-gear-purpose-comparison.webp",
+      "smallSrc": "/images/poe2/guides/poe2-unique-gear-purpose-comparison-720.webp",
+      "width": 1200,
+      "height": 1430,
+      "alt": "PoE2の目的別ユニーク装備比較。周回はヘッドハンター、ツイスターはテイミング、アンデッドはウルルの骨、防御はレア装備も比較。",
+      "caption": "周回・ツイスター・アンデッドミニオン・防御で必要な効果を分けた図解。アイコンは効果の模式図で、実際の装備画像ではありません。採用条件と英語名は各ビルドの詳細で確認してください。"
+    }
   }
 ]
