@@ -4857,8 +4857,8 @@
   },
   {
     "slug": "unique-gear",
-    "title": "おすすめユニーク装備｜12ビルドの採用条件と比較",
-    "summary": "掲載12ビルドのユニーク候補を、構成・目的・必要な効果・弱点・レア装備の代替で比較。万能の最強1位を決めず、現在の育成段階に合う装備へ進めます。",
+    "title": "おすすめユニーク装備一覧｜12ビルドの最強候補と採用条件",
+    "summary": "PoE2 0.5.5の掲載12ビルド・32候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
     "category": "basics",
     "version": "掲載12ビルド：0.5.5／原典の版は出典欄で区別",
     "checkedAt": "2026-10-12",
@@ -4947,6 +4947,14 @@
     "tocLabel": "掲載12ビルドからユニーク装備を探す",
     "sections": [
       {
+        "id": "build-unique-summary",
+        "heading": "PoE2おすすめユニーク装備一覧｜12ビルドの選び方早見",
+        "paragraphs": [
+          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全32候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
+        ],
+        "gearSummary": true
+      },
+      {
         "id": "choose",
         "heading": "「最強ユニーク」は構成と目的で変わる",
         "paragraphs": [
@@ -4967,7 +4975,7 @@
       },
       {
         "id": "monk-whirling-assault",
-        "heading": "ワーリングアサルト・マーシャルアーティストのユニーク装備",
+        "heading": "ワーリングアサルト・マーシャルアーティストのおすすめユニーク装備",
         "buildId": "monk-whirling-assault",
         "paragraphs": [
           "原典のベルト3候補を目的で比較します。武器・手袋・防具はレア装備の条件も重要で、ベルトだけで完成する構成ではありません。"
@@ -5021,11 +5029,12 @@
         ],
         "sourceRefs": [
           29
-        ]
+        ],
+        "quickAnswer": "創造力は指輪が整ってから、シャヴロンの鞄はESとライフフラスコを使う構成で比較。ヘッドハンターはレア敵を倒す周回向けです。"
       },
       {
         "id": "mercenary-twister-gemling",
-        "heading": "ツイスター・ジェムリングのユニーク装備",
+        "heading": "ツイスター・ジェムリングのおすすめユニーク装備",
         "buildId": "mercenary-twister-gemling",
         "paragraphs": [
           "Atlas Progression〜Mid Endgameを照合。会心移行と、地面効果を自動で揃える移行を分けます。"
@@ -5082,11 +5091,12 @@
         ],
         "sourceRefs": [
           30
-        ]
+        ],
+        "quickAnswer": "会心移行のタングルタン＋アジスの標と、元素地面で強化するテイミングを段階別に比較。別段階の完成形を部分的に混ぜないようにします。"
       },
       {
         "id": "warrior-shield-wall-smith",
-        "heading": "シールドウォール・スミスのユニーク装備",
+        "heading": "シールドウォール・スミスのおすすめユニーク装備",
         "buildId": "warrior-shield-wall-smith",
         "paragraphs": [
           "MapsとGiga Endgameの装備欄で確認。盾はユニーク名を固定せず、盾のアーマー実数と使用条件を先に比較します。"
@@ -5125,11 +5135,12 @@
         ],
         "sourceRefs": [
           31
-        ]
+        ],
+        "quickAnswer": "スリルスティールは他部位で防御・耐性が整ったMaps段階の候補。盾のアーマー実数を先に比較し、ユニークの盾を固定で指定しません。"
       },
       {
         "id": "sorceress-sand-fire",
-        "heading": "砂と炎のヴァラシュタのユニーク装備",
+        "heading": "砂と炎のヴァラシュタのおすすめユニーク装備",
         "buildId": "sorceress-sand-fire",
         "paragraphs": [
           "PhazePlaysのEndgame装備欄は主要部位にレア装備を採用。ジンを使う構成に、アンデッド専用の効果を無条件で当てはめないことが重要です。"
@@ -5169,11 +5180,12 @@
         "sourceRefs": [
           32,
           33
-        ]
+        ],
+        "quickAnswer": "現行原典の主要部位はレア装備。希望の芽吹きは凍結時使用とチャージ条件を確認します。包み込む夜明けはSpirit不足時の検討候補で、現行Endgameの採用品ではありません。"
       },
       {
         "id": "huntress-companion",
-        "heading": "相棒スピリットウォーカーのユニーク装備",
+        "heading": "相棒スピリットウォーカーのおすすめユニーク装備",
         "buildId": "huntress-companion",
         "paragraphs": [
           "メインハンドのダメージを相棒へ渡すThe Catha's Balanceが前提。MobalyticsのRed Maps／EndgameとPoE Vaultの2武器比較を照合しました。"
@@ -5214,11 +5226,12 @@
         "sourceRefs": [
           34,
           35
-        ]
+        ],
+        "quickAnswer": "圧政の手とトレンチティンバーは強化状態・必要能力値と原典の防御条件を確認。相棒へ武器ダメージを渡すアセンダンシーが前提です。"
       },
       {
         "id": "ranger-ice-shot-deadeye",
-        "heading": "アイスショット・デッドアイのユニーク装備",
+        "heading": "アイスショット・デッドアイのおすすめユニーク装備",
         "buildId": "ranger-ice-shot-deadeye",
         "paragraphs": [
           "Fubgunの優先順は、基本の弓・矢筒・防御を先に整える方針。高価なユニーク名を武器更新より優先しません。"
@@ -5272,11 +5285,12 @@
         ],
         "sourceRefs": [
           36
-        ]
+        ],
+        "quickAnswer": "井戸の心臓・闇との対立は必要なModと配置を確認。弓・矢筒・防御を先に整え、ヘッドハンターの購入を優先しません。"
       },
       {
         "id": "witch-minion-infernalist",
-        "heading": "スナイパーミニオン・インファーナリストのユニーク装備",
+        "heading": "スナイパーミニオン・インファーナリストのおすすめユニーク装備",
         "buildId": "witch-minion-infernalist",
         "paragraphs": [
           "Thyの育成条件を残し、以下はPoE VaultのPowered Zealot Endgameでの候補として紹介。スナイパー育成の全段階に必須とは扱いません。"
@@ -5332,11 +5346,12 @@
         "sourceRefs": [
           37,
           38
-        ]
+        ],
+        "quickAnswer": "ウルルの骨はアンデッド生成スキルが対象。即位した闇は兜扱いのソケット効果版を指定する別原典のEndgame候補で、育成全段階の必須装備ではありません。"
       },
       {
         "id": "druid-plant-oracle",
-        "heading": "植物オラクルのユニーク装備",
+        "heading": "植物オラクルのおすすめユニーク装備",
         "buildId": "druid-plant-oracle",
         "paragraphs": [
           "原典のCheap、Expensive、Mirror Tierを区別。ナイトスケール（Nightscale）は安価型の装備欄で確認できましたが、マナ維持の条件を見落とさないでください。"
@@ -5390,11 +5405,12 @@
         ],
         "sourceRefs": [
           39
-        ]
+        ],
+        "quickAnswer": "ナイトスケールは直近会心時のマナ再生を持つタイプを選択。ヘッドハンターは周回、英雄の悲劇は原典のMirror Tier構成で比較します。"
       },
       {
         "id": "witch-ed-contagion-lich",
-        "heading": "ED・コンテージョン リッチのユニーク装備",
+        "heading": "ED・コンテージョン リッチのおすすめユニーク装備",
         "buildId": "witch-ed-contagion-lich",
         "paragraphs": [
           "DEADRABB1Tの防御構成ではアッツィリの軽蔑（Atziri's Disdain）をSoulless Form・Eternal Life・Heavy Bufferなどと組み合わせます。兜だけで同じ耐久を得る案内ではありません。"
@@ -5418,11 +5434,12 @@
         ],
         "sourceRefs": [
           40
-        ]
+        ],
+        "quickAnswer": "アッツィリの軽蔑はライフからESを増やす防御候補。Eternal Lifeなど、原典の防御条件と合わせて検討します。"
       },
       {
         "id": "mercenary-grenade-gemling",
-        "heading": "グレネード・ジェムリングのユニーク装備",
+        "heading": "グレネード・ジェムリングのおすすめユニーク装備",
         "buildId": "mercenary-grenade-gemling",
         "paragraphs": [
           "DEADRABB1T版はMid Endgameに贖罪（Redemption）、Uber Endgameにヘッドハンター（Headhunter）を採用。不屈なる者として死す（Morior Invictus）は別のPoE Vault版の候補なので、構成全体を確認します。"
@@ -5477,11 +5494,12 @@
         "sourceRefs": [
           41,
           42
-        ]
+        ],
+        "quickAnswer": "贖罪は専用のグレネード運用へ移行する構成向け。不屈なる者として死すは別原典で指定されたModとソケット条件を確認します。"
       },
       {
         "id": "huntress-twister-spirit-walker",
-        "heading": "ツイスター・スピリットウォーカーのユニーク装備",
+        "heading": "ツイスター・スピリットウォーカーのおすすめユニーク装備",
         "buildId": "huntress-twister-spirit-walker",
         "paragraphs": [
           "既存掲載のDotGG版に加え、0.5.5のGuyThatDies版を追加照合。装備候補はその原典の武器セットと構成名に合わせて選びます。"
@@ -5535,11 +5553,12 @@
         ],
         "sourceRefs": [
           43
-        ]
+        ],
+        "quickAnswer": "スカイシルバーは武器セット1、目の導きの掌はセット2の補助武器。テイミングは非会心型でも採用される段階があります。"
       },
       {
         "id": "sorceress-spark-stormweaver",
-        "heading": "スパーク・ストームウィーバーのユニーク装備",
+        "heading": "スパーク・ストームウィーバーのおすすめユニーク装備",
         "buildId": "sorceress-spark-stormweaver",
         "paragraphs": [
           "DotGGのCoC Comet型と、2026-10-09更新のPoE Vaultマナスタック型は別構成。手袋・武器・マナ防御を部分的に混ぜないでください。"
@@ -5609,7 +5628,8 @@
         "sourceRefs": [
           44,
           45
-        ]
+        ],
+        "quickAnswer": "マリガロの妙技は会心ダメージ固定のタイプを確認。反抗のクローク・カランドラの接触・メイジブラッドは別原典のマナ型候補で、杖型と混ぜません。"
       },
       {
         "id": "avoid-mistakes",
@@ -5974,6 +5994,18 @@
       {
         "question": "装備要求Lvと原典の切替段階は同じ？",
         "answer": "別です。現物の要求Lv・能力値を満たすことと、原典のスキル・パッシブ・Spirit・防御を揃えることを分けて確認してください。"
+      },
+      {
+        "question": "PoE2のツイスターにテイミングはおすすめ？",
+        "answer": "テイミング（The Taming）は、複数の元素地面でTwisterを強化する構成の候補です。掲載原典ではジェムリングのMid Endgameと、スピリットウォーカーの非会心型に採用されています。指輪枠の追加ダメージ・能力値など、交換で失う効果も確認してください。[source:4][source:30][source:43]"
+      },
+      {
+        "question": "ヘッドハンターはボス戦でも最強？",
+        "answer": "ヘッドハンター（Headhunter）は、レア敵を倒して得る強化を利用する周回向けの候補です。レア敵を倒せないボス単独戦の固定火力とは区別します。アイスショットの原典では、弓・矢筒・防御を先に整える方針です。[source:1][source:36]"
+      },
+      {
+        "question": "創造力（Ingenuity）はいつ装備する？",
+        "answer": "創造力（Ingenuity）は、強化したい指輪のModと左右の増幅ロールが揃った段階で比較します。掲載ワーリングアサルトの原典ではEndgameのベルト候補ですが、弱い指輪のままでは交換で失う耐性・ライフを補えない場合があります。[source:2][source:29]"
       }
     ],
     "related": [
@@ -5988,8 +6020,14 @@
       {
         "href": "/builds/",
         "label": "ビルドを比較する"
+      },
+      {
+        "href": "/gear-check/",
+        "label": "交換後の耐性・防御を装備チェックで確認"
       }
     ],
-    "ogImage": "/images/poe2/og/poe2-guides-unique-gear-og.webp"
+    "ogImage": "/images/poe2/og/poe2-guides-unique-gear-og.webp",
+    "showEditorialNote": true,
+    "structuredCitations": true
   }
 ]
