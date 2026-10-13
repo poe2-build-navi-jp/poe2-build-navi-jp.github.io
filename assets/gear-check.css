@@ -1,0 +1,10 @@
+/* The fixed sample stays distinct from the selected build's live diagnosis. */
+.gear-example{border-top:1px solid var(--line)}
+.gear-example>h2{font-size:1.15rem;line-height:1.6;margin-bottom:8px}
+.gear-example>p{margin-top:0}
+.gear-example details{border:1px solid var(--line);border-radius:8px;padding:0 16px;background:#fff}
+.gear-example summary{cursor:pointer;min-height:44px;padding:12px 0;font-weight:700;line-height:1.5}
+.gear-example summary:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.gear-example-body{padding:8px 0 16px}
+.gear-example #gear-example-title{font-size:1.1rem;line-height:1.6}
+.gear-example .button{max-width:100%;white-space:normal;text-align:left;line-height:1.6}
