@@ -15,6 +15,8 @@ assert(visible(home.querySelector('.mobile-lead')), 'General build guidance is v
 assert(visible(home.querySelector('.hero-actions a[href="/best-builds/"]')), 'Strongest-build comparison has a direct visible entrance');
 assert(visible(home.querySelector('.hero-actions a[href="/beginner-builds/"]')), 'Existing beginner entrance is preserved');
 assert(visible(best.querySelector('#best-answer')), 'Answer-first comparison is not hidden in details');
+assert.match(read('assets/build-search.css'), /\.best-build-sources \.source-list li\{display:block\}/, 'Source dates must not become separate inherited flex columns');
+assert.match(read('assets/build-search.css'), /\.best-build-sources \.source-list time\{white-space:nowrap\}/, 'A source date must stay readable on one line');
 assert(best.querySelector('#best-answer').compareDocumentPosition(best.querySelector('#best-candidates')) & 4);
 assert.match(best.querySelector('title').textContent, /^PoE2 最強ビルド｜/);
 assert.match(best.querySelector('h1').textContent, /^PoE2 最強ビルド｜/);

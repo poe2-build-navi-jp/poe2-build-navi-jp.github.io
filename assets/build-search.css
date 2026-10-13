@@ -7,6 +7,8 @@
 .best-build-conditions dd{margin:4px 0 0;overflow-wrap:anywhere}
 .best-build-sources summary{cursor:pointer;min-height:44px;padding:10px 0;font-weight:700}
 .best-build-sources summary:focus-visible{outline:3px solid #b04a1c;outline-offset:3px}
+.best-build-sources .source-list li{display:block}
+.best-build-sources .source-list time{white-space:nowrap}
 .best-build-sources a{overflow-wrap:anywhere}
 #best-answer,#best-budget,#best-comparison,#best-candidates{scroll-margin-top:90px}
 @media(max-width:680px){
