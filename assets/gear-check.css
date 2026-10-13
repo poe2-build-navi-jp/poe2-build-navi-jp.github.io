@@ -8,3 +8,5 @@
 .gear-example-body{padding:8px 0 16px}
 .gear-example #gear-example-title{font-size:1.1rem;line-height:1.6}
 .gear-example .button{max-width:100%;white-space:normal;text-align:left;line-height:1.6}
+.diagnosis-form #gear-level{font-size:1rem}
+.gear-level-help{font-weight:400;line-height:1.5}

@@ -1,6 +1,7 @@
 const STAGES = [[1,10,"Lv1〜10"],[11,20,"Lv11〜20"],[21,30,"Lv21〜30"],[31,40,"Lv31〜40"],[41,65,"Lv41〜キャンペーン終了"],[66,75,"Mapping開始"],[76,90,"Early Endgame"],[91,100,"Endgame完成"]];
 const byId = (id) => document.getElementById(id);
 let builds = [];
+let committedLevel = 1;
 const concernLabels = {death:"すぐ死ぬ",damage:"火力が低い",mana:"マナ不足",boss:"ボスが倒せない",speed:"周回が遅い",purchase:"何を買えばいいか分からない"};
 const common = {
   death:["防具","属性耐性と現在レベルに合う防御値を確認","ブーツと回避手段"],
@@ -22,7 +23,7 @@ function populateBuilds(className, selectedBuild = "") {
 
 function render() {
   const build = builds.find((item) => item.id === byId("gear-build").value);
-  const level = Math.max(1, Math.min(100, Number(byId("gear-level").value) || 1));
+  const level = committedLevel;
   const concern = byId("gear-concern").value;
   const budget = byId("gear-budget").value;
   const stageLabel = STAGES.find(([min,max]) => level >= min && level <= max)?.[2];
@@ -60,7 +61,9 @@ fetch("/data/builds.json").then((response) => response.json()).then((data) => {
   const savedClass = builds.find((build) => build.id === savedBuild)?.className || localStorage.getItem("poe2:navi:gear-class") || "";
   byId("gear-class").value = savedClass;
   populateBuilds(savedClass, savedBuild);
-  byId("gear-level").value = params.get('level') || localStorage.getItem('poe2:navi:quick-level') || localStorage.getItem("poe2:navi:gear-level") || 1;
+  const levelCandidates = [params.get('level'), localStorage.getItem("poe2:navi:gear-level"), localStorage.getItem('poe2:navi:quick-level')];
+  committedLevel = levelCandidates.map(Number).find((level) => Number.isInteger(level) && level >= 1 && level <= 100) || 1;
+  byId("gear-level").value = committedLevel;
   if(Object.hasOwn(common,params.get('concern')))byId('gear-concern').value=params.get('concern');
   render();
 });
@@ -69,4 +72,17 @@ byId("gear-class").addEventListener("change", (event) => {
   populateBuilds(event.target.value);
   render();
 });
-["gear-build","gear-level","gear-concern","gear-budget"].forEach((id) => byId(id).addEventListener("input", render));
+function commitLevelInput() {
+  const input = byId("gear-level");
+  const value = input.value.trim();
+  const number = Number(value);
+  const next = value !== "" && Number.isFinite(number) ? Math.max(1, Math.min(100, Math.trunc(number))) : committedLevel;
+  input.value = next;
+  if (next !== committedLevel) { committedLevel = next; render(); }
+}
+byId("gear-level").addEventListener("change", commitLevelInput);
+byId("gear-level").addEventListener("blur", commitLevelInput);
+byId("gear-level").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") { event.preventDefault(); commitLevelInput(); }
+});
+["gear-build","gear-concern","gear-budget"].forEach((id) => byId(id).addEventListener("input", render));

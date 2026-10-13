@@ -81,7 +81,7 @@ console.log('PASS: 12 static cards, unlock/SSF/style filters, zero results recov
  assert.match(dd.getElementById('fact-grid').textContent,/掲載中の育成段階8\/8/);
  assert.doesNotMatch(dd.getElementById('fact-grid').textContent,/確認済み段階/);
  assert.equal(detail.window.location.search,'?level=38');
- dd.getElementById('level-input').value='1';dd.getElementById('level-input').dispatchEvent(new detail.window.Event('input'));
+ dd.getElementById('level-input').value='1';dd.getElementById('level-input').dispatchEvent(new detail.window.Event('change'));
  assert.equal(detail.window.location.search,'');
  const openDetail=async(url,saved={})=>{const w=new JSDOM(html,{runScripts:'outside-only',url}).window;for(const [k,v] of Object.entries(saved))w.localStorage.setItem(k,v);w.fetch=async()=>({ok:true,json:async()=>data});w.eval(fs.readFileSync('assets/detail.js','utf8'));await new Promise(r=>setTimeout(r,60));return w;};
  const clean=await openDetail('https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/',{'poe2:navi:level:ranger-ice-shot-deadeye':'37'});
@@ -114,11 +114,11 @@ console.log('PASS: 12 static cards, unlock/SSF/style filters, zero results recov
  assert.match(minion.window.document.querySelector('[data-now-action]').textContent,/Act 3の切替地点に到達したら/);
  assert.match(minion.window.document.querySelector('[data-now-action]').textContent,/未到達ならスナイパーを継続/);
  assert.equal(guidance.querySelector('a').href,data.find(b=>b.id==='witch-minion-infernalist').sources[0].url);
- minion.window.document.getElementById('level-input').value='42';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('input'));
+ minion.window.document.getElementById('level-input').value='42';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('change'));
  assert.equal(guidance.hidden,false);
  assert.match(guidance.textContent,/When do I swap to Vaal Guards/);
  assert.match(minion.window.document.querySelector('[data-now-action]').textContent,/Utzaal.*50 Spirit.*スナイパーを維持/);
- minion.window.document.getElementById('level-input').value='70';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('input'));
+ minion.window.document.getElementById('level-input').value='70';minion.window.document.getElementById('level-input').dispatchEvent(new minion.window.Event('change'));
  assert.equal(guidance.hidden,true);
  console.log('PASS: minion Lv37 and Lv42 show switch conditions and original guide sections; unrelated stage hides them');
  const shieldPage=new JSDOM(fs.readFileSync('builds/warrior/shield-wall-smith/index.html','utf8'));

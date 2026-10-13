@@ -22,7 +22,7 @@ async function openBuild(id, level) {
 function setLevel(page, level) {
   const input = page.window.document.getElementById('level-input');
   input.value = String(level);
-  input.dispatchEvent(new page.window.Event('input'));
+  input.dispatchEvent(new page.window.Event('change'));
 }
 
 function assertInlineGuidance(document, build, stageIndex, actionIndex) {

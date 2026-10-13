@@ -18,6 +18,7 @@ const gearExample = `<section class="section compact-section gear-example" aria-
 const gearExamplePattern = /<section class="section compact-section gear-example"[^>]*>[\s\S]*?<\/section>/;
 gearHtml = gearExamplePattern.test(gearHtml) ? gearHtml.replace(gearExamplePattern, gearExample) : gearHtml.replace("</main>", gearExample + "</main>");
 gearHtml = gearHtml
+  .replace(/<label class="field">3\. 現在Lv[\s\S]*?<\/label>/, '<label class="field">3. 現在Lv<input id="gear-level" type="number" inputmode="numeric" enterkeyhint="done" min="1" max="100" step="1" value="1" aria-describedby="gear-level-help"><small id="gear-level-help" class="gear-level-help">数字を直接入力できます（1〜100）。Enterまたは欄外をタップして確定します。</small></label>')
   .replace(/<section class="diagnosis-result"[^>]*>/, '<section class="diagnosis-result" aria-live="polite" aria-labelledby="gear-result-label gear-result-title">')
   .replace(/(<section class="diagnosis-result"[^>]*>)<p[^>]*>[^<]*<\/p>/, '$1<p id="gear-result-label" class="section-kicker">あなたの診断結果</p>')
   .replace(/<link rel="stylesheet" href="\/assets\/gear-check\.css[^"]*">/g, "")

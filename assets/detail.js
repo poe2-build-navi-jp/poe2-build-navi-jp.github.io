@@ -301,7 +301,18 @@ function bindEvents() {
     check.checked=Boolean(savedStages[index]);
     check.addEventListener('change',()=>{savedStages[index]=check.checked;localStorage.setItem(`poe2:navi:stages:${build.id}`,JSON.stringify(savedStages));});
   });
-  byId("level-input").addEventListener("input", (event) => setLevel(event.target.value));
+  const commitLevelInput = () => {
+    const input = byId("level-input");
+    const value = input.value.trim();
+    const next = value !== "" && Number.isFinite(Number(value)) ? Math.max(1, Math.min(100, Math.trunc(Number(value)))) : level;
+    input.value = next;
+    if (next !== level) setLevel(next);
+  };
+  byId("level-input").addEventListener("change", commitLevelInput);
+  byId("level-input").addEventListener("blur", commitLevelInput);
+  byId("level-input").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") { event.preventDefault(); commitLevelInput(); }
+  });
   byId("level-range").addEventListener("input", (event) => setLevel(event.target.value));
   byId("level-minus").addEventListener("click", () => setLevel(level - 1));
   byId("level-plus").addEventListener("click", () => setLevel(level + 1));

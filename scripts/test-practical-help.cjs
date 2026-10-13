@@ -43,7 +43,7 @@ async function open(level,hash=''){
  await flush();
  return {page,events,doc:page.window.document};
 }
-function change(ctx,level){const input=ctx.doc.getElementById('level-input');input.value=level;input.dispatchEvent(new ctx.page.window.Event('input'));}
+function change(ctx,level){const input=ctx.doc.getElementById('level-input');input.value=level;input.dispatchEvent(new ctx.page.window.Event('change'));}
 (async()=>{
  const ctx=await open(37);
  assert.equal(ctx.doc.getElementById('now-stage-detail').hash,'#roadmap-stage-3');

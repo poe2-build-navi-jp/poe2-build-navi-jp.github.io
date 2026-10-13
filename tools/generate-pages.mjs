@@ -63,7 +63,7 @@ function detailPage(build) {
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${url}">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260909-1">
+  <link rel="stylesheet" href="/assets/styles.css?v=20260909-1"><link rel="stylesheet" href="/assets/level-input.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisher}" crossorigin="anonymous"></script>
   <script type="application/ld+json">${breadcrumb.replaceAll("<", "\\u003c")}</script>
   <script type="module" src="/assets/detail.js?v=20260909-1"></script>
@@ -76,7 +76,7 @@ function detailPage(build) {
     <section class="build-hero">
       <div class="build-hero-grid">
         <div><p id="build-class" class="eyebrow">${escapeHtml(build.className)} / ${escapeHtml(build.ascendancy)}</p><h1 id="build-name">PoE2 ${escapeHtml(build.name)} ビルド｜${escapeHtml(build.version)}育成</h1><p id="build-skill" class="lead">メインスキル：${escapeHtml(build.mainSkill)}</p><p>現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。</p><p class="status-note" data-build-status="${escapeHtml(build.status)}">${escapeHtml(statusLabels[build.status] || "状態未登録")}</p><p class="status-note">対応環境 ${escapeHtml(build.version)}・育成手順の原典照合 ${escapeHtml(build.updatedAt)}・<a href="${escapeHtml(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式パッチノート確認 ${escapeHtml(site.latestPatchCheckedAt)}</a></p><div class="build-overview"><p><b>おすすめ：</b>${escapeHtml(build.audience)}</p><p><b>弱点：</b>${escapeHtml(build.weaknesses?.[0] || "未登録")}</p><p><b>操作：</b>${escapeHtml(build.difficulty)}　<b>SSF：</b>${ssfLabel(build)}</p></div><div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${escapeHtml(build.version)}</div><div class="fact">育成手順の原典照合：${escapeHtml(build.updatedAt)}</div></div></div>
-        <section id="level-card" class="level-card" aria-labelledby="level-title"><div class="level-number"><h2 id="level-title">現在Lv</h2><output id="level-output" for="level-input level-range">Lv1</output></div><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="level-input" type="number" inputmode="numeric" min="1" max="100" value="1" aria-label="現在レベル"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><input id="level-range" type="range" min="1" max="100" value="1" aria-label="現在レベルのスライダー"><div class="range-labels"><span>Lv1</span><span>Lv100</span></div><p class="disclaimer">この端末に自動保存されます。</p></section>
+        <section id="level-card" class="level-card" aria-labelledby="level-title"><div class="level-number"><h2 id="level-title">現在Lv</h2><output id="level-output" for="level-input level-range">Lv1</output></div><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="level-input" type="number" inputmode="numeric" enterkeyhint="done" min="1" max="100" step="1" value="1" aria-label="現在レベル" aria-describedby="level-input-help"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><input id="level-range" type="range" min="1" max="100" value="1" aria-label="現在レベルのスライダー"><div class="range-labels"><span>Lv1</span><span>Lv100</span></div><p id="level-input-help" class="disclaimer">数字を直接入力できます（1〜100）。Enterまたは欄外をタップして確定。＋／−でも変更でき、この端末に保存されます。</p></section>
       </div>
     </section>
     <div class="detail-main">

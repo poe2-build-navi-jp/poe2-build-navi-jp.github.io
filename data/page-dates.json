@@ -56,7 +56,7 @@
   "date": "2026-10-09"
  },
  "/gear-check/": {
-  "hash": "d73bfba199ddb092",
+  "hash": "7dcc58a051b612b7",
   "date": "2026-10-13"
  },
  "/class-check/": {
@@ -148,52 +148,52 @@
   "date": "2026-10-06"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "fda54d3ddf0c8c36",
-  "date": "2026-10-12"
+  "hash": "94d446767a5c40a0",
+  "date": "2026-10-13"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "2220ca654ea06600",
-  "date": "2026-10-12"
+  "hash": "bb208600b121477a",
+  "date": "2026-10-13"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "a069bf1677ac4119",
-  "date": "2026-10-12"
+  "hash": "bb4eeb7fae460685",
+  "date": "2026-10-13"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "51caf45c0ebe7e7c",
-  "date": "2026-10-12"
+  "hash": "fc724241501aa4aa",
+  "date": "2026-10-13"
  },
  "/builds/huntress/companion/": {
-  "hash": "88b6a4c723a4f77e",
-  "date": "2026-10-12"
+  "hash": "6a8c1fac0a1087b6",
+  "date": "2026-10-13"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "b6faa965a0918140",
-  "date": "2026-10-12"
+  "hash": "49adab6427603294",
+  "date": "2026-10-13"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "e4d3661807467846",
-  "date": "2026-10-12"
+  "hash": "a2e5c36a46d80251",
+  "date": "2026-10-13"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "8ea0e41fbbe17cd4",
-  "date": "2026-10-12"
+  "hash": "c6e54d0988035307",
+  "date": "2026-10-13"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "babe7d62b9102cfb",
-  "date": "2026-10-12"
+  "hash": "34663bd29eac3ebc",
+  "date": "2026-10-13"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "d664310a6717483f",
-  "date": "2026-10-12"
+  "hash": "f109abc53586e5af",
+  "date": "2026-10-13"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "71c232c7324756f4",
-  "date": "2026-10-12"
+  "hash": "3171d9fda579e473",
+  "date": "2026-10-13"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "55bf5f0f3928aafd",
-  "date": "2026-10-12"
+  "hash": "16bc6ba12c54e25c",
+  "date": "2026-10-13"
  },
  "/guides/skill-gems/": {
   "hash": "3c5919b95dbf236b",
