@@ -42,7 +42,7 @@ export function applyMobileSummary(html, beginner) {
   } else {
     const hero = d.querySelector('.hero');
     const intro = d.createElement('p'); intro.className = 'mobile-lead'; intro.dataset.mobileAdded = '';
-    intro.textContent = 'ビルドを選んで現在Lvを入力。今やることを3つ確認。';
+    intro.textContent = 'PoE2のビルドを職業・目的から選び、現在Lvに合うスキル・装備・パッシブの手順を確認できます。';
     hero.querySelector('h1').after(intro);
     disclose(hero, [hero.querySelector('.lead'), hero.querySelector('#home-build-routes'), hero.querySelector('.journey-steps'), hero.querySelector('.status-note')], '使い方・掲載ビルド・対応パッチ');
     const actions = hero.querySelector('.hero-actions');

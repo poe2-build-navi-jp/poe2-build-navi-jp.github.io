@@ -1,0 +1,111 @@
+{
+  "editedAt": "2026-10-13",
+  "candidates": [
+    {
+      "label": "周回",
+      "anchor": "mapping",
+      "id": "ranger-ice-shot-deadeye",
+      "reason": "遠距離から攻撃し、周回用アイスショットと単体用スナイプを使い分けます。",
+      "stage": "アイスショットへ切替後のMapping序盤（原典のEarly構成）。主力はLv31以降。",
+      "conditions": "Lv31でもジェム・必要Spirit・装備が揃ってから切替。後半の防御・クリティカル移行は装備に依存します。",
+      "budget": "必要通貨額は未検証。原典のEarly構成はSSFまたは少量の取引で装備を揃えられると説明しています。Crit・Uber完成形までの安さは示しません。",
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+          "checkedAt": "2026-10-13",
+          "scope": "Mapping序盤の装備とSSFの範囲"
+        },
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
+          "checkedAt": "2026-09-27",
+          "scope": "主力切替の育成手順"
+        }
+      ]
+    },
+    {
+      "label": "ボス",
+      "anchor": "bossing",
+      "id": "monk-whirling-assault",
+      "reason": "Endgame構成ではワーリングアサルトとFalling Thunderを使います。Lv41の育成構成とは異なるため、現在Lvの段階で使うスキルを確認してください。",
+      "stage": "Endgame構成の単体戦。Lv41で解禁される育成版と分けて比較。",
+      "conditions": "最初のパワーチャージ生成とCharged Staff維持が必要。クォータースタッフの火力、クリティカル、回避・ESを整えます。",
+      "budget": "必要通貨額と同予算DPSは未検証。原典の完成形の火力を、Lv41到達時の火力とは扱いません。",
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+          "checkedAt": "2026-10-13",
+          "scope": "Endgame構成・単体戦の候補根拠"
+        }
+      ]
+    },
+    {
+      "label": "初心者",
+      "anchor": "beginner",
+      "id": "witch-minion-infernalist",
+      "reason": "攻撃をミニオンへ任せやすく、自分は敵の動きと回避へ集中しやすい構成です。",
+      "stage": "Lv1からの育成ルート。Act 3・Lv67前後で構成を変更。",
+      "conditions": "Spiritとミニオン用の装備を確保。後半の防御はES・ブロック・耐性などの更新が必要です。",
+      "budget": "必要通貨額は未検証。装備更新の分かりやすさと、完成装備を安く買えることは別です。",
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+          "checkedAt": "2026-09-26",
+          "scope": "掲載する育成ルート・装備更新"
+        }
+      ]
+    },
+    {
+      "label": "SSF",
+      "anchor": "ssf",
+      "id": "witch-minion-infernalist",
+      "reason": "原典にSSF向けの育成手順がキャンペーンからEndgameまで掲載されています。",
+      "stage": "掲載するThyworm版のキャンペーン〜Endgame育成。",
+      "conditions": "段階別のスキル・装備を揃えて進めます。他作者のスペクター完成形や任意ユニークを混ぜて同じ条件とは扱いません。",
+      "budget": "SSFは取引を使わない遊び方です。ドロップ運や育成時間は別で、低予算・短時間での完成を保証しません。",
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+          "checkedAt": "2026-09-07",
+          "scope": "同じ掲載ルートのSSF対応範囲"
+        }
+      ]
+    },
+    {
+      "label": "防御重視",
+      "anchor": "defense",
+      "id": "warrior-shield-wall-smith",
+      "reason": "盾を軸に進め、耐久を優先するスターター候補として掲載しています。",
+      "stage": "Lv22の主力切替〜マップ序盤を重視。",
+      "conditions": "Tier 7・ジェムLv7版はLv22・筋力41・アーマーを持つ盾が必要。盾のアーマーとライフ・耐性を確認します。",
+      "budget": "マップ序盤は装備を整えやすいとの記載あり。必要通貨額は未検証で、高投資時の火力・周回の伸びには注意が必要です。",
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+          "checkedAt": "2026-10-13",
+          "scope": "掲載ルートのマップ序盤・装備依存"
+        },
+        {
+          "url": "https://poe2db.tw/us/Shield_Wall",
+          "checkedAt": "2026-10-02",
+          "scope": "Tier 7・ジェムLv7版の使用条件"
+        }
+      ]
+    },
+    {
+      "label": "操作少なめ",
+      "anchor": "simple-controls",
+      "id": "druid-plant-oracle",
+      "reason": "Lv1から主力を継続しやすく、基本操作を増やしすぎずに育成できます。",
+      "stage": "主力中心の通常周回。最上位ボスとは条件を分けて比較。",
+      "conditions": "後半の防御はESと混沌耐性などの装備に依存。自動発動構成は必要ジェム・Spiritを揃えてから切り替えます。",
+      "budget": "低予算版あり（原典のCheap構成）。相場は未測定で、防御用のES・混沌耐性と長い戦闘のマナ維持が条件です。",
+      "sources": [
+        {
+          "url": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+          "checkedAt": "2026-10-13",
+          "scope": "通常周回の操作量・低予算構成と防御条件"
+        }
+      ]
+    }
+  ]
+}

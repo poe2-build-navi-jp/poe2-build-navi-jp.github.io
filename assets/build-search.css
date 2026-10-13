@@ -1,0 +1,17 @@
+/* Purpose comparison only: conditions stay visible and sources are optional. */
+#best-answer a{font-weight:700}
+#best-candidates .purpose-card{min-width:0;scroll-margin-top:90px}
+.best-build-conditions{margin:16px 0}
+.best-build-conditions>div{padding:10px 0;border-top:1px solid #d5cfc3}
+.best-build-conditions dt{font-weight:700}
+.best-build-conditions dd{margin:4px 0 0;overflow-wrap:anywhere}
+.best-build-sources summary{cursor:pointer;min-height:44px;padding:10px 0;font-weight:700}
+.best-build-sources summary:focus-visible{outline:3px solid #b04a1c;outline-offset:3px}
+.best-build-sources a{overflow-wrap:anywhere}
+#best-answer,#best-budget,#best-comparison,#best-candidates{scroll-margin-top:90px}
+@media(max-width:680px){
+ #best-candidates .purpose-grid{grid-template-columns:1fr}
+ #best-candidates .purpose-card{padding:18px}
+ #best-candidates .purpose-card h3{font-size:1.2rem;line-height:1.5}
+ #best-answer{padding:18px}
+}

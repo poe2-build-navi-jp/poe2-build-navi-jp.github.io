@@ -136,8 +136,10 @@ assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(!/Disallow:\s*\/images/i.test(robots), "robots must not block image assets");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'), "image sitemap namespace missing");
-// 5 guide/hub images + 8 class images + one roadmap per listed build.
-const expectedSitemapImages = 13 + builds.filter((build) => build.status === "verified").length;
+// Existing hub/class/build images plus each indexed strategy guide's unique visuals.
+const strategyGuidesForImages = JSON.parse(await read("data/strategy-guides.json"));
+const strategyImageCount = strategyGuidesForImages.filter(guide => sitemap.includes(`${baseUrl}/guides/${guide.slug}/</loc>`)).reduce((total, guide) => total + new Set([guide.heroVisual, ...guide.sections.map(section => section.visual)].filter(Boolean).map(visual => visual.src)).size, 0);
+const expectedSitemapImages = 13 + builds.filter((build) => build.status === "verified").length + strategyImageCount;
 assert((sitemap.match(/<image:image>/g) || []).length === expectedSitemapImages, `image sitemap must contain ${expectedSitemapImages} images`);
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");
@@ -163,7 +165,7 @@ for (const page of [
   ["tier-list/", "PoE2 0.5.5初心者向けビルドTier"],
   ["league-starter/", "PoE2リーグスターター・序盤おすすめビルド"],
   ["leveling/", "PoE2レベリングガイド｜現在Lvから次にやること"],
-  ["best-builds/", "PoE2 0.5.5おすすめ・最強ビルド｜目的別比較"],
+  ["best-builds/", "PoE2 最強ビルド｜0.5.5の目的別おすすめ比較"],
   ["poe2-1-0/", "PoE2 1.0はいつ？正式リリース・無料化の確定情報"]
 ]) {
   const html = await read(`${page[0]}index.html`);

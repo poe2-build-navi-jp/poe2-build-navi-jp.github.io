@@ -11,7 +11,7 @@ for(const g of guides){
  assert(d.querySelectorAll('.strategy-section').length>=4);
  assert(d.querySelectorAll('#sources li').length>=1);
  for(const a of d.querySelectorAll('a[href^="#"]')) assert(d.getElementById(a.hash.slice(1)),`${g.slug}: missing ${a.hash}`);
- for(const a of d.querySelectorAll('a[href^="/"]')){const p=a.getAttribute('href').split(/[?#]/)[0];assert(fs.existsSync(path.join(root,p,'index.html')),`${g.slug}: missing route ${p}`);}
+ for(const a of d.querySelectorAll('a[href^="/"]')){const p=a.getAttribute('href').split(/[?#]/)[0];const target=path.extname(p)?path.join(root,p):path.join(root,p,'index.html');assert(fs.existsSync(target),`${g.slug}: missing route or asset ${p}`);}
  for(const s of g.sources){assert(['www.pathofexile.com','pathofexile.com','www.poe2wiki.net','poe2wiki.net','poe2db.tw','www.poe-vault.com','mobalytics.gg','pathofexile.gg','game8.co','www.gamerguides.com','www.pcgamesn.com','poe2dictionary.com','exiledb.com'].includes(new URL(s.url).hostname),`${g.slug}: source must be reviewed official or named reference`);assert(/^\d{4}-\d{2}-\d{2}$/.test(s.checkedAt));}
  assert(sitemap.includes(`/guides/${g.slug}/</loc>`));
  assert(!html.includes('[source:'),'Source markers must render into links');
