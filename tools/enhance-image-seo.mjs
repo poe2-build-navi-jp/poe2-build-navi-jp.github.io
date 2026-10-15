@@ -1,9 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { imageRights, imageCreditHtml } from "./image-rights.mjs";
 import { insertBlock } from "./block-order.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const base = "https://poe2-build-navi-jp.github.io";
+const site = JSON.parse(await readFile(resolve(root, "data/site.json"), "utf8"));
 const builds = JSON.parse(await readFile(resolve(root, "data/builds.json"), "utf8"));
 const classes = JSON.parse(await readFile(resolve(root, "data/classes.json"), "utf8"));
 const { ROADMAP_BUILD_IDS, ROADMAP_OG_BUILD_IDS } = await import("./roadmap-builds.mjs");
@@ -11,8 +13,8 @@ const roadmapBuilds = new Set(ROADMAP_BUILD_IDS);
 const esc = (value) => String(value).replaceAll("&", "&amp;").replaceAll('"', "&quot;");
 
 const pages = [
-  {file:"beginner-builds/index.html",path:"/beginner-builds/",image:"/images/poe2/guides/poe2-beginner-recommended-builds.svg",og:"/images/poe2/og/poe2-recommended-builds-og.webp",alt:"PoE2初心者向けおすすめビルド比較",caption:"初心者向けおすすめビルドの戦い方・弱点・切替時期の比較"},
-  {file:"index.html",path:"/",image:"/images/poe2/guides/poe2-beginner-recommended-builds.svg",og:"/images/poe2/og/poe2-recommended-builds-og.webp",alt:"PoE2初心者向けおすすめビルド比較",caption:"遠距離・耐久・ミニオン・DoTから選ぶ、初心者向けおすすめビルド早見図",boundary:'</section><section id="choose-class"'},
+  {file:"beginner-builds/index.html",path:"/beginner-builds/",metadataOnly:true,image:"/images/poe2/guides/poe2-beginner-recommended-builds.svg",og:"/images/poe2/og/poe2-recommended-builds-og.webp",alt:"PoE2初心者向けおすすめビルド比較",caption:"初心者向けおすすめビルドの戦い方・弱点・切替時期の比較"},
+  {file:"index.html",path:"/",metadataOnly:true,image:"/images/poe2/guides/poe2-beginner-recommended-builds.svg",og:"/images/poe2/og/poe2-recommended-builds-og.webp",alt:"PoE2初心者向けおすすめビルド比較",caption:"遠距離・耐久・ミニオン・DoTから選ぶ、初心者向けおすすめビルド早見図",boundary:'</section><section id="choose-class"'},
   {file:"tier-list/index.html",path:"/tier-list/",image:"/images/poe2/guides/poe2-beginner-build-tier.svg",og:"/images/poe2/og/poe2-build-tier-og.webp",alt:"PoE2初心者向けビルドTier比較",caption:"育てやすさ・操作・切替条件を基準にした初心者向けビルドTier",article:true},
   {file:"league-starter/index.html",path:"/league-starter/",image:"/images/poe2/guides/poe2-league-starter-builds.svg",og:"/images/poe2/og/poe2-league-starter-og.webp",alt:"PoE2リーグスターターと序盤おすすめビルド比較",caption:"序盤の育てやすさから選ぶPoE2リーグスターター早見図",article:true},
   {file:"leveling/index.html",path:"/leveling/",image:"/images/poe2/guides/poe2-leveling-guide.svg",og:"/images/poe2/og/poe2-leveling-og.webp",alt:"PoE2レベリングで現在Lvから今やること3つを確認する流れ",caption:"職業とビルドを選び、現在Lvから今やること3つへ進むレベリング手順",article:true},
@@ -35,7 +37,7 @@ for (const page of pages) {
     page.mobileHeight = Number(mobileSvg.match(/viewBox="0 0 720 (\d+)"/)[1]);
   }
 }
-const figure = (page) => `<!-- image-visual:start --><figure class="seo-visual">${page.mobile ? `<picture><source media="(max-width: 600px)" srcset="${page.mobile}" width="720" height="${page.mobileHeight}">` : ""}<img src="${page.image}" width="${page.width}" height="${page.height}" loading="lazy" decoding="async" alt="${esc(page.alt)}">${page.mobile ? "</picture>" : ""}<figcaption>${esc(page.caption)}${page.build ? "。各段階の最優先行動を抜粋。スキル・装備の詳しい条件は下の育成手順で確認してください。" : ""}</figcaption></figure><!-- image-visual:end -->`;
+const figure = (page) => `<!-- image-visual:start --><figure class="seo-visual">${page.mobile ? `<picture><source media="(max-width: 600px)" srcset="${page.mobile}" width="720" height="${page.mobileHeight}">` : ""}<img src="${page.image}" width="${page.width}" height="${page.height}" loading="lazy" decoding="async" alt="${esc(page.alt)}">${page.mobile ? "</picture>" : ""}<figcaption>${esc(page.caption)}${page.build ? "。各段階の最優先行動を抜粋。スキル・装備の詳しい条件は下の育成手順で確認してください。" : ""}${imageCreditHtml}</figcaption></figure><!-- image-visual:end -->`;
 
 
 for (const page of pages) {
@@ -47,11 +49,12 @@ for (const page of pages) {
   html = html.replace(/\n[ \t]+\n/g,"\n");
   const absolute = `${base}${page.image}`;
   const absoluteOg = `${base}${page.og}`;
-  const schema = JSON.stringify({"@context":"https://schema.org","@type":"WebPage","url":`${base}${page.path}`,"image":[absolute],"primaryImageOfPage":{"@type":"ImageObject","contentUrl":absolute,"caption":page.caption}}).replaceAll("<","\\u003c");
+  const schema = JSON.stringify({"@context":"https://schema.org","@type":"WebPage","url":`${base}${page.path}`,...(page.metadataOnly ? {} : {"image":[absolute],"primaryImageOfPage":{"@type":"ImageObject","contentUrl":absolute,"caption":page.caption,...imageRights(site)}})}).replaceAll("<","\\u003c");
   const meta = page.schemaOnly
     ? `<!-- image-schema:start --><script type="application/ld+json">${schema}</script><!-- image-schema:end -->`
     : `<!-- image-seo:start --><meta property="og:image" content="${absoluteOg}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(page.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${absoluteOg}"><script type="application/ld+json">${schema}</script><!-- image-seo:end -->`;
   html = insertBlock(html, '</head>', page.schemaOnly ? 'image-schema' : 'image-seo', meta);
+  if (page.metadataOnly) { await writeFile(location,html); continue; }
   if (page.boundary && html.includes(page.boundary)) html = html.replace(page.boundary,`</section>${figure(page)}<section id="choose-class"`);
   else if (page.classHero) html = html.replace(/(<section class="class-page-hero"[\s\S]*?<div class="status-note">[\s\S]*?<\/div>)(<\/section>)/,`$1${figure(page)}$2`);
   else if (page.build) html = html.replace('<section id="roadmap"',`${figure(page)}<section id="roadmap"`);

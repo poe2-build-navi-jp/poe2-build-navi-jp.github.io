@@ -48,12 +48,12 @@
   "date": "2026-10-06"
  },
  "/classes/": {
-  "hash": "4f802d62cc08ed77",
-  "date": "2026-10-06"
+  "hash": "5ba2a811804ff5cb",
+  "date": "2026-10-15"
  },
  "/leveling/": {
-  "hash": "71496d561f0e265c",
-  "date": "2026-10-09"
+  "hash": "6adef9f7e660f002",
+  "date": "2026-10-15"
  },
  "/gear-check/": {
   "hash": "7dcc58a051b612b7",
@@ -80,12 +80,12 @@
   "date": "2026-10-06"
  },
  "/tier-list/": {
-  "hash": "6265e007606a34fa",
-  "date": "2026-10-09"
+  "hash": "69870c2c7a5ab975",
+  "date": "2026-10-15"
  },
  "/league-starter/": {
-  "hash": "2de69041ab50ace0",
-  "date": "2026-10-09"
+  "hash": "b9b961f9adf76ed2",
+  "date": "2026-10-15"
  },
  "/best-builds/": {
   "hash": "738bac82ba2636a3",
@@ -112,88 +112,88 @@
   "date": "2026-10-08"
  },
  "/terms/": {
-  "hash": "c72fbd9156d6b97b",
-  "date": "2026-09-07"
+  "hash": "5303eef1dab35eaf",
+  "date": "2026-10-15"
  },
  "/classes/monk/": {
-  "hash": "7810101e6549affe",
-  "date": "2026-10-06"
+  "hash": "4561abac4cd0d319",
+  "date": "2026-10-15"
  },
  "/classes/mercenary/": {
-  "hash": "e0dd263569dab4fb",
-  "date": "2026-10-06"
+  "hash": "2f0aeea65198f568",
+  "date": "2026-10-15"
  },
  "/classes/warrior/": {
-  "hash": "0b0a936643493f8b",
-  "date": "2026-10-06"
+  "hash": "59cdedd4ec00910b",
+  "date": "2026-10-15"
  },
  "/classes/sorceress/": {
-  "hash": "304f271bc64cdffe",
-  "date": "2026-10-06"
+  "hash": "07361922f27dde3c",
+  "date": "2026-10-15"
  },
  "/classes/huntress/": {
-  "hash": "0dff34be62881ba5",
-  "date": "2026-10-06"
+  "hash": "d6f81864bd08e961",
+  "date": "2026-10-15"
  },
  "/classes/ranger/": {
-  "hash": "2bc887c82a215df2",
-  "date": "2026-10-06"
+  "hash": "d9b97e10b0ee9830",
+  "date": "2026-10-15"
  },
  "/classes/witch/": {
-  "hash": "3c956b911696f112",
-  "date": "2026-10-06"
+  "hash": "ae7a5a190ff039df",
+  "date": "2026-10-15"
  },
  "/classes/druid/": {
-  "hash": "73af8dea10dc7282",
-  "date": "2026-10-06"
+  "hash": "f3a11ed342cd2a85",
+  "date": "2026-10-15"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "94d446767a5c40a0",
-  "date": "2026-10-13"
+  "hash": "e3a43a3ef326a6c0",
+  "date": "2026-10-15"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "bb208600b121477a",
-  "date": "2026-10-13"
+  "hash": "cde97d9196ca4f5a",
+  "date": "2026-10-15"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "bb4eeb7fae460685",
-  "date": "2026-10-13"
+  "hash": "e0f0e395822d93e1",
+  "date": "2026-10-15"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "fc724241501aa4aa",
-  "date": "2026-10-13"
+  "hash": "767bc74e0cde7831",
+  "date": "2026-10-15"
  },
  "/builds/huntress/companion/": {
-  "hash": "6a8c1fac0a1087b6",
-  "date": "2026-10-13"
+  "hash": "b48e63f00a25546c",
+  "date": "2026-10-15"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "49adab6427603294",
-  "date": "2026-10-13"
+  "hash": "e2c54d868a16be28",
+  "date": "2026-10-15"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "a2e5c36a46d80251",
-  "date": "2026-10-13"
+  "hash": "c3f8433c4b09527f",
+  "date": "2026-10-15"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "c6e54d0988035307",
-  "date": "2026-10-13"
+  "hash": "bbedb8cf3326d216",
+  "date": "2026-10-15"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "34663bd29eac3ebc",
-  "date": "2026-10-13"
+  "hash": "226fa374994f41bf",
+  "date": "2026-10-15"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "f109abc53586e5af",
-  "date": "2026-10-13"
+  "hash": "c79238688a9c755c",
+  "date": "2026-10-15"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "3171d9fda579e473",
-  "date": "2026-10-13"
+  "hash": "76df5f19e8acb9b5",
+  "date": "2026-10-15"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "16bc6ba12c54e25c",
-  "date": "2026-10-13"
+  "hash": "5558cf716ccc3840",
+  "date": "2026-10-15"
  },
  "/guides/skill-gems/": {
   "hash": "3c5919b95dbf236b",
@@ -300,8 +300,8 @@
   "date": "2026-10-10"
  },
  "/guides/unique-gear/": {
-  "hash": "d5885a7409ea19b7",
-  "date": "2026-10-13"
+  "hash": "8a64d17f78e6680c",
+  "date": "2026-10-15"
  },
  "/dictionary/build/": {
   "hash": "43ba11e22407abde",

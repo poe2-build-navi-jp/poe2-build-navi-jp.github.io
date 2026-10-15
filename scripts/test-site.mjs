@@ -136,10 +136,10 @@ assert(robots.includes("Allow: /"), "robots must allow crawling");
 assert(!/Disallow:\s*\/images/i.test(robots), "robots must not block image assets");
 assert(robots.includes("https://poe2-build-navi-jp.github.io/sitemap.xml"), "robots sitemap missing");
 assert(sitemap.includes('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'), "image sitemap namespace missing");
-// Existing hub/class/build images plus each indexed strategy guide's unique visuals.
+// Displayed hub/class/build images (home has no figure) plus strategy visuals.
 const strategyGuidesForImages = JSON.parse(await read("data/strategy-guides.json"));
 const strategyImageCount = strategyGuidesForImages.filter(guide => sitemap.includes(`${baseUrl}/guides/${guide.slug}/</loc>`)).reduce((total, guide) => total + new Set([guide.heroVisual, ...guide.sections.map(section => section.visual)].filter(Boolean).map(visual => visual.src)).size, 0);
-const expectedSitemapImages = 13 + builds.filter((build) => build.status === "verified").length + strategyImageCount;
+const expectedSitemapImages = 12 + builds.filter((build) => build.status === "verified").length + strategyImageCount;
 assert((sitemap.match(/<image:image>/g) || []).length === expectedSitemapImages, `image sitemap must contain ${expectedSitemapImages} images`);
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/"), "sitemap root missing");
 assert(sitemap.includes("https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/"), "reviewed build missing from sitemap");

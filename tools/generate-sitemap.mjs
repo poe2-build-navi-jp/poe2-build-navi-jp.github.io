@@ -19,7 +19,6 @@ const changedPaths=new Set(["/","/leveling/","/tier-list/","/league-starter/","/
 const {ROADMAP_BUILD_IDS}=await import("./roadmap-builds.mjs");
 const priorityBuildIds=new Set(ROADMAP_BUILD_IDS);
 const imageMap=new Map([
-  ["/",["/images/poe2/guides/poe2-beginner-recommended-builds.svg","PoE2初心者向けおすすめビルド比較"]],
   ["/tier-list/",["/images/poe2/guides/poe2-beginner-build-tier.svg","PoE2初心者向けビルドTier比較"]],
   ["/league-starter/",["/images/poe2/guides/poe2-league-starter-builds.svg","PoE2リーグスターター比較"]],
   ["/leveling/",["/images/poe2/guides/poe2-leveling-guide.svg","PoE2レベリングガイド"]],
@@ -41,6 +40,6 @@ for(const path of urls){
 await writeFile(datesFile,`${JSON.stringify(pageDates,null,1)}\n`);
 const lastmod=path=>[buildLastmod.get(path)||(changedPaths.has(path)?changedDate:defaultDate),pageDates[path].date].sort().at(-1);
 const xmlEscape=value=>String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
-const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map((path,i)=>{const image=imageMap.get(path);return `  <url><loc>${base}${path}</loc><lastmod>${lastmod(path)}</lastmod><priority>${i===0?"1.0":path==="/best-builds/"||path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority>${image?`<image:image><image:loc>${base}${image[0]}</image:loc><image:title>${xmlEscape(image[1])}</image:title></image:image>`:""}${(strategyImages.get(path)||[]).map(src=>`<image:image><image:loc>${base}${xmlEscape(src)}</image:loc></image:image>`).join("")}</url>`}).join("\n")}\n</urlset>\n`;
+const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map((path,i)=>{const image=imageMap.get(path);return `  <url><loc>${base}${path}</loc><lastmod>${lastmod(path)}</lastmod><priority>${i===0?"1.0":path==="/best-builds/"||path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority>${image?`<image:image><image:loc>${base}${image[0]}</image:loc></image:image>`:""}${(strategyImages.get(path)||[]).map(src=>`<image:image><image:loc>${base}${xmlEscape(src)}</image:loc></image:image>`).join("")}</url>`}).join("\n")}\n</urlset>\n`;
 await writeFile(resolve(root,"sitemap.xml"),xml);
 console.log(`Generated sitemap with ${urls.length} URLs.`);
