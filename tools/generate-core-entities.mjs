@@ -38,6 +38,6 @@ for(const b of builds.filter(b=>b.status!=='draft')){
  html=html.replace('</main>',block+'</main>');await writeFile(file,html);
 }
 console.log(`Generated ${entities.length} skill/equipment references and two indexes.`);
-for(const [slug,label,href] of [['skill-gems','掲載ビルドの主要スキルを調べる','/skills/'],['equipment-basics','掲載ビルドの装備を調べる','/equipment/']]){
- const file=resolve(root,`guides/${slug}/index.html`);let html=await readFile(file,'utf8');html=html.replace(/<!-- entity-reference:start -->[\s\S]*?<!-- entity-reference:end -->/g,'');const block=`<!-- entity-reference:start --><p><a href="${href}">${label}：効果・条件・入手方法</a></p><!-- entity-reference:end -->`;html=html.replace('</article>',block+'</article>');await writeFile(file,html);
+for(const [page,label,href] of [['guides/skill-gems','掲載ビルドの主要スキルを調べる','/skills/'],['guides/equipment-basics','掲載ビルドの装備を調べる','/equipment/'],['dictionary/skill-gem','掲載ビルドの主要スキル一覧','/skills/'],['guides/unique-gear','ユニーク装備ごとの効果・必要条件を調べる','/equipment/']]){
+ const file=resolve(root,`${page}/index.html`);let html;try{html=await readFile(file,'utf8');}catch{continue;} // Partial copies in tests may lack a page.html=html.replace(/<!-- entity-reference:start -->[\s\S]*?<!-- entity-reference:end -->/g,'');const block=`<!-- entity-reference:start --><p><a href="${href}">${label}：効果・条件・入手方法</a></p><!-- entity-reference:end -->`;html=html.replace('</article>',block+'</article>');await writeFile(file,html);
 }
