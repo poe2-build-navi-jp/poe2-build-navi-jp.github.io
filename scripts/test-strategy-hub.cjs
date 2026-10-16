@@ -15,6 +15,13 @@ const expected=new Set([...original,...extra.map(g=>g.slug)]).size;
 assert.equal(doc.querySelectorAll('h1').length,1);
 assert.equal(doc.querySelector('link[rel="canonical"]').href,'https://poe2-build-navi-jp.github.io/guides/');
 const cards=[...doc.querySelectorAll('.content-card')];
+assert.equal(doc.querySelectorAll('.guide-entrances a').length,6);
+assert(doc.querySelector('#beginner').open,'Beginner steps visible on arrival');
+for(const a of doc.querySelectorAll('.guide-entrances a, .guide-build-links a')) {
+ const href=a.getAttribute('href');
+ assert(href.startsWith('#')?doc.querySelector(href):fs.existsSync(path.join(root,href,'index.html')),href);
+}
+
 const intents=JSON.parse(read('data/guide-search-intents.json'));
 assert.equal(cards.length,expected);
 assert.equal(new Set(cards.map(a=>a.href)).size,expected);
@@ -84,5 +91,11 @@ doc.querySelector('.guide-category-nav a[href="#progress"]').click();
 assert.equal(visible().length,cards.length,'Category anchors expose their destinations');
 assert.equal(search.value,'');
 for(const card of cards)assert.equal(card.querySelector('strong').textContent,intents.find(i=>i.path===card.getAttribute('href')).h1,'Client-side filtering must preserve full titles');
+query('該当しない検索zzzz');
+doc.querySelector('.guide-entrances a[href="#progress"]').click();
+assert.equal(visible().length,cards.length,'Purpose navigation clears filters before jumping');
+doc.querySelector('#beginner').open=false;
+doc.querySelector('.guide-entrances a[href="#beginner"]').click();
+assert(doc.querySelector('#beginner').open,'Beginner entrance expands a closed roadmap');
 console.log(`PASS: ${expected} full-title JS-off cards, routes, source note, search/filter/reset, query restoration, legacy anchors, schema and return links`);
 dom.window.close();

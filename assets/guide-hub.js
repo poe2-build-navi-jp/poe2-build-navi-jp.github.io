@@ -48,8 +48,9 @@
   for (const button of buttons) button.addEventListener('click', () => { category = button.dataset.filter; render(); save('pushState'); });
   for (const button of document.querySelectorAll('[data-guide-reset]')) button.addEventListener('click', () => { category = 'all'; search.value = ''; render(); save('pushState'); search.focus(); });
   // Category anchors remain real links, including with JavaScript disabled.
-  for (const link of document.querySelectorAll('.guide-category-nav a')) link.addEventListener('click', () => {
+  for (const link of document.querySelectorAll('.guide-category-nav a, .guide-entrances a, .guide-build-links a[href^="#"]')) link.addEventListener('click', () => {
     category = 'all'; search.value = ''; render(); save();
+    if (link.hash === '#beginner') document.querySelector('#beginner').open = true;
   });
   window.addEventListener('popstate', restore);
   window.addEventListener('pageshow', restore);
