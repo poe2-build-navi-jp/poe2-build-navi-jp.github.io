@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "7ef06d0a7a14e461573f0d47a56bb8b25f62187f",
+  "headCommit": "cd3a829cb4638fa510847fe9f4a1562355ec1ff7",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "change": "updated",
+      "beforeHash": "2d2140064f83621d6dfc4a17e2aae45ff3ff3aef1aeb959119469ff0529ab8f4",
+      "afterHash": "99b81f46a32e14680050fcad293de7a30db08f4417c90ce38de5c13435ba9406"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/best-builds/",
+      "change": "updated",
+      "beforeHash": "da3c622edb52bc1e91bc77dada2b0430e956101339cef1bf2a61e22f9773e679",
+      "afterHash": "9ce268b1eb6c8cb13b23866656da1c2456f7bdfc7c9681651c0387b2ca2d18b4"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/what-is-poe2/",
+      "change": "updated",
+      "beforeHash": "4c4730298eebcb21492eb601617639bce709d67dba8442bad2e541cb05e004e5",
+      "afterHash": "564ee5a260766ba552b5ac2874eebd70c799065a9f59e615b5f5bdca11b9c14d"
+    }
+  ]
+}

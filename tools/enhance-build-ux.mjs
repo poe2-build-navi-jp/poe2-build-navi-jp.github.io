@@ -10,6 +10,27 @@ const builds=JSON.parse(await read('data/builds.json')).filter(b=>b.status!=='dr
 const discovery=JSON.parse(await read('data/discovery.json'));
 const site=JSON.parse(await read('data/site.json'));
 const url=b=>`/builds/${b.classSlug}/${b.slug}/`;
+// Home: every listed build, grouped by how it fights, as crawlable text plus an ItemList. Each build
+// appears once; the group follows its main skill type (Attack with a ranged weapon / melee Attack /
+// Spell / Minion or Companion). JS shows one group at a time (tabs); without JS all groups are shown.
+const HOME_GROUPS=[
+ ['ranged','遠距離','弓・クロスボウ・槍で離れて戦う',['ranger-ice-shot-deadeye','mercenary-twister-gemling','huntress-twister-spirit-walker','mercenary-grenade-gemling']],
+ ['melee','近接','近づいて武器や盾で戦う',['monk-whirling-assault','warrior-shield-wall-smith']],
+ ['spell','魔法','スペル（魔法）を撃って戦う',['sorceress-spark-stormweaver','druid-plant-oracle','witch-ed-contagion-lich']],
+ ['minion','召喚','召喚した仲間や相棒に戦わせる',['witch-minion-infernalist','sorceress-sand-fire','huntress-companion']]
+];
+const tierOf=id=>Object.entries(discovery.tiers).find(([,list])=>list.some(t=>t.id===id))?.[0];
+function homeBuildsHtml(){
+ const listed=builds.filter(b=>b.status!=='draft');
+ const grouped=HOME_GROUPS.map(([key,label,hint,ids])=>[key,label,hint,ids.map(id=>listed.find(b=>b.id===id)).filter(Boolean)]);
+ const placed=new Set(grouped.flatMap(g=>g[3].map(b=>b.id)));
+ const missing=listed.filter(b=>!placed.has(b.id));
+ if(missing.length)throw new Error(`Home build groups miss: ${missing.map(b=>b.id).join(', ')}`);
+ const top=listed.filter(b=>tierOf(b.id)==='S');
+ const row=b=>`<li><a href="${url(b)}">${esc(b.name)}</a><span class="hb-meta">${esc(b.className)}・${esc(b.ascendancy)}／主力：${esc(b.mainSkill)}${tierOf(b.id)?`／初心者Tier ${tierOf(b.id)}`:''}</span><span class="hb-fit">${esc(b.audience)}</span></li>`;
+ const schema={'@context':'https://schema.org','@type':'ItemList',name:`PoE2 ${discovery.patchVersion} おすすめビルド一覧`,numberOfItems:listed.length,itemListElement:grouped.flatMap(g=>g[3]).map((b,i)=>({'@type':'ListItem',position:i+1,name:b.name,url:`${site.baseUrl}${url(b)}`}))};
+ return `<!-- home-builds:start --><section id="home-builds" class="section" aria-labelledby="home-builds-title"><div class="section-head"><p class="section-kicker">ALL BUILDS / ${esc(discovery.patchVersion)}</p><h2 id="home-builds-title">PoE2のおすすめビルド一覧（全${listed.length}ビルド）</h2><p class="hb-answer">POE2ビルドナビは、Path of Exile 2（PoE2）のビルドを日本語で比較できるビルドサイトです。${esc(discovery.patchVersion)}に対応した${listed.length}ビルドを、遠距離・近接・魔法・召喚の戦い方から選べます。初めて遊ぶ人は、初心者向けTierでSの${top.map(b=>esc(b.name)).join('・')}から選ぶと迷いにくくなります。</p></div><div class="hb-tabs" role="tablist" aria-label="戦い方を選ぶ" hidden>${grouped.map(([key,label,,list],i)=>`<button type="button" role="tab" id="hb-tab-${key}" aria-controls="hb-${key}" aria-selected="${i===0}">${label}<small>${list.length}</small></button>`).join('')}</div>${grouped.map(([key,label,hint,list])=>`<div class="hb-panel" id="hb-${key}" role="tabpanel" aria-labelledby="hb-tab-${key}"><h3>${label}<small>${hint}</small></h3><ul class="hb-list">${list.map(row).join('')}</ul></div>`).join('')}<p class="hb-more">「最強ビルド」は周回・ボス・予算などの目的で変わります。<a href="/best-builds/">目的別の最強ビルド比較</a>・<a href="/tier-list/">初心者向けTier</a>・<a href="/builds/">全ビルドの条件を比較</a></p><script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script><script defer src="/assets/home-builds.js"></script></section><!-- home-builds:end -->`;
+}
 const pages=['index.html','beginner-builds/index.html','builds/index.html','tier-list/index.html','league-starter/index.html','classes/index.html','leveling/index.html',...[...new Set(builds.map(b=>b.classSlug))].map(c=>`classes/${c}/index.html`)];
 for(const page of pages){
  let html=await read(page);
@@ -41,7 +62,9 @@ for(const page of pages){
  if(page==='index.html'){
   html=html.replace(/<div class="hero-actions"[^>]*>[\s\S]*?<\/div>/,`<div class="hero-actions" aria-label="まず何をしたい？"><a class="button" href="/beginner-builds/">初心者おすすめビルド</a><a class="button-secondary" href="/best-builds/">最強ビルドを目的別に比較</a><a class="button-secondary" href="/classes/">自分に合う職業を選ぶ</a><a class="button-secondary" href="/leveling/">現在Lvから続きを見る</a></div>`);
   const quick=html.match(/<section id="quick-start"[\s\S]*?<\/section>/)?.[0];
-  if(quick){html=html.replace(quick,'').replace(/(<section id="purpose-picks"[\s\S]*?<\/section>)/,`$1${quick}`);}
+  html=html.replace(/<!-- home-builds:start -->[\s\S]*?<!-- home-builds:end -->/g,'');
+  if(quick)html=html.replace(quick,'');
+  html=html.replace(/(<section id="purpose-picks"[\s\S]*?<\/section>)/,`$1${homeBuildsHtml()}${quick||''}`);
   html=html.replace('id="quality-title">目的から探す','id="quality-title">もっと詳しく探す');
   html=html.replace(/<!-- recent-builds:start -->[\s\S]*?<!-- recent-builds:end -->/g,'');
   const recent=[...builds].sort((a,b)=>b.updatedAt.localeCompare(a.updatedAt)).slice(0,3);
