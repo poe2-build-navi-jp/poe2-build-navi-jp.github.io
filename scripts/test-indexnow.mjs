@@ -5,7 +5,11 @@ import { join, resolve } from 'node:path';
 import { SITE, REPO, KEY_FILE, ENDPOINT, articleUrl, inspectArticle, validatePlan, digest } from './indexnow-content.mjs';
 import { runIndexNow, verifyDeployment } from './indexnow-submit.mjs';
 const root = resolve(import.meta.dirname, '..');
-const original = JSON.parse(await readFile(join(root, 'docs/indexnow/2026-10-13-changes.json'), 'utf8'));
+import { readdir } from 'node:fs/promises';
+// The newest reviewed plan must describe the current pages (a later content change needs a new plan).
+const planName = (await readdir(join(root, 'docs/indexnow'))).filter(name => name.endsWith('-changes.json')).sort().at(-1);
+const original = JSON.parse(await readFile(join(root, 'docs/indexnow', planName), 'utf8'));
+const planUrls = (await readFile(join(root, 'docs/indexnow', planName.replace('-changes.json', '-urls.txt')), 'utf8')).trim().split(/\s+/);
 const plan = { ...original, urls: [original.urls[0]], deploymentCommit: '1'.repeat(40) };
 const key = (await readFile(join(root, KEY_FILE), 'utf8')).trim();
 const html = await readFile(join(root, 'index.html'), 'utf8');
@@ -39,7 +43,7 @@ async function stateTest(callback) {
 }
 test('only explicit production canonical paths are allowed', () => {
   for (const url of ['http://poe2-build-navi-jp.github.io/', 'https://gemnao.pages.dev/', `${SITE}/?x=1`, `${SITE}/#x`, `${SITE}/builds`, `${SITE}/../`, `${SITE}/%61/`, `${SITE}:444/`]) assert.throws(() => articleUrl(url));
-  assert.equal(validatePlan(original).urls.length, 16);
+  assert.equal(validatePlan(original).urls.length, planUrls.length);
   assert.throws(() => validatePlan({ ...plan, urls: [{ ...plan.urls[0], beforeHash: plan.urls[0].afterHash }] }));
 });
 test('local verification resources match and Bing tag remains in head', () => {
