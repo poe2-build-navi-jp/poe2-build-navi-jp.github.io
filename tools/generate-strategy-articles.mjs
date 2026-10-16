@@ -7,17 +7,23 @@ const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const guides=JSON.parse(await read('data/strategy-guides.json'));
 const site=JSON.parse(await read('data/site.json'));
+// Equipment pages (data/core-entities.json) that a unique-gear card can link to, keyed by English name.
+const gearKey=v=>String(v).replace(/[’']/g,"'").toLowerCase();
+const equipmentPages=new Map(JSON.parse(await read('data/core-entities.json')).filter(e=>e.kind==='equipment').map(e=>[gearKey(e.englishName),e]));
 const builds=JSON.parse(await read('data/builds.json'));
 const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const refs=(section,guide)=>(section.sourceRefs||[]).length?`<p class="guide-evidence">根拠：${section.sourceRefs.map(n=>{if(!guide.sources[n-1])throw Error(`${guide.slug}: missing source ${n}`);return `<a href="#source-${n}">資料${n}</a>`;}).join('・')}</p>`:'';
 const text=s=>esc(s).replace(/\[source:(\d+)\]/g,(_,n)=>`<sup><a href="#source-${n}" aria-label="資料${n}">[${n}]</a></sup>`);
 const visual=(v,hero=false)=>v?`<figure class="unique-gear-visual"><a href="${esc(v.src)}" aria-label="図解を大きく見る：${esc(v.alt)}"><img src="${esc(v.src)}" srcset="${esc(v.smallSrc)} 720w, ${esc(v.src)} 1200w" sizes="(max-width: 600px) calc(100vw - 48px), 680px" width="${v.width}" height="${v.height}" loading="${hero?'eager':'lazy'}" decoding="async"${hero?' fetchpriority="high"':''} alt="${esc(v.alt)}"></a><figcaption>${esc(v.caption)} <a href="${esc(v.src)}">図解を大きく見る</a>${imageCreditHtml}</figcaption></figure>`:'';
 const gearSummary=(section,guide)=>section.gearSummary?`<ul class="unique-gear-summary">${guide.sections.filter(s=>s.buildId).map(s=>`<li><h3><a href="#${esc(s.id)}">${esc(s.heading.replace('のおすすめユニーク装備',''))}</a></h3><p class="unique-summary-names">代表候補：${s.gearOptions.slice(0,2).map(o=>esc(o.nameJa||o.name)).join(' / ')}</p><p>${text(s.quickAnswer)}</p>${refs(s,guide)}</li>`).join('')}</ul>`:'';
-const gearHtml=(section,guide)=>(section.gearOptions||[]).map(option=>{
+// Each build's cards sit in a closed <details>: the section's quick answer stays visible and the
+// page stays short on phones.
+const gearHtml=(section,guide)=>section.gearOptions?.length?`<details class="unique-gear-details"><summary>${section.gearOptions.length}件の候補の詳細（用途・条件・代替）を見る</summary>${gearCards(section,guide)}</details>`:'';
+const gearCards=(section,guide)=>(section.gearOptions||[]).map(option=>{
  for(const key of ['name','slot','phase','purpose','conditions','tradeoff','rareAlternative','basis'])if(!option[key]?.trim())throw Error(`${guide.slug}: incomplete gear option ${key}`);
  if(!option.sourceRefs?.length)throw Error(`${guide.slug}: gear option needs sources`);
  const name=option.nameJa?`${esc(option.nameJa)}<span class="unique-gear-name-en" lang="en">${esc(option.name)}</span>`:esc(option.name);
- return `<article class="unique-gear-card"><h3>${name}</h3><p class="unique-gear-context">${esc(option.slot)} / ${esc(option.phase)}</p><p class="unique-gear-basis">${esc(option.basis)}</p><dl>${[['用途',option.purpose],['採用条件',option.conditions],['弱点・交換で失うもの',option.tradeoff],['レア装備などの代替',option.rareAlternative]].map(([label,value])=>`<div><dt>${label}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>${refs(option,guide)}</article>`;
+ return `<article class="unique-gear-card"><h3>${name}</h3><p class="unique-gear-context">${esc(option.slot)} / ${esc(option.phase)}</p><p class="unique-gear-basis">${esc(option.basis)}</p>${equipmentPages.has(gearKey(option.name))?`<p class="unique-gear-entity"><a href="/equipment/${equipmentPages.get(gearKey(option.name)).slug}/">${esc(option.nameJa||option.name)}の効果・必要条件・入手方法</a></p>`:''}<dl>${[['用途',option.purpose],['採用条件',option.conditions],['弱点・交換で失うもの',option.tradeoff],['レア装備などの代替',option.rareAlternative]].map(([label,value])=>`<div><dt>${label}</dt><dd>${text(value)}</dd></div>`).join('')}</dl>${refs(option,guide)}</article>`;
 }).join('');
 const buildReturn=section=>{
  if(!section.buildId)return '';

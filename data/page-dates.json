@@ -4,20 +4,20 @@
   "date": "2026-10-13"
  },
  "/search/": {
-  "hash": "3d825dadb0660415",
-  "date": "2026-10-12"
+  "hash": "e191d39ce17fc403",
+  "date": "2026-10-17"
  },
  "/name-index/": {
   "hash": "986d0019a8e5e4d2",
   "date": "2026-10-10"
  },
  "/skills/": {
-  "hash": "9c401699d4b1a42a",
-  "date": "2026-10-10"
+  "hash": "166b936a41de8e5f",
+  "date": "2026-10-17"
  },
  "/equipment/": {
-  "hash": "4ecd4839474095d8",
-  "date": "2026-10-10"
+  "hash": "b19554b580bbc502",
+  "date": "2026-10-17"
  },
  "/skills/whirling-assault/": {
   "hash": "02b78d50f7bdd415",
@@ -42,6 +42,78 @@
  "/equipment/thrillsteel/": {
   "hash": "2633bd33775cc4b8",
   "date": "2026-10-10"
+ },
+ "/skills/ice-shot/": {
+  "hash": "2ce1c742774c5036",
+  "date": "2026-10-17"
+ },
+ "/skills/skeletal-sniper/": {
+  "hash": "3b4a4457d450f2c9",
+  "date": "2026-10-17"
+ },
+ "/skills/entangle/": {
+  "hash": "8a39f312ee93b478",
+  "date": "2026-10-17"
+ },
+ "/skills/essence-drain/": {
+  "hash": "49c99f9a4478b309",
+  "date": "2026-10-17"
+ },
+ "/skills/contagion/": {
+  "hash": "ecf3febbb517749e",
+  "date": "2026-10-17"
+ },
+ "/skills/explosive-grenade/": {
+  "hash": "b3ab65fa2febe5e2",
+  "date": "2026-10-17"
+ },
+ "/skills/tame-beast/": {
+  "hash": "4b12721e85b3e7f5",
+  "date": "2026-10-17"
+ },
+ "/skills/comet/": {
+  "hash": "fc9a1edbf4a45020",
+  "date": "2026-10-17"
+ },
+ "/equipment/headhunter/": {
+  "hash": "b34d61bc0e31daee",
+  "date": "2026-10-17"
+ },
+ "/equipment/darkness-enthroned/": {
+  "hash": "2285bfdc1d5d9242",
+  "date": "2026-10-17"
+ },
+ "/equipment/bones-of-ullr/": {
+  "hash": "245f712fdb6b27fc",
+  "date": "2026-10-17"
+ },
+ "/equipment/atziris-disdain/": {
+  "hash": "4604c766e814f232",
+  "date": "2026-10-17"
+ },
+ "/equipment/maligaros-virtuosity/": {
+  "hash": "7ff0ffe06c0b611c",
+  "date": "2026-10-17"
+ },
+ "/equipment/nightscale/": {
+  "hash": "a135f3adf9d6c1b1",
+  "date": "2026-10-17"
+ },
+ "/equipment/redemption/": {
+  "hash": "e62c290f1876a341",
+  "date": "2026-10-17"
+ },
+ "/equipment/tangletongue/": {
+  "hash": "69d9b88948568c38",
+  "date": "2026-10-17"
+ },
+ "/equipment/skysliver/": {
+  "hash": "34a932df83843a31",
+  "date": "2026-10-17"
+ },
+ "/equipment/tyrannys-grip/": {
+  "hash": "54dcd0c566dcc105",
+  "date": "2026-10-17"
  },
  "/builds/": {
   "hash": "7818a18e6dd604fa",
@@ -148,56 +220,56 @@
   "date": "2026-10-15"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "e3a43a3ef326a6c0",
-  "date": "2026-10-15"
+  "hash": "e734af0259a072ca",
+  "date": "2026-10-17"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "cde97d9196ca4f5a",
-  "date": "2026-10-15"
+  "hash": "62e2d5f2a5f28b07",
+  "date": "2026-10-17"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "e0f0e395822d93e1",
-  "date": "2026-10-15"
+  "hash": "278aea25542c629a",
+  "date": "2026-10-17"
  },
  "/builds/sorceress/sand-and-fire/": {
   "hash": "767bc74e0cde7831",
   "date": "2026-10-15"
  },
  "/builds/huntress/companion/": {
-  "hash": "b48e63f00a25546c",
-  "date": "2026-10-15"
+  "hash": "a88e610d5ccefb8d",
+  "date": "2026-10-17"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "e2c54d868a16be28",
-  "date": "2026-10-15"
+  "hash": "708ae8d4b8f80556",
+  "date": "2026-10-17"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "c3f8433c4b09527f",
-  "date": "2026-10-15"
+  "hash": "31711649a3ce2227",
+  "date": "2026-10-17"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "bbedb8cf3326d216",
-  "date": "2026-10-15"
+  "hash": "41e7696c03633675",
+  "date": "2026-10-17"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "226fa374994f41bf",
-  "date": "2026-10-15"
+  "hash": "8aa6ba1d3093f2c3",
+  "date": "2026-10-17"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "c79238688a9c755c",
-  "date": "2026-10-15"
+  "hash": "6b27fab0bb1910a5",
+  "date": "2026-10-17"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "76df5f19e8acb9b5",
-  "date": "2026-10-15"
+  "hash": "5c272b0314ed0486",
+  "date": "2026-10-17"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "5558cf716ccc3840",
-  "date": "2026-10-15"
+  "hash": "83aeca4e5b5daecb",
+  "date": "2026-10-17"
  },
  "/guides/skill-gems/": {
-  "hash": "3c5919b95dbf236b",
-  "date": "2026-10-10"
+  "hash": "fe67c9c212bd6bc5",
+  "date": "2026-10-17"
  },
  "/guides/support-gems/": {
   "hash": "765bdff5f3e253fd",
@@ -208,8 +280,8 @@
   "date": "2026-10-09"
  },
  "/guides/equipment-basics/": {
-  "hash": "4bdd9d9a7e6ee216",
-  "date": "2026-10-10"
+  "hash": "8490bfb024326dab",
+  "date": "2026-10-17"
  },
  "/guides/resistance/": {
   "hash": "d95a4ccc1ceb8a79",
@@ -300,8 +372,8 @@
   "date": "2026-10-10"
  },
  "/guides/unique-gear/": {
-  "hash": "8a64d17f78e6680c",
-  "date": "2026-10-15"
+  "hash": "ab49881c8ddb25bc",
+  "date": "2026-10-17"
  },
  "/dictionary/build/": {
   "hash": "43ba11e22407abde",
@@ -313,7 +385,7 @@
  },
  "/dictionary/skill-gem/": {
   "hash": "b407c32a050e55f2",
-  "date": "2026-10-06"
+  "date": "2026-10-17"
  },
  "/dictionary/support-gem/": {
   "hash": "06ae998ca9f3d43f",
@@ -380,8 +452,8 @@
   "date": "2026-10-09"
  },
  "/poe2-1-0/release-date/": {
-  "hash": "91f34b2eb7641f5e",
-  "date": "2026-10-06"
+  "hash": "7c22d197fcc2e69f",
+  "date": "2026-10-17"
  },
  "/poe2-1-0/how-to-start/": {
   "hash": "5d4d23c72198f1d9",
@@ -412,8 +484,8 @@
   "date": "2026-10-04"
  },
  "/poe2-1-0/duelist/": {
-  "hash": "21120eb723a0b10f",
-  "date": "2026-10-06"
+  "hash": "316d26244307e6e3",
+  "date": "2026-10-17"
  },
  "/what-is-poe2/": {
   "hash": "b565f6a2ec83b69f",

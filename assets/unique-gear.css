@@ -15,3 +15,7 @@
 .unique-gear-card dl>div{display:grid;grid-template-columns:145px minmax(0,1fr);gap:.8rem;padding:.7rem 0;border-top:1px solid #ded7ca}
 .unique-gear-card dt{font-weight:700}.unique-gear-card dd{margin:0;line-height:1.85}
 @media(max-width:600px){.unique-gear-card{padding:1rem}.unique-gear-card dl>div{grid-template-columns:1fr;gap:.25rem}.unique-gear-card h3{font-size:1.1rem}}
+.unique-gear-details{margin:1rem 0}
+.unique-gear-details>summary{cursor:pointer;padding:.75rem 1rem;border:1px solid #c7bfae;border-radius:10px;background:#fffdf8;font-weight:700}
+.unique-gear-details[open]>summary{margin-bottom:.5rem}
+.unique-gear-entity{margin:.25rem 0 .75rem}

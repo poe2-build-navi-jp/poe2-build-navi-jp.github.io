@@ -322,5 +322,888 @@
         "supports": "マップ開始時のThrillsteel採用・購入案。2026-05-28公開のビルド解説であり、現行全ロードアウトの検証ではない。"
       }
     ]
+  },
+  {
+    "slug": "ice-shot",
+    "kind": "skill",
+    "name": "アイスショット",
+    "englishName": "Ice Shot",
+    "aliases": [],
+    "summary": "命中すると氷の破片を円錐状に散らす、弓用の冷気アタック。掲載デッドアイの主力。",
+    "effect": [
+      "氷の矢を放ち、命中すると氷の破片を円錐状に散らす。[source:1]",
+      "物理ダメージの80%を冷気ダメージに変換し、チルの効果とフリーズの蓄積を高める。[source:1]"
+    ],
+    "requirements": [
+      "弓が必要。ジェムに表示された器用さが必要。[source:1]",
+      "原石からの選択ティアは9。キャラクターLv31から使える（レベル9のスキルジェムの必要レベル）。[source:1][source:3]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石（ティア9以上）からアイスショットを選択する。[source:3]"
+    ],
+    "cautions": [
+      "Lv31まで使えないため、掲載ビルドの序盤はライトニングアローとライトニングロッドで進める。[source:4]",
+      "ジェムレベルを上げる前に必要器用さとマナコストを確認する。[source:1]"
+    ],
+    "buildIds": [
+      "ranger-ice-shot-deadeye"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Ice Shot（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Ice_Shot",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Ice Shot",
+        "url": "https://poe2db.tw/jp/Ice_Shot",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-16",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "Mobalytics: Ice Shot Deadeye Leveling Guide",
+        "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
+        "checkedAt": "2026-10-16",
+        "supports": "掲載育成ビルドでのLv31までの代替スキルと切替時期。"
+      }
+    ]
+  },
+  {
+    "slug": "skeletal-sniper",
+    "kind": "skill",
+    "name": "スケルトンスナイパー",
+    "englishName": "Skeletal Sniper",
+    "aliases": [
+      "スケルタルスナイパー"
+    ],
+    "summary": "遠距離から攻撃する復活型のスケルトンを召喚するSpiritジェム。掲載インファーナリストの育成主力。",
+    "effect": [
+      "有効にすると、遠距離攻撃を行い倒れても復活するスケルトンスナイパーを召喚する。[source:1]",
+      "コマンドで上空から矢を降らせ、可燃性の毒ガスの雲を作る。雲は起爆スキルの命中か、発火した敵が触れると爆発する。[source:1]"
+    ],
+    "requirements": [
+      "Spiritを予約して使う。予約量はジェムレベルで変わる（表示ではLv1で90、Lv20で30）。[source:1]",
+      "ジェムに表示された知性が必要。[source:1]"
+    ],
+    "acquisition": [
+      "入手経路の詳細は今回確認していない。ジェムに表示された予約Spiritと、現在のSpirit総量を確認する。[source:1]"
+    ],
+    "cautions": [
+      "掲載ビルドはAct 3とLv67前後で召喚構成を切り替える。スナイパーだけで最後まで進む前提にしない。[source:3]",
+      "ミニオンAIが狭い場所で詰まる場合があると、参照ガイドは短所に挙げている。[source:4]"
+    ],
+    "buildIds": [
+      "witch-minion-infernalist"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Skeletal Sniper（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Skeletal_Sniper",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Skeletal Sniper",
+        "url": "https://poe2db.tw/jp/Skeletal_Sniper",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "Mobalytics: Thy Infernalist Leveling",
+        "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+        "checkedAt": "2026-10-16",
+        "supports": "掲載育成ビルドでのスナイパー採用と構成切替の時期。"
+      },
+      {
+        "name": "PoE Vault: Minion Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/witch/infernalist/minion-leveling-build",
+        "checkedAt": "2026-10-16",
+        "supports": "Strengths/Weaknesses欄のミニオンAIの注意。"
+      }
+    ]
+  },
+  {
+    "slug": "entangle",
+    "kind": "skill",
+    "name": "エンタングル",
+    "englishName": "Entangle",
+    "aliases": [],
+    "summary": "前方へ進む根の裂け目を作り、近くの敵へツタを絡めて減速させる植物スペル。掲載植物オラクルの主力。",
+    "effect": [
+      "前方へ這い進む裂け目を作り、通り道の敵にダメージを与える。裂け目が残る間、近くの敵へツタを付けてダメージと減速を与える。[source:1]",
+      "裂け目には同時に置ける上限がある（表示ではジェムレベルにより4〜8）。[source:1]"
+    ],
+    "requirements": [
+      "ジェムに表示された筋力と知性が必要。原石からの選択ティアは1。[source:1][source:3]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石からエンタングルを選択する。[source:3]"
+    ],
+    "cautions": [
+      "掲載ビルドは単体戦でThrashing Vinesを併用する。エンタングルだけでボスを倒す前提にしない。[source:4]",
+      "長いボス戦ではマナ不足に注意する。[source:5]"
+    ],
+    "buildIds": [
+      "druid-plant-oracle"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Entangle（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Entangle",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Entangle",
+        "url": "https://poe2db.tw/jp/Entangle",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-16",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "Maxroll: Entangle Oracle Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
+        "checkedAt": "2026-10-16",
+        "supports": "掲載ビルドでのエンタングルとThrashing Vinesの役割分担。"
+      },
+      {
+        "name": "Mobalytics: Raxx's 0.5.5 Plant Oracle Druid Endgame Build Guide",
+        "url": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+        "checkedAt": "2026-10-16",
+        "supports": "短所欄の「Mana Starved on Long Fights」。"
+      }
+    ]
+  },
+  {
+    "slug": "essence-drain",
+    "kind": "skill",
+    "name": "エッセンスドレイン",
+    "englishName": "Essence Drain",
+    "aliases": [],
+    "summary": "命中した敵に強力な混沌の継続ダメージを与える投射物スペル。掲載リッチの主力。",
+    "effect": [
+      "投射物を放ち、命中した敵に混沌ダメージの継続ダメージ（デバフ）を与える。[source:1]",
+      "スペルダメージの補正がデバフの継続ダメージにも適用される。[source:1]"
+    ],
+    "requirements": [
+      "ジェムに表示された知性が必要。原石からの選択ティアは3。[source:1][source:3]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石（ティア3以上）からエッセンスドレインを選択する。[source:3]"
+    ],
+    "cautions": [
+      "継続ダメージは効き始めるまでに時間がかかる。掲載ビルドはコンテージョンで広げる運用。[source:4]",
+      "スキルを複数使うためマナ消費が重くなりやすい。"
+    ],
+    "buildIds": [
+      "witch-ed-contagion-lich"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Essence Drain（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Essence_Drain",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Essence Drain",
+        "url": "https://poe2db.tw/jp/Essence_Drain",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-16",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "PoE Vault: Chaos Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
+        "checkedAt": "2026-10-16",
+        "supports": "掲載育成ビルドでのエッセンスドレインとコンテージョンの組合せ、武器依存の注意。"
+      }
+    ]
+  },
+  {
+    "slug": "contagion",
+    "kind": "skill",
+    "name": "コンテージョン",
+    "englishName": "Contagion",
+    "aliases": [],
+    "summary": "敵に混沌の継続ダメージを与え、倒れると周囲へ広がるスペル。掲載リッチでエッセンスドレインと組み合わせる。",
+    "effect": [
+      "1体の敵に混沌の継続ダメージを与えるデバフを付ける。対象が倒れると、呪いや他の混沌の継続ダメージデバフとともに近くの敵へ広がり、効果時間を更新する。[source:1]",
+      "広がるたびにデバフのダメージが増える（表示では1回ごとに100%、最大300%）。[source:1]"
+    ],
+    "requirements": [
+      "ジェムに表示された知性が必要。原石からの選択ティアは1。[source:1][source:3]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石からコンテージョンを選択する。[source:3]"
+    ],
+    "cautions": [
+      "広げるには、デバフ中の敵を倒す必要がある。単体のボス戦では広がりによる強化を前提にしない。",
+      "掲載ビルドの単体戦では別のスキル操作が増える。"
+    ],
+    "buildIds": [
+      "witch-ed-contagion-lich"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Contagion（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Contagion",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Contagion",
+        "url": "https://poe2db.tw/jp/Contagion",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-16",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "PoE Vault: Chaos Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
+        "checkedAt": "2026-10-16",
+        "supports": "掲載育成ビルドでのコンテージョンの使い方と単体戦の操作。"
+      }
+    ]
+  },
+  {
+    "slug": "explosive-grenade",
+    "kind": "skill",
+    "name": "エクスプローシブグレネード",
+    "englishName": "Explosive Grenade",
+    "aliases": [],
+    "summary": "跳ねるグレネードを放ち、導火線が尽きると炎の爆発を起こすクロスボウ用アタック。掲載グレネード・ジェムリングの主力。",
+    "effect": [
+      "跳ねるグレネードを放ち、起爆時間（表示では3秒）の後に炎の爆発を起こす。[source:1]",
+      "物理ダメージの80%を火ダメージに変換する。クールダウンがあり、表示では3回分まで使える。[source:1]"
+    ],
+    "requirements": [
+      "クロスボウが必要。ジェムに表示された筋力と器用さが必要。原石からの選択ティアは1。[source:1][source:3]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石からエクスプローシブグレネードを選択する。[source:3]"
+    ],
+    "cautions": [
+      "掲載ビルドは複数のグレネードを使い分けるため、起爆の順番に慣れが必要。",
+      "クロスボウと各部位の攻撃性能を段階的に更新する。"
+    ],
+    "buildIds": [
+      "mercenary-grenade-gemling"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Explosive Grenade（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Explosive_Grenade",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Explosive Grenade",
+        "url": "https://poe2db.tw/jp/Explosive_Grenade",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-16",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling",
+        "url": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "checkedAt": "2026-10-16",
+        "supports": "掲載育成ビルドでのグレネードの使い分け。"
+      }
+    ]
+  },
+  {
+    "slug": "tame-beast",
+    "kind": "skill",
+    "name": "テイムビースト",
+    "englishName": "Tame Beast",
+    "aliases": [],
+    "summary": "レアのビーストを捕まえて、復活する相棒として召喚できるようにするスキル。掲載相棒スピリットウォーカーの主力。",
+    "effect": [
+      "レアのビーストを一定時間ウィスプで包んで妨害する。包まれている間に倒すと捕獲し、以後はそのビーストを復活する相棒（Companion）として召喚できる。[source:1]",
+      "召喚したビーストは最大4つのモンスターModを保持する。[source:1]"
+    ],
+    "requirements": [
+      "ジェムに表示された器用さが必要。原石からの選択ティアは7。[source:1][source:3]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石（ティア7以上）からテイムビーストを選択する。[source:1][source:3]"
+    ],
+    "cautions": [
+      "原石のティア7が必要なため序盤は使えない。掲載ビルドは序盤を別の構成で進め、Act 3以降に相棒型へ切り替える。",
+      "良いModのビーストを探すには周回が必要になる場合がある。"
+    ],
+    "buildIds": [
+      "huntress-companion"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Tame Beast（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Tame_Beast",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Tame Beast",
+        "url": "https://poe2db.tw/jp/Tame_Beast",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-16",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "PoE Vault: Companion Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/huntress/spirit-walker/companion-leveling-build",
+        "checkedAt": "2026-10-16",
+        "supports": "掲載育成ビルドでの相棒型への切替時期と注意。"
+      }
+    ]
+  },
+  {
+    "slug": "comet",
+    "kind": "skill",
+    "name": "コメット",
+    "englishName": "Comet",
+    "aliases": [],
+    "summary": "指定した場所へ氷の塊を降らせ、大きなダメージを与える冷気スペル。掲載スパーク・ストームウィーバーではEndgameで会心時に自動発動させる。",
+    "effect": [
+      "空から氷の塊を降らせ、狙った場所に大きな冷気ダメージを与える。近くを狙うと詠唱時に後ろへ跳ぶ。[source:1]",
+      "火の注入（Fire Infusion）があれば消費し、氷と炎の強力な爆発になる。[source:1]"
+    ],
+    "requirements": [
+      "ジェムに表示された知性が必要。原石からの選択ティアは11。[source:1][source:3]"
+    ],
+    "acquisition": [
+      "スキルジェムの原石（ティア11以上）からコメットを選択する。[source:3]"
+    ],
+    "cautions": [
+      "掲載ビルドはSpirit 121以上になってからCast on Criticalで自動発動させる。それまではスパーク中心で進める。[source:4]",
+      "手動で使う場合は詠唱時間が長い（表示では合計詠唱時間+1秒）。[source:1]"
+    ],
+    "buildIds": [
+      "sorceress-spark-stormweaver"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Comet（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Comet",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Comet",
+        "url": "https://poe2db.tw/jp/Comet",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB: Uncut Skill Gem（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Uncut_Skill_Gem",
+        "checkedAt": "2026-10-16",
+        "supports": "原石からのスキル作成・各スキルの選択ティア。"
+      },
+      {
+        "name": "Path of Exile 2 Guide: Stormweaver - CoC Comet Spark Build",
+        "url": "https://pathofexile.gg/stormweaver-coc-comet-spark-build/",
+        "checkedAt": "2026-10-16",
+        "supports": "Spirit 121以上でCast on Critical＋コメットを追加する手順。"
+      }
+    ]
+  },
+  {
+    "slug": "headhunter",
+    "kind": "equipment",
+    "name": "ヘッドハンター",
+    "englishName": "Headhunter",
+    "aliases": [],
+    "summary": "レアモンスターを倒すとそのModを一定時間得るユニークベルト。複数の掲載ビルドが高投資の周回用に挙げる。",
+    "effect": [
+      "レアモンスターを倒すと、そのモンスターのModを60秒間得る。[source:1]",
+      "ライフ・筋力・器用さ・スタン閾値とチャームスロットも付く（数値は個体で変動）。[source:1]"
+    ],
+    "requirements": [
+      "ヘビーベルトをベースとする。表示上の必要レベルは50。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。高額品のため、トレード可能な環境で個体を確認して購入する案が中心。"
+    ],
+    "cautions": [
+      "レア敵を倒し続ける周回で効果を発揮する。ボス単独戦の火力が上がる装備ではない。[source:3]",
+      "参照ビルドの多くは、弓・武器・防御などを整えた後の候補としている。先にライフ・耐性を整える。[source:3]"
+    ],
+    "buildIds": [
+      "monk-whirling-assault",
+      "warrior-shield-wall-smith",
+      "ranger-ice-shot-deadeye",
+      "druid-plant-oracle",
+      "mercenary-grenade-gemling"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Headhunter（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Headhunter",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Headhunter",
+        "url": "https://poe2db.tw/jp/Headhunter",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。各ビルドの原典でヘッドハンターを採用した段階。"
+      }
+    ]
+  },
+  {
+    "slug": "darkness-enthroned",
+    "kind": "equipment",
+    "name": "即位した闇",
+    "englishName": "Darkness Enthroned",
+    "aliases": [],
+    "summary": "ソケットに入れた補強アイテムの効果を、胴装備として受けるユニークベルト。",
+    "effect": [
+      "このアイテムはソケットに入れたアイテムのボーナスを胴装備（Body Armour）として受ける。[source:1]",
+      "ソケットに入れた補強アイテムの効果が増える（数値は個体で変動）。隠しの補強ソケットを2つ持つ。[source:1]"
+    ],
+    "requirements": [
+      "精巧なベルト（Fine Belt）をベースとする。表示上の必要レベルは62。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。ソケットに入れるアイテムも別に必要。"
+    ],
+    "cautions": [
+      "ソケット効果の扱いが違う版（兜として受けるものなど）がある。参照ビルドによって指定する版が違うため、購入時に現物の文言を確認する。[source:3]",
+      "名前の「body armour」「helmet」はソケット効果の種類で、装備枠はベルト。[source:3]"
+    ],
+    "buildIds": [
+      "mercenary-twister-gemling",
+      "witch-minion-infernalist"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Darkness Enthroned（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Darkness_Enthroned",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Darkness Enthroned",
+        "url": "https://poe2db.tw/jp/Darkness_Enthroned",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。ツイスター・ジェムリングは胴扱い、インファーナリストの別原典は兜扱いの版を指定。"
+      }
+    ]
+  },
+  {
+    "slug": "bones-of-ullr",
+    "kind": "equipment",
+    "name": "ウルルの骨",
+    "englishName": "Bones of Ullr",
+    "aliases": [],
+    "summary": "アンデッドミニオンを生成するスキルの予約効率を高めるユニークブーツ。",
+    "effect": [
+      "アンデッドミニオンを生成するスキルの予約効率が上がる（数値は個体で変動）。[source:1]",
+      "移動速度・エナジーシールド・ライフ・マナも付く。[source:1]"
+    ],
+    "requirements": [
+      "格子のサンダル（Lattice Sandals）をベースとする。表示上の必要レベルは16、知性23。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。"
+    ],
+    "cautions": [
+      "対象はアンデッドを生成するスキルだけ。全てのミニオンに効くわけではない。[source:3]",
+      "ブーツの移動速度・防御・耐性を失わないか比較する。[source:3]"
+    ],
+    "buildIds": [
+      "witch-minion-infernalist"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Bones of Ullr（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Bones_of_Ullr",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Bones of Ullr",
+        "url": "https://poe2db.tw/jp/Bones_of_Ullr",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。インファーナリストの別原典（Powered Zealot Endgame）での採用と対象の注意。"
+      }
+    ]
+  },
+  {
+    "slug": "atziris-disdain",
+    "kind": "equipment",
+    "name": "アッツィリの軽蔑",
+    "englishName": "Atziri's Disdain",
+    "aliases": [
+      "Atziris Disdain"
+    ],
+    "summary": "最大ライフの一部を追加のエナジーシールドとして得るユニーク兜。",
+    "effect": [
+      "最大ライフの一部を追加の最大エナジーシールドとして得る（数値は個体で変動）。[source:1]",
+      "受けるダメージの10%はエナジーシールドを迂回する。最大マナとアイテムレアリティも付く。[source:1]"
+    ],
+    "requirements": [
+      "金のサークレット（Gold Circlet）をベースとする。表示上の必要レベルは40、知性58。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。"
+    ],
+    "cautions": [
+      "掲載リッチの原典は、Eternal Lifeなどの防御条件とセットで採用している。兜だけ交換して同じ耐久になるとは限らない。[source:3]",
+      "ダメージの一部がESを迂回する点を理解して採用する。[source:1]"
+    ],
+    "buildIds": [
+      "witch-ed-contagion-lich"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Atziri's Disdain（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Atziris_Disdain",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Atziri's Disdain",
+        "url": "https://poe2db.tw/jp/Atziris_Disdain",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。ED・コンテージョン リッチの原典での防御条件。"
+      }
+    ]
+  },
+  {
+    "slug": "maligaros-virtuosity",
+    "kind": "equipment",
+    "name": "マリガロの妙技",
+    "englishName": "Maligaro's Virtuosity",
+    "aliases": [
+      "Maligaros Virtuosity"
+    ],
+    "summary": "会心ダメージボーナスを250%に固定するユニーク手袋。スパーク・ストームウィーバーの会心型で採用。",
+    "effect": [
+      "会心ダメージボーナスが250%になる。会心率は再判定されない。[source:1]",
+      "会心率・攻撃速度・器用さ・回避も付く（数値は個体で変動）。[source:1]"
+    ],
+    "requirements": [
+      "上質な弓籠手（Fine Bracers）をベースとする。表示上の必要レベルは45、器用さ56。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。"
+    ],
+    "cautions": [
+      "すでに高い会心ダメージを積んでいる構成では有利とは限らない。変種と効果を混同しない。[source:3]",
+      "掲載ビルドの原典（CoC Comet型）は、会心ダメージが下がるPinpoint Criticalとの併用を前提にしている。[source:4]"
+    ],
+    "buildIds": [
+      "sorceress-spark-stormweaver"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Maligaro's Virtuosity（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Maligaros_Virtuosity",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Maligaro's Virtuosity",
+        "url": "https://poe2db.tw/jp/Maligaros_Virtuosity",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。250%固定の現物確認と変種の注意。"
+      },
+      {
+        "name": "Path of Exile 2 Guide: Stormweaver - CoC Comet Spark Build",
+        "url": "https://pathofexile.gg/stormweaver-coc-comet-spark-build/",
+        "checkedAt": "2026-10-16",
+        "supports": "Pinpoint Criticalとの併用。"
+      }
+    ]
+  },
+  {
+    "slug": "nightscale",
+    "kind": "equipment",
+    "name": "ナイトスケール",
+    "englishName": "Nightscale",
+    "aliases": [],
+    "summary": "直近に会心を出していればマナ再生が大きく上がるユニーク手袋。植物オラクルの安価構成で採用。",
+    "effect": [
+      "直近に会心を出していれば、マナ再生速度が150%上がる。[source:1]",
+      "直近に会心を出していなければ、マナを再生できない。[source:1]"
+    ],
+    "requirements": [
+      "パウアスケール手袋（Pauascale Gloves）をベースとする。表示上の必要レベルは45、知性56。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。"
+    ],
+    "cautions": [
+      "会心を出せない状況ではマナが回復しない。会心を安定して出せる構成でのみ採用する。[source:1]",
+      "効果の異なる変種がある。原典と同じタイプか現物を確認する。[source:3]"
+    ],
+    "buildIds": [
+      "druid-plant-oracle"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Nightscale（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Nightscale",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Nightscale",
+        "url": "https://poe2db.tw/jp/Nightscale",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。植物オラクル（Raxx）のCheap構成での採用と変種の注意。"
+      }
+    ]
+  },
+  {
+    "slug": "redemption",
+    "kind": "equipment",
+    "name": "贖罪",
+    "englishName": "Redemption",
+    "aliases": [],
+    "summary": "グレネードを使うたびにExplosive Rhythmを得る、弾薬を撃てないユニーククロスボウ。",
+    "effect": [
+      "グレネードスキルを2〜3回使うたびにExplosive Rhythmを1得る。10に達すると全て消費して、10秒間Explosive Fervourを得る。[source:1]",
+      "弾薬の装填・発射ができない。この武器の命中には会心ダメージボーナスがない。[source:1]"
+    ],
+    "requirements": [
+      "トラーサスキャノン（Trarthan Cannon）をベースとする。表示上の必要レベルは65、筋力114、器用さ63。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。"
+    ],
+    "cautions": [
+      "掲載グレネード・ジェムリングの原典はMid Endgameで専用の運用へ移行して採用している。単純な武器DPSの交換ではない。[source:3]",
+      "クールダウン回復速度が下がる。[source:1]"
+    ],
+    "buildIds": [
+      "mercenary-grenade-gemling"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Redemption（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Redemption",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Redemption",
+        "url": "https://poe2db.tw/jp/Redemption",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。グレネード・ジェムリング（DEADRABB1T版）のMid Endgameでの採用。"
+      }
+    ]
+  },
+  {
+    "slug": "tangletongue",
+    "kind": "equipment",
+    "name": "タングルタン",
+    "englishName": "Tangletongue",
+    "aliases": [],
+    "summary": "会心が二股に分かれる（Bifurcate）ユニーク槍。ツイスター・ジェムリングの会心移行で採用。",
+    "effect": [
+      "会心を二股に分ける（Bifurcates Critical Hits）。[source:1]",
+      "物理ダメージの追加と会心率・知性が付く。スキルのマナコストの10%をライフコストに変換する。[source:1]"
+    ],
+    "requirements": [
+      "双頭の槍（Forked Spear）をベースとする。表示上の必要レベルは26、筋力17、器用さ38。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。"
+    ],
+    "cautions": [
+      "武器自体のダメージは高くない。参照ビルドは会心ツリーと他部位の追加ダメージを揃えたうえで採用している。[source:3]",
+      "マナコストの一部がライフで支払われる。[source:1]"
+    ],
+    "buildIds": [
+      "mercenary-twister-gemling"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Tangletongue（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Tangletongue",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Tangletongue",
+        "url": "https://poe2db.tw/jp/Tangletongue",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。ツイスター・ジェムリングのAtlas Progression〜Early Endgameでのアジスの標との組合せ。"
+      }
+    ]
+  },
+  {
+    "slug": "skysliver",
+    "kind": "equipment",
+    "name": "スカイシルバー",
+    "englishName": "Skysliver",
+    "aliases": [],
+    "summary": "物理ダメージを持たず、雷ダメージと攻撃速度を持つユニーク槍。ツイスター・スピリットウォーカーの武器セット1で採用。",
+    "effect": [
+      "物理ダメージを持たず、雷ダメージを追加する。攻撃速度とショックの付与率が上がる（数値は個体で変動）。[source:1]"
+    ],
+    "requirements": [
+      "翼刃のスピア（Winged Spear）をベースとする。表示上の必要レベルは16、筋力12、器用さ25。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。"
+    ],
+    "cautions": [
+      "参照ビルドはWhirling Slash用の武器セット1に使う。Twister用の武器セット2の武器とは役割が違う。[source:3]"
+    ],
+    "buildIds": [
+      "huntress-twister-spirit-walker"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Skysliver（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Skysliver",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Skysliver",
+        "url": "https://poe2db.tw/jp/Skysliver",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。ツイスター・スピリットウォーカー（GuyThatDies版）の武器セット1での採用。"
+      }
+    ]
+  },
+  {
+    "slug": "tyrannys-grip",
+    "kind": "equipment",
+    "name": "圧政の手",
+    "englishName": "Tyranny's Grip",
+    "aliases": [
+      "Tyrannys Grip"
+    ],
+    "summary": "物理ダメージが大きく上がり、ストライクが周囲にも当たるユニーク槍。相棒スピリットウォーカーのEndgameで採用。",
+    "effect": [
+      "物理ダメージが大きく上がり、ストライクが範囲ダメージ（Splash）を与える。命中時に敵をノックバックする。[source:1]",
+      "投射物アタックを使えない。攻撃速度が下がる。[source:1]"
+    ],
+    "requirements": [
+      "鉄頭のスピア（Ironhead Spear）をベースとする。表示上の必要レベルは5、器用さ10。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "入手方法の確定情報は今回確認していない。参照ビルドは強化（Runeforging）した版を使う場合がある。[source:3]"
+    ],
+    "cautions": [
+      "投射物アタックを使えないため、序盤の槍投げ育成へそのまま流用しない。[source:1][source:3]",
+      "掲載相棒ビルドは、メインハンドのダメージを相棒へ渡すアセンダンシーが前提。[source:3]"
+    ],
+    "buildIds": [
+      "huntress-companion"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB: Tyranny's Grip（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Tyrannys_Grip",
+        "checkedAt": "2026-10-16",
+        "supports": "スキル・アイテムの効果、使用条件、取得元。公式による全仕様の保証ではない。"
+      },
+      {
+        "name": "PoE2DB日本語版: Tyranny's Grip",
+        "url": "https://poe2db.tw/jp/Tyrannys_Grip",
+        "checkedAt": "2026-10-16",
+        "supports": "日本語名と英語名の対応。ゲーム内表示を優先。"
+      },
+      {
+        "name": "ビルド別ユニーク装備ガイド",
+        "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+        "checkedAt": "2026-10-16",
+        "supports": "ビルド別ユニーク装備ガイド（このサイト）での照合内容。相棒スピリットウォーカー（PoE Vault版）での強化状態と前提条件。"
+      }
+    ]
   }
 ]

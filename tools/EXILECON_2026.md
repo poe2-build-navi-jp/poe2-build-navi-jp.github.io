@@ -3,12 +3,17 @@
 ExileCon 2026 は 2026-11-07〜08（ニュージーランド時間）、オークランドで開催
 （出典：Steamニュース公式「ExileCon 2026」2026-01-28、`/poe2-1-0/` に掲載）。
 11月のニュージーランドは夏時間（UTC+13）なので、日本時間は現地より4時間遅い。
-発表の時刻は未確認。**目標：発表から48時間以内に、確認できた内容だけをサイトとnoteに反映する。**
+**配信時刻（2026-10-06の公式「One Month until ExileCon 2026」で確認）**：TwitchとYouTubeで2日間無料配信。
+開始はPST 11月6日・7日の12:00＝**日本時間11月7日・8日の5:00**。基調講演（大型発表）はPST 13:00開始
+（告知に日付の明記なし。初日なら日本時間11月7日6:00）。
+**目標：発表から48時間以内に、確認できた内容だけをサイトとnoteに反映する。**
 
-## 0. 事前準備（済み・2026-09-28）
+## 0. 事前準備（済み・2026-09-28、2026-10-16に再確認）
 - `/poe2-1-0/` と `/poe2-1-0/duelist/` に「ExileCon 2026で発表予定」の節を追加済み。
 - `/poe2-1-0/pre-registration/`（事前登録）を公開済み。登録者には公式からExileConの発表メールが届く。
 - note見出し画像の生成スクリプト：`tools/note-header.mjs`。
+- 2026-10-16：配信時刻を `/poe2-1-0/duelist/`（本文・FAQ）と `/poe2-1-0/release-date/`（日程表）に掲載。下の手順の参照先がすべて存在することを確認。
+- `/poe2-1-0/early-access-characters/`（表の3）はまだ作っていない。発表で扱いが確定してから新規作成する。
 
 ## 1. 一次情報を集める（発表後すぐ）
 WebSearch・WebFetchの要約は誤りがあったため、**必ず原文で確認**する。
@@ -28,6 +33,7 @@ WebSearch・WebFetchの要約は誤りがあったため、**必ず原文で確�
 | 4 | Mac対応・アカウント作成手順・コンソール版の日本語 | `/poe2-1-0/how-to-start/`、`/poe2-1-0/system-requirements/`、`/poe2-1-0/japanese/` の未確認欄 |
 | 5 | 事前登録の残り報酬・節目の人数 | `/poe2-1-0/pre-registration/` |
 | 6 | キャンペーン・エンドゲームの変更 | `/poe2-1-0/` の「Early Accessから何が変わる？」 |
+| 7 | Duelistのスキル・ユニーク装備（公式の名前と効果が出た場合） | `data/core-entities.json`（`/skills/`・`/equipment/` に自動掲載。PoE2DB等で効果・条件を確認できたものだけ。一覧は「掲載ビルドで使う」項目と説明しているため、Duelistのビルドを掲載するまでは追加しない） |
 
 各ページ共通：
 - 確認できた項目を「まだ確認できていないこと」から本文へ移す。
@@ -38,8 +44,10 @@ WebSearch・WebFetchの要約は誤りがあったため、**必ず原文で確�
 
 ## 3. 生成・確認・公開
 ```
-node tools/generate-pages.mjs && node tools/generate-sitemap.mjs && node tools/enhance-ratings.mjs && node tools/enhance-build-ux.mjs && node tools/enhance-version-notice.mjs && CHROMIUM_PATH=/opt/pw-browsers/chromium node tools/generate-og-images.mjs && node tools/sync-asset-versions.mjs && npm test
+npm run build          # 全ページ再生成（ImageMagickとChromiumが必要）
+npm test && npm run test:strategy && npm run test:discovery && npm run test:contrast && npm run test:order
 ```
+サイト内検索（`/search/`）とサイトマップは `npm run build` で自動的に更新される。
 スマホ幅（390px）でスクリーンショットを撮って確認してから、mainにpushする。
 
 ## 4. note記事（サイト更新と同じ日に）
