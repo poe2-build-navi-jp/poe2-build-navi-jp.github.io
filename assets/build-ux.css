@@ -2,3 +2,19 @@
 
 .quick-choice-facts{line-height:1.6}.quick-choice-facts>div{margin:.6rem 0}.quick-choice-facts dt{font-weight:700}.quick-choice-facts dd{margin:.15rem 0 0}.quick-choice-sources{margin-top:1rem}.quick-choice-sources summary,.card-facts summary,#recent-changes summary,.ux-compare-card summary{cursor:pointer;padding:.5rem 0}.ux-compare-card .comparison-priority{border-top:2px solid #7d5f1a}.comparison-shared{margin-top:1rem;padding:1rem;background:#fff;border:1px solid #d8d2c5}.comparison-difference dt::after{content:" ・違いあり";font-size:.75rem;color:#7d5f1a}
 .card-facts{margin-top:1rem}
+#home-builds .hb-answer{max-width:46rem;text-align:left;margin-left:auto;margin-right:auto}
+.hb-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem;margin:1rem 0}
+.hb-tabs button{min-height:44px;border:2px solid var(--ink,#10171e);background:#fff;color:var(--ink,#10171e);border-radius:8px;font:inherit;font-weight:700;cursor:pointer;padding:.4rem .25rem;line-height:1.2}
+.hb-tabs button small{display:block;font-weight:400;font-size:.8rem}
+.hb-tabs button[aria-selected="true"]{background:var(--ink,#10171e);color:#fff}
+.hb-panel h3{margin:1rem 0 .5rem;font-size:1.05rem}
+.hb-panel h3 small{display:block;font-weight:400;font-size:.85rem;color:var(--muted,#565f66)}
+.hb-tabbed .hb-panel h3{margin-top:0}
+.hb-list{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.hb-list li{border:1px solid #d6cfbf;border-radius:8px;padding:.55rem .75rem;background:#fff;display:grid;gap:.1rem;line-height:1.5}
+.hb-list a{font-weight:700;font-size:1.05rem}
+.hb-meta{font-size:.8rem;color:var(--muted,#565f66)}
+.hb-fit{font-size:.9rem}
+.hb-more{margin-top:1rem}
+@media (max-width:600px){.hb-tabs{gap:.35rem}.hb-tabs button{font-size:.9rem}}
+@media (max-width:600px){.summary-page .hero .hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.summary-page .hero .hero-actions a{font-size:.85rem;line-height:1.35;text-align:center;padding:8px 10px}}

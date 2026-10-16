@@ -45,8 +45,8 @@ assert((beginnerLanding.match(/class="purpose-card"/g) || []).length === 5, "beg
 assert((beginnerLanding.match(/class="discovery-card"/g) || []).length === 6, "beginner page must retain six featured choices");
 assert(beginnerLanding.indexOf('id="purpose-picks"') < beginnerLanding.indexOf('id="featured-builds"'), "beginner page must show quick choices before detailed comparison");
 assert(index.includes("PoE2 0.5.5 おすすめビルド｜職業別・初心者向け") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
-assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ</title>"), "homepage CTR-focused title missing");
-assert(index.includes("PoE2 0.5.5対応の日本語ビルドサイト"), "homepage Japanese build-site description missing");
+assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・最強ビルドを比較できる日本語ビルドサイト</title>"), "homepage CTR-focused title missing");
+assert(index.includes("0.5.5のおすすめビルドを日本語で比較できるビルドサイト"), "homepage Japanese build-site description missing");
 const homeRoutes = index.match(/<p id="home-build-routes">([\s\S]*?)<\/p>/)?.[1] || "";
 assert((index.match(/id="home-build-routes"/g) || []).length === 1, "homepage comparison routes must be present once after regeneration");
 assert(homeRoutes.includes('href="/builds/"') && homeRoutes.includes('href="/best-builds/"'), "broad build searches need catalog and purpose-comparison routes");
