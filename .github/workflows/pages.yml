@@ -1,0 +1,44 @@
+# Publishes only the website. Repository notes and tooling (company/, docs/, tools/, scripts/,
+# tests/, package files, root notes) stay in Git but are not served.
+# Takes effect once Settings → Pages → Build and deployment → Source is set to "GitHub Actions".
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect site files
+        run: |
+          mkdir _site
+          rsync -a ./ _site/ \
+            --exclude '.git' --exclude '.github' --exclude '_site' --exclude 'node_modules' \
+            --exclude '/company/' --exclude '/docs/' --exclude '/tools/' --exclude '/scripts/' --exclude '/tests/' \
+            --exclude '/package.json' --exclude '/package-lock.json' --exclude '/.gitignore' --exclude '.indexnow' \
+            --exclude '/NOTE_CONTENT_MAP.md' --exclude '/ASSET_SOURCES.md' --exclude '/README.md' \
+            --exclude '/site-update.zip' --exclude '/.claude/'
+          touch _site/.nojekyll
+          test -f _site/index.html && test -f _site/sitemap.xml && test -f _site/ads.txt
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

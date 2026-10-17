@@ -1,4 +1,16 @@
 User-agent: *
 Allow: /
+# Repository files that are not part of the site (notes, tooling, test pages).
+Disallow: /company/
+Disallow: /docs/
+Disallow: /tools/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /.github/
+Disallow: /.claude/
+Disallow: /NOTE_CONTENT_MAP.md
+Disallow: /ASSET_SOURCES.md
+Disallow: /package.json
+Disallow: /package-lock.json
 
 Sitemap: https://poe2-build-navi-jp.github.io/sitemap.xml

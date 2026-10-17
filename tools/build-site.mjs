@@ -7,7 +7,9 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname,'..');
 const steps=[
  'generate-pages',           // base pages, then content/discovery/SEO/strategy pages and their own enhancers
- 'enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice','enhance-one-hub',
+ 'enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice',
+ 'generate-html-sitemap',    // reads page titles, so after the generators and the title changes
+ 'enhance-one-hub',
  'enhance-term-links','enhance-site-chrome','enhance-practical-help','generate-build-data',
  'generate-sitemap',         // after everything that changes <main>: it records each page's content date
  'enhance-page-schema',      // reads those dates

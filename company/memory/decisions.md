@@ -270,3 +270,10 @@
   PoE2とは「…どんなゲーム？ジャンル・無料化・始め方…」。1.0時のタイトル自動変換（version-title）と両立することを確認。
 - IndexNowの送信計画 docs/indexnow/2026-10-16-changes.json（3URL）を作成。テストは最新の計画と照合する形に変更。送信はしていない。
 - インデックス状況：技術的な阻害要因なし（200・index,follow・自己canonical・sitemap123件）。Search Consoleの「ページ」レポートを依頼中。
+
+## 2026-10-17 AdSense「有用性の低いコンテンツ」への対応①②（ユーザー依頼）
+- リポジトリの内部ファイル（company/の運営メモ、docs/の監査CSV、tools/、scripts/、tests/等）がサイトURLで公開されていた。
+  robots.txtで除外し、サイトのファイルだけを公開する .github/workflows/pages.yml を追加（Pages設定の切替はユーザー操作）。
+  IndexNowの送信前チェックは、新しいワークフローと除外付きrobots.txtも受け付けるよう変更（送信URLが除外されていないことは確認）。
+- Googleの発見を助けるため、全ページ一覧 /site-map/ を追加し、全ページのフッターからリンク。
+- 再申請はインデックス登録が増えるのを待ってから（2〜4週間目安）。
