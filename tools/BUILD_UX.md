@@ -158,3 +158,15 @@ a page's fingerprint is out of date.
 visible breadcrumb (sitemap pages without one), Article on the `data/guides.json` chapters and
 DefinedTerm / DefinedTermSet on the dictionary pages. Article `dateModified` comes from
 `data/page-dates.json`, so run it after `generate-sitemap.mjs`.
+
+## Published files and the HTML sitemap
+
+`.github/workflows/pages.yml` publishes only the site: it copies the repository without
+`company/`, `docs/`, `tools/`, `scripts/`, `tests/`, `.claude/`, package files and root notes, and
+deploys that with GitHub Pages Actions. It takes effect when Settings → Pages → Source is
+"GitHub Actions". `robots.txt` also disallows those paths. Keep `data/`, `assets/` and `images/`
+crawlable: build pages load their data from `data/builds/`.
+
+`tools/generate-html-sitemap.mjs` writes `/site-map/` (every indexable page by section) and the
+shared footer links to it, so every page is within two clicks. It runs in `npm run build` after the
+title changes and before `generate-sitemap`.

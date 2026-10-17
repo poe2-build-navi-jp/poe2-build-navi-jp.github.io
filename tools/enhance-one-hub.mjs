@@ -32,7 +32,7 @@ const lead = released ? "正式版は基本プレイ無料です。" : "正式�
 export const ONE_LINK_MARKER = "<!-- one-link:start -->";
 const box = `${ONE_LINK_MARKER}<aside class="next-box one-link" aria-label="PoE2 1.0の情報"><b>${heading}</b><p>${lead}<a href="/what-is-poe2/">PoE2とは</a>・<a href="/poe2-1-0/">1.0の確定情報</a>・<a href="/poe2-1-0/how-to-start/">始め方</a>・<a href="/poe2-1-0/system-requirements/">必要スペック</a></p></aside><!-- one-link:end -->`;
 
-const skip = (path) => path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria)\//.test(path);
+const skip = (path) => path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map)\//.test(path);
 const unescape = (v) => v.replace(/<[^>]+>/g, "").replaceAll("&quot;", '"').replaceAll("&#39;", "'").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&amp;", "&").trim();
 
 let linked = 0;

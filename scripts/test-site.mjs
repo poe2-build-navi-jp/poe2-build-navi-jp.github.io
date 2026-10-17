@@ -268,7 +268,7 @@ assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("
 assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"') && oneHub.includes('href="/poe2-1-0/pre-registration/"') && oneHub.includes('href="/poe2-1-0/build-status/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
 for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1])) {
   const html = await read(`${path}index.html`);
-  const excluded = path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria)\//.test(path);
+  const excluded = path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map)\//.test(path);
   const boxes = (html.match(/<!-- one-link:start -->/g) || []).length;
   assert(boxes === (excluded ? 0 : 1), `${path || "/"}: 1.0 link box count ${boxes}, expected ${excluded ? 0 : 1}`);
   if (!excluded) {
@@ -442,6 +442,14 @@ for (const path of datedPaths) {
   if (html.includes('<nav class="breadcrumbs"')) assert(types.has("BreadcrumbList"), `${path}: visible breadcrumb without BreadcrumbList`);
   if (guides.some((guide) => path === `/guides/${guide.slug}/`)) assert(types.has("Article"), `${path}: guide chapter without Article`);
   if (terms.some((term) => path === `/dictionary/${term.slug}/`)) assert(types.has("DefinedTerm"), `${path}: dictionary page without DefinedTerm`);
+}
+// Repository notes and tooling stay out of crawling (the Pages workflow also leaves them out of the
+// published site), while page assets and data stay crawlable. /site-map/ links every sitemap page.
+for (const dir of ["/company/", "/docs/", "/tools/", "/scripts/", "/tests/"]) assert(robots.includes(`Disallow: ${dir}`), `robots must disallow ${dir}`);
+for (const dir of ["/data/", "/assets/", "/images/", "/builds/", "/guides/"]) assert(!robots.includes(`Disallow: ${dir}`), `robots must not disallow ${dir}`);
+{
+  const siteMap = await read("site-map/index.html");
+  for (const path of datedPaths) assert(path === "/site-map/" || siteMap.includes(`href="${path}"`), `/site-map/ must link ${path}`);
 }
 for (const icon of ["favicon.ico", "favicon.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.png"]) {
   try { await access(resolve(root, icon)); } catch { failures.push(`missing: ${icon}`); }

@@ -30,7 +30,9 @@ for(const file of await htmlFiles(root)){
  });
  html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>links.includes('href="/search/"')?nav:`${start}${links}<a href="/search/"${file===join(root,'search/index.html')?' aria-current="page"':''}>全体検索</a>${end}`);
  html=insertBlock(html,'</head>','site-icon',ICON_BLOCK);icons++;
- // Pages generated with their own footer keep it; the rest get the shared one after </main>.
+ // Pages generated with their own copy of the footer get the current shared one (same markup);
+ // the rest get it after </main>.
+ html=html.replace(/(?<!<!-- site-footer:start -->)<footer class="site-footer">[\s\S]*?<\/footer>/,m=>m===FOOTER?m:FOOTER);
  if(!html.includes('<footer class="site-footer">')){
   const block=`<!-- site-footer:start -->${FOOTER}<!-- site-footer:end -->`;
   html=html.includes('</main>')?html.replace(/<\/main>(?![\s\S]*<\/main>)/,`</main>${block}`):html.replace('</body>',`${block}</body>`);

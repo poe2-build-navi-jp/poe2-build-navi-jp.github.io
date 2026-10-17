@@ -48,11 +48,12 @@ export async function verifyDeployment(head, fetchFn = fetch) {
   const result = await (
     await get(`${API}/actions/runs?head_sha=${head}&per_page=100`, fetchFn)
   ).json();
+  // Either the standard branch deployment or the site-only Actions workflow (.github/workflows/pages.yml).
+  const pagesRun = r =>
+    (r.name === 'pages build and deployment' && r.path === 'dynamic/pages/pages-build-deployment' && r.event === 'dynamic') ||
+    (r.name === 'Deploy site to GitHub Pages' && r.path === '.github/workflows/pages.yml' && ['push', 'workflow_dispatch'].includes(r.event));
   const runs = result.workflow_runs?.filter(r =>
-    r.name === 'pages build and deployment' &&
-    r.path === 'dynamic/pages/pages-build-deployment' &&
-    r.head_sha === head && r.head_branch === BRANCH &&
-    r.repository?.full_name === REPO && r.event === 'dynamic'
+    pagesRun(r) && r.head_sha === head && r.head_branch === BRANCH && r.repository?.full_name === REPO
   ) || [];
   const latest = runs.sort((a, b) => b.id - a.id)[0];
   requireValue(latest && latest.status === 'completed' && latest.conclusion === 'success',
@@ -72,8 +73,16 @@ export async function verifyProduction(plan, key, fetchFn = fetch) {
     'Public IndexNow key content does not match',
   );
   const robots = await (await get(`${SITE}/robots.txt`, fetchFn)).text();
-  // This site currently allows all crawlers. Fail closed if that policy changes.
-  requireValue(/^User-agent: \*\s+Allow: \/\s+Sitemap: https:\/\/poe2-build-navi-jp\.github\.io\/sitemap\.xml\s*$/i.test(robots),
+  // One group for all crawlers that allows the site and lists the sitemap; it may disallow repository
+  // paths that are not part of the site, but never a submitted URL. Fail closed on anything else.
+  const lines = robots.split(/\r?\n/).map(line => line.replace(/#.*/, '').trim()).filter(Boolean);
+  const disallowed = lines.filter(line => /^Disallow:/i.test(line)).map(line => line.replace(/^Disallow:\s*/i, ''));
+  requireValue(
+    lines[0] === 'User-agent: *' && lines[1] === 'Allow: /' &&
+    lines.includes(`Sitemap: ${SITE}/sitemap.xml`) &&
+    lines.every(line => /^(User-agent: \*|Allow: \/|Disallow: \/\S+|Sitemap: \S+)$/i.test(line)) &&
+    lines.filter(line => /^User-agent:/i.test(line)).length === 1 &&
+    !disallowed.some(path => path === '/' || plan.urls.some(entry => new URL(entry.url).pathname.startsWith(path))),
     'Robots policy changed; review before submitting');
   const sitemap = await (await get(`${SITE}/sitemap.xml`, fetchFn)).text();
   const locations = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]));
