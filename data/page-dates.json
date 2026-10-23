@@ -4,8 +4,8 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "e191d39ce17fc403",
-  "date": "2026-10-17"
+  "hash": "a38d3aa7a5c06ac1",
+  "date": "2026-10-23"
  },
  "/name-index/": {
   "hash": "986d0019a8e5e4d2",
@@ -144,8 +144,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "0b3847fc23d0e56e",
-  "date": "2026-10-16"
+  "hash": "14ac414437b50fe1",
+  "date": "2026-10-23"
  },
  "/dictionary/": {
   "hash": "0db607327ee7e867",
@@ -168,8 +168,8 @@
   "date": "2026-10-06"
  },
  "/about/": {
-  "hash": "30116d4903d012ac",
-  "date": "2026-09-30"
+  "hash": "fda560a0efd0231d",
+  "date": "2026-10-23"
  },
  "/editorial-policy/": {
   "hash": "0c0d53ae80eae700",
@@ -188,8 +188,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "7c3db85bee394831",
-  "date": "2026-10-17"
+  "hash": "2577a706f69f2156",
+  "date": "2026-10-23"
  },
  "/classes/monk/": {
   "hash": "4561abac4cd0d319",
@@ -228,8 +228,8 @@
   "date": "2026-10-17"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "62e2d5f2a5f28b07",
-  "date": "2026-10-17"
+  "hash": "3a8c9025ba290cca",
+  "date": "2026-10-23"
  },
  "/builds/warrior/shield-wall-smith/": {
   "hash": "278aea25542c629a",
@@ -372,8 +372,12 @@
   "date": "2026-10-10"
  },
  "/guides/pinnacle-bosses/": {
-  "hash": "79918a08da3dd6a7",
-  "date": "2026-10-10"
+  "hash": "c02e17e3deadbb75",
+  "date": "2026-10-23"
+ },
+ "/guides/arbiter-of-ash-clear-record/": {
+  "hash": "6d3da9692ddd275d",
+  "date": "2026-10-23"
  },
  "/guides/unique-gear/": {
   "hash": "ab49881c8ddb25bc",
