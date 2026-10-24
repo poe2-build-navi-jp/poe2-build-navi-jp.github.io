@@ -752,5 +752,18 @@
     "guideSlug": "trial-of-chaos",
     "sectionId": "retry",
     "summary": "失敗したChimeral Inscribed Ultimatumの再入手先。"
+  },
+  {
+    "slug": "arbiter-of-divinity",
+    "kind": "boss",
+    "name": "神性のアービター",
+    "englishName": "The Arbiter of Divinity",
+    "aliases": [
+      "神性のアビーター",
+      "Arbiter of Divinity"
+    ],
+    "guideSlug": "arbiter-of-divinity",
+    "sectionId": "boss",
+    "summary": "撃破装備の実例と、声・動作の予兆、第2フェーズの分身への対策。"
   }
 ]
