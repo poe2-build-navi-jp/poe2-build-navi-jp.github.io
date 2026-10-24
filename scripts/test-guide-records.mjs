@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {recordTable, recordScreenshots} from '../tools/guide-records.mjs';
+const table = recordTable({caption:'表示値',headers:['項目','値'],rows:[['ES','<unknown> & 1']]});
+assert(table.includes('<th scope="row">ES</th>'));
+assert(table.includes('&lt;unknown&gt; &amp; 1'));
+assert(table.includes('tabindex="0"'));
+assert.throws(()=>recordTable({caption:'値',headers:['項目'],rows:[['a','b']]}));
+const screenshot=recordScreenshots([{src:'/images/record.webp',alt:'装備',caption:'提供画像',width:500,height:700}]);
+assert(screenshot.includes('Grinding Gear Games'));
+assert(!screenshot.includes('図解の利用'));
+assert.throws(()=>recordScreenshots([{src:'javascript:alert(1)',alt:'a',caption:'b',width:1,height:1}]));
+assert.equal(recordTable(), '');
+assert.equal(recordScreenshots(), '');
+console.log('PASS: accessible escaped record tables and separate screenshot attribution');
