@@ -38,9 +38,12 @@ for(const path of paths){
  if(heading.length>20&&q>0&&q<heading.length-1){sub=heading.slice(q+1);heading=heading.slice(0,q+1);}
  const build=builds.find(b=>path===`builds/${b.classSlug}/${b.slug}/`);
  const subtitle=build?`${build.className} / ${build.ascendancy}\nLv1〜Endgame育成`:sub.replace(/POE2ビルドナビ/,'').trim();
- const reuseImage=/^(skills|equipment|search|name-index)\//.test(path)?'/images/poe2/og/poe2-beginner-guide-og.webp':strategyGuides.find(g=>path===`guides/${g.slug}/`)?.ogImage;
- if(reuseImage&&!/^\/images\/poe2\/og\/[a-z0-9-]+\.webp$/.test(reuseImage))throw Error(`Invalid shared OG image: ${path}`);
- pages.push({path,file,heading,subtitle,reuseImage,category:category(path),image:reuseImage||`/images/poe2/og/${imageName(path)}`,alt:reuseImage?'PoE2攻略・育成ガイド':`${heading}${subtitle?`｜${subtitle.replace('\n','　')}`:''}`});
+ const strategyGuide=strategyGuides.find(g=>path===`guides/${g.slug}/`);
+ const reuseImage=/^(skills|equipment|search|name-index)\//.test(path)?'/images/poe2/og/poe2-beginner-guide-og.webp':strategyGuide?.ogImage;
+ const screenshot=strategyGuide?.sections.flatMap(s=>s.screenshots||[]).find(v=>v.src===reuseImage);
+ if(screenshot&&(!/^\/images\/poe2\/[a-z0-9-]+\/[a-z0-9-]+\.webp$/.test(screenshot.src)||!(screenshot.width>0)||!(screenshot.height>0)))throw Error(`Invalid screenshot OG image: ${path}`);
+ if(reuseImage&&!screenshot&&!/^\/images\/poe2\/og\/[a-z0-9-]+\.webp$/.test(reuseImage))throw Error(`Invalid shared OG image: ${path}`);
+ pages.push({path,file,heading,subtitle,reuseImage,width:screenshot?.width||1200,height:screenshot?.height||630,category:category(path),image:reuseImage||`/images/poe2/og/${imageName(path)}`,alt:screenshot?.alt||(reuseImage?'PoE2攻略・育成ガイド':`${heading}${subtitle?`｜${subtitle.replace('\n','　')}`:''}`)});
 }
 
 const template=p=>`<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>
@@ -91,7 +94,7 @@ for(const p of pages){
   .replace(/<meta property="og:image(?::[a-z]+)?" content="[^"]*">/g,'')
   .replace(/\n[ \t]+\n/g,'\n'); // Lines whose only tag was removed above.
  const abs=`${base}${p.image}`;
- const meta=`<!-- og-image:start --><meta property="og:image" content="${abs}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(p.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${abs}"><!-- og-image:end -->`;
+ const meta=`<!-- og-image:start --><meta property="og:image" content="${abs}"><meta property="og:image:type" content="image/webp"><meta property="og:image:width" content="${p.width}"><meta property="og:image:height" content="${p.height}"><meta property="og:image:alt" content="${esc(p.alt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${abs}"><!-- og-image:end -->`;
  html=insertBlock(html,'</head>','og-image',meta);
  await writeFile(resolve(root,p.file),html);
 }

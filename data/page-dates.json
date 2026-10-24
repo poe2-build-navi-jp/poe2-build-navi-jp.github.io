@@ -4,12 +4,12 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "a38d3aa7a5c06ac1",
-  "date": "2026-10-23"
+  "hash": "2f743a98dccd0835",
+  "date": "2026-10-25"
  },
  "/name-index/": {
-  "hash": "986d0019a8e5e4d2",
-  "date": "2026-10-10"
+  "hash": "e69e40bda4e12310",
+  "date": "2026-10-25"
  },
  "/skills/": {
   "hash": "0c935913d48ee9b0",
@@ -144,8 +144,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "14ac414437b50fe1",
-  "date": "2026-10-23"
+  "hash": "723086e865a05f3d",
+  "date": "2026-10-25"
  },
  "/dictionary/": {
   "hash": "68f6cc7a5b0ac467",
@@ -188,8 +188,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "2577a706f69f2156",
-  "date": "2026-10-23"
+  "hash": "46dbc93b4a0e924e",
+  "date": "2026-10-25"
  },
  "/classes/monk/": {
   "hash": "4561abac4cd0d319",
@@ -372,8 +372,8 @@
   "date": "2026-10-10"
  },
  "/guides/pinnacle-bosses/": {
-  "hash": "c02e17e3deadbb75",
-  "date": "2026-10-23"
+  "hash": "af4e2f57c7cc0bac",
+  "date": "2026-10-25"
  },
  "/guides/arbiter-of-ash-clear-record/": {
   "hash": "6d3da9692ddd275d",
@@ -382,6 +382,10 @@
  "/guides/unique-gear/": {
   "hash": "ab49881c8ddb25bc",
   "date": "2026-10-17"
+ },
+ "/guides/arbiter-of-divinity/": {
+  "hash": "54acd778f49916fb",
+  "date": "2026-10-25"
  },
  "/dictionary/build/": {
   "hash": "43ba11e22407abde",
