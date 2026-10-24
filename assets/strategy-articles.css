@@ -7,3 +7,7 @@
 .first-hand-note{background:#e3ecdf;color:#1d2a1f;border-left:4px solid #3d6b45;border-radius:8px;padding:.9rem 1.1rem;margin:1.2rem 0;line-height:1.85}.first-hand-note strong{display:block;color:#2c5233;margin-bottom:.2rem}.first-hand-note a{color:#7d3b1b;text-decoration:underline}
 
 .guide-record-table{overflow-x:auto;margin:1.5rem 0;border:1px solid var(--line,#454545);border-radius:8px}.guide-record-table table{width:100%;border-collapse:collapse;line-height:1.7}.guide-record-table caption{text-align:left;font-weight:700;padding:1rem}.guide-record-table th,.guide-record-table td{padding:.8rem 1rem;text-align:left;vertical-align:top;border-top:1px solid var(--line,#454545);white-space:pre-line;overflow-wrap:anywhere}.guide-record-table th[scope="row"]{min-width:7em}.guide-record-table:focus-visible{outline:2px solid currentColor;outline-offset:3px}.guide-record-image{margin:1.5rem 0}.guide-record-image img{display:block;max-width:100%;height:auto;margin:auto}.guide-record-image figcaption{font-size:.9rem;line-height:1.7;margin-top:.6rem}
+
+.guide-record-gallery{margin:1.5rem 0;border:1px solid var(--line,#454545);border-radius:8px;padding:1rem}.guide-record-gallery summary{cursor:pointer;font-weight:700}.guide-record-image figcaption a{text-decoration:underline}
+
+.guide-record-table-wide table{min-width:58rem}.guide-record-table-wide th:nth-child(2){min-width:11em}.guide-record-table-wide th:nth-child(3){min-width:13em}.guide-record-scroll-hint{font-size:.9rem}

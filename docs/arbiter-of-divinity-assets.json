@@ -1,0 +1,107 @@
+[
+  {
+    "filename": "amulet.webp",
+    "mime": "image/webp",
+    "sha256": "aa7edfab5ab71e12d437f4cc309abf8723cd50ddf8d09892fcb7b29d51dc124e",
+    "width": 518,
+    "height": 305
+  },
+  {
+    "filename": "attributes.webp",
+    "mime": "image/webp",
+    "sha256": "1ab0de314ae1829da4efb3d69ec5ce286544b601747f05b3b1140d91a3391d0d",
+    "width": 217,
+    "height": 80
+  },
+  {
+    "filename": "belt-shavronne.webp",
+    "mime": "image/webp",
+    "sha256": "3cc3c69c6c32000043286e9e945e521891d515713688947cd9a83117efb59f49",
+    "width": 826,
+    "height": 345
+  },
+  {
+    "filename": "body-armour.webp",
+    "mime": "image/webp",
+    "sha256": "416ad9a955021b196324f138eb1a87a30172d60cb5a8b5d703d7f6ced1ecb4c6",
+    "width": 701,
+    "height": 618
+  },
+  {
+    "filename": "boots-atziri.webp",
+    "mime": "image/webp",
+    "sha256": "b9d2ebdf1cddb5e656005d45e0bf797abf6c936284dd0e6db2dc49ee9906eb44",
+    "width": 571,
+    "height": 472
+  },
+  {
+    "filename": "clear-scene.webp",
+    "mime": "image/webp",
+    "sha256": "126b3375ec52116f4ce2b253a07ea2abc9b7c1f5d16f36a76367268c576c8814",
+    "width": 1625,
+    "height": 620
+  },
+  {
+    "filename": "defensive-stats.webp",
+    "mime": "image/webp",
+    "sha256": "b9bdbee3b59a0bfdcc34b0cdd518d5a99d4d1d997ad1041e2b16e81ebe607d57",
+    "width": 618,
+    "height": 516
+  },
+  {
+    "filename": "gloves.webp",
+    "mime": "image/webp",
+    "sha256": "7b767191b4f86c1e98c286b9acfbd114606fb44ad4b271638e9e2e4bd3d44277",
+    "width": 648,
+    "height": 393
+  },
+  {
+    "filename": "helmet-alpha-howl.webp",
+    "mime": "image/webp",
+    "sha256": "9643c2f1c8324d58fab4c5127fd9bc99fc5341c308e2b550273ee89a7518f81b",
+    "width": 557,
+    "height": 456
+  },
+  {
+    "filename": "passive-tree-lower.webp",
+    "mime": "image/webp",
+    "sha256": "6f23d44204777c239471496c6f40c77434c7b0e3ef851a27c3f5132c8fe52f72",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "filename": "passive-tree-upper.webp",
+    "mime": "image/webp",
+    "sha256": "8b12eac23c02cf231fa99ad26cdf8c46e0b611b72b568b15992afaa42fabbaea",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "filename": "ring-taming.webp",
+    "mime": "image/webp",
+    "sha256": "14db703b3935d540cbe7cf3d2602d4a1a946fa8e2ddd5925dce7138eed03bfbe",
+    "width": 990,
+    "height": 538
+  },
+  {
+    "filename": "sceptre.webp",
+    "mime": "image/webp",
+    "sha256": "b6d56566c54242ab2db07891c15e735b456358327310c24bcaa42f14424c4f1f",
+    "width": 903,
+    "height": 497
+  },
+  {
+    "filename": "spear-chosen.webp",
+    "mime": "image/webp",
+    "sha256": "67d953f209b534cb9e27d6d635c6b11024139531e8a8a639a03b6a92f348e550",
+    "width": 997,
+    "height": 559
+  },
+  {
+    "filename": "spear-skysliver.webp",
+    "mime": "image/webp",
+    "sha256": "bcd7669e21e7de573a61e41cb58787c46f2d338fa0f475a2d62ca7160a73ea20",
+    "width": 913,
+    "height": 452
+  }
+]

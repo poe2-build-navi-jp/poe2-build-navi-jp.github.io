@@ -6335,7 +6335,23 @@
               "513"
             ]
           ]
-        }
+        },
+        "screenshots": [
+          {
+            "src": "/images/poe2/arbiter-of-divinity/defensive-stats.webp",
+            "alt": "撮影時の耐性・ライフ・エナジーシールド表示",
+            "caption": "火耐性−3%、雷耐性53%を含む撮影時の表示。キャラクター名を含むヘッダーは除いています。",
+            "width": 618,
+            "height": 516
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/attributes.webp",
+            "alt": "筋力125・器用さ174・知性150の表示",
+            "caption": "装備条件を確認するための能力値。",
+            "width": 217,
+            "height": 80
+          }
+        ]
       },
       {
         "id": "gear",
@@ -6373,7 +6389,7 @@
             ],
             [
               "鎧",
-              "不屈なる者として死す／荘厳なレガリア（ベース名の小字は判読に留保）",
+              "不屈なる者として死す／壮厳なレガリア",
               "品質+20%。アーマー983、回避力891、ES270。必要Lv65・筋力39・器用さ39・知性39。",
               "最大ライフ+36。受けたダメージ16%をマナとして回収。雷耐性+18%。呪いの効果50%減少。アーマーの+10%が混沌ダメージにも適用。ソケットしたアイドルが絆モッドの恩恵を得る。絆：全スキル品質+5%、混沌耐性+8%。防御3種350%増加。埋まったソケットごとに全能力値+7、混沌耐性+11%、最大ライフ+56。ダブルコラプト状態。"
             ],
@@ -6385,7 +6401,7 @@
             ],
             [
               "手袋",
-              "血タロン／サイレンスヴェイルの手袋",
+              "血タロン／サイレーンスケイルの手袋",
               "品質+20%。ES243。必要Lv80・知性97。",
               "アタックスピード8%増加（淡青の行）。最大ES+51、ES93%増加、アタックスピード15%増加、器用さ+26。アタックに物理14–26追加、アタック効果範囲11%増加。コラプト状態。"
             ],
@@ -6414,7 +6430,80 @@
               "全元素耐性+8%と+20%（別々の行）。敵に付与した元素系状態異常の種類ごとにダメージ19%増加。元素領域効果でブーストできるウィンドスキルは複数の元素領域でブースト可能で、発火・感電・冷却領域によりブーストされたと見なされる。コラプト状態。"
             ]
           ]
-        }
+        },
+        "screenshots": [
+          {
+            "src": "/images/poe2/arbiter-of-divinity/spear-chosen.webp",
+            "alt": "選ばれし者の装備ツールチップ",
+            "caption": "選ばれし者：上の表の表示値を確認できる提供画像。",
+            "width": 997,
+            "height": 559
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/spear-skysliver.webp",
+            "alt": "スカイシルバーの装備ツールチップ",
+            "caption": "スカイシルバー：上の表の表示値を確認できる提供画像。",
+            "width": 913,
+            "height": 452
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/helmet-alpha-howl.webp",
+            "alt": "アルファの遠吠えの装備ツールチップ",
+            "caption": "アルファの遠吠え：上の表の表示値を確認できる提供画像。",
+            "width": 557,
+            "height": 456
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/body-armour.webp",
+            "alt": "不屈なる者として死すの装備ツールチップ",
+            "caption": "不屈なる者として死す：上の表の表示値を確認できる提供画像。",
+            "width": 701,
+            "height": 618
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/belt-shavronne.webp",
+            "alt": "シャヴロンの鞄の装備ツールチップ",
+            "caption": "シャヴロンの鞄：上の表の表示値を確認できる提供画像。",
+            "width": 826,
+            "height": 345
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/gloves.webp",
+            "alt": "血タロンの装備ツールチップ",
+            "caption": "血タロン：上の表の表示値を確認できる提供画像。",
+            "width": 648,
+            "height": 393
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/boots-atziri.webp",
+            "alt": "アッツィリの歩みの装備ツールチップ",
+            "caption": "アッツィリの歩み：上の表の表示値を確認できる提供画像。",
+            "width": 571,
+            "height": 472
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/sceptre.webp",
+            "alt": "目の導きの掌の装備ツールチップ",
+            "caption": "目の導きの掌：上の表の表示値を確認できる提供画像。",
+            "width": 903,
+            "height": 497
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/amulet.webp",
+            "alt": "忘却の留め金の装備ツールチップ",
+            "caption": "忘却の留め金：上の表の表示値を確認できる提供画像。",
+            "width": 518,
+            "height": 305
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/ring-taming.webp",
+            "alt": "テイミングの装備ツールチップ",
+            "caption": "テイミング：上の表の表示値を確認できる提供画像。",
+            "width": 990,
+            "height": 538
+          }
+        ],
+        "screenshotsDisclosure": "装備のスクリーンショット10枚を見る"
       },
       {
         "id": "limits",
@@ -6423,7 +6512,31 @@
           "クリア後の場面には「マップを完了した」の目標表示と、神性のアービターに言及する会話が写っています。これは提供者の攻略報告と整合しますが、難易度・死亡回数・所要時間を示すものではありません。地面の戦利品は装備品として集計していません。",
           "もう片方の指輪、フラスコ、チャームは詳細表示がなく、名前と効果は不明です。スキル／サポートジェム画面もないため、リンク構成やDPSは記載していません。",
           "パッシブ画面2枚では取得経路が見えますが、ノード名のツールチップは読めません。スキルポイント0、武器セットIは7（24）、IIは6（24）、アセンダンシーポイント0という表示のみ確認できます。アイコンからノード名を推定したツリーは掲載しません。"
-        ]
+        ],
+        "screenshots": [
+          {
+            "src": "/images/poe2/arbiter-of-divinity/clear-scene.webp",
+            "alt": "神性のアービター攻略後として提供された闘技場の場面",
+            "caption": "攻略後の場面。会話と目標の表示はこの切り抜きには含めていません。",
+            "width": 1625,
+            "height": 620
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/passive-tree-upper.webp",
+            "alt": "取得経路が見えるパッシブツリー上側の全体像",
+            "caption": "提供された取得経路の参考画像。ノード名やサポート構成は特定していません。",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "src": "/images/poe2/arbiter-of-divinity/passive-tree-lower.webp",
+            "alt": "取得経路が見えるパッシブツリー下側の全体像",
+            "caption": "もう一方のパッシブ画面。再現用のインポートデータではありません。",
+            "width": 1920,
+            "height": 1080
+          }
+        ],
+        "screenshotsDisclosure": "攻略後の場面とパッシブ画像3枚を見る"
       },
       {
         "id": "boss",

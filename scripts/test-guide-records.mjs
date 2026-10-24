@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict';
+import {readFileSync, existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {recordTable, recordScreenshots} from '../tools/guide-records.mjs';
 const table = recordTable({caption:'表示値',headers:['項目','値'],rows:[['ES','<unknown> & 1']]});
 assert(table.includes('<th scope="row">ES</th>'));
@@ -11,4 +13,25 @@ assert(!screenshot.includes('図解の利用'));
 assert.throws(()=>recordScreenshots([{src:'javascript:alert(1)',alt:'a',caption:'b',width:1,height:1}]));
 assert.equal(recordTable(), '');
 assert.equal(recordScreenshots(), '');
+const root = new URL('../', import.meta.url);
+const manifest = JSON.parse(readFileSync(new URL('docs/arbiter-of-divinity-assets.json',root)));
+assert.equal(manifest.length, 15);
+const guide = JSON.parse(readFileSync(new URL('data/strategy-guides.json',root))).find(g=>g.slug==='arbiter-of-divinity');
+const figures = guide.sections.flatMap(s=>s.screenshots||[]);
+assert.equal(figures.length,15);
+for(const asset of manifest){
+  const src=`/images/poe2/arbiter-of-divinity/${asset.filename}`;
+  const bytes=readFileSync(new URL(src.slice(1),root));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256);
+  const figure=figures.find(f=>f.src===src);
+  assert(figure && figure.alt && figure.caption);
+  assert.equal(figure.width,asset.width);
+  assert.equal(figure.height,asset.height);
+}
+assert(!existsSync(new URL('docs/arbiter-assets-transfer.json',root)));
+const stats=new Map(guide.sections.find(s=>s.id==='stats').table.rows);
+assert.equal(stats.get('火耐性'),'−3%（−3%）');
+assert.equal(stats.get('冷気耐性'),'76%（103%）');
+assert.equal(stats.get('雷耐性'),'53%（53%）');
+assert.equal(stats.get('混沌耐性'),'75%（78%）');
 console.log('PASS: accessible escaped record tables and separate screenshot attribution');
