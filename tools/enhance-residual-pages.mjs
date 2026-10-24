@@ -33,3 +33,47 @@ await updateOnce(
 );
 
 console.log("Enhanced gear example and 1.0 update hub.");
+
+// Explanatory blocks for the hub and tool pages, built only from data the site already verifies
+// (builds, classes, glossary, guide answers and the diagnosis rules in gear-check.js), so the pages
+// explain themselves without JavaScript and stay in step with that data.
+{
+  const json = async (p) => JSON.parse(await readFile(resolve(root, p), "utf8"));
+  const [builds, classes, dictRaw, intents] = await Promise.all(["data/builds.json", "data/classes.json", "data/dictionary.json", "data/guide-search-intents.json"].map(json));
+  const terms = Array.isArray(dictRaw) ? dictRaw : dictRaw.terms;
+  const esc = (v) => String(v ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+  const live = builds.filter((b) => b.status !== "draft");
+  const buildLink = (b) => `<a href="/builds/${b.classSlug}/${b.slug}/">${esc(b.name)}</a>`;
+  const put = async (path, block) => {
+    const file = resolve(root, path);
+    let html = (await readFile(file, "utf8")).replace(/<!-- hub-content:start -->[\s\S]*?<!-- hub-content:end -->/g, "");
+    if (!html.includes("</main>")) throw Error(`Missing main: ${path}`);
+    const blockHtml = `<!-- hub-content:start --><div class="hub-content">${block}</div><!-- hub-content:end -->`;
+    // Before the shared 1.0 box when it is already there, so a rebuild keeps the same order.
+    html = html.includes("<!-- one-link:start -->") ? html.replace("<!-- one-link:start -->", blockHtml + "<!-- one-link:start -->") : html.replace("</main>", blockHtml + "</main>");
+    await writeFile(file, html);
+  };
+
+  // gear-check: the stage boundaries and per-problem checks come straight from the diagnosis script.
+  const js = await readFile(resolve(root, "assets/gear-check.js"), "utf8");
+  const stages = JSON.parse(js.match(/const STAGES = (\[[^;]*\]);/)[1]);
+  const labels = Object.fromEntries([...js.match(/const concernLabels = \{([^}]*)\}/)[1].matchAll(/(\w+):"([^"]*)"/g)].map((m) => [m[1], m[2]]));
+  const common = Object.fromEntries([...js.match(/const common = \{([\s\S]*?)\n\};/)[1].matchAll(/(\w+):\[([^\]]*)\]/g)].map((m) => [m[1], JSON.parse(`[${m[2]}]`)]));
+  const concernGuide = { death: "why-i-die", damage: "increase-damage", mana: "mana-problem", boss: "cant-beat-boss", speed: "slow-mapping", purchase: "gear-upgrade" };
+  for (const key of Object.keys(concernGuide)) if (!labels[key] || !common[key]) throw Error(`gear-check concern missing: ${key}`);
+  await put("gear-check/index.html", `<section class="section compact-section"><h2>装備診断の仕組み</h2><p>入力した現在Lvを、掲載ビルドの育成手順と同じ${stages.length}つのレベル帯に当てはめます。そのレベル帯で原典が挙げている「更新する装備」と「確認する能力」を最優先に表示し、次に主力スキルと装備条件、最後に選んだ困りごとの確認点を並べます。</p><p>装備の相場や価格は変動が大きいため使いません。予算の選択は、手持ちで直すか購入を検討するかの目安として表示に反映するだけです。</p><div class="table-scroll"><table class="hub-table"><caption>診断で使うレベル帯</caption><thead><tr><th scope="col">レベル帯</th><th scope="col">対象Lv</th></tr></thead><tbody>${stages.map(([min, max, label]) => `<tr><th scope="row">${esc(label)}</th><td>Lv${min}〜${max}</td></tr>`).join("")}</tbody></table></div></section><section class="section compact-section"><h2>困りごと別：最初に確認すること</h2><p>ビルドを選ばなくても、困りごとごとに最初に見る場所は共通です。詳しい確認順は各ガイドで解説しています。</p>${Object.entries(concernGuide).map(([key, slug]) => { const g = intents.find((i) => i.slug === slug); return `<h3>${esc(labels[key])}</h3><p><strong>最初に見る場所：${esc(common[key][0])}</strong>（${esc(common[key][1])}。次に${esc(common[key][2])}）</p>${g ? `<p>${esc(g.answer)}</p><p><a href="${esc(g.path)}">${esc(g.h1)}</a></p>` : ""}`; }).join("")}</section>`);
+
+  // classes: one comparison row per class with its published builds.
+  const classRows = classes.map((c) => { const bs = live.filter((b) => b.classSlug === c.slug); return `<tr><th scope="row"><a href="/classes/${c.slug}/">${esc(c.name)}</a></th><td data-label="戦い方">${c.combatStyle.map(esc).join("・")}</td><td data-label="掲載ビルド">${bs.length ? bs.map((b) => `${buildLink(b)}<br><small>主力：${esc(b.mainSkill)}／操作：${esc(b.difficulty)}</small>`).join("<br>") : "準備中"}</td><td data-label="気をつける点">${esc(c.caution)}</td></tr>`; }).join("");
+  await put("classes/index.html", `<section class="section"><h2>8職業と掲載ビルドの比較</h2><p>各職業の戦い方、掲載中のビルドと主力スキル、操作で気をつける点を一覧にしました。どの職業が強いかの順位ではありません。ビルドの比較方法は<a href="/rating-criteria/">比較項目と原典の確認方法</a>で説明しています。</p><div class="table-scroll"><table class="hub-table hub-stack"><thead><tr><th scope="col">職業</th><th scope="col">戦い方</th><th scope="col">掲載ビルド（主力・操作）</th><th scope="col">気をつける点</th></tr></thead><tbody>${classRows}</tbody></table></div></section><section class="section"><h2>迷ったときの決め方</h2><ol><li>まず「近接・遠距離・魔法・召喚」のうち、続けやすそうな戦い方を1つ決めます。</li><li>その戦い方の職業から、掲載ビルドの主力スキルと操作の注意を見比べます。</li><li>決めたらビルドページで現在Lvを入力し、「今やること3つ」から始めます。途中で職業を変えたくなったら、<a href="/class-check/">4問の職業診断</a>で候補を絞り直せます。</li></ol></section>`);
+
+  // class-check: what each possible result means.
+  await put("class-check/index.html", `<section class="section"><h2>診断結果に出る8職業の特徴</h2><p>診断の候補になる職業と、掲載中のビルドです。結果を見る前に、気になる職業の特徴を確認することもできます。</p>${classes.map((c) => { const bs = live.filter((b) => b.classSlug === c.slug); return `<h3><a href="/classes/${c.slug}/">${esc(c.name)}</a>：${esc(c.tagline)}</h3><p>${esc(c.description)}</p><p>戦い方：${c.combatStyle.map(esc).join("・")}。注意：${esc(c.caution)}</p>${bs.length ? `<p>掲載ビルド：${bs.map(buildLink).join("、")}</p>` : ""}`; }).join("")}</section>`);
+
+  // dictionary: the same terms grouped by when a new player meets them, each with its next action.
+  const groups = [["始める前に知っておく用語", ["build", "skill-gem", "support-gem", "passive-tree", "ascendancy"]], ["育成中によく見る用語", ["resistance", "spirit", "energy-shield", "dps"]], ["キャンペーン後・遊び方の用語", ["endgame", "mapping", "league-starter", "ssf"]]];
+  const grouped = new Set(groups.flatMap(([, s]) => s));
+  for (const t of terms) if (!grouped.has(t.slug)) throw Error(`Dictionary term not grouped: ${t.slug}`);
+  await put("dictionary/index.html", `<section class="section"><h2>場面別に用語を探す</h2><p>PoE2を始めてから出会う順に用語を分け、それぞれ「次に何をすればよいか」をまとめました。用語名を選ぶと詳しい解説へ進みます。</p>${groups.map(([label, slugs]) => `<h3>${esc(label)}</h3><dl class="hub-terms">${slugs.map((s) => terms.find((t) => t.slug === s)).filter(Boolean).map((t) => `<div><dt><a href="/dictionary/${t.slug}/">${esc(t.term)}</a></dt><dd>${esc(t.action)}</dd></div>`).join("")}</dl>`).join("")}<p>ボス・クエスト・NPCの名前は<a href="/name-index/">名前索引</a>、スキルや装備は<a href="/skills/">スキル一覧</a>・<a href="/equipment/">装備一覧</a>で調べられます。</p></section>`);
+  console.log("Hub content: gear-check, classes, class-check, dictionary.");
+}
