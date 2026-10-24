@@ -1,6 +1,6 @@
 # 神性のアービター article review
 
-Publication hold: draft PR only. Do not merge or deploy before parent review.
+Public publication was explicitly authorized by the user on 2026-10-24 after the parent explained that the article and privacy-reviewed images would become publicly accessible. Scope: merge only PR #42 after final validation. Publication date is 2026-10-25 JST; source verification remains 2026-10-24.
 
 ## Evidence
 
@@ -38,4 +38,4 @@ Original filenames all begin `Path of Exile 2 2026_10_25 ` and end `.png`:
 
 Library preparation resolved all 15 filenames and identities. The current official transfer helper returned only `library file transfer failed: download failed` (exit 1). Fresh preparation and a bounded retry also failed. No HTTP status or lower-level cause was exposed, so it would be inaccurate to label this an HTTP denial or permission rejection. No raw URL fallback was attempted.
 
-Resolved through the supported alternative: parent committed a reviewed asset bundle at b267761165bf0c4d6bdf73ab97d8ed18f43218f6 on the existing draft branch. This executor fetched it normally, decoded the 15 assets, verified hashes and dimensions, and inspected actual pixels. `docs/arbiter-of-divinity-assets.json` retains the asset integrity manifest without base64 data. Keep the branch draft and do not merge.
+Resolved through the supported alternative: parent committed a reviewed asset bundle at b267761165bf0c4d6bdf73ab97d8ed18f43218f6 on the existing draft branch. This executor fetched it normally, decoded the 15 assets, verified hashes and dimensions, and inspected actual pixels. `docs/arbiter-of-divinity-assets.json` retains the asset integrity manifest without base64 data. The user subsequently authorized public publication; final validation and PR #42 are the only publication scope.
