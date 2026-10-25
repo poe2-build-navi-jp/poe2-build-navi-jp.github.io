@@ -4,7 +4,7 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "69e24c2940da3151",
+  "hash": "97b31323b3254c3f",
   "date": "2026-10-25"
  },
  "/name-index/": {
@@ -144,7 +144,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "c7753839945abfa6",
+  "hash": "eec1f60879f7193d",
   "date": "2026-10-25"
  },
  "/dictionary/": {
@@ -188,7 +188,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "2e8b5c1b6c3671f9",
+  "hash": "15c2ec0570ee858a",
   "date": "2026-10-25"
  },
  "/classes/monk/": {
@@ -320,8 +320,8 @@
   "date": "2026-10-09"
  },
  "/guides/waystones-tablets/": {
-  "hash": "3d507699f8ba3248",
-  "date": "2026-10-09"
+  "hash": "55db17be4f248b01",
+  "date": "2026-10-25"
  },
  "/guides/expedition/": {
   "hash": "bbf672a271c18eb1",
@@ -389,6 +389,10 @@
  },
  "/guides/mageblood-legacies/": {
   "hash": "b1d4f8603bbf60de",
+  "date": "2026-10-25"
+ },
+ "/guides/tier-16-waystones/": {
+  "hash": "44df93fe24e81255",
   "date": "2026-10-25"
  },
  "/dictionary/build/": {
