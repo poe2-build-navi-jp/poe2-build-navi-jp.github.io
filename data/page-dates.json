@@ -4,7 +4,7 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "2f743a98dccd0835",
+  "hash": "69e24c2940da3151",
   "date": "2026-10-25"
  },
  "/name-index/": {
@@ -144,7 +144,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "723086e865a05f3d",
+  "hash": "c7753839945abfa6",
   "date": "2026-10-25"
  },
  "/dictionary/": {
@@ -188,7 +188,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "46dbc93b4a0e924e",
+  "hash": "2e8b5c1b6c3671f9",
   "date": "2026-10-25"
  },
  "/classes/monk/": {
@@ -380,11 +380,15 @@
   "date": "2026-10-23"
  },
  "/guides/unique-gear/": {
-  "hash": "ab49881c8ddb25bc",
-  "date": "2026-10-17"
+  "hash": "ae78ea6d3ca9d9c7",
+  "date": "2026-10-25"
  },
  "/guides/arbiter-of-divinity/": {
   "hash": "54acd778f49916fb",
+  "date": "2026-10-25"
+ },
+ "/guides/mageblood-legacies/": {
+  "hash": "b1d4f8603bbf60de",
   "date": "2026-10-25"
  },
  "/dictionary/build/": {
