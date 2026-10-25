@@ -95,7 +95,13 @@
         "href": "/guides/after-campaign/",
         "label": "キャンペーン終了後にすること"
       }
-    ]
+    ],
+    "version": "参照仕様：0.3.0・0.5.0・0.5.5b・0.5.5c",
+    "verification": {
+      "method": "公式パッチの進行条件から、止まった場所を切り分ける手順を整理。実機再現ではありません。",
+      "confirmed": "Act4と間幕への構成変更、Boat Charter提出条件など、本文に挙げた公式変更。",
+      "unverified": "全クエスト分岐、旧キャラクターの移行状態、全操作環境の不具合。"
+    }
   },
   {
     "slug": "trial-of-chaos",
@@ -183,7 +189,13 @@
         "href": "/leveling/",
         "label": "自分の育成段階へ戻る"
       }
-    ]
+    ],
+    "version": "参照仕様：0.5.5・0.5.5b",
+    "verification": {
+      "method": "公式0.5.5・0.5.5bの変更記録を照合。部屋の選択順は攻略上の提案です。",
+      "confirmed": "途中退出・同じ部屋からの再開、部屋ごとの報酬、Chimeral再入手に関する修正。",
+      "unverified": "全ビルドでのクリア、報酬効率、全追加効果の組合せ。"
+    }
   },
   {
     "slug": "atlas-progression",
@@ -473,7 +485,13 @@
         "href": "/guides/gear-upgrade/",
         "label": "装備更新の優先順"
       }
-    ]
+    ],
+    "version": "参照仕様：0.5.5・0.5.5b",
+    "verification": {
+      "method": "公式のリーグ統合と修正内容を照合。実際の遭遇率を測定した記事ではありません。",
+      "confirmed": "0.5.5のRunes of Aldur統合と、Verisium Anvil・Tablet入手に関わる修正。",
+      "unverified": "遭遇率、全リーグ・移行キャラクターの進行、最高収益の周回方法。"
+    }
   },
   {
     "slug": "act-1-walkthrough",

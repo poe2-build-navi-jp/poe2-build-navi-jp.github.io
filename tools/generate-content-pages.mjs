@@ -1,3 +1,4 @@
+import {evidenceBlock,evidenceStyles} from './guide-evidence.mjs';
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
@@ -20,14 +21,14 @@ const termExamples = (term) => term.buildExamples?.length ? `<h2>このサイト
   if (!build) throw new Error(`${term.slug}: unknown build ${ex.id}`);
   return `<li><a href="/builds/${build.classSlug}/${build.slug}/">${esc(build.name)}</a>：${esc(ex.text)}</li>`;
 }).join("")}</ul>` : "";
-const termSources = (term) => term.sources?.length ? `<section class="sources"><h2>確認した情報源</h2><p>数値や仕様はPath of Exile 2 ${esc(term.version || site.gameVersion)}時点のものです。正式版1.0で変わる可能性があります。</p><ul class="source-list">${term.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>確認日 ${esc(s.checkedAt)}</span></li>`).join("")}</ul></section>` : "";
+const termSources = (term) => term.sources?.length ? `<section class="sources"${term.evidence?' id="guide-evidence-sources"':''}><h2>確認した情報源</h2><p>${term.evidence?esc(term.evidence.version)+'。資料に記載された範囲の説明であり、現行の全仕様を実機検証したものではありません。':`数値や仕様はPath of Exile 2 ${esc(term.version || site.gameVersion)}時点のものです。正式版1.0で変わる可能性があります。`}</p><ul class="source-list">${term.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>確認日 ${esc(s.checkedAt)}</span></li>`).join("")}</ul></section>` : "";
 
 for (const guide of guides) {
   const dir = resolve(root, "guides", guide.slug);
   const url = `${base}/guides/${guide.slug}/`;
   const actions = guide.actions.map((x, i) => `<li><b>${["最優先", "次", "その次"][i]}</b><span>${esc(x)}</span></li>`).join("");
   const details = guide.details.map((x) => `<p>${esc(x)}</p>`).join("");
-  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${guide.title}｜初心者ガイド`, guide.metaDescription || guide.summary, url)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/beginner-guide/">初心者ガイド</a></li><li>${esc(guide.title)}</li></ol></nav><article class="article-page"><p class="section-kicker">BEGINNER GUIDE</p><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.summary)}</p><section class="content-action"><h2>今日確認すること</h2><ol>${actions}</ol></section><section><h2>初心者向け説明</h2>${details}</section>${termSections(guide)}${termExamples(guide)}${termSources(guide)}<aside class="next-box"><b>次の行動</b><p>${esc(guide.nextText || "関連する画面を開いて、今の自分に必要な項目を確認してください。")}</p><a class="button" href="${guide.related}">${esc(guide.relatedLabel || "関連ページへ")}</a>${(guide.links || []).map((l) => `<a class="button button-ghost" href="${esc(l.href)}">${esc(l.label)}</a>`).join("")}</aside><p><a href="/beginner-guide/">${guides.length}章の一覧へ戻る</a></p></article></main></body></html>`;
+  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${guide.title}｜初心者ガイド`, guide.metaDescription || guide.summary, url)}${evidenceStyles(guide.evidence)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/beginner-guide/">初心者ガイド</a></li><li>${esc(guide.title)}</li></ol></nav><article class="article-page"><p class="section-kicker">BEGINNER GUIDE</p><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.summary)}</p><section class="content-action"><h2>今日確認すること</h2><ol>${actions}</ol></section>${evidenceBlock(guide.evidence)}<section><h2>初心者向け説明</h2>${details}</section>${termSections(guide)}${termExamples(guide)}${termSources(guide)}<aside class="next-box"><b>次の行動</b><p>${esc(guide.nextText || "関連する画面を開いて、今の自分に必要な項目を確認してください。")}</p><a class="button" href="${guide.related}">${esc(guide.relatedLabel || "関連ページへ")}</a>${(guide.links || []).map((l) => `<a class="button button-ghost" href="${esc(l.href)}">${esc(l.label)}</a>`).join("")}</aside><p><a href="/beginner-guide/">${guides.length}章の一覧へ戻る</a></p></article></main></body></html>`;
   await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
 }
 
