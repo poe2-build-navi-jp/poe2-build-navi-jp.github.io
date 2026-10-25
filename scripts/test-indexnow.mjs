@@ -16,7 +16,7 @@ const html = await readFile(join(root, 'index.html'), 'utf8');
 const robots = await readFile(join(root, 'robots.txt'), 'utf8');
 const sitemap = await readFile(join(root, 'sitemap.xml'), 'utf8');
 const run = { id: 123, name: 'pages build and deployment', path: 'dynamic/pages/pages-build-deployment', head_sha: plan.deploymentCommit, head_branch: 'main', repository: { full_name: REPO }, event: 'dynamic', status: 'completed', conclusion: 'success', updated_at: '2026-10-13T11:00:00Z', html_url: `https://github.com/${REPO}/actions/runs/123` };
-function fixture({ statuses = [200], changeHtml = s => s, wrongKey = false, branch = plan.deploymentCommit, failStatus, blockRobots = false, omitSitemap = false, wrongKeyAfterPost = false } = {}) {
+function fixture({ statuses = [200], changeHtml = s => s, wrongKey = false, branch = plan.deploymentCommit, failStatus, blockRobots = false, changeRobots = s => s, omitSitemap = false, wrongKeyAfterPost = false } = {}) {
   let posts = 0;
   const fetchFn = async (url, init = {}) => {
     if (init.method === 'POST') {
@@ -30,7 +30,7 @@ function fixture({ statuses = [200], changeHtml = s => s, wrongKey = false, bran
     if (url.endsWith('/branches/main')) return Response.json({ commit: { sha: branch } });
     if (url.includes('/actions/runs?')) return Response.json({ workflow_runs: [{ ...run, ...(failStatus ? { conclusion: failStatus } : {}) }] });
     if (url.endsWith(KEY_FILE)) return new Response(wrongKey || (wrongKeyAfterPost && posts > 0) ? 'bad' : key);
-    if (url.endsWith('/robots.txt')) return new Response(blockRobots ? 'User-agent: *\nDisallow: /' : robots);
+    if (url.endsWith('/robots.txt')) return new Response(blockRobots ? 'User-agent: *\nDisallow: /' : changeRobots(robots));
     if (url.endsWith('/sitemap.xml')) return new Response(omitSitemap ? '' : sitemap);
     if (url === plan.urls[0].url) return new Response(changeHtml(html), { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
     throw new Error(`Unexpected URL ${url}`);
@@ -58,6 +58,18 @@ test('self canonical and robots are validated', () => {
   assert.throws(() => inspectArticle(html.replace(`href="${SITE}/"`, `href="${SITE}/wrong/"`), `${SITE}/`));
   assert.throws(() => inspectArticle(html.replace('index,follow', 'noindex,follow'), `${SITE}/`));
   assert.throws(() => inspectArticle(html, `${SITE}/`, new Headers({ 'X-Robots-Tag': 'noindex' })));
+});
+test('training opt-out is separate from search policy; unexpected groups still fail closed', async () => {
+  for (const changeRobots of [
+    s => s.replace('User-agent: OAI-SearchBot', 'User-agent: bingbot'),
+    s => s.replace('User-agent: GPTBot\nDisallow: /', 'User-agent: GPTBot\nAllow: /'),
+    s => s.replace('User-agent: OAI-SearchBot\nAllow: /', 'User-agent: OAI-SearchBot\nDisallow: /'),
+    s => s + '\nUser-agent: bingbot\nDisallow: /\n',
+  ]) {
+    const f = fixture({ changeRobots });
+    await assert.rejects(runIndexNow({plan, key, mode:'verify', fetchFn:f.fetchFn}), /Robots policy changed/);
+    assert.equal(f.posts(), 0);
+  }
 });
 test('dry-run has zero network requests', async () => {
   const result = await runIndexNow({ plan, fetchFn: () => { throw new Error('No network'); } });

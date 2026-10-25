@@ -73,15 +73,28 @@ export async function verifyProduction(plan, key, fetchFn = fetch) {
     'Public IndexNow key content does not match',
   );
   const robots = await (await get(`${SITE}/robots.txt`, fetchFn)).text();
-  // One group for all crawlers that allows the site and lists the sitemap; it may disallow repository
-  // paths that are not part of the site, but never a submitted URL. Fail closed on anything else.
+  // Fail closed except for the reviewed wildcard policy and optional independent OpenAI groups.
+  // GPTBot's training opt-out must not be mistaken for a Bing/search opt-out.
   const lines = robots.split(/\r?\n/).map(line => line.replace(/#.*/, '').trim()).filter(Boolean);
-  const disallowed = lines.filter(line => /^Disallow:/i.test(line)).map(line => line.replace(/^Disallow:\s*/i, ''));
-  requireValue(
-    lines[0] === 'User-agent: *' && lines[1] === 'Allow: /' &&
+  const groups = new Map(); let group; let valid = true;
+  for (const line of lines) {
+    if (line.startsWith('Sitemap: ')) continue;
+    if (line.startsWith('User-agent: ')) {
+      const agent = line.slice(12);
+      if (groups.has(agent)) valid = false;
+      group = []; groups.set(agent, group);
+    } else if (group && /^(Allow: \/|Disallow: \/\S*)$/.test(line)) group.push(line);
+    else valid = false;
+  }
+  const wildcard = groups.get('*') || [];
+  const disallowed = wildcard.filter(line => line.startsWith('Disallow: ')).map(line => line.slice(10));
+  const openaiGroups = groups.size === 1 || (groups.size === 3 &&
+    JSON.stringify(groups.get('OAI-SearchBot')) === JSON.stringify(wildcard) &&
+    JSON.stringify(groups.get('GPTBot')) === JSON.stringify(['Disallow: /']));
+  requireValue(valid && groups.has('*') && openaiGroups &&
+    wildcard[0] === 'Allow: /' && wildcard.slice(1).every(line => /^Disallow: \/\S+$/.test(line)) &&
+    lines.filter(line => line.startsWith('Sitemap: ')).length === 1 &&
     lines.includes(`Sitemap: ${SITE}/sitemap.xml`) &&
-    lines.every(line => /^(User-agent: \*|Allow: \/|Disallow: \/\S+|Sitemap: \S+)$/i.test(line)) &&
-    lines.filter(line => /^User-agent:/i.test(line)).length === 1 &&
     !disallowed.some(path => path === '/' || plan.urls.some(entry => new URL(entry.url).pathname.startsWith(path))),
     'Robots policy changed; review before submitting');
   const sitemap = await (await get(`${SITE}/sitemap.xml`, fetchFn)).text();
