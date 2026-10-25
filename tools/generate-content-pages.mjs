@@ -21,7 +21,7 @@ const termExamples = (term) => term.buildExamples?.length ? `<h2>このサイト
   if (!build) throw new Error(`${term.slug}: unknown build ${ex.id}`);
   return `<li><a href="/builds/${build.classSlug}/${build.slug}/">${esc(build.name)}</a>：${esc(ex.text)}</li>`;
 }).join("")}</ul>` : "";
-const termSources = (term) => term.sources?.length ? `<section class="sources"${term.evidence?' id="guide-evidence-sources"':''}><h2>確認した情報源</h2><p>${term.evidence?esc(term.evidence.version)+'。資料に記載された範囲の説明であり、現行の全仕様を実機検証したものではありません。':`数値や仕様はPath of Exile 2 ${esc(term.version || site.gameVersion)}時点のものです。正式版1.0で変わる可能性があります。`}</p><ul class="source-list">${term.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>確認日 ${esc(s.checkedAt)}</span></li>`).join("")}</ul></section>` : "";
+const termSources = (term) => term.sources?.length ? `<section class="sources"${term.provenance?' id="term-sources"':term.evidence?' id="guide-evidence-sources"':''}><h2>確認した情報源</h2><p>${term.provenance?'以下は資料を確認した日であり、全仕様の現在の動作や実プレイを再検証した日ではありません。':term.evidence?esc(term.evidence.version)+'。資料に記載された範囲の説明であり、現行の全仕様を実機検証したものではありません。':`数値や仕様はPath of Exile 2 ${esc(term.version || site.gameVersion)}時点のものです。正式版1.0で変わる可能性があります。`}</p><ul class="source-list">${term.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>確認日 ${esc(s.checkedAt)}</span></li>`).join("")}</ul></section>` : "";
 
 for (const guide of guides) {
   const dir = resolve(root, "guides", guide.slug);
@@ -32,10 +32,15 @@ for (const guide of guides) {
   await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
 }
 
+const termProvenance = term => {
+  const p=term.provenance;
+  if(!p || ['method','scope','unknown'].some(k=>!p[k]?.trim()))throw new Error(`${term.slug}: missing term provenance`);
+  return `<section class="guide-verification term-provenance" aria-labelledby="term-evidence-title"><h2 id="term-evidence-title">この用語の根拠と参照時点</h2><dl>${[['資料の扱い',p.method],['説明の範囲',p.scope],['未確認の範囲',p.unknown]].map(([label,value])=>`<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><p><a href="#term-sources">出典と資料別の確認日</a></p></section>`;
+};
 for (const term of terms) {
   const dir = resolve(root, "dictionary", term.slug);
   const url = `${base}/dictionary/${term.slug}/`;
-  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${term.term}とは｜初心者用語辞典`, term.metaDescription || `${term.term}をPOE2初心者向けに説明。${term.oneLine}`, url)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/dictionary/">用語辞典</a></li><li>${esc(term.term)}</li></ol></nav><article class="article-page"><p class="section-kicker">DICTIONARY</p><h1>${esc(term.term)}</h1><section class="term-lead"><h2>一言でいうと</h2><p>${esc(term.oneLine)}</p></section><h2>初心者向け説明</h2><p>${esc(term.description)}</p>${termSections(term)}<h2>なぜ重要？</h2><p>${esc(term.importance)}</p>${termExamples(term)}<h2>次にすること</h2><p>${esc(term.action)}</p>${termSources(term)}<div class="section-cta"><a class="button" href="${term.guide}">関連ガイド</a><a class="button button-ghost" href="/dictionary/">用語一覧</a></div></article></main></body></html>`;
+  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${term.term}とは｜初心者用語辞典`, term.metaDescription || `${term.term}をPOE2初心者向けに説明。${term.oneLine}`, url)}${evidenceStyles(term.provenance)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/dictionary/">用語辞典</a></li><li>${esc(term.term)}</li></ol></nav><article class="article-page"><p class="section-kicker">DICTIONARY</p><h1>${esc(term.term)}</h1><section class="term-lead"><h2>一言でいうと</h2><p>${esc(term.oneLine)}</p></section><section class="term-action"><h2>次にすること</h2><p>${esc(term.action)}</p></section>${termProvenance(term)}<h2>初心者向け説明</h2><p>${esc(term.description)}</p>${termSections(term)}<h2>なぜ重要？</h2><p>${esc(term.importance)}</p>${termExamples(term)}${termSources(term)}<div class="section-cta"><a class="button" href="${term.guide}">関連ガイド</a><a class="button button-ghost" href="/dictionary/">用語一覧</a></div></article></main></body></html>`;
   await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
 }
 
