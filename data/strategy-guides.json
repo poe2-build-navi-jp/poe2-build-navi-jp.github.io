@@ -276,7 +276,13 @@
         "href": "/guides/resistance/",
         "label": "耐性を確認する"
       }
-    ]
+    ],
+    "verification": {
+      "method": "公式の進行条件を照合したガイド。運営者の周回実測としては扱いません。",
+      "confirmed": "最初のTowerからFortressへの進行、コアの種類による完了対象、鍵の取得に必要なボス死亡時の参加条件。",
+      "unverified": "全クエスト分岐の実プレイ再現、パーティー別の不具合、周回時間と最適ルート。"
+    },
+    "version": "参照仕様：0.5.0・0.5.5・0.5.5c（全分岐の実機確認ではありません）"
   },
   {
     "slug": "waystones-tablets",
@@ -373,7 +379,13 @@
         "href": "/guides/expedition/",
         "label": "Expeditionのリーグ別仕様"
       }
-    ]
+    ],
+    "verification": {
+      "method": "公式パッチノートに基づく操作確認ガイド。実プレイによる再現検証は掲載していません。",
+      "confirmed": "0.5.0の起動前鑑定と同種Tablet併用、0.5.5dの無効な枠・グレー表示と赤字の説明を確認。",
+      "unverified": "全Map・操作環境での再現結果、各Tablet組合せの効率、Waystoneの維持率。"
+    },
+    "version": "参照仕様：0.5.0・0.5.5d（全パッチの再検証ではありません）"
   },
   {
     "slug": "expedition",
@@ -6625,7 +6637,12 @@
         "label": "自分の装備を診断する"
       }
     ],
-    "ogImage": "/images/poe2/arbiter-of-divinity/clear-scene.webp"
+    "ogImage": "/images/poe2/arbiter-of-divinity/clear-scene.webp",
+    "verification": {
+      "method": "運営者の実戦クリア記録。撃破報告・提供画像と、公式仕様を分けて確認。",
+      "confirmed": "Lv87の装備・ステータスとクリア後の場面を画像で確認。戦闘対策は公式情報から整理した助言です。",
+      "unverified": "撃破時のパッチ、難易度、死亡回数、所要時間、スキルリンク、実際の操作手順。掲載値は最低条件ではありません。"
+    }
   },
   {
     "slug": "mageblood-legacies",
@@ -6633,7 +6650,7 @@
     "metaDescription": "PoE2のメイジブラッドを、遺産14種の基本効果・重複の数え方・25〜50%ロールの計算例から解説。4枠同じなら最強とは限らない理由と、自分のビルドに合わせた選び方を整理します。",
     "summary": "メイジブラッドは、4枠の「メイジの遺産」の組合せで性能が変わるPoE2のユニークベルトです。必要な効果を選び、重複数と効果増加ロールを比べる順番で、自分の構成に合う個体を見つけましょう。",
     "category": "basics",
-    "version": "PoE2／2026-10-25データ確認",
+    "version": "追加告知：0.5.0／数値：2026-10-25照合のPoE2DB",
     "checkedAt": "2026-10-25",
     "publishedAt": "2026-10-25",
     "updatedAt": "2026-10-25",
@@ -6988,7 +7005,12 @@
         "label": "現在の装備を診断する"
       }
     ],
-    "ogImage": "/images/poe2/og/poe2-guides-mageblood-legacies-og.webp"
+    "ogImage": "/images/poe2/og/poe2-guides-mageblood-legacies-og.webp",
+    "verification": {
+      "method": "公式の追加告知と非公式PoE2DBのアイテム説明を照合。実機測定ではありません。",
+      "confirmed": "遺産14種の効果と重複の説明を確認。40%ロールの例は説明文から算出した理論値です。",
+      "unverified": "端数処理、抽選の重み、ドロップ率、再抽選手段、相場と実戦での最適構成。"
+    }
   },
   {
     "slug": "tier-16-waystones",
@@ -6996,7 +7018,7 @@
     "metaDescription": "PoE2のティア16ウェイストーンはT15へのヴァールオーブ使用で狙います。リフォージの上限、失敗時の判断、T15の補充、トレード、アイテムのTierとエリアレベルの違いを出典付きで解説。",
     "summary": "自作・完成品の取引・T15の補充を比較し、失敗した石の扱いまで整理します。リフォージの上限とエリアレベルの違いを押さえ、周回用の石を残しながらT16を用意しましょう。",
     "category": "endgame",
-    "version": "PoE2／2026-10-25資料確認",
+    "version": "参照仕様：0.1.1・0.5.0／データ：2026-10-25照合のPoE2DB",
     "checkedAt": "2026-10-25",
     "publishedAt": "2026-10-25",
     "updatedAt": "2026-10-25",
@@ -7290,6 +7312,12 @@
         "label": "Atlasパッシブの効果と優先順位"
       }
     ],
-    "ogImage": "/images/poe2/og/poe2-guides-tier-16-waystones-og.webp"
+    "ogImage": "/images/poe2/og/poe2-guides-tier-16-waystones-og.webp",
+    "verification": {
+      "method": "公式パッチノート・非公式PoE2DBと、提供されたT16画像を照合。作成試行の実測ではありません。",
+      "confirmed": "T15コラプトの入手経路とリフォージレシピを資料で確認。画像ではT16・コラプト状態を確認できます。",
+      "unverified": "成功確率、全コラプト結果、特殊報酬の全例外、相場。画像だけでは入手操作は確認できません。"
+    },
+    "tocLabel": "目次を開く：T16の入手・準備・注意点"
   }
 ]
