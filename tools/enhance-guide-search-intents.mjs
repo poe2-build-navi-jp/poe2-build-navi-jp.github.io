@@ -1,3 +1,4 @@
+import {applyGuideReadingLayout} from './guide-reading-layout.mjs';
 // Editorial SEO pass. Run after article generators; does not change source-check dates.
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
@@ -17,6 +18,8 @@ export function enhanceHtml(original,intent,site,pageDate={}){
  if((original.match(/<h1\b/g)||[]).length!==1)throw Error(`${intent.path}: expected one H1`);
  const url=site.baseUrl+intent.path;
  let html=original.replace(answerMarker,'').replace(schemaMarker,'');
+ html=applyGuideReadingLayout(html);
+
  if(!/<title>[^<]*<\/title>/.test(html))throw Error(`${intent.path}: missing title`);
  html=html.replace(/<title>[^<]*<\/title>/,()=>`<title>${esc(intent.title)}</title>`);
  html=html.replace(/(<h1\b[^>]*>)[\s\S]*?(<\/h1>)/,(_,start,end)=>`${start}${esc(intent.h1)}${end}<!-- guide-search-answer:start --><p class="guide-direct-answer">${esc(intent.answer)}</p><!-- guide-search-answer:end -->`);
