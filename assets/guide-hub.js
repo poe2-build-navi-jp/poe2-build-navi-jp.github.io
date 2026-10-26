@@ -5,7 +5,7 @@
   const search = document.querySelector('#guide-search');
   const cards = [...document.querySelectorAll('[data-guide-card]')];
   const groups = [...document.querySelectorAll('[data-guide-group]')];
-  const buttons = [...controls.querySelectorAll('[data-filter]')];
+  const buttons = [...document.querySelectorAll('[data-filter]')];
   const status = controls.querySelector('[data-guide-status]');
   const empty = document.querySelector('[data-guide-empty]');
   const normalize = value => value.normalize('NFKC').toLocaleLowerCase('ja').trim();
@@ -55,5 +55,6 @@
   window.addEventListener('popstate', restore);
   window.addEventListener('pageshow', restore);
   controls.hidden = false;
+  document.querySelector('.guide-chips').hidden = false;
   restore();
 })();
