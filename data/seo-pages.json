@@ -50,8 +50,8 @@
       {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["warrior-shield-wall-smith", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
     ],
     "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"耐性の意味を確認","url":"/dictionary/resistance/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
-    "sources": []
-  },
+    "sources": [{"name":"PoE2DB: Resistances（非公式ゲームデータ）","url":"https://poe2db.tw/us/Resistances","checkedAt":"2026-10-25","supports":"対応する属性の被ダメージを耐性が軽減し、装備・パッシブ等で補えるという説明。死亡原因の診断結果や固定合格値の根拠ではありません。"}]
+  ,"evidence":{"method":"耐性の資料説明と掲載ビルドの生存手段から確認順を整理。個別の死亡場面を検証した記録ではありません。","confirmed":"属性耐性と回復・ライフ／ES・操作を別々に点検する項目。耐性の役割はDB説明を参照します。","unverified":"ユーザーの死亡原因、全敵のダメージ内訳、必須の防御数値。","version":"防御の一般的な確認手順／耐性資料・ビルド原典の範囲"}},
   {
     "path": "/guides/increase-damage/",
     "publishedAt": "2026-09-10",
@@ -68,8 +68,8 @@
       {"heading": "確認済みビルドで現在Lvから見る", "buildIds": ["ranger-ice-shot-deadeye", "mercenary-twister-gemling", "monk-whirling-assault"]}
     ],
     "related": [{"label":"装備診断を開く","url":"/gear-check/"},{"label":"サポートジェムを確認","url":"/dictionary/support-gem/"},{"label":"ビルド一覧から現在Lvを入力","url":"/builds/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"}],
-    "sources": []
-  },
+    "sources": [{"name":"GGG: 0.4.0 パッチノート","url":"https://www.pathofexile.com/forum/view-thread/3883495/filter-account-type/staff","checkedAt":"2026-10-25","supports":"Gemcuttingでサポートを指した際に装備中スキルとの互換表示が出る変更。全リンクの有効性・火力比較を検証した資料ではありません。"}]
+  ,"evidence":{"method":"掲載ビルドの切替条件と公式のサポート互換表示を基にした診断手順。DPS実測ではありません。","confirmed":"武器・主力・サポート・パッシブ・消費を切り分ける確認項目。互換表示の追加は公式0.4.0に記載されています。","unverified":"全スキルのDPS、装備変更による上昇率、ボス別の必要火力。","version":"一般的な確認手順／互換表示の変更：0.4.0"}},
   {
     "path": "/guides/gear-upgrade/",
     "publishedAt": "2026-09-12",
@@ -83,49 +83,7 @@
       "現在Lvとビルドを確認する",
       "効果が大きい部位を1つだけ交換して変化を見る"
     ],
-    "sections": [
-      {
-        "heading": "交換順を固定しすぎない",
-        "paragraphs": [
-          "同じレベルでもビルドと手持ち装備で最優先は変わります。一般論として武器、胴、防具、ブーツなどを並べるだけではなく、主力スキルと困りごとに影響する部位から見ます。"
-        ]
-      },
-      {
-        "heading": "購入前のチェック",
-        "bullets": [
-          "その能力が主力スキルへ作用するか",
-          "交換で必要な耐性や能力条件を失わないか",
-          "現在Lvで装備できるか",
-          "次の育成段階ですぐ切り替える装備ではないか",
-          "表示価格を固定相場と思い込まず、現在の出品を確認したか"
-        ]
-      },
-      {
-        "heading": "このサイトで絞り込む",
-        "paragraphs": [
-          "装備診断へビルド、現在Lv、困りごと、予算を入力すると、最初に確認する部位と理由を最大3件に絞ります。未登録のビルド固有情報は一般的な改善策と明示します。"
-        ]
-      },
-      {
-        "heading": "ビルド別：最初に見る装備（元ガイドの優先度）",
-        "paragraphs": [
-          "掲載ビルドの装備優先度のうち、先頭の2項目です。武器・防具の何を見るかはビルドで大きく違うため、自分のビルドの行を確認してください。"
-        ],
-        "buildGear": 2
-      },
-      {
-        "heading": "交換のたびに耐性と防御を確認する",
-        "bullets": [
-          "PoE2の装備の主な防御は、アーマー・回避・エナジーシールドの3種類。どれを重視するかはビルドで違う。",
-          "元素耐性のペナルティはAct 2で-10%、Act 3で-20%、Act 4で-30%。Interlude以降はエリアレベル54〜59で-40%、60〜64で-50%、65以上で-60%になる。進行先のエリアで、耐性が足りているか確認する。",
-          "交換で耐性が下がった分は、ほかの部位で補えるかを先に確かめる。"
-        ],
-        "termLinks": [
-          "resistance",
-          "energy-shield"
-        ]
-      }
-    ],
+    "sections": [{"heading":"交換順を固定しすぎない","paragraphs":["同じレベルでもビルドと手持ち装備で最優先は変わります。一般論として武器、胴、防具、ブーツなどを並べるだけではなく、主力スキルと困りごとに影響する部位から見ます。"]},{"heading":"購入前のチェック","bullets":["その能力が主力スキルへ作用するか","交換で必要な耐性や能力条件を失わないか","現在Lvで装備できるか","次の育成段階ですぐ切り替える装備ではないか","表示価格を固定相場と思い込まず、現在の出品を確認したか"]},{"heading":"このサイトで絞り込む","paragraphs":["装備診断へビルド、現在Lv、困りごと、予算を入力すると、最初に確認する部位と理由を最大3件に絞ります。未登録のビルド固有情報は一般的な改善策と明示します。"]},{"heading":"ビルド別：最初に見る装備（元ガイドの優先度）","paragraphs":["掲載ビルドの装備優先度のうち、先頭の2項目です。武器・防具の何を見るかはビルドで大きく違うため、自分のビルドの行を確認してください。"],"buildGear":2},{"heading":"交換のたびに耐性と防御を確認する","bullets":["PoE2の装備の主な防御は、アーマー・回避・エナジーシールドの3種類。どれを重視するかはビルドで違う。","進行による元素耐性の低下を考慮し、現在のキャラクター画面で不足量を確認します。旧版の地域別表をそのまま合格ラインにはしません。","交換で耐性が下がった分は、ほかの部位で補えるかを先に確かめる。"],"termLinks":["resistance","energy-shield"]}],
     "related": [
       {
         "label": "装備診断を始める",
@@ -140,18 +98,7 @@
         "url": "/guides/increase-damage/"
       }
     ],
-    "sources": [
-      {
-        "name": "PoE2 Wiki（コミュニティWiki）：Resistance（キャンペーンの耐性ペナルティ）",
-        "url": "https://www.poe2wiki.net/wiki/Resistance",
-        "checkedAt": "2026-09-29"
-      },
-      {
-        "name": "PoE2 Wiki（コミュニティWiki）：Energy shield（主な防御の種類）",
-        "url": "https://www.poe2wiki.net/wiki/Energy_shield",
-        "checkedAt": "2026-09-29"
-      }
-    ],
+    "sources": [{"name":"PoE2 Wiki（コミュニティWiki）：Resistance（キャンペーンの耐性ペナルティ）","url":"https://www.poe2wiki.net/wiki/Resistance","checkedAt":"2026-09-29"},{"name":"PoE2 Wiki（コミュニティWiki）：Energy shield（主な防御の種類）","url":"https://www.poe2wiki.net/wiki/Energy_shield","checkedAt":"2026-09-29"},{"name":"PoE2DB: Resistances（非公式ゲームデータ）","url":"https://poe2db.tw/us/Resistances","checkedAt":"2026-10-25","supports":"対応する属性の被ダメージを耐性が軽減し、装備・パッシブ等で補えるという説明。死亡原因の診断結果や固定合格値の根拠ではありません。"}],
     "faq": [
       {
         "q": "装備はどの部位から替えればいい？",
@@ -162,7 +109,7 @@
         "a": "交換で耐性やライフが下がった可能性があります。Actを進めると元素耐性も下がるため、交換前後でキャラクター画面の耐性を比べてください。"
       }
     ]
-  },
+  ,"evidence":{"method":"掲載ビルド原典の装備優先度と耐性資料から比較手順を整理。購入・交換の実測記録ではありません。","confirmed":"今の不足と交換で失う能力を比較する項目。原典の優先度は、全構成共通のランキングとは分けます。","unverified":"相場、実際の性能上昇、全ベース・ユニークの例外、ペナルティ表の現行全条件。","version":"装備比較の提案／耐性の資料と各ビルド原典の版を参照"}},
   {
     "path": "/guides/mana-problem/",
     "publishedAt": "2026-09-12",
@@ -232,7 +179,7 @@
         "url": "/guides/increase-damage/"
       }
     ],
-    "sources": [],
+    "sources": [{"name":"PoE2DB: Mana（非公式・個別スキル／回復の例）","url":"https://poe2db.tw/us/Mana","checkedAt":"2026-10-25","supports":"Mana Tempestの継続消費などの個別例。全スキルに共通の回復目標は導きません。"}],
     "faq": [
       {
         "q": "マナが足りないとき、最初に何をする？",
@@ -243,7 +190,7 @@
         "a": "当サイトの掲載ビルドでは、ED・コンテージョン リッチ（複数スキルで消費が重くなりやすい）や植物オラクル（長いボス戦）などの元ガイドがマナに注意するよう書いています。このページの『ビルド別：マナの注意点』で確認できます。"
       }
     ]
-  },
+  ,"evidence":{"method":"掲載ビルドの消費・回復条件を確認する手順。DBの個別スキル例を補助資料とし、全構成の実測とはしません。","confirmed":"消費が増えた場面、回復手段、攻撃頻度を分ける確認項目。継続消費するMana Tempest等は通常の単発コストと区別します。","unverified":"毎秒必要な回復量、全予約・消費変換の例外、全リンクの最適化。","version":"一般的な消費確認手順／個別例はPoE2DB、構成は各原典参照"}},
   {
     "path": "/guides/cant-beat-boss/",
     "publishedAt": "2026-09-13",
@@ -340,7 +287,7 @@
         "url": "/gear-check/"
       }
     ],
-    "sources": [],
+    "sources": [{"name":"当サイト：終盤ボス別の対処と原典","url":"/guides/pinnacle-bosses/#sources","checkedAt":"2026-10-25","supports":"灰のアービターとゼシュトの個別出典への案内。この記事の一般的な切り分け手順は編集上の提案です。"}],
     "faq": [
       {
         "q": "ボスに勝てないのは火力不足？",
@@ -355,7 +302,7 @@
         "a": "ビルドによります。段階別の手順で周回用と単体用のスキルを分けているビルドもあるため、自分のビルドの現在段階を確認してください。"
       }
     ]
-  },
+  ,"evidence":{"method":"掲載ビルド原典の長所・弱点を引用元と区別して整理。運営者が全ボスで試したランキングではありません。","confirmed":"攻撃機会・単体用の操作・防御・消費を分ける確認項目。具体的なボス対処は出典付きの個別攻略へ案内します。","unverified":"全ボス・難易度の挙動、必要DPS、クリア時間、掲載構成での撃破保証。","version":"一般的な戦闘の切り分け／ボス別仕様は個別攻略の参照版"}},
   {
     "path": "/guides/slow-mapping/",
     "publishedAt": "2026-09-13",
@@ -369,49 +316,7 @@
       "通常敵へ使う主力と操作回数を確認する",
       "現在段階のブーツ・武器・切替条件を見る"
     ],
-    "sections": [
-      {
-        "heading": "まず確認する3つ",
-        "bullets": [
-          "移動速度と移動スキルの使い方",
-          "通常敵を処理する範囲と必要な攻撃回数",
-          "ボス用の補助操作を通常敵へ使いすぎていないか"
-        ]
-      },
-      {
-        "heading": "速さと安全を分けない",
-        "paragraphs": [
-          "速度だけを上げて死亡が増えると、結果として周回は遅くなります。低い難度で主力の動作、防御、回復を確認し、原因を1つずつ変えてください。"
-        ]
-      },
-      {
-        "heading": "確認済みビルドで現在Lvから見る",
-        "buildIds": [
-          "mercenary-twister-gemling",
-          "ranger-ice-shot-deadeye",
-          "sorceress-sand-fire"
-        ]
-      },
-      {
-        "heading": "ビルド別：周回の強み・弱み（元ガイドの記載）",
-        "paragraphs": [
-          "掲載ビルドの長所・弱点のうち、周回・殲滅・移動に触れている記載です。周回の速さはビルドの得意不得意が大きく出ます。"
-        ],
-        "buildNotes": "周回|殲滅|移動速度|範囲"
-      },
-      {
-        "heading": "Waystoneの追加効果を見直す",
-        "bullets": [
-          "Waystoneの追加効果（モッド）が多いほど、マップは難しくなり報酬も増える。",
-          "追加効果が多いほど、マップ内で復活できる回数が減る（追加効果なしで6回、6個以上で0回）。",
-          "倒されて周回が止まるなら、追加効果の少ないWaystoneや低いTierで、主力の動作と防御を先に安定させる。"
-        ],
-        "termLinks": [
-          "mapping",
-          "endgame"
-        ]
-      }
-    ],
+    "sections": [{"heading":"まず確認する3つ","bullets":["移動速度と移動スキルの使い方","通常敵を処理する範囲と必要な攻撃回数","ボス用の補助操作を通常敵へ使いすぎていないか"]},{"heading":"速さと安全を分けない","paragraphs":["速度だけを上げて死亡が増えると、結果として周回は遅くなります。低い難度で主力の動作、防御、回復を確認し、原因を1つずつ変えてください。"]},{"heading":"確認済みビルドで現在Lvから見る","buildIds":["mercenary-twister-gemling","ranger-ice-shot-deadeye","sorceress-sand-fire"]},{"heading":"ビルド別：周回の強み・弱み（元ガイドの記載）","paragraphs":["掲載ビルドの長所・弱点のうち、周回・殲滅・移動に触れている記載です。周回の速さはビルドの得意不得意が大きく出ます。"],"buildNotes":"周回|殲滅|移動速度|範囲"},{"heading":"Waystoneの追加効果を見直す","bullets":["Waystoneの追加効果は敵の危険と報酬に影響します。0.5.0では分類と報酬補正が変更されているため、個数だけでなく実物の効果を読みます。","復活回数は実物に表示された回数を確認してください。古い「モッド数からの一律換算」を全Mapへ適用しません。","倒されて周回が止まるなら、対応できる追加効果や低いTierで、主力の動作と防御を先に安定させます。"],"termLinks":["mapping","endgame"]}],
     "related": [
       {
         "label": "Mapping初心者ガイド",
@@ -426,13 +331,7 @@
         "url": "/guides/gear-upgrade/"
       }
     ],
-    "sources": [
-      {
-        "name": "PoE2 Wiki（コミュニティWiki）：Waystone（追加効果と復活回数）",
-        "url": "https://www.poe2wiki.net/wiki/Waystone",
-        "checkedAt": "2026-09-29"
-      }
-    ],
+    "sources": [{"name":"PoE2 Wiki（コミュニティWiki）：Waystone（追加効果と復活回数）","url":"https://www.poe2wiki.net/wiki/Waystone","checkedAt":"2026-09-29"},{"name":"GGG: 0.5.0 パッチノート","url":"https://www.pathofexile.com/forum/view-thread/3932540","checkedAt":"2026-10-25","supports":"Waystoneの起動前鑑定、モッド分類・報酬補正の変更。固定の維持率・周回速度は示しません。"}],
     "faq": [
       {
         "q": "周回が遅いとき、最初に何を見る？",
@@ -443,7 +342,7 @@
         "a": "元ガイドで周回や殲滅の強さが書かれているビルドは、このページの『ビルド別：周回の強み・弱み』で確認できます。"
       }
     ]
-  },
+  ,"evidence":{"method":"掲載ビルド原典の周回評価とWaystoneの公式変更を整理。原典作者の評価・時間と当サイトの実測を区別します。","confirmed":"移動・範囲・操作の切り分け、Waystoneモッドと報酬補正の変更。現在の石の表示を読む方針です。","unverified":"同一条件の周回速度・収益、全モッド組合せの復活回数、T15以上の維持率。","version":"Waystone変更：0.5.0／周回評価は各ビルド原典の版"}},
   {
     "path": "/guides/mapping/",
     "publishedAt": "2026-09-10",
@@ -459,8 +358,8 @@
       {"heading": "ビルド別のMapping移行目安", "paragraphs": ["移行条件はビルドごとに異なります。確認済みロードマップのMapping開始段階を開き、現在Lvと切替条件を優先してください。"], "buildIds": ["monk-whirling-assault", "ranger-ice-shot-deadeye", "witch-minion-infernalist"]}
     ],
     "related": [{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"周回が遅い原因","url":"/guides/slow-mapping/"},{"label":"装備診断","url":"/gear-check/"},{"label":"ボスに勝てないとき","url":"/guides/cant-beat-boss/"},{"label":"キャンペーン終了後にすること","url":"/guides/after-campaign/"}],
-    "sources": []
-  },
+    "sources": [{"name":"GGG: 0.5.0 パッチノート","url":"https://www.pathofexile.com/forum/view-thread/3932540","checkedAt":"2026-10-25","supports":"Waystoneの起動前鑑定、モッド分類・報酬補正の変更。固定の維持率・周回速度は示しません。"}]
+  ,"evidence":{"method":"掲載ビルドの移行条件と公式Waystone変更を参照した準備手順。周回実測ではありません。","confirmed":"鑑定・モッド確認が必要な点と、主力・防御の動作を低難度で確認する順番。","unverified":"全ビルドの最低装備、マップ維持率、経験値・通貨の時給。","version":"Waystone参照仕様：0.5.0／移行条件は各ビルドの版を参照"}},
   {
     "path": "/poe2-1-0/release-date/",
     "publishedAt": "2026-09-12",
@@ -1089,8 +988,8 @@
       {"heading":"確認済みビルドで現在Lvから見る","buildIds":["monk-whirling-assault","ranger-ice-shot-deadeye","mercenary-twister-gemling"]}
     ],
     "related": [{"label":"パッシブツリーとは","url":"/dictionary/passive-tree/"},{"label":"火力が出ない原因","url":"/guides/increase-damage/"},{"label":"全ビルドから現在Lvを入力","url":"/builds/"}],
-    "sources": []
-  },
+    "sources": [{"name":"GGG: 0.5.0 パッチノート","url":"https://www.pathofexile.com/forum/view-thread/3932540","checkedAt":"2026-10-25","supports":"Passive Skill Tree Changesの変更記録。本文の取得順や全ノード経路の最適性を示す資料ではありません。"}]
+  ,"evidence":{"method":"掲載ビルドの段階別方針から確認手順を整理。公式資料はツリーが版ごとに変わることの根拠です。","confirmed":"現在の主力・防御・能力条件と、次の段階の方針を照合する項目。ノード名を推測して完成ツリーを作ってはいません。","unverified":"全ノードの接続順、リスペック費用、各ビルドの実機での最適経路。","version":"確認手順の提案／変更記録：0.5.0／構成の版はリンク先ビルド参照"}},
   {
     "path": "/guides/resistance/",
     "publishedAt": "2026-09-10",
@@ -1107,8 +1006,8 @@
       {"heading":"確認済みビルドで現在Lvから見る","buildIds":["warrior-shield-wall-smith","ranger-ice-shot-deadeye","witch-minion-infernalist"]}
     ],
     "related": [{"label":"耐性とは","url":"/dictionary/resistance/"},{"label":"すぐ死ぬ原因","url":"/guides/why-i-die/"},{"label":"装備診断を開く","url":"/gear-check/"}],
-    "sources": []
-  },
+    "sources": [{"name":"PoE2DB: Resistances（非公式ゲームデータ）","url":"https://poe2db.tw/us/Resistances","checkedAt":"2026-10-25","supports":"対応する属性の被ダメージを耐性が軽減し、装備・パッシブ等で補えるという説明。死亡原因の診断結果や固定合格値の根拠ではありません。"}]
+  ,"evidence":{"method":"非公式DBの耐性説明と掲載ビルドの防御方針から、装備交換の確認順を整理。実測ではありません。","confirmed":"耐性が対応属性のダメージを軽減する説明と、装備・パッシブで補えること。交換順は編集上の提案です。","unverified":"特定ボスに必要な耐性値、全ペナルティ・最大耐性の例外、実際の死亡原因。","version":"耐性の一般説明：PoE2DB資料確認／ビルド別の版は各原典参照"}},
   {
     "path": "/what-is-poe2/",
     "publishedAt": "2026-10-01",
