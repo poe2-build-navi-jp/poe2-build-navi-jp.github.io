@@ -15,7 +15,7 @@ assert(groups.some(g=>g.agent==='oai-searchbot'));
 for(const path of ['/','/guides/','/images/poe2/a.webp',...excluded])assert(!allowed('GPTBot',path));
 assert.equal((robots.match(/^Sitemap:/gm)||[]).length,1);
 const guides=JSON.parse(read('data/strategy-guides.json'));
-const targets=['campaign-progression','trial-of-chaos','expedition','atlas-progression','waystones-tablets','arbiter-of-divinity','mageblood-legacies','tier-16-waystones'];
+const targets=['campaign-progression','trial-of-chaos','expedition','atlas-progression','waystones-tablets','arbiter-of-divinity','mageblood-legacies','tier-16-waystones','runeseekers-call'];
 assert.deepEqual(guides.filter(g=>g.verification).map(g=>g.slug).sort(),targets.slice().sort());
 for(const g of guides){const d=new JSDOM(read(`guides/${g.slug}/index.html`)).window.document;const block=d.querySelector('.guide-verification');assert.equal(!!block,targets.includes(g.slug));if(!block)continue;
  assert.equal(block.querySelectorAll('dt').length,3);
@@ -29,7 +29,7 @@ for(const g of guides){const d=new JSDOM(read(`guides/${g.slug}/index.html`)).wi
 }
 assert.equal(new JSDOM(read('guides/arbiter-of-divinity/index.html')).window.document.querySelectorAll('.guide-record-image').length,15);
 assert.equal(new JSDOM(read('guides/tier-16-waystones/index.html')).window.document.querySelectorAll('.guide-record-image').length,1);
-console.log('PASS: crawler access matrix, retained exclusions, eight scoped strategy evidence blocks and published screenshots');
+console.log('PASS: crawler access matrix, retained exclusions, nine scoped strategy evidence blocks and published screenshots');
 
 const legacyTargets=['after-campaign','equipment-basics','skill-gems','support-gems','passive-tree','resistance','increase-damage','why-i-die','mapping','mana-problem','cant-beat-boss','gear-upgrade','slow-mapping'];
 const legacy=[...JSON.parse(read('data/guides.json')),...JSON.parse(read('data/seo-pages.json'))].filter(g=>g.evidence);
