@@ -390,6 +390,10 @@
       {
         "href": "/guides/expedition/",
         "label": "Expeditionのリーグ別仕様"
+      },
+      {
+        "href": "/guides/loot-filter/",
+        "label": "ルートフィルターの入れ方"
       }
     ],
     "verification": {
@@ -7560,5 +7564,195 @@
       }
     ],
     "tocLabel": "目次を開く：検索・交換・取引前の確認"
+  },
+  {
+    "slug": "loot-filter",
+    "title": "ルートフィルターの入れ方｜NeverSinkの導入と段階の選び方",
+    "metaDescription": "ルートフィルターは、落ちたアイテムの表示を整理する設定です。NeverSinkを公式サイトでフォローする方法と、Windowsでファイルを置く方法を分けて解説します。厳しさを選ぶときの注意点、更新時の確認事項、PCとコンソールの違いも紹介します。",
+    "summary": "ルートフィルターは、地面に落ちたアイテムの表示を整理する設定です。NeverSinkを使う入口と、必要な物まで隠さないための確認手順を説明します。",
+    "category": "basics",
+    "version": "0.5.5e（サイト対象版。2026-10-28に公式一覧・0.5.0／0.5.5eパッチノート・PoE2DB掲載先を照合）",
+    "checkedAt": "2026-10-28",
+    "publishedAt": "2026-10-28",
+    "updatedAt": "2026-10-28",
+    "actions": [
+      "公式のPoE2用フィルター一覧で、作者と対象ゲームを確認します。",
+      "フォロー方式かWindowsのファイル方式を選び、ゲーム内で有効にします。",
+      "必要なアイテムが隠れていないか確認してから、厳しさを調整します（編集部の提案）。"
+    ],
+    "scope": "公式のフィルター一覧と仕様説明、PoE2DBの配布先一覧、導入資料を照合した記事です。ゲーム内での動作確認はしていません。2025年の導入資料にある画面階層を、現行版の日本語表示とは断定しません。",
+    "verification": {
+      "method": "2026-10-28に公式のPoE2用一覧・フィルター仕様・0.5.0と0.5.5eパッチノートを確認しました。配布先をPoE2DB、PCの保存形式をPoE2 Wiki、段階の考え方をMobalyticsの導入資料と照合しました。",
+      "confirmed": "公式一覧にNeverSinkのPoE2用フィルターがあり、Follow後にゲーム内で選択する仕組みを確認しました。Windowsの.filter形式と保存先、コンソールのアカウント連携方式を資料で確認しました。",
+      "unverified": "現行日本語UIの正確な階層、各段階が隠す全アイテム、自動更新の反映時刻、現在のFilterBladeの全ボタン名は未確認です。実機動作や収益・周回効率の改善率も未確認です。"
+    },
+    "sections": [
+      {
+        "id": "what-filter-does",
+        "heading": "ルートフィルターで変わること",
+        "paragraphs": [
+          "ルートフィルターは、ドロップ品の名前の表示や色、音、演出を変える仕組みです。条件に合う物を表示するルールと、隠すルールを使えます。[source:1][source:2]",
+          "厳しさは、拾う候補をどこまで絞るかという設定です。画面をすっきりさせる設定でも、自分がまだ必要とする物が隠れる場合があります。[source:3]"
+        ],
+        "sourceRefs": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "follow-official-filter",
+        "heading": "PC・コンソール：公式サイトでフォローする",
+        "paragraphs": [
+          "公式サイトにはPoE2専用の一覧があります。NeverSinkの名前だけでなく、作者のNeverSink#3349とPoE2用であることを確認します。選んだフィルターを開いてFollowを押し、ゲーム内の設定で選択する流れです。[source:1]",
+          "コンソールでも、公式サイトで他のプレイヤーのフィルターをフォローする方法が案内されています。[source:3]"
+        ],
+        "steps": [
+          "公式のPoE2用一覧を開きます。ログインを求められた場合は、プレイしているアカウントでログインします。",
+          "NeverSinkの候補を開き、対象がPoE2であることを確認してFollowを選びます。",
+          "ゲームの設定画面でアイテムフィルター（Item Filter）の選択欄を探し、フォローした名前を選びます。"
+        ],
+        "sourceRefs": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "windows-file-install",
+        "heading": "Windows：ファイルを置く方法もある",
+        "paragraphs": [
+          "PoE2DBのToolsページには、NeverSink.Filterの配布先リンクがあります。ファイル方式を選ぶ場合は、この掲載先からPoE2用のフィルターを取得します。[source:4]",
+          "Windowsの標準的な保存先は「%USERPROFILE%\\Documents\\My Games\\Path of Exile 2」です。ゲームが読み込む拡張子は「.filter」です。Documentsの場所を変更している場合は、標準のパスと異なります。[source:5]"
+        ],
+        "steps": [
+          "配布物から「.filter」で終わるファイルを取り出します。",
+          "Path of Exile 2の保存フォルダーに置きます。",
+          "ゲーム内のフィルター選択欄で、そのファイルを選びます。"
+        ],
+        "sourceRefs": [
+          4,
+          5
+        ]
+      },
+      {
+        "id": "choose-strictness",
+        "heading": "厳しさは拾いたい物を基準に選ぶ",
+        "paragraphs": [
+          "公式一覧には、Regular、Semi-Strict、Strictなどに対応する名前のNeverSinkフィルターがあります。段階名はゲームの難易度ではなく、表示するアイテムを絞るための区別です。[source:1][source:3]",
+          "初めてならRegularやSemi-Strictを候補にし、表示内容を確認してから絞り込む方法を提案します（編集部の提案）。キャラクターのレベルだけで一律に切り替えるのではなく、まだ拾いたい素材や装備が見えるかを基準にしてください（編集部の提案）。"
+        ],
+        "table": {
+          "caption": "段階選びの考え方（編集部の提案）",
+          "headers": [
+            "状況",
+            "確認すること"
+          ],
+          "rows": [
+            [
+              "初めて使う",
+              "拾いたい素材や装備が表示されるかを確認する。"
+            ],
+            [
+              "表示が多すぎる",
+              "拾わなくなった物を整理し、次の段階を候補にする。"
+            ],
+            [
+              "必要な物が見当たらない",
+              "いったん緩い段階に戻し、非表示条件を確認する。"
+            ]
+          ]
+        },
+        "sourceRefs": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "updates-and-checks",
+        "heading": "更新後・一覧に出ないときの確認",
+        "paragraphs": [
+          "0.5.0では設定メニューの再構成が告知されています。古い導入記事と項目の位置が違っても、現行画面のItem Filter欄を探してください。0.5.5eの告知にはフィルター固有の変更は記載されていません。[source:6][source:7]",
+          "大型更新後は、配布先で対応版と更新内容を確認してください（編集部の提案）。ローカルファイル方式では、新版の.filterを保存し直し、ゲーム内で選び直す手順を提案します（編集部の提案）。フォロー方式の自動反映時刻は、この調査では確認できていません。"
+        ],
+        "bullets": [
+          "一覧にない場合は、対象ゲーム、ログインしたアカウント、フォローした名前を確認します（編集部の提案）。",
+          "ファイル方式では、保存先と「.filter」という拡張子を確認します。[source:5]",
+          "厳しさを変えた直後は、必要な物の表示を確認します（編集部の提案）。"
+        ],
+        "sourceRefs": [
+          5,
+          6,
+          7
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "コンソールでもNeverSinkを使えますか？",
+        "answer": "アカウントを通じて、公式サイトのフィルターをフォローする方法が案内されています。PC用のファイル保存手順とは分けて考えてください。[source:1][source:3]"
+      },
+      {
+        "question": "一番厳しい設定にすればよいですか？",
+        "answer": "必要な物まで隠れる可能性があります。最初から厳しさを最大にせず、拾いたい物を確認しながら調整することを提案します（編集部の提案）。[source:3]"
+      },
+      {
+        "question": "古い説明と設定画面が違うのはなぜですか？",
+        "answer": "0.5.0で設定メニューの再構成が告知されています。この記事では、現在の日本語UIの階層を断定せず、Item Filterの選択欄を案内しています。[source:6]"
+      }
+    ],
+    "sources": [
+      {
+        "name": "公式：PoE2用アイテムフィルター一覧",
+        "url": "https://www.pathofexile.com/item-filter/ladder/follower/type/PoE2",
+        "checkedAt": "2026-10-28",
+        "supports": "NeverSinkの作者・PoE2用候補、Followからゲーム内選択までの流れ。"
+      },
+      {
+        "name": "公式：アイテムフィルターの仕様",
+        "url": "https://www.pathofexile.com/item-filter/about",
+        "checkedAt": "2026-10-28",
+        "supports": "表示・非表示ルールと表示変更の仕組み。"
+      },
+      {
+        "name": "Mobalytics：PoE2 Loot Filter Guide",
+        "url": "https://mobalytics.gg/poe-2/guides/loot-filter-guide",
+        "checkedAt": "2026-10-28",
+        "supports": "2025-01-30時点の厳しさの考え方、コンソールのフォロー方式。古い相場や画面階層は採用しない。"
+      },
+      {
+        "name": "PoE2DB日本語版：Tools",
+        "url": "https://poe2db.tw/jp/Tools",
+        "checkedAt": "2026-10-28",
+        "supports": "Filters欄に掲載されているNeverSinkの配布先。"
+      },
+      {
+        "name": "PoE2 Wiki：Item filter",
+        "url": "https://www.poe2wiki.net/wiki/Item_filter",
+        "checkedAt": "2026-10-28",
+        "supports": "Windowsの標準保存先と.filter拡張子。検索取得本文で照合。"
+      },
+      {
+        "name": "公式：0.5.0パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-28",
+        "supports": "設定メニューが再構成されたこと。"
+      },
+      {
+        "name": "公式：0.5.5eパッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4009785",
+        "checkedAt": "2026-10-28",
+        "supports": "サイト対象版の変更一覧。フィルター固有の変更記載がないこと。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/equipment-basics/",
+        "label": "装備の基本を確認する"
+      },
+      {
+        "href": "/guides/waystones-tablets/",
+        "label": "ウェイストーンと石板の使い方"
+      }
+    ]
   }
 ]
