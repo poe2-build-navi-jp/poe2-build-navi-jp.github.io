@@ -4,7 +4,7 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "85dfd57c2e52dec9",
+  "hash": "efaabd20373df1dd",
   "date": "2026-10-28"
  },
  "/name-index/": {
@@ -148,8 +148,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "143575e5d69ba0f3",
-  "date": "2026-10-25"
+  "hash": "21cb7670c62a0c02",
+  "date": "2026-10-28"
  },
  "/dictionary/": {
   "hash": "68f6cc7a5b0ac467",
@@ -192,7 +192,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "112302f29efce3a3",
+  "hash": "f67a5eea9916e2cb",
   "date": "2026-10-28"
  },
  "/classes/monk/": {
@@ -324,8 +324,8 @@
   "date": "2026-10-26"
  },
  "/guides/waystones-tablets/": {
-  "hash": "942c976c7b4a82f2",
-  "date": "2026-10-26"
+  "hash": "bb9f59a2a05976b8",
+  "date": "2026-10-28"
  },
  "/guides/expedition/": {
   "hash": "89caf757342e4d5d",
@@ -372,8 +372,8 @@
   "date": "2026-10-10"
  },
  "/guides/budget-gear-crafting/": {
-  "hash": "ec332acba7b056c4",
-  "date": "2026-10-10"
+  "hash": "a5767b63437634b1",
+  "date": "2026-10-28"
  },
  "/guides/pinnacle-bosses/": {
   "hash": "af4e2f57c7cc0bac",
@@ -398,6 +398,18 @@
  "/guides/tier-16-waystones/": {
   "hash": "3e0368e616e8ca3c",
   "date": "2026-10-26"
+ },
+ "/guides/trade/": {
+  "hash": "c6b2d6e1af151e79",
+  "date": "2026-10-28"
+ },
+ "/guides/loot-filter/": {
+  "hash": "3a83c6aaf51479a3",
+  "date": "2026-10-28"
+ },
+ "/guides/currency-guide/": {
+  "hash": "2f886766d12c6536",
+  "date": "2026-10-28"
  },
  "/dictionary/build/": {
   "hash": "d07eb2c6c49c7f7a",
