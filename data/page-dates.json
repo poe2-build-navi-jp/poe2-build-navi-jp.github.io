@@ -4,8 +4,8 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "97b31323b3254c3f",
-  "date": "2026-10-25"
+  "hash": "85dfd57c2e52dec9",
+  "date": "2026-10-28"
  },
  "/name-index/": {
   "hash": "e69e40bda4e12310",
@@ -16,8 +16,8 @@
   "date": "2026-10-24"
  },
  "/equipment/": {
-  "hash": "df990f969ce315f0",
-  "date": "2026-10-24"
+  "hash": "a49b9c29affd15f9",
+  "date": "2026-10-28"
  },
  "/skills/whirling-assault/": {
   "hash": "10f584d728406378",
@@ -115,6 +115,10 @@
   "hash": "e10d8a7f6e523c8f",
   "date": "2026-10-24"
  },
+ "/equipment/unset-ring/": {
+  "hash": "af72934bfa90c069",
+  "date": "2026-10-28"
+ },
  "/builds/": {
   "hash": "7818a18e6dd604fa",
   "date": "2026-10-06"
@@ -144,7 +148,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "eec1f60879f7193d",
+  "hash": "143575e5d69ba0f3",
   "date": "2026-10-25"
  },
  "/dictionary/": {
@@ -188,8 +192,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "15c2ec0570ee858a",
-  "date": "2026-10-25"
+  "hash": "112302f29efce3a3",
+  "date": "2026-10-28"
  },
  "/classes/monk/": {
   "hash": "4561abac4cd0d319",
@@ -272,20 +276,20 @@
   "date": "2026-10-17"
  },
  "/guides/skill-gems/": {
-  "hash": "c59f7110eeae6fce",
-  "date": "2026-10-26"
+  "hash": "c0247d15902219f2",
+  "date": "2026-10-28"
  },
  "/guides/support-gems/": {
-  "hash": "6fae5879dc0f8bbb",
-  "date": "2026-10-26"
+  "hash": "60b751563721650a",
+  "date": "2026-10-28"
  },
  "/guides/passive-tree/": {
   "hash": "5fc9eb779019557b",
   "date": "2026-10-26"
  },
  "/guides/equipment-basics/": {
-  "hash": "aa0f747c66cc6bbd",
-  "date": "2026-10-26"
+  "hash": "bd1eb83de5f5976e",
+  "date": "2026-10-28"
  },
  "/guides/resistance/": {
   "hash": "f8621610233a276d",
