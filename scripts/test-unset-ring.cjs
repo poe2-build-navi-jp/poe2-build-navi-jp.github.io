@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{JSDOM}=require('jsdom');
+const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const data=JSON.parse(read('data/core-entities.json')).find(e=>e.slug==='unset-ring');
+assert(data);assert.deepEqual(data.buildIds,[]);assert(data.title.includes('スキル枠'));
+const d=new JSDOM(read('equipment/unset-ring/index.html')).window.document,t=d.body.textContent;
+for(const s of ['レベル44','合計＋2','スピリット','サポート','毎秒最大ライフの5%','3%','未確認','Bursting Decay'])assert(t.includes(s),s);
+assert(!/統合された効率.{0,30}[+＋]3/.test(t));assert(!/基本.{0,10}9枠/.test(t));assert(!t.includes('Req56'));
+assert(d.body.classList.contains('guide-reading'));assert(d.querySelector('link[href*="guide-reading.css"]'));
+assert(d.querySelector('img[width="1920"][height="1080"][alt]'));
+assert(fs.existsSync(path.join(root,data.sections.find(s=>s.image).image.src)));
+for(const slug of ['skill-gems','equipment-basics','support-gems'])assert(read(`guides/${slug}/index.html`).includes('/equipment/unset-ring/'),slug);
+assert(read('equipment/index.html').includes('/equipment/unset-ring/'));
+assert(read('site-map/index.html').includes('/equipment/unset-ring/'));
+const xml=new JSDOM(read('sitemap.xml'),{contentType:'text/xml'}).window.document;
+const ent=[...xml.querySelectorAll('url')].find(x=>x.querySelector('loc').textContent.endsWith('/equipment/unset-ring/'));
+assert.equal(ent.querySelector('lastmod').textContent,'2026-10-28');
+console.log('PASS: Unset Ring source-based content, no inferred adoption, reading layout, three incoming links and sitemap');
