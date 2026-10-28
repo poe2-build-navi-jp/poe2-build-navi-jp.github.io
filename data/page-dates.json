@@ -4,7 +4,7 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "40903db9ea182ef7",
+  "hash": "efaabd20373df1dd",
   "date": "2026-10-28"
  },
  "/name-index/": {
@@ -148,7 +148,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "e33691f812a58040",
+  "hash": "21cb7670c62a0c02",
   "date": "2026-10-28"
  },
  "/dictionary/": {
@@ -192,7 +192,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "5804729f008d450b",
+  "hash": "f67a5eea9916e2cb",
   "date": "2026-10-28"
  },
  "/classes/monk/": {
@@ -372,7 +372,7 @@
   "date": "2026-10-10"
  },
  "/guides/budget-gear-crafting/": {
-  "hash": "e7093773cd37dd65",
+  "hash": "a5767b63437634b1",
   "date": "2026-10-28"
  },
  "/guides/pinnacle-bosses/": {
@@ -405,6 +405,10 @@
  },
  "/guides/loot-filter/": {
   "hash": "3a83c6aaf51479a3",
+  "date": "2026-10-28"
+ },
+ "/guides/currency-guide/": {
+  "hash": "2f886766d12c6536",
   "date": "2026-10-28"
  },
  "/dictionary/build/": {
