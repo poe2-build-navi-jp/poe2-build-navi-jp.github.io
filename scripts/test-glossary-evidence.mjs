@@ -27,6 +27,6 @@ for(const b of builds){
  assert(/未確認|再確認|再検証/.test(d.body.textContent));
  assert(!d.querySelector('.term-provenance'));
 }
-const entities=JSON.parse(read('data/core-entities.json'));assert.equal(entities.length,24);
+const entities=JSON.parse(read('data/core-entities.json'));assert.equal(entities.length,25);
 for(const e of entities){assert(e.cautions.length);for(const s of e.sources)assert(s.supports && s.checkedAt);}
-console.log('PASS: thirteen term-specific source scopes, retained source dates, action order; twelve build and twenty-four entity evidence structures');
+console.log('PASS: thirteen term-specific source scopes, retained source dates, action order; twelve build and twenty-five entity evidence structures');

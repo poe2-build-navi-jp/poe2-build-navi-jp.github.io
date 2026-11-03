@@ -4,8 +4,8 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "f1cf2f8ab0a74997",
-  "date": "2026-10-27"
+  "hash": "399ada23556b7230",
+  "date": "2026-11-03"
  },
  "/name-index/": {
   "hash": "e69e40bda4e12310",
@@ -16,8 +16,8 @@
   "date": "2026-10-24"
  },
  "/equipment/": {
-  "hash": "df990f969ce315f0",
-  "date": "2026-10-24"
+  "hash": "a49b9c29affd15f9",
+  "date": "2026-10-28"
  },
  "/skills/whirling-assault/": {
   "hash": "10f584d728406378",
@@ -115,6 +115,10 @@
   "hash": "e10d8a7f6e523c8f",
   "date": "2026-10-24"
  },
+ "/equipment/unset-ring/": {
+  "hash": "af72934bfa90c069",
+  "date": "2026-10-28"
+ },
  "/builds/": {
   "hash": "7818a18e6dd604fa",
   "date": "2026-10-06"
@@ -144,8 +148,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "0118cce1dc3447f0",
-  "date": "2026-10-27"
+  "hash": "c5ef732028409105",
+  "date": "2026-11-03"
  },
  "/dictionary/": {
   "hash": "68f6cc7a5b0ac467",
@@ -188,8 +192,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "9e8e1e2a7c066873",
-  "date": "2026-10-27"
+  "hash": "a6fc3aaf3523327e",
+  "date": "2026-11-03"
  },
  "/classes/monk/": {
   "hash": "4561abac4cd0d319",
@@ -272,20 +276,20 @@
   "date": "2026-10-17"
  },
  "/guides/skill-gems/": {
-  "hash": "c59f7110eeae6fce",
-  "date": "2026-10-26"
+  "hash": "c0247d15902219f2",
+  "date": "2026-10-28"
  },
  "/guides/support-gems/": {
-  "hash": "6fae5879dc0f8bbb",
-  "date": "2026-10-26"
+  "hash": "60b751563721650a",
+  "date": "2026-10-28"
  },
  "/guides/passive-tree/": {
   "hash": "5fc9eb779019557b",
   "date": "2026-10-26"
  },
  "/guides/equipment-basics/": {
-  "hash": "aa0f747c66cc6bbd",
-  "date": "2026-10-26"
+  "hash": "bd1eb83de5f5976e",
+  "date": "2026-10-28"
  },
  "/guides/resistance/": {
   "hash": "f8621610233a276d",
@@ -320,12 +324,12 @@
   "date": "2026-10-26"
  },
  "/guides/waystones-tablets/": {
-  "hash": "942c976c7b4a82f2",
-  "date": "2026-10-26"
+  "hash": "bb9f59a2a05976b8",
+  "date": "2026-10-28"
  },
  "/guides/expedition/": {
   "hash": "b884513c28886cb6",
-  "date": "2026-10-27"
+  "date": "2026-11-03"
  },
  "/guides/act-1-walkthrough/": {
   "hash": "2ade2b70938a0fb2",
@@ -353,7 +357,7 @@
  },
  "/guides/endgame-items/": {
   "hash": "96d6a31c9a364192",
-  "date": "2026-10-27"
+  "date": "2026-11-03"
  },
  "/guides/atlas-passive-trees/": {
   "hash": "6b457f922728feee",
@@ -368,8 +372,8 @@
   "date": "2026-10-10"
  },
  "/guides/budget-gear-crafting/": {
-  "hash": "ec332acba7b056c4",
-  "date": "2026-10-10"
+  "hash": "a5767b63437634b1",
+  "date": "2026-10-28"
  },
  "/guides/pinnacle-bosses/": {
   "hash": "af4e2f57c7cc0bac",
@@ -395,9 +399,21 @@
   "hash": "3e0368e616e8ca3c",
   "date": "2026-10-26"
  },
+ "/guides/trade/": {
+  "hash": "b145c3477e0359f6",
+  "date": "2026-10-29"
+ },
+ "/guides/loot-filter/": {
+  "hash": "9c5d21ac28768da2",
+  "date": "2026-10-29"
+ },
+ "/guides/currency-guide/": {
+  "hash": "8588dd83aec11022",
+  "date": "2026-10-29"
+ },
  "/guides/runeseekers-call/": {
-  "hash": "6897d1d259d016b3",
-  "date": "2026-10-27"
+  "hash": "947067ec4c2116d8",
+  "date": "2026-11-03"
  },
  "/dictionary/build/": {
   "hash": "d07eb2c6c49c7f7a",
