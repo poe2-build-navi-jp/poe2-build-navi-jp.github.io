@@ -18,7 +18,7 @@ const crumb=(name,url,parentName,parentUrl)=>({'@context':'https://schema.org','
 for(const e of entities){
  if(!/^[a-z0-9-]+$/.test(e.slug)||!['skill','equipment'].includes(e.kind)||!e.sources?.length)throw Error('Invalid entity '+e.slug);
  const type=e.kind==='skill'?'スキル':'装備',parent=e.kind==='skill'?'/skills/':'/equipment/',url=site.baseUrl+path(e);
- const title=e.title||`PoE2 ${e.name}｜効果・必要条件・入手方法と採用ビルド`;
+ const title=e.title||`PoE2 ${e.name}｜効果・必要条件・入手方法${e.buildIds.length?"と採用ビルド":""}`;
  const text=v=>esc(v).replace(/\[source:(\d+)\]/g,(_,n)=>{if(!e.sources[n-1])throw Error('Source '+e.slug);return `<sup><a href="#source-${n}" aria-label="資料${n}">[${n}]</a></sup>`});
  const selected=e.buildIds.map(id=>{const b=builds.find(b=>b.id===id&&b.status!=='draft');if(!b)throw Error('Build '+id);return b});
  const date=e.sources.map(s=>s.checkedAt).sort().at(-1);

@@ -5094,6 +5094,14 @@
       {
         "href": "/gear-check/",
         "label": "装備診断で次の一手を確認"
+      },
+      {
+        "href": "/equipment/morior-invictus/",
+        "label": "不屈なる者として死す（鎧）の効果と入手"
+      },
+      {
+        "href": "/equipment/guiding-palm-of-the-eye/",
+        "label": "目の導きの掌（セプター）の効果"
       }
     ]
   },
@@ -7041,6 +7049,10 @@
       {
         "href": "/gear-check/",
         "label": "現在の装備を診断する"
+      },
+      {
+        "href": "/equipment/mageblood/",
+        "label": "メイジブラッドの効果・装備条件"
       }
     ],
     "ogImage": "/images/poe2/og/poe2-guides-mageblood-legacies-og.webp",
@@ -8270,6 +8282,10 @@
       {
         "href": "/builds/sorceress/spark-stormweaver/",
         "label": "スペル系ビルドの例：スパーク・ストームウィーバー"
+      },
+      {
+        "href": "/equipment/runeseekers-call/",
+        "label": "ルーンシーカーの呼び声の効果・装備条件"
       }
     ],
     "tocLabel": "目次を開く：入手の4ステップ・マナの作り方"
