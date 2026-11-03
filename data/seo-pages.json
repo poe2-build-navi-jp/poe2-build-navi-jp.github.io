@@ -398,7 +398,7 @@
           ],
           [
             "2026年11月7〜8日（ニュージーランド時間）",
-            "ExileCon 2026（オークランド）。公式は大型発表を行うと案内。配信は日本時間11月7日・8日の午前5時から（PST 11月6日・7日の正午）"
+            "ExileCon 2026（オークランド）。PoE2 1.0の大型発表（基調講演）は日本時間11月7日（土）午前6時から（太平洋時間11月6日午後1時）"
           ],
           [
             "2026年12月11日（PST）",
@@ -468,6 +468,10 @@
         "url": "/poe2-1-0/"
       },
       {
+        "label": "ExileCon 2026の日本時間と発表内容",
+        "url": "/poe2-1-0/exilecon-2026/"
+      },
+      {
         "label": "事前登録のやり方と報酬",
         "url": "/poe2-1-0/pre-registration/"
       },
@@ -533,6 +537,11 @@
         "name": "Steamニュース（公式）：One Month until ExileCon 2026（2026年10月6日）",
         "url": "https://store.steampowered.com/news/app/2694490/view/669504028414052668",
         "checkedAt": "2026-10-16"
+      },
+      {
+        "name": "Path of Exile 2公式（Steam）：Two Weeks Until ExileCon 2026!（2026年10月25日）",
+        "url": "https://steamcommunity.com/ogg/2694490/announcements/detail/699905228356458262",
+        "checkedAt": "2026-11-03"
       }
     ]
   },
@@ -870,7 +879,7 @@
         "heading": "ExileCon 2026で発表予定",
         "paragraphs": [
           "公式は、ExileCon 2026を11月7〜8日（ニュージーランド時間）にオークランドで開催し、大型発表を行うと案内しています。Duelistの詳細が発表された場合は、公式情報で確認してから追記します。",
-          "公式は、2日間の全日程をTwitchとYouTubeで無料配信すると案内しています。配信開始は太平洋時間（PST）11月6日・7日の正午で、日本時間では11月7日・8日の午前5時です。大型発表を含む基調講演はPSTの午後1時開始と案内されています（どちらの日かは告知に明記されていません。初日なら日本時間11月7日の午前6時）。"
+          "公式によると、大型発表を含む基調講演は太平洋時間11月6日午後1時、日本時間では11月7日（土）午前6時から始まり、TwitchとYouTubeで無料配信されます。配信の時刻と見方はExileCon 2026のページにまとめています。"
         ]
       },
       {
@@ -895,6 +904,10 @@
       {
         "label": "PoE2 1.0情報ハブ",
         "url": "/poe2-1-0/"
+      },
+      {
+        "label": "ExileCon 2026の日本時間と発表内容",
+        "url": "/poe2-1-0/exilecon-2026/"
       },
       {
         "label": "1.0公開予定日を見る",
@@ -947,6 +960,11 @@
         "name": "Steamニュース（公式）：One Month until ExileCon 2026（2026年10月6日）",
         "url": "https://store.steampowered.com/news/app/2694490/view/669504028414052668",
         "checkedAt": "2026-10-16"
+      },
+      {
+        "name": "Path of Exile 2公式（Steam）：Two Weeks Until ExileCon 2026!（2026年10月25日）",
+        "url": "https://steamcommunity.com/ogg/2694490/announcements/detail/699905228356458262",
+        "checkedAt": "2026-11-03"
       }
     ],
     "faq": [
@@ -968,7 +986,141 @@
       },
       {
         "q": "ExileConは日本時間の何時から見られる？",
-        "a": "公式の告知では、配信開始は太平洋時間（PST）11月6日・7日の正午です。日本時間では11月7日・8日の午前5時からです。"
+        "a": "基調講演（大型発表）は日本時間11月7日（土）午前6時からです（太平洋時間11月6日午後1時）。午前5時30分から事前番組があります。"
+      }
+    ]
+  },
+  {
+    "path": "/poe2-1-0/exilecon-2026/",
+    "publishedAt": "2026-11-03",
+    "kicker": "POE2 1.0 / EXILECON 2026",
+    "title": "ExileCon 2026はいつ？日本時間の配信時刻とPoE2 1.0発表まとめ",
+    "description": "ExileCon 2026のPoE2 1.0大型発表は日本時間11月7日（土）午前6時から。配信の見方（Twitch・YouTube）、事前番組、2日目の配信、見逃した時のアーカイブを公式発表で確認。発表内容は確認でき次第追記します。",
+    "h1": "ExileCon 2026の日本時間と発表内容",
+    "answer": "ExileCon 2026の基調講演（PoE2 1.0の大型発表）は、日本時間11月7日（土）午前6時から（太平洋時間11月6日午後1時）です。午前5時30分から事前番組があり、TwitchとYouTubeで無料配信されます。基調講演は約2時間で、PoE1とPoE2の両方の発表があります。発表内容は公式情報で確認でき次第、このページに追記します。",
+    "quickActions": [
+      "日本時間11月7日（土）午前6時の基調講演を、TwitchかYouTubeの公式チャンネルで見る",
+      "見逃したら、終了後すぐ公開されるアーカイブで確認する",
+      "発表のあとは、このページと1.0情報ハブで確認済みの内容を見る"
+    ],
+    "sections": [
+      {
+        "heading": "配信の日時（日本時間）",
+        "table": [
+          [
+            "基調講演の事前番組",
+            "11月7日（土）午前5時30分〜（太平洋時間11月6日午後0時30分）"
+          ],
+          [
+            "基調講演（大型発表）",
+            "11月7日（土）午前6時〜、約2時間（太平洋時間11月6日午後1時、ニュージーランド時間11月7日午前10時）"
+          ],
+          [
+            "2日目の配信",
+            "11月8日（日）午前5時〜（太平洋時間11月7日正午。10月6日の公式告知による）"
+          ]
+        ]
+      },
+      {
+        "heading": "どこで見られる？",
+        "bullets": [
+          "公式のTwitchチャンネル（twitch.tv/pathofexile）とYouTubeチャンネル（@playpathofexile）で無料配信されます。",
+          "2日間を通して、開発者のトーク、ゲームプレイの紹介、インタビュー、PoE1とPoE2のレース決勝なども配信されます。",
+          "配信中はTwitchドロップ（視聴で受け取れる報酬）が予定されていると公式が案内しています。内容は公式の告知で確認してください。"
+        ]
+      },
+      {
+        "heading": "見逃した場合",
+        "paragraphs": [
+          "基調講演は、生配信の終了後すぐにTwitchとYouTubeで見られるようになると公式が案内しています。開発者のトークやパネルは、ExileConの後に順次公開されます。",
+          "公式によると、新しい内容のトレーラーや告知ページは、基調講演で発表されると同時に公開されます。"
+        ]
+      },
+      {
+        "heading": "発表される内容",
+        "paragraphs": [
+          "公式は、ExileCon 2026でPath of Exile 2の1.0（正式版）に向けた最新の内容を発表すると案内しています。告知のタイトルは「Path of Exile 2 1.0 Full Reveal」です。",
+          "このページでは、発表後に公式の告知ページ・トレーラーで確認できた内容だけを追記します。予想やリーク情報は載せません。"
+        ],
+        "bullets": [
+          "発表内容：ExileConの後に追記します",
+          "このサイトのビルドへの影響：発表内容を確認してから、1.0のビルド対応状況ページに反映します"
+        ]
+      },
+      {
+        "heading": "会場と開催概要",
+        "bullets": [
+          "開催日：2026年11月7日（土）・8日（日）（ニュージーランド時間）",
+          "会場：ニュージーランド・オークランドのアオテア・センター（Aotea Centre）",
+          "Grinding Gear Gamesが主催する3回目のExileConです。会場は16歳以上が対象のイベントです。"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "PoE2 1.0情報ハブ",
+        "url": "/poe2-1-0/"
+      },
+      {
+        "label": "1.0公開予定日を見る",
+        "url": "/poe2-1-0/release-date/"
+      },
+      {
+        "label": "Duelistの確認済み情報",
+        "url": "/poe2-1-0/duelist/"
+      },
+      {
+        "label": "1.0のビルド対応状況",
+        "url": "/poe2-1-0/build-status/"
+      },
+      {
+        "label": "事前登録のやり方と報酬",
+        "url": "/poe2-1-0/pre-registration/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Path of Exile 2公式（Steam）：1.0 Full Reveal - Watch ExileCon 2026 on November 6 PST（2026年10月29日）",
+        "url": "https://steamcommunity.com/ogg/2694490/announcements/detail/698779962638862150",
+        "checkedAt": "2026-11-03"
+      },
+      {
+        "name": "Path of Exile 2公式（Steam）：Two Weeks Until ExileCon 2026!（2026年10月25日）",
+        "url": "https://steamcommunity.com/ogg/2694490/announcements/detail/699905228356458262",
+        "checkedAt": "2026-11-03"
+      },
+      {
+        "name": "Path of Exile 2公式（Steam）：ExileCon 2026 Schedule and Information for Attendees（2026年10月29日）",
+        "url": "https://steamcommunity.com/ogg/2694490/announcements/detail/698779962638862157",
+        "checkedAt": "2026-11-03"
+      },
+      {
+        "name": "Steamニュース（公式）：One Month until ExileCon 2026（2026年10月6日）",
+        "url": "https://store.steampowered.com/news/app/2694490/view/669504028414052668",
+        "checkedAt": "2026-11-03"
+      },
+      {
+        "name": "Steamニュース（公式）：ExileCon 2026（2026年1月28日）",
+        "url": "https://store.steampowered.com/news/app/2694490/view/523114848066732372",
+        "checkedAt": "2026-11-03"
+      }
+    ],
+    "faq": [
+      {
+        "q": "ExileCon 2026は日本時間の何時から？",
+        "a": "基調講演（大型発表）は日本時間11月7日（土）午前6時からです。午前5時30分から事前番組があります。"
+      },
+      {
+        "q": "ExileCon 2026はどこで見られる？",
+        "a": "公式のTwitch（twitch.tv/pathofexile）とYouTube（@playpathofexile）で無料配信されます。"
+      },
+      {
+        "q": "見逃したらどうすればいい？",
+        "a": "基調講演は終了後すぐにTwitchとYouTubeでアーカイブが見られると公式が案内しています。"
+      },
+      {
+        "q": "ExileCon 2026では何が発表される？",
+        "a": "公式はPoE2 1.0（正式版）の内容を発表すると案内しています。具体的な内容は発表後、公式情報で確認してから追記します。"
       }
     ]
   },
