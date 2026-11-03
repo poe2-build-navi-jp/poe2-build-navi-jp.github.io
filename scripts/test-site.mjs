@@ -197,7 +197,7 @@ assert(bestPage.includes('class="comparison-table"') && bestPage.includes("æ²è¼
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
 assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
-assert(seoPages.length === 21, "targeted SEO page count must be 21");
+assert(seoPages.length === 22, "targeted SEO page count must be 22");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
@@ -231,7 +231,7 @@ for (const [before, after] of [
   assert(applyVersionTitle(switched, "0.5.5", "1.0") === switched, "release title must be idempotent");
   assert(applyVersionTitle(switched, null, "0.5.5") === sample, "release title must restore the original title and og:title");
 }
-for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/microtransactions/", "/poe2-1-0/controller/", "/poe2-1-0/pre-registration/", "/poe2-1-0/build-status/", "/poe2-1-0/duelist/"]) {
+for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/microtransactions/", "/poe2-1-0/controller/", "/poe2-1-0/pre-registration/", "/poe2-1-0/build-status/", "/poe2-1-0/duelist/", "/poe2-1-0/exilecon-2026/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: 1.0 SEO page missing`);
 }
 assert(gearCheck.includes('id="gear-example-title"'), "gear check verified static example missing");

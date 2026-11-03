@@ -184,8 +184,8 @@
   "date": "2026-10-13"
  },
  "/poe2-1-0/": {
-  "hash": "c3075809673c6319",
-  "date": "2026-10-06"
+  "hash": "0ff224cd54dcd9b3",
+  "date": "2026-11-03"
  },
  "/about/": {
   "hash": "9287c97ab64e39ab",
@@ -208,7 +208,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "382f7cba27aa9fdd",
+  "hash": "edd693a9f63980ba",
   "date": "2026-11-03"
  },
  "/classes/monk/": {
@@ -508,8 +508,8 @@
   "date": "2026-10-26"
  },
  "/poe2-1-0/release-date/": {
-  "hash": "7c22d197fcc2e69f",
-  "date": "2026-10-17"
+  "hash": "5fcc5acd1c1bb7f1",
+  "date": "2026-11-03"
  },
  "/poe2-1-0/how-to-start/": {
   "hash": "5d4d23c72198f1d9",
@@ -540,8 +540,12 @@
   "date": "2026-10-04"
  },
  "/poe2-1-0/duelist/": {
-  "hash": "316d26244307e6e3",
-  "date": "2026-10-17"
+  "hash": "a71188ed93b1803b",
+  "date": "2026-11-03"
+ },
+ "/poe2-1-0/exilecon-2026/": {
+  "hash": "3088c479ab15a67d",
+  "date": "2026-11-03"
  },
  "/what-is-poe2/": {
   "hash": "b565f6a2ec83b69f",
