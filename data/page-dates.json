@@ -4,8 +4,8 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "333db3f18000aba3",
-  "date": "2026-11-03"
+  "hash": "6dfb5d4b193bf7ee",
+  "date": "2026-11-04"
  },
  "/name-index/": {
   "hash": "e69e40bda4e12310",
@@ -164,8 +164,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "1669cd860f358a7c",
-  "date": "2026-11-03"
+  "hash": "c17ed8e134e74e65",
+  "date": "2026-11-04"
  },
  "/dictionary/": {
   "hash": "68f6cc7a5b0ac467",
@@ -208,8 +208,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "a327f9b459bc1544",
-  "date": "2026-11-03"
+  "hash": "7fbde9789aceeb3f",
+  "date": "2026-11-04"
  },
  "/classes/monk/": {
   "hash": "4561abac4cd0d319",
@@ -244,52 +244,52 @@
   "date": "2026-10-15"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "e734af0259a072ca",
-  "date": "2026-10-17"
+  "hash": "5ab75e2b4c098245",
+  "date": "2026-11-04"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "3a8c9025ba290cca",
-  "date": "2026-10-23"
+  "hash": "5ac33fb2290d0b6a",
+  "date": "2026-11-04"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "278aea25542c629a",
-  "date": "2026-10-17"
+  "hash": "d9ee5f19f79290aa",
+  "date": "2026-11-04"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "767bc74e0cde7831",
-  "date": "2026-10-15"
+  "hash": "8a6222499716899b",
+  "date": "2026-11-04"
  },
  "/builds/huntress/companion/": {
-  "hash": "a88e610d5ccefb8d",
-  "date": "2026-10-17"
+  "hash": "25335ea413467ae7",
+  "date": "2026-11-04"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "708ae8d4b8f80556",
-  "date": "2026-10-17"
+  "hash": "e8985c12a442b3d5",
+  "date": "2026-11-04"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "31711649a3ce2227",
-  "date": "2026-10-17"
+  "hash": "75de1467c8dd198e",
+  "date": "2026-11-04"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "41e7696c03633675",
-  "date": "2026-10-17"
+  "hash": "d761eb1578dd24a8",
+  "date": "2026-11-04"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "8aa6ba1d3093f2c3",
-  "date": "2026-10-17"
+  "hash": "7414d9915102a03a",
+  "date": "2026-11-04"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "6b27fab0bb1910a5",
-  "date": "2026-10-17"
+  "hash": "2b3a1c88e7f98240",
+  "date": "2026-11-04"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "5c272b0314ed0486",
-  "date": "2026-10-17"
+  "hash": "7e75195aac62091e",
+  "date": "2026-11-04"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "83aeca4e5b5daecb",
-  "date": "2026-10-17"
+  "hash": "e8392d50ba42993f",
+  "date": "2026-11-04"
  },
  "/guides/skill-gems/": {
   "hash": "c0247d15902219f2",
@@ -320,8 +320,8 @@
   "date": "2026-10-26"
  },
  "/guides/after-campaign/": {
-  "hash": "1274592fa4d453df",
-  "date": "2026-10-26"
+  "hash": "0dc76d77e87b8169",
+  "date": "2026-11-04"
  },
  "/guides/mapping/": {
   "hash": "48ea75648a23adf1",
@@ -388,8 +388,8 @@
   "date": "2026-11-03"
  },
  "/guides/budget-gear-crafting/": {
-  "hash": "e70488a20b5c2ddd",
-  "date": "2026-11-03"
+  "hash": "feb60a769797b198",
+  "date": "2026-11-04"
  },
  "/guides/pinnacle-bosses/": {
   "hash": "68bb9c8c3ac207bd",
@@ -400,8 +400,8 @@
   "date": "2026-11-03"
  },
  "/guides/unique-gear/": {
-  "hash": "3cd8f3f041ed0089",
-  "date": "2026-11-03"
+  "hash": "2d1815168fdfcfea",
+  "date": "2026-11-04"
  },
  "/guides/arbiter-of-divinity/": {
   "hash": "bf74a460a348c6d4",
@@ -416,8 +416,8 @@
   "date": "2026-11-03"
  },
  "/guides/trade/": {
-  "hash": "830f03b692c58f94",
-  "date": "2026-11-03"
+  "hash": "57c15c2256fd0ea8",
+  "date": "2026-11-04"
  },
  "/guides/loot-filter/": {
   "hash": "a9940042a4714fc5",
@@ -430,6 +430,18 @@
  "/guides/runeseekers-call/": {
   "hash": "e7285d9ef93c981f",
   "date": "2026-11-03"
+ },
+ "/guides/beginner-currency-farming/": {
+  "hash": "bc3456a4f27a15a9",
+  "date": "2026-11-04"
+ },
+ "/guides/build-gear-buying-order/": {
+  "hash": "c708a6c8ac20c69d",
+  "date": "2026-11-04"
+ },
+ "/guides/twister-gemling-transition/": {
+  "hash": "3cf5f5700a994e16",
+  "date": "2026-11-04"
  },
  "/dictionary/build/": {
   "hash": "d07eb2c6c49c7f7a",
@@ -492,8 +504,8 @@
   "date": "2026-10-06"
  },
  "/guides/gear-upgrade/": {
-  "hash": "b379a8668b7606a5",
-  "date": "2026-10-26"
+  "hash": "191978022be3ec79",
+  "date": "2026-11-04"
  },
  "/guides/mana-problem/": {
   "hash": "07c26fe43c389935",

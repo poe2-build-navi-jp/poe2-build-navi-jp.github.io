@@ -4779,6 +4779,10 @@
       {
         "href": "/guides/currency-guide/",
         "label": "カレンシー（オーブ）の使い方一覧"
+      },
+      {
+        "href": "/guides/build-gear-buying-order/",
+        "label": "自分のビルドで買う順番を決める"
       }
     ],
     "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp"
@@ -6319,6 +6323,10 @@
       {
         "href": "/guides/mageblood-legacies/",
         "label": "メイジブラッドの遺産14種・重複の計算"
+      },
+      {
+        "href": "/guides/build-gear-buying-order/",
+        "label": "買う前に12ビルドの購入順を確認"
       }
     ],
     "ogImage": "/images/poe2/og/poe2-guides-unique-gear-og.webp",
@@ -7917,6 +7925,10 @@
       {
         "href": "/guides/equipment-basics/",
         "label": "装備の基本と要求値"
+      },
+      {
+        "href": "/guides/beginner-currency-farming/",
+        "label": "売る素材と金策の収支を確認"
       }
     ],
     "tocLabel": "目次を開く：検索・交換・取引前の確認"
@@ -8621,5 +8633,1377 @@
       }
     ],
     "tocLabel": "目次を開く：入手の4ステップ・マナの作り方"
+  },
+  {
+    "slug": "beginner-currency-farming",
+    "title": "初心者の金策｜低予算マップ周回・売る物・収支の確認",
+    "summary": "キャンペーン後の装備資金づくりを、低予算で周回する手順、残す物・売る物、通貨交換、経費を引いた収支の見方で整理。30分の記録例は計算用の仮例で、運営者の収益実績ではありません。",
+    "category": "crafting",
+    "version": "0.5.5掲載構成",
+    "checkedAt": "2026-11-04",
+    "publishedAt": "2026-11-04",
+    "updatedAt": "2026-11-04",
+    "actions": [
+      "死亡が少ない難度と、使ってよい周回経費を決める",
+      "必要な素材を残し、売却候補を同じ条件でまとめる",
+      "売れた分から経費を引いて、次に買う装備を1つ決める"
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB：Waystones",
+        "url": "https://poe2db.tw/us/Waystones",
+        "checkedAt": "2026-11-04",
+        "supports": "Tierによるエリアと難度、Modによる難度・報酬の変更。金策の時給根拠ではありません。"
+      },
+      {
+        "name": "Mobalytics：Currency Exchange",
+        "url": "https://mobalytics.gg/poe-2/guides/currency-exchange",
+        "checkedAt": "2026-11-04",
+        "supports": "通貨交換の注文・回収とゴールドコスト。2025年のガイドであり古いNPC所在地は採用しません。"
+      },
+      {
+        "name": "GGG公式：Asynchronous Trade FAQ",
+        "url": "https://www.pathofexile.com/forum/view-thread/3828185",
+        "checkedAt": "2026-11-04",
+        "supports": "装備等の非同期取引とカレンシー交換の対象の区別、購入者のゴールド負担、売上回収。"
+      },
+      {
+        "name": "PoE2DB：Essence",
+        "url": "https://poe2db.tw/us/Essence",
+        "checkedAt": "2026-11-04",
+        "supports": "種類・等級・対象装備で効果が異なるクラフト素材。固定の市場価値を示すものではありません。"
+      },
+      {
+        "name": "PoE2DB：Breach",
+        "url": "https://poe2db.tw/us/Breach",
+        "checkedAt": "2026-11-04",
+        "supports": "ブリーチの敵処理と進行条件。遭遇頻度・ドロップ量・収益の保証には使いません。"
+      }
+    ],
+    "scope": "周回と売却を別工程にし、使う素材・売れ残り・経費を区別する初心者向けの手順。仕様は参照資料、難度や記録時間の選び方は編集上の提案です。",
+    "structuredCitations": true,
+    "keywords": [
+      "金策",
+      "初心者",
+      "通貨稼ぎ",
+      "低予算",
+      "マップ周回",
+      "売るもの",
+      "収支",
+      "エッセンス"
+    ],
+    "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
+    "verification": {
+      "method": "出典の仕様と、編集上の比較手順を分けて整理。",
+      "confirmed": "周回と売却を別工程にし、使う素材・売れ残り・経費を区別する初心者向けの手順。仕様は参照資料、難度や記録時間の選び方は編集上の提案です。",
+      "unverified": "固定相場、確定収益、交換前後の同条件DPS、全育成段階の実機再検証。"
+    },
+    "revisionNotes": [
+      {
+        "date": "2026-11-04",
+        "summary": "初版公開。判断手順・比較項目と参照資料を掲載。"
+      }
+    ],
+    "quickLinks": [
+      {
+        "href": "#choose-route",
+        "label": "今の状態から金策を選ぶ"
+      },
+      {
+        "href": "#sell-or-keep",
+        "label": "拾った物を残す・売る"
+      },
+      {
+        "href": "#record-income",
+        "label": "収支を記録する"
+      }
+    ],
+    "sections": [
+      {
+        "id": "choose-route",
+        "heading": "初心者はどこで金策する？今の状態から選ぶ",
+        "paragraphs": [
+          "最初は追加投資を抑えたマップ周回から始めます。Tierを上げるほどモンスターが強くなり、Modでも難度が変わります。高Tierを選ぶことだけで収益が増えるとは判断しません。[source:1]"
+        ],
+        "table": {
+          "caption": "金策を始める場所の判断",
+          "headers": [
+            "今の状態",
+            "先に行うこと"
+          ],
+          "rows": [
+            [
+              "キャンペーン・間幕が未完了",
+              "必要な進行と恒久報酬を優先。高価な終盤素材を買って金策へ急がない。"
+            ],
+            [
+              "低Tierでも死亡や帰還が多い",
+              "難度を下げ、耐性・回復・主力操作を点検。追加の周回素材はまだ買わない。"
+            ],
+            [
+              "低Tierを安定して回れる",
+              "同じ程度の難度で一定時間回り、拾った物と経費を記録する。"
+            ],
+            [
+              "周回は安定するが売上が増えない",
+              "売却・交換の対象、未成立注文、価格比較の条件を確認する。"
+            ],
+            [
+              "追加要素まで無理なく処理できる",
+              "好きな要素を1つだけ追加し、投入素材の費用を含めて前後を比較する。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/after-campaign/",
+            "label": "キャンペーン後の準備"
+          },
+          {
+            "href": "/guides/why-i-die/",
+            "label": "死亡が多い場合の確認"
+          }
+        ]
+      },
+      {
+        "id": "cheap-mapping",
+        "heading": "低予算のマップ周回：準備から持ち帰りまで",
+        "paragraphs": [],
+        "steps": [
+          "所持通貨を記録し、装備購入用に残す分と、今回の周回に使ってよい分を分ける。",
+          "倉庫に拾得品を置く場所を確保し、ルートフィルターの厳しさを進行度に合わせる。",
+          "所持ウェイストーンのTier・Modを読み、自分の苦手条件を避ける。今回は持ち込み費用を小さくする。",
+          "まず通常の敵集団を安定して処理する。倒せない強敵や追加要素に時間を使い続けない。",
+          "周回後は倉庫へまとめ、売却作業の時間も記録。次の周回に必要なウェイストーンは残す。"
+        ],
+        "sourceRefs": [
+          1
+        ],
+        "links": [
+          {
+            "href": "/guides/loot-filter/",
+            "label": "フィルターの設定"
+          },
+          {
+            "href": "/guides/waystones-tablets/",
+            "label": "ウェイストーン・タブレットの確認"
+          }
+        ]
+      },
+      {
+        "id": "sell-or-keep",
+        "heading": "拾う物・売る物・残す物を分ける",
+        "paragraphs": [
+          "拾得品の価格は時期・リーグ・等級・効果で変わります。「この素材なら必ず高く売れる」という固定リストにはせず、交換・検索画面で同条件を比較します。エッセンスは名前や等級によって対象と効果が違うため、ひとまとめに評価しません。[source:4]"
+        ],
+        "table": {
+          "caption": "持ち帰ったアイテムの整理",
+          "headers": [
+            "分類",
+            "初心者の判断"
+          ],
+          "rows": [
+            [
+              "主要通貨",
+              "買いたい装備の支払い分を残す。目的なくすべて別通貨へ交換しない。"
+            ],
+            [
+              "エッセンスなどの素材",
+              "自分が使う種類と売却候補を分ける。交換所で対象・等級・数量を確認する。"
+            ],
+            [
+              "ウェイストーン・周回素材",
+              "次に使う分を残し、余剰分のみ売却を検討。売った後に買い直す費用も考える。"
+            ],
+            [
+              "レア武器・防具",
+              "自分の更新候補を先に確認。売る場合はベース・主要Mod・要求条件が近い出品と比較する。"
+            ],
+            [
+              "ユニーク装備",
+              "名前だけで値付けしない。ロール・変種・強化・コラプト状態を揃えて比較する。"
+            ],
+            [
+              "価格を調べるのに時間がかかる品",
+              "今回の金策では保留箱へ。整理時間が膨らむ場合は、次回から拾う対象を絞る。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/currency-guide/",
+            "label": "オーブの使い道"
+          },
+          {
+            "href": "/guides/unique-gear/",
+            "label": "ユニークの採用条件"
+          }
+        ]
+      },
+      {
+        "id": "sell-items",
+        "heading": "通貨と装備で売却方法を変える",
+        "paragraphs": [
+          "通貨交換では、売りたい側・受け取る側・数量・交換比率・必要ゴールドを確認してから注文します。成立後は受け取りまで確認します。未成立注文やキャンセル時の扱いも確認してください。[source:2]",
+          "武器・防具などは通貨交換と同じ扱いではありません。非同期取引のMerchant’s Tabでは、カレンシー交換で扱われないアイテムが対象です。購入者にゴールド負担があり、売上には回収操作があります。[source:3]",
+          "出品しただけの品は売上に加えません。売れないときは、リーグ・等級・Mod・在庫数を揃えて再比較します。購入予定の装備も、同時に検索して必要予算を更新しましょう。"
+        ],
+        "links": [
+          {
+            "href": "/guides/trade/",
+            "label": "画面の操作はトレード記事へ"
+          }
+        ]
+      },
+      {
+        "id": "extra-content",
+        "heading": "追加コンテンツは1種類ずつ試す",
+        "paragraphs": [
+          "ブリーチのように敵の処理が進行に関わる要素では、倒す速度や生存力も比較条件になります。[source:5] 初心者のうちは、密集戦で倒される追加要素へ高い素材代を払い続けないようにします。",
+          "まず追加投資なしの周回を基準にします。次に、得意で解放済みの要素を1つ加え、追加素材の価格・帰還回数・整理時間がどう変わったかを比べます。アトラスの振り直し費用も発生した場合は記録します。",
+          "リチュアル・エクスペディションなどを同時に増やすと、改善した理由が分かりにくくなります。全要素の収益順位は本記事では付けず、手持ちのキャラクターで続けられるかを判断します。"
+        ],
+        "links": [
+          {
+            "href": "/guides/endgame-contents/",
+            "label": "各コンテンツの入口と報酬"
+          },
+          {
+            "href": "/guides/atlas-passive-trees/",
+            "label": "アトラスの選び方"
+          }
+        ]
+      },
+      {
+        "id": "record-income",
+        "heading": "30分で比較する：収益の記録方法",
+        "paragraphs": [
+          "30分は記録を始めやすくするための編集上の提案です。準備・移動・死亡後の再開・整理・売却まで同じ範囲に含め、条件を揃えて比べます。短い計測1回で長期の時給を確定しません。",
+          "実現した収支＝その周回で直接拾った評価単位の通貨＋拾得品から実際に受け取った売却額−消費したウェイストーン・追加素材・クラフト等の費用。すべて同じ通貨単位で記録します。ゴールドは別欄に残し、未売却品の見積額を実現収支に混ぜません。"
+        ],
+        "table": {
+          "caption": "コピーして使える周回記録欄（空欄は自分で記入）",
+          "headers": [
+            "項目",
+            "記録すること"
+          ],
+          "rows": [
+            [
+              "対象条件",
+              "日付・リーグ・キャラクター・Tier・主なMod・追加要素"
+            ],
+            [
+              "時間",
+              "周回＿＿分／整理・売却＿＿分／合計＿＿分"
+            ],
+            [
+              "直接拾った通貨",
+              "評価単位を＿＿に統一して＿＿"
+            ],
+            [
+              "売却済みの受取額",
+              "＿＿（出品中は含めない）"
+            ],
+            [
+              "消費した素材の費用",
+              "ウェイストーン＿＿／追加素材＿＿／その他＿＿"
+            ],
+            [
+              "別管理",
+              "未売却品＿＿／消費ゴールド＿＿／死亡・帰還回数＿＿"
+            ],
+            [
+              "比較結果",
+              "実現収支＿＿／次に変えること1つ＿＿"
+            ]
+          ]
+        },
+        "bullets": [
+          "計算だけの仮例：直接入手8、売却済み12、消費費用5なら、同じ評価単位で8＋12−5＝15。これは実測や期待値ではありません。",
+          "30分の収支15を60分換算すれば30ですが、売れ行きやドロップのばらつきがあるため「時給30を稼げる」とは扱いません。",
+          "失敗して使った素材も経費です。自分で拾って消費した追加素材も、比較するときの扱いを揃えます。"
+        ]
+      },
+      {
+        "id": "spend-profit",
+        "heading": "稼いだ通貨は、次に困っている1か所へ使う",
+        "paragraphs": [
+          "次の周回に使う分を残し、装備購入用の予算だけを使います。死亡が多いなら不足している防御、倒すのに時間がかかるなら主力に有効な火力、移動が遅いなら移動手段を先に比較します。",
+          "資金が増えても、今の構成で効果が出ない高価なユニークを最初に買う必要はありません。購入順の記事で自分のビルドを選び、切替に必要な装備をまとめて準備します。"
+        ],
+        "links": [
+          {
+            "href": "/guides/build-gear-buying-order/",
+            "label": "12ビルドの装備購入順を見る"
+          },
+          {
+            "href": "/guides/twister-gemling-transition/",
+            "label": "ツイスターの切替準備を見る"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "初心者はT16で金策しないと稼げない？",
+        "answer": "T16を最初の目標にする必要はありません。死亡・消費素材・売却時間を含め、今の装備で安定して回れる難度の収支から比較してください。"
+      },
+      {
+        "question": "SSFでも使える？",
+        "answer": "周回難度・素材の保管・経費管理の考え方は使えますが、他プレイヤーへの売却・通貨交換による装備資金化はSSFの手順には含めません。"
+      },
+      {
+        "question": "何Divine／時稼げる？",
+        "answer": "運営者の比較実測がないため固定の時給は掲載していません。自分のリーグ・装備・売却時間を含めて記録し、未売却品の見積もりと売却済みの収支を分けてください。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/trade/",
+        "label": "取引の操作手順"
+      },
+      {
+        "href": "/guides/build-gear-buying-order/",
+        "label": "装備を買う順番"
+      },
+      {
+        "href": "/guides/twister-gemling-transition/",
+        "label": "ツイスターの切替"
+      }
+    ],
+    "heroVisual": {
+      "src": "/images/poe2/guides/poe2-beginner-currency-farming-route.svg",
+      "width": 720,
+      "height": 960,
+      "alt": "PoE2 金策は「回れる難度」から。準備：死亡が少ない難度を選ぶ：使ってよい経費を決める。周回と売却：必要品を残し、余剰を売る：売れ残りは収入に混ぜない。収支から購入へ：受取額から経費を引く：次に改善する装備を1つ選ぶ",
+      "caption": "手順の概要。各条件・例外・出典は本文で確認できます。"
+    }
+  },
+  {
+    "slug": "build-gear-buying-order",
+    "title": "ビルド別の装備購入順｜低予算から完成形へ進む12構成",
+    "summary": "掲載12ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
+    "category": "basics",
+    "version": "0.5.5掲載構成",
+    "checkedAt": "2026-11-04",
+    "publishedAt": "2026-11-04",
+    "updatedAt": "2026-11-04",
+    "actions": [
+      "自分のビルドと現在段階を選び、困っていることを1つ決める",
+      "購入価格と、交換で失う耐性・能力値・Spiritを確認する",
+      "1部位ずつ比較し、専用構成への切替品はまとめて準備する"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "checkedAt": "2026-09-07",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: 0.5.5 Twister Gemling Legionnaire",
+        "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+        "checkedAt": "2026-09-27",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "checkedAt": "2026-09-07",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Sandscorcher Campaign Guide 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide",
+        "checkedAt": "2026-09-07",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Spirit Walker Beast Master 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/spirit-walker-beast-master",
+        "checkedAt": "2026-09-27",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Ice Shot Deadeye Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
+        "checkedAt": "2026-09-07",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Detailed SSF Minion Infernalist 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+        "checkedAt": "2026-09-07",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Plant Oracle Druid Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide",
+        "checkedAt": "2026-09-27",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Chaos DoT Lich Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit",
+        "checkedAt": "2026-09-09",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Mobalytics: Grenades Gemling League Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
+        "checkedAt": "2026-09-27",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Path of Exile 2 Guide: Spirit Walker Elemental Twister Build",
+        "url": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
+        "checkedAt": "2026-09-24",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "PoE Vault: Spark Sorceress or Witch Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
+        "checkedAt": "2026-10-03",
+        "supports": "個別ビルドの既存照合元。原典の確認日は維持し、本記事では装備を比較する順番へ再編集。"
+      },
+      {
+        "name": "Fubgun：Ice Shot Deadeyeの装備進行",
+        "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+        "checkedAt": "2026-11-04",
+        "supports": "弓と矢筒を整えた会心移行、防御更新、後回しにする高投資品。"
+      },
+      {
+        "name": "animeprincess：Twister Gemlingの低予算と高投資",
+        "url": "https://mobalytics.gg/poe-2/profile/animeprincess/builds/0-5-5-twister-gemling-comprehensive-leveling-guide",
+        "checkedAt": "2026-11-04",
+        "supports": "序盤の装備条件と、テイミング・タングルタン・高投資品の位置付け。snoobae85版とは別原典。"
+      }
+    ],
+    "scope": "掲載済み12ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+    "structuredCitations": true,
+    "keywords": [
+      "装備購入順",
+      "低予算",
+      "装備更新",
+      "ビルド別",
+      "ツイスター",
+      "アイスショット",
+      "ミニオン",
+      "シールドウォール",
+      "必要装備",
+      "ワーリングアサルト・マーシャルアーティスト",
+      "ツイスター・ジェムリング",
+      "シールドウォール・スミス",
+      "砂と炎のヴァラシュタ",
+      "相棒スピリットウォーカー",
+      "アイスショット・デッドアイ",
+      "スナイパーミニオン・インファーナリスト",
+      "植物オラクル",
+      "ED・コンテージョン リッチ",
+      "グレネード・ジェムリング",
+      "ツイスター・スピリットウォーカー",
+      "スパーク・ストームウィーバー"
+    ],
+    "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
+    "verification": {
+      "method": "既存の個別ビルドの装備優先項目を再編集。ツイスター・アイスショットの作者解説と装備データは別途参照。",
+      "confirmed": "掲載済み12ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+      "unverified": "12原典の全段階の再検証、全装備の購入価格、交換前後の同条件実測、最安クリア構成。"
+    },
+    "revisionNotes": [
+      {
+        "date": "2026-11-04",
+        "summary": "初版公開。判断手順・比較項目と参照資料を掲載。"
+      }
+    ],
+    "quickLinks": [
+      {
+        "href": "#budget-levels",
+        "label": "予算の使い方を選ぶ"
+      },
+      {
+        "href": "#build-list",
+        "label": "12ビルドから選ぶ"
+      },
+      {
+        "href": "#before-after",
+        "label": "交換前後を比較する"
+      }
+    ],
+    "sections": [
+      {
+        "id": "budget-levels",
+        "heading": "予算別：1点の買い足し・構成切替・完成後を分ける",
+        "paragraphs": [
+          "「低予算○Divineなら必ず完成」と価格を固定せず、使える予算の中で何を揃えるかを決めます。相場確認は同じリーグ・同等のロール・強化状態で行い、周回用の通貨は購入予算から分けて残します。"
+        ],
+        "table": {
+          "caption": "装備予算に合わせた更新の進め方",
+          "headers": [
+            "段階",
+            "使い方"
+          ],
+          "rows": [
+            [
+              "買い足し1点の予算",
+              "今の構成を維持し、足りない耐性・回復・主力火力のうち1つを改善。複数効果があるレア装備も比較する。"
+            ],
+            [
+              "切替用セットの予算",
+              "装備・ジェム・ソケット品・能力値補完・振り直しを合計。1品だけ買って現行構成を崩さない。"
+            ],
+            [
+              "完成後の余裕資金",
+              "高いロール・ジュエル・高価なユニークを目的別に比較。防御と操作が成立してから進む。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/beginner-currency-farming/",
+            "label": "先に装備資金を作る"
+          },
+          {
+            "href": "/guides/budget-gear-crafting/",
+            "label": "購入検索・低予算クラフト"
+          }
+        ]
+      },
+      {
+        "id": "common-priority",
+        "heading": "全ビルド共通：死亡・火力・速度のどこが不足か",
+        "paragraphs": [],
+        "bullets": [
+          "すぐ死ぬ：不足耐性、回復、ライフ／ESなど採用する防御機構の不足を先に確認。購入後に必要能力値が足りなくならないかも調べる。",
+          "倒せない：主力の種類を確認。アタック武器の追加ダメージ、ミニオンレベル、スペルレベルなど、自分の主力に有効な項目を選ぶ。",
+          "移動が遅い：ブーツの移動速度と移動スキルの運用を確認。2つの武器セットを使う構成では速度用と火力用を取り違えない。",
+          "高いユニークが欲しい：その装備が成立させる機能を確認。今の指輪・ジェム・パッシブで機能しない品は購入を後回しにする。"
+        ]
+      },
+      {
+        "id": "build-list",
+        "heading": "掲載12ビルドから装備の購入順を選ぶ",
+        "paragraphs": [
+          "以下は必須購入ランキングではなく、個別ページの掲載済み育成データを使った確認順です。すでに満たしている防御項目へ買い直す必要はありません。段階ごとの細かいジェムや切替条件は、現在Lvの育成案内へ戻って照合してください。"
+        ],
+        "links": [
+          {
+            "href": "#monk-whirling-assault",
+            "label": "ワーリングアサルト・マーシャルアーティスト"
+          },
+          {
+            "href": "#mercenary-twister-gemling",
+            "label": "ツイスター・ジェムリング"
+          },
+          {
+            "href": "#warrior-shield-wall-smith",
+            "label": "シールドウォール・スミス"
+          },
+          {
+            "href": "#sorceress-sand-fire",
+            "label": "砂と炎のヴァラシュタ"
+          },
+          {
+            "href": "#huntress-companion",
+            "label": "相棒スピリットウォーカー"
+          },
+          {
+            "href": "#ranger-ice-shot-deadeye",
+            "label": "アイスショット・デッドアイ"
+          },
+          {
+            "href": "#witch-minion-infernalist",
+            "label": "スナイパーミニオン・インファーナリスト"
+          },
+          {
+            "href": "#druid-plant-oracle",
+            "label": "植物オラクル"
+          },
+          {
+            "href": "#witch-ed-contagion-lich",
+            "label": "ED・コンテージョン リッチ"
+          },
+          {
+            "href": "#mercenary-grenade-gemling",
+            "label": "グレネード・ジェムリング"
+          },
+          {
+            "href": "#huntress-twister-spirit-walker",
+            "label": "ツイスター・スピリットウォーカー"
+          },
+          {
+            "href": "#sorceress-spark-stormweaver",
+            "label": "スパーク・ストームウィーバー"
+          }
+        ]
+      },
+      {
+        "id": "monk-whirling-assault",
+        "heading": "ワーリングアサルト・マーシャルアーティストの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：まず耐性と防御を安定させ、次にクォータースタッフの火力、近接スキルレベル、クリティカル、攻撃速度を伸ばす。[source:1]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：クォータースタッフの追加ダメージ・主力に有効なレベルや攻撃速度を比較。",
+          "後回し・まとめて準備する品：指輪が整う前に創造力を優先しない。Hollow Palmを使う育成段階と武器装備段階を混ぜない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/monk/whirling-assault/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#monk-whirling-assault",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          1
+        ]
+      },
+      {
+        "id": "mercenary-twister-gemling",
+        "heading": "ツイスター・ジェムリングの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：防具のライフ・耐性、ブーツ移動速度と攻撃用槍の追加ダメージを比較。速度用／攻撃用の武器セットを分け、移動と攻撃の不足を確認する。[source:2]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：攻撃用槍・追加アタックダメージを確認し、速度用セットと区別。",
+          "後回し・まとめて準備する品：会心移行・地面効果・高投資版を別の買い物として扱う。メイジブラッドを最初の購入目標にしない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/mercenary/twister-gemling/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#mercenary-twister-gemling",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          2
+        ]
+      },
+      {
+        "id": "warrior-shield-wall-smith",
+        "heading": "シールドウォール・スミスの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：耐性とライフを安定させ、高アーマー盾と胴防具を更新。[source:3]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：盾のアーマー実数を比較し、胴防具・不足耐性を補う。",
+          "後回し・まとめて準備する品：ユニーク盾を先に固定しない。スリルスティールも交換で失う防御を補える段階で比較。"
+        ],
+        "links": [
+          {
+            "href": "/builds/warrior/shield-wall-smith/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#warrior-shield-wall-smith",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          3
+        ]
+      },
+      {
+        "id": "sorceress-sand-fire",
+        "heading": "砂と炎のヴァラシュタの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：まず耐性と防御。次にミニオンのジェムレベル、ダメージ、攻撃速度。[source:4]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：ミニオンに有効なレベル・火力を確認。ES主体へ進む段階ではFocusと防具も一緒に見る。",
+          "後回し・まとめて準備する品：ジンとアンデッドの効果を取り違えない。召喚対象に効かない予約効率品を買わない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/sorceress/sand-and-fire/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#sorceress-sand-fire",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          4
+        ]
+      },
+      {
+        "id": "huntress-companion",
+        "heading": "相棒スピリットウォーカーの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：属性・混沌耐性、ライフ、回避・ディフレクション、相棒ダメージ、ミニオンのジェムレベル。[source:5]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：相棒への効果・ミニオンレベルを比較。武器ダメージを使う完成形はアセンダンシーを照合。",
+          "後回し・まとめて準備する品：圧政の手やトレンチティンバーは強化状態と能力値も含めた切替用。槍育成へ名前だけで流用しない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/huntress/companion/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#huntress-companion",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          5
+        ]
+      },
+      {
+        "id": "ranger-ice-shot-deadeye",
+        "heading": "アイスショット・デッドアイの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：三属性耐性、ライフ、回避、冷気・物理の追加アタックダメージ、弓と矢筒。[source:6]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：火力は弓と矢筒をまとめて比較。会心へ移るなら会心用の両方を準備。",
+          "後回し・まとめて準備する品：ヘッドハンターより弓・矢筒・防御を優先する作者方針を確認。単体の高投資品だけで会心型へ移らない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/ranger/ice-shot-deadeye/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#ranger-ice-shot-deadeye",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          6
+        ]
+      },
+      {
+        "id": "witch-minion-infernalist",
+        "heading": "スナイパーミニオン・インファーナリストの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：ミニオンレベル、Spirit、ES、ブロック、属性耐性、移動速度。[source:7]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：ミニオンレベルとSpiritを、召喚数・防御と一緒に比較。",
+          "後回し・まとめて準備する品：ウルルの骨はアンデッド対象。靴の移動速度・耐性を失うことも購入予算へ含める。"
+        ],
+        "links": [
+          {
+            "href": "/builds/witch/minion-infernalist/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#witch-minion-infernalist",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          7
+        ]
+      },
+      {
+        "id": "druid-plant-oracle",
+        "heading": "植物オラクルの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：耐性、ライフ/ES、混沌耐性、スペルレベル、Spirit、キャスト速度。[source:8]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：スペルレベル・キャスト速度を比較し、Spiritとマナ維持も点検。",
+          "後回し・まとめて準備する品：ナイトスケールはタイプの違いを確認。英雄の悲劇は種・配置・ツリーを揃える完成形向け。"
+        ],
+        "links": [
+          {
+            "href": "/builds/druid/plant-oracle/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#druid-plant-oracle",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          8
+        ]
+      },
+      {
+        "id": "witch-ed-contagion-lich",
+        "heading": "ED・コンテージョン リッチの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：ライフ/ES、耐性、混沌スペルレベル、キャスト速度、マナ維持。[source:9]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：混沌スペルレベル・キャスト速度を比較し、防御・マナ維持を残す。",
+          "後回し・まとめて準備する品：アッツィリの軽蔑は防御の組み合わせを照合してから。1点だけで耐久が完成したとは扱わない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/witch/ed-contagion-lich/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#witch-ed-contagion-lich",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          9
+        ]
+      },
+      {
+        "id": "mercenary-grenade-gemling",
+        "heading": "グレネード・ジェムリングの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：クロスボウ、投射物レベル、追加ダメージ、ライフ、アーマー、耐性。[source:10]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：クロスボウの主力に有効な性能と、投射物レベル・追加ダメージを比較。",
+          "後回し・まとめて準備する品：贖罪は専用の運用へ切り替える装備。通常の弾薬型と同じ操作のまま買い替えない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/mercenary/grenade-gemling/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#mercenary-grenade-gemling",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          10
+        ]
+      },
+      {
+        "id": "huntress-twister-spirit-walker",
+        "heading": "ツイスター・スピリットウォーカーの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：属性耐性、ライフ、回避、槍の物理・追加ダメージ、移動速度。[source:11]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：攻撃用槍と速度用セットを照合し、地面効果の供給方法を確認。",
+          "後回し・まとめて準備する品：スカイシルバーと目の導きの掌は原典のセット割当で使う。ジェムリング版の配置をそのまま移さない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/huntress/twister-spirit-walker/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#huntress-twister-spirit-walker",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          11
+        ]
+      },
+      {
+        "id": "sorceress-spark-stormweaver",
+        "heading": "スパーク・ストームウィーバーの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：ティアラ・ローブ・手袋・サンダルでエナジーシールドを確保。接頭辞はライフと追加エナジーシールド、耐性はルーンで補う。[source:12]"
+        ],
+        "bullets": [
+          "最初の1点：死亡原因が残っていれば該当する防御部位。足りている場合は次の火力候補へ進む。",
+          "火力・機能を買い足す：掲載する杖型の主力・ES・耐性を先に確認。マナ型へ移るなら原典を選び直す。",
+          "後回し・まとめて準備する品：反抗のクロークやカランドラの接触は別原典のマナ型候補。杖型と無条件で組み合わせない。"
+        ],
+        "links": [
+          {
+            "href": "/builds/sorceress/spark-stormweaver/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#sorceress-spark-stormweaver",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          12
+        ]
+      },
+      {
+        "id": "before-after",
+        "heading": "購入前後で比べる項目：1部位だけで判断しない",
+        "paragraphs": [
+          "購入検索では「増える効果」と「消える効果」の両方を書きます。指輪を替えて筋力が足りなくなり、他の防具が使えなくなるような場合は、追加の買い物も含めて予算を組みます。"
+        ],
+        "table": {
+          "caption": "交換前・交換後・判断を記録する欄",
+          "headers": [
+            "項目",
+            "記録方法"
+          ],
+          "rows": [
+            [
+              "主力に有効な火力",
+              "追加ダメージ／スキルレベル／速度等：交換前＿＿ → 交換後＿＿"
+            ],
+            [
+              "防御と回復",
+              "耐性・ライフ／ES・回復：交換前＿＿ → 交換後＿＿"
+            ],
+            [
+              "成立条件",
+              "能力値・Spirit・ジェム・武器セット：不足が出るか＿＿"
+            ],
+            [
+              "支払い総額",
+              "装備本体＿＿＋補完装備＿＿＋ジェム等＿＿＋振り直し＿＿"
+            ],
+            [
+              "試す条件",
+              "同じスキル・同程度の難度で比較。変えたこと＿＿"
+            ],
+            [
+              "戻す判断",
+              "死亡・マナ切れ・使用不可が増えた場合は旧装備へ戻す。旧装備は試験が終わるまで保管。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/gear-check/",
+            "label": "自分の防御・不足を点検"
+          }
+        ]
+      },
+      {
+        "id": "clear-example",
+        "heading": "実際の撃破装備を参考にするときの見方",
+        "paragraphs": [
+          "サイトにはLv82ツイスター・ジェムリングの灰のアービター撃破装備と、Lv87の神性のアービター撃破装備を掲載しています。購入価格・最安構成・交換前後の性能比較を証明する記録ではありません。",
+          "真似するなら、品名だけでなく「どの部位でSpirit・必要能力値・防御を確保したか」を見ます。掲載と異なるロールやコラプト品を買うと同じ条件にならないため、今のキャラクターに必要な機能から選び直してください。"
+        ],
+        "links": [
+          {
+            "href": "/guides/arbiter-of-ash-clear-record/",
+            "label": "Lv82の撃破装備を見る"
+          },
+          {
+            "href": "/guides/arbiter-of-divinity/",
+            "label": "Lv87の装備・確認範囲を見る"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "予算はいくらあれば完成する？",
+        "answer": "リーグ・時期・ロールで価格が変わるため固定額は設定していません。今の段階を維持する買い足しと、装備・ジェム・振り直しをまとめて揃える切替予算を分けてください。"
+      },
+      {
+        "question": "レアとユニークはどちらを先に買う？",
+        "answer": "不足する防御や能力値をレアで補い、専用構成を成立させるユニークは必要条件と一緒に準備します。高価なユニークを先に買う共通ルールはありません。"
+      },
+      {
+        "question": "装備を替えたら弱くなったのはなぜ？",
+        "answer": "消えた耐性・能力値・Spirit、主力に有効なMod、武器セット、マナ維持を確認します。まず旧装備へ戻して差を確認し、原因を1つずつ切り分けてください。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/beginner-currency-farming/",
+        "label": "装備資金を作る"
+      },
+      {
+        "href": "/guides/unique-gear/",
+        "label": "ユニーク装備を比較"
+      },
+      {
+        "href": "/guides/twister-gemling-transition/",
+        "label": "ジェムリングの切替準備"
+      }
+    ],
+    "heroVisual": {
+      "src": "/images/poe2/guides/poe2-build-gear-buying-order.svg",
+      "width": 720,
+      "height": 960,
+      "alt": "PoE2 装備予算を3段階に分ける。買い足し1点：今の構成の不足を補う：防御・火力・移動のどれか。構成を切り替える：装備・ジェム・ツリーを準備：補完費用もまとめて計算。完成後の比較：目的に合う高投資品を選ぶ：高価な品名だけで決めない",
+      "caption": "手順の概要。各条件・例外・出典は本文で確認できます。"
+    }
+  },
+  {
+    "slug": "twister-gemling-transition",
+    "title": "ツイスター・ジェムリングの切替手順｜必要装備・Spirit・武器セット",
+    "summary": "キャンペーンからマップ、会心・テイミング採用、高投資版へ進む前の準備を整理。装備・ジェム・パッシブ・Spirit・武器セットを同じ原典と段階で揃え、切替できないときの戻し方まで確認できます。",
+    "category": "basics",
+    "version": "0.5.5掲載構成",
+    "checkedAt": "2026-11-04",
+    "publishedAt": "2026-11-04",
+    "updatedAt": "2026-11-04",
+    "actions": [
+      "使う作者と到達したい段階を1つ選ぶ",
+      "装備・ジェム・ツリー・Spirit・武器セットをまとめて照合する",
+      "旧装備を残して低難度で試し、成立しなければ元へ戻す"
+    ],
+    "sources": [
+      {
+        "name": "snoobae85：Twister Gemling Legionnaire 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/profile/snoobae85/builds/0-5-5-twister-gemling-legionnaire",
+        "checkedAt": "2026-11-04",
+        "supports": "段階一覧、序盤操作、武器セットの割当、Whirling Slash Lv1、Late EndgameのSpirit変更履歴。全段階の装備データを取得したものではありません。"
+      },
+      {
+        "name": "PoE2DB：Tangletongue",
+        "url": "https://poe2db.tw/us/Tangletongue",
+        "checkedAt": "2026-11-04",
+        "supports": "会心関連効果、マナコストの一部がライフになる性質、通常品と強化版の区別。"
+      },
+      {
+        "name": "PoE2DB：Beacon of Azis",
+        "url": "https://poe2db.tw/us/Beacon_of_Azis",
+        "checkedAt": "2026-11-04",
+        "supports": "Spiritを持つアミュレットと会心時の元素耐性に関する効果。"
+      },
+      {
+        "name": "PoE2DB：テイミング",
+        "url": "https://poe2db.tw/jp/The_Taming",
+        "checkedAt": "2026-11-04",
+        "supports": "指輪の日本語名と、ウィンドスキルの複数元素領域による強化。"
+      },
+      {
+        "name": "PoE2DB：Barrage",
+        "url": "https://poe2db.tw/us/Barrage",
+        "checkedAt": "2026-11-04",
+        "supports": "対象アタック、Frenzy Chargeと追加リピート、品質欄の効果。表示回数・維持率の実測ではありません。"
+      },
+      {
+        "name": "animeprincess：Twister Gemling League Starter 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/profile/animeprincess/builds/0-5-5-twister-gemling-comprehensive-leveling-guide",
+        "checkedAt": "2026-11-04",
+        "supports": "別原典。序盤にユニーク必須ではない説明、会心移行・品質追加後のアセンダンシー移行、高投資品の位置付け。snoobae85版へ混ぜて処方しません。"
+      }
+    ],
+    "scope": "snoobae85版の段階の選び方・序盤武器セットと公開本文、装備データから確認できる条件を整理。animeprincess版は別原典として明示し、必須条件を混ぜません。後半全段階の完全装備表・固定Spirit総量・全サポート一覧は保証せず、採用段階の原典で最終照合します。",
+    "structuredCitations": true,
+    "keywords": [
+      "ツイスター",
+      "ジェムリング",
+      "切替",
+      "移行",
+      "必要装備",
+      "会心",
+      "テイミング",
+      "Spirit不足",
+      "武器セット",
+      "バラージ",
+      "Barrage",
+      "Twister Gemling"
+    ],
+    "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
+    "verification": {
+      "method": "出典の仕様と、編集上の比較手順を分けて整理。",
+      "confirmed": "snoobae85版の段階の選び方・序盤武器セットと公開本文、装備データから確認できる条件を整理。animeprincess版は別原典として明示し、必須条件を混ぜません。後半全段階の完全装備表・固定Spirit総量・全サポート一覧は保証せず、採用段階の原典で最終照合します。",
+      "unverified": "固定相場、確定収益、交換前後の同条件DPS、全育成段階の実機再検証。"
+    },
+    "revisionNotes": [
+      {
+        "date": "2026-11-04",
+        "summary": "初版公開。判断手順・比較項目と参照資料を掲載。"
+      }
+    ],
+    "quickLinks": [
+      {
+        "href": "#choose-stage",
+        "label": "どこへ切り替えるか選ぶ"
+      },
+      {
+        "href": "#transition-checklist",
+        "label": "切替前チェック"
+      },
+      {
+        "href": "#not-ready",
+        "label": "切り替えられない場合"
+      }
+    ],
+    "sections": [
+      {
+        "id": "choose-stage",
+        "heading": "いつ切り替える？Lvだけでなく構成が揃った段階で判断",
+        "paragraphs": [
+          "ツイスターを使い始めることと、会心・自動の地面効果・高投資版へ移ることは別です。snoobae85版にはCampaign StartからLate Endgameまで段階があります。まず原典の段階名を1つ選んでから買い物を始めます。[source:1]",
+          "別作者のanimeprincess版には、キャンペーンとマップ開始にユニーク必須ではないという説明があります。ただし、その作者のスキル・ツリーで成立する話です。採用品の一部だけをsnoobae85版へ足して同じ構成になるとは考えません。[source:6]"
+        ],
+        "table": {
+          "caption": "今やりたい切替の種類を先に選ぶ",
+          "headers": [
+            "移りたい段階",
+            "準備するもの"
+          ],
+          "rows": [
+            [
+              "キャンペーン → Early Atlas",
+              "低難度で使える主力・防御と、その段階のスキル・ツリー・武器セット。"
+            ],
+            [
+              "会心を使う構成",
+              "会心の供給、武器・アミュレットの組み合わせ、会心用ツリー、追加ダメージ。"
+            ],
+            [
+              "テイミングを使う構成",
+              "指輪枠、交換で失う能力、元素地面を前提とするスキルの構成。"
+            ],
+            [
+              "品質を伸ばす構成",
+              "実際の品質・対応するアセンダンシー・チャージ供給と維持の確認。"
+            ],
+            [
+              "Late Endgame等の高投資版",
+              "全スキル・サポート、胴防具とソケット品、必要Spiritを同じ版で照合。"
+            ]
+          ]
+        },
+        "sourceRefs": [
+          1,
+          6
+        ]
+      },
+      {
+        "id": "transition-checklist",
+        "heading": "切替前チェックリスト：5項目を同じ版で揃える",
+        "paragraphs": [],
+        "steps": [
+          "原典・段階：作者名と段階名を記録。装備だけLate、ジェムだけEarlyのように混ぜない。",
+          "装備：武器セット1・2の現物、要求Lv・能力値、必要なModと強化状態を確認。交換で失う防御も比較する。",
+          "ジェム：主力・補助・サポートを採用段階と照合。実際に使える枠と要求能力値を確認する。",
+          "パッシブ：共通ツリーと武器セット用ポイントを区別。必要なアセンダンシーと振り直し用の予算を確保する。",
+          "Spirit・マナ・回復：採用したスキルとサポートで必要量を再計算し、両方の武器セットで使用できるか確認する。"
+        ],
+        "links": [
+          {
+            "href": "/guides/support-gems/",
+            "label": "サポートの条件"
+          },
+          {
+            "href": "/guides/build-gear-buying-order/#mercenary-twister-gemling",
+            "label": "購入順と予算を確認"
+          }
+        ]
+      },
+      {
+        "id": "weapon-sets",
+        "heading": "武器セット：ワーリングスラッシュ用とツイスター用を確認",
+        "paragraphs": [
+          "snoobae85の序盤説明では、ワーリングスラッシュ（Whirling Slash）とFangs of Frostをセット1、ツイスター（Twister）をセット2に割り当てます。装備画面で武器1・2、スキル画面で対象セットのチェックをそれぞれ確認します。[source:1]",
+          "これは原典の序盤の指定です。Fangs of Frostが後半でも必須という意味ではありません。後半は選んだ段階のSkill Gemsと武器セットの表示を確認します。スピリットウォーカーの割当や、別作者の説明を混ぜないでください。"
+        ],
+        "bullets": [
+          "片方でスキルが使用不可：そのセットの武器種・能力値・割当を点検。",
+          "交換後に補助スキルが止まる：Spiritがそのセットでも足りるか、装備の効果が有効か確認。",
+          "速度用槍で単体火力が落ちる：攻撃用スキルが速度側へ割り当てられていないか確認。"
+        ],
+        "sourceRefs": [
+          1
+        ]
+      },
+      {
+        "id": "crit-and-ground",
+        "heading": "会心移行とテイミング採用は別々に準備する",
+        "paragraphs": [
+          "タングルタン（Tangletongue）は会心に関係する効果を持ち、スキルのマナコストの一部をライフコストにします。武器だけ替えて、回復や他部位の追加ダメージを確認しないまま進めないようにします。[source:2]",
+          "アジスの標（Beacon of Azis）はSpiritを補い、会心ヒット時に敵の元素耐性を無視する効果を持ちます。会心を出す条件と装備・ツリーを揃えて比較します。2品を買えば自動で火力が上がるという保証ではありません。[source:3]",
+          "テイミング（The Taming）は指輪で、ウィンドスキルへの複数の元素領域による強化を扱います。会心移行と同じ条件の装備ではないため、採用する段階の地面効果の供給方法と、失う指輪のライフ・耐性・能力値を確認します。[source:4]"
+        ],
+        "links": [
+          {
+            "href": "/equipment/tangletongue/",
+            "label": "タングルタンの条件"
+          },
+          {
+            "href": "/equipment/the-taming/",
+            "label": "テイミングの効果"
+          },
+          {
+            "href": "/guides/unique-gear/#mercenary-twister-gemling",
+            "label": "候補と代替を比較"
+          }
+        ]
+      },
+      {
+        "id": "quality-and-barrage",
+        "heading": "品質・バラージ：回数・チャージ維持・消費を分ける",
+        "paragraphs": [
+          "バラージ（Barrage）は次の対象アタックを繰り返すバフで、Frenzy Chargeの消費が追加リピートに関わります。バフを使った回数、次のアタックのリピート回数、ツイスターの見た目の数を同じ数として数えないようにします。[source:5]",
+          "品質欄のチャージを消費しない確率と、チャージの最大数・生成方法は別に確認します。「品質を追加したから常時最大回数」とは決めず、チャージが貯まるか、使用後に残るか、繰り返し攻撃できるかを順に試します。[source:5]",
+          "animeprincess版では、品質を追加してからAdvanced Thaumaturgyへ進む説明があります。これは別原典の移行案です。採用する作者の順番を維持し、品質だけ・アセンダンシーだけを別々にコピーしないでください。[source:6]"
+        ],
+        "links": [
+          {
+            "href": "/guides/skill-gems/",
+            "label": "ジェムの基本条件"
+          },
+          {
+            "href": "/guides/passive-tree/",
+            "label": "パッシブの確認方法"
+          }
+        ]
+      },
+      {
+        "id": "spirit-budget",
+        "heading": "Spiritはいくつ必要？固定値ではなく採用スキルで計算",
+        "paragraphs": [
+          "原典の更新履歴には、Late Endgameのサポートと胴防具のAugment変更で必要Spiritが増えた記載があります。古いスクリーンショットの合計や、他人の完成装備のSpiritをそのまま最低条件にしません。[source:1]",
+          "今回使うスキルを並べ、それぞれのリザーブとサポートによる変化をゲーム内で確認します。片方の武器セットで装備効果が変わる場合は、1・2の両方で実際に有効化できるか点検してください。"
+        ],
+        "table": {
+          "caption": "切替前に自分で埋めるSpiritと成立条件の表",
+          "headers": [
+            "確認欄",
+            "記録すること"
+          ],
+          "rows": [
+            [
+              "原典と段階",
+              "作者＿＿／段階＿＿／確認した更新日＿＿"
+            ],
+            [
+              "採用スキル",
+              "名前＿＿／リザーブ＿＿／サポート変更後＿＿"
+            ],
+            [
+              "セット1",
+              "利用可能Spirit＿＿／使用できるスキル＿＿"
+            ],
+            [
+              "セット2",
+              "利用可能Spirit＿＿／使用できるスキル＿＿"
+            ],
+            [
+              "マナと回復",
+              "数回使って消費を維持できるか＿＿／ライフ消費があるなら回復＿＿"
+            ],
+            [
+              "不足したとき",
+              "足りない原因＿＿／同じ原典の前段階へ戻すか＿＿"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/mana-problem/",
+            "label": "マナが足りない場合"
+          }
+        ]
+      },
+      {
+        "id": "try-and-revert",
+        "heading": "切替の実行順：保存してから低難度で試す",
+        "paragraphs": [
+          "一度に高難度へ上げると、構成の問題と敵の強さを区別できません。切替の確認と、マップTierを上げる判断は分けて行います。"
+        ],
+        "steps": [
+          "旧装備・現在のスキル・パッシブの画像を残す。必要品が揃うまで旧装備を売らない。",
+          "切替品とジェムを揃え、原典で指定された装備・ツリーを一組として変更する。通常の1部位更新とは区別する。",
+          "拠点で装備条件・スキルの使用可否・予約・武器セットを確認する。",
+          "低難度で主力と補助を数回使い、切替・マナ・回復・チャージを確認する。",
+          "以前安定していた難度で比較し、死亡や使用不可が増えるなら原因を記録して旧構成へ戻す。"
+        ]
+      },
+      {
+        "id": "not-ready",
+        "heading": "切り替えられない場合：症状から戻す場所を決める",
+        "paragraphs": [
+          "必要品が揃わなければ、同じ作者の前段階の構成を維持します。別作者の品を買い足し続けて原因を増やす前に、何が不足しているかを1つに絞りましょう。"
+        ],
+        "table": {
+          "caption": "切替後のつまずきと確認先",
+          "headers": [
+            "症状",
+            "先に確認すること"
+          ],
+          "rows": [
+            [
+              "装備できない",
+              "現物の要求Lv・能力値と、外した装備から失った能力値。"
+            ],
+            [
+              "主力が使えない",
+              "武器セットの割当・武器種・ジェム条件。"
+            ],
+            [
+              "Spiritが足りない",
+              "同じ段階の全スキル・サポート・装備効果になっているか。固定総量で合わせない。"
+            ],
+            [
+              "マナ／ライフが減って維持できない",
+              "上げたジェムLv、サポート倍率、ライフ消費への変換と回復。"
+            ],
+            [
+              "火力が下がった",
+              "攻撃用セット・有効な追加ダメージ・会心の供給・地面効果。"
+            ],
+            [
+              "死亡が増えた",
+              "交換で失った防御・耐性・回復、使用できなくなった装備。低難度へ戻して比較。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/builds/mercenary/twister-gemling/#level-card",
+            "label": "現在Lvの育成へ戻る"
+          },
+          {
+            "href": "/guides/beginner-currency-farming/",
+            "label": "足りない装備資金を作る"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "何レベルになれば完成形へ切り替えられる？",
+        "answer": "レベルだけでは決まりません。装備・ジェム・パッシブ・Spirit・武器セットが同じ原典の段階で成立することを確認してください。装備要求Lvとビルドの切替条件は別です。"
+      },
+      {
+        "question": "ワーリングスラッシュのジェムレベルを上げるべき？",
+        "answer": "本記事で参照するsnoobae85版の説明は、マナ消費を抑えるためLv1維持です。ツイスターと同じように一律で上げず、採用する作者・段階を確認してください。[source:1]"
+      },
+      {
+        "question": "テイミングを買えば会心型へ移れる？",
+        "answer": "テイミングの元素地面効果と会心の成立条件は別です。会心を出す武器・ツリー等を準備し、交換で失う指輪の能力も確認してください。[source:4]"
+      },
+      {
+        "question": "この手順は別作者のツイスターでも同じ？",
+        "answer": "共通する比較の考え方は使えますが、具体的な武器セット・ジェム・アセンダンシーの順番は混ぜないでください。作者名と段階名を選んで原典へ戻ります。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/builds/mercenary/twister-gemling/",
+        "label": "ジェムリングのLv別育成"
+      },
+      {
+        "href": "/guides/build-gear-buying-order/",
+        "label": "装備購入順"
+      },
+      {
+        "href": "/guides/unique-gear/",
+        "label": "ユニークの条件と代替"
+      }
+    ],
+    "heroVisual": {
+      "src": "/images/poe2/guides/poe2-twister-gemling-transition-check.svg",
+      "width": 720,
+      "height": 960,
+      "alt": "PoE2 切替は「同じ原典・段階」で。段階を決める：作者名と段階名を1つ選ぶ：序盤と完成形を混ぜない。必要条件を揃える：装備・ジェム・パッシブ：Spiritと武器セットも確認。低難度で試す：旧装備を残して比較する：成立しなければ元へ戻す",
+      "caption": "手順の概要。各条件・例外・出典は本文で確認できます。"
+    }
   }
 ]
