@@ -1,3 +1,4 @@
+import {shareResources,withShareResource} from './guide-sharing.mjs';
 import { restoreMobileSummary } from './mobile-summary.mjs';
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
@@ -247,3 +248,7 @@ const noteMap = `# note / X → POE2ビルドナビ 送客対応表\n\n同じ本
 await writeFile(resolve(root, "NOTE_CONTENT_MAP.md"), noteMap);
 
 console.log("Generated discovery landing pages and note mapping.");
+
+// The Lv navigation remains the only form; add the same canonical sharing controls.
+const levelingFile=resolve(root,'leveling/index.html');
+await writeFile(levelingFile,withShareResource(await readFile(levelingFile,'utf8'),shareResources.find(item=>item.id==='leveling'),site.baseUrl));

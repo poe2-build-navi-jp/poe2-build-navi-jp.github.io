@@ -40,7 +40,7 @@ for(const a of cards){
   assert(!gd.querySelector('.trouble-guides').closest('.build-card,.build-option'));
   assert(guide.indexOf('<!-- strategy-link:start -->')>guide.lastIndexOf('<article'));
 }
-assert.equal(doc.querySelectorAll('a[href="/leveling/"]').length,3);
+assert.equal(doc.querySelectorAll('a[href="/leveling/"]').length,5,'Three existing routes plus the two sharing-card routes');
 for(const a of doc.querySelectorAll('nav[aria-label="攻略カテゴリ"] a'))assert(doc.querySelector(a.getAttribute('href')));
 for(const id of ['problems','basics','progress'])assert(doc.getElementById(id),'Original anchors preserved');
 const data=[...doc.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent));

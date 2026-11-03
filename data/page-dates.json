@@ -144,8 +144,8 @@
   "date": "2026-10-24"
  },
  "/leveling/": {
-  "hash": "6adef9f7e660f002",
-  "date": "2026-10-15"
+  "hash": "06f0b35ae03ef712",
+  "date": "2026-11-03"
  },
  "/gear-check/": {
   "hash": "94852bbe9009539b",
@@ -164,7 +164,7 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "93ca0a62617a5768",
+  "hash": "1669cd860f358a7c",
   "date": "2026-11-03"
  },
  "/dictionary/": {
@@ -328,107 +328,107 @@
   "date": "2026-10-26"
  },
  "/guides/campaign-progression/": {
-  "hash": "252193e44b603ccc",
-  "date": "2026-10-26"
+  "hash": "44eadab359e7771a",
+  "date": "2026-11-03"
  },
  "/guides/trial-of-chaos/": {
-  "hash": "893b4da064134f6a",
-  "date": "2026-10-26"
+  "hash": "d69a2a5f21563e78",
+  "date": "2026-11-03"
  },
  "/guides/atlas-progression/": {
-  "hash": "3ec71e9b10398cac",
-  "date": "2026-10-26"
+  "hash": "de35ac94899c765a",
+  "date": "2026-11-03"
  },
  "/guides/waystones-tablets/": {
-  "hash": "bb9f59a2a05976b8",
-  "date": "2026-10-28"
+  "hash": "99a099035ee6d99a",
+  "date": "2026-11-03"
  },
  "/guides/expedition/": {
-  "hash": "b884513c28886cb6",
+  "hash": "3c761e9507e87b2b",
   "date": "2026-11-03"
  },
  "/guides/act-1-walkthrough/": {
-  "hash": "2ade2b70938a0fb2",
-  "date": "2026-10-10"
+  "hash": "21ea6dc558e74ceb",
+  "date": "2026-11-03"
  },
  "/guides/act-2-walkthrough/": {
-  "hash": "cb271fd7b404840c",
-  "date": "2026-10-10"
+  "hash": "6c594b1b920a3487",
+  "date": "2026-11-03"
  },
  "/guides/act-3-walkthrough/": {
-  "hash": "80cc15808b817681",
-  "date": "2026-10-10"
+  "hash": "ab10d051451c892c",
+  "date": "2026-11-03"
  },
  "/guides/act-4-walkthrough/": {
-  "hash": "cbc910f5b61a2b20",
-  "date": "2026-10-10"
+  "hash": "7e80f264a5581896",
+  "date": "2026-11-03"
  },
  "/guides/interlude-walkthrough/": {
-  "hash": "6b470d76fa710fe2",
-  "date": "2026-10-10"
+  "hash": "ecb10f37f453394f",
+  "date": "2026-11-03"
  },
  "/guides/endgame-contents/": {
-  "hash": "5f5dbc58f52d667f",
-  "date": "2026-10-10"
+  "hash": "2a9fc8208749eb5b",
+  "date": "2026-11-03"
  },
  "/guides/endgame-items/": {
-  "hash": "96d6a31c9a364192",
+  "hash": "e4a21fdb302e573f",
   "date": "2026-11-03"
  },
  "/guides/atlas-passive-trees/": {
-  "hash": "6b457f922728feee",
-  "date": "2026-10-09"
+  "hash": "b5fe609f9127bdd7",
+  "date": "2026-11-03"
  },
  "/guides/ascendancy-trials/": {
-  "hash": "d93f15d88fb1a175",
-  "date": "2026-10-10"
+  "hash": "699f0608f62ebcca",
+  "date": "2026-11-03"
  },
  "/guides/permanent-rewards/": {
-  "hash": "9546a53283f251c4",
-  "date": "2026-10-10"
+  "hash": "c756bf9d41403263",
+  "date": "2026-11-03"
  },
  "/guides/budget-gear-crafting/": {
-  "hash": "a5767b63437634b1",
-  "date": "2026-10-28"
+  "hash": "e70488a20b5c2ddd",
+  "date": "2026-11-03"
  },
  "/guides/pinnacle-bosses/": {
-  "hash": "092ec119b42b2d2b",
+  "hash": "68bb9c8c3ac207bd",
   "date": "2026-11-03"
  },
  "/guides/arbiter-of-ash-clear-record/": {
-  "hash": "93a6dd80ab60c322",
+  "hash": "434d2bff4802b382",
   "date": "2026-11-03"
  },
  "/guides/unique-gear/": {
-  "hash": "e8dccaa97ac8d6b0",
+  "hash": "3cd8f3f041ed0089",
   "date": "2026-11-03"
  },
  "/guides/arbiter-of-divinity/": {
-  "hash": "d34e449346817316",
+  "hash": "bf74a460a348c6d4",
   "date": "2026-11-03"
  },
  "/guides/mageblood-legacies/": {
-  "hash": "93e8f36f9a128cfd",
+  "hash": "ea6910bf9c6f552a",
   "date": "2026-11-03"
  },
  "/guides/tier-16-waystones/": {
-  "hash": "964faaebdc9cf33a",
+  "hash": "2bfd86baca850cb9",
   "date": "2026-11-03"
  },
  "/guides/trade/": {
-  "hash": "b145c3477e0359f6",
-  "date": "2026-10-29"
+  "hash": "830f03b692c58f94",
+  "date": "2026-11-03"
  },
  "/guides/loot-filter/": {
-  "hash": "9c5d21ac28768da2",
-  "date": "2026-10-29"
+  "hash": "a9940042a4714fc5",
+  "date": "2026-11-03"
  },
  "/guides/currency-guide/": {
-  "hash": "8588dd83aec11022",
-  "date": "2026-10-29"
+  "hash": "8c730e7a000151f8",
+  "date": "2026-11-03"
  },
  "/guides/runeseekers-call/": {
-  "hash": "37e34e7fedf862ca",
+  "hash": "e7285d9ef93c981f",
   "date": "2026-11-03"
  },
  "/dictionary/build/": {
