@@ -1333,5 +1333,252 @@
         "supports": "ユニーク版の要求レベル60、追加枠、レアリティ、混沌耐性、ライフ喪失と追加物理ダメージ。"
       }
     ]
+  },
+  {
+    "slug": "runeseekers-call",
+    "kind": "equipment",
+    "name": "ルーンシーカーの呼び声",
+    "englishName": "Runeseeker's Call",
+    "aliases": [],
+    "slot": "ワンド",
+    "summary": "ソケットしたルーンの効果が200%増加し、ルーン用のソケットを5つ持つユニークワンド。エンドゲームのクエスト報酬として自力で入手できます。",
+    "effect": [
+      "ルーンだけをソケットでき、オーグメントソケットを5つ持つ。[source:1][source:2]",
+      "ソケットされたルーンの効果が200%増加する。[source:1][source:2]",
+      "レベル15のスキル「スターアンサー」を付与する。スターアンサーはコストが10,000マナで、マナが10,000未満だと使えない。[source:1][source:3]"
+    ],
+    "requirements": [
+      "ベースはルーニックフォーク（ワンド）。装備条件はレベル65・知性114。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "エンドゲームのクエスト報酬。星を飲むもの、ウートレドがまれに落とす「枯渇したマナルーン」を、マナ10,000以上で充填してファロウに渡すと受け取れる。手順はこのサイトの入手ガイドで解説している。[source:4]",
+      "完成品はトレードでも入手できる。[source:4]"
+    ],
+    "cautions": [
+      "コラプトで6つ目のソケットが付く場合があるが、ほかの結果になることもある。成功率は確認していない。[source:4]",
+      "ルーンの効果を伸ばす武器なので、ルーンの強化を活かせない構成では採用の意味が薄い（編集部の判断）。"
+    ],
+    "buildIds": [],
+    "buildsNote": "このサイトの掲載ビルドで採用を確認した装備ではありません。ルーンの効果を活かせる構成かどうかを、自分のビルドで判断してください。",
+    "relatedLinks": [
+      {
+        "href": "/guides/runeseekers-call/",
+        "label": "入手方法：枯渇したマナルーンとマナ10,000"
+      },
+      {
+        "href": "/guides/expedition/",
+        "label": "エクスペディション攻略"
+      },
+      {
+        "href": "/guides/unique-gear/",
+        "label": "ユニーク装備を選ぶ前に"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB日本語版：ルーンシーカーの呼び声（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/jp/Runeseekers_Call",
+        "checkedAt": "2026-11-03",
+        "supports": "日本語名、ベース、装備条件、効果の表記。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB英語版：Runeseeker’s Call（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Runeseekers_Call",
+        "checkedAt": "2026-11-03",
+        "supports": "英語名、効果の数値範囲、ドロップ元の記載、更新履歴。"
+      },
+      {
+        "name": "PoE2DB日本語版：スターアンサー（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/jp/The_Stars_Answer",
+        "checkedAt": "2026-11-03",
+        "supports": "コスト10,000マナ、マナ10,000未満では使用不可。"
+      },
+      {
+        "name": "Mobalytics：PoE 2: How to obtain Runeseeker's Call",
+        "url": "https://mobalytics.gg/poe-2/guides/runeseekers-call",
+        "checkedAt": "2026-11-03",
+        "supports": "2026-07-02更新。クエストでの入手手順、トレードでの入手、コラプトで6つ目のソケット。"
+      }
+    ]
+  },
+  {
+    "slug": "morior-invictus",
+    "kind": "equipment",
+    "name": "不屈なる者として死す",
+    "englishName": "Morior Invictus",
+    "aliases": [],
+    "slot": "鎧",
+    "summary": "アーマー・回避力・エナジーシールドの3つを大きく伸ばし、ソケットの数に応じて能力が増えるユニーク鎧。灰のアービターのドロップ品です。",
+    "effect": [
+      "アーマー・回避力・エナジーシールドが300〜400%増加する。[source:1][source:2]",
+      "オーグメントソケットを4つ持つ。[source:1][source:2]",
+      "「嵌められているソケットごとに」能力が増えるモッドがランダムに3つ付く。候補には全能力値、元素耐性、最大ライフ、最大マナ、混沌耐性などがある。[source:1]"
+    ],
+    "requirements": [
+      "ベースは荘厳なレガリア（鎧）。装備条件はレベル65・筋力41・器用さ41・知性41。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "PoE2DBでは灰のアービターのドロップ品として記載されている。[source:1][source:2]",
+      "灰のアービターの戦い方はこのサイトの終盤ボス攻略、入場素材はエンドゲームのアイテム記事で確認できる。"
+    ],
+    "cautions": [
+      "ソケットごとの効果は、ソケットを埋めて初めて伸びる。付いた3つのモッドは個体ごとに違うため、実物の表示を確認する。[source:1]",
+      "0.4.0で防御の増加量が200〜300%から300〜400%に変わっている。古い資料の数値に注意する。[source:2]"
+    ],
+    "buildIds": [],
+    "buildsNote": "このサイトの掲載ビルドで採用を確認した装備ではありません。運営者の灰のアービター撃破記録では、実際にこの鎧を使っています。",
+    "relatedLinks": [
+      {
+        "href": "/guides/arbiter-of-ash-clear-record/",
+        "label": "運営者の撃破記録（この鎧を使用）"
+      },
+      {
+        "href": "/guides/pinnacle-bosses/",
+        "label": "灰のアービターの予兆と避け方"
+      },
+      {
+        "href": "/guides/endgame-items/",
+        "label": "入場素材と鍵"
+      },
+      {
+        "href": "/guides/unique-gear/",
+        "label": "ユニーク装備を選ぶ前に"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB日本語版：不屈なる者として死す（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/jp/Morior_Invictus",
+        "checkedAt": "2026-11-03",
+        "supports": "日本語名、ベース、装備条件、効果の表記。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB英語版：Morior Invictus（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Morior_Invictus",
+        "checkedAt": "2026-11-03",
+        "supports": "英語名、効果の数値範囲、ドロップ元の記載、更新履歴。"
+      }
+    ]
+  },
+  {
+    "slug": "guiding-palm-of-the-eye",
+    "kind": "equipment",
+    "name": "目の導きの掌",
+    "englishName": "Guiding Palm of the Eye",
+    "aliases": [],
+    "slot": "セプター",
+    "summary": "スピリット100と冷気ダメージの上乗せを持つユニークセプター。ピュリティオブアイスを付与し、存在下の味方にも冷気のアタックダメージを与えます。",
+    "effect": [
+      "スピリット100を持ち、スキル「ピュリティオブアイス」を付与する。[source:1][source:2]",
+      "ダメージの25%を追加冷気ダメージとして獲得する。[source:1][source:2]",
+      "存在下の味方に、15〜23から28〜35の追加アタック冷気ダメージを与える。[source:1][source:2]",
+      "基礎ライフ自動回復の50%を存在下の味方に付与する。知性+20〜30、光半径25%増加、導きの凍結のシュラインの効果も持つ。[source:1][source:2]"
+    ],
+    "requirements": [
+      "ベースは神殿のセプター。装備条件はレベル65・筋力17・知性38。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "特定の入手場所やドロップ率は確認していない。この記事では入手場所を断定しない。"
+    ],
+    "cautions": [
+      "0.2.1で「導きの掌」の冷気版がこの名前に変わり、効果も変更されている。古い資料の名前や数値に注意する。[source:2]",
+      "冷気ダメージの上乗せは、冷気に弱い敵（例：灰のアービターは冷気耐性-15%）で特に活きる。[source:3]"
+    ],
+    "buildIds": [],
+    "buildsNote": "このサイトの掲載ビルドで採用を確認した装備ではありません。運営者の灰のアービター撃破記録では、実際にこのセプターを使っています。",
+    "relatedLinks": [
+      {
+        "href": "/guides/arbiter-of-ash-clear-record/",
+        "label": "運営者の撃破記録（このセプターを使用）"
+      },
+      {
+        "href": "/dictionary/spirit/",
+        "label": "スピリットとは"
+      },
+      {
+        "href": "/guides/unique-gear/",
+        "label": "ユニーク装備を選ぶ前に"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB日本語版：目の導きの掌（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/jp/Guiding_Palm_of_the_Eye",
+        "checkedAt": "2026-11-03",
+        "supports": "日本語名、ベース、装備条件、効果の表記。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB英語版：Guiding Palm of the Eye（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Guiding_Palm_of_the_Eye",
+        "checkedAt": "2026-11-03",
+        "supports": "英語名、効果の数値範囲、ドロップ元の記載、更新履歴。"
+      },
+      {
+        "name": "PoE2DB日本語版：灰のアービター（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/jp/The_Arbiter_of_Ash",
+        "checkedAt": "2026-11-03",
+        "supports": "灰のアービターの冷気耐性-15%。"
+      }
+    ]
+  },
+  {
+    "slug": "mageblood",
+    "kind": "equipment",
+    "name": "メイジブラッド",
+    "englishName": "Mageblood",
+    "aliases": [],
+    "slot": "ベルト",
+    "summary": "14種類の「メイジの遺産」から4つの効果を持つユニークベルト。同じ遺産が重複すると効果が増えます。0.5.0で追加されました。",
+    "effect": [
+      "メイジの遺産を4つ持つ。遺産の候補は14種類ある。[source:1][source:2][source:3]",
+      "全てのメイジの遺産は、重複した遺産1つごとに効果が25〜50%増加する。[source:1][source:2]",
+      "フラスコによる回復の20%が即時に適用される。チャームスロットを1〜3個持つ。[source:1][source:2]"
+    ],
+    "requirements": [
+      "ベースは実用的なベルト。装備条件はレベル55。[source:1][source:2]"
+    ],
+    "acquisition": [
+      "特定の入手場所、ドロップ率、相場は確認していない。この記事では入手場所や価格を断定しない。"
+    ],
+    "cautions": [
+      "遺産の組み合わせは個体ごとに違う。重複の効果や計算例は、このサイトのメイジブラッドの遺産ガイドで解説している。[source:3]",
+      "今のベルトを外すと失う耐性・ライフ・チャームスロットを、交換前に比較する（編集部の提案）。"
+    ],
+    "buildIds": [],
+    "buildsNote": "このサイトの掲載ビルドで採用を確認した装備ではありません。遺産の組み合わせが自分のビルドに合うかを確認してください。",
+    "relatedLinks": [
+      {
+        "href": "/guides/mageblood-legacies/",
+        "label": "メイジブラッドの遺産一覧と重複の計算"
+      },
+      {
+        "href": "/guides/unique-gear/",
+        "label": "ユニーク装備を選ぶ前に"
+      },
+      {
+        "href": "/guides/trade/",
+        "label": "トレードのやり方"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB日本語版：メイジブラッド（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/jp/Mageblood",
+        "checkedAt": "2026-11-03",
+        "supports": "日本語名、ベース、装備条件、効果の表記。ゲーム内表示を優先。"
+      },
+      {
+        "name": "PoE2DB英語版：Mageblood（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/us/Mageblood",
+        "checkedAt": "2026-11-03",
+        "supports": "英語名、効果の数値範囲、ドロップ元の記載、更新履歴。"
+      },
+      {
+        "name": "メイジブラッドの遺産ガイド（このサイト）",
+        "url": "https://poe2-build-navi-jp.github.io/guides/mageblood-legacies/",
+        "checkedAt": "2026-11-03",
+        "supports": "遺産14種の効果と重複の説明（公式0.5.0とPoE2DBで照合済み）。"
+      }
+    ]
   }
 ]

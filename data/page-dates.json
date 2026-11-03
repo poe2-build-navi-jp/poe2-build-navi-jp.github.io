@@ -4,7 +4,7 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "399ada23556b7230",
+  "hash": "c5cde9d257bec369",
   "date": "2026-11-03"
  },
  "/name-index/": {
@@ -16,8 +16,8 @@
   "date": "2026-10-24"
  },
  "/equipment/": {
-  "hash": "a49b9c29affd15f9",
-  "date": "2026-10-28"
+  "hash": "05c25701cc833588",
+  "date": "2026-11-03"
  },
  "/skills/whirling-assault/": {
   "hash": "10f584d728406378",
@@ -119,6 +119,22 @@
   "hash": "af72934bfa90c069",
   "date": "2026-10-28"
  },
+ "/equipment/runeseekers-call/": {
+  "hash": "90fb03f69542469c",
+  "date": "2026-11-03"
+ },
+ "/equipment/morior-invictus/": {
+  "hash": "d37ed003783e20f7",
+  "date": "2026-11-03"
+ },
+ "/equipment/guiding-palm-of-the-eye/": {
+  "hash": "60fe658331779b74",
+  "date": "2026-11-03"
+ },
+ "/equipment/mageblood/": {
+  "hash": "95a7596a593c84f9",
+  "date": "2026-11-03"
+ },
  "/builds/": {
   "hash": "7818a18e6dd604fa",
   "date": "2026-10-06"
@@ -192,7 +208,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "a6fc3aaf3523327e",
+  "hash": "382f7cba27aa9fdd",
   "date": "2026-11-03"
  },
  "/classes/monk/": {
@@ -380,20 +396,20 @@
   "date": "2026-10-25"
  },
  "/guides/arbiter-of-ash-clear-record/": {
-  "hash": "6d3da9692ddd275d",
-  "date": "2026-10-23"
+  "hash": "071b6ee78cd31f1a",
+  "date": "2026-11-03"
  },
  "/guides/unique-gear/": {
-  "hash": "ae78ea6d3ca9d9c7",
-  "date": "2026-10-25"
+  "hash": "e8dccaa97ac8d6b0",
+  "date": "2026-11-03"
  },
  "/guides/arbiter-of-divinity/": {
   "hash": "6fac8370794dc61b",
   "date": "2026-10-26"
  },
  "/guides/mageblood-legacies/": {
-  "hash": "7d7cda30cf2c2766",
-  "date": "2026-10-26"
+  "hash": "d1ce1be4d18402ac",
+  "date": "2026-11-03"
  },
  "/guides/tier-16-waystones/": {
   "hash": "3e0368e616e8ca3c",
@@ -412,7 +428,7 @@
   "date": "2026-10-29"
  },
  "/guides/runeseekers-call/": {
-  "hash": "947067ec4c2116d8",
+  "hash": "37e34e7fedf862ca",
   "date": "2026-11-03"
  },
  "/dictionary/build/": {
