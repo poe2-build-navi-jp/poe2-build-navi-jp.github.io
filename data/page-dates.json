@@ -4,8 +4,8 @@
   "date": "2026-10-17"
  },
  "/search/": {
-  "hash": "efaabd20373df1dd",
-  "date": "2026-10-28"
+  "hash": "399ada23556b7230",
+  "date": "2026-11-03"
  },
  "/name-index/": {
   "hash": "e69e40bda4e12310",
@@ -148,8 +148,8 @@
   "date": "2026-10-08"
  },
  "/guides/": {
-  "hash": "21cb7670c62a0c02",
-  "date": "2026-10-28"
+  "hash": "c5ef732028409105",
+  "date": "2026-11-03"
  },
  "/dictionary/": {
   "hash": "68f6cc7a5b0ac467",
@@ -192,8 +192,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "f67a5eea9916e2cb",
-  "date": "2026-10-28"
+  "hash": "a6fc3aaf3523327e",
+  "date": "2026-11-03"
  },
  "/classes/monk/": {
   "hash": "4561abac4cd0d319",
@@ -328,8 +328,8 @@
   "date": "2026-10-28"
  },
  "/guides/expedition/": {
-  "hash": "89caf757342e4d5d",
-  "date": "2026-10-26"
+  "hash": "b884513c28886cb6",
+  "date": "2026-11-03"
  },
  "/guides/act-1-walkthrough/": {
   "hash": "2ade2b70938a0fb2",
@@ -356,8 +356,8 @@
   "date": "2026-10-10"
  },
  "/guides/endgame-items/": {
-  "hash": "0759d04a8dfa3bdb",
-  "date": "2026-10-10"
+  "hash": "96d6a31c9a364192",
+  "date": "2026-11-03"
  },
  "/guides/atlas-passive-trees/": {
   "hash": "6b457f922728feee",
@@ -410,6 +410,10 @@
  "/guides/currency-guide/": {
   "hash": "8588dd83aec11022",
   "date": "2026-10-29"
+ },
+ "/guides/runeseekers-call/": {
+  "hash": "947067ec4c2116d8",
+  "date": "2026-11-03"
  },
  "/dictionary/build/": {
   "hash": "d07eb2c6c49c7f7a",
