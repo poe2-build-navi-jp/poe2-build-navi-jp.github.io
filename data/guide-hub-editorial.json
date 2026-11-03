@@ -1,0 +1,60 @@
+{
+  "answers": [
+    {
+      "title": "初めて遊ぶなら",
+      "answer": "職業とビルドを決め、Act1から進めましょう。育成中は現在Lvに合うスキル・装備・切替条件を確認できます。",
+      "links": [
+        {"href": "/beginner-builds/", "label": "初心者向けビルドを選ぶ"},
+        {"href": "/guides/act-1-walkthrough/", "label": "Act1の進め方"}
+      ]
+    },
+    {
+      "title": "Actで止まった・すぐ死ぬなら",
+      "answer": "進行が止まったらクエストの条件、戦闘で倒されるなら耐性・防御・回復を分けて確認。恒久報酬の取り忘れも点検します。",
+      "links": [
+        {"href": "/guides/campaign-progression/", "label": "進まない場所を確認"},
+        {"href": "/guides/why-i-die/", "label": "死亡原因を切り分ける"},
+        {"href": "/guides/permanent-rewards/", "label": "恒久報酬を点検"}
+      ]
+    },
+    {
+      "title": "キャンペーンを終えたら",
+      "answer": "耐性・主力スキル・装備を整え、攻略できる低Tierのマップから開始。石の補充とAtlasの進行を確認して次の段階へ進みます。",
+      "links": [
+        {"href": "/guides/after-campaign/", "label": "クリア後の準備"},
+        {"href": "/guides/atlas-progression/", "label": "Atlasを進める"},
+        {"href": "/guides/tier-16-waystones/", "label": "T16の入手と補充"}
+      ]
+    },
+    {
+      "title": "装備を買う前・ボスに挑む前なら",
+      "answer": "欲しい効果と、交換で失う耐性・能力値・回復を先に比較。ボスの予兆と、実際に倒した装備例を別々に確認できます。",
+      "links": [
+        {"href": "/guides/unique-gear/", "label": "ユニークの採用条件"},
+        {"href": "/guides/mageblood-legacies/", "label": "メイジブラッドの遺産比較"},
+        {"href": "/guides/pinnacle-bosses/", "label": "ボスの予兆と避け方"}
+      ]
+    }
+  ],
+  "records": [
+    {
+      "slug": "arbiter-of-divinity",
+      "title": "神性のアービター：Lv87の撃破装備と画面",
+      "label": "実戦記録・スクリーンショット15枚",
+      "image": "/images/poe2/arbiter-of-divinity/clear-scene.webp",
+      "imageAlt": "運営者の神性のアービター攻略後の闘技場と完了表示",
+      "width": 1625,
+      "height": 620,
+      "answer": "ライフ1,922・ES2,096。装備10点の表示値とクリア後の場面を掲載。戦闘中の操作や未確認のスキルリンクは推定していません。",
+      "action": "撃破装備・耐性・確認範囲を見る"
+    },
+    {
+      "slug": "arbiter-of-ash-clear-record",
+      "title": "灰のアービター：Lv82ツイスターの装備記録",
+      "label": "運営者の撃破報告・装備の転記",
+      "stat": "Lv82 / ツイスター・ジェムリング",
+      "answer": "ライフ1,857・ES2,096の構成と、スピア・セプター・防具の役割を公開。予兆の避け方は戦闘解説へ進めます。",
+      "action": "装備の役割と育成手順を見る"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+/* Contextual decisions stay outside tables and work without JavaScript. */
+.guide-reading .guide-decision-links{display:flex;flex-wrap:wrap;gap:.5rem .8rem;margin:1rem 0}
+.guide-reading .guide-decision-links a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:.5rem .8rem;border:1px solid #b8a98d;border-radius:4px;background:#f5f1e8;color:#693619;line-height:1.7;overflow-wrap:anywhere}
+@media(max-width:600px){.guide-reading .guide-decision-links{display:grid;grid-template-columns:minmax(0,1fr)}}
