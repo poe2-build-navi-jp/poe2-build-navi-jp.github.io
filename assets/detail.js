@@ -173,6 +173,11 @@ function setLevel(value, fromUser = true) {
   if (gearCheckLink) {
     gearCheckLink.href = `/gear-check/?build=${encodeURIComponent(build.id)}&level=${level}&concern=purchase`;
   }
+  const uniqueGearLink = document.querySelector("[data-unique-gear-level]");
+  if (uniqueGearLink) {
+    const params = new URLSearchParams({ build: build.id, level: String(level) });
+    uniqueGearLink.href = `/guides/unique-gear/?${params}#purchase-${build.id}`;
+  }
   syncLevelParam(fromUser);
   const index = stageIndexFor(level);
   localStorage.setItem("poe2:navi:lastViewedStage", String(index));

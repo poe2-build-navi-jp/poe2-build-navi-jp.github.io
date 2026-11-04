@@ -43,6 +43,6 @@ for(const a of doc.querySelectorAll('a[href^="#"]'))assert(doc.getElementById(a.
 assert(!doc.querySelector('table'),'Comparison stays readable as vertical cards on phones');
 const schema=[...doc.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent));
 assert.equal(schema.filter(s=>s['@type']==='Article').length,1);
-assert.equal(schema.find(s=>s['@type']==='Article').dateModified,'2026-10-12');
+assert.equal(schema.find(s=>s['@type']==='Article').dateModified,guide.updatedAt);
 assert.equal(schema.find(s=>s['@type']==='Article').image,doc.querySelector('meta[property="og:image"]').content);
 console.log(`PASS: ${sections.length} builds, ${options.length} source-backed gear cards, correct slots/variants, conditional adoption, preserved Lv routes, canonical and dated schema`);
