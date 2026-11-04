@@ -1,9 +1,28 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
+import {formatJapaneseNames} from './japanese-names.mjs';
 const root=resolve(import.meta.dirname,'..');
 const builds=JSON.parse(await readFile(resolve(root,'data/builds.json'),'utf8'));
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-function wrap(text,limit){let lines=[],line='',size=0;for(const ch of text){const unit=/[ -~]/.test(ch)?0.57:1;if(size+unit>limit){lines.push(line);line='';size=0;}line+=ch;size+=unit;}if(line)lines.push(line);return lines;}
+const units=text=>Array.from(text).reduce((total,ch)=>total+(/[ -~]/.test(ch)?0.6:1),0);
+function wrap(text,limit){
+ const lines=[];
+ let line='',size=0;
+ for(const token of text.match(/（[ -~]+）|[!-~]+|./gu)||[]){
+  const parts=units(token)>limit?Array.from(token):[token];
+  for(const part of parts){
+   const width=units(part);
+   if(size+width>limit){
+    lines.push(line.trimEnd());
+    line='';size=0;
+   }
+   if(!line&&!part.trim())continue;
+   line+=part;size+=width;
+  }
+ }
+ if(line)lines.push(line.trimEnd());
+ return lines;
+}
 const text=(lines,x,y,size,color='#e9eef5',weight=400)=>`<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-weight="${weight}">${lines.map((l,i)=>`<tspan x="${x}" dy="${i?size*1.45:0}">${esc(l)}</tspan>`).join('')}</text>`;
 function diagram(title,subtitle,steps,mobile,patch){
  const w=mobile?720:1200,pad=mobile?32:48,gap=24,cols=mobile?1:2,cw=(w-pad*2-gap*(cols-1))/cols;
@@ -23,7 +42,7 @@ function diagram(title,subtitle,steps,mobile,patch){
 }
 const {ROADMAP_BUILD_IDS:ids}=await import('./roadmap-builds.mjs');
 for(const b of builds.filter(b=>ids.includes(b.id))){
- const steps=b.levelingStages.map(s=>({label:s.label,action:s.nowActions[0]}));
+ const steps=b.levelingStages.map(s=>({label:s.label,action:formatJapaneseNames(s.nowActions[0])}));
  for(const mobile of [false,true])await writeFile(resolve(root,`images/poe2/builds/poe2-${b.slug}-leveling-roadmap${mobile?'-mobile':''}.svg`),diagram(b.name,'育成順序と各段階で最初に確認すること',steps,mobile,b.version));
 }
 const site=JSON.parse(await readFile(resolve(root,'data/site.json'),'utf8'));

@@ -4,6 +4,7 @@ import {resolve} from 'node:path';
 import {FOOTER,ICON_BLOCK} from './site-chrome.mjs';
 import {sourceDate} from './guide-review.mjs';
 import {shareAssets,shareSection} from './guide-sharing.mjs';
+import {formatJapaneseNames} from './japanese-names.mjs';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const save=(p,s)=>writeFile(resolve(root,p),s);
@@ -36,7 +37,8 @@ const entry=slug=>{
  const path=`/guides/${slug}/`,g=extra.find(x=>x.slug===slug)||guides.find(x=>x.slug===slug),p=pages.find(x=>x.path===path);
  if(!g&&!p)throw new Error(`Guide missing from shared data: ${path}`);
  const intent=intents.find(i=>i.path===path);
- return {reviewed:sourceDate(g),path,title:intent?.h1||g?.title||p.h1,summary:intent?.description||g?.summary||p?.description,keywords:[...(g?.keywords||[]),...(intent?.searchExamples||[])]};
+ const keywords=[...(g?.keywords||[]),...(intent?.searchExamples||[]),...(g?.sections||[]).map(section=>section.heading).filter(Boolean)];
+ return {reviewed:sourceDate(g),path,title:intent?.h1||g?.title||p.h1,summary:intent?.description||g?.summary||p?.description,keywords:keywords.map(value=>formatJapaneseNames(value))};
 };
 const total=seen.size;
 

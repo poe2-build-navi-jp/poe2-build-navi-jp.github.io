@@ -2879,7 +2879,8 @@
   {
     "slug": "endgame-items",
     "title": "エンドゲーム専用アイテム辞典｜入手方法・使う場所・消費前の注意",
-    "summary": "Breachstone、Simulacrum、王への謁見、Origin Core、Logbook、骨、結晶などを拾ったら？素材ごとの入手元、使用場所、起動手順、失敗や装備変更の注意点をまとめます。",
+    "summary": "ブリーチストーン（Breachstone）、シミュラクラム（Simulacrum）、王との謁見（An Audience with the King）、起源のコア（Origin Core）、エクスペディションログブック（Expedition Logbook）などの入手元・使用場所・操作手順と、消費前の注意点をまとめます。",
+    "keywords": ["Ailith", "Xesht", "The Dreamer", "ジェネシスツリー", "王への謁見"],
     "category": "endgame",
     "version": "0.5.5e",
     "scope": "2026年10月9日、0.5.5e時点の主要な進行素材・入場アイテム・専用クラフト素材を対象にした辞典です。キャンペーンでも入手する共通素材は、エンドゲームで迷いやすい用途を補足しています。全Uniqueや全通貨の網羅ではありません。GGG公式変更を優先し、アイテム・クエストデータで使用先を照合しました。実ゲームでの操作検証ではなく、操作名は英語UIを併記しています。",
@@ -2947,7 +2948,7 @@
       },
       {
         "id": "wombgifts",
-        "heading": "Hiveblood・Wombgift：MonasteryのGenesis Treeで使う",
+        "heading": "Hiveblood・Wombgift：Monastery of the KeepersのGenesis Treeで使う",
         "paragraphs": [
           "BreachやHiveで集める素材です。使用先はMonastery of the KeepersにあるThe Genesis Tree。Wombgiftは作る物の種類を選ぶ種、Hivebloodは生成に使う資源、と分けて覚えましょう。生成を確定する前に対象と表示コストを確認します。[source:15][source:16][source:1]"
         ],
@@ -2972,7 +2973,7 @@
         ],
         "bullets": [],
         "steps": [
-          "破片をまとめたRevelatory WombgiftをMonasteryのBreachstone用wombで育てる。[source:16]",
+          "破片をまとめたRevelatory WombgiftをMonastery of the KeepersのBreachstone用wombで育てる。[source:16]",
           "BreachstoneをAtlasで使ってBreach領域を公開する。Hiveを進め、It That Was EshとIt That Was Tulを倒す。[source:3]",
           "Breachlord Sacを回収したら、Monastery of the Keepersへ戻る。導入クエストの会話を進め、The Dreamerへ渡す。[source:3]",
           "開いたTwisted DomainでXeshtへ挑む。BreachstoneとSacは別の段階の素材なので、一度のBreachstone使用だけで全ボスへの準備が終わると考えない。[source:3]"
@@ -2980,7 +2981,7 @@
       },
       {
         "id": "simulacrum-reflection",
-        "heading": "Simulacrum・Raven’s Reflection：霧のMapとWillowの鏡へ",
+        "heading": "Simulacrum・Raven’s Reflection：霧のマップとThe Withered Willowの鏡へ",
         "paragraphs": [
           "Simulacrum SplinterはDeliriumで集める破片で、300個が1個のSimulacrumになります。アイテム版Simulacrumは、AtlasでDeliriumの霧に覆われた100%以上DeliriousなMapへ使い、遭遇を追加します。対象Mapの条件を確認してから使いましょう。[source:7][source:17]",
           "Grand Mirrorから霧を広げて100%に到達すると現れるSimulacrumと、手持ちのSimulacrumアイテムを使って追加する操作は区別します。現行Simulacrumは7波。完了後のRaven’s ReflectionはThe Withered Willowの鏡へ持っていく次段階の鍵です。[source:18][source:1][source:7]"

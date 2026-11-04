@@ -1032,7 +1032,7 @@
     "name": "贖罪",
     "englishName": "Redemption",
     "aliases": [],
-    "summary": "グレネードを使うたびにExplosive Rhythmを得る、弾薬を撃てないユニーククロスボウ。",
+    "summary": "グレネードを使うたびに爆発のリズム（Explosive Rhythm）を得る、弾薬を撃てないユニーククロスボウ。",
     "effect": [
       "グレネードスキルを2〜3回使うたびにExplosive Rhythmを1得る。10に達すると全て消費して、10秒間Explosive Fervourを得る。[source:1]",
       "弾薬の装填・発射ができない。この武器の命中には会心ダメージボーナスがない。[source:1]"

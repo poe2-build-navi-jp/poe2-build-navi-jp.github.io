@@ -3,6 +3,7 @@ import {readFile, writeFile, mkdir} from 'node:fs/promises';
 import {resolve, dirname} from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 import {FOOTER, ICON_BLOCK} from './site-chrome.mjs';
+import {formatJapaneseNames} from './japanese-names.mjs';
 
 const defaultRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const SEARCH_TYPES = [
@@ -116,7 +117,8 @@ function collectionPage({site, path, title, h1, description, content, entries, s
   return `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${esc(url)}"><meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="${esc(site.siteName)}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${esc(url)}"><meta property="og:image" content="${esc(image)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="PoE2攻略・育成ガイド"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/mobile.css"><link rel="stylesheet" href="/assets/site-search.css">${ICON_BLOCK}${script ? '<script defer src="/assets/site-search.js"></script>' : ''}<script type="application/ld+json">${json(schema)}</script></head><body class="site-discovery"><a class="skip-link" href="#main">本文へ移動</a>${header(path)}<main id="main" class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li aria-current="page">${esc(h1)}</li></ol></nav><article class="article-page discovery-article"><header class="discovery-heading"><p class="section-kicker">PATH OF EXILE 2 / FIND A GUIDE</p><h1>${esc(h1)}</h1><p class="lead">${esc(description)}</p></header>${content}<p class="discovery-note">掲載範囲は当サイトで解説している項目です。ゲーム内の全名称を網羅するものではありません。仕様・出典・確認日はリンク先で確認できます。</p></article></main>${FOOTER}</body></html>\n`;
 }
 function resultCard(entry) {
-  const search = ['PoE2', entry.title, entry.englishName, entry.summary, entry.context, ...entry.aliases].filter(Boolean).join(' ');
+  const search = ['PoE2', entry.title, entry.englishName, entry.summary, entry.context, ...entry.aliases]
+    .filter(Boolean).map(value => formatJapaneseNames(value)).join(' ');
   return `<li class="search-result" data-search-entry data-search-type="${entry.type}" data-search-text="${esc(search)}"><a href="${esc(entry.href)}"><strong>${esc(entry.title)}</strong>${entry.englishName && entry.englishName !== entry.title ? `<span class="search-english" lang="en">${esc(entry.englishName)}</span>` : ''}<span class="search-summary">${esc(entry.summary)}</span>${entry.context ? `<span class="search-context">${esc(entry.context)}の該当箇所へ →</span>` : ''}</a></li>`;
 }
 export function renderSearchPage({site, entries}) {

@@ -1895,7 +1895,7 @@
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Act 3のUtzaalで召喚対象と必要Spiritが揃うまではスケルタルスナイパーを継続。切替後はヴァールガードのスペクター（Vaal Guard Spectre）を主力にキャンペーンを進行",
+        "mainSkill": "Act 3のウトザール（Utzaal）で召喚対象と必要Spiritが揃うまではスケルタルスナイパーを継続。切替後はヴァールガードのスペクター（Vaal Guard Spectre）を主力にキャンペーンを進行",
         "supports": "切替前は原典のAct 3 - Before Spectre Swapを維持。切替後はAct 3 - ヴァールガードのスペクター（Vaal Guard Spectres）からEnd of Act 4、End of Interludesへ順に進む。",
         "passivePriority": "切替前はAct 3 - Before Spectre Swap、切替後はAct 3 - ヴァールガードのスペクター（Vaal Guard Spectres）からEnd of Act 4、End of Interludesの段階別ツリーを使用。",
         "gearPriority": "ミニオンレベル、Spirit、ライフ・ES、ブロックに関係する装備、耐性。",
@@ -1903,7 +1903,7 @@
         "caution": "ミニオンが狭い通路で遅れる場合は、自分の位置を変えて再誘導する。",
         "transitionCondition": "キャンペーンとInterlude終了。Lv67前後の次のスペクター切替を準備できる。",
         "nowActions": [
-          "Act 3のUtzaalでヴァールガード（Vaal Guard）（50 Spirit）を確保するまではスナイパーを維持し、切替後にAct 4→Interludesへ進む",
+          "Act 3のウトザール（Utzaal）でヴァールガード（Vaal Guard）（50 Spirit）を確保するまではスナイパーを維持し、切替後にAct 4→Interludesへ進む",
           "自身の防御と耐性を整える",
           "Lv67用スペクター切替を準備する"
         ],
@@ -2102,7 +2102,7 @@
       "questions": [
         {
           "question": "Lv37なのにVaal Guardへ切り替えられない？",
-          "answer": "Lvだけでは切り替えません。原典はAct 3のUtzaalに到達後、手榴弾を投げる50 Spiritのヴァールガード（Vaal Guard）を対象にしています。対象と必要なSpiritが揃うまでは、スケルタルスナイパー構成を維持します。",
+          "answer": "Lvだけでは切り替えません。原典はAct 3のウトザール（Utzaal）に到達後、手榴弾を投げる50 Spiritのヴァールガード（Vaal Guard）を対象にしています。対象と必要なSpiritが揃うまでは、スケルタルスナイパー構成を維持します。",
           "stageIndex": 3,
           "sourceIndex": 0,
           "where": "FAQ → When do I swap to Vaal Guards?"

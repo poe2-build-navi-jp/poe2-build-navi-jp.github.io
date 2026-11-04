@@ -251,4 +251,4 @@ console.log("Generated discovery landing pages and note mapping.");
 
 // The Lv navigation remains the only form; add the same canonical sharing controls.
 const levelingFile=resolve(root,'leveling/index.html');
-await writeFile(levelingFile,withShareResource(await readFile(levelingFile,'utf8'),shareResources.find(item=>item.id==='leveling'),site.baseUrl));
+await writeFile(levelingFile,withShareResource(await readFile(levelingFile,'utf8'),shareResources.find(item=>item.id==='leveling'),base));
