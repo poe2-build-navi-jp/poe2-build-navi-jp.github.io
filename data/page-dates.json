@@ -1,7 +1,7 @@
 {
  "/": {
-  "hash": "81573f39cb98d64f",
-  "date": "2026-10-17"
+  "hash": "7bb6aa15487a20d4",
+  "date": "2026-11-04"
  },
  "/search/": {
   "hash": "6dfb5d4b193bf7ee",
@@ -136,8 +136,8 @@
   "date": "2026-11-03"
  },
  "/builds/": {
-  "hash": "7818a18e6dd604fa",
-  "date": "2026-10-06"
+  "hash": "6b1315ab2f08fa1e",
+  "date": "2026-11-04"
  },
  "/classes/": {
   "hash": "9bd057f9253efb70",
@@ -208,7 +208,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "7fbde9789aceeb3f",
+  "hash": "788b50154b5f3dbb",
   "date": "2026-11-04"
  },
  "/classes/monk/": {
