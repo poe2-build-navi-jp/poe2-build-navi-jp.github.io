@@ -4,7 +4,7 @@
   "date": "2026-11-04"
  },
  "/search/": {
-  "hash": "c158df64b92f41a9",
+  "hash": "0513e60077e01d16",
   "date": "2026-11-04"
  },
  "/name-index/": {
@@ -164,7 +164,7 @@
   "date": "2026-11-04"
  },
  "/guides/": {
-  "hash": "6dbfd0a153d87fad",
+  "hash": "b31edaf58f467025",
   "date": "2026-11-04"
  },
  "/dictionary/": {
@@ -208,7 +208,7 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "788b50154b5f3dbb",
+  "hash": "4322df0f56cff6f2",
   "date": "2026-11-04"
  },
  "/classes/monk/": {
@@ -348,20 +348,20 @@
   "date": "2026-11-04"
  },
  "/guides/act-1-walkthrough/": {
-  "hash": "0d0c4895004dd11c",
+  "hash": "657e8f6aa20ecde7",
   "date": "2026-11-04"
  },
  "/guides/act-2-walkthrough/": {
-  "hash": "a9770607a2c07870",
+  "hash": "830fd112dfe34a62",
   "date": "2026-11-04"
  },
  "/guides/act-3-walkthrough/": {
-  "hash": "0530d647998bd27b",
+  "hash": "3135f22778adb958",
   "date": "2026-11-04"
  },
  "/guides/act-4-walkthrough/": {
-  "hash": "7e80f264a5581896",
-  "date": "2026-11-03"
+  "hash": "2d81b676bab90f0d",
+  "date": "2026-11-04"
  },
  "/guides/interlude-walkthrough/": {
   "hash": "2c9d074f3b66fc86",
@@ -432,7 +432,7 @@
   "date": "2026-11-03"
  },
  "/guides/beginner-currency-farming/": {
-  "hash": "bc3456a4f27a15a9",
+  "hash": "40041d00a9f6502a",
   "date": "2026-11-04"
  },
  "/guides/build-gear-buying-order/": {
@@ -561,6 +561,14 @@
  },
  "/what-is-poe2/": {
   "hash": "fef48bfdb9dbf342",
+  "date": "2026-11-04"
+ },
+ "/guides/valuable-drops-early/": {
+  "hash": "2e6398f346d0573c",
+  "date": "2026-11-04"
+ },
+ "/guides/valuable-drops-act-4/": {
+  "hash": "37c74b62260e9c5c",
   "date": "2026-11-04"
  }
 }

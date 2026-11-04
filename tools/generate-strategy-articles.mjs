@@ -69,6 +69,11 @@ const connections={
  'slow-mapping':['waystones-tablets','atlas-progression'],
  'equipment-basics':['budget-gear-crafting','expedition'],
  'gear-upgrade':['budget-gear-crafting','build-gear-buying-order'],
+ 'act-1-walkthrough':['valuable-drops-early'],
+ 'act-2-walkthrough':['valuable-drops-early'],
+ 'act-3-walkthrough':['valuable-drops-early'],
+ 'act-4-walkthrough':['valuable-drops-act-4'],
+ 'beginner-currency-farming':['valuable-drops-early','valuable-drops-act-4'],
  'after-campaign':['interlude-walkthrough','endgame-contents','atlas-progression','waystones-tablets','beginner-currency-farming']
 };
 for(const [slug,targets] of Object.entries(connections)){
