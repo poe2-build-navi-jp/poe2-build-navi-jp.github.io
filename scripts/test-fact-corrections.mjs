@@ -1,11 +1,12 @@
 // Regression checks for evidence-backed corrections. This is not a live fact-check.
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
+import {formatJapaneseNames} from '../tools/japanese-names.mjs';
 const read=async p=>JSON.parse(await readFile(new URL('../'+p,import.meta.url),'utf8'));
 const builds=await read('data/builds.json'),guides=await read('data/guides.json'),dictionary=await read('data/dictionary.json'),seo=await read('data/seo-pages.json');
 const by=id=>builds.find(b=>b.id===id);
 const twister=by('mercenary-twister-gemling');
-assert.match(twister.gearPriorities.join(' '),/Prismatic Ring（指輪）/);
+assert.match(twister.gearPriorities.join(' '),/プリズムの指輪（Prismatic Ring）（指輪）/);
 assert.doesNotMatch(twister.gearPriorities.join(' '),/ユニークアミュレット「The Taming」/);
 assert.match(twister.levelingStages[7].mainSkill,/Sniper's Mark.*Barrage.*ツイスター/);
 const spirit=by('huntress-twister-spirit-walker');
@@ -19,7 +20,7 @@ assert.equal(by('mercenary-grenade-gemling').ssf,null);
 assert.doesNotMatch(by('mercenary-grenade-gemling').strengths.join(' '),/SSF.*Arbiter/);
 assert.doesNotMatch(spirit.levelingStages[0].mainSkill,/PounceとShredを中心/);
 assert.equal(by('witch-ed-contagion-lich').ratingEvidence.beginner.checks.moderateOperation,true);
-assert.match(by('druid-plant-oracle').levelingStages[2].mainSkill,/手動Thunderstorm/);
+assert.match(by('druid-plant-oracle').levelingStages[2].mainSkill,/手動サンダーストーム（Thunderstorm）/);
 assert.match(by('sorceress-spark-stormweaver').levelingStages[7].caution,/別の作者/);
 assert.match(JSON.stringify(guides.find(x=>x.slug==='skill-gems')),/スペクターとテイムビースト/);
 assert.match(JSON.stringify(guides.find(x=>x.slug==='support-gems')),/Solus Ipse/);
@@ -108,7 +109,7 @@ assert.match(shield.levelingStages[2].gearPriority,/作者.*80以上.*目安/);
 assert.match(shield.levelingStages[3].supports,/Fortifying Cry.*Close Combat I.*Sunder.*Prolonged Duration II/);
 assert.match(twister.levelingStages[5].mainSkill,/ワーリングスラッシュのジェムLv1.*セット1.*ツイスターのジェムLv16.*セット2/);
 assert.match(twister.levelingStages[5].supports,/Rage III.*Blazing Critical.*Prolonged Duration II.*Pinpoint Critical/);
-assert.match(twister.levelingStages[5].caution,/War Banner・Fangs of Frostはない/);
+assert.match(twister.levelingStages[5].caution,/War Banner）・ファングオブフロスト（Fangs of Frost）はない/);
 const stageAudit=await read('docs/audits/stage-tabs-2026-10-06.json');
 assert.equal(stageAudit.records.length,6);
 assert.deepEqual(stageAudit.counts,{corrected_stage_attribution:1,source_coverage_expanded:5});
@@ -116,7 +117,15 @@ assert.equal(stageAudit.completeFactualCertification,false);
 for(const record of stageAudit.records){
  const source=await read(record.sourceFile);
  const index=Number(record.jsonPointer.split('/').at(-1));
- assert.deepEqual(source.build.levelingStages[index],record.current);
+ const expected=structuredClone(record.current);
+ // The audit preserves its original text. Compare the current display after applying name glosses.
+ for(const field of ['mainSkill','supports','passivePriority','gearPriority','replaceGear','caution','transitionCondition','nowActions']){
+  const value=expected[field];
+  if(typeof value==='string')expected[field]=formatJapaneseNames(value);
+  else if(Array.isArray(value))expected[field]=value.map(s=>formatJapaneseNames(s));
+ }
+ if(expected.actionGuidance?.what)expected.actionGuidance.what=formatJapaneseNames(expected.actionGuidance.what);
+ assert.deepEqual(source.build.levelingStages[index],expected);
  assert.ok(record.sourceUrl.includes('activeVariantId%2C'));
 }
 const site=await read('data/site.json');

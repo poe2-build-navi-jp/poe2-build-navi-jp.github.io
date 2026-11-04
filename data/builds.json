@@ -29,59 +29,59 @@
     ],
     "weaknesses": [
       "ワーリングアサルトはLv41まで使えないため、キャンペーン途中でスキルを切り替える必要がある。",
-      "序盤のGlacial Cascadeルートは耐久が低いと案内されており、防具更新と回避操作が重要。",
-      "Endgameでは最初のパワーチャージ生成とCharged Staff維持が必要で、完全な1ボタン構成ではない。",
+      "序盤のグレイシャルカスケード（Glacial Cascade）ルートは耐久が低いと案内されており、防具更新と回避操作が重要。",
+      "Endgameでは最初のパワーチャージ生成とチャージドスタッフ（Charged Staff）維持が必要で、完全な1ボタン構成ではない。",
       "主力のワーリングアサルトはTier 11ジェムで、使えるのはLv41から（poe2db）。それまでは別のスキルで進める。"
     ],
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "Glacial Cascade + Frozen Locus（英語名）",
-        "supports": "Glacial Cascade：Concentrated Area → Cold Attunement。Frozen Locus：Ice Bite I → Cold Attunement。",
+        "mainSkill": "グレイシャルカスケード（Glacial Cascade） + フローズンローカス（Frozen Locus）",
+        "supports": "グレイシャルカスケード（Glacial Cascade）：効果範囲集中（Concentrated Area） → コールドアチューンメント（Cold Attunement）。フローズンローカス（Frozen Locus）：アイスバイト I（Ice Bite I） → コールドアチューンメント（Cold Attunement）。",
         "passivePriority": "「Glacial 1-22」段階別ツリーに沿う。固有ノード名は安全に抽出できないため、下記の原典ツリーで取得順を確認。",
         "gearPriority": "武器は物理ダメージ増加・追加ダメージを優先。ブーツは移動速度、防具は耐性・ライフ・回避。",
         "replaceGear": "武器のダメージが伸びない場合と、移動速度のないブーツを優先して交換。",
-        "caution": "Frozen Locusを敵集団へ置き、後方からGlacial Cascadeで破壊する。Lv10でHerald of Iceを追加。",
-        "transitionCondition": "Lv11到達。Glacial CascadeとFrozen Locusの基本連携が安定していること。",
+        "caution": "フローズンローカス（Frozen Locus）を敵集団へ置き、後方からグレイシャルカスケード（Glacial Cascade）で破壊する。Lv10でヘラルドオブアイス（Herald of Ice）を追加。",
+        "transitionCondition": "Lv11到達。グレイシャルカスケード（Glacial Cascade）とフローズンローカス（Frozen Locus）の基本連携が安定していること。",
         "nowActions": [
-          "Glacial Cascadeを最優先で強化する",
-          "Frozen Locusを置いてからGlacial Cascadeで破壊する",
+          "グレイシャルカスケード（Glacial Cascade）を最優先で強化する",
+          "フローズンローカス（Frozen Locus）を置いてからグレイシャルカスケード（Glacial Cascade）で破壊する",
           "移動速度付きブーツを探す"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Glacial Cascade + Frozen Locus。Lv14以降、必要条件を満たしたTempest Flurryをボスのショック付与に追加。",
-        "supports": "序盤構成を継続。Tempest FlurryにはShockを付け、ボスへのショック付与用として使う。",
+        "mainSkill": "グレイシャルカスケード（Glacial Cascade） + フローズンローカス（Frozen Locus）。Lv14以降、必要条件を満たしたテンペストフラリィ（Tempest Flurry）をボスのショック付与に追加。",
+        "supports": "序盤構成を継続。テンペストフラリィ（Tempest Flurry）には感電（Shock）を付け、ボスへのショック付与用として使う。",
         "passivePriority": "「Glacial 1-22」段階別ツリーを継続。冷気・アタック系の導線から外れない。",
         "gearPriority": "武器：物理増加・追加ダメージ。ブーツ：移動速度。その他：耐性・ライフ・回避。",
         "replaceGear": "現在レベルより大きく古い武器、防御値や耐性が不足する防具を交換。",
-        "caution": "Tempest Flurryは通常周回の主力ではなく、ボスへのショック付与に使う。",
-        "transitionCondition": "Lv21到達。ボス戦でFrozen LocusとGlacial Cascadeの連携を再現できること。",
+        "caution": "テンペストフラリィ（Tempest Flurry）は通常周回の主力ではなく、ボスへのショック付与に使う。",
+        "transitionCondition": "Lv21到達。ボス戦でフローズンローカス（Frozen Locus）とグレイシャルカスケード（Glacial Cascade）の連携を再現できること。",
         "nowActions": [
-          "Glacial Cascadeを優先して更新する",
-          "ボス戦だけTempest Flurryでショックを付与する",
+          "グレイシャルカスケード（Glacial Cascade）を優先して更新する",
+          "ボス戦だけテンペストフラリィ（Tempest Flurry）でショックを付与する",
           "耐性・ライフ付き防具を確保する"
         ]
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Lv22まではGlacial Cascade。Lv22以降はStorm Waveルートへ移行可能。",
-        "supports": "Storm Waveのサポート構成は0.5.5ガイドの「Stormwave 22+」段階を使用。名称を確認できない枠は原典参照。",
-        "passivePriority": "「Stormwave 22+」段階別ツリーへ切り替える。Hollow Palm Techniqueは装備条件を理解した場合のみ選択。",
+        "mainSkill": "Lv22まではグレイシャルカスケード（Glacial Cascade）。Lv22以降はストームウェーブ（Storm Wave）ルートへ移行可能。",
+        "supports": "ストームウェーブ（Storm Wave）のサポート構成は0.5.5ガイドの「Stormwave 22+」段階を使用。名称を確認できない枠は原典参照。",
+        "passivePriority": "「Stormwave 22+」段階別ツリーへ切り替える。ホロウパームテクニック（Hollow Palm Technique）は装備条件を理解した場合のみ選択。",
         "gearPriority": "Hollow Palm採用時は武器を外す。採用しない場合は高性能クォータースタッフを継続。",
         "replaceGear": "Hollow Palmへ切り替える前に、武器を外しても火力が成立する回避・エナジーシールド装備を揃える。",
         "caution": "Hollow Palmは自動的に最適になるわけではなく、良いクォータースタッフの方が高火力になる場合がある。",
-        "transitionCondition": "Lv31到達。Storm Wave構成またはGlacial Cascade継続構成のどちらかを決める。",
+        "transitionCondition": "Lv31到達。ストームウェーブ（Storm Wave）構成またはグレイシャルカスケード（Glacial Cascade）継続構成のどちらかを決める。",
         "nowActions": [
-          "Lv22でStorm Waveへの移行を判断する",
+          "Lv22でストームウェーブ（Storm Wave）への移行を判断する",
           "Hollow Palm採用前に装備条件を確認する",
           "移行直後に武器を売却しない"
         ]
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Storm Wave、または安定している場合はGlacial Cascadeを継続。",
+        "mainSkill": "ストームウェーブ（Storm Wave）、または安定している場合はグレイシャルカスケード（Glacial Cascade）を継続。",
         "supports": "選択した育成ルートの0.5.5段階別構成を維持し、Lv41用ジェムを準備。",
         "passivePriority": "Lv41+ Whirlingの段階別ツリーへ接続できるように進める。固有ノードは原典ツリーで確認。",
         "gearPriority": "耐性・ライフ・回避を優先し、Lv41切替後の器用さ・知性要求も確認。",
@@ -96,42 +96,42 @@
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "ワーリングアサルトを主力に、Staggering Palm・Tempest Bell・Mantra of Destructionを組み合わせる。",
-        "supports": "原典の育成タブはMagnified Area II、Rage II、Heavy Swing、Pursuit IIを掲載。Pursuit IIの追加はGreater Jeweller’s Orbの優先先として案内されている。枠・所持ジェム・要求能力値を満たしてから追加する。",
+        "mainSkill": "ワーリングアサルトを主力に、スタッガリングパーム（Staggering Palm）・テンペストベル（Tempest Bell）・マントラオブデストラクション（Mantra of Destruction）を組み合わせる。",
+        "supports": "原典の育成タブは効果範囲拡大 II（Magnified Area II）、憤怒 II（Rage II）、ヘビースイング（Heavy Swing）、追撃 II（Pursuit II）を掲載。追撃 II（Pursuit II）の追加は宝飾職人のオーブ (上級)（Greater Jeweller’s Orb）の優先先として案内されている。枠・所持ジェム・要求能力値を満たしてから追加する。",
         "passivePriority": "0.5.5ガイドの「Leveling Whirling 41+」ツリーへ切り替える。",
         "gearPriority": "クォータースタッフは追加ダメージ、ダメージ増加、近接/アタックスキルレベル、クリティカル、攻撃速度。防具は耐性・ライフ・回避。",
         "replaceGear": "良いクォータースタッフがHollow Palmを上回る場合は武器型へ戻す。",
-        "caution": "育成タブはマナ対策にConservative Casting、マナリーチ、またはPounceとMark of Siphoningを使う案を掲載。手持ちジェムと要求能力値を確認して選ぶ。",
-        "transitionCondition": "キャンペーン終了。ワーリングアサルトで周回し、Staggering Palm・Tempest Bell・Mantra of Destructionを使い分けられる。",
+        "caution": "育成タブはマナ対策に控えめな詠唱（Conservative Casting）、マナリーチ、またはパウンス（Pounce）と吸収の呪印（Mark of Siphoning）を使う案を掲載。手持ちジェムと要求能力値を確認して選ぶ。",
+        "transitionCondition": "キャンペーン終了。ワーリングアサルトで周回し、スタッガリングパーム（Staggering Palm）・テンペストベル（Tempest Bell）・マントラオブデストラクション（Mantra of Destruction）を使い分けられる。",
         "nowActions": [
           "ワーリングアサルトへ切り替える",
           "育成用構成でマナとサポート要求を確認する",
-          "ボス用のTempest BellとMantra of Destructionを設定する"
+          "ボス用のテンペストベル（Tempest Bell）とマントラオブデストラクション（Mantra of Destruction）を設定する"
         ]
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Killing Palm → Charged Staff → ワーリングアサルト → フォーリングサンダー。",
-        "supports": "原典の「Early Endgame Whirling」で、所持ジェムと枠数に合うサポートを確認する。Late Endgameの5枠やFalling Thunder用の高Tierサポートが、マップ開始時に揃うとは扱わない。",
-        "passivePriority": "「Early Endgame Whirling」ツリーへ移行。アセンダンシーはWay of the Stonefistを含む現行ガイドを確認。",
+        "mainSkill": "キリングパーム（Killing Palm） → チャージドスタッフ（Charged Staff） → ワーリングアサルト → フォーリングサンダー。",
+        "supports": "原典の「Early Endgame Whirling」で、所持ジェムと枠数に合うサポートを確認する。Late Endgameの5枠やフォーリングサンダー（Falling Thunder）用の高Tierサポートが、マップ開始時に揃うとは扱わない。",
+        "passivePriority": "「Early Endgame Whirling」ツリーへ移行。アセンダンシーは石拳の道（Way of the Stonefist）を含む現行ガイドを確認。",
         "gearPriority": "まず耐性と防御を安定させ、次にクォータースタッフの火力、近接スキルレベル、クリティカル、攻撃速度を伸ばす。",
         "replaceGear": "耐性不足の防具、移動速度不足のブーツ、火力が停滞したクォータースタッフの順で確認。",
-        "caution": "マップ開始時はKilling Palmで最初のパワーチャージを作ってからCharged Staffを起動する。",
-        "transitionCondition": "Charged Staffを切らさず、ワーリングアサルト2回前後からフォーリングサンダーへつなげられる。",
+        "caution": "マップ開始時はキリングパーム（Killing Palm）で最初のパワーチャージを作ってからチャージドスタッフ（Charged Staff）を起動する。",
+        "transitionCondition": "チャージドスタッフ（Charged Staff）を切らさず、ワーリングアサルト2回前後からフォーリングサンダーへつなげられる。",
         "nowActions": [
-          "Killing Palmで最初のチャージを作る",
-          "Charged Staffを維持する",
+          "キリングパーム（Killing Palm）で最初のチャージを作る",
+          "チャージドスタッフ（Charged Staff）を維持する",
           "ワーリングアサルト後にフォーリングサンダーを使う"
         ]
       },
       {
         "label": "Early Endgame",
         "mainSkill": "ワーリングアサルトを周回主力、フォーリングサンダーをチャージ消費・単体火力として使用。",
-        "supports": "ワーリングアサルトはマナ状況でEfficiency IIとクリティカル系を切替。フォーリングサンダーは反射・範囲用サポートを段階的に追加。",
+        "supports": "ワーリングアサルトはマナ状況でコスト軽減 II（Efficiency II）とクリティカル系を切替。フォーリングサンダーは反射・範囲用サポートを段階的に追加。",
         "passivePriority": "Early Endgameツリーを完成させてからLate Endgameへ移る。パッシブの一括変更は避ける。",
         "gearPriority": "近接スキルレベル、クリティカル率、回避、最大ES、全体防御、足りない耐性。",
         "replaceGear": "防御が不安定なら火力装備より回避・ES・耐性を優先。",
-        "caution": "Hollow Focusなど別のチャージ手段もあるが、現行ガイドではCharged Staff方式を安定案としている。",
+        "caution": "ホロウフォーカス（Hollow Focus）など別のチャージ手段もあるが、現行ガイドではチャージドスタッフ（Charged Staff）方式を安定案としている。",
         "transitionCondition": "チャージ生成とマナ維持が安定し、Late Endgame用装備への更新目的が明確になる。",
         "nowActions": [
           "チャージが途切れる原因を確認する",
@@ -142,7 +142,7 @@
       {
         "label": "Endgame完成",
         "mainSkill": "ワーリングアサルト×2 → フォーリングサンダーを基本ローテーションとして反復。",
-        "supports": "完成候補：ワーリングアサルトにMagnified Area II、Elemental Armament II、Rage III、Ancestral Call II、Efficiency II。マナ問題がなければEfficiency IIをクリティカル系へ。",
+        "supports": "完成候補：ワーリングアサルトに効果範囲拡大 II（Magnified Area II）、元素武装 II（Elemental Armament II）、憤怒 III（Rage III）、アンセストラルコール II（Ancestral Call II）、コスト軽減 II（Efficiency II）。マナ問題がなければコスト軽減 II（Efficiency II）をクリティカル系へ。",
         "passivePriority": "Late Endgame Whirlingツリーを基準に、装備のクリティカル・回避・ES・耐性不足へ合わせて調整。",
         "gearPriority": "高性能クォータースタッフ、近接スキルレベル、クリティカル率/ダメージ、回避、ES、全体防御を順に比較。",
         "replaceGear": "価格ではなく、現在の不足項目と実際の出品性能を比較して1部位ずつ更新。",
@@ -296,7 +296,7 @@
     "leagueStarter": true,
     "ssf": null,
     "strengths": [
-      "Act 1で必要なジェムを入手後、Whirling SlashとTwisterの連携を主力にできる。",
+      "Act 1で必要なジェムを入手後、ワーリングスラッシュ（Whirling Slash）とツイスター（Twister）の連携を主力にできる。",
       "段階別の装備・スキル・パッシブ構成が公開されている。",
       "殲滅力が高いため、被弾すること自体がほとんどない（Maxroll）。"
     ],
@@ -310,7 +310,7 @@
       {
         "label": "Lv1〜10",
         "mainSkill": "ワーリングスラッシュ×3 → ツイスター",
-        "supports": "ワーリングスラッシュ：Rage、Rapid Attacks。ツイスター：Retreat、Elemental Armament。",
+        "supports": "ワーリングスラッシュ：憤怒（Rage）、アタックスピード増加（Rapid Attacks）。ツイスター：後退（Retreat）、元素武装（Elemental Armament）。",
         "passivePriority": "原典のCampaign Start段階別ツリーを使用。正確な取得ノードはリンク先ツリーで確認。",
         "gearPriority": "槍・手袋・指輪の追加ダメージ、ブーツの移動速度、ライフ、耐性。",
         "replaceGear": "追加ダメージが不足する槍を優先して更新。",
@@ -324,16 +324,16 @@
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "ワーリングスラッシュ → ツイスター。単体にはパリィ → Fangs of Frostも使用。",
-        "supports": "序盤のRage、Rapid Attacks、Retreat、Elemental Armamentを継続。War Bannerを最初のSpiritスキルとして追加。",
+        "mainSkill": "ワーリングスラッシュ → ツイスター。単体にはパリィ → ファングオブフロスト（Fangs of Frost）も使用。",
+        "supports": "序盤の憤怒（Rage）、アタックスピード増加（Rapid Attacks）、後退（Retreat）、元素武装（Elemental Armament）を継続。ウォーバナー（War Banner）を最初のSpiritスキルとして追加。",
         "passivePriority": "原典のEarly Campaign段階別ツリーへ進む。固有ノード名は原典ツリーで確認。",
         "gearPriority": "追加ダメージ付きの槍・手袋・指輪、移動速度付きブーツ、ライフと耐性。",
         "replaceGear": "武器の基礎性能が現在レベルから遅れている場合は槍を先に更新。",
-        "caution": "Fangs of Frostは通常周回の必須操作ではなく、強敵への補助として使う。",
-        "transitionCondition": "Lv21到達。War Bannerと単体用の補助操作を使い分けられる。",
+        "caution": "ファングオブフロスト（Fangs of Frost）は通常周回の必須操作ではなく、強敵への補助として使う。",
+        "transitionCondition": "Lv21到達。ウォーバナー（War Banner）と単体用の補助操作を使い分けられる。",
         "nowActions": [
-          "War Bannerを設定する",
-          "強敵にはFangs of Frostを加える",
+          "ウォーバナー（War Banner）を設定する",
+          "強敵にはファングオブフロスト（Fangs of Frost）を加える",
           "移動速度付きブーツを確保する"
         ]
       },
@@ -354,7 +354,7 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "ワーリングスラッシュ / Fangs of Frostは速度用、ツイスターは攻撃用セットで使用。",
+        "mainSkill": "ワーリングスラッシュ / ファングオブフロスト（Fangs of Frost）は速度用、ツイスターは攻撃用セットで使用。",
         "supports": "Late Campaignへ向けて既存サポートを維持。変更は原典の段階別構成を確認して1枠ずつ行う。",
         "passivePriority": "Campaign Progression後半の段階別ツリーを使用。装備条件を満たす能力値も確認。",
         "gearPriority": "攻撃用槍のダメージ、速度用槍の使いやすさ、ブーツ移動速度、ライフ、耐性。",
@@ -364,12 +364,12 @@
         "nowActions": [
           "武器セットの割当を確認する",
           "攻撃用槍を優先して更新する",
-          "ボス前にWar Bannerを準備する"
+          "ボス前にウォーバナー（War Banner）を準備する"
         ]
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "ワーリングスラッシュ×3 → ツイスター。強敵にはパリィ → Fangs of Frostを先に使用。",
+        "mainSkill": "ワーリングスラッシュ×3 → ツイスター。強敵にはパリィ → ファングオブフロスト（Fangs of Frost）を先に使用。",
         "supports": "原典のLate Campaign構成へ段階的に更新。名称を検証できない枠は原典表示を優先。",
         "passivePriority": "Late Campaign段階別ツリーを使用し、キャンペーン終了前に耐性と装備条件を整える。",
         "gearPriority": "攻撃用槍のダメージ、ライフ、属性耐性、移動速度。",
@@ -384,45 +384,45 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Early Atlasの掲載構成は、ワーリングスラッシュのジェムLv1を武器セット1、ツイスターのジェムLv16をセット2で使用。Barrage、Ice-Tipped Arrows、Sniper’s Mark、Combat Frenzy、Charge Regulation、Wind Dancer、Ghost Dance、Parryも掲載。",
-        "supports": "ワーリングスラッシュ：Rage III、Rapid Attacks III、Knockback、Blazing Critical。ツイスター：Prolonged Duration II、Projectile Acceleration III、Salvo、Pinpoint Critical。原典の掲載構成であり、マップ開始時の入手を保証しない。枠・所持ジェム・要求能力値を満たしてから採用する。",
-        "passivePriority": "Early Atlas段階別ツリーへ移る。キャンペーン用ツリーを一括で推測変更しない。",
+        "mainSkill": "Early アトラス（Atlas）の掲載構成は、ワーリングスラッシュのジェムLv1を武器セット1、ツイスターのジェムLv16をセット2で使用。バラージ（Barrage）、アイスティップアロー（Ice-Tipped Arrows）、スナイパーの呪印（Sniper’s Mark）、コンバットフレンジー（Combat Frenzy）、チャージレギュレーション（Charge Regulation）、ウィンドダンサー（Wind Dancer）、ゴーストダンス（Ghost Dance）、パリィ（Parry）も掲載。",
+        "supports": "ワーリングスラッシュ：憤怒 III（Rage III）、アタックスピード増加 III（Rapid Attacks III）、ノックバック（Knockback）、灼熱のクリティカル（Blazing Critical）。ツイスター：持続時間延長 II（Prolonged Duration II）、投射物加速 III（Projectile Acceleration III）、サルヴォ（Salvo）、クリティカル集中（Pinpoint Critical）。原典の掲載構成であり、マップ開始時の入手を保証しない。枠・所持ジェム・要求能力値を満たしてから採用する。",
+        "passivePriority": "Early アトラス（Atlas）段階別ツリーへ移る。キャンペーン用ツリーを一括で推測変更しない。",
         "gearPriority": "防具のライフ・耐性、ブーツ移動速度と攻撃用槍の追加ダメージを比較。速度用／攻撃用の武器セットを分け、移動と攻撃の不足を確認する。",
         "replaceGear": "マップで倒される場合は火力装備より不足耐性・ライフの部位を先に更新。",
-        "caution": "Early Atlasの掲載スキル一覧にはWar Banner・Fangs of Frostはない。原典の共通操作説明と段階固有の一覧を区別して参照する。危険床やボス動作を見失わない。",
+        "caution": "Early アトラス（Atlas）の掲載スキル一覧にはウォーバナー（War Banner）・ファングオブフロスト（Fangs of Frost）はない。原典の共通操作説明と段階固有の一覧を区別して参照する。危険床やボス動作を見失わない。",
         "transitionCondition": "低Tierマップを安定周回でき、強敵への操作順を再現できる。",
         "nowActions": [
-          "Early Atlasツリーへ移る",
+          "Early アトラス（Atlas）ツリーへ移る",
           "ライフと耐性を先に安定させる",
           "危険床が見える設定を優先する"
         ]
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "ツイスターを主力に、原典Early／Mid EndgameのSkill Gemsと操作順を同じ版で確認する。序盤のパリィ・Fangs of Frost・War Banner構成を自動的に完成形へ持ち越さない。",
+        "mainSkill": "ツイスターを主力に、原典Early／Mid EndgameのSkill Gemsと操作順を同じ版で確認する。序盤のパリィ・ファングオブフロスト（Fangs of Frost）・ウォーバナー（War Banner）構成を自動的に完成形へ持ち越さない。",
         "supports": "Atlas ProgressionからEarly Endgameの原典構成へ進む。変更前後のマナ消費を確認。",
-        "passivePriority": "Atlas Progression、Late Atlas、Early Endgameの順で段階別ツリーを追う。",
+        "passivePriority": "Atlas Progression、Late アトラス（Atlas）、Early Endgameの順で段階別ツリーを追う。",
         "gearPriority": "まずライフと耐性、次に攻撃用槍の追加ダメージと速度用槍・ブーツの移動速度を比較。原典のEarly／Mid Endgame装備タブで採用版と照合。",
         "replaceGear": "単体火力不足なら攻撃用槍、死亡が多いなら防具を優先。",
         "caution": "装備依存度が高いため、固定価格やDPSではなく不足項目で比較する。",
         "transitionCondition": "周回・単体・防御のどこがボトルネックか判断できる。",
         "nowActions": [
           "不足が火力か防御か切り分ける",
-          "原典のAtlas段階を順番に追う",
+          "原典のアトラス（Atlas）段階を順番に追う",
           "装備を1部位ずつ比較する"
         ]
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "原典Endgameの基本順：Sniper's Mark → ワーリングスラッシュを3回以上 → Ice-Tipped ArrowsとBarrage → ツイスター。バックラー採用時は攻撃前のパリィを追加候補にする。",
+        "mainSkill": "原典Endgameの基本順：スナイパーの呪印（Sniper's Mark） → ワーリングスラッシュを3回以上 → アイスティップアロー（Ice-Tipped Arrows）とバラージ（Barrage） → ツイスター。バックラー採用時は攻撃前のパリィを追加候補にする。",
         "supports": "Mid EndgameからLate Endgameの原典構成を基準に、装備とマナに合わせて調整。",
         "passivePriority": "Mid Endgame、Late Endgame段階別ツリーを順に完成。正確なノード名は原典を確認。",
         "gearPriority": "①防具のライフ・耐性、②攻撃用槍・手袋・指輪の追加ダメージ、③速度用槍とブーツの移動速度を不足に応じて比較。高投資版固有の装備条件は原典Late Endgameで確認。",
         "replaceGear": "死亡が多ければ防具のライフ・耐性、火力不足なら攻撃用槍と追加ダメージ付きの手袋・指輪、移動が遅ければ速度用セットとブーツから比較する。",
-        "caution": "原典は2026-10-03にLate Endgameのサポートと胴防具のAugmentを更新し、必要Spiritが増えたと記載。必要総量は採用する最新版の全スキルで確認する。序盤のFangs of Frost・War Banner構成を完成形へそのまま流用しない。",
+        "caution": "原典は2026-10-03にLate Endgameのサポートと胴防具のAugmentを更新し、必要Spiritが増えたと記載。必要総量は採用する最新版の全スキルで確認する。序盤のファングオブフロスト（Fangs of Frost）・ウォーバナー（War Banner）構成を完成形へそのまま流用しない。",
         "transitionCondition": "完成後は火力・防御・操作性の不足を1項目ずつ改善する。",
         "nowActions": [
-          "Sniper's MarkからBarrage・ツイスターまでの順番を確認する",
+          "スナイパーの呪印（Sniper's Mark）からバラージ（Barrage）・ツイスターまでの順番を確認する",
           "Late Endgame版のサポートと胴防具・必要Spiritを一緒に照合する",
           "不足する能力値と防御を維持して1部位ずつ更新する"
         ]
@@ -435,7 +435,7 @@
       "武器セット1（移動用）：攻撃速度を重視し、ワーリングスラッシュでの立ち回りを優先する。",
       "武器セット2（火力用）：基礎ダメージを重視し、ツイスターの威力を伸ばす。",
       "防御はライフに加えてエヴェージョン（回避）も確保する。",
-      "ユニーク「The Taming」はアミュレットではなくPrismatic Ring（指輪）。採用時は指輪枠の耐性・能力値との交換条件を確認する。入手順位は採用する原典の段階に従い、SSFでの入手を保証しない。"
+      "ユニーク「テイミング（The Taming）」はアミュレットではなくプリズムの指輪（Prismatic Ring）（指輪）。採用時は指輪枠の耐性・能力値との交換条件を確認する。入手順位は採用する原典の段階に従い、SSFでの入手を保証しない。"
     ],
     "sources": [
       {
@@ -574,14 +574,14 @@
     "weaknesses": [
       "シールドウォールのTier 7・ジェムLv7版はキャラクターLv22・筋力41・アーマーを持つ盾が必要。原典ではAct 2・Lv22から、ジェムと盾の条件を満たして切り替える。",
       "高額装備帯では他構成ほど火力と周回が伸びないと原典で説明されている。",
-      "0.5でFortifying Cryの仕様が変わり、Act 3以降の単体火力が最悪の場合30%下がる（Kami-labs）。",
-      "Act 1のローリングスラム→ボーンシャッターはアニメーションキャンセルの練習が必要。Lv14のPerfect Strikeはタイミングを外すとダメージが出ない（Kami-labs）。"
+      "0.5でフォティファイイングクライ（Fortifying Cry）の仕様が変わり、Act 3以降の単体火力が最悪の場合30%下がる（Kami-labs）。",
+      "Act 1のローリングスラム→ボーンシャッターはアニメーションキャンセルの練習が必要。Lv14のパーフェクトストライク（Perfect Strike）はタイミングを外すとダメージが出ない（Kami-labs）。"
     ],
     "levelingStages": [
       {
         "label": "Lv1〜10",
         "mainSkill": "ローリングスラム + ボーンシャッター",
-        "supports": "ローリングスラム：Rapid Attacks。Brinkはスタン蓄積が不足する場合の任意枠。ボーンシャッター：Impact Shockwave、Magnified Area。",
+        "supports": "ローリングスラム：アタックスピード増加（Rapid Attacks）。スタン狙い（Brink）はスタン蓄積が不足する場合の任意枠。ボーンシャッター：インパクトショックウェーブ（Impact Shockwave）、効果範囲拡大（Magnified Area）。",
         "passivePriority": "原典のAct 1段階別ツリーを使用。正確な取得ノードはリンク先で確認。",
         "gearPriority": "メイスと防具を現在レベルに合わせ、ライフと耐性を優先。",
         "replaceGear": "スタン蓄積や火力が不足する場合はメイスを更新。",
@@ -595,23 +595,23 @@
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "ローリングスラム + ボーンシャッター。Lv14から単体用Perfect Strikeを追加。",
-        "supports": "Perfect Strike：Window of Opportunity、Concentrated Area。Herald of Ash：Magnified Area。",
+        "mainSkill": "ローリングスラム + ボーンシャッター。Lv14から単体用パーフェクトストライク（Perfect Strike）を追加。",
+        "supports": "パーフェクトストライク（Perfect Strike）：好機の幅（Window of Opportunity）、効果範囲集中（Concentrated Area）。ヘラルドオブアッシュ（Herald of Ash）：効果範囲拡大（Magnified Area）。",
         "passivePriority": "原典のAct 2 - Pre Level 22段階別ツリーを使用。",
         "gearPriority": "メイスの火力、アーマー、ライフ、耐性、移動速度。",
-        "replaceGear": "Perfect Strikeを追加しても単体火力が不足する場合はメイスを先に確認。",
+        "replaceGear": "パーフェクトストライク（Perfect Strike）を追加しても単体火力が不足する場合はメイスを先に確認。",
         "caution": "シールドウォールはLv22から。先に現在の主力を外さない。",
         "transitionCondition": "Lv21到達。Lv22切替用の高アーマー盾を探し始めている。",
         "nowActions": [
-          "Lv14でPerfect Strikeを追加する",
-          "単体戦でPerfect Strikeを使う",
+          "Lv14でパーフェクトストライク（Perfect Strike）を追加する",
+          "単体戦でパーフェクトストライク（Perfect Strike）を使う",
           "Lv22用の高アーマー盾を探す"
         ]
       },
       {
         "label": "Lv21〜30",
         "mainSkill": "Lv22からシールドウォールへ切替。",
-        "supports": "Lv22まではローリングスラム＋ボーンシャッター（単体はPerfect Strike）を維持。Act 2 - Shield Wall Swapでは、シールドウォール：Rapid Attacks I、Magnified Area I、Fire Attunement。Infernal Cry：Tireless、Raging Cry。Freezing Mark：Mark for Death、Mark of Siphoning。",
+        "supports": "Lv22まではローリングスラム＋ボーンシャッター（単体はパーフェクトストライク（Perfect Strike））を維持。Act 2 - Shield Wall Swapでは、シールドウォール：アタックスピード増加 I（Rapid Attacks I）、効果範囲拡大 I（Magnified Area I）、ファイヤーアチューンメント（Fire Attunement）。インファーナルクライ（Infernal Cry）：持続のウォークライ（Tireless）、憤怒のクライ（Raging Cry）。凍結の呪印（Freezing Mark）：死の呪印（Mark for Death）、吸収の呪印（Mark of Siphoning）。",
         "supportSourceStage": "Act 2 - Shield Wall Swap",
         "passivePriority": "原典のAct 2 - Shield Wall Swap段階別ツリーへ移行。",
         "gearPriority": "作者はLv22・盾アーマー80以上を切替の目安としている。ゲームの使用条件や実測保証ではない。防具はライフと耐性も確認する。",
@@ -626,13 +626,13 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "シールドウォールを主力として継続。原典は最初のLv9以上ジェムでFortifying Cry、次にSunderを追加する案を掲載。",
-        "supports": "Act 3ではシールドウォールのMagnified AreaをIIへ更新。Fortifying Cry：Raging Cry、Fire Attunement、Close Combat I。Sunder：Prolonged Duration II、Rapid Attacks I。所持ジェム・枠・要求能力値を確認する。",
+        "mainSkill": "シールドウォールを主力として継続。原典は最初のLv9以上ジェムでフォティファイイングクライ（Fortifying Cry）、次にサンダー（Sunder）を追加する案を掲載。",
+        "supports": "Act 3ではシールドウォールの効果範囲拡大（Magnified Area）をIIへ更新。フォティファイイングクライ（Fortifying Cry）：憤怒のクライ（Raging Cry）、ファイヤーアチューンメント（Fire Attunement）、近距離戦闘 I（Close Combat I）。サンダー（Sunder）：持続時間延長 II（Prolonged Duration II）、アタックスピード増加 I（Rapid Attacks I）。所持ジェム・枠・要求能力値を確認する。",
         "supportSourceStage": "Act 3",
         "passivePriority": "原典のAct 3段階別ツリーを使用。Smithの防御効果と装備要求を優先。",
         "gearPriority": "盾のアーマー、胴装備の防御、ライフ、不足耐性、移動速度。",
         "replaceGear": "火力と壁の性能に直結する盾を先に比較し、防御不足なら胴装備を更新。",
-        "caution": "主力の性能が盾に強く依存するため、武器だけを更新し続けない。原典はスキル枠不足時にLeap Slamを一時的に外す案を掲載。",
+        "caution": "主力の性能が盾に強く依存するため、武器だけを更新し続けない。原典はスキル枠不足時にリープスラム（Leap Slam）を一時的に外す案を掲載。",
         "transitionCondition": "Lv41到達。通常敵とボスで壁の置き方を使い分けられる。",
         "nowActions": [
           "盾のアーマー値を比較する",
@@ -697,12 +697,12 @@
       {
         "label": "Endgame完成",
         "mainSkill": "シールドウォールを主力とし、地形・敵サイズに合わせて設置と起爆を反復。",
-        "supports": "原典「Skill Gems」→「Giga Endgame」で完成形のサポートを確認。Avatar of Fire版へ変更する場合は別原典のスキル・装備・ツリーをまとめて照合する。段階固有のサポート名は未確認。",
+        "supports": "原典「Skill Gems」→「Giga Endgame」で完成形のサポートを確認。アバターオブファイヤー（Avatar of Fire）版へ変更する場合は別原典のスキル・装備・ツリーをまとめて照合する。段階固有のサポート名は未確認。",
         "supportSourceStage": "Giga Endgame（Avatar of Fire版は別原典）",
-        "passivePriority": "Giga Endgame段階別ツリーを基準にする。Avatar of Fire版への変更は原典の装備前提を確認後に行う。",
+        "passivePriority": "Giga Endgame段階別ツリーを基準にする。アバターオブファイヤー（Avatar of Fire）版への変更は原典の装備前提を確認後に行う。",
         "gearPriority": "高性能盾、アーマー、防御、ライフ、耐性を不足順で更新。",
         "replaceGear": "固定価格を使わず、現在の盾・防具と同条件出品の性能差で判断。",
-        "caution": "Avatar of Fire版は自動的な上位互換ではない。装備とツリーを部分的に混ぜない。",
+        "caution": "アバターオブファイヤー（Avatar of Fire）版は自動的な上位互換ではない。装備とツリーを部分的に混ぜない。",
         "transitionCondition": "完成後は盾、防御、操作のボトルネックを1項目ずつ改善する。",
         "nowActions": [
           "完成形を1種類に決める",
@@ -714,9 +714,9 @@
     "gearPriorities": [
       "盾（最重要）：アーマー値とアーマー増加%。シールドウォールは盾のアーマー15ごとに物理ダメージ5〜7が加算されるため、火力も盾で決まる（poe2db。0.5.0で6〜8から変更）。使用にはアーマー系の盾が必要。",
       "Lv22の切替時：アーマー値の高い盾を先に用意しておく。",
-      "耐性：Coal Stokerを取得する構成なら、火耐性の修正値の50%が冷気・雷耐性にも加わる（PoE2DBの現行効果文）。実際の取得ノードは原典の段階別ツリーで確認し、未取得ならこの効果を前提に装備を組まない。",
+      "耐性：石炭係（Coal Stoker）を取得する構成なら、火耐性の修正値の50%が冷気・雷耐性にも加わる（PoE2DBの現行効果文）。実際の取得ノードは原典の段階別ツリーで確認し、未取得ならこの効果を前提に装備を組まない。",
       "必要な耐性を確保できた後なら、余った接尾辞を火力やアイテムレアリティに回せる（Maxroll・Kami-labs）。",
-      "マップ序盤：ユニーク「Thrillsteel」で常時Onslaught（加速）を得て周回を速くする案がある（Kami-labs）。",
+      "マップ序盤：ユニーク「スリルスティール（Thrillsteel）」で常時Onslaught（加速）を得て周回を速くする案がある（Kami-labs）。",
       "防具：ライフと不足耐性。現在レベルに合う防具を使う。"
     ],
     "sources": [
@@ -875,7 +875,7 @@
         },
         {
           "question": "ボス戦でSunderを使うタイミングは？",
-          "answer": "原典はアーマーブレイク後にSunderを使う手順を案内しています。未取得なら完成形をそのまま真似せず、現在段階の構成を確認します。Fortifying Cryも取得後に加える補助です。",
+          "answer": "原典はアーマーブレイク後にサンダー（Sunder）を使う手順を案内しています。未取得なら完成形をそのまま真似せず、現在段階の構成を確認します。フォティファイイングクライ（Fortifying Cry）も取得後に加える補助です。",
           "stageIndex": 3,
           "sourceIndex": 0,
           "where": "How it Plays → Against bosses"
@@ -920,22 +920,22 @@
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "Lv1〜5：Entangle + Contagion。Lv6以降：Essence Drain + Contagion。",
-        "supports": "Contagion：Unleash、Magnified Area。Essence Drain：Chain、Swift Affliction。",
+        "mainSkill": "Lv1〜5：エンタングル（Entangle） + コンテージョン（Contagion）。Lv6以降：エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）。",
+        "supports": "コンテージョン（Contagion）：アンリーシュ（Unleash）、効果範囲拡大（Magnified Area）。エッセンスドレイン（Essence Drain）：連鎖（Chain）、スウィフトアフリクション（Swift Affliction）。",
         "passivePriority": "原典のAct 1段階別ツリーを使用。正確な取得ノードはリンク先で確認。",
         "gearPriority": "キャンペーン中はアーマー、ライフ、不足耐性を優先。",
         "replaceGear": "防御が不足する防具を更新。",
-        "caution": "Frost BombとVolcanoを補助に使用。Raging SpiritsはTier 4のSpiritジェムと予約用Spiritを確保してから追加する。ジェムLv4版にはキャラクターLv10・知性21、基礎予約30 Spiritが必要で、Lv6到達だけでは追加できない。",
-        "transitionCondition": "Lv11到達。Essence DrainとContagionの連携が安定している。",
+        "caution": "フロストボム（Frost Bomb）とボルケーノ（Volcano）を補助に使用。レイジングスピリット（Raging Spirits）はTier 4のSpiritジェムと予約用Spiritを確保してから追加する。ジェムLv4版にはキャラクターLv10・知性21、基礎予約30 Spiritが必要で、Lv6到達だけでは追加できない。",
+        "transitionCondition": "Lv11到達。エッセンスドレイン（Essence Drain）とコンテージョン（Contagion）の連携が安定している。",
         "nowActions": [
-          "Lv6でEssence Drainへ移行する",
-          "Frost BombでExposureを付ける",
+          "Lv6でエッセンスドレイン（Essence Drain）へ移行する",
+          "フロストボム（Frost Bomb）でExposureを付ける",
           "アーマーと耐性を確認する"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Essence Drain + Contagion。Frost Bomb、Volcano、Raging Spiritsを補助に使用。",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）。フロストボム（Frost Bomb）、ボルケーノ（Volcano）、レイジングスピリット（Raging Spirits）を補助に使用。",
         "supports": "序盤サポートを継続し、原典のAct 2構成へ進む。未確認枠は原典で確認。",
         "passivePriority": "最初のアセンダンシーまでは原典のスペル育成ツリーを継続。",
         "gearPriority": "アーマー、ライフ、不足耐性。構成切替用の能力値とゴールドも確保。",
@@ -943,7 +943,7 @@
         "caution": "Lv22前後でミニオン型へ切り替えるため、スペル用ツリーを完成形と思わない。",
         "transitionCondition": "最初のアセンダンシーへ進め、切替用ゴールドを残している。",
         "nowActions": [
-          "Essence DrainとContagionを継続する",
+          "エッセンスドレイン（Essence Drain）とコンテージョン（Contagion）を継続する",
           "最初のアセンダンシーを進める",
           "振り直し用ゴールドを残す"
         ]
@@ -951,7 +951,7 @@
       {
         "label": "Lv21〜30",
         "mainSkill": "最初のアセンダンシー後、ケラリの幻惑 + ケラリの残虐へ切替。",
-        "supports": "範囲はMagnified Area II、単体はConcentrated Areaを切替候補にする。",
+        "supports": "範囲は効果範囲拡大 II（Magnified Area II）、単体は効果範囲集中（Concentrated Area）を切替候補にする。",
         "passivePriority": "最初のアセンダンシー後にスペル系からミニオン系の段階別ツリーへ振り直す。",
         "gearPriority": "アーマーを保ちつつ、ミニオン系の必要能力と防御を確認。",
         "replaceGear": "構成切替に合わないスペル専用装備を1部位ずつ見直す。",
@@ -966,14 +966,14 @@
       {
         "label": "Lv31〜40",
         "mainSkill": "ケラリの幻惑 + ケラリの残虐。Lv40以降はルザンの罠を追加。",
-        "supports": "Lv36でMusterを追加候補。ルザン用サポートは切替時に原典を確認。",
+        "supports": "Lv36で招集（Muster）を追加候補。ルザン用サポートは切替時に原典を確認。",
         "passivePriority": "原典のAct 3〜Act 4段階別ツリーを継続。",
         "gearPriority": "アーマー、ライフ、耐性、必要能力値。",
         "replaceGear": "ルザン追加に必要な条件を満たさない部位を更新。",
         "caution": "ルザンの罠はLv40以降。先に既存の処理手段を外さない。",
         "transitionCondition": "Lv40到達。ルザンの罠を戦闘開始時に使える。",
         "nowActions": [
-          "Lv36でMusterを確認する",
+          "Lv36で招集（Muster）を確認する",
           "Lv40用のルザンを準備する",
           "指示スキルのクールダウンを意識する"
         ]
@@ -996,7 +996,7 @@
       {
         "label": "Mapping開始",
         "mainSkill": "ルザンの罠 + ケラリの指示。マッピング用Spectreは条件を満たした場合のみ追加。",
-        "supports": "ケラリ：Bidding II、Muster、Hulking Minionsを軸に、残りは原典の現行構成を確認。ルザンも原典のMapping構成へ。",
+        "supports": "ケラリ：命令 II（Bidding II）、招集（Muster）、ミニオン巨大化（Hulking Minions）を軸に、残りは原典の現行構成を確認。ルザンも原典のMapping構成へ。",
         "passivePriority": "Mapping開始用のミニオン・防御ツリーへ移行。装備が揃う前に完成形へ一括変更しない。",
         "gearPriority": "まず耐性と防御。次にミニオンのジェムレベル、ダメージ、攻撃速度。",
         "replaceGear": "マップで倒される場合は防具、処理が遅い場合はミニオンに有効な装備を確認。",
@@ -1010,8 +1010,8 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "ルザンの罠を軸にケラリの指示を重ね、Bind Spectreを周回補助として運用。",
-        "supports": "ケラリはBidding II、Muster、Hulking Minionsなど、ルザンはBidding III、Muster、Long Fuse II、Hulking Minions、Magnified Area IIが原典候補。",
+        "mainSkill": "ルザンの罠を軸にケラリの指示を重ね、バインドスペクター（Bind Spectre）を周回補助として運用。",
+        "supports": "ケラリは命令 II（Bidding II）、招集（Muster）、ミニオン巨大化（Hulking Minions）など、ルザンは命令 III（Bidding III）、招集（Muster）、遅延起爆 II（Long Fuse II）、ミニオン巨大化（Hulking Minions）、効果範囲拡大 II（Magnified Area II）が原典候補。",
         "passivePriority": "Endgameのミニオン・ES段階へ進む。防御切替は装備が揃ってから行う。",
         "gearPriority": "最大ES、Focus由来ES、ミニオンのクリティカル・ダメージ、リチャージ、耐性。",
         "replaceGear": "アーマー育成装備からES装備へ一括で変えず、耐性と実防御を維持して1部位ずつ更新。",
@@ -1045,7 +1045,7 @@
       "防具：キャンペーン中はアーマー・ライフ・不足耐性（元ガイド）。PoE VaultはES重視、MaxrollのEndgame構成はES・ESの回復・ブロック率を積む。ESへの移行は原典の段階に合わせる。",
       "耐性：ルーンは耐性上限の維持を最優先（PoE Vault）。",
       "Act 4以降：Spirit、ES、+ミニオンスキルレベルの3つを探す（PoE Vault）。ブーツは移動速度。",
-      "ユニークは必須ではない（Maxroll）。Enfolding Dawn（Runeforgeで強化するのが最良）とBones of Ullrが有用。防御ではLv36のSoul MantleやLv51のWaveshaperも候補（Maxroll）。",
+      "ユニークは必須ではない（Maxroll）。包み込む夜明け（Enfolding Dawn）（Runeforgeで強化するのが最良）とウルルの骨（Bones of Ullr）が有用。防御ではLv36の魂の外套（Soul Mantle）やLv51のWaveshaperも候補（Maxroll）。",
       "構成切替用の必要能力値。"
     ],
     "sources": [
@@ -1206,7 +1206,7 @@
       "操作が簡単：Maxroll（0.5.5）は「ミニオンに任せて見ていられる、とてもシンプルな操作」と紹介している。",
       "相棒が敵の注意を引き攻撃を受け止めるため、自分は位置取りと安全確保に集中できる（PoE Vault）。",
       "Maxroll（0.5.5）はユニークアイテムなしで成立すると明記している。ただし「SSF対応」とは明言しておらず、マップでビーストの能力を確認するためにMarketplaceのホットキーで一時停止する方法はSSFでは使えないと注記している。",
-      "Odealo（0.5.0）はPROSに「操作が楽」「火力が高い」「生存力が高い」を挙げ、Act 3のMighty Silverfistがボス戦の火力不足を解決すると説明している。"
+      "Odealo（0.5.0）はPROSに「操作が楽」「火力が高い」「生存力が高い」を挙げ、Act 3のマイティ・シルバーフィスト（Mighty Silverfist）がボス戦の火力不足を解決すると説明している。"
     ],
     "weaknesses": [
       "テイムビーストはTier 7ジェムのため序盤は使えず、相棒型への切替はAct 3・2回目の試練後が推奨されている。",
@@ -1220,7 +1220,7 @@
       {
         "label": "Lv1〜10",
         "mainSkill": "ツイスター + ワーリングスラッシュ",
-        "supports": "ワーリングスラッシュ：Rage、Rapid Attacks。ツイスター：Retreat、Chilling Ice。",
+        "supports": "ワーリングスラッシュ：憤怒（Rage）、アタックスピード増加（Rapid Attacks）。ツイスター：後退（Retreat）、Chilling Ice。",
         "passivePriority": "相棒型へ早く寄せず、原典のAct 1段階別ツリーを使用。",
         "gearPriority": "槍・手袋・指輪の追加ダメージ、ライフ、耐性。",
         "replaceGear": "追加ダメージの低い槍を優先して更新。",
@@ -1249,12 +1249,12 @@
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Act 3で2回目の試練を終えるまではツイスター＋ワーリングスラッシュ。Tame Beastのレベル7ジェムと再振り分けの準備後、Act 3 SWAPへ移行。候補はAct 3のMighty Silverfist。",
+        "mainSkill": "Act 3で2回目の試練を終えるまではツイスター＋ワーリングスラッシュ。テイムビースト（Tame Beast）のレベル7ジェムと再振り分けの準備後、Act 3 SWAPへ移行。候補はAct 3のマイティ・シルバーフィスト（Mighty Silverfist）。",
         "supports": "相棒用サポートは原典のAct 3 SWAP段階を確認。安全に抽出できない名称は断定しない。",
         "passivePriority": "2回目の試練後、原典のAct 3 SWAP段階別ツリーへまとめて振り直す。",
         "gearPriority": "相棒ダメージ、ミニオンスキルレベル、ライフ、回避・ディフレクション、耐性。",
         "replaceGear": "切替後に槍中心の装備から相棒向け装備へ段階的に更新。",
-        "caution": "原典はAct 3・2回目の試練後の切替を推奨。Lvだけで切り替えず、Tame Beastのレベル7ジェムとパッシブ再振り分け用の資金を確認する。",
+        "caution": "原典はAct 3・2回目の試練後の切替を推奨。Lvだけで切り替えず、テイムビースト（Tame Beast）のレベル7ジェムとパッシブ再振り分け用の資金を確認する。",
         "transitionCondition": "Tier 7ジェム、2回目の試練、振り直し資金が揃う。",
         "nowActions": [
           "2回目の試練を終える",
@@ -1264,7 +1264,7 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "原典が単体火力の候補に挙げるAct 3のJungle RuinsにいるMighty Silverfistなど、取得できた固有相棒を主力にする。他の固有相棒でも進行できると原典は説明する。",
+        "mainSkill": "原典が単体火力の候補に挙げるAct 3のジャングルの遺跡（Jungle Ruins）にいるマイティ・シルバーフィスト（Mighty Silverfist）など、取得できた固有相棒を主力にする。他の固有相棒でも進行できると原典は説明する。",
         "supports": "原典のSkill Gems → Act 3 SWAPで選んだ相棒の構成を確認。槍育成のサポートをそのまま相棒用に流用しない。",
         "passivePriority": "Act 3 SWAP後の相棒用段階別ツリーを使用。",
         "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ライフ、回避、耐性。",
@@ -1294,12 +1294,12 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "取得済みの固有相棒を主力にする。単体を重視するならMighty Silverfistが原典の候補。マップではAIと通路での動きも確認する。",
+        "mainSkill": "取得済みの固有相棒を主力にする。単体を重視するならマイティ・シルバーフィスト（Mighty Silverfist）が原典の候補。マップではAIと通路での動きも確認する。",
         "supports": "原典のRed Maps前段階へ進む。相棒固有サポートはテイム対象と現行ガイドを照合。",
         "passivePriority": "マップ開始用の相棒・防御ツリーへ移る。",
         "gearPriority": "属性・混沌耐性、ライフ、回避・ディフレクション、相棒ダメージ、ミニオンのジェムレベル。",
         "replaceGear": "低Tierマップで倒されるなら防具、処理が遅いなら相棒に有効な装備を確認。",
-        "caution": "相棒の種類と付与効果を確認する。原典は単体向けにMighty Silverfist、希少な個体の例としてTemporal Bubbleなど防御効果を持つPlague Harvesterを挙げる。後者の効果は固定ではなく個体ごとに確認。",
+        "caution": "相棒の種類と付与効果を確認する。原典は単体向けにマイティ・シルバーフィスト（Mighty Silverfist）、希少な個体の例としてTemporal Bubbleなど防御効果を持つPlague Harvesterを挙げる。後者の効果は固定ではなく個体ごとに確認。",
         "transitionCondition": "低Tierマップで相棒の生存と自身の防御が安定する。",
         "nowActions": [
           "属性と混沌耐性を確認する",
@@ -1309,7 +1309,7 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "単体を重視するなら原典のMighty Silverfist。別の固有相棒も成立するため、実際の入手状況とAIの扱いやすさで選ぶ。",
+        "mainSkill": "単体を重視するなら原典のマイティ・シルバーフィスト（Mighty Silverfist）。別の固有相棒も成立するため、実際の入手状況とAIの扱いやすさで選ぶ。",
         "supports": "Red MapsからEndgame段階別構成へ進む。テイム対象に合わないサポートを混在させない。",
         "passivePriority": "Red Maps、Endgameの順に段階別ツリーを追う。",
         "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ES、回避、防御、耐性。",
@@ -1324,12 +1324,12 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "原典Endgame版では単体向けにMighty Silverfistを候補とする。Zoo版など別構成では採用した相棒に合わせて補助・防御・位置取りを整える。",
+        "mainSkill": "原典Endgame版では単体向けにマイティ・シルバーフィスト（Mighty Silverfist）を候補とする。Zoo版など別構成では採用した相棒に合わせて補助・防御・位置取りを整える。",
         "supports": "EndgameまたはZoo段階の原典構成を選び、テイム対象と装備前提に合わせる。",
         "passivePriority": "EndgameとZooを混ぜず、選んだ段階別ツリーを基準に不足防御を調整。",
         "gearPriority": "相棒ダメージ、ミニオン攻撃速度、ミニオンのジェムレベル、ES、回避・ディフレクション、耐性。",
         "replaceGear": "固定相場やDPSを使わず、自身と相棒の不足へ効果がある部位だけ更新。",
-        "caution": "Mighty Silverfistを全場面の唯一の正解とは扱わない。相棒のボディブロックとAIは残る弱点。単体火力と周回時の扱いやすさを別に確認する。",
+        "caution": "マイティ・シルバーフィスト（Mighty Silverfist）を全場面の唯一の正解とは扱わない。相棒のボディブロックとAIは残る弱点。単体火力と周回時の扱いやすさを別に確認する。",
         "transitionCondition": "完成後は相棒火力、自身の防御、AI対策を1項目ずつ改善する。",
         "nowActions": [
           "EndgameかZooの方針を決める",
@@ -1345,8 +1345,8 @@
       "盾・胴・手袋・ブーツ：最大ライフと耐性。PoE VaultのEndgame版は回避ベースで、手袋・ブーツに「回避の一部をディフレクションとして得る」を狙う。",
       "ブーツ：移動速度。",
       "マップ開始時：元素耐性75%を確保（混沌耐性はあれば良い）。装備を替えるときも耐性上限と必要能力値を割らない（Maxroll・PoE Vault）。",
-      "Endgameのメインハンド：アセンダンシー「The Catha's Balance」でメインハンド武器のダメージが相棒に加わるため、ユニーク「Tyranny's Grip」（耐久寄りならTrenchtimbre）をVerisium Anvilで強化して使う。ユニークなしでも成立する（Maxroll 0.5.5）。",
-      "指輪・ベルト：Breachクラフトのミニオン系Modも有効だが、先に必要能力値と耐性を満たす（PoE Vault）。"
+      "Endgameのメインハンド：アセンダンシー「キャサのバランス（The Catha's Balance）」でメインハンド武器のダメージが相棒に加わるため、ユニーク「圧政の手（Tyranny's Grip）」（耐久寄りならトレンチティンバー（Trenchtimbre））をヴェリシウムの金床（Verisium Anvil）で強化して使う。ユニークなしでも成立する（Maxroll 0.5.5）。",
+      "指輪・ベルト：ブリーチ（Breach）クラフトのミニオン系Modも有効だが、先に必要能力値と耐性を満たす（PoE Vault）。"
     ],
     "sources": [
       {
@@ -1508,13 +1508,13 @@
       "アイスショットはLv31まで解禁されないため、序盤はライトニングアローとライトニングロッドを使う。",
       "後半の防御やクリティカル移行は装備依存で、完成形へ早く切り替えると不安定になりやすい。",
       "単体戦ではスナイプの溜めとマナ管理が必要になる。",
-      "対ボス用のスナイプは離すタイミングに慣れが必要（Maxroll「Snipe can be tricky」・Gamerch）。"
+      "対ボス用のスナイプは離すタイミングに慣れが必要（Maxroll「スナイプ（Snipe） can be tricky」・Gamerch）。"
     ],
     "levelingStages": [
       {
         "label": "Lv1〜10",
         "mainSkill": "ライトニングアロー + ライトニングロッド",
-        "supports": "ライトニングアロー：Rapid Attacks I → Elemental Armament I。ライトニングロッド：Concentrated Area。",
+        "supports": "ライトニングアロー：アタックスピード増加 I（Rapid Attacks I） → 元素武装 I（Elemental Armament I）。ライトニングロッド：効果範囲集中（Concentrated Area）。",
         "passivePriority": "原典のlvl 1-14段階別ツリーを使用。正確なノード名はリンク先ツリーで確認。",
         "gearPriority": "弓と矢筒の追加アタックダメージ、ライフ、耐性、移動速度。",
         "replaceGear": "火力が止まった弓と、移動速度のないブーツを優先して見直す。",
@@ -1543,8 +1543,8 @@
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Lv23まではライトニングアロー＋ライトニングロッド。原典のlvl 24-30ではライトニングアローを継続し、Freezing Mark・Freezing Salvo・Ice-Tipped Arrowsなどを追加する。",
-        "supports": "原典は切替用にLv7スキルジェム1個、Lv5または6を2個、サポート4〜5個を案内。Lv7はFreezing Markを優先し、次のLv7でスナイプを追加。スナイプ：Concentrated Area、Window of Opportunity I、Elemental Armament II。",
+        "mainSkill": "Lv23まではライトニングアロー＋ライトニングロッド。原典のlvl 24-30ではライトニングアローを継続し、凍結の呪印（Freezing Mark）・フリージングサルヴォ（Freezing Salvo）・アイスティップアロー（Ice-Tipped Arrows）などを追加する。",
+        "supports": "原典は切替用にLv7スキルジェム1個、Lv5または6を2個、サポート4〜5個を案内。Lv7は凍結の呪印（Freezing Mark）を優先し、次のLv7でスナイプを追加。スナイプ：効果範囲集中（Concentrated Area）、好機の幅 I（Window of Opportunity I）、元素武装 II（Elemental Armament II）。",
         "passivePriority": "lvl 24-30段階別ツリーを使用し、Lv31の切替地点へ接続。",
         "gearPriority": "弓、矢筒、ライフ、耐性、移動速度。必要な知性も確認。",
         "replaceGear": "Lv31切替後も使える防具を優先し、短期間だけの装備へ過剰投資しない。",
@@ -1552,18 +1552,18 @@
         "transitionCondition": "Lv31到達。アイスショットと切替後のサポートを用意できる。",
         "nowActions": [
           "切替用のLv7ジェム1個とLv5または6ジェム2個を残す",
-          "Freezing Markを優先し、次のLv7でスナイプを追加する",
-          "Lv31用Ice ShotとHerald of Iceの条件を準備する"
+          "凍結の呪印（Freezing Mark）を優先し、次のLv7でスナイプを追加する",
+          "Lv31用アイスショット（Ice Shot）とヘラルドオブアイス（Herald of Ice）の条件を準備する"
         ]
       },
       {
         "label": "Lv31〜40",
         "mainSkill": "アイスショットへ切替。単体にはスナイプを使用",
-        "supports": "原典のlvl 31-41では、アイスショットにRapid Attacks I、Elemental Armament II、Ice Bite Iを掲載。Herald of ThunderをHerald of Iceへ交換する。所持ジェム・Spirit・能力値を確認して移行する。",
+        "supports": "原典のlvl 31-41では、アイスショットにアタックスピード増加 I（Rapid Attacks I）、元素武装 II（Elemental Armament II）、アイスバイト I（Ice Bite I）を掲載。ヘラルドオブサンダー（Herald of Thunder）をヘラルドオブアイス（Herald of Ice）へ交換する。所持ジェム・Spirit・能力値を確認して移行する。",
         "passivePriority": "lvl 31-41段階別ツリーへ移る。完成ツリーへ一括変更しない。",
         "gearPriority": "冷気または物理の追加アタックダメージ、弓DPS、矢筒、ライフ、耐性。",
         "replaceGear": "切替後に通常敵を処理できない場合は、サポートより先に弓と矢筒を比較する。",
-        "caution": "原典はFreezing Markを武器セット2、それ以外をセット1に割り当てる。操作を減らしたい場合、Freezing Salvoは省略可能。日本語プレイ記録のLv36まで待つ案は0.4環境の記録であり、現在の取得条件は現行ガイドとゲーム内で確認する。",
+        "caution": "原典は凍結の呪印（Freezing Mark）を武器セット2、それ以外をセット1に割り当てる。操作を減らしたい場合、フリージングサルヴォ（Freezing Salvo）は省略可能。日本語プレイ記録のLv36まで待つ案は0.4環境の記録であり、現在の取得条件は現行ガイドとゲーム内で確認する。",
         "transitionCondition": "Lv41到達。アイスショットで周回し、スナイプを単体用に使い分けられる。",
         "nowActions": [
           "Lv31でアイスショットへの切替を判断する",
@@ -1829,27 +1829,27 @@
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "スケルタルスナイパー + Flame Wall。Contagion + Unearthを周回補助に使用",
-        "supports": "スケルタルスナイパー：Multishot I。Flame Wall：Ignite I。Frost BombをExposure用に追加。",
+        "mainSkill": "スケルタルスナイパー + フレイムウォール（Flame Wall）。コンテージョン（Contagion） + アンアース（Unearth）を周回補助に使用",
+        "supports": "スケルタルスナイパー：マルチショット I（Multishot I）。フレイムウォール（Flame Wall）：発火 I（Ignite I）。フロストボム（Frost Bomb）をExposure用に追加。",
         "passivePriority": "原典のLvl 5、Lvl 10段階別ツリーを順に使用。",
-        "gearPriority": "ミニオンスキルレベル、Spirit、ライフ、ES、耐性。Rattling Sceptreも確認。",
+        "gearPriority": "ミニオンスキルレベル、Spirit、ライフ、ES、耐性。ラトリングセプター（Rattling Sceptre）も確認。",
         "replaceGear": "ミニオンレベルまたはSpiritが付くセプターを優先して比較。",
-        "caution": "Act 1のスキル・サポート報酬クエストを取り逃さない。ContagionとUnearthへサポートを使いすぎない。",
-        "transitionCondition": "Lv11到達。Flame Wallとスナイパーの連携でRare・ボスを処理できる。",
+        "caution": "Act 1のスキル・サポート報酬クエストを取り逃さない。コンテージョン（Contagion）とアンアース（Unearth）へサポートを使いすぎない。",
+        "transitionCondition": "Lv11到達。フレイムウォール（Flame Wall）とスナイパーの連携でRare・ボスを処理できる。",
         "nowActions": [
-          "スナイパーにMultishot Iを付ける",
-          "Flame WallにIgnite Iを付ける",
+          "スナイパーにマルチショット I（Multishot I）を付ける",
+          "フレイムウォール（Flame Wall）に発火 I（Ignite I）を付ける",
           "Act 1の報酬クエストを確認する"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "スケルタルスナイパー + Flame Wallを中心に継続",
-        "supports": "原典のEnd of Act 1構成へ進み、Frost BombをExposure用に維持。",
+        "mainSkill": "スケルタルスナイパー + フレイムウォール（Flame Wall）を中心に継続",
+        "supports": "原典のEnd of Act 1構成へ進み、フロストボム（Frost Bomb）をExposure用に維持。",
         "passivePriority": "End of Act 1段階別ツリーを使用。",
         "gearPriority": "ミニオンレベル、Spirit、ライフ、ES、属性耐性。",
         "replaceGear": "セプター、アミュレット、兜のミニオンレベルと、Spiritが付く部位を確認。",
-        "caution": "ミニオン数だけでなく、Flame Wallとの連携と自分の防御を維持する。",
+        "caution": "ミニオン数だけでなく、フレイムウォール（Flame Wall）との連携と自分の防御を維持する。",
         "transitionCondition": "Lv21到達。Act 1報酬を回収し、ミニオンと自身の耐性が不足していない。",
         "nowActions": [
           "ミニオンレベル付き装備を探す",
@@ -1865,7 +1865,7 @@
         "gearPriority": "ミニオンレベル、Spirit、ライフ、ES、耐性、移動速度。",
         "replaceGear": "スペクター切替前は、現在の召喚構成が崩れる交換を避ける。",
         "caution": "切替対象を確保する前にスナイパー構成を外さない。",
-        "transitionCondition": "Act 3のVaal Guard Spectre切替地点へ到達し、対象と必要ジェムを確認できる。",
+        "transitionCondition": "Act 3のヴァールガードのスペクター（Vaal Guard Spectre）切替地点へ到達し、対象と必要ジェムを確認できる。",
         "nowActions": [
           "End of Act 2ツリーを確認する",
           "Act 3のスペクター切替準備をする",
@@ -1874,55 +1874,55 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Act 3の切替地点に到達し、対象と必要Spiritを揃えたらVaal Guard Spectreへ段階的に切替。未到達ならスケルタルスナイパーを継続",
-        "supports": "原典のAct 3 - Vaal Guard Spectres構成を使用。確認できない名称は原典表示を優先。",
-        "passivePriority": "Act 3 - Vaal Guard Spectres段階別ツリーへ移行。",
+        "mainSkill": "Act 3の切替地点に到達し、対象と必要Spiritを揃えたらヴァールガードのスペクター（Vaal Guard Spectre）へ段階的に切替。未到達ならスケルタルスナイパーを継続",
+        "supports": "原典のAct 3 - ヴァールガードのスペクター（Vaal Guard Spectres）構成を使用。確認できない名称は原典表示を優先。",
+        "passivePriority": "Act 3 - ヴァールガードのスペクター（Vaal Guard Spectres）段階別ツリーへ移行。",
         "gearPriority": "ミニオンレベル、Spirit、防御、耐性。",
         "replaceGear": "スペクターの必要Spiritを満たせない場合は、Spirit部位を優先して見直す。",
         "caution": "召喚対象、サポート、Spiritを揃えてから切り替え、途中構成を長く残さない。",
-        "transitionCondition": "Lv41到達。Act 3の切替条件が未達ならスナイパーを維持し、達成後にVaal Guard Spectreへ移行。",
+        "transitionCondition": "Lv41到達。Act 3の切替条件が未達ならスナイパーを維持し、達成後にヴァールガードのスペクター（Vaal Guard Spectre）へ移行。",
         "nowActions": [
-          "Act 3の切替地点に到達したらVaal Guard Spectreを確保する（未到達ならスナイパーを継続）",
+          "Act 3の切替地点に到達したらヴァールガードのスペクター（Vaal Guard Spectre）を確保する（未到達ならスナイパーを継続）",
           "必要Spiritを確認する",
           "切替後のサポートを原典と照合する"
         ],
         "actionGuidance": {
           "actionIndex": 2,
           "where": "元ガイド「Skill Gems」→「Act 3 - Vaal Guard Spectres」段階",
-          "what": "Vaal Guard Spectreのサポート構成と必要Spirit",
+          "what": "ヴァールガードのスペクター（Vaal Guard Spectre）のサポート構成と必要Spirit",
           "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
         }
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Act 3のUtzaalで召喚対象と必要Spiritが揃うまではスケルタルスナイパーを継続。切替後はVaal Guard Spectreを主力にキャンペーンを進行",
-        "supports": "切替前は原典のAct 3 - Before Spectre Swapを維持。切替後はAct 3 - Vaal Guard SpectresからEnd of Act 4、End of Interludesへ順に進む。",
-        "passivePriority": "切替前はAct 3 - Before Spectre Swap、切替後はAct 3 - Vaal Guard SpectresからEnd of Act 4、End of Interludesの段階別ツリーを使用。",
+        "mainSkill": "Act 3のUtzaalで召喚対象と必要Spiritが揃うまではスケルタルスナイパーを継続。切替後はヴァールガードのスペクター（Vaal Guard Spectre）を主力にキャンペーンを進行",
+        "supports": "切替前は原典のAct 3 - Before Spectre Swapを維持。切替後はAct 3 - ヴァールガードのスペクター（Vaal Guard Spectres）からEnd of Act 4、End of Interludesへ順に進む。",
+        "passivePriority": "切替前はAct 3 - Before Spectre Swap、切替後はAct 3 - ヴァールガードのスペクター（Vaal Guard Spectres）からEnd of Act 4、End of Interludesの段階別ツリーを使用。",
         "gearPriority": "ミニオンレベル、Spirit、ライフ・ES、ブロックに関係する装備、耐性。",
         "replaceGear": "死亡が多い場合はミニオン火力より自身の防具・盾・耐性を先に確認。",
         "caution": "ミニオンが狭い通路で遅れる場合は、自分の位置を変えて再誘導する。",
         "transitionCondition": "キャンペーンとInterlude終了。Lv67前後の次のスペクター切替を準備できる。",
         "nowActions": [
-          "Act 3のUtzaalでVaal Guard（50 Spirit）を確保するまではスナイパーを維持し、切替後にAct 4→Interludesへ進む",
+          "Act 3のUtzaalでヴァールガード（Vaal Guard）（50 Spirit）を確保するまではスナイパーを維持し、切替後にAct 4→Interludesへ進む",
           "自身の防御と耐性を整える",
           "Lv67用スペクター切替を準備する"
         ],
         "actionGuidance": {
           "actionIndex": 0,
           "where": "元ガイド「FAQ」→「When do I swap to Vaal Guards?」および「Act 3 - Before Spectre Swap」",
-          "what": "Utzaalへの到達と50 SpiritのVaal Guard。未到達ならSkeletal Sniperを継続",
+          "what": "Utzaalへの到達と50 Spiritのヴァールガード（Vaal Guard）。未到達ならスケルトンスナイパー（Skeletal Sniper）を継続",
           "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
         }
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Vaal Guard SpectreからPowered Zealotへの切替をLv67前後で判断",
+        "mainSkill": "ヴァールガードのスペクター（Vaal Guard Spectre）から電気の狂信者（Powered Zealot）への切替をLv67前後で判断",
         "supports": "原典のLvl 67 - Powered Zealot Swap、Lvl 70、Lvl 75構成を順に使用。",
         "passivePriority": "Lvl 67、70、75の段階別ツリーを順に追う。",
         "gearPriority": "ミニオンレベル、Spirit、ES、ブロック、属性耐性、移動速度。",
-        "replaceGear": "切替条件が不足する場合はVaal Guard構成を維持し、Spiritと防御装備を先に更新。",
+        "replaceGear": "切替条件が不足する場合はヴァールガード（Vaal Guard）構成を維持し、Spiritと防御装備を先に更新。",
         "caution": "新しいスペクターを確保する前に現在の召喚構成を解除しない。",
-        "transitionCondition": "低Tierマップが安定し、Powered Zealot構成または継続構成の方針を決められる。",
+        "transitionCondition": "低Tierマップが安定し、電気の狂信者（Powered Zealot）構成または継続構成の方針を決められる。",
         "nowActions": [
           "Lv67切替条件を確認する",
           "新しいスペクターを先に確保する",
@@ -1931,7 +1931,7 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "Powered Zealotを含むスペクター構成",
+        "mainSkill": "電気の狂信者（Powered Zealot）を含むスペクター構成",
         "supports": "原典のLvl 80、Lvl 85、Lvl 90構成へ段階的に更新。",
         "passivePriority": "Lvl 80→85→90の段階別ツリーを順に使用。",
         "gearPriority": "ミニオンレベル、Spirit、ES、ブロック、耐性、ミニオンに有効な能力。",
@@ -1946,7 +1946,7 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "スナイパー/スペクター軍団を主力に、Flame WallやExposure補助を状況別に使用",
+        "mainSkill": "スナイパー/スペクター軍団を主力に、フレイムウォール（Flame Wall）やExposure補助を状況別に使用",
         "supports": "原典のDay 4、Day 6、Final Updateを比較し、採用した装備段階に合う構成だけ使用。",
         "passivePriority": "Final Update for 0.5のツリーを基準に、装備不足へ合わせて調整。",
         "gearPriority": "ミニオンレベル、Spirit、ES、ブロック、耐性を不足順で更新。",
@@ -1961,13 +1961,13 @@
       }
     ],
     "gearPriorities": [
-      "セプター：Spirit増加・ミニオンダメージ増加・+全ミニオンスキルレベル。序盤からRattling Sceptreを確認する（PoE Vault）。",
+      "セプター：Spirit増加・ミニオンダメージ増加・+全ミニオンスキルレベル。序盤からラトリングセプター（Rattling Sceptre）を確認する（PoE Vault）。",
       "オフハンド：PoE VaultのEndgameスペクター版はフォーカス（ES、+全ミニオンスキルレベル）。Maxroll版はブロック率の高い盾（ES・ライフ・耐性）。",
       "兜・アミュレット：+全ミニオンスキルレベル、ES、ライフ。兜は予約効率、アミュレットはSpiritも有効（PoE Vault）。",
       "胴：Spiritが付いたES装備。手袋：ES・ライフ・耐性（PoE Vault）。Maxrollも胴・ブーツ・兜・手袋・アミュレットのESをできるだけ多くと案内。",
       "耐性・能力値：部位を固定せず、装備全体の合計で元素耐性75%と必要能力値を満たす（Maxroll）。",
       "指輪：ライフ・耐性、ミニオンダメージやミニオンの攻撃・詠唱速度（PoE Vault）。",
-      "ユニークは必須ではない（Maxroll）。ブーツ「Bones of Ullr」（アンデッドミニオンの予約効率）はPoE Vaultが最優先で狙う装備とし、Maxrollも有用と紹介。キャンペーン中にExalted/Chaos Orbが手に入ったら、Enfolding Dawnなどの購入に使う案もある（Maxroll）。"
+      "ユニークは必須ではない（Maxroll）。ブーツ「ウルルの骨（Bones of Ullr）」（アンデッドミニオンの予約効率）はPoE Vaultが最優先で狙う装備とし、Maxrollも有用と紹介。キャンペーン中にExalted/カオスオーブ（Chaos Orb）が手に入ったら、包み込む夜明け（Enfolding Dawn）などの購入に使う案もある（Maxroll）。"
     ],
     "sources": [
       {
@@ -2102,7 +2102,7 @@
       "questions": [
         {
           "question": "Lv37なのにVaal Guardへ切り替えられない？",
-          "answer": "Lvだけでは切り替えません。原典はAct 3のUtzaalに到達後、手榴弾を投げる50 SpiritのVaal Guardを対象にしています。対象と必要なSpiritが揃うまでは、スケルタルスナイパー構成を維持します。",
+          "answer": "Lvだけでは切り替えません。原典はAct 3のUtzaalに到達後、手榴弾を投げる50 Spiritのヴァールガード（Vaal Guard）を対象にしています。対象と必要なSpiritが揃うまでは、スケルタルスナイパー構成を維持します。",
           "stageIndex": 3,
           "sourceIndex": 0,
           "where": "FAQ → When do I swap to Vaal Guards?"
@@ -2116,7 +2116,7 @@
         },
         {
           "question": "Powered ZealotはLv67ならすぐ切り替えていい？",
-          "answer": "原典作者はLv65〜70を切替目安とし、5リンクと必要サポートが揃ってから移ることを勧めています。4リンクならVaal Guardを優先するという作者の判断です。Lvだけを必須条件や切替の保証として扱いません。",
+          "answer": "原典作者はLv65〜70を切替目安とし、5リンクと必要サポートが揃ってから移ることを勧めています。4リンクならヴァールガード（Vaal Guard）を優先するという作者の判断です。Lvだけを必須条件や切替の保証として扱いません。",
           "stageIndex": 5,
           "sourceIndex": 0,
           "where": "FAQ → When do I swap to Powered Zealots?"
@@ -2136,7 +2136,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-07",
     "status": "verified",
-    "mainSkill": "Entangle / Thrashing Vines",
+    "mainSkill": "エンタングル（Entangle） / スラッシングヴァイン（Thrashing Vines）",
     "beginnerRating": 3,
     "damageRating": 2,
     "defenseRating": 3,
@@ -2154,7 +2154,7 @@
       "checkedAt": "2026-09-26"
     },
     "strengths": [
-      "Lv1からEndgameまでEntangleを主力として継続できる。",
+      "Lv1からEndgameまでエンタングル（Entangle）を主力として継続できる。",
       "周回の基本操作を少なくしやすく、植物による足止めも使える。",
       "育成ガイドとEndgameガイドが同じ作成者から公開されている。",
       "Maxroll（0.5.5）はメリットに「マップ殲滅が容易」「自動で狙いがつく」「リーグ開始時に安く始められる」を挙げている。",
@@ -2171,72 +2171,72 @@
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "Entangle。ボスには手持ちの単体補助スペルも使用",
-        "supports": "EntangleはLv1から使用。原典のSkill Gems欄はLv20ジェムの構成例で、掲載サポートをキャラクターLv1で全取得できる意味ではない。序盤の入手枠は原典の育成手順で確認。",
+        "mainSkill": "エンタングル（Entangle）。ボスには手持ちの単体補助スペルも使用",
+        "supports": "エンタングル（Entangle）はLv1から使用。原典のSkill Gems欄はLv20ジェムの構成例で、掲載サポートをキャラクターLv1で全取得できる意味ではない。序盤の入手枠は原典の育成手順で確認。",
         "passivePriority": "原典の序盤段階別ツリーを使用。正確なノード名はリンク先で確認。",
         "gearPriority": "+物理/全スペルレベル、スペル/物理スペル威力、ライフ、ESまたはアーマー、耐性、移動速度。",
         "replaceGear": "+スペルレベルまたはスペル威力のない武器を優先して比較。",
-        "caution": "Entangleはダメージ発生まで時間差がある。敵の足元へ置いてから距離を取る。",
-        "transitionCondition": "Lv11到達。Entangleで通常敵を処理し、強敵に補助スキルを使える。",
+        "caution": "エンタングル（Entangle）はダメージ発生まで時間差がある。敵の足元へ置いてから距離を取る。",
+        "transitionCondition": "Lv11到達。エンタングル（Entangle）で通常敵を処理し、強敵に補助スキルを使える。",
         "nowActions": [
-          "Entangleを敵の進路へ置く",
+          "エンタングル（Entangle）を敵の進路へ置く",
           "+スペルレベル付き武器を探す",
           "ライフ・耐性・移動速度を確認する"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Entangleを主力として継続。処刑人撃破後にThunderstormを取得できたら、植物に手動で重ねて過成長とShockを付与する。",
+        "mainSkill": "エンタングル（Entangle）を主力として継続。処刑人撃破後にサンダーストーム（Thunderstorm）を取得できたら、植物に手動で重ねて過成長と感電（Shock）を付与する。",
         "supports": "原典の育成構成を段階的に追加。未確認のサポート名は原典を優先。",
         "passivePriority": "レベリングガイドの現在レベルに近い段階別ツリーを使用。",
         "gearPriority": "+物理/全スペルレベル、スペル威力、キャスト速度、防御、耐性。",
         "replaceGear": "主力の伸びが止まった場合は武器、防御不足なら胴と耐性部位を更新。",
         "caution": "序盤から完成装備を探さず、現在レベルで効果のある武器と防具を優先。",
-        "transitionCondition": "Lv21到達。Entangleの設置と移動を繰り返して安定して進める。",
+        "transitionCondition": "Lv21到達。エンタングル（Entangle）の設置と移動を繰り返して安定して進める。",
         "nowActions": [
-          "Entangleのサポートを原典と照合する",
+          "エンタングル（Entangle）のサポートを原典と照合する",
           "武器のスペル性能を比較する",
           "耐性と移動速度を整える"
         ]
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Entangle + 手動Thunderstorm。強敵にはThunderstormを植物に重ね、単体補助手段も準備する。",
-        "supports": "原典の育成用Skill GemsではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Considered Castingを掲載。ただしLv20ジェムの構成例で、キャラクターLv21での全枠解禁を意味しない。",
+        "mainSkill": "エンタングル（Entangle） + 手動サンダーストーム（Thunderstorm）。強敵にはサンダーストーム（Thunderstorm）を植物に重ね、単体補助手段も準備する。",
+        "supports": "原典の育成用Skill Gemsではエンタングル（Entangle）にゼニス II（Zenith II）・成長の加速 II（Explosive Growth II）・枝分かれする亀裂 II（Branching Fissures II）・熟考詠唱（Considered Casting）を掲載。ただしLv20ジェムの構成例で、キャラクターLv21での全枠解禁を意味しない。",
         "passivePriority": "中盤の段階別ツリーへ進み、アセンダンシー取得後の導線へ接続。",
         "gearPriority": "スペルレベル、物理スペル威力、追加雷ダメージ、キャスト速度、ライフ、耐性。",
         "replaceGear": "火力不足なら武器、死亡が多いなら防具を1部位ずつ更新。",
-        "caution": "追加雷ダメージはShock用の候補だが、装備に付けば必ず最優先とは断定しない。",
+        "caution": "追加雷ダメージは感電（Shock）用の候補だが、装備に付けば必ず最優先とは断定しない。",
         "transitionCondition": "Lv31到達。最初のアセンダンシー段階と主力の装備条件を確認できる。",
         "nowActions": [
           "アセンダンシー取得を進める",
-          "Entangleの火力源を確認する",
+          "エンタングル（Entangle）の火力源を確認する",
           "火力と防御の不足を分ける"
         ]
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Entangleを周回主力、Thrashing Vinesを強敵用に追加。自動化まではThunderstormを手動で植物に重ねる。",
-        "supports": "原典の育成用構成ではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Considered Casting、Thrashing VinesにConcentrated Area・Explosive Growth II・Rapid Casting IIを掲載。入手と枠数に応じて採用。",
+        "mainSkill": "エンタングル（Entangle）を周回主力、スラッシングヴァイン（Thrashing Vines）を強敵用に追加。自動化まではサンダーストーム（Thunderstorm）を手動で植物に重ねる。",
+        "supports": "原典の育成用構成ではエンタングル（Entangle）にゼニス II（Zenith II）・成長の加速 II（Explosive Growth II）・枝分かれする亀裂 II（Branching Fissures II）・熟考詠唱（Considered Casting）、スラッシングヴァイン（Thrashing Vines）に効果範囲集中（Concentrated Area）・成長の加速 II（Explosive Growth II）・キャストスピード増加 II（Rapid Casting II）を掲載。入手と枠数に応じて採用。",
         "passivePriority": "中盤のオラクル段階別ツリーを使用。",
         "gearPriority": "スペルレベル、キャスト速度、ライフ、ES/アーマー、耐性、移動速度。",
-        "replaceGear": "Thrashing Vines追加で必要能力値が不足する部位を先に調整。",
+        "replaceGear": "スラッシングヴァイン（Thrashing Vines）追加で必要能力値が不足する部位を先に調整。",
         "caution": "周回用と単体用の植物を混同せず、強敵でだけ操作を増やす。",
-        "transitionCondition": "Lv41到達。EntangleとThrashing Vinesを役割別に使える。",
+        "transitionCondition": "Lv41到達。エンタングル（Entangle）とスラッシングヴァイン（Thrashing Vines）を役割別に使える。",
         "nowActions": [
-          "Thrashing Vinesを強敵用に設定する",
+          "スラッシングヴァイン（Thrashing Vines）を強敵用に設定する",
           "必要能力値を確認する",
           "周回とボスで操作を分ける"
         ]
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Entangle + Thrashing Vines + 手動Thunderstorm。キャンペーン終盤にCast on Criticalの条件が揃ったらThunderstormを自動化する。",
+        "mainSkill": "エンタングル（Entangle） + スラッシングヴァイン（Thrashing Vines） + 手動サンダーストーム（Thunderstorm）。キャンペーン終盤にクリティカル時キャスト（Cast on Critical）の条件が揃ったらサンダーストーム（Thunderstorm）を自動化する。",
         "supports": "レベリングガイド後半の構成を使用し、第二アセンダンシー後の自動発動を準備。",
         "passivePriority": "キャンペーン後半の段階別ツリーを使用。",
         "gearPriority": "スペルレベル、キャスト速度、ライフ、ES/アーマー、三属性耐性、移動速度。",
         "replaceGear": "キャンペーン終了時に不足する耐性と、火力が停滞した武器を優先。",
-        "caution": "Thunderstormは自動化前から手動で使う。原典はキャンペーン最終盤にCast on Criticalへ移行すると説明している。第二アセンダンシー、必要ジェムとSpiritが揃うまでは手動で植物に重ねる。",
+        "caution": "サンダーストーム（Thunderstorm）は自動化前から手動で使う。原典はキャンペーン最終盤にクリティカル時キャスト（Cast on Critical）へ移行すると説明している。第二アセンダンシー、必要ジェムとSpiritが揃うまでは手動で植物に重ねる。",
         "transitionCondition": "キャンペーン終了。第二アセンダンシーと自動発動構成の準備ができる。",
         "nowActions": [
           "キャンペーン後半ツリーを確認する",
@@ -2246,23 +2246,23 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Entangle + Thrashing Vines。条件達成後にCast on Critical + Thunderstormを追加",
-        "supports": "Forced Outcome取得後、Cast on CriticalにThunderstormをセット。原典の育成用構成にはShock・Magnified Area IIも掲載。アセンダンシー未取得なら自動発動済みと扱わない。",
+        "mainSkill": "エンタングル（Entangle） + スラッシングヴァイン（Thrashing Vines）。条件達成後にクリティカル時キャスト（Cast on Critical） + サンダーストーム（Thunderstorm）を追加",
+        "supports": "強制された結果（Forced Outcome）取得後、クリティカル時キャスト（Cast on Critical）にサンダーストーム（Thunderstorm）をセット。原典の育成用構成には感電（Shock）・効果範囲拡大 II（Magnified Area II）も掲載。アセンダンシー未取得なら自動発動済みと扱わない。",
         "passivePriority": "マップ開始用のオラクル段階別ツリーへ移行。",
         "gearPriority": "耐性、ライフ/ES、混沌耐性、スペルレベル、Spirit、キャスト速度。",
         "replaceGear": "マップで倒される場合は武器より防具と耐性、自動発動しない場合はSpiritとジェム条件を確認。",
         "caution": "第二アセンダンシーと必要条件を満たす前に自動発動構成を完成扱いしない。",
-        "transitionCondition": "低TierマップでEntangle、Thrashing Vines、自動Thunderstormが役割どおり動く。",
+        "transitionCondition": "低Tierマップでエンタングル（Entangle）、スラッシングヴァイン（Thrashing Vines）、自動サンダーストーム（Thunderstorm）が役割どおり動く。",
         "nowActions": [
-          "Forced Outcome取得状況を確認する",
-          "Cast on CriticalとThunderstormを接続する",
+          "強制された結果（Forced Outcome）取得状況を確認する",
+          "クリティカル時キャスト（Cast on Critical）とサンダーストーム（Thunderstorm）を接続する",
           "耐性・ES・混沌耐性を確認する"
         ]
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "Entangleを周回主力、Thrashing Vinesを単体用、Thunderstormを自動発動",
-        "supports": "原典Cheap版ではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Heft・Physical Mastery、Thrashing VinesにRapid Casting II・Physical Mastery・Considered Casting・Concentrated Area・Heftを掲載。枠数・能力値を確認。",
+        "mainSkill": "エンタングル（Entangle）を周回主力、スラッシングヴァイン（Thrashing Vines）を単体用、サンダーストーム（Thunderstorm）を自動発動",
+        "supports": "原典Cheap版ではエンタングル（Entangle）にゼニス II（Zenith II）・成長の加速 II（Explosive Growth II）・枝分かれする亀裂 II（Branching Fissures II）・重撃（Heft）・物理マスタリー（Physical Mastery）、スラッシングヴァイン（Thrashing Vines）にキャストスピード増加 II（Rapid Casting II）・物理マスタリー（Physical Mastery）・熟考詠唱（Considered Casting）・効果範囲集中（Concentrated Area）・重撃（Heft）を掲載。枠数・能力値を確認。",
         "passivePriority": "Cheap段階のEndgameツリーを使用し、装備が揃う前に高額版へ移らない。",
         "gearPriority": "ES、混沌耐性、スペルレベル、クリティカル、キャスト速度、Spirit、マナ維持。",
         "replaceGear": "長い戦闘でマナ不足なら火力装備より、マナ維持と防御の不足部位を先に確認。",
@@ -2276,12 +2276,12 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "Entangle + Thrashing Vines + 自動Thunderstorm",
-        "supports": "原典Cheap版ではEntangleにZenith II・Explosive Growth II・Branching Fissures II・Heft・Physical Mastery。Cast on CriticalにThunderstorm・Shock・Efficiency II・Boundless Energy II・Zenith II。高投資版と混在させない。",
+        "mainSkill": "エンタングル（Entangle） + スラッシングヴァイン（Thrashing Vines） + 自動サンダーストーム（Thunderstorm）",
+        "supports": "原典Cheap版ではエンタングル（Entangle）にゼニス II（Zenith II）・成長の加速 II（Explosive Growth II）・枝分かれする亀裂 II（Branching Fissures II）・重撃（Heft）・物理マスタリー（Physical Mastery）。クリティカル時キャスト（Cast on Critical）にサンダーストーム（Thunderstorm）・感電（Shock）・コスト軽減 II（Efficiency II）・無尽蔵のエネルギー II（Boundless Energy II）・ゼニス II（Zenith II）。高投資版と混在させない。",
         "passivePriority": "Endgameガイドの採用段階を1つ選び、装備とツリーを同じ段階へ揃える。",
         "gearPriority": "ES、混沌耐性、スペルレベル、クリティカル、キャスト速度、Spirit、マナ維持。",
         "replaceGear": "固定価格ではなく、現在の不足へ効く装備を同条件出品と比較。",
-        "caution": "原典はCast on Critical内のThunderstormを装備の+スキル込みでLv18に調整してマナ負担を減らす説明がある。Expensive／Mirror Tierと混ぜず、長期戦のマナ・混沌耐性を確認。",
+        "caution": "原典はクリティカル時キャスト（Cast on Critical）内のサンダーストーム（Thunderstorm）を装備の+スキル込みでLv18に調整してマナ負担を減らす説明がある。Expensive／Mirror Tierと混ぜず、長期戦のマナ・混沌耐性を確認。",
         "transitionCondition": "完成後は単体火力、ES/混沌耐性、マナのボトルネックを1項目ずつ改善する。",
         "nowActions": [
           "採用するEndgame段階を決める",
@@ -2295,8 +2295,8 @@
       "キャンペーン：店で+物理スペル／+スペルスキルレベルの武器を確認する。Maxrollはライフ型で、アーマーと「アーマーを元素ダメージにも適用」で被ダメージを減らす構成。",
       "防具：ES、ブーツの移動速度、胴のSpirit、最大マナ。手袋はクリティカルダメージ。耐性は混沌耐性も含めて確保（Gamerch）。",
       "アミュレット：ES、+スペルスキルレベル、クリティカルダメージ、耐性（Gamerch）。",
-      "安価なユニーク：手袋「Nightscale」はクリティカル率とマナ回復を補えて育成中から使える。胴「Waveshaper」は育成からEndgameまで使える（Gamerch）。",
-      "Endgame：ES、混沌耐性、Spirit、マナ維持。MaxrollのEndgame構成は、ライフでスペルを使う構成（Atalui's BloodlettingやLifetapのサポートジェム）でMind Over MatterとEldritch Batteryを両立する。"
+      "安価なユニーク：手袋「ナイトスケール（Nightscale）」はクリティカル率とマナ回復を補えて育成中から使える。胴「Waveshaper」は育成からEndgameまで使える（Gamerch）。",
+      "Endgame：ES、混沌耐性、Spirit、マナ維持。MaxrollのEndgame構成は、ライフでスペルを使う構成（アタルイの血抜き（Atalui's Bloodletting）やライフタップ（Lifetap）のサポートジェム）でマインドオーバーマター（Mind Over Matter）とエルドリッチバッテリー（Eldritch Battery）を両立する。"
     ],
     "sources": [
       {
@@ -2421,7 +2421,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-09",
     "status": "verified",
-    "mainSkill": "Essence Drain + Contagion",
+    "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）",
     "beginnerRating": 5,
     "damageRating": 2,
     "defenseRating": 3,
@@ -2432,7 +2432,7 @@
     "leagueStarter": true,
     "ssf": true,
     "strengths": [
-      "ContagionとEssence Drainを中心にLv1からEndgameまで段階別構成がある。",
+      "コンテージョン（Contagion）とエッセンスドレイン（Essence Drain）を中心にLv1からEndgameまで段階別構成がある。",
       "通常敵の集団処理と安全な位置取りを両立しやすいと書面ガイドで説明されている。",
       "キャンペーン、T1〜T15、フルライフ、ローライフの各構成が分けて提示されている。",
       "Maxroll（0.5.5）はメリットに「SSFでキャンペーン約5時間、Arbiterまで約10時間」「範囲殲滅が非常に強い」「大きなESプール」を挙げている。",
@@ -2440,7 +2440,7 @@
     ],
     "weaknesses": [
       "スキルを複数使うため、マナ消費が重くなりやすい。",
-      "単体戦ではBonestorm、Dark Effigy、Despairなど役割の違う操作が増える。",
+      "単体戦ではボーンストーム（Bonestorm）、ダークエフィジー（Dark Effigy）、ディスペア（Despair）など役割の違う操作が増える。",
       "ローライフ版は必要条件が多いため、序盤から部分的に混ぜない。",
       "被弾しない立ち回りが前提（Maxrollのデメリット「Don't Get Hit Playstyle」）。",
       "火力はまともな武器を入手・クラフトできるかに大きく左右され、継続ダメージは効くまでに時間がかかる（PoE Vault）。",
@@ -2449,67 +2449,67 @@
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "Contagion。単体はVolcanoからEssence Drainへ移行",
-        "supports": "UnleashをContagionへ。Essence Drain入手後はSwift Affliction IとZenith I。",
+        "mainSkill": "コンテージョン（Contagion）。単体はボルケーノ（Volcano）からエッセンスドレイン（Essence Drain）へ移行",
+        "supports": "アンリーシュ（Unleash）をコンテージョン（Contagion）へ。エッセンスドレイン（Essence Drain）入手後はスウィフトアフリクション I（Swift Affliction I）とゼニス I（Zenith I）。",
         "passivePriority": "書面ガイドのACT 1段階ツリーを使用。正確なノード名は掲載元で確認。",
         "gearPriority": "+Chaos Spell Skills、Spell Damage。防具は最大ライフ、冷気耐性、移動速度。",
         "replaceGear": "混沌呪文を伸ばさない武器、移動速度のないブーツを比較。",
-        "caution": "Contagionだけで単体を倒そうとせず、VolcanoまたはEssence Drainを使う。",
-        "transitionCondition": "Lv11到達。Contagionと単体スキルを役割別に使える。",
+        "caution": "コンテージョン（Contagion）だけで単体を倒そうとせず、ボルケーノ（Volcano）またはエッセンスドレイン（Essence Drain）を使う。",
+        "transitionCondition": "Lv11到達。コンテージョン（Contagion）と単体スキルを役割別に使える。",
         "nowActions": [
-          "ContagionへUnleashを付ける",
-          "Essence Drainを入手したら単体用に使う",
+          "コンテージョン（Contagion）へアンリーシュ（Unleash）を付ける",
+          "エッセンスドレイン（Essence Drain）を入手したら単体用に使う",
           "ライフ・冷気耐性・移動速度を確認する"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Essence Drain + Contagion。単体にBonestormを追加",
-        "supports": "ContagionへMagnified Area I。BonestormへBurgeon IとZenith I。",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）。単体にボーンストーム（Bonestorm）を追加",
+        "supports": "コンテージョン（Contagion）へ効果範囲拡大 I（Magnified Area I）。ボーンストーム（Bonestorm）へチャネリング蓄積 I（Burgeon I）とゼニス I（Zenith I）。",
         "passivePriority": "ACT 1後半からACT 2の段階別ツリーへ進む。固有名は書面資料で確認。",
         "gearPriority": "+Chaos Spell Skills、Spell Damage、Cast Speed、ライフ、耐性。",
         "replaceGear": "火力不足ならワンド、防御不足なら胴・ブーツを優先。",
-        "caution": "通常敵はContagionからEssence Drain、強敵はBonestormも使う。",
+        "caution": "通常敵はコンテージョン（Contagion）からエッセンスドレイン（Essence Drain）、強敵はボーンストーム（Bonestorm）も使う。",
         "transitionCondition": "Lv21到達。通常敵と強敵でスキルを使い分けられる。",
         "nowActions": [
-          "EDとContagionの順番を試す",
-          "Bonestormを強敵用に設定する",
+          "EDとコンテージョン（Contagion）の順番を試す",
+          "ボーンストーム（Bonestorm）を強敵用に設定する",
           "ワンドの混沌呪文性能を比較する"
         ]
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Essence Drain + Contagion + Bonestorm",
-        "supports": "Ravenous SwarmにはCorrosion、またはWithering PresenceにはProlonged Duration I。",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion） + ボーンストーム（Bonestorm）",
+        "supports": "ラヴェナススウォーム（Ravenous Swarm）には腐食（Corrosion）、またはWithering Presenceには持続時間延長 I（Prolonged Duration I）。",
         "passivePriority": "書面ガイドのACT 2〜ACT 3段階ツリーを使用。",
         "gearPriority": "混沌スペルレベル、スペルダメージ、キャスト速度、ライフ、耐性。",
         "replaceGear": "古いワンド、耐性不足の防具を1部位ずつ更新。",
-        "caution": "ボスではWithered WandのChaos BoltでWitherを補う手順が示されている。",
-        "transitionCondition": "Lv31到達。ボス用の弱体化とBonestormを使える。",
+        "caution": "ボスでは枯れたワンド（Withered Wand）のカオスボルト（Chaos Bolt）でウィザー（Wither）を補う手順が示されている。",
+        "transitionCondition": "Lv31到達。ボス用の弱体化とボーンストーム（Bonestorm）を使える。",
         "nowActions": [
-          "ボス用のWither手段を確認する",
-          "Bonestormのサポートを照合する",
+          "ボス用のウィザー（Wither）手段を確認する",
+          "ボーンストーム（Bonestorm）のサポートを照合する",
           "耐性不足を1属性ずつ直す"
         ]
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Essence Drain + Contagion。Dark EffigyとDespairを準備",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）。ダークエフィジー（Dark Effigy）とディスペア（Despair）を準備",
         "supports": "ACT 3〜ACT 4の表示構成を使用。未確認名称は書面ガイドで確認。",
         "passivePriority": "ACT 3/4段階ツリーへ移行。",
         "gearPriority": "混沌スペルレベル、キャスト速度、ライフ、エナジーシールド、耐性。",
         "replaceGear": "主力が伸びない場合はワンド、死亡が多い場合は防具。",
-        "caution": "Dark EffigyとDespairは強敵用。通常敵で毎回すべて使う必要はない。",
+        "caution": "ダークエフィジー（Dark Effigy）とディスペア（Despair）は強敵用。通常敵で毎回すべて使う必要はない。",
         "transitionCondition": "Lv41到達。周回用と強敵用の操作を分けられる。",
         "nowActions": [
-          "Dark Effigyを強敵用に準備する",
-          "Despairの役割を確認する",
+          "ダークエフィジー（Dark Effigy）を強敵用に準備する",
+          "ディスペア（Despair）の役割を確認する",
           "ワンドと防具の不足を分ける"
         ]
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Essence Drain + Contagion。強敵にDark Effigy + Despair",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）。強敵にダークエフィジー（Dark Effigy） + ディスペア（Despair）",
         "supports": "書面ガイドのACT 4-Endgame移行構成を使用。",
         "passivePriority": "ACT 4-Endgame段階ツリーを使用。",
         "gearPriority": "混沌スペルレベル、キャスト速度、ライフ/ES、各耐性、移動速度。",
@@ -2524,7 +2524,7 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Essence Drain + Contagion + Dark Effigy + Despair",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion） + ダークエフィジー（Dark Effigy） + ディスペア（Despair）",
         "supports": "T1〜T15用の書面表示構成を使用。",
         "passivePriority": "T1〜T15フルライフ段階ツリーへ移行。",
         "gearPriority": "ライフ/ES、耐性、混沌スペルレベル、キャスト速度、マナ維持。",
@@ -2539,7 +2539,7 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "Essence Drain + Contagionを周回、Dark Effigy + Despairを強敵用",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）を周回、ダークエフィジー（Dark Effigy） + ディスペア（Despair）を強敵用",
         "supports": "T1〜T15フルライフ版を基準に不足だけ更新。",
         "passivePriority": "フルライフEndgame段階ツリーを使用。",
         "gearPriority": "混沌スペルレベル、スペルダメージ、キャスト速度、防御、マナ維持。",
@@ -2554,7 +2554,7 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "Essence Drain + Contagion。採用版に応じた強敵用セット",
+        "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）。採用版に応じた強敵用セット",
         "supports": "フルライフまたはローライフの一方へ構成全体を揃える。",
         "passivePriority": "採用するEndgame版のツリーだけを使用。",
         "gearPriority": "採用版が要求する混沌呪文性能、防御、キャスト速度、マナ維持。",
@@ -2573,8 +2573,8 @@
       "武器の重要度が高い：PoE Vaultは、火力がまともな武器を入手・クラフトできるかに大きく左右されると短所に挙げている。ワンドは+Chaos Spell Skills、Spell Damage、Cast Speed。",
       "キャンペーン後：店とギャンブル店で弱い部位を更新し、まず耐性上限を確保する（Maxroll）。",
       "マップ以降：ES装備を更新し、アイテムレアリティ100%を早めに目指す。ジュエルは最大ES%増加と、マナ維持用に「キル時に最大マナの%回復」を1つ以上（Maxroll）。",
-      "Spirit：ConvalescenceとRavenous Swarmの併用に「アミュレットと胴で合計+50 Spiritが必要」というMaxroll由来の条件は、原典を取得できず再確認できていない。",
-      "Endgame：+全スキルレベル、ES、アイテムレアリティ、移動速度の高いブーツ、Lv20〜21・品質20%のジェム。ローライフ版はEternal Life取得後にユニーク「Atziri's Disdain」を早めに装備（Maxroll）。",
+      "Spirit：コンヴァレッセンス（Convalescence）とラヴェナススウォーム（Ravenous Swarm）の併用に「アミュレットと胴で合計+50 Spiritが必要」というMaxroll由来の条件は、原典を取得できず再確認できていない。",
+      "Endgame：+全スキルレベル、ES、アイテムレアリティ、移動速度の高いブーツ、Lv20〜21・品質20%のジェム。ローライフ版は永遠の命（Eternal Life）取得後にユニーク「アッツィリの軽蔑（Atziri's Disdain）」を早めに装備（Maxroll）。",
       "ユニークは必須ではない（Maxroll）。"
     ],
     "sources": [
@@ -2704,7 +2704,7 @@
     "version": "0.5.5",
     "updatedAt": "2026-09-09",
     "status": "verified",
-    "mainSkill": "Explosive Grenade",
+    "mainSkill": "エクスプローシブグレネード（Explosive Grenade）",
     "beginnerRating": 3,
     "damageRating": 4,
     "defenseRating": 3,
@@ -2716,52 +2716,52 @@
     "ssf": null,
     "strengths": [
       "Lv1からEndgameまでグレネードを軸にする段階別の書面ガイドがある。",
-      "Explosive、Flash、Gas、Oil、Cluster Grenadeを状況別に使える。",
+      "Explosive、Flash、Gas、Oil、クラスターグレネード（Cluster Grenade）を状況別に使える。",
       "ACT 1からUber Endgameまで構成が分けて提示されている。",
-      "別構成のPoE Vault版（0.5）は、Oil GrenadeとExplosive Grenadeの1〜2ボタンで周回でき、低予算で開始できると作者が説明している。"
+      "別構成のPoE Vault版（0.5）は、オイルグレネード（Oil Grenade）とエクスプローシブグレネード（Explosive Grenade）の1〜2ボタンで周回でき、低予算で開始できると作者が説明している。"
     ],
     "weaknesses": [
       "複数のグレネードを使うため、画面上の効果が多くなりやすい。",
       "クロスボウと各部位の攻撃性能を段階的に更新する必要がある。",
       "Endgame版を序盤へ部分的に持ち込まず、段階を揃える必要がある。",
-      "別構成のPoE Vault版（0.5）でCluster Grenadeの一撃を狙う場合は、ボスへの密着とBerserkを支える高いライフ自動回復が必要とされる。掲載する育成ルートの全段階に共通する条件ではない。"
+      "別構成のPoE Vault版（0.5）でクラスターグレネード（Cluster Grenade）の一撃を狙う場合は、ボスへの密着とバーサーク（Berserk）を支える高いライフ自動回復が必要とされる。掲載する育成ルートの全段階に共通する条件ではない。"
     ],
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "Explosive Grenade。補助にFrost BombとFlash Grenade",
-        "supports": "Explosive Grenade：Multishot + Elemental Armament。Flash Grenade：Multishot。",
+        "mainSkill": "エクスプローシブグレネード（Explosive Grenade）。補助にフロストボム（Frost Bomb）とフラッシュグレネード（Flash Grenade）",
+        "supports": "エクスプローシブグレネード（Explosive Grenade）：マルチショット（Multishot） + 元素武装（Elemental Armament）。フラッシュグレネード（Flash Grenade）：マルチショット（Multishot）。",
         "passivePriority": "ACT 1段階ツリー。書面で確認できた優先ノードはDemolitionist、Grenadier。",
         "gearPriority": "クロスボウの物理/元素ダメージ、投射物レベル。ブーツ移動速度、手袋・指輪の追加ダメージ。",
         "replaceGear": "古いクロスボウと移動速度のないブーツを優先。",
-        "caution": "Explosive Grenadeを主力にし、Frost BombはExposure用として使う。",
-        "transitionCondition": "Lv11到達。Explosive Grenadeと補助スキルを役割別に使える。",
+        "caution": "エクスプローシブグレネード（Explosive Grenade）を主力にし、フロストボム（Frost Bomb）はExposure用として使う。",
+        "transitionCondition": "Lv11到達。エクスプローシブグレネード（Explosive Grenade）と補助スキルを役割別に使える。",
         "nowActions": [
-          "Explosive Grenadeへサポートを付ける",
+          "エクスプローシブグレネード（Explosive Grenade）へサポートを付ける",
           "クロスボウのダメージを比較する",
           "移動速度付きブーツを探す"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Explosive Grenade + Flash Grenade。入手後Gas Grenade",
-        "supports": "Explosive Grenade：Multishot I・Elemental Armament I。Flash／Gas Grenade：Multishot I。GasにはElemental Armament Iも採用。Herald of Ashを使う場合はMagnified Area I・Swift Affliction I（原典ACT 1の取得順）。",
-        "passivePriority": "ACT 2段階ツリーへ進み、Repeating Explosivesへの導線を確認。",
+        "mainSkill": "エクスプローシブグレネード（Explosive Grenade） + フラッシュグレネード（Flash Grenade）。入手後ガスグレネード（Gas Grenade）",
+        "supports": "エクスプローシブグレネード（Explosive Grenade）：マルチショット I（Multishot I）・元素武装 I（Elemental Armament I）。Flash／ガスグレネード（Gas Grenade）：マルチショット I（Multishot I）。Gasには元素武装 I（Elemental Armament I）も採用。ヘラルドオブアッシュ（Herald of Ash）を使う場合は効果範囲拡大 I（Magnified Area I）・スウィフトアフリクション I（Swift Affliction I）（原典ACT 1の取得順）。",
+        "passivePriority": "ACT 2段階ツリーへ進み、繰り返す爆発（Repeating Explosives）への導線を確認。",
         "gearPriority": "クロスボウ、手袋・指輪の追加ダメージ、ライフ、耐性、移動速度。",
         "replaceGear": "火力不足はクロスボウ、防御不足は胴・兜を優先。",
         "caution": "新しいグレネードを一度に増やさず、役割を確認して追加する。",
         "transitionCondition": "Lv21到達。FlashとGasの役割を区別できる。",
         "nowActions": [
-          "Flash Grenadeの役割を確認する",
-          "Gas Grenadeを入手後に試す",
+          "フラッシュグレネード（Flash Grenade）の役割を確認する",
+          "ガスグレネード（Gas Grenade）を入手後に試す",
           "クロスボウと耐性を見直す"
         ]
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Explosive Grenade + Flash/Gas Grenade",
-        "supports": "序盤に確認できたExplosive GrenadeのMultishot I・Elemental Armament Iを起点とする。追加枠は原典のSkill Gems → ACT 2／3で採用した段階を確認。",
-        "passivePriority": "ACT 3段階ツリー。Demolitionist、Grenadier、Repeating Explosivesの取得順は掲載ツリーで確認。",
+        "mainSkill": "エクスプローシブグレネード（Explosive Grenade） + Flash/ガスグレネード（Gas Grenade）",
+        "supports": "序盤に確認できたエクスプローシブグレネード（Explosive Grenade）のマルチショット I（Multishot I）・元素武装 I（Elemental Armament I）を起点とする。追加枠は原典のSkill Gems → ACT 2／3で採用した段階を確認。",
+        "passivePriority": "ACT 3段階ツリー。Demolitionist、Grenadier、繰り返す爆発（Repeating Explosives）の取得順は掲載ツリーで確認。",
         "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、ライフ、アーマー、耐性。",
         "replaceGear": "古いクロスボウ、次にライフ/耐性不足の防具。",
         "caution": "複数グレネードのクールダウンと投げる順番を実戦で確認する。",
@@ -2774,7 +2774,7 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Explosive Grenadeを主力に複数グレネードを追加",
+        "mainSkill": "エクスプローシブグレネード（Explosive Grenade）を主力に複数グレネードを追加",
         "supports": "ACT 3/4表示構成を使用。",
         "passivePriority": "ACT 3/4段階ツリーと最初のアセンダンシー取得を確認。",
         "gearPriority": "クロスボウ、追加ダメージ、投射物レベル、アーマー、ライフ、耐性。",
@@ -2789,7 +2789,7 @@
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Explosive、Flash、Gas、Oil、Cluster Grenadeから段階表示どおり採用",
+        "mainSkill": "Explosive、Flash、Gas、Oil、クラスターグレネード（Cluster Grenade）から段階表示どおり採用",
         "supports": "ACT 4/Interludes表示構成を使用。",
         "passivePriority": "ACT 4とInterludesの段階別ツリーを使用。",
         "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、アーマー、ライフ、各耐性。",
@@ -2804,7 +2804,7 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Explosive Grenadeを主力、Flash・Gas Grenadeを補助にする。Oil・Cluster Grenadeの採用は原典のEarly Endgameタブで確認する。",
+        "mainSkill": "エクスプローシブグレネード（Explosive Grenade）を主力、Flash・ガスグレネード（Gas Grenade）を補助にする。Oil・クラスターグレネード（Cluster Grenade）の採用は原典のEarly Endgameタブで確認する。",
         "supports": "原典のSkill Gems → Early Endgameで現在のグレネードとサポートを照合。ACT 1のサポート構成がそのままEndgameの完成形とは限らない。",
         "passivePriority": "Early Endgame段階ツリーへ移行。",
         "gearPriority": "クロスボウ、投射物レベル、追加ダメージ、ライフ、アーマー、耐性。",
@@ -2819,7 +2819,7 @@
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "Explosive Grenadeを主軸に、原典Mid Endgame版のFlash・Gas・Oil・Cluster Grenadeの採用枠を確認して進める。",
+        "mainSkill": "エクスプローシブグレネード（Explosive Grenade）を主軸に、原典Mid Endgame版のFlash・Gas・Oil・クラスターグレネード（Cluster Grenade）の採用枠を確認して進める。",
         "supports": "原典のSkill Gems → Mid Endgameで主力・補助のリンクを確認。EquipmentとPassive Treeも同じMid Endgame版に揃える。",
         "passivePriority": "Mid Endgame段階ツリーを使用。",
         "gearPriority": "クロスボウ、追加ダメージ、投射物レベル、防御、必要能力。",
@@ -2834,7 +2834,7 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "Explosive Grenadeを軸にした原典Uber Endgame版。Flash・Gas・Oil・Cluster Grenadeの採用枠をUber EndgameのSkill Gems欄で確認する。",
+        "mainSkill": "エクスプローシブグレネード（Explosive Grenade）を軸にした原典Uber Endgame版。Flash・Gas・Oil・クラスターグレネード（Cluster Grenade）の採用枠をUber EndgameのSkill Gems欄で確認する。",
         "supports": "原典のSkill Gems → Uber Endgameで各グレネードのサポートを照合。必要能力値・装備・パッシブもUber版に揃えられる場合だけ切り替える。",
         "passivePriority": "Uber Endgame段階ツリーを使用。",
         "gearPriority": "採用版のクロスボウ、投射物レベル、追加ダメージ、防御、必要能力。",
@@ -2985,64 +2985,64 @@
     "ssf": null,
     "strengths": [
       "必須ユニークなしで育成を始められると掲載資料で案内されている。",
-      "Whirling Slashで作った旋風をTwisterで飛ばし、範囲攻撃へつなげられる。",
+      "ワーリングスラッシュ（Whirling Slash）で作った旋風をツイスター（Twister）で飛ばし、範囲攻撃へつなげられる。",
       "序盤・キャンペーン・Endgameの方針は海外ガイドを参照。数値のLv帯は本サイトの整理用の目安で、原典が各Lvでの移行を保証するものではない。"
     ],
     "weaknesses": [
       "武器セット2種と複数スキルの割り当てが必要で、完全な1ボタン構成ではない。",
-      "Whirling Slash、Ice-Tipped Arrows、Twisterの順番を練習する必要がある。",
+      "ワーリングスラッシュ（Whirling Slash）、アイスティップアロー（Ice-Tipped Arrows）、ツイスター（Twister）の順番を練習する必要がある。",
       "Endgameのユニーク候補は任意であり、基礎装備と耐性を先に整える必要がある。"
     ],
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "槍と必要ジェムを入手後、Whirling Slashで旋風を作りTwisterへつなぐ。Pounceは移動、Shredは人狼化の補助候補で、掲載ルートの主力としては扱わない。",
+        "mainSkill": "槍と必要ジェムを入手後、ワーリングスラッシュ（Whirling Slash）で旋風を作りツイスター（Twister）へつなぐ。パウンス（Pounce）は移動、シュレッド（Shred）は人狼化の補助候補で、掲載ルートの主力としては扱わない。",
         "supports": "序盤は物理ダメージと攻撃速度を伸ばすサポートを優先し、未入手の名称は原典の段階表で確認。",
         "passivePriority": "原典のEarly Game段階。投射物・攻撃速度・冷気へつながるルートを確認する。",
         "gearPriority": "槍の物理ダメージ、ブーツの移動速度、防具のライフと耐性。",
         "replaceGear": "現在レベルに対して物理ダメージが低い槍と、移動速度のないブーツを優先して交換。",
-        "caution": "Whirling Slashはダメージ目的ではなく旋風生成に使うため、原典ではLv1維持が案内されている。",
-        "transitionCondition": "Lv11付近の進行目安。槍の更新とWhirling Slash・Twisterの基本連携を確認する。",
+        "caution": "ワーリングスラッシュ（Whirling Slash）はダメージ目的ではなく旋風生成に使うため、原典ではLv1維持が案内されている。",
+        "transitionCondition": "Lv11付近の進行目安。槍の更新とワーリングスラッシュ（Whirling Slash）・ツイスター（Twister）の基本連携を確認する。",
         "nowActions": [
-          "槍とWhirling Slash・Twisterのジェムを用意する",
-          "Whirling SlashをLv1に保ち、Twisterへつなぐ",
+          "槍とワーリングスラッシュ（Whirling Slash）・ツイスター（Twister）のジェムを用意する",
+          "ワーリングスラッシュ（Whirling Slash）をLv1に保ち、ツイスター（Twister）へつなぐ",
           "移動速度付きブーツと耐性を確保する"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Whirling Slashで旋風を作り、Twisterで敵集団へ飛ばす。",
-        "supports": "Twisterのダメージと範囲を優先。War Bannerは入手後に補助として使う。",
+        "mainSkill": "ワーリングスラッシュ（Whirling Slash）で旋風を作り、ツイスター（Twister）で敵集団へ飛ばす。",
+        "supports": "ツイスター（Twister）のダメージと範囲を優先。ウォーバナー（War Banner）は入手後に補助として使う。",
         "passivePriority": "原典のEarly Game段階を継続し、投射物・攻撃速度・冷気の順で確認する。",
         "gearPriority": "槍の物理ダメージ、ライフ、耐性、回避。ブーツは移動速度を維持。",
         "replaceGear": "火力が止まったら槍、防御が不安なら耐性とライフの不足部位を交換。",
-        "caution": "Whirling Slashをレベルアップしすぎず、Twister側の更新を優先する。",
-        "transitionCondition": "Lv21到達。旋風を作ってTwisterで飛ばす基本連携を再現できること。",
+        "caution": "ワーリングスラッシュ（Whirling Slash）をレベルアップしすぎず、ツイスター（Twister）側の更新を優先する。",
+        "transitionCondition": "Lv21到達。旋風を作ってツイスター（Twister）で飛ばす基本連携を再現できること。",
         "nowActions": [
-          "Whirling Slashで旋風を作る",
-          "Twisterで旋風を敵へ飛ばす",
-          "Twister側のジェム更新を優先する"
+          "ワーリングスラッシュ（Whirling Slash）で旋風を作る",
+          "ツイスター（Twister）で旋風を敵へ飛ばす",
+          "ツイスター（Twister）側のジェム更新を優先する"
         ]
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → ツイスター。Barrageを採用する場合は、強化したいツイスターを撃つ前に使用する。",
-        "supports": "TwisterとIce-Tipped Arrowsを優先し、Barrageは単体戦用として段階的に追加。",
-        "passivePriority": "原典のMid Campaign段階。Spirit Walker取得後はPrimal Bountyを含む現行ルートを確認。",
+        "mainSkill": "ワーリングスラッシュ（Whirling Slash） → アイスティップアロー（Ice-Tipped Arrows） → ツイスター。バラージ（Barrage）を採用する場合は、強化したいツイスターを撃つ前に使用する。",
+        "supports": "ツイスター（Twister）とアイスティップアロー（Ice-Tipped Arrows）を優先し、バラージ（Barrage）は単体戦用として段階的に追加。",
+        "passivePriority": "原典のMid Campaign段階。スピリットウォーカー（Spirit Walker）取得後はプライマルバウンティ（Primal Bounty）を含む現行ルートを確認。",
         "gearPriority": "武器セット2種を用意し、槍の物理ダメージ、冷気追加、ライフ、耐性を確認。",
         "replaceGear": "2つの武器セットで主力スキルを正しく使えるよう、スキル割り当てと装備条件を先に整える。",
         "caution": "アセンダンシー取得時期は進行状況で変わるため、取得前に名称だけを先行して適用しない。",
         "transitionCondition": "Lv31到達。武器セット切替と3スキルの連携が安定していること。",
         "nowActions": [
-          "Ice-Tipped Arrowsを連携へ加える",
+          "アイスティップアロー（Ice-Tipped Arrows）を連携へ加える",
           "武器セット2種を設定する",
-          "単体戦用Barrageを準備する"
+          "単体戦用バラージ（Barrage）を準備する"
         ]
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Whirling Slashを3回以上使い、Ice-Tipped ArrowsとBarrageで準備してからツイスターを撃つ。",
-        "supports": "Twister、Barrage、Ice-Tipped Arrowsを優先して更新し、旋風生成用Whirling SlashはLv1を維持。",
+        "mainSkill": "ワーリングスラッシュ（Whirling Slash）を3回以上使い、アイスティップアロー（Ice-Tipped Arrows）とバラージ（Barrage）で準備してからツイスターを撃つ。",
+        "supports": "ツイスター（Twister）、バラージ（Barrage）、アイスティップアロー（Ice-Tipped Arrows）を優先して更新し、旋風生成用ワーリングスラッシュ（Whirling Slash）はLv1を維持。",
         "passivePriority": "原典のMid Campaign段階。投射物・冷気・攻撃速度を伸ばし、防御は回避とDeflectを確認。",
         "gearPriority": "高物理ダメージの槍、移動速度、ライフ、耐性、回避。",
         "replaceGear": "武器を最優先し、次に耐性不足と移動速度不足を解消する。",
@@ -3050,15 +3050,15 @@
         "transitionCondition": "Lv41到達。周回と単体戦の両方で連携を再現できること。",
         "nowActions": [
           "旋風を複数作ってから攻撃する",
-          "TwisterとBarrageを優先更新する",
+          "ツイスター（Twister）とバラージ（Barrage）を優先更新する",
           "回避・Deflect・耐性を確認する"
         ]
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Barrage → ツイスター。移動・補助は原典の武器セット割当を確認する。",
+        "mainSkill": "ワーリングスラッシュ（Whirling Slash） → アイスティップアロー（Ice-Tipped Arrows） → バラージ（Barrage） → ツイスター。移動・補助は原典の武器セット割当を確認する。",
         "supports": "原典のMid/Late Campaign構成に合わせ、主力3種のリンクを優先して完成させる。",
-        "passivePriority": "原典のMid/Late Campaign段階。Dance with Deathを採用する現行ルートと武器セット割当を確認。",
+        "passivePriority": "原典のMid/Late Campaign段階。ダンスウィズデス（Dance with Death）を採用する現行ルートと武器セット割当を確認。",
         "gearPriority": "槍の物理ダメージ、ライフ、耐性、回避、移動速度。Spiritは必要スキル分を確保。",
         "replaceGear": "キャンペーン終了前に属性耐性の不足部位と古い槍を更新する。",
         "caution": "武器セットごとのスキル割り当てを崩さず、任意ユニークより基礎防御を優先する。",
@@ -3071,7 +3071,7 @@
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "Whirling Slashを3回以上使い、Ice-Tipped ArrowsとBarrageを使用してからツイスターへつなぐ。",
+        "mainSkill": "ワーリングスラッシュ（Whirling Slash）を3回以上使い、アイスティップアロー（Ice-Tipped Arrows）とバラージ（Barrage）を使用してからツイスターへつなぐ。",
         "supports": "主力スキルのリンクを優先し、Spirit不足がない状態で補助スキルを維持する。",
         "passivePriority": "原典のEarly Endgame段階へ移行。攻撃速度・冷気・クリティカルと回避系防御を確認。",
         "gearPriority": "属性耐性、ライフ、回避、槍の物理・追加ダメージ、移動速度。",
@@ -3081,12 +3081,12 @@
         "nowActions": [
           "属性耐性と回避を先に整える",
           "槍の物理・追加ダメージを更新する",
-          "Barrageをツイスターの前に使う連携を確認する"
+          "バラージ（Barrage）をツイスターの前に使う連携を確認する"
         ]
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "Twisterを主力に、BarrageとIce-Tipped Arrowsで単体火力を補う。",
+        "mainSkill": "ツイスター（Twister）を主力に、バラージ（Barrage）とアイスティップアロー（Ice-Tipped Arrows）で単体火力を補う。",
         "supports": "主力リンクを完成させ、必要Spiritを確保して補助効果を維持する。",
         "passivePriority": "原典のEndgame段階。クリティカル、冷気、攻撃速度を伸ばし、回避・エナジーシールドとの両立を確認。",
         "gearPriority": "槍の高い物理・追加ダメージ、Spirit、ライフまたはエナジーシールド、回避、耐性。",
@@ -3101,7 +3101,7 @@
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "Whirling Slashで旋風を準備し、Ice-Tipped ArrowsとBarrageで次の攻撃を強化してからツイスターを撃つ。",
+        "mainSkill": "ワーリングスラッシュ（Whirling Slash）で旋風を準備し、アイスティップアロー（Ice-Tipped Arrows）とバラージ（Barrage）で次の攻撃を強化してからツイスターを撃つ。",
         "supports": "採用中のEndgame段階と同じサポート構成へ揃え、入手状況に応じて順次更新する。",
         "passivePriority": "原典のEndgameツリーを確認し、クリティカル・冷気・攻撃速度と回避系防御を同じ段階へ揃える。",
         "gearPriority": "高性能の槍、必要Spirit、耐性、回避、ライフまたはエナジーシールド。任意ユニークは基礎装備完成後に検討。",
@@ -3247,133 +3247,133 @@
     "leagueStarter": true,
     "ssf": null,
     "strengths": [
-      "ソーサレスは開始地点のジェム箱でSparkを入手でき、Lv1からEndgameまで同じ主力を使い続けられる。",
-      "通常の周回はSparkを撃ち続けるのが中心で、Endgameではコメットが会心時に自動で発動する（原典は「ほぼ1ボタン」と説明）。",
+      "ソーサレスは開始地点のジェム箱でスパーク（Spark）を入手でき、Lv1からEndgameまで同じ主力を使い続けられる。",
+      "通常の周回はスパーク（Spark）を撃ち続けるのが中心で、Endgameではコメットが会心時に自動で発動する（原典は「ほぼ1ボタン」と説明）。",
       "キャンペーン用の育成ガイドが、SSF（トレードなし）でも成立すると明記している。"
     ],
     "weaknesses": [
       "火力は杖（スタッフ）の性能に大きく左右されると、育成ガイドの弱点欄にある。",
-      "ボス戦ではFrost Bomb・Orb of Storms・Flame Wallなどを順に使う、複数ボタンの手順が必要。",
+      "ボス戦ではフロストボム（Frost Bomb）・オーブオブストーム（Orb of Storms）・フレイムウォール（Flame Wall）などを順に使う、複数ボタンの手順が必要。",
       "CoC Cometを追加する海外ガイドの構成ではSpirit 121以上が目安。別構成のマナスタック完成形では会心率90%以上・最大マナ5,000以上と装備・ツリーの組み替えが必要で、低予算では組みにくい。"
     ],
     "levelingStages": [
       {
         "label": "Lv1〜10",
-        "mainSkill": "開始地点のジェム箱で手に入るSparkを主力にする。2つ目のスキルはFrost Bomb、続けてFlame Wallを作る。",
-        "supports": "Sparkを最優先で強化。Orb of Stormsを作ったらOverabundance IとUnleashを付け、1回で2つ設置する。",
+        "mainSkill": "開始地点のジェム箱で手に入るスパーク（Spark）を主力にする。2つ目のスキルはフロストボム（Frost Bomb）、続けてフレイムウォール（Flame Wall）を作る。",
+        "supports": "スパーク（Spark）を最優先で強化。オーブオブストーム（Orb of Storms）を作ったら上限超過 I（Overabundance I）とアンリーシュ（Unleash）を付け、1回で2つ設置する。",
         "passivePriority": "元素ダメージへ向かうルートを取り、能力値ノードは主に知性へ振る。装備・ジェムに必要な筋力・器用さだけ補う。",
         "gearPriority": "杖の雷・全スペルスキルレベル、次に詠唱速度とスペルダメージ。防具はエナジーシールドの付く装備。",
         "replaceGear": "スペルスキルレベルの付いた杖を最優先で交換。商人の品ぞろえはレベルで変わるため、町に戻るたびに確認する。",
         "caution": "原典の「Act 1」の内容をこのレベル帯に当てています。Lvと進行の対応は目安です。",
-        "transitionCondition": "Lv11到達。Spark・Frost Bomb・Flame Wallを入手し、Sparkで敵の群れを倒せること。",
+        "transitionCondition": "Lv11到達。スパーク（Spark）・フロストボム（Frost Bomb）・フレイムウォール（Flame Wall）を入手し、スパーク（Spark）で敵の群れを倒せること。",
         "nowActions": [
-          "Sparkをメインの攻撃ボタンに置く",
-          "Frost Bombを作ってSparkと併用する",
+          "スパーク（Spark）をメインの攻撃ボタンに置く",
+          "フロストボム（Frost Bomb）を作ってスパーク（Spark）と併用する",
           "スペルスキルレベル付きの杖を探す"
         ]
       },
       {
         "label": "Lv11〜20",
-        "mainSkill": "Spark＋Frost Bomb。最初のLv3未カットのスキルジェムでOrb of Stormsを作り、範囲内からSparkを撃つ。",
-        "supports": "Act 2からLv2未カットのサポートジェムが出る。Rising TempestをSpark、次にOrb of Stormsへ付ける。",
-        "passivePriority": "元素ダメージを伸ばしつつ、Orb of Stormsを3つ置けるSecrets of the Orbを目指す。",
+        "mainSkill": "スパーク（Spark）＋フロストボム（Frost Bomb）。最初のLv3未カットのスキルジェムでオーブオブストーム（Orb of Storms）を作り、範囲内からスパーク（Spark）を撃つ。",
+        "supports": "Act 2からLv2未カットのサポートジェムが出る。嵐の連鎖（Rising Tempest）をスパーク（Spark）、次にオーブオブストーム（Orb of Storms）へ付ける。",
+        "passivePriority": "元素ダメージを伸ばしつつ、オーブオブストーム（Orb of Storms）を3つ置けるオーブの秘密（Secrets of the Orb）を目指す。",
         "gearPriority": "杖のスキルレベルと追加ダメージ、防具のライフと耐性、マナ回復速度。",
-        "replaceGear": "Spirit 30（Act 1のThe King in the Mists撃破）を得たらMana Remnantsを有効化する。",
-        "caution": "Orb of Stormsは範囲内で詠唱すると敵へ連鎖する雷を撃つため、設置場所から離れすぎない。",
-        "transitionCondition": "Lv21到達。Orb of Stormsを2つ設置し、Frost Bomb→Orb of Storms→Sparkの順で戦えること。",
+        "replaceGear": "Spirit 30（Act 1の霧の王（The King in the Mists）撃破）を得たらマナレムナント（Mana Remnants）を有効化する。",
+        "caution": "オーブオブストーム（Orb of Storms）は範囲内で詠唱すると敵へ連鎖する雷を撃つため、設置場所から離れすぎない。",
+        "transitionCondition": "Lv21到達。オーブオブストーム（Orb of Storms）を2つ設置し、フロストボム（Frost Bomb）→オーブオブストーム（Orb of Storms）→スパーク（Spark）の順で戦えること。",
         "nowActions": [
-          "Orb of Stormsを作って2つ設置する",
-          "Rising TempestをSparkへ付ける",
-          "Spirit 30でMana Remnantsを有効化"
+          "オーブオブストーム（Orb of Storms）を作って2つ設置する",
+          "嵐の連鎖（Rising Tempest）をスパーク（Spark）へ付ける",
+          "Spirit 30でマナレムナント（Mana Remnants）を有効化"
         ]
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "Frost Bomb → Orb of Storms → Sparkを連打。ボスにはElemental Weakness（Lv7未カットのスキルジェム）を使う。",
-        "supports": "Lv25前後の敵から出るLesser Jeweller’s Orbで、Spark、次にOrb of Stormsの3つ目のソケットを開ける。",
-        "passivePriority": "Act 2の試練（Trial of the Sekhemas）を終えたら、ストームウィーバーのStorm’s Recollectionを取得。Frost Bomb1回で冷気インフュージョンを6個作れる。",
+        "mainSkill": "フロストボム（Frost Bomb） → オーブオブストーム（Orb of Storms） → スパーク（Spark）を連打。ボスにはエレメンタルウィークネス（Elemental Weakness）（Lv7未カットのスキルジェム）を使う。",
+        "supports": "Lv25前後の敵から出る宝飾職人のオーブ (見習い)（Lesser Jeweller’s Orb）で、スパーク（Spark）、次にオーブオブストーム（Orb of Storms）の3つ目のソケットを開ける。",
+        "passivePriority": "Act 2の試練（セケマの試練 / Trial of the Sekhemas）を終えたら、ストームウィーバーの嵐の思い出（Storm’s Recollection）を取得。Frost Bomb1回で冷気インフュージョンを6個作れる。",
         "gearPriority": "杖を最優先。防具はライフ、耐性、エナジーシールド、マナ回復速度の順。",
-        "replaceGear": "任意で、武器セット2にChiming Staff（Lv25以上）を持ちSigil of Powerを使う。他のスキルは武器セット1専用に設定する。",
-        "caution": "Chiming Staff（火力）と人狼化（移動速度）はどちらか一方しか使えないと原典にある。",
-        "transitionCondition": "Lv31到達。アセンダンシーを取得し、ボス戦でElemental WeaknessとFrost Bombを使えること。",
+        "replaceGear": "任意で、武器セット2に鐘鳴のスタッフ（Chiming Staff）（Lv25以上）を持ちシギルオブパワー（Sigil of Power）を使う。他のスキルは武器セット1専用に設定する。",
+        "caution": "鐘鳴のスタッフ（Chiming Staff）（火力）と人狼化（移動速度）はどちらか一方しか使えないと原典にある。",
+        "transitionCondition": "Lv31到達。アセンダンシーを取得し、ボス戦でエレメンタルウィークネス（Elemental Weakness）とフロストボム（Frost Bomb）を使えること。",
         "nowActions": [
-          "試練を終えてStorm’s Recollectionを取る",
-          "Sparkの3つ目のソケットを開ける",
-          "ボスにElemental Weaknessを使う"
+          "試練を終えて嵐の思い出（Storm’s Recollection）を取る",
+          "スパーク（Spark）の3つ目のソケットを開ける",
+          "ボスにエレメンタルウィークネス（Elemental Weakness）を使う"
         ]
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Spark主体。ボスはSigil of Power → Elemental Weakness → Frost Bomb → Orb of Storms → Sparkの順。",
-        "supports": "Act 3からLv3未カットのサポートジェムが出る。SparkのサポートをZenith IIへ上げる。",
-        "passivePriority": "Act 3のTemple of ChaosでUltimatum（Trial of Chaos）を終え、アセンダンシーポイント2点を取得する。",
+        "mainSkill": "スパーク（Spark）主体。ボスはシギルオブパワー（Sigil of Power） → エレメンタルウィークネス（Elemental Weakness） → フロストボム（Frost Bomb） → オーブオブストーム（Orb of Storms） → スパーク（Spark）の順。",
+        "supports": "Act 3からLv3未カットのサポートジェムが出る。スパーク（Spark）のサポートをゼニス II（Zenith II）へ上げる。",
+        "passivePriority": "Act 3のカオスの寺院（Temple of Chaos）でUltimatum（混沌の試練 / Trial of Chaos）を終え、アセンダンシーポイント2点を取得する。",
         "gearPriority": "杖のスキルレベル、詠唱速度、スペルダメージ。防具は耐性とエナジーシールド。",
-        "replaceGear": "Spirit 60（The King in the Mists＋Act 3のIgnagduk）でMana RemnantsをBlasphemyに替え、Elemental Weaknessをそのソケットへ移す。",
-        "caution": "原典はZenithを使う間、マナを90%以上に保つよう案内している。杖・指輪・アミュレットのマナ回復速度とマナフラスコで残量を保つ。",
-        "transitionCondition": "Lv41到達。BlasphemyでElemental Weaknessを自動化し、ボスの手順を再現できること。",
+        "replaceGear": "Spirit 60（霧の王（The King in the Mists）＋Act 3のIgnagduk）でマナレムナント（Mana Remnants）をブラスファミー（Blasphemy）に替え、エレメンタルウィークネス（Elemental Weakness）をそのソケットへ移す。",
+        "caution": "原典はゼニス（Zenith）を使う間、マナを90%以上に保つよう案内している。杖・指輪・アミュレットのマナ回復速度とマナフラスコで残量を保つ。",
+        "transitionCondition": "Lv41到達。ブラスファミー（Blasphemy）でエレメンタルウィークネス（Elemental Weakness）を自動化し、ボスの手順を再現できること。",
         "nowActions": [
-          "SparkのサポートをZenith IIへ上げる",
-          "Spirit 60でBlasphemyに替える",
-          "Trial of Chaosを終え、アセンダンシーポイントをさらに2点得る"
+          "スパーク（Spark）のサポートをゼニス II（Zenith II）へ上げる",
+          "Spirit 60でブラスファミー（Blasphemy）に替える",
+          "混沌の試練（Trial of Chaos）を終え、アセンダンシーポイントをさらに2点得る"
         ]
       },
       {
         "label": "Lv41〜キャンペーン終了",
-        "mainSkill": "Sparkを主力に、Frost Bomb・Orb of Storms・Flame Wallでボス火力を補う。",
-        "supports": "Act 4からLv4未カットのサポートジェムが出る。SparkにConsidered CastingとProjectile Acceleration IIを付ける。",
-        "passivePriority": "2つ目のアセンダンシーはConstant Gale（常時Arcane Surge）。キャンペーン終了まで育成用ツリーを進める。",
-        "gearPriority": "Voltaic Staff（アイテムレベル36以上で雷スペルスキルレベル+3〜4）が最も伸びしろがある。耐性とエナジーシールドも維持。",
-        "replaceGear": "Spirit 100（インタールードのLythara撃破で最後の報酬）でSiphon ElementsとClarity Iを追加する。",
-        "caution": "Greater Jeweller’s Orbはまれにしか出ないため当てにしない。出たらSpark、次にOrb of Stormsへ使う。",
-        "transitionCondition": "キャンペーン終了。耐性を整え、Spark中心で通常敵とボスを倒せること。",
+        "mainSkill": "スパーク（Spark）を主力に、フロストボム（Frost Bomb）・オーブオブストーム（Orb of Storms）・フレイムウォール（Flame Wall）でボス火力を補う。",
+        "supports": "Act 4からLv4未カットのサポートジェムが出る。スパーク（Spark）に熟考詠唱（Considered Casting）と投射物加速 II（Projectile Acceleration II）を付ける。",
+        "passivePriority": "2つ目のアセンダンシーは絶え間ない強風（Constant Gale）（常時アーケインサージ（Arcane Surge））。キャンペーン終了まで育成用ツリーを進める。",
+        "gearPriority": "電撃のスタッフ（Voltaic Staff）（アイテムレベル36以上で雷スペルスキルレベル+3〜4）が最も伸びしろがある。耐性とエナジーシールドも維持。",
+        "replaceGear": "Spirit 100（インタールードのLythara撃破で最後の報酬）でサイフォンエレメント（Siphon Elements）とクラリティ I（Clarity I）を追加する。",
+        "caution": "宝飾職人のオーブ (上級)（Greater Jeweller’s Orb）はまれにしか出ないため当てにしない。出たらスパーク（Spark）、次にオーブオブストーム（Orb of Storms）へ使う。",
+        "transitionCondition": "キャンペーン終了。耐性を整え、スパーク（Spark）中心で通常敵とボスを倒せること。",
         "nowActions": [
-          "Considered CastingをSparkに付ける",
-          "Voltaic Staffの更新を狙う",
-          "Spirit 100でSiphon Elementsを追加"
+          "熟考詠唱（Considered Casting）をスパーク（Spark）に付ける",
+          "電撃のスタッフ（Voltaic Staff）の更新を狙う",
+          "Spirit 100でサイフォンエレメント（Siphon Elements）を追加"
         ]
       },
       {
         "label": "Mapping開始",
-        "mainSkill": "通常敵はSparkを連打。強敵にはSigil of Power → Frost Bomb → Orb of Storms → Sparkの順で使う。",
-        "supports": "Spark・Orb of Stormsのリンクを維持し、マナ消費の重いスキルにはEfficiency IIを付けてマナ不足を補う。",
+        "mainSkill": "通常敵はスパーク（Spark）を連打。強敵にはシギルオブパワー（Sigil of Power） → フロストボム（Frost Bomb） → オーブオブストーム（Orb of Storms） → スパーク（Spark）の順で使う。",
+        "supports": "スパーク（Spark）・オーブオブストーム（Orb of Storms）のリンクを維持し、マナ消費の重いスキルにはコスト軽減 II（Efficiency II）を付けてマナ不足を補う。",
         "passivePriority": "育成用ツリーからEndgame用ツリーへ移る。冷気インフュージョンと元素ダメージ、エナジーシールドを確認。",
         "gearPriority": "ティアラ・ローブ・手袋・サンダルでエナジーシールドを確保。接頭辞はライフと追加エナジーシールド、耐性はルーンで補う。",
         "replaceGear": "耐性不足、防御不足、杖の火力不足の順に1部位ずつ更新する。Spirit付きのアミュレットは後で使うため残す。",
-        "caution": "Mana Tempestを使う場合は効果を得たらすぐ範囲から出る。中に居続けるとマナが急速に減る。",
-        "transitionCondition": "低Tierマップで耐性を維持しながら、Spark中心で周回できること。",
+        "caution": "マナテンペスト（Mana Tempest）を使う場合は効果を得たらすぐ範囲から出る。中に居続けるとマナが急速に減る。",
+        "transitionCondition": "低Tierマップで耐性を維持しながら、スパーク（Spark）中心で周回できること。",
         "nowActions": [
           "耐性とエナジーシールドを整える",
-          "Efficiency IIでマナ不足を補う",
+          "コスト軽減 II（Efficiency II）でマナ不足を補う",
           "Spirit付きアミュレットを確保する"
         ]
       },
       {
         "label": "Early Endgame",
-        "mainSkill": "Spirit 121以上でCast on Critical＋コメットを追加。Sparkの会心でコメットが自動発動し、操作はこれまでと同じ。",
-        "supports": "Pinpoint CriticalをSpark・Cast on Critical・Orb of Stormsに付けて会心率を上げる。",
-        "passivePriority": "Elemental Equilibriumを取ると、Orb of Stormsが冷気、Frost Bombが火のインフュージョンになりコメットを強化する。",
+        "mainSkill": "Spirit 121以上でクリティカル時キャスト（Cast on Critical）＋コメットを追加。スパーク（Spark）の会心でコメットが自動発動し、操作はこれまでと同じ。",
+        "supports": "クリティカル集中（Pinpoint Critical）をスパーク（Spark）・クリティカル時キャスト（Cast on Critical）・オーブオブストーム（Orb of Storms）に付けて会心率を上げる。",
+        "passivePriority": "エレメンタルイクイリブリアム（Elemental Equilibrium）を取ると、オーブオブストーム（Orb of Storms）が冷気、フロストボム（Frost Bomb）が火のインフュージョンになりコメットを強化する。",
         "gearPriority": "Spirit（杖・アミュレット・ローブの接頭辞、ヘルムのコラプト、サイドクエスト）と会心率。",
-        "replaceGear": "Maligaro’s Virtuosity（手袋）が火力の要と原典にある。Call of the Brotherhood装備後は追加雷より追加冷気ダメージを優先する。",
-        "caution": "Pinpoint Criticalは会心ダメージが下がるため、原典はMaligaro’s Virtuosity（会心倍率を固定）との併用を前提にしている。",
-        "transitionCondition": "コメットが自動発動し、緊急用のConvalescenceも含めてSpiritが足りていること。",
+        "replaceGear": "マリガロの妙技（Maligaro’s Virtuosity）（手袋）が火力の要と原典にある。Call of the Brotherhood装備後は追加雷より追加冷気ダメージを優先する。",
+        "caution": "クリティカル集中（Pinpoint Critical）は会心ダメージが下がるため、原典はマリガロの妙技（Maligaro’s Virtuosity）（会心倍率を固定）との併用を前提にしている。",
+        "transitionCondition": "コメットが自動発動し、緊急用のコンヴァレッセンス（Convalescence）も含めてSpiritが足りていること。",
         "nowActions": [
           "Spiritを121以上に増やす",
-          "Cast on Criticalとコメットを追加する",
-          "Pinpoint Criticalで会心率を上げる"
+          "クリティカル時キャスト（Cast on Critical）とコメットを追加する",
+          "クリティカル集中（Pinpoint Critical）で会心率を上げる"
         ]
       },
       {
         "label": "Endgame完成",
-        "mainSkill": "別の高予算マナスタック構成へ組み替える選択肢。周回はSpark、ボスはFrost Bomb → Spark。コメットはCast on Criticalで自動発動する。",
-        "supports": "Sparkの会心率を90%以上に保つ。サポートは原典のジェム表の優先順に強化し、各スキルの品質も上げる。",
-        "passivePriority": "アセンダンシーはConstant Gale・Force of Will・Tempest Caller・Multiplying Squalls。ジュエルは会心率・会心ダメージ・スペルダメージを優先。",
-        "gearPriority": "最大マナ（5,000以上が目安）、会心率、Spirit。Absent Amulet（Cast on Critical付き）がない場合は笏でSpiritを補う。",
-        "replaceGear": "Cloak of Defianceは必須ではない。通常のエナジーシールド鎧にする場合はパッシブでMind Over Matterを取る。",
-        "caution": "前段のMaligaro’s Virtuosityを使う構成とは別の作者・装備・パッシブ・アセンダンシーです。マナを増やすだけで移行できるとは限りません。必要な振り直しとジェム・装備をまとめて照合してください。高額装備を含み、低予算の開始向けではないと原典に明記。1.0では未確認。",
+        "mainSkill": "別の高予算マナスタック構成へ組み替える選択肢。周回はスパーク（Spark）、ボスはフロストボム（Frost Bomb） → スパーク（Spark）。コメットはクリティカル時キャスト（Cast on Critical）で自動発動する。",
+        "supports": "スパーク（Spark）の会心率を90%以上に保つ。サポートは原典のジェム表の優先順に強化し、各スキルの品質も上げる。",
+        "passivePriority": "アセンダンシーは絶え間ない強風（Constant Gale）・意思の力（Force of Will）・テンペストコーラー（Tempest Caller）・次々と襲うスコール（Multiplying Squalls）。ジュエルは会心率・会心ダメージ・スペルダメージを優先。",
+        "gearPriority": "最大マナ（5,000以上が目安）、会心率、Spirit。不在のアミュレット（Absent Amulet）（クリティカル時キャスト（Cast on Critical）付き）がない場合は笏でSpiritを補う。",
+        "replaceGear": "反抗のクローク（Cloak of Defiance）は必須ではない。通常のエナジーシールド鎧にする場合はパッシブでマインドオーバーマター（Mind Over Matter）を取る。",
+        "caution": "前段のマリガロの妙技（Maligaro’s Virtuosity）を使う構成とは別の作者・装備・パッシブ・アセンダンシーです。マナを増やすだけで移行できるとは限りません。必要な振り直しとジェム・装備をまとめて照合してください。高額装備を含み、低予算の開始向けではないと原典に明記。1.0では未確認。",
         "transitionCondition": "使用中の0.5.5段階が揃い、変更前後をゲーム内で比較できる状態。",
         "nowActions": [
           "最大マナ5,000以上を目指す",
-          "Sparkの会心率90%以上を保つ",
+          "スパーク（Spark）の会心率90%以上を保つ",
           "1.0移行前に対応表示を再確認する"
         ]
       }
@@ -3381,7 +3381,7 @@
     "gearPriorities": [
       "杖：雷・全スペルスキルレベル、追加元素ダメージ、スペルダメージ増加、詠唱速度",
       "防具：ライフ、耐性、エナジーシールド、マナ回復速度（ティアラ・ローブ・手袋・サンダル）",
-      "Endgame：Spirit 121以上と会心率。手袋Maligaro’s Virtuosityが火力の要と原典に記載"
+      "Endgame：Spirit 121以上と会心率。手袋マリガロの妙技（Maligaro’s Virtuosity）が火力の要と原典に記載"
     ],
     "sources": [
       {
@@ -3464,7 +3464,7 @@
       }
     },
     "reviewedFacts": {
-      "operation": "周回は少なめ（Spark中心）・ボスは複数スキル（原典に記載）",
+      "operation": "周回は少なめ（スパーク（Spark）中心）・ボスは複数スキル（原典に記載）",
       "gearDependence": "高（火力は杖の性能に大きく左右されると原典に記載）",
       "ssfNote": "キャンペーン用の育成ガイドはSSFで成立と明記（PoE Vault）。Endgame完成形のSSF成立は未確認",
       "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",

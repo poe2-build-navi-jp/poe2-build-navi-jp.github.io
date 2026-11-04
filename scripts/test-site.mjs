@@ -54,7 +54,7 @@ assert(index.indexOf('id="home-build-routes"') < index.indexOf('id="purpose-pick
 assert(index.includes(`掲載${builds.length}ビルドを職業・戦い方で比較`), "homepage catalog count must follow public build data");
 assert(index.includes("全ビルドを同じ予算・条件で実測した最強順位ではありません") && index.includes("この日付は全ビルドの再検証日ではありません"), "latest/strongest search intent must retain evidence limits");
 const bestLanding = await read("best-builds/index.html");
-assert(bestLanding.includes("Endgame構成ではワーリングアサルトとFalling Thunder") && bestLanding.includes("Lv41の育成構成とは異なる"), "boss comparison must distinguish Endgame from the Lv41 variant");
+assert(bestLanding.includes("Endgame構成ではワーリングアサルトとフォーリングサンダー（Falling Thunder）") && bestLanding.includes("Lv41の育成構成とは異なる"), "boss comparison must distinguish Endgame from the Lv41 variant");
 assert(!bestLanding.includes("単体戦で使うFalling Thunderの手順を段階別に"), "unscoped boss-mechanic summary must not return");
 
 assert(index.includes('class="hero hero-focused"') && !index.includes('class="hero-guide"'), "homepage hero choices must be focused without duplicated guide links");
