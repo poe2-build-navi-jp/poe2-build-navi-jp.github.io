@@ -76,7 +76,7 @@ function enhance(original) {
  }
 
  if (article && !content.some(node => hasClass(node, 'guide-toc')) && !hasClass(article, 'discovery-page') && !hasClass(article, 'wide-article')) {
-  const headings = content.filter(node => node.nodeName === 'h2' && (node.parentNode === article || node.parentNode?.parentNode === article) && !['sources', 'seo-sources', 'related', 'content-action', 'guide-verification', 'next-box'].some(name => hasClass(node.parentNode, name)));
+  const headings = content.filter(node => node.nodeName === 'h2' && (node.parentNode === article || node.parentNode?.parentNode === article) && !['sources', 'seo-sources', 'related', 'content-action', 'guide-verification', 'next-box', 'term-lead', 'term-action'].some(name => hasClass(node.parentNode, name)));
   if (headings.length >= 4) {
    const used = new Set(nodes.map(node => attrs(node).id).filter(Boolean));
    const links = headings.map((heading, i) => {
