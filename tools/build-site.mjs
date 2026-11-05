@@ -12,6 +12,7 @@ const steps=[
  'enhance-one-hub',
  'enhance-term-links','enhance-site-chrome','enhance-practical-help','generate-build-data',
  'localize-japanese-names',   // the final visible copy, before recording page dates
+ 'enhance-article-reading',  // paragraph breaks, contents and responsive tables
  'generate-sitemap',         // after everything that changes <main>: it records each page's content date
  'enhance-page-schema',      // reads those dates
  'generate-og-images','inject-analytics',

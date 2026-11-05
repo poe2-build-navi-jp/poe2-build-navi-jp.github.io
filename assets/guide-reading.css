@@ -1,4 +1,4 @@
-/* Reading layout for the 35 existing guide-intent pages only. */
+/* Shared reading styles for article pages and build roadmaps. */
 .guide-reading .article-page{max-width:800px;padding:36px 24px 64px;font-size:17px;line-height:1.85;overflow-wrap:break-word}
 .guide-reading .article-page h1,.guide-reading .article-page h2,.guide-reading .article-page h3{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;letter-spacing:.015em;text-wrap:pretty;color:#17232b}
 .guide-reading .article-page h1{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.5;margin:.4rem 0 1.25rem}
@@ -62,4 +62,43 @@
  .guide-reading .guide-record-table th,.guide-reading .guide-record-table td{padding:.6rem;font-size:.95rem}
  .guide-reading .unique-gear-name-en{overflow-wrap:anywhere}
  .guide-reading .related-links{grid-template-columns:1fr}
+}
+
+/* Keep comparison and discovery layouts wide while giving their prose room. */
+.guide-reading .article-page:is(.discovery-page,.wide-article){max-width:1050px}
+.guide-reading .article-page :is(p,li,dd,th,td){line-break:strict}
+.guide-reading .article-page :is(h1,h2,h3){overflow-wrap:anywhere}
+.guide-reading .article-page .next-box :is(h3,p){color:inherit}
+.guide-reading .article-page .seo-visual{width:100%;margin-inline:0}
+.guide-reading .article-page .guide-toc summary{min-height:44px;cursor:pointer;line-height:1.6;font-weight:700}
+.guide-reading .article-page .guide-toc li{break-inside:avoid}
+.guide-reading .article-page .source-list{display:block}
+.guide-reading .article-page .source-list>li{display:block;padding:.8rem 0;border-bottom:1px solid #d8d0c0}
+.guide-reading .article-page .source-list>li>a{display:block;overflow-wrap:anywhere}
+.guide-reading .article-page .source-list>li>span{display:block;text-align:left;margin:.25rem 0}
+.guide-reading .article-page .source-list>li>p{margin:.35rem 0}
+.guide-reading table[data-reading-table]{table-layout:fixed;min-width:0;width:100%}
+.guide-reading table[data-reading-table] th:first-child{width:28%}
+.guide-reading table[data-reading-table] :is(th,td){min-width:0;word-break:normal;overflow-wrap:anywhere}
+.guide-reading table[data-reading-table] td br{display:block;content:"";margin-top:.5em}
+.guide-reading .static-roadmap{font-size:17px;line-height:1.85}
+.guide-reading .static-roadmap :is(p,li,dd){overflow-wrap:anywhere}
+.guide-reading .static-roadmap dd{min-width:0;line-height:1.85}
+.guide-reading .static-roadmap dt{line-height:1.65}
+@media(max-width:680px){
+ .guide-reading .article-page :is(.definition-list li,.pros-cons,.dictionary-list){grid-template-columns:1fr}
+ .guide-reading .article-page .definition-list li{gap:.4rem}
+ .guide-reading .article-page .sources{padding:1rem}
+ .guide-reading .article-page .guide-toc ol{columns:1}
+ .guide-reading .guide-record-table:has(table[data-reading-table]){overflow:visible;background:transparent;border:0}
+ .guide-reading table[data-reading-table]{display:block}
+ .guide-reading table[data-reading-table] caption{display:block;padding:.8rem 0;text-align:left}
+ .guide-reading table[data-reading-table] thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .guide-reading table[data-reading-table] tbody{display:block}
+ .guide-reading table[data-reading-table] tbody tr{display:block;margin:0 0 1rem;border:1px solid #c7bfae;border-radius:6px;overflow:hidden;background:#fffdf8}
+ .guide-reading table[data-reading-table] tbody :is(th,td){display:block;width:auto;min-width:0;border:0;padding:.75rem 1rem}
+ .guide-reading table[data-reading-table] tbody th{background:#e9e2d4;font-size:1rem;line-height:1.7}
+ .guide-reading table[data-reading-table] tbody th:first-child{width:auto}
+ .guide-reading table[data-reading-table] td+td{border-top:1px solid #e9e2d4}
+ .guide-reading table[data-reading-table] td[data-label]::before{content:attr(data-label);display:block;font-size:.85rem;font-weight:700;color:#565f66;margin-bottom:.35rem}
 }
