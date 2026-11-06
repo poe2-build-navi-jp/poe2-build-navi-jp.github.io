@@ -42,4 +42,14 @@ const lastmod=path=>[buildLastmod.get(path)||(changedPaths.has(path)?changedDate
 const xmlEscape=value=>String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map((path,i)=>{const image=imageMap.get(path);return `  <url><loc>${base}${path}</loc><lastmod>${lastmod(path)}</lastmod><priority>${i===0?"1.0":path==="/best-builds/"||path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority>${image?`<image:image><image:loc>${base}${image[0]}</image:loc></image:image>`:""}${(strategyImages.get(path)||[]).map(src=>`<image:image><image:loc>${base}${xmlEscape(src)}</image:loc></image:image>`).join("")}</url>`}).join("\n")}\n</urlset>\n`;
 await writeFile(resolve(root,"sitemap.xml"),xml);
-console.log(`Generated sitemap with ${urls.length} URLs.`);
+// Two more ways for crawlers to find every page besides sitemap.xml: a plain-text URL list (also a
+// valid sitemap format) and an Atom feed of the most recently changed pages, which search engines
+// fetch often. robots.txt keeps its single Sitemap line; these are submitted separately.
+await writeFile(resolve(root,"sitemap.txt"),urls.map(path=>`${base}${path}`).join("\n")+"\n");
+const pageMeta=async path=>{const html=await readFile(resolve(root,`${path.slice(1)}index.html`),"utf8");const unesc=v=>v.replaceAll("&quot;",'"').replaceAll("&gt;",">").replaceAll("&lt;","<").replaceAll("&amp;","&");return {title:unesc(html.match(/<title>([^<]*)<\/title>/)?.[1]||path),summary:unesc(html.match(/<meta name="description" content="([^"]*)"/)?.[1]||"")};};
+const recent=urls.map((path,i)=>({path,i,date:lastmod(path)})).sort((a,b)=>b.date.localeCompare(a.date)||a.i-b.i).slice(0,50);
+const entries=[];
+for(const {path,date} of recent){const {title,summary}=await pageMeta(path);entries.push(`  <entry><title>${xmlEscape(title)}</title><link href="${base}${path}"/><id>${base}${path}</id><updated>${date}T00:00:00+09:00</updated><summary>${xmlEscape(summary)}</summary></entry>`);}
+const feed=`<?xml version="1.0" encoding="UTF-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">\n  <title>${xmlEscape(site.siteName)}の更新情報</title>\n  <link href="${base}/"/>\n  <link rel="self" href="${base}/feed.xml"/>\n  <id>${base}/feed.xml</id>\n  <updated>${recent[0].date}T00:00:00+09:00</updated>\n  <author><name>${xmlEscape(site.operatorName)}</name></author>\n${entries.join("\n")}\n</feed>\n`;
+await writeFile(resolve(root,"feed.xml"),feed);
+console.log(`Generated sitemap with ${urls.length} URLs, sitemap.txt and an Atom feed of ${entries.length} recent pages.`);

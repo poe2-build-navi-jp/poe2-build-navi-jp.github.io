@@ -13,5 +13,7 @@ assert(read('equipment/index.html').includes('/equipment/unset-ring/'));
 assert(read('site-map/index.html').includes('/equipment/unset-ring/'));
 const xml=new JSDOM(read('sitemap.xml'),{contentType:'text/xml'}).window.document;
 const ent=[...xml.querySelectorAll('url')].find(x=>x.querySelector('loc').textContent.endsWith('/equipment/unset-ring/'));
-assert.equal(ent.querySelector('lastmod').textContent,'2026-10-28');
+// lastmod follows the page's recorded content date (data/page-dates.json), never earlier than its first publication.
+const recorded=JSON.parse(read('data/page-dates.json'))['/equipment/unset-ring/'].date;
+assert.equal(ent.querySelector('lastmod').textContent,recorded);assert(recorded>='2026-10-28');
 console.log('PASS: Unset Ring source-based content, no inferred adoption, reading layout, three incoming links and sitemap');

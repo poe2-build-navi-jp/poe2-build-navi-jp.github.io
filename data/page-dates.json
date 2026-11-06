@@ -208,8 +208,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "4322df0f56cff6f2",
-  "date": "2026-11-04"
+  "hash": "8ccf48d23b92806d",
+  "date": "2026-11-06"
  },
  "/classes/monk/": {
   "hash": "e46caa6b9d29b5a8",
@@ -224,8 +224,8 @@
   "date": "2026-11-04"
  },
  "/classes/sorceress/": {
-  "hash": "5fcd0b4e0abc5788",
-  "date": "2026-11-04"
+  "hash": "fe80d6bd02d7dda3",
+  "date": "2026-11-06"
  },
  "/classes/huntress/": {
   "hash": "58b5f15088daa9af",
@@ -244,52 +244,52 @@
   "date": "2026-11-04"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "11fb74345bb72193",
-  "date": "2026-11-04"
+  "hash": "c34062335330dd20",
+  "date": "2026-11-06"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "164cc9c123a976f5",
-  "date": "2026-11-04"
+  "hash": "c69c17a491b740ef",
+  "date": "2026-11-06"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "24694e20d4594d43",
-  "date": "2026-11-04"
+  "hash": "3b713599ca1fc6b8",
+  "date": "2026-11-06"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "86f487a85e6ffdaf",
-  "date": "2026-11-04"
+  "hash": "69af60a66e192124",
+  "date": "2026-11-06"
  },
  "/builds/huntress/companion/": {
-  "hash": "4f266f99369951c8",
-  "date": "2026-11-04"
+  "hash": "299093a83af0136c",
+  "date": "2026-11-06"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "859e9b1c3c7729d8",
-  "date": "2026-11-04"
+  "hash": "6ea068fd614682c9",
+  "date": "2026-11-06"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "d0e9e53779ec6f40",
-  "date": "2026-11-04"
+  "hash": "d0f440cd4300e3b7",
+  "date": "2026-11-06"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "a4e33e332713b1c5",
-  "date": "2026-11-04"
+  "hash": "fb19943484b6b860",
+  "date": "2026-11-06"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "e3e6ed9322f8f1f3",
-  "date": "2026-11-04"
+  "hash": "4001aa5459d092f3",
+  "date": "2026-11-06"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "f6d5b11a46c0f508",
-  "date": "2026-11-04"
+  "hash": "a13f5e2d5a5d1dfe",
+  "date": "2026-11-06"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "280e35a83c786765",
-  "date": "2026-11-04"
+  "hash": "228fa4c1d57520d4",
+  "date": "2026-11-06"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "1c35d1f62a5c029e",
-  "date": "2026-11-04"
+  "hash": "32c4174cf15dd316",
+  "date": "2026-11-06"
  },
  "/guides/skill-gems/": {
   "hash": "93871fde038b8e53",
@@ -348,20 +348,20 @@
   "date": "2026-11-04"
  },
  "/guides/act-1-walkthrough/": {
-  "hash": "657e8f6aa20ecde7",
-  "date": "2026-11-04"
+  "hash": "038506b0754a3369",
+  "date": "2026-11-06"
  },
  "/guides/act-2-walkthrough/": {
-  "hash": "830fd112dfe34a62",
-  "date": "2026-11-04"
+  "hash": "918ebb8113c4acf5",
+  "date": "2026-11-06"
  },
  "/guides/act-3-walkthrough/": {
-  "hash": "3135f22778adb958",
-  "date": "2026-11-04"
+  "hash": "2e19cd1856d60549",
+  "date": "2026-11-06"
  },
  "/guides/act-4-walkthrough/": {
-  "hash": "2d81b676bab90f0d",
-  "date": "2026-11-04"
+  "hash": "cc9d164732db3007",
+  "date": "2026-11-06"
  },
  "/guides/interlude-walkthrough/": {
   "hash": "2c9d074f3b66fc86",
@@ -400,8 +400,8 @@
   "date": "2026-11-03"
  },
  "/guides/unique-gear/": {
-  "hash": "917a71b3790b03a2",
-  "date": "2026-11-04"
+  "hash": "ab1933931ff107db",
+  "date": "2026-11-06"
  },
  "/guides/arbiter-of-divinity/": {
   "hash": "45ec6ea5de29ddae",
@@ -432,8 +432,8 @@
   "date": "2026-11-03"
  },
  "/guides/beginner-currency-farming/": {
-  "hash": "40041d00a9f6502a",
-  "date": "2026-11-04"
+  "hash": "f4c05fb4edf68b47",
+  "date": "2026-11-06"
  },
  "/guides/build-gear-buying-order/": {
   "hash": "c2d2da7665c875f6",
@@ -442,6 +442,14 @@
  "/guides/twister-gemling-transition/": {
   "hash": "807eca0be5e15a1f",
   "date": "2026-11-04"
+ },
+ "/guides/valuable-drops-early/": {
+  "hash": "e7ad5f85ee403a8b",
+  "date": "2026-11-06"
+ },
+ "/guides/valuable-drops-act-4/": {
+  "hash": "9af4b5c30cbe18a3",
+  "date": "2026-11-06"
  },
  "/dictionary/build/": {
   "hash": "b08ae474e5f648b2",
@@ -561,14 +569,6 @@
  },
  "/what-is-poe2/": {
   "hash": "979fe140e32518b8",
-  "date": "2026-11-05"
- },
- "/guides/valuable-drops-early/": {
-  "hash": "fc8f9859127d9df7",
-  "date": "2026-11-05"
- },
- "/guides/valuable-drops-act-4/": {
-  "hash": "ded4814acbc57d03",
   "date": "2026-11-05"
  }
 }

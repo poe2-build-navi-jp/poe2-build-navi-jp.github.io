@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {JSDOM} from 'jsdom';
+// The build shows English game names as 「日本語（English）」 (tools/localize-japanese-names.mjs), so compare against that visible form.
+import {formatJapaneseNames} from '../tools/japanese-names.mjs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const terms=JSON.parse(read('data/dictionary.json'));
 assert.equal(terms.length,13);
@@ -8,7 +10,7 @@ for(const term of terms){
  const d=new JSDOM(read(`dictionary/${term.slug}/index.html`)).window.document;
  const block=d.querySelector('.term-provenance');assert(block,term.slug);
  assert.equal(block.querySelectorAll('dt').length,3);
- for(const field of ['method','scope','unknown'])assert(block.textContent.includes(term.provenance[field]));
+ for(const field of ['method','scope','unknown'])assert(block.textContent.includes(formatJapaneseNames(term.provenance[field])),`${term.slug}: ${field}`);
  assert(d.querySelector('.term-lead').compareDocumentPosition(d.querySelector('.term-action'))&4);
  assert(d.querySelector('.term-action').compareDocumentPosition(block)&4);
  assert(block.compareDocumentPosition(d.querySelector('#term-sources'))&4);
