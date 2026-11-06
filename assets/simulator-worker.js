@@ -1,5 +1,5 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
-import {fromDecoded, MAX_CODE_LENGTH, validRequest} from './simulator-model.js?v=182b43eae1';
+import {validRequest} from './simulator-model.js?v=0194a81d11';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;
@@ -62,13 +62,6 @@ self.onmessage = async ({data:{id,action,payload}}) => {
       const rolls=Object.fromEntries(lines.map((_,index)=>[index,Math.min(1,Math.max(0,payload.roll ?? .5))]));
       result = JSON.parse(engine.uniqueItemDraftJson(JSON.stringify({id:payload.id,...(variants?{variant:variants}:{}),rolls})));
     }
-    else if (action === 'import') {
-      const code = payload.trim();
-      if (code.length > MAX_CODE_LENGTH || !/^[A-Za-z0-9_+/=-]+$/.test(code)) throw new Error('PoB2の共有コードを貼り付けてください。URLの読み込みには対応していません。');
-      const decoded = JSON.parse(engine.decodeBuildJson(code));
-      const request = fromDecoded(decoded,code);
-      result = {request,notes:decoded.notes || '',result:calculate(request),tree:tree(request.tree_version)};
-    } else if (action === 'export') result = engine.encodeBuildJson(JSON.stringify({...payload.request,base_code:payload.request.pob_code,notes:payload.notes}));
     else throw new Error('不明な操作です。');
     postMessage({id,result});
   } catch (error) {

@@ -36,10 +36,8 @@ try{
  const low=await rpc('unique',{id:astro.id,roll:0}),high=await rpc('unique',{id:astro.id,roll:1});assert.notEqual(low.text,high.text);
  const equipped=await rpc('calculate',{...request,items:[{slot:'amulet',text:high.text}]});assert.equal(equipped.item_errors.length,0);assert.ok(model.statValue(equipped,'Str')>model.statValue(baseline,'Str'));
  const spell=model.newPlan(presets.find(p=>p.id==='sorceress-spark-stormweaver'),catalog.gems),spellLow=await rpc('calculate',spell);spell.socket_groups[0].gems[0].level=10;const spellHigh=await rpc('calculate',spell);assert.ok(model.statValue(spellHigh,'CombinedDPS')>model.statValue(spellLow,'CombinedDPS'),'gem level changes calculated spell damage');
- const code=await rpc('export',{request:edited,notes:'日本語メモ'});
- const imported=await rpc('import',code);assert.equal(imported.request.character.class_name,'Mercenary');assert.equal(imported.notes,'日本語メモ');assert.ok(imported.request.allocated_nodes.includes(nextNode.skill));
- assert.equal(model.statValue(imported.result,'Life'),model.statValue(await rpc('calculate',edited),'Life'));
- await assert.rejects(rpc('import','broken-code'));
+ await assert.rejects(rpc('import','external-code'),/不明な操作/);
+ await assert.rejects(rpc('export',{}),/不明な操作/);
  const save=model.makeSave('mercenary-twister-gemling',edited,0,'メモ');assert.deepEqual(model.parseSave(JSON.stringify(save)),save);assert.throws(()=>model.parseSave('{}'));
- console.log('PASS: real WASM/data integrity; 12 presets; exact Life delta; item and unsupported-effect diagnostics; connected allocation/refund/budget; unique rolls; PoB2 export/import; saved plan validation');
+ console.log('PASS: real WASM/data integrity; 12 presets; exact Life delta; item and unsupported-effect diagnostics; connected allocation/refund/budget; unique rolls; external-code actions rejected; saved plan validation');
 }finally{await worker.terminate();}

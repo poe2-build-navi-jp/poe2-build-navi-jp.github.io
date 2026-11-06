@@ -1,6 +1,5 @@
 export const SAVE_VERSION = 1;
 export const ENGINE_VERSION = '0.0.46';
-export const MAX_CODE_LENGTH = 1000000;
 export function validRequest(request) {
   if (!request || !request.character || typeof request.character.class_name !== 'string') return false;
   if (!Number.isInteger(request.character.level) || request.character.level < 1 || request.character.level > 100) return false;
@@ -8,19 +7,6 @@ export function validRequest(request) {
   if (request.socket_groups && (!Array.isArray(request.socket_groups) || request.socket_groups.length > 50)) return false;
   if (request.allocated_nodes && (!Array.isArray(request.allocated_nodes) || request.allocated_nodes.length > 1000 || request.allocated_nodes.some(n => !Number.isInteger(n)))) return false;
   return true;
-}
-export function fromDecoded(build, code) {
-  const request = {pob_code:code, character:build.character, tree_version:build.tree.tree_version,
-    allocated_nodes:build.tree.allocated_nodes, attribute_choices:build.tree.attribute_choices,
-    items:build.items.equipped, flasks:build.items.flasks, limbs:build.items.limbs,
-    jewels:build.items.socket_jewels, equipment_jewels:build.items.equipment_jewels || [],
-    socket_groups:build.socket_groups.map(({active_skill_id, ...group})=>group), config_inputs:build.config_inputs,
-    custom_modifier_blocks:build.custom_modifier_blocks || [], breakdowns:[]};
-  if (build.main_socket_group !== null) request.main_socket_group = build.main_socket_group;
-  if (build.weapon_swap) request.weapon_swap = build.weapon_swap;
-  if (build.party) request.party = build.party;
-  if (!validRequest(request)) throw new Error('読み込んだ構成の形式に対応していません。');
-  return request;
 }
 export function newPlan(preset, catalog) {
   const socket_groups = preset.skills.flatMap(name => {

@@ -1,4 +1,4 @@
-import {newPlan, parseSave, makeSave, statValue, treeEdges, MAX_CODE_LENGTH} from './simulator-model.js?v=182b43eae1';
+import {newPlan, parseSave, makeSave, statValue, treeEdges} from './simulator-model.js?v=0194a81d11';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
@@ -15,7 +15,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- worker=new Worker(new URL('./simulator-worker.js?v=849bb42b39',import.meta.url),{type:'module'});
+ worker=new Worker(new URL('./simulator-worker.js?v=1fc636144e',import.meta.url),{type:'module'});
  worker.onmessage=({data})=>{if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  worker.onerror=()=>{for(const task of pending.values())task.reject(Error('計算処理を続けられません。ページを再読み込みしてください。'));pending.clear();};
  bootPromise=rpc('boot').then(data=>{catalog=data;return data;});return bootPromise;
@@ -53,7 +53,7 @@ function renderResults(){
  $('sim-diagnostic-count').textContent=`（${diagnostics.length}件）`;
  $('sim-diagnostic-body').innerHTML=`<p>${hasSkill?'選択したスキルと現在の計算条件の結果です。':'計算対象のダメージスキルがありません。スキルと必要な武器・召喚対象を設定してください。'}</p>${diagnostics.length?`<p>以下の効果は数値に含まれない場合があります。</p><ul>${diagnostics.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`:'<p>エンジンから未対応効果・装備エラーの報告はありません。全機構の再現を保証する判定ではありません。</p>'}`;
  $('sim-diagnostics').open=diagnostics.length>0;
- $('sim-engine-version').textContent=`PoBR ${catalog.runtime.release} / データ ${result.provenance?.data_version || catalog.runtime.dataVersion}`;
+ $('sim-engine-version').textContent=`対応データ ${result.provenance?.data_version || catalog.runtime.dataVersion}`;
  $('sim-character-name').textContent=`${label(plan.request.character.class_name)} / ${label(plan.request.character.ascendancy_name)} · 装備・パッシブは自分の設定`;
 }
 async function selectPreset(id,{fromHistory=false}={}){
@@ -133,13 +133,6 @@ async function previewNode(){
  try{const action=plan.request.allocated_nodes?.includes(id)?'refund':'allocate';const next=await rpc('edit',{request:clone(plan.request),node:id,mode:0,action,quest_points:plan.questPoints});if(id!==selectedNode||version!==generation)return;preview=next;
  $('sim-node-preview-result').innerHTML=next.valid?`<p>追加 ${next.result.added.length}ノード / 解除 ${next.result.removed.length}ノード<br>通常ポイント ${next.result.points_used} / ${next.result.points_max}</p><button type="button" id="sim-node-apply" class="sim-primary">この変更を反映</button>`:`<p role="status">この変更は適用できません：${esc(next.reason)}</p>`;renderTreeState();}catch(error){showError(error);}
 }
-function openCode(mode){$('sim-code-dialog').dataset.mode=mode;$('sim-code-title').textContent=mode==='import'?'PoB2コードを読み込む':'現在の構成をPoB2へ';$('sim-code').value='';$('sim-code').readOnly=mode==='export';$('sim-code-import').hidden=mode==='export';$('sim-code-copy').hidden=mode!=='export';$('sim-code-message').textContent='';$('sim-code-dialog').showModal();}
-async function importCode(){
- const code=$('sim-code').value.trim();if(!code||code.length>MAX_CODE_LENGTH){$('sim-code-message').textContent='有効なPoB2コードを入力してください。';return;}
- const version=generation;$('sim-code-import').disabled=true;$('sim-code-message').textContent='読み込みと計算を確認しています…';
- try{const next=await rpc('import',code);if(version!==generation)return;plan={request:next.request,questPoints:plan.questPoints,notes:next.notes};currentTree=next.tree;baseline=null;result=next.result;preview=null;selectedNode=null;renderInputs();renderTree();renderResults();save();$('sim-code-dialog').close();clearError();$('sim-status').textContent='PoB2コードを読み込みました。計算の確認事項も確認してください。';}
- catch(error){$('sim-code-message').textContent=error.message;}finally{$('sim-code-import').disabled=false;}
-}
 function download(){const blob=new Blob([JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes),null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`poe2-${selectedPreset.id}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 // All inputs stay on this origin; no character or code upload is performed.
 document.addEventListener('click',async event=>{
@@ -147,7 +140,6 @@ document.addEventListener('click',async event=>{
  try{
   if(target.dataset.preset){event.preventDefault();await selectPreset(target.dataset.preset);return;}
   if(target.id==='sim-change-build'){save();showChooser();return;}
-  if(target.id==='sim-choose-import'){await selectPreset(presets[0].id);if(plan)openCode('import');return;}
   if(!plan)return;
   if(target.dataset.tab){setTab(target.dataset.tab);return;}
   if(target.dataset.slot){selectedSlot=target.dataset.slot;renderSlots();return;}
@@ -166,10 +158,6 @@ document.addEventListener('click',async event=>{
   if(['sim-tree-plus','sim-tree-minus'].includes(target.id)){const factor=target.id==='sim-tree-plus'?.7:1.4;view.w=Math.max(800,Math.min(60000,view.w*factor));view.h=view.w*.76;updateView();return;}
   if(target.id==='sim-baseline'){if(result){baseline=Object.fromEntries(statistics.map(([id])=>[id,statValue(result,id)]));renderResults();$('sim-status').textContent='比較の基準を設定しました。以降の変更との差分を表示します。';}return;}
   if(target.id==='sim-config-apply'){plan.request.enemy_tier=$('sim-enemy').value;plan.request.config_inputs ||= {};plan.request.config_inputs['questInterlude 2Khari CrossingMolten Shrine']=$('sim-life-reward').checked;plan.request.extra_modifiers=$('sim-extra-mods').value.split('\n').map(s=>s.trim()).filter(Boolean);if(plan.request.extra_modifiers.length>100)throw Error('追加の修飾効果は100行までです。');commit();return;}
-  if(target.id==='sim-import-open'){openCode('import');return;}
-  if(target.id==='sim-export-open'){openCode('export');$('sim-code-message').textContent='コードを生成しています…';try{$('sim-code').value=await rpc('export',{request:clone(plan.request),notes:plan.notes});$('sim-code-message').textContent='PoB2へインポートできます。';}catch(error){$('sim-code-message').textContent=error.message;}return;}
-  if(target.id==='sim-code-import'){await importCode();return;}
-  if(target.id==='sim-code-copy'){try{await navigator.clipboard.writeText($('sim-code').value);$('sim-code-message').textContent='コピーしました。';}catch{$('sim-code').select();$('sim-code-message').textContent='コードを選択しました。手動でコピーしてください。';}return;}
   if(target.id==='sim-download')download();
  }catch(error){showError(error);}
 });

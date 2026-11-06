@@ -41,10 +41,12 @@ try{
  click('#sim-item-apply');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'&&i.text.includes('Astramentis')));
  click('[data-tab="skills"]');change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
  click('[data-tab="tree"]');const nodeSearch=d.getElementById('sim-node-search');nodeSearch.value='59779';nodeSearch.dispatchEvent(new w.Event('input',{bubbles:true}));click('[data-node-result="59779"]');click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));click('#sim-node-apply');await wait(ready);assert.ok(saved().request.allocated_nodes.includes(59779));
- click('#sim-export-open');await wait(()=>d.getElementById('sim-code').value.startsWith('e'));const exported=d.getElementById('sim-code').value;const imported=await rpc('import',exported);assert.ok(imported.request.items.some(i=>i.slot==='amulet'));d.getElementById('sim-code-dialog').close();
+ assert.equal(d.querySelector('#sim-code-dialog,#sim-import-open,#sim-export-open,#sim-choose-import'),null);
+ const restored=model.parseSave(JSON.stringify(model.makeSave('mercenary-twister-gemling',saved().request,0,'保存の確認')));
+ assert.ok(restored.request.items.some(i=>i.slot==='amulet'));
  click('#sim-change-build');assert.equal(d.getElementById('sim-chooser').hidden,false);
  click('[data-preset="monk-whirling-assault"]');await wait(ready);assert.ok(d.getElementById('sim-build-name').textContent.includes('ワーリング'));
  click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);
  assert.equal(errors.length,0,errors.join('\n'));
- console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; PoB2 export; isolated saved builds and restoration');
+ console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; native saved-file roundtrip; isolated saved builds and restoration');
 }finally{dom.window.close();await native.terminate();}
