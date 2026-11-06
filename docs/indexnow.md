@@ -8,7 +8,7 @@ The root text file named by `KEY_FILE` in `scripts/indexnow-content.mjs` is this
 
 `docs/indexnow/2026-10-13-changes.json` contains exactly 16 canonical HTML pages changed from `0fc117efc3b214ba5a15cca190dd184e0a3def3e` to `7fd942c80bcbbe29565cf9a88467e56de549ce82`. It includes the homepage, purpose comparison, gear diagnosis, unique-gear guide, and 12 build details. The other 89 sitemap URLs were not selected. The hashes cover meaningful rendered content, title, description and links; verification-only tags do not create content updates.
 
-`docs/indexnow/2026-10-16-changes.json` is the newest plan: the homepage (new build list), `/best-builds/` and `/what-is-poe2/` (titles and descriptions). `npm run test:indexnow` checks the current pages against the newest plan, so a later content change to one of its pages needs a new plan.
+`docs/indexnow/2026-11-06-changes.json` is the newest plan: 141 canonical pages changed from `cd3a829` to `15c63e1` (20 added, including the new guides, equipment pages, the ExileCon page and /site-map/; the rest updated). It has not been sent. The previous plan, `docs/indexnow/2026-10-16-changes.json`, covered the homepage (new build list), `/best-builds/` and `/what-is-poe2/` (titles and descriptions). `npm run test:indexnow` checks the current pages against the newest plan, so a later content change to one of its pages needs a new plan.
 
 ## Review and send
 

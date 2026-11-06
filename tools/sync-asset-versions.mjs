@@ -1,8 +1,10 @@
 // Run last: rewrites every /assets/*.css|js reference in the site HTML to ?v=<content hash>,
 // so each page busts the cache exactly when the file changes. Generators may emit any ?v=.
+// It also gives late-added page stylesheets a fixed place in <head> (normalizeHeadStylesheets).
 import {readFile,readdir,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {resolve} from 'node:path';
+import {normalizeHeadStylesheets} from './block-order.mjs';
 const root=resolve(import.meta.dirname,'..');
 const ignored=new Set(['.git','company','node_modules','scripts','tests','tools']);
 const hashes=new Map();
@@ -18,7 +20,7 @@ async function walk(dir=''){
   if(entry.isDirectory()){await walk(path);continue;}
   if(!entry.name.endsWith('.html'))continue;
   const html=await readFile(resolve(root,path),'utf8');
-  const next=html.replace(assetRef,(match,name)=>hashes.has(name)?`/assets/${name}?v=${hashes.get(name)}`:match);
+  const next=normalizeHeadStylesheets(html.replace(assetRef,(match,name)=>hashes.has(name)?`/assets/${name}?v=${hashes.get(name)}`:match));
   pages++;
   if(next!==html){await writeFile(resolve(root,path),next);changed++;}
  }

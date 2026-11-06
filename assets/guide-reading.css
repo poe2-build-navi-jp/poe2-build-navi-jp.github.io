@@ -102,3 +102,5 @@
  .guide-reading table[data-reading-table] td+td{border-top:1px solid #e9e2d4}
  .guide-reading table[data-reading-table] td[data-label]::before{content:attr(data-label);display:block;font-size:.85rem;font-weight:700;color:#565f66;margin-bottom:.35rem}
 }
+/* Dark cards keep their own light headings (styles.css .class-card h3). */
+.guide-reading .class-card h3{color:#fff}

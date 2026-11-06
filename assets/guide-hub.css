@@ -202,3 +202,7 @@
 @media(max-width:700px){#directory-title{scroll-margin-top:20px}}
 /* Card summaries preview the linked article; full guidance stays in each article. */
 .guide-hub .content-card>span:not(.guide-card-action){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* guide-reading.css gives article headings dark text for light article pages; the guide hub is dark,
+   so its headings keep the hub's own (light) colours. */
+.guide-reading.guide-hub .article-page :is(h1,h2,h3){color:inherit}
+.guide-reading.guide-hub .guide-section-heading h2{color:#edf0f3}

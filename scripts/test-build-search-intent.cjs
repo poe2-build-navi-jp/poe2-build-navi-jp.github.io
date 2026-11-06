@@ -5,6 +5,9 @@ const path = require('node:path');
 const {JSDOM} = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
+// Visible copy shows English game names as 「日本語（English）」 (tools/localize-japanese-names.mjs).
+(async () => {
+const {formatJapaneseNames} = await import(require('node:url').pathToFileURL(path.join(root, 'tools/japanese-names.mjs')));
 const builds = JSON.parse(read('data/builds.json')).filter(build => build.status !== 'draft');
 const comparison = JSON.parse(read('data/build-search-comparison.json'));
 const base = 'https://poe2-build-navi-jp.github.io';
@@ -34,7 +37,7 @@ for (const candidate of comparison.candidates) {
   assert(card && visible(card), candidate.anchor);
   for (const key of ['stage', 'conditions', 'budget']) {
     assert(candidate[key]?.trim());
-    assert(card.textContent.includes(candidate[key]), `${candidate.id}: ${key} must match data`);
+    assert(card.textContent.includes(formatJapaneseNames(candidate[key])), `${candidate.id}: ${key} must match data`);
   }
   assert(visible(card.querySelector('.best-build-conditions')), 'Decision-critical conditions remain visible');
   assert.equal(card.querySelectorAll('.best-build-conditions dd').length, 3);
@@ -84,3 +87,4 @@ assert.equal(collection.mainEntity.itemListElement.length, uniqueIds.length);
 assert(!schema.some(item => ['FAQPage','AggregateRating','Review'].includes(item['@type'])), 'No rich-result or rating claims are manufactured');
 assert.match(read('tier-list/index.html'), /PoE2 0.5.5初心者向けビルドTier/);
 console.log('PASS: visible build-search answers, scoped candidates and dates, budget/SSF separation, source links, native disclosure, intent ownership and unranked schema');
+})().catch(error => { console.error(error); process.exit(1); });

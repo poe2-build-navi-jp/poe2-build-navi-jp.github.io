@@ -3,6 +3,7 @@
 import {readFile, writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {parse} from 'parse5';
+import {insertBlock} from './block-order.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const site = JSON.parse(await readFile(resolve(root, 'data/site.json'), 'utf8'));
@@ -64,7 +65,11 @@ for (const path of paths) {
   const heading = nodes.find(n => n.tagName === 'h1');
   if (!heading) throw new Error(`Article without heading: ${path}`);
   const credit = `<!-- editorial-credit:start --><p class="editorial-credit">編集：<a href="/about/">${site.operatorName}</a><span aria-hidden="true"> · </span><a href="/editorial-policy/">情報源・確認方法</a></p><!-- editorial-credit:end -->`;
-  edits.push({start:heading.sourceCodeLocation.endOffset, end:heading.sourceCodeLocation.endOffset, value:credit});
+  // The search answer stays directly under the heading (enhance-guide-search-intents); the credit follows it.
+  let at = heading.sourceCodeLocation.endOffset;
+  const answerEnd = '<!-- guide-search-answer:end -->';
+  if (html.startsWith('<!-- guide-search-answer:start -->', at) && html.indexOf(answerEnd, at) !== -1) at = html.indexOf(answerEnd, at) + answerEnd.length;
+  edits.push({start:at, end:at, value:credit});
   if (!html.includes('/assets/article-trust.css')) {
    const at = html.indexOf('</head>');
    edits.push({start:at, end:at, value:'<link rel="stylesheet" href="/assets/article-trust.css">'});
@@ -75,7 +80,7 @@ for (const path of paths) {
  if (path === '/' || path === '/about/') {
   const hasWebsite = schemas.some(n => /"@type"\s*:\s*"WebSite"/.test(text(n)));
   const graph = [organization, ...(!hasWebsite ? [website] : [])];
-  html = html.replace('</head>', `<!-- identity-schema:start --><script type="application/ld+json">${json({'@context':'https://schema.org','@graph':graph})}</script><!-- identity-schema:end --></head>`);
+  html = insertBlock(html, '</head>', 'identity-schema', `<!-- identity-schema:start --><script type="application/ld+json">${json({'@context':'https://schema.org','@graph':graph})}</script><!-- identity-schema:end -->`);
  }
  if (html !== original) await writeFile(file, html);
 }
