@@ -269,7 +269,7 @@ assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("
 assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"') && oneHub.includes('href="/poe2-1-0/pre-registration/"') && oneHub.includes('href="/poe2-1-0/build-status/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
 for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1])) {
   const html = await read(`${path}index.html`);
-  const excluded = path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map)\//.test(path);
+  const excluded = path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map|simulator)\//.test(path);
   const boxes = (html.match(/<!-- one-link:start -->/g) || []).length;
   assert(boxes === (excluded ? 0 : 1), `${path || "/"}: 1.0 link box count ${boxes}, expected ${excluded ? 0 : 1}`);
   if (!excluded) {

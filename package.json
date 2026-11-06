@@ -12,7 +12,8 @@
     "test:discovery": "node scripts/test-core-entities.cjs && node scripts/test-site-search.cjs && node scripts/test-entity-generation.mjs",
     "indexnow": "node scripts/ping-index.mjs",
     "test:indexnow": "node --test scripts/test-indexnow.mjs",
-    "test:images": "node scripts/test-image-metadata.mjs"
+    "test:images": "node scripts/test-image-metadata.mjs",
+    "test:simulator": "node scripts/test-simulator.mjs && node scripts/test-simulator-ui.mjs"
   },
   "devDependencies": {
     "axe-core": "^4.13.0",

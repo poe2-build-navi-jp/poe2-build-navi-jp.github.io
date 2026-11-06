@@ -1,0 +1,114 @@
+{
+  "release": "0.0.46",
+  "schema": 19,
+  "dataVersion": "0.5.5.5",
+  "source": "https://github.com/ackness/pobr/releases/tag/v0.0.46",
+  "archiveSha256": "49546f88ef88605a3a9071acbb0e411faf87be57081f6e0af1d1d03e27093e3d",
+  "wasm": {
+    "parts": [
+      {
+        "file": "wasm-00.bin",
+        "bytes": 524288,
+        "sha256": "53093f502eb1dd5eb6612fa88cb2ef7a5323cdb0b5c6e72db4a3dc20c51201c9"
+      },
+      {
+        "file": "wasm-01.bin",
+        "bytes": 524288,
+        "sha256": "836348dd6887412d0fcb432ed2cf59738d264b87c247b6796d6bb33da3fcfb99"
+      },
+      {
+        "file": "wasm-02.bin",
+        "bytes": 524288,
+        "sha256": "84eee34cd9d0b07f00d59096be172bf59eff1a1a12863e92fa77bad179ac0ffd"
+      },
+      {
+        "file": "wasm-03.bin",
+        "bytes": 524288,
+        "sha256": "d8df0a8f8bc2b0d753178846b9ba24568bd70e28b3705bfa17221e740f38c6a5"
+      },
+      {
+        "file": "wasm-04.bin",
+        "bytes": 524288,
+        "sha256": "d4b1ebbf4d17615a98ca587be0ae867fd6b87aa77e25403fbf9ca5be26018492"
+      },
+      {
+        "file": "wasm-05.bin",
+        "bytes": 165472,
+        "sha256": "195de2aba17cee40f63d59c4cd1bc093b2882dd9d620258b4371ec7e743264f6"
+      }
+    ],
+    "bytes": 2786912,
+    "sha256": "853def786373c84821b7517aa73090150a7387a9dfa4e382ae61f37e96c0cdd0"
+  },
+  "data": {
+    "parts": [
+      {
+        "file": "data-00.bin",
+        "bytes": 524288,
+        "sha256": "07abe73832b5488766fe281f3f8b0a1a15cc135a96f26001f82610ccbfa92f71"
+      },
+      {
+        "file": "data-01.bin",
+        "bytes": 524288,
+        "sha256": "49f9fd0a3fa49fc819983429c7a0f4fd2287688bf564458e215ef897ca17dcc2"
+      },
+      {
+        "file": "data-02.bin",
+        "bytes": 524288,
+        "sha256": "6aca66dd9dcc269ba3ee2b5a63978fb7c6f61e50dca9dc7e72409df9804aad1f"
+      },
+      {
+        "file": "data-03.bin",
+        "bytes": 524288,
+        "sha256": "562245223efd44a9bb1d6c789f11111c97ebc8fd4c1df2e085ff08acf3601535"
+      },
+      {
+        "file": "data-04.bin",
+        "bytes": 524288,
+        "sha256": "94a9a0ee79d02070c62d586ea4d87da246adcf2f61cddd23ea075bb378e540d1"
+      },
+      {
+        "file": "data-05.bin",
+        "bytes": 524288,
+        "sha256": "da7f2e99eb16740ac6d76a40ca95acb5c9431449572b74be8b8a7eebddd1d392"
+      },
+      {
+        "file": "data-06.bin",
+        "bytes": 524288,
+        "sha256": "fe570517b1be2d5b3e645c8db2646677e89b97929e660f6b8b1e57d5ff2df235"
+      },
+      {
+        "file": "data-07.bin",
+        "bytes": 524288,
+        "sha256": "3b05ba2410829999652badece153e7e7ab626b8fecc253cf2f90f5c481634625"
+      },
+      {
+        "file": "data-08.bin",
+        "bytes": 524288,
+        "sha256": "4e15722a86c8250950086fae21e590b3b91ec36f5a8228f34f07fe8c75c033b3"
+      },
+      {
+        "file": "data-09.bin",
+        "bytes": 524288,
+        "sha256": "3dd4fc8a613a6028e7846a0a618dab535a46ef35052389204a233fdb22f4ea38"
+      },
+      {
+        "file": "data-10.bin",
+        "bytes": 524288,
+        "sha256": "01f8e196edb3c293f879723b1c61579edd9dedde5fbbdad40f768d905d8015f5"
+      },
+      {
+        "file": "data-11.bin",
+        "bytes": 524288,
+        "sha256": "6a16dcdcac418ed94f5013834455318455e640913489c8585509889881d19778"
+      },
+      {
+        "file": "data-12.bin",
+        "bytes": 247812,
+        "sha256": "b698ea80e3d671966e91015eb9594b4cacf66646cff627538785bee24fc0756a"
+      }
+    ],
+    "bytes": 6539268,
+    "sha256": "a4b4eced7ef4e4c151abf863d0ffb0fce80a6b1315df1c612ddb327f3768e2a3"
+  }
+}

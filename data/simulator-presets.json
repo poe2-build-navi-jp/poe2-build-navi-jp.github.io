@@ -1,0 +1,162 @@
+[
+  {
+    "id": "monk-whirling-assault",
+    "name": "ワーリングアサルト・マーシャルアーティスト",
+    "class": "Monk",
+    "className": "モンク",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "マーシャルアーティスト",
+    "skills": [
+      "Whirling Assault"
+    ],
+    "mainSkill": "ワーリングアサルト（Whirling Assault）",
+    "path": "/builds/monk/whirling-assault/"
+  },
+  {
+    "id": "mercenary-twister-gemling",
+    "name": "ツイスター・ジェムリング",
+    "class": "Mercenary",
+    "className": "マーセナリー",
+    "ascendancy": "Gemling Legionnaire",
+    "ascendancyName": "ジェムリング・リージョネア",
+    "skills": [
+      "Twister"
+    ],
+    "mainSkill": "ツイスター（Twister）",
+    "path": "/builds/mercenary/twister-gemling/"
+  },
+  {
+    "id": "warrior-shield-wall-smith",
+    "name": "シールドウォール・スミス",
+    "class": "Warrior",
+    "className": "ウォリアー",
+    "ascendancy": "Smith of Kitava",
+    "ascendancyName": "スミス・オブ・キタヴァ",
+    "skills": [
+      "Shield Wall"
+    ],
+    "mainSkill": "シールドウォール（Shield Wall）",
+    "path": "/builds/warrior/shield-wall-smith/"
+  },
+  {
+    "id": "sorceress-sand-fire",
+    "name": "砂と炎のヴァラシュタ",
+    "class": "Sorceress",
+    "className": "ソーサレス",
+    "ascendancy": "Disciple of Varashta",
+    "ascendancyName": "ディサイプル・オブ・ヴァラシュタ",
+    "skills": [
+      "Kelari's Deception",
+      "Ruzhan's Trap"
+    ],
+    "mainSkill": "ケラリの幻惑 / ルザンの罠",
+    "path": "/builds/sorceress/sand-and-fire/"
+  },
+  {
+    "id": "huntress-companion",
+    "name": "相棒スピリットウォーカー",
+    "class": "Huntress",
+    "className": "ハントレス",
+    "ascendancy": "Spirit Walker",
+    "ascendancyName": "スピリットウォーカー",
+    "skills": [
+      "Companion: {0}"
+    ],
+    "mainSkill": "テイムビースト（Tame Beast）",
+    "path": "/builds/huntress/companion/"
+  },
+  {
+    "id": "ranger-ice-shot-deadeye",
+    "name": "アイスショット・デッドアイ",
+    "class": "Ranger",
+    "className": "レンジャー",
+    "ascendancy": "Deadeye",
+    "ascendancyName": "デッドアイ",
+    "skills": [
+      "Ice Shot"
+    ],
+    "mainSkill": "アイスショット（Ice Shot）",
+    "path": "/builds/ranger/ice-shot-deadeye/"
+  },
+  {
+    "id": "witch-minion-infernalist",
+    "name": "スナイパーミニオン・インファーナリスト",
+    "class": "Witch",
+    "className": "ウィッチ",
+    "ascendancy": "Infernalist",
+    "ascendancyName": "インファーナリスト",
+    "skills": [
+      "Skeletal Sniper"
+    ],
+    "mainSkill": "スケルタルスナイパー / スペクター",
+    "path": "/builds/witch/minion-infernalist/"
+  },
+  {
+    "id": "druid-plant-oracle",
+    "name": "植物オラクル",
+    "class": "Druid",
+    "className": "ドルイド",
+    "ascendancy": "Oracle",
+    "ascendancyName": "オラクル",
+    "skills": [
+      "Entangle",
+      "Thrashing Vines"
+    ],
+    "mainSkill": "エンタングル（Entangle） / スラッシングヴァイン（Thrashing Vines）",
+    "path": "/builds/druid/plant-oracle/"
+  },
+  {
+    "id": "witch-ed-contagion-lich",
+    "name": "ED・コンテージョン リッチ",
+    "class": "Witch",
+    "className": "ウィッチ",
+    "ascendancy": "Lich",
+    "ascendancyName": "リッチ",
+    "skills": [
+      "Essence Drain",
+      "Contagion"
+    ],
+    "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）",
+    "path": "/builds/witch/ed-contagion-lich/"
+  },
+  {
+    "id": "mercenary-grenade-gemling",
+    "name": "グレネード・ジェムリング",
+    "class": "Mercenary",
+    "className": "マーセナリー",
+    "ascendancy": "Gemling Legionnaire",
+    "ascendancyName": "ジェムリング・リージョネア",
+    "skills": [
+      "Explosive Grenade"
+    ],
+    "mainSkill": "エクスプローシブグレネード（Explosive Grenade）",
+    "path": "/builds/mercenary/grenade-gemling/"
+  },
+  {
+    "id": "huntress-twister-spirit-walker",
+    "name": "ツイスター・スピリットウォーカー",
+    "class": "Huntress",
+    "className": "ハントレス",
+    "ascendancy": "Spirit Walker",
+    "ascendancyName": "スピリットウォーカー",
+    "skills": [
+      "Twister"
+    ],
+    "mainSkill": "ツイスター（Twister）",
+    "path": "/builds/huntress/twister-spirit-walker/"
+  },
+  {
+    "id": "sorceress-spark-stormweaver",
+    "name": "スパーク・ストームウィーバー",
+    "class": "Sorceress",
+    "className": "ソーサレス",
+    "ascendancy": "Stormweaver",
+    "ascendancyName": "ストームウィーバー",
+    "skills": [
+      "Spark",
+      "Comet"
+    ],
+    "mainSkill": "スパーク（Spark）＋コメット（Comet）",
+    "path": "/builds/sorceress/spark-stormweaver/"
+  }
+]

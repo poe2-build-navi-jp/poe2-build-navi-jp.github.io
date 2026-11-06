@@ -1,0 +1,50 @@
+import assert from 'node:assert/strict';
+import {readFile}from'node:fs/promises';
+import {Worker}from'node:worker_threads';
+import {resolve}from'node:path';
+import {pathToFileURL}from'node:url';
+import {JSDOM,VirtualConsole}from'jsdom';
+import * as model from '../assets/simulator-model.js';
+const root=resolve(import.meta.dirname,'..'),native=new Worker(new URL('./fixtures/simulator-worker-node.mjs',import.meta.url));
+let sequence=0;const pending=new Map();native.on('message',m=>{if(m.progress)return;const t=pending.get(m.id);if(!t)return;pending.delete(m.id);m.error?t.reject(Error(m.error)):t.resolve(m.result);});native.on('error',e=>{for(const p of pending.values())p.reject(e);});
+const rpc=(action,payload)=>new Promise((resolve,reject)=>{let id=++sequence;pending.set(id,{resolve,reject});native.postMessage({id,action,payload});});
+const errors=[],vconsole=new VirtualConsole();vconsole.on('jsdomError',e=>{if(!e.message.includes('navigation'))errors.push(e.message);});
+const dom=new JSDOM(await readFile(resolve(root,'simulator/index.html'),'utf8'),{url:'https://poe2-build-navi-jp.github.io/simulator/',runScripts:'outside-only',virtualConsole:vconsole});
+const w=dom.window,d=w.document;
+Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
+w.HTMLElement.prototype.scrollIntoView=function(){};
+w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
+w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.replace(/^\//,''))));
+// A compact map fixture keeps jsdom's SVG/live-collection overhead out of behavioral tests.
+// The real engine, full graph and every source edge are checked by test-simulator.mjs.
+const compactTree=nodes=>nodes.filter((n,index)=>index<80||[59779,61525,50986,50459,47175,44683,54447].includes(n.skill));
+w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>{if(action==='boot')result={...result,tree:compactTree(result.tree)};if(action==='tree')result=compactTree(result);this.onmessage?.({data:{id,result}});},error=>this.onmessage?.({data:{id,error:error.message}}));}};
+let code=await readFile(resolve(root,'assets/simulator.js'),'utf8');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
+const wait=async predicate=>{const deadline=Date.now()+30000;while(!predicate()){if(Date.now()>deadline)throw Error('UI timeout: '+d.getElementById('sim-error').textContent+' '+d.getElementById('sim-status').textContent);await new Promise(r=>setTimeout(r,25));}};
+const click=selector=>{const e=d.querySelector(selector);assert.ok(e,selector);e.click();};
+const change=(selector,value)=>{const e=d.querySelector(selector);assert.ok(e,selector);e.value=value;e.dispatchEvent(new w.Event('change',{bubbles:true}));};
+const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false'&&!!d.querySelector('.sim-stat');
+try{
+ await w.eval(`(async()=>{${code}\n})()`);
+ assert.equal(d.querySelectorAll('[data-preset]').length,12);
+ change('#sim-class-filter','Monk');assert.equal([...d.querySelectorAll('[data-preset]')].filter(e=>!e.hidden).length,1);
+ change('#sim-class-filter','');
+ click('[data-preset="mercenary-twister-gemling"]');await wait(ready);
+ assert.ok(d.getElementById('sim-build-name').textContent.includes('ツイスター'));
+ const saved=()=>model.parseSave(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'));
+ assert.equal(saved().request.character.class_name,'Mercenary');
+ click('[data-tab="config"]');assert.equal(d.getElementById('sim-config').hidden,false);
+ const life=()=>Number([...d.querySelectorAll('.sim-stat')].find(e=>e.textContent.includes('最大ライフ')).querySelector('b').textContent.replaceAll(',',''));
+ const before=life();d.getElementById('sim-extra-mods').value='+100 to maximum Life';click('#sim-config-apply');await wait(ready);assert.equal(life(),before+100);
+ click('[data-tab="items"]');click('[data-slot="amulet"]');
+ const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent.includes('Astramentis'));assert.ok(astro);change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('Astramentis'));
+ click('#sim-item-apply');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'&&i.text.includes('Astramentis')));
+ click('[data-tab="skills"]');change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
+ click('[data-tab="tree"]');const nodeSearch=d.getElementById('sim-node-search');nodeSearch.value='59779';nodeSearch.dispatchEvent(new w.Event('input',{bubbles:true}));click('[data-node-result="59779"]');click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));click('#sim-node-apply');await wait(ready);assert.ok(saved().request.allocated_nodes.includes(59779));
+ click('#sim-export-open');await wait(()=>d.getElementById('sim-code').value.startsWith('e'));const exported=d.getElementById('sim-code').value;const imported=await rpc('import',exported);assert.ok(imported.request.items.some(i=>i.slot==='amulet'));d.getElementById('sim-code-dialog').close();
+ click('#sim-change-build');assert.equal(d.getElementById('sim-chooser').hidden,false);
+ click('[data-preset="monk-whirling-assault"]');await wait(ready);assert.ok(d.getElementById('sim-build-name').textContent.includes('ワーリング'));
+ click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);
+ assert.equal(errors.length,0,errors.join('\n'));
+ console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; PoB2 export; isolated saved builds and restoration');
+}finally{dom.window.close();await native.terminate();}

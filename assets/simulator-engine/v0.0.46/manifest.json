@@ -1,0 +1,55 @@
+{
+  "packageVersion": "0.0.46",
+  "schemaVersion": 19,
+  "dataVersion": "0.5.5.5",
+  "commit": "6f8fde94111b63bdbea6731c7adff647ef7c7b88",
+  "build": {
+    "version": 1,
+    "sourceFingerprint": "caf21082db0c5ecea2926a28efac1dff98e49eceb798cb2982ae4ec9c13c2b39",
+    "commit": "6f8fde94111b63bdbea6731c7adff647ef7c7b88",
+    "dirty": false,
+    "schemaVersion": 19,
+    "target": "web",
+    "profile": "wasm-release",
+    "features": [
+      "wasm"
+    ],
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-unknown-linux-gnu\nrelease: 1.99.1\nLLVM version: 23.1.1",
+    "wasmPack": "wasm-pack 0.15.1",
+    "buildInputs": {
+      "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-unknown-linux-gnu\nrelease: 1.99.1\nLLVM version: 23.1.1",
+      "wasmPack": "wasm-pack 0.15.1",
+      "environment": "80307b3ed87d6fb7c9387f973de2990afdbd557d2aea5a294ce6df896bca1452",
+      "cargoConfig": "044f805cd93d629c60321f041f6608b1101f84da2609682f5368e3e1c0e78335"
+    },
+    "files": {
+      "package.json": "4ade1f0d1f025109e7ed1c59f402547812b6d58c525647fcb4109e14d8d583e1",
+      "pobr_wasm.js": "17afae8497596cdffc4f6061eaaef65d5a0b0a89b5fd1ed46670a5c90a2fd6ff",
+      "pobr_wasm_bg.wasm": "808543244d0ab5e2164a08b2e0f0ff9361413f9006671cd050e54d8235b20d9b",
+      "pobr_wasm.d.ts": "503ab6fcde441c22e56548672aa42b8a6b420c784b773d27bac0436faae629c6",
+      "pobr_wasm_bg.wasm.d.ts": "8cba505062004b57134bfbb74629d55545700c3e04aa46b4205546c5cebadddd"
+    }
+  },
+  "target": "web",
+  "dataFileCount": 80,
+  "files": [
+    {
+      "name": "pobr_wasm.js",
+      "bytes": 35647,
+      "gzipBytes": 4752,
+      "sha256": "17afae8497596cdffc4f6061eaaef65d5a0b0a89b5fd1ed46670a5c90a2fd6ff"
+    },
+    {
+      "name": "pobr_wasm_bg.wasm",
+      "bytes": 7579535,
+      "gzipBytes": 2785041,
+      "sha256": "808543244d0ab5e2164a08b2e0f0ff9361413f9006671cd050e54d8235b20d9b"
+    },
+    {
+      "name": "pobr-data.json.gz",
+      "bytes": 6539268,
+      "uncompressedBytes": 83755286,
+      "sha256": "a4b4eced7ef4e4c151abf863d0ffb0fce80a6b1315df1c612ddb327f3768e2a3"
+    }
+  ]
+}

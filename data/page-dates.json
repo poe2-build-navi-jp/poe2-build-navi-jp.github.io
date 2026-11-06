@@ -1,7 +1,11 @@
 {
  "/": {
-  "hash": "87a84c486f751497",
-  "date": "2026-11-04"
+  "hash": "baebd8ab1148bf5d",
+  "date": "2026-11-07"
+ },
+ "/simulator/": {
+  "hash": "9d24850a56c41538",
+  "date": "2026-11-07"
  },
  "/search/": {
   "hash": "35a540436196a0b6",
@@ -136,8 +140,8 @@
   "date": "2026-11-04"
  },
  "/builds/": {
-  "hash": "71f85c27139033d5",
-  "date": "2026-11-04"
+  "hash": "d8a151a60aa0d807",
+  "date": "2026-11-07"
  },
  "/classes/": {
   "hash": "16df3831df764bcb",
@@ -208,8 +212,8 @@
   "date": "2026-10-15"
  },
  "/site-map/": {
-  "hash": "dcdba8cb0936cdce",
-  "date": "2026-11-06"
+  "hash": "55647a27f27b4227",
+  "date": "2026-11-07"
  },
  "/classes/monk/": {
   "hash": "e46caa6b9d29b5a8",
@@ -244,52 +248,52 @@
   "date": "2026-11-04"
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "c34062335330dd20",
-  "date": "2026-11-06"
+  "hash": "c9a2ffa95a9f7152",
+  "date": "2026-11-07"
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "c69c17a491b740ef",
-  "date": "2026-11-06"
+  "hash": "87b274b730b54967",
+  "date": "2026-11-07"
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "3b713599ca1fc6b8",
-  "date": "2026-11-06"
+  "hash": "bfcd78292904cc73",
+  "date": "2026-11-07"
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "69af60a66e192124",
-  "date": "2026-11-06"
+  "hash": "5ea522207b61ad28",
+  "date": "2026-11-07"
  },
  "/builds/huntress/companion/": {
-  "hash": "299093a83af0136c",
-  "date": "2026-11-06"
+  "hash": "637b667dfb7acaf3",
+  "date": "2026-11-07"
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "6ea068fd614682c9",
-  "date": "2026-11-06"
+  "hash": "b56fca896a5260cb",
+  "date": "2026-11-07"
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "d0f440cd4300e3b7",
-  "date": "2026-11-06"
+  "hash": "d2a69cfb00e191a6",
+  "date": "2026-11-07"
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "fb19943484b6b860",
-  "date": "2026-11-06"
+  "hash": "efcfadb6be6d3290",
+  "date": "2026-11-07"
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "4001aa5459d092f3",
-  "date": "2026-11-06"
+  "hash": "57c3ed3f23f56f43",
+  "date": "2026-11-07"
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "a13f5e2d5a5d1dfe",
-  "date": "2026-11-06"
+  "hash": "a2d600576aaeefbe",
+  "date": "2026-11-07"
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "228fa4c1d57520d4",
-  "date": "2026-11-06"
+  "hash": "89ca9b01f7617b63",
+  "date": "2026-11-07"
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "32c4174cf15dd316",
-  "date": "2026-11-06"
+  "hash": "25b06e66c7a09b56",
+  "date": "2026-11-07"
  },
  "/guides/skill-gems/": {
   "hash": "93871fde038b8e53",

@@ -19,7 +19,7 @@ async function pages(dir,out=[]){
  return out;
 }
 const GROUPS=[
- ['ビルド',p=>p==='/builds/'||p.startsWith('/builds/')||p==='/best-builds/'||p==='/beginner-builds/'||p==='/tier-list/'||p==='/league-starter/'||p==='/leveling/'||p==='/rating-criteria/'],
+ ['ビルド',p=>p==='/simulator/'||p==='/builds/'||p.startsWith('/builds/')||p==='/best-builds/'||p==='/beginner-builds/'||p==='/tier-list/'||p==='/league-starter/'||p==='/leveling/'||p==='/rating-criteria/'],
  ['職業',p=>p.startsWith('/classes/')||p==='/class-check/'],
  ['攻略ガイド',p=>p.startsWith('/guides/')||p==='/beginner-guide/'||p==='/gear-check/'],
  ['スキル・装備',p=>p.startsWith('/skills/')||p.startsWith('/equipment/')],
