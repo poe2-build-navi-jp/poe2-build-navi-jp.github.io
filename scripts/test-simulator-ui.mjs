@@ -45,6 +45,17 @@ try{
  click('[data-tab="items"]');click('[data-slot="amulet"]');
  const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent.includes('アストラメンティス'));assert.ok(astro);change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('アストラメンティス'));
  click('#sim-item-apply');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'&&i.text.includes('Astramentis')));
+ click('#sim-item-back');assert.equal(d.getElementById('sim-item-editor').hidden,true);
+ click('[data-slot="helmet"]');assert.equal(d.getElementById('sim-item-list').hidden,true);assert.equal(d.activeElement.id,'sim-slot-title');
+ click('[data-equipment-mode="rare"]');assert.equal(d.getElementById('sim-rare-editor').hidden,false);
+ const equipment=JSON.parse(await readFile(resolve(root,'data/simulator-equipment.json'),'utf8'));
+ change('#sim-rare-base',equipment.bases.find(b=>b.name==='Covert Hood').id);change('#sim-rare-name','自作テスト兜');
+ const rareLife=life();click('#sim-rare-add');change('[data-rare-row="0"] [data-rare-value="0"]','100');
+ click('#sim-rare-add');change('[data-rare-mod="1"]','fire_res');change('[data-rare-row="1"] [data-rare-value="0"]','30');
+ click('#sim-item-apply');await wait(ready);assert.equal(life(),rareLife+100);assert.equal(saved().equipmentDrafts.helmet.name,'自作テスト兜');assert.ok(saved().request.items.find(i=>i.slot==='helmet').text.includes('+30% to Fire Resistance'));
+ change('[data-rare-row="0"] [data-rare-value="0"]','150');click('#sim-item-apply');await wait(ready);assert.equal(life(),rareLife+150);
+ click('#sim-item-back');click('[data-slot="helmet"]');assert.equal(d.querySelector('[data-rare-row="0"] [data-rare-value="0"]').value,'150');assert.equal(d.querySelector('[data-equipment-mode="rare"]').getAttribute('aria-pressed'),'true');
+ click('#sim-item-back');click('[data-slot="Flask 1"]');click('[data-equipment-mode="rare"]');assert.equal(d.getElementById('sim-item-apply').disabled,true);click('[data-equipment-mode="unique"]');assert.equal(d.getElementById('sim-item-apply').disabled,false);
  click('[data-tab="skills"]');const gemSelect=d.querySelector('[data-gem-field="skill_id"]');const selectedGem=gemSelect.value;assert.ok(gemSelect.options.length<=2);gemSelect.dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));assert.ok(gemSelect.options.length>100);assert.equal(gemSelect.value,selectedGem);change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
  click('[data-tab="tree"]');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length>0);
  const visibleNodeCount=d.querySelectorAll('#sim-tree-nodes circle').length;assert.ok(visibleNodeCount<4913/2,'viewport should draw a fraction of the full tree');

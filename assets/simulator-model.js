@@ -25,8 +25,8 @@ export function parseSave(text) {
     || typeof value.notes!=='string' || value.notes.length>20000) throw new Error('保存データの形式または計算エンジンの版が異なります。');
   return value;
 }
-export function makeSave(preset, request, questPoints, notes = '') {
-  return {version:SAVE_VERSION, engine:ENGINE_VERSION, preset, request, questPoints, notes, savedAt:new Date().toISOString()};
+export function makeSave(preset, request, questPoints, notes = '', equipmentDrafts = {}) {
+  return {version:SAVE_VERSION, engine:ENGINE_VERSION, preset, request, questPoints, notes, equipmentDrafts, savedAt:new Date().toISOString()};
 }
 export const statValue = (result, id) => result?.stats?.find(stat => stat.id === id)?.value ?? null;
 export function treeEdges(nodes) {
@@ -70,4 +70,20 @@ export function restoreItemText(text,names,original=''){
   if(match&&fields[match[1]])return `${fields[match[1]]}: ${fields[match[1]]==='Rarity'?(rarity[match[2]] || match[2]):match[2]}`;
   return reverse.get(line) || line;
  }).join('\n');
+}
+
+const rareSlotClasses={helmet:['Helmet'],body:['Body Armour'],gloves:['Gloves'],boots:['Boots'],belt:['Belt'],amulet:['Amulet'],ring1:['Ring'],ring2:['Ring'],weapon1:['Bow','Crossbow','One Hand Mace','Two Hand Mace','Wand','Staff','Warstaff','Sceptre','Spear','Talisman'],weapon2:['Shield','Buckler','Focus','Quiver','One Hand Mace','Wand','Sceptre','Spear']};
+export function rareBasesForSlot(slot,catalog){return catalog.bases.filter(b=>(rareSlotClasses[slot] || []).includes(b.itemClass));}
+export function buildRareItem(draft,slot,catalog){
+ const base=rareBasesForSlot(slot,catalog).find(b=>b.id===draft.baseId);if(!base)throw Error('この部位に対応するベース装備を選んでください。');
+ const name=String(draft.name || '自作のレア装備').trim();if(!name||name.length>80||/[\r\n]/.test(name))throw Error('装備名は改行なしの80文字以内で入力してください。');
+ const level=Number(draft.level),quality=Number(draft.quality);if(!Number.isInteger(level)||level<1||level>100||!Number.isInteger(quality)||quality<0||quality>30)throw Error('アイテムレベルは1〜100、品質は0〜30で入力してください。');
+ if(!Array.isArray(draft.modifiers)||draft.modifiers.length>10)throw Error('オプションは10行まで追加できます。');
+ const seen=new Set(),lines=draft.modifiers.map(mod=>{
+  const definition=catalog.modifiers.find(d=>d.id===mod.id);if(!definition||seen.has(mod.id))throw Error('同じオプションの重複を解除してください。');seen.add(mod.id);
+  if(!Array.isArray(mod.values)||mod.values.length!==definition.default.length||mod.values.some(v=>v===''||!Number.isFinite(Number(v))||Number(v)<0||Number(v)>100000))throw Error('オプションの数値は0〜100000で入力してください。');
+  if(mod.values.length===2&&Number(mod.values[0])>Number(mod.values[1]))throw Error('ダメージの最小値は最大値以下にしてください。');
+  return definition.template.replace(/\{(\d+)\}/g,(_,i)=>String(Number(mod.values[+i])));
+ });
+ return ['Rarity: RARE',name,base.name,`Item Level: ${level}`,`Quality: ${quality}`,'Implicits: 0',...lines].join('\n');
 }

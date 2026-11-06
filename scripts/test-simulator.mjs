@@ -23,6 +23,19 @@ try{
  for(const preset of presets){const request=model.newPlan(preset,catalog.gems);assert.ok(request.socket_groups.length,`${preset.id}: primary skill resolved`);const result=await rpc('calculate',request);assert.ok(model.statValue(result,'Life')>0,preset.id);assert.equal(request.character.ascendancy_name,preset.ascendancy);}
  const request=model.newPlan(presets.find(p=>p.id==='mercenary-twister-gemling'),catalog.gems);
  const baseline=await rpc('calculate',request);
+ const equipment=JSON.parse(await readFile(resolve(root,'data/simulator-equipment.json'),'utf8'));
+ const rare={baseId:equipment.bases.find(b=>b.name==='Covert Hood').id,name:'比較用のレア兜',level:80,quality:20,modifiers:[{id:'life',values:[100]},{id:'fire_res',values:[30]},{id:'str',values:[20]}]};
+ const rareText=model.buildRareItem(rare,'helmet',equipment),rareResult=await rpc('calculate',{...request,items:[{slot:'helmet',text:rareText}]});
+ assert.equal(rareResult.item_errors.length,0);assert.equal(rareResult.unsupported_modifiers.length,0);
+ assert.equal(model.statValue(rareResult,'Life')-model.statValue(baseline,'Life'),140,'100 life plus 40 life from 20 Strength');
+ assert.equal(model.statValue(rareResult,'FireResist')-model.statValue(baseline,'FireResist'),30);
+ assert.equal(model.statValue(rareResult,'Str')-model.statValue(baseline,'Str'),20);
+ assert.ok(model.statValue(rareResult,'Evasion')>model.statValue(baseline,'Evasion'),'base item defences must calculate');
+ for(const mod of equipment.modifiers){const text=model.buildRareItem({...rare,modifiers:[{id:mod.id,values:mod.default}]},'helmet',equipment);const checked=await rpc('calculate',{...request,items:[{slot:'helmet',text}]});assert.equal(checked.item_errors.length,0,mod.id);assert.equal(checked.unsupported_modifiers.length,0,mod.id);}
+ assert.throws(()=>model.buildRareItem({...rare,modifiers:[{id:'physical_flat',values:[20,10]}]},'helmet',equipment));
+ assert.throws(()=>model.buildRareItem(rare,'ring1',equipment));
+ const withDraft=model.makeSave('mercenary-twister-gemling',{...request,items:[{slot:'helmet',text:rareText}]},0,'',{helmet:rare});assert.deepEqual(model.parseSave(JSON.stringify(withDraft)).equipmentDrafts.helmet,rare);
+
  const locale=JSON.parse(await readFile(resolve(root,'data/simulator-localization.json'),'utf8'));
  for(const entry of [...catalog.gems,...catalog.uniques,...catalog.minions.monsters.filter(m=>!m.name.startsWith('[DNT]'))])assert.match(locale.names[entry.name] || '',/[ぁ-んァ-ヶ一-龥]/,entry.name);
  for(const node of catalog.tree){assert.match(locale.names[node.name] || '',/[ぁ-んァ-ヶ一-龥]/,node.name);assert.ok(Array.isArray(locale.descriptions[locale.nodes[node.skill]]),String(node.skill));}
