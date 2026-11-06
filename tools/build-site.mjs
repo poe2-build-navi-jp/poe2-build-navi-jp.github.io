@@ -15,6 +15,7 @@ const steps=[
  'enhance-article-reading',  // paragraph breaks, contents and responsive tables
  'generate-sitemap',         // after everything that changes <main>: it records each page's content date
  'enhance-page-schema',      // reads those dates
+ 'enhance-editorial-trust',  // visible editor, matching identity and source citations
  'generate-og-images','inject-analytics',
  'sync-asset-versions'       // always last
 ];

@@ -1,0 +1,4 @@
+.editorial-credit{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .5rem;font-size:.875rem;line-height:1.8;color:#515b63;margin:.5rem 0 1rem}
+.editorial-credit a{color:#24547b;text-decoration:underline;text-underline-offset:.2em}
+.editorial-credit a:focus-visible{outline:3px solid #1e5f9f;outline-offset:3px}
+.guide-reading .article-page .editorial-credit{font-size:.875rem;line-height:1.8;margin:.5rem 0 1rem}

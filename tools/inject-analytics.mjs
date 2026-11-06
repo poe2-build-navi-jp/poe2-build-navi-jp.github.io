@@ -41,7 +41,8 @@ async function inject(directory = "") {
       : html.replace(/<head([^>]*)>/, `<head$1>${preconnectTag}`);
     const tracksEvents = path === "index.html"
       || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(path)
-      || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(path);
+      || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(path)
+      || /^(guides|skills|equipment|dictionary)\/(?:[^/]+\/)?index\.html$/.test(path);
     if (tracksEvents && !html.includes("/assets/analytics-events.js")) {
       html = insertBlock(html, "</head>", "analytics-events", eventTag);
     } else if (!tracksEvents) {

@@ -16,6 +16,19 @@ const buildClickEvent = pagePath.startsWith("/best-builds/")
 
 document.addEventListener("click", (event) => {
   const link = event.target.closest("a[href]");
+  // Track useful reading outcomes without sending link text, search queries or trade filters.
+  if (link && link.closest('main') && /^(\/guides\/|\/skills\/|\/equipment\/|\/dictionary\/)/.test(pagePath)) {
+    const sameSite = link.origin === window.location.origin;
+    if (sameSite && /^\/builds\/[^/]+\/[^/]+\/$/.test(link.pathname)) {
+      sendEvent('guide_build_click', { page_path: pagePath, destination_path: link.pathname });
+    } else if (sameSite && link.pathname !== pagePath && /^\/guides\//.test(link.pathname)) {
+      sendEvent('guide_next_click', { page_path: pagePath, destination_path: link.pathname });
+    } else if (link.hostname === 'www.pathofexile.com' && /^\/trade2\//.test(link.pathname)) {
+      sendEvent('guide_trade_click', { page_path: pagePath });
+    } else if (!sameSite && /^https?:$/.test(link.protocol) && link.closest('.sources, .seo-sources, .guide-evidence, .guide-review-detail')) {
+      sendEvent('guide_source_click', { page_path: pagePath, source_host: link.hostname });
+    }
+  }
   if (link && buildClickEvent && /^\/builds\/[^/]+\/[^/]+\//.test(link.pathname)) {
     sendEvent(buildClickEvent, { link_url: link.href, link_text: link.textContent.trim().slice(0, 100) });
   }
