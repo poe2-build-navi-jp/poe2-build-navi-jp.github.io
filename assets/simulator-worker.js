@@ -36,10 +36,13 @@ async function boot() {
   uniques = JSON.parse(engine.uniqueCatalogJson());
   minions = JSON.parse(engine.minionCatalogJson());
 }
+const treeCache=new Map();
 function tree(version) {
   const path = version && version !== '0_5' ? `base/passive_trees/${version}.json` : 'base/passive_tree.json';
   if (!dataFiles[path]) throw new Error(`このパッシブツリーの版には対応していません：${version}`);
-  return JSON.parse(dataFiles[path]).map(n => ({skill:n.skill,name:n.name || n.id,kind:n.kind,x:n.x,y:n.y,connections:n.connections || [],stats:n.stats || [],ascendancy_id:n.ascendancy_id}));
+  if(treeCache.has(path))return treeCache.get(path);
+  const nodes=JSON.parse(dataFiles[path]).map(n => ({skill:n.skill,name:n.name || n.id,kind:n.kind,x:n.x,y:n.y,connections:n.connections || [],stats:n.stats || [],ascendancy_id:n.ascendancy_id}));
+  treeCache.set(path,nodes);return nodes;
 }
 const calculate = request => {
   if (!validRequest(request)) throw new Error('構成の形式が正しくありません。');

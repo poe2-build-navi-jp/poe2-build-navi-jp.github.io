@@ -123,3 +123,7 @@
  .simulator-page .sim-tabs button{font-size:.8rem}
  .simulator-page .sim-gem-group-head{align-items:flex-start;gap:.5rem}
 }
+
+/* Isolate tree painting and keep result rows in place while a calculation runs. */
+#sim-tree-map{contain:layout paint}
+#sim-stats[aria-busy=true]{opacity:.6}
