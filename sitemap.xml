@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://poe2-build-navi-jp.github.io/</loc><lastmod>2026-11-04</lastmod><priority>1.0</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/search/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/search/</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/name-index/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/skills/</loc><lastmod>2026-10-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/equipment/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
@@ -41,7 +41,7 @@
   <url><loc>https://poe2-build-navi-jp.github.io/class-check/</loc><lastmod>2026-11-05</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/beginner-guide/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/beginner-builds/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/</loc><lastmod>2026-11-06</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/tier-list/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-beginner-build-tier.svg</image:loc></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/league-starter/</loc><lastmod>2026-11-04</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-league-starter-builds.svg</image:loc></image:image></url>

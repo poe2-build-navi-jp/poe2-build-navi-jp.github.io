@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {JSDOM} from 'jsdom';
+// Visible copy shows English game names as 「日本語（English）」 (tools/localize-japanese-names.mjs).
+import {formatJapaneseNames} from '../tools/japanese-names.mjs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const robots=read('robots.txt');
 const groups=[];let current;
@@ -15,21 +17,23 @@ assert(groups.some(g=>g.agent==='oai-searchbot'));
 for(const path of ['/','/guides/','/images/poe2/a.webp',...excluded])assert(!allowed('GPTBot',path));
 assert.equal((robots.match(/^Sitemap:/gm)||[]).length,1);
 const guides=JSON.parse(read('data/strategy-guides.json'));
-const targets=['campaign-progression','trial-of-chaos','expedition','atlas-progression','waystones-tablets','arbiter-of-divinity','mageblood-legacies','tier-16-waystones','trade','loot-filter','currency-guide','runeseekers-call'];
+const targets=['arbiter-of-divinity','atlas-progression','beginner-currency-farming','build-gear-buying-order','campaign-progression','currency-guide','expedition','loot-filter','mageblood-legacies','runeseekers-call','tier-16-waystones','trade','trial-of-chaos','twister-gemling-transition','waystones-tablets'];
 assert.deepEqual(guides.filter(g=>g.verification).map(g=>g.slug).sort(),targets.slice().sort());
-for(const g of guides){const d=new JSDOM(read(`guides/${g.slug}/index.html`)).window.document;const block=d.querySelector('.guide-verification');assert.equal(!!block,targets.includes(g.slug));if(!block)continue;
- assert.equal(block.querySelectorAll('dt').length,3);
- for(const key of ['method','confirmed','unverified'])assert(block.textContent.includes(g.verification[key]));
+for(const g of guides){const d=new JSDOM(read(`guides/${g.slug}/index.html`)).window.document;const block=d.querySelector('.guide-verification');assert(block,`${g.slug}: review panel`);if(!targets.includes(g.slug))continue;
+ // The review panel also shows scope and dates; the three evidence rows must always be there.
+ const labels=[...block.querySelectorAll('dt')].map(dt=>dt.textContent.trim());
+ for(const label of ['確認方法','確認した範囲','未確認の範囲'])assert(labels.includes(label),`${g.slug}: ${label}`);
+ for(const key of ['method','confirmed','unverified'])assert(block.textContent.includes(formatJapaneseNames(g.verification[key])),`${g.slug}: ${key}`);
  assert(d.querySelector('.guide-direct-answer'));
  assert(d.querySelector('.content-action').compareDocumentPosition(block)&4);
  assert(block.compareDocumentPosition(d.querySelector('#sources'))&4);
  assert.equal(d.querySelectorAll('#verification-title').length,1);
- assert(d.querySelector('.guide-meta').textContent.includes(g.version));
+ assert(d.querySelector('.guide-meta').textContent.includes(formatJapaneseNames(g.version)),`${g.slug}: version`);
  for(const source of g.sources)assert(d.querySelector('#sources').textContent.includes(source.checkedAt));
 }
 assert.equal(new JSDOM(read('guides/arbiter-of-divinity/index.html')).window.document.querySelectorAll('.guide-record-image').length,15);
 assert.equal(new JSDOM(read('guides/tier-16-waystones/index.html')).window.document.querySelectorAll('.guide-record-image').length,1);
-console.log('PASS: crawler access matrix, retained exclusions, twelve scoped strategy evidence blocks and published screenshots');
+console.log(`PASS: crawler access matrix, retained exclusions, ${targets.length} scoped strategy evidence blocks and published screenshots`);
 
 const legacyTargets=['after-campaign','equipment-basics','skill-gems','support-gems','passive-tree','resistance','increase-damage','why-i-die','mapping','mana-problem','cant-beat-boss','gear-upgrade','slow-mapping'];
 const legacy=[...JSON.parse(read('data/guides.json')),...JSON.parse(read('data/seo-pages.json'))].filter(g=>g.evidence);
@@ -40,7 +44,7 @@ for(const record of legacy){
  const d=new JSDOM(read(`guides/${g.slug}/index.html`)).window.document;
  const block=d.querySelector('.guide-verification');assert(block);
  assert.equal(block.querySelectorAll('dt').length,4);
- for(const key of ['method','confirmed','unverified','version'])assert(block.textContent.includes(g.evidence[key]));
+ for(const key of ['method','confirmed','unverified','version'])assert(block.textContent.includes(formatJapaneseNames(g.evidence[key])),`${g.slug}: ${key}`);
  assert(d.querySelector('.guide-direct-answer'));
  assert(d.querySelector('.content-action').compareDocumentPosition(block)&4);
  assert(block.compareDocumentPosition(d.querySelector('#guide-evidence-sources'))&4);

@@ -44,14 +44,14 @@ assert(!/class="(?:purpose-card|discovery-card)"/.test(index), "homepage must no
 assert((beginnerLanding.match(/class="purpose-card"/g) || []).length === 5, "beginner page must retain five quick choices");
 assert((beginnerLanding.match(/class="discovery-card"/g) || []).length === 6, "beginner page must retain six featured choices");
 assert(beginnerLanding.indexOf('id="purpose-picks"') < beginnerLanding.indexOf('id="featured-builds"'), "beginner page must show quick choices before detailed comparison");
-assert(index.includes("PoE2 0.5.5 おすすめビルド｜職業別・初心者向け") && index.includes("現在Lvを入力すると"), "homepage search intent/action message missing");
-assert(index.includes("<title>PoE2 ビルド｜0.5.5おすすめ・最強ビルドを比較できる日本語ビルドサイト</title>"), "homepage CTR-focused title missing");
-assert(index.includes("0.5.5のおすすめビルドを日本語で比較できるビルドサイト"), "homepage Japanese build-site description missing");
+assert(index.includes("PoE2 0.5.5 おすすめビルド｜職業別・初心者向け") && index.includes("現在Lvを入力して"), "homepage search intent/action message missing");
+assert(index.includes("<title>PoE2おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド</title>"), "homepage CTR-focused title missing");
+assert(index.includes("PoE2の日本語ビルドガイド。召喚・弓・近接など、好きな戦い方で初心者向けビルドを比較。"), "homepage Japanese build-site description missing");
 const homeRoutes = index.match(/<p id="home-build-routes">([\s\S]*?)<\/p>/)?.[1] || "";
 assert((index.match(/id="home-build-routes"/g) || []).length === 1, "homepage comparison routes must be present once after regeneration");
 assert(homeRoutes.includes('href="/builds/"') && homeRoutes.includes('href="/best-builds/"'), "broad build searches need catalog and purpose-comparison routes");
 assert(index.indexOf('id="home-build-routes"') < index.indexOf('id="purpose-picks"'), "comparison routes must precede the beginner CTA");
-assert(index.includes(`掲載${builds.length}ビルドを職業・戦い方で比較`), "homepage catalog count must follow public build data");
+assert(index.includes(`全${builds.length}ビルドを職業・条件で比較`), "homepage catalog count must follow public build data");
 assert(index.includes("全ビルドを同じ予算・条件で実測した最強順位ではありません") && index.includes("この日付は全ビルドの再検証日ではありません"), "latest/strongest search intent must retain evidence limits");
 const bestLanding = await read("best-builds/index.html");
 assert(bestLanding.includes("Endgame構成ではワーリングアサルトとフォーリングサンダー（Falling Thunder）") && bestLanding.includes("Lv41の育成構成とは異なる"), "boss comparison must distinguish Endgame from the Lv41 variant");
@@ -63,7 +63,7 @@ assert((index.match(/現在Lvから今やることを見る/g) || []).length <= 
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
 assert(buildList.includes("<h1>PoE2 0.5.5 職業別ビルド一覧</h1>"), "build catalog search-focused H1 missing");
-assert(buildList.includes("<title>PoE2 0.5.5 職業別おすすめビルド一覧｜初心者向け育成ナビ</title>"), "build catalog count-free title missing");
+assert(buildList.includes("<title>PoE2職業別ビルド一覧（0.5.5）｜主力スキル・操作・SSFで比較</title>"), "build catalog count-free title missing");
 assert(!/ビルド\d+(?:選|本)/.test(buildList), "build catalog must not hardcode build count in SEO copy");
 assert(detailJs.includes('byId("gear-check-link")') && detailJs.includes("history.replaceState"), "level changes must update the gear-check link and shareable URL");
 assert(styles.includes("align-items:start") && styles.includes(".level-card{align-self:start"), "build hero must not stretch the level card");
@@ -153,7 +153,8 @@ for (const [, pageUrl] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   assert((page.match(new RegExp(`gtag\\('config','${site.googleAnalyticsMeasurementId}'\\)`, "g")) || []).length === 1, `${pagePath}: Google Analytics config must appear once`);
   const tracksEvents = pagePath === "index.html"
     || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(pagePath)
-    || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(pagePath);
+    || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(pagePath)
+    || /^(guides|skills|equipment|dictionary)\/(?:[^/]+\/)?index\.html$/.test(pagePath);
   assert((page.match(/\/assets\/analytics-events\.js/g) || []).length === (tracksEvents ? 1 : 0), `${pagePath}: analytics event script scope mismatch`);
 }
 const noindexListed = new Set(JSON.parse(await read("data/noindex.json")).paths);

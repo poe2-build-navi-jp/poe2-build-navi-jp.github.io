@@ -353,3 +353,13 @@
   robots.txtはIndexNowのチェックとテストがSitemap行1つを前提にしているため変更しない。新しい2つはSearch Consoleに個別に送信する。
 - test-unset-ringのlastmod固定日付を、page-dates.jsonの記録日と比べる形に修正。test-glossary-evidenceは日本語名の自動併記（localize-japanese-names）後の表示と比べる形に修正。
 - 未解決：mainでほかに9つのテストが失敗している（他セッションの変更後にテストが未更新）。別作業として扱う。
+
+## 2026-11-06 壊れていたテストと生成の不安定さを修正
+- 他セッションの変更後に未更新だったテスト・生成処理を修正（mainで12スクリプトが失敗していた）。
+- 生成順の不安定さ（実際の不具合）：
+  - enhance-editorial-trust の identity-schema を block-order に登録し insertBlock で挿入。
+  - </head> 直前に後から足されるスタイルシートを sync-asset-versions で決まった位置へ（normalizeHeadStylesheets）。ページ本来のCSSとmobile.cssは動かさず、カスケードは変えない（/leveling/ の guide-share.css のみ位置が変わったが、build-ux.cssと共通セレクタなし）。
+  - 編集者表記（editorial-credit）を検索回答（guide-direct-answer）の後に置く。回答はh1直後のまま。
+  - ビルド手順を tools/build-steps.mjs に移し、再生成テストは FINISHING_STEPS を使う（手順追加でずれない）。
+- 表示の不具合：guide-reading.css の見出し色（#17232b）が暗い背景の見出しを上書きしていた（/guides/ 下部・カテゴリ見出し、/classes/ の職業カード）。各所の明るい色を優先するよう修正。
+- テストの更新：日本語名の自動併記後の表示で比較、検証パネルの新デザイン（5〜6行）、トップ・一覧の新タイトル、分析タグの対象拡大、poe.ninjaを出典許可リストに追加、序盤の売却2記事の検索意図を追加。
