@@ -346,3 +346,10 @@
 - Duelist・公開予定日ページの古い記述（「配信は日本時間5時から」「基調講演の日が不明」）を新しい公式告知に合わせて修正。1.0ハブからリンク。
 - 発表当日の手順を docs/announcement-runbook.md、パッチノート要約の型を docs/templates/patch-notes-summary.json に用意（未公開）。
 - seo-pages.json は手で整形されているため、対象オブジェクトだけを書き換える方式で編集した。
+
+## 2026-11-06 サイトマップ以外のクロール経路を追加
+- Search Consoleでsitemap.xmlが「取得できませんでした」のまま。sitemap.xml自体は200・XML妥当・143URL・robots許可で問題なし。
+- 追加：sitemap.txt（全URLのテキスト形式サイトマップ）、feed.xml（最近更新した50ページのAtomフィード）。全ページの<head>にフィードへのリンク。
+  robots.txtはIndexNowのチェックとテストがSitemap行1つを前提にしているため変更しない。新しい2つはSearch Consoleに個別に送信する。
+- test-unset-ringのlastmod固定日付を、page-dates.jsonの記録日と比べる形に修正。test-glossary-evidenceは日本語名の自動併記（localize-japanese-names）後の表示と比べる形に修正。
+- 未解決：mainでほかに9つのテストが失敗している（他セッションの変更後にテストが未更新）。別作業として扱う。
