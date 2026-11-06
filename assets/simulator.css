@@ -64,3 +64,62 @@
  .simulator-page .footer-row{flex-direction:column}
  .simulator-page .footer-links{gap:12px 18px}
 }
+
+/* Keep intrinsic form widths and file inputs inside their own panels. */
+.simulator-page{width:100%;min-width:0}
+.simulator-page main,.simulator-page .sim-toolbar,.simulator-page .sim-layout{width:100%;min-width:0}
+.simulator-page button,.simulator-page input,.simulator-page select,.simulator-page textarea{min-width:0;max-width:100%}
+.simulator-page select,.simulator-page textarea{width:100%}
+.simulator-page .sim-chooser-body,.simulator-page .sim-hero-inner,.simulator-page .sim-editor,.simulator-page .sim-panel,.simulator-page .sim-gem-group{min-width:0;max-width:100%}
+.simulator-page .sim-file-button{position:relative;display:inline-flex;align-items:center;max-width:100%;min-height:44px}
+.simulator-page .sim-file-button input[type=file]{position:absolute;top:0;left:0;width:1px;height:1px;max-width:1px;padding:0;border:0;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;opacity:0}
+.simulator-page .sim-actions>*{min-width:0;max-width:100%;overflow-wrap:anywhere;white-space:normal}
+.simulator-page .sim-toolbar>div{min-width:0;max-width:100%}
+.simulator-page .sim-items-layout{grid-template-columns:minmax(0,190px) minmax(0,1fr)}
+.simulator-page .sim-items-layout>div{min-width:0;max-width:100%}
+#sim-slots button{width:100%;min-width:0;overflow-wrap:anywhere}
+#sim-slots small{max-width:100%;min-width:0}
+.simulator-page .sim-unique-controls{flex-wrap:wrap}
+.simulator-page .sim-unique-controls label{flex:1 1 160px;min-width:0;max-width:100%}
+.simulator-page .sim-gem-group-head{flex-wrap:wrap}
+.simulator-page .sim-gem-group-head>*{min-width:0;max-width:100%}
+.simulator-page .sim-gem-row>*{min-width:0;max-width:100%}
+.simulator-page .sim-check input[type=checkbox],.simulator-page .sim-check input[type=radio]{flex:0 0 auto;width:1.125rem;height:1.125rem;max-width:1.125rem;margin:0;display:inline-block;padding:0}
+.simulator-page .sim-tree-controls>*{min-width:0;max-width:100%}
+.simulator-page .sim-tree-controls label{min-width:0;flex:1 1 220px}
+#sim-tree-map{width:100%;max-width:100%;min-width:0}
+#sim-node-search-results button{overflow-wrap:anywhere;white-space:normal;text-align:left;max-width:100%}
+#sim-node-detail,#sim-raw-config{min-width:0;max-width:100%}
+.sim-stat>div{min-width:0;overflow-wrap:anywhere;text-align:right}
+.sim-stat b{max-width:100%;font-variant-numeric:tabular-nums}
+.simulator-page .sim-results-top{flex-wrap:wrap}
+.simulator-page .sim-level-label input{width:85px;flex:0 1 85px}
+@media(max-width:1000px){
+ .simulator-page .sim-items-layout{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:720px){
+ /* 16px prevents Safari from zooming and shifting the viewport on focus. */
+ .simulator-page input,.simulator-page select,.simulator-page textarea{font-size:16px}
+ .simulator-page .sim-toolbar{align-items:stretch}
+ .simulator-page .sim-toolbar .sim-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;align-items:stretch}
+ .simulator-page .sim-toolbar .sim-actions>*{width:100%;min-height:44px;justify-content:center;text-align:center}
+ .simulator-page .sim-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;max-width:100%;overflow:visible}
+ .simulator-page .sim-tabs button{min-width:0;min-height:48px;padding:.75rem .2rem;white-space:normal;overflow-wrap:normal;font-size:.85rem}
+ .simulator-page .sim-items-layout{grid-template-columns:minmax(0,1fr)}
+ .simulator-page .sim-gem-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 44px}
+ .simulator-page .sim-gem-row label:first-child{grid-column:1/-1}
+ .simulator-page .sim-gem-row button{min-height:44px}
+ .simulator-page .sim-results-top{gap:.35rem .8rem}
+ .simulator-page .sim-stat{gap:.4rem;flex-wrap:wrap}
+ .simulator-page .sim-stat>div{margin-left:auto}
+ .simulator-page .sim-tree-controls label{flex-basis:100%}
+ .simulator-page .sim-tree-controls button{min-height:44px}
+ .simulator-page .sim-unique-controls button{min-height:44px;max-width:100%;white-space:normal}
+ .simulator-page .sim-explain{overflow-wrap:anywhere}
+}
+@media(max-width:360px){
+ .simulator-page .sim-panel{padding:.75rem}
+ .simulator-page .sim-results{padding:.8rem}
+ .simulator-page .sim-tabs button{font-size:.8rem}
+ .simulator-page .sim-gem-group-head{align-items:flex-start;gap:.5rem}
+}
