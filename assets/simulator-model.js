@@ -38,3 +38,36 @@ export function treeEdges(nodes) {
   }
   return edges;
 }
+
+// Only display names change; the calculation engine retains its original identifiers.
+const itemFields = {'Rarity':'レアリティ','Quality':'品質','Item Level':'アイテムレベル','Sockets':'ソケット','Armour':'アーマー','Evasion Rating':'回避力','Energy Shield':'エナジーシールド','Spirit':'スピリット','Physical Damage':'物理ダメージ','Elemental Damage':'元素ダメージ','Critical Hit Chance':'クリティカルヒット率','Attacks per Second':'秒間アタック回数','Requires':'装備条件'};
+const rarities = {'UNIQUE':'ユニーク','Unique':'ユニーク','RARE':'レア','Rare':'レア','MAGIC':'マジック','Magic':'マジック','NORMAL':'ノーマル','Normal':'ノーマル'};
+export function localizeItemText(text,names){
+ return text.split('\n').map(line=>{
+  if(names[line])return names[line];
+  const match=line.match(/^([^:]+): (.*)$/);if(!match||!itemFields[match[1]])return line;
+  return `${itemFields[match[1]]}: ${match[1]==='Rarity'?(rarities[match[2]] || match[2]):match[2]}`;
+ }).join('\n');
+}
+export function restoreItemText(text,names,original=''){
+ const originals=original.split('\n'),reverse=new Map();
+ for(const [en,ja]of Object.entries(names))if(!reverse.has(ja))reverse.set(ja,en);
+ const fields=Object.fromEntries(Object.entries(itemFields).map(([en,ja])=>[ja,en]));
+ const rarity={ユニーク:'UNIQUE',レア:'RARE',マジック:'MAGIC',ノーマル:'NORMAL'};
+ return text.split('\n').map((line,index)=>{
+  if(originals[index]!==undefined&&localizeItemText(originals[index],names)===line)return originals[index];
+  if(originals[index]!==undefined){
+   const before=localizeItemText(originals[index],names),number=/[+-]?\d+(?:\.\d+)?/g;
+   if(before.replace(number,'#')===line.replace(number,'#')){
+    const a=originals[index].match(number)||[],b=before.match(number)||[],c=line.match(number)||[];
+    if(a.length&&a.length===b.length&&b.length===c.length){
+     const used=new Set(),positions=a.map(value=>{const i=b.findIndex((other,j)=>other===value&&!used.has(j));used.add(i);return i;});
+     if(positions.every(i=>i>=0)){let i=0;return originals[index].replace(number,()=>c[positions[i++]]);}
+    }
+   }
+  }
+  const match=line.match(/^([^:]+): (.*)$/);
+  if(match&&fields[match[1]])return `${fields[match[1]]}: ${fields[match[1]]==='Rarity'?(rarity[match[2]] || match[2]):match[2]}`;
+  return reverse.get(line) || line;
+ }).join('\n');
+}

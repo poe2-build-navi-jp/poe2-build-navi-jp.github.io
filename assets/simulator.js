@@ -1,11 +1,14 @@
-import {newPlan, parseSave, makeSave, statValue, treeEdges} from './simulator-model.js?v=0194a81d11';
+import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText} from './simulator-model.js?v=c5fa11d09b';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
-const [presets,names] = await Promise.all(['/data/simulator-presets.json?v=0ccac17a2f','/data/simulator-names.json?v=ad066e41ef'].map(async url => {
+const [presets,localization] = await Promise.all(['/data/simulator-presets.json?v=5a1df9b8e3','/data/simulator-localization.json?v=3f5c9b399b'].map(async url => {
  const r=await fetch(url);if(!r.ok)throw Error('ビルド一覧を読み込めません。再読み込みしてください。');return r.json();
 })).catch(error=>{$('sim-chooser').insertAdjacentHTML('beforeend',`<p role="alert">${esc(error.message)}</p>`);throw error;});
-const label = name => name==='Companion: {0}' ? 'コンパニオン（召喚対象を設定）' : names[name] ? `${names[name]}（${name}）` : name;
+const names=localization.names;
+const label=name=>name==='Companion: {0}'?'コンパニオン（召喚対象を設定）':name==='Spectre: {0}'?'スペクター（召喚対象を設定）':names[name] || name;
+const nodeStats=node=>(!plan?.request.tree_version||plan.request.tree_version==='0_5')?localization.descriptions[localization.nodes[node.skill]] || node.stats.map(s=>names[s] || s):node.stats.map(s=>names[s] || s);
+let itemSource='';
 let worker,bootPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
 let selectedSlot='helmet',selectedNode=null,preview=null,activeTab='items',view={x:0,y:0,w:8500,h:6500},currentTree=[];
 const pending = new Map();
@@ -15,7 +18,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- worker=new Worker(new URL('./simulator-worker.js?v=1fc636144e',import.meta.url),{type:'module'});
+ worker=new Worker(new URL('./simulator-worker.js?v=3f49893b94',import.meta.url),{type:'module'});
  worker.onmessage=({data})=>{if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  worker.onerror=()=>{for(const task of pending.values())task.reject(Error('計算処理を続けられません。ページを再読み込みしてください。'));pending.clear();};
  bootPromise=rpc('boot').then(data=>{catalog=data;return data;});return bootPromise;
@@ -49,7 +52,7 @@ function renderResults(){
   return `<div class="sim-stat${i===0?' primary':''}"><span>${title}</span><div><b>${number(value,id)}</b>${delta!==null?`<small class="${delta<0?'negative':''}">${delta>0?'+':''}${number(delta,id)}</small>`:''}</div></div>`;
  }).join('');
  const starts=new Set(Object.values(result.tree_effects?.class_starts || {})),normalPoints=(plan.request.allocated_nodes || []).filter(id=>!starts.has(id)&&!currentTree.find(n=>n.skill===id)?.ascendancy_id).length;
- const diagnostics=[...(normalPoints>plan.request.character.level-1+plan.questPoints?['選択した通常パッシブが現在Lvと報酬ポイントの上限を超えています。']:[]),...(result.unsupported_modifiers || []).map(v=>`未対応の効果：${v}`),...(result.item_errors || []).map(v=>`装備を計算から除外：${v.slot} / ${v.message}`),...(result.tree_effects?.warnings || [])];
+ const diagnostics=[...(normalPoints>plan.request.character.level-1+plan.questPoints?['選択した通常パッシブが現在Lvと報酬ポイントの上限を超えています。']:[]),...(result.unsupported_modifiers || []).map(v=>`未対応の効果：${v}`),...(result.item_errors || []).map(v=>`装備を計算から除外：${slots.find(s=>s[0]===v.slot)?.[1] || '装備'}。装備データの形式を確認してください。`),...(result.tree_effects?.warnings || [])];
  $('sim-diagnostic-count').textContent=`（${diagnostics.length}件）`;
  $('sim-diagnostic-body').innerHTML=`<p>${hasSkill?'選択したスキルと現在の計算条件の結果です。':'計算対象のダメージスキルがありません。スキルと必要な武器・召喚対象を設定してください。'}</p>${diagnostics.length?`<p>以下の効果は数値に含まれない場合があります。</p><ul>${diagnostics.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`:'<p>エンジンから未対応効果・装備エラーの報告はありません。全機構の再現を保証する判定ではありません。</p>'}`;
  $('sim-diagnostics').open=diagnostics.length>0;
@@ -82,7 +85,7 @@ function renderInputs(){
  $('sim-enemy').value=plan.request.enemy_tier || 'none';
  $('sim-life-reward').checked=!!plan.request.config_inputs?.['questInterlude 2Khari CrossingMolten Shrine'];
  $('sim-extra-mods').value=(plan.request.extra_modifiers || []).join('\n');$('sim-notes').value=plan.notes;
- $('sim-raw-config').textContent=JSON.stringify(plan.request.config_inputs || {},null,2);$('sim-quest-points').value=plan.questPoints;
+ $('sim-quest-points').value=plan.questPoints;
  renderSlots();renderSkills();setTab(activeTab);
 }
 function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree')updateView();}
@@ -92,7 +95,7 @@ const itemList=()=>utility(selectedSlot)?(plan.request.flasks ||= []):(plan.requ
 function itemName(text){const lines=text.trim().split('\n');return /^Rarity:/i.test(lines[0])?lines[1] || '未装備':lines[0] || '未装備';}
 function renderSlots(){
  $('sim-slots').innerHTML=slots.map(([id,title])=>{const item=(utility(id)?plan.request.flasks:plan.request.items)?.find(i=>i.slot===id);return `<button type="button" data-slot="${id}" aria-pressed="${id===selectedSlot}">${title}<small>${esc(item?label(itemName(item.text)):'未装備')}</small></button>`;}).join('');
- $('sim-slot-title').textContent=slots.find(s=>s[0]===selectedSlot)?.[1];$('sim-item-text').value=itemList().find(i=>i.slot===selectedSlot)?.text || '';renderUniques();
+ $('sim-slot-title').textContent=slots.find(s=>s[0]===selectedSlot)?.[1];itemSource=itemList().find(i=>i.slot===selectedSlot)?.text || '';$('sim-item-text').value=localizeItemText(itemSource,names);renderUniques();
 }
 function renderUniques(){
  const q=$('sim-unique-search').value.trim().toLowerCase();
@@ -105,8 +108,8 @@ function gemOptions(support,selected){return `<option value="">${support?'サポ
 function renderSkills(){
  $('sim-skill-groups').innerHTML=(plan.request.socket_groups || []).map((group,index)=>`<section class="sim-gem-group" data-group="${index}"><div class="sim-gem-group-head"><label class="sim-check"><input type="radio" name="main-skill" data-main="${index}"${(plan.request.main_socket_group || 0)===index?' checked':''}>計算する主力</label><button type="button" data-remove-group="${index}" aria-label="スキル組${index+1}を削除">組を削除</button></div>${group.gems.map((gem,j)=>{
  const entry=catalog.gems.find(g=>g.skill_id===gem.skill_id);const support=entry?.is_support || false;
- const summoner=catalog.minions.summoners.find(s=>s.skill_id===gem.skill_id);const monsters=summoner?catalog.minions.monsters.filter(m=>summoner.minion_ids.includes(m.id)):[];
- return `<div class="sim-gem-row" data-gem="${j}"><label>${support?'サポート':'スキル'}<select data-gem-field="skill_id">${!entry?`<option value="${esc(gem.skill_id)}">${esc(gem.name_spec || gem.skill_id)}（未解決）</option>`:''}${gemOptions(support,gem.skill_id)}</select></label><label>Lv<input data-gem-field="level" type="number" min="1" max="40" value="${gem.level}"></label><label>品質<input data-gem-field="quality" type="number" min="0" max="30" value="${gem.quality}"></label><button type="button" data-remove-gem="${j}" aria-label="ジェム${j+1}を削除">×</button></div>${monsters.length?`<label>召喚する対象<select data-minion="${j}"><option value="">対象を選ぶ</option>${monsters.map(m=>`<option value="${esc(m.id)}"${gem.minion===m.id?' selected':''}>${esc(label(m.name))}</option>`).join('')}</select></label>`:''}`;
+ const summoner=catalog.minions.summoners.find(s=>s.skill_id===gem.skill_id);const monsters=summoner?catalog.minions.monsters.filter(m=>!m.name.startsWith('[DNT]')&&summoner.minion_ids.includes(m.id)):[];
+ return `<div class="sim-gem-row" data-gem="${j}"><label>${support?'サポート':'スキル'}<select data-gem-field="skill_id">${!entry?`<option value="${esc(gem.skill_id)}">${esc(label(gem.name_spec || gem.skill_id))}（未解決）</option>`:''}${gemOptions(support,gem.skill_id)}</select></label><label>Lv<input data-gem-field="level" type="number" min="1" max="40" value="${gem.level}"></label><label>品質<input data-gem-field="quality" type="number" min="0" max="30" value="${gem.quality}"></label><button type="button" data-remove-gem="${j}" aria-label="ジェム${j+1}を削除">×</button></div>${monsters.length?`<label>召喚する対象<select data-minion="${j}"><option value="">対象を選ぶ</option>${monsters.map(m=>`<option value="${esc(m.id)}"${gem.minion===m.id?' selected':''}>${esc(label(m.name))}</option>`).join('')}</select></label>`:''}`;
  }).join('')}<label class="sim-check"><input type="checkbox" data-enabled="${index}"${group.enabled?' checked':''}>このスキル組を有効にする</label><button type="button" class="sim-add-support" data-add-support="${index}">＋ サポートを追加</button></section>`).join('');
 }
 function renderTree(){
@@ -127,11 +130,11 @@ function renderTreeState(){
  for(const edge of [...$('sim-tree-edges').children])toggle(edge,'allocated',allocated.has(+edge.dataset.from)&&allocated.has(+edge.dataset.to));
  $('sim-point-count').textContent=`選択ノード ${(plan.request.allocated_nodes || []).length} / 通常ポイント上限 ${plan.request.character.level-1+plan.questPoints}（別枠ノードを含む）`;
 }
-function nodeDetail(id){selectedNode=id;preview=null;const node=currentTree.find(n=>n.skill===id);if(!node)return;const allocated=plan.request.allocated_nodes?.includes(id);$('sim-node-detail').innerHTML=`<h4>${esc(label(node.name))}</h4><ul>${node.stats.map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p>ノードID：${id}${node.ascendancy_id?' / アセンダンシー':''}</p><div class="sim-actions"><button type="button" id="sim-node-preview" class="sim-primary">${allocated?'外す範囲を確認':'取得経路を確認'}</button></div><div id="sim-node-preview-result"></div>${allocated&&node.name==='Attribute'?`<label>能力値ノードの選択<select id="sim-node-attribute"><option value="str">筋力</option><option value="dex">器用さ</option><option value="int">知性</option></select></label>`:''}`;if($('sim-node-attribute'))$('sim-node-attribute').value=plan.request.attribute_choices?.[id] || 'str';renderTreeState();}
+function nodeDetail(id){selectedNode=id;preview=null;const node=currentTree.find(n=>n.skill===id);if(!node)return;const allocated=plan.request.allocated_nodes?.includes(id);$('sim-node-detail').innerHTML=`<h4>${esc(label(node.name))}</h4><ul>${nodeStats(node).map(s=>`<li>${esc(s)}</li>`).join('')}</ul><p>ノードID：${id}${node.ascendancy_id?' / アセンダンシー':''}</p><div class="sim-actions"><button type="button" id="sim-node-preview" class="sim-primary">${allocated?'外す範囲を確認':'取得経路を確認'}</button></div><div id="sim-node-preview-result"></div>${allocated&&node.name==='Attribute'?`<label>能力値ノードの選択<select id="sim-node-attribute"><option value="str">筋力</option><option value="dex">器用さ</option><option value="int">知性</option></select></label>`:''}`;if($('sim-node-attribute'))$('sim-node-attribute').value=plan.request.attribute_choices?.[id] || 'str';renderTreeState();}
 async function previewNode(){
  const id=selectedNode,version=generation;
  try{const action=plan.request.allocated_nodes?.includes(id)?'refund':'allocate';const next=await rpc('edit',{request:clone(plan.request),node:id,mode:0,action,quest_points:plan.questPoints});if(id!==selectedNode||version!==generation)return;preview=next;
- $('sim-node-preview-result').innerHTML=next.valid?`<p>追加 ${next.result.added.length}ノード / 解除 ${next.result.removed.length}ノード<br>通常ポイント ${next.result.points_used} / ${next.result.points_max}</p><button type="button" id="sim-node-apply" class="sim-primary">この変更を反映</button>`:`<p role="status">この変更は適用できません：${esc(next.reason)}</p>`;renderTreeState();}catch(error){showError(error);}
+ $('sim-node-preview-result').innerHTML=next.valid?`<p>追加 ${next.result.added.length}ノード / 解除 ${next.result.removed.length}ノード<br>通常ポイント ${next.result.points_used} / ${next.result.points_max}</p><button type="button" id="sim-node-apply" class="sim-primary">この変更を反映</button>`:`<p role="status">この変更は適用できません：取得経路とポイント上限を確認してください。</p>`;renderTreeState();}catch(error){showError(error);}
 }
 function download(){const blob=new Blob([JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes),null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`poe2-${selectedPreset.id}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 // All inputs stay on this origin; no character or code upload is performed.
@@ -144,9 +147,9 @@ document.addEventListener('click',async event=>{
   if(!plan)return;
   if(target.dataset.tab){setTab(target.dataset.tab);return;}
   if(target.dataset.slot){selectedSlot=target.dataset.slot;renderSlots();return;}
-  if(target.id==='sim-unique-draft'){const value=$('sim-unique').value;if(!value)return;const drafted=await rpc('unique',{id:+value,roll:+$('sim-roll').value});$('sim-item-text').value=drafted.text;return;}
+  if(target.id==='sim-unique-draft'){const value=$('sim-unique').value;if(!value)return;const drafted=await rpc('unique',{id:+value,roll:+$('sim-roll').value});itemSource=drafted.text;$('sim-item-text').value=localizeItemText(itemSource,names);return;}
   if(target.id==='sim-item-apply'||target.id==='sim-item-remove'){
-   const list=itemList(),index=list.findIndex(i=>i.slot===selectedSlot);if(index>=0)list.splice(index,1);const text=$('sim-item-text').value.trim();if(target.id==='sim-item-apply'&&text){if(text.length>100000)throw Error('装備テキストが長すぎます。');list.push({slot:selectedSlot,text,...(utility(selectedSlot)?{active:true}:{})});}commit();renderSlots();return;}
+   const list=itemList(),index=list.findIndex(i=>i.slot===selectedSlot);if(index>=0)list.splice(index,1);const text=restoreItemText($('sim-item-text').value,names,itemSource).trim();if(target.id==='sim-item-apply'&&text){if(text.length>100000)throw Error('装備テキストが長すぎます。');list.push({slot:selectedSlot,text,...(utility(selectedSlot)?{active:true}:{})});}commit();renderSlots();return;}
   if(target.dataset.removeGroup!==undefined){plan.request.socket_groups.splice(+target.dataset.removeGroup,1);plan.request.main_socket_group=Math.max(0,Math.min(plan.request.main_socket_group || 0,plan.request.socket_groups.length-1));renderSkills();commit();return;}
   if(target.dataset.removeGem!==undefined){const group=plan.request.socket_groups[+target.closest('[data-group]').dataset.group];group.gems.splice(+target.dataset.removeGem,1);renderSkills();commit();return;}
   if(target.dataset.addSupport!==undefined){const group=plan.request.socket_groups[+target.dataset.addSupport];if(group.gems.length>=6)throw Error('この画面では1組につき主力1個＋サポート5個まで追加できます。');group.gems.push({skill_id:catalog.gems.find(g=>g.is_support).skill_id,level:1,quality:0});renderSkills();commit();return;}
@@ -184,7 +187,7 @@ document.addEventListener('change',async event=>{
 $('sim-notes').addEventListener('input',()=>{if(plan){plan.notes=$('sim-notes').value;save();}});
 $('sim-unique-search').addEventListener('input',()=>{if(catalog)renderUniques();});
 $('sim-node-search').addEventListener('input',()=>{
- const q=$('sim-node-search').value.trim().toLowerCase();const found=q?currentTree.filter(n=>`${n.skill} ${n.name} ${names[n.name] || ''} ${n.stats.join(' ')}`.toLowerCase().includes(q)).slice(0,25):[];
+ const q=$('sim-node-search').value.trim().toLowerCase();const found=q?currentTree.filter(n=>`${n.skill} ${n.name} ${names[n.name] || ''} ${nodeStats(n).join(' ')}`.toLowerCase().includes(q)).slice(0,25):[];
  $('sim-node-search-results').innerHTML=found.map(n=>`<button type="button" data-node-result="${n.skill}">${esc(label(n.name))}</button>`).join('')+(q&&!found.length?'<p>一致するノードがありません。</p>':'');
 });
 let drag;

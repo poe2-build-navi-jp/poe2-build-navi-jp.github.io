@@ -39,7 +39,7 @@ try{
  const life=()=>Number([...d.querySelectorAll('.sim-stat')].find(e=>e.textContent.includes('最大ライフ')).querySelector('b').textContent.replaceAll(',',''));
  const before=life();d.getElementById('sim-extra-mods').value='+100 to maximum Life';click('#sim-config-apply');await wait(ready);assert.equal(life(),before+100);
  click('[data-tab="items"]');click('[data-slot="amulet"]');
- const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent.includes('Astramentis'));assert.ok(astro);change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('Astramentis'));
+ const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent.includes('アストラメンティス'));assert.ok(astro);change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('アストラメンティス'));
  click('#sim-item-apply');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'&&i.text.includes('Astramentis')));
  click('[data-tab="skills"]');change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
  click('[data-tab="tree"]');const nodeSearch=d.getElementById('sim-node-search');nodeSearch.value='59779';nodeSearch.dispatchEvent(new w.Event('input',{bubbles:true}));click('[data-node-result="59779"]');click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));click('#sim-node-apply');await wait(ready);assert.ok(saved().request.allocated_nodes.includes(59779));

@@ -9,7 +9,7 @@
     "skills": [
       "Whirling Assault"
     ],
-    "mainSkill": "ワーリングアサルト（Whirling Assault）",
+    "mainSkill": "ワーリングアサルト",
     "path": "/builds/monk/whirling-assault/"
   },
   {
@@ -22,7 +22,7 @@
     "skills": [
       "Twister"
     ],
-    "mainSkill": "ツイスター（Twister）",
+    "mainSkill": "ツイスター",
     "path": "/builds/mercenary/twister-gemling/"
   },
   {
@@ -35,7 +35,7 @@
     "skills": [
       "Shield Wall"
     ],
-    "mainSkill": "シールドウォール（Shield Wall）",
+    "mainSkill": "シールドウォール",
     "path": "/builds/warrior/shield-wall-smith/"
   },
   {
@@ -62,7 +62,7 @@
     "skills": [
       "Companion: {0}"
     ],
-    "mainSkill": "テイムビースト（Tame Beast）",
+    "mainSkill": "テイムビースト",
     "path": "/builds/huntress/companion/"
   },
   {
@@ -75,7 +75,7 @@
     "skills": [
       "Ice Shot"
     ],
-    "mainSkill": "アイスショット（Ice Shot）",
+    "mainSkill": "アイスショット",
     "path": "/builds/ranger/ice-shot-deadeye/"
   },
   {
@@ -102,12 +102,12 @@
       "Entangle",
       "Thrashing Vines"
     ],
-    "mainSkill": "エンタングル（Entangle） / スラッシングヴァイン（Thrashing Vines）",
+    "mainSkill": "エンタングル / スラッシングヴァイン",
     "path": "/builds/druid/plant-oracle/"
   },
   {
     "id": "witch-ed-contagion-lich",
-    "name": "ED・コンテージョン リッチ",
+    "name": "エッセンスドレイン・コンテージョン リッチ",
     "class": "Witch",
     "className": "ウィッチ",
     "ascendancy": "Lich",
@@ -116,7 +116,7 @@
       "Essence Drain",
       "Contagion"
     ],
-    "mainSkill": "エッセンスドレイン（Essence Drain） + コンテージョン（Contagion）",
+    "mainSkill": "エッセンスドレイン + コンテージョン",
     "path": "/builds/witch/ed-contagion-lich/"
   },
   {
@@ -129,7 +129,7 @@
     "skills": [
       "Explosive Grenade"
     ],
-    "mainSkill": "エクスプローシブグレネード（Explosive Grenade）",
+    "mainSkill": "エクスプローシブグレネード",
     "path": "/builds/mercenary/grenade-gemling/"
   },
   {
@@ -142,7 +142,7 @@
     "skills": [
       "Twister"
     ],
-    "mainSkill": "ツイスター（Twister）",
+    "mainSkill": "ツイスター",
     "path": "/builds/huntress/twister-spirit-walker/"
   },
   {
@@ -156,7 +156,7 @@
       "Spark",
       "Comet"
     ],
-    "mainSkill": "スパーク（Spark）＋コメット（Comet）",
+    "mainSkill": "スパーク＋コメット",
     "path": "/builds/sorceress/spark-stormweaver/"
   }
 ]
