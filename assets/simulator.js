@@ -138,6 +138,7 @@ function download(){const blob=new Blob([JSON.stringify(makeSave(selectedPreset.
 document.addEventListener('click',async event=>{
  const target=event.target.closest('button,a');if(!target)return;
  try{
+  if(target.id==='menu-button'){const open=$('site-nav').classList.toggle('is-open');target.setAttribute('aria-expanded',String(open));return;}
   if(target.dataset.preset){event.preventDefault();await selectPreset(target.dataset.preset);return;}
   if(target.id==='sim-change-build'){save();showChooser();return;}
   if(!plan)return;

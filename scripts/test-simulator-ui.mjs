@@ -27,6 +27,8 @@ const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false
 try{
  await w.eval(`(async()=>{${code}\n})()`);
  assert.equal(d.querySelectorAll('[data-preset]').length,12);
+ click('#menu-button');assert.equal(d.getElementById('menu-button').getAttribute('aria-expanded'),'true');assert.ok(d.getElementById('site-nav').classList.contains('is-open'));
+ click('#menu-button');assert.equal(d.getElementById('menu-button').getAttribute('aria-expanded'),'false');
  change('#sim-class-filter','Monk');assert.equal([...d.querySelectorAll('[data-preset]')].filter(e=>!e.hidden).length,1);
  change('#sim-class-filter','');
  click('[data-preset="mercenary-twister-gemling"]');await wait(ready);
