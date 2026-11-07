@@ -57,8 +57,15 @@ for (const p of presets) {
   await writeFile(file,html);
 }
 for (const path of ['builds/index.html','index.html']) {
- const file=resolve(root,path); let html=(await readFile(file,'utf8')).replace(/<!-- simulator-entry:start -->[\s\S]*?<!-- simulator-entry:end -->/g,'');
- html=html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/,'$1<!-- simulator-entry:start --><p class="simulator-entry"><a class="button button-secondary" href="/simulator/">ビルドを選んでシミュレーション →</a></p><!-- simulator-entry:end -->');
+ const file=resolve(root,path);let html=await readFile(file,'utf8');
+ if(path==='index.html'){
+  const card=(await readFile(resolve(root,'tools/simulator-intro.html'),'utf8')).trim();
+  html=/<!-- simulator-entry:start -->/.test(html)?html.replace(/<!-- simulator-entry:start -->[\s\S]*?<!-- simulator-entry:end -->/,()=>card):html.replace(/(<div class="hero-actions"[\s\S]*?<\/div>)/,match=>match+card);
+  if(!html.includes('/assets/simulator-intro.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/simulator-intro.css"></head>');
+ }else{
+  html=html.replace(/<!-- simulator-entry:start -->[\s\S]*?<!-- simulator-entry:end -->/g,'');
+  html=html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/,'$1<!-- simulator-entry:start --><p class="simulator-entry"><a class="button button-secondary" href="/simulator/">装備・パッシブを試してみる →</a></p><!-- simulator-entry:end -->');
+ }
  await writeFile(file,html);
 }
 console.log(`Simulator: ${presets.length} build choices and detail-page entry links`);
