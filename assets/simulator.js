@@ -39,14 +39,14 @@ function showError(error){$('sim-error').textContent=error.message || String(err
 function clearError(){$('sim-error').hidden=true;$('sim-error').textContent='';}
 function save() {
  if(!plan)return;
- try{localStorage.setItem(`poe2-simulator:v1:${selectedPreset.id}`,JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {})));$('sim-save-status').textContent='この端末に保存済み';}
- catch{$('sim-save-status').textContent='端末保存ができません。保存ファイルを使ってください。';}
+ try{localStorage.setItem(`poe2-simulator:v1:${selectedPreset.id}`,JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {})));$('sim-save-status').textContent='この端末に保存済み';$('sim-tree-save-state').textContent='この端末に保存済み';return true;}
+ catch{$('sim-save-status').textContent='端末保存ができません。保存ファイルを使ってください。';$('sim-tree-save-state').textContent=$('sim-save-status').textContent;return false;}
 }
 let calculating=false,queuedCalculation=null;
 function recalculate() {
  if(!plan)return Promise.resolve();
  const token=++calculation,version=generation;
- clearError();$('sim-item-result').setAttribute('aria-busy','true');$('sim-stats').setAttribute('aria-busy','true');$('sim-baseline').disabled=true;$('sim-status').textContent='変更を再計算しています…';
+ clearError();$('sim-tree-save-state').textContent='再計算しています…';$('sim-item-result').setAttribute('aria-busy','true');$('sim-stats').setAttribute('aria-busy','true');$('sim-baseline').disabled=true;$('sim-status').textContent='変更を再計算しています…';
  return new Promise(resolve=>{
   if(queuedCalculation)queuedCalculation.resolve();
   queuedCalculation={token,version,request:clone(plan.request),resolve};
@@ -60,8 +60,8 @@ async function drainCalculations(){
   try{
    const next=await rpc('calculate',job.request);
    if(job.token!==calculation||job.version!==generation)continue;
-   result=next;renderResults();renderTreeState();$('sim-status').textContent='変更を計算しました。';
-  }catch(error){if(job.token===calculation&&job.version===generation){result=null;$('sim-stats').innerHTML='<p>この構成は計算できません。</p>';showError(error);}}
+   result=next;renderResults();renderTreeState();$('sim-status').textContent='変更を計算しました。';$('sim-tree-save-state').textContent=$('sim-save-status').textContent+'・計算反映済み';
+  }catch(error){if(job.token===calculation&&job.version===generation){result=null;$('sim-tree-live-stats').textContent='この構成は計算できません。';$('sim-tree-save-state').textContent='計算に失敗しました。構成の設定を確認してください。';$('sim-stats').innerHTML='<p>この構成は計算できません。</p>';showError(error);}}
   finally{if(job.token===calculation&&job.version===generation){$('sim-item-result').setAttribute('aria-busy','false');$('sim-stats').setAttribute('aria-busy','false');$('sim-baseline').disabled=!result;}job.resolve();}
  }}finally{calculating=false;}
 }
@@ -82,7 +82,7 @@ function renderResults(){
  $('sim-diagnostic-body').innerHTML=`<p>${hasSkill?'選択したスキルと現在の計算条件の結果です。':'計算対象のダメージスキルがありません。スキルと必要な武器・召喚対象を設定してください。'}</p>${diagnostics.length?`<p>以下の効果は数値に含まれない場合があります。</p><ul>${diagnostics.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`:'<p>エンジンから未対応効果・装備エラーの報告はありません。全機構の再現を保証する判定ではありません。</p>'}`;
  $('sim-diagnostics').open=diagnostics.length>0;
  $('sim-engine-version').textContent=`対応データ ${result.provenance?.data_version || catalog.runtime.dataVersion}`;
- renderItemResult();
+ renderItemResult();$('sim-tree-live-stats').textContent=['Life','Armour','Evasion','CombinedDPS'].map(id=>`${statistics.find(s=>s[0]===id)[1]} ${number(statValue(result,id),id)}`).join(' · ');
  $('sim-character-name').textContent=`${label(plan.request.character.class_name)} / ${label(plan.request.character.ascendancy_name)} · 装備・パッシブは自分の設定`;
 }
 async function selectPreset(id,{fromHistory=false}={}){
@@ -113,6 +113,21 @@ function renderInputs(){
  $('sim-extra-mods').value=localizeModifiers(plan.request.extra_modifiers || [],equipmentCatalog,names);$('sim-config-modifier').innerHTML=equipmentCatalog.modifiers.map(m=>`<option value="${m.id}">${esc(m.label)}</option>`).join('');$('sim-notes').value=plan.notes;
  $('sim-quest-points').value=plan.questPoints;
  renderSlots();renderSkills();setTab(activeTab);
+}
+let treeFullscreen=false,treeClosing=false,treeReturnFocus=null,treePageOverflow=null;
+function openTreeEditor(){
+ if(treeFullscreen||!plan)return;treeFullscreen=true;treeReturnFocus=document.activeElement;
+ treePageOverflow={body:document.body.style.overflow,html:document.documentElement.style.overflow};document.body.style.overflow='hidden';document.documentElement.style.overflow='hidden';
+ $('sim-tree').classList.add('sim-tree-fullscreen');$('sim-tree').setAttribute('role','dialog');$('sim-tree').setAttribute('aria-modal','true');$('sim-tree').setAttribute('aria-label','パッシブツリーの編集');
+ $('sim-tree-full-header').hidden=false;$('sim-tree-settings').open=false;$('sim-node-inspector').open=selectedNode!==null;$('sim-tree-close').focus({preventScroll:true});updateView();
+}
+async function closeTreeEditor(){
+ if(!treeFullscreen||treeClosing)return;treeClosing=true;$('sim-tree').classList.add('sim-tree-closing');$('sim-tree-settings').inert=true;$('sim-node-inspector').inert=true;const button=$('sim-tree-close');button.disabled=true;button.textContent='保存・計算中…';
+ try{await recalculate();if(!save())showError(Error('端末への保存ができませんでした。構成をファイルで保存してください。'));}finally{
+ treeFullscreen=false;treeClosing=false;$('sim-tree').classList.remove('sim-tree-fullscreen','sim-tree-closing');$('sim-tree-settings').inert=false;$('sim-node-inspector').inert=false;for(const name of ['role','aria-modal','aria-label'])$('sim-tree').removeAttribute(name);
+ $('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
+ button.disabled=false;button.textContent='保存して戻る';treeReturnFocus?.focus?.({preventScroll:true});updateView();
+ }
 }
 function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree')updateView();}
 const slots=[['weapon1','メイン武器'],['weapon2','サブ武器・盾'],['helmet','兜'],['body','鎧'],['gloves','手袋'],['boots','靴'],['belt','ベルト'],['amulet','アミュレット'],['ring1','指輪1'],['ring2','指輪2'],['Flask 1','フラスコ1'],['Flask 2','フラスコ2'],['Charm 1','チャーム1'],['Charm 2','チャーム2'],['Charm 3','チャーム3']];
@@ -273,11 +288,12 @@ function renderNodeCatalog(){
  $('sim-node-prev').disabled=nodePage===0;$('sim-node-next').disabled=nodePage===pages-1;
 }
 function nodeDetail(id,{reveal=true}={}){
+ $('sim-node-inspector').open=true;if(treeFullscreen)$('sim-tree-settings').open=false;
  selectedNode=id;preview=null;++editSequence;const node=treeNodes.get(id);if(!node)return;
  const allocated=plan.request.allocated_nodes?.includes(id),start=Object.values(result?.tree_effects?.class_starts || {}).includes(id)||node.kind==='ascendancy_start',decorative=node.kind==='mastery';
  $('sim-node-detail').innerHTML=`<h4 tabindex="-1">${esc(label(node.name))}</h4><p>${passiveKind(node)} · ${allocated?'取得済み':'未取得'}${node.ascendancy_id?' · アセンダンシー':''}</p><ul>${nodeStats(node).map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${node.name==='Attribute'?`<label>このノードの能力値<select id="sim-node-attribute"><option value="str">筋力 +5</option><option value="dex">器用さ +5</option><option value="int">知性 +5</option></select></label>`:''}${!start&&!decorative?`<div class="sim-actions"><button type="button" id="sim-node-preview" class="sim-primary">${allocated?'外す範囲と変化を確認':'取得経路と変化を確認'}</button></div>`:''}<div id="sim-node-preview-result" aria-live="polite"></div>`;
  if($('sim-node-attribute'))$('sim-node-attribute').value=plan.request.attribute_choices?.[id] || 'str';renderTreeState();
- if(reveal){$('sim-node-detail').querySelector('h4').focus({preventScroll:true});$('sim-node-detail').scrollIntoView({block:'nearest',behavior:'instant'});}
+ if(reveal&&!treeFullscreen){$('sim-node-detail').querySelector('h4').focus({preventScroll:true});$('sim-node-detail').scrollIntoView({block:'nearest',behavior:'instant'});}
 }
 async function previewNode(){
  const id=selectedNode,version=generation,token=++editSequence,source=clone(plan.request);
@@ -304,7 +320,9 @@ document.addEventListener('click',async event=>{
   if(target.dataset.preset){event.preventDefault();await selectPreset(target.dataset.preset);return;}
   if(target.id==='sim-change-build'){save();showChooser();return;}
   if(!plan)return;
-  if(target.dataset.tab){setTab(target.dataset.tab);return;}
+  if(target.dataset.tab){setTab(target.dataset.tab);if(target.dataset.tab==='tree'&&window.matchMedia?.('(max-width: 720px)').matches)openTreeEditor();return;}
+  if(target.id==='sim-tree-open'){openTreeEditor();return;}
+  if(target.id==='sim-tree-close'){await closeTreeEditor();return;}
   if(target.dataset.slot){selectedSlot=target.dataset.slot;renderSlots();openItemEditor();return;}
   if(target.id==='sim-item-back'){closeItemEditor();return;}
   if(target.dataset.equipmentMode){setEquipmentMode(target.dataset.equipmentMode);return;}
@@ -377,31 +395,51 @@ $('sim-node-search').addEventListener('input',()=>{
  nodePage=0;renderNodeCatalog();$('sim-node-search-results').innerHTML=found.map(n=>`<button type="button" data-node-result="${n.skill}"><strong>${esc(label(n.name))}</strong><small>${esc(nodeStats(n).join(' / '))}</small></button>`).join('')+(q&&!found.length?'<p>一致するノードがありません。</p>':'');
 });
 let drag;
-const treeSvg=$('sim-tree-svg'),treeMap=$('sim-tree-map');
+const treeSvg=$('sim-tree-svg'),treeMap=$('sim-tree-map'),treePointers=new Map();
 const stopTreeGesture=event=>{if(event.cancelable)event.preventDefault();};
-// Keep native scrolling and rubber-band gestures outside the interactive map.
-treeMap.addEventListener('touchstart',stopTreeGesture,{passive:false});
-treeMap.addEventListener('touchmove',stopTreeGesture,{passive:false});
+// Suppress only the browser's map-local gestures; page zoom outside stays available.
+for(const type of ['touchstart','touchmove','gesturestart','gesturechange','gestureend'])treeMap.addEventListener(type,stopTreeGesture,{passive:false});
+function treeWorldPoint(x,y,rect){return {x:view.x+(x-rect.left-rect.width/2)*view.w/Math.max(1,rect.width),y:view.y+(y-rect.top-rect.height/2)*view.h/Math.max(1,rect.height)};}
+function beginTreePinch(){
+ const [a,b]=[...treePointers.values()],rect=treeMap.getBoundingClientRect(),mid={x:(a.x+b.x)/2,y:(a.y+b.y)/2};
+ drag={mode:'pinch',rect,distance:Math.max(1,Math.hypot(b.x-a.x,b.y-a.y)),width:view.w,ratio:view.h/view.w,anchor:treeWorldPoint(mid.x,mid.y,rect),moved:true};
+}
+function zoomTreeAt(width,point,rect,anchor,ratio=view.h/view.w){
+ view.w=Math.max(800,Math.min(60000,width));view.h=view.w*(rect.width>0&&rect.height>0?rect.height/rect.width:ratio);
+ view.x=anchor.x-(point.x-rect.left-rect.width/2)*view.w/Math.max(1,rect.width);view.y=anchor.y-(point.y-rect.top-rect.height/2)*view.h/Math.max(1,rect.height);updateView();
+}
 treeSvg.addEventListener('pointerdown',event=>{
- if(drag||event.isPrimary===false||event.button!==undefined&&event.button!==0)return;
- stopTreeGesture(event);let hit=event.target.closest('[data-node]')?.dataset.node;const rect=treeMap.getBoundingClientRect();
+ if(event.button!==undefined&&event.button!==0)return;stopTreeGesture(event);
+ if(treePointers.has(event.pointerId)||treePointers.size>=2)return;
+ treePointers.set(event.pointerId,{x:event.clientX,y:event.clientY});treeSvg.setPointerCapture?.(event.pointerId);
+ if(treePointers.size===2){beginTreePinch();return;}
+ let hit=event.target.closest('[data-node]')?.dataset.node;const rect=treeMap.getBoundingClientRect();
  if(!hit&&rect.width>0){let distance=20;for(const node of currentTree){if(!renderedNodes.has(node.skill))continue;const dx=(node.x-view.x)*rect.width/view.w+rect.width/2+rect.left-event.clientX,dy=(node.y-view.y)*rect.height/view.h+rect.height/2+rect.top-event.clientY,d=Math.hypot(dx,dy);if(d<distance){hit=node.skill;distance=d;}}}
- drag={pointerId:event.pointerId,rect,x:event.clientX,y:event.clientY,vx:view.x,vy:view.y,moved:false,node:hit};treeSvg.setPointerCapture?.(event.pointerId);
+ drag={mode:'pan',pointerId:event.pointerId,rect,x:event.clientX,y:event.clientY,vx:view.x,vy:view.y,moved:false,node:hit};
 });
 treeSvg.addEventListener('pointermove',event=>{
- if(!drag||event.pointerId!==drag.pointerId)return;stopTreeGesture(event);const rect=drag.rect,dx=event.clientX-drag.x,dy=event.clientY-drag.y;
- if(Math.hypot(dx,dy)>6)drag.moved=true;if(!drag.moved)return;
+ if(!drag||!treePointers.has(event.pointerId))return;stopTreeGesture(event);treePointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+ if(drag.mode==='pinch'){
+  const [a,b]=[...treePointers.values()];if(!a||!b)return;
+  zoomTreeAt(drag.width*drag.distance/Math.max(1,Math.hypot(b.x-a.x,b.y-a.y)),{x:(a.x+b.x)/2,y:(a.y+b.y)/2},drag.rect,drag.anchor,drag.ratio);return;
+ }
+ const rect=drag.rect,dx=event.clientX-drag.x,dy=event.clientY-drag.y;if(Math.hypot(dx,dy)>6)drag.moved=true;if(!drag.moved)return;
  view.x=drag.vx-dx*view.w/Math.max(1,rect.width);view.y=drag.vy-dy*view.h/Math.max(1,rect.height);updateView();
 });
-treeSvg.addEventListener('pointerup',event=>{
- if(!drag||event.pointerId!==drag.pointerId)return;stopTreeGesture(event);const gesture=drag;drag=null;
- const moved=gesture.moved||Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)>6;
- if(!moved&&gesture.node)nodeDetail(+gesture.node,{reveal:false});
-});
-for(const type of ['pointercancel','lostpointercapture'])treeSvg.addEventListener(type,event=>{if(drag?.pointerId===event.pointerId)drag=null;});
-window.addEventListener('blur',()=>{drag=null;});
-treeSvg.addEventListener('wheel',event=>{event.preventDefault();event.stopPropagation();const factor=event.deltaY>0?1.12:.89;view.w=Math.max(800,Math.min(60000,view.w*factor));view.h=view.w*.76;updateView();},{passive:false});
+function endTreePointer(event,cancelled=false){
+ if(!treePointers.has(event.pointerId))return;stopTreeGesture(event);const gesture=drag;treePointers.delete(event.pointerId);
+ if(treePointers.size){const [pointerId,point]=[...treePointers][0];drag={mode:'pan',pointerId,rect:treeMap.getBoundingClientRect(),x:point.x,y:point.y,vx:view.x,vy:view.y,moved:true};return;}
+ drag=null;if(!cancelled&&gesture?.mode==='pan'&&!gesture.moved&&Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)<=6&&gesture.node)nodeDetail(+gesture.node,{reveal:false});
+}
+treeSvg.addEventListener('pointerup',event=>endTreePointer(event));
+for(const type of ['pointercancel','lostpointercapture'])treeSvg.addEventListener(type,event=>endTreePointer(event,true));
+window.addEventListener('blur',()=>{drag=null;treePointers.clear();});
+treeSvg.addEventListener('wheel',event=>{event.preventDefault();event.stopPropagation();const rect=treeMap.getBoundingClientRect(),point={x:event.clientX,y:event.clientY};zoomTreeAt(view.w*(event.deltaY>0?1.12:.89),point,rect,treeWorldPoint(point.x,point.y,rect));},{passive:false});
 window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('build');if(id)void selectPreset(id,{fromHistory:true});else{generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;}});
 const initial=new URLSearchParams(location.search).get('build');if(initial)void selectPreset(initial,{fromHistory:true});
 
 window.addEventListener('resize',()=>{if(activeTab==='tree')updateView();});
+
+document.addEventListener('keydown',event=>{if(!treeFullscreen)return;if(event.key==='Escape'){event.preventDefault();void closeTreeEditor();}else if(event.key==='Tab'){const targets=[...$('sim-tree').querySelectorAll('button,input,select,textarea,summary,[tabindex="0"]')].filter(e=>!e.disabled&&e.getClientRects().length);if(!targets.length)return;const first=targets[0],last=targets.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}}});
+
+$('sim-tree-settings').addEventListener('toggle',()=>{if(treeFullscreen&&$('sim-tree-settings').open)$('sim-node-inspector').open=false;});
