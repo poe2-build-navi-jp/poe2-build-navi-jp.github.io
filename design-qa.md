@@ -53,4 +53,12 @@ Browser follow-up at 390 × 844 CSS px: native consecutive taps on 59779 and 113
 
 Evidence: [two pending targets](docs/simulator/2026-11-07/multi-selected.webp), [combined preview](docs/simulator/2026-11-07/multi-preview.webp).
 
+## Follow-up: homepage simulator introduction
+
+The existing simulator entry now explains equipment comparison, multiple passive selection and Ninja reference routes. An actual simulator screenshot and a before/after example show what the user can try. The example uses Lv100 Gemling without gear and passives 59779 + 11311: Armour 0 → 20, Evasion 7 → 23, independently checked with the real WASM engine. The image is served from `assets/simulator-intro-preview.webp`; resources under excluded deployment directories are rejected by the site test.
+
+Final browser verification: the public homepage renders the card, image and comparison table. Desktop and 375, 390 and 430 CSS px layouts were checked; mobile page scroll width equals its viewport, the table fits its column, and the CTA is approximately 46 px tall. Mobile evidence uses the same production source in a local iframe with the native scrollbar accounted for. Both public desktop and mobile CTA clicks reach the simulator chooser with all 12 build links. No new layout fixes were necessary during this final check.
+
+Evidence: [public desktop](docs/simulator/2026-11-07/intro-desktop.webp), [390 px mobile](docs/simulator/2026-11-07/intro-mobile.webp). This verifies Chromium responsive layouts; no physical iPhone/Safari session was performed.
+
 final result: passed
