@@ -162,3 +162,23 @@ export function acquiredTreeState(request,nodes,classStarts,ascendancyId){
  const owned=new Set((request.allocated_nodes || []).filter(id=>{const node=byId.get(id);return node&&!allStarts.has(id)&&node.kind!=='ascendancy_start'&&node.kind!=='mastery';}));
  return {starts,owned};
 }
+
+// Plan all requested acquisitions against a cloned request; callers commit only the final result.
+export async function previewPassiveBatch(request,targets,edit,questPoints=0,isCurrent=()=>true){
+ const selected=[...new Set(targets)];if(!selected.length)return {valid:false,reason:'empty'};
+ if(selected.some(id=>!Number.isInteger(id)))throw Error('選択したノードを確認してください。');
+ let next=structuredClone(request),last=null;const path=new Set();
+ for(const node of selected){
+  if(!isCurrent())return {valid:false,reason:'cancelled'};
+  if(next.allocated_nodes?.includes(node))continue;
+  const checked=await edit({request:next,node,mode:0,action:'allocate',quest_points:questPoints});
+  if(!isCurrent())return {valid:false,reason:'cancelled'};
+  if(!checked.valid)return {valid:false,reason:'allocation',failedNode:node};
+  next=applyTreeAllocation(next,checked.result.allocation);last=checked;
+  for(const id of checked.result.path || [])path.add(id);
+ }
+ if(!selected.every(id=>next.allocated_nodes?.includes(id)))return {valid:false,reason:'allocation'};
+ if(!last)return {valid:false,reason:'already_owned'};
+ const before=new Set(request.allocated_nodes || []),after=new Set(next.allocated_nodes || []);
+ return {valid:true,request:next,selectedTargets:selected,result:{...(last?.result || {}),added:[...after].filter(id=>!before.has(id)),removed:[...before].filter(id=>!after.has(id)),path:[...path]}};
+}
