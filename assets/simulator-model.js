@@ -129,7 +129,4 @@ export function parseJapaneseModifiers(text,catalog,names,original=[]){
  });
 }
 
-export function ninjaReferenceUrl(value){
- const url=new URL(value);if(url.protocol!=='https:'||url.hostname!=='poe.ninja'||url.port||url.username||url.password||!/^\/(?:ja\/)?poe2\/(?:builds|passive-skill-tree)(?:\/|$)/.test(url.pathname))throw Error('poe.ninjaのPoE2ビルド／パッシブページのURLを入力してください。');return url.href;
-}
 export function passiveComparison(own,reference){const a=new Set(own),b=new Set(reference);return {shared:[...a].filter(n=>b.has(n)),referenceOnly:[...b].filter(n=>!a.has(n)),ownOnly:[...a].filter(n=>!b.has(n))};}
