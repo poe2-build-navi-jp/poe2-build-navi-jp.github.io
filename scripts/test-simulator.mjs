@@ -46,14 +46,7 @@ try{
  assert.throws(()=>model.parseJapaneseModifiers('追加物理ダメージ 20〜10',equipment,{}));assert.throws(()=>model.parseJapaneseModifiers('不明な効果 +100',equipment,{}));
  assert.deepEqual(model.passiveComparison([1,2],[2,3]),{shared:[2],referenceOnly:[3],ownOnly:[1]});
  const routes=JSON.parse(await readFile(resolve(root,'data/simulator-routes.json'),'utf8'));
- assert.equal(Object.keys(routes.templates).length,12);
- for(const preset of presets){const template=routes.templates[preset.id],plan=model.newPlan(preset,catalog.gems);assert.equal(template.steps.length,5);const roots=(await rpc('calculate',plan)).tree_effects.class_starts;assert.equal(template.root,roots[plan.character.class_name.toLowerCase()]);
-  let previous=new Set();for(const stage of template.steps){assert.ok(stage.nodes.length<=79);assert.ok(previous.size<=stage.nodes.length);for(const id of previous)assert.ok(stage.nodes.includes(id));previous=new Set(stage.nodes);
-   const connected=new Set([template.root]);let grew=true;while(grew){grew=false;for(const edge of edges)if((connected.has(edge.from)&&previous.has(edge.to))||(connected.has(edge.to)&&previous.has(edge.from))){const size=connected.size;connected.add(edge.from);connected.add(edge.to);if(connected.size>size)grew=true;}}
-   for(const id of stage.nodes){assert.ok(connected.has(id),`${preset.id}: disconnected ${id}`);const node=catalog.tree.find(n=>n.skill===id);assert.ok(node&&!node.ascendancy_id&&!['keystone','mastery'].includes(node.kind));}
-  }
-  const allocated={...plan,allocated_nodes:template.steps.at(-1).nodes};const checked=await rpc('edit',{request:allocated,node:template.steps.at(-1).target,mode:0,action:'refund',quest_points:0});assert.ok(checked.valid,preset.id);assert.ok(checked.result.points_used<=79);
- }
+ assert.equal(routes.source,'poe.ninja');assert.deepEqual(routes.templates,{},'unverified site-authored routes must not remain');
  let weapons={request:structuredClone(request),equipmentDrafts:{},weaponSets:null};
  const wand=equipment.bases.find(b=>b.itemClass==='Wand'),weaponDraft={baseId:wand.id,name:'セット1の武器',level:80,quality:0,modifiers:[{id:'life',values:[100]}]};
  weapons.request.items=[{slot:'weapon1',text:model.buildRareItem(weaponDraft,'weapon1',equipment)}];weapons.equipmentDrafts.weapon1=weaponDraft;
