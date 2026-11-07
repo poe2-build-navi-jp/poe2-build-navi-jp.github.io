@@ -80,6 +80,11 @@ try{
  assert.equal(model.statValue(modified,'Life')-model.statValue(baseline,'Life'),100);
  const badItem=await rpc('calculate',{...request,items:[{slot:'helmet',text:'not an item'}]});assert.ok(badItem.item_errors.length);
  const unsupported=await rpc('calculate',{...request,extra_modifiers:['UNSUPPORTED_SIMULATOR_TEST_123']});assert.ok(unsupported.unsupported_modifiers.length);
+ const drawable=model.drawableTreeEdges(catalog.tree),nodeMap=new Map(catalog.tree.map(n=>[n.skill,n]));assert.ok(drawable.length<edges.length,'graph-only ascendancy links must be hidden');
+ for(const edge of drawable){assert.equal(nodeMap.get(edge.from).ascendancy_id || null,nodeMap.get(edge.to).ascendancy_id || null);assert.ok(expected.has([edge.from,edge.to].sort((a,b)=>a-b).join(':')),'every painted edge must exist in the source graph');}
+ const starts=baseline.tree_effects.class_starts,ascId=catalog.meta.classes.find(c=>c.name==='Mercenary').ascendancies.find(a=>a.name==='Gemling Legionnaire').id;
+ const emptyState=model.acquiredTreeState(request,catalog.tree,starts,ascId);assert.equal(emptyState.owned.size,0);assert.ok(emptyState.starts.size>0);const startOnly=model.acquiredTreeState({...request,allocated_nodes:[...emptyState.starts]},catalog.tree,starts,ascId);assert.equal(startOnly.owned.size,0);
+ const oneState=model.acquiredTreeState({...request,allocated_nodes:[59779]},catalog.tree,starts,ascId);assert.deepEqual([...oneState.owned],[59779]);assert.ok(drawable.some(e=>[e.from,e.to].includes(59779)&&[e.from,e.to].includes(starts.mercenary)));
  const rootNode=baseline.tree_effects.class_starts.mercenary;
  const nextNode=catalog.tree.find(n=>n.connections.includes(rootNode));
  const edit=await rpc('edit',{request,node:nextNode.skill,mode:0,action:'allocate',quest_points:0});assert.equal(edit.valid,true);assert.equal(edit.result.points_used,1);

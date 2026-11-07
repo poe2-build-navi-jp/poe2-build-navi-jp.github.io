@@ -1,4 +1,4 @@
-import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet} from './simulator-model.js?v=b129a8d353';
+import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState} from './simulator-model.js?v=2ac2d4f1c0';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
@@ -20,7 +20,7 @@ let allocatedState=new Set(),highlightState=new Set(),selectedState=null,treeSea
 const elementNS='http://www.w3.org/2000/svg';
 function setCurrentTree(nodes){
  if(currentTree===nodes)return;
- currentTree=nodes;treeNodes=new Map(nodes.map(n=>[n.skill,n]));treeConnections=treeEdges(nodes);
+ currentTree=nodes;treeNodes=new Map(nodes.map(n=>[n.skill,n]));treeConnections=drawableTreeEdges(nodes);
  treeSearch=nodes.map(n=>({node:n,text:`${n.skill} ${n.name} ${label(n.name)} ${nodeStats(n).join(' ')}`.toLowerCase()}));
  $('sim-tree-nodes').replaceChildren();$('sim-tree-edges').replaceChildren();renderedNodes.clear();renderedEdges.clear();
 }
@@ -31,7 +31,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- worker=new Worker(new URL('./simulator-worker.js?v=e476f0bac1',import.meta.url),{type:'module'});
+ worker=new Worker(new URL('./simulator-worker.js?v=e8cca230da',import.meta.url),{type:'module'});
  worker.onmessage=({data})=>{if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  worker.onerror=()=>{for(const task of pending.values())task.reject(Error('計算処理を続けられません。ページを再読み込みしてください。'));pending.clear();};
  bootPromise=rpc('boot').then(data=>{catalog=data;return data;});return bootPromise;
@@ -247,9 +247,8 @@ function isAllocatedNode(node){return !!node&&!isStartNode(node)&&node.kind!=='m
 function isOwnedEdge(a,b){return (allocatedState.has(a)||startState.has(a))&&(allocatedState.has(b)||startState.has(b))&&(allocatedState.has(a)||allocatedState.has(b));}
 function renderTreeState(){
  if(!plan)return;
- const allocated=new Set((plan.request.allocated_nodes || []).filter(id=>isAllocatedNode(treeNodes.get(id)))),highlight=new Set(preview?.result?.path || []),starts=new Set();
- const root=result?.tree_effects?.class_starts?.[plan.request.character.class_name.toLowerCase()];if(root)starts.add(root);
- const cls=catalog.meta.classes.find(c=>c.name===plan.request.character.class_name),asc=cls?.ascendancies?.find(a=>a.name===plan.request.character.ascendancy_name),ascRoot=currentTree.find(n=>n.kind==='ascendancy_start'&&n.ascendancy_id===asc?.id);if(ascRoot)starts.add(ascRoot.skill);
+ const cls=catalog.meta.classes.find(c=>c.name===plan.request.character.class_name),asc=cls?.ascendancies?.find(a=>a.name===plan.request.character.ascendancy_name);
+ const {owned:allocated,starts}=acquiredTreeState(plan.request,currentTree,result?.tree_effects?.class_starts,asc?.id),highlight=new Set(preview?.result?.path || []);
  const changed=new Set([...allocatedState,...allocated,...startState,...starts].filter(id=>allocatedState.has(id)!==allocated.has(id)||startState.has(id)!==starts.has(id)));
  const nodeChanges=new Set([...changed,...[...highlightState,...highlight].filter(id=>highlightState.has(id)!==highlight.has(id)),selectedState,selectedNode]);
  allocatedState=allocated;startState=starts;highlightState=highlight;selectedState=selectedNode;
