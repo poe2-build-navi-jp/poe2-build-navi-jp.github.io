@@ -46,7 +46,14 @@ try{
  assert.throws(()=>model.parseJapaneseModifiers('追加物理ダメージ 20〜10',equipment,{}));assert.throws(()=>model.parseJapaneseModifiers('不明な効果 +100',equipment,{}));
  assert.deepEqual(model.passiveComparison([1,2],[2,3]),{shared:[2],referenceOnly:[3],ownOnly:[1]});
  const routes=JSON.parse(await readFile(resolve(root,'data/simulator-routes.json'),'utf8'));
- assert.equal(routes.source,'poe.ninja');assert.deepEqual(routes.templates,{},'unverified site-authored routes must not remain');
+ assert.equal(routes.source,'poe.ninja');assert.equal(Object.keys(routes.templates).length,12);
+ for(const template of Object.values(routes.templates)){
+  assert.match(template.source.url,/^https:\/\/poe\.ninja\/ja\/poe2\/builds\/forbiddenrites\/character\//);assert.ok(Date.parse(template.source.verifiedAt));assert.equal(template.source.method,'public-export-textbox');assert.equal(template.source.selection,'class-and-main-skill-filtered-first-row');
+  const all=new Set(template.rawNodes);for(const step of template.steps){assert.ok(step.nodes.length>100);for(const id of step.nodes){assert.ok(all.has(id),'no invented route nodes');assert.ok(catalog.tree.some(n=>n.skill===id));}assert.ok(!step.nodes.includes(template.root));assert.equal(step.path,undefined,'completion snapshot must not invent an acquisition order');}
+  for(let i=0;i<template.steps.length;i++){const expected=template.rawNodes.filter(id=>!(template.weaponSets[1-i] || []).includes(id)||(template.weaponSets[i] || []).includes(id)).filter(id=>id!==template.root&&!['mastery','ascendancy_start'].includes(catalog.tree.find(n=>n.skill===id).kind));assert.deepEqual([...template.steps[i].nodes].sort((a,b)=>a-b),expected.sort((a,b)=>a-b));}
+ }
+ const edgeKeys=new Set(model.drawableTreeEdges(catalog.tree).map(e=>[e.from,e.to].sort((a,b)=>a-b).join(':')));assert.ok(Object.keys(routes.geometry.arcs).length>1000);for(const [key,path]of Object.entries(routes.geometry.arcs)){assert.ok(edgeKeys.has(key),'curves only follow real graph connections');assert.match(path,/^M[-\d.]+ [-\d.]+ A[\d.]+ [\d.]+ 0 0 [01] [-\d.]+ [-\d.]+$/);}
+ assert.equal(routes.templates['huntress-companion'].source.level,99,'do not relabel an actual level 99 reference as level 100');
  let weapons={request:structuredClone(request),equipmentDrafts:{},weaponSets:null};
  const wand=equipment.bases.find(b=>b.itemClass==='Wand'),weaponDraft={baseId:wand.id,name:'セット1の武器',level:80,quality:0,modifiers:[{id:'life',values:[100]}]};
  weapons.request.items=[{slot:'weapon1',text:model.buildRareItem(weaponDraft,'weapon1',equipment)}];weapons.equipmentDrafts.weapon1=weaponDraft;
