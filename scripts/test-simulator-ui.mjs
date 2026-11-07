@@ -12,7 +12,7 @@ const errors=[],vconsole=new VirtualConsole();vconsole.on('jsdomError',e=>{if(!e
 const dom=new JSDOM(await readFile(resolve(root,'simulator/index.html'),'utf8'),{url:'https://poe2-build-navi-jp.github.io/simulator/',runScripts:'outside-only',virtualConsole:vconsole});
 const w=dom.window,d=w.document;
 Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
-w.HTMLElement.prototype.scrollIntoView=function(){};
+let scrollCalls=0;w.HTMLElement.prototype.scrollIntoView=function(){scrollCalls++;};
 w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
 w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.replace(/^\//,''))));
 // Exercise the real full tree. Only its visible region should create SVG elements.
@@ -62,7 +62,17 @@ try{
  const visibleNodeCount=d.querySelectorAll('#sim-tree-nodes circle').length;assert.ok(visibleNodeCount<4913/2,'viewport should draw a fraction of the full tree');
  assert.match(d.getElementById('sim-node-catalog-count').textContent,/4913/);assert.equal(d.querySelectorAll('#sim-node-catalog-list button').length,30);
  click('#sim-node-next');assert.match(d.getElementById('sim-node-catalog-count').textContent,/2 \/ /);change('#sim-node-filter','keystone');assert.ok([...d.querySelectorAll('#sim-node-catalog-list button')].every(b=>b.textContent.includes('キーストーン')));change('#sim-node-filter','all');
- const circle=d.querySelector('#sim-tree-nodes circle');assert.ok(circle.querySelector('title').textContent.includes('\n'));circle.dispatchEvent(new w.MouseEvent('pointerdown',{bubbles:true,clientX:100,clientY:100}));d.getElementById('sim-tree-svg').dispatchEvent(new w.MouseEvent('pointerup',{bubbles:true,clientX:100,clientY:100}));assert.ok(d.querySelector('#sim-node-detail li'));assert.equal(d.activeElement,d.querySelector('#sim-node-detail h4'));
+ const circle=d.querySelector('#sim-tree-nodes circle'),svg=d.getElementById('sim-tree-svg'),map=d.getElementById('sim-tree-map');assert.ok(circle.querySelector('title').textContent.includes('\n'));
+ const pointer=(type,x,y,id=1)=>{const event=new w.MouseEvent(type,{bubbles:true,cancelable:true,clientX:x,clientY:y,button:0});Object.defineProperty(event,'pointerId',{value:id});return event;};
+ const scrollBefore=scrollCalls,focusedBefore=d.activeElement;
+ const down=pointer('pointerdown',100,100);circle.dispatchEvent(down);assert.ok(down.defaultPrevented);svg.dispatchEvent(pointer('pointerup',100,100));assert.ok(d.querySelector('#sim-node-detail li'));assert.equal(d.activeElement,focusedBefore);assert.equal(scrollCalls,scrollBefore,'map tap must not scroll the page to details');
+ const detailBefore=d.getElementById('sim-node-detail').innerHTML,viewBefore=svg.getAttribute('viewBox');
+ circle.dispatchEvent(pointer('pointerdown',100,100));const move=pointer('pointermove',180,150);svg.dispatchEvent(move);assert.ok(move.defaultPrevented);svg.dispatchEvent(pointer('pointerup',180,150,2));svg.dispatchEvent(pointer('pointermove',200,150));svg.dispatchEvent(pointer('pointerup',200,150));await new Promise(r=>setTimeout(r,30));assert.notEqual(svg.getAttribute('viewBox'),viewBefore);assert.equal(d.getElementById('sim-node-detail').innerHTML,detailBefore,'drag must not select a node');assert.equal(scrollCalls,scrollBefore);click('#sim-tree-center');await new Promise(r=>setTimeout(r,30));
+ d.querySelector('#sim-tree-nodes circle').dispatchEvent(pointer('pointerdown',100,100));svg.dispatchEvent(pointer('pointerup',150,100));assert.equal(d.getElementById('sim-node-detail').innerHTML,detailBefore,'a moved release without pointermove is still a drag');
+ for(const type of ['touchstart','touchmove']){const event=new w.Event(type,{bubbles:true,cancelable:true});map.dispatchEvent(event);assert.ok(event.defaultPrevented);}
+ const outside=new w.Event('touchmove',{bubbles:true,cancelable:true});d.getElementById('sim-tree').dispatchEvent(outside);assert.equal(outside.defaultPrevented,false,'page scrolling outside the map remains available');
+ d.querySelector('#sim-tree-nodes circle').dispatchEvent(pointer('pointerdown',100,100));svg.dispatchEvent(pointer('pointercancel',100,100));svg.dispatchEvent(pointer('pointerup',100,100));assert.equal(scrollCalls,scrollBefore);
+
  assert.equal(d.querySelector('#sim-tree-compare,#sim-reference-image-file'),null,'mobile uses one tree without screenshot panels');
  const requestBeforeTemplate=JSON.stringify(saved().request),lifeBeforeTemplate=life();assert.equal(d.getElementById('sim-template-stage').options.length,5);assert.ok(d.getElementById('sim-template-visible').checked);assert.ok(d.querySelectorAll('#sim-tree-svg circle.template').length>0);
  change('#sim-template-stage','4');await new Promise(r=>setTimeout(r,30));assert.equal(JSON.stringify(saved().request),requestBeforeTemplate);assert.equal(life(),lifeBeforeTemplate);assert.ok(d.querySelectorAll('#sim-tree-svg line.template').length>0);
