@@ -146,3 +146,19 @@ export function selectWeaponSet(plan,active){
  if(next.request.weapon_swap){const swap=next.request.weapon_swap,exclusive=new Set((swap.exclusive_nodes || []).flat());next.request.allocated_nodes=[...new Set([...(next.request.allocated_nodes || []).filter(id=>!exclusive.has(id)),...(swap.exclusive_nodes?.[active-1] || [])])];swap.active=active;}
  return next;
 }
+
+export function drawableTreeEdges(nodes){
+ const byId=new Map(nodes.map(node=>[node.skill,node]));
+ return treeEdges(nodes).filter(edge=>{
+  const a=byId.get(edge.from),b=byId.get(edge.to);
+  // These graph links enable ascendancy/class changes. They are not map routes.
+  return (a.ascendancy_id || null)===(b.ascendancy_id || null)&&[edge.x1,edge.y1,edge.x2,edge.y2].every(Number.isFinite);
+ });
+}
+export function acquiredTreeState(request,nodes,classStarts,ascendancyId){
+ const byId=new Map(nodes.map(node=>[node.skill,node])),allStarts=new Set(Object.values(classStarts || {})),starts=new Set();
+ const root=classStarts?.[request.character.class_name.toLowerCase()];if(root!==undefined)starts.add(root);
+ const ascRoot=nodes.find(node=>node.kind==='ascendancy_start'&&node.ascendancy_id===ascendancyId);if(ascRoot)starts.add(ascRoot.skill);
+ const owned=new Set((request.allocated_nodes || []).filter(id=>{const node=byId.get(id);return node&&!allStarts.has(id)&&node.kind!=='ascendancy_start'&&node.kind!=='mastery';}));
+ return {starts,owned};
+}

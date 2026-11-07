@@ -175,3 +175,6 @@
 .sim-tree-closing{pointer-events:none}
 
 #sim-tree-svg circle.start,#sim-tree-svg circle.start.template{fill:#71818b;stroke:#e5eef2;stroke-width:24;filter:none;opacity:1}.sim-weapon-sets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;margin:1rem 0 .5rem}.sim-weapon-sets button{min-width:0;min-height:48px;font-size:.9rem}.sim-weapon-sets button[aria-pressed=true]{background:var(--dark2);color:#fff;border-color:var(--dark2)}
+
+/* Acquired effects follow real map edges; graph-only ascendancy links are never drawn. */
+#sim-tree-svg circle.allocated,#sim-tree-svg circle.allocated.template{fill:#f4ce76;stroke:#ffe9a8;stroke-width:22;filter:drop-shadow(0 0 28px #e9bb53);opacity:1}#sim-tree-svg line.allocated{stroke:#e3bd67;stroke-width:15;filter:drop-shadow(0 0 12px #d3a94a);opacity:.85}#sim-tree-svg circle.start,#sim-tree-svg circle.start.template{fill:#71818b;stroke:#e5eef2;filter:none}#sim-tree-svg circle.selected:not(.allocated){fill:#172e3b;stroke:#fff;filter:none}#sim-tree-svg circle.selected.allocated{fill:#f4ce76;stroke:#fff1c8;filter:drop-shadow(0 0 28px #e9bb53)}
