@@ -10,7 +10,8 @@ Normalization: source screenshots are 706 × 1536 physical pixels; source CSS de
 
 1. P1: initial reference nodes appeared without connecting lines. Cause: reference edges initialized before the current tree. Fixed initialization order and added a first-open connection assertion. Final browser observation shows 131 genuine reference edges on first open.
 2. P2: overview connections were too faint and cluster rings appeared as chords. Added non-scaling strokes and 1,391 arc definitions derived from actual connected nodes in the pinned game's orbital groups. No extra graph connections or invented routes were added. Final captures show cluster curves and readable blue paths.
-3. P2: mobile legend was hidden and too small. Restored the blue/gold legend, increased labels and counts to 12 px, and kept all persistent controls within the 390 px canvas. Final overview shows both reference and acquired states explicitly.
+3. P2: initial desktop overview used the hidden-panel aspect ratio. Deferred fitting until the tree is visible and added a wide desktop aspect-ratio regression assertion.
+4. P2: mobile legend was hidden and too small. Restored the blue/gold legend, increased labels and counts to 12 px, and kept all persistent controls within the 390 px canvas. Final overview shows both reference and acquired states explicitly.
 
 ## Required fidelity surfaces
 
