@@ -364,6 +364,9 @@ for (const build of builds) {
   assert(page.includes('原典で長所として紹介') || page.includes('原典で弱点として紹介') || page.includes('原典の記述を確認中'), `${build.id}: qualitative evidence missing`);
 
 }
+// Resource references must not point into folders omitted from the published Pages artifact.
+const pagesWorkflow = await read(".github/workflows/pages.yml");
+const unpublishedFolders = [...pagesWorkflow.matchAll(/--exclude '\/([^']+\/)'/g)].map(m => `/${m[1]}`);
 const assetHashes = new Map();
 const staleAssets = new Map();
 for (const name of await readdir(resolve(root, "assets"))) {
@@ -371,6 +374,9 @@ for (const name of await readdir(resolve(root, "assets"))) {
 }
 for (const path of [...new Set([...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => `${m[1]}index.html`)), "404.html"]) {
   const html = await read(path);
+  for (const [, resource] of html.matchAll(/<(?:img|source|script)\b[^>]*\bsrc="(\/[^"#?]+)[^"]*"/g)) {
+    assert(!unpublishedFolders.some(folder => resource.startsWith(folder)), `${path}: resource ${resource} is excluded from the Pages deployment`);
+  }
   for (const [, name, version] of html.matchAll(/\/assets\/([A-Za-z0-9_-]+\.(?:css|js))(?:\?v=([^"'\s)>]*))?/g)) {
     if (version !== assetHashes.get(name)) staleAssets.set(name, [...(staleAssets.get(name) || []), path]);
   }
