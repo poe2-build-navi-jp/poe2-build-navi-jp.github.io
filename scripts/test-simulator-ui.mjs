@@ -57,8 +57,12 @@ try{
  change('[data-rare-row="0"] [data-rare-value="0"]','150');click('#sim-item-apply');await wait(ready);assert.equal(life(),rareLife+150);
  click('#sim-item-back');click('[data-slot="helmet"]');assert.equal(d.querySelector('[data-rare-row="0"] [data-rare-value="0"]').value,'150');assert.equal(d.querySelector('[data-equipment-mode="rare"]').getAttribute('aria-pressed'),'true');
  click('#sim-item-back');click('[data-slot="Flask 1"]');click('[data-equipment-mode="rare"]');assert.equal(d.getElementById('sim-item-apply').disabled,true);click('[data-equipment-mode="unique"]');assert.equal(d.getElementById('sim-item-apply').disabled,false);
+ click('#sim-item-back');click('[data-weapon-set="1"]');await wait(ready);click('[data-slot="weapon1"]');click('[data-equipment-mode="rare"]');change('#sim-rare-name','武器セット1');const weaponLife=life();click('#sim-rare-add');change('[data-rare-row="0"] [data-rare-value="0"]','80');click('#sim-item-apply');await wait(ready);assert.equal(life(),weaponLife+80);
+ click('#sim-item-back');click('[data-weapon-set="2"]');await wait(ready);assert.equal(life(),weaponLife);click('[data-slot="weapon1"]');click('[data-equipment-mode="rare"]');change('#sim-rare-name','武器セット2');click('#sim-rare-add');change('[data-rare-row="0"] [data-rare-value="0"]','160');click('#sim-item-apply');await wait(ready);assert.equal(life(),weaponLife+160);
+ click('#sim-item-back');click('[data-weapon-set="1"]');await wait(ready);assert.equal(life(),weaponLife+80);assert.ok(saved().request.items.find(i=>i.slot==='weapon1').text.includes('武器セット1'));assert.equal(saved().weaponSets.active,1);assert.ok(saved().weaponSets.sets[1].items[0].text.includes('武器セット2'));
  click('[data-tab="skills"]');const gemSelect=d.querySelector('[data-gem-field="skill_id"]');const selectedGem=gemSelect.value;assert.ok(gemSelect.options.length<=2);gemSelect.dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));assert.ok(gemSelect.options.length>100);assert.equal(gemSelect.value,selectedGem);change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
  click('[data-tab="tree"]');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length>0);
+ assert.match(d.getElementById('sim-point-count').textContent,/取得済み 0ノード/);assert.equal(d.querySelectorAll('#sim-tree-nodes circle.allocated').length,0,'starting points are not acquired nodes');assert.ok(d.querySelector('#sim-tree-nodes circle.start'));
  const visibleNodeCount=d.querySelectorAll('#sim-tree-nodes circle').length;assert.ok(visibleNodeCount<4913/2,'viewport should draw a fraction of the full tree');
  assert.match(d.getElementById('sim-node-catalog-count').textContent,/4913/);assert.equal(d.querySelectorAll('#sim-node-catalog-list button').length,30);
  click('#sim-node-next');assert.match(d.getElementById('sim-node-catalog-count').textContent,/2 \/ /);change('#sim-node-filter','keystone');assert.ok([...d.querySelectorAll('#sim-node-catalog-list button')].every(b=>b.textContent.includes('キーストーン')));change('#sim-node-filter','all');
@@ -91,6 +95,7 @@ try{
  click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));assert.match(d.getElementById('sim-node-preview-result').textContent,/解除/);click('#sim-node-apply');await wait(ready);assert.ok(!saved().request.allocated_nodes.includes(59779));
  click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));click('#sim-node-apply');await wait(ready);
 
+ click('#sim-passives-reset');await wait(ready);assert.equal(saved().request.allocated_nodes.length,0);assert.equal(d.querySelectorAll('#sim-tree-nodes circle.allocated').length,0);assert.match(d.getElementById('sim-point-count').textContent,/取得済み 0ノード/);assert.equal(armourValue(),armourBeforeFull);click('#sim-passives-undo');await wait(ready);assert.ok(saved().request.allocated_nodes.includes(59779));assert.equal(armourValue(),armourBeforeFull+10);
  for(let i=0;i<9;i++)click('#sim-tree-minus');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length===drawableNodes);
  click('#sim-tree-center');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length<4913/2);
  assert.equal(d.querySelector('#sim-code-dialog,#sim-import-open,#sim-export-open,#sim-choose-import'),null);
@@ -98,7 +103,7 @@ try{
  assert.ok(restored.request.items.some(i=>i.slot==='amulet'));
  click('#sim-change-build');assert.equal(d.getElementById('sim-chooser').hidden,false);
  click('[data-preset="monk-whirling-assault"]');await wait(ready);assert.ok(d.getElementById('sim-build-name').textContent.includes('ワーリング'));assert.equal(d.getElementById('sim-template-stage').options.length,5);assert.match(d.getElementById('sim-template-stage').options[0].textContent,/目安 1/);
- click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);assert.equal(d.getElementById('sim-extra-mods').value,'最大ライフ +290');assert.equal(d.getElementById('sim-template-stage').value,'0');
+ click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);assert.equal(d.getElementById('sim-extra-mods').value,'最大ライフ +290');assert.equal(d.getElementById('sim-template-stage').value,'0');assert.equal(saved().weaponSets.active,1);assert.ok(saved().weaponSets.sets[1].items[0].text.includes('武器セット2'));
  console.log(`Tree viewport: ${visibleNodeCount}/4913 nodes; no hidden-tree SVG; latest-only calculation queue passed`);
  assert.equal(errors.length,0,errors.join('\n'));
  console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; native saved-file roundtrip; isolated saved builds and restoration');

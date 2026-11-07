@@ -54,6 +54,15 @@ try{
   }
   const allocated={...plan,allocated_nodes:template.steps.at(-1).nodes};const checked=await rpc('edit',{request:allocated,node:template.steps.at(-1).target,mode:0,action:'refund',quest_points:0});assert.ok(checked.valid,preset.id);assert.ok(checked.result.points_used<=79);
  }
+ let weapons={request:structuredClone(request),equipmentDrafts:{},weaponSets:null};
+ const wand=equipment.bases.find(b=>b.itemClass==='Wand'),weaponDraft={baseId:wand.id,name:'セット1の武器',level:80,quality:0,modifiers:[{id:'life',values:[100]}]};
+ weapons.request.items=[{slot:'weapon1',text:model.buildRareItem(weaponDraft,'weapon1',equipment)}];weapons.equipmentDrafts.weapon1=weaponDraft;
+ const setOne=await rpc('calculate',weapons.request);assert.equal(model.statValue(setOne,'Life')-model.statValue(baseline,'Life'),100);
+ weapons=model.selectWeaponSet(weapons,2);assert.equal(weapons.request.items.length,0);assert.equal(weapons.equipmentDrafts.weapon1,undefined);
+ weapons.request.items=[{slot:'weapon1',text:model.buildRareItem({...weaponDraft,name:'セット2の武器',modifiers:[{id:'life',values:[200]}]},'weapon1',equipment)}];
+ const setTwo=await rpc('calculate',weapons.request);assert.equal(model.statValue(setTwo,'Life')-model.statValue(baseline,'Life'),200,'inactive weapons must never be summed');
+ weapons=model.selectWeaponSet(weapons,1);assert.ok(weapons.request.items[0].text.includes('セット1'));assert.equal(weapons.equipmentDrafts.weapon1.name,'セット1の武器');
+ const savedWeapons=model.parseSave(JSON.stringify(model.makeSave('mercenary-twister-gemling',weapons.request,0,'',weapons.equipmentDrafts,weapons.weaponSets)));assert.equal(model.selectWeaponSet({request:savedWeapons.request,equipmentDrafts:savedWeapons.equipmentDrafts,weaponSets:savedWeapons.weaponSets},2).request.items[0].text.includes('セット2'),true);
  const locale=JSON.parse(await readFile(resolve(root,'data/simulator-localization.json'),'utf8'));
  for(const node of catalog.tree){const descriptions=model.passiveDescriptions(node,locale);assert.ok(descriptions.length>0,String(node.skill));assert.ok(descriptions.every(x=>typeof x==='string'&&x.length));}
  assert.match(model.passiveDescriptions(attribute,locale,{[attribute.skill]:'int'})[0],/知性.*5/);
