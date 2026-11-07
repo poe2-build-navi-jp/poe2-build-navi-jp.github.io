@@ -36,7 +36,15 @@ try{
  assert.throws(()=>model.buildRareItem(rare,'ring1',equipment));
  const withDraft=model.makeSave('mercenary-twister-gemling',{...request,items:[{slot:'helmet',text:rareText}]},0,'',{helmet:rare});assert.deepEqual(model.parseSave(JSON.stringify(withDraft)).equipmentDrafts.helmet,rare);
 
+ const ordinary=await rpc('calculate',{...request,allocated_nodes:[59779]});assert.equal(model.statValue(ordinary,'Armour')-model.statValue(baseline,'Armour'),10);assert.equal(model.statValue(ordinary,'Evasion')-model.statValue(baseline,'Evasion'),8);
+ const attribute=catalog.tree.find(n=>n.name==='Attribute');
+ const dexterity=await rpc('calculate',{...request,allocated_nodes:[attribute.skill],attribute_choices:{[attribute.skill]:'dex'}});assert.equal(model.statValue(dexterity,'Dex')-model.statValue(baseline,'Dex'),5);
+ const inoculation=catalog.tree.find(n=>n.name==='Chaos Inoculation');const ci=await rpc('calculate',{...request,allocated_nodes:[inoculation.skill]});assert.equal(model.statValue(ci,'Life'),1,'keystone mechanics must affect real calculations');
+ const asc=await rpc('calculate',{...request,allocated_nodes:[1442]});assert.ok(model.statValue(asc,'Str')>=model.statValue(baseline,'Str'),'ascendancy effect is accepted by the same engine');
  const locale=JSON.parse(await readFile(resolve(root,'data/simulator-localization.json'),'utf8'));
+ for(const node of catalog.tree){const descriptions=model.passiveDescriptions(node,locale);assert.ok(descriptions.length>0,String(node.skill));assert.ok(descriptions.every(x=>typeof x==='string'&&x.length));}
+ assert.match(model.passiveDescriptions(attribute,locale,{[attribute.skill]:'int'})[0],/知性.*5/);
+ const swapped={...request,weapon_swap:{active:2,exclusive_nodes:[[],[]]}};assert.deepEqual(model.applyTreeAllocation(swapped,{shared:[1],exclusive:[[2],[3]]}).allocated_nodes,[1,3]);assert.deepEqual(swapped.weapon_swap.exclusive_nodes,[[],[]]);
  for(const entry of [...catalog.gems,...catalog.uniques,...catalog.minions.monsters.filter(m=>!m.name.startsWith('[DNT]'))])assert.match(locale.names[entry.name] || '',/[ぁ-んァ-ヶ一-龥]/,entry.name);
  for(const node of catalog.tree){assert.match(locale.names[node.name] || '',/[ぁ-んァ-ヶ一-龥]/,node.name);assert.ok(Array.isArray(locale.descriptions[locale.nodes[node.skill]]),String(node.skill));}
  const runtimeRoot=resolve(root,'assets/simulator-engine/v0.0.46'),manifest=JSON.parse(await readFile(resolve(runtimeRoot,'runtime.json'),'utf8'));

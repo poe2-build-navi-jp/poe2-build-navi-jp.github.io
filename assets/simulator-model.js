@@ -87,3 +87,20 @@ export function buildRareItem(draft,slot,catalog){
  });
  return ['Rarity: RARE',name,base.name,`Item Level: ${level}`,`Quality: ${quality}`,'Implicits: 0',...lines].join('\n');
 }
+
+export function passiveDescriptions(node,localization,choices={},current=true){
+ if(node.name==='Attribute')return [`${{str:'筋力',dex:'器用さ',int:'知性'}[choices[node.skill] || 'str']} +5（能力値を変更できます）`];
+ const translated=current?localization.descriptions[localization.nodes[node.skill]]:null;
+ const lines=(translated?.length?translated:node.stats || []).flatMap(line=>line.split('\n')).filter(Boolean);
+ if(lines.length)return lines;
+ if(node.kind==='mastery')return ['パッシブ群の中央マークです。このマーク自体には取得する能力はありません。'];
+ if(node.kind==='jewel_socket')return ['ジュエルを配置するソケットです。取得だけでは能力値は増えません。ジュエルの個別設定はこの画面では未対応です。'];
+ if(node.kind==='ascendancy_start')return ['選択したアセンダンシーの開始点です。開始点自体に追加の能力はありません。'];
+ if(/^[A-Z]+$/.test(node.name))return ['職業の開始点です。開始点自体に追加の能力はありません。'];
+ return ['対応データに効果の定義がありません。個別の選択効果は未対応のため、このノード単体の能力を計算したとは扱いません。'];
+}
+export function applyTreeAllocation(request,allocation){
+ const next=structuredClone(request);next.allocated_nodes=[...allocation.shared];
+ if(next.weapon_swap){next.weapon_swap.exclusive_nodes=structuredClone(allocation.exclusive);next.allocated_nodes=[...new Set([...allocation.shared,...allocation.exclusive[(next.weapon_swap.active || 1)-1]])];}
+ return next;
+}
