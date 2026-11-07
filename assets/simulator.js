@@ -377,11 +377,30 @@ $('sim-node-search').addEventListener('input',()=>{
  nodePage=0;renderNodeCatalog();$('sim-node-search-results').innerHTML=found.map(n=>`<button type="button" data-node-result="${n.skill}"><strong>${esc(label(n.name))}</strong><small>${esc(nodeStats(n).join(' / '))}</small></button>`).join('')+(q&&!found.length?'<p>一致するノードがありません。</p>':'');
 });
 let drag;
-$('sim-tree-svg').addEventListener('pointerdown',event=>{let hit=event.target.closest('[data-node]')?.dataset.node;const rect=$('sim-tree-map').getBoundingClientRect();if(!hit&&rect.width>0){let distance=20;for(const node of currentTree){if(!renderedNodes.has(node.skill))continue;const dx=(node.x-view.x)*rect.width/view.w+rect.width/2+rect.left-event.clientX,dy=(node.y-view.y)*rect.height/view.h+rect.height/2+rect.top-event.clientY,d=Math.hypot(dx,dy);if(d<distance){hit=node.skill;distance=d;}}}drag={rect:$('sim-tree-map').getBoundingClientRect(),x:event.clientX,y:event.clientY,vx:view.x,vy:view.y,moved:false,node:hit};$('sim-tree-svg').setPointerCapture?.(event.pointerId);});
-$('sim-tree-svg').addEventListener('pointermove',event=>{if(!drag)return;const rect=drag.rect,dx=event.clientX-drag.x,dy=event.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>5)drag.moved=true;view.x=drag.vx-dx*view.w/Math.max(1,rect.width);view.y=drag.vy-dy*view.h/Math.max(1,rect.height);updateView();});
-$('sim-tree-svg').addEventListener('pointerup',()=>{if(drag&&!drag.moved&&drag.node)nodeDetail(+drag.node);drag=null;});
-$('sim-tree-svg').addEventListener('pointercancel',()=>{drag=null;});
-$('sim-tree-svg').addEventListener('wheel',event=>{event.preventDefault();const factor=event.deltaY>0?1.12:.89;view.w=Math.max(800,Math.min(60000,view.w*factor));view.h=view.w*.76;updateView();},{passive:false});
+const treeSvg=$('sim-tree-svg'),treeMap=$('sim-tree-map');
+const stopTreeGesture=event=>{if(event.cancelable)event.preventDefault();};
+// Keep native scrolling and rubber-band gestures outside the interactive map.
+treeMap.addEventListener('touchstart',stopTreeGesture,{passive:false});
+treeMap.addEventListener('touchmove',stopTreeGesture,{passive:false});
+treeSvg.addEventListener('pointerdown',event=>{
+ if(drag||event.isPrimary===false||event.button!==undefined&&event.button!==0)return;
+ stopTreeGesture(event);let hit=event.target.closest('[data-node]')?.dataset.node;const rect=treeMap.getBoundingClientRect();
+ if(!hit&&rect.width>0){let distance=20;for(const node of currentTree){if(!renderedNodes.has(node.skill))continue;const dx=(node.x-view.x)*rect.width/view.w+rect.width/2+rect.left-event.clientX,dy=(node.y-view.y)*rect.height/view.h+rect.height/2+rect.top-event.clientY,d=Math.hypot(dx,dy);if(d<distance){hit=node.skill;distance=d;}}}
+ drag={pointerId:event.pointerId,rect,x:event.clientX,y:event.clientY,vx:view.x,vy:view.y,moved:false,node:hit};treeSvg.setPointerCapture?.(event.pointerId);
+});
+treeSvg.addEventListener('pointermove',event=>{
+ if(!drag||event.pointerId!==drag.pointerId)return;stopTreeGesture(event);const rect=drag.rect,dx=event.clientX-drag.x,dy=event.clientY-drag.y;
+ if(Math.hypot(dx,dy)>6)drag.moved=true;if(!drag.moved)return;
+ view.x=drag.vx-dx*view.w/Math.max(1,rect.width);view.y=drag.vy-dy*view.h/Math.max(1,rect.height);updateView();
+});
+treeSvg.addEventListener('pointerup',event=>{
+ if(!drag||event.pointerId!==drag.pointerId)return;stopTreeGesture(event);const gesture=drag;drag=null;
+ const moved=gesture.moved||Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)>6;
+ if(!moved&&gesture.node)nodeDetail(+gesture.node,{reveal:false});
+});
+for(const type of ['pointercancel','lostpointercapture'])treeSvg.addEventListener(type,event=>{if(drag?.pointerId===event.pointerId)drag=null;});
+window.addEventListener('blur',()=>{drag=null;});
+treeSvg.addEventListener('wheel',event=>{event.preventDefault();event.stopPropagation();const factor=event.deltaY>0?1.12:.89;view.w=Math.max(800,Math.min(60000,view.w*factor));view.h=view.w*.76;updateView();},{passive:false});
 window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('build');if(id)void selectPreset(id,{fromHistory:true});else{generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;}});
 const initial=new URLSearchParams(location.search).get('build');if(initial)void selectPreset(initial,{fromHistory:true});
 
