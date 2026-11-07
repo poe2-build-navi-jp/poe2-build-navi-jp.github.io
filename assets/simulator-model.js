@@ -104,3 +104,27 @@ export function applyTreeAllocation(request,allocation){
  if(next.weapon_swap){next.weapon_swap.exclusive_nodes=structuredClone(allocation.exclusive);next.allocated_nodes=[...new Set([...allocation.shared,...allocation.exclusive[(next.weapon_swap.active || 1)-1]])];}
  return next;
 }
+
+const escapePattern=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+export function modifierJapanese(definition,values){return `${definition.label} ${values.length===2?values.join('〜'):'+'+values[0]}${definition.unit || ''}`;}
+export function localizeModifiers(lines,catalog,names){
+ return lines.map(line=>{
+  for(const def of catalog.modifiers){const pattern=escapePattern(def.template).replace(/\\\{\d+\\\}/g,'([0-9]+(?:\\.[0-9]+)?)');const match=line.match(new RegExp('^'+pattern+'$'));if(match)return modifierJapanese(def,match.slice(1));}
+  return localizeItemText(line,names);
+ }).join('\n');
+}
+export function parseJapaneseModifiers(text,catalog,names,original=[]){
+ const lines=text.normalize('NFKC').split('\n').map(line=>line.trim()).filter(Boolean);
+ if(lines.length>100)throw Error('追加の効果は100行までです。');
+ return lines.map((line,index)=>{
+  for(const def of catalog.modifiers){
+   const match=line.match(new RegExp('^'+escapePattern(def.label)+'\\s*[:：]?\\s*\\+?([0-9]+(?:\\.[0-9]+)?)'+(def.default.length===2?'\\s*[〜~～]\\s*([0-9]+(?:\\.[0-9]+)?)':'')+'\\s*'+(def.unit?'%?':'')+'$'));
+   if(!match)continue;
+   const values=match.slice(1).map(Number);if(values.some(v=>!Number.isFinite(v)||v>100000)||values.length===2&&values[0]>values[1])throw Error(`${index+1}行目の数値を確認してください。`);
+   return def.template.replace(/\{(\d+)\}/g,(_,i)=>String(values[+i]));
+  }
+  const restored=restoreItemText(line,names,original[index] || '');
+  if(/[ぁ-んァ-ヶ一-龥]/.test(restored))throw Error(`${index+1}行目の日本語の効果を認識できません。「追加する効果」から選ぶか、入力例の形式で入力してください。`);
+  return restored;
+ });
+}

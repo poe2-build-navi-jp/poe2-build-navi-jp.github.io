@@ -41,6 +41,9 @@ try{
  const dexterity=await rpc('calculate',{...request,allocated_nodes:[attribute.skill],attribute_choices:{[attribute.skill]:'dex'}});assert.equal(model.statValue(dexterity,'Dex')-model.statValue(baseline,'Dex'),5);
  const inoculation=catalog.tree.find(n=>n.name==='Chaos Inoculation');const ci=await rpc('calculate',{...request,allocated_nodes:[inoculation.skill]});assert.equal(model.statValue(ci,'Life'),1,'keystone mechanics must affect real calculations');
  const asc=await rpc('calculate',{...request,allocated_nodes:[1442]});assert.ok(model.statValue(asc,'Str')>=model.statValue(baseline,'Str'),'ascendancy effect is accepted by the same engine');
+ for(const def of equipment.modifiers){const en=def.template.replace(/\{(\d+)\}/g,(_,i)=>String(def.default[+i]));const ja=model.localizeModifiers([en],equipment,{});assert.ok(ja.includes(def.label));assert.deepEqual(model.parseJapaneseModifiers(ja,equipment,{}),[en]);}
+ assert.deepEqual(model.parseJapaneseModifiers('最大ライフ ＋１００\n火耐性 +30％\n追加物理ダメージ 10〜20',equipment,{}),['+100 to maximum Life','+30% to Fire Resistance','Adds 10 to 20 Physical Damage']);
+ assert.throws(()=>model.parseJapaneseModifiers('追加物理ダメージ 20〜10',equipment,{}));assert.throws(()=>model.parseJapaneseModifiers('不明な効果 +100',equipment,{}));
  const locale=JSON.parse(await readFile(resolve(root,'data/simulator-localization.json'),'utf8'));
  for(const node of catalog.tree){const descriptions=model.passiveDescriptions(node,locale);assert.ok(descriptions.length>0,String(node.skill));assert.ok(descriptions.every(x=>typeof x==='string'&&x.length));}
  assert.match(model.passiveDescriptions(attribute,locale,{[attribute.skill]:'int'})[0],/知性.*5/);

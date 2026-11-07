@@ -37,9 +37,10 @@ try{
  assert.equal(d.querySelectorAll('#sim-tree-nodes circle').length,0,'hidden tree must not render SVG nodes');
  click('[data-tab="config"]');assert.equal(d.getElementById('sim-config').hidden,false);
  const life=()=>Number([...d.querySelectorAll('.sim-stat')].find(e=>e.textContent.includes('最大ライフ')).querySelector('b').textContent.replaceAll(',',''));
- const before=life();d.getElementById('sim-extra-mods').value='+100 to maximum Life';click('#sim-config-apply');await wait(ready);assert.equal(life(),before+100);
+ const before=life();d.getElementById('sim-extra-mods').value='最大ライフ +100';click('#sim-config-apply');await wait(ready);assert.equal(life(),before+100);assert.deepEqual(saved().request.extra_modifiers,['+100 to maximum Life']);assert.equal(d.getElementById('sim-extra-mods').value,'最大ライフ +100');change('#sim-config-modifier','fire_res');click('#sim-config-add');assert.match(d.getElementById('sim-extra-mods').value,/火耐性 \+30%/);click('#sim-config-apply');await wait(ready);assert.ok(saved().request.extra_modifiers.includes('+30% to Fire Resistance'));
+ const prior=JSON.stringify(saved().request);d.getElementById('sim-extra-mods').value='不明な効果 +100';click('#sim-config-apply');assert.equal(JSON.stringify(saved().request),prior);assert.match(d.getElementById('sim-error').textContent,/認識できません/);
  const callsBefore=calculationCalls,statBefore=d.querySelector('.sim-stat');
- for(let i=0;i<10;i++){d.getElementById('sim-extra-mods').value=`+${200+i*10} to maximum Life`;click('#sim-config-apply');}
+ for(let i=0;i<10;i++){d.getElementById('sim-extra-mods').value=`最大ライフ +${200+i*10}`;click('#sim-config-apply');}
  assert.equal(d.querySelector('.sim-stat'),statBefore,'recalculation keeps result layout stable');
  await wait(ready);assert.equal(life(),before+290);assert.ok(calculationCalls-callsBefore<=2,'only running and newest requests should calculate');
  click('[data-tab="items"]');click('[data-slot="amulet"]');
@@ -73,7 +74,7 @@ try{
  assert.ok(restored.request.items.some(i=>i.slot==='amulet'));
  click('#sim-change-build');assert.equal(d.getElementById('sim-chooser').hidden,false);
  click('[data-preset="monk-whirling-assault"]');await wait(ready);assert.ok(d.getElementById('sim-build-name').textContent.includes('ワーリング'));
- click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);
+ click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);assert.equal(d.getElementById('sim-extra-mods').value,'最大ライフ +290');
  console.log(`Tree viewport: ${visibleNodeCount}/4913 nodes; no hidden-tree SVG; latest-only calculation queue passed`);
  assert.equal(errors.length,0,errors.join('\n'));
  console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; native saved-file roundtrip; isolated saved builds and restoration');
