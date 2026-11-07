@@ -87,6 +87,7 @@ function renderResults(){
  $('sim-character-name').textContent=`${label(plan.request.character.class_name)} / ${label(plan.request.character.ascendancy_name)} · 装備・パッシブは自分の設定`;
 }
 async function selectPreset(id,{fromHistory=false}={}){
+ if(treeFullscreen){save();restoreTreeEditor();}
  const preset=presets.find(p=>p.id===id);if(!preset){showChooser();return;}
  const version=++generation;++calculation;selectedPreset=preset;passiveResetBackup=null;$('sim-passives-undo').hidden=true;plan=null;result=null;baseline=null;preview=null;selectedNode=null;
  $('sim-chooser').hidden=true;$('sim-workbench').hidden=false;$('sim-build-name').textContent=preset.name;$('sim-guide-link').href=preset.path;
@@ -106,7 +107,7 @@ async function selectPreset(id,{fromHistory=false}={}){
   if(recoveryError)showError(recoveryError);else save();
  }catch(error){if(version===generation)showError(error);}
 }
-function showChooser(){generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;const u=new URL(location.href);u.searchParams.delete('build');history.pushState({},'',u.pathname+u.search);$('sim-chooser').scrollIntoView({block:'start'});}
+function showChooser(){if(treeFullscreen){save();restoreTreeEditor();}generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;const u=new URL(location.href);u.searchParams.delete('build');history.pushState({},'',u.pathname+u.search);$('sim-chooser').scrollIntoView({block:'start'});}
 function renderInputs(){
  $('sim-level').value=plan.request.character.level;
  $('sim-enemy').value=plan.request.enemy_tier || 'none';
@@ -115,20 +116,26 @@ function renderInputs(){
  $('sim-quest-points').value=plan.questPoints;
  renderSlots();renderSkills();setTab(activeTab);
 }
-let treeFullscreen=false,treeClosing=false,treeReturnFocus=null,treePageOverflow=null;
+let treeFullscreen=false,treeClosing=false,treeReturnFocus=null,treePageOverflow=null,treeHomeMarker=null,treeMainInert=false;
 function openTreeEditor(){
  if(treeFullscreen||!plan)return;treeFullscreen=true;treeReturnFocus=document.activeElement;
+ const mobile=!!window.matchMedia?.('(max-width: 720px)').matches;if(mobile){treeHomeMarker=document.createElement('div');treeHomeMarker.setAttribute('aria-hidden','true');treeHomeMarker.style.height=$('sim-tree').getBoundingClientRect().height+'px';$('sim-tree').before(treeHomeMarker);document.body.append($('sim-tree'));treeMainInert=$('main').inert;$('main').inert=true;$('sim-tree').classList.add('sim-tree-mobile');$('sim-tree-mobile-controls').hidden=false;}
  treePageOverflow={body:document.body.style.overflow,html:document.documentElement.style.overflow};document.body.style.overflow='hidden';document.documentElement.style.overflow='hidden';
  $('sim-tree').classList.add('sim-tree-fullscreen');$('sim-tree').setAttribute('role','dialog');$('sim-tree').setAttribute('aria-modal','true');$('sim-tree').setAttribute('aria-label','パッシブツリーの編集');
- $('sim-tree-full-header').hidden=false;$('sim-tree-settings').open=false;$('sim-node-inspector').open=selectedNode!==null;$('sim-tree-close').focus({preventScroll:true});updateView();
+ $('sim-tree-full-header').hidden=false;$('sim-tree-settings').open=false;$('sim-node-inspector').open=!mobile&&selectedNode!==null;$('sim-tree-close').focus({preventScroll:true});updateView();
 }
 async function closeTreeEditor(){
  if(!treeFullscreen||treeClosing)return;treeClosing=true;$('sim-tree').classList.add('sim-tree-closing');$('sim-tree-settings').inert=true;$('sim-node-inspector').inert=true;const button=$('sim-tree-close');button.disabled=true;button.textContent='保存・計算中…';
  try{await recalculate();if(!save())showError(Error('端末への保存ができませんでした。構成をファイルで保存してください。'));}finally{
- treeFullscreen=false;treeClosing=false;$('sim-tree').classList.remove('sim-tree-fullscreen','sim-tree-closing');$('sim-tree-settings').inert=false;$('sim-node-inspector').inert=false;for(const name of ['role','aria-modal','aria-label'])$('sim-tree').removeAttribute(name);
- $('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
- button.disabled=false;button.textContent='保存して戻る';treeReturnFocus?.focus?.({preventScroll:true});updateView();
+ restoreTreeEditor();
  }
+}
+function restoreTreeEditor(){
+ if(!treeFullscreen)return;
+ treeFullscreen=false;treeClosing=false;$('sim-tree').classList.remove('sim-tree-fullscreen','sim-tree-closing');$('sim-tree-settings').inert=false;$('sim-node-inspector').inert=false;for(const name of ['role','aria-modal','aria-label'])$('sim-tree').removeAttribute(name);
+ if(treeHomeMarker){treeHomeMarker.replaceWith($('sim-tree'));treeHomeMarker=null;$('main').inert=treeMainInert;}$('sim-tree').classList.remove('sim-tree-mobile');$('sim-tree-mobile-controls').hidden=true;
+ $('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
+ $('sim-tree-close').disabled=false;$('sim-tree-close').textContent='保存して戻る';treeReturnFocus?.focus?.({preventScroll:true});updateView();
 }
 function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree')updateView();}
 const slots=[['weapon1','メイン武器'],['weapon2','サブ武器・盾'],['helmet','兜'],['body','鎧'],['gloves','手袋'],['boots','靴'],['belt','ベルト'],['amulet','アミュレット'],['ring1','指輪1'],['ring2','指輪2'],['Flask 1','フラスコ1'],['Flask 2','フラスコ2'],['Charm 1','チャーム1'],['Charm 2','チャーム2'],['Charm 3','チャーム3']];
@@ -323,6 +330,9 @@ document.addEventListener('click',async event=>{
   if(target.id==='sim-change-build'){save();showChooser();return;}
   if(!plan)return;
   if(target.dataset.tab){setTab(target.dataset.tab);if(target.dataset.tab==='tree'&&window.matchMedia?.('(max-width: 720px)').matches)openTreeEditor();return;}
+  if(target.dataset.treeAction){$('sim-tree-'+target.dataset.treeAction).click();return;}
+  if(target.id==='sim-tree-hide-settings'){$('sim-tree-settings').open=false;return;}
+  if(target.id==='sim-tree-hide-node'){$('sim-node-inspector').open=false;return;}
   if(target.id==='sim-tree-open'){openTreeEditor();return;}
   if(target.id==='sim-tree-close'){await closeTreeEditor();return;}
   if(target.dataset.weaponSet){plan=selectWeaponSet(plan,+target.dataset.weaponSet);selectedSlot='weapon1';commit();renderSlots();if(!$('sim-item-editor').hidden)openItemEditor();return;}
@@ -419,6 +429,7 @@ function zoomTreeAt(width,point,rect,anchor,ratio=view.h/view.w){
 treeSvg.addEventListener('pointerdown',event=>{
  if(event.button!==undefined&&event.button!==0)return;stopTreeGesture(event);
  if(treePointers.has(event.pointerId)||treePointers.size>=2)return;
+ if(treeFullscreen&&$('sim-tree').classList.contains('sim-tree-mobile')){$('sim-tree-settings').open=false;$('sim-node-inspector').open=false;}
  treePointers.set(event.pointerId,{x:event.clientX,y:event.clientY});treeSvg.setPointerCapture?.(event.pointerId);
  if(treePointers.size===2){beginTreePinch();return;}
  let hit=event.target.closest('[data-node]')?.dataset.node;const rect=treeMap.getBoundingClientRect();
@@ -443,7 +454,7 @@ treeSvg.addEventListener('pointerup',event=>endTreePointer(event));
 for(const type of ['pointercancel','lostpointercapture'])treeSvg.addEventListener(type,event=>endTreePointer(event,true));
 window.addEventListener('blur',()=>{drag=null;treePointers.clear();});
 treeSvg.addEventListener('wheel',event=>{event.preventDefault();event.stopPropagation();const rect=treeMap.getBoundingClientRect(),point={x:event.clientX,y:event.clientY};zoomTreeAt(view.w*(event.deltaY>0?1.12:.89),point,rect,treeWorldPoint(point.x,point.y,rect));},{passive:false});
-window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('build');if(id)void selectPreset(id,{fromHistory:true});else{generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;}});
+window.addEventListener('popstate',()=>{if(treeFullscreen){save();restoreTreeEditor();}const id=new URLSearchParams(location.search).get('build');if(id)void selectPreset(id,{fromHistory:true});else{generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;}});
 const initial=new URLSearchParams(location.search).get('build');if(initial)void selectPreset(initial,{fromHistory:true});
 
 window.addEventListener('resize',()=>{if(activeTab==='tree')updateView();});
