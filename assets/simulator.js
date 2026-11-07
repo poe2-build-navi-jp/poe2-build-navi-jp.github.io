@@ -15,6 +15,7 @@ const pending = new Map();
 const frame = window.requestAnimationFrame?.bind(window) || (fn=>setTimeout(fn,16));
 let nodePage=0,editSequence=0,templateStep=0,templateVisible=true,templateRoute=null,templateNodes=new Set(),templateEdges=new Set();
 let templateImport=null,templateImportSequence=0;
+let treeNeedsFit=true;
 let treeFrame=0,treeNodes=new Map(),treeConnections=[],renderedNodes=new Map(),renderedEdges=new Map();
 let startState=new Set(),passiveResetBackup=null;
 let allocatedState=new Set(),highlightState=new Set(),selectedState=null,treeSearch=[];
@@ -142,7 +143,7 @@ function restoreTreeEditor(){
  $('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
  $('sim-tree-close').disabled=false;$('sim-tree-close').textContent='保存して戻る';treeReturnFocus?.focus?.({preventScroll:true});updateView();
 }
-function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree')updateView();}
+function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree'){if(treeNeedsFit){treeNeedsFit=false;fitTree();}else updateView();}}
 const slots=[['weapon1','メイン武器'],['weapon2','サブ武器・盾'],['helmet','兜'],['body','鎧'],['gloves','手袋'],['boots','靴'],['belt','ベルト'],['amulet','アミュレット'],['ring1','指輪1'],['ring2','指輪2'],['Flask 1','フラスコ1'],['Flask 2','フラスコ2'],['Charm 1','チャーム1'],['Charm 2','チャーム2'],['Charm 3','チャーム3']];
 const utility=slot=>/^(Flask|Charm) /.test(slot);
 const itemList=()=>utility(selectedSlot)?(plan.request.flasks ||= []):(plan.request.items ||= []);
@@ -225,7 +226,7 @@ function renderSkills(){
  return `<div class="sim-gem-row" data-gem="${j}"><label>${support?'サポート':'スキル'}<select data-gem-field="skill_id" data-support="${support}">${!entry?`<option value="${esc(gem.skill_id)}">${esc(label(gem.name_spec || gem.skill_id))}（未解決）</option>`:''}${gemOptions(support,gem.skill_id)}</select></label><label>Lv<input data-gem-field="level" type="number" min="1" max="40" value="${gem.level}"></label><label>品質<input data-gem-field="quality" type="number" min="0" max="30" value="${gem.quality}"></label><button type="button" data-remove-gem="${j}" aria-label="ジェム${j+1}を削除">×</button></div>${monsters.length?`<label>召喚する対象<select data-minion="${j}"><option value="">対象を選ぶ</option>${monsters.map(m=>`<option value="${esc(m.id)}"${gem.minion===m.id?' selected':''}>${esc(label(m.name))}</option>`).join('')}</select></label>`:''}`;
  }).join('')}<label class="sim-check"><input type="checkbox" data-enabled="${index}"${group.enabled?' checked':''}>このスキル組を有効にする</label><button type="button" class="sim-add-support" data-add-support="${index}">＋ サポートを追加</button></section>`).join('');
 }
-function renderTree(){fitTree();renderTreeState();renderNodeCatalog();}
+function renderTree(){treeNeedsFit=true;if(activeTab==='tree'){treeNeedsFit=false;fitTree();}renderTreeState();renderNodeCatalog();}
 function fitTree(){
  const nodes=currentTree.filter(n=>!n.ascendancy_id&&Number.isFinite(n.x)&&Number.isFinite(n.y));if(!nodes.length)return;
  const rect=$('sim-tree-map').getBoundingClientRect(),ratio=rect.width&&rect.height?rect.height/rect.width:.76;
