@@ -38,8 +38,8 @@ function engine() {
  worker.onerror=()=>{for(const task of pending.values())task.reject(Error('計算処理を続けられません。ページを再読み込みしてください。'));pending.clear();};
  bootPromise=rpc('boot').then(data=>{catalog=data;return data;});return bootPromise;
 }
-function showError(error){$('sim-error').textContent=error.message || String(error);$('sim-error').hidden=false;}
-function clearError(){$('sim-error').hidden=true;$('sim-error').textContent='';}
+function showError(error){const message=error.message || String(error);$('sim-error').textContent=message;$('sim-error').hidden=false;$('sim-tree-error-message').textContent=message;$('sim-tree-error').hidden=!treeFullscreen;}
+function clearError(){$('sim-error').hidden=true;$('sim-error').textContent='';$('sim-tree-error').hidden=true;$('sim-tree-error-message').textContent='';}
 function save() {
  if(!plan)return;
  try{localStorage.setItem(`poe2-simulator:v1:${selectedPreset.id}`,JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {},plan.weaponSets || null)));$('sim-save-status').textContent='この端末に保存済み';$('sim-tree-save-state').textContent='この端末に保存済み';return true;}
@@ -115,7 +115,7 @@ async function selectPreset(id,{fromHistory=false}={}){
 }
 function showChooser(){if(treeFullscreen){save();restoreTreeEditor();}generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;const u=new URL(location.href);u.searchParams.delete('build');history.pushState({},'',u.pathname+u.search);$('sim-chooser').scrollIntoView({block:'start'});}
 function renderInputs(){
- $('sim-level').value=plan.request.character.level;
+ $('sim-level').value=plan.request.character.level;$('sim-tree-level').value=plan.request.character.level;
  $('sim-enemy').value=plan.request.enemy_tier || 'none';
  $('sim-life-reward').checked=!!plan.request.config_inputs?.['questInterlude 2Khari CrossingMolten Shrine'];
  $('sim-extra-mods').value=localizeModifiers(plan.request.extra_modifiers || [],equipmentCatalog,names);$('sim-config-modifier').innerHTML=equipmentCatalog.modifiers.map(m=>`<option value="${m.id}">${esc(m.label)}</option>`).join('');$('sim-notes').value=plan.notes;
@@ -128,7 +128,7 @@ function openTreeEditor(){
  const mobile=!!window.matchMedia?.('(max-width: 720px)').matches;if(mobile){treeHomeMarker=document.createElement('div');treeHomeMarker.setAttribute('aria-hidden','true');treeHomeMarker.style.height=$('sim-tree').getBoundingClientRect().height+'px';$('sim-tree').before(treeHomeMarker);document.body.append($('sim-tree'));treeMainInert=$('main').inert;$('main').inert=true;$('sim-tree').classList.add('sim-tree-mobile');$('sim-tree-mobile-controls').hidden=false;}
  treePageOverflow={body:document.body.style.overflow,html:document.documentElement.style.overflow};document.body.style.overflow='hidden';document.documentElement.style.overflow='hidden';
  $('sim-tree').classList.add('sim-tree-fullscreen');$('sim-tree').setAttribute('role','dialog');$('sim-tree').setAttribute('aria-modal','true');$('sim-tree').setAttribute('aria-label','パッシブツリーの編集');
- $('sim-tree-full-header').hidden=false;$('sim-tree-settings').open=false;$('sim-node-inspector').open=!mobile&&selectedNode!==null;$('sim-tree-close').focus({preventScroll:true});if(mobile)fitTree();else updateView();
+ $('sim-tree-error').hidden=true;$('sim-tree-full-header').hidden=false;$('sim-tree-settings').open=false;$('sim-node-inspector').open=!mobile&&selectedNode!==null;$('sim-tree-close').focus({preventScroll:true});if(mobile)fitTree();else updateView();
 }
 async function closeTreeEditor(){
  if(!treeFullscreen||treeClosing)return;treeClosing=true;$('sim-tree').classList.add('sim-tree-closing');$('sim-tree-settings').inert=true;$('sim-node-inspector').inert=true;const button=$('sim-tree-close');button.disabled=true;button.textContent='保存・計算中…';
@@ -140,7 +140,7 @@ function restoreTreeEditor(){
  if(!treeFullscreen)return;
  treeFullscreen=false;treeClosing=false;$('sim-tree').classList.remove('sim-tree-fullscreen','sim-tree-closing');$('sim-tree-settings').inert=false;$('sim-node-inspector').inert=false;for(const name of ['role','aria-modal','aria-label'])$('sim-tree').removeAttribute(name);
  if(treeHomeMarker){treeHomeMarker.replaceWith($('sim-tree'));treeHomeMarker=null;$('main').inert=treeMainInert;}$('sim-tree').classList.remove('sim-tree-mobile');$('sim-tree-mobile-controls').hidden=true;
- $('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
+ $('sim-tree-error').hidden=true;$('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
  $('sim-tree-close').disabled=false;$('sim-tree-close').textContent='保存して戻る';treeReturnFocus?.focus?.({preventScroll:true});updateView();
 }
 function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree'){if(treeNeedsFit){treeNeedsFit=false;fitTree();}else updateView();}}
@@ -275,7 +275,7 @@ function renderTreeState(){
  allocatedState=allocated;startState=starts;highlightState=highlight;selectedState=selectedNode;
  for(const id of nodeChanges){const node=renderedNodes.get(id);if(node)node.setAttribute('class',nodeClasses(id));}
  if(changed.size)for(const line of renderedEdges.values()){const a=+line.dataset.from,b=+line.dataset.to;if(changed.has(a)||changed.has(b))line.classList.toggle('allocated',isOwnedEdge(a,b));}
- const chosen=[...allocated];$('sim-passives-reset').disabled=chosen.length===0;$('sim-point-count').textContent=`取得済み ${chosen.length}ノード · 通常 ${chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length} / ${plan.request.character.level-1+plan.questPoints}pt · アセンダンシー ${chosen.filter(id=>treeNodes.get(id)?.ascendancy_id).length}ノード`;renderTemplateSummary();
+ const chosen=[...allocated],used=chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length,limit=plan.request.character.level-1+plan.questPoints;$('sim-tree-budget-summary').textContent=`通常ポイント ${used} / ${limit} · ${used>limit?`${used-limit}ポイント超過しています。レベル・報酬ポイントを確認するか、ノードを外してください。`:`あと${limit-used}ポイント取得できます。`}`;$('sim-tree-budget-summary').classList.toggle('sim-budget-over',used>limit);$('sim-passives-reset').disabled=chosen.length===0;$('sim-point-count').textContent=`取得済み ${chosen.length}ノード · 通常 ${chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length} / ${plan.request.character.level-1+plan.questPoints}pt · アセンダンシー ${chosen.filter(id=>treeNodes.get(id)?.ascendancy_id).length}ノード`;renderTemplateSummary();
 }
 function loadTemplate(){
  ++templateImportSequence;templateImport=null;$('sim-template-import-preview').replaceChildren();
@@ -316,6 +316,12 @@ async function previewTemplateImport(){
  const next=await rpc('calculate',request);if(version!==generation||edited!==editSequence||token!==templateImportSequence)return;
  templateImport={request,points,edited,version};const changes=[['Life','最大ライフ'],['Armour','アーマー'],['Evasion','回避力'],['CombinedDPS','DPS']].map(([key,name])=>`${name}：${number(statValue(result,key),key)} → ${number(statValue(next,key),key)}`).join('<br>');
  $('sim-template-import-preview').innerHTML=`<p>今のパッシブを<strong>${esc(step.label)}</strong>の${step.nodes.length}ノードに置き換えます。レベルは${level}、報酬ポイントは${points}になります。装備・ジェム・ジュエル効果は取り込みません。</p><p>${changes}</p><button id="sim-template-import-apply" type="button" class="sim-primary">この内容で反映して保存</button><button id="sim-template-import-cancel" type="button">キャンセル</button>`;
+}
+function setPassiveBudget(level,points){
+ if(level===plan.request.character.level&&points===plan.questPoints)return;
+ preview=null;templateImport=null;++templateImportSequence;
+ for(const id of ['sim-node-preview-result','sim-template-import-preview']){const box=$(id);if(box?.hasChildNodes())box.textContent='レベル・報酬ポイントが変わりました。もう一度反映内容を確認してください。';}
+ plan.request.character.level=level;plan.questPoints=points;$('sim-level').value=level;$('sim-tree-level').value=level;$('sim-quest-points').value=points;commit();renderTreeState();
 }
 function passiveKind(node){return {normal:'通常',notable:'ノータブル',keystone:'キーストーン',ascendancy_start:'開始点',jewel_socket:'ジュエルソケット',mastery:'中央マーク'}[node.kind] || 'パッシブ';}
 function renderNodeCatalog(){
@@ -365,6 +371,7 @@ document.addEventListener('click',async event=>{
   if(target.id==='sim-tree-hide-node'){$('sim-node-inspector').open=false;return;}
   if(target.id==='sim-tree-open'){openTreeEditor();return;}
   if(target.id==='sim-tree-close'){await closeTreeEditor();return;}
+  if(target.id==='sim-tree-error-close'){clearError();return;}
   if(target.dataset.weaponSet){plan=selectWeaponSet(plan,+target.dataset.weaponSet);selectedSlot='weapon1';commit();renderSlots();if(!$('sim-item-editor').hidden)openItemEditor();return;}
   if(target.id==='sim-passives-reset'){
    passiveResetBackup={allocated_nodes:clone(plan.request.allocated_nodes || []),attribute_choices:clone(plan.request.attribute_choices || {}),weapon_swap:clone(plan.request.weapon_swap || null),level:plan.request.character.level,questPoints:plan.questPoints};
@@ -424,8 +431,8 @@ document.addEventListener('change',async event=>{
   if(target.id==='sim-template-stage'||target.id==='sim-template-visible'){templateStep=Number($('sim-template-stage').value);templateVisible=$('sim-template-visible').checked;updateTemplate();focusTemplate();return;}
   if(target.id==='sim-node-filter'){nodePage=0;renderNodeCatalog();return;}
   if(target.dataset.rareMod!==undefined){readRareDraft();const row=rareDraft.modifiers[+target.dataset.rareMod],def=equipmentCatalog.modifiers.find(m=>m.id===target.value);row.id=def.id;row.values=[...def.default];renderRareModifiers();return;}
-  if(target.id==='sim-level'){const n=Number(target.value);if(!Number.isInteger(n)||n<1||n>100){target.value=plan.request.character.level;throw Error('Lvは1〜100で入力してください。');}plan.request.character.level=n;commit();}
-  if(target.id==='sim-quest-points'){const n=Number(target.value);if(!Number.isInteger(n)||n<0||n>24){target.value=plan.questPoints;throw Error('報酬ポイントは0〜24で入力してください。');}plan.questPoints=n;preview=null;save();renderTreeState();}
+  if(target.id==='sim-level'||target.id==='sim-tree-level'){const n=Number(target.value);if(!target.value.trim()||!Number.isInteger(n)||n<1||n>100){target.value=plan.request.character.level;throw Error('Lvは1〜100で入力してください。');}setPassiveBudget(n,plan.questPoints);}
+  if(target.id==='sim-quest-points'){const n=Number(target.value);if(!target.value.trim()||!Number.isInteger(n)||n<0||n>24){target.value=plan.questPoints;throw Error('報酬ポイントは0〜24で入力してください。');}setPassiveBudget(plan.request.character.level,n);}
   if(target.dataset.main!==undefined){plan.request.main_socket_group=+target.dataset.main;commit();}
   if(target.dataset.enabled!==undefined){plan.request.socket_groups[+target.dataset.enabled].enabled=target.checked;commit();}
   if(target.dataset.gemField){const group=plan.request.socket_groups[+target.closest('[data-group]').dataset.group],gem=group.gems[+target.closest('[data-gem]').dataset.gem],key=target.dataset.gemField;if(key==='skill_id'){gem.skill_id=target.value;delete gem.minion;delete gem.minion_skill;delete gem.stat_set_index;renderSkills();}else{const n=Number(target.value),max=key==='level'?40:30,min=key==='level'?1:0;if(!Number.isInteger(n)||n<min||n>max){target.value=gem[key];throw Error(`${key==='level'?'Lv':'品質'}は${min}〜${max}で入力してください。`);}gem[key]=n;}commit();}

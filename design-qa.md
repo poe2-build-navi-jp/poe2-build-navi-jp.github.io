@@ -31,4 +31,16 @@ Residual test gap: no physical iPhone/Safari gesture session; pinch and page-scr
 
 No remaining actionable P0/P1/P2 findings within this scope.
 
+## Follow-up: mobile point-budget editing
+
+The full-screen layout hid the quest-point input outside settings and provided no accessible level input. Both inputs now live inside the search/settings overlay, with 16 px numeric inputs and 44 px minimum height. The level stays synchronized with the main result panel. The settings show remaining points and highlight an exceeded limit without deleting selected nodes.
+
+Changing level or campaign points invalidates both completed allocation previews and in-flight Ninja import previews. Campaign-point changes also refresh the result diagnostics. Input errors appear inside the full-screen tree and can be dismissed, instead of being hidden behind the full-screen overlay.
+
+Browser follow-up: checked 375, 390 and 430 CSS px widths; Lv80 + 24 rewards = 103 points, Lv100 + 24 rewards = 123 points. Invalid Lv101 restores the previous value and displays the error inside the tree. Saved and reloaded Lv100 + 24 points. The settings panel did not overflow horizontally at either narrow or wide mobile width. Numeric columns align at the bottom when the campaign label wraps.
+
+Regression coverage uses the real WASM engine: level/stat changes, budget synchronization, invalid input, completed preview invalidation, delayed in-flight Ninja preview invalidation, over-budget warnings and recovery, and preservation of selected nodes when lowering the limit. `npm run test:simulator`, `node scripts/test-site.mjs` and `git diff --check` passed. A physical iPhone/Safari session remains untested.
+
+Follow-up evidence: [settings](docs/simulator/2026-11-07/budget-settings.webp), [in-tree error](docs/simulator/2026-11-07/budget-error.webp).
+
 final result: passed
