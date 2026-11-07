@@ -15,10 +15,9 @@ Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
 w.HTMLElement.prototype.scrollIntoView=function(){};
 w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
 w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.replace(/^\//,''))));
-// A compact map fixture keeps jsdom's SVG/live-collection overhead out of behavioral tests.
-// The real engine, full graph and every source edge are checked by test-simulator.mjs.
-const compactTree=nodes=>nodes.filter((n,index)=>index<80||[59779,61525,50986,50459,47175,44683,54447].includes(n.skill));
-w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>{if(action==='boot')result={...result,tree:compactTree(result.tree)};if(action==='tree')result=compactTree(result);this.onmessage?.({data:{id,result}});},error=>this.onmessage?.({data:{id,error:error.message}}));}};
+// Exercise the real full tree. Only its visible region should create SVG elements.
+let calculationCalls=0,drawableNodes=0;
+w.Worker=class{postMessage({id,action,payload}){if(action==='calculate')calculationCalls++;rpc(action,payload).then(result=>{if(action==='boot')drawableNodes=result.tree.filter(n=>Number.isFinite(n.x)&&Number.isFinite(n.y)).length;this.onmessage?.({data:{id,result}});},error=>this.onmessage?.({data:{id,error:error.message}}));}};
 let code=await readFile(resolve(root,'assets/simulator.js'),'utf8');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
 const wait=async predicate=>{const deadline=Date.now()+30000;while(!predicate()){if(Date.now()>deadline)throw Error('UI timeout: '+d.getElementById('sim-error').textContent+' '+d.getElementById('sim-status').textContent);await new Promise(r=>setTimeout(r,25));}};
 const click=selector=>{const e=d.querySelector(selector);assert.ok(e,selector);e.click();};
@@ -27,24 +26,61 @@ const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false
 try{
  await w.eval(`(async()=>{${code}\n})()`);
  assert.equal(d.querySelectorAll('[data-preset]').length,12);
+ click('#menu-button');assert.equal(d.getElementById('menu-button').getAttribute('aria-expanded'),'true');assert.ok(d.getElementById('site-nav').classList.contains('is-open'));
+ click('#menu-button');assert.equal(d.getElementById('menu-button').getAttribute('aria-expanded'),'false');
  change('#sim-class-filter','Monk');assert.equal([...d.querySelectorAll('[data-preset]')].filter(e=>!e.hidden).length,1);
  change('#sim-class-filter','');
  click('[data-preset="mercenary-twister-gemling"]');await wait(ready);
  assert.ok(d.getElementById('sim-build-name').textContent.includes('ツイスター'));
  const saved=()=>model.parseSave(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'));
  assert.equal(saved().request.character.class_name,'Mercenary');
+ assert.equal(d.querySelectorAll('#sim-tree-nodes circle').length,0,'hidden tree must not render SVG nodes');
  click('[data-tab="config"]');assert.equal(d.getElementById('sim-config').hidden,false);
  const life=()=>Number([...d.querySelectorAll('.sim-stat')].find(e=>e.textContent.includes('最大ライフ')).querySelector('b').textContent.replaceAll(',',''));
- const before=life();d.getElementById('sim-extra-mods').value='+100 to maximum Life';click('#sim-config-apply');await wait(ready);assert.equal(life(),before+100);
+ const before=life();d.getElementById('sim-extra-mods').value='最大ライフ +100';click('#sim-config-apply');await wait(ready);assert.equal(life(),before+100);assert.deepEqual(saved().request.extra_modifiers,['+100 to maximum Life']);assert.equal(d.getElementById('sim-extra-mods').value,'最大ライフ +100');change('#sim-config-modifier','fire_res');click('#sim-config-add');assert.match(d.getElementById('sim-extra-mods').value,/火耐性 \+30%/);click('#sim-config-apply');await wait(ready);assert.ok(saved().request.extra_modifiers.includes('+30% to Fire Resistance'));
+ const prior=JSON.stringify(saved().request);d.getElementById('sim-extra-mods').value='不明な効果 +100';click('#sim-config-apply');assert.equal(JSON.stringify(saved().request),prior);assert.match(d.getElementById('sim-error').textContent,/認識できません/);
+ const callsBefore=calculationCalls,statBefore=d.querySelector('.sim-stat');
+ for(let i=0;i<10;i++){d.getElementById('sim-extra-mods').value=`最大ライフ +${200+i*10}`;click('#sim-config-apply');}
+ assert.equal(d.querySelector('.sim-stat'),statBefore,'recalculation keeps result layout stable');
+ await wait(ready);assert.equal(life(),before+290);assert.ok(calculationCalls-callsBefore<=2,'only running and newest requests should calculate');
  click('[data-tab="items"]');click('[data-slot="amulet"]');
- const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent.includes('Astramentis'));assert.ok(astro);change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('Astramentis'));
+ const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent.includes('アストラメンティス'));assert.ok(astro);change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('アストラメンティス'));
  click('#sim-item-apply');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'&&i.text.includes('Astramentis')));
- click('[data-tab="skills"]');change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
- click('[data-tab="tree"]');const nodeSearch=d.getElementById('sim-node-search');nodeSearch.value='59779';nodeSearch.dispatchEvent(new w.Event('input',{bubbles:true}));click('[data-node-result="59779"]');click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));click('#sim-node-apply');await wait(ready);assert.ok(saved().request.allocated_nodes.includes(59779));
- click('#sim-export-open');await wait(()=>d.getElementById('sim-code').value.startsWith('e'));const exported=d.getElementById('sim-code').value;const imported=await rpc('import',exported);assert.ok(imported.request.items.some(i=>i.slot==='amulet'));d.getElementById('sim-code-dialog').close();
+ click('#sim-item-back');assert.equal(d.getElementById('sim-item-editor').hidden,true);
+ click('[data-slot="helmet"]');assert.equal(d.getElementById('sim-item-list').hidden,true);assert.equal(d.activeElement.id,'sim-slot-title');
+ click('[data-equipment-mode="rare"]');assert.equal(d.getElementById('sim-rare-editor').hidden,false);
+ const equipment=JSON.parse(await readFile(resolve(root,'data/simulator-equipment.json'),'utf8'));
+ change('#sim-rare-base',equipment.bases.find(b=>b.name==='Covert Hood').id);change('#sim-rare-name','自作テスト兜');
+ const rareLife=life();click('#sim-rare-add');change('[data-rare-row="0"] [data-rare-value="0"]','100');
+ click('#sim-rare-add');change('[data-rare-mod="1"]','fire_res');change('[data-rare-row="1"] [data-rare-value="0"]','30');
+ click('#sim-item-apply');await wait(ready);assert.equal(life(),rareLife+100);assert.equal(saved().equipmentDrafts.helmet.name,'自作テスト兜');assert.ok(saved().request.items.find(i=>i.slot==='helmet').text.includes('+30% to Fire Resistance'));
+ change('[data-rare-row="0"] [data-rare-value="0"]','150');click('#sim-item-apply');await wait(ready);assert.equal(life(),rareLife+150);
+ click('#sim-item-back');click('[data-slot="helmet"]');assert.equal(d.querySelector('[data-rare-row="0"] [data-rare-value="0"]').value,'150');assert.equal(d.querySelector('[data-equipment-mode="rare"]').getAttribute('aria-pressed'),'true');
+ click('#sim-item-back');click('[data-slot="Flask 1"]');click('[data-equipment-mode="rare"]');assert.equal(d.getElementById('sim-item-apply').disabled,true);click('[data-equipment-mode="unique"]');assert.equal(d.getElementById('sim-item-apply').disabled,false);
+ click('[data-tab="skills"]');const gemSelect=d.querySelector('[data-gem-field="skill_id"]');const selectedGem=gemSelect.value;assert.ok(gemSelect.options.length<=2);gemSelect.dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));assert.ok(gemSelect.options.length>100);assert.equal(gemSelect.value,selectedGem);change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
+ click('[data-tab="tree"]');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length>0);
+ const visibleNodeCount=d.querySelectorAll('#sim-tree-nodes circle').length;assert.ok(visibleNodeCount<4913/2,'viewport should draw a fraction of the full tree');
+ assert.match(d.getElementById('sim-node-catalog-count').textContent,/4913/);assert.equal(d.querySelectorAll('#sim-node-catalog-list button').length,30);
+ click('#sim-node-next');assert.match(d.getElementById('sim-node-catalog-count').textContent,/2 \/ /);change('#sim-node-filter','keystone');assert.ok([...d.querySelectorAll('#sim-node-catalog-list button')].every(b=>b.textContent.includes('キーストーン')));change('#sim-node-filter','all');
+ const circle=d.querySelector('#sim-tree-nodes circle');assert.ok(circle.querySelector('title').textContent.includes('\n'));circle.dispatchEvent(new w.MouseEvent('pointerdown',{bubbles:true,clientX:100,clientY:100}));d.getElementById('sim-tree-svg').dispatchEvent(new w.MouseEvent('pointerup',{bubbles:true,clientX:100,clientY:100}));assert.ok(d.querySelector('#sim-node-detail li'));assert.equal(d.activeElement,d.querySelector('#sim-node-detail h4'));
+ assert.equal(d.querySelector('#sim-tree-compare,#sim-reference-image-file'),null,'mobile uses one tree without screenshot panels');
+ const requestBeforeTemplate=JSON.stringify(saved().request),lifeBeforeTemplate=life();assert.equal(d.getElementById('sim-template-stage').options.length,5);assert.ok(d.getElementById('sim-template-visible').checked);assert.ok(d.querySelectorAll('#sim-tree-svg circle.template').length>0);
+ change('#sim-template-stage','4');await new Promise(r=>setTimeout(r,30));assert.equal(JSON.stringify(saved().request),requestBeforeTemplate);assert.equal(life(),lifeBeforeTemplate);assert.ok(d.querySelectorAll('#sim-tree-svg line.template').length>0);
+ click('#sim-template-visible');assert.equal(d.querySelectorAll('#sim-tree-svg circle.template').length,0);assert.equal(JSON.stringify(saved().request),requestBeforeTemplate);click('#sim-template-visible');click('#sim-template-next');assert.ok(d.querySelector('#sim-node-preview'));assert.equal(JSON.stringify(saved().request),requestBeforeTemplate);
+ change('#sim-template-stage','0');
+ const nodeSearch=d.getElementById('sim-node-search');nodeSearch.value='59779';nodeSearch.dispatchEvent(new w.Event('input',{bubbles:true}));click('[data-node-result="59779"]');click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));assert.match(d.getElementById('sim-node-preview-result').textContent,/アーマー/);click('#sim-node-apply');await wait(ready);assert.ok(saved().request.allocated_nodes.includes(59779));
+ click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));assert.match(d.getElementById('sim-node-preview-result').textContent,/解除/);click('#sim-node-apply');await wait(ready);assert.ok(!saved().request.allocated_nodes.includes(59779));
+ click('#sim-node-preview');await wait(()=>!!d.getElementById('sim-node-apply'));click('#sim-node-apply');await wait(ready);
+
+ for(let i=0;i<9;i++)click('#sim-tree-minus');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length===drawableNodes);
+ click('#sim-tree-center');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length<4913/2);
+ assert.equal(d.querySelector('#sim-code-dialog,#sim-import-open,#sim-export-open,#sim-choose-import'),null);
+ const restored=model.parseSave(JSON.stringify(model.makeSave('mercenary-twister-gemling',saved().request,0,'保存の確認')));
+ assert.ok(restored.request.items.some(i=>i.slot==='amulet'));
  click('#sim-change-build');assert.equal(d.getElementById('sim-chooser').hidden,false);
- click('[data-preset="monk-whirling-assault"]');await wait(ready);assert.ok(d.getElementById('sim-build-name').textContent.includes('ワーリング'));
- click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);
+ click('[data-preset="monk-whirling-assault"]');await wait(ready);assert.ok(d.getElementById('sim-build-name').textContent.includes('ワーリング'));assert.equal(d.getElementById('sim-template-stage').options.length,5);assert.match(d.getElementById('sim-template-stage').options[0].textContent,/目安 1/);
+ click('#sim-change-build');click('[data-preset="mercenary-twister-gemling"]');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'));assert.equal(saved().request.socket_groups[0].gems[0].level,10);assert.equal(d.getElementById('sim-extra-mods').value,'最大ライフ +290');assert.equal(d.getElementById('sim-template-stage').value,'0');
+ console.log(`Tree viewport: ${visibleNodeCount}/4913 nodes; no hidden-tree SVG; latest-only calculation queue passed`);
  assert.equal(errors.length,0,errors.join('\n'));
- console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; PoB2 export; isolated saved builds and restoration');
+ console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; native saved-file roundtrip; isolated saved builds and restoration');
 }finally{dom.window.close();await native.terminate();}
