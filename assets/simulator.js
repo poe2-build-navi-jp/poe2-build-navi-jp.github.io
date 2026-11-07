@@ -1,4 +1,4 @@
-import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState} from './simulator-model.js?v=2ac2d4f1c0';
+import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch} from './simulator-model.js?v=92480b8bec';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
@@ -18,6 +18,7 @@ let templateImport=null,templateImportSequence=0;
 let treeNeedsFit=true;
 let treeFrame=0,treeNodes=new Map(),treeConnections=[],renderedNodes=new Map(),renderedEdges=new Map();
 let startState=new Set(),passiveResetBackup=null;
+const queuedNodes=new Set();let queuedState=new Set();
 let allocatedState=new Set(),highlightState=new Set(),selectedState=null,treeSearch=[];
 const elementNS='http://www.w3.org/2000/svg';
 function setCurrentTree(nodes){
@@ -33,7 +34,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- worker=new Worker(new URL('./simulator-worker.js?v=e8cca230da',import.meta.url),{type:'module'});
+ worker=new Worker(new URL('./simulator-worker.js?v=8bcd92cf40',import.meta.url),{type:'module'});
  worker.onmessage=({data})=>{if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  worker.onerror=()=>{for(const task of pending.values())task.reject(Error('計算処理を続けられません。ページを再読み込みしてください。'));pending.clear();};
  bootPromise=rpc('boot').then(data=>{catalog=data;return data;});return bootPromise;
@@ -95,7 +96,7 @@ function renderResults(){
 async function selectPreset(id,{fromHistory=false}={}){
  if(treeFullscreen){save();restoreTreeEditor();}
  const preset=presets.find(p=>p.id===id);if(!preset){showChooser();return;}
- const version=++generation;++calculation;selectedPreset=preset;passiveResetBackup=null;$('sim-passives-undo').hidden=true;plan=null;result=null;baseline=null;preview=null;selectedNode=null;
+ const version=++generation;++calculation;selectedPreset=preset;passiveResetBackup=null;$('sim-passives-undo').hidden=true;plan=null;result=null;baseline=null;preview=null;selectedNode=null;queuedNodes.clear();
  $('sim-chooser').hidden=true;$('sim-workbench').hidden=false;$('sim-build-name').textContent=preset.name;$('sim-guide-link').href=preset.path;
  $('sim-status').textContent='計算画面を準備しています…';clearError();$('sim-item-editor').hidden=true;$('sim-item-list').hidden=false;
  $('sim-stats').innerHTML='<p>準備中…</p>';
@@ -241,7 +242,7 @@ function updateView(){
   $('sim-tree-svg').classList.toggle('sim-tree-overview',view.w>18000);$('sim-tree-svg').setAttribute('viewBox',`${view.x-view.w/2} ${view.y-view.h/2} ${view.w} ${view.h}`);drawTreeViewport();
  });
 }
-function nodeClasses(id){const node=treeNodes.get(id);return [node.kind,startState.has(id)?'start':'',allocatedState.has(id)?'allocated':'',highlightState.has(id)?'preview':'',selectedState===id?'selected':'',templateVisible&&templateNodes.has(id)?'template':''].filter(Boolean).join(' ');}
+function nodeClasses(id){const node=treeNodes.get(id);return [node.kind,startState.has(id)?'start':'',allocatedState.has(id)?'allocated':'',highlightState.has(id)?'preview':'',selectedState===id?'selected':'',queuedNodes.has(id)?'queued':'',templateVisible&&templateNodes.has(id)?'template':''].filter(Boolean).join(' ');}
 function drawTreeViewport(){
  const margin=150,left=view.x-view.w/2-margin,right=view.x+view.w/2+margin,top=view.y-view.h/2-margin,bottom=view.y+view.h/2+margin;
  const visible=new Set(),edges=new Set(),nodeFragment=document.createDocumentFragment(),edgeFragment=document.createDocumentFragment();
@@ -270,12 +271,14 @@ function renderTreeState(){
  if(!plan)return;
  const cls=catalog.meta.classes.find(c=>c.name===plan.request.character.class_name),asc=cls?.ascendancies?.find(a=>a.name===plan.request.character.ascendancy_name);
  const {owned:allocated,starts}=acquiredTreeState(plan.request,currentTree,result?.tree_effects?.class_starts,asc?.id),highlight=new Set(preview?.result?.path || []);
+ for(const id of queuedNodes)if(allocated.has(id))queuedNodes.delete(id);
  const changed=new Set([...allocatedState,...allocated,...startState,...starts].filter(id=>allocatedState.has(id)!==allocated.has(id)||startState.has(id)!==starts.has(id)));
- const nodeChanges=new Set([...changed,...[...highlightState,...highlight].filter(id=>highlightState.has(id)!==highlight.has(id)),selectedState,selectedNode]);
+ const nodeChanges=new Set([...changed,...[...highlightState,...highlight].filter(id=>highlightState.has(id)!==highlight.has(id)),selectedState,selectedNode,...[...queuedState,...queuedNodes].filter(id=>queuedState.has(id)!==queuedNodes.has(id))]);
+ queuedState=new Set(queuedNodes);
  allocatedState=allocated;startState=starts;highlightState=highlight;selectedState=selectedNode;
  for(const id of nodeChanges){const node=renderedNodes.get(id);if(node)node.setAttribute('class',nodeClasses(id));}
  if(changed.size)for(const line of renderedEdges.values()){const a=+line.dataset.from,b=+line.dataset.to;if(changed.has(a)||changed.has(b))line.classList.toggle('allocated',isOwnedEdge(a,b));}
- const chosen=[...allocated],used=chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length,limit=plan.request.character.level-1+plan.questPoints;$('sim-tree-budget-summary').textContent=`通常ポイント ${used} / ${limit} · ${used>limit?`${used-limit}ポイント超過しています。レベル・報酬ポイントを確認するか、ノードを外してください。`:`あと${limit-used}ポイント取得できます。`}`;$('sim-tree-budget-summary').classList.toggle('sim-budget-over',used>limit);$('sim-passives-reset').disabled=chosen.length===0;$('sim-point-count').textContent=`取得済み ${chosen.length}ノード · 通常 ${chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length} / ${plan.request.character.level-1+plan.questPoints}pt · アセンダンシー ${chosen.filter(id=>treeNodes.get(id)?.ascendancy_id).length}ノード`;renderTemplateSummary();
+ const chosen=[...allocated],used=chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length,limit=plan.request.character.level-1+plan.questPoints;$('sim-tree-budget-summary').textContent=`通常ポイント ${used} / ${limit} · ${used>limit?`${used-limit}ポイント超過しています。レベル・報酬ポイントを確認するか、ノードを外してください。`:`あと${limit-used}ポイント取得できます。`}`;$('sim-tree-budget-summary').classList.toggle('sim-budget-over',used>limit);$('sim-passives-reset').disabled=chosen.length===0;$('sim-point-count').textContent=`取得済み ${chosen.length}ノード · 通常 ${chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length} / ${plan.request.character.level-1+plan.questPoints}pt · アセンダンシー ${chosen.filter(id=>treeNodes.get(id)?.ascendancy_id).length}ノード`;renderTemplateSummary();renderQueuedSelection();
 }
 function loadTemplate(){
  ++templateImportSequence;templateImport=null;$('sim-template-import-preview').replaceChildren();
@@ -332,27 +335,41 @@ function renderNodeCatalog(){
  $('sim-node-catalog-list').innerHTML=nodes.slice(nodePage*30,nodePage*30+30).map(({node})=>`<button type="button" data-node-result="${node.skill}"><strong>${esc(label(node.name))}</strong><span>${passiveKind(node)}${isAllocatedNode(node)?' · 取得済み':isStartNode(node)?' · 開始点（取得数に含めません）':''}</span>${nodeStats(node).map(line=>`<small>${esc(line)}</small>`).join('')}</button>`).join('') || '<p>一致するパッシブはありません。</p>';
  $('sim-node-prev').disabled=nodePage===0;$('sim-node-next').disabled=nodePage===pages-1;
 }
-function nodeDetail(id,{reveal=true}={}){
+function renderQueuedSelection(){
+ const count=queuedNodes.size;$('sim-tree-selection').hidden=!count;$('sim-tree').classList.toggle('sim-has-selection',count>0);
+ $('sim-selection-count').textContent=`選択中 ${count}ノード（未反映）`;
+ $('sim-selection-name').textContent=label(treeNodes.get(selectedNode)?.name || '');
+ $('sim-selection-list').innerHTML=[...queuedNodes].map(id=>`<button type="button" data-selection-remove="${id}" aria-label="${esc(label(treeNodes.get(id)?.name))}の選択を解除">${esc(label(treeNodes.get(id)?.name))} ×</button>`).join('');
+}
+function changeQueuedNode(id,enabled){
+ if(enabled)queuedNodes.add(id);else queuedNodes.delete(id);preview=null;++editSequence;
+ if(selectedNode!==null)nodeDetail(selectedNode,{reveal:false});else renderTreeState();
+}
+function nodeDetail(id,{reveal=true,select=false,compact=false}={}){
  $('sim-node-inspector').open=true;if(treeFullscreen)$('sim-tree-settings').open=false;
- selectedNode=id;preview=null;++editSequence;const node=treeNodes.get(id);if(!node)return;
+ const node=treeNodes.get(id);if(!node)return;
+ if(select&&!isStartNode(node)&&node.kind!=='mastery'&&!isAllocatedNode(node)){if(queuedNodes.has(id))queuedNodes.delete(id);else queuedNodes.add(id);}
+ selectedNode=id;preview=null;++editSequence;
  const allocated=isAllocatedNode(node),start=Object.values(result?.tree_effects?.class_starts || {}).includes(id)||node.kind==='ascendancy_start',decorative=node.kind==='mastery';
- $('sim-node-detail').innerHTML=`<h4 tabindex="-1">${esc(label(node.name))}</h4><p>${passiveKind(node)} · ${start?'開始点（取得数に含めません）':allocated?'取得済み':'未取得'}${node.ascendancy_id?' · アセンダンシー':''}</p><ul>${nodeStats(node).map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${node.name==='Attribute'?`<label>このノードの能力値<select id="sim-node-attribute"><option value="str">筋力 +5</option><option value="dex">器用さ +5</option><option value="int">知性 +5</option></select></label>`:''}${!start&&!decorative?`<div class="sim-actions"><button type="button" id="sim-node-preview" class="sim-primary">${allocated?'外す範囲と変化を確認':'取得経路と変化を確認'}</button></div>`:''}<div id="sim-node-preview-result" aria-live="polite"></div>`;
+ $('sim-node-detail').innerHTML=`<h4 tabindex="-1">${esc(label(node.name))}</h4><p>${passiveKind(node)} · ${start?'開始点（取得数に含めません）':allocated?'取得済み':'未取得'}${node.ascendancy_id?' · アセンダンシー':''}</p><ul>${nodeStats(node).map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${node.name==='Attribute'?`<label>このノードの能力値<select id="sim-node-attribute"><option value="str">筋力 +5</option><option value="dex">器用さ +5</option><option value="int">知性 +5</option></select></label>`:''}${!start&&!decorative?`<div class="sim-actions"><button type="button" id="sim-node-preview" class="sim-primary">${queuedNodes.size?`選んだ${queuedNodes.size}ノードの取得を確認`:allocated?'外す範囲と変化を確認':'取得経路と変化を確認'}</button></div>`:''}<div id="sim-node-preview-result" aria-live="polite"></div>`;
  if($('sim-node-attribute'))$('sim-node-attribute').value=plan.request.attribute_choices?.[id] || 'str';renderTreeState();
+ if(compact&&queuedNodes.size)$('sim-node-inspector').open=false;
  if(reveal&&!treeFullscreen){$('sim-node-detail').querySelector('h4').focus({preventScroll:true});$('sim-node-detail').scrollIntoView({block:'nearest',behavior:'instant'});}
 }
 async function previewNode(){
- const id=selectedNode,version=generation,token=++editSequence,source=clone(plan.request);
+ const id=selectedNode,version=generation,token=++editSequence,source=clone(plan.request),targets=[...queuedNodes];
+ $('sim-node-inspector').open=true;if(treeFullscreen)$('sim-tree-settings').open=false;preview=null;renderTreeState();
  $('sim-node-preview-result').textContent='経路と能力の変化を計算しています…';
  try{
- const action=source.allocated_nodes?.includes(id)?'refund':'allocate',next=await rpc('edit',{request:source,node:id,mode:0,action,quest_points:plan.questPoints});
+ const action=source.allocated_nodes?.includes(id)?'refund':'allocate',next=targets.length?await previewPassiveBatch(source,targets,payload=>rpc('edit',payload),plan.questPoints,()=>id===selectedNode&&version===generation&&token===editSequence):await rpc('edit',{request:source,node:id,mode:0,action,quest_points:plan.questPoints});
  if(id!==selectedNode||version!==generation||token!==editSequence)return;
- if(!next.valid){$('sim-node-preview-result').innerHTML='<p role="status">この変更は適用できません。接続経路・職業・通常／アセンダンシーのポイント上限を確認してください。</p>';return;}
- const request=applyTreeAllocation(source,next.result.allocation),calculated=await rpc('calculate',request);
+ if(!next.valid){$('sim-node-preview-result').innerHTML='<p role="status">この組み合わせは反映できません。接続経路・職業・通常／アセンダンシーのポイント上限を確認してください。一部だけ取得することはありません。</p>';return;}
+ const request=next.request || applyTreeAllocation(source,next.result.allocation),calculated=await rpc('calculate',request);
  if(id!==selectedNode||version!==generation||token!==editSequence)return;
- preview={...next,request};
+ preview={...next,request,selectedTargets:targets};
  const changed=[...next.result.added,...next.result.removed],delta=statistics.map(([key,title])=>{const before=statValue(result,key),after=statValue(calculated,key);return before!==null&&after!==null&&Math.abs(after-before)>.00001?`<li>${title}：${number(before,key)} → ${number(after,key)}（${after>before?'+':''}${number(after-before,key)}）</li>`:'';}).join('');
  const unresolved=changed.filter(n=>{const node=treeNodes.get(n);return node&&!node.stats.length&&!['mastery','ascendancy_start','jewel_socket'].includes(node.kind);});
- $('sim-node-preview-result').innerHTML=`<p>追加 ${next.result.added.length}ノード / 解除 ${next.result.removed.length}ノード<br>通常ポイント ${next.result.points_used} / ${next.result.points_max}</p><h5>反映後のステータス</h5>${delta?`<ul>${delta}</ul>`:'<p>表示中の数値に変化はありません。条件付き効果や必要な装備・スキルも確認してください。</p>'}${unresolved.length?'<p role="status">効果の定義がないノードを含みます。その個別効果は計算に含まれません。</p>':''}${calculated.unsupported_modifiers?.length?'<p role="status">未対応の効果があります。詳細は計算の確認事項を確認してください。</p>':''}<details><summary>変更される全ノードの能力</summary>${changed.map(n=>{const node=treeNodes.get(n);return node?`<h5>${next.result.added.includes(n)?'＋':'−'} ${esc(label(node.name))}</h5><ul>${nodeStats(node).map(line=>`<li>${esc(line)}</li>`).join('')}</ul>`:'';}).join('')}</details><button type="button" id="sim-node-apply" class="sim-primary">この変更を反映</button>`;renderTreeState();
+ $('sim-node-preview-result').innerHTML=`<p>${targets.length?`選択した${targets.length}ノードと必要な経路をまとめて反映します。<br>`:''}追加 ${next.result.added.length}ノード / 解除 ${next.result.removed.length}ノード<br>通常ポイント ${next.result.points_used} / ${next.result.points_max}</p><h5>反映後のステータス</h5>${delta?`<ul>${delta}</ul>`:'<p>表示中の数値に変化はありません。条件付き効果や必要な装備・スキルも確認してください。</p>'}${unresolved.length?'<p role="status">効果の定義がないノードを含みます。その個別効果は計算に含まれません。</p>':''}${calculated.unsupported_modifiers?.length?'<p role="status">未対応の効果があります。詳細は計算の確認事項を確認してください。</p>':''}<details><summary>変更される全ノードの能力</summary>${changed.map(n=>{const node=treeNodes.get(n);return node?`<h5>${next.result.added.includes(n)?'＋':'−'} ${esc(label(node.name))}</h5><ul>${nodeStats(node).map(line=>`<li>${esc(line)}</li>`).join('')}</ul>`:'';}).join('')}</details><button type="button" id="sim-node-apply" class="sim-primary">この変更を反映</button>`;renderTreeState();
  }catch(error){if(token===editSequence){$('sim-node-preview-result').textContent='変更を計算できませんでした。';showError(error);}}
 }
 
@@ -375,7 +392,7 @@ document.addEventListener('click',async event=>{
   if(target.dataset.weaponSet){plan=selectWeaponSet(plan,+target.dataset.weaponSet);selectedSlot='weapon1';commit();renderSlots();if(!$('sim-item-editor').hidden)openItemEditor();return;}
   if(target.id==='sim-passives-reset'){
    passiveResetBackup={allocated_nodes:clone(plan.request.allocated_nodes || []),attribute_choices:clone(plan.request.attribute_choices || {}),weapon_swap:clone(plan.request.weapon_swap || null),level:plan.request.character.level,questPoints:plan.questPoints};
-   plan.request.allocated_nodes=[];plan.request.attribute_choices={};if(plan.request.weapon_swap)plan.request.weapon_swap.exclusive_nodes=[[],[]];selectedNode=null;preview=null;commit();renderTreeState();renderNodeCatalog();$('sim-passives-undo').hidden=false;$('sim-node-detail').innerHTML='<h4>取得済み0から始めます</h4><p>参考ルートは目安です。自分でノードを選び、取得経路を確認して反映してください。</p>';return;
+   plan.request.allocated_nodes=[];plan.request.attribute_choices={};if(plan.request.weapon_swap)plan.request.weapon_swap.exclusive_nodes=[[],[]];selectedNode=null;preview=null;queuedNodes.clear();commit();renderTreeState();renderNodeCatalog();$('sim-passives-undo').hidden=false;$('sim-node-detail').innerHTML='<h4>取得済み0から始めます</h4><p>参考ルートは目安です。自分でノードを選び、取得経路を確認して反映してください。</p>';return;
   }
   if(target.id==='sim-passives-undo'&&passiveResetBackup){plan.request.allocated_nodes=passiveResetBackup.allocated_nodes;plan.request.attribute_choices=passiveResetBackup.attribute_choices;plan.request.character.level=passiveResetBackup.level ?? plan.request.character.level;plan.questPoints=passiveResetBackup.questPoints ?? plan.questPoints;if(passiveResetBackup.weapon_swap)plan.request.weapon_swap=passiveResetBackup.weapon_swap;passiveResetBackup=null;$('sim-passives-undo').hidden=true;renderInputs();commit();renderTreeState();renderNodeCatalog();$('sim-node-detail').innerHTML='<h4>取得状態を戻しました</h4><p>ノードを選ぶと能力と取得状態を確認できます。</p>';return;}
   if(target.dataset.slot){selectedSlot=target.dataset.slot;renderSlots();openItemEditor();return;}
@@ -404,12 +421,15 @@ document.addEventListener('click',async event=>{
   if(target.id==='sim-add-group'){if(plan.request.socket_groups.length>=20)throw Error('スキル組は20個までです。');plan.request.socket_groups.push({enabled:true,main_active_skill:1,gems:[{skill_id:catalog.gems.find(g=>!g.is_support&&g.name==='Spark').skill_id,level:1,quality:0}]});renderSkills();commit();return;}
   if(target.id==='sim-template-import'){await previewTemplateImport();return;}
   if(target.id==='sim-template-import-cancel'){++templateImportSequence;templateImport=null;$('sim-template-import-preview').replaceChildren();return;}
-  if(target.id==='sim-template-import-apply'&&templateImport){if(templateImport.version!==generation||templateImport.edited!==editSequence)throw Error('構成が変更されました。もう一度反映内容を確認してください。');passiveResetBackup={allocated_nodes:clone(plan.request.allocated_nodes || []),attribute_choices:clone(plan.request.attribute_choices || {}),weapon_swap:clone(plan.request.weapon_swap || null),level:plan.request.character.level,questPoints:plan.questPoints};plan.request=templateImport.request;plan.questPoints=templateImport.points;templateImport=null;selectedNode=null;preview=null;$('sim-template-import-preview').textContent='参考ツリーを反映して保存しました。';$('sim-passives-undo').hidden=false;renderInputs();commit();renderTreeState();renderNodeCatalog();return;}
+  if(target.id==='sim-template-import-apply'&&templateImport){if(templateImport.version!==generation||templateImport.edited!==editSequence)throw Error('構成が変更されました。もう一度反映内容を確認してください。');passiveResetBackup={allocated_nodes:clone(plan.request.allocated_nodes || []),attribute_choices:clone(plan.request.attribute_choices || {}),weapon_swap:clone(plan.request.weapon_swap || null),level:plan.request.character.level,questPoints:plan.questPoints};plan.request=templateImport.request;plan.questPoints=templateImport.points;templateImport=null;selectedNode=null;preview=null;queuedNodes.clear();$('sim-template-import-preview').textContent='参考ツリーを反映して保存しました。';$('sim-passives-undo').hidden=false;renderInputs();commit();renderTreeState();renderNodeCatalog();return;}
   if(target.id==='sim-template-focus'){focusTemplate();return;}
   if(target.id==='sim-template-next'){const id=templateRoute?.steps[templateStep].nodes.find(id=>!plan.request.allocated_nodes?.includes(id));if(id!==undefined){const node=treeNodes.get(id);view.x=node.x;view.y=node.y;view.w=2600;view.h=2000;updateView();nodeDetail(id);}return;}
-  if(target.dataset.nodeResult){nodeDetail(+target.dataset.nodeResult);const n=treeNodes.get(+target.dataset.nodeResult);view.x=n.x;view.y=n.y;view.w=4000;view.h=3000;updateView();return;}
-  if(target.id==='sim-node-preview'){await previewNode();return;}
-  if(target.id==='sim-node-apply'&&preview?.valid){plan.request=preview.request;const id=selectedNode;commit();nodeDetail(id,{reveal:false});renderNodeCatalog();return;}
+  if(target.dataset.nodeResult){nodeDetail(+target.dataset.nodeResult,{select:true});const n=treeNodes.get(+target.dataset.nodeResult);view.x=n.x;view.y=n.y;view.w=4000;view.h=3000;updateView();return;}
+  if(target.id==='sim-node-preview'||target.id==='sim-selection-preview'){await previewNode();return;}
+  if(target.id==='sim-selection-details'){$('sim-node-inspector').open=true;return;}
+  if(target.id==='sim-selection-clear'){queuedNodes.clear();preview=null;++editSequence;if(selectedNode!==null)nodeDetail(selectedNode,{reveal:false});else renderTreeState();return;}
+  if(target.dataset.selectionRemove){changeQueuedNode(+target.dataset.selectionRemove,false);return;}
+  if(target.id==='sim-node-apply'&&preview?.valid){plan.request=preview.request;const id=selectedNode;queuedNodes.clear();commit();nodeDetail(id,{reveal:false});renderNodeCatalog();return;}
   if(target.id==='sim-node-prev'||target.id==='sim-node-next'){nodePage+=target.id==='sim-node-next'?1:-1;renderNodeCatalog();return;}
   if(target.id==='sim-tree-overview'){fitTree();return;}
   if(target.id==='sim-tree-reference'){if(templateRoute)focusTemplate();else $('sim-tree-settings').open=true;return;}
@@ -441,7 +461,7 @@ document.addEventListener('change',async event=>{
   if(target.id==='sim-file'){
    const file=target.files[0];if(!file)return;if(file.size>2000000)throw Error('保存ファイルは2MBまでです。');const saved=parseSave(await file.text());
    const next=await rpc('calculate',saved.request),nodes=await rpc('tree',saved.request.tree_version || null);
-   plan={request:saved.request,questPoints:saved.questPoints || 0,notes:saved.notes || '',equipmentDrafts:saved.equipmentDrafts || {},weaponSets:saved.weaponSets || null};passiveResetBackup=null;$('sim-passives-undo').hidden=true;setCurrentTree(nodes);loadTemplate();result=next;baseline=null;selectedNode=null;preview=null;renderInputs();renderTree();renderResults();closeItemEditor();save();target.value='';
+   plan={request:saved.request,questPoints:saved.questPoints || 0,notes:saved.notes || '',equipmentDrafts:saved.equipmentDrafts || {},weaponSets:saved.weaponSets || null};passiveResetBackup=null;$('sim-passives-undo').hidden=true;setCurrentTree(nodes);loadTemplate();result=next;baseline=null;selectedNode=null;preview=null;queuedNodes.clear();renderInputs();renderTree();renderResults();closeItemEditor();save();target.value='';
   }
  }catch(error){showError(error);}
 });
@@ -490,7 +510,7 @@ treeSvg.addEventListener('pointermove',event=>{
 function endTreePointer(event,cancelled=false){
  if(!treePointers.has(event.pointerId))return;stopTreeGesture(event);const gesture=drag;treePointers.delete(event.pointerId);
  if(treePointers.size){const [pointerId,point]=[...treePointers][0];drag={mode:'pan',pointerId,rect:treeMap.getBoundingClientRect(),x:point.x,y:point.y,vx:view.x,vy:view.y,moved:true};return;}
- drag=null;if(!cancelled&&gesture?.mode==='pan'&&!gesture.moved&&Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)<=6&&gesture.node)nodeDetail(+gesture.node,{reveal:false});
+ drag=null;if(!cancelled&&gesture?.mode==='pan'&&!gesture.moved&&Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)<=6&&gesture.node)nodeDetail(+gesture.node,{reveal:false,select:true,compact:treeFullscreen&&$('sim-tree').classList.contains('sim-tree-mobile')});
 }
 treeSvg.addEventListener('pointerup',event=>endTreePointer(event));
 for(const type of ['pointercancel','lostpointercapture'])treeSvg.addEventListener(type,event=>endTreePointer(event,true));

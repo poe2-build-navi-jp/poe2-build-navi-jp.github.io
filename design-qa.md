@@ -43,4 +43,14 @@ Regression coverage uses the real WASM engine: level/stat changes, budget synchr
 
 Follow-up evidence: [settings](docs/simulator/2026-11-07/budget-settings.webp), [in-tree error](docs/simulator/2026-11-07/budget-error.webp).
 
+## Follow-up: multiple passive selection
+
+Unallocated map nodes now toggle an independent pending selection. The white dashed outline and “選択中…（未反映）” toolbar distinguish pending targets from blue Ninja references and gold acquired nodes. In the mobile full-screen editor, tapping nodes keeps the map available; “能力を見る” opens the detail panel when needed. Search results also support selecting additional targets. Tapping again, removing a selection chip or using the clear button removes pending targets without changing saved allocations.
+
+“まとめて確認” plans the requested acquisitions sequentially against a cloned request using the real graph editor. It deduplicates shared path nodes, calculates the complete combined stat result, and offers a single final apply action. A failed or cancelled batch returns no partial request. Changing the selection or budget invalidates pending calculations. Confirmed allocations clear the pending selection and are saved through the existing calculation/save pipeline. Already acquired nodes retain the existing single-node refund flow. Pending selections are not represented as saved acquired nodes.
+
+Browser follow-up at 390 × 844 CSS px: native consecutive taps on 59779 and 11311 retained two selected targets while acquired count remained zero. Combined preview showed 2 points, Armour 0 → 20 and Evasion 7 → 23. One confirmation acquired both; save/return and reload retained both nodes and the resulting stats. No app-origin console errors were observed. Regression tests cover toggling and clearing, deduplicated shared routes, all-or-nothing budget failure, cancellation during an edit, combined real WASM effects and saved-state validation. Existing touch/pinch and budget tests still pass. Physical iPhone/Safari testing remains outside this verification.
+
+Evidence: [two pending targets](docs/simulator/2026-11-07/multi-selected.webp), [combined preview](docs/simulator/2026-11-07/multi-preview.webp).
+
 final result: passed
