@@ -23,10 +23,11 @@ export function parseSave(text) {
   if (value.version !== SAVE_VERSION || value.engine !== ENGINE_VERSION || !validRequest(value.request)
     || !Number.isInteger(value.questPoints) || value.questPoints<0 || value.questPoints>24
     || typeof value.notes!=='string' || value.notes.length>20000) throw new Error('保存データの形式または計算エンジンの版が異なります。');
-  return value;
+  if(value.weaponSets)weaponSetState(value.request,value.equipmentDrafts || {},value.weaponSets);
+ return value;
 }
-export function makeSave(preset, request, questPoints, notes = '', equipmentDrafts = {}) {
-  return {version:SAVE_VERSION, engine:ENGINE_VERSION, preset, request, questPoints, notes, equipmentDrafts, savedAt:new Date().toISOString()};
+export function makeSave(preset, request, questPoints, notes = '', equipmentDrafts = {}, weaponSets = null) {
+  return {version:SAVE_VERSION, engine:ENGINE_VERSION, preset, request, questPoints, notes, equipmentDrafts, weaponSets:weaponSetState(request,equipmentDrafts,weaponSets), savedAt:new Date().toISOString()};
 }
 export const statValue = (result, id) => result?.stats?.find(stat => stat.id === id)?.value ?? null;
 export function treeEdges(nodes) {
@@ -130,3 +131,18 @@ export function parseJapaneseModifiers(text,catalog,names,original=[]){
 }
 
 export function passiveComparison(own,reference){const a=new Set(own),b=new Set(reference);return {shared:[...a].filter(n=>b.has(n)),referenceOnly:[...b].filter(n=>!a.has(n)),ownOnly:[...a].filter(n=>!b.has(n))};}
+
+const weaponSlots=new Set(['weapon1','weapon2']);
+export function weaponSetState(request,drafts={},previous=null){
+ const state=previous?structuredClone(previous):{active:1,sets:[{items:[],drafts:{}},{items:[],drafts:{}}]};
+ if(![1,2].includes(state.active)||!Array.isArray(state.sets)||state.sets.length!==2||state.sets.some(set=>!set||!Array.isArray(set.items)||set.items.length>2||set.items.some(item=>!weaponSlots.has(item.slot)||typeof item.text!=='string')||!set.drafts||typeof set.drafts!=='object'))throw Error('武器スロットの保存形式が正しくありません。');
+ state.sets[state.active-1]={items:structuredClone((request.items || []).filter(item=>weaponSlots.has(item.slot))),drafts:structuredClone(Object.fromEntries(Object.entries(drafts).filter(([slot])=>weaponSlots.has(slot))))};return state;
+}
+export function selectWeaponSet(plan,active){
+ if(![1,2].includes(active))throw Error('武器スロットは1または2を選んでください。');
+ const next=structuredClone(plan),state=weaponSetState(next.request,next.equipmentDrafts || {},next.weaponSets);state.active=active;next.weaponSets=state;
+ next.request.items=[...(next.request.items || []).filter(item=>!weaponSlots.has(item.slot)),...structuredClone(state.sets[active-1].items)];
+ next.equipmentDrafts={...Object.fromEntries(Object.entries(next.equipmentDrafts || {}).filter(([slot])=>!weaponSlots.has(slot))),...structuredClone(state.sets[active-1].drafts)};
+ if(next.request.weapon_swap){const swap=next.request.weapon_swap,exclusive=new Set((swap.exclusive_nodes || []).flat());next.request.allocated_nodes=[...new Set([...(next.request.allocated_nodes || []).filter(id=>!exclusive.has(id)),...(swap.exclusive_nodes?.[active-1] || [])])];swap.active=active;}
+ return next;
+}
