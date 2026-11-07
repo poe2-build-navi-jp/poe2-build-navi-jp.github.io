@@ -2,7 +2,7 @@ import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, re
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
-const [presets,localization,equipmentCatalog,routeCatalog] = await Promise.all(['/data/simulator-presets.json?v=5a1df9b8e3','/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment.json?v=0f1b3fa2e3','/data/simulator-routes.json?v=19f7f146ca'].map(async url => {
+const [presets,localization,equipmentCatalog,routeCatalog] = await Promise.all(['/data/simulator-presets.json?v=5a1df9b8e3','/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment.json?v=0f1b3fa2e3','/data/simulator-routes.json?v=e65f535abb'].map(async url => {
  const r=await fetch(url);if(!r.ok)throw Error('ビルド一覧を読み込めません。再読み込みしてください。');return r.json();
 })).catch(error=>{$('sim-chooser').insertAdjacentHTML('beforeend',`<p role="alert">${esc(error.message)}</p>`);throw error;});
 const names=localization.names;
@@ -257,10 +257,10 @@ function renderTreeState(){
  const chosen=[...allocated];$('sim-passives-reset').disabled=chosen.length===0;$('sim-point-count').textContent=`取得済み ${chosen.length}ノード · 通常 ${chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length} / ${plan.request.character.level-1+plan.questPoints}pt · アセンダンシー ${chosen.filter(id=>treeNodes.get(id)?.ascendancy_id).length}ノード`;renderTemplateSummary();
 }
 function loadTemplate(){
- templateRoute=(!plan.request.tree_version||plan.request.tree_version==='0_5')?routeCatalog.templates[selectedPreset.id]:null;templateStep=0;templateVisible=true;
+ const reference=routeCatalog.source==='poe.ninja'?routeCatalog.templates[selectedPreset.id]:null;const verified=reference?.source?.verifiedAt&&/^https:\/\/poe\.ninja\/(?:ja\/)?poe2\/builds\//.test(reference?.source?.url || '');templateRoute=verified&&(!plan.request.tree_version||plan.request.tree_version==='0_5')?reference:null;templateStep=0;templateVisible=true;
  try{const saved=JSON.parse(localStorage.getItem(`poe2-template:v1:${selectedPreset.id}`));if(saved){templateStep=Math.max(0,Math.min(4,Number(saved.step)||0));templateVisible=saved.visible!==false;}}catch{}
- $('sim-template-stage').innerHTML=(templateRoute?.steps || []).map((step,i)=>`<option value="${i}">目安 ${i+1}：${esc(label(catalog.tree.find(n=>n.skill===step.target)?.name || '目標'))}（${step.nodes.length}pt）</option>`).join('');
- $('sim-template-stage').value=String(templateStep);$('sim-template-visible').checked=templateVisible;$('sim-template-controls').hidden=!templateRoute;$('sim-template-unavailable').hidden=!!templateRoute;updateTemplate();
+ $('sim-template-stage').innerHTML=(templateRoute?.steps || []).map((step,i)=>`<option value="${i}">NINJA ${i+1}：${esc(label(catalog.tree.find(n=>n.skill===step.target)?.name || '目標'))}（${step.nodes.length}pt）</option>`).join('');
+ if(templateRoute){$('sim-template-source').href=templateRoute.source.url;}$('sim-template-stage').value=String(templateStep);$('sim-template-visible').checked=templateVisible;$('sim-template-controls').hidden=!templateRoute;$('sim-template-unavailable').hidden=!!templateRoute;updateTemplate();
 }
 function updateTemplate(){
  const step=templateRoute?.steps[templateStep];$('sim-tree-svg').classList.toggle('has-template',templateVisible&&!!step);templateNodes=new Set(step?[templateRoute.root,...step.nodes]:[]);templateEdges=new Set();
