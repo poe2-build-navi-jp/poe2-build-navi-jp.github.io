@@ -12,6 +12,7 @@ export const HEAD_BLOCKS = [
   ["build-ux", marker("build-ux")],
   ["one-faq", marker("one-faq")],
   ["page-schema", marker("page-schema")],
+  ["page-date-schema", marker("page-date-schema")],
   ["og-image", marker("og-image")],
   ["site-icon", marker("site-icon")],
   // enhance-editorial-trust: shared Organization/WebSite identity on the home and about pages.
