@@ -12,7 +12,8 @@ for(const g of guides){
  assert(d.querySelectorAll('#sources li').length>=1);
  for(const a of d.querySelectorAll('a[href^="#"]')) assert(d.getElementById(a.hash.slice(1)),`${g.slug}: missing ${a.hash}`);
  for(const a of d.querySelectorAll('a[href^="/"]')){const p=a.getAttribute('href').split(/[?#]/)[0];const target=path.extname(p)?path.join(root,p):path.join(root,p,'index.html');assert(fs.existsSync(target),`${g.slug}: missing route or asset ${p}`);}
- for(const s of g.sources){assert(['www.pathofexile.com','pathofexile.com','www.poe2wiki.net','poe2wiki.net','poe2db.tw','www.poe-vault.com','mobalytics.gg','pathofexile.gg','game8.co','www.gamerguides.com','www.pcgamesn.com','poe2dictionary.com','exiledb.com','poe.ninja'].includes(new URL(s.url).hostname),`${g.slug}: source must be reviewed official or named reference`);assert(/^\d{4}-\d{2}-\d{2}$/.test(s.checkedAt));}
+ const screenshotUrls=new Set(g.sections.flatMap(section=>section.screenshots||[]).map(image=>'https://poe2-build-navi-jp.github.io'+image.src));
+ for(const s of g.sources){assert(screenshotUrls.has(s.url)||['www.pathofexile.com','pathofexile.com','www.poe2wiki.net','poe2wiki.net','poe2db.tw','www.poe-vault.com','mobalytics.gg','pathofexile.gg','game8.co','www.gamerguides.com','www.pcgamesn.com','poe2dictionary.com','exiledb.com','poe.ninja'].includes(new URL(s.url).hostname),`${g.slug}: source must be reviewed official or named reference`);assert(/^\d{4}-\d{2}-\d{2}$/.test(s.checkedAt));}
  assert(sitemap.includes(`/guides/${g.slug}/</loc>`));
  assert(!html.includes('[source:'),'Source markers must render into links');
  const schema=[...d.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent));
