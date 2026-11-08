@@ -1,2 +1,7 @@
 node_modules/
 .indexnow/
+
+# secrets / local Claude Code settings
+.env
+.env.*
+.claude/settings.local.json
