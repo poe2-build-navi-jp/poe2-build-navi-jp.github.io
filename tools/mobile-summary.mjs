@@ -33,7 +33,7 @@ export function applyMobileSummary(html, beginner) {
     const nav = d.querySelector('.site-nav');
     if (nav) disclose(nav.parentElement, [nav], 'メニュー', '攻略ガイド・ビルド一覧');
     const hero = d.querySelector('.discovery-hero');
-    disclose(hero, [hero.querySelector(':scope > p:not(.section-kicker)'), hero.querySelector('.update-strip')], '選び方・対応パッチを確認');
+    disclose(hero, [hero.querySelector(':scope > p:not(.section-kicker):not(.page-updated)'), hero.querySelector('.update-strip')], '選び方・対応パッチを確認');
     const featured = d.querySelector('#featured-builds');
     disclose(featured, [featured.querySelector('.discovery-grid')], 'おすすめ6ビルドを詳しく比較', 'おすすめ理由・弱点・操作・SSF・確認資料');
     // Do not force duplicate section navigation ahead of the first choice.

@@ -1,13 +1,16 @@
 // Run after enhance-page-schema. Attribution and citations reflect visible content;
-// this pass never changes publication, source-review or modification dates.
+// Publication/source-review dates are preserved. Page modification signals use the content ledger.
 import {readFile, writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {parse} from 'parse5';
 import {insertBlock} from './block-order.mjs';
+import {synchronizePageDate} from './page-date-signals.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const site = JSON.parse(await readFile(resolve(root, 'data/site.json'), 'utf8'));
 const base = site.baseUrl;
+const pageDates=JSON.parse(await readFile(resolve(root,'data/page-dates.json'),'utf8'));
+const today=new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Tokyo'});
 const organization = {'@type':'Organization', '@id':`${base}/about/#organization`, name:site.operatorName, url:`${base}/about/`};
 const website = {'@type':'WebSite', '@id':`${base}/#website`, name:site.siteName, url:`${base}/`, inLanguage:'ja', publisher:organization};
 const paths = [...(await readFile(resolve(root, 'sitemap.xml'), 'utf8')).matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => new URL(m[1]).pathname);
@@ -82,6 +85,8 @@ for (const path of paths) {
   const graph = [organization, ...(!hasWebsite ? [website] : [])];
   html = insertBlock(html, '</head>', 'identity-schema', `<!-- identity-schema:start --><script type="application/ld+json">${json({'@context':'https://schema.org','@graph':graph})}</script><!-- identity-schema:end -->`);
  }
+ const heading=nodes.find(n=>n.tagName==='h1');
+ html=synchronizePageDate(html,{date:pageDates[path]?.date,url:base+path,title:heading?text(heading):path,today});
  if (html !== original) await writeFile(file, html);
 }
 console.log(`Editorial trust: ${articleCount} article credits; ${citationCount} visible source citations added.`);

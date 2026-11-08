@@ -1,21 +1,14 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { contentHash } from "./page-content.mjs";
+import { recordPageDate } from "./page-content.mjs";
 const root=resolve(import.meta.dirname,"..");
 const [builds,classes,guides,terms,seoPages,site]=await Promise.all(["builds","classes","guides","dictionary","seo-pages","site"].map(name=>readFile(resolve(root,`data/${name}.json`),"utf8").then(JSON.parse)));
 const strategyGuides=JSON.parse(await readFile(resolve(root,"data/strategy-guides.json"),"utf8"));
 const coreEntities=JSON.parse(await readFile(resolve(root,'data/core-entities.json'),'utf8'));
 const base=site.baseUrl;
-const defaultDate=site.lastUpdated;
-const changedDate=site.latestPatchCheckedAt;
 const indexableBuilds=builds.filter(x=>x.status==="verified");
-const buildLastmod=new Map(indexableBuilds.map(build=>[
-  `/builds/${build.classSlug}/${build.slug}/`,
-  [changedDate,build.updatedAt,...(build.changeHistory||[]).map(entry=>entry.date)].filter(Boolean).sort().at(-1)
-]));
 const noindex=new Set(JSON.parse(await readFile(resolve(root,"data/noindex.json"),"utf8")).paths);
 const urls=[...new Set(["/","/simulator/","/search/","/name-index/","/skills/","/equipment/",...coreEntities.map(e=>`/${e.kind==='skill'?'skills':'equipment'}/${e.slug}/`),"/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/beginner-builds/","/guides/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/","/site-map/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...strategyGuides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])].filter(path=>!noindex.has(path));
-const changedPaths=new Set(["/","/leveling/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`)]);
 const {ROADMAP_BUILD_IDS}=await import("./roadmap-builds.mjs");
 const priorityBuildIds=new Set(ROADMAP_BUILD_IDS);
 const imageMap=new Map([
@@ -34,11 +27,11 @@ const datesFile=resolve(root,"data/page-dates.json");
 const oldDates=JSON.parse(await readFile(datesFile,"utf8").catch(()=>"{}"));
 const pageDates={};
 for(const path of urls){
-  const hash=contentHash(await readFile(resolve(root,`${path.slice(1)}index.html`),"utf8"));
-  pageDates[path]=oldDates[path]?.hash===hash?oldDates[path]:{hash,date:today};
+  const html=await readFile(resolve(root,`${path.slice(1)}index.html`),"utf8");
+  pageDates[path]=recordPageDate(html,oldDates[path],today);
 }
 await writeFile(datesFile,`${JSON.stringify(pageDates,null,1)}\n`);
-const lastmod=path=>[buildLastmod.get(path)||(changedPaths.has(path)?changedDate:defaultDate),pageDates[path].date].sort().at(-1);
+const lastmod=path=>pageDates[path].date;
 const xmlEscape=value=>String(value).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.map((path,i)=>{const image=imageMap.get(path);return `  <url><loc>${base}${path}</loc><lastmod>${lastmod(path)}</lastmod><priority>${i===0?"1.0":path==="/best-builds/"||path.startsWith("/builds/")||path.startsWith("/classes/")?"0.9":"0.7"}</priority>${image?`<image:image><image:loc>${base}${image[0]}</image:loc></image:image>`:""}${(strategyImages.get(path)||[]).map(src=>`<image:image><image:loc>${base}${xmlEscape(src)}</image:loc></image:image>`).join("")}</url>`}).join("\n")}\n</urlset>\n`;
 await writeFile(resolve(root,"sitemap.xml"),xml);
