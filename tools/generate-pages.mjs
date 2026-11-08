@@ -1,5 +1,6 @@
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import {rows as buildFactRows} from "./build-facts.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const builds = JSON.parse(await readFile(resolve(root, "data/builds.json"), "utf8"));
@@ -29,6 +30,12 @@ function detailPage(build) {
   const title = build.seoTitle || `PoE2 ${build.version} ${build.name} ビルド｜Lv1〜Endgame育成`;
   const description = build.seoDescription || `PoE2 ${build.version}対応、${build.name}のスキル・サポート・パッシブ・装備とLv1〜Endgame育成手順。現在Lvから今やること3つを確認できます。`;
   const url = `${baseUrl}/builds/${build.classSlug}/${build.slug}/`;
+  const factValues = new Map(buildFactRows(build, discovery));
+  const switchNote = factValues.get("主力への切替目安");
+  const timingSource = build.mainSkillTiming;
+  const source = timingSource
+    ? {url:timingSource.guide, checkedAt:timingSource.checkedAt}
+    : build.sources?.[0];
   const verified = build.status === "verified";
   const indexable = ["verified", "partial"].includes(build.status);
   const breadcrumb = JSON.stringify({
@@ -63,7 +70,7 @@ function detailPage(build) {
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${url}">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260909-1"><link rel="stylesheet" href="/assets/level-input.css">
+  <link rel="stylesheet" href="/assets/styles.css?v=20260909-1"><link rel="stylesheet" href="/assets/level-input.css"><link rel="stylesheet" href="/assets/build-answer.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisher}" crossorigin="anonymous"></script>
   <script type="application/ld+json">${breadcrumb.replaceAll("<", "\\u003c")}</script>
   <script type="module" src="/assets/detail.js?v=20260909-1"></script>
@@ -75,7 +82,7 @@ function detailPage(build) {
   <main id="main">
     <section class="build-hero">
       <div class="build-hero-grid">
-        <div><p id="build-class" class="eyebrow">${escapeHtml(build.className)} / ${escapeHtml(build.ascendancy)}</p><h1 id="build-name">PoE2 ${escapeHtml(build.name)} ビルド｜${escapeHtml(build.version)}育成</h1><p id="build-skill" class="lead">メインスキル：${escapeHtml(build.mainSkill)}</p><p>現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。</p><p class="status-note" data-build-status="${escapeHtml(build.status)}">${escapeHtml(statusLabels[build.status] || "状態未登録")}</p><p class="status-note">対応環境 ${escapeHtml(build.version)}・育成手順の原典照合 ${escapeHtml(build.updatedAt)}・<a href="${escapeHtml(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式パッチノート確認 ${escapeHtml(site.latestPatchCheckedAt)}</a></p><div class="build-overview"><p><b>おすすめ：</b>${escapeHtml(build.audience)}</p><p><b>弱点：</b>${escapeHtml(build.weaknesses?.[0] || "未登録")}</p><p><b>操作：</b>${escapeHtml(build.difficulty)}　<b>SSF：</b>${ssfLabel(build)}</p></div><div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${escapeHtml(build.version)}</div><div class="fact">育成手順の原典照合：${escapeHtml(build.updatedAt)}</div></div></div>
+        <div><p id="build-class" class="eyebrow">${escapeHtml(build.className)} / ${escapeHtml(build.ascendancy)}</p><h1 id="build-name">PoE2 ${escapeHtml(build.name)} ビルド｜${escapeHtml(build.version)}育成</h1><p class="build-direct-answer">${escapeHtml(build.className)}の${escapeHtml(build.ascendancy)}で、${escapeHtml(build.mainSkill)}を主力にするビルドです。</p><p id="build-skill" class="lead">メインスキル：${escapeHtml(build.mainSkill)}</p><p>現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。</p><p class="status-note" data-build-status="${escapeHtml(build.status)}">${escapeHtml(statusLabels[build.status] || "状態未登録")}</p><p class="status-note">対応環境 ${escapeHtml(build.version)}・育成手順の原典照合 ${escapeHtml(build.updatedAt)}・<a href="${escapeHtml(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式パッチノート確認 ${escapeHtml(site.latestPatchCheckedAt)}</a></p><div class="build-overview"><p><b>おすすめ：</b>${escapeHtml(build.audience)}</p><p><b>弱点：</b>${escapeHtml(build.weaknesses?.[0] || "未登録")}</p><p><b>主力への切替：</b>${escapeHtml(switchNote.replace(/[。．]$/, ""))}。Lvだけで決めず、下の育成手順でジェム・装備・進行条件を確認してください。</p><p><b>操作：</b>${escapeHtml(build.difficulty)}　<b>SSF：</b>${ssfLabel(build)}</p>${source ? `<p class="build-answer-source"><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">育成の原典</a>（資料確認 ${escapeHtml(source.checkedAt)}）${timingSource ? ` · <a href="${escapeHtml(timingSource.source)}" target="_blank" rel="noopener noreferrer">スキルの使用条件</a>` : ""} · <a href="#source-list">情報源と確認範囲</a></p>` : ""}</div><div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${escapeHtml(build.version)}</div><div class="fact">育成手順の原典照合：${escapeHtml(build.updatedAt)}</div></div></div>
         <section id="level-card" class="level-card" aria-labelledby="level-title"><div class="level-number"><h2 id="level-title">現在Lv</h2><output id="level-output" for="level-input level-range">Lv1</output></div><div class="level-controls"><button id="level-minus" type="button" aria-label="レベルを1下げる">−</button><input id="level-input" type="number" inputmode="numeric" enterkeyhint="done" min="1" max="100" step="1" value="1" aria-label="現在レベル" aria-describedby="level-input-help"><button id="level-plus" type="button" aria-label="レベルを1上げる">＋</button></div><input id="level-range" type="range" min="1" max="100" value="1" aria-label="現在レベルのスライダー"><div class="range-labels"><span>Lv1</span><span>Lv100</span></div><p id="level-input-help" class="disclaimer">数字を直接入力できます（1〜100）。Enterまたは欄外をタップして確定。＋／−でも変更でき、この端末に保存されます。</p></section>
       </div>
     </section>
