@@ -8,7 +8,7 @@ import {resolve} from 'node:path';
 import {insertBlock} from './block-order.mjs';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
-const [site,guides,terms,pageDates,intents]=await Promise.all(['site','guides','dictionary','page-dates','guide-search-intents'].map(n=>read(`data/${n}.json`).then(JSON.parse)));
+const [site,guides,terms,pageDates,intents,builds]=await Promise.all(['site','guides','dictionary','page-dates','guide-search-intents','builds'].map(n=>read(`data/${n}.json`).then(JSON.parse)));
 const base=site.baseUrl;
 // The guide chapters and dictionary pages were first published together (git: 2026-09-10).
 const FIRST_PUBLISHED='2026-09-10';
@@ -32,6 +32,15 @@ for(const path of paths){
  if(crumbs&&!html.includes('"BreadcrumbList"')){
   const items=[...crumbs.matchAll(/<li>([\s\S]*?)<\/li>/g)].map(([,li])=>({name:text(li),href:li.match(/href="([^"]+)"/)?.[1]??path}));
   data.push({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:items.map((item,i)=>({"@type":"ListItem",position:i+1,name:item.name,item:`${base}${item.href}`}))});
+ }
+ const build=builds.find(b=>b.status==='verified' && path===`/builds/${b.classSlug}/${b.slug}/`);
+ if(build && !html.includes('"@type":"Article"')) {
+  // Content dates describe editorial changes, not a fresh verification of game mechanics.
+  const article={"@context":"https://schema.org","@type":"Article","@id":`${base}${path}#article`,headline:h1,description:meta('description'),inLanguage:'ja',mainEntityOfPage:`${base}${path}`,author:org,publisher,articleSection:'ビルド・育成ガイド'};
+  if(pageDates[path]?.date)article.dateModified=pageDates[path].date;
+  const image=html.match(/<figure\b[^>]*class="[^"]*seo-visual[^"]*"[^>]*>[\s\S]*?<img\b[^>]*src="([^"]+)"/)?.[1];
+  if(image)article.image=new URL(image,base).href;
+  data.push(article);
  }
  const guide=guides.find(g=>path===`/guides/${g.slug}/`);
  if(guide&&!html.includes('"@type":"Article"')){
