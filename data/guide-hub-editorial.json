@@ -4,39 +4,83 @@
       "title": "初めて遊ぶなら",
       "answer": "職業とビルドを決め、Act1から進めましょう。育成中は現在Lvに合うスキル・装備・切替条件を確認できます。",
       "links": [
-        {"href": "/beginner-builds/", "label": "初心者向けビルドを選ぶ"},
-        {"href": "/guides/act-1-walkthrough/", "label": "Act1の進め方"}
+        {
+          "href": "/beginner-builds/",
+          "label": "初心者向けビルドを選ぶ"
+        },
+        {
+          "href": "/guides/act-1-walkthrough/",
+          "label": "Act1の進め方"
+        }
       ]
     },
     {
       "title": "Actで止まった・すぐ死ぬなら",
       "answer": "進行が止まったらクエストの条件、戦闘で倒されるなら耐性・防御・回復を分けて確認。恒久報酬の取り忘れも点検します。",
       "links": [
-        {"href": "/guides/campaign-progression/", "label": "進まない場所を確認"},
-        {"href": "/guides/why-i-die/", "label": "死亡原因を切り分ける"},
-        {"href": "/guides/permanent-rewards/", "label": "恒久報酬を点検"}
+        {
+          "href": "/guides/campaign-progression/",
+          "label": "進まない場所を確認"
+        },
+        {
+          "href": "/guides/why-i-die/",
+          "label": "死亡原因を切り分ける"
+        },
+        {
+          "href": "/guides/permanent-rewards/",
+          "label": "恒久報酬を点検"
+        }
       ]
     },
     {
       "title": "キャンペーンを終えたら",
       "answer": "耐性・主力スキル・装備を整え、攻略できる低Tierのマップから開始。石の補充とAtlasの進行を確認して次の段階へ進みます。",
       "links": [
-        {"href": "/guides/after-campaign/", "label": "クリア後の準備"},
-        {"href": "/guides/atlas-progression/", "label": "Atlasを進める"},
-        {"href": "/guides/tier-16-waystones/", "label": "T16の入手と補充"}
+        {
+          "href": "/guides/after-campaign/",
+          "label": "クリア後の準備"
+        },
+        {
+          "href": "/guides/atlas-progression/",
+          "label": "Atlasを進める"
+        },
+        {
+          "href": "/guides/tier-16-waystones/",
+          "label": "T16の入手と補充"
+        }
       ]
     },
     {
       "title": "装備を買う前・ボスに挑む前なら",
       "answer": "欲しい効果と、交換で失う耐性・能力値・回復を先に比較。ボスの予兆と、実際に倒した装備例を別々に確認できます。",
       "links": [
-        {"href": "/guides/unique-gear/", "label": "ユニークの採用条件"},
-        {"href": "/guides/mageblood-legacies/", "label": "メイジブラッドの遺産比較"},
-        {"href": "/guides/pinnacle-bosses/", "label": "ボスの予兆と避け方"}
+        {
+          "href": "/guides/unique-gear/",
+          "label": "ユニークの採用条件"
+        },
+        {
+          "href": "/guides/mageblood-legacies/",
+          "label": "メイジブラッドの遺産比較"
+        },
+        {
+          "href": "/guides/pinnacle-bosses/",
+          "label": "ボスの予兆と避け方"
+        }
       ]
     }
   ],
   "records": [
+    {
+      "slug": "xesht",
+      "title": "ゼシュト：アビーターと同じ装備で撃破",
+      "label": "撃破報告・今回の画面の表示値",
+      "image": "/images/poe2/xesht/clear-scene.webp",
+      "imageAlt": "ゼシュト攻略後として提供された闘技場の画像。倒れたボスとマップデバイスへ戻るポータル",
+      "width": 1920,
+      "height": 1080,
+      "answer": "ライフ2,169・ES967の画面を掲載。装備10点は神性のアービターと同じ構成を参照し、射撃・頭上の手・召喚への対処を確認できます。",
+      "action": "画像・装備構成・予兆の避け方を見る"
+    },
     {
       "slug": "arbiter-of-divinity",
       "title": "神性のアービター：Lv87の撃破装備と画面",

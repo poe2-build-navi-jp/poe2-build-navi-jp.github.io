@@ -10,7 +10,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "27a20b90294adae4",
+  "hash": "4a7952fe49e0fd8a",
   "date": "2026-11-09",
   "hashVersion": 2
  },
@@ -210,7 +210,7 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "976609d89987aa5e",
+  "hash": "c6966f2d1ef0f953",
   "date": "2026-11-09",
   "hashVersion": 2
  },
@@ -265,8 +265,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "5cab1078fffd71cd",
-  "date": "2026-11-07",
+  "hash": "d95c2541f23a85c9",
+  "date": "2026-11-09",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -495,8 +495,8 @@
   "hashVersion": 2
  },
  "/guides/pinnacle-bosses/": {
-  "hash": "5afb2e73fee19357",
-  "date": "2026-11-04",
+  "hash": "df341c4748659212",
+  "date": "2026-11-09",
   "hashVersion": 2
  },
  "/guides/arbiter-of-ash-clear-record/": {
@@ -510,8 +510,8 @@
   "hashVersion": 2
  },
  "/guides/arbiter-of-divinity/": {
-  "hash": "8ecc618fed2d73c8",
-  "date": "2026-11-05",
+  "hash": "7875140f396b94e8",
+  "date": "2026-11-09",
   "hashVersion": 2
  },
  "/guides/mageblood-legacies/": {
@@ -567,6 +567,11 @@
  "/guides/valuable-drops-act-4/": {
   "hash": "faf6684c5a27776b",
   "date": "2026-11-06",
+  "hashVersion": 2
+ },
+ "/guides/xesht/": {
+  "hash": "4584455768193271",
+  "date": "2026-11-09",
   "hashVersion": 2
  },
  "/dictionary/build/": {
