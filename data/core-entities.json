@@ -1538,7 +1538,8 @@
       "ベースは実用的なベルト。装備条件はレベル55。[source:1][source:2]"
     ],
     "acquisition": [
-      "特定の入手場所、ドロップ率、相場は確認していない。この記事では入手場所や価格を断定しない。"
+      "どこでもドロップする。ノーマルの実用的なベルトに可能性のオーブを使って作ることもできる。[source:4]",
+      "ドロップ率、相場は確認していない。入手方法の詳細はこのサイトの入手ガイドで解説している。"
     ],
     "cautions": [
       "遺産の組み合わせは個体ごとに違う。重複の効果や計算例は、このサイトのメイジブラッドの遺産ガイドで解説している。[source:3]",
@@ -1547,6 +1548,10 @@
     "buildIds": [],
     "buildsNote": "このサイトの掲載ビルドで採用を確認した装備ではありません。遺産の組み合わせが自分のビルドに合うかを確認してください。",
     "relatedLinks": [
+      {
+        "href": "/guides/mageblood-acquisition/",
+        "label": "入手方法：ドロップ・可能性のオーブ・トレード"
+      },
       {
         "href": "/guides/mageblood-legacies/",
         "label": "メイジブラッドの遺産一覧と重複の計算"
@@ -1578,6 +1583,12 @@
         "url": "https://poe2-build-navi-jp.github.io/guides/mageblood-legacies/",
         "checkedAt": "2026-11-03",
         "supports": "遺産14種の効果と重複の説明（公式0.5.0とPoE2DBで照合済み）。"
+      },
+      {
+        "name": "PoE2 Wiki：Mageblood",
+        "url": "https://www.poe2wiki.net/wiki/Mageblood",
+        "checkedAt": "2026-11-09",
+        "supports": "入手：どこでもドロップし、可能性のオーブで作れる。"
       }
     ]
   }
