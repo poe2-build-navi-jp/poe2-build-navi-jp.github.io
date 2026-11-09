@@ -17,7 +17,7 @@ assert(groups.some(g=>g.agent==='oai-searchbot'));
 for(const path of ['/','/guides/','/images/poe2/a.webp',...excluded])assert(!allowed('GPTBot',path));
 assert.equal((robots.match(/^Sitemap:/gm)||[]).length,1);
 const guides=JSON.parse(read('data/strategy-guides.json'));
-const targets=['arbiter-of-divinity','atlas-progression','beginner-currency-farming','build-gear-buying-order','campaign-progression','currency-guide','expedition','loot-filter','mageblood-legacies','runeseekers-call','tier-16-waystones','trade','trial-of-chaos','twister-gemling-transition','waystones-tablets'];
+const targets=['arbiter-of-divinity','atlas-progression','beginner-currency-farming','build-gear-buying-order','campaign-progression','currency-guide','expedition','loot-filter','mageblood-acquisition','mageblood-legacies','runeseekers-call','tier-16-waystones','trade','trial-of-chaos','twister-gemling-transition','waystones-tablets','xesht'];
 assert.deepEqual(guides.filter(g=>g.verification).map(g=>g.slug).sort(),targets.slice().sort());
 for(const g of guides){const d=new JSDOM(read(`guides/${g.slug}/index.html`)).window.document;const block=d.querySelector('.guide-verification');assert(block,`${g.slug}: review panel`);if(!targets.includes(g.slug))continue;
  // The review panel also shows scope and dates; the three evidence rows must always be there.

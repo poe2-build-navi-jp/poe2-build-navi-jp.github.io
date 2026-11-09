@@ -10,7 +10,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "4a7952fe49e0fd8a",
+  "hash": "91eb6df34086aed5",
   "date": "2026-11-09",
   "hashVersion": 2
  },
@@ -170,8 +170,8 @@
   "hashVersion": 2
  },
  "/equipment/mageblood/": {
-  "hash": "1d81883a74eaf9c3",
-  "date": "2026-11-04",
+  "hash": "24a0d7f37f8c34a8",
+  "date": "2026-11-09",
   "hashVersion": 2
  },
  "/builds/": {
@@ -210,7 +210,7 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "c6966f2d1ef0f953",
+  "hash": "371a6263dcf8f6bf",
   "date": "2026-11-09",
   "hashVersion": 2
  },
@@ -265,7 +265,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "d95c2541f23a85c9",
+  "hash": "f5a8b1511aae2bb4",
   "date": "2026-11-09",
   "hashVersion": 2
  },
@@ -515,8 +515,8 @@
   "hashVersion": 2
  },
  "/guides/mageblood-legacies/": {
-  "hash": "f8468e25b159ee9c",
-  "date": "2026-11-03",
+  "hash": "e442be728f45d2cb",
+  "date": "2026-11-09",
   "hashVersion": 2
  },
  "/guides/tier-16-waystones/": {
@@ -571,6 +571,11 @@
  },
  "/guides/xesht/": {
   "hash": "4584455768193271",
+  "date": "2026-11-09",
+  "hashVersion": 2
+ },
+ "/guides/mageblood-acquisition/": {
+  "hash": "fb5f8f9a8ba7ea1a",
   "date": "2026-11-09",
   "hashVersion": 2
  },

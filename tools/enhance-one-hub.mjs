@@ -37,6 +37,18 @@ const unescape = (v) => v.replace(/<[^>]+>/g, "").replaceAll("&quot;", '"').repl
 
 let linked = 0;
 let faqPages = 0;
+// Index of the </section> that closes the <section> starting at `start`, counting nested sections.
+function sectionEnd(html, start) {
+  if (start === -1) return -1;
+  const tags = /<section\b|<\/section>/g;
+  tags.lastIndex = start;
+  let depth = 0;
+  for (let m; (m = tags.exec(html));) {
+    depth += m[0] === "</section>" ? -1 : 1;
+    if (depth === 0) return m.index;
+  }
+  return -1;
+}
 for (const path of paths) {
   const file = `${path}index.html`;
   let html = await read(file);
@@ -45,7 +57,8 @@ for (const path of paths) {
   html = html.replace(/<!-- poe2-intro:start -->[\s\S]*?<!-- poe2-intro:end -->/g, "");
   if (path === "") {
     // Home: first-time visitors get a link to the "PoE2とは" explainer right under the hero.
-    const at = html.indexOf("</section>", html.indexOf('class="hero-actions"'));
+    // The hero can contain nested <section>s (the simulator card), so find its own closing tag.
+    const at = sectionEnd(html, html.lastIndexOf("<section", html.indexOf('class="hero-actions"')));
     if (at === -1) throw new Error("index.html: hero section not found");
     html = `${html.slice(0, at - "</div>".length)}<!-- poe2-intro:start --><p class="hero-intro"><a href="/what-is-poe2/">はじめての方へ：PoE2とは？どんなゲームかを見る</a></p><!-- poe2-intro:end --></div>${html.slice(at)}`;
   }

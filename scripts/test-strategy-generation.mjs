@@ -1,6 +1,6 @@
 // Verify repeated article/hub generation without changing the working tree.
 import assert from 'node:assert/strict';
-import {cp,mkdtemp,readFile,rm} from 'node:fs/promises';
+import {cp,mkdtemp,readFile,rm,symlink} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
@@ -8,6 +8,8 @@ const root=resolve(import.meta.dirname,'..');
 const dir=await mkdtemp(join(tmpdir(),'poe2-strategy-generation-'));
 try{
  await cp(root,dir,{recursive:true,filter:src=>!/[\\/](\.git|node_modules)$/.test(src)});
+ // Generators import parsing libraries (e.g. parse5 in page-content.mjs), so share the dependencies.
+ await symlink(join(root,'node_modules'),join(dir,'node_modules'),'dir');
  const guides=JSON.parse(await readFile(join(dir,'data/strategy-guides.json'),'utf8'));
  const files=['index.html','beginner-builds/index.html','guides/index.html','sitemap.xml',...guides.map(g=>`guides/${g.slug}/index.html`),'guides/mapping/index.html','guides/cant-beat-boss/index.html'];
  const beforeHome=await readFile(join(dir,'index.html'),'utf8');
