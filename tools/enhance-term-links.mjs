@@ -34,7 +34,7 @@ for(const path of paths){
  const self=path.startsWith('dictionary/')?path.split('/')[1]:null;
  const found=terms.filter(t=>t.slug!==self&&patterns[t.slug]?.test(text));
  if(found.length){
-  html=insertBlock(html,'</main>','term-links',`<!-- term-links:start --><section class="term-links-block" aria-labelledby="term-links-title"><h2 id="term-links-title">このページに出てくる用語</h2><ul class="term-links">${found.map(t=>`<li><a href="/dictionary/${t.slug}/">${esc(t.term)}</a>：${esc(t.oneLine)}</li>`).join('')}</ul></section><!-- term-links:end -->`);
+  html=insertBlock(html,'</main>','term-links',`<!-- term-links:start --><section class="term-links-block" aria-labelledby="term-links-title"><h2 id="term-links-title">このページに出てくる用語</h2><ul class="term-links">${found.map(t=>`<li><a href="/dictionary/${t.slug}/" title="${esc(t.oneLine)}">${esc(t.term)}</a></li>`).join('')}</ul></section><!-- term-links:end -->`);
   linked++;
  }
  if(path.startsWith('builds/')){
