@@ -265,7 +265,7 @@ for (const build of builds.filter((item) => item.status === "verified")) {
 }
 const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
-assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0公開前に断定しない情報"), "1.0 search-intent sections missing");
+assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0でまだ公式発表がない情報"), "1.0 search-intent sections missing");
 assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"') && oneHub.includes('href="/poe2-1-0/pre-registration/"') && oneHub.includes('href="/poe2-1-0/build-status/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
 for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1])) {
   const html = await read(`${path}index.html`);
@@ -460,6 +460,24 @@ for (const dir of ["/data/", "/assets/", "/images/", "/builds/", "/guides/"]) as
 }
 for (const icon of ["favicon.ico", "favicon.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.png"]) {
   try { await access(resolve(root, icon)); } catch { failures.push(`missing: ${icon}`); }
+}
+
+// Every indexable HTML page must carry the AdSense account meta and exactly one loader.
+async function htmlPages(directory = "") {
+  const out = [];
+  for (const entry of await readdir(resolve(root, directory), { withFileTypes: true })) {
+    if (entry.name.startsWith(".") || ["company", "docs", "node_modules", "scripts", "tests", "tools"].includes(entry.name)) continue;
+    const path = directory ? `${directory}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) out.push(...await htmlPages(path));
+    else if (entry.name.endsWith(".html") && !entry.name.startsWith("google")) out.push(path);
+  }
+  return out;
+}
+for (const path of await htmlPages()) {
+  const html = await read(path);
+  if (!html.includes("</head>") || /<meta name="robots" content="[^"]*noindex/i.test(html)) continue;
+  assert(html.includes('<meta name="google-adsense-account" content="ca-pub-7738997902416481">'), `${path} must declare the AdSense account`);
+  assert((html.match(/pagead\/js\/adsbygoogle\.js\?client=ca-pub-7738997902416481/g) || []).length === 1, `${path} must load AdSense exactly once`);
 }
 
 if (failures.length) {

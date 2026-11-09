@@ -18,6 +18,10 @@ const preconnectTag = '<!-- perf-preconnect:start --><link rel="preconnect" href
 const preconnectMarker = /<!-- perf-preconnect:start -->[\s\S]*?<!-- perf-preconnect:end -->/;
 const eventTag = '<script defer src="/assets/analytics-events.js?v=20260923-1"></script>';
 const eventMarker = /<script defer src="\/assets\/analytics-events\.js[^\"]*"><\/script>/g;
+// Every indexable page carries the AdSense account meta and loader, whichever generator wrote it.
+const adsensePublisher = "ca-pub-7738997902416481";
+const adsenseMeta = `<meta name="google-adsense-account" content="${adsensePublisher}">`;
+const adsenseScript = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisher}" crossorigin="anonymous"></script>`;
 const ignoredDirectories = new Set([".git", "company", "node_modules", "scripts", "tests", "tools"]);
 let pageCount = 0;
 
@@ -39,6 +43,13 @@ async function inject(directory = "") {
     html = preconnectMarker.test(html)
       ? html.replace(preconnectMarker, preconnectTag)
       : html.replace(/<head([^>]*)>/, `<head$1>${preconnectTag}`);
+    const indexable = !/<meta name="robots" content="[^"]*noindex/i.test(html);
+    if (indexable && !html.includes('name="google-adsense-account"')) {
+      html = html.replace("<!-- /Google tag -->", `<!-- /Google tag -->${adsenseMeta}`);
+    }
+    if (indexable && !html.includes("pagead/js/adsbygoogle.js")) {
+      html = html.replace(adsenseMeta, `${adsenseMeta}${adsenseScript}`);
+    }
     const tracksEvents = path === "index.html"
       || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(path)
       || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(path)
