@@ -6,9 +6,11 @@ The root text file named by `KEY_FILE` in `scripts/indexnow-content.mjs` is this
 
 ## Current selection
 
+`docs/indexnow/2026-11-11-changes.json` is the current reviewed plan: 48 canonical pages changed from `da296173` to `77a8101b` (patch review, simulator workspace and sourced boss-equipment links). It has not been sent. Source content is checked against these commits; the accompanying documentation-only commit does not change the reviewed page content.
+
 `docs/indexnow/2026-10-13-changes.json` contains exactly 16 canonical HTML pages changed from `0fc117efc3b214ba5a15cca190dd184e0a3def3e` to `7fd942c80bcbbe29565cf9a88467e56de549ce82`. It includes the homepage, purpose comparison, gear diagnosis, unique-gear guide, and 12 build details. The other 89 sitemap URLs were not selected. The hashes cover meaningful rendered content, title, description and links; verification-only tags do not create content updates.
 
-`docs/indexnow/2026-11-09-changes.json` is the newest plan: 146 canonical pages changed from `15c63e1` to `86fbd0c` (adds the simulator, the Xesht and Mageblood acquisition guides and others; the rest updated). It has not been sent. Before it, `docs/indexnow/2026-11-06-changes.json` 141 canonical pages changed from `cd3a829` to `15c63e1` (20 added, including the new guides, equipment pages, the ExileCon page and /site-map/; the rest updated). It has not been sent. The previous plan, `docs/indexnow/2026-10-16-changes.json`, covered the homepage (new build list), `/best-builds/` and `/what-is-poe2/` (titles and descriptions). `npm run test:indexnow` checks the current pages against the newest plan, so a later content change to one of its pages needs a new plan.
+`docs/indexnow/2026-11-09-changes.json` was an earlier plan: 146 canonical pages changed from `15c63e1` to `86fbd0c` (adds the simulator, the Xesht and Mageblood acquisition guides and others; the rest updated). It has not been sent. Before it, `docs/indexnow/2026-11-06-changes.json` 141 canonical pages changed from `cd3a829` to `15c63e1` (20 added, including the new guides, equipment pages, the ExileCon page and /site-map/; the rest updated). It has not been sent. The previous plan, `docs/indexnow/2026-10-16-changes.json`, covered the homepage (new build list), `/best-builds/` and `/what-is-poe2/` (titles and descriptions). `npm run test:indexnow` checks the current pages against the newest plan, so a later content change to one of its pages needs a new plan.
 
 ## Review and send
 
