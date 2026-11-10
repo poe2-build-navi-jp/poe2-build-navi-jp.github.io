@@ -245,3 +245,25 @@
 @media(max-width:720px){.sim-difference>div{display:block}.sim-difference dd{text-align:left;margin-top:.25rem}.sim-transfer .sim-actions>*{flex:1 1 100%}.sim-transfer{padding:.85rem}.sim-actions{flex-wrap:wrap}#sim-share-panel textarea{max-width:100%}}
 
 .sim-checks{color:var(--sim-ink)}.sim-checks>summary{font-weight:700;cursor:pointer;min-height:44px;padding:.45rem 0}.sim-checks[open]>summary{margin-bottom:.75rem}.sim-transfer{max-width:1440px;margin:1rem auto}.sim-transfer>label{max-width:60rem}
+.sim-workspace{margin:16px 0;padding:18px 22px;background:var(--sim-panel,#fffdf8);border:1px solid #d7cbb9;border-radius:12px;min-width:0}
+.sim-workspace>summary{cursor:pointer;font-weight:700;line-height:1.5;padding:3px 0}
+.sim-workspace[open]>summary{margin-bottom:14px}
+.sim-workspace label{display:grid;gap:7px;min-width:0}
+.sim-workspace input,.sim-workspace select{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.sim-workspace input{min-height:44px;padding:10px 12px;border:1px solid #cfc7ba;background:#fff;color:inherit;font:inherit;border-radius:4px}
+.sim-workspace-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px;margin:14px 0}
+.sim-compare-picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.sim-comparison-result{margin-top:18px;overflow-wrap:anywhere}
+.sim-table-scroll{overflow-x:auto;border:1px solid #d7cbb9;border-radius:8px;margin:12px 0}
+.sim-table-scroll table{border-collapse:collapse;width:100%;min-width:490px;font-variant-numeric:tabular-nums}
+.sim-table-scroll th,.sim-table-scroll td{text-align:right;padding:11px 13px;border-bottom:1px solid #e6ded2;white-space:nowrap}
+.sim-table-scroll th:first-child{text-align:left}
+.sim-table-scroll caption{text-align:left;font-weight:700;padding:12px;background:#f3eee4}
+.sim-origin{padding:15px 20px;border-left:4px solid #a75b30;background:#f6efe3;margin:16px 0;overflow-wrap:anywhere}
+.sim-origin p{margin:7px 0}
+.sim-upgrade-actions li{padding:8px 0}
+.sim-upgrade-actions button{margin:4px 8px 4px 0}
+.sim-sample-choices{margin:8px 0 28px;padding:20px;background:#f1e9d9;border-radius:14px}
+.sim-sample-choices .sim-build-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.sim-sample-choices .sim-build-card{background:#fffdf8;padding:18px;min-width:0}
+@media(max-width:720px){.sim-workspace{padding:15px;margin:12px 0}.sim-workspace-row,.sim-compare-picks,.sim-sample-choices .sim-build-grid{grid-template-columns:1fr}.sim-workspace .sim-actions{flex-wrap:wrap}.sim-workspace button{max-width:100%;white-space:normal}.sim-sample-choices{padding:16px}.sim-workspace summary{font-size:1rem}}

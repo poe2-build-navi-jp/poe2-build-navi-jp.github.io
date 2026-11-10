@@ -44,3 +44,12 @@ for(const path of hubs){
  await save(path,html);
 }
 console.log(`Version notice: game ${game}, ${outdated.length}/${builds.length} builds not verified for it`);
+
+const review=JSON.parse(await read('data/patch-review.json'));
+if(review.checkedAt!==site.latestPatchCheckedAt)throw Error('Patch review dates disagree');
+for(const patch of review.patches)if(new URL(patch.url).hostname!=='www.pathofexile.com')throw Error('Patch reviews require official sources');
+const reviewBlock=`<!-- patch-review:start --><details class="version-notice patch-review"><summary>最新パッチの確認内容：${esc(site.latestPatch)}</summary><p>公式差分の確認：<time datetime="${esc(review.checkedAt)}">${esc(review.checkedAt)}</time>。${esc(review.scope)}</p><ul>${review.patches.map(p=>`<li><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.version)}</a>（${esc(p.publishedDate)}公開）<p>${esc(p.summary)}</p><p>${esc(p.impact)}</p>${p.remaining?`<p>${esc(p.remaining)}</p>`:''}</li>`).join('')}</ul><p>掲載ビルドの基準：${esc(review.gameVersion)}。計算エンジンのデータ：${esc(review.engineDataVersion)}。確認した差分だけを反映し、育成資料の原典照合日は各記事に残しています。</p></details><!-- patch-review:end -->`;
+for(const path of ['index.html','guides/index.html','simulator/index.html','poe2-1-0/index.html']){
+ let html=(await read(path)).replace(/<!-- patch-review:start -->[\s\S]*?<!-- patch-review:end -->/g,'');
+ html=html.replace('</main>',reviewBlock+'</main>');await save(path,html);
+}

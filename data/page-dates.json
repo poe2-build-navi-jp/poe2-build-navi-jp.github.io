@@ -1,12 +1,12 @@
 {
  "/": {
-  "hash": "888929034f86447a",
-  "date": "2026-11-10",
+  "hash": "ff5e89d64532b40a",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "cb037618e8dfb7ee",
-  "date": "2026-11-10",
+  "hash": "d45d6fba9bdd7c12",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/search/": {
@@ -180,13 +180,13 @@
   "hashVersion": 2
  },
  "/classes/": {
-  "hash": "0f6ae1fab4b2d995",
-  "date": "2026-11-04",
+  "hash": "bd02f89fa6e03dc2",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/leveling/": {
-  "hash": "5754e12587089823",
-  "date": "2026-11-10",
+  "hash": "d3c87ec5d9c1d26b",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/gear-check/": {
@@ -200,18 +200,18 @@
   "hashVersion": 2
  },
  "/beginner-guide/": {
-  "hash": "3420ec8b7d44de8d",
-  "date": "2026-11-04",
+  "hash": "bc0a688d59d409d4",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/beginner-builds/": {
-  "hash": "f318aeb4bd9a9cfd",
-  "date": "2026-11-10",
+  "hash": "67ba2002f2c084ab",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "5ab442369cac2c5a",
-  "date": "2026-11-10",
+  "hash": "30a35a5a4dc27aa2",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/dictionary/": {
@@ -220,23 +220,23 @@
   "hashVersion": 2
  },
  "/tier-list/": {
-  "hash": "0622da67a79baa9d",
-  "date": "2026-11-10",
+  "hash": "0098c4d9ffacfa60",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/league-starter/": {
-  "hash": "c7b6339be936557b",
-  "date": "2026-11-10",
+  "hash": "93a95df66f5d5971",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/best-builds/": {
-  "hash": "5dd4f55da6d6284d",
-  "date": "2026-11-04",
+  "hash": "3ba9d5a41e8d05f7",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/": {
-  "hash": "9ec9f5f91604fc82",
-  "date": "2026-11-10",
+  "hash": "849fa6d27279b450",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/about/": {
@@ -270,103 +270,103 @@
   "hashVersion": 2
  },
  "/classes/monk/": {
-  "hash": "66edacd4f3ec0bb3",
-  "date": "2026-11-10",
+  "hash": "94e694cd7fcf55d5",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/classes/mercenary/": {
-  "hash": "0cf376a03bbe8b05",
-  "date": "2026-11-10",
+  "hash": "1266b05d2bd9a0cf",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/classes/warrior/": {
-  "hash": "990d09a84ab09943",
-  "date": "2026-11-10",
+  "hash": "b9bc7ba180cbd398",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/classes/sorceress/": {
-  "hash": "52c26a9f1f5647d1",
-  "date": "2026-11-10",
+  "hash": "9ff911a3f52aa472",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/classes/huntress/": {
-  "hash": "3b8b1a8bef89a111",
-  "date": "2026-11-10",
+  "hash": "fbd03c1c31280109",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/classes/ranger/": {
-  "hash": "043649aca95f6259",
-  "date": "2026-11-10",
+  "hash": "4b83ac94653e9419",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/classes/witch/": {
-  "hash": "495b89b42611a5a1",
-  "date": "2026-11-10",
+  "hash": "57c3efb27b6481aa",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/classes/druid/": {
-  "hash": "e78f8dd91035574e",
-  "date": "2026-11-10",
+  "hash": "b91de46579a550cf",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "4eac69bd72d7b8df",
-  "date": "2026-11-10",
+  "hash": "20f65c6d15c861ff",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "31a4c6e36b93ce8d",
-  "date": "2026-11-10",
+  "hash": "67785a0681d38240",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "8a76ec242959c265",
-  "date": "2026-11-10",
+  "hash": "b20560fe8d9bdb8e",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "35b3c52247fd28ce",
-  "date": "2026-11-10",
+  "hash": "38c156c5a9f9c026",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/huntress/companion/": {
-  "hash": "b5d7a4a9f65e0b1f",
-  "date": "2026-11-10",
+  "hash": "e9aeb283681ae27e",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "61a23d1e1d05243b",
-  "date": "2026-11-10",
+  "hash": "6b300aad39e69543",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "16639cac9c958f4a",
-  "date": "2026-11-10",
+  "hash": "200997a924ba7ce9",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "c83d86fe97aee065",
-  "date": "2026-11-10",
+  "hash": "04673e88ff6222fa",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "e6e7cbcf32510445",
-  "date": "2026-11-10",
+  "hash": "f496237ee2f2cf07",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "37c88c2a6be152b9",
-  "date": "2026-11-10",
+  "hash": "077ac40bc3a2789d",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "0af5966a75f4c78e",
-  "date": "2026-11-10",
+  "hash": "d02d33a5507ee6a5",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "6492153ca898710b",
-  "date": "2026-11-10",
+  "hash": "c53588903881199d",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/skill-gems/": {
@@ -500,18 +500,18 @@
   "hashVersion": 2
  },
  "/guides/arbiter-of-ash-clear-record/": {
-  "hash": "715668d7c0276983",
-  "date": "2026-11-10",
+  "hash": "38fe6cb0b8609a83",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/unique-gear/": {
-  "hash": "64fd7cc3aaad1d39",
-  "date": "2026-11-10",
+  "hash": "792122370318a009",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/arbiter-of-divinity/": {
-  "hash": "33a48db9e4c3cca1",
-  "date": "2026-11-10",
+  "hash": "8c23cca3a75982d1",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/mageblood-legacies/": {
@@ -570,8 +570,8 @@
   "hashVersion": 2
  },
  "/guides/xesht/": {
-  "hash": "d73591bdd0d9f15f",
-  "date": "2026-11-10",
+  "hash": "f65106ed4d4c5496",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/mageblood-acquisition/": {
@@ -645,13 +645,13 @@
   "hashVersion": 2
  },
  "/guides/poe2-0-5-5-builds/": {
-  "hash": "be856684fb182e85",
-  "date": "2026-11-10",
+  "hash": "3ed49eabe86e93a9",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/forbidden-rites-beginner/": {
-  "hash": "75e504a6cd005fb2",
-  "date": "2026-11-10",
+  "hash": "4b42f6862a621078",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/guides/gear-upgrade/": {
@@ -675,58 +675,58 @@
   "hashVersion": 2
  },
  "/poe2-1-0/release-date/": {
-  "hash": "d6a108f623e0b7fe",
-  "date": "2026-11-10",
+  "hash": "5efebd22323ce9a8",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/how-to-start/": {
-  "hash": "a69a9ffb05959865",
-  "date": "2026-11-05",
+  "hash": "cc853bd703561ddb",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/system-requirements/": {
-  "hash": "2cd900c1f232e15b",
-  "date": "2026-11-05",
+  "hash": "a4b3648d7e17f32d",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/japanese/": {
-  "hash": "062d32bceda97f71",
-  "date": "2026-11-05",
+  "hash": "f9c4394392cd28b7",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/microtransactions/": {
-  "hash": "da601e925b81b221",
-  "date": "2026-11-05",
+  "hash": "4fed4a1d9b1a1eb3",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/controller/": {
-  "hash": "2c60c50d577b37e4",
-  "date": "2026-11-05",
+  "hash": "1cde5715a56e0a60",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/pre-registration/": {
-  "hash": "49a2d6a47507deff",
-  "date": "2026-11-05",
+  "hash": "c0b88b3ee5585b25",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/build-status/": {
-  "hash": "8ce126b8e3be947b",
-  "date": "2026-11-10",
+  "hash": "73963795fd0a60e7",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/duelist/": {
-  "hash": "2397efc0d8b71db5",
-  "date": "2026-11-05",
+  "hash": "7b1a4fb82ae2e18b",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/poe2-1-0/exilecon-2026/": {
-  "hash": "7f72481c50b2f51a",
-  "date": "2026-11-05",
+  "hash": "f4bf8c8ecb1004ee",
+  "date": "2026-11-11",
   "hashVersion": 2
  },
  "/what-is-poe2/": {
-  "hash": "ef8176af81f47b01",
-  "date": "2026-11-10",
+  "hash": "c3a58cce154bd7ee",
+  "date": "2026-11-11",
   "hashVersion": 2
  }
 }

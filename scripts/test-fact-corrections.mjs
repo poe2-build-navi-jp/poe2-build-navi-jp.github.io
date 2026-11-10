@@ -129,8 +129,8 @@ for(const record of stageAudit.records){
  assert.ok(record.sourceUrl.includes('activeVariantId%2C'));
 }
 const site=await read('data/site.json');
-assert.equal(site.latestPatch,'0.5.5e');
-assert.equal(site.latestPatchSource,'https://www.pathofexile.com/forum/view-thread/4009785');
+assert.equal(site.latestPatch,'0.5.5f Hotfix');
+assert.equal(site.latestPatchSource,'https://www.pathofexile.com/forum/view-thread/4013539/page/1');
 assert.equal(by('monk-whirling-assault').updatedAt,'2026-09-07');
 console.log('PASS: six selected-stage records, one corrected attribution, patch freshness and preserved historical dates');
 
@@ -138,7 +138,7 @@ const discovery=await read('data/discovery.json');
 for(const key of ['latestPatch','latestPatchSource','latestPatchCheckedAt']) assert.equal(discovery[key],site[key]);
 for(const path of ['index.html','league-starter/index.html','tier-list/index.html','leveling/index.html','poe2-1-0/index.html','best-builds/index.html']) {
  const html=await readFile(new URL('../'+path,import.meta.url),'utf8');
- assert.match(html,/最新確認[^<]*0\.5\.5e/);
+ assert.match(html,/最新確認[^<]*0\.5\.5f/);
  assert.doesNotMatch(html,/最新確認[^<]*0\.5\.5d/);
 }
 console.log('PASS: patch metadata and discovery-page latest-patch labels stay aligned');

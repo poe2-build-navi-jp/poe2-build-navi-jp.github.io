@@ -1,5 +1,5 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
-import {validRequest} from './simulator-model.js?v=20909d41d6';
+import {validRequest} from './simulator-model.js?v=e0212e6c36';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;
@@ -44,9 +44,14 @@ function tree(version) {
   const nodes=JSON.parse(dataFiles[path]).map(n => ({skill:n.skill,name:n.name || n.id,kind:n.kind,x:n.x,y:n.y,connections:n.connections || [],stats:n.stats || [],ascendancy_id:n.ascendancy_id}));
   treeCache.set(path,nodes);return nodes;
 }
+const engineRequest=request=>({...request,items:(request.items||[]).map(item=>item.slot==='body'?{...item,slot:'bodyarmour'}:item)});
 const calculate = request => {
   if (!validRequest(request)) throw new Error('構成の形式が正しくありません。');
-  return JSON.parse(engine.calculateBuildJson(JSON.stringify(request)));
+  // Preserve the site's existing save-slot IDs; normalize only at the engine boundary.
+  const normalized=engineRequest(request);
+  const result=JSON.parse(engine.calculateBuildJson(JSON.stringify(normalized)));
+  if(result.item_errors)result.item_errors=result.item_errors.map(error=>error.slot==='bodyarmour'?{...error,slot:'body'}:error);
+  return result;
 };
 self.onmessage = async ({data:{id,action,payload}}) => {
   try {
@@ -56,7 +61,7 @@ self.onmessage = async ({data:{id,action,payload}}) => {
       meta:JSON.parse(dataFiles['base/passive_tree_meta.json']), tree:tree(), runtime:{release:runtime.release,dataVersion:runtime.dataVersion}};
     else if (action === 'calculate') result = calculate(payload);
     else if (action === 'tree') result = tree(payload);
-    else if (action === 'edit') result = JSON.parse(engine.previewTreeEditJson(JSON.stringify(payload)));
+    else if (action === 'edit') result = JSON.parse(engine.previewTreeEditJson(JSON.stringify({...payload,request:engineRequest(payload.request)})));
     else if(action==='equipment-audit'){
       if(!validRequest(payload.request)||!Array.isArray(payload.items)||payload.items.length>40)throw Error('装備条件を確認できません。');
       result=payload.items.flatMap(({slot,requirements:req})=>{

@@ -1,8 +1,8 @@
-import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps} from './simulator-model.js?v=20909d41d6';
+import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps, namedPlanKey, parseNamedPlans, putNamedPlan, upgradeAdvice} from './simulator-model.js?v=e0212e6c36';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
-const [presets,localization,equipmentCatalog,routeCatalog] = await Promise.all(['/data/simulator-presets.json?v=99b38709f9','/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment.json?v=846e3f9450','/data/simulator-routes.json?v=856fb198d8'].map(async url => {
+const [presets,localization,equipmentCatalog,routeCatalog,exampleData] = await Promise.all(['/data/simulator-presets.json?v=99b38709f9','/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment.json?v=846e3f9450','/data/simulator-routes.json?v=856fb198d8','/data/simulator-examples.json?v=10556156b5'].map(async url => {
  const r=await fetch(url);if(!r.ok)throw Error('ビルド一覧を読み込めません。再読み込みしてください。');return r.json();
 })).catch(error=>{$('sim-chooser').insertAdjacentHTML('beforeend',`<p role="alert">${esc(error.message)}</p>`);throw error;});
 const trackSim=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{page_path:location.pathname,...(selectedPreset?{build_id:selectedPreset.id}:{}),...extra});};
@@ -10,6 +10,8 @@ let sharedReadOnly=false,incomingLevel=null,stageBackup=null,auditSequence=0,rea
 const names=localization.names;
 const label=name=>name==='Companion: {0}'?'コンパニオン（召喚対象を設定）':name==='Spectre: {0}'?'スペクター（召喚対象を設定）':names[name] || name;
 const nodeStats=node=>passiveDescriptions(node,localization,plan?.request.attribute_choices || {},!plan?.request.tree_version||plan.request.tree_version==='0_5');
+const examples=exampleData.examples;
+let namedPlans=[],namedStorageSnapshot=null,deletedPlan=null,deletePlanId=null,workspaceBackup=null,examplePreview=null,workspaceSequence=0;
 let equipmentDraftVersion=0;
 let itemSource='',equipmentMode='unique',rareDraft=null,editorBaseline=null;
 let worker,bootPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
@@ -37,7 +39,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- worker=new Worker(new URL('./simulator-worker.js?v=91f0affada',import.meta.url),{type:'module'});
+ worker=new Worker(new URL('./simulator-worker.js?v=c6e8af4ef9',import.meta.url),{type:'module'});
  worker.onmessage=({data})=>{if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  worker.onerror=()=>{for(const task of pending.values())task.reject(Error('計算処理を続けられません。ページを再読み込みしてください。'));pending.clear();};
  bootPromise=rpc('boot').then(data=>{catalog=data;return data;});return bootPromise;
@@ -47,7 +49,7 @@ function clearError(){$('sim-error').hidden=true;$('sim-error').textContent='';$
 function save(options={}) {
  if(!plan)return;
  if(sharedReadOnly){$('sim-save-status').textContent='共有構成を確認中（未保存）';$('sim-tree-save-state').textContent='共有構成を確認中（未保存）';return true;}
- try{localStorage.setItem(`poe2-simulator:v1:${selectedPreset.id}`,JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {},plan.weaponSets || null)));$('sim-save-status').textContent='この端末に保存済み';$('sim-tree-save-state').textContent='この端末に保存済み';if(options.track)trackSim('simulator_save',{method:'device'});return true;}
+ try{localStorage.setItem(`poe2-simulator:v1:${selectedPreset.id}`,JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {},plan.weaponSets || null,plan.origin || null)));$('sim-save-status').textContent='この端末に保存済み';$('sim-tree-save-state').textContent='この端末に保存済み';if(options.track)trackSim('simulator_save',{method:'device'});return true;}
  catch{$('sim-save-status').textContent='端末保存ができません。保存ファイルを使ってください。';$('sim-tree-save-state').textContent=$('sim-save-status').textContent;return false;}
 }
 let calculating=false,queuedCalculation=null;
@@ -102,7 +104,7 @@ function renderResults(){
 async function selectPreset(id,{fromHistory=false,shared=null}={}){
  if(treeFullscreen){save();restoreTreeEditor();}
  const preset=presets.find(p=>p.id===id);if(!preset){showChooser();return;}
- const version=++generation;++calculation;selectedPreset=preset;sharedReadOnly=!!shared;incomingLevel=null;stageBackup=null;$('sim-stage-undo').hidden=true;$('sim-stage-panel').hidden=true;$('sim-share-panel').hidden=true;$('sim-shared-panel').hidden=!shared;passiveResetBackup=null;$('sim-passives-undo').hidden=true;plan=null;result=null;baseline=null;preview=null;selectedNode=null;queuedNodes.clear();
+ const version=++generation;++calculation;selectedPreset=preset;sharedReadOnly=!!shared;incomingLevel=null;stageBackup=null;$('sim-stage-undo').hidden=true;$('sim-stage-panel').hidden=true;$('sim-share-panel').hidden=true;$('sim-shared-panel').hidden=!shared;passiveResetBackup=null;$('sim-passives-undo').hidden=true;plan=null;result=null;baseline=null;preview=null;selectedNode=null;queuedNodes.clear();++workspaceSequence;examplePreview=null;workspaceBackup=null;$('sim-workspace-restore').hidden=true;$('sim-example-preview-result').hidden=true;$('sim-example-apply').hidden=true;$('sim-example-status').textContent='';$('sim-compare-result').replaceChildren();$('sim-plan-delete-confirm').hidden=true;
  $('sim-chooser').hidden=true;$('sim-workbench').hidden=false;$('sim-build-name').textContent=preset.name;$('sim-guide-link').href=preset.path;
  $('sim-status').textContent='計算画面を準備しています…';clearError();$('sim-item-editor').hidden=true;$('sim-item-list').hidden=false;
  $('sim-stats').innerHTML='<p>準備中…</p>';
@@ -111,14 +113,15 @@ async function selectPreset(id,{fromHistory=false,shared=null}={}){
  try{
   await engine();if(version!==generation)return;
   let recoveryError;
-  if(shared)plan={request:shared.request,questPoints:shared.questPoints,notes:shared.notes,equipmentDrafts:shared.equipmentDrafts || {},weaponSets:shared.weaponSets || null};
-  try{const saved=!shared&&localStorage.getItem(`poe2-simulator:v1:${id}`);if(saved){const data=parseSave(saved);plan={request:data.request,questPoints:data.questPoints || 0,notes:data.notes || '',equipmentDrafts:data.equipmentDrafts || {},weaponSets:data.weaponSets || null};}}
+  if(shared)plan={request:shared.request,questPoints:shared.questPoints,notes:shared.notes,equipmentDrafts:shared.equipmentDrafts || {},weaponSets:shared.weaponSets || null,origin:shared.origin || null};
+  try{const saved=!shared&&localStorage.getItem(`poe2-simulator:v1:${id}`);if(saved){const data=parseSave(saved);plan={request:data.request,questPoints:data.questPoints || 0,notes:data.notes || '',equipmentDrafts:data.equipmentDrafts || {},weaponSets:data.weaponSets || null,origin:data.origin || null};}}
   catch(error){recoveryError=Error('前回の保存を読み込めませんでした。新しい試作を表示しています。以前の保存ファイルがあれば「保存を読み込む」で復元できます。');}
   plan ||= {request:newPlan(preset,catalog.gems),questPoints:0,notes:''};
   const nodes=!plan.request.tree_version||plan.request.tree_version==='0_5'?catalog.tree:await rpc('tree',plan.request.tree_version);if(version!==generation)return;setCurrentTree(nodes);loadTemplate();
   for(const element of $('sim-workbench').querySelectorAll('button,input,select,textarea'))element.disabled=false;
-  renderInputs();renderStageHandoff();entrySource=shared?'shared':incomingLevel?'guide':'chooser';await recalculate();if(version!==generation)return;renderTree();
+  renderInputs();renderStageHandoff();renderWorkspace();renderExampleOptions();entrySource=shared?'shared':incomingLevel?'guide':new URLSearchParams(location.search).get('from')==='record'?'record':'chooser';await recalculate();if(version!==generation)return;renderTree();
   if(recoveryError)showError(recoveryError);else if(result)save();
+  const requestedExample=new URLSearchParams(location.search).get('example');if(requestedExample&&examples.some(e=>e.id===requestedExample&&e.preset===preset.id)){$('sim-examples-panel').open=true;$('sim-example-select').value=requestedExample;setExampleConditions();await previewExample();}
  }catch(error){if(version===generation)showError(error);}
 }
 function showChooser(){if(treeFullscreen){save();restoreTreeEditor();}generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;const u=new URL(location.href);u.searchParams.delete('build');u.searchParams.delete('level');u.searchParams.delete('from');u.hash='';history.pushState({},'',u.pathname+u.search);$('sim-chooser').scrollIntoView({block:'start'});}
@@ -128,7 +131,7 @@ function renderInputs(){
  $('sim-life-reward').checked=!!plan.request.config_inputs?.['questInterlude 2Khari CrossingMolten Shrine'];
  $('sim-extra-mods').value=localizeModifiers(plan.request.extra_modifiers || [],equipmentCatalog,names);$('sim-config-modifier').innerHTML=equipmentCatalog.modifiers.map(m=>`<option value="${m.id}">${esc(m.label)}</option>`).join('');$('sim-notes').value=plan.notes;
  $('sim-quest-points').value=plan.questPoints;
- renderSlots();renderSkills();setTab(activeTab);
+ renderSlots();renderSkills();setTab(activeTab);renderOrigin();
 }
 let treeFullscreen=false,treeClosing=false,treeReturnFocus=null,treePageOverflow=null,treeHomeMarker=null,treeMainInert=false;
 function openTreeEditor(){
@@ -382,11 +385,162 @@ async function previewNode(){
 }
 
 
+function capturePlan(){return makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts||{},plan.weaponSets||null,plan.origin||null);}
+function renderOrigin(){
+ const example=examples.find(e=>e.id===plan?.origin?.id&&e.preset===selectedPreset?.id),box=$('sim-plan-origin');box.hidden=!example;
+ if(example)box.innerHTML=`<b>この構成の出発点：${esc(example.title)}</b><p>${esc(example.kind==='record'?'記事の確認済み装備をもとにした試算です。未確認の設定は空欄、武器セットは計算用の仮配置です。':'数値比較用の仮装備を含む操作サンプルです。')} 編集内容は自分の設定です。</p><a href="${esc(example.source.href)}">出典・確認範囲を見る</a>`;
+}
+function renderWorkspace(selectedId=$('sim-plan-select').value){
+ let error=null;
+ try{namedStorageSnapshot=localStorage.getItem(namedPlanKey(selectedPreset.id));namedPlans=parseNamedPlans(namedStorageSnapshot,selectedPreset.id);}catch(e){namedPlans=null;error=e;}
+ const plans=namedPlans||[],selected=plans.some(p=>p.id===selectedId)?selectedId:plans[0]?.id||'';
+ $('sim-plan-select').innerHTML=plans.length?plans.map(p=>`<option value="${esc(p.id)}">${esc(p.name)} · Lv${p.saved.request.character.level}</option>`).join(''):'<option value="">名前付きの保存はまだありません</option>';
+ $('sim-plan-select').value=selected;$('sim-plan-create').disabled=!!error;
+ for(const id of ['sim-plan-load','sim-plan-update','sim-plan-delete'])$(id).disabled=!!error||!plans.length;
+ for(const id of ['sim-compare-a','sim-compare-b']){
+  const previous=$(id).value;
+  $(id).innerHTML='<option value="current">今の構成</option>'+plans.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');
+  $(id).value=previous==='current'||plans.some(p=>p.id===previous)?previous:id==='sim-compare-b'&&plans.length?plans[0].id:'current';
+ }
+ $('sim-plan-status').textContent=error?'構成一覧を読み込めません。元の一覧を上書きせず保持しています。保存ファイルを確認してください。':`${plans.length} / 12構成を保存`;
+ $('sim-compare-plans').disabled=!!error||!plans.length;
+ try{const text=localStorage.getItem(`poe2-simulator:deleted-plan:${selectedPreset.id}`);deletedPlan=text?parseNamedPlans(text,selectedPreset.id)[0]:null;}catch{deletedPlan=null;}
+ $('sim-plan-delete-undo').hidden=!deletedPlan;
+ if(!workspaceBackup)try{const backup=JSON.parse(localStorage.getItem(`poe2-simulator:before-workspace:${selectedPreset.id}`));if(backup?.saved&&parseSave(JSON.stringify(backup.saved)).preset===selectedPreset.id){workspaceBackup=backup;$('sim-workspace-restore').hidden=false;}}catch{}
+}
+function writeNamedPlans(next,selected){
+ parseNamedPlans(JSON.stringify({version:1,plans:next}),selectedPreset.id);
+ if(localStorage.getItem(namedPlanKey(selectedPreset.id))!==namedStorageSnapshot){renderWorkspace();throw Error('別のタブで構成一覧が更新されました。最新の一覧を表示したので、もう一度操作してください。');}
+ try{localStorage.setItem(namedPlanKey(selectedPreset.id),JSON.stringify({version:1,plans:next}));}catch{throw Error('構成を保存できませんでした。以前の一覧は保持されています。保存ファイルもお使いください。');}
+ renderWorkspace(selected);if(next.length&&$('sim-compare-a').value==='current'&&$('sim-compare-b').value==='current')$('sim-compare-b').value=next.some(p=>p.id===selected)?selected:next[0].id;++workspaceSequence;$('sim-compare-result').replaceChildren();
+}
+function renderExampleOptions(){
+ const choices=examples.filter(e=>e.preset===selectedPreset.id);
+ $('sim-example-select').innerHTML=choices.length?choices.map(e=>`<option value="${esc(e.id)}">${esc(e.title)}</option>`).join(''):'<option value="">このビルドの見本は準備中です</option>';
+ $('sim-example-preview').disabled=!choices.length;$('sim-example-conditions').hidden=!choices.length;
+ if(choices.length)setExampleConditions();
+ else $('sim-example-level-help').innerHTML='他の操作見本は<a href="/simulator/#sim-sample-choices">サンプル一覧</a>から選べます。';
+}
+function setExampleConditions(){
+ const example=examples.find(e=>e.id===$('sim-example-select').value);if(!example)return;
+ $('sim-example-level').value=example.level||plan.request.character.level;$('sim-example-level').readOnly=!!example.level;
+ $('sim-example-level-help').textContent=example.level?`見本のLvは${example.level}です。取り込んだ後に編集できます。`:'撃破時のLvは未確認です。この入力は試算用のLvです。画像の撃破Lvを表すものではありません。';
+ $('sim-example-weapon-label').hidden=example.kind!=='record';$('sim-example-weapon').value='1';
+ examplePreview=null;++workspaceSequence;$('sim-example-apply').hidden=true;$('sim-example-preview-result').hidden=true;
+}
+async function previewExample(){
+ const example=examples.find(e=>e.id===$('sim-example-select').value&&e.preset===selectedPreset.id);if(!example)throw Error('見本を選んでください。');
+ const level=Number($('sim-example-level').value);if(!Number.isInteger(level)||level<1||level>100)throw Error('試算用のLvは1〜100で入力してください。');
+ const version=generation,edited=editSequence,token=++workspaceSequence,saved=clone(example.saved);saved.request.character.level=example.level||level;
+ saved.origin={id:example.id,kind:example.kind};
+ if(example.kind==='record'){
+  const next=selectWeaponSet({request:saved.request,equipmentDrafts:saved.equipmentDrafts,weaponSets:saved.weaponSets},Number($('sim-example-weapon').value));saved.request=next.request;saved.weaponSets=next.weaponSets;saved.equipmentDrafts=next.equipmentDrafts;
+ }
+ const box=$('sim-example-preview-result');box.hidden=false;box.textContent='読み込み内容を計算しています…';$('sim-example-apply').hidden=true;
+ const calculated=await rpc('calculate',saved.request);
+ if(version!==generation||edited!==editSequence||token!==workspaceSequence)return;
+ if(calculated.item_errors?.length)throw Error('見本の装備を読み込めません。');
+ examplePreview={saved,example,version,edited};
+ const itemCount=example.kind==='record'?example.itemCount:saved.request.items.length;
+ box.innerHTML=`<h3>${esc(example.title)}</h3><p>${esc(example.description)}</p><p>Lv${saved.request.character.level}${!example.level?'（試算用・撃破Lv未確認）':''} / 装備${itemCount}点 / 通常パッシブ${saved.request.allocated_nodes.length}点 / ${saved.request.socket_groups.length?'主力ジェムLv'+saved.request.socket_groups[0].gems[0].level:'スキル・サポート未設定'}</p><details><summary>計算の対応データと確認範囲</summary><p>計算エンジン ${esc(example.verification.engine)} / データ ${esc(example.verification.data)}で装備の読み込みを確認。試算は通常の敵で開始します。</p></details><ul>${example.omissions.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${example.sourceItems?`<details><summary>取り込む装備と転記元</summary><ul>${example.sourceItems.map(i=>`<li><b>${esc(label(i.name))}</b><p>${esc(i.sourceText)}</p></li>`).join('')}</ul></details>`:''}<p>試算結果：最大ライフ ${number(statValue(calculated,'Life'),'Life')} / ES ${number(statValue(calculated,'EnergyShield'),'EnergyShield')} / 選択スキルのDPS ${calculated.main_skill?number(statValue(calculated,'CombinedDPS'),'CombinedDPS'):'未設定'}</p><a href="${esc(example.source.href)}">${esc(example.source.label)}を確認</a><p>「この内容で試す」を押すと今の構成を退避して切り替えます。切替前に戻すこともできます。</p>`;
+ $('sim-example-apply').hidden=false;$('sim-example-status').textContent='まだ現在の構成・保存内容は変わっていません。';
+}
+async function applyWorkspaceSave(saved,{restore=false,readOnly=false}={}){
+ saved=parseSave(JSON.stringify(saved));
+ if(saved.preset!==selectedPreset.id||saved.request.character.class_name!==selectedPreset.class)throw Error('選択中のビルドと構成が一致しません。');
+ const version=generation,edited=editSequence,token=++workspaceSequence;
+ const [next,nodes]=await Promise.all([rpc('calculate',saved.request),rpc('tree',saved.request.tree_version||null)]);
+ if(version!==generation||edited!==editSequence||token!==workspaceSequence)return false;
+ if(!restore){
+  const backup={saved:capturePlan(),readOnly:sharedReadOnly};
+  try{localStorage.setItem(`poe2-simulator:before-workspace:${selectedPreset.id}`,JSON.stringify(backup));}catch{throw Error('切替前の構成を退避できませんでした。保存ファイルを書き出してからお試しください。');}
+  workspaceBackup=backup;
+ }
+ // Existing own autosaves remain protected while working from a shared URL.
+ const protectedSave=restore?readOnly:sharedReadOnly;
+ if(treeFullscreen)restoreTreeEditor();
+ plan={request:saved.request,questPoints:saved.questPoints,notes:saved.notes,equipmentDrafts:saved.equipmentDrafts||{},weaponSets:saved.weaponSets||null,origin:saved.origin||null};
+ sharedReadOnly=protectedSave;$('sim-shared-panel').hidden=!protectedSave;
+ ++editSequence;++calculation;++auditSequence;baseline=null;preview=null;selectedNode=null;queuedNodes.clear();examplePreview=null;templateImport=null;++templateImportSequence;
+ passiveResetBackup=null;stageBackup=null;$('sim-passives-undo').hidden=true;$('sim-stage-undo').hidden=true;$('sim-stage-panel').hidden=true;$('sim-example-apply').hidden=true;$('sim-example-preview-result').hidden=true;
+ $('sim-item-preview-result').hidden=true;$('sim-item-editor').hidden=true;$('sim-item-list').hidden=false;
+ setCurrentTree(nodes);result=next;loadTemplate();renderInputs();renderTree();renderResults();save({track:true});clearError();
+ $('sim-stats').setAttribute('aria-busy','false');$('sim-baseline').disabled=false;
+ $('sim-workspace-restore').hidden=restore;$('sim-status').textContent=restore?'切替前の構成に戻しました。':'構成を読み込んで計算しました。';
+ if(restore){workspaceBackup=null;try{localStorage.removeItem(`poe2-simulator:before-workspace:${selectedPreset.id}`);}catch{}}
+ return true;
+}
+async function compareNamedPlans(){
+ if(!namedPlans)throw Error('構成一覧を読み込めないため、比較できません。');
+ const get=id=>id==='current'?{name:'今の構成',saved:capturePlan()}:namedPlans.find(p=>p.id===id);
+ const a=get($('sim-compare-a').value),b=get($('sim-compare-b').value);if(!a||!b)throw Error('比較する構成を選び直してください。');
+ if($('sim-compare-a').value===$('sim-compare-b').value)throw Error('構成Aと構成Bに、異なる構成を選んでください。');
+ const version=generation,edited=editSequence,token=++workspaceSequence,enemy=$('sim-compare-enemy').value;
+ const request=p=>({...clone(p.saved.request),enemy_tier:enemy});
+ const box=$('sim-compare-result');box.textContent='AとBを計算しています…';$('sim-compare-plans').disabled=true;
+ try{
+  const [ar,br]=await Promise.all([rpc('calculate',request(a)),rpc('calculate',request(b))]);
+  if(version!==generation||edited!==editSequence||token!==workspaceSequence)return;
+  const summary=p=>`Lv${p.saved.request.character.level} / 報酬${p.saved.questPoints}P / 武器スロット${p.saved.weaponSets?.active||1}`;
+  box.innerHTML=`<h4>${esc(a.name)} と ${esc(b.name)}</h4><p>A：${esc(summary(a))}<br>B：${esc(summary(b))}</p><p>敵：${esc($('sim-compare-enemy').selectedOptions[0].textContent)}。装備・ジェム・一時効果・Lvは各構成の内容です。</p><div class="sim-table-scroll" tabindex="0" role="region" aria-label="構成比較の表"><table><caption>保存を変更しない構成比較</caption><thead><tr><th scope="col">項目</th><th scope="col">A</th><th scope="col">B</th><th scope="col">B − A</th></tr></thead><tbody>${statistics.map(([id,title])=>{const av=id==='CombinedDPS'&&!ar.main_skill?null:statValue(ar,id),bv=id==='CombinedDPS'&&!br.main_skill?null:statValue(br,id),delta=av!==null&&bv!==null?bv-av:null;return `<tr><th scope="row">${title}</th><td>${number(av,id)}</td><td>${number(bv,id)}</td><td>${delta===null?'—':(delta>0?'+':'')+number(delta,id)}</td></tr>`;}).join('')}</tbody></table></div>${[ar,br].some(r=>r.item_errors?.length||r.unsupported_modifiers?.length)?'<p>未対応効果・装備の読み込みエラーを含む構成があります。各構成を開いて「計算の確認事項」を確認してください。</p>':''}`;
+  trackSim('simulator_plan_compare',{count:2});
+ }finally{$('sim-compare-plans').disabled=false;}
+}
+async function handleWorkspaceClick(target){
+ if(target.dataset.improveSlot){selectedSlot=target.dataset.improveSlot;setTab('items');renderSlots();openItemEditor();setEquipmentMode('rare');return true;}
+ if(target.id==='sim-plan-create'||target.id==='sim-plan-update'){
+  if(!namedPlans)throw Error('元の構成一覧を読み込めません。上書きは行いません。');
+  const id=target.id==='sim-plan-update'?$('sim-plan-select').value:null;
+  const next=putNamedPlan(namedPlans,selectedPreset.id,$('sim-plan-name').value,capturePlan(),{id});
+  writeNamedPlans(next,id||next.at(-1).id);$('sim-plan-status').textContent=target.id==='sim-plan-update'?'選択した構成を更新しました。':'名前付きで保存しました。自動保存もそのまま使えます。';trackSim('simulator_named_save',{action:id?'update':'create',count:next.length});return true;
+ }
+ if(target.id==='sim-plan-load'){
+  const item=namedPlans?.find(p=>p.id===$('sim-plan-select').value);if(!item)throw Error('構成を選んでください。');
+  if(await applyWorkspaceSave(item.saved))$('sim-plan-status').textContent=`「${item.name}」を読み込みました。名前付きの保存は更新するまで変わりません。`;return true;
+ }
+ if(target.id==='sim-plan-delete'){
+  const item=namedPlans?.find(p=>p.id===$('sim-plan-select').value);if(!item)throw Error('構成を選んでください。');deletePlanId=item.id;
+  $('sim-plan-delete-message').textContent=`「${item.name}」を名前付きの一覧から削除します。今開いている構成は変わりません。`;$('sim-plan-delete-confirm').hidden=false;return true;
+ }
+ if(target.id==='sim-plan-delete-cancel'){deletePlanId=null;$('sim-plan-delete-confirm').hidden=true;return true;}
+ if(target.id==='sim-plan-delete-apply'){
+  const item=namedPlans?.find(p=>p.id===deletePlanId);if(!item)throw Error('削除する構成を確認し直してください。');
+  localStorage.setItem(`poe2-simulator:deleted-plan:${selectedPreset.id}`,JSON.stringify({version:1,plans:[item]}));
+  writeNamedPlans(namedPlans.filter(p=>p.id!==item.id));deletePlanId=null;$('sim-plan-delete-confirm').hidden=true;$('sim-plan-status').textContent='一覧から削除しました。「削除した構成を戻す」で復元できます。';return true;
+ }
+ if(target.id==='sim-plan-delete-undo'){
+  if(!namedPlans||!deletedPlan)throw Error('復元する構成が見つかりません。');if(namedPlans.some(p=>p.id===deletedPlan.id))throw Error('この構成は一覧に存在します。');
+  writeNamedPlans([...namedPlans,deletedPlan],deletedPlan.id);localStorage.removeItem(`poe2-simulator:deleted-plan:${selectedPreset.id}`);deletedPlan=null;$('sim-plan-delete-undo').hidden=true;$('sim-plan-status').textContent='削除した構成を復元しました。';return true;
+ }
+ if(target.id==='sim-compare-plans'){await compareNamedPlans();return true;}
+ if(target.id==='sim-example-preview'){await previewExample();return true;}
+ if(target.id==='sim-example-apply'){
+  const p=examplePreview;if(!p||p.version!==generation||p.edited!==editSequence)throw Error('構成が変更されました。もう一度「内容を見る」で確認してください。');
+  if(await applyWorkspaceSave(p.saved)){$('sim-example-status').textContent='見本から試算を開始しました。切替前に戻すこともできます。';trackSim('simulator_example_apply',{example_id:p.example.id,kind:p.example.kind});}return true;
+ }
+ if(target.id==='sim-workspace-undo'){
+  let backup=workspaceBackup;
+  if(!backup)try{backup=JSON.parse(localStorage.getItem(`poe2-simulator:before-workspace:${selectedPreset.id}`));}catch{}
+  if(!backup?.saved)throw Error('切替前の構成が見つかりません。');
+  await applyWorkspaceSave(backup.saved,{restore:true,readOnly:backup.readOnly});return true;
+ }
+ return false;
+}
+function handleWorkspaceChange(target){
+ if(target.id==='sim-plan-select'){
+  const selected=namedPlans?.find(p=>p.id===target.value);if(selected)$('sim-plan-name').value=selected.name;
+  deletePlanId=null;$('sim-plan-delete-confirm').hidden=true;return true;
+ }
+ if(target.id==='sim-example-select'){setExampleConditions();return true;}
+ if(['sim-example-level','sim-example-weapon'].includes(target.id)){examplePreview=null;++workspaceSequence;$('sim-example-apply').hidden=true;$('sim-example-status').textContent='試算条件が変わりました。「内容を見る」で再確認してください。';return true;}
+ if(['sim-compare-a','sim-compare-b','sim-compare-enemy'].includes(target.id)){++workspaceSequence;$('sim-compare-result').replaceChildren();return true;}
+ return false;
+}
 function renderStageHandoff(){
  const params=new URLSearchParams(location.search),n=Number(params.get('level'));
  if(sharedReadOnly||params.get('from')!=='guide'||!Number.isInteger(n)||n<1||n>100)return;
  const stage=levelingStage(selectedPreset,n);if(!stage)return;incomingLevel=n;
- try{const previous=localStorage.getItem(`poe2-simulator:before-stage:${selectedPreset.id}`);if(previous){const saved=parseSave(previous);stageBackup={request:saved.request,questPoints:saved.questPoints,notes:saved.notes,equipmentDrafts:saved.equipmentDrafts || {},weaponSets:saved.weaponSets || null};$('sim-stage-undo').hidden=false;}}catch{}
+ try{const previous=localStorage.getItem(`poe2-simulator:before-stage:${selectedPreset.id}`);if(previous){const saved=parseSave(previous);stageBackup={request:saved.request,questPoints:saved.questPoints,notes:saved.notes,equipmentDrafts:saved.equipmentDrafts || {},weaponSets:saved.weaponSets || null,origin:saved.origin || null};$('sim-stage-undo').hidden=false;}}catch{}
  $('sim-stage-title').textContent=`記事から引き継ぎ：Lv${n} / ${stage.label}`;
  $('sim-stage-description').innerHTML=`<p><b>主力の案内：</b>${esc(stage.mainSkill)}</p><details><summary>この段階の装備・パッシブ・切替条件</summary>${[['サポート',stage.supports],['装備',stage.gearPriority],['パッシブ',stage.passivePriority],['切替条件',stage.transitionCondition],['注意',stage.caution]].map(([title,value])=>`<p><b>${title}：</b>${esc(value)}</p>`).join('')}</details>`;
  const candidates=stageSkillCandidates(stage,catalog.gems,names);
@@ -396,7 +550,7 @@ function renderStageHandoff(){
 function applyStageHandoff(){
  if(!incomingLevel)return;
  stageBackup=clone(plan);
- try{localStorage.setItem(`poe2-simulator:before-stage:${selectedPreset.id}`,JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {},plan.weaponSets || null)));}catch{throw Error('切替前の保存ができません。先に保存ファイルを書き出してください。');}
+ try{localStorage.setItem(`poe2-simulator:before-stage:${selectedPreset.id}`,JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {},plan.weaponSets || null,plan.origin || null)));}catch{throw Error('切替前の保存ができません。先に保存ファイルを書き出してください。');}
  const request=newPlan(selectedPreset,catalog.gems);request.character.level=incomingLevel;
  const id=$('sim-stage-skill').value;if(id)request.socket_groups=[{enabled:true,main_active_skill:1,gems:[{skill_id:id,level:1,quality:0}]}];
  plan={request,questPoints:0,notes:''};baseline=null;selectedNode=null;queuedNodes.clear();preview=null;renderInputs();loadTemplate();commit();$('sim-stage-undo').hidden=false;$('sim-stage-status').textContent=`Lv${incomingLevel}の新しい試作に切り替えました。装備・サポート・ジェムLvを手持ちに合わせて設定してください。`;trackSim('simulator_stage_apply',{level:incomingLevel});
@@ -405,7 +559,7 @@ function saveSharedPlan(){
  try{const key=`poe2-simulator:v1:${selectedPreset.id}`,previous=localStorage.getItem(key);if(previous)localStorage.setItem(`poe2-simulator:before-share:${selectedPreset.id}`,previous);sharedReadOnly=false;if(!save({track:true})){sharedReadOnly=true;return false;}$('sim-shared-panel').hidden=true;return true;}catch(error){showError(error);return false;}
 }
 async function createShareLink(){
- const value=await encodePlanLink(makeSave(selectedPreset.id,plan.request,plan.questPoints,'',plan.equipmentDrafts || {},plan.weaponSets || null));
+ const value=await encodePlanLink(makeSave(selectedPreset.id,plan.request,plan.questPoints,'',plan.equipmentDrafts || {},plan.weaponSets || null,plan.origin || null));
  const url=new URL('/simulator/',location.origin);url.searchParams.set('build',selectedPreset.id);url.hash='plan='+value;
  $('sim-share-url').value=url.href;$('sim-share-panel').hidden=false;$('sim-share-status').textContent='別の端末でこのURLを開くと、同じ構成を確認できます。';$('sim-share-url').focus();trackSim('simulator_share_create');
 }
@@ -414,14 +568,16 @@ function auditRequirements(request){
  const items=(request.items || []).map(item=>({slot:item.slot,requirements:itemRequirements(item.text,equipmentCatalog)})).filter(item=>Object.values(item.requirements).some(n=>n>0));
  return items.length?rpc('equipment-audit',{request,items}):Promise.resolve([]);
 }
-function warningsHtml(next,requirements){
+function warningsHtml(next,requirements,request=plan.request){
  const gaps=resistanceGaps(next,targetValue());
- return `<h4>目標との不足・装備条件</h4>${gaps.length?`<ul>${gaps.map(g=>`<li>${g.label}：${number(g.value,g.id)}。目標${targetValue()}%まで${g.missing}ポイント不足</li>`).join('')}</ul>`:'<p>設定した耐性の目標を満たしています。</p>'}${requirements.length?`<ul>${requirements.map(v=>`<li>${esc(slots.find(s=>s[0]===v.slot)?.[1] || v.slot)}：${esc(v.message)}</li>`).join('')}</ul>`:'<p>データで確認できる通常の装備条件に不足は見つかりませんでした。</p>'}${next.item_errors?.length?'<p>読み込めない装備があります。計算の確認事項も見てください。</p>':''}`;
+ const advice=upgradeAdvice(next,requirements,targetValue(),request);
+ const actions=advice.length?`<h4>次に確認すること</h4><ol class="sim-upgrade-actions">${advice.map(a=>`<li><b>${esc(a.title)}</b><p>${esc(a.detail)}</p>${a.slot?`<button type="button" data-improve-slot="${esc(a.slot)}">${esc(slots.find(s=>s[0]===a.slot)?.[1]||'装備')}の候補を作る</button>`:''} <a href="${esc(a.href)}">${esc(a.link)}</a></li>`).join('')}</ol>`:'<p>設定した耐性目標と通常の装備条件を満たしています。次は装備交換による火力・耐久の変化を比較してください。</p>';
+ return `<h4>目標との不足・装備条件</h4>${gaps.length?`<ul>${gaps.map(g=>`<li>${g.label}：${number(g.value,g.id)}。目標${targetValue()}%まで${g.missing}ポイント不足</li>`).join('')}</ul>`:'<p>設定した耐性の目標を満たしています。</p>'}${requirements.length?`<ul>${requirements.map(v=>`<li>${esc(slots.find(s=>s[0]===v.slot)?.[1] || v.slot)}：${esc(v.message)}</li>`).join('')}</ul>`:'<p>データで確認できる通常の装備条件に不足は見つかりませんでした。</p>'}${next.item_errors?.length?'<p>読み込めない装備があります。計算の確認事項も見てください。</p>':''}${actions}`;
 }
 async function updateBuildWarnings(next,request){
  const token=++auditSequence,version=generation;
  $('sim-build-warnings').textContent='装備条件を確認中…';
- try{const requirements=await auditRequirements(clone(request));if(token!==auditSequence||version!==generation)return;$('sim-build-warnings').innerHTML=warningsHtml(next,requirements);}
+ try{const requirements=await auditRequirements(clone(request));if(token!==auditSequence||version!==generation)return;$('sim-build-warnings').innerHTML=warningsHtml(next,requirements,request);}
  catch{if(token===auditSequence)$('sim-build-warnings').textContent='装備条件を確認できませんでした。ゲーム内表示を確認してください。';}
 }
 async function previewEquipment(){
@@ -433,10 +589,10 @@ async function previewEquipment(){
  const next=await rpc('calculate',request),requirements=await auditRequirements(request);
  if(version!==generation||edited!==editSequence||slot!==selectedSlot||draftVersion!==equipmentDraftVersion)return;
  if(next.item_errors?.some(e=>e.slot===slot))throw Error('この装備を読み込めません。テキストを確認してください。');
- panel.innerHTML=`<h4>交換する前の比較（まだ反映していません）</h4><dl class="sim-difference">${statistics.filter(([id])=>!['SpiritUnreserved'].includes(id)).map(([id,title])=>{const old=statValue(result,id),value=statValue(next,id),delta=old!==null&&value!==null?value-old:null;return `<div><dt>${title}</dt><dd>${number(old,id)} → ${number(value,id)}${delta!==null?` <b class="${delta<0?'negative':''}">(${delta>0?'+':''}${number(delta,id)})</b>`:''}</dd></div>`;}).join('')}</dl>${warningsHtml(next,requirements)}<p>比較結果を確認してから「この装備を反映」を押してください。</p>`;
+ panel.innerHTML=`<h4>交換する前の比較（まだ反映していません）</h4><dl class="sim-difference">${statistics.filter(([id])=>!['SpiritUnreserved'].includes(id)).map(([id,title])=>{const old=statValue(result,id),value=statValue(next,id),delta=old!==null&&value!==null?value-old:null;return `<div><dt>${title}</dt><dd>${number(old,id)} → ${number(value,id)}${delta!==null?` <b class="${delta<0?'negative':''}">(${delta>0?'+':''}${number(delta,id)})</b>`:''}</dd></div>`;}).join('')}</dl>${warningsHtml(next,requirements,request)}<p>比較結果を確認してから「この装備を反映」を押してください。</p>`;
  trackSim('simulator_compare_preview',{slot});
 }
-function download(){const blob=new Blob([JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {},plan.weaponSets || null),null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`poe2-${selectedPreset.id}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function download(){const blob=new Blob([JSON.stringify(makeSave(selectedPreset.id,plan.request,plan.questPoints,plan.notes,plan.equipmentDrafts || {},plan.weaponSets || null,plan.origin || null),null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=`poe2-${selectedPreset.id}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 // All inputs stay on this origin; no character or code upload is performed.
 document.addEventListener('click',async event=>{
  const target=event.target.closest('button,a');if(!target)return;
@@ -445,6 +601,7 @@ document.addEventListener('click',async event=>{
   if(target.dataset.preset){event.preventDefault();await selectPreset(target.dataset.preset);return;}
   if(target.id==='sim-change-build'){save();showChooser();return;}
   if(!plan)return;
+  if(target.dataset.improveSlot||/^sim-(plan-|compare-plans$|example-|workspace-undo$)/.test(target.id)){await handleWorkspaceClick(target);return;}
   if(target.dataset.tab){setTab(target.dataset.tab);if(target.dataset.tab==='tree'&&window.matchMedia?.('(max-width: 720px)').matches)openTreeEditor();return;}
   if(target.dataset.treeAction){$('sim-tree-'+target.dataset.treeAction).click();return;}
   if(target.id==='sim-tree-hide-settings'){$('sim-tree-settings').open=false;return;}
@@ -518,6 +675,7 @@ document.addEventListener('change',async event=>{
  if(target.id==='sim-class-filter'){for(const card of document.querySelectorAll('[data-preset]'))card.hidden=!!target.value&&presets.find(p=>p.id===card.dataset.preset).class!==target.value;return;}
  if(!plan)return;
  try{
+  if(handleWorkspaceChange(target))return;
   if(target.id==='sim-resist-target'){const value=Number(target.value);if(!Number.isFinite(value)||value< -100||value>100){target.value='75';throw Error('耐性の比較目標は−100〜100で入力してください。');}if(result)void updateBuildWarnings(result,plan.request);return;}
   if(target.closest('#sim-item-editor')){equipmentDraftVersion++;$('sim-item-preview-result').hidden=true;}
   if(target.id==='sim-rare-base'||target.id==='sim-rare-level'||target.id==='sim-rare-quality'||target.id==='sim-rare-name'||target.dataset.rareValue!==undefined){readRareDraft();$('sim-rare-dirty').textContent='未反映の変更があります。';return;}
@@ -533,8 +691,9 @@ document.addEventListener('change',async event=>{
   if(target.id==='sim-node-attribute'){plan.request.attribute_choices ||= {};plan.request.attribute_choices[selectedNode]=target.value;commit();nodeDetail(selectedNode,{reveal:false});renderNodeCatalog();}
   if(target.id==='sim-file'){
    const file=target.files[0];if(!file)return;if(file.size>2000000)throw Error('保存ファイルは2MBまでです。');const saved=parseSave(await file.text());
+   if(saved.preset!==selectedPreset.id||saved.request.character.class_name!==selectedPreset.class)throw Error('この保存ファイルは別のビルドの構成です。対応するビルドを選んでから読み込んでください。');
    const next=await rpc('calculate',saved.request),nodes=await rpc('tree',saved.request.tree_version || null);
-   plan={request:saved.request,questPoints:saved.questPoints || 0,notes:saved.notes || '',equipmentDrafts:saved.equipmentDrafts || {},weaponSets:saved.weaponSets || null};passiveResetBackup=null;$('sim-passives-undo').hidden=true;setCurrentTree(nodes);loadTemplate();result=next;baseline=null;selectedNode=null;preview=null;queuedNodes.clear();renderInputs();renderTree();renderResults();closeItemEditor();save();target.value='';
+   plan={request:saved.request,questPoints:saved.questPoints || 0,notes:saved.notes || '',equipmentDrafts:saved.equipmentDrafts || {},weaponSets:saved.weaponSets || null,origin:saved.origin || null};passiveResetBackup=null;$('sim-passives-undo').hidden=true;setCurrentTree(nodes);loadTemplate();result=next;baseline=null;selectedNode=null;preview=null;queuedNodes.clear();renderInputs();renderTree();renderResults();closeItemEditor();save();target.value='';
   }
  }catch(error){showError(error);}
 });

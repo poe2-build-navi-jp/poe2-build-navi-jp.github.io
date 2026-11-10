@@ -5,11 +5,11 @@
   "gameVersion": "0.5.5",
   "nextGameVersion": "1.0",
   "nextGameVersionReleaseDate": "2026-12-11",
-  "lastUpdated": "2026-09-13",
-  "latestPatch": "0.5.5e",
-  "latestPatchCheckedAt": "2026-10-06",
-  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4009785",
-  "latestPatchImpact": "0.5.5e公式パッチノートは低VRAM向け設定と不具合修正を掲載。ビルドやサポート共通ルールの変更根拠としては扱っていません。",
+  "lastUpdated": "2026-11-11",
+  "latestPatch": "0.5.5f Hotfix",
+  "latestPatchCheckedAt": "2026-11-11",
+  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4013539/page/1",
+  "latestPatchImpact": "0.5.5fは告知・サポーターパック対応、11月10日のHotfixはコラプトした先駆者のビーコンの連続マップ報酬の修正です。今回確認した差分にはスキル・パッシブの数値変更の記載はありません。各ビルドの育成資料・ゲーム内検証日は個別ページで確認してください。",
   "baseUrl": "https://poe2-build-navi-jp.github.io",
   "googleAnalyticsMeasurementId": "G-ZTQ4RYVHPC"
 }

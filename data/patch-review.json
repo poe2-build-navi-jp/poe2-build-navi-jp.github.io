@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-11",
+  "gameVersion": "0.5.5",
+  "engineDataVersion": "0.5.5.5",
+  "scope": "公式差分の確認です。全ビルドの再検証日・実機プレイ日とは区別しています。",
+  "patches": [
+    {
+      "version": "0.5.5f Hotfix",
+      "publishedDate": "2026-11-10",
+      "url": "https://www.pathofexile.com/forum/view-thread/4013539/page/1",
+      "summary": "Corrupted Precursor Beacon（コラプト状態の先駆者のビーコン）で選んだ一連のマップを完了しても報酬を受け取れない問題を修正。既に対象の元マップを開いている場合は対象外です。",
+      "remaining": "最終マップで失敗し再挑戦した場合に報酬を得られない問題は調査中とされています。",
+      "impact": "報酬・進行に関する変更。ビルド評価を変更する根拠としては扱いません。"
+    },
+    {
+      "version": "0.5.5f",
+      "publishedDate": "2026-11-06",
+      "url": "https://www.pathofexile.com/forum/view-thread/4012719/filter-account-type/staff",
+      "summary": "今後の告知と新しいサポーターパックへの対応。",
+      "remaining": "公開時のXbox配信遅延の告知は確認できましたが、この確認で解消時刻までは特定していません。",
+      "impact": "掲載ノートにスキル・パッシブ数値の変更記載はありません。"
+    },
+    {
+      "version": "0.5.5e Hotfix 1",
+      "publishedDate": "2026-10-28",
+      "url": "https://www.pathofexile.com/forum/view-thread/4012026",
+      "summary": "ミニマップの地形が正しく表示されない問題を修正。クライアント再起動で更新を受け取る旨の案内があります。",
+      "impact": "表示に関する変更。育成手順の変更とは分けて記録します。"
+    }
+  ]
+}

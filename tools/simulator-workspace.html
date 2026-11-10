@@ -1,0 +1,27 @@
+<details id="sim-workspace" class="sim-workspace">
+ <summary>構成を名前付きで保存・比較する</summary>
+ <p>今の自動保存に加えて、このビルドを12構成まで保存できます。名前付きの構成は「更新」を押すまで変わりません。</p>
+ <div class="sim-workspace-row"><label>構成名<input id="sim-plan-name" maxlength="40" placeholder="例：周回用・ボス用・購入候補"></label><button type="button" id="sim-plan-create">別の構成として保存</button></div>
+ <label>保存した構成<select id="sim-plan-select"></select></label>
+ <div class="sim-actions"><button type="button" id="sim-plan-load">この構成を読み込む</button><button type="button" id="sim-plan-update">現在の内容で更新</button><button type="button" id="sim-plan-delete">削除内容を確認</button></div>
+ <div id="sim-plan-delete-confirm" class="sim-transfer" hidden><p id="sim-plan-delete-message"></p><button type="button" id="sim-plan-delete-apply">この構成を削除</button><button type="button" id="sim-plan-delete-cancel">キャンセル</button></div>
+ <button type="button" id="sim-plan-delete-undo" hidden>削除した構成を戻す</button>
+ <p id="sim-plan-status" role="status" aria-live="polite"></p>
+ <h3>2つの構成を比較する</h3>
+ <div class="sim-compare-picks"><label>構成A<select id="sim-compare-a"></select></label><label>構成B<select id="sim-compare-b"></select></label><label>共通の敵条件<select id="sim-compare-enemy"><option value="none">通常の敵</option><option value="boss">ボス</option><option value="pinnacle">ピナクルボス</option><option value="uber">ウーバーボス</option></select></label></div>
+ <p class="sim-muted">敵条件をそろえ、Lv・装備・スキル・一時効果は各構成の保存内容で比較します。今の作業内容や保存構成は変わりません。</p>
+ <button type="button" id="sim-compare-plans">AとBを計算して比較</button>
+ <div id="sim-compare-result" class="sim-comparison-result" role="status" aria-live="polite"></div>
+</details>
+<details id="sim-examples-panel" class="sim-workspace">
+ <summary>装備入りのサンプル・撃破装備から始める</summary>
+ <label>確認する見本<select id="sim-example-select"></select></label>
+ <div id="sim-example-conditions" class="sim-compare-picks" hidden><label id="sim-example-level-label">試算用のキャラクターLv<input id="sim-example-level" type="number" inputmode="numeric" min="1" max="100"></label><label id="sim-example-weapon-label">計算用の武器配置<select id="sim-example-weapon"><option value="1">選ばれし者 ＋ セプター</option><option value="2">スカイシルバー ＋ セプター</option></select></label></div>
+ <p id="sim-example-level-help" class="sim-muted"></p>
+ <button type="button" id="sim-example-preview">内容を見る</button>
+ <section id="sim-example-preview-result" class="sim-transfer" hidden aria-live="polite"></section>
+ <button type="button" id="sim-example-apply" class="sim-primary" hidden>この内容で試す</button>
+ <p id="sim-example-status" role="status" aria-live="polite"></p>
+</details>
+<div id="sim-workspace-restore" class="sim-transfer" hidden><p>切替前の作業内容を退避しています。</p><button type="button" id="sim-workspace-undo">切替前の構成に戻す</button></div>
+<aside id="sim-plan-origin" class="sim-origin" hidden></aside>
