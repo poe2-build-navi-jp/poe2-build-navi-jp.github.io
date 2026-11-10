@@ -151,7 +151,7 @@ for (const [, pageUrl] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   const loader = `https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsMeasurementId}`;
   assert((page.match(new RegExp(loader.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")) || []).length === 1, `${pagePath}: Google Analytics loader must appear once`);
   assert((page.match(new RegExp(`gtag\\('config','${site.googleAnalyticsMeasurementId}'\\)`, "g")) || []).length === 1, `${pagePath}: Google Analytics config must appear once`);
-  const tracksEvents = pagePath === "index.html"
+  const tracksEvents = pagePath === "simulator/index.html" || pagePath === "index.html"
     || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(pagePath)
     || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(pagePath)
     || /^(guides|skills|equipment|dictionary)\/(?:[^/]+\/)?index\.html$/.test(pagePath);

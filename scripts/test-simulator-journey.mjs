@@ -1,0 +1,58 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {Worker} from 'node:worker_threads';
+import {JSDOM,VirtualConsole} from 'jsdom';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import * as model from '../assets/simulator-model.js';
+const root=resolve(import.meta.dirname,'..'),native=new Worker(new URL('./fixtures/simulator-worker-node.mjs',import.meta.url));
+let seq=0;const pending=new Map();native.on('message',m=>{if(m.progress)return;const p=pending.get(m.id);pending.delete(m.id);m.error?p.reject(Error(m.error)):p.resolve(m.result);});
+const rpc=(action,payload)=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});native.postMessage({id,action,payload});});
+const wait=async predicate=>{for(let i=0;i<600;i++){if(predicate())return;await new Promise(r=>setTimeout(r,25));}throw Error('Journey UI timeout');};
+const presets=JSON.parse(await readFile(resolve(root,'data/simulator-presets.json'),'utf8'));
+const html=await readFile(resolve(root,'simulator/index.html'),'utf8');
+let code=await readFile(resolve(root,'assets/simulator.js'),'utf8');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
+const contexts=[];
+async function browser(url,stored){
+ const v=new VirtualConsole(),errors=[];v.on('jsdomError',e=>{if(!/navigation/.test(e.message))errors.push(e.message);});
+ const dom=new JSDOM(html,{url,runScripts:'outside-only',virtualConsole:v}),w=dom.window,d=w.document;contexts.push(dom);
+ Object.assign(w,model,{structuredClone,TextEncoder,TextDecoder,Blob,Response,CompressionStream,DecompressionStream,WebAssembly});
+ w.HTMLElement.prototype.scrollIntoView=function(){};const events=[];w.gtag=(...a)=>events.push(a);
+ if(stored)w.localStorage.setItem('poe2-simulator:v1:mercenary-twister-gemling',JSON.stringify(stored));
+ w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.slice(1))));
+ w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>this.onmessage?.({data:{id,result}}),error=>this.onmessage?.({data:{id,error:error.message}}));}};
+ await w.eval(`(async()=>{${code}\n})()`);
+ const click=s=>d.querySelector(s).click(),change=(s,v)=>{const e=d.querySelector(s);e.value=v;e.dispatchEvent(new w.Event('change',{bubbles:true}));};
+ const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false'&&!!d.querySelector('.sim-stat');
+ await wait(ready);
+ return{w,d,click,change,ready,events,saved:()=>JSON.parse(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'))};
+}
+try{
+ const catalog=await rpc('boot'),preset=presets.find(p=>p.id==='mercenary-twister-gemling');
+ for(const p of presets){assert.equal(p.stages.length,8);for(const level of [1,10,11,20,21,40,41,65,66,75,76,90,91,100])assert(model.levelingStage(p,level));}
+ const req=model.newPlan(preset,catalog.gems);req.extra_modifiers=['+999 to maximum Life'];
+ let stored=model.makeSave(preset.id,req,0,'秘密のメモ');
+ const shared={...stored,request:{...req,character:{...req.character,level:33}}};
+ const value=await model.encodePlanLink(shared),decoded=await model.decodePlanLink(value);assert.equal(decoded.notes,'');assert.equal(decoded.request.character.level,33);assert.deepEqual(decoded.weaponSets,shared.weaponSets);
+ await assert.rejects(()=>model.decodePlanLink('1g.not_valid_compressed_data'));
+ await assert.rejects(()=>model.decodePlanLink('x'.repeat(24001)));
+ const bad={...stored,version:2};await assert.rejects(()=>model.encodePlanLink(bad));
+ const c=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+preset.id+'&level=18&from=guide',stored);
+ assert.equal(c.d.getElementById('sim-stage-panel').hidden,false);assert.equal(c.saved().request.character.level,80,'entry does not overwrite the previous save');
+ c.click('#sim-stage-apply');await wait(c.ready);assert.equal(c.saved().request.character.level,18);assert.deepEqual(c.saved().request.allocated_nodes,[]);assert.equal(c.saved().request.extra_modifiers,undefined);assert(c.w.localStorage.getItem('poe2-simulator:before-stage:'+preset.id).includes('秘密のメモ'));
+ c.click('[data-slot="helmet"]');c.click('[data-equipment-mode="rare"]');
+ const equipment=JSON.parse(await readFile(resolve(root,'data/simulator-equipment.json'),'utf8'));
+ c.change('#sim-rare-base',equipment.bases.find(b=>b.name==='Covert Hood').id);c.click('#sim-rare-add');c.change('[data-rare-value="0"]','100');
+ const before=JSON.stringify(c.saved());c.click('#sim-item-preview');await wait(()=>c.d.getElementById('sim-item-preview-result').textContent.includes('交換する前の比較'));
+ assert.equal(JSON.stringify(c.saved()),before,'a preview must not alter the saved build');assert.match(c.d.getElementById('sim-item-preview-result').textContent,/器用さが.*不足/);assert.match(c.d.getElementById('sim-item-preview-result').textContent,/火耐性.*不足/);
+ c.click('#sim-item-apply');await wait(c.ready);assert.equal(c.saved().request.items.length,1);assert(c.events.some(e=>e[1]==='simulator_compare_preview'));
+ c.click('#sim-share');await wait(()=>c.d.getElementById('sim-share-url').value.includes('#plan='));
+ const url=c.d.getElementById('sim-share-url').value;
+ const other=await browser(url,stored);assert.equal(other.d.getElementById('sim-shared-panel').hidden,false);assert.equal(other.saved().request.character.level,80);assert.equal(other.d.getElementById('sim-level').value,'18');
+ other.change('#sim-level','19');await wait(other.ready);assert.equal(other.saved().request.character.level,80,'editing shared data does not overwrite own save');
+ other.click('#sim-shared-save');assert.equal(other.saved().request.character.level,19);assert(other.w.localStorage.getItem('poe2-simulator:before-share:'+preset.id));
+ const leak=JSON.stringify(c.events);assert(!leak.includes('秘密のメモ'));assert(!leak.includes('Rarity:'));assert(!leak.includes('#plan='));
+ const requirements=model.itemRequirements('Rarity: RARE\nGear\nUnknown\nRequirements:\nLevel: 60\nStr: 120\nDex: 30\n--------',equipment);assert.deepEqual(requirements,{str:120,dex:30,level:60});
+ const audit=await rpc('equipment-audit',{request:{...req,items:[{slot:'helmet',text:'Rarity: RARE\nGear\nCovert Hood\n--------\n+1000 to Dexterity'}]},items:[{slot:'helmet',requirements:{dex:79}}]});assert(audit.some(a=>a.message.includes('器用さ')),'an item cannot count its own attribute bonus towards equipping itself');
+ console.log('PASS: guide stage handoff, backup, unapplied equipment preview, requirement/target warnings, shared URL round trip and save isolation, bounded analytics events');
+}finally{contexts.forEach(d=>d.window.close());await native.terminate();}

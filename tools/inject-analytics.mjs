@@ -37,9 +37,10 @@ async function inject(directory = "") {
     const file = resolve(root, path);
     const original = await readFile(file, "utf8");
     if (!original.includes("</head>")) continue;
+    const pageTag = path === "simulator/index.html" ? tag.replace("gtag('config'", "gtag('set','page_location',location.origin+location.pathname);gtag('config'") : tag;
     let html = marker.test(original)
-      ? original.replace(marker, tag)
-      : original.replace(/<head([^>]*)>/, `<head$1>${tag}`);
+      ? original.replace(marker, pageTag)
+      : original.replace(/<head([^>]*)>/, `<head$1>${pageTag}`);
     html = preconnectMarker.test(html)
       ? html.replace(preconnectMarker, preconnectTag)
       : html.replace(/<head([^>]*)>/, `<head$1>${preconnectTag}`);
@@ -50,7 +51,7 @@ async function inject(directory = "") {
     if (indexable && !html.includes("pagead/js/adsbygoogle.js")) {
       html = html.replace(adsenseMeta, `${adsenseMeta}${adsenseScript}`);
     }
-    const tracksEvents = path === "index.html"
+    const tracksEvents = path === "simulator/index.html" || path === "index.html"
       || /^(best-builds|tier-list|league-starter|leveling|poe2-1-0)\/index\.html$/.test(path)
       || /^builds\/[^/]+\/[^/]+\/index\.html$/.test(path)
       || /^(guides|skills|equipment|dictionary)\/(?:[^/]+\/)?index\.html$/.test(path);

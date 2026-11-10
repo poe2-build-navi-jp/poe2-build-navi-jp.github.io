@@ -1,5 +1,5 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
-import {validRequest} from './simulator-model.js?v=92480b8bec';
+import {validRequest} from './simulator-model.js?v=20909d41d6';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;
@@ -57,6 +57,17 @@ self.onmessage = async ({data:{id,action,payload}}) => {
     else if (action === 'calculate') result = calculate(payload);
     else if (action === 'tree') result = tree(payload);
     else if (action === 'edit') result = JSON.parse(engine.previewTreeEditJson(JSON.stringify(payload)));
+    else if(action==='equipment-audit'){
+      if(!validRequest(payload.request)||!Array.isArray(payload.items)||payload.items.length>40)throw Error('装備条件を確認できません。');
+      result=payload.items.flatMap(({slot,requirements:req})=>{
+        const without=calculate({...payload.request,items:(payload.request.items || []).filter(i=>i.slot!==slot)});
+        const available=id=>without.stats.find(s=>s.id===id)?.value ?? 0;
+        const gaps=[];
+        for(const [key,id,label]of [['str','Str','筋力'],['dex','Dex','器用さ'],['int','Int','知性']])if(Number.isFinite(req[key])&&req[key]>available(id))gaps.push(`${label}が${Math.ceil(req[key]-available(id))}不足（装備自身を除く${available(id)} / 必要${req[key]}）`);
+        if(req.level>payload.request.character.level)gaps.push(`必要Lv${req.level}に未到達`);
+        return gaps.map(message=>({slot,message}));
+      });
+    }
     else if (action === 'unique') {
       const raw=uniques.find(item=>item.id===payload.id)?.raw;
       if(!raw)throw new Error('ユニークが見つかりません。');

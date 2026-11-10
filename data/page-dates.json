@@ -5,8 +5,8 @@
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "a6fcc36f26c7ec2e",
-  "date": "2026-11-07",
+  "hash": "cb037618e8dfb7ee",
+  "date": "2026-11-10",
   "hashVersion": 2
  },
  "/search/": {
@@ -310,62 +310,62 @@
   "hashVersion": 2
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "f1277af4b6a77442",
+  "hash": "4eac69bd72d7b8df",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "b08016a8e615f337",
+  "hash": "31a4c6e36b93ce8d",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "72f8f1c5f708608c",
+  "hash": "8a76ec242959c265",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "a1a3aac3bc278154",
+  "hash": "35b3c52247fd28ce",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/huntress/companion/": {
-  "hash": "90451ab9c83aa429",
+  "hash": "b5d7a4a9f65e0b1f",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/ranger/ice-shot-deadeye/": {
-  "hash": "1a6824c0f97e63ee",
+  "hash": "61a23d1e1d05243b",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/witch/minion-infernalist/": {
-  "hash": "a985bb3363766721",
+  "hash": "16639cac9c958f4a",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "8eaa44f03ab79994",
+  "hash": "c83d86fe97aee065",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "0c0a87acddeddcea",
+  "hash": "e6e7cbcf32510445",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "62a16320ab40b315",
+  "hash": "37c88c2a6be152b9",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/huntress/twister-spirit-walker/": {
-  "hash": "d3357fc83c807fc8",
+  "hash": "0af5966a75f4c78e",
   "date": "2026-11-10",
   "hashVersion": 2
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "bad4900eb02e4a16",
+  "hash": "6492153ca898710b",
   "date": "2026-11-10",
   "hashVersion": 2
  },
@@ -500,7 +500,7 @@
   "hashVersion": 2
  },
  "/guides/arbiter-of-ash-clear-record/": {
-  "hash": "86e0304d049f3347",
+  "hash": "715668d7c0276983",
   "date": "2026-11-10",
   "hashVersion": 2
  },
@@ -510,7 +510,7 @@
   "hashVersion": 2
  },
  "/guides/arbiter-of-divinity/": {
-  "hash": "5de62a04bf03c21b",
+  "hash": "33a48db9e4c3cca1",
   "date": "2026-11-10",
   "hashVersion": 2
  },
@@ -570,7 +570,7 @@
   "hashVersion": 2
  },
  "/guides/xesht/": {
-  "hash": "5c10df96e6c8bdb1",
+  "hash": "d73591bdd0d9f15f",
   "date": "2026-11-10",
   "hashVersion": 2
  },
