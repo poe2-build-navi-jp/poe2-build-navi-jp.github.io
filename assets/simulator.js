@@ -6,7 +6,7 @@ const [presets,localization,equipmentCatalog,routeCatalog] = await Promise.all([
  const r=await fetch(url);if(!r.ok)throw Error('ビルド一覧を読み込めません。再読み込みしてください。');return r.json();
 })).catch(error=>{$('sim-chooser').insertAdjacentHTML('beforeend',`<p role="alert">${esc(error.message)}</p>`);throw error;});
 const trackSim=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{page_path:location.pathname,...(selectedPreset?{build_id:selectedPreset.id}:{}),...extra});};
-let sharedReadOnly=false,incomingLevel=null,stageBackup=null,auditSequence=0;
+let sharedReadOnly=false,incomingLevel=null,stageBackup=null,auditSequence=0,readyGeneration=0,entrySource='chooser';
 const names=localization.names;
 const label=name=>name==='Companion: {0}'?'コンパニオン（召喚対象を設定）':name==='Spectre: {0}'?'スペクター（召喚対象を設定）':names[name] || name;
 const nodeStats=node=>passiveDescriptions(node,localization,plan?.request.attribute_choices || {},!plan?.request.tree_version||plan.request.tree_version==='0_5');
@@ -69,7 +69,8 @@ async function drainCalculations(){
    const next=await rpc('calculate',job.request);
    if(job.token!==calculation||job.version!==generation)continue;
    result=next;renderResults();renderTreeState();$('sim-status').textContent='変更を計算しました。';$('sim-tree-save-state').textContent=$('sim-save-status').textContent+'・計算反映済み';
-  }catch(error){if(job.token===calculation&&job.version===generation){result=null;$('sim-tree-live-stats').textContent='この構成は計算できません。';$('sim-tree-save-state').textContent='計算に失敗しました。構成の設定を確認してください。';$('sim-stats').innerHTML='<p>この構成は計算できません。</p>';showError(error);}}
+   if(readyGeneration!==generation){readyGeneration=generation;trackSim('simulator_ready',{source:entrySource});}
+  }catch(error){if(job.token===calculation&&job.version===generation){result=null;$('sim-tree-live-stats').textContent='この構成は計算できません。';$('sim-tree-save-state').textContent='計算に失敗しました。構成の設定を確認してください。';$('sim-status').textContent=$('sim-tree-save-state').textContent;$('sim-stats').innerHTML='<p>この構成は計算できません。</p>';showError(error);}}
   finally{if(job.token===calculation&&job.version===generation){$('sim-item-result').setAttribute('aria-busy','false');$('sim-stats').setAttribute('aria-busy','false');$('sim-baseline').disabled=!result;}job.resolve();}
  }}finally{calculating=false;}
 }
@@ -116,8 +117,8 @@ async function selectPreset(id,{fromHistory=false,shared=null}={}){
   plan ||= {request:newPlan(preset,catalog.gems),questPoints:0,notes:''};
   const nodes=!plan.request.tree_version||plan.request.tree_version==='0_5'?catalog.tree:await rpc('tree',plan.request.tree_version);if(version!==generation)return;setCurrentTree(nodes);loadTemplate();
   for(const element of $('sim-workbench').querySelectorAll('button,input,select,textarea'))element.disabled=false;
-  renderInputs();renderStageHandoff();await recalculate();if(version!==generation)return;renderTree();
-  if(recoveryError)showError(recoveryError);else save();trackSim('simulator_ready',{source:shared?'shared':incomingLevel?'guide':'chooser'});
+  renderInputs();renderStageHandoff();entrySource=shared?'shared':incomingLevel?'guide':'chooser';await recalculate();if(version!==generation)return;renderTree();
+  if(recoveryError)showError(recoveryError);else if(result)save();
  }catch(error){if(version===generation)showError(error);}
 }
 function showChooser(){if(treeFullscreen){save();restoreTreeEditor();}generation++;calculation++;$('sim-chooser').hidden=false;$('sim-workbench').hidden=true;const u=new URL(location.href);u.searchParams.delete('build');u.searchParams.delete('level');u.searchParams.delete('from');u.hash='';history.pushState({},'',u.pathname+u.search);$('sim-chooser').scrollIntoView({block:'start'});}
