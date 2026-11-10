@@ -15,3 +15,9 @@ export function recordScreenshots(images = [], disclosure) {
   }).join('');
   return disclosure && images.length ? `<details class="guide-record-gallery"><summary>${esc(disclosure)}</summary>${figures}</details>` : figures;
 }
+
+export function recordSimulatorLink(guide){
+ const ids={'arbiter-of-divinity':'record-divinity','xesht':'record-xesht','arbiter-of-ash-clear-record':'record-ash'},id=ids[guide.slug];
+ if(!id)return '';
+ return `<aside class="content-action record-simulator"><h2>掲載装備を自分の構成と比較する</h2><p>確認できた装備の効果をシミュレーターへ取り込めます。未確認のスキル・パッシブ・予約設定は空欄です。最初に読み込み内容を確認し、今の作業を退避してから切り替えられます。</p><a class="button-secondary" href="/simulator/?build=mercenary-twister-gemling&amp;example=${id}&amp;from=record">撃破装備の読み込み内容を見る</a>${guide.slug==='xesht'?'<p>ゼシュト撃破時のLvは未確認です。画面で入力するLvは試算用です。</p>':''}</aside>`;
+}

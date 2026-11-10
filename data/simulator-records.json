@@ -1,0 +1,564 @@
+{
+  "checkedAt": "2026-11-11",
+  "records": [
+    {
+      "id": "record-divinity",
+      "preset": "mercenary-twister-gemling",
+      "title": "神性のアービター：確認済み装備10点",
+      "guide": "arbiter-of-divinity",
+      "level": 87,
+      "items": [
+        {
+          "slot": "weapon1",
+          "name": "The Ordained",
+          "base": "Grand Spear",
+          "quality": 20,
+          "requirements": {
+            "level": 79,
+            "str": 65,
+            "dex": 105
+          },
+          "modifiers": [
+            "18% increased Physical Damage",
+            "Grants Skill: Spear Throw",
+            "Grants Skill: Level 19 Righteous Descent",
+            "25% increased Melee Strike Range with this weapon",
+            "189% increased Physical Damage",
+            "Adds 1 to 206 Lightning Damage",
+            "+6.66% to Critical Hit Chance",
+            "Life Leech recovers based on your Lightning damage as well as Physical damage",
+            "Create a Fragment of Divinity in your Presence every 4 seconds"
+          ],
+          "sourceText": "スピア ／ 選ばれし者／グランドスピア ／ 品質+20%。物理206–309、雷1–206、クリティカル11.66%、秒間アタック1.40。必要Lv79・筋力65・器用さ105。 ／ 物理ダメージ18%増加（淡青の行）。スピアスロー、Lv19ライチャスデセントを付与。近接ストライク距離25%増加。物理ダメージ189%増加、雷1–206追加、クリティカル率+6.66%。ライフリーチが物理だけでなく雷ダメージにも基づく。4秒ごとに存在下に神性の欠片1個を生成。コラプト状態。"
+        },
+        {
+          "slot": "weapon1",
+          "name": "Skysliver",
+          "base": "Winged Spear",
+          "quality": 15,
+          "requirements": {
+            "level": 16,
+            "str": 12,
+            "dex": 24
+          },
+          "modifiers": [
+            "+80 to maximum Life",
+            "Grants Skill: Spear Throw",
+            "No Physical Damage",
+            "Adds 1 to 84 Lightning Damage",
+            "26% increased Attack Speed",
+            "58% increased chance to Shock",
+            "Rolls only the minimum or maximum Damage value for each Damage Type"
+          ],
+          "sourceText": "追加のスピア ／ スカイシルバー／翼刃のスピア ／ 品質+15%。雷「1または84」、クリティカル5.00%、秒間アタック2.15。必要Lv16・筋力12・器用さ24。 ／ 最大ライフ+80。スピアスローを付与。物理ダメージなし。雷1–84追加、アタックスピード26%増加、感電付与確率58%増加。各ダメージタイプで最小値か最大値だけをロール。"
+        },
+        {
+          "slot": "helmet",
+          "name": "Alpha's Howl",
+          "base": "Armoured Cap",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "dex": 87
+          },
+          "modifiers": [
+            "15% increased Life Regeneration rate",
+            "18% increased Armour, Evasion and Energy Shield",
+            "100% increased Evasion Rating",
+            "+100 to Spirit",
+            "+55% to Cold Resistance",
+            "Presence Radius is doubled"
+          ],
+          "sourceText": "兜 ／ アルファの遠吠え／ルーンマスターの装甲帽子 ／ 品質+20%。回避力466、ルーンワード136。必要Lv65・器用さ87。 ／ ライフ自動回復レート15%増加、防御3種18%増加（淡青の行）。回避力100%増加、スピリット+100、冷気耐性+55%、存在下の半径が2倍。コラプト状態。"
+        },
+        {
+          "slot": "body",
+          "name": "Morior Invictus",
+          "base": "Grand Regalia",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "str": 39,
+            "dex": 39,
+            "int": 39
+          },
+          "modifiers": [
+            "+36 to maximum Life",
+            "16% of Damage taken Recouped as Mana",
+            "+18% to Lightning Resistance",
+            "50% reduced effect of Curses on you",
+            "350% increased Armour, Evasion and Energy Shield"
+          ],
+          "sourceText": "鎧 ／ 不屈なる者として死す／壮厳なレガリア ／ 品質+20%。アーマー983、回避力891、ES270。必要Lv65・筋力39・器用さ39・知性39。 ／ 最大ライフ+36。受けたダメージ16%をマナとして回収。雷耐性+18%。呪いの効果50%減少。アーマーの+10%が混沌ダメージにも適用。ソケットしたアイドルが絆モッドの恩恵を得る。絆：全スキル品質+5%、混沌耐性+8%。防御3種350%増加。埋まったソケットごとに全能力値+7、混沌耐性+11%、最大ライフ+56。ダブルコラプト状態。"
+        },
+        {
+          "slot": "belt",
+          "name": "Shavronne's Satchel",
+          "base": "Fine Belt",
+          "quality": 0,
+          "requirements": {
+            "level": 62
+          },
+          "modifiers": [
+            "Has 3 Charm Slot",
+            "Flasks gain 0.17 charges per Second",
+            "26% reduced Flask Life Recovery rate",
+            "+26 to Intelligence",
+            "20% increased Flask Charges gained",
+            "Life Recovery from Flasks also applies to Energy Shield"
+          ],
+          "sourceText": "ベルト ／ シャヴロンの鞄／精巧なベルト ／ 必要Lv62。チャームスロット3。 ／ フラスコが毎秒0.17チャージを獲得。フラスコのライフ回復レート26%減少、知性+26、獲得フラスコチャージ20%増加。フラスコによるライフ回復はESにも適用。コラプト状態。"
+        },
+        {
+          "slot": "gloves",
+          "name": "血タロン",
+          "base": "Sirenscale Gloves",
+          "quality": 20,
+          "requirements": {
+            "level": 80,
+            "int": 97
+          },
+          "modifiers": [
+            "8% increased Attack Speed",
+            "+51 to maximum Energy Shield",
+            "93% increased Energy Shield",
+            "15% increased Attack Speed",
+            "+26 to Dexterity",
+            "Adds 14 to 26 Physical Damage to Attacks",
+            "11% increased Area of Effect of Attacks"
+          ],
+          "sourceText": "手袋 ／ 血タロン／サイレーンスケイルの手袋 ／ 品質+20%。ES243。必要Lv80・知性97。 ／ アタックスピード8%増加（淡青の行）。最大ES+51、ES93%増加、アタックスピード15%増加、器用さ+26。アタックに物理14–26追加、アタック効果範囲11%増加。コラプト状態。"
+        },
+        {
+          "slot": "boots",
+          "name": "Atziri's Step",
+          "base": "Cinched Boots",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "dex": 83
+          },
+          "modifiers": [
+            "18% increased Armour, Evasion and Energy Shield",
+            "30% increased Movement Speed",
+            "102% increased Evasion Rating",
+            "+81 to maximum Life",
+            "Gain Deflection Rating equal to 50% of Evasion Rating",
+            "-10% to amount of Damage Prevented by Deflection",
+            "19% increased Deflection Rating while Moving"
+          ],
+          "sourceText": "靴 ／ アッツィリの歩み／締め具のブーツ ／ ヴァール 靴。品質+20%。回避力586。必要Lv65・器用さ83。 ／ 防御3種18%増加（淡青の行）。移動スピード30%増加、回避力102%増加、最大ライフ+81。回避力50%と同量の受け流し力を獲得。受け流しにより防ぐダメージ量−10%。移動中の受け流し力19%増加（赤い行）。コラプト状態。"
+        },
+        {
+          "slot": "weapon2",
+          "name": "Guiding Palm of the Eye",
+          "base": "Shrine Sceptre",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "str": 16,
+            "int": 36
+          },
+          "modifiers": [
+            "Grants Skill: Level 18 Purity of Ice",
+            "Gain 25% of Damage as Extra Cold Damage",
+            "Allies in your Presence deal 22 to 29 added Attack Cold Damage",
+            "50% of your Base Life Regeneration is granted to Allies in your Presence",
+            "+23 to Intelligence",
+            "25% increased Light Radius",
+            "Grants effect of Guided Freezing Shrine"
+          ],
+          "sourceText": "セプター ／ 目の導きの掌／神殿のセプター ／ 品質+20%。スピリット100。必要Lv65・筋力16・知性36。 ／ Lv18ピュリティオブアイスを付与。ダメージ25%を追加冷気として獲得。存在下の味方にアタック冷気22–29追加。基本ライフ自動回復の50%を存在下の味方に付与。知性+23、光半径25%増加、導きの凍結のシュラインの効果を付与。コラプト状態。"
+        },
+        {
+          "slot": "amulet",
+          "name": "忘却の留め金",
+          "base": "Stellar Amulet",
+          "quality": 0,
+          "requirements": {
+            "level": 65
+          },
+          "modifiers": [
+            "+5 to all Attributes",
+            "+89 to maximum Energy Shield",
+            "28% increased maximum Energy Shield",
+            "+139 to maximum Mana",
+            "+1 to Level of all Projectile Skills",
+            "+16 to all Attributes",
+            "+41% to Lightning Resistance"
+          ],
+          "sourceText": "アミュレット ／ 忘却の留め金／星のアミュレット ／ 必要Lv65。全能力値+5。 ／ 最大ES+89、最大ES28%増加、最大マナ+139。全投射物スキルレベル+1、全能力値+16、雷耐性+41%。"
+        },
+        {
+          "slot": "ring1",
+          "name": "The Taming",
+          "base": "Prismatic Ring",
+          "quality": 0,
+          "requirements": {
+            "level": 42
+          },
+          "modifiers": [
+            "13% increased Rarity of Items found",
+            "+8% to all Elemental Resistances",
+            "+20% to all Elemental Resistances",
+            "19% increased Damage for each type of Elemental Ailment on Enemy",
+            "Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces",
+            "Wind Skills which can be boosted by Elemental Ground Surfaces are considered boosted by Burning, Shocked and Chilled Ground"
+          ],
+          "sourceText": "確認できた指輪 ／ テイミング／プリズムの指輪 ／ 必要Lv42。発見アイテムのレアリティ13%増加（淡青の行）。 ／ 全元素耐性+8%と+20%（別々の行）。敵に付与した元素系状態異常の種類ごとにダメージ19%増加。元素領域効果でブーストできるウィンドスキルは複数の元素領域でブースト可能で、発火・感電・冷却領域によりブーストされたと見なされる。コラプト状態。"
+        }
+      ],
+      "omissions": [
+        "未確認のサポートリンク・ジェムLv・取得パッシブ・ジュエル・予約設定は空欄です。画面に掲載されたライフ・耐性・DPSの完全再現ではありません。",
+        "武器セットの組合せは計算用の仮配置です。確認できた2本のスピアとセプターを切り替えて試せます。",
+        "鎧の埋まったソケット数とアイドル・絆の適用条件が特定できないため、ソケット数依存の能力値・ライフ・耐性と未対応の特殊効果は補完していません。",
+        "確認できていない2個目の指輪・フラスコ・チャームは空欄です。"
+      ],
+      "sourceCheckedAt": "2026-10-24"
+    },
+    {
+      "id": "record-xesht",
+      "preset": "mercenary-twister-gemling",
+      "title": "ゼシュト：同じ装備10点を試す",
+      "guide": "xesht",
+      "level": null,
+      "items": [
+        {
+          "slot": "weapon1",
+          "name": "The Ordained",
+          "base": "Grand Spear",
+          "quality": 20,
+          "requirements": {
+            "level": 79,
+            "str": 65,
+            "dex": 105
+          },
+          "modifiers": [
+            "18% increased Physical Damage",
+            "Grants Skill: Spear Throw",
+            "Grants Skill: Level 19 Righteous Descent",
+            "25% increased Melee Strike Range with this weapon",
+            "189% increased Physical Damage",
+            "Adds 1 to 206 Lightning Damage",
+            "+6.66% to Critical Hit Chance",
+            "Life Leech recovers based on your Lightning damage as well as Physical damage",
+            "Create a Fragment of Divinity in your Presence every 4 seconds"
+          ],
+          "sourceText": "スピア ／ 選ばれし者／グランドスピア ／ 品質+20%。物理206–309、雷1–206、クリティカル11.66%、秒間アタック1.40。必要Lv79・筋力65・器用さ105。 ／ 物理ダメージ18%増加（淡青の行）。スピアスロー、Lv19ライチャスデセントを付与。近接ストライク距離25%増加。物理ダメージ189%増加、雷1–206追加、クリティカル率+6.66%。ライフリーチが物理だけでなく雷ダメージにも基づく。4秒ごとに存在下に神性の欠片1個を生成。コラプト状態。"
+        },
+        {
+          "slot": "weapon1",
+          "name": "Skysliver",
+          "base": "Winged Spear",
+          "quality": 15,
+          "requirements": {
+            "level": 16,
+            "str": 12,
+            "dex": 24
+          },
+          "modifiers": [
+            "+80 to maximum Life",
+            "Grants Skill: Spear Throw",
+            "No Physical Damage",
+            "Adds 1 to 84 Lightning Damage",
+            "26% increased Attack Speed",
+            "58% increased chance to Shock",
+            "Rolls only the minimum or maximum Damage value for each Damage Type"
+          ],
+          "sourceText": "追加のスピア ／ スカイシルバー／翼刃のスピア ／ 品質+15%。雷「1または84」、クリティカル5.00%、秒間アタック2.15。必要Lv16・筋力12・器用さ24。 ／ 最大ライフ+80。スピアスローを付与。物理ダメージなし。雷1–84追加、アタックスピード26%増加、感電付与確率58%増加。各ダメージタイプで最小値か最大値だけをロール。"
+        },
+        {
+          "slot": "helmet",
+          "name": "Alpha's Howl",
+          "base": "Armoured Cap",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "dex": 87
+          },
+          "modifiers": [
+            "15% increased Life Regeneration rate",
+            "18% increased Armour, Evasion and Energy Shield",
+            "100% increased Evasion Rating",
+            "+100 to Spirit",
+            "+55% to Cold Resistance",
+            "Presence Radius is doubled"
+          ],
+          "sourceText": "兜 ／ アルファの遠吠え／ルーンマスターの装甲帽子 ／ 品質+20%。回避力466、ルーンワード136。必要Lv65・器用さ87。 ／ ライフ自動回復レート15%増加、防御3種18%増加（淡青の行）。回避力100%増加、スピリット+100、冷気耐性+55%、存在下の半径が2倍。コラプト状態。"
+        },
+        {
+          "slot": "body",
+          "name": "Morior Invictus",
+          "base": "Grand Regalia",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "str": 39,
+            "dex": 39,
+            "int": 39
+          },
+          "modifiers": [
+            "+36 to maximum Life",
+            "16% of Damage taken Recouped as Mana",
+            "+18% to Lightning Resistance",
+            "50% reduced effect of Curses on you",
+            "350% increased Armour, Evasion and Energy Shield"
+          ],
+          "sourceText": "鎧 ／ 不屈なる者として死す／壮厳なレガリア ／ 品質+20%。アーマー983、回避力891、ES270。必要Lv65・筋力39・器用さ39・知性39。 ／ 最大ライフ+36。受けたダメージ16%をマナとして回収。雷耐性+18%。呪いの効果50%減少。アーマーの+10%が混沌ダメージにも適用。ソケットしたアイドルが絆モッドの恩恵を得る。絆：全スキル品質+5%、混沌耐性+8%。防御3種350%増加。埋まったソケットごとに全能力値+7、混沌耐性+11%、最大ライフ+56。ダブルコラプト状態。"
+        },
+        {
+          "slot": "belt",
+          "name": "Shavronne's Satchel",
+          "base": "Fine Belt",
+          "quality": 0,
+          "requirements": {
+            "level": 62
+          },
+          "modifiers": [
+            "Has 3 Charm Slot",
+            "Flasks gain 0.17 charges per Second",
+            "26% reduced Flask Life Recovery rate",
+            "+26 to Intelligence",
+            "20% increased Flask Charges gained",
+            "Life Recovery from Flasks also applies to Energy Shield"
+          ],
+          "sourceText": "ベルト ／ シャヴロンの鞄／精巧なベルト ／ 必要Lv62。チャームスロット3。 ／ フラスコが毎秒0.17チャージを獲得。フラスコのライフ回復レート26%減少、知性+26、獲得フラスコチャージ20%増加。フラスコによるライフ回復はESにも適用。コラプト状態。"
+        },
+        {
+          "slot": "gloves",
+          "name": "血タロン",
+          "base": "Sirenscale Gloves",
+          "quality": 20,
+          "requirements": {
+            "level": 80,
+            "int": 97
+          },
+          "modifiers": [
+            "8% increased Attack Speed",
+            "+51 to maximum Energy Shield",
+            "93% increased Energy Shield",
+            "15% increased Attack Speed",
+            "+26 to Dexterity",
+            "Adds 14 to 26 Physical Damage to Attacks",
+            "11% increased Area of Effect of Attacks"
+          ],
+          "sourceText": "手袋 ／ 血タロン／サイレーンスケイルの手袋 ／ 品質+20%。ES243。必要Lv80・知性97。 ／ アタックスピード8%増加（淡青の行）。最大ES+51、ES93%増加、アタックスピード15%増加、器用さ+26。アタックに物理14–26追加、アタック効果範囲11%増加。コラプト状態。"
+        },
+        {
+          "slot": "boots",
+          "name": "Atziri's Step",
+          "base": "Cinched Boots",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "dex": 83
+          },
+          "modifiers": [
+            "18% increased Armour, Evasion and Energy Shield",
+            "30% increased Movement Speed",
+            "102% increased Evasion Rating",
+            "+81 to maximum Life",
+            "Gain Deflection Rating equal to 50% of Evasion Rating",
+            "-10% to amount of Damage Prevented by Deflection",
+            "19% increased Deflection Rating while Moving"
+          ],
+          "sourceText": "靴 ／ アッツィリの歩み／締め具のブーツ ／ ヴァール 靴。品質+20%。回避力586。必要Lv65・器用さ83。 ／ 防御3種18%増加（淡青の行）。移動スピード30%増加、回避力102%増加、最大ライフ+81。回避力50%と同量の受け流し力を獲得。受け流しにより防ぐダメージ量−10%。移動中の受け流し力19%増加（赤い行）。コラプト状態。"
+        },
+        {
+          "slot": "weapon2",
+          "name": "Guiding Palm of the Eye",
+          "base": "Shrine Sceptre",
+          "quality": 20,
+          "requirements": {
+            "level": 65,
+            "str": 16,
+            "int": 36
+          },
+          "modifiers": [
+            "Grants Skill: Level 18 Purity of Ice",
+            "Gain 25% of Damage as Extra Cold Damage",
+            "Allies in your Presence deal 22 to 29 added Attack Cold Damage",
+            "50% of your Base Life Regeneration is granted to Allies in your Presence",
+            "+23 to Intelligence",
+            "25% increased Light Radius",
+            "Grants effect of Guided Freezing Shrine"
+          ],
+          "sourceText": "セプター ／ 目の導きの掌／神殿のセプター ／ 品質+20%。スピリット100。必要Lv65・筋力16・知性36。 ／ Lv18ピュリティオブアイスを付与。ダメージ25%を追加冷気として獲得。存在下の味方にアタック冷気22–29追加。基本ライフ自動回復の50%を存在下の味方に付与。知性+23、光半径25%増加、導きの凍結のシュラインの効果を付与。コラプト状態。"
+        },
+        {
+          "slot": "amulet",
+          "name": "忘却の留め金",
+          "base": "Stellar Amulet",
+          "quality": 0,
+          "requirements": {
+            "level": 65
+          },
+          "modifiers": [
+            "+5 to all Attributes",
+            "+89 to maximum Energy Shield",
+            "28% increased maximum Energy Shield",
+            "+139 to maximum Mana",
+            "+1 to Level of all Projectile Skills",
+            "+16 to all Attributes",
+            "+41% to Lightning Resistance"
+          ],
+          "sourceText": "アミュレット ／ 忘却の留め金／星のアミュレット ／ 必要Lv65。全能力値+5。 ／ 最大ES+89、最大ES28%増加、最大マナ+139。全投射物スキルレベル+1、全能力値+16、雷耐性+41%。"
+        },
+        {
+          "slot": "ring1",
+          "name": "The Taming",
+          "base": "Prismatic Ring",
+          "quality": 0,
+          "requirements": {
+            "level": 42
+          },
+          "modifiers": [
+            "13% increased Rarity of Items found",
+            "+8% to all Elemental Resistances",
+            "+20% to all Elemental Resistances",
+            "19% increased Damage for each type of Elemental Ailment on Enemy",
+            "Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces",
+            "Wind Skills which can be boosted by Elemental Ground Surfaces are considered boosted by Burning, Shocked and Chilled Ground"
+          ],
+          "sourceText": "確認できた指輪 ／ テイミング／プリズムの指輪 ／ 必要Lv42。発見アイテムのレアリティ13%増加（淡青の行）。 ／ 全元素耐性+8%と+20%（別々の行）。敵に付与した元素系状態異常の種類ごとにダメージ19%増加。元素領域効果でブーストできるウィンドスキルは複数の元素領域でブースト可能で、発火・感電・冷却領域によりブーストされたと見なされる。コラプト状態。"
+        }
+      ],
+      "omissions": [
+        "ゼシュトの撃破Lvは画像で確認できません。入力したLvは計算用です。",
+        "未確認のサポートリンク・ジェムLv・取得パッシブ・ジュエル・予約設定は空欄です。画面に掲載されたライフ・耐性・DPSの完全再現ではありません。",
+        "武器セットの組合せは計算用の仮配置です。確認できた2本のスピアとセプターを切り替えて試せます。",
+        "鎧の埋まったソケット数とアイドル・絆の適用条件が特定できないため、ソケット数依存の能力値・ライフ・耐性と未対応の特殊効果は補完していません。",
+        "確認できていない2個目の指輪・フラスコ・チャームは空欄です。"
+      ],
+      "sourceCheckedAt": "2026-11-07"
+    },
+    {
+      "id": "record-ash",
+      "preset": "mercenary-twister-gemling",
+      "title": "灰のアービター：確認済み装備7点",
+      "guide": "arbiter-of-ash-clear-record",
+      "level": 82,
+      "items": [
+        {
+          "slot": "weapon1",
+          "name": "The Ordained",
+          "base": "Grand Spear",
+          "quality": 0,
+          "requirements": {
+            "level": 79
+          },
+          "modifiers": [
+            "Grants Skill: Spear Throw",
+            "Grants Skill: Level 19 Righteous Descent",
+            "25% increased Melee Strike Range with this weapon",
+            "189% increased Physical Damage",
+            "Adds 1 to 206 Lightning Damage",
+            "+6.66% to Critical Hit Chance",
+            "Life Leech recovers based on your Lightning damage as well as Physical damage",
+            "Create a Fragment of Divinity in your Presence every 4 seconds"
+          ],
+          "sourceText": "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。"
+        },
+        {
+          "slot": "weapon1",
+          "name": "Skysliver",
+          "base": "Winged Spear",
+          "quality": 0,
+          "requirements": {
+            "level": 16
+          },
+          "modifiers": [
+            "+80 to maximum Life",
+            "Grants Skill: Spear Throw",
+            "No Physical Damage",
+            "Adds 1 to 84 Lightning Damage",
+            "26% increased Attack Speed",
+            "58% increased chance to Shock",
+            "Rolls only the minimum or maximum Damage value for each Damage Type"
+          ],
+          "sourceText": "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。"
+        },
+        {
+          "slot": "helmet",
+          "name": "Alpha's Howl",
+          "base": "Armoured Cap",
+          "quality": 0,
+          "requirements": {},
+          "modifiers": [
+            "100% increased Evasion Rating",
+            "+100 to Spirit",
+            "+55% to Cold Resistance",
+            "Presence Radius is doubled"
+          ],
+          "sourceText": "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。"
+        },
+        {
+          "slot": "body",
+          "name": "Morior Invictus",
+          "base": "Grand Regalia",
+          "quality": 0,
+          "requirements": {},
+          "modifiers": [
+            "350% increased Armour, Evasion and Energy Shield",
+            "16% of Damage taken Recouped as Mana",
+            "50% reduced effect of Curses on you"
+          ],
+          "sourceText": "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。"
+        },
+        {
+          "slot": "gloves",
+          "name": "血タロン",
+          "base": "Sirenscale Gloves",
+          "quality": 0,
+          "requirements": {},
+          "modifiers": [
+            "8% increased Attack Speed",
+            "+51 to maximum Energy Shield",
+            "93% increased Energy Shield",
+            "15% increased Attack Speed",
+            "+26 to Dexterity",
+            "Adds 14 to 26 Physical Damage to Attacks",
+            "11% increased Area of Effect of Attacks"
+          ],
+          "sourceText": "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。"
+        },
+        {
+          "slot": "boots",
+          "name": "Atziri's Step",
+          "base": "Cinched Boots",
+          "quality": 0,
+          "requirements": {},
+          "modifiers": [
+            "30% increased Movement Speed",
+            "102% increased Evasion Rating",
+            "+81 to maximum Life",
+            "Gain Deflection Rating equal to 50% of Evasion Rating"
+          ],
+          "sourceText": "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。"
+        },
+        {
+          "slot": "weapon2",
+          "name": "Guiding Palm of the Eye",
+          "base": "Shrine Sceptre",
+          "quality": 0,
+          "requirements": {},
+          "modifiers": [
+            "Grants Skill: Level 18 Purity of Ice",
+            "Gain 25% of Damage as Extra Cold Damage",
+            "Allies in your Presence deal 22 to 29 added Attack Cold Damage",
+            "+23 to Intelligence",
+            "Grants effect of Guided Freezing Shrine"
+          ],
+          "sourceText": "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。"
+        }
+      ],
+      "omissions": [
+        "記事で特定できた装備7点のみ。新しい撃破記録のアクセサリー・品質・ルーン効果を流用していません。",
+        "未確認のサポートリンク・ジェムLv・取得パッシブ・ジュエル・予約設定は空欄です。画面に掲載されたライフ・耐性・DPSの完全再現ではありません。",
+        "武器セットの組合せは計算用の仮配置です。確認できた2本のスピアとセプターを切り替えて試せます。",
+        "ソケット数・予約条件・ジェムLvは未確認のため補完していません。"
+      ],
+      "sourceCheckedAt": "2026-10-22"
+    }
+  ]
+}

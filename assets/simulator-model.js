@@ -24,10 +24,11 @@ export function parseSave(text) {
     || !Number.isInteger(value.questPoints) || value.questPoints<0 || value.questPoints>24
     || typeof value.notes!=='string' || value.notes.length>20000) throw new Error('保存データの形式または計算エンジンの版が異なります。');
   if(value.weaponSets)weaponSetState(value.request,value.equipmentDrafts || {},value.weaponSets);
+  if(value.origin&&(!['sample','record'].includes(value.origin.kind)||typeof value.origin.id!=='string'||!/^[-a-z0-9]{1,100}$/.test(value.origin.id)))throw Error('構成の出典情報が正しくありません。');
  return value;
 }
-export function makeSave(preset, request, questPoints, notes = '', equipmentDrafts = {}, weaponSets = null) {
-  return {version:SAVE_VERSION, engine:ENGINE_VERSION, preset, request, questPoints, notes, equipmentDrafts, weaponSets:weaponSetState(request,equipmentDrafts,weaponSets), savedAt:new Date().toISOString()};
+export function makeSave(preset, request, questPoints, notes = '', equipmentDrafts = {}, weaponSets = null, origin = null) {
+  return {version:SAVE_VERSION, engine:ENGINE_VERSION, preset, request, questPoints, notes, equipmentDrafts, weaponSets:weaponSetState(request,equipmentDrafts,weaponSets), ...(origin?{origin}:{}), savedAt:new Date().toISOString()};
 }
 export const statValue = (result, id) => result?.stats?.find(stat => stat.id === id)?.value ?? null;
 export function treeEdges(nodes) {
@@ -238,4 +239,40 @@ export function resistanceGaps(result,target=75){
   return [['FireResist','火耐性'],['ColdResist','冷気耐性'],['LightningResist','雷耐性'],['ChaosResist','混沌耐性']].flatMap(([id,label])=>{
     const value=statValue(result,id);return Number.isFinite(value)&&value<target?[{id,label,value,missing:Math.round((target-value)*10)/10}]:[];
   });
+}
+
+// Named copies supplement the existing per-build autosave. Never migrate or replace it implicitly.
+export const NAMED_PLAN_LIMIT=12;
+export function namedPlanKey(preset){return `poe2-simulator:plans:v1:${preset}`;}
+export function parseNamedPlans(text,preset){
+ if(!text)return [];
+ if(text.length>6000000)throw Error('構成一覧が大きすぎます。保存ファイルから復元してください。');
+ const data=JSON.parse(text);
+ if(data.version!==1||!Array.isArray(data.plans)||data.plans.length>NAMED_PLAN_LIMIT)throw Error('構成一覧の形式が正しくありません。');
+ const ids=new Set();
+ return data.plans.map(entry=>{
+  if(!entry||typeof entry.id!=='string'||!/^[a-zA-Z0-9-]{1,80}$/.test(entry.id)||ids.has(entry.id)||typeof entry.name!=='string'||!entry.name.trim()||entry.name.length>40)throw Error('保存した構成の名前・識別子を確認してください。');
+  ids.add(entry.id);const saved=parseSave(JSON.stringify(entry.saved));if(saved.preset!==preset)throw Error('別のビルドの構成が混ざっています。');
+  return {...entry,saved};
+ });
+}
+export function putNamedPlan(plans,preset,name,saved,{id=null,newId=()=>crypto.randomUUID()}={}){
+ const value=String(name).trim();if(!value||value.length>40||/[\r\n]/.test(value))throw Error('構成名は改行なしの1〜40文字で入力してください。');
+ const next=structuredClone(plans),index=id?next.findIndex(p=>p.id===id):-1;
+ if(next.some(p=>p.name===value&&p.id!==id))throw Error('同じ名前の構成があります。別の名前にするか、保存構成を選んで更新してください。');
+ if(id&&index<0)throw Error('更新する構成が見つかりません。');
+ if(index<0&&next.length>=NAMED_PLAN_LIMIT)throw Error(`このビルドには${NAMED_PLAN_LIMIT}構成まで保存できます。不要な構成を削除するか、保存ファイルを使ってください。`);
+ const entry={id:id||newId(),name:value,saved:structuredClone(saved)};
+ if(index>=0)next[index]=entry;else next.push(entry);
+ return parseNamedPlans(JSON.stringify({version:1,plans:next}),preset);
+}
+export function upgradeAdvice(result,requirements=[],target=75,request={}){
+ const advice=[];
+ for(const item of requirements){if(advice.some(a=>a.slot===item.slot))continue;advice.push({title:'装備条件を先に満たす',detail:item.message,slot:item.slot,href:'/guides/equipment-basics/',link:'装備条件と能力値の確認方法'});}
+ const spirit=statValue(result,'SpiritUnreserved');
+ if(Number.isFinite(spirit)&&spirit<0)advice.push({title:'スピリットの予約を見直す',detail:`予約が${Math.ceil(-spirit)}不足しています。召喚数・予約スキルを調整してから装備を比較してください。`,href:'/dictionary/spirit/',link:'スピリットの仕組み'});
+ const gaps=resistanceGaps(result,target).sort((a,b)=>(a.id==='ChaosResist')-(b.id==='ChaosResist')||b.missing-a.missing);
+ const occupied=new Set((request.items||[]).map(i=>i.slot)),candidate=['ring1','ring2','boots','belt','gloves'].find(s=>!occupied.has(s))||'ring1';
+ if(gaps.length)advice.push({title:'不足している耐性から比較する',detail:gaps.slice(0,3).map(g=>`${g.label}は目標${target}%まで${g.missing}ポイント`).join('、')+'。指輪・靴・ベルトなどで補う候補を作り、交換で失う能力値も確認します。',slot:candidate,href:'/guides/resistance/',link:'耐性を補う装備の選び方'});
+ return advice.slice(0,3);
 }

@@ -2,6 +2,7 @@
 // stay in step with the real build when a step is added.
 export const BUILD_STEPS=[
  'generate-pages',           // base pages, then content/discovery/SEO/strategy pages and their own enhancers
+ 'generate-simulator-examples', // real engine checks for optional examples and sourced equipment
  'generate-simulator',       // selectable build workbench and per-build entry links
  'enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice',
  'generate-html-sitemap',    // reads page titles, so after the generators and the title changes
