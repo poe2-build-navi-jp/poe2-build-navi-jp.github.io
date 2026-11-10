@@ -181,6 +181,7 @@ function setLevel(value, fromUser = true) {
   syncLevelParam(fromUser);
   const index = stageIndexFor(level);
   localStorage.setItem("poe2:navi:lastViewedStage", String(index));
+  for (const link of document.querySelectorAll('[data-simulator-level]')) link.href = `/simulator/?build=${encodeURIComponent(build.id)}&level=${level}&from=guide`;
   renderNow(index);
   renderStage(index);
   renderProgress();

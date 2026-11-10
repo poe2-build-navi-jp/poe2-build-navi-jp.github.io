@@ -56,3 +56,10 @@ if (fromNote) {
   } catch {}
   if (shouldSend) sendEvent("note_referral", { page_path: pagePath });
 }
+
+// Funnel counts use bounded IDs only: never the configuration, shared fragment, notes or item text.
+document.addEventListener('click',event=>{
+ const a=event.target.closest('a[href]');if(!a||a.origin!==location.origin||a.pathname!=='/simulator/')return;
+ const level=Number(new URL(a.href).searchParams.get('level'));
+ sendEvent('simulator_entry_click',{page_path:pagePath,source_type:pagePath.startsWith('/builds/')?'build':pagePath.startsWith('/guides/')?'guide':'navigation',...(Number.isInteger(level)&&level>=1&&level<=100?{level}:{})});
+});

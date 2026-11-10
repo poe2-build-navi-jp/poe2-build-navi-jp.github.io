@@ -182,3 +182,60 @@ export async function previewPassiveBatch(request,targets,edit,questPoints=0,isC
  const before=new Set(request.allocated_nodes || []),after=new Set(next.allocated_nodes || []);
  return {valid:true,request:next,selectedTargets:selected,result:{...(last?.result || {}),added:[...after].filter(id=>!before.has(id)),removed:[...before].filter(id=>!after.has(id)),path:[...path]}};
 }
+
+// Shared links carry only the site's validated save format. Notes stay on the device.
+export async function encodePlanLink(saved) {
+  parseSave(JSON.stringify(saved));
+  const copy={...saved,notes:'',savedAt:undefined};
+  const bytes=new TextEncoder().encode(JSON.stringify(copy));
+  const gzip=typeof CompressionStream==='function';
+  const packed=gzip?new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer()):bytes;
+  let binary='';for(let i=0;i<packed.length;i+=8192)binary+=String.fromCharCode(...packed.subarray(i,i+8192));
+  const value=`1${gzip?'g':'j'}.`+btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
+  if(value.length>24000)throw Error('この構成は共有URLの上限を超えています。保存ファイルを使ってください。');
+  return value;
+}
+export async function decodePlanLink(value) {
+  if(typeof value!=='string'||value.length>24000||!/^1[gj]\.[A-Za-z0-9_-]+$/.test(value))throw Error('共有URLの形式が正しくありません。');
+  const binary=atob(value.slice(3).replaceAll('-','+').replaceAll('_','/'));
+  let stream=new Blob([Uint8Array.from(binary,c=>c.charCodeAt(0))]).stream();
+  if(value[1]==='g'){
+    if(typeof DecompressionStream!=='function')throw Error('このブラウザでは共有構成を開けません。最新のブラウザをお使いください。');
+    stream=stream.pipeThrough(new DecompressionStream('gzip'));
+  }
+  const reader=stream.getReader(),parts=[];let size=0;
+  try{while(true){const {done,value:part}=await reader.read();if(done)break;size+=part.length;if(size>2000000){await reader.cancel();throw Error('共有構成のサイズが上限を超えています。');}parts.push(part);}}finally{reader.releaseLock();}
+  const bytes=new Uint8Array(size);let offset=0;for(const part of parts){bytes.set(part,offset);offset+=part.length;}
+  return parseSave(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
+}
+export function levelingStage(preset,level){
+  const index=level<=10?0:level<=20?1:level<=30?2:level<=40?3:level<=65?4:level<=75?5:level<=90?6:7;
+  return preset.stages?.[index] || null;
+}
+export function stageSkillCandidates(stage,gems,names){
+  if(!stage)return [];
+  // Present alternatives for the user to choose; never guess conditional cutovers or support links.
+  return gems.filter(g=>!g.is_support&&[g.name,names[g.name]].filter(Boolean).some(n=>stage.mainSkill.includes(n))).sort((a,b)=>{
+    const position=g=>Math.min(...[g.name,names[g.name]].filter(n=>n&&stage.mainSkill.includes(n)).map(n=>stage.mainSkill.indexOf(n)));
+    return position(a)-position(b);
+  });
+}
+export function itemRequirements(text,catalog){
+  const lines=String(text||'').split('\n');
+  const base=catalog.bases.find(b=>lines.includes(b.name));
+  const req={...base?.requirements};
+  // Accept both one-line simulator drafts and game clipboard requirement blocks.
+  const region=lines.flatMap((line,i)=>/^Requires\b/i.test(line)?[line]:/^Requirements:/i.test(line)?lines.slice(i+1,i+6).filter(l=>!/^[-]+$/.test(l)):[]).join(' ');
+  for(const [key,word]of [['str','Str(?:ength)?'],['dex','Dex(?:terity)?'],['int','Int(?:elligence)?']]){
+    const match=new RegExp(`${word}\\s*:\\s*(\\d+)`,'i').exec(region)||new RegExp(`(\\d+)\\s+${word}\\b(?!\\s*:)`,'i').exec(region);
+    if(match)req[key]=Number(match[1]);
+  }
+  const level=/Level\s*:?\s*(\d+)/i.exec(region);if(level)req.level=Number(level[1]);
+  const reduction=/(\d+)% reduced Attribute Requirements/i.exec(text);if(reduction)for(const k of ['str','dex','int'])if(req[k])req[k]=Math.floor(req[k]*(1-Number(reduction[1])/100));
+  return req;
+}
+export function resistanceGaps(result,target=75){
+  return [['FireResist','火耐性'],['ColdResist','冷気耐性'],['LightningResist','雷耐性'],['ChaosResist','混沌耐性']].flatMap(([id,label])=>{
+    const value=statValue(result,id);return Number.isFinite(value)&&value<target?[{id,label,value,missing:Math.round((target-value)*10)/10}]:[];
+  });
+}
