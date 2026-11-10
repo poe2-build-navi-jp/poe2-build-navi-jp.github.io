@@ -13,18 +13,19 @@ const presets=JSON.parse(await readFile(resolve(root,'data/simulator-presets.jso
 const html=await readFile(resolve(root,'simulator/index.html'),'utf8');
 let code=await readFile(resolve(root,'assets/simulator.js'),'utf8');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
 const contexts=[];
-async function browser(url,stored){
+async function browser(url,stored,{failFirstCalculation=false}={}){
  const v=new VirtualConsole(),errors=[];v.on('jsdomError',e=>{if(!/navigation/.test(e.message))errors.push(e.message);});
  const dom=new JSDOM(html,{url,runScripts:'outside-only',virtualConsole:v}),w=dom.window,d=w.document;contexts.push(dom);
  Object.assign(w,model,{structuredClone,TextEncoder,TextDecoder,Blob,Response,CompressionStream,DecompressionStream,WebAssembly});
  w.HTMLElement.prototype.scrollIntoView=function(){};const events=[];w.gtag=(...a)=>events.push(a);
  if(stored)w.localStorage.setItem('poe2-simulator:v1:mercenary-twister-gemling',JSON.stringify(stored));
  w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.slice(1))));
- w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>this.onmessage?.({data:{id,result}}),error=>this.onmessage?.({data:{id,error:error.message}}));}};
+ let failedCalculation=false;
+ w.Worker=class{postMessage({id,action,payload}){if(failFirstCalculation&&!failedCalculation&&action==='calculate'){failedCalculation=true;queueMicrotask(()=>this.onmessage?.({data:{id,error:'計算失敗の再現'}}));return;}rpc(action,payload).then(result=>this.onmessage?.({data:{id,result}}),error=>this.onmessage?.({data:{id,error:error.message}}));}};
  await w.eval(`(async()=>{${code}\n})()`);
  const click=s=>d.querySelector(s).click(),change=(s,v)=>{const e=d.querySelector(s);e.value=v;e.dispatchEvent(new w.Event('change',{bubbles:true}));};
  const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false'&&!!d.querySelector('.sim-stat');
- await wait(ready);
+ await wait(()=>failFirstCalculation?!d.getElementById('sim-error').hidden&&d.getElementById('sim-stats').getAttribute('aria-busy')==='false':ready());
  return{w,d,click,change,ready,events,saved:()=>JSON.parse(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'))};
 }
 try{
@@ -32,6 +33,15 @@ try{
  for(const p of presets){assert.equal(p.stages.length,8);for(const level of [1,10,11,20,21,40,41,65,66,75,76,90,91,100])assert(model.levelingStage(p,level));}
  const req=model.newPlan(preset,catalog.gems);req.extra_modifiers=['+999 to maximum Life'];
  let stored=model.makeSave(preset.id,req,0,'秘密のメモ');
+ const failed=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+preset.id+'&level=18&from=guide',stored,{failFirstCalculation:true});
+ assert.equal(failed.events.filter(e=>e[1]==='simulator_ready').length,0,'failed startup must not count as ready');
+ assert.deepEqual(failed.saved(),stored,'failed startup must preserve the previous save');
+ assert.match(failed.d.getElementById('sim-status').textContent,/計算に失敗/);
+ failed.change('#sim-level','79');await wait(failed.ready);
+ assert.equal(failed.events.filter(e=>e[1]==='simulator_ready').length,1,'first successful retry counts once');
+ assert.equal(failed.events.find(e=>e[1]==='simulator_ready')[2].source,'guide');
+ failed.change('#sim-level','80');await wait(failed.ready);
+ assert.equal(failed.events.filter(e=>e[1]==='simulator_ready').length,1,'later edits must not count as another startup');
  const shared={...stored,request:{...req,character:{...req.character,level:33}}};
  const value=await model.encodePlanLink(shared),decoded=await model.decodePlanLink(value);assert.equal(decoded.notes,'');assert.equal(decoded.request.character.level,33);assert.deepEqual(decoded.weaponSets,shared.weaponSets);
  await assert.rejects(()=>model.decodePlanLink('1g.not_valid_compressed_data'));
