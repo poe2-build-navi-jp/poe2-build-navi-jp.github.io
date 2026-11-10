@@ -84,10 +84,11 @@ function unsupportedLabel(value){
  const text=String(value),match=/^Tree:(\d+):\s*(.*)$/.exec(text),node=match&&treeNodes.get(+match[1]);if(node){const index=node.stats.indexOf(match[2]);return `${label(node.name)}：${index>=0?(nodeStats(node)[index] || '一部の効果は計算未対応です。'):'一部の効果は計算未対応です。'}`;}
  return localizeModifiers([text],equipmentCatalog,names);
 }
+const displayStat=(result,id,request=plan?.request)=>id==='CombinedDPS'&&(!result?.main_skill||!request?.socket_groups?.some(group=>group.enabled!==false&&group.gems?.length))?null:statValue(result,id);
 function renderResults(){
- const hasSkill=!!result.main_skill;
+ const hasSkill=displayStat(result,'CombinedDPS')!==null;
  $('sim-stats').innerHTML=statistics.map(([id,title],i)=>{
-  let value=statValue(result,id);if(i===0&&!hasSkill)value=null;
+  const value=displayStat(result,id);
   const old=baseline?.[id],delta=old!==null&&old!==undefined&&value!==null?value-old:null;
   return `<div class="sim-stat${i===0?' primary':''}"><span>${title}</span><div><b>${number(value,id)}</b>${delta!==null?`<small class="${delta<0?'negative':''}">${delta>0?'+':''}${number(delta,id)}</small>`:''}</div></div>`;
  }).join('');
@@ -98,7 +99,7 @@ function renderResults(){
  $('sim-diagnostics').open=diagnostics.length>0;
  $('sim-engine-version').textContent=`対応データ ${result.provenance?.data_version || catalog.runtime.dataVersion}`;
  void updateBuildWarnings(result,plan.request);
- renderItemResult();$('sim-tree-live-stats').textContent=['Life','Armour','Evasion','CombinedDPS'].map(id=>`${statistics.find(s=>s[0]===id)[1]} ${number(statValue(result,id),id)}`).join(' · ');
+ renderItemResult();$('sim-tree-live-stats').textContent=['Life','Armour','Evasion','CombinedDPS'].map(id=>`${statistics.find(s=>s[0]===id)[1]} ${number(displayStat(result,id),id)}`).join(' · ');
  $('sim-character-name').textContent=`${label(plan.request.character.class_name)} / ${label(plan.request.character.ascendancy_name)} · 装備・パッシブは自分の設定`;
 }
 async function selectPreset(id,{fromHistory=false,shared=null}={}){
@@ -203,7 +204,7 @@ function readRareDraft(){
 function renderItemResult(){
  if(!result||$('sim-item-editor').hidden)return;
  const ids=['CombinedDPS','Life','Mana','EnergyShield','FireResist','ColdResist','LightningResist','ChaosResist'];
- $('sim-item-result-values').innerHTML='<dl>'+ids.map(id=>{const value=statValue(result,id),old=editorBaseline?.[id],delta=value!==null&&old!==undefined&&old!==null?value-old:null;return `<div><dt>${statistics.find(s=>s[0]===id)[1]}</dt><dd>${number(value,id)}${delta?`<small>${delta>0?'+':''}${number(delta,id)}</small>`:''}</dd></div>`;}).join('')+'</dl>';
+ $('sim-item-result-values').innerHTML='<dl>'+ids.map(id=>{const value=displayStat(result,id),old=editorBaseline?.[id],delta=value!==null&&old!==undefined&&old!==null?value-old:null;return `<div><dt>${statistics.find(s=>s[0]===id)[1]}</dt><dd>${number(value,id)}${delta?`<small>${delta>0?'+':''}${number(delta,id)}</small>`:''}</dd></div>`;}).join('')+'</dl>';
  $('sim-rare-dirty').textContent='反映済みの構成のステータスです。';
 }
 function renderUniques(){
@@ -328,7 +329,7 @@ async function previewTemplateImport(){
  // Copy only the displayed tree. Equipment and skills remain the user's configuration.
  if(request.weapon_swap)request.weapon_swap.exclusive_nodes=[[],[]];
  const next=await rpc('calculate',request);if(version!==generation||edited!==editSequence||token!==templateImportSequence)return;
- templateImport={request,points,edited,version};const changes=[['Life','最大ライフ'],['Armour','アーマー'],['Evasion','回避力'],['CombinedDPS','DPS']].map(([key,name])=>`${name}：${number(statValue(result,key),key)} → ${number(statValue(next,key),key)}`).join('<br>');
+ templateImport={request,points,edited,version};const changes=[['Life','最大ライフ'],['Armour','アーマー'],['Evasion','回避力'],['CombinedDPS','DPS']].map(([key,name])=>`${name}：${number(displayStat(result,key),key)} → ${number(displayStat(next,key,request),key)}`).join('<br>');
  $('sim-template-import-preview').innerHTML=`<p>今のパッシブを<strong>${esc(step.label)}</strong>の${step.nodes.length}ノードに置き換えます。レベルは${level}、報酬ポイントは${points}になります。装備・ジェム・ジュエル効果は取り込みません。</p><p>${changes}</p><button id="sim-template-import-apply" type="button" class="sim-primary">この内容で反映して保存</button><button id="sim-template-import-cancel" type="button">キャンセル</button>`;
 }
 function setPassiveBudget(level,points){
@@ -442,7 +443,7 @@ async function previewExample(){
  if(calculated.item_errors?.length)throw Error('見本の装備を読み込めません。');
  examplePreview={saved,example,version,edited};
  const itemCount=example.kind==='record'?example.itemCount:saved.request.items.length;
- box.innerHTML=`<h3>${esc(example.title)}</h3><p>${esc(example.description)}</p><p>Lv${saved.request.character.level}${!example.level?'（試算用・撃破Lv未確認）':''} / 装備${itemCount}点 / 通常パッシブ${saved.request.allocated_nodes.length}点 / ${saved.request.socket_groups.length?'主力ジェムLv'+saved.request.socket_groups[0].gems[0].level:'スキル・サポート未設定'}</p><details><summary>計算の対応データと確認範囲</summary><p>計算エンジン ${esc(example.verification.engine)} / データ ${esc(example.verification.data)}で装備の読み込みを確認。試算は通常の敵で開始します。</p></details><ul>${example.omissions.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${example.sourceItems?`<details><summary>取り込む装備と転記元</summary><ul>${example.sourceItems.map(i=>`<li><b>${esc(label(i.name))}</b><p>${esc(i.sourceText)}</p></li>`).join('')}</ul></details>`:''}<p>試算結果：最大ライフ ${number(statValue(calculated,'Life'),'Life')} / ES ${number(statValue(calculated,'EnergyShield'),'EnergyShield')} / 選択スキルのDPS ${calculated.main_skill?number(statValue(calculated,'CombinedDPS'),'CombinedDPS'):'未設定'}</p><a href="${esc(example.source.href)}">${esc(example.source.label)}を確認</a><p>「この内容で試す」を押すと今の構成を退避して切り替えます。切替前に戻すこともできます。</p>`;
+ box.innerHTML=`<h3>${esc(example.title)}</h3><p>${esc(example.description)}</p><p>Lv${saved.request.character.level}${!example.level?'（試算用・撃破Lv未確認）':''} / 装備${itemCount}点 / 通常パッシブ${saved.request.allocated_nodes.length}点 / ${saved.request.socket_groups.length?'主力ジェムLv'+saved.request.socket_groups[0].gems[0].level:'スキル・サポート未設定'}</p><details><summary>計算の対応データと確認範囲</summary><p>計算エンジン ${esc(example.verification.engine)} / データ ${esc(example.verification.data)}で装備の読み込みを確認。試算は通常の敵で開始します。</p></details><ul>${example.omissions.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${example.sourceItems?`<details><summary>取り込む装備と転記元</summary><ul>${example.sourceItems.map(i=>`<li><b>${esc(label(i.name))}</b><p>${esc(i.sourceText)}</p></li>`).join('')}</ul></details>`:''}<p>試算結果：最大ライフ ${number(statValue(calculated,'Life'),'Life')} / ES ${number(statValue(calculated,'EnergyShield'),'EnergyShield')} / 選択スキルのDPS ${displayStat(calculated,'CombinedDPS',saved.request)!==null?number(displayStat(calculated,'CombinedDPS',saved.request),'CombinedDPS'):'未設定'}</p><a href="${esc(example.source.href)}">${esc(example.source.label)}を確認</a><p>「この内容で試す」を押すと今の構成を退避して切り替えます。切替前に戻すこともできます。</p>`;
  $('sim-example-apply').hidden=false;$('sim-example-status').textContent='まだ現在の構成・保存内容は変わっていません。';
 }
 async function applyWorkspaceSave(saved,{restore=false,readOnly=false}={}){
@@ -482,7 +483,7 @@ async function compareNamedPlans(){
   const [ar,br]=await Promise.all([rpc('calculate',request(a)),rpc('calculate',request(b))]);
   if(version!==generation||edited!==editSequence||token!==workspaceSequence)return;
   const summary=p=>`Lv${p.saved.request.character.level} / 報酬${p.saved.questPoints}P / 武器スロット${p.saved.weaponSets?.active||1}`;
-  box.innerHTML=`<h4>${esc(a.name)} と ${esc(b.name)}</h4><p>A：${esc(summary(a))}<br>B：${esc(summary(b))}</p><p>敵：${esc($('sim-compare-enemy').selectedOptions[0].textContent)}。装備・ジェム・一時効果・Lvは各構成の内容です。</p><div class="sim-table-scroll" tabindex="0" role="region" aria-label="構成比較の表"><table><caption>保存を変更しない構成比較</caption><thead><tr><th scope="col">項目</th><th scope="col">A</th><th scope="col">B</th><th scope="col">B − A</th></tr></thead><tbody>${statistics.map(([id,title])=>{const av=id==='CombinedDPS'&&!ar.main_skill?null:statValue(ar,id),bv=id==='CombinedDPS'&&!br.main_skill?null:statValue(br,id),delta=av!==null&&bv!==null?bv-av:null;return `<tr><th scope="row">${title}</th><td>${number(av,id)}</td><td>${number(bv,id)}</td><td>${delta===null?'—':(delta>0?'+':'')+number(delta,id)}</td></tr>`;}).join('')}</tbody></table></div>${[ar,br].some(r=>r.item_errors?.length||r.unsupported_modifiers?.length)?'<p>未対応効果・装備の読み込みエラーを含む構成があります。各構成を開いて「計算の確認事項」を確認してください。</p>':''}`;
+  box.innerHTML=`<h4>${esc(a.name)} と ${esc(b.name)}</h4><p>A：${esc(summary(a))}<br>B：${esc(summary(b))}</p><p>敵：${esc($('sim-compare-enemy').selectedOptions[0].textContent)}。装備・ジェム・一時効果・Lvは各構成の内容です。</p><div class="sim-table-scroll" tabindex="0" role="region" aria-label="構成比較の表"><table><caption>保存を変更しない構成比較</caption><thead><tr><th scope="col">項目</th><th scope="col">A</th><th scope="col">B</th><th scope="col">B − A</th></tr></thead><tbody>${statistics.map(([id,title])=>{const av=displayStat(ar,id,a.saved.request),bv=displayStat(br,id,b.saved.request),delta=av!==null&&bv!==null?bv-av:null;return `<tr><th scope="row">${title}</th><td>${number(av,id)}</td><td>${number(bv,id)}</td><td>${delta===null?'—':(delta>0?'+':'')+number(delta,id)}</td></tr>`;}).join('')}</tbody></table></div>${[ar,br].some(r=>r.item_errors?.length||r.unsupported_modifiers?.length)?'<p>未対応効果・装備の読み込みエラーを含む構成があります。各構成を開いて「計算の確認事項」を確認してください。</p>':''}`;
   trackSim('simulator_plan_compare',{count:2});
  }finally{$('sim-compare-plans').disabled=false;}
 }
