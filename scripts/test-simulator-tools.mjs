@@ -1,0 +1,78 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {Worker} from 'node:worker_threads';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {JSDOM,VirtualConsole} from 'jsdom';
+import * as model from '../assets/simulator-model.js';
+const root=resolve(import.meta.dirname,'..'),read=p=>readFile(resolve(root,p),'utf8');
+const native=new Worker(new URL('./fixtures/simulator-worker-node.mjs',import.meta.url)),pending=new Map();let sequence=0;
+native.on('message',m=>{if(m.progress)return;const p=pending.get(m.id);if(!p)return;pending.delete(m.id);m.error?p.reject(Error(m.error)):p.resolve(m.result);});
+const rpc=(action,payload)=>new Promise((resolve,reject)=>{const id=++sequence;pending.set(id,{resolve,reject});native.postMessage({id,action,payload});});
+const wait=async predicate=>{for(let i=0;i<1000;i++){if(predicate())return;await new Promise(r=>setTimeout(r,20));}throw Error('Workspace UI timeout');};
+const contexts=[],presets=JSON.parse(await read('data/simulator-presets.json')),examples=JSON.parse(await read('data/simulator-examples.json')).examples;
+const html=await read('simulator/index.html');let code=await read('assets/simulator.js');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
+const gemling='mercenary-twister-gemling',autoKey=`poe2-simulator:v1:${gemling}`,bookKey=model.namedPlanKey(gemling);
+async function browser(url,stored,extraStorage={}){
+ const v=new VirtualConsole(),errors=[];v.on('jsdomError',e=>{if(!/navigation/.test(e.message))errors.push(e.message);});
+ const dom=new JSDOM(html,{url,runScripts:'outside-only',virtualConsole:v}),w=dom.window,d=w.document;contexts.push(dom);
+ Object.assign(w,model,{structuredClone,TextEncoder,TextDecoder,Blob,Response,CompressionStream,DecompressionStream,WebAssembly});
+ w.HTMLElement.prototype.scrollIntoView=function(){};const events=[];w.gtag=(...args)=>events.push(args);
+ if(stored)w.localStorage.setItem(autoKey,JSON.stringify(stored));for(const [key,value]of Object.entries(extraStorage))w.localStorage.setItem(key,value);
+ w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.slice(1))));
+ w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>this.onmessage?.({data:{id,result}}),e=>this.onmessage?.({data:{id,error:e.message}}));}};
+ await w.eval(`(async()=>{${code}\n})()`);
+ const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false'&&!!d.querySelector('.sim-stat');if(new URL(url).searchParams.has('build'))await wait(ready);
+ const click=s=>{assert(d.querySelector(s),s);d.querySelector(s).click();},change=(s,value)=>{const e=d.querySelector(s);assert(e,s);e.value=String(value);e.dispatchEvent(new w.Event('change',{bubbles:true}));};
+ return {w,d,click,change,ready,events,errors,saved:()=>JSON.parse(w.localStorage.getItem(autoKey)),book:()=>model.parseNamedPlans(w.localStorage.getItem(bookKey),gemling)};
+}
+try{
+ const catalog=await rpc('boot'),preset=presets.find(p=>p.id===gemling),saved=model.makeSave(gemling,model.newPlan(preset,catalog.gems),0,'非公開メモ');
+ const named=model.putNamedPlan([],gemling,'<b>周回用</b>',saved,{newId:()=> 'resume-test'});
+ const c=await browser('https://poe2-build-navi-jp.github.io/simulator/#sim-resume',saved,{[bookKey]:JSON.stringify({version:1,plans:named})});
+ assert.equal(c.d.querySelectorAll('#sim-resume-list a').length,2);
+ assert(!c.d.querySelector('#sim-resume-list b'),'names must be escaped');
+ assert(c.d.querySelector('#sim-resume-list a[href*="saved=resume-test"]'));
+ assert(!c.d.getElementById('sim-resume-list').textContent.includes('非公開メモ'));
+ const sitemap=await read('sitemap.xml');for(const m of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)){
+  const file=new URL(m[1]).pathname.slice(1)+'index.html';const page=new JSDOM(await read(file));
+  const nav=page.window.document.querySelector('.site-nav');if(nav){assert.equal(nav.querySelectorAll('a[href="/simulator/"]').length,1,file);assert.equal(nav.querySelectorAll('a[href="/simulator/#sim-resume"]').length,1,file);}page.window.close();
+ }
+ const h=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,saved);
+ h.change('#sim-extra-mods','最大ライフ +200');h.click('#sim-config-apply');await wait(h.ready);
+ h.change('[data-gem-field="level"]',5);await wait(h.ready);assert.equal(h.saved().request.socket_groups[0].gems[0].level,5);
+ h.click('#sim-history-undo');await wait(()=>h.saved().request.socket_groups[0].gems[0].level===1&&h.ready());assert.deepEqual(h.saved().request.extra_modifiers,['+200 to maximum Life']);
+ h.click('#sim-history-undo');await wait(()=>!h.saved().request.extra_modifiers&&h.ready());
+ h.click('#sim-history-redo');await wait(()=>h.saved().request.extra_modifiers?.length&&h.ready());
+ h.click('#sim-history-redo');await wait(()=>h.saved().request.socket_groups[0].gems[0].level===5&&h.ready());
+ h.click('#sim-history-undo');await wait(()=>h.saved().request.socket_groups[0].gems[0].level===1&&h.ready());h.change('#sim-level',90);await wait(h.ready);assert(h.d.getElementById('sim-history-redo').disabled,'new edit discards future branch');
+ h.click('#sim-change-build');h.click('[data-preset="monk-whirling-assault"]');await wait(()=>h.d.getElementById('sim-build-name').textContent.includes('ワーリング')&&h.ready());assert(h.d.getElementById('sim-history-undo').disabled,'history cannot cross builds');
+ let history=model.createEditHistory(saved,true);for(let i=1;i<30;i++){const edit=structuredClone(saved);edit.request.character.level=i;history=model.appendEditHistory(history,edit,true);}assert.equal(history.past.length,20);assert(model.moveEditHistory(history,'undo').current.readOnly);
+ const priced=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,saved);
+ priced.change('#sim-plan-name','購入候補');priced.click('#sim-plan-create');await wait(()=>priced.book().length===1);const candidate=priced.book()[0].id;
+ priced.change('#sim-price-budget',50);priced.change(`[data-price-entry="${candidate}"] [data-price-amount]`,40);priced.click('#sim-price-save');
+ priced.change('#sim-compare-b',candidate);const planBeforePrice=JSON.stringify(priced.saved());priced.click('#sim-compare-plans');await wait(()=>priced.d.querySelector('#sim-compare-result table'));assert.match(priced.d.getElementById('sim-compare-result').textContent,/40 高貴なオーブ · 予算内/);assert.equal(JSON.stringify(priced.saved()),planBeforePrice);
+ priced.change(`[data-price-entry="${candidate}"] [data-price-amount]`,60);assert(!priced.d.querySelector('#sim-compare-result table'));priced.click('#sim-price-save');priced.click('#sim-compare-plans');await wait(()=>priced.d.querySelector('#sim-compare-result table'));assert.match(priced.d.getElementById('sim-compare-result').textContent,/予算超過/);
+ priced.change(`[data-price-entry="${candidate}"] [data-price-currency]`,'divine');priced.click('#sim-price-save');priced.click('#sim-compare-plans');await wait(()=>priced.d.querySelector('#sim-compare-result table'));assert.match(priced.d.getElementById('sim-compare-result').textContent,/別通貨（換算なし）/);
+ assert.equal(model.priceAmount(''),null);assert.equal(model.priceAmount('0'),0);assert.equal(model.priceAmount('0.125'),.125);assert.throws(()=>model.priceAmount('-1'));assert.throws(()=>model.priceAmount('1e10'));assert.throws(()=>model.parsePriceBook('{broken'));
+ assert.equal(model.budgetVerdict({amount:null,currency:'exalted'},{amount:100,currency:'exalted'}),'予定額未設定');
+ const drawn=[];priced.w.HTMLCanvasElement.prototype.getContext=()=>({fillStyle:'',font:'',textAlign:'',fillRect(){},measureText:s=>({width:[...s].length*15}),fillText:s=>drawn.push(s)});priced.w.HTMLCanvasElement.prototype.toBlob=function(cb){setTimeout(()=>cb(new Blob(['test png'],{type:'image/png'})),10);};priced.w.URL.createObjectURL=()=> 'blob:test-comparison';priced.w.URL.revokeObjectURL=()=>{};
+ assert.equal(priced.d.getElementById('sim-card-names').checked,false);priced.click('#sim-card-create');await wait(()=>!priced.d.getElementById('sim-card-preview').hidden);
+ assert(drawn.includes('1,018'));assert(!drawn.some(x=>x.includes('購入候補')||x.includes('非公開メモ')));assert.equal(priced.d.getElementById('sim-card-download').getAttribute('href'),'blob:test-comparison');
+ priced.change('#sim-card-names',true);priced.d.getElementById('sim-card-names').checked=true;priced.click('#sim-card-create');await wait(()=>!priced.d.getElementById('sim-card-preview').hidden);assert(drawn.some(x=>x.includes('購入候補')));
+ priced.click('#sim-card-create');priced.change('#sim-level',81);await wait(priced.ready);await new Promise(r=>setTimeout(r,30));assert(priced.d.getElementById('sim-card-preview').hidden,'stale image cannot reappear after an edit');assert(priced.d.getElementById('sim-compare-export').hidden);
+ const explained=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,examples.find(e=>e.id==='sample-'+gemling).saved);
+ const beforeExplanation=JSON.stringify(explained.saved());explained.change('#sim-breakdown-stat','Life');explained.click('#sim-breakdown-show');await wait(()=>explained.d.getElementById('sim-breakdown-result').textContent.includes('計算の段階'));
+ assert.match(explained.d.getElementById('sim-breakdown-result').textContent,/1,478/);assert.match(explained.d.getElementById('sim-breakdown-result').textContent,/鎧 · 装備の効果/);assert.equal(JSON.stringify(explained.saved()),beforeExplanation);
+ explained.change('#sim-extra-mods','最大ライフ +200');explained.click('#sim-config-apply');await wait(explained.ready);assert(!explained.d.getElementById('sim-breakdown-result').textContent.includes('1,478'),'edit invalidates old explanation');
+ explained.change('#sim-breakdown-stat','FireResist');explained.click('#sim-breakdown-show');await wait(()=>explained.d.getElementById('sim-breakdown-result').textContent.includes('進行による耐性補正'));
+ explained.change('#sim-breakdown-stat','SpiritUnreserved');explained.click('#sim-breakdown-show');await wait(()=>explained.d.getElementById('sim-breakdown-result').textContent.includes('総スピリット − 予約済みスピリット'));
+ explained.change('#sim-breakdown-stat','CombinedDPS');explained.click('#sim-breakdown-show');await wait(()=>explained.d.getElementById('sim-breakdown-result').textContent.includes('ヒット：'));
+ assert.deepEqual(explained.errors,[]);
+ const incoming=structuredClone(saved);incoming.request.character.level=70;const sharedLink=await model.encodePlanLink(incoming);
+ const protectedContext=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling+'#plan='+sharedLink,saved);const ownBeforeHistory=JSON.stringify(protectedContext.saved());
+ protectedContext.change('#sim-level',71);await wait(protectedContext.ready);protectedContext.click('#sim-history-undo');await wait(()=>protectedContext.d.getElementById('sim-level').value==='70'&&protectedContext.ready());assert.equal(JSON.stringify(protectedContext.saved()),ownBeforeHistory,'undo preserves shared-link protection of own autosave');
+ const corruptPrice=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,saved,{[model.priceBookKey(gemling)]:'{broken'});assert(corruptPrice.d.getElementById('sim-price-save').disabled);assert.equal(corruptPrice.w.localStorage.getItem(model.priceBookKey(gemling)),'{broken');
+ const oldPrice=priced.w.localStorage.getItem(model.priceBookKey(gemling)),updatedPrice=JSON.parse(oldPrice);updatedPrice.budget.amount=999;const newerPrice=JSON.stringify(updatedPrice);priced.w.localStorage.setItem(model.priceBookKey(gemling),newerPrice);priced.change('#sim-price-budget',100);priced.click('#sim-price-save');await wait(()=>priced.d.getElementById('sim-error').textContent.includes('別のタブ'));assert.equal(priced.w.localStorage.getItem(model.priceBookKey(gemling)),newerPrice);
+ console.log('PASS: real-engine breakdown sources/derived values/DPS and read-only state; simulator navigation, escaped device resume list and private notes exclusion; session undo/redo, redo branching and cross-build isolation; price budgets, zero/unknown distinction and mixed-currency isolation');
+}finally{contexts.forEach(c=>c.window.close());await native.terminate();}

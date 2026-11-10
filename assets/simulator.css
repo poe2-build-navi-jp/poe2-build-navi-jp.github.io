@@ -249,8 +249,8 @@
 .sim-workspace>summary{cursor:pointer;font-weight:700;line-height:1.5;padding:3px 0}
 .sim-workspace[open]>summary{margin-bottom:14px}
 .sim-workspace label{display:grid;gap:7px;min-width:0}
-.sim-workspace input,.sim-workspace select{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
-.sim-workspace input{min-height:44px;padding:10px 12px;border:1px solid #cfc7ba;background:#fff;color:inherit;font:inherit;border-radius:4px}
+.sim-workspace input:not([type=checkbox]),.sim-workspace select{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.sim-workspace input:not([type=checkbox]){min-height:44px;padding:10px 12px;border:1px solid #cfc7ba;background:#fff;color:inherit;font:inherit;border-radius:4px}
 .sim-workspace-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px;margin:14px 0}
 .sim-compare-picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
 .sim-comparison-result{margin-top:18px;overflow-wrap:anywhere}
@@ -267,3 +267,13 @@
 .sim-sample-choices .sim-build-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .sim-sample-choices .sim-build-card{background:#fffdf8;padding:18px;min-width:0}
 @media(max-width:720px){.sim-workspace{padding:15px;margin:12px 0}.sim-workspace-row,.sim-compare-picks,.sim-sample-choices .sim-build-grid{grid-template-columns:1fr}.sim-workspace .sim-actions{flex-wrap:wrap}.sim-workspace button{max-width:100%;white-space:normal}.sim-sample-choices{padding:16px}.sim-workspace summary{font-size:1rem}}
+/* Keep the extra tools folded until needed, with room for touch input. */
+.sim-resume{margin:24px 0;padding:24px;border:1px solid var(--line);background:var(--surface);scroll-margin-top:24px}.sim-resume h2{margin-top:0}.sim-resume-build{padding:12px 0;border-top:1px solid var(--line)}.sim-resume-build summary{cursor:pointer;font-weight:700}.sim-resume-build a{display:inline-block;padding:8px 0}
+.sim-edit-history{padding:16px 24px;margin:0 0 16px;border:1px solid var(--line);background:var(--surface)}.sim-edit-history p{font-size:.85rem;margin-bottom:0;color:var(--muted)}
+.sim-price-panel{padding:16px;border:1px solid var(--line);margin:20px 0}.sim-price-panel>summary{cursor:pointer;font-weight:700}.sim-price-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(100px,.6fr) minmax(120px,.8fr);gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}.sim-price-row label{margin:0}.sim-cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sim-cost-grid dd{margin:4px 0}.sim-cost-comparison{border:1px solid var(--line);padding:12px 16px}.sim-cost-comparison h5{font-size:1rem;margin:0}
+#sim-card-image{display:block;max-width:100%;width:min(100%,600px);height:auto;margin:16px 0;border:1px solid var(--line)}#sim-card-download{display:inline-block;color:var(--ink);background:var(--surface);text-decoration:none;padding:12px 20px;border:1px solid var(--line)}
+#sim-breakdown-result{font-size:.88rem;overflow-wrap:anywhere}#sim-breakdown-result h4,#sim-breakdown-result h5{font-size:1rem}#sim-breakdown-result ol,#sim-breakdown-result ul{padding-left:22px}.sim-mod-sources li{padding:8px 0;border-bottom:1px solid #ffffff30}.sim-mod-sources p{margin:4px 0}#sim-breakdown-result .sim-muted{color:#46565e}
+@media(max-width:720px){.sim-resume,.sim-edit-history{padding:16px}.sim-price-row{grid-template-columns:1fr 1fr}.sim-price-row>b{grid-column:1/-1}.sim-cost-grid{grid-template-columns:1fr}.sim-edit-history .sim-actions>button{flex:1}.sim-price-panel{padding:12px}#sim-tree-full-header{flex-wrap:wrap}}
+
+#sim-compare-export>label{display:flex;align-items:center;gap:10px;min-height:44px}#sim-card-names{display:inline-block;width:20px;height:20px;min-height:0;padding:0;margin:0;accent-color:var(--orange)}
+.sim-tree-mobile #sim-tree-full-header{grid-template-columns:auto minmax(0,1fr) auto auto;column-gap:6px}.sim-tree-mobile #sim-tree-full-header strong{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.75rem}.sim-tree-mobile #sim-tree-full-header button{min-height:44px;padding:6px 8px;font-size:.75rem}.sim-tree-mobile #sim-tree-save-state{grid-column:1/-1}

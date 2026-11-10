@@ -29,6 +29,10 @@ for(const file of await htmlFiles(root)){
   return `${start}${links.replace(/(<a\b[^>]*href="\/guides\/"[^>]*>[\s\S]*?<\/a>)/,`$1${link}`)}${end}`;
  });
  html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>links.includes('href="/search/"')?nav:`${start}${links}<a href="/search/"${file===join(root,'search/index.html')?' aria-current="page"':''}>全体検索</a>${end}`);
+ html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>{
+  links=links.replace(/<a\b[^>]*href="\/simulator\/(?:#sim-resume)?"[^>]*>[\s\S]*?<\/a>/g,'');
+  return `${start}${links}<a href="/simulator/"${file===join(root,'simulator/index.html')?' aria-current="page"':''}>シミュレーター</a><a href="/simulator/#sim-resume">保存した構成</a>${end}`;
+ });
  html=insertBlock(html,'</head>','site-icon',ICON_BLOCK);icons++;
  // Pages generated with their own copy of the footer get the current shared one (same markup);
  // the rest get it after </main>.

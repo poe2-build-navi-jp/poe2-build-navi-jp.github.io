@@ -7,10 +7,15 @@
  <div id="sim-plan-delete-confirm" class="sim-transfer" hidden><p id="sim-plan-delete-message"></p><button type="button" id="sim-plan-delete-apply">この構成を削除</button><button type="button" id="sim-plan-delete-cancel">キャンセル</button></div>
  <button type="button" id="sim-plan-delete-undo" hidden>削除した構成を戻す</button>
  <p id="sim-plan-status" role="status" aria-live="polite"></p>
+ <details id="sim-price-panel" class="sim-price-panel"><summary>候補の予定額と予算を入力する</summary>
+ <p>購入に使う予定額を手入力します。装備や構成を変更したら予定額も見直してください。相場の自動取得・通貨間の換算は行いません。今の構成を基準にする場合は予定額を0にできます。</p>
+ <div class="sim-compare-picks"><label>使える予算<input id="sim-price-budget" type="number" min="0" max="1000000000" step="0.0001" placeholder="未設定"></label><label>予算の通貨<select id="sim-price-currency"><option value="exalted">高貴なオーブ</option><option value="divine">神のオーブ</option><option value="chaos">カオスオーブ</option></select></label></div>
+ <div id="sim-price-entries"></div><button id="sim-price-save" type="button">予定額と予算を保存</button><p id="sim-price-status" role="status"></p></details>
  <h3>2つの構成を比較する</h3>
  <div class="sim-compare-picks"><label>構成A<select id="sim-compare-a"></select></label><label>構成B<select id="sim-compare-b"></select></label><label>共通の敵条件<select id="sim-compare-enemy"><option value="none">通常の敵</option><option value="boss">ボス</option><option value="pinnacle">ピナクルボス</option><option value="uber">ウーバーボス</option></select></label></div>
  <p class="sim-muted">敵条件をそろえ、Lv・装備・スキル・一時効果は各構成の保存内容で比較します。今の作業内容や保存構成は変わりません。</p>
  <button type="button" id="sim-compare-plans">AとBを計算して比較</button>
+ <div id="sim-compare-export" class="sim-transfer" hidden><label><input id="sim-card-names" type="checkbox"> 構成名を画像に含める</label><button id="sim-card-create" type="button">比較画像を作る</button><p id="sim-card-status" role="status">比較表と同じ数値の画像を作れます。メモ・装備テキストは含めません。</p><div id="sim-card-preview" hidden><img id="sim-card-image" alt="構成Aと構成Bの計算結果の比較画像" width="1200" height="1280"><a id="sim-card-download" class="sim-file-button" download="poe2-build-comparison.png">PNGを保存</a></div></div>
  <div id="sim-compare-result" class="sim-comparison-result" role="status" aria-live="polite"></div>
 </details>
 <details id="sim-examples-panel" class="sim-workspace">
