@@ -321,6 +321,55 @@ export function budgetVerdict(price,budget){
  return price.amount<=budget.amount?'予算内':'予算超過';
 }
 
+// Describe saved inputs, independently of the engine's numeric output.
+export function comparisonChanges(a,b){
+ const items=s=>[...(s.request.items||[]),...(s.request.flasks||[])];
+ const equipment=[...new Set([...items(a),...items(b)].map(i=>i.slot))].flatMap(slot=>{
+  const before=items(a).find(i=>i.slot===slot)?.text||'',after=items(b).find(i=>i.slot===slot)?.text||'';
+  return before.trim()===after.trim()?[]:[{slot,before,after}];
+ });
+ const gems=[];const ag=a.request.socket_groups||[],bg=b.request.socket_groups||[];
+ for(let group=0;group<Math.max(ag.length,bg.length);group++)for(let index=0;index<Math.max(ag[group]?.gems?.length||0,bg[group]?.gems?.length||0);index++){
+  const before=ag[group]?.gems?.[index]||null,after=bg[group]?.gems?.[index]||null;
+  if(JSON.stringify(before)!==JSON.stringify(after))gems.push({group,index,before,after});
+ }
+ const an=new Set(a.request.allocated_nodes||[]),bn=new Set(b.request.allocated_nodes||[]);
+ const attributes=[...new Set([...Object.keys(a.request.attribute_choices||{}),...Object.keys(b.request.attribute_choices||{})])].filter(id=>an.has(+id)&&bn.has(+id)&&(a.request.attribute_choices?.[id]||'str')!==(b.request.attribute_choices?.[id]||'str')).map(id=>({id:+id,before:a.request.attribute_choices?.[id]||'str',after:b.request.attribute_choices?.[id]||'str'}));
+ const conditions=[];
+ for(const [key,title]of [['character','職業・Lv'],['config_inputs','一時効果・報酬'],['extra_modifiers','追加効果'],['main_socket_group','主力スキル'],['tree_version','ツリーの対応版'],['weapon_swap','武器切替パッシブ']])if(JSON.stringify(a.request[key]??null)!==JSON.stringify(b.request[key]??null))conditions.push(title);
+ if(a.questPoints!==b.questPoints)conditions.push('報酬パッシブポイント');
+ if((a.weaponSets?.active||1)!==(b.weaponSets?.active||1))conditions.push('使用中の武器スロット');
+ if(ag.some((g,i)=>g.enabled!==bg[i]?.enabled||g.main_active_skill!==bg[i]?.main_active_skill)||bg.length!==ag.length)conditions.push('スキルグループの有効状態・主力指定');
+ const aw=weaponSetState(a.request,a.equipmentDrafts||{},a.weaponSets),bw=weaponSetState(b.request,b.equipmentDrafts||{},b.weaponSets);
+ for(let i=0;i<2;i++)if(i!==aw.active-1&&i!==bw.active-1&&JSON.stringify(aw.sets[i].items)!==JSON.stringify(bw.sets[i].items))conditions.push(`控えの武器スロット${i+1}`);
+ return {equipment,gems,passives:{added:[...bn].filter(id=>!an.has(id)),removed:[...an].filter(id=>!bn.has(id)),attributes},conditions};
+}
+
+export function validateComparison(value){
+ if(value?.version!==1||!['none','boss','pinnacle','uber'].includes(value.enemy))throw Error('比較条件の形式が正しくありません。');
+ const a=parseSave(JSON.stringify(value.a)),b=parseSave(JSON.stringify(value.b));
+ if(a.preset!==b.preset||a.request.character.class_name!==b.request.character.class_name)throw Error('同じビルドの構成を比較してください。');
+ const prices=parsePriceBook(JSON.stringify(value.prices));
+ if(prices.entries.some(p=>!['a','b'].includes(p.id)))throw Error('比較予定額の形式が正しくありません。');
+ // Opening either side must use the same enemy as the shared comparison table.
+ a.request.enemy_tier=value.enemy;b.request.enemy_tier=value.enemy;
+ return {version:1,enemy:value.enemy,a,b,prices};
+}
+export async function encodeComparisonLink(value){
+ const data=validateComparison(value);
+ const packed={version:1,enemy:data.enemy,prices:data.prices,a:await encodePlanLink(data.a),b:await encodePlanLink(data.b)};
+ const bytes=new TextEncoder().encode(JSON.stringify(packed));let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
+ const link='1c.'+btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
+ if(link.length>24000)throw Error('2構成を含む共有URLが上限を超えています。構成を小さくしてお試しください。');
+ return link;
+}
+export async function decodeComparisonLink(value){
+ if(typeof value!=='string'||value.length>24000||!/^1c\.[A-Za-z0-9_-]+$/.test(value))throw Error('比較URLの形式が正しくありません。');
+ const packed=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(Uint8Array.from(atob(value.slice(3).replaceAll('-','+').replaceAll('_','/')),c=>c.charCodeAt(0))));
+ if(packed.version!==1)throw Error('比較URLの版が異なります。');
+ return validateComparison({...packed,a:await decodePlanLink(packed.a),b:await decodePlanLink(packed.b)});
+}
+
 // Draw exact computed labels, without fetching fonts, images or user data.
 export function drawComparisonCard(ctx,snapshot,includeNames=false){
  const width=1200,height=1280;ctx.fillStyle='#f3efe5';ctx.fillRect(0,0,width,height);

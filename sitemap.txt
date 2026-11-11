@@ -114,6 +114,8 @@ https://poe2-build-navi-jp.github.io/guides/valuable-drops-early/
 https://poe2-build-navi-jp.github.io/guides/valuable-drops-act-4/
 https://poe2-build-navi-jp.github.io/guides/xesht/
 https://poe2-build-navi-jp.github.io/guides/mageblood-acquisition/
+https://poe2-build-navi-jp.github.io/guides/simulator-ring-comparison/
+https://poe2-build-navi-jp.github.io/guides/simulator-boots-comparison/
 https://poe2-build-navi-jp.github.io/dictionary/build/
 https://poe2-build-navi-jp.github.io/dictionary/dps/
 https://poe2-build-navi-jp.github.io/dictionary/skill-gem/

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "5b29dffbf5af3e6d60bde6fa5767aa73113fd018",
+  "headCommit": "d1aa60d457dcb855c03bbe7e2a726876c85933a7",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "95b7421674e623d28ec031fb2297dc44b23162943530ae0d8c27f2f05875064f",
+      "afterHash": "14c8ebabf19b1c869c76567da3b6585cb67b97fb46256ab0a3271fbe869b5399"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/endgame-items/",
+      "change": "updated",
+      "beforeHash": "ccb28e7ee18a0a7d5c8e13e8c00ba3576686ae97709a2f9a9b2a37cda5b3748f",
+      "afterHash": "6be20e4cade7fe2009d5ed9aba061b6ba24ef96bc88596675ee63339e6f5881a"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/simulator-boots-comparison/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "a390d3acae610c5811dcdbd99faaf952efd459c7c7caa4fc1f03f985009cc520"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/simulator-ring-comparison/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "010cdd1cbdaf7df90d0050eadfadab2e25a4e806fd0002ec5ad523f6f2d1acdb"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/name-index/",
+      "change": "updated",
+      "beforeHash": "0d453abf2f74b327bf59f4f607e85c2fcbd79e52470d976f3b97009685472ae0",
+      "afterHash": "8cfaae3bf8a6fca2330c70f82902301f32719335d2abf8a08fe230eab6069033"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "23dc5d10d19b3a9f2c1763e18b8220fbd55a4a7d079a16402a46d7f74ec57484",
+      "afterHash": "55d86156073dc1adcb920a2e3ea4db429460f93757f9f0433a8f03e973e9e5ec"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/simulator/",
+      "change": "updated",
+      "beforeHash": "474738276df844df7619db9c65ae26d9376cc83a594ba57d5b5a40f93652ff41",
+      "afterHash": "deb320261264c3376d9c994c990b99883bb12546936de056c3c28083a3b6ec6b"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "11a94365afe165c85bc5f264323a51bac9508363e8e7a445ebec405cdcbe12ad",
+      "afterHash": "2b0fc7be654b2abc735863f6e53644088f2245ad4bd17e7c735971af64601b59"
+    }
+  ]
+}

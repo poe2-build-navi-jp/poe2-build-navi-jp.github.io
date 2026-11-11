@@ -13,7 +13,7 @@ try{
  const guides=JSON.parse(await readFile(join(dir,'data/strategy-guides.json'),'utf8'));
  const files=['index.html','beginner-builds/index.html','guides/index.html','sitemap.xml',...guides.map(g=>`guides/${g.slug}/index.html`),'guides/mapping/index.html','guides/cant-beat-boss/index.html'];
  const beforeHome=await readFile(join(dir,'index.html'),'utf8');
- const sequence=['generate-strategy-articles','enhance-guide-search-intents','generate-strategy-hub','generate-sitemap','enhance-one-hub','inject-analytics','sync-asset-versions','generate-sitemap'];
+ const sequence=['generate-strategy-articles','enhance-simulator-comparisons','enhance-guide-search-intents','generate-strategy-hub','generate-sitemap','enhance-one-hub','inject-analytics','sync-asset-versions','generate-sitemap'];
  const run=()=>{for(const name of sequence)execFileSync('node',[join(dir,'tools',`${name}.mjs`)],{cwd:dir,stdio:'pipe'});};
  run();const first=await Promise.all(files.map(f=>readFile(join(dir,f),'utf8')));
  run();const second=await Promise.all(files.map(f=>readFile(join(dir,f),'utf8')));

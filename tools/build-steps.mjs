@@ -3,6 +3,7 @@
 export const BUILD_STEPS=[
  'generate-pages',           // base pages, then content/discovery/SEO/strategy pages and their own enhancers
  'generate-simulator-examples', // real engine checks for optional examples and sourced equipment
+ 'enhance-simulator-comparisons', // calculated article tables and reproducible comparison links
  'generate-simulator',       // selectable build workbench and per-build entry links
  'enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice',
  'generate-html-sitemap',    // reads page titles, so after the generators and the title changes

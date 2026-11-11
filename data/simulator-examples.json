@@ -821,5 +821,491 @@
         "parsedItems": 7
       }
     }
+  ],
+  "comparisons": [
+    {
+      "id": "ring-life-resistance",
+      "version": 1,
+      "enemy": "none",
+      "a": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "b": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n比較用のライフ指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+120 to maximum Life\n+60% to Fire Resistance"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "prices": {
+        "version": 1,
+        "budget": {
+          "amount": 50,
+          "currency": "exalted"
+        },
+        "entries": [
+          {
+            "id": "a",
+            "amount": 0,
+            "currency": "exalted"
+          },
+          {
+            "id": "b",
+            "amount": 40,
+            "currency": "exalted"
+          }
+        ]
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "stats": [
+          {
+            "id": "CombinedDPS",
+            "a": 29.907117276,
+            "b": 29.907117276
+          },
+          {
+            "id": "Life",
+            "a": 1478,
+            "b": 1538
+          },
+          {
+            "id": "Armour",
+            "a": 76,
+            "b": 76
+          },
+          {
+            "id": "Evasion",
+            "a": 23,
+            "b": 23
+          },
+          {
+            "id": "FireResist",
+            "a": 10,
+            "b": 40
+          },
+          {
+            "id": "ColdResist",
+            "a": 10,
+            "b": -20
+          },
+          {
+            "id": "LightningResist",
+            "a": 10,
+            "b": -20
+          },
+          {
+            "id": "ChaosResist",
+            "a": 0,
+            "b": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "boots-life-resistance",
+      "version": 1,
+      "enemy": "none",
+      "a": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "b": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n比較用の耐性靴\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+40 to maximum Life\n25% increased Movement Speed\n+40% to all Elemental Resistances"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "prices": {
+        "version": 1,
+        "budget": {
+          "amount": 30,
+          "currency": "exalted"
+        },
+        "entries": [
+          {
+            "id": "a",
+            "amount": 0,
+            "currency": "exalted"
+          },
+          {
+            "id": "b",
+            "amount": 20,
+            "currency": "exalted"
+          }
+        ]
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "stats": [
+          {
+            "id": "CombinedDPS",
+            "a": 29.907117276,
+            "b": 29.907117276
+          },
+          {
+            "id": "Life",
+            "a": 1478,
+            "b": 1438
+          },
+          {
+            "id": "Armour",
+            "a": 76,
+            "b": 76
+          },
+          {
+            "id": "Evasion",
+            "a": 23,
+            "b": 23
+          },
+          {
+            "id": "FireResist",
+            "a": 10,
+            "b": 50
+          },
+          {
+            "id": "ColdResist",
+            "a": 10,
+            "b": 50
+          },
+          {
+            "id": "LightningResist",
+            "a": 10,
+            "b": 20
+          },
+          {
+            "id": "ChaosResist",
+            "a": 0,
+            "b": 0
+          }
+        ]
+      }
+    }
   ]
 }
