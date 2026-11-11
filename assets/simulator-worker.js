@@ -1,5 +1,5 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
-import {validRequest} from './simulator-model.js?v=e0212e6c36';
+import {validRequest} from './simulator-model.js?v=b3d17ef5b9';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;

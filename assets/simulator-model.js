@@ -276,3 +276,67 @@ export function upgradeAdvice(result,requirements=[],target=75,request={}){
  if(gaps.length)advice.push({title:'不足している耐性から比較する',detail:gaps.slice(0,3).map(g=>`${g.label}は目標${target}%まで${g.missing}ポイント`).join('、')+'。指輪・靴・ベルトなどで補う候補を作り、交換で失う能力値も確認します。',slot:candidate,href:'/guides/resistance/',link:'耐性を補う装備の選び方'});
  return advice.slice(0,3);
 }
+
+// Session-only history: preserve save protection and bound retained snapshots.
+const historySnapshot=(saved,readOnly)=>{const value=parseSave(JSON.stringify(saved));delete value.savedAt;return {saved:value,readOnly:!!readOnly};};
+export function createEditHistory(saved,readOnly=false){return {past:[],current:historySnapshot(saved,readOnly),future:[]};}
+function limitHistory(history){
+ while(history.past.length>20)history.past.shift();
+ while(JSON.stringify(history).length>6000000&&(history.past.length||history.future.length)){
+  if(history.past.length)history.past.shift();else history.future.pop();
+ }
+ return history;
+}
+export function appendEditHistory(history,saved,readOnly=false){
+ const current=historySnapshot(saved,readOnly);if(!history)return createEditHistory(saved,readOnly);
+ if(JSON.stringify(history.current)===JSON.stringify(current))return history;
+ return limitHistory({past:[...history.past,history.current],current,future:[]});
+}
+export function moveEditHistory(history,direction){
+ if(!history||!['undo','redo'].includes(direction))throw Error('履歴の操作を確認してください。');
+ const from=direction==='undo'?history.past:history.future;if(!from.length)return null;
+ const next=direction==='undo'?{past:history.past.slice(0,-1),current:from.at(-1),future:[history.current,...history.future]}:{past:[...history.past,history.current],current:from[0],future:history.future.slice(1)};
+ return limitHistory(structuredClone(next));
+}
+
+export const PRICE_CURRENCIES={exalted:'高貴なオーブ',divine:'神のオーブ',chaos:'カオスオーブ'};
+export const priceBookKey=preset=>`poe2-simulator:prices:v1:${preset}`;
+export function priceAmount(text){
+ const value=String(text).trim();if(!value)return null;
+ if(!/^\d+(?:\.\d{1,4})?$/.test(value)||!Number.isFinite(+value)||+value>1000000000)throw Error('予定額・予算は0〜10億、小数4桁以内で入力してください。');
+ return +value;
+}
+export function parsePriceBook(text){
+ if(!text)return {version:1,budget:{amount:null,currency:'exalted'},entries:[]};
+ if(text.length>30000)throw Error('予定額の保存データが大きすぎます。');
+ const data=JSON.parse(text),valid=p=>p&&(p.amount===null||typeof p.amount==='number'&&Number.isFinite(p.amount)&&p.amount>=0&&p.amount<=1000000000)&&Object.hasOwn(PRICE_CURRENCIES,p.currency);
+ if(data.version!==1||!valid(data.budget)||!Array.isArray(data.entries)||data.entries.length>100)throw Error('予定額の保存形式を確認してください。');
+ const ids=new Set();for(const p of data.entries){if(!valid(p)||typeof p.id!=='string'||!/^[a-zA-Z0-9-]{1,80}$/.test(p.id)||ids.has(p.id))throw Error('予定額の候補を確認してください。');ids.add(p.id);}
+ return data;
+}
+export function budgetVerdict(price,budget){
+ if(!price||price.amount===null)return '予定額未設定';
+ if(!budget||budget.amount===null)return '予算未設定';
+ if(price.currency!==budget.currency)return '別通貨（換算なし）';
+ return price.amount<=budget.amount?'予算内':'予算超過';
+}
+
+// Draw exact computed labels, without fetching fonts, images or user data.
+export function drawComparisonCard(ctx,snapshot,includeNames=false){
+ const width=1200,height=1280;ctx.fillStyle='#f3efe5';ctx.fillRect(0,0,width,height);
+ const text=(value,x,y,size=28,color='#172a34',align='left',max=1100)=>{ctx.font=`${size>=34?'700':'500'} ${size}px system-ui, sans-serif`;ctx.fillStyle=color;ctx.textAlign=align;let s=String(value);while(s.length&&ctx.measureText(s).width>max)s=s.slice(0,-2)+'…';ctx.fillText(s,x,y);};
+ ctx.fillStyle='#10232e';ctx.fillRect(0,0,width,94);text('POE2 ビルドナビ',48,60,34,'#f2d58c');text('poe2-build-navi-jp.github.io',1150,58,22,'#f3efe5','right',650);
+ text('構成比較｜'+snapshot.build,48,158,38,'#172a34','left',1100);
+ text(`共通の敵：${snapshot.enemy} / 参考計算`,48,218,27);
+ text(`A：${includeNames?snapshot.a.name+' / ':''}${snapshot.a.summary}`,48,267,25,'#172a34','left',1100);
+ text(`B：${includeNames?snapshot.b.name+' / ':''}${snapshot.b.summary}`,48,310,25,'#172a34','left',1100);
+ ctx.fillStyle='#e5dcc8';ctx.fillRect(40,340,1120,54);
+ for(const [s,x,align]of [['項目',56,'left'],['A',640,'right'],['B',890,'right'],['B − A',1144,'right']])text(s,x,377,27,'#172a34',align,420);
+ snapshot.rows.forEach((row,i)=>{const y=430+i*41;if(i%2===0){ctx.fillStyle='#fffdf7';ctx.fillRect(40,y-30,1120,41);}text(row.title,56,y,26,'#172a34','left',395);text(row.a,640,y,28,'#172a34','right',225);text(row.b,890,y,28,'#172a34','right',225);text(row.delta,1144,y,28,'#172a34','right',225);});
+ text(`予定額 A：${snapshot.priceA} / B：${snapshot.priceB}`,48,1045,24,'#172a34','left',1100);
+ text(`予算：${snapshot.budget}（手入力・通貨換算なし）`,48,1085,24,'#172a34','left',1100);
+ text('装備・ジェム・一時効果は各構成の設定。実戦DPSの保証ではありません。',48,1150,24,'#46565e','left',1100);
+ text(snapshot.warning?'未対応の効果・装備エラーを含みます。元の構成で確認してください。':'対応範囲は元の構成の「計算の確認事項」で確認してください。',48,1190,24,'#46565e','left',1100);
+ text(`対応データ ${snapshot.dataVersion} / ${snapshot.date}`,48,1240,22,'#46565e');
+ return {width,height};
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "da95e8d05be143f153a1aee1b36bf523a5cd2622",
+  "headCommit": "68a56e4f1ac46f68de8ed6a364a86fbee78e90cc",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "change": "updated",
+      "beforeHash": "480c25f96c4c6ceb600044b33cd2758e401754062da547d72a4a9e743d2bd983",
+      "afterHash": "55d52415c41be6813ec34f1fcc588c758a6207399d5f0da89b528473ff59eb1b"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/simulator/",
+      "change": "updated",
+      "beforeHash": "9a63bc44e486dedf34b6223545a37ce3c4de75ff044162a42aa4c4f935b65dd8",
+      "afterHash": "474738276df844df7619db9c65ae26d9376cc83a594ba57d5b5a40f93652ff41"
+    }
+  ]
+}
