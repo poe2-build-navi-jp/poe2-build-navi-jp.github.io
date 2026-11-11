@@ -6,6 +6,8 @@ The root text file named by `KEY_FILE` in `scripts/indexnow-content.mjs` is this
 
 ## Current selection
 
+`docs/indexnow/2026-11-11-tools-changes.json` is the newest reviewed plan: the homepage and simulator changed from `da95e8d0` to `68a56e4f` (resume navigation, edit history, manual budget comparisons, PNG cards and calculation breakdowns). It has not been sent. The following information-page menu additions do not change the editorial hashes.
+
 `docs/indexnow/2026-11-11-changes.json` is the current reviewed plan: 48 canonical pages changed from `da296173` to `77a8101b` (patch review, simulator workspace and sourced boss-equipment links). It has not been sent. Source content is checked against these commits; the accompanying documentation-only commit does not change the reviewed page content.
 
 `docs/indexnow/2026-10-13-changes.json` contains exactly 16 canonical HTML pages changed from `0fc117efc3b214ba5a15cca190dd184e0a3def3e` to `7fd942c80bcbbe29565cf9a88467e56de549ce82`. It includes the homepage, purpose comparison, gear diagnosis, unique-gear guide, and 12 build details. The other 89 sitemap URLs were not selected. The hashes cover meaningful rendered content, title, description and links; verification-only tags do not create content updates.

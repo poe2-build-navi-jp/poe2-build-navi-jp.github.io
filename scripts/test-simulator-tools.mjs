@@ -36,7 +36,7 @@ try{
  assert(!c.d.getElementById('sim-resume-list').textContent.includes('非公開メモ'));
  const sitemap=await read('sitemap.xml');for(const m of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)){
   const file=new URL(m[1]).pathname.slice(1)+'index.html';const page=new JSDOM(await read(file));
-  const nav=page.window.document.querySelector('.site-nav');if(nav){assert.equal(nav.querySelectorAll('a[href="/simulator/"]').length,1,file);assert.equal(nav.querySelectorAll('a[href="/simulator/#sim-resume"]').length,1,file);}page.window.close();
+  const nav=page.window.document.querySelector('.site-nav');assert(nav,'Missing shared menu: '+file);assert.equal(nav.querySelectorAll('a[href="/simulator/"]').length,1,file);assert.equal(nav.querySelectorAll('a[href="/simulator/#sim-resume"]').length,1,file);page.window.close();
  }
  const h=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,saved);
  h.change('#sim-extra-mods','最大ライフ +200');h.click('#sim-config-apply');await wait(h.ready);
@@ -48,6 +48,15 @@ try{
  h.click('#sim-history-undo');await wait(()=>h.saved().request.socket_groups[0].gems[0].level===1&&h.ready());h.change('#sim-level',90);await wait(h.ready);assert(h.d.getElementById('sim-history-redo').disabled,'new edit discards future branch');
  h.click('#sim-change-build');h.click('[data-preset="monk-whirling-assault"]');await wait(()=>h.d.getElementById('sim-build-name').textContent.includes('ワーリング')&&h.ready());assert(h.d.getElementById('sim-history-undo').disabled,'history cannot cross builds');
  let history=model.createEditHistory(saved,true);for(let i=1;i<30;i++){const edit=structuredClone(saved);edit.request.character.level=i;history=model.appendEditHistory(history,edit,true);}assert.equal(history.past.length,20);assert(model.moveEditHistory(history,'undo').current.readOnly);
+ const edits=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,examples.find(e=>e.id==='sample-'+gemling).saved);
+ const originalItems=edits.saved().request.items,originalDrafts=edits.saved().equipmentDrafts,originalNodes=edits.saved().request.allocated_nodes;
+ edits.click('[data-slot="helmet"]');edits.click('#sim-item-remove');await wait(()=>!edits.saved().request.items.some(i=>i.slot==='helmet')&&edits.ready());
+ edits.click('#sim-history-undo');await wait(()=>edits.saved().request.items.some(i=>i.slot==='helmet')&&edits.ready());assert.deepEqual(edits.saved().request.items,originalItems);assert.deepEqual(edits.saved().equipmentDrafts,originalDrafts);
+ edits.click('#sim-history-redo');await wait(()=>!edits.saved().request.items.some(i=>i.slot==='helmet')&&edits.ready());
+ edits.click('#sim-history-undo');await wait(()=>edits.saved().request.items.some(i=>i.slot==='helmet')&&edits.ready());
+ edits.click('[data-tab="tree"]');edits.click('#sim-passives-reset');await wait(()=>edits.saved().request.allocated_nodes.length===0&&edits.ready());
+ edits.click('#sim-history-undo');await wait(()=>edits.saved().request.allocated_nodes.length===originalNodes.length&&edits.ready());assert.deepEqual(edits.saved().request.allocated_nodes,originalNodes);
+ edits.click('#sim-history-redo');await wait(()=>edits.saved().request.allocated_nodes.length===0&&edits.ready());
  const priced=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,saved);
  priced.change('#sim-plan-name','購入候補');priced.click('#sim-plan-create');await wait(()=>priced.book().length===1);const candidate=priced.book()[0].id;
  priced.change('#sim-price-budget',50);priced.change(`[data-price-entry="${candidate}"] [data-price-amount]`,40);priced.click('#sim-price-save');

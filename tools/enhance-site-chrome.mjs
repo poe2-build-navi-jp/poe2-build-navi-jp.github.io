@@ -21,6 +21,8 @@ for(const file of await htmlFiles(root)){
  const before=await readFile(file,'utf8');
  let html=before.replace(/<!-- site-icon:start -->[\s\S]*?<!-- site-icon:end -->/g,'').replace(/<!-- site-footer:start -->[\s\S]*?<!-- site-footer:end -->/g,'');
  if(!html.includes('</head>'))continue;
+ // Information pages also need an always-visible route back to the tools.
+ if(!/<nav\b[^>]*class="site-nav\b/.test(html))html=html.replace(/(<header\b[^>]*class="site-header"[^>]*>[\s\S]*?)(<\/header>)/,`$1<nav class="site-nav page-nav" aria-label="メインメニュー"><a href="/guides/">攻略ガイド</a><a href="/builds/">ビルドを探す</a><a href="/search/">全体検索</a></nav>$2`);
  html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>
   links.includes('href="/guides/"')?nav:`${start}<a href="/guides/"${file===join(root,'guides/index.html')?' aria-current="page"':''}>攻略ガイド</a>${links}${end}`);
  html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>{
