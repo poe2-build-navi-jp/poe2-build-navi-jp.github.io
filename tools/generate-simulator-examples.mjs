@@ -48,6 +48,17 @@ try{
   const result=await rpc('calculate',request);if(result.item_errors?.length)throw Error('Unreadable recorded equipment: '+record.id+' '+JSON.stringify(result.item_errors));
   examples.push({id:record.id,preset:record.preset,title:record.title,kind:'record',level:record.level,source:{href:`/guides/${record.guide}/`,label:record.title,checkedAt:record.sourceCheckedAt},description:'記事で確認できた装備の効果とLvを試算へ取り込みます。未確認の設定は空欄です。',omissions:record.omissions,itemCount:record.items.length,sourceItems:record.items.map(i=>({name:i.name,slot:i.slot,sourceText:i.sourceText})),saved:cleanSave(record.preset,request,weaponSets),verification:{engine:catalog.runtime.release,data:catalog.runtime.dataVersion,checkedAt:records.checkedAt,parsedItems:record.items.length}});
  }
- await writeFile(resolve(root,'data/simulator-examples.json'),JSON.stringify({version:1,examples},null,2)+'\n');
+ const comparisons=[];
+ const sample=examples.find(e=>e.id==='sample-mercenary-twister-gemling');
+ for(const spec of [{id:'ring-life-resistance',slot:'ring1',type:'Ring',name:'比較用のライフ指輪',mods:[['life',120],['fire_res',60]],cost:40,budget:50},{id:'boots-life-resistance',slot:'boots',type:'Boots',name:'比較用の耐性靴',mods:[['life',40],['move_speed',25],['all_res',40]],cost:20,budget:30}]){
+  const a=structuredClone(sample.saved),b=structuredClone(sample.saved),base=equipment.bases.filter(x=>x.itemClass===spec.type).sort((x,y)=>Math.max(0,...Object.values(x.requirements))-Math.max(0,...Object.values(y.requirements))||x.name.localeCompare(y.name,'en'))[0];
+  const text=buildRareItem({baseId:base.id,name:spec.name,level:80,quality:0,modifiers:spec.mods.map(([id,...values])=>({id,values}))},spec.slot,equipment);
+  b.request.items=b.request.items.map(item=>item.slot===spec.slot?{slot:spec.slot,text}:item);b.weaponSets=weaponSetState(b.request,{},b.weaponSets);
+  const ar=await rpc('calculate',a.request),br=await rpc('calculate',b.request);
+  if([ar,br].some(r=>r.item_errors?.length||r.unsupported_modifiers?.length))throw Error('Comparison example has unparsed inputs: '+spec.id);
+  const stats=['CombinedDPS','Life','Armour','Evasion','FireResist','ColdResist','LightningResist','ChaosResist'].map(id=>({id,a:statValue(ar,id),b:statValue(br,id)}));
+  comparisons.push({id:spec.id,version:1,enemy:'none',a,b,prices:{version:1,budget:{amount:spec.budget,currency:'exalted'},entries:[{id:'a',amount:0,currency:'exalted'},{id:'b',amount:spec.cost,currency:'exalted'}]},verification:{engine:catalog.runtime.release,data:catalog.runtime.dataVersion,stats}});
+ }
+ await writeFile(resolve(root,'data/simulator-examples.json'),JSON.stringify({version:1,examples,comparisons},null,2)+'\n');
  console.log(`Examples: ${examples.filter(e=>e.kind==='sample').length} calculated samples, ${examples.filter(e=>e.kind==='record').length} sourced equipment records`);
 }finally{await worker.terminate();}

@@ -12,7 +12,9 @@ const original = JSON.parse(await readFile(join(root, 'docs/indexnow', planName)
 const planUrls = (await readFile(join(root, 'docs/indexnow', planName.replace('-changes.json', '-urls.txt')), 'utf8')).trim().split(/\s+/);
 const plan = { ...original, urls: [original.urls[0]], deploymentCommit: '1'.repeat(40) };
 const key = (await readFile(join(root, KEY_FILE), 'utf8')).trim();
-const html = await readFile(join(root, 'index.html'), 'utf8');
+const home = await readFile(join(root, 'index.html'), 'utf8');
+const targetUrl=plan.urls[0].url;
+const html = await readFile(join(root,new URL(targetUrl).pathname.slice(1),'index.html'), 'utf8');
 const robots = await readFile(join(root, 'robots.txt'), 'utf8');
 const sitemap = await readFile(join(root, 'sitemap.xml'), 'utf8');
 const run = { id: 123, name: 'pages build and deployment', path: 'dynamic/pages/pages-build-deployment', head_sha: plan.deploymentCommit, head_branch: 'main', repository: { full_name: REPO }, event: 'dynamic', status: 'completed', conclusion: 'success', updated_at: '2026-10-13T11:00:00Z', html_url: `https://github.com/${REPO}/actions/runs/123` };
@@ -49,15 +51,15 @@ test('only explicit production canonical paths are allowed', () => {
 test('local verification resources match and Bing tag remains in head', () => {
   assert.equal(KEY_FILE, `${key}.txt`);
   assert.match(key, /^[a-f0-9]{32}$/);
-  const head = html.match(/<head>([\s\S]+?)<\/head>/)[1];
+  const head = home.match(/<head>([\s\S]+?)<\/head>/)[1];
   assert.equal([...head.matchAll(/name="msvalidate\.01"/g)].length, 1);
   assert.match(head, /name="msvalidate\.01" content="8C02613CB39D96A4B791BA7BCCACC2CF"/);
-  assert.equal(inspectArticle(html, `${SITE}/`).hash, plan.urls[0].afterHash);
+  assert.equal(inspectArticle(html, targetUrl).hash, plan.urls[0].afterHash);
 });
 test('self canonical and robots are validated', () => {
-  assert.throws(() => inspectArticle(html.replace(`href="${SITE}/"`, `href="${SITE}/wrong/"`), `${SITE}/`));
-  assert.throws(() => inspectArticle(html.replace('index,follow', 'noindex,follow'), `${SITE}/`));
-  assert.throws(() => inspectArticle(html, `${SITE}/`, new Headers({ 'X-Robots-Tag': 'noindex' })));
+  assert.throws(() => inspectArticle(html.replace(`href="${targetUrl}"`, `href="${SITE}/wrong/"`), targetUrl));
+  assert.throws(() => inspectArticle(html.replace('index,follow', 'noindex,follow'), targetUrl));
+  assert.throws(() => inspectArticle(html, targetUrl, new Headers({ 'X-Robots-Tag': 'noindex' })));
 });
 test('training opt-out is separate from search policy; unexpected groups still fail closed', async () => {
   for (const changeRobots of [
@@ -80,7 +82,7 @@ test('verify checks exact deployment, live key, sitemap and content but never po
   const result = await runIndexNow({ plan, key, mode: 'verify', fetchFn: f.fetchFn });
   assert.equal(result.deployment.head, plan.deploymentCommit);
   assert.equal(f.posts(), 0);
-  for (const options of [{ wrongKey: true }, { branch: '2'.repeat(40) }, { failStatus: 'failure' }, { blockRobots: true }, { omitSitemap: true }, { changeHtml: s => s.replace('POE2ビルドナビ ホーム', 'Changed').replace('<h1 id="hero-title">', '<h1 id="hero-title">changed') }]) {
+  for (const options of [{ wrongKey: true }, { branch: '2'.repeat(40) }, { failStatus: 'failure' }, { blockRobots: true }, { omitSitemap: true }, { changeHtml: s => s.replace(/(<h1\b[^>]*>)/,'$1changed') }]) {
     const bad = fixture(options);
     await assert.rejects(runIndexNow({ plan, key, mode: 'verify', fetchFn: bad.fetchFn }));
     assert.equal(bad.posts(), 0);

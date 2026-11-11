@@ -5,18 +5,18 @@
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "82cab397f9bd0f98",
-  "date": "2026-11-11",
+  "hash": "dbce08abe6d3eb50",
+  "date": "2026-11-12",
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "91eb6df34086aed5",
-  "date": "2026-11-09",
+  "hash": "5cb49c618cc35b3f",
+  "date": "2026-11-12",
   "hashVersion": 2
  },
  "/name-index/": {
   "hash": "cb244a5bd53a3837",
-  "date": "2026-11-04",
+  "date": "2026-11-12",
   "hashVersion": 2
  },
  "/skills/": {
@@ -210,8 +210,8 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "2495df3d538d89ee",
-  "date": "2026-11-11",
+  "hash": "f44364b5c928b03b",
+  "date": "2026-11-12",
   "hashVersion": 2
  },
  "/dictionary/": {
@@ -265,8 +265,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "f5a8b1511aae2bb4",
-  "date": "2026-11-09",
+  "hash": "79f0e5fc100a4294",
+  "date": "2026-11-12",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -470,8 +470,8 @@
   "hashVersion": 2
  },
  "/guides/endgame-items/": {
-  "hash": "6bb13f3b67c5ccca",
-  "date": "2026-11-11",
+  "hash": "c6530fccfa689268",
+  "date": "2026-11-12",
   "hashVersion": 2
  },
  "/guides/atlas-passive-trees/": {
@@ -577,6 +577,16 @@
  "/guides/mageblood-acquisition/": {
   "hash": "f6ab366edb76ccb3",
   "date": "2026-11-10",
+  "hashVersion": 2
+ },
+ "/guides/simulator-ring-comparison/": {
+  "hash": "134f6ba41d9e0041",
+  "date": "2026-11-12",
+  "hashVersion": 2
+ },
+ "/guides/simulator-boots-comparison/": {
+  "hash": "94f03ac6178f4803",
+  "date": "2026-11-12",
   "hashVersion": 2
  },
  "/dictionary/build/": {
