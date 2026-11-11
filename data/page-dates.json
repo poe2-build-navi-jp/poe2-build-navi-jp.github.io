@@ -239,6 +239,11 @@
   "date": "2026-11-11",
   "hashVersion": 2
  },
+ "/issues/": {
+  "hash": "9394fdde6706161a",
+  "date": "2026-11-12",
+  "hashVersion": 2
+ },
  "/about/": {
   "hash": "a510491bc4f04d88",
   "date": "2026-10-24",

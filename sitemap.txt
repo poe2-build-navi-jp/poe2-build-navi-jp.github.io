@@ -46,6 +46,7 @@ https://poe2-build-navi-jp.github.io/tier-list/
 https://poe2-build-navi-jp.github.io/league-starter/
 https://poe2-build-navi-jp.github.io/best-builds/
 https://poe2-build-navi-jp.github.io/poe2-1-0/
+https://poe2-build-navi-jp.github.io/issues/
 https://poe2-build-navi-jp.github.io/about/
 https://poe2-build-navi-jp.github.io/editorial-policy/
 https://poe2-build-navi-jp.github.io/rating-criteria/

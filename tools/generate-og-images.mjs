@@ -39,7 +39,7 @@ for(const path of paths){
  const build=builds.find(b=>path===`builds/${b.classSlug}/${b.slug}/`);
  const subtitle=build?`${build.className} / ${build.ascendancy}\nLv1〜Endgame育成`:sub.replace(/POE2ビルドナビ/,'').trim();
  const strategyGuide=strategyGuides.find(g=>path===`guides/${g.slug}/`);
- const reuseImage=/^(skills|equipment|search|name-index)\//.test(path)?'/images/poe2/og/poe2-beginner-guide-og.webp':strategyGuide?.ogImage;
+ const reuseImage=/^(skills|equipment|search|name-index|issues)\//.test(path)?'/images/poe2/og/poe2-beginner-guide-og.webp':strategyGuide?.ogImage;
  const screenshot=strategyGuide?.sections.flatMap(s=>s.screenshots||[]).find(v=>v.src===reuseImage);
  if(screenshot&&(!/^\/images\/poe2\/[a-z0-9-]+\/[a-z0-9-]+\.webp$/.test(screenshot.src)||!(screenshot.width>0)||!(screenshot.height>0)))throw Error(`Invalid screenshot OG image: ${path}`);
  if(reuseImage&&!screenshot&&!/^\/images\/poe2\/og\/[a-z0-9-]+\.webp$/.test(reuseImage))throw Error(`Invalid shared OG image: ${path}`);
