@@ -1,1 +1,11 @@
 .issue-page{max-width:1050px;margin:auto;padding:24px}.issue-page .section{scroll-margin-top:100px;margin-top:40px}.issue-jumps{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.issue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px}.issue-card{padding:20px;border:1px solid #516477;border-radius:12px;background:#142131}.issue-status{font-weight:700;color:#f7d485}.issue-page label{display:block;margin:16px 0}.issue-page input,.issue-page textarea,.issue-page select{display:block;width:100%;max-width:100%;box-sizing:border-box;margin-top:8px;padding:12px;border:1px solid #798b9d;border-radius:8px;background:#101c29;color:#fff;font:inherit}.issue-page button{cursor:pointer;min-height:44px;padding:10px 18px;margin:4px 8px 4px 0}.issue-page a{overflow-wrap:anywhere}.issue-page :focus-visible{outline:3px solid #f7d485;outline-offset:3px}.issue-note{padding:16px;border-left:3px solid #f7d485}#report-output[hidden]{display:none}
+/* Cards sit on the light site canvas, but keep their own dark palette. */
+.issue-page .issue-card{color:#f1f5f9}
+.issue-page .issue-card h3{color:#fff}
+.issue-page .issue-card .issue-status{color:#f7d485}
+.issue-page .issue-card a{color:#9cdbff;text-decoration:underline;text-underline-offset:.2em}
+.issue-page input::placeholder,.issue-page textarea::placeholder{color:#b8c6d4;opacity:1}
+.issue-page button[type="reset"]{background:#fffdf8;color:#10171e;border:1px solid #565f66;border-radius:8px;font:inherit}
+.issue-page :focus-visible{outline:3px solid #075985;outline-offset:3px}
+.issue-page .issue-card :focus-visible,.issue-page .page-hero :focus-visible{outline-color:#f7d485}
+@media(max-width:600px){.issue-page{padding:16px}.issue-page .section,.issue-page .page-hero{padding:24px 16px}.issue-page .issue-card{min-width:0}}
