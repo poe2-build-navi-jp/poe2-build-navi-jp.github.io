@@ -993,7 +993,7 @@ document.addEventListener('click',event=>{
   if(id==='sim-backup-cancel'){backupPreview=null;$('sim-backup-preview').hidden=true;}
   if(id==='sim-backup-restore'){
    if(!backupPreview)throw Error('復元するファイルを選んでください。');
-   restoreSimulatorBackup(localStorage,backupPreview,backupExpected);backupPreview=null;$('sim-backup-preview').hidden=true;renderResume();$('sim-backup-status').textContent='復元しました。保存した構成の一覧から続きが開けます。';
+   restoreSimulatorBackup(localStorage,backupPreview,backupExpected);++generation;++calculation;plan=null;result=null;selectedPreset=null;editHistory=null;summaryBaseline=null;backupPreview=null;$('sim-backup-preview').hidden=true;renderResume();$('sim-backup-status').textContent='復元しました。保存した構成の一覧から続きが開けます。';
   }
  }catch(error){$('sim-backup-status').textContent=error.message;}
 });
