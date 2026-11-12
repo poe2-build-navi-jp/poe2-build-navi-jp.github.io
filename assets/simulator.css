@@ -285,4 +285,10 @@
 
 .sim-candidate-cost,.sim-candidate-delta{display:block;font-size:.8rem;margin-top:.35rem;white-space:nowrap}.sim-candidate-cost{white-space:normal}.sim-comparison-result th,.sim-workspace th{overflow-wrap:anywhere}.sim-workspace table{font-variant-numeric:tabular-nums}#sim-engine-retry{margin:.7rem 0}#sim-catalog-error{padding:1rem;border:1px solid #b78b50;border-radius:12px}
 
-.sim-first-guide{padding:1.25rem;background:#122631;border:1px solid #58727f;border-radius:12px;margin:1.25rem 0}.sim-first-guide ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;padding-left:1.5rem}.sim-first-guide li,.sim-first-progress li{line-height:1.6}.sim-first-guide p{font-size:.9rem}.sim-first-progress{padding-left:1.5rem}.sim-first-progress li+li{margin-top:1rem}.sim-first-guide .sim-file-button{white-space:normal}@media(max-width:720px){.sim-first-guide ol{grid-template-columns:1fr;gap:.4rem}.sim-first-guide{padding:1rem}.sim-first-progress button{max-width:100%;white-space:normal}}
+.sim-first-guide{padding:1.25rem;background:#122631;color:#edf3f7;border:1px solid #58727f;border-radius:12px;margin:1.25rem 0}.sim-first-guide ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;padding-left:1.5rem}.sim-first-guide li,.sim-first-progress li{line-height:1.6}.sim-first-guide p{font-size:.9rem}.sim-first-progress{padding-left:1.5rem}.sim-first-progress li+li{margin-top:1rem}.sim-first-guide .sim-file-button{white-space:normal}@media(max-width:720px){.sim-first-guide ol{grid-template-columns:1fr;gap:.4rem}.sim-first-guide{padding:1rem}.sim-first-progress button{max-width:100%;white-space:normal}}
+
+/* A dark surface owns its foreground; do not inherit the light page palette. */
+.sim-first-guide :is(h2,b,li,p){color:inherit}.sim-first-guide p.sim-muted{color:#c5d2dc}.sim-first-guide .sim-file-button{background:#fff;color:#10171e}
+/* The checks are light cards inside the dark results sidebar. */
+.sim-results .sim-checks .sim-muted{color:var(--sim-muted)}
+.sim-results .sim-checks a{color:var(--sim-blue);text-decoration:underline;text-underline-offset:.2em}

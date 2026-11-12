@@ -1,0 +1,2935 @@
+{
+  "desktop": [
+    {
+      "checked": 278,
+      "failures": [],
+      "overflow": false,
+      "path": "/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 148,
+      "failures": [
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "",
+          "fg": "rgb(16, 23, 30)",
+          "minimum": 3,
+          "ratio": 1.16,
+          "tag": "H2",
+          "text": "初めてなら、この3ステップ"
+        },
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "",
+          "fg": "rgb(16, 23, 30)",
+          "minimum": 4.5,
+          "ratio": 1.16,
+          "tag": "B",
+          "text": "ビルドを選ぶ"
+        },
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "",
+          "fg": "rgb(16, 23, 30)",
+          "minimum": 4.5,
+          "ratio": 1.16,
+          "tag": "P",
+          "text": "下の一覧で普段使うスキル・職業を選びます。"
+        },
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "",
+          "fg": "rgb(16, 23, 30)",
+          "minimum": 4.5,
+          "ratio": 1.16,
+          "tag": "B",
+          "text": "今の装備を入れる"
+        },
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "",
+          "fg": "rgb(16, 23, 30)",
+          "minimum": 4.5,
+          "ratio": 1.16,
+          "tag": "P",
+          "text": "装備欄でレア装備の能力値を入力。ジェムのLvも手持ちに合わせます。"
+        },
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "",
+          "fg": "rgb(16, 23, 30)",
+          "minimum": 4.5,
+          "ratio": 1.16,
+          "tag": "B",
+          "text": "交換候補を比較する"
+        },
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "",
+          "fg": "rgb(16, 23, 30)",
+          "minimum": 4.5,
+          "ratio": 1.16,
+          "tag": "P",
+          "text": "交換予定の装備を入力し、予定額を付けて候補保存。現在の構成との差が見られます。"
+        },
+        {
+          "bg": [
+            "18,38,49"
+          ],
+          "cls": "sim-muted",
+          "fg": "rgb(86, 95, 102)",
+          "minimum": 4.5,
+          "ratio": 2.39,
+          "tag": "P",
+          "text": "見本は内容を確認してから取り込めます。今の構成は切替前に退避します。"
+        }
+      ],
+      "overflow": false,
+      "path": "/simulator/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 550,
+      "failures": [],
+      "overflow": false,
+      "path": "/search/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 342,
+      "failures": [],
+      "overflow": false,
+      "path": "/name-index/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 84,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 104,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 107,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/whirling-assault/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 117,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/shield-wall/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 166,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/twister/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 123,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/spark/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 171,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/the-taming/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 133,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/thrillsteel/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 114,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/ice-shot/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 113,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/skeletal-sniper/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 127,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/entangle/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 123,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/essence-drain/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 122,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/contagion/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 118,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/explosive-grenade/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 95,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/tame-beast/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 100,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/comet/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 276,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/headhunter/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 227,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/darkness-enthroned/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 113,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/bones-of-ullr/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 127,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/atziris-disdain/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 123,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/maligaros-virtuosity/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 126,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/nightscale/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 109,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/redemption/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 117,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/tangletongue/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 119,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/skysliver/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 130,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/tyrannys-grip/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 165,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/unset-ring/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 91,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/runeseekers-call/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 132,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/morior-invictus/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 110,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/guiding-palm-of-the-eye/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 206,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/mageblood/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 543,
+      "failures": [],
+      "overflow": false,
+      "path": "/builds/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 148,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 177,
+      "failures": [],
+      "overflow": false,
+      "path": "/leveling/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 125,
+      "failures": [],
+      "overflow": false,
+      "path": "/gear-check/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 118,
+      "failures": [],
+      "overflow": false,
+      "path": "/class-check/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 119,
+      "failures": [],
+      "overflow": false,
+      "path": "/beginner-guide/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 540,
+      "failures": [],
+      "overflow": false,
+      "path": "/beginner-builds/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 437,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 94,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 780,
+      "failures": [],
+      "overflow": false,
+      "path": "/tier-list/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 750,
+      "failures": [],
+      "overflow": false,
+      "path": "/league-starter/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 375,
+      "failures": [],
+      "overflow": false,
+      "path": "/best-builds/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 201,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 95,
+      "failures": [],
+      "overflow": false,
+      "path": "/issues/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 59,
+      "failures": [],
+      "overflow": false,
+      "path": "/about/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 57,
+      "failures": [],
+      "overflow": false,
+      "path": "/editorial-policy/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 383,
+      "failures": [],
+      "overflow": false,
+      "path": "/rating-criteria/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 44,
+      "failures": [],
+      "overflow": false,
+      "path": "/privacy/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 38,
+      "failures": [],
+      "overflow": false,
+      "path": "/terms/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 178,
+      "failures": [],
+      "overflow": false,
+      "path": "/site-map/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 119,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/monk/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 176,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/mercenary/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 126,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/warrior/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 180,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/sorceress/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 180,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/huntress/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 126,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/ranger/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 177,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/witch/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 125,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/druid/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 453,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/monk/whirling-assault/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 464,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/mercenary/twister-gemling/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 506,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/warrior/shield-wall-smith/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 460,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/sorceress/sand-and-fire/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 470,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/huntress/companion/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 482,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/ranger/ice-shot-deadeye/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 491,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/witch/minion-infernalist/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 465,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/druid/plant-oracle/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 461,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/witch/ed-contagion-lich/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 452,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/mercenary/grenade-gemling/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 450,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/huntress/twister-spirit-walker/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 450,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/sorceress/spark-stormweaver/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 120,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/skill-gems/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 114,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/support-gems/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 100,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/passive-tree/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 140,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/equipment-basics/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 103,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/resistance/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 104,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/increase-damage/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 108,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/why-i-die/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 124,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/after-campaign/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 107,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mapping/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 120,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/campaign-progression/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 108,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/trial-of-chaos/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 127,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/atlas-progression/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 112,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/waystones-tablets/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 109,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/expedition/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 279,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-1-walkthrough/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 299,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-2-walkthrough/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 362,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-3-walkthrough/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 334,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-4-walkthrough/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 386,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/interlude-walkthrough/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 365,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/endgame-contents/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 648,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/endgame-items/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 447,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/atlas-passive-trees/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 250,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/ascendancy-trials/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 281,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/permanent-rewards/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 151,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/budget-gear-crafting/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 149,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/pinnacle-bosses/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 191,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/arbiter-of-ash-clear-record/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 1358,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/unique-gear/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 302,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/arbiter-of-divinity/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 308,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mageblood-legacies/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 257,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/tier-16-waystones/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 195,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/trade/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 176,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/loot-filter/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 177,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/currency-guide/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 335,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/runeseekers-call/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 215,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/beginner-currency-farming/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 339,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/build-gear-buying-order/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 237,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/twister-gemling-transition/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 248,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/valuable-drops-early/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 195,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/valuable-drops-act-4/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 248,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/xesht/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 210,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mageblood-acquisition/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 145,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/simulator-ring-comparison/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 145,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/simulator-boots-comparison/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 88,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/build/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 88,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/dps/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 96,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/skill-gem/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 90,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/support-gem/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 89,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/passive-tree/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 84,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/resistance/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 95,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/mapping/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 89,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/endgame/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 99,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/league-starter/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 102,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/ssf/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 98,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/ascendancy/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 86,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/spirit/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 83,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/energy-shield/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 144,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/poe2-0-5-5-builds/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 69,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/forbidden-rites-beginner/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 150,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/gear-upgrade/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 117,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mana-problem/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 168,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/cant-beat-boss/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 150,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/slow-mapping/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 121,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/release-date/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 99,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/how-to-start/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 117,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/system-requirements/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 85,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/japanese/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 104,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/microtransactions/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 88,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/controller/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 95,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/pre-registration/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 123,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/build-status/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 114,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/duelist/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 98,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/exilecon-2026/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 222,
+      "failures": [],
+      "overflow": false,
+      "path": "/what-is-poe2/",
+      "unknown": [],
+      "width": 1265
+    },
+    {
+      "checked": 21,
+      "failures": [],
+      "overflow": false,
+      "path": "/404.html",
+      "unknown": [],
+      "width": 1280
+    }
+  ],
+  "mobile": [
+    {
+      "checked": 271,
+      "failures": [],
+      "overflow": false,
+      "path": "/index.html",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 140,
+      "failures": [],
+      "overflow": false,
+      "path": "/simulator/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 550,
+      "failures": [],
+      "overflow": false,
+      "path": "/search/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 342,
+      "failures": [],
+      "overflow": false,
+      "path": "/name-index/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 84,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 104,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 104,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/whirling-assault/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 114,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/shield-wall/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 160,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/twister/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 120,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/spark/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 171,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/the-taming/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 133,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/thrillsteel/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 111,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/ice-shot/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 110,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/skeletal-sniper/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 124,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/entangle/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 120,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/essence-drain/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 119,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/contagion/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 115,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/explosive-grenade/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 92,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/tame-beast/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 97,
+      "failures": [],
+      "overflow": false,
+      "path": "/skills/comet/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 276,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/headhunter/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 227,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/darkness-enthroned/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 113,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/bones-of-ullr/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 127,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/atziris-disdain/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 123,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/maligaros-virtuosity/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 126,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/nightscale/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 109,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/redemption/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 117,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/tangletongue/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 119,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/skysliver/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 130,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/tyrannys-grip/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 165,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/unset-ring/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 91,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/runeseekers-call/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 132,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/morior-invictus/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 110,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/guiding-palm-of-the-eye/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 206,
+      "failures": [],
+      "overflow": false,
+      "path": "/equipment/mageblood/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 543,
+      "failures": [],
+      "overflow": false,
+      "path": "/builds/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 144,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 177,
+      "failures": [],
+      "overflow": false,
+      "path": "/leveling/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 126,
+      "failures": [],
+      "overflow": false,
+      "path": "/gear-check/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 118,
+      "failures": [],
+      "overflow": false,
+      "path": "/class-check/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 119,
+      "failures": [],
+      "overflow": false,
+      "path": "/beginner-guide/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 540,
+      "failures": [],
+      "overflow": false,
+      "path": "/beginner-builds/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 432,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 94,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 780,
+      "failures": [],
+      "overflow": false,
+      "path": "/tier-list/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 750,
+      "failures": [],
+      "overflow": false,
+      "path": "/league-starter/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 375,
+      "failures": [],
+      "overflow": false,
+      "path": "/best-builds/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 201,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 95,
+      "failures": [],
+      "overflow": false,
+      "path": "/issues/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 59,
+      "failures": [],
+      "overflow": false,
+      "path": "/about/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 57,
+      "failures": [],
+      "overflow": false,
+      "path": "/editorial-policy/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 383,
+      "failures": [],
+      "overflow": false,
+      "path": "/rating-criteria/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 44,
+      "failures": [],
+      "overflow": false,
+      "path": "/privacy/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 38,
+      "failures": [],
+      "overflow": false,
+      "path": "/terms/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 178,
+      "failures": [],
+      "overflow": false,
+      "path": "/site-map/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 119,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/monk/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 176,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/mercenary/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 126,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/warrior/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 180,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/sorceress/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 180,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/huntress/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 126,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/ranger/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 177,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/witch/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 125,
+      "failures": [],
+      "overflow": false,
+      "path": "/classes/druid/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 445,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/monk/whirling-assault/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 456,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/mercenary/twister-gemling/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 498,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/warrior/shield-wall-smith/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 452,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/sorceress/sand-and-fire/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 462,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/huntress/companion/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 474,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/ranger/ice-shot-deadeye/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 483,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/witch/minion-infernalist/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 457,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/druid/plant-oracle/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 453,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/witch/ed-contagion-lich/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 444,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/mercenary/grenade-gemling/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 442,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/huntress/twister-spirit-walker/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 442,
+      "failures": [
+        {
+          "bg": [
+            "255,255,255"
+          ],
+          "cls": "",
+          "fg": "rgb(157, 150, 142)",
+          "minimum": 4.5,
+          "ratio": 2.92,
+          "tag": "INPUT",
+          "text": ""
+        }
+      ],
+      "overflow": false,
+      "path": "/builds/sorceress/spark-stormweaver/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 120,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/skill-gems/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 114,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/support-gems/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 100,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/passive-tree/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 140,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/equipment-basics/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 103,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/resistance/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 104,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/increase-damage/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 108,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/why-i-die/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 124,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/after-campaign/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 107,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mapping/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 120,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/campaign-progression/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 108,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/trial-of-chaos/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 127,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/atlas-progression/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 112,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/waystones-tablets/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 109,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/expedition/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 279,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-1-walkthrough/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 299,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-2-walkthrough/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 362,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-3-walkthrough/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 334,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/act-4-walkthrough/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 386,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/interlude-walkthrough/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 365,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/endgame-contents/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 648,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/endgame-items/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 447,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/atlas-passive-trees/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 250,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/ascendancy-trials/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 281,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/permanent-rewards/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 151,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/budget-gear-crafting/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 149,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/pinnacle-bosses/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 191,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/arbiter-of-ash-clear-record/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 1358,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/unique-gear/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 302,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/arbiter-of-divinity/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 308,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mageblood-legacies/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 257,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/tier-16-waystones/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 195,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/trade/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 176,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/loot-filter/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 177,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/currency-guide/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 335,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/runeseekers-call/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 215,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/beginner-currency-farming/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 339,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/build-gear-buying-order/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 237,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/twister-gemling-transition/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 248,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/valuable-drops-early/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 195,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/valuable-drops-act-4/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 248,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/xesht/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 210,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mageblood-acquisition/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 145,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/simulator-ring-comparison/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 145,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/simulator-boots-comparison/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 88,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/build/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 88,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/dps/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 96,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/skill-gem/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 90,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/support-gem/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 89,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/passive-tree/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 84,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/resistance/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 95,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/mapping/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 89,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/endgame/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 99,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/league-starter/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 102,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/ssf/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 98,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/ascendancy/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 86,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/spirit/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 83,
+      "failures": [],
+      "overflow": false,
+      "path": "/dictionary/energy-shield/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 144,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/poe2-0-5-5-builds/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 69,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/forbidden-rites-beginner/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 150,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/gear-upgrade/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 117,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/mana-problem/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 168,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/cant-beat-boss/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 150,
+      "failures": [],
+      "overflow": false,
+      "path": "/guides/slow-mapping/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 121,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/release-date/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 99,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/how-to-start/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 117,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/system-requirements/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 85,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/japanese/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 104,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/microtransactions/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 88,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/controller/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 95,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/pre-registration/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 123,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/build-status/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 114,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/duelist/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 98,
+      "failures": [],
+      "overflow": false,
+      "path": "/poe2-1-0/exilecon-2026/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 222,
+      "failures": [],
+      "overflow": false,
+      "path": "/what-is-poe2/",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    },
+    {
+      "checked": 21,
+      "failures": [],
+      "overflow": false,
+      "path": "/404.html",
+      "unknown": [],
+      "width": 360,
+      "placeholders": []
+    }
+  ],
+  "excludedControl": "The twelve native level range sliders render no text. Their gray INPUT color is not a text contrast failure.",
+  "method": "Rendered HTML text and form foregrounds over composited solid backgrounds and opaque gradient stops. Collapsed/hidden content is checked separately in representative simulator states; not a full accessibility conformance audit."
+}
