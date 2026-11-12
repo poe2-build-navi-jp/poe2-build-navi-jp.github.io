@@ -1,18 +1,24 @@
-import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps, namedPlanKey, parseNamedPlans, putNamedPlan, upgradeAdvice, createEditHistory, appendEditHistory, moveEditHistory, PRICE_CURRENCIES, priceBookKey, priceAmount, parsePriceBook, budgetVerdict, drawComparisonCard, comparisonChanges, validateComparison, encodeComparisonLink, decodeComparisonLink} from './simulator-model.js?v=e380d946a3';
+import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps, namedPlanKey, parseNamedPlans, putNamedPlan, upgradeAdvice, createEditHistory, appendEditHistory, moveEditHistory, PRICE_CURRENCIES, priceBookKey, priceAmount, parsePriceBook, budgetVerdict, drawComparisonCard, comparisonChanges, validateComparison, encodeComparisonLink, decodeComparisonLink, simulatorBackup, parseSimulatorBackup, restoreSimulatorBackup, isolatedChanges, candidateOrder} from './simulator-model.js?v=161ef63cbd';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
-const [presets,localization,equipmentCatalog,routeCatalog,exampleData] = await Promise.all(['/data/simulator-presets.json?v=99b38709f9','/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment.json?v=846e3f9450','/data/simulator-routes.json?v=856fb198d8','/data/simulator-examples.json?v=4253b9606f'].map(async url => {
- const r=await fetch(url);if(!r.ok)throw Error('ビルド一覧を読み込めません。再読み込みしてください。');return r.json();
-})).catch(error=>{$('sim-chooser').insertAdjacentHTML('beforeend',`<p role="alert">${esc(error.message)}</p>`);throw error;});
+const [presets,exampleData] = await loadCatalogs();
+let localization={names:{}},equipmentCatalog,routeCatalog,editorCatalogPromise;
+async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets.json?v=99b38709f9','/data/simulator-examples.json?v=4253b9606f'].map(async url => {
+ const r=await fetch(url);if(!r.ok)throw Error('ビルド一覧を読み込めません。再試行してください。');return r.json();
+}));}catch(error){$('sim-catalog-error').hidden=false;$('sim-catalog-message').textContent=error.message;await new Promise(resolve=>{$('sim-catalog-retry').onclick=resolve;});$('sim-catalog-error').hidden=true;}}}
 const trackSim=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{page_path:location.pathname,...(selectedPreset?{build_id:selectedPreset.id}:{}),...extra});};
 let sharedReadOnly=false,incomingLevel=null,stageBackup=null,auditSequence=0,readyGeneration=0,entrySource='chooser';
-const names=localization.names;
+let names=localization.names;
+function loadEditorCatalogs(){
+ return editorCatalogPromise ||= Promise.all(['/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment.json?v=846e3f9450','/data/simulator-routes.json?v=856fb198d8'].map(async url=>{const response=await fetch(url);if(!response.ok)throw Error('編集用データを読み込めません。「再試行」を押してください。');return response.json();})).then(values=>{[localization,equipmentCatalog,routeCatalog]=values;names=localization.names;}).catch(error=>{editorCatalogPromise=null;throw error;});
+}
 const label=name=>name==='Companion: {0}'?'コンパニオン（召喚対象を設定）':name==='Spectre: {0}'?'スペクター（召喚対象を設定）':names[name] || name;
 const nodeStats=node=>passiveDescriptions(node,localization,plan?.request.attribute_choices || {},!plan?.request.tree_version||plan.request.tree_version==='0_5');
 const examples=exampleData.examples;
 let namedPlans=[],namedStorageSnapshot=null,deletedPlan=null,deletePlanId=null,workspaceBackup=null,examplePreview=null,workspaceSequence=0;
 let editHistory=null,historyBusy=false,priceBook=null,priceStorageSnapshot=null,priceDirty=false,comparisonSnapshot=null,cardUrl=null,cardSequence=0,breakdownSequence=0;
+let decisionSequence=0,multiSequence=0,isolateSequence=0,candidateTable=null;
 let equipmentDraftVersion=0,candidateBusy=false,incomingComparison=null,comparisonSource=null,summaryBaseline=null,locationSequence=0;
 let itemSource='',equipmentMode='unique',rareDraft=null,editorBaseline=null;
 let worker,bootPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
@@ -35,18 +41,26 @@ function setCurrentTree(nodes){
 }
 
 function rpc(action,payload) {
- return new Promise((resolve,reject)=>{const id=++sequence;pending.set(id,{resolve,reject});worker.postMessage({id,action,payload});});
+ return new Promise((resolve,reject)=>{const id=++sequence;pending.set(id,{resolve,reject});try{if(!worker)throw Error('計算エンジンを再起動してください。');worker.postMessage({id,action,payload});}catch(error){pending.delete(id);reject(error);}});
 }
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- worker=new Worker(new URL('./simulator-worker.js?v=1ddcea795e',import.meta.url),{type:'module'});
- worker.onmessage=({data})=>{if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
- worker.onerror=()=>{for(const task of pending.values())task.reject(Error('計算処理を続けられません。ページを再読み込みしてください。'));pending.clear();};
- bootPromise=rpc('boot').then(data=>{catalog=data;return data;});return bootPromise;
+ const current=new Worker(new URL('./simulator-worker.js?v=0a82d50ceb',import.meta.url),{type:'module'});worker=current;
+ const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;bootPromise=null;catalog=null;for(const task of pending.values())task.reject(Error('読み込み・計算に失敗しました。「再試行」で構成を残したまま再開できます。'));pending.clear();};
+ current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
+ current.onerror=fail;
+ const timer=setTimeout(fail,90000);
+ bootPromise=Promise.all([rpc('boot'),loadEditorCatalogs()]).then(([data])=>{catalog=data;return data;}).catch(error=>{fail();throw error;}).finally(()=>clearTimeout(timer));return bootPromise;
 }
-function showError(error){const message=error.message || String(error);$('sim-error').textContent=message;$('sim-error').hidden=false;$('sim-tree-error-message').textContent=message;$('sim-tree-error').hidden=!treeFullscreen;}
-function clearError(){$('sim-error').hidden=true;$('sim-error').textContent='';$('sim-tree-error').hidden=true;$('sim-tree-error-message').textContent='';}
+async function retryEngine(){
+ $('sim-engine-retry').disabled=true;clearError();
+ try{await engine();if(plan){await recalculate();}else if(selectedPreset){await selectPreset(selectedPreset.id,{fromHistory:true});}}
+ catch(error){showError(error);}finally{$('sim-engine-retry').disabled=false;}
+}
+
+function showError(error){const message=error.message || String(error);$('sim-error').textContent=message;$('sim-error').hidden=false;$('sim-engine-retry').hidden=false;$('sim-engine-retry').disabled=false;$('sim-tree-error-message').textContent=message;$('sim-tree-error').hidden=!treeFullscreen;}
+function clearError(){$('sim-engine-retry').hidden=true;$('sim-error').hidden=true;$('sim-error').textContent='';$('sim-tree-error').hidden=true;$('sim-tree-error-message').textContent='';}
 function save(options={}) {
  if(!plan)return;
  if(sharedReadOnly){$('sim-save-status').textContent='共有構成を確認中（未保存）';$('sim-tree-save-state').textContent='共有構成を確認中（未保存）';return true;}
@@ -136,7 +150,7 @@ function renderInputs(){
  $('sim-life-reward').checked=!!plan.request.config_inputs?.['questInterlude 2Khari CrossingMolten Shrine'];
  $('sim-extra-mods').value=localizeModifiers(plan.request.extra_modifiers || [],equipmentCatalog,names);$('sim-config-modifier').innerHTML=equipmentCatalog.modifiers.map(m=>`<option value="${m.id}">${esc(m.label)}</option>`).join('');$('sim-notes').value=plan.notes;
  $('sim-quest-points').value=plan.questPoints;
- renderSlots();renderSkills();setTab(activeTab);renderOrigin();
+ renderSlots();renderSkills();setTab(activeTab);renderOrigin();renderFirstGuide();
 }
 let treeFullscreen=false,treeClosing=false,treeReturnFocus=null,treePageOverflow=null,treeHomeMarker=null,treeMainInert=false;
 function openTreeEditor(){
@@ -418,7 +432,7 @@ async function showBreakdown(){
  finally{if(token===breakdownSequence)$('sim-breakdown-show').disabled=false;}
 }
 function clearComparisonCard(){++cardSequence;if(cardUrl){URL.revokeObjectURL(cardUrl);cardUrl=null;}$('sim-card-preview').hidden=true;$('sim-card-image').removeAttribute('src');$('sim-card-download').removeAttribute('href');}
-function invalidateComparison(){++workspaceSequence;comparisonSnapshot=null;comparisonSource=null;$('sim-compare-share-panel').hidden=true;$('sim-compare-share-url').value='';clearComparisonCard();$('sim-compare-export').hidden=true;$('sim-compare-result').replaceChildren();}
+function invalidateComparison(){++decisionSequence;candidateTable=null;$('sim-multi-result').replaceChildren();$('sim-isolate-result').replaceChildren();$('sim-isolate-run').hidden=true;++workspaceSequence;comparisonSnapshot=null;comparisonSource=null;$('sim-compare-share-panel').hidden=true;$('sim-compare-share-url').value='';clearComparisonCard();$('sim-compare-export').hidden=true;$('sim-compare-result').replaceChildren();}
 function currencyOptions(selected){return Object.entries(PRICE_CURRENCIES).map(([id,name])=>`<option value="${id}"${id===selected?' selected':''}>${name}</option>`).join('');}
 function priceText(price){return !price||price.amount===null?'未記録':`${new Intl.NumberFormat('ja-JP',{maximumFractionDigits:4}).format(price.amount)} ${PRICE_CURRENCIES[price.currency]}`;}
 function renderPrices(){
@@ -484,7 +498,7 @@ function renderWorkspace(selectedId=$('sim-plan-select').value){
   $(id).value=previous==='current'||incomingComparison&&['shared-a','shared-b'].includes(previous)||plans.some(p=>p.id===previous)?previous:id==='sim-compare-b'&&plans.length?plans[0].id:'current';
  }
  $('sim-plan-status').textContent=error?'構成一覧を読み込めません。元の一覧を上書きせず保持しています。保存ファイルを確認してください。':`${plans.length} / 12構成を保存`;
- $('sim-compare-plans').disabled=!!error&&!incomingComparison||!plans.length&&!incomingComparison;renderPrices();
+ renderFirstGuide();$('sim-compare-plans').disabled=!!error&&!incomingComparison||!plans.length&&!incomingComparison;renderPrices();
  try{const text=localStorage.getItem(`poe2-simulator:deleted-plan:${selectedPreset.id}`);deletedPlan=text?parseNamedPlans(text,selectedPreset.id)[0]:null;}catch{deletedPlan=null;}
  $('sim-plan-delete-undo').hidden=!deletedPlan;
  if(!workspaceBackup)try{const backup=JSON.parse(localStorage.getItem(`poe2-simulator:before-workspace:${selectedPreset.id}`));if(backup?.saved&&parseSave(JSON.stringify(backup.saved)).preset===selectedPreset.id){workspaceBackup=backup;$('sim-workspace-restore').hidden=false;}}catch{}
@@ -563,7 +577,7 @@ async function compareNamedPlans(){
  if($('sim-compare-a').value===$('sim-compare-b').value)throw Error('構成Aと構成Bに、異なる構成を選んでください。');
  const version=generation,edited=editSequence,token=++workspaceSequence,enemy=$('sim-compare-enemy').value,book=comparisonPriceBook();
  const request=p=>({...clone(p.saved.request),enemy_tier:enemy});
- const box=$('sim-compare-result');comparisonSnapshot=null;comparisonSource=null;$('sim-compare-share-panel').hidden=true;clearComparisonCard();$('sim-compare-export').hidden=true;box.textContent='AとBを計算しています…';$('sim-compare-plans').disabled=true;
+ ++isolateSequence;$('sim-isolate-result').replaceChildren();$('sim-isolate-run').hidden=true;const box=$('sim-compare-result');comparisonSnapshot=null;comparisonSource=null;$('sim-compare-share-panel').hidden=true;clearComparisonCard();$('sim-compare-export').hidden=true;box.textContent='AとBを計算しています…';$('sim-compare-plans').disabled=true;
  try{
   const [ar,br]=await Promise.all([rpc('calculate',request(a)),rpc('calculate',request(b))]);
   if(version!==generation||edited!==editSequence||token!==workspaceSequence)return;
@@ -573,6 +587,7 @@ async function compareNamedPlans(){
   comparisonSnapshot={build:selectedPreset.name,a:{name:a.name,summary:summary(a)},b:{name:b.name,summary:summary(b)},enemy:$('sim-compare-enemy').selectedOptions[0].textContent,rows,priceA:priceText(priceA),priceB:priceText(priceB),budget:priceText(book.budget),warning,dataVersion:ar.provenance?.data_version||catalog.runtime.dataVersion,date:new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo'}).format(new Date())};
   box.innerHTML=`<h4>${esc(a.name)} と ${esc(b.name)}</h4><p>A：${esc(summary(a))}<br>B：${esc(summary(b))}</p><p>敵：${esc(comparisonSnapshot.enemy)}。装備・ジェム・一時効果・Lvは各構成の内容です。</p>${priceComparison($('sim-compare-a').value,$('sim-compare-b').value,book)}<div class="sim-table-scroll" tabindex="0" role="region" aria-label="構成比較の表"><table><caption>保存を変更しない構成比較</caption><thead><tr><th scope="col">項目</th><th scope="col">A</th><th scope="col">B</th><th scope="col">B − A</th></tr></thead><tbody>${rows.map(row=>`<tr><th scope="row">${row.title}</th><td>${row.a}</td><td>${row.b}</td><td>${row.delta}</td></tr>`).join('')}</tbody></table></div>${warning?'<p>未対応効果・装備の読み込みエラーを含む構成があります。各構成を開いて「計算の確認事項」を確認してください。</p>':''}`;
   box.insertAdjacentHTML('beforeend',changesHtml({...clone(a.saved),request:request(a)},{...clone(b.saved),request:request(b)}));
+  $('sim-isolate-run').hidden=false;
   comparisonSource=validateComparison({version:1,a:clone(a.saved),b:clone(b.saved),enemy,prices:{version:1,budget:book.budget,entries:[{id:'a',amount:priceA?.amount??null,currency:priceA?.currency||book.budget.currency},{id:'b',amount:priceB?.amount??null,currency:priceB?.currency||book.budget.currency}]}});
   clearComparisonCard();$('sim-compare-export').hidden=false;
   trackSim('simulator_plan_compare',{count:2});
@@ -710,6 +725,7 @@ document.addEventListener('click',async event=>{
   if(target.id==='menu-button'){const open=$('site-nav').classList.toggle('is-open');target.setAttribute('aria-expanded',String(open));return;}
   if(target.dataset.preset){event.preventDefault();await selectPreset(target.dataset.preset);return;}
   if(target.id==='sim-change-build'){save();showChooser();return;}
+  if(target.id==='sim-engine-retry'){await retryEngine();return;}
   if(!plan)return;
   if(target.id==='sim-candidate-save'){await saveEquipmentCandidate();return;}
   if(target.id==='sim-compare-share'){await shareComparison();return;}
@@ -964,3 +980,96 @@ async function openComparison(data,route,isExample=false){
  $('sim-compare-a').value='shared-a';$('sim-compare-b').value='shared-b';$('sim-compare-enemy').value=data.enemy;
  await compareNamedPlans();
 }
+
+let backupPreview=null,backupExpected=null;
+function downloadJson(value,filename){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=filename;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+document.addEventListener('click',event=>{
+ const id=event.target.closest('button')?.id;
+ try{
+  if(id==='sim-backup-export'){
+   const data=simulatorBackup(localStorage,presets);if(!data.entries.length)throw Error('このブラウザには保存した構成・価格がありません。');
+   downloadJson(data,'poe2-all-builds-backup.json');$('sim-backup-status').textContent='保存済みの全ビルドを書き出しました。メモ・構成名も含むため、共有先に注意してください。';
+  }
+  if(id==='sim-backup-cancel'){backupPreview=null;$('sim-backup-preview').hidden=true;}
+  if(id==='sim-backup-restore'){
+   if(!backupPreview)throw Error('復元するファイルを選んでください。');
+   restoreSimulatorBackup(localStorage,backupPreview,backupExpected);++generation;++calculation;plan=null;result=null;selectedPreset=null;editHistory=null;summaryBaseline=null;backupPreview=null;$('sim-backup-preview').hidden=true;renderResume();$('sim-backup-status').textContent='復元しました。保存した構成の一覧から続きが開けます。';
+  }
+ }catch(error){$('sim-backup-status').textContent=error.message;}
+});
+document.addEventListener('change',async event=>{
+ if(event.target.id!=='sim-backup-file')return;
+ backupPreview=null;$('sim-backup-preview').hidden=true;const file=event.target.files?.[0];event.target.value='';if(!file)return;
+ try{
+  if(file.size>20000000)throw Error('バックアップは20MB以内で選んでください。');
+  const parsed=parseSimulatorBackup(await file.text(),presets);if(!parsed.entries.length)throw Error('復元する保存がありません。');
+  backupPreview=parsed;backupExpected=new Map(parsed.entries.map(e=>[e.key,localStorage.getItem(e.key)]));
+  const groups=presets.filter(p=>parsed.entries.some(e=>e.preset===p.id));
+  $('sim-backup-content').innerHTML='<p>ファイルに含まれる保存欄を置き換えます。含まれない保存欄は保持します。</p><ul>'+groups.map(p=>{const entries=parsed.entries.filter(e=>e.preset===p.id),named=entries.find(e=>e.type==='named');return `<li>${esc(p.name)}：自動保存${entries.some(e=>e.type==='auto')?'あり':'なし'}、名前付き${named?parseNamedPlans(named.value,p.id).length:0}件、価格${entries.some(e=>e.type==='prices')?'あり':'なし'}（既存の保存欄${entries.filter(e=>backupExpected.get(e.key)!==null).length}件を置換）</li>`;}).join('')+'</ul>';
+  $('sim-backup-preview').hidden=false;$('sim-backup-status').textContent='内容を確認してから復元してください。先に今のバックアップを書き出すと安心です。';
+ }catch(error){$('sim-backup-status').textContent=error.message;}
+});
+
+function decisionTable(rows,caption){
+ const ids=['CombinedDPS','Life','FireResist','ColdResist','LightningResist'];
+ return `<div class="sim-table-scroll" tabindex="0" role="region" aria-label="${esc(caption)}"><table><caption>${esc(caption)}</caption><thead><tr><th scope="col">候補・変更</th>${ids.map(id=>`<th scope="col">${statistics.find(s=>s[0]===id)[1]}</th>`).join('')}<th scope="col">確認事項</th></tr></thead><tbody>${rows.map(row=>`<tr><th scope="row">${esc(row.name)}${row.cost?`<small class="sim-candidate-cost">${esc(row.cost)}</small>`:''}</th>${ids.map(id=>{const v=row.values[id],d=row.deltas?.[id];return `<td>${number(v,id)}${d!=null?`<small class="sim-candidate-delta">${d>0?'+':''}${number(d,id)}</small>`:''}</td>`;}).join('')}<td>${esc(row.warning||'報告なし')}</td></tr>`).join('')}</tbody></table></div>`;
+}
+function decisionValues(next,request){const values=Object.fromEntries(['CombinedDPS','Life','FireResist','ColdResist','LightningResist'].map(id=>[id,displayStat(next,id,request)]));values.resistance=['FireResist','ColdResist','LightningResist'].every(id=>values[id]!=null)?Math.min(values.FireResist,values.ColdResist,values.LightningResist):null;return values;}
+function decisionWarnings(next){return [next.item_errors?.length?'装備エラーあり':'',next.unsupported_modifiers?.length?'未対応効果あり':'',next.tree_effects?.warnings?.length?'ツリー要確認':''].filter(Boolean).join('・');}
+function decisionDeltas(values,base){return Object.fromEntries(Object.entries(values).map(([id,v])=>[id,v!=null&&base[id]!=null?v-base[id]:null]));}
+function renderCandidateTable(){
+ if(!candidateTable)return;
+ const rows=candidateOrder(candidateTable.rows,$('sim-multi-sort').value,$('sim-multi-budget').checked,candidateTable.budget);
+ $('sim-multi-result').innerHTML=`<p>予算：${esc(priceText(candidateTable.budget))}。共通の敵：${esc(candidateTable.enemy)}。差分は今の構成からの変化です。予定額は構成全体の手入力額です。</p>${rows.length?decisionTable(rows,'保存した候補の一覧比較'):'<p>条件に合う候補がありません。予算・予定額・通貨を確認してください。</p>'}<p>価格順は予算と同じ通貨のみを並べ、別通貨・未設定は末尾に表示します。未対応効果や装備エラーのある数値は参考値です。</p>`;
+}
+async function compareCandidates(){
+ if(priceDirty)throw Error('予定額・予算を保存してから一覧比較してください。');
+ if(!namedPlans)throw Error('保存した構成を読み込めません。');
+ const token=decisionSequence,run=++multiSequence,version=generation,edited=editSequence,enemy=$('sim-compare-enemy').value,book=clone(priceBook),choices=[{id:'current',name:'今の構成',saved:capturePlan()},...clone(namedPlans)];
+ candidateTable=null;$('sim-multi-result').textContent='候補を順番に計算しています…';$('sim-multi-run').disabled=true;
+ try{
+  const rows=[];let base;
+  for(const [index,choice]of choices.entries()){
+   const request={...clone(choice.saved.request),enemy_tier:enemy};let values={},warning='';
+   try{const next=await rpc('calculate',request);values=decisionValues(next,request);warning=decisionWarnings(next);}catch{warning='計算できません';}
+   if(token!==decisionSequence||run!==multiSequence||version!==generation||edited!==editSequence)return;
+   if(index===0)base=values;
+   const price=book.entries.find(p=>p.id===choice.id);
+   rows.push({index,name:choice.name,values,deltas:decisionDeltas(values,base),warning,price,cost:priceText(price)+' · '+budgetVerdict(price,book.budget)});
+  }
+  candidateTable={rows,budget:book.budget,enemy:$('sim-compare-enemy').selectedOptions[0].textContent};renderCandidateTable();
+ }finally{$('sim-multi-run').disabled=false;}
+}
+async function calculateIsolatedChanges(){
+ if(!comparisonSource)throw Error('先にA/B比較を行ってください。');
+ const source=clone(comparisonSource),token=decisionSequence,run=++isolateSequence,version=generation,scenarios=isolatedChanges(source.a,source.b),box=$('sim-isolate-result');
+ box.textContent='Aを基準に、変更を1つずつ試算しています…';$('sim-isolate-run').disabled=true;
+ try{
+  const baseResult=await rpc('calculate',source.a.request),base=decisionValues(baseResult,source.a.request),rows=[{name:'構成A（すべての試算の基準）',values:base,warning:decisionWarnings(baseResult)}];
+  for(const scenario of scenarios){
+   let values={},warning='';try{const next=await rpc('calculate',scenario.request);values=decisionValues(next,scenario.request);warning=decisionWarnings(next);}catch{warning='この組み合わせは計算できません';}
+   if(token!==decisionSequence||run!==isolateSequence||version!==generation)return;
+   rows.push({name:scenario.kind==='equipment'?(slots.find(s=>s[0]===scenario.label)?.[1]||scenario.label)+'だけ交換':scenario.label,values,deltas:decisionDeltas(values,base),warning});
+  }
+  if(token!==decisionSequence||run!==isolateSequence||version!==generation)return;
+  box.innerHTML=`<p>各行はAにその変更だけを入れた独立した試算です。相互作用があるため、差分を足してもBの結果にはなりません。必要能力値・接続条件はゲーム内でも確認してください。</p>${decisionTable(rows,'変更を1つずつ試した結果')}${scenarios.length?'':'<p>試算対象の設定差はありません。</p>'}`;
+ }finally{$('sim-isolate-run').disabled=false;}
+}
+document.addEventListener('click',async event=>{
+ const id=event.target.closest('button')?.id;if(!['sim-multi-run','sim-isolate-run'].includes(id))return;
+ try{if(id==='sim-multi-run')await compareCandidates();else await calculateIsolatedChanges();}catch(error){showError(error);$(id==='sim-multi-run'?'sim-multi-result':'sim-isolate-result').textContent=error.message;}
+});
+document.addEventListener('change',event=>{if(['sim-multi-sort','sim-multi-budget'].includes(event.target.id))renderCandidateTable();});
+
+function renderFirstGuide(){
+ if(!plan)return;
+ $('sim-first-build').textContent=selectedPreset.name+'を選択中。';
+ $('sim-first-input').textContent=`装備${plan.request.items?.length||0}部位を設定中。実際の装備・ジェムLvに合わせて入力してください。`;
+ $('sim-first-compare').textContent=namedPlans?.length?`保存した候補は${namedPlans.length}件。A/B比較か一覧比較で確認できます。`:'まだ比較候補はありません。交換案を候補として保存すると比較できます。';
+}
+document.addEventListener('click',event=>{
+ const id=event.target.closest('button')?.id;if(!plan)return;
+ if(id==='sim-first-item'){setTab('items');selectedSlot='ring1';renderSlots();openItemEditor();}
+ if(id==='sim-first-gems'){setTab('skills');$('sim-skills').scrollIntoView({block:'start'});}
+ if(id==='sim-first-compare-open'){$('sim-workspace').open=true;$('sim-workspace').scrollIntoView({block:'start'});}
+});
