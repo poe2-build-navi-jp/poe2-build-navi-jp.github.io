@@ -1,0 +1,86 @@
+{
+  "metrics": {
+    "bottomPadding": "132px",
+    "items": [
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "構成を開いた時との差"
+      },
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "結果を詳しく"
+      },
+      {
+        "font": "16px",
+        "overflow": false,
+        "text": "DPS29.90"
+      },
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "DPS"
+      },
+      {
+        "font": "16px",
+        "overflow": false,
+        "text": "29.9"
+      },
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "0"
+      },
+      {
+        "font": "16px",
+        "overflow": false,
+        "text": "ライフ1,538+60"
+      },
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "ライフ"
+      },
+      {
+        "font": "16px",
+        "overflow": false,
+        "text": "1,538"
+      },
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "+60"
+      },
+      {
+        "font": "16px",
+        "overflow": false,
+        "text": "火・冷・雷耐性40% / -20% / -20%+30% / -30% / -30%"
+      },
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "火・冷・雷耐性"
+      },
+      {
+        "font": "14px",
+        "overflow": false,
+        "text": "40% / -20% / -20%"
+      },
+      {
+        "font": "12px",
+        "overflow": false,
+        "text": "+30% / -30% / -30%"
+      }
+    ],
+    "pageOverflow": false,
+    "summaryHeight": 115.984375,
+    "width": 305
+  },
+  "scan": {
+    "checked": 197,
+    "issues": [],
+    "overflow": false,
+    "small": []
+  }
+}

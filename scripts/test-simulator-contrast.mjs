@@ -15,4 +15,24 @@ const checks=['.sim-first-guide h2','.sim-first-guide li','.sim-first-guide b','
 for(const selector of checks){for(const el of d.querySelectorAll(selector)){const bg=background(el),fg=blend(foreground(el),bg),a=lum(fg),b=lum(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);assert(ratio>=4.5,`${selector}: ${ratio.toFixed(2)}:1`);console.log(`${selector}: ${ratio.toFixed(2)}:1`);}}
 assert(checks.every(s=>d.querySelector(s)),'All intended surfaces must be present');
 console.log('PASS: dark introduction, list markers, light call-to-action, nested light checks, explanatory links, and dark sidebar keep readable foregrounds');
+// Resolve width media queries for the CSS-only fixture; actual wrapping is checked in a browser.
+const sourceRules=Array.from(style.sheet.cssRules);
+function atWidth(rules,width){return Array.from(rules).flatMap(rule=>{
+ if(rule.type===1)return rule.cssText;
+ if(rule.type!==4)return [];
+ const media=rule.conditionText;if(/prefers-|hover|pointer/.test(media))return [];
+ const min=/min-width:\s*([\d.]+)px/.exec(media),max=/max-width:\s*([\d.]+)px/.exec(media);
+ return (!min||width>=+min[1])&&(!max||width<=+max[1])?atWidth(rule.cssRules,width):[];
+}).join('\n');}
+d.getElementById('sim-mobile-summary-values').innerHTML='<button><span>ライフ</span><b>1,234</b><small>-123</small></button><button><span>耐性</span><b class="sim-mobile-resists">10% / 40% / -20%</b><small>+30% / 0% / -30%</small></button>';
+d.getElementById('sim-slots').innerHTML='<button>指輪<small>装備の名前</small></button>';
+d.getElementById('sim-stats').innerHTML='<div class="sim-stat"><small>+100</small></div>';
+d.getElementById('sim-tree').classList.add('sim-tree-mobile','sim-tree-fullscreen');
+const widthStyle=d.createElement('style');d.head.append(widthStyle);
+const readable=['#sim-mobile-summary-status','#sim-mobile-more','#sim-mobile-summary-values span','#sim-mobile-summary-values small','.sim-results-top>span','.sim-stat small','#sim-slots small','#sim-tree-save-state','#sim-tree-mobile-controls [data-tree-action=overview]','#sim-tree-mobile-controls [data-tree-action=center]'];
+for(const width of [320,375,720]){
+ widthStyle.textContent=atWidth(sourceRules,width);
+ for(const selector of readable){const elements=d.querySelectorAll(selector);assert(elements.length,selector);for(const el of elements){let node=el,raw='';while(node&&!/[0-9]/.test(raw)){raw=w.getComputedStyle(node).fontSize;node=node.parentElement;}const size=Number.parseFloat(raw)*(raw.endsWith('rem')?16:1);assert(size>=12,`${width}px ${selector}: ${size}px`);}}
+}
+console.log('PASS: supporting result labels/deltas, equipment names and mobile tree controls are at least 12px at phone widths');
 dom.window.close();

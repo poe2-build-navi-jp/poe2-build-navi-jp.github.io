@@ -292,3 +292,16 @@
 /* The checks are light cards inside the dark results sidebar. */
 .sim-results .sim-checks .sim-muted{color:var(--sim-muted)}
 .sim-results .sim-checks a{color:var(--sim-blue);text-decoration:underline;text-underline-offset:.2em}
+
+/* Keep supporting text legible on the phone without shrinking numeric deltas. */
+@media(max-width:720px){
+ .sim-mobile-summary-head,.sim-mobile-summary-head button,
+ #sim-mobile-summary-values span,#sim-mobile-summary-values small,
+ .sim-results-top>span,.sim-stat small{font-size:.75rem}
+ #sim-mobile-summary-values .sim-mobile-resists{font-size:.875rem}
+ #sim-mobile-summary-values small{max-width:100%;overflow:hidden;text-overflow:ellipsis}
+ #sim-slots small{font-size:.8rem;line-height:1.6}
+ .sim-tree-mobile #sim-tree-save-state,
+ .sim-tree-mobile #sim-tree-mobile-controls button[data-tree-action=overview],
+ .sim-tree-mobile #sim-tree-mobile-controls button[data-tree-action=center]{font-size:.75rem}
+}
