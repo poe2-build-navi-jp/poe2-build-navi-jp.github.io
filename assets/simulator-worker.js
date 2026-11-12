@@ -1,8 +1,10 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
-import {validRequest} from './simulator-model.js?v=e380d946a3';
+import {validRequest} from './simulator-model.js?v=161ef63cbd';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;
+let loadedBytes=0,totalBytes=0;
+const progress=()=>postMessage({progress:`計算データを準備中：${(loadedBytes/1000000).toFixed(1)} / ${(totalBytes/1000000).toFixed(1)} MB（保存済みデータも利用）`});
 const digest = async bytes => [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');
 async function get(name) {
   const response = await fetch(new URL(name,base));
@@ -11,7 +13,15 @@ async function get(name) {
 }
 async function unpack(bundle) {
   const chunks = await Promise.all(bundle.parts.map(async part => {
-    const bytes = new Uint8Array(await (await get(part.file)).arrayBuffer());
+    let cache;try{cache=await caches.open('poe2-simulator-engine-v1');}catch{}
+    const url=new URL(part.file,base).href;
+    let response;try{response=await cache?.match(url);}catch{}
+    let bytes=response?new Uint8Array(await response.arrayBuffer()):null;
+    if(!bytes || bytes.length!==part.bytes || await digest(bytes)!==part.sha256){
+      bytes=new Uint8Array(await (await get(part.file)).arrayBuffer());
+      if(bytes.length===part.bytes && await digest(bytes)===part.sha256)try{await cache?.put(url,new Response(bytes));}catch{}
+    }
+    loadedBytes+=bytes.length;progress();
     if (bytes.length !== part.bytes || await digest(bytes) !== part.sha256) throw new Error('計算データの整合性を確認できません。再読み込みしてください。');
     return bytes;
   }));
@@ -23,9 +33,12 @@ async function unpack(bundle) {
 async function boot() {
   postMessage({progress:'計算エンジンとゲームデータを読み込んでいます（初回約9.3MB）…'});
   runtime = await (await get('runtime.json')).json();
+  totalBytes=runtime.wasm.bytes+runtime.data.bytes;progress();
   const [wasm,dataResponse] = await Promise.all([unpack(runtime.wasm),unpack(runtime.data)]);
+  postMessage({progress:'計算エンジンを起動しています…'});
   engine.initSync({module:await wasm.arrayBuffer()});
   if (engine.schemaVersion() !== 19 || runtime.schema !== 19) throw new Error('計算エンジンの版が一致しません。');
+  postMessage({progress:'ゲームデータを展開しています…'});
   const data = await dataResponse.json();
   if (data.version !== runtime.dataVersion) throw new Error('ゲームデータの版が一致しません。');
   dataFiles = data.files;

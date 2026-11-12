@@ -389,3 +389,61 @@ export function drawComparisonCard(ctx,snapshot,includeNames=false){
  text(`対応データ ${snapshot.dataVersion} / ${snapshot.date}`,48,1240,22,'#46565e');
  return {width,height};
 }
+
+// Portable backups contain only documented simulator storage keys, never unrelated origin data.
+export function simulatorBackup(storage,presets){
+ const entries=[];
+ for(const preset of presets)for(const key of [`poe2-simulator:v1:${preset.id}`,namedPlanKey(preset.id),priceBookKey(preset.id)]){
+  const value=storage.getItem(key);if(value!==null)entries.push({key,value});
+ }
+ return parseSimulatorBackup(JSON.stringify({format:'poe2-simulator-backup',version:1,createdAt:new Date().toISOString(),entries}),presets);
+}
+export function parseSimulatorBackup(text,presets){
+ if(typeof text!=='string'||text.length>20000000)throw Error('バックアップは20MB以内のJSONを選んでください。');
+ const data=JSON.parse(text);
+ if(data?.format!=='poe2-simulator-backup'||data.version!==1||!Array.isArray(data.entries)||data.entries.length>presets.length*3)throw Error('対応する一括バックアップではありません。');
+ const allowed=new Map(presets.flatMap(p=>[[`poe2-simulator:v1:${p.id}`,{preset:p,type:'auto'}],[namedPlanKey(p.id),{preset:p,type:'named'}],[priceBookKey(p.id),{preset:p,type:'prices'}]])),seen=new Set();
+ const entries=data.entries.map(entry=>{
+  const spec=allowed.get(entry?.key);
+  if(!spec||seen.has(entry.key)||typeof entry.value!=='string')throw Error('バックアップの保存先・重複を確認してください。');
+  seen.add(entry.key);const {preset,type}=spec;
+  const check=saved=>{if(saved.preset!==preset.id||saved.request.character.class_name!==preset.class)throw Error('バックアップのビルドが一致しません。');};
+  if(type==='auto')check(parseSave(entry.value));
+  else if(type==='named')parseNamedPlans(entry.value,preset.id).forEach(e=>check(e.saved));
+  else parsePriceBook(entry.value);
+  return {key:entry.key,value:entry.value,preset:preset.id,type};
+ });
+ return {format:data.format,version:1,createdAt:typeof data.createdAt==='string'?data.createdAt:'',entries};
+}
+export function restoreSimulatorBackup(storage,backup,expected){
+ if(backup.entries.some(e=>storage.getItem(e.key)!==expected.get(e.key)))throw Error('確認後に保存が変わりました。ファイルを選び直してください。');
+ const written=[];
+ try{for(const entry of backup.entries){storage.setItem(entry.key,entry.value);written.push(entry);}}
+ catch(error){let rollbackFailed=false;for(const entry of written.reverse())try{if(storage.getItem(entry.key)!==entry.value){rollbackFailed=true;continue;}const value=expected.get(entry.key);value===null?storage.removeItem(entry.key):storage.setItem(entry.key,value);}catch{rollbackFailed=true;}
+  throw Error(rollbackFailed?'復元を完了できません。保存領域が不足しています。元のバックアップを保持して保存一覧を確認してください。':'保存容量などの理由で復元できません。変更した保存は元に戻しました。');}
+}
+
+// Each scenario starts from A. Effects interact, so these deltas must never be summed.
+export function isolatedChanges(a,b){
+ const scenarios=[],equal=(x,y)=>JSON.stringify(x??null)===JSON.stringify(y??null);
+ for(const key of ['items','flasks'])for(const slot of new Set([...(a.request[key]||[]),...(b.request[key]||[])].map(i=>i.slot))){
+  const old=(a.request[key]||[]).find(i=>i.slot===slot),next=(b.request[key]||[]).find(i=>i.slot===slot);if(equal(old,next))continue;
+  const request=structuredClone(a.request);request[key]=(request[key]||[]).filter(i=>i.slot!==slot);if(next)request[key].push(structuredClone(next));
+  scenarios.push({label:slot,kind:'equipment',request});
+ }
+ const group=(label,keys)=>{if(keys.every(key=>equal(a.request[key],b.request[key])))return;const request=structuredClone(a.request);for(const key of keys){if(b.request[key]===undefined)delete request[key];else request[key]=structuredClone(b.request[key]);}scenarios.push({label,kind:'group',request});};
+ group('ジェム・主力スキルだけ',['socket_groups','main_socket_group']);
+ group('パッシブの設定だけ',['allocated_nodes','attribute_choices','tree_version','weapon_swap']);
+ group('ジュエルの設定だけ',['jewels']);
+ const used=new Set(['items','flasks','socket_groups','main_socket_group','allocated_nodes','attribute_choices','tree_version','weapon_swap','jewels','enemy_tier','breakdowns']);
+ group('Lv・追加効果などの条件だけ',[...new Set([...Object.keys(a.request),...Object.keys(b.request)])].filter(key=>!used.has(key)));
+ return scenarios;
+}
+export function candidateOrder(rows,sort,budgetOnly,budget){
+ const value=row=>sort==='price'?(row.price?.currency===budget.currency?row.price.amount:null):row.values[sort];
+ return rows.filter(row=>!budgetOnly||budgetVerdict(row.price,budget)==='予算内').sort((a,b)=>{
+  const av=value(a),bv=value(b),valid=v=>typeof v==='number'&&Number.isFinite(v);
+  if(!valid(av)||!valid(bv))return Number(valid(bv))-Number(valid(av));
+  return (sort==='price'?av-bv:bv-av)||a.index-b.index;
+ });
+}
