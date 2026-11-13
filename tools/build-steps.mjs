@@ -15,6 +15,7 @@ export const BUILD_STEPS=[
  'generate-simulator-data-english', // English descriptions; immutable calculation requests
  'generate-simulator-runtime-en', // shared logic with reviewed English UI/data
  'generate-simulator-english', // finish English UI after Japanese-only enhancers
+ 'enhance-skill-icons',       // real game icons beside names in JA/EN and dynamic skill selectors
  'generate-sitemap',         // after everything that changes <main>: it records each page's content date
  'enhance-page-schema',      // reads those dates
  'enhance-editorial-trust',  // visible editor, matching identity and source citations

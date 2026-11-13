@@ -4,6 +4,7 @@
 // the same whichever order the tools run in. Add new appended blocks to these lists.
 const marker = (name) => (html) => html.indexOf(`<!-- ${name}:start -->`);
 export const HEAD_BLOCKS = [
+  ["skill-icons", marker("skill-icons")],
   ["image-seo", marker("image-seo")],
   ["image-schema", marker("image-schema")],
   // inject-analytics adds this script without a marker.

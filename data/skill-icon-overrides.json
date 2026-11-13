@@ -1,0 +1,18 @@
+[
+  {
+    "id": "Kelaris_Deception",
+    "name": "Kelari's Deception",
+    "names": ["Kelari's Deception", "ケラリの幻惑"],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SandDjinnExplosiveTeleport.webp",
+    "reference": "https://poe2db.tw/us/Kelaris_Deception",
+    "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder."
+  },
+  {
+    "id": "Ruzhans_Trap",
+    "name": "Ruzhan's Trap",
+    "names": ["Ruzhan's Trap", "ルザンの罠"],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FireDjinnFlameRunes.webp",
+    "reference": "https://poe2db.tw/us/Ruzhans_Trap",
+    "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder."
+  }
+]

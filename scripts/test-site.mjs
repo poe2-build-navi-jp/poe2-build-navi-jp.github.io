@@ -11,6 +11,7 @@ const baseUrl = "https://poe2-build-navi-jp.github.io";
 const failures = [];
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 const read = (path) => readFile(resolve(root, path), "utf8");
+const withoutSkillIcons = html => html.replace(/<span class="skill-name" data-skill-icon="[^"]+"><img\b[^>]*>([\s\S]*?)<\/span>/g,'$1');
 
 const required = ["index.html", "404.html", "robots.txt", "sitemap.xml", "ads.txt", "googlebaa56ffa7c50bcfb.html", "data/classes.json", "data/builds.json", "data/guides.json", "data/dictionary.json", "data/discovery.json", "data/seo-pages.json", "assets/app.js", "assets/detail.js", "assets/class-check.js", "assets/leveling.js", "assets/analytics-events.js", "class-check/index.html", "leveling/index.html", "best-builds/index.html", "beginner-builds/index.html", "NOTE_CONTENT_MAP.md"];
 for (const path of required) {
@@ -54,7 +55,7 @@ assert(index.indexOf('id="home-build-routes"') < index.indexOf('id="purpose-pick
 assert(index.includes(`全${builds.length}ビルドを職業・条件で比較`), "homepage catalog count must follow public build data");
 assert(index.includes("全ビルドを同じ予算・条件で実測した最強順位ではありません") && index.includes("この日付は全ビルドの再検証日ではありません"), "latest/strongest search intent must retain evidence limits");
 const bestLanding = await read("best-builds/index.html");
-assert(bestLanding.includes("Endgame構成ではワーリングアサルトとフォーリングサンダー（Falling Thunder）") && bestLanding.includes("Lv41の育成構成とは異なる"), "boss comparison must distinguish Endgame from the Lv41 variant");
+assert(withoutSkillIcons(bestLanding).includes("Endgame構成ではワーリングアサルトとフォーリングサンダー（Falling Thunder）") && bestLanding.includes("Lv41の育成構成とは異なる"), "boss comparison must distinguish Endgame from the Lv41 variant");
 assert(!bestLanding.includes("単体戦で使うFalling Thunderの手順を段階別に"), "unscoped boss-mechanic summary must not return");
 
 assert(index.includes('class="hero hero-focused"') && !index.includes('class="hero-guide"'), "homepage hero choices must be focused without duplicated guide links");
@@ -101,10 +102,10 @@ for (const build of builds) {
     assert(page.includes("この段階のパッシブツリーを見る"), `${pagePath}: stage passive source CTA missing`);
     assert(page.includes(`<title>${build.seoTitle}</title>`), `${pagePath}: search-focused title missing`);
     assert(page.includes(`<meta name="description" content="${build.seoDescription}">`), `${pagePath}: build-specific description missing`);
-    assert(page.includes(`<h1 id="build-name">PoE2 ${build.name} ビルド｜${build.version}育成</h1>`), `${pagePath}: search-focused H1 missing`);
-    assert(page.includes(`${build.name}ビルドのよくある質問`), `${pagePath}: build-specific FAQ H2 missing`);
+    assert(withoutSkillIcons(page).includes(`<h1 id="build-name">PoE2 ${build.name} ビルド｜${build.version}育成</h1>`), `${pagePath}: search-focused H1 missing`);
+    assert(withoutSkillIcons(page).includes(`${build.name}ビルドのよくある質問`), `${pagePath}: build-specific FAQ H2 missing`);
     assert(page.includes('id="gear-check-link"'), `${pagePath}: level-aware gear check link missing`);
-    assert(page.includes(`PoE2 ${build.name}のLv1〜Endgame育成手順`), `${pagePath}: build-specific roadmap heading missing`);
+    assert(withoutSkillIcons(page).includes(`PoE2 ${build.name}のLv1〜Endgame育成手順`), `${pagePath}: build-specific roadmap heading missing`);
     assert(page.includes(`/classes/${build.classSlug}/`), `${pagePath}: class hub link missing`);
     assert(page.includes("現在Lvを入力すると、次に確認するスキル・装備・パッシブを3つに絞ります。"), `${pagePath}: level-value summary missing`);
     assert(page.includes('id="note-referral-guide"') && page.includes('href="#level-card"'), `${pagePath}: note referral handoff missing`);
