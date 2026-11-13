@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {JSDOM} from 'jsdom';
+import {searchSkills,openSkillPicker} from '../assets/simulator-skill-picker.js';
+const names={'Twister':'ツイスター','Cast on Freeze':'凍結時キャスト'};
+const label=name=>names[name]||name;
+const gems=[{skill_id:'twister',name:'Twister',is_support:false},{skill_id:'freeze',name:'Cast on Freeze',is_support:false},{skill_id:'support',name:'Brutality I',is_support:true},{skill_id:'hidden',name:'Playtest Attack',is_support:false,ui_hidden:true}];
+assert.deepEqual(searchSkills(gems,label,'ついすたー',false).map(g=>g.skill_id),['twister']);
+assert.deepEqual(searchSkills(gems,label,'ＣＡＳＴ freeze',false).map(g=>g.skill_id),['freeze']);
+assert.deepEqual(searchSkills(gems,label,'円形陣地',false),[]);
+assert.equal(searchSkills(gems,label,'',true).length,1);
+assert.equal(searchSkills(gems,label,'playtest',false).length,0);
+for(const language of ['ja','en']){
+ const dom=new JSDOM(`<html lang="${language}"><main><button id="launch">Find</button></main></html>`,{pretendToBeVisual:true});const d=dom.window.document;
+ dom.window.HTMLDialogElement.prototype.showModal=function(){this.open=true;};dom.window.HTMLDialogElement.prototype.close=function(){this.open=false;};
+ let selected=null;const launch=d.getElementById('launch');launch.focus();
+ const catalog=[...gems,...Array.from({length:55},(_,i)=>({skill_id:'extra'+i,name:'Extra '+i,is_support:false}))];
+ openSkillPicker({document:d,gems:catalog,label,support:false,selected:'twister',returnFocus:launch,onSelect:id=>{selected=id;}});
+ assert.equal(d.querySelectorAll('[data-picker-skill]').length,40);
+ assert(d.querySelector('[data-picker-skill="twister"] .skill-icon'));
+ d.querySelector('[data-picker-more]').click();assert.equal(d.querySelectorAll('[data-picker-skill]').length,57);
+ const input=d.getElementById('sim-skill-search');input.value='ついすたー';input.dispatchEvent(new dom.window.Event('input'));
+ assert.equal(d.querySelectorAll('[data-picker-skill]').length,1);assert.equal(selected,null,'Typing does not edit the build');
+ d.querySelector('[data-picker-skill="twister"]').click();assert.equal(selected,'twister');assert.equal(d.getElementById('sim-skill-picker').open,false);assert.equal(d.activeElement,launch);
+ openSkillPicker({document:d,gems,label,support:true,selected:null,returnFocus:launch,onSelect:()=>{throw Error('Cancel must not select');}});
+ assert.equal(d.querySelectorAll('dialog').length,1);assert.equal(d.querySelectorAll('[data-picker-skill]').length,1);
+ input.value='<img src=x onerror=alert(1)>';input.dispatchEvent(new dom.window.Event('input'));assert(d.querySelector('.sim-skill-empty'));assert.equal(d.querySelectorAll('#sim-skill-options img').length,0);
+ d.querySelector('[data-picker-close]').click();assert.equal(d.getElementById('sim-skill-picker').open,false);
+ if(language==='en')assert.equal(d.querySelector('dialog h2').textContent,'Find a support');dom.window.close();
+}
+const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
+const hash=createHash('sha256').update(await read('assets/simulator-skill-picker.js')).digest('hex').slice(0,10);
+for(const name of ['simulator.js','simulator-en.js'])assert((await read('assets/'+name)).includes('./simulator-skill-picker.js?v='+hash),'Picker import must be versioned: '+name);
+console.log('PASS: bilingual/hiragana search, support filtering, internal exclusions, paging, cancel/focus, safe text and cache versions');

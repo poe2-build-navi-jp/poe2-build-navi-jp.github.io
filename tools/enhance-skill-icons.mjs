@@ -21,12 +21,19 @@ const entries=catalog.entries.map(({id,name,names:aliases,support,src,availabili
 const data='// Generated from data/skill-icons.json. Game artwork © Grinding Gear Games.\nexport const skillIcons='+JSON.stringify(entries)+';\n';
 await writeFile(resolve(root,'assets/skill-icon-data.js'),data);
 // Module imports have their own content hashes; HTML asset versions are finalized later.
-let runtime=await read('assets/skill-icons.js');
-for(const name of ['skill-icon-data.js','skill-icon-matcher.js']) {
- const hash=createHash('sha256').update(await read('assets/'+name)).digest('hex').slice(0,10);
- runtime=runtime.replace(new RegExp(`(\\./${name.replaceAll('.','\\.')})(?:\\?v=[a-f0-9]+)?`,'g'),`$1?v=${hash}`);
+for(const file of ['skill-icons.js','simulator-skill-picker.js']) {
+ let runtime=await read('assets/'+file);
+ for(const name of ['skill-icon-data.js','skill-icon-matcher.js']) {
+  const hash=createHash('sha256').update(await read('assets/'+name)).digest('hex').slice(0,10);
+  runtime=runtime.replace(new RegExp(`(\\./${name.replaceAll('.','\\.')})(?:\\?v=[a-f0-9]+)?`,'g'),`$1?v=${hash}`);
+ }
+ await writeFile(resolve(root,'assets/'+file),runtime);
 }
-await writeFile(resolve(root,'assets/skill-icons.js'),runtime);
+const pickerHash=createHash('sha256').update(await read('assets/simulator-skill-picker.js')).digest('hex').slice(0,10);
+for(const file of ['simulator.js','simulator-en.js']) {
+ const body=await read('assets/'+file);
+ await writeFile(resolve(root,'assets/'+file),body.replace(/(\.\/simulator-skill-picker\.js)(?:\?v=[a-f0-9]+)?/g,`$1?v=${pickerHash}`));
+}
 const matcher=createSkillMatcher(entries);
 async function* files(dir=root) {
  for(const entry of await readdir(dir,{withFileTypes:true})) {
