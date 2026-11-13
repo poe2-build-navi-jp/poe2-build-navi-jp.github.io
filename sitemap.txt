@@ -1,5 +1,6 @@
 https://poe2-build-navi-jp.github.io/
 https://poe2-build-navi-jp.github.io/simulator/
+https://poe2-build-navi-jp.github.io/en/simulator/
 https://poe2-build-navi-jp.github.io/search/
 https://poe2-build-navi-jp.github.io/name-index/
 https://poe2-build-navi-jp.github.io/skills/

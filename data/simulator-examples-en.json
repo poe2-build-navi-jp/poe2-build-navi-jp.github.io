@@ -1,0 +1,1311 @@
+{
+  "version": 1,
+  "examples": [
+    {
+      "id": "sample-mercenary-twister-gemling",
+      "preset": "mercenary-twister-gemling",
+      "title": "Twister Gemling: worked example",
+      "kind": "sample",
+      "level": 80,
+      "source": {
+        "href": "/builds/mercenary/twister-gemling/",
+        "label": "Twister Gemling levelling guide (Japanese)"
+      },
+      "description": "Try a level 80 setup with a level 10 main gem, 6 items and 3 normal passive nodes. This worked example includes hypothetical equipment for numerical comparisons.",
+      "omissions": [
+        "This sample does not demonstrate in-game item availability or an optimal build. Adjust it to your own equipment and skill requirements."
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-11",
+        "life": 1478,
+        "dps": 29.907117276,
+        "allocated": 3
+      }
+    },
+    {
+      "id": "sample-ranger-ice-shot-deadeye",
+      "preset": "ranger-ice-shot-deadeye",
+      "title": "Ice Shot Deadeye: worked example",
+      "kind": "sample",
+      "level": 80,
+      "source": {
+        "href": "/builds/ranger/ice-shot-deadeye/",
+        "label": "Ice Shot Deadeye levelling guide (Japanese)"
+      },
+      "description": "Try a level 80 setup with a level 10 main gem, 6 items and 3 normal passive nodes. This worked example includes hypothetical equipment for numerical comparisons.",
+      "omissions": [
+        "This sample does not demonstrate in-game item availability or an optimal build. Adjust it to your own equipment and skill requirements."
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "ranger-ice-shot-deadeye",
+        "request": {
+          "character": {
+            "class_name": "Ranger",
+            "ascendancy_name": "Deadeye",
+            "level": 80
+          },
+          "allocated_nodes": [
+            1140,
+            13828,
+            15507
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の粗雑な弓\nCrude Bow\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "IceShotPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の粗雑な弓\nCrude Bow\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-11",
+        "life": 1470,
+        "dps": 90.490955452,
+        "allocated": 3
+      }
+    },
+    {
+      "id": "sample-sorceress-spark-stormweaver",
+      "preset": "sorceress-spark-stormweaver",
+      "title": "Spark Stormweaver: worked example",
+      "kind": "sample",
+      "level": 80,
+      "source": {
+        "href": "/builds/sorceress/spark-stormweaver/",
+        "label": "Spark Stormweaver levelling guide (Japanese)"
+      },
+      "description": "Try a level 80 setup with a level 10 main gem, 6 items and 3 normal passive nodes. This worked example includes hypothetical equipment for numerical comparisons.",
+      "omissions": [
+        "This sample does not demonstrate in-game item availability or an optimal build. Adjust it to your own equipment and skill requirements."
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "sorceress-spark-stormweaver",
+        "request": {
+          "character": {
+            "class_name": "Sorceress",
+            "ascendancy_name": "Stormweaver",
+            "level": 80
+          },
+          "allocated_nodes": [
+            4739,
+            18845,
+            55807
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の同調のワンド\nAttuned Wand\nItem Level: 80\nQuality: 0\nImplicits: 0\n50% increased Spell Damage\n15% increased Cast Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "SparkPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の同調のワンド\nAttuned Wand\nItem Level: 80\nQuality: 0\nImplicits: 0\n50% increased Spell Damage\n15% increased Cast Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-11",
+        "life": 1470,
+        "dps": 97.414857151,
+        "allocated": 3
+      }
+    },
+    {
+      "id": "record-divinity",
+      "preset": "mercenary-twister-gemling",
+      "title": "Arbiter of Divinity: 10 verified items",
+      "kind": "record",
+      "level": 87,
+      "source": {
+        "href": "/guides/arbiter-of-divinity/",
+        "label": "Arbiter of Divinity: 10 verified items (Japanese)",
+        "checkedAt": "2026-10-24"
+      },
+      "description": "Import the equipment effects and level verified in the article into an estimate. Unverified settings are left blank.",
+      "omissions": [
+        "Unverified support links, gem levels, allocated passives, jewels and reservation settings are left blank. This does not fully reproduce the Life, resistances or DPS shown in the screenshots.",
+        "Weapon sets use hypothetical arrangements for calculation. Switch between the two verified spears and the sceptre to compare them.",
+        "The number of filled body armour sockets and the conditions for Idols and Bonded modifiers could not be established. Socket-dependent attributes, Life and resistances, and unsupported special effects have not been filled in.",
+        "The unverified second ring, flasks and charms are left blank."
+      ],
+      "itemCount": 10,
+      "sourceItems": [
+        {
+          "name": "The Ordained",
+          "slot": "weapon1",
+          "sourceText": "Spear / The Ordained / Grand Spear / Quality +20%. Physical 206–309, Lightning 1–206, Critical Hit Chance 11.66%, Attacks per Second 1.40. Requires level 79, 65 Strength and 105 Dexterity. / 18% increased Physical Damage (light-blue line). Grants Spear Throw and level 19 Righteous Descent. 25% increased Melee Strike Range. 189% increased Physical Damage, Adds 1 to 206 Lightning Damage, +6.66% to Critical Hit Chance. Life Leech recovers based on Lightning Damage as well as Physical Damage. Creates one Fragment of Divinity in your Presence every 4 seconds. Corrupted."
+        },
+        {
+          "name": "Skysliver",
+          "slot": "weapon1",
+          "sourceText": "Additional spear / Skysliver / Winged Spear / Quality +15%. Lightning Damage “1 or 84”, Critical Hit Chance 5.00%, Attacks per Second 2.15. Requires level 16, 12 Strength and 24 Dexterity. / +80 to maximum Life. Grants Spear Throw. No Physical Damage. Adds 1 to 84 Lightning Damage, 26% increased Attack Speed and 58% increased chance to Shock. Rolls only the minimum or maximum Damage value for each Damage Type."
+        },
+        {
+          "name": "Alpha's Howl",
+          "slot": "helmet",
+          "sourceText": "Helmet / Alpha’s Howl / Runemaster Armoured Cap / Quality +20%. Evasion 466, Runeward 136. Requires level 65 and 87 Dexterity. / 15% increased Life Regeneration Rate and 18% increased Armour, Evasion and Energy Shield (light-blue lines). 100% increased Evasion, +100 Spirit, +55% Cold Resistance and doubled Presence Radius. Corrupted."
+        },
+        {
+          "name": "Morior Invictus",
+          "slot": "body",
+          "sourceText": "Body armour / Morior Invictus / Grand Regalia / Quality +20%. Armour 983, Evasion 891, Energy Shield 270. Requires level 65, 39 Strength, 39 Dexterity and 39 Intelligence. / +36 maximum Life. 16% of Damage taken Recouped as Mana. +18% Lightning Resistance. 50% reduced effect of Curses. +10% of Armour also applies to Chaos Damage. Socketed Idols benefit from Bonded modifiers. Bonded: +5% Quality to all Skills and +8% Chaos Resistance. 350% increased Armour, Evasion and Energy Shield. Per filled socket: +7 to all Attributes, +11% Chaos Resistance and +56 maximum Life. Double-corrupted."
+        },
+        {
+          "name": "Shavronne's Satchel",
+          "slot": "belt",
+          "sourceText": "Belt / Shavronne’s Satchel / Fine Belt / Requires level 62. 3 Charm Slots. / Flasks gain 0.17 Charges per second. 26% reduced Life Recovery Rate from Flasks, +26 Intelligence and 20% increased Flask Charges gained. Life Recovery from Flasks also applies to Energy Shield. Corrupted."
+        },
+        {
+          "name": "Rare Sirenscale Gloves",
+          "slot": "gloves",
+          "sourceText": "Gloves / Rare Sirenscale Gloves / Quality +20%. Energy Shield 243. Requires level 80 and 97 Intelligence. / 8% increased Attack Speed (light-blue line). +51 maximum Energy Shield, 93% increased Energy Shield, 15% increased Attack Speed and +26 Dexterity. Adds 14 to 26 Physical Damage to Attacks and 11% increased Area of Effect of Attacks. Corrupted."
+        },
+        {
+          "name": "Atziri's Step",
+          "slot": "boots",
+          "sourceText": "Boots / Atziri’s Step / Cinched Boots / Vaal boots. Quality +20%. Evasion 586. Requires level 65 and 83 Dexterity. / 18% increased Armour, Evasion and Energy Shield (light-blue line). 30% increased Movement Speed, 102% increased Evasion and +81 maximum Life. Gain Deflection equal to 50% of Evasion. −10% to the amount of Damage prevented by Deflection. 19% increased Deflection while moving (red line). Corrupted."
+        },
+        {
+          "name": "Guiding Palm of the Eye",
+          "slot": "weapon2",
+          "sourceText": "Sceptre / Guiding Palm of the Eye / Shrine Sceptre / Quality +20%. Spirit 100. Requires level 65, 16 Strength and 36 Intelligence. / Grants level 18 Purity of Ice. Gain 25% of Damage as Extra Cold Damage. Allies in your Presence gain 22 to 29 added Attack Cold Damage and 50% of your Base Life Regeneration. +23 Intelligence, 25% increased Light Radius and the effect of a Guiding Freezing Shrine. Corrupted."
+        },
+        {
+          "name": "Rare Stellar Amulet",
+          "slot": "amulet",
+          "sourceText": "Amulet / Rare Stellar Amulet / Requires level 65. +5 to all Attributes. / +89 maximum Energy Shield, 28% increased maximum Energy Shield and +139 maximum Mana. +1 to Level of all Projectile Skills, +16 to all Attributes and +41% Lightning Resistance."
+        },
+        {
+          "name": "The Taming",
+          "slot": "ring1",
+          "sourceText": "Verified ring / The Taming / Prismatic Ring / Requires level 42. 13% increased Rarity of Items found (light-blue line). / +8% and +20% to all Elemental Resistances (separate lines). 19% increased Damage per type of Elemental Ailment on the enemy. Wind skills that can be empowered by Elemental Ground Effects can be empowered by multiple Elemental Ground Effects and count as empowered by Burning, Shocked and Chilled Ground. Corrupted."
+        }
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 87
+          },
+          "allocated_nodes": [],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "helmet",
+              "text": "Rarity: UNIQUE\nAlpha's Howl\nArmoured Cap\nQuality: 20\nRequires: Level 65, 87 Dex\nImplicits: 0\n15% increased Life Regeneration rate\n18% increased Armour, Evasion and Energy Shield\n100% increased Evasion Rating\n+100 to Spirit\n+55% to Cold Resistance\nPresence Radius is doubled"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: UNIQUE\nMorior Invictus\nGrand Regalia\nQuality: 20\nRequires: Level 65, 39 Str, 39 Dex, 39 Int\nImplicits: 0\n+36 to maximum Life\n16% of Damage taken Recouped as Mana\n+18% to Lightning Resistance\n50% reduced effect of Curses on you\n350% increased Armour, Evasion and Energy Shield"
+            },
+            {
+              "slot": "belt",
+              "text": "Rarity: UNIQUE\nShavronne's Satchel\nFine Belt\nQuality: 0\nRequires: Level 62\nImplicits: 0\nHas 3 Charm Slot\nFlasks gain 0.17 charges per Second\n26% reduced Flask Life Recovery rate\n+26 to Intelligence\n20% increased Flask Charges gained\nLife Recovery from Flasks also applies to Energy Shield"
+            },
+            {
+              "slot": "gloves",
+              "text": "Rarity: RARE\n血タロン\nSirenscale Gloves\nQuality: 20\nRequires: Level 80, 97 Int\nImplicits: 0\n8% increased Attack Speed\n+51 to maximum Energy Shield\n93% increased Energy Shield\n15% increased Attack Speed\n+26 to Dexterity\nAdds 14 to 26 Physical Damage to Attacks\n11% increased Area of Effect of Attacks"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: UNIQUE\nAtziri's Step\nCinched Boots\nQuality: 20\nRequires: Level 65, 83 Dex\nImplicits: 0\n18% increased Armour, Evasion and Energy Shield\n30% increased Movement Speed\n102% increased Evasion Rating\n+81 to maximum Life\nGain Deflection Rating equal to 50% of Evasion Rating\n-10% to amount of Damage Prevented by Deflection\n19% increased Deflection Rating while Moving"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n忘却の留め金\nStellar Amulet\nQuality: 0\nRequires: Level 65\nImplicits: 0\n+5 to all Attributes\n+89 to maximum Energy Shield\n28% increased maximum Energy Shield\n+139 to maximum Mana\n+1 to Level of all Projectile Skills\n+16 to all Attributes\n+41% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: UNIQUE\nThe Taming\nPrismatic Ring\nQuality: 0\nRequires: Level 42\nImplicits: 0\n13% increased Rarity of Items found\n+8% to all Elemental Resistances\n+20% to all Elemental Resistances\n19% increased Damage for each type of Elemental Ailment on Enemy\nWind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces\nWind Skills which can be boosted by Elemental Ground Surfaces are considered boosted by Burning, Shocked and Chilled Ground"
+            },
+            {
+              "slot": "weapon1",
+              "text": "Rarity: UNIQUE\nThe Ordained\nGrand Spear\nQuality: 20\nRequires: Level 79, 65 Str, 105 Dex\nImplicits: 0\n18% increased Physical Damage\nGrants Skill: Spear Throw\nGrants Skill: Level 19 Righteous Descent\n25% increased Melee Strike Range with this weapon\n189% increased Physical Damage\nAdds 1 to 206 Lightning Damage\n+6.66% to Critical Hit Chance\nLife Leech recovers based on your Lightning damage as well as Physical damage\nCreate a Fragment of Divinity in your Presence every 4 seconds"
+            },
+            {
+              "slot": "weapon2",
+              "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 20\nRequires: Level 65, 16 Str, 36 Int\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n50% of your Base Life Regeneration is granted to Allies in your Presence\n+23 to Intelligence\n25% increased Light Radius\nGrants effect of Guided Freezing Shrine"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: UNIQUE\nThe Ordained\nGrand Spear\nQuality: 20\nRequires: Level 79, 65 Str, 105 Dex\nImplicits: 0\n18% increased Physical Damage\nGrants Skill: Spear Throw\nGrants Skill: Level 19 Righteous Descent\n25% increased Melee Strike Range with this weapon\n189% increased Physical Damage\nAdds 1 to 206 Lightning Damage\n+6.66% to Critical Hit Chance\nLife Leech recovers based on your Lightning damage as well as Physical damage\nCreate a Fragment of Divinity in your Presence every 4 seconds"
+                },
+                {
+                  "slot": "weapon2",
+                  "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 20\nRequires: Level 65, 16 Str, 36 Int\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n50% of your Base Life Regeneration is granted to Allies in your Presence\n+23 to Intelligence\n25% increased Light Radius\nGrants effect of Guided Freezing Shrine"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: UNIQUE\nSkysliver\nWinged Spear\nQuality: 15\nRequires: Level 16, 12 Str, 24 Dex\nImplicits: 0\n+80 to maximum Life\nGrants Skill: Spear Throw\nNo Physical Damage\nAdds 1 to 84 Lightning Damage\n26% increased Attack Speed\n58% increased chance to Shock\nRolls only the minimum or maximum Damage value for each Damage Type"
+                },
+                {
+                  "slot": "weapon2",
+                  "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 20\nRequires: Level 65, 16 Str, 36 Int\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n50% of your Base Life Regeneration is granted to Allies in your Presence\n+23 to Intelligence\n25% increased Light Radius\nGrants effect of Guided Freezing Shrine"
+                }
+              ],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-11",
+        "parsedItems": 10
+      }
+    },
+    {
+      "id": "record-xesht",
+      "preset": "mercenary-twister-gemling",
+      "title": "Xesht: try the same 10 items",
+      "kind": "record",
+      "level": null,
+      "source": {
+        "href": "/guides/xesht/",
+        "label": "Xesht: try the same 10 items (Japanese)",
+        "checkedAt": "2026-11-07"
+      },
+      "description": "Import the equipment effects and level verified in the article into an estimate. Unverified settings are left blank.",
+      "omissions": [
+        "The level at which Xesht was defeated cannot be verified from the image. The entered level is for calculation only.",
+        "Unverified support links, gem levels, allocated passives, jewels and reservation settings are left blank. This does not fully reproduce the Life, resistances or DPS shown in the screenshots.",
+        "Weapon sets use hypothetical arrangements for calculation. Switch between the two verified spears and the sceptre to compare them.",
+        "The number of filled body armour sockets and the conditions for Idols and Bonded modifiers could not be established. Socket-dependent attributes, Life and resistances, and unsupported special effects have not been filled in.",
+        "The unverified second ring, flasks and charms are left blank."
+      ],
+      "itemCount": 10,
+      "sourceItems": [
+        {
+          "name": "The Ordained",
+          "slot": "weapon1",
+          "sourceText": "Spear / The Ordained / Grand Spear / Quality +20%. Physical 206–309, Lightning 1–206, Critical Hit Chance 11.66%, Attacks per Second 1.40. Requires level 79, 65 Strength and 105 Dexterity. / 18% increased Physical Damage (light-blue line). Grants Spear Throw and level 19 Righteous Descent. 25% increased Melee Strike Range. 189% increased Physical Damage, Adds 1 to 206 Lightning Damage, +6.66% to Critical Hit Chance. Life Leech recovers based on Lightning Damage as well as Physical Damage. Creates one Fragment of Divinity in your Presence every 4 seconds. Corrupted."
+        },
+        {
+          "name": "Skysliver",
+          "slot": "weapon1",
+          "sourceText": "Additional spear / Skysliver / Winged Spear / Quality +15%. Lightning Damage “1 or 84”, Critical Hit Chance 5.00%, Attacks per Second 2.15. Requires level 16, 12 Strength and 24 Dexterity. / +80 to maximum Life. Grants Spear Throw. No Physical Damage. Adds 1 to 84 Lightning Damage, 26% increased Attack Speed and 58% increased chance to Shock. Rolls only the minimum or maximum Damage value for each Damage Type."
+        },
+        {
+          "name": "Alpha's Howl",
+          "slot": "helmet",
+          "sourceText": "Helmet / Alpha’s Howl / Runemaster Armoured Cap / Quality +20%. Evasion 466, Runeward 136. Requires level 65 and 87 Dexterity. / 15% increased Life Regeneration Rate and 18% increased Armour, Evasion and Energy Shield (light-blue lines). 100% increased Evasion, +100 Spirit, +55% Cold Resistance and doubled Presence Radius. Corrupted."
+        },
+        {
+          "name": "Morior Invictus",
+          "slot": "body",
+          "sourceText": "Body armour / Morior Invictus / Grand Regalia / Quality +20%. Armour 983, Evasion 891, Energy Shield 270. Requires level 65, 39 Strength, 39 Dexterity and 39 Intelligence. / +36 maximum Life. 16% of Damage taken Recouped as Mana. +18% Lightning Resistance. 50% reduced effect of Curses. +10% of Armour also applies to Chaos Damage. Socketed Idols benefit from Bonded modifiers. Bonded: +5% Quality to all Skills and +8% Chaos Resistance. 350% increased Armour, Evasion and Energy Shield. Per filled socket: +7 to all Attributes, +11% Chaos Resistance and +56 maximum Life. Double-corrupted."
+        },
+        {
+          "name": "Shavronne's Satchel",
+          "slot": "belt",
+          "sourceText": "Belt / Shavronne’s Satchel / Fine Belt / Requires level 62. 3 Charm Slots. / Flasks gain 0.17 Charges per second. 26% reduced Life Recovery Rate from Flasks, +26 Intelligence and 20% increased Flask Charges gained. Life Recovery from Flasks also applies to Energy Shield. Corrupted."
+        },
+        {
+          "name": "Rare Sirenscale Gloves",
+          "slot": "gloves",
+          "sourceText": "Gloves / Rare Sirenscale Gloves / Quality +20%. Energy Shield 243. Requires level 80 and 97 Intelligence. / 8% increased Attack Speed (light-blue line). +51 maximum Energy Shield, 93% increased Energy Shield, 15% increased Attack Speed and +26 Dexterity. Adds 14 to 26 Physical Damage to Attacks and 11% increased Area of Effect of Attacks. Corrupted."
+        },
+        {
+          "name": "Atziri's Step",
+          "slot": "boots",
+          "sourceText": "Boots / Atziri’s Step / Cinched Boots / Vaal boots. Quality +20%. Evasion 586. Requires level 65 and 83 Dexterity. / 18% increased Armour, Evasion and Energy Shield (light-blue line). 30% increased Movement Speed, 102% increased Evasion and +81 maximum Life. Gain Deflection equal to 50% of Evasion. −10% to the amount of Damage prevented by Deflection. 19% increased Deflection while moving (red line). Corrupted."
+        },
+        {
+          "name": "Guiding Palm of the Eye",
+          "slot": "weapon2",
+          "sourceText": "Sceptre / Guiding Palm of the Eye / Shrine Sceptre / Quality +20%. Spirit 100. Requires level 65, 16 Strength and 36 Intelligence. / Grants level 18 Purity of Ice. Gain 25% of Damage as Extra Cold Damage. Allies in your Presence gain 22 to 29 added Attack Cold Damage and 50% of your Base Life Regeneration. +23 Intelligence, 25% increased Light Radius and the effect of a Guiding Freezing Shrine. Corrupted."
+        },
+        {
+          "name": "Rare Stellar Amulet",
+          "slot": "amulet",
+          "sourceText": "Amulet / Rare Stellar Amulet / Requires level 65. +5 to all Attributes. / +89 maximum Energy Shield, 28% increased maximum Energy Shield and +139 maximum Mana. +1 to Level of all Projectile Skills, +16 to all Attributes and +41% Lightning Resistance."
+        },
+        {
+          "name": "The Taming",
+          "slot": "ring1",
+          "sourceText": "Verified ring / The Taming / Prismatic Ring / Requires level 42. 13% increased Rarity of Items found (light-blue line). / +8% and +20% to all Elemental Resistances (separate lines). 19% increased Damage per type of Elemental Ailment on the enemy. Wind skills that can be empowered by Elemental Ground Effects can be empowered by multiple Elemental Ground Effects and count as empowered by Burning, Shocked and Chilled Ground. Corrupted."
+        }
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "helmet",
+              "text": "Rarity: UNIQUE\nAlpha's Howl\nArmoured Cap\nQuality: 20\nRequires: Level 65, 87 Dex\nImplicits: 0\n15% increased Life Regeneration rate\n18% increased Armour, Evasion and Energy Shield\n100% increased Evasion Rating\n+100 to Spirit\n+55% to Cold Resistance\nPresence Radius is doubled"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: UNIQUE\nMorior Invictus\nGrand Regalia\nQuality: 20\nRequires: Level 65, 39 Str, 39 Dex, 39 Int\nImplicits: 0\n+36 to maximum Life\n16% of Damage taken Recouped as Mana\n+18% to Lightning Resistance\n50% reduced effect of Curses on you\n350% increased Armour, Evasion and Energy Shield"
+            },
+            {
+              "slot": "belt",
+              "text": "Rarity: UNIQUE\nShavronne's Satchel\nFine Belt\nQuality: 0\nRequires: Level 62\nImplicits: 0\nHas 3 Charm Slot\nFlasks gain 0.17 charges per Second\n26% reduced Flask Life Recovery rate\n+26 to Intelligence\n20% increased Flask Charges gained\nLife Recovery from Flasks also applies to Energy Shield"
+            },
+            {
+              "slot": "gloves",
+              "text": "Rarity: RARE\n血タロン\nSirenscale Gloves\nQuality: 20\nRequires: Level 80, 97 Int\nImplicits: 0\n8% increased Attack Speed\n+51 to maximum Energy Shield\n93% increased Energy Shield\n15% increased Attack Speed\n+26 to Dexterity\nAdds 14 to 26 Physical Damage to Attacks\n11% increased Area of Effect of Attacks"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: UNIQUE\nAtziri's Step\nCinched Boots\nQuality: 20\nRequires: Level 65, 83 Dex\nImplicits: 0\n18% increased Armour, Evasion and Energy Shield\n30% increased Movement Speed\n102% increased Evasion Rating\n+81 to maximum Life\nGain Deflection Rating equal to 50% of Evasion Rating\n-10% to amount of Damage Prevented by Deflection\n19% increased Deflection Rating while Moving"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n忘却の留め金\nStellar Amulet\nQuality: 0\nRequires: Level 65\nImplicits: 0\n+5 to all Attributes\n+89 to maximum Energy Shield\n28% increased maximum Energy Shield\n+139 to maximum Mana\n+1 to Level of all Projectile Skills\n+16 to all Attributes\n+41% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: UNIQUE\nThe Taming\nPrismatic Ring\nQuality: 0\nRequires: Level 42\nImplicits: 0\n13% increased Rarity of Items found\n+8% to all Elemental Resistances\n+20% to all Elemental Resistances\n19% increased Damage for each type of Elemental Ailment on Enemy\nWind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces\nWind Skills which can be boosted by Elemental Ground Surfaces are considered boosted by Burning, Shocked and Chilled Ground"
+            },
+            {
+              "slot": "weapon1",
+              "text": "Rarity: UNIQUE\nThe Ordained\nGrand Spear\nQuality: 20\nRequires: Level 79, 65 Str, 105 Dex\nImplicits: 0\n18% increased Physical Damage\nGrants Skill: Spear Throw\nGrants Skill: Level 19 Righteous Descent\n25% increased Melee Strike Range with this weapon\n189% increased Physical Damage\nAdds 1 to 206 Lightning Damage\n+6.66% to Critical Hit Chance\nLife Leech recovers based on your Lightning damage as well as Physical damage\nCreate a Fragment of Divinity in your Presence every 4 seconds"
+            },
+            {
+              "slot": "weapon2",
+              "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 20\nRequires: Level 65, 16 Str, 36 Int\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n50% of your Base Life Regeneration is granted to Allies in your Presence\n+23 to Intelligence\n25% increased Light Radius\nGrants effect of Guided Freezing Shrine"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: UNIQUE\nThe Ordained\nGrand Spear\nQuality: 20\nRequires: Level 79, 65 Str, 105 Dex\nImplicits: 0\n18% increased Physical Damage\nGrants Skill: Spear Throw\nGrants Skill: Level 19 Righteous Descent\n25% increased Melee Strike Range with this weapon\n189% increased Physical Damage\nAdds 1 to 206 Lightning Damage\n+6.66% to Critical Hit Chance\nLife Leech recovers based on your Lightning damage as well as Physical damage\nCreate a Fragment of Divinity in your Presence every 4 seconds"
+                },
+                {
+                  "slot": "weapon2",
+                  "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 20\nRequires: Level 65, 16 Str, 36 Int\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n50% of your Base Life Regeneration is granted to Allies in your Presence\n+23 to Intelligence\n25% increased Light Radius\nGrants effect of Guided Freezing Shrine"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: UNIQUE\nSkysliver\nWinged Spear\nQuality: 15\nRequires: Level 16, 12 Str, 24 Dex\nImplicits: 0\n+80 to maximum Life\nGrants Skill: Spear Throw\nNo Physical Damage\nAdds 1 to 84 Lightning Damage\n26% increased Attack Speed\n58% increased chance to Shock\nRolls only the minimum or maximum Damage value for each Damage Type"
+                },
+                {
+                  "slot": "weapon2",
+                  "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 20\nRequires: Level 65, 16 Str, 36 Int\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n50% of your Base Life Regeneration is granted to Allies in your Presence\n+23 to Intelligence\n25% increased Light Radius\nGrants effect of Guided Freezing Shrine"
+                }
+              ],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-11",
+        "parsedItems": 10
+      }
+    },
+    {
+      "id": "record-ash",
+      "preset": "mercenary-twister-gemling",
+      "title": "Arbiter of Ash: 7 verified items",
+      "kind": "record",
+      "level": 82,
+      "source": {
+        "href": "/guides/arbiter-of-ash-clear-record/",
+        "label": "Arbiter of Ash: 7 verified items (Japanese)",
+        "checkedAt": "2026-10-22"
+      },
+      "description": "Import the equipment effects and level verified in the article into an estimate. Unverified settings are left blank.",
+      "omissions": [
+        "Only the 7 items identified in the article are included. Accessories, quality and rune effects from the newer clear record have not been reused.",
+        "Unverified support links, gem levels, allocated passives, jewels and reservation settings are left blank. This does not fully reproduce the Life, resistances or DPS shown in the screenshots.",
+        "Weapon sets use hypothetical arrangements for calculation. Switch between the two verified spears and the sceptre to compare them.",
+        "Socket counts, reservation conditions and gem levels are unverified and have not been filled in."
+      ],
+      "itemCount": 7,
+      "sourceItems": [
+        {
+          "name": "The Ordained",
+          "slot": "weapon1",
+          "sourceText": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+        },
+        {
+          "name": "Skysliver",
+          "slot": "weapon1",
+          "sourceText": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+        },
+        {
+          "name": "Alpha's Howl",
+          "slot": "helmet",
+          "sourceText": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+        },
+        {
+          "name": "Morior Invictus",
+          "slot": "body",
+          "sourceText": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+        },
+        {
+          "name": "Rare Sirenscale Gloves",
+          "slot": "gloves",
+          "sourceText": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+        },
+        {
+          "name": "Atziri's Step",
+          "slot": "boots",
+          "sourceText": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+        },
+        {
+          "name": "Guiding Palm of the Eye",
+          "slot": "weapon2",
+          "sourceText": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+        }
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 82
+          },
+          "allocated_nodes": [],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "helmet",
+              "text": "Rarity: UNIQUE\nAlpha's Howl\nArmoured Cap\nQuality: 0\nImplicits: 0\n100% increased Evasion Rating\n+100 to Spirit\n+55% to Cold Resistance\nPresence Radius is doubled"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: UNIQUE\nMorior Invictus\nGrand Regalia\nQuality: 0\nImplicits: 0\n350% increased Armour, Evasion and Energy Shield\n16% of Damage taken Recouped as Mana\n50% reduced effect of Curses on you"
+            },
+            {
+              "slot": "gloves",
+              "text": "Rarity: RARE\n血タロン\nSirenscale Gloves\nQuality: 0\nImplicits: 0\n8% increased Attack Speed\n+51 to maximum Energy Shield\n93% increased Energy Shield\n15% increased Attack Speed\n+26 to Dexterity\nAdds 14 to 26 Physical Damage to Attacks\n11% increased Area of Effect of Attacks"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: UNIQUE\nAtziri's Step\nCinched Boots\nQuality: 0\nImplicits: 0\n30% increased Movement Speed\n102% increased Evasion Rating\n+81 to maximum Life\nGain Deflection Rating equal to 50% of Evasion Rating"
+            },
+            {
+              "slot": "weapon1",
+              "text": "Rarity: UNIQUE\nThe Ordained\nGrand Spear\nQuality: 0\nRequires: Level 79\nImplicits: 0\nGrants Skill: Spear Throw\nGrants Skill: Level 19 Righteous Descent\n25% increased Melee Strike Range with this weapon\n189% increased Physical Damage\nAdds 1 to 206 Lightning Damage\n+6.66% to Critical Hit Chance\nLife Leech recovers based on your Lightning damage as well as Physical damage\nCreate a Fragment of Divinity in your Presence every 4 seconds"
+            },
+            {
+              "slot": "weapon2",
+              "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 0\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n+23 to Intelligence\nGrants effect of Guided Freezing Shrine"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: UNIQUE\nThe Ordained\nGrand Spear\nQuality: 0\nRequires: Level 79\nImplicits: 0\nGrants Skill: Spear Throw\nGrants Skill: Level 19 Righteous Descent\n25% increased Melee Strike Range with this weapon\n189% increased Physical Damage\nAdds 1 to 206 Lightning Damage\n+6.66% to Critical Hit Chance\nLife Leech recovers based on your Lightning damage as well as Physical damage\nCreate a Fragment of Divinity in your Presence every 4 seconds"
+                },
+                {
+                  "slot": "weapon2",
+                  "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 0\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n+23 to Intelligence\nGrants effect of Guided Freezing Shrine"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: UNIQUE\nSkysliver\nWinged Spear\nQuality: 0\nRequires: Level 16\nImplicits: 0\n+80 to maximum Life\nGrants Skill: Spear Throw\nNo Physical Damage\nAdds 1 to 84 Lightning Damage\n26% increased Attack Speed\n58% increased chance to Shock\nRolls only the minimum or maximum Damage value for each Damage Type"
+                },
+                {
+                  "slot": "weapon2",
+                  "text": "Rarity: UNIQUE\nGuiding Palm of the Eye\nShrine Sceptre\nQuality: 0\nImplicits: 0\nGrants Skill: Level 18 Purity of Ice\nGain 25% of Damage as Extra Cold Damage\nAllies in your Presence deal 22 to 29 added Attack Cold Damage\n+23 to Intelligence\nGrants effect of Guided Freezing Shrine"
+                }
+              ],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-11",
+        "parsedItems": 7
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "ring-life-resistance",
+      "version": 1,
+      "enemy": "none",
+      "a": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "b": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n比較用のライフ指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+120 to maximum Life\n+60% to Fire Resistance"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "prices": {
+        "version": 1,
+        "budget": {
+          "amount": 50,
+          "currency": "exalted"
+        },
+        "entries": [
+          {
+            "id": "a",
+            "amount": 0,
+            "currency": "exalted"
+          },
+          {
+            "id": "b",
+            "amount": 40,
+            "currency": "exalted"
+          }
+        ]
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "stats": [
+          {
+            "id": "CombinedDPS",
+            "a": 29.907117276,
+            "b": 29.907117276
+          },
+          {
+            "id": "Life",
+            "a": 1478,
+            "b": 1538
+          },
+          {
+            "id": "Armour",
+            "a": 76,
+            "b": 76
+          },
+          {
+            "id": "Evasion",
+            "a": 23,
+            "b": 23
+          },
+          {
+            "id": "FireResist",
+            "a": 10,
+            "b": 40
+          },
+          {
+            "id": "ColdResist",
+            "a": 10,
+            "b": -20
+          },
+          {
+            "id": "LightningResist",
+            "a": 10,
+            "b": -20
+          },
+          {
+            "id": "ChaosResist",
+            "a": 0,
+            "b": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "boots-life-resistance",
+      "version": 1,
+      "enemy": "none",
+      "a": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n操作見本の粗末なグリーヴ\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "b": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 80
+          },
+          "allocated_nodes": [
+            97,
+            2455,
+            59915
+          ],
+          "attribute_choices": {},
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n操作見本の錆びたグレートヘルム\nRusted Greathelm\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Fire Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n操作見本のチェインメイル\nChain Mail\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n比較用の耐性靴\nRough Greaves\nItem Level: 80\nQuality: 0\nImplicits: 0\n+40 to maximum Life\n25% increased Movement Speed\n+40% to all Elemental Resistances"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n操作見本のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to maximum Life\n+30% to all Elemental Resistances"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n操作見本の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+60 to all Attributes"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 10,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 0,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n操作見本の硬材の槍\nHardwood Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "prices": {
+        "version": 1,
+        "budget": {
+          "amount": 30,
+          "currency": "exalted"
+        },
+        "entries": [
+          {
+            "id": "a",
+            "amount": 0,
+            "currency": "exalted"
+          },
+          {
+            "id": "b",
+            "amount": 20,
+            "currency": "exalted"
+          }
+        ]
+      },
+      "verification": {
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "stats": [
+          {
+            "id": "CombinedDPS",
+            "a": 29.907117276,
+            "b": 29.907117276
+          },
+          {
+            "id": "Life",
+            "a": 1478,
+            "b": 1438
+          },
+          {
+            "id": "Armour",
+            "a": 76,
+            "b": 76
+          },
+          {
+            "id": "Evasion",
+            "a": 23,
+            "b": 23
+          },
+          {
+            "id": "FireResist",
+            "a": 10,
+            "b": 50
+          },
+          {
+            "id": "ColdResist",
+            "a": 10,
+            "b": 50
+          },
+          {
+            "id": "LightningResist",
+            "a": 10,
+            "b": 20
+          },
+          {
+            "id": "ChaosResist",
+            "a": 0,
+            "b": 0
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -7,6 +7,8 @@ const PAGE_TYPES=new Set(['Article','BlogPosting','NewsArticle','WebPage','Colle
 export function synchronizePageDate(original,{date,url,title,today}) {
  if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||new Date(date+'T00:00:00Z').toISOString().slice(0,10)!==date)throw Error(`Invalid content date: ${url}`);
  if(today && date>today)throw Error(`Future content date: ${url}`);
+ const english=/<html[^>]+lang="en"/.test(original);
+ const dateLabel=english?'Updated: ':'ページ更新：';
  let html=original.replace(/<span class="page-updated">[\s\S]*?<\/time><\/span>/g,'').replace(/<!-- page-updated:start -->[\s\S]*?<!-- page-updated:end -->/g,'').replace(/<!-- page-date-schema:start -->[\s\S]*?<!-- page-date-schema:end -->/g,'');
  if(!html.includes('/assets/page-dates.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/page-dates.css"></head>');
  let pageEntity=false;
@@ -28,12 +30,12 @@ export function synchronizePageDate(original,{date,url,title,today}) {
   edits.push({start:n.sourceCodeLocation.startTag.endOffset,end:n.sourceCodeLocation.endTag.startOffset,value:json(value)});
  }
  for(const e of edits.sort((a,b)=>b.start-a.start))html=html.slice(0,e.start)+e.value+html.slice(e.end);
- if(!pageEntity)html=insertBlock(html,'</head>','page-date-schema',`<!-- page-date-schema:start --><script type="application/ld+json">${json({'@context':'https://schema.org','@type':'WebPage','@id':url+'#webpage',url,name:title,inLanguage:'ja',dateModified:date})}</script><!-- page-date-schema:end -->`);
- const label=`<span class="page-updated">ページ更新：<time datetime="${date}">${date}</time></span>`;
+ if(!pageEntity)html=insertBlock(html,'</head>','page-date-schema',`<!-- page-date-schema:start --><script type="application/ld+json">${json({'@context':'https://schema.org','@type':'WebPage','@id':url+'#webpage',url,name:title,inLanguage:english?'en':'ja',dateModified:date})}</script><!-- page-date-schema:end -->`);
+ const label=`<span class="page-updated">${dateLabel}<time datetime="${date}">${date}</time></span>`;
  if(html.includes('<!-- editorial-credit:start -->')) {
   html=html.replace(/(<!-- editorial-credit:start -->[\s\S]*?)(<\/p><!-- editorial-credit:end -->)/,`$1${label}$2`);
  } else {
-  html=html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/,`$1<!-- page-updated:start --><p class="page-updated">ページ更新：<time datetime="${date}">${date}</time></p><!-- page-updated:end -->`);
+  html=html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/,`$1<!-- page-updated:start --><p class="page-updated">${dateLabel}<time datetime="${date}">${date}</time></p><!-- page-updated:end -->`);
  }
 
  return html;

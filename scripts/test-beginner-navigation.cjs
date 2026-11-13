@@ -101,7 +101,7 @@ for (const file of htmlFiles()) {
   const document = new JSDOM(fs.readFileSync(file, 'utf8')).window.document;
   for (const nav of document.querySelectorAll('.site-nav')) {
     const link = only(nav, 'a[href="/beginner-builds/"]', `${path.relative(root, file)} beginner navigation`);
-    assert.equal(link.textContent.trim(), '初心者おすすめ');
+    assert.equal(link.textContent.trim(), document.documentElement.lang === 'en' ? 'Starter builds (Japanese)' : '初心者おすすめ');
     assert.equal(link.getAttribute('aria-current'), file === path.join(root, 'beginner-builds/index.html') ? 'page' : null,
       `${path.relative(root, file)} beginner current-page state`);
     navCount++;

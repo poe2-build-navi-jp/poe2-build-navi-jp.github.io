@@ -1,0 +1,3291 @@
+{
+  "version": 1,
+  "bases": [
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrInt6",
+      "name": "Omen Crest Shield",
+      "label": "Omen Crest Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 30,
+        "int": 30
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptre4",
+      "name": "Omen Sceptre",
+      "label": "Omen Sceptre",
+      "itemClass": "Sceptre",
+      "requirements": {
+        "str": 12,
+        "int": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStr1",
+      "name": "Stocky Mitts",
+      "label": "Stocky Mitts",
+      "itemClass": "Gloves",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDex1",
+      "name": "Brimmed Helm",
+      "label": "Brimmed Helm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 7,
+        "dex": 7
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing6",
+      "name": "Amethyst Ring",
+      "label": "Amethyst Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman2",
+      "name": "Nettle Talisman",
+      "label": "Nettle Talisman",
+      "itemClass": "Talisman",
+      "requirements": {
+        "str": 9,
+        "int": 8
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear5",
+      "name": "War Spear",
+      "label": "War Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 14,
+        "dex": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace5",
+      "name": "Warpick",
+      "label": "Warpick",
+      "itemClass": "One Hand Mace",
+      "requirements": {
+        "str": 41
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing7",
+      "name": "Emerald Ring",
+      "label": "Emerald Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt9",
+      "name": "Elementalist Robe",
+      "label": "Elementalist Robe",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 72
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsDex3",
+      "name": "Embossed Boots",
+      "label": "Embossed Boots",
+      "itemClass": "Boots",
+      "requirements": {
+        "dex": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace2",
+      "name": "Oak Greathammer",
+      "label": "Oak Greathammer",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 11
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrInt4",
+      "name": "Kalguuran Cuffs",
+      "label": "Kalguuran Cuffs",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 32,
+        "int": 32
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace14",
+      "name": "Kalguuran Forgehammer",
+      "label": "Kalguuran Forgehammer",
+      "itemClass": "One Hand Mace",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace5",
+      "name": "Cultist Greathammer",
+      "label": "Cultist Greathammer",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 41
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrInt3",
+      "name": "Cultist Crown",
+      "label": "Cultist Crown",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 15,
+        "int": 15
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDexIntBase",
+      "name": "Garment",
+      "label": "Garment",
+      "itemClass": "Body Armour",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex2",
+      "name": "Quilted Vest",
+      "label": "Quilted Vest",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 10
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex4",
+      "name": "Cloaked Mail",
+      "label": "Cloaked Mail",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 25,
+        "dex": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDex6",
+      "name": "Closed Helm",
+      "label": "Closed Helm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 36,
+        "dex": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear8Endgame",
+      "name": "Grand Spear",
+      "label": "Grand Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 68,
+        "dex": 109
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt6",
+      "name": "Keth Raiment",
+      "label": "Keth Raiment",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 47
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex7",
+      "name": "Corsair Cap",
+      "label": "Corsair Cap",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 64
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow5",
+      "name": "Composite Bow",
+      "label": "Composite Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 41
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff3",
+      "name": "Gothic Quarterstaff",
+      "label": "Gothic Quarterstaff",
+      "itemClass": "Warstaff",
+      "requirements": {
+        "dex": 18,
+        "int": 9
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing4",
+      "name": "Sapphire Ring",
+      "label": "Sapphire Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex8",
+      "name": "Serpentscale Coat",
+      "label": "Serpentscale Coat",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 59
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt4",
+      "name": "Shaman Mantle",
+      "label": "Shaman Mantle",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 26,
+        "int": 26
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow2",
+      "name": "Shortbow",
+      "label": "Shortbow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 12
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsInt4",
+      "name": "Silk Slippers",
+      "label": "Silk Slippers",
+      "itemClass": "Boots",
+      "requirements": {
+        "int": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDex1",
+      "name": "Suede Bracers",
+      "label": "Suede Bracers",
+      "itemClass": "Gloves",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex6",
+      "name": "Scale Mail",
+      "label": "Scale Mail",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 34,
+        "dex": 34
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff6",
+      "name": "Steelpoint Quarterstaff",
+      "label": "Steelpoint Quarterstaff",
+      "itemClass": "Warstaff",
+      "requirements": {
+        "dex": 41,
+        "int": 18
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex11",
+      "name": "Strider Vest",
+      "label": "Strider Vest",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 83
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrInt6",
+      "name": "Spiritbone Crown",
+      "label": "Spiritbone Crown",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 36,
+        "int": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsDexInt2",
+      "name": "Threaded Shoes",
+      "label": "Threaded Shoes",
+      "itemClass": "Boots",
+      "requirements": {
+        "dex": 14,
+        "int": 14
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStr7",
+      "name": "Titan Mitts",
+      "label": "Titan Mitts",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 64
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt8",
+      "name": "Double Belt",
+      "label": "Double Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex1",
+      "name": "Chain Mail",
+      "label": "Chain Mail",
+      "itemClass": "Body Armour",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing13c",
+      "name": "Two-Stone Ring",
+      "label": "Two-Stone Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDexInt8",
+      "name": "Death Mask",
+      "label": "Death Mask",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 50,
+        "int": 50
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow6",
+      "name": "Dualstring Bow",
+      "label": "Dualstring Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 52
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex6",
+      "name": "Spiked Buckler",
+      "label": "Spiked Buckler",
+      "itemClass": "Buckler",
+      "requirements": {
+        "dex": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace4",
+      "name": "Spiked Club",
+      "label": "Spiked Club",
+      "itemClass": "One Hand Mace",
+      "requirements": {
+        "str": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear7",
+      "name": "Barbed Spear",
+      "label": "Barbed Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 20,
+        "dex": 47
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing5",
+      "name": "Topaz Ring",
+      "label": "Topaz Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow14Endgame",
+      "name": "Trarthan Cannon",
+      "label": "Trarthan Cannon",
+      "itemClass": "Crossbow",
+      "requirements": {
+        "str": 114,
+        "dex": 63
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace10",
+      "name": "Totemic Greatclub",
+      "label": "Totemic Greatclub",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 89
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace13",
+      "name": "Torment Club",
+      "label": "Torment Club",
+      "itemClass": "One Hand Mace",
+      "requirements": {
+        "str": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRingB3",
+      "name": "Mnemonic Ring",
+      "label": "Mnemonic Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsDexInt3",
+      "name": "Hunting Shoes",
+      "label": "Hunting Shoes",
+      "itemClass": "Boots",
+      "requirements": {
+        "dex": 26,
+        "int": 26
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear3",
+      "name": "Hunting Spear",
+      "label": "Hunting Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 9,
+        "dex": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBowUnique1",
+      "name": "Heartwood Shortbow",
+      "label": "Heartwood Shortbow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 134
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDex3",
+      "name": "Visored Helm",
+      "label": "Visored Helm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 15,
+        "dex": 15
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff5",
+      "name": "Pyrophyte Staff",
+      "label": "Pyrophyte Staff",
+      "itemClass": "Staff",
+      "requirements": {
+        "int": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesInt6",
+      "name": "Pauascale Gloves",
+      "label": "Pauascale Gloves",
+      "itemClass": "Gloves",
+      "requirements": {
+        "int": 56
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt3",
+      "name": "Beaded Circlet",
+      "label": "Beaded Circlet",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex2",
+      "name": "Felt Cap",
+      "label": "Felt Cap",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDexInt2",
+      "name": "Face Mask",
+      "label": "Face Mask",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 10,
+        "int": 10
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace3Endgame",
+      "name": "Flanged Mace",
+      "label": "Flanged Mace",
+      "itemClass": "One Hand Mace",
+      "requirements": {
+        "str": 134
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr7",
+      "name": "Full Plate",
+      "label": "Full Plate",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 54
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDexInt3",
+      "name": "Hooded Mask",
+      "label": "Hooded Mask",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 15,
+        "int": 15
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus7",
+      "name": "Voodoo Focus",
+      "label": "Voodoo Focus",
+      "itemClass": "Focus",
+      "requirements": {
+        "int": 48
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing9",
+      "name": "Prismatic Ring",
+      "label": "Prismatic Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrDex4",
+      "name": "Plate Gauntlets",
+      "label": "Plate Gauntlets",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 32,
+        "dex": 32
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex3",
+      "name": "Plated Buckler",
+      "label": "Plated Buckler",
+      "itemClass": "Buckler",
+      "requirements": {
+        "dex": 18
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt5",
+      "name": "Plate Belt",
+      "label": "Plate Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt9",
+      "name": "Heavy Belt",
+      "label": "Heavy Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow13",
+      "name": "Heavy Bow",
+      "label": "Heavy Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear13",
+      "name": "Helix Spear",
+      "label": "Helix Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 36,
+        "dex": 89
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex9",
+      "name": "Velvet Cap",
+      "label": "Velvet Cap",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 74
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsDexInt5",
+      "name": "Velour Shoes",
+      "label": "Velour Shoes",
+      "itemClass": "Boots",
+      "requirements": {
+        "dex": 38,
+        "int": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDexInt4",
+      "name": "Veiled Mask",
+      "label": "Veiled Mask",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 23,
+        "int": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr5",
+      "name": "Maraketh Cuirass",
+      "label": "Maraketh Cuirass",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 34
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt3",
+      "name": "Marabout Garb",
+      "label": "Marabout Garb",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 17,
+        "int": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStrDex1",
+      "name": "Mail Sabatons",
+      "label": "Mail Sabatons",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 7,
+        "dex": 7
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt7",
+      "name": "Mail Belt",
+      "label": "Mail Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace9",
+      "name": "Morning Star",
+      "label": "Morning Star",
+      "itemClass": "One Hand Mace",
+      "requirements": {
+        "str": 80
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptre1",
+      "name": "Rattling Sceptre",
+      "label": "Rattling Sceptre",
+      "itemClass": "Sceptre",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow4",
+      "name": "Recurve Bow",
+      "label": "Recurve Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsDex5",
+      "name": "Lizardscale Boots",
+      "label": "Lizardscale Boots",
+      "itemClass": "Boots",
+      "requirements": {
+        "dex": 45
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex5",
+      "name": "Ridged Buckler",
+      "label": "Ridged Buckler",
+      "itemClass": "Buckler",
+      "requirements": {
+        "dex": 33
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt2",
+      "name": "Linen Belt",
+      "label": "Linen Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDexInt2",
+      "name": "Linen Wraps",
+      "label": "Linen Wraps",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 13,
+        "int": 13
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStr2",
+      "name": "Riveted Mitts",
+      "label": "Riveted Mitts",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 16
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrDex1",
+      "name": "Ringmail Gauntlets",
+      "label": "Ringmail Gauntlets",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 6,
+        "dex": 6
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing3",
+      "name": "Ruby Ring",
+      "label": "Ruby Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWandUnique2",
+      "name": "Runic Fork",
+      "label": "Runic Fork",
+      "itemClass": "Wand",
+      "requirements": {
+        "int": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex3",
+      "name": "Lace Hood",
+      "label": "Lace Hood",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsDex2",
+      "name": "Laced Boots",
+      "label": "Laced Boots",
+      "itemClass": "Boots",
+      "requirements": {
+        "dex": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex5",
+      "name": "Rhoahide Coat",
+      "label": "Rhoahide Coat",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 37
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff2",
+      "name": "Long Quarterstaff",
+      "label": "Long Quarterstaff",
+      "itemClass": "Warstaff",
+      "requirements": {
+        "dex": 9
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt2",
+      "name": "Waxed Jacket",
+      "label": "Waxed Jacket",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 13,
+        "int": 13
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff13",
+      "name": "Wyrm Quarterstaff",
+      "label": "Wyrm Quarterstaff",
+      "itemClass": "Warstaff",
+      "requirements": {
+        "dex": 89,
+        "int": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt7",
+      "name": "Vermeil Circlet",
+      "label": "Vermeil Circlet",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 64
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr8",
+      "name": "Vaal Cuirass",
+      "label": "Vaal Cuirass",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 60
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff5",
+      "name": "Crescent Quarterstaff",
+      "label": "Crescent Quarterstaff",
+      "itemClass": "Warstaff",
+      "requirements": {
+        "dex": 30,
+        "int": 14
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrDex4",
+      "name": "Crescent Targe",
+      "label": "Crescent Targe",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 22,
+        "dex": 22
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDex6",
+      "name": "Fine Bracers",
+      "label": "Fine Bracers",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 56
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptre2",
+      "name": "Stoic Sceptre",
+      "label": "Stoic Sceptre",
+      "itemClass": "Sceptre",
+      "requirements": {
+        "int": 12
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmuletB1c",
+      "name": "Absent Amulet",
+      "label": "Absent Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear6Endgame",
+      "name": "Pronged Spear",
+      "label": "Pronged Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 46,
+        "dex": 115
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrDex3",
+      "name": "Doubled Gauntlets",
+      "label": "Doubled Gauntlets",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 24,
+        "dex": 24
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace1",
+      "name": "Felled Greatclub",
+      "label": "Felled Greatclub",
+      "itemClass": "Two Hand Mace",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex7",
+      "name": "Scout's Vest",
+      "label": "Scout's Vest",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 54
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex8",
+      "name": "Ancestral Mail",
+      "label": "Ancestral Mail",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 44,
+        "dex": 44
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStr2",
+      "name": "Soldier Greathelm",
+      "label": "Soldier Greathelm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 19
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDex4",
+      "name": "Sectioned Bracers",
+      "label": "Sectioned Bracers",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesInt7",
+      "name": "Embroidered Gloves",
+      "label": "Embroidered Gloves",
+      "itemClass": "Gloves",
+      "requirements": {
+        "int": 64
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrInt2",
+      "name": "Sigil Crest Shield",
+      "label": "Sigil Crest Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 8,
+        "int": 8
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr1",
+      "name": "Splintered Tower Shield",
+      "label": "Splintered Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexIntUnique1",
+      "name": "Primal Markings",
+      "label": "Primal Markings",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 67,
+        "int": 67
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear6",
+      "name": "Forked Spear",
+      "label": "Forked Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 17,
+        "dex": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaffUnique3",
+      "name": "Reflecting Staff",
+      "label": "Reflecting Staff",
+      "itemClass": "Staff",
+      "requirements": {
+        "int": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDexUnique1",
+      "name": "Ancient Visor",
+      "label": "Ancient Visor",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 59,
+        "dex": 59
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrIntUnique2",
+      "name": "Ancient Mail",
+      "label": "Ancient Mail",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 67,
+        "int": 67
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStrIntUnique1",
+      "name": "Ancient Leggings",
+      "label": "Ancient Leggings",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 56,
+        "int": 56
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand3",
+      "name": "Attuned Wand",
+      "label": "Attuned Wand",
+      "itemClass": "Wand",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand4",
+      "name": "Siphoning Wand",
+      "label": "Siphoning Wand",
+      "itemClass": "Wand",
+      "requirements": {
+        "int": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt3",
+      "name": "Hexer's Robe",
+      "label": "Hexer's Robe",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 21
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace7",
+      "name": "Brigand Mace",
+      "label": "Brigand Mace",
+      "itemClass": "One Hand Mace",
+      "requirements": {
+        "str": 60
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr6",
+      "name": "Rampart Tower Shield",
+      "label": "Rampart Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 42
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrDex1",
+      "name": "Hardwood Targe",
+      "label": "Hardwood Targe",
+      "itemClass": "Shield",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman1",
+      "name": "Changeling Talisman",
+      "label": "Changeling Talisman",
+      "itemClass": "Talisman",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStrDex3",
+      "name": "Stacked Sabatons",
+      "label": "Stacked Sabatons",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 26,
+        "dex": 26
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrDexInt1",
+      "name": "Grand Manchettes",
+      "label": "Grand Manchettes",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 32,
+        "dex": 32,
+        "int": 32
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStrDexInt1",
+      "name": "Grand Cuisses",
+      "label": "Grand Cuisses",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 34,
+        "dex": 34,
+        "int": 34
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDexInt1",
+      "name": "Grand Visage",
+      "label": "Grand Visage",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 36,
+        "dex": 36,
+        "int": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver1",
+      "name": "Broadhead Quiver",
+      "label": "Broadhead Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet9",
+      "name": "Solar Amulet",
+      "label": "Solar Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt7",
+      "name": "Votive Raiment",
+      "label": "Votive Raiment",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 54
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesInt4",
+      "name": "Jewelled Gloves",
+      "label": "Jewelled Gloves",
+      "itemClass": "Gloves",
+      "requirements": {
+        "int": 34
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt10",
+      "name": "Utility Belt",
+      "label": "Utility Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDexInt6",
+      "name": "Utility Wraps",
+      "label": "Utility Wraps",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 44,
+        "int": 44
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrInt1",
+      "name": "Blazon Crest Shield",
+      "label": "Blazon Crest Shield",
+      "itemClass": "Shield",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex10",
+      "name": "Smuggler Coat",
+      "label": "Smuggler Coat",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 82
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace6",
+      "name": "Temple Maul",
+      "label": "Temple Maul",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 52
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow5",
+      "name": "Dyad Crossbow",
+      "label": "Dyad Crossbow",
+      "itemClass": "Crossbow",
+      "requirements": {
+        "str": 22,
+        "dex": 22
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrDexUnique1",
+      "name": "Venerable Defender",
+      "label": "Venerable Defender",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 64,
+        "dex": 64
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt1",
+      "name": "Twig Circlet",
+      "label": "Twig Circlet",
+      "itemClass": "Helmet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus1",
+      "name": "Twig Focus",
+      "label": "Twig Focus",
+      "itemClass": "Focus",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace9",
+      "name": "Pointed Maul",
+      "label": "Pointed Maul",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 80
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStr4",
+      "name": "Spired Greathelm",
+      "label": "Spired Greathelm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 40
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrDex2",
+      "name": "Layered Gauntlets",
+      "label": "Layered Gauntlets",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 13,
+        "dex": 13
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt1",
+      "name": "Pilgrim Vestments",
+      "label": "Pilgrim Vestments",
+      "itemClass": "Body Armour",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace13",
+      "name": "Giant Maul",
+      "label": "Giant Maul",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff1",
+      "name": "Wrapped Quarterstaff",
+      "label": "Wrapped Quarterstaff",
+      "itemClass": "Warstaff",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStr3",
+      "name": "Wrapped Greathelm",
+      "label": "Wrapped Greathelm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsInt2",
+      "name": "Wrapped Sandals",
+      "label": "Wrapped Sandals",
+      "itemClass": "Boots",
+      "requirements": {
+        "int": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt3",
+      "name": "Wide Belt",
+      "label": "Wide Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrInt2",
+      "name": "Aged Cuffs",
+      "label": "Aged Cuffs",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 13,
+        "int": 13
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow2",
+      "name": "Tense Crossbow",
+      "label": "Tense Crossbow",
+      "itemClass": "Crossbow",
+      "requirements": {
+        "str": 8,
+        "dex": 8
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr2",
+      "name": "Painted Tower Shield",
+      "label": "Painted Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 11
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus4",
+      "name": "Engraved Focus",
+      "label": "Engraved Focus",
+      "itemClass": "Focus",
+      "requirements": {
+        "int": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDex8",
+      "name": "Engraved Bracers",
+      "label": "Engraved Bracers",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 80
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr14",
+      "name": "Conqueror Plate",
+      "label": "Conqueror Plate",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 121
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStr5",
+      "name": "Moulded Mitts",
+      "label": "Moulded Mitts",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 42
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStr6",
+      "name": "Warrior Greathelm",
+      "label": "Warrior Greathelm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 52
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesInt5",
+      "name": "Intricate Gloves",
+      "label": "Intricate Gloves",
+      "itemClass": "Gloves",
+      "requirements": {
+        "int": 42
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRingBase",
+      "name": "Ring",
+      "label": "Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWandUnique1",
+      "name": "Twisted Wand",
+      "label": "Twisted Wand",
+      "itemClass": "Wand",
+      "requirements": {
+        "int": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex5",
+      "name": "Explorer Armour",
+      "label": "Explorer Armour",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 31,
+        "dex": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex1",
+      "name": "Shabby Hood",
+      "label": "Shabby Hood",
+      "itemClass": "Helmet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt1",
+      "name": "Tattered Robe",
+      "label": "Tattered Robe",
+      "itemClass": "Body Armour",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex3",
+      "name": "Vagabond Armour",
+      "label": "Vagabond Armour",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 17,
+        "dex": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex12",
+      "name": "Array Buckler",
+      "label": "Array Buckler",
+      "itemClass": "Buckler",
+      "requirements": {
+        "dex": 78
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt4",
+      "name": "Wayfarer Jacket",
+      "label": "Wayfarer Jacket",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 26,
+        "int": 26
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet8",
+      "name": "Stellar Amulet",
+      "label": "Stellar Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrIntUnique1",
+      "name": "Tenebrous Crown",
+      "label": "Tenebrous Crown",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 59,
+        "int": 59
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt13",
+      "name": "Assassin Garb",
+      "label": "Assassin Garb",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 67,
+        "int": 67
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet6",
+      "name": "Lunar Amulet",
+      "label": "Lunar Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex2",
+      "name": "Wooden Buckler",
+      "label": "Wooden Buckler",
+      "itemClass": "Buckler",
+      "requirements": {
+        "dex": 10
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace8",
+      "name": "Crumbling Maul",
+      "label": "Crumbling Maul",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 68
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt2",
+      "name": "Wicker Tiara",
+      "label": "Wicker Tiara",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus3",
+      "name": "Antler Focus",
+      "label": "Antler Focus",
+      "itemClass": "Focus",
+      "requirements": {
+        "int": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand1",
+      "name": "Withered Wand",
+      "label": "Withered Wand",
+      "itemClass": "Wand",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsInt3",
+      "name": "Lattice Sandals",
+      "label": "Lattice Sandals",
+      "itemClass": "Boots",
+      "requirements": {
+        "int": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace1",
+      "name": "Wooden Club",
+      "label": "Wooden Club",
+      "itemClass": "One Hand Mace",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff2",
+      "name": "Gelid Staff",
+      "label": "Gelid Staff",
+      "itemClass": "Staff",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaffUnique4",
+      "name": "Perching Staff",
+      "label": "Perching Staff",
+      "itemClass": "Staff",
+      "requirements": {
+        "int": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrInt4",
+      "name": "Martyr Crown",
+      "label": "Martyr Crown",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 23,
+        "int": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow9Endgame",
+      "name": "Obliterator Bow",
+      "label": "Obliterator Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 163
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver6",
+      "name": "Toxic Quiver",
+      "label": "Toxic Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex6",
+      "name": "Viper Cap",
+      "label": "Viper Cap",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 54
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr2",
+      "name": "Fur Plate",
+      "label": "Fur Plate",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 10
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr6Endgame",
+      "name": "Fortress Tower Shield",
+      "label": "Fortress Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 99
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaffUnique1",
+      "name": "Permafrost Staff",
+      "label": "Permafrost Staff",
+      "itemClass": "Staff",
+      "requirements": {
+        "int": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet1",
+      "name": "Crimson Amulet",
+      "label": "Crimson Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet2",
+      "name": "Azure Amulet",
+      "label": "Azure Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt8",
+      "name": "Tideseer Mantle",
+      "label": "Tideseer Mantle",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 45,
+        "int": 45
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver2",
+      "name": "Fire Quiver",
+      "label": "Fire Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff1",
+      "name": "Ashen Staff",
+      "label": "Ashen Staff",
+      "itemClass": "Staff",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman3Endgame",
+      "name": "Ashbark Talisman",
+      "label": "Ashbark Talisman",
+      "itemClass": "Talisman",
+      "requirements": {
+        "str": 94,
+        "int": 67
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStr3",
+      "name": "Tempered Mitts",
+      "label": "Tempered Mitts",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 22
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow7Endgame",
+      "name": "Fanatic Bow",
+      "label": "Fanatic Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 163
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand5",
+      "name": "Volatile Wand",
+      "label": "Volatile Wand",
+      "itemClass": "Wand",
+      "requirements": {
+        "int": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow8",
+      "name": "Zealot Bow",
+      "label": "Zealot Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 70
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex5",
+      "name": "Hunter Hood",
+      "label": "Hunter Hood",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 48
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStr8",
+      "name": "Fierce Greathelm",
+      "label": "Fierce Greathelm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 73
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman8",
+      "name": "Vicious Talisman",
+      "label": "Vicious Talisman",
+      "itemClass": "Talisman",
+      "requirements": {
+        "str": 47,
+        "int": 34
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr12",
+      "name": "Champion Cuirass",
+      "label": "Champion Cuirass",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 92
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet3",
+      "name": "Amber Amulet",
+      "label": "Amber Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet5",
+      "name": "Lapis Amulet",
+      "label": "Lapis Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt1",
+      "name": "Rawhide Belt",
+      "label": "Rawhide Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDexInt2",
+      "name": "Sacrificial Regalia",
+      "label": "Sacrificial Regalia",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 72,
+        "dex": 72,
+        "int": 72
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt6",
+      "name": "Sacrificial Mantle",
+      "label": "Sacrificial Mantle",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 33,
+        "int": 33
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt11",
+      "name": "Revered Vestments",
+      "label": "Revered Vestments",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 67,
+        "int": 67
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStrInt2",
+      "name": "Secured Leggings",
+      "label": "Secured Leggings",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 14,
+        "int": 14
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMaceUnique1",
+      "name": "Aberrant Sledge",
+      "label": "Aberrant Sledge",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 163
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex8",
+      "name": "Leatherbound Hood",
+      "label": "Leatherbound Hood",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 71
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex2",
+      "name": "Rogue Armour",
+      "label": "Rogue Armour",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 13,
+        "dex": 13
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow3",
+      "name": "Warden Bow",
+      "label": "Warden Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDex5",
+      "name": "Shielded Helm",
+      "label": "Shielded Helm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 27,
+        "dex": 27
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmuletUnique1",
+      "name": "Veridical Chain",
+      "label": "Veridical Chain",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing8",
+      "name": "Pearl Ring",
+      "label": "Pearl Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman4",
+      "name": "Familial Talisman",
+      "label": "Familial Talisman",
+      "itemClass": "Talisman",
+      "requirements": {
+        "str": 21,
+        "int": 16
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStr5",
+      "name": "Stone Greaves",
+      "label": "Stone Greaves",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 45
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing11",
+      "name": "Unset Ring",
+      "label": "Unset Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrDex5",
+      "name": "Burnished Gauntlets",
+      "label": "Burnished Gauntlets",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 36,
+        "dex": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow9",
+      "name": "Artillery Bow",
+      "label": "Artillery Bow",
+      "itemClass": "Bow",
+      "requirements": {
+        "dex": 80
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesInt1",
+      "name": "Torn Gloves",
+      "label": "Torn Gloves",
+      "itemClass": "Gloves",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt13",
+      "name": "Havoc Raiment",
+      "label": "Havoc Raiment",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 121
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear1",
+      "name": "Hardwood Spear",
+      "label": "Hardwood Spear",
+      "itemClass": "Spear",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptreUnique1",
+      "name": "Shrine Sceptre",
+      "label": "Shrine Sceptre",
+      "itemClass": "Sceptre",
+      "requirements": {
+        "str": 17,
+        "int": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver3",
+      "name": "Sacral Quiver",
+      "label": "Sacral Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt8",
+      "name": "Altar Robe",
+      "label": "Altar Robe",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 65
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDexInt1",
+      "name": "Hewn Mask",
+      "label": "Hewn Mask",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 7,
+        "int": 7
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStr1",
+      "name": "Rough Greaves",
+      "label": "Rough Greaves",
+      "itemClass": "Boots",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow1",
+      "name": "Crude Bow",
+      "label": "Crude Bow",
+      "itemClass": "Bow",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex13",
+      "name": "Exquisite Vest",
+      "label": "Exquisite Vest",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 121
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt11",
+      "name": "Fine Belt",
+      "label": "Fine Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrInt5",
+      "name": "Sectarian Crest Shield",
+      "label": "Sectarian Crest Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 27,
+        "int": 27
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStr5",
+      "name": "Elite Greathelm",
+      "label": "Elite Greathelm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 48
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrInt3",
+      "name": "Emblem Crest Shield",
+      "label": "Emblem Crest Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 15,
+        "int": 15
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr7",
+      "name": "Heraldric Tower Shield",
+      "label": "Heraldric Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 48
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace3",
+      "name": "Slim Mace",
+      "label": "Slim Mace",
+      "itemClass": "One Hand Mace",
+      "requirements": {
+        "str": 21
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus6",
+      "name": "Crystal Focus",
+      "label": "Crystal Focus",
+      "itemClass": "Focus",
+      "requirements": {
+        "int": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt5",
+      "name": "Silk Robe",
+      "label": "Silk Robe",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 37
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsDex2Endgame",
+      "name": "Cinched Boots",
+      "label": "Cinched Boots",
+      "itemClass": "Boots",
+      "requirements": {
+        "dex": 86
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus2",
+      "name": "Woven Focus",
+      "label": "Woven Focus",
+      "itemClass": "Focus",
+      "requirements": {
+        "int": 11
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStr4",
+      "name": "Trimmed Greaves",
+      "label": "Trimmed Greaves",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrInt1",
+      "name": "Rope Cuffs",
+      "label": "Rope Cuffs",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 6,
+        "int": 6
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesInt3",
+      "name": "Stitched Gloves",
+      "label": "Stitched Gloves",
+      "itemClass": "Gloves",
+      "requirements": {
+        "int": 22
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsInt5",
+      "name": "Feathered Sandals",
+      "label": "Feathered Sandals",
+      "itemClass": "Boots",
+      "requirements": {
+        "int": 45
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt5",
+      "name": "Feathered Tiara",
+      "label": "Feathered Tiara",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 48
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt2",
+      "name": "Feathered Robe",
+      "label": "Feathered Robe",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 11
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet4",
+      "name": "Jade Amulet",
+      "label": "Jade Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt8",
+      "name": "Jade Tiara",
+      "label": "Jade Tiara",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 71
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear4",
+      "name": "Winged Spear",
+      "label": "Winged Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "str": 12,
+        "dex": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus8Endgame",
+      "name": "Sacred Focus",
+      "label": "Sacred Focus",
+      "itemClass": "Focus",
+      "requirements": {
+        "int": 107
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt7",
+      "name": "Cleric Vestments",
+      "label": "Cleric Vestments",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 41,
+        "int": 41
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand7",
+      "name": "Acrid Wand",
+      "label": "Acrid Wand",
+      "itemClass": "Wand",
+      "requirements": {
+        "int": 60
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver8",
+      "name": "Primed Quiver",
+      "label": "Primed Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex11",
+      "name": "Heroic Armour",
+      "label": "Heroic Armour",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 67,
+        "dex": 67
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDexInt1",
+      "name": "Grand Regalia",
+      "label": "Grand Regalia",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 41,
+        "dex": 41,
+        "int": 41
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt6",
+      "name": "Ornate Belt",
+      "label": "Ornate Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDexInt1",
+      "name": "Gauze Wraps",
+      "label": "Gauze Wraps",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 6,
+        "int": 6
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver11",
+      "name": "Visceral Quiver",
+      "label": "Visceral Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet7",
+      "name": "Bloodstone Amulet",
+      "label": "Bloodstone Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt12",
+      "name": "Plated Raiment",
+      "label": "Plated Raiment",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 92
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex15",
+      "name": "Armoured Vest",
+      "label": "Armoured Vest",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 121
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex11",
+      "name": "Armoured Cap",
+      "label": "Armoured Cap",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 91
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrDex6",
+      "name": "Ornate Gauntlets",
+      "label": "Ornate Gauntlets",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 44,
+        "dex": 44
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex3Endgame",
+      "name": "Ornate Buckler",
+      "label": "Ornate Buckler",
+      "itemClass": "Buckler",
+      "requirements": {
+        "dex": 91
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDex7",
+      "name": "Decorated Helm",
+      "label": "Decorated Helm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 41,
+        "dex": 41
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStrDex2",
+      "name": "Braced Sabatons",
+      "label": "Braced Sabatons",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 14,
+        "dex": 14
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr3",
+      "name": "Braced Tower Shield",
+      "label": "Braced Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 19
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStr4",
+      "name": "Bolstered Mitts",
+      "label": "Bolstered Mitts",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 35
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStrDex4",
+      "name": "Covered Sabatons",
+      "label": "Covered Sabatons",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 34,
+        "dex": 34
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex4",
+      "name": "Shrouded Vest",
+      "label": "Shrouded Vest",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 28
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt14",
+      "name": "Enlightened Robe",
+      "label": "Enlightened Robe",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 121
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrInt2",
+      "name": "Horned Crown",
+      "label": "Horned Crown",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 10,
+        "int": 10
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr9",
+      "name": "Crucible Tower Shield",
+      "label": "Crucible Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 64
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Focii/FourFocus5",
+      "name": "Tonal Focus",
+      "label": "Tonal Focus",
+      "itemClass": "Focus",
+      "requirements": {
+        "int": 33
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaffUnique1",
+      "name": "Warding Quarterstaff",
+      "label": "Warding Quarterstaff",
+      "itemClass": "Warstaff",
+      "requirements": {
+        "dex": 127,
+        "int": 50
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff14",
+      "name": "Ravenous Staff",
+      "label": "Ravenous Staff",
+      "itemClass": "Staff",
+      "requirements": {
+        "int": 114
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver9",
+      "name": "Penetrating Quiver",
+      "label": "Penetrating Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt6",
+      "name": "Scalper's Jacket",
+      "label": "Scalper's Jacket",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 35,
+        "int": 35
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDexInt5",
+      "name": "Tribal Mask",
+      "label": "Tribal Mask",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 27,
+        "int": 27
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrInt5",
+      "name": "Heavy Crown",
+      "label": "Heavy Crown",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 27,
+        "int": 27
+      }
+    },
+    {
+      "id": "Metadata/Items/Amulets/FourAmulet10",
+      "name": "Gold Amulet",
+      "label": "Gold Amulet",
+      "itemClass": "Amulet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt6",
+      "name": "Gold Circlet",
+      "label": "Gold Circlet",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 58
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing10",
+      "name": "Gold Ring",
+      "label": "Gold Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt9",
+      "name": "Gilded Vestments",
+      "label": "Gilded Vestments",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 46,
+        "int": 46
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesStrInt3",
+      "name": "Goldcast Cuffs",
+      "label": "Goldcast Cuffs",
+      "itemClass": "Gloves",
+      "requirements": {
+        "str": 24,
+        "int": 24
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDex5",
+      "name": "Spined Bracers",
+      "label": "Spined Bracers",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 42
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman10",
+      "name": "Lumbering Talisman",
+      "label": "Lumbering Talisman",
+      "itemClass": "Talisman",
+      "requirements": {
+        "str": 60,
+        "int": 43
+      }
+    },
+    {
+      "id": "Metadata/Items/Quivers/FourQuiver5",
+      "name": "Blunt Quiver",
+      "label": "Blunt Quiver",
+      "itemClass": "Quiver",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStrInt4",
+      "name": "Jingling Crest Shield",
+      "label": "Jingling Crest Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 23,
+        "int": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStr2",
+      "name": "Iron Greaves",
+      "label": "Iron Greaves",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex4",
+      "name": "Iron Buckler",
+      "label": "Iron Buckler",
+      "itemClass": "Buckler",
+      "requirements": {
+        "dex": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrInt1",
+      "name": "Iron Crown",
+      "label": "Iron Crown",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 7,
+        "int": 7
+      }
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing1",
+      "name": "Iron Ring",
+      "label": "Iron Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr3",
+      "name": "Iron Cuirass",
+      "label": "Iron Cuirass",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 21
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear2",
+      "name": "Ironhead Spear",
+      "label": "Ironhead Spear",
+      "itemClass": "Spear",
+      "requirements": {
+        "dex": 10
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace7",
+      "name": "Leaden Greathammer",
+      "label": "Leaden Greathammer",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 60
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace4",
+      "name": "Studded Greatclub",
+      "label": "Studded Greatclub",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex6",
+      "name": "Studded Vest",
+      "label": "Studded Vest",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 43
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr6",
+      "name": "Steel Plate",
+      "label": "Steel Plate",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 45
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStr1",
+      "name": "Rusted Greathelm",
+      "label": "Rusted Greathelm",
+      "itemClass": "Helmet",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStr1",
+      "name": "Rusted Cuirass",
+      "label": "Rusted Cuirass",
+      "itemClass": "Body Armour",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace3",
+      "name": "Forge Maul",
+      "label": "Forge Maul",
+      "itemClass": "Two Hand Mace",
+      "requirements": {
+        "str": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt4",
+      "name": "Chain Tiara",
+      "label": "Chain Tiara",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 38
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt3",
+      "name": "Mail Vestments",
+      "label": "Mail Vestments",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 17,
+        "int": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff6",
+      "name": "Chiming Staff",
+      "label": "Chiming Staff",
+      "itemClass": "Staff",
+      "requirements": {
+        "int": 46
+      }
+    },
+    {
+      "id": "Metadata/Items/Belts/FourBelt4",
+      "name": "Long Belt",
+      "label": "Long Belt",
+      "itemClass": "Belt",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex3",
+      "name": "Pathfinder Coat",
+      "label": "Pathfinder Coat",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 21
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow1",
+      "name": "Makeshift Crossbow",
+      "label": "Makeshift Crossbow",
+      "itemClass": "Crossbow",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr4",
+      "name": "Barricade Tower Shield",
+      "label": "Barricade Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 25
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDex2",
+      "name": "Guarded Helm",
+      "label": "Guarded Helm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 11,
+        "dex": 11
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesInt2",
+      "name": "Sombre Gloves",
+      "label": "Sombre Gloves",
+      "itemClass": "Gloves",
+      "requirements": {
+        "int": 17
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow8Endgame",
+      "name": "Desolate Crossbow",
+      "label": "Desolate Crossbow",
+      "itemClass": "Crossbow",
+      "requirements": {
+        "str": 89,
+        "dex": 89
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt5",
+      "name": "Anchorite Garb",
+      "label": "Anchorite Garb",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "dex": 31,
+        "int": 31
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDex10",
+      "name": "Covert Hood",
+      "label": "Covert Hood",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 79
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDexInt5",
+      "name": "Furtive Wraps",
+      "label": "Furtive Wraps",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 36,
+        "int": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt1",
+      "name": "Hermit Garb",
+      "label": "Hermit Garb",
+      "itemClass": "Body Armour",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff3",
+      "name": "Voltaic Staff",
+      "label": "Voltaic Staff",
+      "itemClass": "Staff",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Rings/FourRing2",
+      "name": "Lazuli Ring",
+      "label": "Lazuli Ring",
+      "itemClass": "Ring",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsStr3",
+      "name": "Bronze Greaves",
+      "label": "Bronze Greaves",
+      "itemClass": "Boots",
+      "requirements": {
+        "str": 23
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldDex1",
+      "name": "Leather Buckler",
+      "label": "Leather Buckler",
+      "itemClass": "Buckler",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyDex1",
+      "name": "Leather Vest",
+      "label": "Leather Vest",
+      "itemClass": "Body Armour",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetDexInt6",
+      "name": "Solid Mask",
+      "label": "Solid Mask",
+      "itemClass": "Helmet",
+      "requirements": {
+        "dex": 36,
+        "int": 36
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Gloves/FourGlovesDex2",
+      "name": "Firm Bracers",
+      "label": "Firm Bracers",
+      "itemClass": "Gloves",
+      "requirements": {
+        "dex": 16
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetStrDex4",
+      "name": "Cowled Helm",
+      "label": "Cowled Helm",
+      "itemClass": "Helmet",
+      "requirements": {
+        "str": 22,
+        "dex": 22
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex7",
+      "name": "Knight Armour",
+      "label": "Knight Armour",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 41,
+        "dex": 41
+      }
+    },
+    {
+      "id": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand2",
+      "name": "Bone Wand",
+      "label": "Bone Wand",
+      "itemClass": "Wand",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyInt4",
+      "name": "Bone Raiment",
+      "label": "Bone Raiment",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "int": 28
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Helmets/FourHelmetInt11",
+      "name": "Magus Tiara",
+      "label": "Magus Tiara",
+      "itemClass": "Helmet",
+      "requirements": {
+        "int": 91
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt12",
+      "name": "Corvus Mantle",
+      "label": "Corvus Mantle",
+      "itemClass": "Body Armour",
+      "requirements": {
+        "str": 67,
+        "int": 67
+      }
+    },
+    {
+      "id": "Metadata/Items/Armours/Boots/FourBootsInt1",
+      "name": "Straw Sandals",
+      "label": "Straw Sandals",
+      "itemClass": "Boots",
+      "requirements": {}
+    },
+    {
+      "id": "Metadata/Items/Armours/Shields/FourShieldStr13",
+      "name": "Blacksteel Tower Shield",
+      "label": "Blacksteel Tower Shield",
+      "itemClass": "Shield",
+      "requirements": {
+        "str": 91
+      }
+    }
+  ],
+  "modifiers": [
+    {
+      "id": "life",
+      "label": "+# to maximum Life",
+      "template": "+{0} to maximum Life",
+      "default": [
+        100
+      ],
+      "group": "Survival and defence",
+      "unit": ""
+    },
+    {
+      "id": "mana",
+      "label": "+# to maximum Mana",
+      "template": "+{0} to maximum Mana",
+      "default": [
+        100
+      ],
+      "group": "Survival and defence",
+      "unit": ""
+    },
+    {
+      "id": "es",
+      "label": "+# to maximum Energy Shield",
+      "template": "+{0} to maximum Energy Shield",
+      "default": [
+        100
+      ],
+      "group": "Survival and defence",
+      "unit": ""
+    },
+    {
+      "id": "armour",
+      "label": "+# to Armour",
+      "template": "+{0} to Armour",
+      "default": [
+        100
+      ],
+      "group": "Survival and defence",
+      "unit": ""
+    },
+    {
+      "id": "evasion",
+      "label": "+# to Evasion Rating",
+      "template": "+{0} to Evasion Rating",
+      "default": [
+        100
+      ],
+      "group": "Survival and defence",
+      "unit": ""
+    },
+    {
+      "id": "spirit",
+      "label": "+# to Spirit",
+      "template": "+{0} to Spirit",
+      "default": [
+        30
+      ],
+      "group": "Survival and defence",
+      "unit": ""
+    },
+    {
+      "id": "armour_pct",
+      "label": "#% increased Armour",
+      "template": "{0}% increased Armour",
+      "default": [
+        50
+      ],
+      "group": "Survival and defence",
+      "unit": "%"
+    },
+    {
+      "id": "evasion_pct",
+      "label": "#% increased Evasion Rating",
+      "template": "{0}% increased Evasion Rating",
+      "default": [
+        50
+      ],
+      "group": "Survival and defence",
+      "unit": "%"
+    },
+    {
+      "id": "es_pct",
+      "label": "#% increased Energy Shield",
+      "template": "{0}% increased Energy Shield",
+      "default": [
+        50
+      ],
+      "group": "Survival and defence",
+      "unit": "%"
+    },
+    {
+      "id": "fire_res",
+      "label": "+#% to Fire Resistance",
+      "template": "+{0}% to Fire Resistance",
+      "default": [
+        30
+      ],
+      "group": "Resistances",
+      "unit": "%"
+    },
+    {
+      "id": "cold_res",
+      "label": "+#% to Cold Resistance",
+      "template": "+{0}% to Cold Resistance",
+      "default": [
+        30
+      ],
+      "group": "Resistances",
+      "unit": "%"
+    },
+    {
+      "id": "lightning_res",
+      "label": "+#% to Lightning Resistance",
+      "template": "+{0}% to Lightning Resistance",
+      "default": [
+        30
+      ],
+      "group": "Resistances",
+      "unit": "%"
+    },
+    {
+      "id": "chaos_res",
+      "label": "+#% to Chaos Resistance",
+      "template": "+{0}% to Chaos Resistance",
+      "default": [
+        30
+      ],
+      "group": "Resistances",
+      "unit": "%"
+    },
+    {
+      "id": "all_res",
+      "label": "+#% to all Elemental Resistances",
+      "template": "+{0}% to all Elemental Resistances",
+      "default": [
+        15
+      ],
+      "group": "Resistances",
+      "unit": "%"
+    },
+    {
+      "id": "str",
+      "label": "+# to Strength",
+      "template": "+{0} to Strength",
+      "default": [
+        30
+      ],
+      "group": "Attributes",
+      "unit": ""
+    },
+    {
+      "id": "dex",
+      "label": "+# to Dexterity",
+      "template": "+{0} to Dexterity",
+      "default": [
+        30
+      ],
+      "group": "Attributes",
+      "unit": ""
+    },
+    {
+      "id": "int",
+      "label": "+# to Intelligence",
+      "template": "+{0} to Intelligence",
+      "default": [
+        30
+      ],
+      "group": "Attributes",
+      "unit": ""
+    },
+    {
+      "id": "attributes",
+      "label": "+# to all Attributes",
+      "template": "+{0} to all Attributes",
+      "default": [
+        30
+      ],
+      "group": "Attributes",
+      "unit": ""
+    },
+    {
+      "id": "move_speed",
+      "label": "#% increased Movement Speed",
+      "template": "{0}% increased Movement Speed",
+      "default": [
+        20
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "attack_speed",
+      "label": "#% increased Attack Speed",
+      "template": "{0}% increased Attack Speed",
+      "default": [
+        15
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "cast_speed",
+      "label": "#% increased Cast Speed",
+      "template": "{0}% increased Cast Speed",
+      "default": [
+        15
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "crit_chance",
+      "label": "#% increased Critical Hit Chance",
+      "template": "{0}% increased Critical Hit Chance",
+      "default": [
+        30
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "crit_damage",
+      "label": "+#% to Critical Damage Bonus",
+      "template": "+{0}% to Critical Damage Bonus",
+      "default": [
+        20
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "accuracy",
+      "label": "+# to Accuracy Rating",
+      "template": "+{0} to Accuracy Rating",
+      "default": [
+        100
+      ],
+      "group": "Speed and damage",
+      "unit": ""
+    },
+    {
+      "id": "physical_pct",
+      "label": "#% increased Physical Damage",
+      "template": "{0}% increased Physical Damage",
+      "default": [
+        100
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "spell_pct",
+      "label": "#% increased Spell Damage",
+      "template": "{0}% increased Spell Damage",
+      "default": [
+        50
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "elemental_pct",
+      "label": "#% increased Elemental Damage",
+      "template": "{0}% increased Elemental Damage",
+      "default": [
+        30
+      ],
+      "group": "Speed and damage",
+      "unit": "%"
+    },
+    {
+      "id": "physical_flat",
+      "label": "Adds # to # Physical Damage",
+      "template": "Adds {0} to {1} Physical Damage",
+      "default": [
+        10,
+        20
+      ],
+      "group": "Added damage",
+      "unit": ""
+    },
+    {
+      "id": "fire_flat",
+      "label": "Adds # to # Fire Damage",
+      "template": "Adds {0} to {1} Fire Damage",
+      "default": [
+        10,
+        20
+      ],
+      "group": "Added damage",
+      "unit": ""
+    },
+    {
+      "id": "cold_flat",
+      "label": "Adds # to # Cold Damage",
+      "template": "Adds {0} to {1} Cold Damage",
+      "default": [
+        10,
+        20
+      ],
+      "group": "Added damage",
+      "unit": ""
+    },
+    {
+      "id": "lightning_flat",
+      "label": "Adds # to # Lightning Damage",
+      "template": "Adds {0} to {1} Lightning Damage",
+      "default": [
+        10,
+        20
+      ],
+      "group": "Added damage",
+      "unit": ""
+    },
+    {
+      "id": "chaos_flat",
+      "label": "Adds # to # Chaos Damage",
+      "template": "Adds {0} to {1} Chaos Damage",
+      "default": [
+        10,
+        20
+      ],
+      "group": "Added damage",
+      "unit": ""
+    },
+    {
+      "id": "mana_regen",
+      "label": "#% increased Mana Regeneration Rate",
+      "template": "{0}% increased Mana Regeneration Rate",
+      "default": [
+        30
+      ],
+      "group": "Recovery",
+      "unit": "%"
+    },
+    {
+      "id": "life_regen",
+      "label": "Regenerate # Life per second",
+      "template": "Regenerate {0} Life per second",
+      "default": [
+        10
+      ],
+      "group": "Recovery",
+      "unit": ""
+    },
+    {
+      "id": "skill_levels",
+      "label": "+# to Level of all Skills",
+      "template": "+{0} to Level of all Skills",
+      "default": [
+        1
+      ],
+      "group": "Skills",
+      "unit": ""
+    }
+  ]
+}

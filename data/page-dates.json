@@ -5,8 +5,13 @@
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "b10529bbb66f5a0b",
-  "date": "2026-11-12",
+  "hash": "89a478598dd7159d",
+  "date": "2026-11-13",
+  "hashVersion": 2
+ },
+ "/en/simulator/": {
+  "hash": "b10a246ae3e0c9fe",
+  "date": "2026-11-13",
   "hashVersion": 2
  },
  "/search/": {
@@ -270,8 +275,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "79f0e5fc100a4294",
-  "date": "2026-11-12",
+  "hash": "1d4948e26b5cab45",
+  "date": "2026-11-13",
   "hashVersion": 2
  },
  "/classes/monk/": {

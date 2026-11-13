@@ -1,0 +1,376 @@
+PoE2ビルドシミュレーター｜装備・ジェム・パッシブを編集	PoE2 Build Simulator | Gear, Gems & Passive Tree Planner
+PoE2ビルドシミュレーター	PoE2 Build Simulator
+本文へ移動	Skip to content
+ビルドナビ	Build Navi
+メニュー	Menu
+攻略ガイド	Guides (Japanese)
+初心者おすすめ	Starter builds (Japanese)
+ビルドを探す	Browse builds (Japanese)
+装備診断	Gear check (Japanese)
+初心者ガイド	Beginner guide (Japanese)
+用語辞典	Glossary (Japanese)
+全体検索	Site search (Japanese)
+シミュレーター	Simulator
+保存した構成	Saved builds
+POE2ビルドナビ / ビルドシミュレーター	POE2 Build Navi / Build Simulator
+ページ更新：	Updated: 
+まずは育成方針を選択。装備・ジェム・パッシブを変更して、数値の変化を確かめられます。	Start with a build, then change gear, gems and passives to see how the numbers change.
+初期設定は職業・アセンダンシー・主力スキルです。装備とパッシブを追加して、自分の構成に育ててください。	Each starting setup includes a class, Ascendancy and main skill. Add your own equipment and passive allocations to build it out.
+初めてなら、この3ステップ	Your first comparison in three steps
+ビルドを選ぶ	Choose a build
+下の一覧で普段使うスキル・職業を選びます。	Choose the skill and class you play from the list below.
+今の装備を入れる	Enter your current gear
+装備欄でレア装備の能力値を入力。ジェムのLvも手持ちに合わせます。	Enter your rare item's stats in the equipment editor and set your gem levels.
+交換候補を比較する	Compare an upgrade
+交換予定の装備を入力し、予定額を付けて候補保存。現在の構成との差が見られます。	Enter an upgrade, add its planned cost and save it as a candidate to compare it with your current build.
+入力例を見て始める	Start with a worked example
+見本は内容を確認してから取り込めます。今の構成は切替前に退避します。	Preview an example before importing it. Your current setup is set aside before switching.
+保存した構成から再開	Resume a saved build
+このブラウザの自動保存・名前付き保存を表示します。別の端末へは保存ファイルで移せます。	Find autosaves and named builds stored in this browser. Export a save file to move them to another device.
+保存した構成を確認しています…	Checking saved builds…
+ビルド一覧の読み込みを再試行	Retry loading builds
+全ビルドをまとめてバックアップ・復元	Back up or restore all builds
+このブラウザに保存済みの自動保存・名前付き構成・予定額・予算を書き出します。メモと構成名も含まれます。未保存の入力・共有構成・操作履歴は含みません。	Export this browser's autosaves, named builds, planned costs and budgets, including notes and build names. Unsaved input, shared previews and undo history are not included.
+全ビルドのバックアップを書き出す	Export all builds
+一括バックアップを選ぶ	Choose a backup file
+確認した保存欄を置き換えて復元	Replace the reviewed saves and restore
+キャンセル	Cancel
+装備入りの見本で操作を試す	Try an example with equipment
+装備・主力ジェム・パッシブ入りの操作サンプルです。内容を見てから取り込み、自分の構成へ調整できます。	These examples include equipment, main gems and passives. Review an example before importing it, then adjust it to your build.
+Lv80・装備6点・パッシブ3点	Level 80 · 6 items · 3 passives
+ツイスター・ジェムリング：操作サンプル	Twister Gemling: worked example
+見本の内容を見る →	Preview example →
+アイスショット・デッドアイ：操作サンプル	Ice Shot Deadeye: worked example
+スパーク・ストームウィーバー：操作サンプル	Spark Stormweaver: worked example
+装備交換の実例から試す	Try a gear comparison
+固定した構成でライフ・耐性と予定額を比較し、同じ計算例を開けます。	Compare Life, resistances and planned costs with a fixed setup, then open the same calculation yourself.
+指輪：ライフと耐性の交換	Rings: trading Life for resistances
+計算例と装備の違いを見る →	View the calculation and item differences →
+靴：耐性を増やすときの比較	Boots: comparing resistance upgrades
+試したいビルドを選ぶ	Choose a build to try
+職業で絞る	Filter by class
+すべての職業	All classes
+モンク	Monk
+マーセナリー	Mercenary
+ウォリアー	Warrior
+ソーサレス	Sorceress
+ハントレス	Huntress
+レンジャー	Ranger
+ウィッチ	Witch
+ドルイド	Druid
+モンク / マーシャルアーティスト	Monk / Martial Artist
+ワーリングアサルト・マーシャルアーティスト	Whirling Assault Martial Artist
+ワーリングアサルト	Whirling Assault
+このビルドで作る 	Start this build 
+マーセナリー / ジェムリング・リージョネア	Mercenary / Gemling Legionnaire
+ツイスター・ジェムリング	Twister Gemling
+ツイスター	Twister
+ウォリアー / スミス・オブ・キタヴァ	Warrior / Smith of Kitava
+シールドウォール・スミス	Shield Wall Smith
+シールドウォール	Shield Wall
+ソーサレス / ディサイプル・オブ・ヴァラシュタ	Sorceress / Disciple of Varashta
+砂と炎のヴァラシュタ	Sand and Fire Varashta
+ケラリの幻惑 / ルザンの罠	Kelari's Deception / Ruzhan's Trap
+ハントレス / スピリットウォーカー	Huntress / Spirit Walker
+相棒スピリットウォーカー	Companion Spirit Walker
+テイムビースト	Tame Beast
+レンジャー / デッドアイ	Ranger / Deadeye
+アイスショット・デッドアイ	Ice Shot Deadeye
+アイスショット	Ice Shot
+ウィッチ / インファーナリスト	Witch / Infernalist
+スナイパーミニオン・インファーナリスト	Sniper Minion Infernalist
+スケルタルスナイパー / スペクター	Skeletal Sniper / Spectre
+ドルイド / オラクル	Druid / Oracle
+植物オラクル	Plant Oracle
+エンタングル / スラッシングヴァイン	Entangle / Thrashing Vines
+ウィッチ / リッチ	Witch / Lich
+エッセンスドレイン・コンテージョン リッチ	Essence Drain / Contagion Lich
+エッセンスドレイン + コンテージョン	Essence Drain + Contagion
+グレネード・ジェムリング	Grenade Gemling
+エクスプローシブグレネード	Explosive Grenade
+ツイスター・スピリットウォーカー	Twister Spirit Walker
+ソーサレス / ストームウィーバー	Sorceress / Stormweaver
+スパーク・ストームウィーバー	Spark Stormweaver
+スパーク＋コメット	Spark + Comet
+変更してから、買う・振るを決める	Plan changes before spending currency or points
+装備の比較、サポートジェムの組み替え、パッシブの経路と必要ポイントを確認できます。保存はこのブラウザ内。このサイトの保存ファイルで別の端末にも持ち出せます。	Compare gear, change support gems and review passive paths and their point costs. Builds are saved in this browser and can be exported to another device using this site's save files.
+対応データ：0.5.5.5。装備・スキル・パッシブに基づく参考計算です。未対応の効果・装備の読込エラーは計算結果の下に表示します。実際の戦闘中の数値とは異なる場合があります。	Data version: 0.5.5.5. These are estimates based on equipment, skills and passives. Unsupported effects and item import errors appear below the results. Values may differ from actual combat.
+← ビルドを選び直す	← Choose another build
+共有URLを作る	Create share link
+保存ファイル	Export save
+保存を読み込む	Import save
+変更を戻す	Undo
+やり直す	Redo
+このビルドを開いている間、直近20操作を戻せます。名前付き保存は変更しません。	Undo the last 20 edits while this build is open. Named saves are not changed.
+最初の比較までの3ステップ	Three steps to your first comparison
+今の装備・ジェムを入力	Enter your current gear and gems
+指輪1の入力欄を開く	Edit Ring 1
+ジェムのLvを入力する	Set gem levels
+交換候補を保存して比較	Save and compare an upgrade
+先に今の装備を「この装備を反映」で設定。その後、交換案を入力し「比較候補に追加して比較」を押します。	First set your current item with “Apply item”. Then enter an upgrade and choose “Save candidate and compare”.
+保存した候補の比較欄へ	Go to saved candidate comparisons
+構成を名前付きで保存・比較する	Save and compare named builds
+今の自動保存に加えて、このビルドを12構成まで保存できます。名前付きの構成は「更新」を押すまで変わりません。	Keep up to 12 named setups for this build in addition to its autosave. Named setups stay unchanged until you update them.
+構成名	Build name
+別の構成として保存	Save as a new setup
+この構成を読み込む	Load this setup
+現在の内容で更新	Update with current setup
+削除内容を確認	Review deletion
+この構成を削除	Delete this setup
+削除した構成を戻す	Restore deleted setup
+候補の予定額と予算を入力する	Enter planned costs and your budget
+購入に使う予定額を手入力します。装備や構成を変更したら予定額も見直してください。相場の自動取得・通貨間の換算は行いません。今の構成を基準にする場合は予定額を0にできます。	Enter your planned purchase cost manually and review it after changing gear or a setup. Prices are not fetched automatically and currencies are not converted. Set the cost to 0 when using your current setup as a baseline.
+使える予算	Budget
+予算の通貨	Budget currency
+高貴なオーブ	Exalted Orb
+神のオーブ	Divine Orb
+カオスオーブ	Chaos Orb
+予定額と予算を保存	Save costs and budget
+共有比較を確認中	Viewing a shared comparison
+構成A・Bと共通の敵条件・予定額を読み込みました。この端末の自動保存や名前付き保存は変わりません。	Setups A and B, shared enemy settings and planned costs have loaded. Your local autosaves and named saves are unchanged.
+構成Aを編集して試す	Edit setup A
+構成Bを編集して試す	Edit setup B
+3件以上の候補を一覧で比較する	Compare multiple candidates
+今の構成と、このビルドの名前付き保存をまとめて計算します。下の「共通の敵条件」を使用します。	Calculate your current setup and this build's named saves together using the shared enemy settings below.
+並べる順番	Sort by
+DPSが高い順	Highest DPS
+ライフが高い順	Highest Life
+最も低い元素耐性が高い順	Highest minimum elemental resistance
+予定額が安い順	Lowest planned cost
+予算内だけ表示	Show only candidates within budget
+保存した候補をまとめて計算	Calculate saved candidates
+2つの構成を比較する	Compare two setups
+構成A	Setup A
+構成B	Setup B
+共通の敵条件	Shared enemy settings
+通常の敵	Normal enemy
+ボス	Boss
+ピナクルボス	Pinnacle boss
+ウーバーボス	Uber boss
+敵条件をそろえ、Lv・装備・スキル・一時効果は各構成の保存内容で比較します。今の作業内容や保存構成は変わりません。	Use matching enemy settings while keeping each setup's saved level, gear, skills and temporary effects. Your current work and saved setups are unchanged.
+AとBを計算して比較	Calculate and compare A/B
+A/B比較の共有URLを作る	Create an A/B comparison link
+2つの構成・敵条件・入力した予定額と予算を含みます。メモと保存した構成名は含めません。	Includes both setups, enemy settings, entered costs and budget. Notes and saved setup names are excluded.
+比較の共有URL	Comparison share link
+比較URLをコピー	Copy comparison link
+ 構成名を画像に含める	 Include setup names in image
+比較画像を作る	Create comparison image
+比較表と同じ数値の画像を作れます。メモ・装備テキストは含めません。	Create an image with the same values as the comparison table. Notes and item text are excluded.
+PNGを保存	Save PNG
+変更を1つずつ試算する	Estimate one change at a time
+装備入りのサンプル・撃破装備から始める	Start from a sample or boss-clear setup
+確認する見本	Example to review
+試算用のキャラクターLv	Character level for the estimate
+計算用の武器配置	Weapon arrangement for calculation
+選ばれし者 ＋ セプター	The Ordained + Sceptre
+スカイシルバー ＋ セプター	Skysliver + Sceptre
+内容を見る	Preview contents
+この内容で試す	Try this setup
+切替前の作業内容を退避しています。	Your previous work is set aside.
+切替前の構成に戻す	Restore previous setup
+構成の共有URL	Build share link
+装備・スキル・パッシブ・武器スロット・計算条件を含みます。メモは含めません。URLを知っている人は構成を開けます。	Includes equipment, skills, passives, weapon sets and calculation settings, but not notes. Anyone with this link can open the build.
+共有URL	Share link
+URLをコピー	Copy link
+閉じる	Close
+共有された構成を確認中	Viewing a shared build
+変更を試してから、この端末の自分用の構成として保存できます。	Try changes, then save this as your own setup on this device.
+この構成を自分用に保存	Save this as my setup
+試す主力スキル	Main skill to try
+ジェムはLv1・品質0で開始。手持ちに合わせて調整してください。装備と取得パッシブは自分で設定できます。	Gems start at level 1 and 0 quality. Adjust them to match your character, then set your equipment and allocated passives.
+このLv・スキルで新しく試す	Start with this level and skill
+今の構成を続ける	Continue current setup
+読み込み・計算を再試行	Retry loading and calculation
+計算結果	Results
+この端末に自動保存	Autosaved on this device
+キャラクターLv	Character level
+耐性・必要能力値を確認	Check resistances and requirements
+耐性の比較目標（%）	Resistance target (%)
+耐性は設定した目標との比較。必要能力値は装備自身の能力値を除いた通常条件で確認します。特殊な代替条件はゲーム内でも確認してください。	Resistances are compared with your target. Attribute requirements are checked under normal conditions without counting the item's own attributes. Verify special alternative requirements in game.
+この数値を比較の基準にする	Use these values as the baseline
+計算の確認事項 	Calculation diagnostics 
+数値の内訳・計算条件を見る	View calculation breakdown
+現在の構成を変更せず、計算の段階と効果の出所を確認できます。	Inspect calculation steps and sources of effects without changing your build.
+確認する数値	Stat to inspect
+選択スキルのDPS	Selected skill DPS
+最大ライフ	Maximum Life
+エナジーシールド	Energy Shield
+最大マナ	Maximum Mana
+アーマー	Armour
+回避力	Evasion
+未予約スピリット	Unreserved Spirit
+火耐性	Fire Resistance
+冷気耐性	Cold Resistance
+雷耐性	Lightning Resistance
+混沌耐性	Chaos Resistance
+筋力	Strength
+器用さ	Dexterity
+知性	Intelligence
+この数値の内訳を確認	Show stat breakdown
+確認したい数値を選んでください。	Choose a stat to inspect.
+参考ビルドガイドを開く	Open build guide (Japanese)
+装備	Equipment
+スキル	Skills
+パッシブ	Passives
+計算条件	Configuration
+装備を選ぶ	Choose equipment
+部位を押すと、その装備の編集画面が開きます。	Select a slot to edit its equipment.
+武器スロット1	Weapon set 1
+武器スロット2	Weapon set 2
+← 装備の部位一覧へ	← Back to equipment slots
+ユニーク装備	Unique items
+レア装備を作る	Create a rare item
+データを貼り付ける	Paste item text
+ユニークを検索	Search unique items
+候補	Candidates
+ユニークを選ぶ	Choose a unique item
+可変値の位置	Roll value
+中間値	Midpoint
+最小値	Minimum
+最大値	Maximum
+編集欄に入れる	Put in editor
+レア装備の作成は武器・防具・アクセサリーに対応しています。	The rare item editor supports weapons, armour and accessories.
+ベース装備	Item base
+装備名	Item name
+アイテムレベル	Item level
+品質	Quality
+0〜30	0–30
+装備のオプション	Item modifiers
+＋ オプションを追加	+ Add modifier
+「この装備を反映」でステータスに適用します。	Choose “Apply item” to include it in the calculation.
+数値比較用の仮装備です。実際の付与可否・ティア上限は判定しません。ベースの暗黙効果やソケット効果も、必要なものをオプションに追加してください。	These are hypothetical items for comparison. Modifier availability and tier limits are not validated. Add any required implicit and socket effects as modifiers too.
+装備のテキスト	Item text
+編集欄の内容は「反映」で計算に入ります。	Editor contents enter the calculation when you apply them.
+交換する前に比較	Compare before replacing
+この装備を反映	Apply item
+この部位を外す	Unequip this slot
+この装備を比較候補へ追加	Save this item as a comparison candidate
+今の装備はそのままで、編集欄の装備を入れた構成を保存します。	Keep your current gear unchanged and save a setup using the item in the editor.
+候補名	Candidate name
+購入予定額	Planned purchase cost
+予定額・予算の通貨	Cost and budget currency
+比較候補に追加して比較	Save candidate and compare
+現在のステータス	Current stats
+差分は、この編集画面を開いた時点との比較です。	Changes are relative to the values when you opened this editor.
+計算結果を詳しく見る ↑	View detailed results ↑
+スキルとサポート	Skills and supports
+計算する主力スキルを選び、ジェムの種類・Lv・品質を変更します。	Choose the main skill to calculate and change gem types, levels and quality.
+＋ スキルを追加	+ Add skill
+保存して戻る	Save and return
+パッシブツリー	Passive tree
+戻す	Undo
+この端末に保存済み	Saved on this device
+ツリーだけを大きく編集	Expand passive tree editor
+検索・参考ルート・表示設定	Search, reference routes and display settings
+設定を閉じて地図へ	Close settings and return to tree
+新規の構成は取得済み0から始まります。保存済みの構成は前回の続きから再開します。	New setups start with no allocated passives. Saved setups resume from their previous allocations.
+取得済み0から選び直す	Reset passive allocations
+選び直す前に戻す	Restore previous allocations
+レベル・報酬ポイント	Level and reward points
+取得済みのキャンペーン報酬ポイント	Campaign reward points earned
+パッシブを組む	Plan passives
+1本指で移動、2本指でツリーだけを拡大・縮小できます。＋／−ボタンも使えます。未取得ノードはタップで複数選択できます。同じノードをもう一度タップすると選択を解除します。「まとめて確認」で経路と能力の変化を確認できます。一覧からも選べます。取得前に経路・必要ポイント・ステータスの変化を確認できます。	Drag with one finger and pinch with two fingers to zoom the tree, or use the +/− buttons. Tap unallocated nodes to select several; tap again to deselect. Use “Review selection” to inspect paths, point costs and stat changes before allocating. Nodes can also be selected from the list.
+ノードを検索	Search nodes
+ツリー全体へ	Fit entire tree
+職業の開始点へ	Go to class start
+アセンダンシーへ	Go to Ascendancy
+全パッシブの能力一覧から選ぶ	Browse all passive stats
+表示する種類	Node type
+すべて	All
+取得済み	Allocated
+通常ノード	Normal nodes
+ノータブル	Notables
+キーストーン	Keystones
+アセンダンシー	Ascendancy
+ジュエルソケット	Jewel sockets
+前へ	Previous
+次へ	Next
+NINJAの完成ルートを表示	Show NINJA reference route
+ルート全体へ	Fit reference route
+NINJAの参考ツリー	NINJA reference tree
+未取得ノードを確認	Review unallocated nodes
+この参考ツリーの反映内容を確認	Preview applying this reference tree
+水色はNINJAの参考ルートです。表示だけでは能力値に反映されません。実際の取得はノードを選んで反映してください。	The cyan path is a NINJA reference route. Displaying it does not affect your stats. Select and apply nodes to allocate them.
+参考ツリーの出典	Reference tree source
+出典を確認できたNINJAの取得ルートを表示します。参考ルートの表示だけでは能力値は変わりません。	Shows a NINJA allocation route with a verified source. Viewing a reference route does not change your stats.
+NINJAの参照元を開く ↗	Open NINJA source ↗
+このビルドのNINJA参考ルートは未設定です。独自ルートは表示せず、自分で取得したノードだけを金色で表示します。	No NINJA reference route is set for this build. No invented route is shown; only your allocated nodes are highlighted in gold.
+NINJA参考	NINJA reference
+全体	Fit tree
+起点	Class start
+● 水色：NINJA参考（未取得）	● Cyan: NINJA reference (unallocated)
+● 金色：取得済み	● Gold: allocated
+○ 未取得	○ Unallocated
+◉ 開始点（取得数に含めません）	◉ Starting point (not counted as an allocation)
+まとめて確認	Review selection
+能力を見る	View stats
+解除	Clear
+選んだノードの能力・取得	Selected node stats and allocation
+地図に戻る	Return to tree
+ノードを選んでください	Select a node
+取得前に経路とコストを確認できます。外す場合は、つながらなくなるノードもまとめて確認します。	Review paths and costs before allocating. When removing nodes, also review any nodes that would become disconnected.
+敵と報酬の条件をそろえて比較してください。追加の効果も日本語で設定できます。	Use matching enemy and quest reward settings for comparisons. Add extra effects using the modifier editor below.
+敵の種類	Enemy type
+溶岩の祠のライフ5%報酬を取得済み	Earned the 5% Life reward from the Molten Shrine
+追加する効果	Effect to add
+入力欄に追加	Add to editor
+追加の効果（日本語・1行に1つ）	Additional effects (one per line)
+上の候補から追加して数値を編集できます。例：最大ライフ +100、火耐性 +30%、追加物理ダメージ 10〜20。入力した効果は「条件を反映」で適用されます。	Add a modifier from the list above and edit its values. For example: +100 to maximum Life, +30% to Fire Resistance, or Adds 10 to 20 Physical Damage. Apply configuration to include these effects.
+条件を反映	Apply configuration
+構成のメモ	Build notes
+保存ファイルに含まれるチャージ・状態異常などの設定は保持します。戦闘中の操作順やバフの稼働率は再現しません。	Charge, ailment and other settings in save files are preserved. Combat rotations and buff uptime are not simulated.
+開始時との差	Change from starting values
+結果を詳しく	Detailed results
+シミュレーターの操作にはJavaScriptが必要です。ビルドガイドはJavaScriptなしでも読めます。	The interactive simulator requires JavaScript. The Japanese build guides can be read without JavaScript.
+最新パッチの確認内容：0.5.5f Hotfix	Latest reviewed patch: 0.5.5f Hotfix
+公式差分の確認：	Official patch review: 
+。公式差分の確認です。全ビルドの再検証日・実機プレイ日とは区別しています。	. This is a review of official patch changes, not a full retest or an in-game playtest of every build.
+（2026-11-10公開）	(published November 10, 2026)
+Corrupted Precursor Beacon（コラプト状態の先駆者のビーコン）で選んだ一連のマップを完了しても報酬を受け取れない問題を修正。既に対象の元マップを開いている場合は対象外です。	Fixed an issue preventing rewards after completing a series of maps selected with a Corrupted Precursor Beacon. This does not apply if the original affected map is already open.
+報酬・進行に関する変更。ビルド評価を変更する根拠としては扱いません。	A reward and progression change, not evidence for changing build ratings.
+最終マップで失敗し再挑戦した場合に報酬を得られない問題は調査中とされています。	The issue where rewards are not granted after failing the final map and retrying is reported as under investigation.
+（2026-11-06公開）	(published November 6, 2026)
+今後の告知と新しいサポーターパックへの対応。	Support for upcoming announcements and new supporter packs.
+掲載ノートにスキル・パッシブ数値の変更記載はありません。	The published notes do not list changes to skill or passive values.
+公開時のXbox配信遅延の告知は確認できましたが、この確認で解消時刻までは特定していません。	An Xbox release delay was announced at publication; this review did not establish when it was resolved.
+（2026-10-28公開）	(published October 28, 2026)
+ミニマップの地形が正しく表示されない問題を修正。クライアント再起動で更新を受け取る旨の案内があります。	Fixed incorrect minimap terrain display. The notice instructs players to restart the client to receive the update.
+表示に関する変更。育成手順の変更とは分けて記録します。	A display fix, recorded separately from changes to levelling guidance.
+掲載ビルドの基準：0.5.5。計算エンジンのデータ：0.5.5.5。確認した差分だけを反映し、育成資料の原典照合日は各記事に残しています。	Published builds use version 0.5.5 as their baseline; engine data is version 0.5.5.5. Only reviewed changes are reflected, and source review dates remain on individual guides.
+運営者情報	About (Japanese)
+編集方針	Editorial policy (Japanese)
+プライバシー	Privacy (Japanese)
+利用規約	Terms (Japanese)
+不具合情報・報告	Issues and reports (Japanese)
+サイトマップ	Sitemap (Japanese)
+MITライセンス	MIT license
+Game data © Grinding Gear Games. 非公式ツールです。	Game data © Grinding Gear Games. Unofficial tool.
+PoE2の掲載12ビルドから育成方針を選び、装備・スキル・パッシブをブラウザで編集。変更前後のDPS・ライフ・耐性を比較し、構成の自動保存と保存ファイルの読み書きができます。	Plan a Path of Exile 2 build in your browser. Edit gear, gems and the passive tree, compare estimated DPS, Life and resistances, and save or share your setup.
+ビルドを選んで、自分の装備・ジェム・パッシブを試す。	Choose a PoE2 build and experiment with your gear, gems and passive tree.
+POE2ビルドナビの更新情報	POE2 Build Navi updates (Japanese)
+POE2ビルドナビ ホーム	POE2 Build Navi home (Japanese)
+メインメニュー	Main menu
+編集履歴	Edit history
+例：周回用・ボス用・購入候補	For example: mapping, bosses, upgrade candidate
+未設定	Not set
+構成Aと構成Bの計算結果の比較画像	Image comparing the calculation results for setups A and B
+編集する項目	Editor sections
+計算する武器スロット	Weapon set to calculate
+装備の作り方	Item creation method
+名前で検索	Search by name
+パッシブのポイント設定	Passive point settings
+名前で検索・効果	Search by name or effect
+パッシブツリーを拡大	Zoom in on passive tree
+パッシブツリーを縮小	Zoom out of passive tree
+参考ルート	Reference route
+ツリーのエラー表示を閉じる	Dismiss tree error
+パッシブツリー。ノードは検索欄からも選べます。	Passive tree. Nodes can also be selected using the search field.
+ツリーを拡大	Zoom in on tree
+ツリーを縮小	Zoom out of tree
+ツリー全体を表示	Fit entire tree
+まとめて取得するノード	Nodes to allocate together
+選択をすべて解除	Clear all selections
+選択中のノード	Selected node
+編集中の計算結果	Live calculation results
+サイト情報	Site information
+計算エンジンの出典	Calculation engine sources

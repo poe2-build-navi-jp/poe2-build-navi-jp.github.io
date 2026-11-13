@@ -1,0 +1,83 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {Worker} from 'node:worker_threads';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {JSDOM,VirtualConsole} from 'jsdom';
+import * as en from '../assets/simulator-model-en.js';
+import * as ja from '../assets/simulator-model.js';
+const root=resolve(import.meta.dirname,'..');
+const json=async p=>JSON.parse(await readFile(resolve(root,p),'utf8'));
+const localization=await json('data/simulator-localization.json'),equipment=await json('data/simulator-equipment-en.json');
+assert.equal(en.modifierJapanese(equipment.modifiers.find(d=>d.id==='life'),[100]),'+100 to maximum Life');
+assert.deepEqual(en.parseJapaneseModifiers('+100 to maximum Life\n+30% to Fire Resistance',equipment,localization.names),['+100 to maximum Life','+30% to Fire Resistance']);
+assert.equal(en.restoreItemText('レアリティ: レア\n任意の名前\n品質: 20',localization.names),'Rarity: RARE\n任意の名前\nQuality: 20');
+const old=await json('data/simulator-examples.json');
+for(const e of old.examples){assert.deepEqual(en.parseSave(JSON.stringify(e.saved)),ja.parseSave(JSON.stringify(e.saved)));}
+assert.equal(en.SAVE_VERSION,ja.SAVE_VERSION);assert.equal(en.ENGINE_VERSION,ja.ENGINE_VERSION);
+for(const id of ['mercenary-twister-gemling','monk-whirling-assault']){assert.equal(en.namedPlanKey(id),ja.namedPlanKey(id));assert.equal(en.priceBookKey(id),ja.priceBookKey(id));}
+for(const file of ['simulator-en.js','simulator-model-en.js','simulator-worker-en.js']){
+ const source=(await readFile(resolve(root,'assets',file),'utf8')).replaceAll('/[ぁ-んァ-ヶ一-龥]/','');
+ assert.doesNotMatch(source,/[ぁ-んァ-ヶ一-龥]/,file+' has untranslated UI');
+}
+const native=new Worker(new URL('./fixtures/simulator-worker-node-en.mjs',import.meta.url));
+let sequence=0;const pending=new Map(),progress=[];
+native.on('message',m=>{if(m.progress){progress.push(m.progress);return;}const t=pending.get(m.id);if(!t)return;pending.delete(m.id);m.error?t.reject(Error(m.error)):t.resolve(m.result);});
+native.on('error',e=>{for(const p of pending.values())p.reject(e);});
+const rpc=(action,payload)=>new Promise((resolve,reject)=>{const id=++sequence;pending.set(id,{resolve,reject});native.postMessage({id,action,payload});});
+const errors=[],console=new VirtualConsole();console.on('jsdomError',e=>{if(!e.message.includes('navigation'))errors.push(e.message);});
+const dom=new JSDOM(await readFile(resolve(root,'en/simulator/index.html'),'utf8'),{url:'https://poe2-build-navi-jp.github.io/en/simulator/',runScripts:'outside-only',virtualConsole:console});
+const w=dom.window,d=w.document;Object.assign(w,en,{structuredClone,DecompressionStream,WebAssembly});
+w.HTMLElement.prototype.scrollIntoView=function(){};w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
+w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.slice(1))));
+w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>this.onmessage?.({data:{id,result}}),error=>this.onmessage?.({data:{id,error:error.message}}));}};
+let code=await readFile(resolve(root,'assets/simulator-en.js'),'utf8');code=code.replace(/^import[^\n]+\n/gm,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator-en.js')).href));
+const wait=async predicate=>{const end=Date.now()+30000;while(!predicate()){if(Date.now()>end)throw Error('UI timeout: '+d.getElementById('sim-error').textContent);await new Promise(r=>setTimeout(r,25));}};
+const click=s=>{const e=d.querySelector(s);assert.ok(e,s);e.click();};
+const change=(s,value)=>{const e=d.querySelector(s);assert.ok(e,s);e.value=value;e.dispatchEvent(new w.Event('change',{bubbles:true}));};
+const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false'&&!!d.querySelector('.sim-stat');
+const saved=()=>en.parseSave(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'));
+try{
+ // Existing Japanese save is loaded from exactly the same keys; notes stay untouched.
+ const source=structuredClone(old.examples.find(e=>e.preset==='mercenary-twister-gemling').saved);source.notes='日本語メモはそのまま';
+ w.localStorage.setItem('poe2-simulator:v1:mercenary-twister-gemling',JSON.stringify(source));
+ await w.eval(`(async()=>{${code}\n})()`);
+ assert.equal(d.querySelectorAll('[data-preset]').length,12);
+ assert.doesNotMatch(d.getElementById('sim-build-grid')?.textContent||'',/[ぁ-んァ-ヶ一-龥]/);
+ click('[data-preset="mercenary-twister-gemling"]');await wait(ready);
+ assert.match(d.getElementById('sim-build-name').textContent,/Twister/);
+ assert.equal(saved().notes,'日本語メモはそのまま');
+ assert.equal(saved().preset,source.preset);assert.deepEqual(saved().request.items,source.request.items);
+ assert.match(d.getElementById('sim-save-status').textContent,/Saved/);
+ click('[data-slot="amulet"]');
+ const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent==='Astramentis');assert.ok(astro);
+ change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('Astramentis'));
+ assert.ok(d.getElementById('sim-item-text').value.startsWith('Rarity:'));
+ click('#sim-item-apply');await wait(ready);
+ assert.ok(saved().request.items.some(i=>i.slot==='amulet'&&i.text.includes('Astramentis')));
+ click('#sim-item-back');click('[data-slot="helmet"]');click('[data-equipment-mode="rare"]');
+ change('#sim-rare-base',equipment.bases.find(b=>b.name==='Covert Hood').id);change('#sim-rare-name','English QA helmet');
+ click('#sim-rare-add');change('[data-rare-row="0"] [data-rare-value="0"]','100');click('#sim-item-apply');await wait(ready);
+ assert.ok(saved().request.items.find(i=>i.slot==='helmet').text.includes('+100 to maximum Life'));
+ assert.doesNotMatch(d.getElementById('sim-rare-modifiers').textContent,/[ぁ-んァ-ヶ一-龥]/);
+ click('[data-tab="skills"]');const select=d.querySelector('[data-gem-field="skill_id"]');select.dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));
+ assert.ok([...select.options].some(o=>o.textContent==='Twister'));assert.doesNotMatch(select.textContent,/[ぁ-んァ-ヶ一-龥]/);
+ click('[data-tab="tree"]');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length>0);
+ assert.match(d.getElementById('sim-point-count').textContent,/Allocated:/);
+ assert.doesNotMatch(d.getElementById('sim-node-catalog-list').textContent,/[ぁ-んァ-ヶ一-龥]/);
+ change('#sim-plan-name','English test save');click('#sim-plan-create');await wait(()=>d.getElementById('sim-plan-status').textContent.includes('Named build saved'));
+ click('#sim-plan-delete');assert.match(d.getElementById('sim-plan-delete-message').textContent,/Remove “English test save”/);click('#sim-plan-delete-cancel');
+ assert.equal(d.getElementById('sim-plan-delete-confirm').hidden,true);
+ const named=JSON.parse(w.localStorage.getItem(en.namedPlanKey(source.preset))).plans[0];
+ change('#sim-compare-a','current');change('#sim-compare-b',named.id);click('#sim-compare-plans');
+ await wait(()=>d.getElementById('sim-compare-result').querySelector('table'));
+ assert.match(d.getElementById('sim-compare-result').textContent,/Compare builds without changing saves/);
+ click('#sim-compare-share');await wait(()=>d.getElementById('sim-compare-share-url').value.includes('#compare='));
+ assert.equal(new URL(d.getElementById('sim-compare-share-url').value).pathname,'/en/simulator/');
+ click('#sim-share');await wait(()=>d.getElementById('sim-share-url').value.includes('#plan='));
+ assert.equal(new URL(d.getElementById('sim-share-url').value).pathname,'/en/simulator/');
+ assert.equal(saved().notes,'日本語メモはそのまま');
+ assert.ok(progress.length);assert.ok(progress.every(s=>!/[ぁ-んァ-ヶ一-龥]/.test(s)));
+ assert.equal(errors.length,0,errors.join('\n'));
+ process.stdout.write('English simulator: shared saves, canonical item parsing, real engine, UI labels, rare editing, skills, passives and save/cancel passed.\n');
+}finally{dom.window.close();await native.terminate();}

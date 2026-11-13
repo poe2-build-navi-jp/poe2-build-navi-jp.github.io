@@ -1,0 +1,202 @@
+[
+  {
+    "module": "",
+    "from": "`（${diagnostics.length} entries)`",
+    "to": "`(${diagnostics.length} notes)`"
+  },
+  {
+    "module": "",
+    "from": "`${plans.length} / 12Save build`",
+    "to": "`${plans.length} / 12 saved builds`"
+  },
+  {
+    "module": "",
+    "from": "Named saves${book.length} entries",
+    "to": "${book.length} named saves"
+  },
+  {
+    "module": "",
+    "from": "BuildA",
+    "to": "Build A"
+  },
+  {
+    "module": "",
+    "from": "BuildB",
+    "to": "Build B"
+  },
+  {
+    "module": "",
+    "from": "Prices and budget saved.A/BCompare budget status and stats side by side.",
+    "to": "Prices and budget saved. Use A/B comparison to view budget status and stats side by side."
+  },
+  {
+    "module": "",
+    "from": "First, A/BRun a comparison first.",
+    "to": "Run an A/B comparison first."
+  },
+  {
+    "module": "",
+    "from": "`「${item.name}” loaded. Named saves remain unchanged until you update them.`",
+    "to": "`Loaded “${item.name}”. Named saves remain unchanged until you update them.`"
+  },
+  {
+    "module": "",
+    "from": "`「${item.name}” will be removed from named saves. Your currently open build will not change.`",
+    "to": "`Remove “${item.name}” from named saves? Your currently open build will not change.`"
+  },
+  {
+    "module": "",
+    "from": "${g.label}：${number(g.value,g.id)}. Target: ${targetValue()}% to ${g.missing}Not enough points",
+    "to": "${g.label}: ${number(g.value,g.id)}. Target: ${targetValue()}%; short by ${g.missing} percentage points."
+  },
+  {
+    "module": "",
+    "from": "Allocated ${chosen.length}Node · Normal ${chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length} / ${plan.request.character.level-1+plan.questPoints}pt · Ascendancy ${chosen.filter(id=>treeNodes.get(id)?.ascendancy_id).length}Node",
+    "to": "Allocated: ${chosen.length} nodes · Normal: ${chosen.filter(id=>!treeNodes.get(id)?.ascendancy_id).length} / ${plan.request.character.level-1+plan.questPoints} points · Ascendancy: ${chosen.filter(id=>treeNodes.get(id)?.ascendancy_id).length} nodes"
+  },
+  {
+    "module": "",
+    "from": "${used-limit}Point limit exceeded. Check level and quest rewards, or remove nodes.",
+    "to": "${used-limit} points over the limit. Check level and quest rewards, or remove nodes."
+  },
+  {
+    "module": "",
+    "from": "${nodes.length} entries · ${nodePage+1} / ${pages}Page",
+    "to": "${nodes.length} nodes · Page ${nodePage+1} / ${pages}"
+  },
+  {
+    "module": "",
+    "from": "NINJANot set",
+    "to": "NINJA reference not set"
+  },
+  {
+    "module": "",
+    "from": "${templateRoute.source.character} · Lv${templateRoute.source.level} · ${templateRoute.source.verifiedAt.slice(0,10)} checked.${templateRoute.source.level<100?'First in the list: Lv100 below target.Lv100: the completed setup is unverified.':''}The allocation order is not published. Individual jewel effects are not included.",
+    "to": "${templateRoute.source.character} · Lv${templateRoute.source.level} · Checked ${templateRoute.source.verifiedAt.slice(0,10)}. ${templateRoute.source.level<100?'This reference character is below Lv100; its completed Lv100 setup is unverified. ':''}The allocation order is not published. Individual jewel effects are not included."
+  },
+  {
+    "module": "",
+    "from": "NINJA Lv${templateRoute.source.level} Endgame setup · Match ${compared.shared.length} / ${step.nodes.length}Node",
+    "to": "NINJA Lv${templateRoute.source.level} setup · Matching nodes: ${compared.shared.length} / ${step.nodes.length}"
+  },
+  {
+    "module": "",
+    "from": "Equipment${plan.request.items?.length||0} slots configured. Set actual equipment and gem Lv to match your setup.",
+    "to": "${plan.request.items?.length||0} equipment slots configured. Set equipment and gem levels to match your actual build."
+  },
+  {
+    "module": "",
+    "from": "Saved candidates: ${namedPlans.length} entries.A/BView it in comparison or the candidate table.",
+    "to": "${namedPlans.length} saved candidates. View them in A/B comparison or the candidate table."
+  },
+  {
+    "module": "",
+    "from": "Kill setup Lv is unverified. This input is a hypothetical Lv. The pictured kill’s Lv is not represented by these estimates.",
+    "to": "The character level used for the recorded kill is unverified. This level is a hypothetical calculation input, not evidence of the level in the screenshot."
+  },
+  {
+    "module": "",
+    "from": "${!example.level?' (estimate; kill setup Lvunverified)':''} / Equipment${itemCount} points / Normal passives${saved.request.allocated_nodes.length} points / ${saved.request.socket_groups.length?'Main gemLv'+saved.request.socket_groups[0].gems[0].level:'No skill or support configured'}",
+    "to": "${!example.level?' (estimate; level at kill unverified)':''} / ${itemCount} equipment pieces / ${saved.request.allocated_nodes.length} normal passives / ${saved.request.socket_groups.length?'Main gem Lv'+saved.request.socket_groups[0].gems[0].level:'No skill or support configured'}"
+  },
+  {
+    "module": "",
+    "from": "${min}〜${max} within this range.",
+    "to": "enter a value from ${min} to ${max}."
+  },
+  {
+    "module": "",
+    "from": "Keep your current save and switch to a new draft. Allocated passives: 0: starting point.",
+    "to": "Keep your current save and switch to a new draft with no allocated passives."
+  },
+  {
+    "module": "-model",
+    "from": "${g.label}: target ${target}% to ${g.missing}points",
+    "to": "${g.label}: ${g.missing} percentage points below the ${target}% target"
+  },
+  {
+    "module": "-model",
+    "from": "Reservation is ${Math.ceil(-spirit)} short.",
+    "to": "You need ${Math.ceil(-spirit)} more Spirit for the current reservation."
+  },
+  {
+    "module": "-worker",
+    "from": "${label}: ${Math.ceil(req[key]-available(id))} short (excluding this item’s ${available(id)} / Required${req[key]}）",
+    "to": "${label}: ${Math.ceil(req[key]-available(id))} short (available without this item: ${available(id)}; required: ${req[key]})"
+  },
+  {
+    "module": "-worker",
+    "from": "RequiredLv${req.level} not reached",
+    "to": "Required level ${req.level} not reached"
+  },
+  {
+    "module": "-worker",
+    "from": "9.3MB）…",
+    "to": "9.3 MB)…"
+  },
+  {
+    "module": "",
+    "from": "${support?'Support':'Skill'}: choose",
+    "to": "Choose a ${support?'support':'skill'}"
+  },
+  {
+    "module": "",
+    "from": "Quality${g.quality||0}",
+    "to": "Quality ${g.quality||0}"
+  },
+  {
+    "module": "",
+    "from": "Equipment ${changes.equipment.length}Slot",
+    "to": "Equipment: ${changes.equipment.length} slots"
+  },
+  {
+    "module": "",
+    "from": "Other${items.length-80} changes.",
+    "to": "${items.length-80} more changes."
+  },
+  {
+    "module": "",
+    "from": "Long item text is limited to the first 6000 characters displayed.",
+    "to": "Only the first 6,000 characters of long item text are displayed."
+  },
+  {
+    "module": "",
+    "from": "CompareURL copied.",
+    "to": "Comparison URL copied."
+  },
+  {
+    "module": "",
+    "from": "SharedURL: build could not be identified.",
+    "to": "The shared URL does not identify a valid build."
+  },
+  {
+    "module": "",
+    "from": "/ Rewards${p.saved.questPoints}P /",
+    "to": "/ ${p.saved.questPoints} quest points /"
+  },
+  {
+    "module": "-model",
+    "from": "Prices and budget: 0〜10 hundred million, up to 4 decimal places maximum.",
+    "to": "Enter a price or budget from 0 to 1,000,000,000, with at most 4 decimal places."
+  },
+  {
+    "module": "-model",
+    "from": "Build name must have no line breaks and be 1〜40 characters.",
+    "to": "Build names must be 1–40 characters without line breaks."
+  },
+  {
+    "module": "-model",
+    "from": "Item name must have no line breaks and be 80 characters maximum.",
+    "to": "Item names must be at most 80 characters without line breaks."
+  },
+  {
+    "module": "-model",
+    "from": "Item level: 1〜100; quality: 0〜30 within this range.",
+    "to": "Enter an item level from 1 to 100 and quality from 0 to 30."
+  },
+  {
+    "module": "-model",
+    "from": "Modifier values: 0〜100000 within this range.",
+    "to": "Enter modifier values from 0 to 100,000."
+  }
+]
