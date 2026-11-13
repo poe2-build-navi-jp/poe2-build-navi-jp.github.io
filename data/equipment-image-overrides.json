@@ -1,0 +1,137 @@
+[
+  {
+    "id": "Infernoclasp",
+    "name": "Infernoclasp",
+    "names": [
+      "Infernoclasp",
+      "地獄の留め金"
+    ],
+    "baseNames": [
+      "Plate Belt"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Belts/Uniques/Infernoclasp.webp",
+    "reference": "https://poe2db.tw/us/Infernoclasp",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "The_Road_Warrior",
+    "name": "The Road Warrior",
+    "names": [
+      "The Road Warrior",
+      "道の戦士"
+    ],
+    "baseNames": [
+      "Raider Plate"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/BodyArmours/Uniques/TheRoadWarrior.webp",
+    "reference": "https://poe2db.tw/us/The_Road_Warrior",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "Thunderstep",
+    "name": "Thunderstep",
+    "names": [
+      "Thunderstep"
+    ],
+    "baseNames": [
+      "Steeltoe Boots"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Boots/Uniques/ThunderousSilence.webp",
+    "reference": "https://poe2db.tw/us/Thunderstep",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "Blessed_Bonds",
+    "name": "Blessed Bonds",
+    "names": [
+      "Blessed Bonds",
+      "祝福されし絆"
+    ],
+    "baseNames": [
+      "Linen Wraps"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Gloves/Uniques/BlessedBonds.webp",
+    "reference": "https://poe2db.tw/us/Blessed_Bonds",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "Forbidden_Gaze",
+    "name": "Forbidden Gaze",
+    "names": [
+      "Forbidden Gaze",
+      "禁断の眼差し"
+    ],
+    "baseNames": [
+      "Chain Tiara"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Uniques/ForbiddenGaze.webp",
+    "reference": "https://poe2db.tw/us/Forbidden_Gaze",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "The_Deepest_Tower",
+    "name": "The Deepest Tower",
+    "names": [
+      "The Deepest Tower",
+      "最深の塔"
+    ],
+    "baseNames": [
+      "Spiritbone Crown"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Armours/Helmets/Uniques/TheDeepestTower.webp",
+    "reference": "https://poe2db.tw/us/The_Deepest_Tower",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "Wylunds_Stake",
+    "name": "Wylund's Stake",
+    "names": [
+      "Wylund's Stake",
+      "ワイランドの褒美"
+    ],
+    "baseNames": [
+      "Smithing Hammer"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/OneHandMaces/Uniques/TheStake.webp",
+    "reference": "https://poe2db.tw/us/Wylunds_Stake",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "Merit_of_Service",
+    "name": "Merit of Service",
+    "names": [
+      "Merit of Service",
+      "奉仕の真価"
+    ],
+    "baseNames": [
+      "Pelage Targe"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Offhand/Shields/Uniques/MeritOfService.webp",
+    "reference": "https://poe2db.tw/us/Merit_of_Service",
+    "note": "The exact item panel matching the calculation engine base is used, including retained legacy panels."
+  },
+  {
+    "id": "Guiding_Palm_Engine",
+    "name": "Guiding Palm",
+    "names": [
+      "Guiding Palm"
+    ],
+    "baseNames": [
+      "Shrine Sceptre"
+    ],
+    "kind": "unique",
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Weapons/OneHandWeapons/Scepters/Uniques/GuidingPalmLightning.webp",
+    "reference": "https://www.poe2wiki.net/wiki/Guiding_Palm",
+    "prose": false,
+    "imageTitle": "Guiding Palm — Lightning variant",
+    "note": "The engine defaults to variant 6 (Lightning). Explicit Fire/Cold/Lightning variants are resolved to their own Heart/Eye/Mind artwork when reading equipment text."
+  }
+]

@@ -16,6 +16,8 @@ export const BUILD_STEPS=[
  'generate-simulator-runtime-en', // shared logic with reviewed English UI/data
  'generate-simulator-english', // finish English UI after Japanese-only enhancers
  'enhance-skill-icons',       // real game icons beside names in JA/EN and dynamic skill selectors
+ 'enhance-equipment-images', // exact unique/base inventory art in articles and equipment editors
+ 'audit-equipment-images',   // verify every calculation-engine item and editable base has art
  'audit-skill-icons',         // fail the build if any engine skill lacks an identified image
  'generate-sitemap',         // after everything that changes <main>: it records each page's content date
  'enhance-page-schema',      // reads those dates

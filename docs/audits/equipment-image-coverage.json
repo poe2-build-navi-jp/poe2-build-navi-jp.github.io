@@ -1,0 +1,6212 @@
+{
+  "checkedAt": "2026-11-14",
+  "engine": {
+    "release": "0.0.46",
+    "dataVersion": "0.5.5.5"
+  },
+  "catalogSha256": "2fa6dd8aa5de9d384e7bd08c341bd5b4858a4409048c6b015e27ece7401f9b58",
+  "uniques": 435,
+  "editableBases": 331,
+  "withImages": 766,
+  "unidentified": 0,
+  "authored": [
+    {
+      "name": "The Taming",
+      "imageId": "The_Taming"
+    },
+    {
+      "name": "Thrillsteel",
+      "imageId": "Thrillsteel"
+    },
+    {
+      "name": "Headhunter",
+      "imageId": "Headhunter"
+    },
+    {
+      "name": "Darkness Enthroned",
+      "imageId": "Darkness_Enthroned"
+    },
+    {
+      "name": "Bones of Ullr",
+      "imageId": "Bones_of_Ullr"
+    },
+    {
+      "name": "Atziri's Disdain",
+      "imageId": "Atziris_Disdain"
+    },
+    {
+      "name": "Maligaro's Virtuosity",
+      "imageId": "Maligaros_Virtuosity"
+    },
+    {
+      "name": "Nightscale",
+      "imageId": "Nightscale"
+    },
+    {
+      "name": "Redemption",
+      "imageId": "Redemption"
+    },
+    {
+      "name": "Tangletongue",
+      "imageId": "Tangletongue"
+    },
+    {
+      "name": "Skysliver",
+      "imageId": "Skysliver"
+    },
+    {
+      "name": "Tyranny's Grip",
+      "imageId": "Tyrannys_Grip"
+    },
+    {
+      "name": "Unset Ring",
+      "imageId": "Unset_Ring"
+    },
+    {
+      "name": "Runeseeker's Call",
+      "imageId": "Runeseekers_Call"
+    },
+    {
+      "name": "Morior Invictus",
+      "imageId": "Morior_Invictus"
+    },
+    {
+      "name": "Guiding Palm of the Eye",
+      "imageId": "Guiding_Palm_of_the_Eye"
+    },
+    {
+      "name": "Mageblood",
+      "imageId": "Mageblood"
+    }
+  ],
+  "records": [
+    {
+      "kind": "unique",
+      "engineId": 0,
+      "name": "Astramentis",
+      "base": "Stellar Amulet",
+      "imageId": "Astramentis",
+      "image": "/images/poe2/equipment/items-11.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 1,
+      "name": "Beacon of Azis",
+      "base": "Solar Amulet",
+      "imageId": "Beacon_of_Azis",
+      "image": "/images/poe2/equipment/items-12.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 2,
+      "name": "Carnage Heart",
+      "base": "Amber Amulet",
+      "imageId": "Carnage_Heart",
+      "image": "/images/poe2/equipment/items-13.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 3,
+      "name": "Choir of the Storm",
+      "base": "Jade Amulet",
+      "imageId": "Choir_of_the_Storm",
+      "image": "/images/poe2/equipment/items-15.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 4,
+      "name": "Defiance of Destiny",
+      "base": "Jade Amulet",
+      "imageId": "Defiance_of_Destiny",
+      "image": "/images/poe2/equipment/items-16.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 5,
+      "name": "Eventide Petals",
+      "base": "Veridical Chain",
+      "imageId": "Eventide_Petals",
+      "image": "/images/poe2/equipment/items-25.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 6,
+      "name": "Eye of Chayula",
+      "base": "Gold Amulet",
+      "imageId": "Eye_of_Chayula",
+      "image": "/images/poe2/equipment/items-18.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 7,
+      "name": "Fireflower",
+      "base": "Solar Amulet",
+      "imageId": "Fireflower",
+      "image": "/images/poe2/equipment/items-19.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 8,
+      "name": "Fixation of Yix",
+      "base": "Stellar Amulet",
+      "imageId": "Fixation_of_Yix",
+      "image": "/images/poe2/equipment/items-20.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 9,
+      "name": "Hinekora's Sight",
+      "base": "Stellar Amulet",
+      "imageId": "Hinekoras_Sight",
+      "image": "/images/poe2/equipment/items-21.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 10,
+      "name": "Idol of Uldurn",
+      "base": "Crimson Amulet",
+      "imageId": "Idol_of_Uldurn",
+      "image": "/images/poe2/equipment/items-22.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 11,
+      "name": "Igniferis",
+      "base": "Crimson Amulet",
+      "imageId": "Igniferis",
+      "image": "/images/poe2/equipment/items-23.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 12,
+      "name": "Immaculate Adherence",
+      "base": "Solar Amulet",
+      "imageId": "Immaculate_Adherence",
+      "image": "/images/poe2/equipment/items-14.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 13,
+      "name": "Ligurium Talisman",
+      "base": "Lapis Amulet",
+      "imageId": "Ligurium_Talisman",
+      "image": "/images/poe2/equipment/items-24.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 14,
+      "name": "Revered Resin",
+      "base": "Amber Amulet",
+      "imageId": "Revered_Resin",
+      "image": "/images/poe2/equipment/items-26.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 15,
+      "name": "Rondel of Fragility",
+      "base": "Lunar Amulet",
+      "imageId": "Rondel_of_Fragility",
+      "image": "/images/poe2/equipment/items-27.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 16,
+      "name": "Serpent's Egg",
+      "base": "Gold Amulet",
+      "imageId": "Serpents_Egg",
+      "image": "/images/poe2/equipment/items-32.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 17,
+      "name": "Stone of Lazhwar",
+      "base": "Lapis Amulet",
+      "imageId": "Stone_of_Lazhwar",
+      "image": "/images/poe2/equipment/items-28.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 18,
+      "name": "Strugglescream",
+      "base": "Stellar Amulet",
+      "imageId": "Strugglescream",
+      "image": "/images/poe2/equipment/items-17.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 19,
+      "name": "Surefooted Sigil",
+      "base": "Jade Amulet",
+      "imageId": "Surefooted_Sigil",
+      "image": "/images/poe2/equipment/items-29.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 20,
+      "name": "The Anvil",
+      "base": "Bloodstone Amulet",
+      "imageId": "The_Anvil",
+      "image": "/images/poe2/equipment/items-30.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 21,
+      "name": "The Everlasting Gaze",
+      "base": "Azure Amulet",
+      "imageId": "The_Everlasting_Gaze",
+      "image": "/images/poe2/equipment/items-750.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 22,
+      "name": "The Pandemonius",
+      "base": "Lapis Amulet",
+      "imageId": "The_Pandemonius",
+      "image": "/images/poe2/equipment/items-31.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 23,
+      "name": "Ungil's Harmony",
+      "base": "Azure Amulet",
+      "imageId": "Ungils_Harmony",
+      "image": "/images/poe2/equipment/items-33.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 24,
+      "name": "Xoph's Blood",
+      "base": "Amber Amulet",
+      "imageId": "Xophs_Blood",
+      "image": "/images/poe2/equipment/items-34.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 25,
+      "name": "Yoke of Suffering",
+      "base": "Bloodstone Amulet",
+      "imageId": "Yoke_of_Suffering",
+      "image": "/images/poe2/equipment/items-35.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 26,
+      "name": "Bijouborne",
+      "base": "Double Belt",
+      "imageId": "Bijouborne",
+      "image": "/images/poe2/equipment/items-397.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 27,
+      "name": "Birthright Buckle",
+      "base": "Wide Belt",
+      "imageId": "Birthright_Buckle",
+      "image": "/images/poe2/equipment/items-382.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 28,
+      "name": "Byrnabas",
+      "base": "Wide Belt",
+      "imageId": "Byrnabas",
+      "image": "/images/poe2/equipment/items-383.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 29,
+      "name": "Cat O' Nine Tails",
+      "base": "Utility Belt",
+      "imageId": "Cat_O_Nine_Tails",
+      "image": "/images/poe2/equipment/items-384.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 30,
+      "name": "Coward's Legacy",
+      "base": "Mail Belt",
+      "imageId": "Cowards_Legacy",
+      "image": "/images/poe2/equipment/items-385.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 31,
+      "name": "Darkness Enthroned",
+      "base": "Fine Belt",
+      "imageId": "Darkness_Enthroned",
+      "image": "/images/poe2/equipment/items-386.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 32,
+      "name": "Goregirdle",
+      "base": "Plate Belt",
+      "imageId": "Goregirdle",
+      "image": "/images/poe2/equipment/items-388.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 33,
+      "name": "Headhunter",
+      "base": "Heavy Belt",
+      "imageId": "Headhunter",
+      "image": "/images/poe2/equipment/items-389.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 34,
+      "name": "Infernoclasp",
+      "base": "Plate Belt",
+      "imageId": "Infernoclasp",
+      "image": "/images/poe2/equipment/items-390.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 35,
+      "name": "Ingenuity",
+      "base": "Utility Belt",
+      "imageId": "Ingenuity",
+      "image": "/images/poe2/equipment/items-400.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 36,
+      "name": "Keelhaul",
+      "base": "Linen Belt",
+      "imageId": "Keelhaul",
+      "image": "/images/poe2/equipment/items-747.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 37,
+      "name": "Mageblood",
+      "base": "Utility Belt",
+      "imageId": "Mageblood",
+      "image": "/images/poe2/equipment/items-391.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 38,
+      "name": "Meginord's Girdle",
+      "base": "Rawhide Belt",
+      "imageId": "Meginords_Girdle",
+      "image": "/images/poe2/equipment/items-392.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 39,
+      "name": "Midnight Braid",
+      "base": "Rawhide Belt",
+      "imageId": "Midnight_Braid",
+      "image": "/images/poe2/equipment/items-393.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 40,
+      "name": "Ryslatha's Coil",
+      "base": "Ornate Belt",
+      "imageId": "Ryslathas_Coil",
+      "image": "/images/poe2/equipment/items-394.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 41,
+      "name": "Shavronne's Satchel",
+      "base": "Fine Belt",
+      "imageId": "Shavronnes_Satchel",
+      "image": "/images/poe2/equipment/items-395.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 42,
+      "name": "Soul Tether",
+      "base": "Long Belt",
+      "imageId": "Soul_Tether",
+      "image": "/images/poe2/equipment/items-396.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 43,
+      "name": "The Gnashing Sash",
+      "base": "Wide Belt",
+      "imageId": "The_Gnashing_Sash",
+      "image": "/images/poe2/equipment/items-387.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 44,
+      "name": "Umbilicus Immortalis",
+      "base": "Linen Belt",
+      "imageId": "Umbilicus_Immortalis",
+      "image": "/images/poe2/equipment/items-398.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 45,
+      "name": "Waistgate",
+      "base": "Heavy Belt",
+      "imageId": "Waistgate",
+      "image": "/images/poe2/equipment/items-399.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 46,
+      "name": "Zerphi's Genesis",
+      "base": "Heavy Belt",
+      "imageId": "Zerphis_Genesis",
+      "image": "/images/poe2/equipment/items-401.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 47,
+      "name": "Apron of Emiran",
+      "base": "Hermit Garb",
+      "imageId": "Apron_of_Emiran",
+      "image": "/images/poe2/equipment/items-90.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 48,
+      "name": "Ashrend",
+      "base": "Pathfinder Coat",
+      "imageId": "Ashrend",
+      "image": "/images/poe2/equipment/items-91.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 49,
+      "name": "Atziri's Splendour",
+      "base": "Sacrificial Regalia",
+      "imageId": "Atziris_Splendour",
+      "image": "/images/poe2/equipment/items-92.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 50,
+      "name": "Belly of the Beast",
+      "base": "Explorer Armour",
+      "imageId": "Belly_of_the_Beast",
+      "image": "/images/poe2/equipment/items-93.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 51,
+      "name": "Bitterbloom",
+      "base": "Feathered Robe",
+      "imageId": "Bitterbloom",
+      "image": "/images/poe2/equipment/items-104.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 52,
+      "name": "Blackbraid",
+      "base": "Fur Plate",
+      "imageId": "Blackbraid",
+      "image": "/images/poe2/equipment/items-94.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 53,
+      "name": "Bramblejack",
+      "base": "Rusted Cuirass",
+      "imageId": "Bramblejack",
+      "image": "/images/poe2/equipment/items-95.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 54,
+      "name": "Briskwrap",
+      "base": "Rhoahide Coat",
+      "imageId": "Briskwrap",
+      "image": "/images/poe2/equipment/items-97.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 55,
+      "name": "Bristleboar",
+      "base": "Leather Vest",
+      "imageId": "Bristleboar",
+      "image": "/images/poe2/equipment/items-98.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 56,
+      "name": "Cloak of Defiance",
+      "base": "Havoc Raiment",
+      "imageId": "Cloak_of_Defiance",
+      "image": "/images/poe2/equipment/items-99.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 57,
+      "name": "Cloak of Flame",
+      "base": "Silk Robe",
+      "imageId": "Cloak_of_Flame",
+      "image": "/images/poe2/equipment/items-100.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 58,
+      "name": "Coat of Red",
+      "base": "Chain Mail",
+      "imageId": "Coat_of_Red",
+      "image": "/images/poe2/equipment/items-101.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 59,
+      "name": "Cospri's Will",
+      "base": "Assassin Garb",
+      "imageId": "Cospris_Will",
+      "image": "/images/poe2/equipment/items-102.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 60,
+      "name": "Couture of Crimson",
+      "base": "Gilded Vestments",
+      "imageId": "Couture_of_Crimson",
+      "image": "/images/poe2/equipment/items-103.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 61,
+      "name": "Decree of Loyalty",
+      "base": "Ancient Mail",
+      "imageId": "Decree_of_Loyalty",
+      "image": "/images/poe2/equipment/items-154.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 62,
+      "name": "Doryani's Prototype",
+      "base": "Scale Mail",
+      "imageId": "Doryanis_Prototype",
+      "image": "/images/poe2/equipment/items-105.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 63,
+      "name": "Dustbloom",
+      "base": "Studded Vest",
+      "imageId": "Dustbloom",
+      "image": "/images/poe2/equipment/items-106.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 64,
+      "name": "Edyrn's Tusks",
+      "base": "Iron Cuirass",
+      "imageId": "Edyrns_Tusks",
+      "image": "/images/poe2/equipment/items-107.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 65,
+      "name": "Enfolding Dawn",
+      "base": "Pilgrim Vestments",
+      "imageId": "Enfolding_Dawn",
+      "image": "/images/poe2/equipment/items-109.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 66,
+      "name": "Forgotten Warden",
+      "base": "Primal Markings",
+      "imageId": "Forgotten_Warden",
+      "image": "/images/poe2/equipment/items-144.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 67,
+      "name": "Foxshade",
+      "base": "Quilted Vest",
+      "imageId": "Foxshade",
+      "image": "/images/poe2/equipment/items-110.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 68,
+      "name": "Geofri's Sanctuary",
+      "base": "Revered Vestments",
+      "imageId": "Geofris_Sanctuary",
+      "image": "/images/poe2/equipment/items-112.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 69,
+      "name": "Ghostwrithe",
+      "base": "Tattered Robe",
+      "imageId": "Ghostwrithe",
+      "image": "/images/poe2/equipment/items-113.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 70,
+      "name": "Gloamgown",
+      "base": "Elementalist Robe",
+      "imageId": "Gloamgown",
+      "image": "/images/poe2/equipment/items-114.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 71,
+      "name": "Gloomform",
+      "base": "Waxed Jacket",
+      "imageId": "Gloomform",
+      "image": "/images/poe2/equipment/items-111.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 72,
+      "name": "Greed's Embrace",
+      "base": "Vaal Cuirass",
+      "imageId": "Greeds_Embrace",
+      "image": "/images/poe2/equipment/items-115.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 73,
+      "name": "Hyrri's Ire",
+      "base": "Armoured Vest",
+      "imageId": "Hyrris_Ire",
+      "image": "/images/poe2/equipment/items-117.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 74,
+      "name": "Icetomb",
+      "base": "Mail Vestments",
+      "imageId": "Icetomb",
+      "image": "/images/poe2/equipment/items-118.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 75,
+      "name": "Irongrasp",
+      "base": "Vagabond Armour",
+      "imageId": "Irongrasp",
+      "image": "/images/poe2/equipment/items-119.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 76,
+      "name": "Kaom's Heart",
+      "base": "Conqueror Plate",
+      "imageId": "Kaoms_Heart",
+      "image": "/images/poe2/equipment/items-120.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 77,
+      "name": "Kingsguard",
+      "base": "Full Plate",
+      "imageId": "Kingsguard",
+      "image": "/images/poe2/equipment/items-121.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 78,
+      "name": "Lightning Coil",
+      "base": "Ancestral Mail",
+      "imageId": "Lightning_Coil",
+      "image": "/images/poe2/equipment/items-122.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 79,
+      "name": "Morior Invictus",
+      "base": "Grand Regalia",
+      "imageId": "Morior_Invictus",
+      "image": "/images/poe2/equipment/items-124.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 80,
+      "name": "Necromantle",
+      "base": "Bone Raiment",
+      "imageId": "Necromantle",
+      "image": "/images/poe2/equipment/items-127.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 81,
+      "name": "Pariah's Embrace",
+      "base": "Cloaked Mail",
+      "imageId": "Pariahs_Embrace",
+      "image": "/images/poe2/equipment/items-128.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 82,
+      "name": "Perfidy",
+      "base": "Knight Armour",
+      "imageId": "Perfidy",
+      "image": "/images/poe2/equipment/items-129.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 83,
+      "name": "Pragmatism",
+      "base": "Explorer Armour",
+      "imageId": "Pragmatism",
+      "image": "/images/poe2/equipment/items-131.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 84,
+      "name": "Prayers for Rain",
+      "base": "Keth Raiment",
+      "imageId": "Prayers_for_Rain",
+      "image": "/images/poe2/equipment/items-132.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 85,
+      "name": "Quatl's Molt",
+      "base": "Serpentscale Coat",
+      "imageId": "Quatls_Molt",
+      "image": "/images/poe2/equipment/items-133.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 86,
+      "name": "Queen of the Forest",
+      "base": "Smuggler Coat",
+      "imageId": "Queen_of_the_Forest",
+      "image": "/images/poe2/equipment/items-134.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 87,
+      "name": "Redflare Conduit",
+      "base": "Anchorite Garb",
+      "imageId": "Redflare_Conduit",
+      "image": "/images/poe2/equipment/items-135.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 88,
+      "name": "Reverie",
+      "base": "Shaman Mantle",
+      "imageId": "Reverie",
+      "image": "/images/poe2/equipment/items-116.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 89,
+      "name": "Sacrosanctum",
+      "base": "Corvus Mantle",
+      "imageId": "Sacrosanctum",
+      "image": "/images/poe2/equipment/items-136.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 90,
+      "name": "Sands of Silk",
+      "base": "Shrouded Vest",
+      "imageId": "Sands_of_Silk",
+      "image": "/images/poe2/equipment/items-137.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 91,
+      "name": "Sierran Inheritance",
+      "base": "Marabout Garb",
+      "imageId": "Sierran_Inheritance",
+      "image": "/images/poe2/equipment/items-126.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 92,
+      "name": "Silks of Veneration",
+      "base": "Enlightened Robe",
+      "imageId": "Silks_of_Veneration",
+      "image": "/images/poe2/equipment/items-138.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 93,
+      "name": "Skin of the Loyal",
+      "base": "Garment",
+      "imageId": "Skin_of_the_Loyal",
+      "image": "/images/poe2/equipment/items-139.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 94,
+      "name": "Soul Mantle",
+      "base": "Sacrificial Mantle",
+      "imageId": "Soul_Mantle",
+      "image": "/images/poe2/equipment/items-140.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 95,
+      "name": "Tabula Rasa",
+      "base": "Garment",
+      "imageId": "Tabula_Rasa",
+      "image": "/images/poe2/equipment/items-141.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 96,
+      "name": "Temporalis",
+      "base": "Silk Robe",
+      "imageId": "Temporalis",
+      "image": "/images/poe2/equipment/items-130.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 97,
+      "name": "Tetzlapokal's Desire",
+      "base": "Votive Raiment",
+      "imageId": "Tetzlapokals_Desire",
+      "image": "/images/poe2/equipment/items-142.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 98,
+      "name": "The Auspex",
+      "base": "Exquisite Vest",
+      "imageId": "The_Auspex",
+      "image": "/images/poe2/equipment/items-143.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 99,
+      "name": "The Barrow Dweller",
+      "base": "Rogue Armour",
+      "imageId": "The_Barrow_Dweller",
+      "image": "/images/poe2/equipment/items-145.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 100,
+      "name": "The Black Doubt",
+      "base": "Hexer's Robe",
+      "imageId": "The_Black_Doubt",
+      "image": "/images/poe2/equipment/items-146.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 101,
+      "name": "The Brass Dome",
+      "base": "Champion Cuirass",
+      "imageId": "The_Brass_Dome",
+      "image": "/images/poe2/equipment/items-96.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 102,
+      "name": "The Coming Calamity",
+      "base": "Heroic Armour",
+      "imageId": "The_Coming_Calamity",
+      "image": "/images/poe2/equipment/items-147.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 103,
+      "name": "The Covenant",
+      "base": "Altar Robe",
+      "imageId": "The_Covenant",
+      "image": "/images/poe2/equipment/items-148.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 104,
+      "name": "The Dancing Mirage",
+      "base": "Wayfarer Jacket",
+      "imageId": "The_Dancing_Mirage",
+      "image": "/images/poe2/equipment/items-149.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 105,
+      "name": "The Fallen Formation",
+      "base": "Lamellar Mail",
+      "imageId": "The_Fallen_Formation",
+      "image": "/images/poe2/equipment/items-751.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 106,
+      "name": "The Mutable Star",
+      "base": "Cleric Vestments",
+      "imageId": "The_Mutable_Star",
+      "image": "/images/poe2/equipment/items-125.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 107,
+      "name": "The Rat Cage",
+      "base": "Scout's Vest",
+      "imageId": "The_Rat_Cage",
+      "image": "/images/poe2/equipment/items-150.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 108,
+      "name": "The Road Warrior",
+      "base": "Raider Plate",
+      "imageId": "The_Road_Warrior",
+      "image": "/images/poe2/equipment/items-151.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 109,
+      "name": "The Sunken Vessel",
+      "base": "Knight Armour",
+      "imageId": "The_Sunken_Vessel",
+      "image": "/images/poe2/equipment/items-152.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 110,
+      "name": "The Unleashed",
+      "base": "Revered Vestments",
+      "imageId": "The_Unleashed",
+      "image": "/images/poe2/equipment/items-108.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 111,
+      "name": "Titanrot Cataphract",
+      "base": "Maraketh Cuirass",
+      "imageId": "Titanrot_Cataphract",
+      "image": "/images/poe2/equipment/items-153.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 112,
+      "name": "Vis Mortis",
+      "base": "Plated Raiment",
+      "imageId": "Vis_Mortis",
+      "image": "/images/poe2/equipment/items-155.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 113,
+      "name": "Voll's Protector",
+      "base": "Ironclad Vestments",
+      "imageId": "Volls_Protector",
+      "image": "/images/poe2/equipment/items-156.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 114,
+      "name": "Wandering Reliquary",
+      "base": "Steel Plate",
+      "imageId": "Wandering_Reliquary",
+      "image": "/images/poe2/equipment/items-157.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 115,
+      "name": "Waveshaper",
+      "base": "Tideseer Mantle",
+      "imageId": "Waveshaper",
+      "image": "/images/poe2/equipment/items-158.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 116,
+      "name": "Widow's Reign",
+      "base": "Knight Armour",
+      "imageId": "Widows_Reign",
+      "image": "/images/poe2/equipment/items-159.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 117,
+      "name": "Yriel's Fostering",
+      "base": "Strider Vest",
+      "imageId": "Yriels_Fostering",
+      "image": "/images/poe2/equipment/items-160.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 118,
+      "name": "Zerphi's Serape",
+      "base": "Scalper's Jacket",
+      "imageId": "Zerphis_Serape",
+      "image": "/images/poe2/equipment/items-161.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 119,
+      "name": "Ab Aeterno",
+      "base": "Grand Cuisses",
+      "imageId": "Ab_Aeterno",
+      "image": "/images/poe2/equipment/items-184.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 120,
+      "name": "Atziri's Step",
+      "base": "Cinched Boots",
+      "imageId": "Atziris_Step",
+      "image": "/images/poe2/equipment/items-185.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 121,
+      "name": "Beetlebite",
+      "base": "Velour Shoes",
+      "imageId": "Beetlebite",
+      "image": "/images/poe2/equipment/items-742.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 122,
+      "name": "Birth of Fury",
+      "base": "Stone Greaves",
+      "imageId": "Birth_of_Fury",
+      "image": "/images/poe2/equipment/items-187.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 123,
+      "name": "Bones of Ullr",
+      "base": "Lattice Sandals",
+      "imageId": "Bones_of_Ullr",
+      "image": "/images/poe2/equipment/items-188.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 124,
+      "name": "Briarpatch",
+      "base": "Laced Boots",
+      "imageId": "Briarpatch",
+      "image": "/images/poe2/equipment/items-190.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 125,
+      "name": "Bushwhack",
+      "base": "Lizardscale Boots",
+      "imageId": "Bushwhack",
+      "image": "/images/poe2/equipment/items-191.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 126,
+      "name": "Corpsewade",
+      "base": "Iron Greaves",
+      "imageId": "Corpsewade",
+      "image": "/images/poe2/equipment/items-192.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 127,
+      "name": "Darkray Vectors",
+      "base": "Braced Sabatons",
+      "imageId": "Darkray_Vectors",
+      "image": "/images/poe2/equipment/items-193.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 128,
+      "name": "Decree of Flight",
+      "base": "Ancient Leggings",
+      "imageId": "Decree_of_Flight",
+      "image": "/images/poe2/equipment/items-189.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 129,
+      "name": "Gamblesprint",
+      "base": "Embossed Boots",
+      "imageId": "Gamblesprint",
+      "image": "/images/poe2/equipment/items-194.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 130,
+      "name": "Ghostmarch",
+      "base": "Threaded Shoes",
+      "imageId": "Ghostmarch",
+      "image": "/images/poe2/equipment/items-195.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 131,
+      "name": "Legionstride",
+      "base": "Rough Greaves",
+      "imageId": "Legionstride",
+      "image": "/images/poe2/equipment/items-197.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 132,
+      "name": "Luminous Pace",
+      "base": "Straw Sandals",
+      "imageId": "Luminous_Pace",
+      "image": "/images/poe2/equipment/items-186.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 133,
+      "name": "Obern's Bastion",
+      "base": "Stacked Sabatons",
+      "imageId": "Oberns_Bastion",
+      "image": "/images/poe2/equipment/items-198.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 134,
+      "name": "Powertread",
+      "base": "Hunting Shoes",
+      "imageId": "Powertread",
+      "image": "/images/poe2/equipment/items-199.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 135,
+      "name": "Shankgonne",
+      "base": "Covered Sabatons",
+      "imageId": "Shankgonne",
+      "image": "/images/poe2/equipment/items-200.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 136,
+      "name": "The Infinite Pursuit",
+      "base": "Bronze Greaves",
+      "imageId": "The_Infinite_Pursuit",
+      "image": "/images/poe2/equipment/items-201.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 137,
+      "name": "The Knight-errant",
+      "base": "Mail Sabatons",
+      "imageId": "The_Knight-errant",
+      "image": "/images/poe2/equipment/items-196.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 138,
+      "name": "Thunderstep",
+      "base": "Steeltoe Boots",
+      "imageId": "Thunderstep",
+      "image": "/images/poe2/equipment/items-202.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 139,
+      "name": "Trampletoe",
+      "base": "Trimmed Greaves",
+      "imageId": "Trampletoe",
+      "image": "/images/poe2/equipment/items-203.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 140,
+      "name": "Wake of Destruction",
+      "base": "Secured Leggings",
+      "imageId": "Wake_of_Destruction",
+      "image": "/images/poe2/equipment/items-204.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 141,
+      "name": "Wanderlust",
+      "base": "Wrapped Sandals",
+      "imageId": "Wanderlust",
+      "image": "/images/poe2/equipment/items-205.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 142,
+      "name": "Windscream",
+      "base": "Feathered Sandals",
+      "imageId": "Windscream",
+      "image": "/images/poe2/equipment/items-206.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 143,
+      "name": "Wondertrap",
+      "base": "Silk Slippers",
+      "imageId": "Wondertrap",
+      "image": "/images/poe2/equipment/items-207.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 144,
+      "name": "Death's Harp",
+      "base": "Dualstring Bow",
+      "imageId": "Deaths_Harp",
+      "image": "/images/poe2/equipment/items-667.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 145,
+      "name": "Doomfletch",
+      "base": "Composite Bow",
+      "imageId": "Doomfletch",
+      "image": "/images/poe2/equipment/items-668.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 146,
+      "name": "Fairgraves' Curse",
+      "base": "Artillery Bow",
+      "imageId": "Fairgraves_Curse",
+      "image": "/images/poe2/equipment/items-666.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 147,
+      "name": "Ironbound",
+      "base": "Warden Bow",
+      "imageId": "Ironbound",
+      "image": "/images/poe2/equipment/items-670.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 148,
+      "name": "Lioneye's Glare",
+      "base": "Heavy Bow",
+      "imageId": "Lioneyes_Glare",
+      "image": "/images/poe2/equipment/items-671.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 149,
+      "name": "Periphery",
+      "base": "Heartwood Shortbow",
+      "imageId": "Periphery",
+      "image": "/images/poe2/equipment/items-669.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 150,
+      "name": "Quill Rain",
+      "base": "Shortbow",
+      "imageId": "Quill_Rain",
+      "image": "/images/poe2/equipment/items-672.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 151,
+      "name": "Slivertongue",
+      "base": "Zealot Bow",
+      "imageId": "Slivertongue",
+      "image": "/images/poe2/equipment/items-673.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 152,
+      "name": "Splinterheart",
+      "base": "Recurve Bow",
+      "imageId": "Splinterheart",
+      "image": "/images/poe2/equipment/items-674.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 153,
+      "name": "Voltaxic Rift",
+      "base": "Fanatic Bow",
+      "imageId": "Voltaxic_Rift",
+      "image": "/images/poe2/equipment/items-675.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 154,
+      "name": "Widowhail",
+      "base": "Crude Bow",
+      "imageId": "Widowhail",
+      "image": "/images/poe2/equipment/items-676.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 155,
+      "name": "Double Vision",
+      "base": "Dyad Crossbow",
+      "imageId": "Double_Vision",
+      "image": "/images/poe2/equipment/items-682.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 156,
+      "name": "Mist Whisper",
+      "base": "Makeshift Crossbow",
+      "imageId": "Mist_Whisper",
+      "image": "/images/poe2/equipment/items-683.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 157,
+      "name": "Rampart Raptor",
+      "base": "Tense Crossbow",
+      "imageId": "Rampart_Raptor",
+      "image": "/images/poe2/equipment/items-684.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 158,
+      "name": "Redemption",
+      "base": "Trarthan Cannon",
+      "imageId": "Redemption",
+      "image": "/images/poe2/equipment/items-686.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 159,
+      "name": "The Last Lament",
+      "base": "Desolate Crossbow",
+      "imageId": "The_Last_Lament",
+      "image": "/images/poe2/equipment/items-685.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 160,
+      "name": "Arakaali's Gift",
+      "base": "Antidote Charm",
+      "imageId": "Arakaalis_Gift",
+      "image": "/images/poe2/equipment/items-402.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 161,
+      "name": "Beira's Anguish",
+      "base": "Dousing Charm",
+      "imageId": "Beiras_Anguish",
+      "image": "/images/poe2/equipment/items-404.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 162,
+      "name": "Blood of the Warrior",
+      "base": "Gargantuan Life Flask",
+      "imageId": "Blood_of_the_Warrior",
+      "image": "/images/poe2/equipment/items-423.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 163,
+      "name": "Breath of the Mountains",
+      "base": "Sapphire Charm",
+      "imageId": "Breath_of_the_Mountains",
+      "image": "/images/poe2/equipment/items-408.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 164,
+      "name": "For Utopia",
+      "base": "Stone Charm",
+      "imageId": "For_Utopia",
+      "image": "/images/poe2/equipment/items-411.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 165,
+      "name": "Forsaken Bangle",
+      "base": "Amethyst Charm",
+      "imageId": "Forsaken_Bangle",
+      "image": "/images/poe2/equipment/items-403.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 166,
+      "name": "Lavianga's Spirits",
+      "base": "Gargantuan Mana Flask",
+      "imageId": "Laviangas_Spirits",
+      "image": "/images/poe2/equipment/items-424.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 167,
+      "name": "Melting Maelstrom",
+      "base": "Ultimate Mana Flask",
+      "imageId": "Melting_Maelstrom",
+      "image": "/images/poe2/equipment/items-425.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 168,
+      "name": "Nascent Hope",
+      "base": "Thawing Charm",
+      "imageId": "Nascent_Hope",
+      "image": "/images/poe2/equipment/items-412.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 169,
+      "name": "Ngamahu's Chosen",
+      "base": "Ruby Charm",
+      "imageId": "Ngamahus_Chosen",
+      "image": "/images/poe2/equipment/items-407.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 170,
+      "name": "Olroth's Resolve",
+      "base": "Ultimate Life Flask",
+      "imageId": "Olroths_Resolve",
+      "image": "/images/poe2/equipment/items-426.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 171,
+      "name": "Opportunity",
+      "base": "Ultimate Life Flask",
+      "imageId": "Opportunity",
+      "image": "/images/poe2/equipment/items-427.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 172,
+      "name": "Rite of Passage",
+      "base": "Golden Charm",
+      "imageId": "Rite_of_Passage",
+      "image": "/images/poe2/equipment/items-405.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 173,
+      "name": "Sanguis Heroum",
+      "base": "Staunching Charm",
+      "imageId": "Sanguis_Heroum",
+      "image": "/images/poe2/equipment/items-410.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 174,
+      "name": "The Black Cat",
+      "base": "Grounding Charm",
+      "imageId": "The_Black_Cat",
+      "image": "/images/poe2/equipment/items-406.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 175,
+      "name": "The Fall of the Axe",
+      "base": "Silver Charm",
+      "imageId": "The_Fall_of_the_Axe",
+      "image": "/images/poe2/equipment/items-409.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 176,
+      "name": "Uhtred's Chalice",
+      "base": "Transcendent Mana Flask",
+      "imageId": "Uhtreds_Chalice",
+      "image": "/images/poe2/equipment/items-428.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 177,
+      "name": "Valako's Roar",
+      "base": "Topaz Charm",
+      "imageId": "Valakos_Roar",
+      "image": "/images/poe2/equipment/items-413.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 178,
+      "name": "Apep's Supremacy",
+      "base": "Voodoo Focus",
+      "imageId": "Apeps_Supremacy",
+      "image": "/images/poe2/equipment/items-450.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 179,
+      "name": "Carrion Call",
+      "base": "Engraved Focus",
+      "imageId": "Carrion_Call",
+      "image": "/images/poe2/equipment/items-451.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 180,
+      "name": "Deathrattle",
+      "base": "Twig Focus",
+      "imageId": "Deathrattle",
+      "image": "/images/poe2/equipment/items-452.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 181,
+      "name": "Effigy of Cruelty",
+      "base": "Antler Focus",
+      "imageId": "Effigy_of_Cruelty",
+      "image": "/images/poe2/equipment/items-453.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 182,
+      "name": "Rathpith Globe",
+      "base": "Sacred Focus",
+      "imageId": "Rathpith_Globe",
+      "image": "/images/poe2/equipment/items-455.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 183,
+      "name": "Serpent's Lesson",
+      "base": "Tonal Focus",
+      "imageId": "Serpents_Lesson",
+      "image": "/images/poe2/equipment/items-457.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 184,
+      "name": "The Eternal Spark",
+      "base": "Crystal Focus",
+      "imageId": "The_Eternal_Spark",
+      "image": "/images/poe2/equipment/items-454.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 185,
+      "name": "Threaded Light",
+      "base": "Woven Focus",
+      "imageId": "Threaded_Light",
+      "image": "/images/poe2/equipment/items-456.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 186,
+      "name": "Aerisvane's Wings",
+      "base": "Burnished Gauntlets",
+      "imageId": "Aerisvanes_Wings",
+      "image": "/images/poe2/equipment/items-236.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 187,
+      "name": "Atziri's Acuity",
+      "base": "Moulded Mitts",
+      "imageId": "Atziris_Acuity",
+      "image": "/images/poe2/equipment/items-237.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 188,
+      "name": "Aurseize",
+      "base": "Layered Gauntlets",
+      "imageId": "Aurseize",
+      "image": "/images/poe2/equipment/items-238.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 189,
+      "name": "Blessed Bonds",
+      "base": "Linen Wraps",
+      "imageId": "Blessed_Bonds",
+      "image": "/images/poe2/equipment/items-239.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 190,
+      "name": "Blueflame Bracers",
+      "base": "Goldcast Cuffs",
+      "imageId": "Blueflame_Bracers",
+      "image": "/images/poe2/equipment/items-743.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 191,
+      "name": "Candlemaker",
+      "base": "Sombre Gloves",
+      "imageId": "Candlemaker",
+      "image": "/images/poe2/equipment/items-240.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 192,
+      "name": "Death Articulated",
+      "base": "Ornate Gauntlets",
+      "imageId": "Death_Articulated",
+      "image": "/images/poe2/equipment/items-243.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 193,
+      "name": "Deathblow",
+      "base": "Doubled Gauntlets",
+      "imageId": "Deathblow",
+      "image": "/images/poe2/equipment/items-744.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 194,
+      "name": "Demon Stitcher",
+      "base": "Intricate Gloves",
+      "imageId": "Demon_Stitcher",
+      "image": "/images/poe2/equipment/items-244.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 195,
+      "name": "Doedre's Tenure",
+      "base": "Stitched Gloves",
+      "imageId": "Doedres_Tenure",
+      "image": "/images/poe2/equipment/items-247.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 196,
+      "name": "Dreadfist",
+      "base": "Bolstered Mitts",
+      "imageId": "Dreadfist",
+      "image": "/images/poe2/equipment/items-245.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 197,
+      "name": "Empire's Grasp",
+      "base": "Titan Mitts",
+      "imageId": "Empires_Grasp",
+      "image": "/images/poe2/equipment/items-246.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 198,
+      "name": "Essentia Sanguis",
+      "base": "Furtive Wraps",
+      "imageId": "Essentia_Sanguis",
+      "image": "/images/poe2/equipment/items-248.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 199,
+      "name": "Facebreaker",
+      "base": "Stocky Mitts",
+      "imageId": "Facebreaker",
+      "image": "/images/poe2/equipment/items-249.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 200,
+      "name": "Gravebind",
+      "base": "Rope Cuffs",
+      "imageId": "Gravebind",
+      "image": "/images/poe2/equipment/items-251.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 201,
+      "name": "Grip of Winter",
+      "base": "Firm Bracers",
+      "imageId": "Grip_of_Winter",
+      "image": "/images/poe2/equipment/items-252.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 202,
+      "name": "Hand of Wisdom and Action",
+      "base": "Furtive Wraps",
+      "imageId": "Hand_of_Wisdom_and_Action",
+      "image": "/images/poe2/equipment/items-253.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 203,
+      "name": "Hateforge",
+      "base": "Moulded Mitts",
+      "imageId": "Hateforge",
+      "image": "/images/poe2/equipment/items-254.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 204,
+      "name": "Horror's Flight",
+      "base": "Engraved Bracers",
+      "imageId": "Horrors_Flight",
+      "image": "/images/poe2/equipment/items-241.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 205,
+      "name": "Idle Hands",
+      "base": "Sectioned Bracers",
+      "imageId": "Idle_Hands",
+      "image": "/images/poe2/equipment/items-255.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 206,
+      "name": "Jarngreipr",
+      "base": "Ringmail Gauntlets",
+      "imageId": "Jarngreipr",
+      "image": "/images/poe2/equipment/items-256.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 207,
+      "name": "Killjoy",
+      "base": "Linen Wraps",
+      "imageId": "Killjoy",
+      "image": "/images/poe2/equipment/items-257.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 208,
+      "name": "Kitoko's Current",
+      "base": "Jewelled Gloves",
+      "imageId": "Kitokos_Current",
+      "image": "/images/poe2/equipment/items-250.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 209,
+      "name": "Leopold's Applause",
+      "base": "Embroidered Gloves",
+      "imageId": "Leopolds_Applause",
+      "image": "/images/poe2/equipment/items-258.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 210,
+      "name": "Lochtonial Caress",
+      "base": "Tempered Mitts",
+      "imageId": "Lochtonial_Caress",
+      "image": "/images/poe2/equipment/items-259.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 211,
+      "name": "Maligaro's Virtuosity",
+      "base": "Fine Bracers",
+      "imageId": "Maligaros_Virtuosity",
+      "image": "/images/poe2/equipment/items-260.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 212,
+      "name": "Nightscale",
+      "base": "Pauascale Gloves",
+      "imageId": "Nightscale",
+      "image": "/images/poe2/equipment/items-261.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 213,
+      "name": "Northpaw",
+      "base": "Suede Bracers",
+      "imageId": "Northpaw",
+      "image": "/images/poe2/equipment/items-262.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 214,
+      "name": "Painter's Servant",
+      "base": "Torn Gloves",
+      "imageId": "Painters_Servant",
+      "image": "/images/poe2/equipment/items-263.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 215,
+      "name": "Plaguefinger",
+      "base": "Gauze Wraps",
+      "imageId": "Plaguefinger",
+      "image": "/images/poe2/equipment/items-264.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 216,
+      "name": "Shackles of the Wretched",
+      "base": "Aged Cuffs",
+      "imageId": "Shackles_of_the_Wretched",
+      "image": "/images/poe2/equipment/items-266.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 217,
+      "name": "Sine Aequo",
+      "base": "Grand Manchettes",
+      "imageId": "Sine_Aequo",
+      "image": "/images/poe2/equipment/items-267.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 218,
+      "name": "Snakebite",
+      "base": "Spined Bracers",
+      "imageId": "Snakebite",
+      "image": "/images/poe2/equipment/items-268.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 219,
+      "name": "The Prisoner's Manacles",
+      "base": "Kalguuran Cuffs",
+      "imageId": "The_Prisoners_Manacles",
+      "image": "/images/poe2/equipment/items-265.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 220,
+      "name": "Thunderfist",
+      "base": "Utility Wraps",
+      "imageId": "Thunderfist",
+      "image": "/images/poe2/equipment/items-269.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 221,
+      "name": "Treefingers",
+      "base": "Riveted Mitts",
+      "imageId": "Treefingers",
+      "image": "/images/poe2/equipment/items-270.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 222,
+      "name": "Valako's Vice",
+      "base": "Plate Gauntlets",
+      "imageId": "Valakos_Vice",
+      "image": "/images/poe2/equipment/items-271.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 223,
+      "name": "Alpha's Howl",
+      "base": "Armoured Cap",
+      "imageId": "Alphas_Howl",
+      "image": "/images/poe2/equipment/items-741.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 224,
+      "name": "Assailum",
+      "base": "Closed Helm",
+      "imageId": "Assailum",
+      "image": "/images/poe2/equipment/items-319.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 225,
+      "name": "Atsak's Sight",
+      "base": "Veiled Mask",
+      "imageId": "Atsaks_Sight",
+      "image": "/images/poe2/equipment/items-321.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 226,
+      "name": "Atziri's Disdain",
+      "base": "Gold Circlet",
+      "imageId": "Atziris_Disdain",
+      "image": "/images/poe2/equipment/items-320.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 227,
+      "name": "Black Sun Crest",
+      "base": "Wrapped Greathelm",
+      "imageId": "Black_Sun_Crest",
+      "image": "/images/poe2/equipment/items-322.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 228,
+      "name": "Blood Price",
+      "base": "Fierce Greathelm",
+      "imageId": "Blood_Price",
+      "image": "/images/poe2/equipment/items-323.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 229,
+      "name": "Bronzebeard",
+      "base": "Horned Crown",
+      "imageId": "Bronzebeard",
+      "image": "/images/poe2/equipment/items-325.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 230,
+      "name": "Constricting Command",
+      "base": "Viper Cap",
+      "imageId": "Constricting_Command",
+      "image": "/images/poe2/equipment/items-326.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 231,
+      "name": "Cornathaum",
+      "base": "Heavy Crown",
+      "imageId": "Cornathaum",
+      "image": "/images/poe2/equipment/items-327.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 232,
+      "name": "Corona of the Red Sun",
+      "base": "Warrior Greathelm",
+      "imageId": "Corona_of_the_Red_Sun",
+      "image": "/images/poe2/equipment/items-328.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 233,
+      "name": "Crown of Eyes",
+      "base": "Vermeil Circlet",
+      "imageId": "Crown_of_Eyes",
+      "image": "/images/poe2/equipment/items-329.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 234,
+      "name": "Crown of Thorns",
+      "base": "Twig Circlet",
+      "imageId": "Crown_of_Thorns",
+      "image": "/images/poe2/equipment/items-333.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 235,
+      "name": "Crown of the Pale King",
+      "base": "Cultist Crown",
+      "imageId": "Crown_of_the_Pale_King",
+      "image": "/images/poe2/equipment/items-330.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 236,
+      "name": "Crown of the Victor",
+      "base": "Iron Crown",
+      "imageId": "Crown_of_the_Victor",
+      "image": "/images/poe2/equipment/items-331.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 237,
+      "name": "Decree of Acuity",
+      "base": "Ancient Visor",
+      "imageId": "Decree_of_Acuity",
+      "image": "/images/poe2/equipment/items-358.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 238,
+      "name": "Deidbell",
+      "base": "Elite Greathelm",
+      "imageId": "Deidbell",
+      "image": "/images/poe2/equipment/items-334.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 239,
+      "name": "Elevore",
+      "base": "Hunter Hood",
+      "imageId": "Elevore",
+      "image": "/images/poe2/equipment/items-336.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 240,
+      "name": "Erian's Cobble",
+      "base": "Guarded Helm",
+      "imageId": "Erians_Cobble",
+      "image": "/images/poe2/equipment/items-342.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 241,
+      "name": "Ezomyte Peak",
+      "base": "Soldier Greathelm",
+      "imageId": "Ezomyte_Peak",
+      "image": "/images/poe2/equipment/items-337.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 242,
+      "name": "Forbidden Gaze",
+      "base": "Chain Tiara",
+      "imageId": "Forbidden_Gaze",
+      "image": "/images/poe2/equipment/items-338.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 243,
+      "name": "Glimpse of Chaos",
+      "base": "Tribal Mask",
+      "imageId": "Glimpse_of_Chaos",
+      "image": "/images/poe2/equipment/items-339.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 244,
+      "name": "Goldrim",
+      "base": "Felt Cap",
+      "imageId": "Goldrim",
+      "image": "/images/poe2/equipment/items-340.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 245,
+      "name": "Greymake",
+      "base": "Brimmed Helm",
+      "imageId": "Greymake",
+      "image": "/images/poe2/equipment/items-341.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 246,
+      "name": "Heatshiver",
+      "base": "Velvet Cap",
+      "imageId": "Heatshiver",
+      "image": "/images/poe2/equipment/items-343.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 247,
+      "name": "Horns of Bynden",
+      "base": "Rusted Greathelm",
+      "imageId": "Horns_of_Bynden",
+      "image": "/images/poe2/equipment/items-344.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 248,
+      "name": "Indigon",
+      "base": "Magus Tiara",
+      "imageId": "Indigon",
+      "image": "/images/poe2/equipment/items-345.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 249,
+      "name": "Innsmouth",
+      "base": "Shabby Hood",
+      "imageId": "Innsmouth",
+      "image": "/images/poe2/equipment/items-346.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 250,
+      "name": "Ironride",
+      "base": "Visored Helm",
+      "imageId": "Ironride",
+      "image": "/images/poe2/equipment/items-347.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 251,
+      "name": "Keeper of the Arc",
+      "base": "Spiritbone Crown",
+      "imageId": "Keeper_of_the_Arc",
+      "image": "/images/poe2/equipment/items-348.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 252,
+      "name": "Leer Cast",
+      "base": "Hooded Mask",
+      "imageId": "Leer_Cast",
+      "image": "/images/poe2/equipment/items-349.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 253,
+      "name": "Mask of the Sanguimancer",
+      "base": "Face Mask",
+      "imageId": "Mask_of_the_Sanguimancer",
+      "image": "/images/poe2/equipment/items-354.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 254,
+      "name": "Mask of the Stitched Demon",
+      "base": "Feathered Tiara",
+      "imageId": "Mask_of_the_Stitched_Demon",
+      "image": "/images/poe2/equipment/items-351.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 255,
+      "name": "Mind of the Council",
+      "base": "Death Mask",
+      "imageId": "Mind_of_the_Council",
+      "image": "/images/poe2/equipment/items-352.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 256,
+      "name": "Myris Uxor",
+      "base": "Covert Hood",
+      "imageId": "Myris_Uxor",
+      "image": "/images/poe2/equipment/items-353.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 257,
+      "name": "Radiant Grief",
+      "base": "Lace Hood",
+      "imageId": "Radiant_Grief",
+      "image": "/images/poe2/equipment/items-355.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 258,
+      "name": "Sandstorm Visage",
+      "base": "Chain Tiara",
+      "imageId": "Sandstorm_Visage",
+      "image": "/images/poe2/equipment/items-356.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 259,
+      "name": "Scold's Bridle",
+      "base": "Jade Tiara",
+      "imageId": "Scolds_Bridle",
+      "image": "/images/poe2/equipment/items-357.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 260,
+      "name": "Solus Ipse",
+      "base": "Grand Visage",
+      "imageId": "Solus_Ipse",
+      "image": "/images/poe2/equipment/items-359.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 261,
+      "name": "Starkonja's Head",
+      "base": "Leatherbound Hood",
+      "imageId": "Starkonjas_Head",
+      "image": "/images/poe2/equipment/items-360.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 262,
+      "name": "The Black Insignia",
+      "base": "Corsair Cap",
+      "imageId": "The_Black_Insignia",
+      "image": "/images/poe2/equipment/items-361.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 263,
+      "name": "The Bringer of Rain",
+      "base": "Decorated Helm",
+      "imageId": "The_Bringer_of_Rain",
+      "image": "/images/poe2/equipment/items-324.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 264,
+      "name": "The Deepest Tower",
+      "base": "Spiritbone Crown",
+      "imageId": "The_Deepest_Tower",
+      "image": "/images/poe2/equipment/items-362.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 265,
+      "name": "The Devouring Diadem",
+      "base": "Wicker Tiara",
+      "imageId": "The_Devouring_Diadem",
+      "image": "/images/poe2/equipment/items-335.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 266,
+      "name": "The Hollow Mask",
+      "base": "Hewn Mask",
+      "imageId": "The_Hollow_Mask",
+      "image": "/images/poe2/equipment/items-350.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 267,
+      "name": "The Smiling Knight",
+      "base": "Cowled Helm",
+      "imageId": "The_Smiling_Knight",
+      "image": "/images/poe2/equipment/items-363.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 268,
+      "name": "The Three Dragons",
+      "base": "Solid Mask",
+      "imageId": "The_Three_Dragons",
+      "image": "/images/poe2/equipment/items-364.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 269,
+      "name": "The Vertex",
+      "base": "Tribal Mask",
+      "imageId": "The_Vertex",
+      "image": "/images/poe2/equipment/items-365.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 270,
+      "name": "The Vile Knight",
+      "base": "Shielded Helm",
+      "imageId": "The_Vile_Knight",
+      "image": "/images/poe2/equipment/items-366.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 271,
+      "name": "Thrillsteel",
+      "base": "Spired Greathelm",
+      "imageId": "Thrillsteel",
+      "image": "/images/poe2/equipment/items-367.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 272,
+      "name": "Veil of the Night",
+      "base": "Martyr Crown",
+      "imageId": "Veil_of_the_Night",
+      "image": "/images/poe2/equipment/items-368.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 273,
+      "name": "Vestige of Darkness",
+      "base": "Tenebrous Crown",
+      "imageId": "Vestige_of_Darkness",
+      "image": "/images/poe2/equipment/items-332.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 274,
+      "name": "Visage of Ayah",
+      "base": "Beaded Circlet",
+      "imageId": "Visage_of_Ayah",
+      "image": "/images/poe2/equipment/items-369.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 275,
+      "name": "Wings of Caelyn",
+      "base": "Rusted Greathelm",
+      "imageId": "Wings_of_Caelyn",
+      "image": "/images/poe2/equipment/items-370.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 276,
+      "name": "Controlled Metamorphosis",
+      "base": "Diamond",
+      "imageId": "Controlled_Metamorphosis",
+      "image": "/images/poe2/equipment/items-429.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 277,
+      "name": "Grand Spectrum",
+      "base": "Ruby",
+      "imageId": "Grand_Spectrum",
+      "image": "/images/poe2/equipment/items-437.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 278,
+      "name": "Grand Spectrum",
+      "base": "Emerald",
+      "imageId": "Grand_Spectrum",
+      "image": "/images/poe2/equipment/items-437.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 279,
+      "name": "Grand Spectrum",
+      "base": "Sapphire",
+      "imageId": "Grand_Spectrum",
+      "image": "/images/poe2/equipment/items-437.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 280,
+      "name": "Heroic Tragedy",
+      "base": "Timeless Jewel",
+      "imageId": "Heroic_Tragedy",
+      "image": "/images/poe2/equipment/items-431.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 281,
+      "name": "Split Personality",
+      "base": "Ruby",
+      "imageId": "Split_Personality",
+      "image": "/images/poe2/equipment/items-438.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 282,
+      "name": "The Adorned",
+      "base": "Diamond",
+      "imageId": "The_Adorned",
+      "image": "/images/poe2/equipment/items-435.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 283,
+      "name": "Undying Hate",
+      "base": "Timeless Jewel",
+      "imageId": "Undying_Hate",
+      "image": "/images/poe2/equipment/items-439.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 284,
+      "name": "Voices",
+      "base": "Sapphire",
+      "imageId": "Voices",
+      "image": "/images/poe2/equipment/items-441.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 285,
+      "name": "Brain Rattler",
+      "base": "Studded Greatclub",
+      "imageId": "Brain_Rattler",
+      "image": "/images/poe2/equipment/items-714.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 286,
+      "name": "Brutus' Lead Sprinkler",
+      "base": "Morning Star",
+      "imageId": "Brutus_Lead_Sprinkler",
+      "image": "/images/poe2/equipment/items-599.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 287,
+      "name": "Brynhand's Mark",
+      "base": "Wooden Club",
+      "imageId": "Brynhands_Mark",
+      "image": "/images/poe2/equipment/items-600.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 288,
+      "name": "Chober Chaber",
+      "base": "Leaden Greathammer",
+      "imageId": "Chober_Chaber",
+      "image": "/images/poe2/equipment/items-715.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 289,
+      "name": "Frostbreath",
+      "base": "Slim Mace",
+      "imageId": "Frostbreath",
+      "image": "/images/poe2/equipment/items-601.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 290,
+      "name": "Hoghunt",
+      "base": "Felled Greatclub",
+      "imageId": "Hoghunt",
+      "image": "/images/poe2/equipment/items-717.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 291,
+      "name": "Hrimnor's Hymn",
+      "base": "Oak Greathammer",
+      "imageId": "Hrimnors_Hymn",
+      "image": "/images/poe2/equipment/items-718.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 292,
+      "name": "Marohi Erqi",
+      "base": "Totemic Greatclub",
+      "imageId": "Marohi_Erqi",
+      "image": "/images/poe2/equipment/items-719.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 293,
+      "name": "Mjölner",
+      "base": "Torment Club",
+      "imageId": "Mj%C3%B6lner",
+      "image": "/images/poe2/equipment/items-602.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 294,
+      "name": "Nebuloch",
+      "base": "Brigand Mace",
+      "imageId": "Nebuloch",
+      "image": "/images/poe2/equipment/items-604.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 295,
+      "name": "Olrovasara",
+      "base": "Torment Club",
+      "imageId": "Olrovasara",
+      "image": "/images/poe2/equipment/items-605.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 296,
+      "name": "Quecholli",
+      "base": "Crumbling Maul",
+      "imageId": "Quecholli",
+      "image": "/images/poe2/equipment/items-720.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 297,
+      "name": "Sadist's Mercy",
+      "base": "Flanged Mace",
+      "imageId": "Sadists_Mercy",
+      "image": "/images/poe2/equipment/items-603.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 298,
+      "name": "Sculpted Suffering",
+      "base": "Warpick",
+      "imageId": "Sculpted_Suffering",
+      "image": "/images/poe2/equipment/items-606.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 299,
+      "name": "Seeing Stars",
+      "base": "Plated Mace",
+      "imageId": "Seeing_Stars",
+      "image": "/images/poe2/equipment/items-607.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 300,
+      "name": "Serle's Grit",
+      "base": "Kalguuran Forgehammer",
+      "imageId": "Serles_Grit",
+      "image": "/images/poe2/equipment/items-608.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 301,
+      "name": "Shyaba",
+      "base": "Temple Maul",
+      "imageId": "Shyaba",
+      "image": "/images/poe2/equipment/items-721.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 302,
+      "name": "The Empty Roar",
+      "base": "Cultist Greathammer",
+      "imageId": "The_Empty_Roar",
+      "image": "/images/poe2/equipment/items-723.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 303,
+      "name": "The Hammer of Faith",
+      "base": "Giant Maul",
+      "imageId": "The_Hammer_of_Faith",
+      "image": "/images/poe2/equipment/items-716.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 304,
+      "name": "Tidebreaker",
+      "base": "Pointed Maul",
+      "imageId": "Tidebreaker",
+      "image": "/images/poe2/equipment/items-724.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 305,
+      "name": "Trenchtimbre",
+      "base": "Spiked Club",
+      "imageId": "Trenchtimbre",
+      "image": "/images/poe2/equipment/items-610.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 306,
+      "name": "Trephina",
+      "base": "Forge Maul",
+      "imageId": "Trephina",
+      "image": "/images/poe2/equipment/items-725.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 307,
+      "name": "Twisted Empyrean",
+      "base": "Aberrant Sledge",
+      "imageId": "Twisted_Empyrean",
+      "image": "/images/poe2/equipment/items-722.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 308,
+      "name": "Wylund's Stake",
+      "base": "Smithing Hammer",
+      "imageId": "Wylunds_Stake",
+      "image": "/images/poe2/equipment/items-609.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 309,
+      "name": "Asphyxia's Wrath",
+      "base": "Broadhead Quiver",
+      "imageId": "Asphyxias_Wrath",
+      "image": "/images/poe2/equipment/items-529.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 310,
+      "name": "Beyond Reach",
+      "base": "Visceral Quiver",
+      "imageId": "Beyond_Reach",
+      "image": "/images/poe2/equipment/items-531.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 311,
+      "name": "Blackgleam",
+      "base": "Fire Quiver",
+      "imageId": "Blackgleam",
+      "image": "/images/poe2/equipment/items-530.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 312,
+      "name": "Cadiro's Gambit",
+      "base": "Primed Quiver",
+      "imageId": "Cadiros_Gambit",
+      "image": "/images/poe2/equipment/items-534.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 313,
+      "name": "Drillneck",
+      "base": "Penetrating Quiver",
+      "imageId": "Drillneck",
+      "image": "/images/poe2/equipment/items-532.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 314,
+      "name": "Murkshaft",
+      "base": "Toxic Quiver",
+      "imageId": "Murkshaft",
+      "image": "/images/poe2/equipment/items-533.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 315,
+      "name": "Rearguard",
+      "base": "Blunt Quiver",
+      "imageId": "Rearguard",
+      "image": "/images/poe2/equipment/items-535.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 316,
+      "name": "The Lethal Draw",
+      "base": "Sacral Quiver",
+      "imageId": "The_Lethal_Draw",
+      "image": "/images/poe2/equipment/items-536.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 317,
+      "name": "Andvarius",
+      "base": "Gold Ring",
+      "imageId": "Andvarius",
+      "image": "/images/poe2/equipment/items-556.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 318,
+      "name": "Berek's Grip",
+      "base": "Two-Stone Ring",
+      "imageId": "Bereks_Grip",
+      "image": "/images/poe2/equipment/items-557.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 319,
+      "name": "Berek's Pass",
+      "base": "Two-Stone Ring",
+      "imageId": "Bereks_Pass",
+      "image": "/images/poe2/equipment/items-558.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 320,
+      "name": "Berek's Respite",
+      "base": "Two-Stone Ring",
+      "imageId": "Bereks_Respite",
+      "image": "/images/poe2/equipment/items-559.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 321,
+      "name": "Blackflame",
+      "base": "Amethyst Ring",
+      "imageId": "Blackflame",
+      "image": "/images/poe2/equipment/items-553.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 322,
+      "name": "Blackheart",
+      "base": "Iron Ring",
+      "imageId": "Blackheart",
+      "image": "/images/poe2/equipment/items-560.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 323,
+      "name": "Blistering Bond",
+      "base": "Ruby Ring",
+      "imageId": "Blistering_Bond",
+      "image": "/images/poe2/equipment/items-561.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 324,
+      "name": "Bursting Decay",
+      "base": "Unset Ring",
+      "imageId": "Bursting_Decay",
+      "image": "/images/poe2/equipment/items-562.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 325,
+      "name": "Call of the Brotherhood",
+      "base": "Topaz Ring",
+      "imageId": "Call_of_the_Brotherhood",
+      "image": "/images/poe2/equipment/items-563.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 326,
+      "name": "Cracklecreep",
+      "base": "Ruby Ring",
+      "imageId": "Cracklecreep",
+      "image": "/images/poe2/equipment/items-564.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 327,
+      "name": "Death Rush",
+      "base": "Emerald Ring",
+      "imageId": "Death_Rush",
+      "image": "/images/poe2/equipment/items-565.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 328,
+      "name": "Doedre's Damning",
+      "base": "Lazuli Ring",
+      "imageId": "Doedres_Damning",
+      "image": "/images/poe2/equipment/items-566.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 329,
+      "name": "Dream Fragments",
+      "base": "Sapphire Ring",
+      "imageId": "Dream_Fragments",
+      "image": "/images/poe2/equipment/items-567.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 330,
+      "name": "Eshtera's Path",
+      "base": "Ring",
+      "imageId": "Eshteras_Path",
+      "image": "/images/poe2/equipment/items-579.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 331,
+      "name": "Evergrasping Ring",
+      "base": "Pearl Ring",
+      "imageId": "Evergrasping_Ring",
+      "image": "/images/poe2/equipment/items-569.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 332,
+      "name": "Gifts from Above",
+      "base": "Prismatic Ring",
+      "imageId": "Gifts_from_Above",
+      "image": "/images/poe2/equipment/items-570.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 333,
+      "name": "Glowswarm",
+      "base": "Lazuli Ring",
+      "imageId": "Glowswarm",
+      "image": "/images/poe2/equipment/items-571.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 334,
+      "name": "Heartbound Loop",
+      "base": "Pearl Ring",
+      "imageId": "Heartbound_Loop",
+      "image": "/images/poe2/equipment/items-572.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 335,
+      "name": "Icefang Orbit",
+      "base": "Iron Ring",
+      "imageId": "Icefang_Orbit",
+      "image": "/images/poe2/equipment/items-573.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 336,
+      "name": "Kalandra's Touch",
+      "base": "Ring",
+      "imageId": "Kalandras_Touch",
+      "image": "/images/poe2/equipment/items-555.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 337,
+      "name": "Levinstone",
+      "base": "Topaz Ring",
+      "imageId": "Levinstone",
+      "image": "/images/poe2/equipment/items-582.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 338,
+      "name": "Ming's Heart",
+      "base": "Amethyst Ring",
+      "imageId": "Mings_Heart",
+      "image": "/images/poe2/equipment/items-574.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 339,
+      "name": "Original Sin",
+      "base": "Amethyst Ring",
+      "imageId": "Original_Sin",
+      "image": "/images/poe2/equipment/items-575.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 340,
+      "name": "Perandus Seal",
+      "base": "Gold Ring",
+      "imageId": "Perandus_Seal",
+      "image": "/images/poe2/equipment/items-576.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 341,
+      "name": "Polcirkeln",
+      "base": "Sapphire Ring",
+      "imageId": "Polcirkeln",
+      "image": "/images/poe2/equipment/items-577.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 342,
+      "name": "Prized Pain",
+      "base": "Iron Ring",
+      "imageId": "Prized_Pain",
+      "image": "/images/poe2/equipment/items-578.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 343,
+      "name": "Safrin's Resolve",
+      "base": "Ring",
+      "imageId": "Safrins_Resolve",
+      "image": "/images/poe2/equipment/items-568.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 344,
+      "name": "Seed of Cataclysm",
+      "base": "Lazuli Ring",
+      "imageId": "Seed_of_Cataclysm",
+      "image": "/images/poe2/equipment/items-580.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 345,
+      "name": "Snakepit",
+      "base": "Pearl Ring",
+      "imageId": "Snakepit",
+      "image": "/images/poe2/equipment/items-581.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 346,
+      "name": "The Burrower",
+      "base": "Topaz Ring",
+      "imageId": "The_Burrower",
+      "image": "/images/poe2/equipment/items-584.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 347,
+      "name": "The Taming",
+      "base": "Prismatic Ring",
+      "imageId": "The_Taming",
+      "image": "/images/poe2/equipment/items-585.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 348,
+      "name": "Thief's Torment",
+      "base": "Emerald Ring",
+      "imageId": "Thiefs_Torment",
+      "image": "/images/poe2/equipment/items-586.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 349,
+      "name": "Veilpiercer",
+      "base": "Amethyst Ring",
+      "imageId": "Veilpiercer",
+      "image": "/images/poe2/equipment/items-588.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 350,
+      "name": "Venopuncture",
+      "base": "Iron Ring",
+      "imageId": "Venopuncture",
+      "image": "/images/poe2/equipment/items-589.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 351,
+      "name": "Ventor's Gamble",
+      "base": "Gold Ring",
+      "imageId": "Ventors_Gamble",
+      "image": "/images/poe2/equipment/items-590.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 352,
+      "name": "Vigilant View",
+      "base": "Emerald Ring",
+      "imageId": "Vigilant_View",
+      "image": "/images/poe2/equipment/items-591.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 353,
+      "name": "Whisper of the Brotherhood",
+      "base": "Sapphire Ring",
+      "imageId": "Whisper_of_the_Brotherhood",
+      "image": "/images/poe2/equipment/items-592.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 354,
+      "name": "Zaida's Longevity",
+      "base": "Ring",
+      "imageId": "Zaidas_Longevity",
+      "image": "/images/poe2/equipment/items-583.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 355,
+      "name": "Font of Power",
+      "base": "Omen Sceptre",
+      "imageId": "Font_of_Power",
+      "image": "/images/poe2/equipment/items-635.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 356,
+      "name": "Guiding Palm",
+      "base": "Shrine Sceptre",
+      "imageId": "Guiding_Palm_Engine",
+      "image": "/images/poe2/equipment/items-638.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 357,
+      "name": "Guiding Palm of the Eye",
+      "base": "Shrine Sceptre",
+      "imageId": "Guiding_Palm_of_the_Eye",
+      "image": "/images/poe2/equipment/items-636.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 358,
+      "name": "Guiding Palm of the Heart",
+      "base": "Shrine Sceptre",
+      "imageId": "Guiding_Palm_of_the_Heart",
+      "image": "/images/poe2/equipment/items-637.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 359,
+      "name": "Guiding Palm of the Mind",
+      "base": "Shrine Sceptre",
+      "imageId": "Guiding_Palm_of_the_Mind",
+      "image": "/images/poe2/equipment/items-638.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 360,
+      "name": "Palm of the Dreamer",
+      "base": "Shrine Sceptre",
+      "imageId": "Palm_of_the_Dreamer",
+      "image": "/images/poe2/equipment/items-639.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 361,
+      "name": "Sacred Flame",
+      "base": "Shrine Sceptre",
+      "imageId": "Sacred_Flame",
+      "image": "/images/poe2/equipment/items-641.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 362,
+      "name": "Sylvan's Effigy",
+      "base": "Stoic Sceptre",
+      "imageId": "Sylvans_Effigy",
+      "image": "/images/poe2/equipment/items-640.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 363,
+      "name": "The Dark Defiler",
+      "base": "Rattling Sceptre",
+      "imageId": "The_Dark_Defiler",
+      "image": "/images/poe2/equipment/items-634.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 364,
+      "name": "Alkem Eira",
+      "base": "Blazon Crest Shield",
+      "imageId": "Alkem_Eira",
+      "image": "/images/poe2/equipment/items-481.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 365,
+      "name": "Arvil's Wheel",
+      "base": "Hardwood Targe",
+      "imageId": "Arvils_Wheel",
+      "image": "/images/poe2/equipment/items-482.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 366,
+      "name": "Bloodbarrier",
+      "base": "Iron Buckler",
+      "imageId": "Bloodbarrier",
+      "image": "/images/poe2/equipment/items-483.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 367,
+      "name": "Calgyra's Arc",
+      "base": "Ornate Buckler",
+      "imageId": "Calgyras_Arc",
+      "image": "/images/poe2/equipment/items-484.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 368,
+      "name": "Chernobog's Pillar",
+      "base": "Blacksteel Tower Shield",
+      "imageId": "Chernobogs_Pillar",
+      "image": "/images/poe2/equipment/items-485.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 369,
+      "name": "Crest of Ardura",
+      "base": "Jingling Crest Shield",
+      "imageId": "Crest_of_Ardura",
+      "image": "/images/poe2/equipment/items-486.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 370,
+      "name": "Dionadair",
+      "base": "Splintered Tower Shield",
+      "imageId": "Dionadair",
+      "image": "/images/poe2/equipment/items-487.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 371,
+      "name": "Doomgate",
+      "base": "Braced Tower Shield",
+      "imageId": "Doomgate",
+      "image": "/images/poe2/equipment/items-488.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 372,
+      "name": "Dunkelhalt",
+      "base": "Leather Buckler",
+      "imageId": "Dunkelhalt",
+      "image": "/images/poe2/equipment/items-489.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 373,
+      "name": "Eyes of the Runefather",
+      "base": "Venerable Defender",
+      "imageId": "Eyes_of_the_Runefather",
+      "image": "/images/poe2/equipment/items-506.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 374,
+      "name": "Feathered Fortress",
+      "base": "Crescent Targe",
+      "imageId": "Feathered_Fortress",
+      "image": "/images/poe2/equipment/items-490.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 375,
+      "name": "Kaltenhalt",
+      "base": "Ridged Buckler",
+      "imageId": "Kaltenhalt",
+      "image": "/images/poe2/equipment/items-491.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 376,
+      "name": "Lycosidae",
+      "base": "Rampart Tower Shield",
+      "imageId": "Lycosidae",
+      "image": "/images/poe2/equipment/items-492.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 377,
+      "name": "Mahuxotl's Machination",
+      "base": "Omen Crest Shield",
+      "imageId": "Mahuxotls_Machination",
+      "image": "/images/poe2/equipment/items-493.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 378,
+      "name": "Merit of Service",
+      "base": "Pelage Targe",
+      "imageId": "Merit_of_Service",
+      "image": "/images/poe2/equipment/items-494.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 379,
+      "name": "Nightfall",
+      "base": "Fortress Tower Shield",
+      "imageId": "Nightfall",
+      "image": "/images/poe2/equipment/items-505.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 380,
+      "name": "Nocturne",
+      "base": "Wooden Buckler",
+      "imageId": "Nocturne",
+      "image": "/images/poe2/equipment/items-495.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 381,
+      "name": "Oaksworn",
+      "base": "Sigil Crest Shield",
+      "imageId": "Oaksworn",
+      "image": "/images/poe2/equipment/items-496.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 382,
+      "name": "Prism Guardian",
+      "base": "Sectarian Crest Shield",
+      "imageId": "Prism_Guardian",
+      "image": "/images/poe2/equipment/items-497.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 383,
+      "name": "Redblade Banner",
+      "base": "Heraldric Tower Shield",
+      "imageId": "Redblade_Banner",
+      "image": "/images/poe2/equipment/items-748.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 384,
+      "name": "Rise of the Phoenix",
+      "base": "Omen Crest Shield",
+      "imageId": "Rise_of_the_Phoenix",
+      "image": "/images/poe2/equipment/items-470.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 385,
+      "name": "Rondel de Ezo",
+      "base": "Plated Buckler",
+      "imageId": "Rondel_de_Ezo",
+      "image": "/images/poe2/equipment/items-498.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 386,
+      "name": "Saffell's Frame",
+      "base": "Emblem Crest Shield",
+      "imageId": "Saffells_Frame",
+      "image": "/images/poe2/equipment/items-499.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 387,
+      "name": "Silverthorne",
+      "base": "Spiked Buckler",
+      "imageId": "Silverthorne",
+      "image": "/images/poe2/equipment/items-500.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 388,
+      "name": "Sunsplinter",
+      "base": "Array Buckler",
+      "imageId": "Sunsplinter",
+      "image": "/images/poe2/equipment/items-501.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 389,
+      "name": "Svalinn",
+      "base": "Crucible Tower Shield",
+      "imageId": "Svalinn",
+      "image": "/images/poe2/equipment/items-502.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 390,
+      "name": "The Surrender",
+      "base": "Stone Tower Shield",
+      "imageId": "The_Surrender",
+      "image": "/images/poe2/equipment/items-503.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 391,
+      "name": "The Wailing Wall",
+      "base": "Effigial Tower Shield",
+      "imageId": "The_Wailing_Wall",
+      "image": "/images/poe2/equipment/items-504.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 392,
+      "name": "Window to Paradise",
+      "base": "Barricade Tower Shield",
+      "imageId": "Window_to_Paradise",
+      "image": "/images/poe2/equipment/items-507.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 393,
+      "name": "Wulfsbane",
+      "base": "Painted Tower Shield",
+      "imageId": "Wulfsbane",
+      "image": "/images/poe2/equipment/items-508.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 394,
+      "name": "Atziri's Contempt",
+      "base": "Pronged Spear",
+      "imageId": "Atziris_Contempt",
+      "image": "/images/poe2/equipment/items-622.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 395,
+      "name": "Chainsting",
+      "base": "Hunting Spear",
+      "imageId": "Chainsting",
+      "image": "/images/poe2/equipment/items-623.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 396,
+      "name": "Daevata's Wind",
+      "base": "War Spear",
+      "imageId": "Daevatas_Wind",
+      "image": "/images/poe2/equipment/items-624.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 397,
+      "name": "Saitha's Spear",
+      "base": "Barbed Spear",
+      "imageId": "Saithas_Spear",
+      "image": "/images/poe2/equipment/items-625.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 398,
+      "name": "Skysliver",
+      "base": "Winged Spear",
+      "imageId": "Skysliver",
+      "image": "/images/poe2/equipment/items-620.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 399,
+      "name": "Spire of Ire",
+      "base": "Helix Spear",
+      "imageId": "Spire_of_Ire",
+      "image": "/images/poe2/equipment/items-626.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 400,
+      "name": "Splinter of Lorrata",
+      "base": "Hardwood Spear",
+      "imageId": "Splinter_of_Lorrata",
+      "image": "/images/poe2/equipment/items-627.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 401,
+      "name": "Tangletongue",
+      "base": "Forked Spear",
+      "imageId": "Tangletongue",
+      "image": "/images/poe2/equipment/items-628.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 402,
+      "name": "The Ordained",
+      "base": "Grand Spear",
+      "imageId": "The_Ordained",
+      "image": "/images/poe2/equipment/items-629.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 403,
+      "name": "Tyranny's Grip",
+      "base": "Ironhead Spear",
+      "imageId": "Tyrannys_Grip",
+      "image": "/images/poe2/equipment/items-621.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 404,
+      "name": "Atziri's Rule",
+      "base": "Reflecting Staff",
+      "imageId": "Atziris_Rule",
+      "image": "/images/poe2/equipment/items-693.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 405,
+      "name": "Collapsing Horizon",
+      "base": "Wyrm Quarterstaff",
+      "imageId": "Collapsing_Horizon",
+      "image": "/images/poe2/equipment/items-726.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 406,
+      "name": "Duality",
+      "base": "Warding Quarterstaff",
+      "imageId": "Duality",
+      "image": "/images/poe2/equipment/items-730.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 407,
+      "name": "Dusk Vigil",
+      "base": "Ashen Staff",
+      "imageId": "Dusk_Vigil",
+      "image": "/images/poe2/equipment/items-695.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 408,
+      "name": "Earthbound",
+      "base": "Voltaic Staff",
+      "imageId": "Earthbound",
+      "image": "/images/poe2/equipment/items-696.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 409,
+      "name": "Matsya",
+      "base": "Crescent Quarterstaff",
+      "imageId": "Matsya",
+      "image": "/images/poe2/equipment/items-727.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 410,
+      "name": "Nazir's Judgement",
+      "base": "Steelpoint Quarterstaff",
+      "imageId": "Nazirs_Judgement",
+      "image": "/images/poe2/equipment/items-728.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 411,
+      "name": "Pillar of the Caged God",
+      "base": "Long Quarterstaff",
+      "imageId": "Pillar_of_the_Caged_God",
+      "image": "/images/poe2/equipment/items-729.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 412,
+      "name": "Sire of Shards",
+      "base": "Chiming Staff",
+      "imageId": "Sire_of_Shards",
+      "image": "/images/poe2/equipment/items-700.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 413,
+      "name": "Taryn's Shiver",
+      "base": "Gelid Staff",
+      "imageId": "Taryns_Shiver",
+      "image": "/images/poe2/equipment/items-701.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 414,
+      "name": "The Blood Thorn",
+      "base": "Wrapped Quarterstaff",
+      "imageId": "The_Blood_Thorn",
+      "image": "/images/poe2/equipment/items-731.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 415,
+      "name": "The Burden of Shadows",
+      "base": "Chiming Staff",
+      "imageId": "The_Burden_of_Shadows",
+      "image": "/images/poe2/equipment/items-694.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 416,
+      "name": "The Raven's Flock",
+      "base": "Perching Staff",
+      "imageId": "The_Ravens_Flock",
+      "image": "/images/poe2/equipment/items-698.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 417,
+      "name": "The Searing Touch",
+      "base": "Pyrophyte Staff",
+      "imageId": "The_Searing_Touch",
+      "image": "/images/poe2/equipment/items-699.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 418,
+      "name": "The Sentry",
+      "base": "Gothic Quarterstaff",
+      "imageId": "The_Sentry",
+      "image": "/images/poe2/equipment/items-732.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 419,
+      "name": "The Unborn Lich",
+      "base": "Ravenous Staff",
+      "imageId": "The_Unborn_Lich",
+      "image": "/images/poe2/equipment/items-697.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 420,
+      "name": "The Whispering Ice",
+      "base": "Permafrost Staff",
+      "imageId": "The_Whispering_Ice",
+      "image": "/images/poe2/equipment/items-702.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 421,
+      "name": "Amor Mandragora",
+      "base": "Changeling Talisman",
+      "imageId": "Amor_Mandragora",
+      "image": "/images/poe2/equipment/items-514.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 422,
+      "name": "Fury of the King",
+      "base": "Ashbark Talisman",
+      "imageId": "Fury_of_the_King",
+      "image": "/images/poe2/equipment/items-519.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 423,
+      "name": "Hysseg's Claw",
+      "base": "Familial Talisman",
+      "imageId": "Hyssegs_Claw",
+      "image": "/images/poe2/equipment/items-516.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 424,
+      "name": "Spiteful Floret",
+      "base": "Nettle Talisman",
+      "imageId": "Spiteful_Floret",
+      "image": "/images/poe2/equipment/items-515.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 425,
+      "name": "Surge of the Tide",
+      "base": "Lumbering Talisman",
+      "imageId": "Surge_of_the_Tide",
+      "image": "/images/poe2/equipment/items-517.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 426,
+      "name": "The Flesh Poppet",
+      "base": "Vicious Talisman",
+      "imageId": "The_Flesh_Poppet",
+      "image": "/images/poe2/equipment/items-518.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 427,
+      "name": "Adonia's Ego",
+      "base": "Siphoning Wand",
+      "imageId": "Adonias_Ego",
+      "image": "/images/poe2/equipment/items-650.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 428,
+      "name": "Cursecarver",
+      "base": "Acrid Wand",
+      "imageId": "Cursecarver",
+      "image": "/images/poe2/equipment/items-648.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 429,
+      "name": "Enezun's Charge",
+      "base": "Volatile Wand",
+      "imageId": "Enezuns_Charge",
+      "image": "/images/poe2/equipment/items-651.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 430,
+      "name": "Lifesprig",
+      "base": "Attuned Wand",
+      "imageId": "Lifesprig",
+      "image": "/images/poe2/equipment/items-652.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 431,
+      "name": "Liminal Coil",
+      "base": "Twisted Wand",
+      "imageId": "Liminal_Coil",
+      "image": "/images/poe2/equipment/items-649.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 432,
+      "name": "Runeseeker's Call",
+      "base": "Runic Fork",
+      "imageId": "Runeseekers_Call",
+      "image": "/images/poe2/equipment/items-653.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 433,
+      "name": "Sanguine Diviner",
+      "base": "Bone Wand",
+      "imageId": "Sanguine_Diviner",
+      "image": "/images/poe2/equipment/items-654.svg#item-0"
+    },
+    {
+      "kind": "unique",
+      "engineId": 434,
+      "name": "The Wicked Quill",
+      "base": "Withered Wand",
+      "imageId": "The_Wicked_Quill",
+      "image": "/images/poe2/equipment/items-655.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrInt6",
+      "name": "Omen Crest Shield",
+      "base": "Omen Crest Shield",
+      "imageId": "Omen_Crest_Shield",
+      "image": "/images/poe2/equipment/items-470.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptre4",
+      "name": "Omen Sceptre",
+      "base": "Omen Sceptre",
+      "imageId": "Omen_Sceptre",
+      "image": "/images/poe2/equipment/items-632.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStr1",
+      "name": "Stocky Mitts",
+      "base": "Stocky Mitts",
+      "imageId": "Stocky_Mitts",
+      "image": "/images/poe2/equipment/items-226.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDex1",
+      "name": "Brimmed Helm",
+      "base": "Brimmed Helm",
+      "imageId": "Brimmed_Helm",
+      "image": "/images/poe2/equipment/items-311.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing6",
+      "name": "Amethyst Ring",
+      "base": "Amethyst Ring",
+      "imageId": "Amethyst_Ring",
+      "image": "/images/poe2/equipment/items-542.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman2",
+      "name": "Nettle Talisman",
+      "base": "Nettle Talisman",
+      "imageId": "Nettle_Talisman",
+      "image": "/images/poe2/equipment/items-513.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear5",
+      "name": "War Spear",
+      "base": "War Spear",
+      "imageId": "War_Spear",
+      "image": "/images/poe2/equipment/items-615.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace5",
+      "name": "Warpick",
+      "base": "Warpick",
+      "imageId": "Warpick",
+      "image": "/images/poe2/equipment/items-596.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing7",
+      "name": "Emerald Ring",
+      "base": "Emerald Ring",
+      "imageId": "Emerald_Ring",
+      "image": "/images/poe2/equipment/items-543.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt9",
+      "name": "Elementalist Robe",
+      "base": "Elementalist Robe",
+      "imageId": "Elementalist_Robe",
+      "image": "/images/poe2/equipment/items-61.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsDex3",
+      "name": "Embossed Boots",
+      "base": "Embossed Boots",
+      "imageId": "Embossed_Boots",
+      "image": "/images/poe2/equipment/items-163.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace2",
+      "name": "Oak Greathammer",
+      "base": "Oak Greathammer",
+      "imageId": "Oak_Greathammer",
+      "image": "/images/poe2/equipment/items-704.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrInt4",
+      "name": "Kalguuran Cuffs",
+      "base": "Kalguuran Cuffs",
+      "imageId": "Kalguuran_Cuffs",
+      "image": "/images/poe2/equipment/items-225.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace14",
+      "name": "Kalguuran Forgehammer",
+      "base": "Kalguuran Forgehammer",
+      "imageId": "Kalguuran_Forgehammer",
+      "image": "/images/poe2/equipment/items-593.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace5",
+      "name": "Cultist Greathammer",
+      "base": "Cultist Greathammer",
+      "imageId": "Cultist_Greathammer",
+      "image": "/images/poe2/equipment/items-707.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrInt3",
+      "name": "Cultist Crown",
+      "base": "Cultist Crown",
+      "imageId": "Cultist_Crown",
+      "image": "/images/poe2/equipment/items-299.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDexIntBase",
+      "name": "Garment",
+      "base": "Garment",
+      "imageId": "Garment",
+      "image": "/images/poe2/equipment/items-73.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex2",
+      "name": "Quilted Vest",
+      "base": "Quilted Vest",
+      "imageId": "Quilted_Vest",
+      "image": "/images/poe2/equipment/items-37.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex4",
+      "name": "Cloaked Mail",
+      "base": "Cloaked Mail",
+      "imageId": "Cloaked_Mail",
+      "image": "/images/poe2/equipment/items-83.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDex6",
+      "name": "Closed Helm",
+      "base": "Closed Helm",
+      "imageId": "Closed_Helm",
+      "image": "/images/poe2/equipment/items-316.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear8Endgame",
+      "name": "Grand Spear",
+      "base": "Grand Spear",
+      "imageId": "Grand_Spear",
+      "image": "/images/poe2/equipment/items-618.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt6",
+      "name": "Keth Raiment",
+      "base": "Keth Raiment",
+      "imageId": "Keth_Raiment",
+      "image": "/images/poe2/equipment/items-58.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex7",
+      "name": "Corsair Cap",
+      "base": "Corsair Cap",
+      "imageId": "Corsair_Cap",
+      "image": "/images/poe2/equipment/items-277.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow5",
+      "name": "Composite Bow",
+      "base": "Composite Bow",
+      "imageId": "Composite_Bow",
+      "image": "/images/poe2/equipment/items-660.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff3",
+      "name": "Gothic Quarterstaff",
+      "base": "Gothic Quarterstaff",
+      "imageId": "Gothic_Quarterstaff",
+      "image": "/images/poe2/equipment/items-735.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing4",
+      "name": "Sapphire Ring",
+      "base": "Sapphire Ring",
+      "imageId": "Sapphire_Ring",
+      "image": "/images/poe2/equipment/items-550.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex8",
+      "name": "Serpentscale Coat",
+      "base": "Serpentscale Coat",
+      "imageId": "Serpentscale_Coat",
+      "image": "/images/poe2/equipment/items-43.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt4",
+      "name": "Shaman Mantle",
+      "base": "Shaman Mantle",
+      "imageId": "Shaman_Mantle",
+      "image": "/images/poe2/equipment/items-66.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow2",
+      "name": "Shortbow",
+      "base": "Shortbow",
+      "imageId": "Shortbow",
+      "image": "/images/poe2/equipment/items-657.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsInt4",
+      "name": "Silk Slippers",
+      "base": "Silk Slippers",
+      "imageId": "Silk_Slippers",
+      "image": "/images/poe2/equipment/items-171.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDex1",
+      "name": "Suede Bracers",
+      "base": "Suede Bracers",
+      "imageId": "Suede_Bracers",
+      "image": "/images/poe2/equipment/items-208.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex6",
+      "name": "Scale Mail",
+      "base": "Scale Mail",
+      "imageId": "Scale_Mail",
+      "image": "/images/poe2/equipment/items-85.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff6",
+      "name": "Steelpoint Quarterstaff",
+      "base": "Steelpoint Quarterstaff",
+      "imageId": "Steelpoint_Quarterstaff",
+      "image": "/images/poe2/equipment/items-737.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex11",
+      "name": "Strider Vest",
+      "base": "Strider Vest",
+      "imageId": "Strider_Vest",
+      "image": "/images/poe2/equipment/items-36.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrInt6",
+      "name": "Spiritbone Crown",
+      "base": "Spiritbone Crown",
+      "imageId": "Spiritbone_Crown",
+      "image": "/images/poe2/equipment/items-302.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsDexInt2",
+      "name": "Threaded Shoes",
+      "base": "Threaded Shoes",
+      "imageId": "Threaded_Shoes",
+      "image": "/images/poe2/equipment/items-166.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStr7",
+      "name": "Titan Mitts",
+      "base": "Titan Mitts",
+      "imageId": "Titan_Mitts",
+      "image": "/images/poe2/equipment/items-231.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt8",
+      "name": "Double Belt",
+      "base": "Double Belt",
+      "imageId": "Double_Belt",
+      "image": "/images/poe2/equipment/items-378.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex1",
+      "name": "Chain Mail",
+      "base": "Chain Mail",
+      "imageId": "Chain_Mail",
+      "image": "/images/poe2/equipment/items-80.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing13c",
+      "name": "Two-Stone Ring",
+      "base": "Two-Stone Ring",
+      "imageId": "Two-Stone_Ring",
+      "image": "/images/poe2/equipment/items-545.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDexInt8",
+      "name": "Death Mask",
+      "base": "Death Mask",
+      "imageId": "Death_Mask",
+      "image": "/images/poe2/equipment/items-287.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow6",
+      "name": "Dualstring Bow",
+      "base": "Dualstring Bow",
+      "imageId": "Dualstring_Bow",
+      "image": "/images/poe2/equipment/items-661.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex6",
+      "name": "Spiked Buckler",
+      "base": "Spiked Buckler",
+      "imageId": "Spiked_Buckler",
+      "image": "/images/poe2/equipment/items-463.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace4",
+      "name": "Spiked Club",
+      "base": "Spiked Club",
+      "imageId": "Spiked_Club",
+      "image": "/images/poe2/equipment/items-595.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear7",
+      "name": "Barbed Spear",
+      "base": "Barbed Spear",
+      "imageId": "Barbed_Spear",
+      "image": "/images/poe2/equipment/items-617.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing5",
+      "name": "Topaz Ring",
+      "base": "Topaz Ring",
+      "imageId": "Topaz_Ring",
+      "image": "/images/poe2/equipment/items-551.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow14Endgame",
+      "name": "Trarthan Cannon",
+      "base": "Trarthan Cannon",
+      "imageId": "Trarthan_Cannon",
+      "image": "/images/poe2/equipment/items-681.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace10",
+      "name": "Totemic Greatclub",
+      "base": "Totemic Greatclub",
+      "imageId": "Totemic_Greatclub",
+      "image": "/images/poe2/equipment/items-712.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace13",
+      "name": "Torment Club",
+      "base": "Torment Club",
+      "imageId": "Torment_Club",
+      "image": "/images/poe2/equipment/items-593.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRingB3",
+      "name": "Mnemonic Ring",
+      "base": "Mnemonic Ring",
+      "imageId": "Mnemonic_Ring",
+      "image": "/images/poe2/equipment/items-554.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsDexInt3",
+      "name": "Hunting Shoes",
+      "base": "Hunting Shoes",
+      "imageId": "Hunting_Shoes",
+      "image": "/images/poe2/equipment/items-167.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear3",
+      "name": "Hunting Spear",
+      "base": "Hunting Spear",
+      "imageId": "Hunting_Spear",
+      "image": "/images/poe2/equipment/items-613.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBowUnique1",
+      "name": "Heartwood Shortbow",
+      "base": "Heartwood Shortbow",
+      "imageId": "Heartwood_Shortbow",
+      "image": "/images/poe2/equipment/items-657.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDex3",
+      "name": "Visored Helm",
+      "base": "Visored Helm",
+      "imageId": "Visored_Helm",
+      "image": "/images/poe2/equipment/items-313.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff5",
+      "name": "Pyrophyte Staff",
+      "base": "Pyrophyte Staff",
+      "imageId": "Pyrophyte_Staff",
+      "image": "/images/poe2/equipment/items-690.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesInt6",
+      "name": "Pauascale Gloves",
+      "base": "Pauascale Gloves",
+      "imageId": "Pauascale_Gloves",
+      "image": "/images/poe2/equipment/items-220.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt3",
+      "name": "Beaded Circlet",
+      "base": "Beaded Circlet",
+      "imageId": "Beaded_Circlet",
+      "image": "/images/poe2/equipment/items-290.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex2",
+      "name": "Felt Cap",
+      "base": "Felt Cap",
+      "imageId": "Felt_Cap",
+      "image": "/images/poe2/equipment/items-273.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDexInt2",
+      "name": "Face Mask",
+      "base": "Face Mask",
+      "imageId": "Face_Mask",
+      "image": "/images/poe2/equipment/items-282.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace3Endgame",
+      "name": "Flanged Mace",
+      "base": "Flanged Mace",
+      "imageId": "Flanged_Mace",
+      "image": "/images/poe2/equipment/items-594.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr7",
+      "name": "Full Plate",
+      "base": "Full Plate",
+      "imageId": "Full_Plate",
+      "image": "/images/poe2/equipment/items-78.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDexInt3",
+      "name": "Hooded Mask",
+      "base": "Hooded Mask",
+      "imageId": "Hooded_Mask",
+      "image": "/images/poe2/equipment/items-283.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus7",
+      "name": "Voodoo Focus",
+      "base": "Voodoo Focus",
+      "imageId": "Voodoo_Focus",
+      "image": "/images/poe2/equipment/items-448.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing9",
+      "name": "Prismatic Ring",
+      "base": "Prismatic Ring",
+      "imageId": "Prismatic_Ring",
+      "image": "/images/poe2/equipment/items-548.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrDex4",
+      "name": "Plate Gauntlets",
+      "base": "Plate Gauntlets",
+      "imageId": "Plate_Gauntlets",
+      "image": "/images/poe2/equipment/items-235.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex3",
+      "name": "Plated Buckler",
+      "base": "Plated Buckler",
+      "imageId": "Plated_Buckler",
+      "image": "/images/poe2/equipment/items-460.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt5",
+      "name": "Plate Belt",
+      "base": "Plate Belt",
+      "imageId": "Plate_Belt",
+      "image": "/images/poe2/equipment/items-375.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt9",
+      "name": "Heavy Belt",
+      "base": "Heavy Belt",
+      "imageId": "Heavy_Belt",
+      "image": "/images/poe2/equipment/items-379.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow13",
+      "name": "Heavy Bow",
+      "base": "Heavy Bow",
+      "imageId": "Heavy_Bow",
+      "image": "/images/poe2/equipment/items-665.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear13",
+      "name": "Helix Spear",
+      "base": "Helix Spear",
+      "imageId": "Helix_Spear",
+      "image": "/images/poe2/equipment/items-619.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex9",
+      "name": "Velvet Cap",
+      "base": "Velvet Cap",
+      "imageId": "Velvet_Cap",
+      "image": "/images/poe2/equipment/items-279.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsDexInt5",
+      "name": "Velour Shoes",
+      "base": "Velour Shoes",
+      "imageId": "Velour_Shoes",
+      "image": "/images/poe2/equipment/items-165.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDexInt4",
+      "name": "Veiled Mask",
+      "base": "Veiled Mask",
+      "imageId": "Veiled_Mask",
+      "image": "/images/poe2/equipment/items-284.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr5",
+      "name": "Maraketh Cuirass",
+      "base": "Maraketh Cuirass",
+      "imageId": "Maraketh_Cuirass",
+      "image": "/images/poe2/equipment/items-76.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt3",
+      "name": "Marabout Garb",
+      "base": "Marabout Garb",
+      "imageId": "Marabout_Garb",
+      "image": "/images/poe2/equipment/items-48.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStrDex1",
+      "name": "Mail Sabatons",
+      "base": "Mail Sabatons",
+      "imageId": "Mail_Sabatons",
+      "image": "/images/poe2/equipment/items-180.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt7",
+      "name": "Mail Belt",
+      "base": "Mail Belt",
+      "imageId": "Mail_Belt",
+      "image": "/images/poe2/equipment/items-377.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace9",
+      "name": "Morning Star",
+      "base": "Morning Star",
+      "imageId": "Morning_Star",
+      "image": "/images/poe2/equipment/items-598.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptre1",
+      "name": "Rattling Sceptre",
+      "base": "Rattling Sceptre",
+      "imageId": "Rattling_Sceptre",
+      "image": "/images/poe2/equipment/items-630.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow4",
+      "name": "Recurve Bow",
+      "base": "Recurve Bow",
+      "imageId": "Recurve_Bow",
+      "image": "/images/poe2/equipment/items-659.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsDex5",
+      "name": "Lizardscale Boots",
+      "base": "Lizardscale Boots",
+      "imageId": "Lizardscale_Boots",
+      "image": "/images/poe2/equipment/items-164.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex5",
+      "name": "Ridged Buckler",
+      "base": "Ridged Buckler",
+      "imageId": "Ridged_Buckler",
+      "image": "/images/poe2/equipment/items-462.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt2",
+      "name": "Linen Belt",
+      "base": "Linen Belt",
+      "imageId": "Linen_Belt",
+      "image": "/images/poe2/equipment/items-372.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDexInt2",
+      "name": "Linen Wraps",
+      "base": "Linen Wraps",
+      "imageId": "Linen_Wraps",
+      "image": "/images/poe2/equipment/items-214.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStr2",
+      "name": "Riveted Mitts",
+      "base": "Riveted Mitts",
+      "imageId": "Riveted_Mitts",
+      "image": "/images/poe2/equipment/items-227.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrDex1",
+      "name": "Ringmail Gauntlets",
+      "base": "Ringmail Gauntlets",
+      "imageId": "Ringmail_Gauntlets",
+      "image": "/images/poe2/equipment/items-232.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing3",
+      "name": "Ruby Ring",
+      "base": "Ruby Ring",
+      "imageId": "Ruby_Ring",
+      "image": "/images/poe2/equipment/items-549.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWandUnique2",
+      "name": "Runic Fork",
+      "base": "Runic Fork",
+      "imageId": "Runic_Fork",
+      "image": "/images/poe2/equipment/items-642.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex3",
+      "name": "Lace Hood",
+      "base": "Lace Hood",
+      "imageId": "Lace_Hood",
+      "image": "/images/poe2/equipment/items-274.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsDex2",
+      "name": "Laced Boots",
+      "base": "Laced Boots",
+      "imageId": "Laced_Boots",
+      "image": "/images/poe2/equipment/items-162.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex5",
+      "name": "Rhoahide Coat",
+      "base": "Rhoahide Coat",
+      "imageId": "Rhoahide_Coat",
+      "image": "/images/poe2/equipment/items-40.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff2",
+      "name": "Long Quarterstaff",
+      "base": "Long Quarterstaff",
+      "imageId": "Long_Quarterstaff",
+      "image": "/images/poe2/equipment/items-734.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt2",
+      "name": "Waxed Jacket",
+      "base": "Waxed Jacket",
+      "imageId": "Waxed_Jacket",
+      "image": "/images/poe2/equipment/items-47.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff13",
+      "name": "Wyrm Quarterstaff",
+      "base": "Wyrm Quarterstaff",
+      "imageId": "Wyrm_Quarterstaff",
+      "image": "/images/poe2/equipment/items-733.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt7",
+      "name": "Vermeil Circlet",
+      "base": "Vermeil Circlet",
+      "imageId": "Vermeil_Circlet",
+      "image": "/images/poe2/equipment/items-294.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr8",
+      "name": "Vaal Cuirass",
+      "base": "Vaal Cuirass",
+      "imageId": "Vaal_Cuirass",
+      "image": "/images/poe2/equipment/items-79.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff5",
+      "name": "Crescent Quarterstaff",
+      "base": "Crescent Quarterstaff",
+      "imageId": "Crescent_Quarterstaff",
+      "image": "/images/poe2/equipment/items-736.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrDex4",
+      "name": "Crescent Targe",
+      "base": "Crescent Targe",
+      "imageId": "Crescent_Targe",
+      "image": "/images/poe2/equipment/items-472.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDex6",
+      "name": "Fine Bracers",
+      "base": "Fine Bracers",
+      "imageId": "Fine_Bracers",
+      "image": "/images/poe2/equipment/items-212.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptre2",
+      "name": "Stoic Sceptre",
+      "base": "Stoic Sceptre",
+      "imageId": "Stoic_Sceptre",
+      "image": "/images/poe2/equipment/items-631.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmuletB1c",
+      "name": "Absent Amulet",
+      "base": "Absent Amulet",
+      "imageId": "Absent_Amulet",
+      "image": "/images/poe2/equipment/items-00.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear6Endgame",
+      "name": "Pronged Spear",
+      "base": "Pronged Spear",
+      "imageId": "Pronged_Spear",
+      "image": "/images/poe2/equipment/items-616.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrDex3",
+      "name": "Doubled Gauntlets",
+      "base": "Doubled Gauntlets",
+      "imageId": "Doubled_Gauntlets",
+      "image": "/images/poe2/equipment/items-234.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace1",
+      "name": "Felled Greatclub",
+      "base": "Felled Greatclub",
+      "imageId": "Felled_Greatclub",
+      "image": "/images/poe2/equipment/items-703.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex7",
+      "name": "Scout's Vest",
+      "base": "Scout's Vest",
+      "imageId": "Scouts_Vest",
+      "image": "/images/poe2/equipment/items-42.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex8",
+      "name": "Ancestral Mail",
+      "base": "Ancestral Mail",
+      "imageId": "Ancestral_Mail",
+      "image": "/images/poe2/equipment/items-87.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStr2",
+      "name": "Soldier Greathelm",
+      "base": "Soldier Greathelm",
+      "imageId": "Soldier_Greathelm",
+      "image": "/images/poe2/equipment/items-305.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDex4",
+      "name": "Sectioned Bracers",
+      "base": "Sectioned Bracers",
+      "imageId": "Sectioned_Bracers",
+      "image": "/images/poe2/equipment/items-210.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesInt7",
+      "name": "Embroidered Gloves",
+      "base": "Embroidered Gloves",
+      "imageId": "Embroidered_Gloves",
+      "image": "/images/poe2/equipment/items-221.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrInt2",
+      "name": "Sigil Crest Shield",
+      "base": "Sigil Crest Shield",
+      "imageId": "Sigil_Crest_Shield",
+      "image": "/images/poe2/equipment/items-466.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr1",
+      "name": "Splintered Tower Shield",
+      "base": "Splintered Tower Shield",
+      "imageId": "Splintered_Tower_Shield",
+      "image": "/images/poe2/equipment/items-474.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexIntUnique1",
+      "name": "Primal Markings",
+      "base": "Primal Markings",
+      "imageId": "Primal_Markings",
+      "image": "/images/poe2/equipment/items-52.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear6",
+      "name": "Forked Spear",
+      "base": "Forked Spear",
+      "imageId": "Forked_Spear",
+      "image": "/images/poe2/equipment/items-616.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaffUnique3",
+      "name": "Reflecting Staff",
+      "base": "Reflecting Staff",
+      "imageId": "Reflecting_Staff",
+      "image": "/images/poe2/equipment/items-688.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDexUnique1",
+      "name": "Ancient Visor",
+      "base": "Ancient Visor",
+      "imageId": "Ancient_Visor",
+      "image": "/images/poe2/equipment/items-318.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrIntUnique2",
+      "name": "Ancient Mail",
+      "base": "Ancient Mail",
+      "imageId": "Ancient_Mail",
+      "image": "/images/poe2/equipment/items-123.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStrIntUnique1",
+      "name": "Ancient Leggings",
+      "base": "Ancient Leggings",
+      "imageId": "Ancient_Leggings",
+      "image": "/images/poe2/equipment/items-173.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand3",
+      "name": "Attuned Wand",
+      "base": "Attuned Wand",
+      "imageId": "Attuned_Wand",
+      "image": "/images/poe2/equipment/items-644.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand4",
+      "name": "Siphoning Wand",
+      "base": "Siphoning Wand",
+      "imageId": "Siphoning_Wand",
+      "image": "/images/poe2/equipment/items-645.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt3",
+      "name": "Hexer's Robe",
+      "base": "Hexer's Robe",
+      "imageId": "Hexers_Robe",
+      "image": "/images/poe2/equipment/items-55.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace7",
+      "name": "Brigand Mace",
+      "base": "Brigand Mace",
+      "imageId": "Brigand_Mace",
+      "image": "/images/poe2/equipment/items-597.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr6",
+      "name": "Rampart Tower Shield",
+      "base": "Rampart Tower Shield",
+      "imageId": "Rampart_Tower_Shield",
+      "image": "/images/poe2/equipment/items-478.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrDex1",
+      "name": "Hardwood Targe",
+      "base": "Hardwood Targe",
+      "imageId": "Hardwood_Targe",
+      "image": "/images/poe2/equipment/items-471.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman1",
+      "name": "Changeling Talisman",
+      "base": "Changeling Talisman",
+      "imageId": "Changeling_Talisman",
+      "image": "/images/poe2/equipment/items-509.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStrDex3",
+      "name": "Stacked Sabatons",
+      "base": "Stacked Sabatons",
+      "imageId": "Stacked_Sabatons",
+      "image": "/images/poe2/equipment/items-182.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrDexInt1",
+      "name": "Grand Manchettes",
+      "base": "Grand Manchettes",
+      "imageId": "Grand_Manchettes",
+      "image": "/images/poe2/equipment/items-226.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStrDexInt1",
+      "name": "Grand Cuisses",
+      "base": "Grand Cuisses",
+      "imageId": "Grand_Cuisses",
+      "image": "/images/poe2/equipment/items-175.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDexInt1",
+      "name": "Grand Visage",
+      "base": "Grand Visage",
+      "imageId": "Grand_Visage",
+      "image": "/images/poe2/equipment/items-304.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver1",
+      "name": "Broadhead Quiver",
+      "base": "Broadhead Quiver",
+      "imageId": "Broadhead_Quiver",
+      "image": "/images/poe2/equipment/items-522.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet9",
+      "name": "Solar Amulet",
+      "base": "Solar Amulet",
+      "imageId": "Solar_Amulet",
+      "image": "/images/poe2/equipment/items-09.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt7",
+      "name": "Votive Raiment",
+      "base": "Votive Raiment",
+      "imageId": "Votive_Raiment",
+      "image": "/images/poe2/equipment/items-59.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesInt4",
+      "name": "Jewelled Gloves",
+      "base": "Jewelled Gloves",
+      "imageId": "Jewelled_Gloves",
+      "image": "/images/poe2/equipment/items-218.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt10",
+      "name": "Utility Belt",
+      "base": "Utility Belt",
+      "imageId": "Utility_Belt",
+      "image": "/images/poe2/equipment/items-380.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDexInt6",
+      "name": "Utility Wraps",
+      "base": "Utility Wraps",
+      "imageId": "Utility_Wraps",
+      "image": "/images/poe2/equipment/items-213.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrInt1",
+      "name": "Blazon Crest Shield",
+      "base": "Blazon Crest Shield",
+      "imageId": "Blazon_Crest_Shield",
+      "image": "/images/poe2/equipment/items-465.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex10",
+      "name": "Smuggler Coat",
+      "base": "Smuggler Coat",
+      "imageId": "Smuggler_Coat",
+      "image": "/images/poe2/equipment/items-44.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace6",
+      "name": "Temple Maul",
+      "base": "Temple Maul",
+      "imageId": "Temple_Maul",
+      "image": "/images/poe2/equipment/items-708.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow5",
+      "name": "Dyad Crossbow",
+      "base": "Dyad Crossbow",
+      "imageId": "Dyad_Crossbow",
+      "image": "/images/poe2/equipment/items-679.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrDexUnique1",
+      "name": "Venerable Defender",
+      "base": "Venerable Defender",
+      "imageId": "Venerable_Defender",
+      "image": "/images/poe2/equipment/items-473.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt1",
+      "name": "Twig Circlet",
+      "base": "Twig Circlet",
+      "imageId": "Twig_Circlet",
+      "image": "/images/poe2/equipment/items-288.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus1",
+      "name": "Twig Focus",
+      "base": "Twig Focus",
+      "imageId": "Twig_Focus",
+      "image": "/images/poe2/equipment/items-442.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace9",
+      "name": "Pointed Maul",
+      "base": "Pointed Maul",
+      "imageId": "Pointed_Maul",
+      "image": "/images/poe2/equipment/items-711.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStr4",
+      "name": "Spired Greathelm",
+      "base": "Spired Greathelm",
+      "imageId": "Spired_Greathelm",
+      "image": "/images/poe2/equipment/items-307.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrDex2",
+      "name": "Layered Gauntlets",
+      "base": "Layered Gauntlets",
+      "imageId": "Layered_Gauntlets",
+      "image": "/images/poe2/equipment/items-233.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt1",
+      "name": "Pilgrim Vestments",
+      "base": "Pilgrim Vestments",
+      "imageId": "Pilgrim_Vestments",
+      "image": "/images/poe2/equipment/items-64.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace13",
+      "name": "Giant Maul",
+      "base": "Giant Maul",
+      "imageId": "Giant_Maul",
+      "image": "/images/poe2/equipment/items-713.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaff1",
+      "name": "Wrapped Quarterstaff",
+      "base": "Wrapped Quarterstaff",
+      "imageId": "Wrapped_Quarterstaff",
+      "image": "/images/poe2/equipment/items-733.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStr3",
+      "name": "Wrapped Greathelm",
+      "base": "Wrapped Greathelm",
+      "imageId": "Wrapped_Greathelm",
+      "image": "/images/poe2/equipment/items-306.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsInt2",
+      "name": "Wrapped Sandals",
+      "base": "Wrapped Sandals",
+      "imageId": "Wrapped_Sandals",
+      "image": "/images/poe2/equipment/items-169.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt3",
+      "name": "Wide Belt",
+      "base": "Wide Belt",
+      "imageId": "Wide_Belt",
+      "image": "/images/poe2/equipment/items-373.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrInt2",
+      "name": "Aged Cuffs",
+      "base": "Aged Cuffs",
+      "imageId": "Aged_Cuffs",
+      "image": "/images/poe2/equipment/items-223.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow2",
+      "name": "Tense Crossbow",
+      "base": "Tense Crossbow",
+      "imageId": "Tense_Crossbow",
+      "image": "/images/poe2/equipment/items-678.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr2",
+      "name": "Painted Tower Shield",
+      "base": "Painted Tower Shield",
+      "imageId": "Painted_Tower_Shield",
+      "image": "/images/poe2/equipment/items-475.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus4",
+      "name": "Engraved Focus",
+      "base": "Engraved Focus",
+      "imageId": "Engraved_Focus",
+      "image": "/images/poe2/equipment/items-445.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDex8",
+      "name": "Engraved Bracers",
+      "base": "Engraved Bracers",
+      "imageId": "Engraved_Bracers",
+      "image": "/images/poe2/equipment/items-208.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr14",
+      "name": "Conqueror Plate",
+      "base": "Conqueror Plate",
+      "imageId": "Conqueror_Plate",
+      "image": "/images/poe2/equipment/items-73.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStr5",
+      "name": "Moulded Mitts",
+      "base": "Moulded Mitts",
+      "imageId": "Moulded_Mitts",
+      "image": "/images/poe2/equipment/items-230.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStr6",
+      "name": "Warrior Greathelm",
+      "base": "Warrior Greathelm",
+      "imageId": "Warrior_Greathelm",
+      "image": "/images/poe2/equipment/items-309.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesInt5",
+      "name": "Intricate Gloves",
+      "base": "Intricate Gloves",
+      "imageId": "Intricate_Gloves",
+      "image": "/images/poe2/equipment/items-219.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRingBase",
+      "name": "Ring",
+      "base": "Ring",
+      "imageId": "Ring",
+      "image": "/images/poe2/equipment/items-555.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWandUnique1",
+      "name": "Twisted Wand",
+      "base": "Twisted Wand",
+      "imageId": "Twisted_Wand",
+      "image": "/images/poe2/equipment/items-642.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex5",
+      "name": "Explorer Armour",
+      "base": "Explorer Armour",
+      "imageId": "Explorer_Armour",
+      "image": "/images/poe2/equipment/items-84.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex1",
+      "name": "Shabby Hood",
+      "base": "Shabby Hood",
+      "imageId": "Shabby_Hood",
+      "image": "/images/poe2/equipment/items-272.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt1",
+      "name": "Tattered Robe",
+      "base": "Tattered Robe",
+      "imageId": "Tattered_Robe",
+      "image": "/images/poe2/equipment/items-53.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex3",
+      "name": "Vagabond Armour",
+      "base": "Vagabond Armour",
+      "imageId": "Vagabond_Armour",
+      "image": "/images/poe2/equipment/items-82.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex12",
+      "name": "Array Buckler",
+      "base": "Array Buckler",
+      "imageId": "Array_Buckler",
+      "image": "/images/poe2/equipment/items-464.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt4",
+      "name": "Wayfarer Jacket",
+      "base": "Wayfarer Jacket",
+      "imageId": "Wayfarer_Jacket",
+      "image": "/images/poe2/equipment/items-49.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet8",
+      "name": "Stellar Amulet",
+      "base": "Stellar Amulet",
+      "imageId": "Stellar_Amulet",
+      "image": "/images/poe2/equipment/items-10.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrIntUnique1",
+      "name": "Tenebrous Crown",
+      "base": "Tenebrous Crown",
+      "imageId": "Tenebrous_Crown",
+      "image": "/images/poe2/equipment/items-303.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt13",
+      "name": "Assassin Garb",
+      "base": "Assassin Garb",
+      "imageId": "Assassin_Garb",
+      "image": "/images/poe2/equipment/items-46.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet6",
+      "name": "Lunar Amulet",
+      "base": "Lunar Amulet",
+      "imageId": "Lunar_Amulet",
+      "image": "/images/poe2/equipment/items-08.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex2",
+      "name": "Wooden Buckler",
+      "base": "Wooden Buckler",
+      "imageId": "Wooden_Buckler",
+      "image": "/images/poe2/equipment/items-459.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace8",
+      "name": "Crumbling Maul",
+      "base": "Crumbling Maul",
+      "imageId": "Crumbling_Maul",
+      "image": "/images/poe2/equipment/items-710.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt2",
+      "name": "Wicker Tiara",
+      "base": "Wicker Tiara",
+      "imageId": "Wicker_Tiara",
+      "image": "/images/poe2/equipment/items-289.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus3",
+      "name": "Antler Focus",
+      "base": "Antler Focus",
+      "imageId": "Antler_Focus",
+      "image": "/images/poe2/equipment/items-444.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand1",
+      "name": "Withered Wand",
+      "base": "Withered Wand",
+      "imageId": "Withered_Wand",
+      "image": "/images/poe2/equipment/items-642.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsInt3",
+      "name": "Lattice Sandals",
+      "base": "Lattice Sandals",
+      "imageId": "Lattice_Sandals",
+      "image": "/images/poe2/equipment/items-170.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace1",
+      "name": "Wooden Club",
+      "base": "Wooden Club",
+      "imageId": "Wooden_Club",
+      "image": "/images/poe2/equipment/items-593.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff2",
+      "name": "Gelid Staff",
+      "base": "Gelid Staff",
+      "imageId": "Gelid_Staff",
+      "image": "/images/poe2/equipment/items-688.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaffUnique4",
+      "name": "Perching Staff",
+      "base": "Perching Staff",
+      "imageId": "Perching_Staff",
+      "image": "/images/poe2/equipment/items-692.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrInt4",
+      "name": "Martyr Crown",
+      "base": "Martyr Crown",
+      "imageId": "Martyr_Crown",
+      "image": "/images/poe2/equipment/items-300.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow9Endgame",
+      "name": "Obliterator Bow",
+      "base": "Obliterator Bow",
+      "imageId": "Obliterator_Bow",
+      "image": "/images/poe2/equipment/items-664.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver6",
+      "name": "Toxic Quiver",
+      "base": "Toxic Quiver",
+      "imageId": "Toxic_Quiver",
+      "image": "/images/poe2/equipment/items-527.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex6",
+      "name": "Viper Cap",
+      "base": "Viper Cap",
+      "imageId": "Viper_Cap",
+      "image": "/images/poe2/equipment/items-276.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr2",
+      "name": "Fur Plate",
+      "base": "Fur Plate",
+      "imageId": "Fur_Plate",
+      "image": "/images/poe2/equipment/items-74.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr6Endgame",
+      "name": "Fortress Tower Shield",
+      "base": "Fortress Tower Shield",
+      "imageId": "Fortress_Tower_Shield",
+      "image": "/images/poe2/equipment/items-478.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaffUnique1",
+      "name": "Permafrost Staff",
+      "base": "Permafrost Staff",
+      "imageId": "Permafrost_Staff",
+      "image": "/images/poe2/equipment/items-688.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet1",
+      "name": "Crimson Amulet",
+      "base": "Crimson Amulet",
+      "imageId": "Crimson_Amulet",
+      "image": "/images/poe2/equipment/items-04.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet2",
+      "name": "Azure Amulet",
+      "base": "Azure Amulet",
+      "imageId": "Azure_Amulet",
+      "image": "/images/poe2/equipment/items-02.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt8",
+      "name": "Tideseer Mantle",
+      "base": "Tideseer Mantle",
+      "imageId": "Tideseer_Mantle",
+      "image": "/images/poe2/equipment/items-69.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver2",
+      "name": "Fire Quiver",
+      "base": "Fire Quiver",
+      "imageId": "Fire_Quiver",
+      "image": "/images/poe2/equipment/items-523.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff1",
+      "name": "Ashen Staff",
+      "base": "Ashen Staff",
+      "imageId": "Ashen_Staff",
+      "image": "/images/poe2/equipment/items-687.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman3Endgame",
+      "name": "Ashbark Talisman",
+      "base": "Ashbark Talisman",
+      "imageId": "Ashbark_Talisman",
+      "image": "/images/poe2/equipment/items-510.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStr3",
+      "name": "Tempered Mitts",
+      "base": "Tempered Mitts",
+      "imageId": "Tempered_Mitts",
+      "image": "/images/poe2/equipment/items-228.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow7Endgame",
+      "name": "Fanatic Bow",
+      "base": "Fanatic Bow",
+      "imageId": "Fanatic_Bow",
+      "image": "/images/poe2/equipment/items-662.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand5",
+      "name": "Volatile Wand",
+      "base": "Volatile Wand",
+      "imageId": "Volatile_Wand",
+      "image": "/images/poe2/equipment/items-646.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow8",
+      "name": "Zealot Bow",
+      "base": "Zealot Bow",
+      "imageId": "Zealot_Bow",
+      "image": "/images/poe2/equipment/items-663.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex5",
+      "name": "Hunter Hood",
+      "base": "Hunter Hood",
+      "imageId": "Hunter_Hood",
+      "image": "/images/poe2/equipment/items-275.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStr8",
+      "name": "Fierce Greathelm",
+      "base": "Fierce Greathelm",
+      "imageId": "Fierce_Greathelm",
+      "image": "/images/poe2/equipment/items-310.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman8",
+      "name": "Vicious Talisman",
+      "base": "Vicious Talisman",
+      "imageId": "Vicious_Talisman",
+      "image": "/images/poe2/equipment/items-520.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr12",
+      "name": "Champion Cuirass",
+      "base": "Champion Cuirass",
+      "imageId": "Champion_Cuirass",
+      "image": "/images/poe2/equipment/items-73.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet3",
+      "name": "Amber Amulet",
+      "base": "Amber Amulet",
+      "imageId": "Amber_Amulet",
+      "image": "/images/poe2/equipment/items-01.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet5",
+      "name": "Lapis Amulet",
+      "base": "Lapis Amulet",
+      "imageId": "Lapis_Amulet",
+      "image": "/images/poe2/equipment/items-07.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt1",
+      "name": "Rawhide Belt",
+      "base": "Rawhide Belt",
+      "imageId": "Rawhide_Belt",
+      "image": "/images/poe2/equipment/items-371.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDexInt2",
+      "name": "Sacrificial Regalia",
+      "base": "Sacrificial Regalia",
+      "imageId": "Sacrificial_Regalia",
+      "image": "/images/poe2/equipment/items-89.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt6",
+      "name": "Sacrificial Mantle",
+      "base": "Sacrificial Mantle",
+      "imageId": "Sacrificial_Mantle",
+      "image": "/images/poe2/equipment/items-67.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt11",
+      "name": "Revered Vestments",
+      "base": "Revered Vestments",
+      "imageId": "Revered_Vestments",
+      "image": "/images/poe2/equipment/items-71.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStrInt2",
+      "name": "Secured Leggings",
+      "base": "Secured Leggings",
+      "imageId": "Secured_Leggings",
+      "image": "/images/poe2/equipment/items-174.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMaceUnique1",
+      "name": "Aberrant Sledge",
+      "base": "Aberrant Sledge",
+      "imageId": "Aberrant_Sledge",
+      "image": "/images/poe2/equipment/items-712.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex8",
+      "name": "Leatherbound Hood",
+      "base": "Leatherbound Hood",
+      "imageId": "Leatherbound_Hood",
+      "image": "/images/poe2/equipment/items-278.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex2",
+      "name": "Rogue Armour",
+      "base": "Rogue Armour",
+      "imageId": "Rogue_Armour",
+      "image": "/images/poe2/equipment/items-81.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow3",
+      "name": "Warden Bow",
+      "base": "Warden Bow",
+      "imageId": "Warden_Bow",
+      "image": "/images/poe2/equipment/items-658.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDex5",
+      "name": "Shielded Helm",
+      "base": "Shielded Helm",
+      "imageId": "Shielded_Helm",
+      "image": "/images/poe2/equipment/items-315.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmuletUnique1",
+      "name": "Veridical Chain",
+      "base": "Veridical Chain",
+      "imageId": "Veridical_Chain",
+      "image": "/images/poe2/equipment/items-03.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing8",
+      "name": "Pearl Ring",
+      "base": "Pearl Ring",
+      "imageId": "Pearl_Ring",
+      "image": "/images/poe2/equipment/items-547.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman4",
+      "name": "Familial Talisman",
+      "base": "Familial Talisman",
+      "imageId": "Familial_Talisman",
+      "image": "/images/poe2/equipment/items-511.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStr5",
+      "name": "Stone Greaves",
+      "base": "Stone Greaves",
+      "imageId": "Stone_Greaves",
+      "image": "/images/poe2/equipment/items-179.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing11",
+      "name": "Unset Ring",
+      "base": "Unset Ring",
+      "imageId": "Unset_Ring",
+      "image": "/images/poe2/equipment/items-552.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrDex5",
+      "name": "Burnished Gauntlets",
+      "base": "Burnished Gauntlets",
+      "imageId": "Burnished_Gauntlets",
+      "image": "/images/poe2/equipment/items-232.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow9",
+      "name": "Artillery Bow",
+      "base": "Artillery Bow",
+      "imageId": "Artillery_Bow",
+      "image": "/images/poe2/equipment/items-664.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesInt1",
+      "name": "Torn Gloves",
+      "base": "Torn Gloves",
+      "imageId": "Torn_Gloves",
+      "image": "/images/poe2/equipment/items-215.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt13",
+      "name": "Havoc Raiment",
+      "base": "Havoc Raiment",
+      "imageId": "Havoc_Raiment",
+      "image": "/images/poe2/equipment/items-63.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear1",
+      "name": "Hardwood Spear",
+      "base": "Hardwood Spear",
+      "imageId": "Hardwood_Spear",
+      "image": "/images/poe2/equipment/items-611.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Sceptres/FourSceptreUnique1",
+      "name": "Shrine Sceptre",
+      "base": "Shrine Sceptre",
+      "imageId": "Shrine_Sceptre",
+      "image": "/images/poe2/equipment/items-633.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver3",
+      "name": "Sacral Quiver",
+      "base": "Sacral Quiver",
+      "imageId": "Sacral_Quiver",
+      "image": "/images/poe2/equipment/items-526.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt8",
+      "name": "Altar Robe",
+      "base": "Altar Robe",
+      "imageId": "Altar_Robe",
+      "image": "/images/poe2/equipment/items-60.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDexInt1",
+      "name": "Hewn Mask",
+      "base": "Hewn Mask",
+      "imageId": "Hewn_Mask",
+      "image": "/images/poe2/equipment/items-281.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStr1",
+      "name": "Rough Greaves",
+      "base": "Rough Greaves",
+      "imageId": "Rough_Greaves",
+      "image": "/images/poe2/equipment/items-175.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBow1",
+      "name": "Crude Bow",
+      "base": "Crude Bow",
+      "imageId": "Crude_Bow",
+      "image": "/images/poe2/equipment/items-656.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex13",
+      "name": "Exquisite Vest",
+      "base": "Exquisite Vest",
+      "imageId": "Exquisite_Vest",
+      "image": "/images/poe2/equipment/items-45.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt11",
+      "name": "Fine Belt",
+      "base": "Fine Belt",
+      "imageId": "Fine_Belt",
+      "image": "/images/poe2/equipment/items-381.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrInt5",
+      "name": "Sectarian Crest Shield",
+      "base": "Sectarian Crest Shield",
+      "imageId": "Sectarian_Crest_Shield",
+      "image": "/images/poe2/equipment/items-469.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStr5",
+      "name": "Elite Greathelm",
+      "base": "Elite Greathelm",
+      "imageId": "Elite_Greathelm",
+      "image": "/images/poe2/equipment/items-308.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrInt3",
+      "name": "Emblem Crest Shield",
+      "base": "Emblem Crest Shield",
+      "imageId": "Emblem_Crest_Shield",
+      "image": "/images/poe2/equipment/items-467.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr7",
+      "name": "Heraldric Tower Shield",
+      "base": "Heraldric Tower Shield",
+      "imageId": "Heraldric_Tower_Shield",
+      "image": "/images/poe2/equipment/items-479.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace3",
+      "name": "Slim Mace",
+      "base": "Slim Mace",
+      "imageId": "Slim_Mace",
+      "image": "/images/poe2/equipment/items-594.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus6",
+      "name": "Crystal Focus",
+      "base": "Crystal Focus",
+      "imageId": "Crystal_Focus",
+      "image": "/images/poe2/equipment/items-447.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt5",
+      "name": "Silk Robe",
+      "base": "Silk Robe",
+      "imageId": "Silk_Robe",
+      "image": "/images/poe2/equipment/items-57.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsDex2Endgame",
+      "name": "Cinched Boots",
+      "base": "Cinched Boots",
+      "imageId": "Cinched_Boots",
+      "image": "/images/poe2/equipment/items-162.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus2",
+      "name": "Woven Focus",
+      "base": "Woven Focus",
+      "imageId": "Woven_Focus",
+      "image": "/images/poe2/equipment/items-443.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStr4",
+      "name": "Trimmed Greaves",
+      "base": "Trimmed Greaves",
+      "imageId": "Trimmed_Greaves",
+      "image": "/images/poe2/equipment/items-178.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrInt1",
+      "name": "Rope Cuffs",
+      "base": "Rope Cuffs",
+      "imageId": "Rope_Cuffs",
+      "image": "/images/poe2/equipment/items-222.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesInt3",
+      "name": "Stitched Gloves",
+      "base": "Stitched Gloves",
+      "imageId": "Stitched_Gloves",
+      "image": "/images/poe2/equipment/items-217.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsInt5",
+      "name": "Feathered Sandals",
+      "base": "Feathered Sandals",
+      "imageId": "Feathered_Sandals",
+      "image": "/images/poe2/equipment/items-172.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt5",
+      "name": "Feathered Tiara",
+      "base": "Feathered Tiara",
+      "imageId": "Feathered_Tiara",
+      "image": "/images/poe2/equipment/items-292.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt2",
+      "name": "Feathered Robe",
+      "base": "Feathered Robe",
+      "imageId": "Feathered_Robe",
+      "image": "/images/poe2/equipment/items-54.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet4",
+      "name": "Jade Amulet",
+      "base": "Jade Amulet",
+      "imageId": "Jade_Amulet",
+      "image": "/images/poe2/equipment/items-06.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt8",
+      "name": "Jade Tiara",
+      "base": "Jade Tiara",
+      "imageId": "Jade_Tiara",
+      "image": "/images/poe2/equipment/items-295.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear4",
+      "name": "Winged Spear",
+      "base": "Winged Spear",
+      "imageId": "Winged_Spear",
+      "image": "/images/poe2/equipment/items-614.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus8Endgame",
+      "name": "Sacred Focus",
+      "base": "Sacred Focus",
+      "imageId": "Sacred_Focus",
+      "image": "/images/poe2/equipment/items-449.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt7",
+      "name": "Cleric Vestments",
+      "base": "Cleric Vestments",
+      "imageId": "Cleric_Vestments",
+      "image": "/images/poe2/equipment/items-68.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand7",
+      "name": "Acrid Wand",
+      "base": "Acrid Wand",
+      "imageId": "Acrid_Wand",
+      "image": "/images/poe2/equipment/items-647.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver8",
+      "name": "Primed Quiver",
+      "base": "Primed Quiver",
+      "imageId": "Primed_Quiver",
+      "image": "/images/poe2/equipment/items-525.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex11",
+      "name": "Heroic Armour",
+      "base": "Heroic Armour",
+      "imageId": "Heroic_Armour",
+      "image": "/images/poe2/equipment/items-88.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDexInt1",
+      "name": "Grand Regalia",
+      "base": "Grand Regalia",
+      "imageId": "Grand_Regalia",
+      "image": "/images/poe2/equipment/items-73.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt6",
+      "name": "Ornate Belt",
+      "base": "Ornate Belt",
+      "imageId": "Ornate_Belt",
+      "image": "/images/poe2/equipment/items-376.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDexInt1",
+      "name": "Gauze Wraps",
+      "base": "Gauze Wraps",
+      "imageId": "Gauze_Wraps",
+      "image": "/images/poe2/equipment/items-213.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver11",
+      "name": "Visceral Quiver",
+      "base": "Visceral Quiver",
+      "imageId": "Visceral_Quiver",
+      "image": "/images/poe2/equipment/items-528.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet7",
+      "name": "Bloodstone Amulet",
+      "base": "Bloodstone Amulet",
+      "imageId": "Bloodstone_Amulet",
+      "image": "/images/poe2/equipment/items-03.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt12",
+      "name": "Plated Raiment",
+      "base": "Plated Raiment",
+      "imageId": "Plated_Raiment",
+      "image": "/images/poe2/equipment/items-62.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex15",
+      "name": "Armoured Vest",
+      "base": "Armoured Vest",
+      "imageId": "Armoured_Vest",
+      "image": "/images/poe2/equipment/items-36.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex11",
+      "name": "Armoured Cap",
+      "base": "Armoured Cap",
+      "imageId": "Armoured_Cap",
+      "image": "/images/poe2/equipment/items-272.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrDex6",
+      "name": "Ornate Gauntlets",
+      "base": "Ornate Gauntlets",
+      "imageId": "Ornate_Gauntlets",
+      "image": "/images/poe2/equipment/items-232.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex3Endgame",
+      "name": "Ornate Buckler",
+      "base": "Ornate Buckler",
+      "imageId": "Ornate_Buckler",
+      "image": "/images/poe2/equipment/items-460.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDex7",
+      "name": "Decorated Helm",
+      "base": "Decorated Helm",
+      "imageId": "Decorated_Helm",
+      "image": "/images/poe2/equipment/items-317.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStrDex2",
+      "name": "Braced Sabatons",
+      "base": "Braced Sabatons",
+      "imageId": "Braced_Sabatons",
+      "image": "/images/poe2/equipment/items-181.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr3",
+      "name": "Braced Tower Shield",
+      "base": "Braced Tower Shield",
+      "imageId": "Braced_Tower_Shield",
+      "image": "/images/poe2/equipment/items-476.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStr4",
+      "name": "Bolstered Mitts",
+      "base": "Bolstered Mitts",
+      "imageId": "Bolstered_Mitts",
+      "image": "/images/poe2/equipment/items-229.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStrDex4",
+      "name": "Covered Sabatons",
+      "base": "Covered Sabatons",
+      "imageId": "Covered_Sabatons",
+      "image": "/images/poe2/equipment/items-183.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex4",
+      "name": "Shrouded Vest",
+      "base": "Shrouded Vest",
+      "imageId": "Shrouded_Vest",
+      "image": "/images/poe2/equipment/items-39.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt14",
+      "name": "Enlightened Robe",
+      "base": "Enlightened Robe",
+      "imageId": "Enlightened_Robe",
+      "image": "/images/poe2/equipment/items-53.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrInt2",
+      "name": "Horned Crown",
+      "base": "Horned Crown",
+      "imageId": "Horned_Crown",
+      "image": "/images/poe2/equipment/items-298.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr9",
+      "name": "Crucible Tower Shield",
+      "base": "Crucible Tower Shield",
+      "imageId": "Crucible_Tower_Shield",
+      "image": "/images/poe2/equipment/items-480.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Focii/FourFocus5",
+      "name": "Tonal Focus",
+      "base": "Tonal Focus",
+      "imageId": "Tonal_Focus",
+      "image": "/images/poe2/equipment/items-446.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaffUnique1",
+      "name": "Warding Quarterstaff",
+      "base": "Warding Quarterstaff",
+      "imageId": "Warding_Quarterstaff",
+      "image": "/images/poe2/equipment/items-738.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff14",
+      "name": "Ravenous Staff",
+      "base": "Ravenous Staff",
+      "imageId": "Ravenous_Staff",
+      "image": "/images/poe2/equipment/items-687.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver9",
+      "name": "Penetrating Quiver",
+      "base": "Penetrating Quiver",
+      "imageId": "Penetrating_Quiver",
+      "image": "/images/poe2/equipment/items-524.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt6",
+      "name": "Scalper's Jacket",
+      "base": "Scalper's Jacket",
+      "imageId": "Scalpers_Jacket",
+      "image": "/images/poe2/equipment/items-51.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDexInt5",
+      "name": "Tribal Mask",
+      "base": "Tribal Mask",
+      "imageId": "Tribal_Mask",
+      "image": "/images/poe2/equipment/items-285.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrInt5",
+      "name": "Heavy Crown",
+      "base": "Heavy Crown",
+      "imageId": "Heavy_Crown",
+      "image": "/images/poe2/equipment/items-301.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Amulets/FourAmulet10",
+      "name": "Gold Amulet",
+      "base": "Gold Amulet",
+      "imageId": "Gold_Amulet",
+      "image": "/images/poe2/equipment/items-05.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt6",
+      "name": "Gold Circlet",
+      "base": "Gold Circlet",
+      "imageId": "Gold_Circlet",
+      "image": "/images/poe2/equipment/items-293.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing10",
+      "name": "Gold Ring",
+      "base": "Gold Ring",
+      "imageId": "Gold_Ring",
+      "image": "/images/poe2/equipment/items-544.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt9",
+      "name": "Gilded Vestments",
+      "base": "Gilded Vestments",
+      "imageId": "Gilded_Vestments",
+      "image": "/images/poe2/equipment/items-70.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesStrInt3",
+      "name": "Goldcast Cuffs",
+      "base": "Goldcast Cuffs",
+      "imageId": "Goldcast_Cuffs",
+      "image": "/images/poe2/equipment/items-224.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDex5",
+      "name": "Spined Bracers",
+      "base": "Spined Bracers",
+      "imageId": "Spined_Bracers",
+      "image": "/images/poe2/equipment/items-211.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Talismans/Talisman10",
+      "name": "Lumbering Talisman",
+      "base": "Lumbering Talisman",
+      "imageId": "Lumbering_Talisman",
+      "image": "/images/poe2/equipment/items-512.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Quivers/FourQuiver5",
+      "name": "Blunt Quiver",
+      "base": "Blunt Quiver",
+      "imageId": "Blunt_Quiver",
+      "image": "/images/poe2/equipment/items-521.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStrInt4",
+      "name": "Jingling Crest Shield",
+      "base": "Jingling Crest Shield",
+      "imageId": "Jingling_Crest_Shield",
+      "image": "/images/poe2/equipment/items-468.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStr2",
+      "name": "Iron Greaves",
+      "base": "Iron Greaves",
+      "imageId": "Iron_Greaves",
+      "image": "/images/poe2/equipment/items-176.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex4",
+      "name": "Iron Buckler",
+      "base": "Iron Buckler",
+      "imageId": "Iron_Buckler",
+      "image": "/images/poe2/equipment/items-461.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrInt1",
+      "name": "Iron Crown",
+      "base": "Iron Crown",
+      "imageId": "Iron_Crown",
+      "image": "/images/poe2/equipment/items-297.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing1",
+      "name": "Iron Ring",
+      "base": "Iron Ring",
+      "imageId": "Iron_Ring",
+      "image": "/images/poe2/equipment/items-545.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr3",
+      "name": "Iron Cuirass",
+      "base": "Iron Cuirass",
+      "imageId": "Iron_Cuirass",
+      "image": "/images/poe2/equipment/items-75.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpear2",
+      "name": "Ironhead Spear",
+      "base": "Ironhead Spear",
+      "imageId": "Ironhead_Spear",
+      "image": "/images/poe2/equipment/items-612.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace7",
+      "name": "Leaden Greathammer",
+      "base": "Leaden Greathammer",
+      "imageId": "Leaden_Greathammer",
+      "image": "/images/poe2/equipment/items-709.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace4",
+      "name": "Studded Greatclub",
+      "base": "Studded Greatclub",
+      "imageId": "Studded_Greatclub",
+      "image": "/images/poe2/equipment/items-706.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex6",
+      "name": "Studded Vest",
+      "base": "Studded Vest",
+      "imageId": "Studded_Vest",
+      "image": "/images/poe2/equipment/items-41.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr6",
+      "name": "Steel Plate",
+      "base": "Steel Plate",
+      "imageId": "Steel_Plate",
+      "image": "/images/poe2/equipment/items-77.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStr1",
+      "name": "Rusted Greathelm",
+      "base": "Rusted Greathelm",
+      "imageId": "Rusted_Greathelm",
+      "image": "/images/poe2/equipment/items-304.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStr1",
+      "name": "Rusted Cuirass",
+      "base": "Rusted Cuirass",
+      "imageId": "Rusted_Cuirass",
+      "image": "/images/poe2/equipment/items-73.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMace3",
+      "name": "Forge Maul",
+      "base": "Forge Maul",
+      "imageId": "Forge_Maul",
+      "image": "/images/poe2/equipment/items-705.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt4",
+      "name": "Chain Tiara",
+      "base": "Chain Tiara",
+      "imageId": "Chain_Tiara",
+      "image": "/images/poe2/equipment/items-291.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt3",
+      "name": "Mail Vestments",
+      "base": "Mail Vestments",
+      "imageId": "Mail_Vestments",
+      "image": "/images/poe2/equipment/items-65.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff6",
+      "name": "Chiming Staff",
+      "base": "Chiming Staff",
+      "imageId": "Chiming_Staff",
+      "image": "/images/poe2/equipment/items-691.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Belts/FourBelt4",
+      "name": "Long Belt",
+      "base": "Long Belt",
+      "imageId": "Long_Belt",
+      "image": "/images/poe2/equipment/items-374.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex3",
+      "name": "Pathfinder Coat",
+      "base": "Pathfinder Coat",
+      "imageId": "Pathfinder_Coat",
+      "image": "/images/poe2/equipment/items-38.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow1",
+      "name": "Makeshift Crossbow",
+      "base": "Makeshift Crossbow",
+      "imageId": "Makeshift_Crossbow",
+      "image": "/images/poe2/equipment/items-677.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr4",
+      "name": "Barricade Tower Shield",
+      "base": "Barricade Tower Shield",
+      "imageId": "Barricade_Tower_Shield",
+      "image": "/images/poe2/equipment/items-477.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDex2",
+      "name": "Guarded Helm",
+      "base": "Guarded Helm",
+      "imageId": "Guarded_Helm",
+      "image": "/images/poe2/equipment/items-312.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesInt2",
+      "name": "Sombre Gloves",
+      "base": "Sombre Gloves",
+      "imageId": "Sombre_Gloves",
+      "image": "/images/poe2/equipment/items-216.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbow8Endgame",
+      "name": "Desolate Crossbow",
+      "base": "Desolate Crossbow",
+      "imageId": "Desolate_Crossbow",
+      "image": "/images/poe2/equipment/items-680.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt5",
+      "name": "Anchorite Garb",
+      "base": "Anchorite Garb",
+      "imageId": "Anchorite_Garb",
+      "image": "/images/poe2/equipment/items-50.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDex10",
+      "name": "Covert Hood",
+      "base": "Covert Hood",
+      "imageId": "Covert_Hood",
+      "image": "/images/poe2/equipment/items-280.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDexInt5",
+      "name": "Furtive Wraps",
+      "base": "Furtive Wraps",
+      "imageId": "Furtive_Wraps",
+      "image": "/images/poe2/equipment/items-213.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDexInt1",
+      "name": "Hermit Garb",
+      "base": "Hermit Garb",
+      "imageId": "Hermit_Garb",
+      "image": "/images/poe2/equipment/items-46.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaff3",
+      "name": "Voltaic Staff",
+      "base": "Voltaic Staff",
+      "imageId": "Voltaic_Staff",
+      "image": "/images/poe2/equipment/items-689.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Rings/FourRing2",
+      "name": "Lazuli Ring",
+      "base": "Lazuli Ring",
+      "imageId": "Lazuli_Ring",
+      "image": "/images/poe2/equipment/items-546.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsStr3",
+      "name": "Bronze Greaves",
+      "base": "Bronze Greaves",
+      "imageId": "Bronze_Greaves",
+      "image": "/images/poe2/equipment/items-177.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldDex1",
+      "name": "Leather Buckler",
+      "base": "Leather Buckler",
+      "imageId": "Leather_Buckler",
+      "image": "/images/poe2/equipment/items-458.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyDex1",
+      "name": "Leather Vest",
+      "base": "Leather Vest",
+      "imageId": "Leather_Vest",
+      "image": "/images/poe2/equipment/items-36.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetDexInt6",
+      "name": "Solid Mask",
+      "base": "Solid Mask",
+      "imageId": "Solid_Mask",
+      "image": "/images/poe2/equipment/items-286.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Gloves/FourGlovesDex2",
+      "name": "Firm Bracers",
+      "base": "Firm Bracers",
+      "imageId": "Firm_Bracers",
+      "image": "/images/poe2/equipment/items-209.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetStrDex4",
+      "name": "Cowled Helm",
+      "base": "Cowled Helm",
+      "imageId": "Cowled_Helm",
+      "image": "/images/poe2/equipment/items-314.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrDex7",
+      "name": "Knight Armour",
+      "base": "Knight Armour",
+      "imageId": "Knight_Armour",
+      "image": "/images/poe2/equipment/items-86.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWand2",
+      "name": "Bone Wand",
+      "base": "Bone Wand",
+      "imageId": "Bone_Wand",
+      "image": "/images/poe2/equipment/items-643.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyInt4",
+      "name": "Bone Raiment",
+      "base": "Bone Raiment",
+      "imageId": "Bone_Raiment",
+      "image": "/images/poe2/equipment/items-56.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Helmets/FourHelmetInt11",
+      "name": "Magus Tiara",
+      "base": "Magus Tiara",
+      "imageId": "Magus_Tiara",
+      "image": "/images/poe2/equipment/items-296.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/BodyArmours/FourBodyStrInt12",
+      "name": "Corvus Mantle",
+      "base": "Corvus Mantle",
+      "imageId": "Corvus_Mantle",
+      "image": "/images/poe2/equipment/items-72.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Boots/FourBootsInt1",
+      "name": "Straw Sandals",
+      "base": "Straw Sandals",
+      "imageId": "Straw_Sandals",
+      "image": "/images/poe2/equipment/items-168.svg#item-0"
+    },
+    {
+      "kind": "base",
+      "engineId": "Metadata/Items/Armours/Shields/FourShieldStr13",
+      "name": "Blacksteel Tower Shield",
+      "base": "Blacksteel Tower Shield",
+      "imageId": "Blacksteel_Tower_Shield",
+      "image": "/images/poe2/equipment/items-474.svg#item-0"
+    }
+  ]
+}

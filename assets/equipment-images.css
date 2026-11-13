@@ -1,0 +1,13 @@
+.equipment-name{display:inline;white-space:normal;overflow-wrap:anywhere}
+img.equipment-icon{display:inline-block;width:1.8em;height:2.5em;min-width:24px;max-width:40px;max-height:56px;object-fit:contain;vertical-align:middle;margin:0 .35em .15em 0;box-sizing:border-box;background:#14212a;border:1px solid #81765e;border-radius:6px;padding:3px}
+.equipment-icon[hidden]{display:none}
+.unique-gear-card h3 .equipment-icon{width:48px;height:72px;max-width:48px;max-height:72px}
+.article-page h1 .equipment-icon{width:64px;height:96px;max-width:64px;max-height:96px}
+#sim-slots button:has(>.equipment-icon){display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;align-items:center}
+#sim-slots button>.equipment-icon{width:40px;height:60px;min-width:40px;max-width:40px;max-height:60px;margin:0}
+.sim-slot-copy{min-width:0}
+.equipment-preview{display:flex;gap:16px;align-items:center;max-width:100%;margin:16px 0;padding:12px;border:1px solid var(--line,#c7bfae);background:#f6f1e6;border-radius:8px}
+.equipment-preview[hidden]{display:none}
+.equipment-preview>.equipment-icon{width:80px;height:120px;max-width:80px;max-height:120px;min-width:80px;flex:0 0 80px;margin:0}
+.equipment-preview figcaption{font-size:14px;line-height:1.7;color:#40545d;overflow-wrap:anywhere}
+@media(max-width:720px){#sim-slots button:has(>.equipment-icon){grid-template-columns:36px minmax(0,1fr);gap:8px}#sim-slots button>.equipment-icon{width:36px;min-width:36px;max-width:36px;height:54px}.equipment-preview{gap:12px}.equipment-preview>.equipment-icon{width:64px;height:96px;min-width:64px;max-width:64px;max-height:96px;flex-basis:64px}}

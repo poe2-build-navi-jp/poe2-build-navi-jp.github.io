@@ -34,6 +34,7 @@ jobs:
           npm ci --ignore-scripts
           npm run test:search
           npm run test:skill-icons
+          npm run test:equipment-images
       - name: Collect site files
         run: |
           mkdir _site

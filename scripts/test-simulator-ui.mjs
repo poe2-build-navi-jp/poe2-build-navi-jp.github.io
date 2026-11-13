@@ -6,12 +6,16 @@ import {pathToFileURL}from'node:url';
 import {JSDOM,VirtualConsole}from'jsdom';
 import * as model from '../assets/simulator-model.js';
 import {openSkillPicker} from '../assets/simulator-skill-picker.js';
+import {installEquipmentImages} from '../assets/equipment-images.js';
+import {equipmentImages} from '../assets/equipment-image-data.js';
+import {createEquipmentMatcher} from '../assets/equipment-image-matcher.js';
 const root=resolve(import.meta.dirname,'..'),native=new Worker(new URL('./fixtures/simulator-worker-node.mjs',import.meta.url));
 let sequence=0;const pending=new Map();native.on('message',m=>{if(m.progress)return;const t=pending.get(m.id);if(!t)return;pending.delete(m.id);m.error?t.reject(Error(m.error)):t.resolve(m.result);});native.on('error',e=>{for(const p of pending.values())p.reject(e);});
 const rpc=(action,payload)=>new Promise((resolve,reject)=>{let id=++sequence;pending.set(id,{resolve,reject});native.postMessage({id,action,payload});});
 const errors=[],vconsole=new VirtualConsole();vconsole.on('jsdomError',e=>{if(!e.message.includes('navigation'))errors.push(e.message);});
 const dom=new JSDOM(await readFile(resolve(root,'simulator/index.html'),'utf8'),{url:'https://poe2-build-navi-jp.github.io/simulator/',runScripts:'outside-only',virtualConsole:vconsole});
 const w=dom.window,d=w.document;
+const equipmentMatcher=createEquipmentMatcher(equipmentImages),equipmentObserver=installEquipmentImages(d);
 Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
 Object.assign(w,{openSkillPicker});
 let scrollCalls=0;w.HTMLElement.prototype.scrollIntoView=function(){scrollCalls++;};
@@ -49,6 +53,7 @@ try{
  click('[data-tab="items"]');click('[data-slot="amulet"]');
  const astro=[...d.getElementById('sim-unique').options].find(o=>o.textContent.includes('アストラメンティス'));assert.ok(astro);change('#sim-unique',astro.value);click('#sim-unique-draft');await wait(()=>d.getElementById('sim-item-text').value.includes('アストラメンティス'));
  click('#sim-item-apply');await wait(ready);assert.ok(saved().request.items.some(i=>i.slot==='amulet'&&i.text.includes('Astramentis')));
+ await wait(()=>d.querySelector('[data-slot="amulet"]>.equipment-icon'));assert.equal(d.querySelector('[data-slot="amulet"]>.equipment-icon').getAttribute('src'),equipmentMatcher.lookup('Astramentis').src);
  click('#sim-item-back');assert.equal(d.getElementById('sim-item-editor').hidden,true);
  click('[data-slot="helmet"]');assert.equal(d.getElementById('sim-item-list').hidden,true);assert.equal(d.activeElement.id,'sim-slot-title');
  click('[data-equipment-mode="rare"]');assert.equal(d.getElementById('sim-rare-editor').hidden,false);
@@ -57,6 +62,7 @@ try{
  const rareLife=life();click('#sim-rare-add');change('[data-rare-row="0"] [data-rare-value="0"]','100');
  click('#sim-rare-add');change('[data-rare-mod="1"]','fire_res');change('[data-rare-row="1"] [data-rare-value="0"]','30');
  click('#sim-item-apply');await wait(ready);assert.equal(life(),rareLife+100);assert.equal(saved().equipmentDrafts.helmet.name,'自作テスト兜');assert.ok(saved().request.items.find(i=>i.slot==='helmet').text.includes('+30% to Fire Resistance'));
+ await wait(()=>d.querySelector('[data-slot="helmet"]>.equipment-icon'));assert.equal(d.querySelector('[data-slot="helmet"]>.equipment-icon').getAttribute('src'),equipmentMatcher.lookup('Covert Hood').src);assert.match(d.querySelector('#sim-equipment-preview figcaption').textContent,/ベース装備/);
  change('[data-rare-row="0"] [data-rare-value="0"]','150');click('#sim-item-apply');await wait(ready);assert.equal(life(),rareLife+150);
  click('#sim-item-back');click('[data-slot="helmet"]');assert.equal(d.querySelector('[data-rare-row="0"] [data-rare-value="0"]').value,'150');assert.equal(d.querySelector('[data-equipment-mode="rare"]').getAttribute('aria-pressed'),'true');
  click('#sim-item-back');click('[data-slot="Flask 1"]');click('[data-equipment-mode="rare"]');assert.equal(d.getElementById('sim-item-apply').disabled,true);click('[data-equipment-mode="unique"]');assert.equal(d.getElementById('sim-item-apply').disabled,false);
@@ -126,4 +132,4 @@ try{
  console.log(`Tree viewport: ${visibleNodeCount}/4913 nodes; no hidden-tree SVG; latest-only calculation queue passed`);
  assert.equal(errors.length,0,errors.join('\n'));
  console.log('PASS: chooser/filter → real calculation; config Life delta; unique equipment application; gem editing; native saved-file roundtrip; isolated saved builds and restoration');
-}finally{dom.window.close();await native.terminate();}
+}finally{equipmentObserver.disconnect();dom.window.close();await native.terminate();}

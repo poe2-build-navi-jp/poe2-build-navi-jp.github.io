@@ -182,9 +182,15 @@ const slots=[['weapon1','Main hand'],['weapon2','Off-hand / shield'],['helmet','
 const utility=slot=>/^(Flask|Charm) /.test(slot);
 const itemList=()=>utility(selectedSlot)?(plan.request.flasks ||= []):(plan.request.items ||= []);
 function itemName(text){const lines=text.trim().split('\n');return /^Rarity:/i.test(lines[0])?lines[1] || 'Empty':lines[0] || 'Empty';}
+function itemArt(text){
+ const lines=String(text||'').trim().split(/\r?\n/),rarity=/^Rarity:/i.test(lines[0]||'');
+ const name=text?itemName(text):'',base=rarity&&!/^Rarity:\s*Normal/i.test(lines[0])?lines[2]||'':name;
+ const variants=lines.filter(line=>/^Variant:/.test(line)).map(line=>line.slice(8).trim()),selected=Number(lines.find(line=>/^Selected Variant:/.test(line))?.split(':')[1]);
+ return `data-equipment-selected="${esc(name)}" data-equipment-base="${esc(base)}" data-equipment-variant="${esc(variants[selected-1]||'')}"`;
+}
 function renderSlots(){
  plan.weaponSets=weaponSetState(plan.request,plan.equipmentDrafts || {},plan.weaponSets);for(const b of document.querySelectorAll('[data-weapon-set]')){const active=+b.dataset.weaponSet===plan.weaponSets.active;b.setAttribute('aria-pressed',String(active));} $('sim-weapon-set-status').textContent=`Weapon set ${plan.weaponSets.active} equipment is used to calculate stats.`;
- $('sim-slots').innerHTML=slots.map(([id,title])=>{const item=(utility(id)?plan.request.flasks:plan.request.items)?.find(i=>i.slot===id);return `<button type="button" data-slot="${id}" aria-pressed="${id===selectedSlot}">${title}<small>${esc(item?label(itemName(item.text)):'Empty')}</small></button>`;}).join('');
+ $('sim-slots').innerHTML=slots.map(([id,title])=>{const item=(utility(id)?plan.request.flasks:plan.request.items)?.find(i=>i.slot===id);return `<button type="button" data-slot="${id}" aria-pressed="${id===selectedSlot}" ${itemArt(item?.text||'')}><span class="sim-slot-copy">${title}<small>${esc(item?label(itemName(item.text)):'Empty')}</small></span></button>`;}).join('');
  $('sim-slot-title').textContent=(selectedSlot.startsWith('weapon')?`Weapon set ${plan.weaponSets.active} · `:'')+slots.find(s=>s[0]===selectedSlot)?.[1];itemSource=itemList().find(i=>i.slot===selectedSlot)?.text || '';$('sim-item-text').value=localizeItemText(itemSource,names);renderUniques();
 }
 function openItemEditor(){
@@ -207,7 +213,7 @@ function setEquipmentMode(mode){
 }
 function renderRareEditor(){
  const bases=rareBasesForSlot(selectedSlot,equipmentCatalog);
- $('sim-rare-base').innerHTML=bases.map(b=>`<option value="${esc(b.id)}">${esc(b.label)}</option>`).join('');$('sim-rare-base').value=rareDraft.baseId;
+ $('sim-rare-base').innerHTML=bases.map(b=>`<option value="${esc(b.id)}" data-equipment-name="${esc(b.name)}">${esc(b.label)}</option>`).join('');$('sim-rare-base').value=rareDraft.baseId;
  $('sim-rare-name').value=rareDraft.name;$('sim-rare-level').value=rareDraft.level;$('sim-rare-quality').value=rareDraft.quality;
  $('sim-rare-fields').hidden=!bases.length;$('sim-rare-unavailable').hidden=!!bases.length;renderRareModifiers();
 }
@@ -233,7 +239,7 @@ function renderUniques(){
  const q=$('sim-unique-search').value.trim().toLowerCase();
  const types=selectedSlot==='weapon1'?['bow','crossbow','mace','sceptre','spear','staff','talisman','wand']:selectedSlot==='weapon2'?['focus','quiver','shield','wand','sceptre','mace','spear']:selectedSlot.startsWith('ring')?['ring']:utility(selectedSlot)?['flask']:[selectedSlot];
  const matches=catalog.uniques.filter(u=>types.includes(u.item_type)&&`${u.name} ${names[u.name] || ''}`.toLowerCase().includes(q));
- $('sim-unique').innerHTML='<option value="">Choose a unique</option>'+matches.map(u=>`<option value="${u.id}">${esc(label(u.name))}</option>`).join('');
+ $('sim-unique').innerHTML='<option value="">Choose a unique</option>'+matches.map(u=>`<option value="${u.id}" data-equipment-name="${esc(u.name)}" data-equipment-base="${esc(u.bases[0]?.name||'')}">${esc(label(u.name))}</option>`).join('');
  $('sim-unique-draft').disabled=/^Charm/.test(selectedSlot);
 }
 const gemOptionCache=new Map();
@@ -734,7 +740,7 @@ document.addEventListener('click',async event=>{
   if(target.hasAttribute('data-find-gem')){
    const group=target.closest('[data-group]').dataset.group,index=target.dataset.findGem;
    const current=catalog.gems.find(gem=>gem.skill_id===plan.request.socket_groups[group].gems[index].skill_id);
-   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=56c93d7d2c');
+   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=1fbaebd7bb');
    openSkillPicker({document,gems:catalog.gems,label,support:current?.is_support||false,selected:current?.skill_id,returnFocus:target,onSelect:skillId=>{
     const select=document.querySelector(`[data-group="${group}"] [data-gem="${index}"] select[data-gem-field="skill_id"]`);
     if(!select)return;expandGemOptions(select);select.value=skillId;select.dispatchEvent(new Event('change',{bubbles:true}));
