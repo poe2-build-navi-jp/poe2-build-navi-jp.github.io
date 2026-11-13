@@ -113,7 +113,7 @@
         "passivePriority": "Progress to the original Early Campaign staged tree. Check specific node names in the original tree.",
         "gearPriority": "A spear, gloves and rings with added damage; boots with movement speed; Life and resistances.",
         "caution": "Fangs of Frost is an optional aid against tough enemies, not a mandatory step for normal clearing.",
-        "transitionCondition": "Reach level 21 and use War Banner and your single-target supporting actions appropriately."
+        "transitionCondition": "Reach level 21 and use War Banner and your supporting skills against single targets appropriately."
       },
       {
         "label": "Lv21〜30",
@@ -144,7 +144,7 @@
       },
       {
         "label": "Starting maps",
-        "mainSkill": "The listed Early Atlas setup uses gem-level-1 Whirling Slash in weapon set 1 and gem-level-16 Twister in set 2. It also lists Barrage, Ice-Tipped Arrows, Sniper’s Mark, Combat Frenzy, Charge Regulation, Wind Dancer, Ghost Dance and Parry.",
+        "mainSkill": "The listed Early Atlas setup uses level 1 Whirling Slash in weapon set 1 and level 16 Twister in set 2. It also lists Barrage, Ice-Tipped Arrows, Sniper’s Mark, Combat Frenzy, Charge Regulation, Wind Dancer, Ghost Dance and Parry.",
         "supports": "Whirling Slash: Rage III, Rapid Attacks III, Knockback, Blazing Critical. Twister: Prolonged Duration II, Projectile Acceleration III, Salvo, Pinpoint Critical. This is the original's listed setup, not a guarantee of availability when starting maps. Adopt it only once you have the slots, gems and required attributes.",
         "passivePriority": "Move to the Early Atlas staged tree. Do not replace the campaign tree all at once based on guesswork.",
         "gearPriority": "Compare Life and resistances on armour, movement speed on boots and added damage on the attack spear. Separate speed and damage weapon sets and identify movement and damage shortcomings.",
@@ -548,7 +548,7 @@
         "supports": "Move to the source guide's End of Act 1 setup, keeping Frost Bomb for Exposure.",
         "passivePriority": "Use the End of Act 1 passive tree.",
         "gearPriority": "Minion levels, Spirit, Life, Energy Shield and elemental resistances.",
-        "caution": "Maintain Flame Wall synergy and your own defenses, not just the number of minions.",
+        "caution": "Maintain Flame Wall synergy and your own defences, not just the number of minions.",
         "transitionCondition": "Reach level 21, collect the Act 1 rewards and ensure both your minions and your character have sufficient resistances."
       },
       {
@@ -565,7 +565,7 @@
         "mainSkill": "Once you reach the Act 3 transition point and have the target monster and required Spirit, gradually switch to Vaal Guard Spectre. Otherwise, continue with Skeletal Sniper.",
         "supports": "Use the source guide's Act 3 - Vaal Guard Spectres setup. Refer to the source for names that have not been verified.",
         "passivePriority": "Move to the Act 3 - Vaal Guard Spectres passive tree.",
-        "gearPriority": "Minion levels, Spirit, defenses and resistances.",
+        "gearPriority": "Minion levels, Spirit, defences and resistances.",
         "caution": "Have the summon target, supports and Spirit ready before switching, rather than staying in an incomplete transition setup.",
         "transitionCondition": "Reach level 41. Keep Snipers if the Act 3 transition requirements are unmet, and switch to Vaal Guard Spectre once they are met."
       },
@@ -593,7 +593,7 @@
         "supports": "Gradually update to the source guide's Lvl 80, Lvl 85 and Lvl 90 setups.",
         "passivePriority": "Follow the Lvl 80, 85 and 90 passive trees in order.",
         "gearPriority": "Minion levels, Spirit, Energy Shield, block, resistances and modifiers that benefit minions.",
-        "caution": "Energy Shield recharge changed in 0.5, so do not rely on older assumptions about defenses.",
+        "caution": "Energy Shield recharge changed in 0.5, so do not rely on older assumptions about defences.",
         "transitionCondition": "Have the setup for around level 90 in place and be able to distinguish damage problems from defensive weaknesses."
       },
       {
@@ -603,7 +603,7 @@
         "passivePriority": "Use the Final Update for 0.5 tree as your baseline and adjust for missing equipment.",
         "gearPriority": "Upgrade minion levels, Spirit, Energy Shield, block and resistances in order of need.",
         "caution": "Do not mix Final Update gear and trees with earlier stages without a plan. Minion AI and visual clarity remain weaknesses.",
-        "transitionCondition": "After completing the setup, address Spirit, minion damage and your own defenses one bottleneck at a time."
+        "transitionCondition": "After completing the setup, address Spirit, minion damage and your own defences one bottleneck at a time."
       }
     ],
     "mainSkill": "Skeletal Sniper / Spectre",
@@ -635,8 +635,8 @@
         "mainSkill": "Continue using Entangle as your main skill. If you obtain Thunderstorm after defeating the Executioner, cast it manually over your plants to apply overgrowth and Shock.",
         "supports": "Gradually add the source guide's levelling setup. Use the source for support names that have not been verified.",
         "passivePriority": "Use the levelling guide's passive tree closest to your current level.",
-        "gearPriority": "Levels to physical/all spells, spell damage, cast speed, defenses and resistances.",
-        "caution": "Do not chase finished gear early. Prioritize weapons and armor that help at your current level.",
+        "gearPriority": "Levels to physical/all spells, spell damage, cast speed, defences and resistances.",
+        "caution": "Do not chase finished gear early. Prioritise weapons and armour that help at your current level.",
         "transitionCondition": "Reach level 21 and progress reliably by alternating Entangle placement with movement."
       },
       {
@@ -681,8 +681,8 @@
         "supports": "The source's Cheap version lists Zenith II, Explosive Growth II, Branching Fissures II, Heft and Physical Mastery for Entangle; and Rapid Casting II, Physical Mastery, Considered Casting, Concentrated Area and Heft for Thrashing Vines. Check slots and attribute requirements.",
         "passivePriority": "Use the Cheap endgame tree and do not move to the expensive version before obtaining the required equipment.",
         "gearPriority": "Energy Shield, chaos resistance, spell levels, critical strikes, cast speed, Spirit and mana sustain.",
-        "caution": "Defenses depend on equipment. Do not focus solely on damage while neglecting Energy Shield and chaos resistance.",
-        "transitionCondition": "Map and fight bosses reliably with the Cheap setup, and identify deficiencies in mana sustain and defenses."
+        "caution": "Defences depend on equipment. Do not focus solely on damage while neglecting Energy Shield and chaos resistance.",
+        "transitionCondition": "Map and fight bosses reliably with the Cheap setup, and identify deficiencies in mana sustain and defences."
       },
       {
         "label": "Completed endgame setup",
@@ -690,7 +690,7 @@
         "supports": "The source's Cheap version lists Zenith II, Explosive Growth II, Branching Fissures II, Heft and Physical Mastery for Entangle. Cast on Critical uses Thunderstorm, Shock, Efficiency II, Boundless Energy II and Zenith II. Do not mix this with the high-investment version.",
         "passivePriority": "Choose one stage from the endgame guide and match both your equipment and passive tree to that stage.",
         "gearPriority": "Energy Shield, chaos resistance, spell levels, critical strikes, cast speed, Spirit and mana sustain.",
-        "caution": "The source explains lowering the Thunderstorm inside Cast on Critical to level 18, including gear skill-level bonuses, to reduce mana costs. Do not mix it with Expensive or Mirror Tier versions; check mana sustain in long fights and chaos resistance.",
+        "caution": "The source recommends lowering Thunderstorm socketed in Cast on Critical to level 18, including gear skill-level bonuses, to reduce mana costs. Do not mix it with Expensive or Mirror Tier versions; check mana sustain in long fights and chaos resistance.",
         "transitionCondition": "After completing the setup, improve single-target damage, Energy Shield/chaos resistance and mana sustain one bottleneck at a time."
       }
     ],
@@ -714,7 +714,7 @@
         "mainSkill": "Contagion. For single targets, transition from Volcano to Essence Drain.",
         "supports": "Use Unleash with Contagion. After obtaining Essence Drain, add Swift Affliction I and Zenith I.",
         "passivePriority": "Use the written guide's ACT 1 passive tree. Check the source for exact node names.",
-        "gearPriority": "Levels to Chaos Spell Skills and Spell Damage. For armor, prioritize maximum Life, cold resistance and movement speed.",
+        "gearPriority": "Levels to Chaos Spell Skills and Spell Damage. For armour, prioritise maximum Life, cold resistance and movement speed.",
         "caution": "Do not try to kill single targets with Contagion alone; use Volcano or Essence Drain.",
         "transitionCondition": "Reach level 11 and use Contagion and the single-target skill for their respective roles."
       },
@@ -768,7 +768,7 @@
         "mainSkill": "Use Essence Drain + Contagion for clearing and Dark Effigy + Despair for tougher enemies.",
         "supports": "Use the T1–T15 full-life version as your baseline and upgrade only what is lacking.",
         "passivePriority": "Use the full-life endgame passive tree.",
-        "gearPriority": "Chaos spell levels, spell damage, cast speed, defenses and mana sustain.",
+        "gearPriority": "Chaos spell levels, spell damage, cast speed, defences and mana sustain.",
         "caution": "Do not partially transition before meeting the low-life version's requirements.",
         "transitionCondition": "Progress reliably through T1–T15 with the full-life version."
       },
@@ -777,9 +777,9 @@
         "mainSkill": "Essence Drain + Contagion, with the tougher-enemy setup matching your chosen version.",
         "supports": "Align the entire setup with either the full-life or low-life version.",
         "passivePriority": "Use only the passive tree for your chosen endgame version.",
-        "gearPriority": "Chaos spell performance, defenses, cast speed and mana sustain required by your chosen version.",
+        "gearPriority": "Chaos spell performance, defences, cast speed and mana sustain required by your chosen version.",
         "caution": "Do not partially mix the full-life and low-life versions.",
-        "transitionCondition": "Your chosen version's main skills, defenses and mana sustain should perform their intended roles."
+        "transitionCondition": "Your chosen version's main skills, defences and mana sustain should perform their intended roles."
       }
     ],
     "mainSkill": "Essence Drain + Contagion",
@@ -847,7 +847,7 @@
         "supports": "Check your current grenades and supports against Skill Gems → Early Endgame in the source. The ACT 1 support setup is not necessarily the finished endgame setup.",
         "passivePriority": "Move to the Early Endgame passive tree.",
         "gearPriority": "Crossbow, projectile levels, added damage, Life, Armour and resistances.",
-        "caution": "Prioritize dangerous areas and your own position even when effects clutter the screen.",
+        "caution": "Prioritise dangerous areas and your own position even when effects clutter the screen.",
         "transitionCondition": "Your main and supplementary grenades should perform their intended roles in low-tier maps."
       },
       {
@@ -855,7 +855,7 @@
         "mainSkill": "Keep Explosive Grenade at the core and check which Flash, Gas, Oil and Cluster Grenades the source's Mid Endgame version uses.",
         "supports": "Check main and supplementary links under Skill Gems → Mid Endgame. Match Equipment and Passive Tree to the same Mid Endgame version.",
         "passivePriority": "Use the Mid Endgame passive tree.",
-        "gearPriority": "Crossbow, added damage, projectile levels, defenses and required attributes.",
+        "gearPriority": "Crossbow, added damage, projectile levels, defences and required attributes.",
         "caution": "Keep the Mid Endgame version until the Uber version's equipment prerequisites are met.",
         "transitionCondition": "Have reliable clearing and boss-fighting sequences with the Mid Endgame version."
       },
@@ -864,9 +864,9 @@
         "mainSkill": "Use the source's Uber Endgame version built around Explosive Grenade. Check the Uber Endgame Skill Gems section for Flash, Gas, Oil and Cluster Grenade slots.",
         "supports": "Check each grenade's supports under Skill Gems → Uber Endgame. Switch only when you can also meet the Uber version's attribute, equipment and passive requirements.",
         "passivePriority": "Use the Uber Endgame passive tree.",
-        "gearPriority": "The crossbow, projectile levels, added damage, defenses and required attributes for your chosen version.",
+        "gearPriority": "The crossbow, projectile levels, added damage, defences and required attributes for your chosen version.",
         "caution": "Do not partially mix Early, Mid and Uber gear and trees. Check the next stage's equipment values in the chosen source version; keep your currently functioning setup until those requirements are met.",
-        "transitionCondition": "The chosen stage's main skills, support skills and defenses should perform their intended roles."
+        "transitionCondition": "The chosen stage's main skills, support skills and defences should perform their intended roles."
       }
     ],
     "mainSkill": "Explosive Grenade",
@@ -886,25 +886,25 @@
       {
         "label": "Lv1〜10",
         "mainSkill": "After obtaining a spear and the required gems, create whirlwinds with Whirling Slash and follow with Twister. Pounce is a movement option and Shred can help with Werewolf form; neither is treated as the main skill of this route.",
-        "supports": "Early on, prioritize supports that increase physical damage and attack speed. Check the source's stage table for names of supports you have not obtained.",
+        "supports": "Early on, prioritise supports that increase physical damage and attack speed. Check the source's stage table for names of supports you have not obtained.",
         "passivePriority": "Use the source's Early Game stage. Check routes leading to projectiles, attack speed and cold damage.",
-        "gearPriority": "Spear physical damage, movement speed on boots, and Life and resistances on armor.",
+        "gearPriority": "Spear physical damage, movement speed on boots, and Life and resistances on armour.",
         "caution": "Whirling Slash is used to generate whirlwinds rather than deal damage, so the source recommends keeping it at level 1.",
         "transitionCondition": "A progression checkpoint around level 11: check spear upgrades and the basic Whirling Slash–Twister combination."
       },
       {
         "label": "Lv11〜20",
         "mainSkill": "Create whirlwinds with Whirling Slash and launch them into packs with Twister.",
-        "supports": "Prioritize Twister's damage and area. Use War Banner as support after obtaining it.",
+        "supports": "Prioritise Twister's damage and area. Use War Banner as support after obtaining it.",
         "passivePriority": "Continue the source's Early Game stage, checking projectiles, attack speed and cold damage in that order.",
         "gearPriority": "Spear physical damage, Life, resistances and Evasion. Keep movement speed on boots.",
-        "caution": "Avoid overlevelling Whirling Slash; prioritize upgrading Twister.",
+        "caution": "Avoid overlevelling Whirling Slash; prioritise upgrading Twister.",
         "transitionCondition": "Reach level 21 and be able to consistently create whirlwinds and launch them with Twister."
       },
       {
         "label": "Lv21〜30",
         "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Twister. If using Barrage, activate it before the Twister you want to enhance.",
-        "supports": "Prioritize Twister and Ice-Tipped Arrows, gradually adding Barrage for single-target fights.",
+        "supports": "Prioritise Twister and Ice-Tipped Arrows, gradually adding Barrage for single-target fights.",
         "passivePriority": "Use the source's Mid Campaign stage. After acquiring Spirit Walker, check the current route including Primal Bounty.",
         "gearPriority": "Prepare both weapon sets and check spear physical damage, added cold damage, Life and resistances.",
         "caution": "Ascendancy timing varies with progression. Do not apply its benefits merely by selecting its name before earning it.",
@@ -913,8 +913,8 @@
       {
         "label": "Lv31〜40",
         "mainSkill": "Use Whirling Slash at least 3 times, prepare with Ice-Tipped Arrows and Barrage, then fire Twister.",
-        "supports": "Prioritize upgrading Twister, Barrage and Ice-Tipped Arrows, while keeping the whirlwind-generating Whirling Slash at level 1.",
-        "passivePriority": "Use the source's Mid Campaign stage. Increase projectiles, cold damage and attack speed; check Evasion and Deflect for defenses.",
+        "supports": "Prioritise upgrading Twister, Barrage and Ice-Tipped Arrows, while keeping the whirlwind-generating Whirling Slash at level 1.",
+        "passivePriority": "Use the source's Mid Campaign stage. Increase projectiles, cold damage and attack speed; check Evasion and Deflect for defences.",
         "gearPriority": "A high-physical-damage spear, movement speed, Life, resistances and Evasion.",
         "caution": "Damage drops if the whirlwind count or skill order breaks down, so check the sequence in single-target fights.",
         "transitionCondition": "Reach level 41 and consistently execute the combination while clearing and against single targets."
@@ -922,20 +922,20 @@
       {
         "label": "Level 41 to campaign completion",
         "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Barrage → Twister. Check the source's weapon-set assignments for movement and support skills.",
-        "supports": "Follow the source's Mid/Late Campaign setup, prioritizing completed links for the three main skills.",
+        "supports": "Follow the source's Mid/Late Campaign setup, prioritising completed links for the three main skills.",
         "passivePriority": "Use the source's Mid/Late Campaign stage. Check the current route using Dance with Death and the weapon-set assignments.",
         "gearPriority": "Spear physical damage, Life, resistances, Evasion and movement speed. Secure enough Spirit for the skills you need.",
-        "caution": "Preserve skill assignments for each weapon set and prioritize basic defenses over optional uniques.",
+        "caution": "Preserve skill assignments for each weapon set and prioritise basic defences over optional uniques.",
         "transitionCondition": "Finish the campaign, balance your resistances and handle normal enemies and bosses with the basic combination."
       },
       {
         "label": "Starting maps",
         "mainSkill": "Use Whirling Slash at least 3 times, then Ice-Tipped Arrows and Barrage before following with Twister.",
-        "supports": "Prioritize links for your main skills and maintain support skills without a Spirit shortfall.",
-        "passivePriority": "Move to the source's Early Endgame stage. Check attack speed, cold damage, critical strikes and Evasion-based defenses.",
+        "supports": "Prioritise links for your main skills and maintain support skills without a Spirit shortfall.",
+        "passivePriority": "Move to the source's Early Endgame stage. Check attack speed, cold damage, critical strikes and Evasion-based defences.",
         "gearPriority": "Elemental resistances, Life, Evasion, spear physical and added damage, and movement speed.",
-        "caution": "Do not assume endgame uniques are required as soon as you start maps. First use rare gear to establish resistances and defenses.",
-        "transitionCondition": "Execute the combination reliably in low-tier maps while maintaining resistances and defenses."
+        "caution": "Do not assume endgame uniques are required as soon as you start maps. First use rare gear to establish resistances and defences.",
+        "transitionCondition": "Execute the combination reliably in low-tier maps while maintaining resistances and defences."
       },
       {
         "label": "Early Endgame",
@@ -944,13 +944,13 @@
         "passivePriority": "Use the source's Endgame stage. Increase critical strikes, cold damage and attack speed while balancing Evasion and Energy Shield.",
         "gearPriority": "High physical and added damage on the spear, Spirit, Life or Energy Shield, Evasion and resistances.",
         "caution": "The source's endgame equipment is a target example; the exact same items are not necessarily mandatory.",
-        "transitionCondition": "Maintain the endgame setup's skills and Spirit while balancing defenses and damage."
+        "transitionCondition": "Maintain the endgame setup's skills and Spirit while balancing defences and damage."
       },
       {
         "label": "Completed endgame setup",
         "mainSkill": "Prepare whirlwinds with Whirling Slash, enhance the next attack with Ice-Tipped Arrows and Barrage, then fire Twister.",
         "supports": "Match supports to the endgame stage you are using, upgrading gradually as you obtain them.",
-        "passivePriority": "Check the source's endgame tree and align critical strikes, cold damage, attack speed and Evasion-based defenses with the same stage.",
+        "passivePriority": "Check the source's endgame tree and align critical strikes, cold damage, attack speed and Evasion-based defences with the same stage.",
         "gearPriority": "A strong spear, required Spirit, resistances, Evasion and Life or Energy Shield. Consider optional uniques after completing your basic equipment.",
         "caution": "Unverified in 1.0. Recheck patch notes and stage-by-stage sources after the full release.",
         "transitionCondition": "Have the chosen 0.5.5 stage in place and be able to compare changes in game."
@@ -974,10 +974,10 @@
       {
         "label": "Lv1〜10",
         "mainSkill": "Use Spark from the gem chest in the starting area as your main skill. Make Frost Bomb as your second skill, then Flame Wall.",
-        "supports": "Prioritize upgrading Spark. After making Orb of Storms, add Overabundance I and Unleash to place two orbs with one cast.",
+        "supports": "Prioritise upgrading Spark. After making Orb of Storms, add Overabundance I and Unleash to place two orbs with one cast.",
         "passivePriority": "Path toward elemental damage and allocate most attribute nodes to Intelligence. Add only the Strength and Dexterity required by your gear and gems.",
-        "gearPriority": "Lightning/all spell skill levels on your staff, then cast speed and spell damage. Use armor with Energy Shield.",
-        "caution": "The source's Act 1 advice is mapped to this level range. Level-to-progression correspondence is approximate.",
+        "gearPriority": "Lightning/all spell skill levels on your staff, then cast speed and spell damage. Use armour with Energy Shield.",
+        "caution": "The source's Act 1 advice is mapped to this level range. These level ranges are approximate progression checkpoints.",
         "transitionCondition": "Reach level 11, obtain Spark, Frost Bomb and Flame Wall, and be able to clear packs with Spark."
       },
       {
@@ -985,7 +985,7 @@
         "mainSkill": "Spark + Frost Bomb. Use your first level 3 Uncut Skill Gem to make Orb of Storms, then cast Spark from inside its area.",
         "supports": "Level 2 Uncut Support Gems begin dropping in Act 2. Add Rising Tempest to Spark, then Orb of Storms.",
         "passivePriority": "Increase elemental damage while working toward Secrets of the Orb, which allows three Orbs of Storms.",
-        "gearPriority": "Staff skill levels and added damage, Life and resistances on armor, and mana regeneration rate.",
+        "gearPriority": "Staff skill levels and added damage, Life and resistances on armour, and mana regeneration rate.",
         "caution": "Orb of Storms fires chaining lightning when you cast within its area, so do not move too far from where you placed it.",
         "transitionCondition": "Reach level 21, place two Orbs of Storms and fight in the order Frost Bomb → Orb of Storms → Spark."
       },
@@ -994,7 +994,7 @@
         "mainSkill": "Frost Bomb → Orb of Storms → repeated Spark casts. Use Elemental Weakness against bosses, from a level 7 Uncut Skill Gem.",
         "supports": "Use a Lesser Jeweller's Orb, which can drop from enemies around level 25, to unlock the third socket on Spark, then Orb of Storms.",
         "passivePriority": "After completing the Trial of the Sekhemas in Act 2, take Stormweaver's Storm's Recollection. One Frost Bomb can then generate 6 Cold Infusions.",
-        "gearPriority": "Prioritize your staff. For armor, prioritize Life, resistances, Energy Shield and mana regeneration rate in that order.",
+        "gearPriority": "Prioritise your staff. For armour, prioritise Life, resistances, Energy Shield and mana regeneration rate in that order.",
         "caution": "The source says that Chiming Staff for damage and Werewolf form for movement speed are mutually exclusive options.",
         "transitionCondition": "Reach level 31, acquire your Ascendancy and be able to use Elemental Weakness and Frost Bomb in boss fights."
       },
@@ -1003,7 +1003,7 @@
         "mainSkill": "Focus on Spark. Against bosses, use Sigil of Power → Elemental Weakness → Frost Bomb → Orb of Storms → Spark.",
         "supports": "Level 3 Uncut Support Gems begin dropping in Act 3. Upgrade Spark's support to Zenith II.",
         "passivePriority": "Complete Ultimatum, the Trial of Chaos, at the Temple of Chaos in Act 3 to earn 2 Ascendancy points.",
-        "gearPriority": "Staff skill levels, cast speed and spell damage. Resistances and Energy Shield on armor.",
+        "gearPriority": "Staff skill levels, cast speed and spell damage. Resistances and Energy Shield on armour.",
         "caution": "The source recommends keeping mana at 90% or higher while using Zenith. Maintain it with mana regeneration on your staff, rings and amulet, plus a mana flask.",
         "transitionCondition": "Reach level 41, automate Elemental Weakness with Blasphemy and be able to execute the boss sequence."
       },
@@ -1021,7 +1021,7 @@
         "mainSkill": "Use repeated Spark casts against normal enemies. Against tougher enemies, use Sigil of Power → Frost Bomb → Orb of Storms → Spark.",
         "supports": "Maintain the Spark and Orb of Storms links. Use Efficiency II on mana-intensive skills to help with mana shortages.",
         "passivePriority": "Move from the levelling tree to the endgame tree. Check Cold Infusions, elemental damage and Energy Shield.",
-        "gearPriority": "Get Energy Shield on your tiara, robe, gloves and sandals. Prioritize Life and added Energy Shield prefixes, using runes to supplement resistances.",
+        "gearPriority": "Get Energy Shield on your tiara, robe, gloves and sandals. Prioritise Life and added Energy Shield prefixes, using runes to supplement resistances.",
         "caution": "If using Mana Tempest, leave its area as soon as you gain the effect. Staying inside rapidly drains mana.",
         "transitionCondition": "Clear low-tier maps mainly with Spark while maintaining resistances."
       },
@@ -1038,7 +1038,7 @@
         "label": "Completed endgame setup",
         "mainSkill": "An option to rebuild into a separate high-budget mana-stacking setup. Use Spark for clearing and Frost Bomb → Spark against bosses. Cast on Critical automatically triggers Comet.",
         "supports": "Keep Spark's critical strike chance at 90% or higher. Upgrade supports in the source gem table's priority order and improve each skill's quality.",
-        "passivePriority": "Ascendancy choices: Constant Gale, Force of Will, Tempest Caller and Multiplying Squalls. Prioritize critical strike chance, critical damage and spell damage on jewels.",
+        "passivePriority": "Ascendancy choices: Constant Gale, Force of Will, Tempest Caller and Multiplying Squalls. Prioritise critical strike chance, critical damage and spell damage on jewels.",
         "gearPriority": "Maximum mana, with 5,000 or more as a guideline, critical strike chance and Spirit. If you do not have an Absent Amulet with Cast on Critical, supplement Spirit with a sceptre.",
         "caution": "This uses a different author, equipment, passive tree and Ascendancy setup from the preceding Maligaro's Virtuosity version. Increasing mana alone may not be enough to transition. Review required respecs, gems and gear together. The source explicitly notes expensive equipment and says it is not a low-budget starter. Unverified in 1.0.",
         "transitionCondition": "Have the chosen 0.5.5 stage in place and be able to compare changes in game."

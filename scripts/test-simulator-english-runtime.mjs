@@ -61,6 +61,8 @@ try{
  assert.ok(saved().request.items.find(i=>i.slot==='helmet').text.includes('+100 to maximum Life'));
  assert.doesNotMatch(d.getElementById('sim-rare-modifiers').textContent,/[ぁ-んァ-ヶ一-龥]/);
  click('[data-tab="skills"]');const select=d.querySelector('[data-gem-field="skill_id"]');select.dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));
+ assert.equal(d.querySelector('[data-remove-group]').textContent,'Remove group');
+ assert.equal(d.querySelector('[data-remove-group]').getAttribute('aria-label'),'Remove skill group 1');
  assert.ok([...select.options].some(o=>o.textContent==='Twister'));assert.doesNotMatch(select.textContent,/[ぁ-んァ-ヶ一-龥]/);
  click('[data-tab="tree"]');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length>0);
  assert.match(d.getElementById('sim-point-count').textContent,/Allocated:/);

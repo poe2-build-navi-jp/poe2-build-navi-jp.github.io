@@ -55,7 +55,7 @@ export function buildRareItem(draft,slot,catalog){
  const base=rareBasesForSlot(slot,catalog).find(b=>b.id===draft.baseId);if(!base)throw Error('Choose an item base suitable for this slot.');
  const name=String(draft.name || 'Custom rare item').trim();if(!name||name.length>80||/[\r\n]/.test(name))throw Error('Item names must be at most 80 characters without line breaks.');
  const level=Number(draft.level),quality=Number(draft.quality);if(!Number.isInteger(level)||level<1||level>100||!Number.isInteger(quality)||quality<0||quality>30)throw Error('Enter an item level from 1 to 100 and quality from 0 to 30.');
- if(!Array.isArray(draft.modifiers)||draft.modifiers.length>10)throw Error('Modifiers: 10 rows maximum.');
+ if(!Array.isArray(draft.modifiers)||draft.modifiers.length>10)throw Error('You can add up to 10 modifiers.');
  const seen=new Set(),lines=draft.modifiers.map(mod=>{
   const definition=catalog.modifiers.find(d=>d.id===mod.id);if(!definition||seen.has(mod.id))throw Error('Remove duplicate modifiers.');seen.add(mod.id);
   if(!Array.isArray(mod.values)||mod.values.length!==definition.default.length||mod.values.some(v=>v===''||!Number.isFinite(Number(v))||Number(v)<0||Number(v)>100000))throw Error('Enter modifier values from 0 to 100,000.');
@@ -95,7 +95,7 @@ export function weaponSetState(request,drafts={},previous=null){
  state.sets[state.active-1]={items:structuredClone((request.items || []).filter(item=>weaponSlots.has(item.slot))),drafts:structuredClone(Object.fromEntries(Object.entries(drafts).filter(([slot])=>weaponSlots.has(slot))))};return state;
 }
 export function selectWeaponSet(plan,active){
- if(![1,2].includes(active))throw Error('Weapon set: 1 or 2: please select.');
+ if(![1,2].includes(active))throw Error('Select weapon set 1 or 2.');
  const next=structuredClone(plan),state=weaponSetState(next.request,next.equipmentDrafts || {},next.weaponSets);state.active=active;next.weaponSets=state;
  next.request.items=[...(next.request.items || []).filter(item=>!weaponSlots.has(item.slot)),...structuredClone(state.sets[active-1].items)];
  next.equipmentDrafts={...Object.fromEntries(Object.entries(next.equipmentDrafts || {}).filter(([slot])=>!weaponSlots.has(slot))),...structuredClone(state.sets[active-1].drafts)};
@@ -148,11 +148,11 @@ export async function encodePlanLink(saved) {
   const packed=gzip?new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer()):bytes;
   let binary='';for(let i=0;i<packed.length;i+=8192)binary+=String.fromCharCode(...packed.subarray(i,i+8192));
   const value=`1${gzip?'g':'j'}.`+btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
-  if(value.length>24000)throw Error('This build exceeds the shared URL limit exceeded. Use an exported save file instead.');
+  if(value.length>24000)throw Error('This build exceeds the share-link size limit. Use an exported save file instead.');
   return value;
 }
 export async function decodePlanLink(value) {
-  if(typeof value!=='string'||value.length>24000||!/^1[gj]\.[A-Za-z0-9_-]+$/.test(value))throw Error('SharedURL: invalid format.');
+  if(typeof value!=='string'||value.length>24000||!/^1[gj]\.[A-Za-z0-9_-]+$/.test(value))throw Error('Invalid shared-build URL format.');
   const binary=atob(value.slice(3).replaceAll('-','+').replaceAll('_','/'));
   let stream=new Blob([Uint8Array.from(binary,c=>c.charCodeAt(0))]).stream();
   if(value[1]==='g'){
@@ -296,7 +296,7 @@ export function comparisonChanges(a,b){
  if((a.weaponSets?.active||1)!==(b.weaponSets?.active||1))conditions.push('Active weapon set');
  if(ag.some((g,i)=>g.enabled!==bg[i]?.enabled||g.main_active_skill!==bg[i]?.main_active_skill)||bg.length!==ag.length)conditions.push('Skill-group enabled state and main skill selection');
  const aw=weaponSetState(a.request,a.equipmentDrafts||{},a.weaponSets),bw=weaponSetState(b.request,b.equipmentDrafts||{},b.weaponSets);
- for(let i=0;i<2;i++)if(i!==aw.active-1&&i!==bw.active-1&&JSON.stringify(aw.sets[i].items)!==JSON.stringify(bw.sets[i].items))conditions.push(`Inactive weapon set${i+1}`);
+ for(let i=0;i<2;i++)if(i!==aw.active-1&&i!==bw.active-1&&JSON.stringify(aw.sets[i].items)!==JSON.stringify(bw.sets[i].items))conditions.push(`Inactive weapon set ${i+1}`);
  return {equipment,gems,passives:{added:[...bn].filter(id=>!an.has(id)),removed:[...an].filter(id=>!bn.has(id)),attributes},conditions};
 }
 
@@ -315,13 +315,13 @@ export async function encodeComparisonLink(value){
  const packed={version:1,enemy:data.enemy,prices:data.prices,a:await encodePlanLink(data.a),b:await encodePlanLink(data.b)};
  const bytes=new TextEncoder().encode(JSON.stringify(packed));let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
  const link='1c.'+btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
- if(link.length>24000)throw Error('2 builds in a shared URL exceeds the limit. Try a smaller build.');
+ if(link.length>24000)throw Error('These two builds exceed the share-link size limit. Try smaller builds.');
  return link;
 }
 export async function decodeComparisonLink(value){
- if(typeof value!=='string'||value.length>24000||!/^1c\.[A-Za-z0-9_-]+$/.test(value))throw Error('CompareURL: invalid format.');
+ if(typeof value!=='string'||value.length>24000||!/^1c\.[A-Za-z0-9_-]+$/.test(value))throw Error('Invalid comparison URL format.');
  const packed=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(Uint8Array.from(atob(value.slice(3).replaceAll('-','+').replaceAll('_','/')),c=>c.charCodeAt(0))));
- if(packed.version!==1)throw Error('CompareURL: version does not match.');
+ if(packed.version!==1)throw Error('Comparison URL version does not match.');
  return validateComparison({...packed,a:await decodePlanLink(packed.a),b:await decodePlanLink(packed.b)});
 }
 
@@ -340,7 +340,7 @@ export function drawComparisonCard(ctx,snapshot,includeNames=false){
  text(`Price A：${snapshot.priceA} / B：${snapshot.priceB}`,48,1045,24,'#172a34','left',1100);
  text(`Budget: ${snapshot.budget} (manual input; no currency conversion)`,48,1085,24,'#172a34','left',1100);
  text('Equipment, gems and temporary effects use each build’s settings. In-game DPS is not guaranteed.',48,1150,24,'#46565e','left',1100);
- text(snapshot.warning?'Contains unsupported effects or item errors. Check the original build.':'Check Calculation notes in the original build for supported mechanics.',48,1190,24,'#46565e','left',1100);
+ text(snapshot.warning?'Contains unsupported effects or item errors. Check the original build.':'Check Calculation diagnostics in the original build for supported mechanics.',48,1190,24,'#46565e','left',1100);
  text(`Supported data ${snapshot.dataVersion} / ${snapshot.date}`,48,1240,22,'#46565e');
  return {width,height};
 }
@@ -354,7 +354,7 @@ export function simulatorBackup(storage,presets){
  return parseSimulatorBackup(JSON.stringify({format:'poe2-simulator-backup',version:1,createdAt:new Date().toISOString(),entries}),presets);
 }
 export function parseSimulatorBackup(text,presets){
- if(typeof text!=='string'||text.length>20000000)throw Error('Backup: 20MB maximum: JSON: please select.');
+ if(typeof text!=='string'||text.length>20000000)throw Error('Select a JSON backup file of 20 MB or less.');
  const data=JSON.parse(text);
  if(data?.format!=='poe2-simulator-backup'||data.version!==1||!Array.isArray(data.entries)||data.entries.length>presets.length*3)throw Error('This is not a supported full backup.');
  const allowed=new Map(presets.flatMap(p=>[[`poe2-simulator:v1:${p.id}`,{preset:p,type:'auto'}],[namedPlanKey(p.id),{preset:p,type:'named'}],[priceBookKey(p.id),{preset:p,type:'prices'}]])),seen=new Set();

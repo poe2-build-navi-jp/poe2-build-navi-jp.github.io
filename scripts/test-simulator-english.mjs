@@ -26,3 +26,9 @@ assert((await read('sitemap.txt')).includes(base+'/en/simulator/'));
 assert((await read('tools/build-steps.mjs')).includes('generate-simulator-english'));
 assert(!/MutationObserver/.test(await read('assets/simulator-en.js')),'Do not translate arbitrary DOM/user content');
 console.log('PASS: English canonical, reciprocal hreflang, indexable static content, language links, controls, sitemap and reproducible build');
+
+// JSON comes before JS in the fingerprint matcher so .json is never truncated to .js.
+const runtime=await read('assets/simulator-en.js');
+for(const catalog of ['presets','examples','equipment','routes']){
+ assert.match(runtime,new RegExp('simulator-'+catalog+'-en\\.json\\?v=[a-f0-9]{10}'),'Versioned English '+catalog+' data');
+}

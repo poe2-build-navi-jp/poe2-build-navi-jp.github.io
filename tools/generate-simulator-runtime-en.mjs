@@ -60,7 +60,7 @@ fs.writeFileSync(path.join(root,'data/simulator-routes-en.json'),JSON.stringify(
 // Fingerprint dependencies in dependency order to avoid stale imports after publication.
 for(const file of ['simulator-model-en.js','simulator-worker-en.js','simulator-en.js']){
  let body=read('assets/'+file);
- body=body.replace(/((?:\.\/|\/data\/)[-\w]+(?:-en)?\.(?:js|json))(?:\?v=[^'"`]+)?/g,(all,p)=>{
+ body=body.replace(/((?:\.\/|\/data\/)[-\w]+(?:-en)?\.(?:json|js))(?:\?v=[^'"`]+)?/g,(all,p)=>{
  const target=p.startsWith('./')?'assets/'+p.slice(2):p.slice(1);
  if(!fs.existsSync(path.join(root,target)))return p;
  return p+'?v='+createHash('sha256').update(read(target)).digest('hex').slice(0,10);

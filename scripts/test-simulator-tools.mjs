@@ -36,7 +36,7 @@ try{
  assert(!c.d.getElementById('sim-resume-list').textContent.includes('非公開メモ'));
  const sitemap=await read('sitemap.xml');for(const m of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)){
   const file=new URL(m[1]).pathname.slice(1)+'index.html';const page=new JSDOM(await read(file));
-  const nav=page.window.document.querySelector('.site-nav');assert(nav,'Missing shared menu: '+file);assert.equal(nav.querySelectorAll('a[href="/simulator/"]').length,1,file);assert.equal(nav.querySelectorAll('a[href="/simulator/#sim-resume"]').length,1,file);page.window.close();
+  const nav=page.window.document.querySelector('.site-nav');const simulatorPath=page.window.document.documentElement.lang==='en'?'/en/simulator/':'/simulator/';assert(nav,'Missing shared menu: '+file);assert.equal(nav.querySelectorAll('a[href="'+simulatorPath+'"]').length,1,file);assert.equal(nav.querySelectorAll('a[href="'+simulatorPath+'#sim-resume"]').length,1,file);page.window.close();
  }
  const h=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+gemling,saved);
  h.change('#sim-extra-mods','最大ライフ +200');h.click('#sim-config-apply');await wait(h.ready);

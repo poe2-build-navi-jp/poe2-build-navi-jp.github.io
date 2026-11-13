@@ -351,7 +351,7 @@
         {
           "name": "The Ordained",
           "slot": "weapon1",
-          "sourceText": "Spear / The Ordained / Grand Spear / Quality +20%. Physical 206–309, Lightning 1–206, Critical Hit Chance 11.66%, Attacks per Second 1.40. Requires level 79, 65 Strength and 105 Dexterity. / 18% increased Physical Damage (light-blue line). Grants Spear Throw and level 19 Righteous Descent. 25% increased Melee Strike Range. 189% increased Physical Damage, Adds 1 to 206 Lightning Damage, +6.66% to Critical Hit Chance. Life Leech recovers based on Lightning Damage as well as Physical Damage. Creates one Fragment of Divinity in your Presence every 4 seconds. Corrupted."
+          "sourceText": "Spear / The Ordained / Grand Spear / Quality +20%. Physical 206–309, Lightning 1–206, Critical Hit Chance 11.66%, Attacks per Second 1.40. Requires level 79, 65 Strength and 105 Dexterity. / 18% increased Physical Damage (light-blue line). Grants Spear Throw and level 19 Righteous Descent. 25% increased Melee Strike Range. 189% increased Physical Damage, Adds 1 to 206 Lightning Damage, +6.66% to Critical Hit Chance. Life Leech is based on Lightning Damage as well as Physical Damage. Creates one Fragment of Divinity in your Presence every 4 seconds. Corrupted."
         },
         {
           "name": "Skysliver",
@@ -386,7 +386,7 @@
         {
           "name": "Guiding Palm of the Eye",
           "slot": "weapon2",
-          "sourceText": "Sceptre / Guiding Palm of the Eye / Shrine Sceptre / Quality +20%. Spirit 100. Requires level 65, 16 Strength and 36 Intelligence. / Grants level 18 Purity of Ice. Gain 25% of Damage as Extra Cold Damage. Allies in your Presence gain 22 to 29 added Attack Cold Damage and 50% of your Base Life Regeneration. +23 Intelligence, 25% increased Light Radius and the effect of a Guiding Freezing Shrine. Corrupted."
+          "sourceText": "Sceptre / Guiding Palm of the Eye / Shrine Sceptre / Quality +20%. Spirit 100. Requires level 65, 16 Strength and 36 Intelligence. / Grants level 18 Purity of Ice. Gain 25% of Damage as Extra Cold Damage. Allies in your Presence gain 22 to 29 added Cold Damage to Attacks and 50% of your Base Life Regeneration. +23 Intelligence, 25% increased Light Radius and the effect of a Guiding Freezing Shrine. Corrupted."
         },
         {
           "name": "Rare Stellar Amulet",
@@ -525,7 +525,7 @@
         {
           "name": "The Ordained",
           "slot": "weapon1",
-          "sourceText": "Spear / The Ordained / Grand Spear / Quality +20%. Physical 206–309, Lightning 1–206, Critical Hit Chance 11.66%, Attacks per Second 1.40. Requires level 79, 65 Strength and 105 Dexterity. / 18% increased Physical Damage (light-blue line). Grants Spear Throw and level 19 Righteous Descent. 25% increased Melee Strike Range. 189% increased Physical Damage, Adds 1 to 206 Lightning Damage, +6.66% to Critical Hit Chance. Life Leech recovers based on Lightning Damage as well as Physical Damage. Creates one Fragment of Divinity in your Presence every 4 seconds. Corrupted."
+          "sourceText": "Spear / The Ordained / Grand Spear / Quality +20%. Physical 206–309, Lightning 1–206, Critical Hit Chance 11.66%, Attacks per Second 1.40. Requires level 79, 65 Strength and 105 Dexterity. / 18% increased Physical Damage (light-blue line). Grants Spear Throw and level 19 Righteous Descent. 25% increased Melee Strike Range. 189% increased Physical Damage, Adds 1 to 206 Lightning Damage, +6.66% to Critical Hit Chance. Life Leech is based on Lightning Damage as well as Physical Damage. Creates one Fragment of Divinity in your Presence every 4 seconds. Corrupted."
         },
         {
           "name": "Skysliver",
@@ -560,7 +560,7 @@
         {
           "name": "Guiding Palm of the Eye",
           "slot": "weapon2",
-          "sourceText": "Sceptre / Guiding Palm of the Eye / Shrine Sceptre / Quality +20%. Spirit 100. Requires level 65, 16 Strength and 36 Intelligence. / Grants level 18 Purity of Ice. Gain 25% of Damage as Extra Cold Damage. Allies in your Presence gain 22 to 29 added Attack Cold Damage and 50% of your Base Life Regeneration. +23 Intelligence, 25% increased Light Radius and the effect of a Guiding Freezing Shrine. Corrupted."
+          "sourceText": "Sceptre / Guiding Palm of the Eye / Shrine Sceptre / Quality +20%. Spirit 100. Requires level 65, 16 Strength and 36 Intelligence. / Grants level 18 Purity of Ice. Gain 25% of Damage as Extra Cold Damage. Allies in your Presence gain 22 to 29 added Cold Damage to Attacks and 50% of your Base Life Regeneration. +23 Intelligence, 25% increased Light Radius and the effect of a Guiding Freezing Shrine. Corrupted."
         },
         {
           "name": "Rare Stellar Amulet",

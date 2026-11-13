@@ -147,7 +147,7 @@
   {
     "module": "",
     "from": "Equipment ${changes.equipment.length}Slot",
-    "to": "Equipment: ${changes.equipment.length} slots"
+    "to": "Equipment slots changed: ${changes.equipment.length}"
   },
   {
     "module": "",
@@ -198,5 +198,340 @@
     "module": "-model",
     "from": "Modifier values: 0〜100000 within this range.",
     "to": "Enter modifier values from 0 to 100,000."
+  },
+  {
+    "module": "",
+    "from": ">: remove group</button>",
+    "to": ">Remove group</button>"
+  },
+  {
+    "module": "",
+    "from": "Skill group ${index+1}: delete",
+    "to": "Remove skill group ${index+1}"
+  },
+  {
+    "module": "",
+    "from": "Gem${j+1}: delete",
+    "to": "Remove gem ${j+1}"
+  },
+  {
+    "module": "",
+    "from": "Modifier${i+1}: delete",
+    "to": "Remove modifier ${i+1}"
+  },
+  {
+    "module": "",
+    "from": "Add ${next.result.added.length}Node / Remove ${next.result.removed.length}Node",
+    "to": "Nodes to add: ${next.result.added.length} / Nodes to remove: ${next.result.removed.length}"
+  },
+  {
+    "module": "",
+    "from": "Shared A/BViewing comparison",
+    "to": "Viewing a shared A/B comparison"
+  },
+  {
+    "module": "",
+    "from": "Allocated0: start here",
+    "to": "No passives allocated"
+  },
+  {
+    "module": "",
+    "from": "Set a skill first, then DPS: inspect its breakdown.",
+    "to": "Set a skill first to inspect its DPS breakdown."
+  },
+  {
+    "module": "",
+    "from": "hit_dps:'HitDPS',dot_dps:'Damage over timeDPS',combined_dps:'DPSTotal'",
+    "to": "hit_dps:'Hit DPS',dot_dps:'Damage over time DPS',combined_dps:'Total DPS'"
+  },
+  {
+    "module": "",
+    "from": "Selected skill DPSBreakdown",
+    "to": "Selected skill DPS breakdown"
+  },
+  {
+    "module": "",
+    "from": "DPSThis is a direct breakdown of the total, not a complete expansion of every internal hit-damage formula.",
+    "to": "This is a breakdown of total DPS, not a complete expansion of every internal hit-damage formula."
+  },
+  {
+    "module": "",
+    "from": "(%）",
+    "to": "(%)"
+  },
+  {
+    "module": "",
+    "from": "Total Spirit −  reserved Spirit.",
+    "to": "Total Spirit − reserved Spirit."
+  },
+  {
+    "module": "",
+    "from": "The other ${mods.length-200} remaining sources are omitted.",
+    "to": "The remaining ${mods.length-200} sources are omitted."
+  },
+  {
+    "module": "",
+    "from": "Additional effects${request.extra_modifiers?.length||0} rows.",
+    "to": "Additional effects: ${request.extra_modifiers?.length||0}."
+  },
+  {
+    "module": "",
+    "from": "Changes: 1 step(s) undone.",
+    "to": "Last change undone."
+  },
+  {
+    "module": "",
+    "from": "Hypothetical Lv: 1〜100 within this range.",
+    "to": "Enter a character level from 1 to 100 for the estimate."
+  },
+  {
+    "module": "",
+    "from": "Resistance target range: -100〜100 within this range.",
+    "to": "Enter a resistance target from -100% to 100%."
+  },
+  {
+    "module": "",
+    "from": "Lv: 1〜100 within this range.",
+    "to": "Enter a character level from 1 to 100."
+  },
+  {
+    "module": "",
+    "from": "Quest points: 0〜24 within this range.",
+    "to": "Enter quest points from 0 to 24."
+  },
+  {
+    "module": "",
+    "from": "Save file: 2MB maximum.",
+    "to": "The save file must be 2 MB or smaller."
+  },
+  {
+    "module": "",
+    "from": "Backup: 20MB maximum.",
+    "to": "The backup file must be 20 MB or smaller."
+  },
+  {
+    "module": "",
+    "from": "Skill groups: 20 maximum.",
+    "to": "You can add up to 20 skill groups."
+  },
+  {
+    "module": "",
+    "from": "Modifiers: 10 rows maximum.",
+    "to": "You can add up to 10 modifiers."
+  },
+  {
+    "module": "",
+    "from": "}Upgrade candidate ${i++}",
+    "to": "} upgrade candidate ${i++}"
+  },
+  {
+    "module": "",
+    "from": "Gem ${changes.gems.length} entries",
+    "to": "Gem changes: ${changes.gems.length}"
+  },
+  {
+    "module": "",
+    "from": "Attribute changes ${changes.passives.attributes.length} points",
+    "to": "Attribute nodes changed: ${changes.passives.attributes.length}"
+  },
+  {
+    "module": "",
+    "from": "URL can be used by anyone who has the link; 2 builds can be compared under the same conditions.",
+    "to": "Anyone with this link can compare the two builds using the same conditions."
+  },
+  {
+    "module": "",
+    "from": "A as the baseline, applying 1 change at a time…",
+    "to": "Using A as the baseline and applying one change at a time…"
+  },
+  {
+    "module": "",
+    "from": "Changes: 1 change at a time",
+    "to": "One change at a time"
+  },
+  {
+    "module": "",
+    "from": "Check Calculation notes",
+    "to": "Check Calculation diagnostics"
+  },
+  {
+    "module": "",
+    "from": "check Calculation notes",
+    "to": "check Calculation diagnostics"
+  },
+  {
+    "module": "",
+    "from": "See Calculation notes",
+    "to": "See Calculation diagnostics"
+  },
+  {
+    "module": "",
+    "from": "Check your build and calculation notes",
+    "to": "Check your build and calculation diagnostics"
+  },
+  {
+    "module": "",
+    "from": "Choose Apply this item",
+    "to": "Choose Apply item"
+  },
+  {
+    "module": "",
+    "from": "then choose Apply this item",
+    "to": "then choose Apply item"
+  },
+  {
+    "module": "",
+    "from": "Use Restore deleted build",
+    "to": "Use Restore deleted setup"
+  },
+  {
+    "module": "",
+    "from": "Load this build to keep a recovery copy",
+    "to": "Choose Load this setup to keep a recovery copy"
+  },
+  {
+    "module": "",
+    "from": "Main gem Lv",
+    "to": "Main gem level "
+  },
+  {
+    "module": "",
+    "from": "Current build (in progress)",
+    "to": "Current build (being edited)"
+  },
+  {
+    "module": "-model",
+    "from": "Weapon set: 1 or 2: please select.",
+    "to": "Select weapon set 1 or 2."
+  },
+  {
+    "module": "-model",
+    "from": "This build exceeds the shared URL limit exceeded. Use an exported save file instead.",
+    "to": "This build exceeds the share-link size limit. Use an exported save file instead."
+  },
+  {
+    "module": "-model",
+    "from": "SharedURL: invalid format.",
+    "to": "Invalid shared-build URL format."
+  },
+  {
+    "module": "-model",
+    "from": "CompareURL: invalid format.",
+    "to": "Invalid comparison URL format."
+  },
+  {
+    "module": "-model",
+    "from": "CompareURL: version does not match.",
+    "to": "Comparison URL version does not match."
+  },
+  {
+    "module": "-model",
+    "from": "2 builds in a shared URL exceeds the limit. Try a smaller build.",
+    "to": "These two builds exceed the share-link size limit. Try smaller builds."
+  },
+  {
+    "module": "-model",
+    "from": "Backup: 20MB maximum: JSON: please select.",
+    "to": "Select a JSON backup file of 20 MB or less."
+  },
+  {
+    "module": "-model",
+    "from": "Modifiers: 10 rows maximum.",
+    "to": "You can add up to 10 modifiers."
+  },
+  {
+    "module": "-model",
+    "from": "Check Calculation notes",
+    "to": "Check Calculation diagnostics"
+  },
+  {
+    "module": "",
+    "from": "Safari・Chrome・Edge.",
+    "to": "Safari, Chrome or Edge."
+  },
+  {
+    "module": "",
+    "from": "In this view, 1 per group: main skills 1 + supports 5 maximum can be added.",
+    "to": "Each skill group can contain one main skill and up to five supports."
+  },
+  {
+    "module": "",
+    "from": "Review the image and choose ”PNG” to save.",
+    "to": "Review the image and choose Save PNG."
+  },
+  {
+    "module": "",
+    "from": "Other examples: <a href=\"/en/simulator/#sim-sample-choices\">Sample list</a> available to choose from.",
+    "to": "Choose another example from the <a href=\"/en/simulator/#sim-sample-choices\">sample list</a>."
+  },
+  {
+    "module": "",
+    "from": "Equipment, gems, temporary effects and Lv use each build’s settings.",
+    "to": "Equipment, gems, temporary effects and character level use each build’s settings."
+  },
+  {
+    "module": "",
+    "from": "Class / Lv and base attributes",
+    "to": "Class, level and base attributes"
+  },
+  {
+    "module": "",
+    "from": "'Ring1'",
+    "to": "'Ring 1'"
+  },
+  {
+    "module": "",
+    "from": "'Ring2'",
+    "to": "'Ring 2'"
+  },
+  {
+    "module": "",
+    "from": "'Flask1'",
+    "to": "'Flask 1'"
+  },
+  {
+    "module": "",
+    "from": "'Flask2'",
+    "to": "'Flask 2'"
+  },
+  {
+    "module": "",
+    "from": "'Charm1'",
+    "to": "'Charm 1'"
+  },
+  {
+    "module": "",
+    "from": "'Charm2'",
+    "to": "'Charm 2'"
+  },
+  {
+    "module": "",
+    "from": "'Charm3'",
+    "to": "'Charm 3'"
+  },
+  {
+    "module": "",
+    "from": "Strength +5",
+    "to": "+5 Strength"
+  },
+  {
+    "module": "",
+    "from": "Dexterity +5",
+    "to": "+5 Dexterity"
+  },
+  {
+    "module": "",
+    "from": "Intelligence +5",
+    "to": "+5 Intelligence"
+  },
+  {
+    "module": "",
+    "from": "Remaining: ${limit-used} points available.",
+    "to": "${limit-used} points remaining."
+  },
+  {
+    "module": "-model",
+    "from": "Inactive weapon set${i+1}",
+    "to": "Inactive weapon set ${i+1}"
   }
 ]

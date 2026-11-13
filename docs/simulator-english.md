@@ -34,3 +34,9 @@ Evidence:
 These are a third-party game-data mirror and the build author's guide, not a direct inspection of the user's game client or an official GGG announcement. Only guide display strings changed; calculation IDs, requests, saves, and equipment are unchanged.
 
 The English social image is original SVG artwork (`images/poe2/og/poe2-en-simulator-og.svg`), exported to WebP. Existing site OG images can be retained with `OG_METADATA_ONLY=1 npm run build` when the browser-based image renderer is unavailable; this still executes the full site/data/metadata generation chain. Shared build query/hash data is excluded from the analytics page location in both locales.
+
+## English copy review (2026-11-13)
+
+Reviewed static text/attributes, runtime concatenation, save/compare/share dialogs, errors, calculation labels, passive controls, all 12 build guides and example descriptions. Corrected 3 static sentences, 44 guide/example translations, and 68 whole-template rules (67 new, one revised), including remove-group controls, number/label spacing and clearer error instructions. Prose follows the game's British English spelling where appropriate; game names and calculation data are unchanged. This review is not a claim that every possible input/error combination was manually exercised.
+
+JSON dependencies now receive content fingerprints (the matcher tests `.json` before `.js`), so corrected display data is refreshed after deployment. Regression checks cover fingerprinted catalogs, visible remove-group text and its accessible label, plus locale-aware navigation. Search Console request status must be recorded from its actual result, separately from publication.

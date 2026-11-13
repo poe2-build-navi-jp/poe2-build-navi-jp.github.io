@@ -15,7 +15,7 @@ PoE2ビルドシミュレーター	PoE2 Build Simulator
 POE2ビルドナビ / ビルドシミュレーター	POE2 Build Navi / Build Simulator
 ページ更新：	Updated: 
 まずは育成方針を選択。装備・ジェム・パッシブを変更して、数値の変化を確かめられます。	Start with a build, then change gear, gems and passives to see how the numbers change.
-初期設定は職業・アセンダンシー・主力スキルです。装備とパッシブを追加して、自分の構成に育ててください。	Each starting setup includes a class, Ascendancy and main skill. Add your own equipment and passive allocations to build it out.
+初期設定は職業・アセンダンシー・主力スキルです。装備とパッシブを追加して、自分の構成に育ててください。	Each starting setup includes a class, Ascendancy and main skill. Add your equipment and allocate passives to customise it.
 初めてなら、この3ステップ	Your first comparison in three steps
 ビルドを選ぶ	Choose a build
 下の一覧で普段使うスキル・職業を選びます。	Choose the skill and class you play from the list below.
@@ -33,7 +33,7 @@ POE2ビルドナビ / ビルドシミュレーター	POE2 Build Navi / Build Sim
 このブラウザに保存済みの自動保存・名前付き構成・予定額・予算を書き出します。メモと構成名も含まれます。未保存の入力・共有構成・操作履歴は含みません。	Export this browser's autosaves, named builds, planned costs and budgets, including notes and build names. Unsaved input, shared previews and undo history are not included.
 全ビルドのバックアップを書き出す	Export all builds
 一括バックアップを選ぶ	Choose a backup file
-確認した保存欄を置き換えて復元	Replace the reviewed saves and restore
+確認した保存欄を置き換えて復元	Restore and replace selected saves
 キャンセル	Cancel
 装備入りの見本で操作を試す	Try an example with equipment
 装備・主力ジェム・パッシブ入りの操作サンプルです。内容を見てから取り込み、自分の構成へ調整できます。	These examples include equipment, main gems and passives. Review an example before importing it, then adjust it to your build.
@@ -240,7 +240,7 @@ URLをコピー	Copy link
 「この装備を反映」でステータスに適用します。	Choose “Apply item” to include it in the calculation.
 数値比較用の仮装備です。実際の付与可否・ティア上限は判定しません。ベースの暗黙効果やソケット効果も、必要なものをオプションに追加してください。	These are hypothetical items for comparison. Modifier availability and tier limits are not validated. Add any required implicit and socket effects as modifiers too.
 装備のテキスト	Item text
-編集欄の内容は「反映」で計算に入ります。	Editor contents enter the calculation when you apply them.
+編集欄の内容は「反映」で計算に入ります。	Apply the editor contents to include them in the calculation.
 交換する前に比較	Compare before replacing
 この装備を反映	Apply item
 この部位を外す	Unequip this slot
