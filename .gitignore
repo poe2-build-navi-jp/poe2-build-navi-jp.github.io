@@ -1,4 +1,5 @@
 node_modules/
+.skill-icon-cache/
 .indexnow/
 
 # secrets / local Claude Code settings
