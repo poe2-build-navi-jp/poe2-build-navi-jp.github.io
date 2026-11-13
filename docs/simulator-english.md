@@ -20,6 +20,17 @@ These are eligibility and discovery improvements, not a guarantee of indexing, r
 
 English-specific checks: `npm run test:simulator:en`. Translation generation fails on unknown Japanese source strings, rather than silently serving untranslated labels. The English runtime is generated from the Japanese implementation; it is not independently edited. Existing Japanese user notes and item names inside imported calculation payloads remain user data and are deliberately not rewritten.
 
-English guide data includes one explicitly qualified name: the source's ケラリの残虐 is described as Kelari's second command with the official English name unverified; do not invent a canonical game name. Linked full guide articles remain Japanese and are labelled accordingly.
+Linked full guide articles remain Japanese and are labelled accordingly.
+
+## Kelari command-skill name verification (2026-11-13)
+
+The guide's ケラリの残虐 is **Kelari's Brutality**, not equipment or the Brutality support gem. It is Kelari's knife-volley command skill. The earlier qualified placeholder has been replaced in all four English leveling-guide strings.
+
+Evidence:
+- [PoE2DB Japanese game-data record](https://poe2db.tw/jp/Kelari%2C_the_Tainted_Sands) pairs ケラリの残虐 with skill ID `KnifeThrowSandDjinn`; its English skill-data export labels the same ID `Kelari's Brutality`.
+- [PoE2DB English game-data record](https://poe2db.tw/us/Kelari%2C_the_Tainted_Sands) uses the same ID and name.
+- [Original PhazePlays campaign guide](https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide) explicitly describes Kelari's Brutality and the knife command, independently matching the guide's intended use.
+
+These are a third-party game-data mirror and the build author's guide, not a direct inspection of the user's game client or an official GGG announcement. Only guide display strings changed; calculation IDs, requests, saves, and equipment are unchanged.
 
 The English social image is original SVG artwork (`images/poe2/og/poe2-en-simulator-og.svg`), exported to WebP. Existing site OG images can be retained with `OG_METADATA_ONLY=1 npm run build` when the browser-based image renderer is unavailable; this still executes the full site/data/metadata generation chain. Shared build query/hash data is excluded from the analytics page location in both locales.

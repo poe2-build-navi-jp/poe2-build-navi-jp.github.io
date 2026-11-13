@@ -19,3 +19,7 @@ for(const kind of ['presets','examples']){
  walk(source,translated);
 }
 console.log('English data: all display strings translated; IDs, numbers, keys, requests and saves preserved.');
+const kelari = JSON.parse(fs.readFileSync('data/simulator-presets-en.json')).find(p=>p.id==='sorceress-sand-fire');
+assert.ok(kelari, 'Sand and Fire guide exists');
+assert.equal((JSON.stringify(kelari).match(/Kelari's Brutality/g)||[]).length,4,'Verified command name in four leveling instructions');
+assert.doesNotMatch(JSON.stringify(kelari),/second command|English name unverified/);

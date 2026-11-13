@@ -292,7 +292,7 @@
       },
       {
         "label": "Lv21〜30",
-        "mainSkill": "After your first Ascendancy, switch to Kelari's Deception + Kelari's second command (English name unverified).",
+        "mainSkill": "After your first Ascendancy, switch to Kelari's Deception + Kelari's Brutality.",
         "supports": "Consider Magnified Area II for area coverage and Concentrated Area for single-target damage.",
         "passivePriority": "After the first Ascendancy, respec from the spell tree to the minion staged tree.",
         "gearPriority": "Maintain Armour while checking the attributes needed for minion skills and your defences.",
@@ -301,7 +301,7 @@
       },
       {
         "label": "Lv31〜40",
-        "mainSkill": "Kelari's Deception + Kelari's second command (English name unverified). Add Ruzhan's Trap from level 40.",
+        "mainSkill": "Kelari's Deception + Kelari's Brutality. Add Ruzhan's Trap from level 40.",
         "supports": "Consider adding Muster at level 36. Check Ruzhan's supports in the original when switching.",
         "passivePriority": "Continue the original Act 3–Act 4 staged trees.",
         "gearPriority": "Armour, Life, resistances and required attributes.",
@@ -310,11 +310,11 @@
       },
       {
         "label": "Level 41 to campaign completion",
-        "mainSkill": "Place Ruzhan's Trap at the start, using Kelari's Deception and the second command between casts.",
+        "mainSkill": "Place Ruzhan's Trap at the start, using Kelari's Deception and Kelari's Brutality between casts.",
         "supports": "Use the original Act 4+ setup for Ruzhan's Trap and check Kelari's supports at the same stage.",
         "passivePriority": "Use the Act 4+ minion staged tree and connect it to the post-campaign defensive setup.",
         "gearPriority": "Armour, Life, elemental resistances and useful minion stats.",
-        "caution": "Command order differs between ordinary enemies and bosses. Usually prioritise the trap; against tough enemies, follow the second command with Deception.",
+        "caution": "Command order differs between ordinary enemies and bosses. Usually prioritise the trap; against tough enemies, follow Kelari's Brutality with Deception.",
         "transitionCondition": "Finish the campaign and use Ruzhan's and Kelari's commands whenever their cooldowns allow."
       },
       {
