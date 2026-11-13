@@ -186,6 +186,32 @@
       "sha256": "22c0c0f189de993f6b7e8b0c8b2b5c1475bdfcdefd173b0ed8906918986a1c9e"
     },
     {
+      "id": "Ahns_Citadel",
+      "name": "Ahn's Citadel",
+      "names": [
+        "Ahn's Citadel",
+        "アーンの城塞"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-0",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageAhnChisel.webp",
+      "reference": "https://poe2db.tw/us/Ahns_Citadel",
+      "sha256": "a803158e43d488e75dbce88d9603f7a51b4244d8fdcae650d2f582d764becfb8"
+    },
+    {
+      "id": "Ailiths_Chimes",
+      "name": "Ailith's Chimes",
+      "names": [
+        "Ailith's Chimes",
+        "エイリスの鐘"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-1",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Monastic.webp",
+      "reference": "https://poe2db.tw/us/Ailiths_Chimes",
+      "sha256": "61d57fc44d50d61b7ff15d9d34ab57b88e59f150e622e265a8f86a301b429496"
+    },
+    {
       "id": "Alchemists_Boon",
       "name": "Alchemist's Boon",
       "names": [
@@ -249,6 +275,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/alignmentsupport.webp",
       "reference": "https://poe2db.tw/us/Alignment_III",
       "sha256": "91a4cfd22f87c0c1d42a184d167b999adf0ad61b171ad6aaeac94f830cacd505"
+    },
+    {
+      "id": "Amanamus_Tithe",
+      "name": "Amanamu's Tithe",
+      "names": [
+        "Amanamu's Tithe",
+        "アマナムの十分の一税"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-2",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageAmanamu.webp",
+      "reference": "https://poe2db.tw/us/Amanamus_Tithe",
+      "sha256": "551eb1e884dfd7307a730eb43744e56c05d409ed4a55558fc3fa6549f32cde33"
     },
     {
       "id": "Ambrosia",
@@ -460,6 +499,45 @@
       "sha256": "2918bf204a80aed1b59519786664bae0bdb1492b7bafa88341e5478c52fdf895"
     },
     {
+      "id": "Arakaalis_Lust",
+      "name": "Arakaali's Lust",
+      "names": [
+        "Arakaali's Lust",
+        "アラカーリの肉欲"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-3",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageArakaali.webp",
+      "reference": "https://poe2db.tw/us/Arakaalis_Lust",
+      "sha256": "f3f02e2521610fa8aa612b788c27ace24eccbe43a93a98d38c1185fdd2a84bce"
+    },
+    {
+      "id": "Arbiters_Ignition",
+      "name": "Arbiter's Ignition",
+      "names": [
+        "Arbiter's Ignition",
+        "アービターの着火"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-4",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageArbiter.webp",
+      "reference": "https://poe2db.tw/us/Arbiters_Ignition",
+      "sha256": "8aff6e1315742cf6e4aca4b18c99858c8ef2dc74c12b33323907a4b0db0009eb"
+    },
+    {
+      "id": "Arbiters_Reach",
+      "name": "Arbiter's Reach",
+      "names": [
+        "Arbiter's Reach",
+        "アービターの射程"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-5",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/MothersWard.webp",
+      "reference": "https://poe2db.tw/us/Arbiters_Reach",
+      "sha256": "4c22095282df46b30a52eb7b4ff25966e54979a48b35b72a2c9010cda6d9a014"
+    },
+    {
       "id": "Arc",
       "name": "Arc",
       "names": [
@@ -536,6 +614,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/druidtundrahunter.webp",
       "reference": "https://poe2db.tw/us/Arctic_Howl",
       "sha256": "01a39be80bb0d8bd2f5b3ec0e54319a5ea305dbc3fde8ca5b81bbd11d5bce1ff"
+    },
+    {
+      "id": "Arjuns_Medal",
+      "name": "Arjun's Medal",
+      "names": [
+        "Arjun's Medal",
+        "アルジュンの勲章"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-6",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/AmmoConservation.webp",
+      "reference": "https://poe2db.tw/us/Arjuns_Medal",
+      "sha256": "77600c157c089e4dd1d0f12881e9285006cea261d8b627e9a1a48f189ad6f46d"
     },
     {
       "id": "Armour_Break_I",
@@ -681,6 +772,19 @@
       "sha256": "2adbfd5c2ecadc98862a7905eca1f710bc9332716bb6e2f25368010434f165fc"
     },
     {
+      "id": "Ataluis_Bloodletting",
+      "name": "Atalui's Bloodletting",
+      "names": [
+        "Atalui's Bloodletting",
+        "アタルイの血抜き"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-7",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageLifetap.webp",
+      "reference": "https://poe2db.tw/us/Ataluis_Bloodletting",
+      "sha256": "44ce87c6189738b08b1f05eb8f98c5125f404f9947a2cdf0b3c7a503a90c4316"
+    },
+    {
       "id": "Attrition",
       "name": "Attrition",
       "names": [
@@ -694,6 +798,19 @@
       "sha256": "9eef73305ed30544b936f875475d12d5a20aa39ac864c0752f60220059de51ed"
     },
     {
+      "id": "Atziris_Allure",
+      "name": "Atziri's Allure",
+      "names": [
+        "Atziri's Allure",
+        "アッツィリの魅惑"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-8",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageAtziri.webp",
+      "reference": "https://poe2db.tw/us/Atziris_Allure",
+      "sha256": "b0d2d9734db9bffb1229f3d2060aecb2e62c7dafa86141725fd36b764c1a0fc0"
+    },
+    {
       "id": "Atziris_Call",
       "name": "Atziri's Call",
       "names": [
@@ -705,6 +822,32 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/blankbluesupport.webp",
       "reference": "https://poe2db.tw/us/Atziris_Call",
       "sha256": "fc8dd63311270b2a107c98c679c5be603ec5e5f36d8e6780f14e2ace6808b6bb"
+    },
+    {
+      "id": "Atziris_Communion",
+      "name": "Atziri's Communion",
+      "names": [
+        "Atziri's Communion",
+        "アッツィリの交感"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-9",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/AtziriCommunion.webp",
+      "reference": "https://poe2db.tw/us/Atziris_Communion",
+      "sha256": "00a4454462674390fa31dcb66e305b0a02bef5abad0d624f75cee5d5a6cb6c1a"
+    },
+    {
+      "id": "Atziris_Impatience",
+      "name": "Atziri's Impatience",
+      "names": [
+        "Atziri's Impatience",
+        "アッツィリの短気"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-10",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/AtziriImpatience.webp",
+      "reference": "https://poe2db.tw/us/Atziris_Impatience",
+      "sha256": "22875bd3ff3d798054259c0c9de0f2edc1c5a24154bc04bcb2ab4c4ef6d6e057"
     },
     {
       "id": "Auto_Reload",
@@ -900,6 +1043,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/beserkskill.webp",
       "reference": "https://poe2db.tw/us/Berserk",
       "sha256": "ada55d46fa58620bd4df553d26e9c63a8cfd9349fa18f8d22b67db2324fbb998"
+    },
+    {
+      "id": "Bhatairs_Vengeance",
+      "name": "Bhatair's Vengeance",
+      "names": [
+        "Bhatair's Vengeance",
+        "バタイルの復讐"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-11",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/ShatteredFang.webp",
+      "reference": "https://poe2db.tw/us/Bhatairs_Vengeance",
+      "sha256": "452e9035a53bef2c54dfdf6feff684a7c2138d9d81730b634b8a22d97cae8dca"
     },
     {
       "id": "Bidding_I",
@@ -1388,6 +1544,32 @@
       "sha256": "ae92cdc17f2698f86f1449e62d708b1d52f3c257d8443a6b4cba0280bb5f5c5c"
     },
     {
+      "id": "Breachlords_Amalgam",
+      "name": "Breachlord's Amalgam",
+      "names": [
+        "Breachlord's Amalgam",
+        "ブリーチロードの融合体"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-12",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/BreachlordsAmalgam.webp",
+      "reference": "https://poe2db.tw/us/Breachlords_Amalgam",
+      "sha256": "2844515d1958374cae5f0186c238ee3c9dd7adc0f87c55cf40bfc8ee42c9e20d"
+    },
+    {
+      "id": "Breachlords_Rift",
+      "name": "Breachlord's Rift",
+      "names": [
+        "Breachlord's Rift",
+        "ブリーチロードの亀裂"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-13",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/BreachlordsRemorse.webp",
+      "reference": "https://poe2db.tw/us/Breachlords_Rift",
+      "sha256": "4c29bc4acc6879ef31f40a75ed65d0e76b91f27677240f7c73af34a6864cd820"
+    },
+    {
       "id": "Break_Endurance",
       "name": "Break Endurance",
       "names": [
@@ -1504,6 +1686,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/brutalitysupport.webp",
       "reference": "https://poe2db.tw/us/Brutality_III",
       "sha256": "bb8f504ec90fd47480c51ac9a79d7a0d466ca6e60f29cf7582821b8896850afd"
+    },
+    {
+      "id": "Brutus_Brain",
+      "name": "Brutus' Brain",
+      "names": [
+        "Brutus' Brain",
+        "ブルータスの脳"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-14",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageMeatshield.webp",
+      "reference": "https://poe2db.tw/us/Brutus_Brain",
+      "sha256": "4b3bacb7c78c9dc264a2d97767b99c10cfdc5c32bc349fa91197489d9c37ff70"
     },
     {
       "id": "Burgeon_I",
@@ -1754,6 +1949,19 @@
       "sha256": "dba184314509753f2dc03ba5abd7f38a9da81d0cf368f3172857b93ae3bc6df1"
     },
     {
+      "id": "Cathas_Brilliance",
+      "name": "Catha's Brilliance",
+      "names": [
+        "Catha's Brilliance",
+        "キャサの輝き"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-59.svg#icon-15",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/CathasBrilliance.webp",
+      "reference": "https://poe2db.tw/us/Cathas_Brilliance",
+      "sha256": "f96ad584c5119ce4bc532a30488c8bf3cb9c180d304ba995ec0f920580072d17"
+    },
+    {
       "id": "Chain_I",
       "name": "Chain I",
       "names": [
@@ -1961,6 +2169,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/charmbountysupport.webp",
       "reference": "https://poe2db.tw/us/Charm_Bounty",
       "sha256": "18ad1b8365c892c95026bea7aa91b6453af9debfe4337aca475fcb889f7602f8"
+    },
+    {
+      "id": "Cirels_Cultivation",
+      "name": "Cirel's Cultivation",
+      "names": [
+        "Cirel's Cultivation",
+        "シレルの栽培"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-0",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Greatwood.webp",
+      "reference": "https://poe2db.tw/us/Cirels_Cultivation",
+      "sha256": "25cc8e9571f9f7e1686084a5a2472929fdd7d45cf5a36a8d418ac8b1754a9ff1"
     },
     {
       "id": "Clarity_I",
@@ -2745,18 +2966,6 @@
       "sha256": "baef0ae56ab85c2605c495c8f03be426c7f8db5c9c55158b8b6c4d38b18ff8b9"
     },
     {
-      "id": "DNT_Crushing_Earth",
-      "name": "[DNT] Crushing Earth",
-      "names": [
-        "[DNT] Crushing Earth"
-      ],
-      "support": false,
-      "src": "/images/poe2/skills/icons-13.svg#icon-2",
-      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/AbsolutionBlast.webp",
-      "reference": "https://poe2db.tw/us/DNT_Crushing_Earth",
-      "sha256": "5547783d1d110d5eda73ba25ef040b204cc39d5950a2e005889572a62e5a085e"
-    },
-    {
       "id": "Dagger_Stab",
       "name": "Dagger Stab",
       "names": [
@@ -2781,6 +2990,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/dansemacabresupport.webp",
       "reference": "https://poe2db.tw/us/Danse_Macabre",
       "sha256": "dd57494ad64e2ca0cf98f7230a06b748c901323843827971293c145ebfd57483"
+    },
+    {
+      "id": "Daressos_Passion",
+      "name": "Daresso's Passion",
+      "names": [
+        "Daresso's Passion",
+        "ダレッソの熱情"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-1",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageDaresso.webp",
+      "reference": "https://poe2db.tw/us/Daressos_Passion",
+      "sha256": "7fefbb200537110af5f8f9d53d8ddb8cb1b5330b1a7587be2e1731e987071029"
     },
     {
       "id": "Dark_Effigy",
@@ -3187,6 +3409,19 @@
       "sha256": "69b1b568d7ec067934cb774e06d5501cc6d08bbaa2c60e5bb9ee52350deee6f3"
     },
     {
+      "id": "Diallas_Desire",
+      "name": "Dialla's Desire",
+      "names": [
+        "Dialla's Desire",
+        "ディアーラの欲望"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-2",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Dialla.webp",
+      "reference": "https://poe2db.tw/us/Diallas_Desire",
+      "sha256": "2e976a00e44d2f179e877a9b30fdcb2bb3f205cfd7a7b01546f7be32e5cd823f"
+    },
+    {
       "id": "Direstrike_I",
       "name": "Direstrike I",
       "names": [
@@ -3237,6 +3472,44 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/impaleskillicon.webp",
       "reference": "https://poe2db.tw/us/Disengage",
       "sha256": "7789980423cedd5c180703cf67d89ab3c204d8f48d1450d53314761b93acc4a9"
+    },
+    {
+      "id": "DNT_Crushing_Earth",
+      "name": "[DNT] Crushing Earth",
+      "names": [
+        "[DNT] Crushing Earth"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-13.svg#icon-2",
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/AbsolutionBlast.webp",
+      "reference": "https://poe2db.tw/us/DNT_Crushing_Earth",
+      "sha256": "5547783d1d110d5eda73ba25ef040b204cc39d5950a2e005889572a62e5a085e"
+    },
+    {
+      "id": "Doedres_Undoing",
+      "name": "Doedre's Undoing",
+      "names": [
+        "Doedre's Undoing",
+        "ドゥードリの災厄"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-3",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageDoedre.webp",
+      "reference": "https://poe2db.tw/us/Doedres_Undoing",
+      "sha256": "778d001aac7969e2865b90f928b93b729934e7367dbea3311d4161fee4e32860"
+    },
+    {
+      "id": "Dominus_Grasp",
+      "name": "Dominus' Grasp",
+      "names": [
+        "Dominus' Grasp",
+        "ドミナスの掌握"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-4",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageMercy.webp",
+      "reference": "https://poe2db.tw/us/Dominus_Grasp",
+      "sha256": "976de1a23ee14053ef05724f3d88f2c01479cd30bc93bb0b6ea85b6ea0096a18"
     },
     {
       "id": "Double_Barrel_I",
@@ -3302,6 +3575,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/dreadbannerskill.webp",
       "reference": "https://poe2db.tw/us/Dread_Banner",
       "sha256": "6e4421a6b01e4735282132607ef172231acb7a2eb7186faf1d9ccfd310a96a4f"
+    },
+    {
+      "id": "Dreamers_Knell",
+      "name": "Dreamer's Knell",
+      "names": [
+        "Dreamer's Knell",
+        "夢見人の弔鐘"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-5",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageDreamer.webp",
+      "reference": "https://poe2db.tw/us/Dreamers_Knell",
+      "sha256": "f4f34be2a72d7923c15b6a9745e2351ffd6b813ba752c714f8d863d97e294a83"
     },
     {
       "id": "Durability",
@@ -3381,6 +3667,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/inspiration.webp",
       "reference": "https://poe2db.tw/us/Efficiency_II",
       "sha256": "d1765b4d763da1aba0d4f5cbd22b490e84279d0c44ab821c382f41164c558a3d"
+    },
+    {
+      "id": "Einhars_Beastrite",
+      "name": "Einhar's Beastrite",
+      "names": [
+        "Einhar's Beastrite",
+        "アイナーの獣の儀式"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-6",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageEinhar.webp",
+      "reference": "https://poe2db.tw/us/Einhars_Beastrite",
+      "sha256": "397e1608529756b6d19f065d40ed10ba0d743302ba7526b68326d8461890cb82"
     },
     {
       "id": "Electrocute",
@@ -3813,6 +4112,19 @@
       "sha256": "5378210825d68da34f47ae1f0dc14fc94dbc861b4cb110860b951ce562c0fbfc"
     },
     {
+      "id": "Eonyrs_Thunder",
+      "name": "Eonyr's Thunder",
+      "names": [
+        "Eonyr's Thunder",
+        "エオニルの雷"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-7",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/ScaleofEonyr.webp",
+      "reference": "https://poe2db.tw/us/Eonyrs_Thunder",
+      "sha256": "f1e79ed1fa694f96d298385b91584fbf3e52d7dc4d0c01d50e4ed223470302f7"
+    },
+    {
       "id": "Escalating_Poison",
       "name": "Escalating Poison",
       "names": [
@@ -3837,6 +4149,32 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/rangerfrostescapeshot.webp",
       "reference": "https://poe2db.tw/us/Escape_Shot",
       "sha256": "163495a6364b86aa8966cb4031844885631f7e7323857ce1b72e29dee2ae3164"
+    },
+    {
+      "id": "Eshs_Prowess",
+      "name": "Esh's Prowess",
+      "names": [
+        "Esh's Prowess",
+        "エシュの武勇"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-8",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/EshsProwess.webp",
+      "reference": "https://poe2db.tw/us/Eshs_Prowess",
+      "sha256": "9cf27a08a73e297e2d6bbf58d296276e5056fd41ae3c27f0fc0fb4c6a9c5eea0"
+    },
+    {
+      "id": "Eshs_Radiance",
+      "name": "Esh's Radiance",
+      "names": [
+        "Esh's Radiance",
+        "エシュの輝き"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-9",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageEsh.webp",
+      "reference": "https://poe2db.tw/us/Eshs_Radiance",
+      "sha256": "eaf926b716a3df2c6085dbec8b18e94f38743d294aa18e29cabbcf683aeef20e"
     },
     {
       "id": "Essence_Drain",
@@ -5118,6 +5456,19 @@
       "sha256": "9850d316e4d5c1114968382728e54d0068cab8b91787876dccebe23e156b7b2f"
     },
     {
+      "id": "Garukhans_Resolve",
+      "name": "Garukhan's Resolve",
+      "names": [
+        "Garukhan's Resolve",
+        "ガルカーンの決意"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-10",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Garukhan.webp",
+      "reference": "https://poe2db.tw/us/Garukhans_Resolve",
+      "sha256": "475bd29d752efd6d44ef3339660c1d8c8391ad660c44829790b299a5551167ef"
+    },
+    {
       "id": "Gas_Arrow",
       "name": "Gas Arrow",
       "names": [
@@ -5287,6 +5638,19 @@
       "sha256": "b8ea4b0576028500de3897bea3b0b4e98bd1eabe12751318b469020d20e627f0"
     },
     {
+      "id": "Guatelitzis_Ablation",
+      "name": "Guatelitzi's Ablation",
+      "names": [
+        "Guatelitzi's Ablation",
+        "グアテリッツィの切除"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-11",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Guatelitzi.webp",
+      "reference": "https://poe2db.tw/us/Guatelitzis_Ablation",
+      "sha256": "906a066fdd43314b81faa4ebc29d08bfebc78cff48a77b1a2400749d708dcc4c"
+    },
+    {
       "id": "Haemocrystals",
       "name": "Haemocrystals",
       "names": [
@@ -5404,6 +5768,19 @@
       "sha256": "81997510a93bd6a1808f62b51c9c8a0451183a8886bf714e2ef86d3a608fee31"
     },
     {
+      "id": "Hayoxis_Fulmination",
+      "name": "Hayoxi's Fulmination",
+      "names": [
+        "Hayoxi's Fulmination",
+        "ハヨキの電撃"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-12",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Hayoxi.webp",
+      "reference": "https://poe2db.tw/us/Hayoxis_Fulmination",
+      "sha256": "2e148b08533b0bf707977118670e6e0ff5af50cabab42703872fef81c73372de"
+    },
+    {
       "id": "Healing_Runes",
       "name": "Healing Runes",
       "names": [
@@ -5508,6 +5885,32 @@
       "sha256": "f9110a04517ab6f9d41b2aaa306fab942f98b603a43673de5ca352a41efd8b4c"
     },
     {
+      "id": "Helbryms_Hide",
+      "name": "Helbrym's Hide",
+      "names": [
+        "Helbrym's Hide",
+        "ヘルブリムの皮"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-13",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/HideofHelbrym.webp",
+      "reference": "https://poe2db.tw/us/Helbryms_Hide",
+      "sha256": "97424683266bc443b48a0a0050f691fa0b5c52a526375dda1985e36e1634db74"
+    },
+    {
+      "id": "Her_Declaration",
+      "name": "Her Declaration",
+      "names": [
+        "Her Declaration",
+        "彼女の宣言"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-14",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/MothersDeclaration.webp",
+      "reference": "https://poe2db.tw/us/Her_Declaration",
+      "sha256": "9995eb8dfaf880b99a9abb2861987d7a27611c15fddb4513c6a29f9025a47f9a"
+    },
+    {
       "id": "Herald_of_Ash",
       "name": "Herald of Ash",
       "names": [
@@ -5560,19 +5963,6 @@
       "sha256": "b1f3f92019743dfc1852b99a4217a53958c2ffba45b38b6422c5ad0412f51869"
     },
     {
-      "id": "Herald_of_Thunder",
-      "name": "Herald of Thunder",
-      "names": [
-        "Herald of Thunder",
-        "ヘラルドオブサンダー"
-      ],
-      "support": false,
-      "src": "/images/poe2/skills/icons-26.svg#icon-10",
-      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/heraldofthunderskill.webp",
-      "reference": "https://poe2db.tw/us/Herald_of_Thunder",
-      "sha256": "37374b9435d4726f553eb3b1a4cf50d0f6193d3e8ba1444e5091fea5269a9d32"
-    },
-    {
       "id": "Herald_of_the_Royal_Queen",
       "name": "Herald of the Royal Queen",
       "names": [
@@ -5584,6 +5974,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/atziriheraldofblood.webp",
       "reference": "https://poe2db.tw/us/Herald_of_the_Royal_Queen",
       "sha256": "9bf0c21f7170148ba4d81f3328baf1840f75f8e05135e0633628fd142dae9920"
+    },
+    {
+      "id": "Herald_of_Thunder",
+      "name": "Herald of Thunder",
+      "names": [
+        "Herald of Thunder",
+        "ヘラルドオブサンダー"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-26.svg#icon-10",
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/heraldofthunderskill.webp",
+      "reference": "https://poe2db.tw/us/Herald_of_Thunder",
+      "sha256": "37374b9435d4726f553eb3b1a4cf50d0f6193d3e8ba1444e5091fea5269a9d32"
     },
     {
       "id": "Herbalism_I",
@@ -5796,19 +6199,6 @@
       "sha256": "e6d67f7eb3547546da6084c23939c4425343698e893174c6732b4f3c36ac29e8"
     },
     {
-      "id": "Ice-Tipped_Arrows",
-      "name": "Ice-Tipped Arrows",
-      "names": [
-        "Ice-Tipped Arrows",
-        "アイスティップアロー"
-      ],
-      "support": false,
-      "src": "/images/poe2/skills/icons-27.svg#icon-12",
-      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/rangershearingbolts.webp",
-      "reference": "https://poe2db.tw/us/Ice-Tipped_Arrows",
-      "sha256": "a246e3239e665b93f785610e0140f39473faf32e940d6d9c13e014aa36598f34"
-    },
-    {
       "id": "Ice_Bite_I",
       "name": "Ice Bite I",
       "names": [
@@ -5886,6 +6276,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/monkcomboattack.webp",
       "reference": "https://poe2db.tw/us/Ice_Strike",
       "sha256": "e99c3d37f1f9fecb7dac65630d2977a3844a62e9fb524cfca08630cbaa10bd62"
+    },
+    {
+      "id": "Ice-Tipped_Arrows",
+      "name": "Ice-Tipped Arrows",
+      "names": [
+        "Ice-Tipped Arrows",
+        "アイスティップアロー"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-27.svg#icon-12",
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/rangershearingbolts.webp",
+      "reference": "https://poe2db.tw/us/Ice-Tipped_Arrows",
+      "sha256": "a246e3239e665b93f785610e0140f39473faf32e940d6d9c13e014aa36598f34"
     },
     {
       "id": "Icestorm",
@@ -6227,6 +6630,19 @@
       "sha256": "992322e13143e6b1b050d622f31fcbb7779864bf6f5c6f0e30183b0489f90bb5"
     },
     {
+      "id": "Ixchels_Torment",
+      "name": "Ixchel's Torment",
+      "names": [
+        "Ixchel's Torment",
+        "イシュチェルの苦悩"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-60.svg#icon-15",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Trialmaster.webp",
+      "reference": "https://poe2db.tw/us/Ixchels_Torment",
+      "sha256": "a0364137b4f75c764084dad0e2c5a094a85637f9786ac5e4cbcf9f733f34bfb9"
+    },
+    {
       "id": "Jagged_Ground_I",
       "name": "Jagged Ground I",
       "names": [
@@ -6251,6 +6667,32 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/jaggedgroundsupport.webp",
       "reference": "https://poe2db.tw/us/Jagged_Ground_II",
       "sha256": "3b69e9e60983c71df9d2389305031e0cbda09d40fdeff70c1ccfe633611e119b"
+    },
+    {
+      "id": "Kalisas_Crescendo",
+      "name": "Kalisa's Crescendo",
+      "names": [
+        "Kalisa's Crescendo",
+        "カリサのクレッシェンド"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-0",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageKalisaChorus.webp",
+      "reference": "https://poe2db.tw/us/Kalisas_Crescendo",
+      "sha256": "b45fab4133832e09761890aa37a5ce6a8f87e60543498481e12348fa4da4a537"
+    },
+    {
+      "id": "Kaoms_Madness",
+      "name": "Kaom's Madness",
+      "names": [
+        "Kaom's Madness",
+        "カオムの狂気"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-1",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageKaom.webp",
+      "reference": "https://poe2db.tw/us/Kaoms_Madness",
+      "sha256": "35b5d42a7f9814182759d236cccbb4750d2264e3f4dd9c5c81f0bdb3b6844407"
     },
     {
       "id": "Kelari%2C_the_Tainted_Sands",
@@ -6280,6 +6722,20 @@
       "sha256": "b3ada63e71898f0ee6f623b9cfd69813af50aa76adcabfd0d2b8feb7907b2209"
     },
     {
+      "id": "Kelaris_Judgment",
+      "name": "Kelari's Judgment",
+      "names": [
+        "Kelari's Judgment",
+        "ケラリの裁き"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-64.svg#icon-0",
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SandDjinnDaggerslamSkill.webp",
+      "reference": "https://poe2db.tw/us/Kelaris_Judgment",
+      "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder.",
+      "sha256": "871de7b982ae7e6fdf9a96fbcc19b196c0529b5b76ed8dd23acedb1bc4a6bab9"
+    },
+    {
       "id": "Kelaris_Malediction",
       "name": "Kelari's Malediction",
       "names": [
@@ -6291,6 +6747,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/sorceresssanddjinncorpsebeetles.webp",
       "reference": "https://poe2db.tw/us/Kelaris_Malediction",
       "sha256": "8fb6c8ee26428d07590a7325761fad6b904c4ff01d924fc08c8ba0ddd27926ed"
+    },
+    {
+      "id": "Khatals_Rejuvenation",
+      "name": "Khatal's Rejuvenation",
+      "names": [
+        "Khatal's Rejuvenation",
+        "カタルの活力"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-2",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageKhatal.webp",
+      "reference": "https://poe2db.tw/us/Khatals_Rejuvenation",
+      "sha256": "e8e02746a63d2cf91e3613acd9d977cedacaaf41abf7a514df9c831dcccf95e3"
     },
     {
       "id": "Killing_Palm",
@@ -6320,6 +6789,32 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/knockbacksupport.webp",
       "reference": "https://poe2db.tw/us/Knockback",
       "sha256": "d786769dba493a0d8bd0cc2e7d4c13cc24eafa651bb9420480c8477718a48d60"
+    },
+    {
+      "id": "Kulemaks_Dominion",
+      "name": "Kulemak's Dominion",
+      "names": [
+        "Kulemak's Dominion",
+        "クーラマクの支配"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-3",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageKulemakSpire.webp",
+      "reference": "https://poe2db.tw/us/Kulemaks_Dominion",
+      "sha256": "445dc59734a8390913d50f307d1182659ddfcd14afa735a7e0a94665eb1c8d7f"
+    },
+    {
+      "id": "Kurgals_Leash",
+      "name": "Kurgal's Leash",
+      "names": [
+        "Kurgal's Leash",
+        "クルガルの鎖"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-4",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/AbyssKurgal.webp",
+      "reference": "https://poe2db.tw/us/Kurgals_Leash",
+      "sha256": "5cfc03a9b3a9b8b8cf5a610eb9f26e9814956ae3811bd3de845099edcdf8f116"
     },
     {
       "id": "Last_Gasp",
@@ -6778,6 +7273,19 @@
       "sha256": "2d29bd8e38eb2329411a2f650950d9a482993e791f592a041579a0d402606e18"
     },
     {
+      "id": "M%C3%B3rrigans_Insight",
+      "name": "Mórrigan's Insight",
+      "names": [
+        "Mórrigan's Insight",
+        "モリガンの洞察"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-5",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/MorrigansRefuge.webp",
+      "reference": "https://poe2db.tw/us/M%C3%B3rrigans_Insight",
+      "sha256": "9a1d67c0f4376562daf53db896d4ddb8bd73b644beb38addc8c17da850203a06"
+    },
+    {
       "id": "Mace_Strike",
       "name": "Mace Strike",
       "names": [
@@ -7110,6 +7618,19 @@
       "sha256": "a85e8836a7131156901400c0cb17649cdd5ee7ee9e34b54ec5bafd6514c71bde"
     },
     {
+      "id": "Medveds_Felling",
+      "name": "Medved's Felling",
+      "names": [
+        "Medved's Felling",
+        "メドヴェッドの伐採"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-6",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/MedvedsFelling.webp",
+      "reference": "https://poe2db.tw/us/Medveds_Felling",
+      "sha256": "a4c5e3bad1f6e96940876b419cfb29b11ba86d8bd8405f4d4322f41a99a2aab8"
+    },
+    {
       "id": "Midnight_Zenith",
       "name": "Midnight Zenith",
       "names": [
@@ -7331,6 +7852,19 @@
       "sha256": "cefb6afba8507a14fafcb94d245b7557564a6a325c043960450890240d19f8c4"
     },
     {
+      "id": "Morganas_Tempest",
+      "name": "Morgana's Tempest",
+      "names": [
+        "Morgana's Tempest",
+        "モルガナのテンペスト"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-7",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/MorganasTempest.webp",
+      "reference": "https://poe2db.tw/us/Morganas_Tempest",
+      "sha256": "15c02010373867bd8fae1ee503e30115f4d00002a130c50ae5e4f3b6670a4721"
+    },
+    {
       "id": "Mortar_Cannon",
       "name": "Mortar Cannon",
       "names": [
@@ -7436,6 +7970,48 @@
       "sha256": "8ea820839ad9541e533b600b25b2c720cac5a9fb713c4d53492694b4bf890d37"
     },
     {
+      "id": "Naviras_Fracturing",
+      "name": "Navira's Fracturing",
+      "names": [
+        "Navira's Fracturing",
+        "ナヴィラの破砕"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-64.svg#icon-1",
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/WaterDjinnChiilldedGroundBurst.webp",
+      "reference": "https://poe2db.tw/us/Naviras_Fracturing",
+      "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder.",
+      "sha256": "a672905861b42781aa53ac9c056f0a214692a5bc2114b2f1f3f11b433c82d9bb"
+    },
+    {
+      "id": "Naviras_Oasis",
+      "name": "Navira's Oasis",
+      "names": [
+        "Navira's Oasis",
+        "ナヴィラのオアシス"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-64.svg#icon-2",
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/WaterDjinnCommandOasis.webp",
+      "reference": "https://poe2db.tw/us/Naviras_Oasis",
+      "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder.",
+      "sha256": "13500e023abe6c9ed79674ac9bc1e9ba34d5bd1d8e39821fd4e9c330b5fe37b3"
+    },
+    {
+      "id": "Naviras_Well",
+      "name": "Navira's Well",
+      "names": [
+        "Navira's Well",
+        "ナヴィラの井戸"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-64.svg#icon-3",
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/WaterDjinnESRechargeCommand.webp",
+      "reference": "https://poe2db.tw/us/Naviras_Well",
+      "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder.",
+      "sha256": "dd53c8b1205a4d15c566ba1c0f500c813fa7639a3acb9173ae1038d6afe00b60"
+    },
+    {
       "id": "Neural_Overload",
       "name": "Neural Overload",
       "names": [
@@ -7512,6 +8088,45 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/oilgrenade.webp",
       "reference": "https://poe2db.tw/us/Oil_Grenade",
       "sha256": "023a94af24aa046d9aab5ae536fef68ce22424aa60942880bc17fb81f92a9611"
+    },
+    {
+      "id": "Ois%C3%ADns_Oath",
+      "name": "Oisín's Oath",
+      "names": [
+        "Oisín's Oath",
+        "オシーンの誓い"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-8",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/WalkeroftheWilds.webp",
+      "reference": "https://poe2db.tw/us/Ois%C3%ADns_Oath",
+      "sha256": "1fe00cecfcc526667aab079686ea05d60fca7b4c3e2f5ba21767bbe09b95a1f3"
+    },
+    {
+      "id": "Olroths_Conviction",
+      "name": "Olroth's Conviction",
+      "names": [
+        "Olroth's Conviction",
+        "オルロスの信念"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-9",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/OlrothsConviction.webp",
+      "reference": "https://poe2db.tw/us/Olroths_Conviction",
+      "sha256": "c0c86d12939bea1df5e49b2442ff9bebbd04076ff4ca05370cf2df2af1722c71"
+    },
+    {
+      "id": "Olroths_Hubris",
+      "name": "Olroth's Hubris",
+      "names": [
+        "Olroth's Hubris",
+        "オルロスの驕り"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-10",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/OlrothsHubris.webp",
+      "reference": "https://poe2db.tw/us/Olroths_Hubris",
+      "sha256": "4145bafa860de4d60e9a8f84cf064e90fc9f41a01d667d2d45f813d778519315"
     },
     {
       "id": "Opening_Move",
@@ -7656,6 +8271,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/witchpainoffering.webp",
       "reference": "https://poe2db.tw/us/Pain_Offering",
       "sha256": "38d677b3d73844772a6e75baedaef1006953fce5ebb600fc51d087328eb8a292"
+    },
+    {
+      "id": "Paquates_Pact",
+      "name": "Paquate's Pact",
+      "names": [
+        "Paquate's Pact",
+        "パクアテの契約"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-11",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Paquate.webp",
+      "reference": "https://poe2db.tw/us/Paquates_Pact",
+      "sha256": "47056aa0c92217a37dab306371ff58388dba3382d8aab8130ffda23c693f8e6a"
     },
     {
       "id": "Parry",
@@ -8325,6 +8953,19 @@
       "sha256": "2ae22d5d8c2a9b7e3c3ccadf10014b9447ab5557a933b42239ada171bfcdac7d"
     },
     {
+      "id": "Prototype_Seventeen",
+      "name": "Prototype Seventeen",
+      "names": [
+        "Prototype Seventeen",
+        "プロトタイプ17号"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-12",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/PrototypeSeventeen.webp",
+      "reference": "https://poe2db.tw/us/Prototype_Seventeen",
+      "sha256": "799717e21442cfc5bdd5b8971858af769de869c5a6847a470c8cfad3651761d1"
+    },
+    {
       "id": "Punch",
       "name": "Punch",
       "names": [
@@ -8626,6 +9267,19 @@
       "sha256": "19be4109a52cfb168039ba36de04f64f688fd7a1e2956e67b2fad829b4e0713a"
     },
     {
+      "id": "Rakiatas_Flow",
+      "name": "Rakiata's Flow",
+      "names": [
+        "Rakiata's Flow",
+        "ラキアタの流れ"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-13",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Rakiata.webp",
+      "reference": "https://poe2db.tw/us/Rakiatas_Flow",
+      "sha256": "2e72bf4a3b86574a29a0d5b5bc5abe727288b3b24d908698cae376e5923d40f6"
+    },
+    {
       "id": "Rally",
       "name": "Rally",
       "names": [
@@ -8756,6 +9410,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/rapidshotincendiary.webp",
       "reference": "https://poe2db.tw/us/Rapid_Shot",
       "sha256": "a405dd18bccfc06d738a6d29a88f1354cac04ae89bf994aa725b13f5ec87f9ae"
+    },
+    {
+      "id": "Rathas_Assault",
+      "name": "Ratha's Assault",
+      "names": [
+        "Ratha's Assault",
+        "ラサの強襲"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-14",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Azadian.webp",
+      "reference": "https://poe2db.tw/us/Rathas_Assault",
+      "sha256": "a9e3ab63c8a1f3459afa24e04f65c82e569e661f2b407fea6a36a0aaffce8490"
     },
     {
       "id": "Ravenous_Swarm",
@@ -9175,6 +9842,19 @@
       "sha256": "d1a1f3f0a6b5af4ef124ff774f6386593be0e44a2b97a950da854345001fb0ad"
     },
     {
+      "id": "Rigwalds_Ferocity",
+      "name": "Rigwald's Ferocity",
+      "names": [
+        "Rigwald's Ferocity",
+        "リグワルドの獰猛"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-61.svg#icon-15",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Rigwald.webp",
+      "reference": "https://poe2db.tw/us/Rigwalds_Ferocity",
+      "sha256": "173e59d669fb9a75daed26dc024272f85c6c3ef10f19b541a1ef94e73742f7f1"
+    },
+    {
       "id": "Rime",
       "name": "Rime",
       "names": [
@@ -9277,6 +9957,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/brutedoubleslam.webp",
       "reference": "https://poe2db.tw/us/Rolling_Slam",
       "sha256": "29e1767fc887591c09884f03e09b1a28903ead83af7d913ead1704dfc6424f54"
+    },
+    {
+      "id": "Romiras_Requital",
+      "name": "Romira's Requital",
+      "names": [
+        "Romira's Requital",
+        "ロミラの報い"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-0",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageRomira.webp",
+      "reference": "https://poe2db.tw/us/Romiras_Requital",
+      "sha256": "fd1192517cc0a76a0dc327e8b4a44e9ebf2f9a6dcb20b5f8d3fe95ee42b88dac"
     },
     {
       "id": "Runeforged_Blades",
@@ -9394,6 +10087,34 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/sorceresssummonfiredjinn.webp",
       "reference": "https://poe2db.tw/us/Ruzhan%2C_the_Blazing_Sword",
       "sha256": "47c641d5348da0544013367fe7f77a619e9a02ba3f63a5e4988b2161ebe94be8"
+    },
+    {
+      "id": "Ruzhans_Fury",
+      "name": "Ruzhan's Fury",
+      "names": [
+        "Ruzhan's Fury",
+        "ルザンの怒り"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-64.svg#icon-4",
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FireDjinnEmberSlash.webp",
+      "reference": "https://poe2db.tw/us/Ruzhans_Fury",
+      "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder.",
+      "sha256": "004491ad680fb50d495bbe0f7011f27c389832fb66449fe556a8b9d96a4fdc64"
+    },
+    {
+      "id": "Ruzhans_Reckoning",
+      "name": "Ruzhan's Reckoning",
+      "names": [
+        "Ruzhan's Reckoning",
+        "ルザンの清算"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-64.svg#icon-5",
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FireDjinnMeteoricSlam.webp",
+      "reference": "https://poe2db.tw/us/Ruzhans_Reckoning",
+      "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder.",
+      "sha256": "2a29a13c6034738b9a2b6a36f48251bf08438773b9721142bb035faba81c32fd"
     },
     {
       "id": "Ruzhans_Trap",
@@ -9630,6 +10351,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/figureheadsupport.webp",
       "reference": "https://poe2db.tw/us/Selfless_Remnants",
       "sha256": "917738b32316b9a1829b038d5ab1adb0d99cc0ef8620b8c6a01570bb509f611f"
+    },
+    {
+      "id": "Seraphs_Heart",
+      "name": "Seraph's Heart",
+      "names": [
+        "Seraph's Heart",
+        "セラフの心臓"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-1",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/SeraphsHeart.webp",
+      "reference": "https://poe2db.tw/us/Seraphs_Heart",
+      "sha256": "1589260c196c3fc0bfb6d97db8a7303b3d9b1557f3f9d0fe6ff16e82016daeee"
     },
     {
       "id": "Shard_Scavenger",
@@ -9895,6 +10629,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/sigilofpowerweaponskill.webp",
       "reference": "https://poe2db.tw/us/Sigil_of_Power",
       "sha256": "f745476c41d3b1c5f1343d02ca118ea9041a6735a6b42d490597ae2082f734d7"
+    },
+    {
+      "id": "Siones_Temper",
+      "name": "Sione's Temper",
+      "names": [
+        "Sione's Temper",
+        "シオネの闘志"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-2",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Wildshards.webp",
+      "reference": "https://poe2db.tw/us/Siones_Temper",
+      "sha256": "61f8ff1caa56d9a643321a7a4390cb3ab3875199ea090a50a9b3dafeb9f810f9"
     },
     {
       "id": "Siphon_Elements",
@@ -10235,6 +10982,19 @@
       "sha256": "76f950482566c69c17411332d3fbb3947b4554ea92079981e5c5e3fbfbb8204e"
     },
     {
+      "id": "Spear_of_Solaris",
+      "name": "Spear of Solaris",
+      "names": [
+        "Spear of Solaris",
+        "スピアオブソラリス"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-49.svg#icon-1",
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/solarisspearskillicon.webp",
+      "reference": "https://poe2db.tw/us/Spear_of_Solaris",
+      "sha256": "00f6de36e4b3cda6639b05e18c2e8f69488b94bdab03cac71766614205946940"
+    },
+    {
       "id": "Spear_Stab",
       "name": "Spear Stab",
       "names": [
@@ -10259,19 +11019,6 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/huntressicespear.webp",
       "reference": "https://poe2db.tw/us/Spear_Throw",
       "sha256": "7e5d433b2d484a89bde67902abb63eee2c39399c6b4a4e733386fbda7094f90e"
-    },
-    {
-      "id": "Spear_of_Solaris",
-      "name": "Spear of Solaris",
-      "names": [
-        "Spear of Solaris",
-        "スピアオブソラリス"
-      ],
-      "support": false,
-      "src": "/images/poe2/skills/icons-49.svg#icon-1",
-      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/solarisspearskillicon.webp",
-      "reference": "https://poe2db.tw/us/Spear_of_Solaris",
-      "sha256": "00f6de36e4b3cda6639b05e18c2e8f69488b94bdab03cac71766614205946940"
     },
     {
       "id": "Spearfield",
@@ -10678,6 +11425,32 @@
       "sha256": "c4fa57c3e9a19600b78c22cce21f5e1b9e7bbfed901f731014f0479bbba39982"
     },
     {
+      "id": "Styrns_Ferocity",
+      "name": "Styrn's Ferocity",
+      "names": [
+        "Styrn's Ferocity",
+        "スターンの獰猛さ"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-3",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/KnightsFerocity.webp",
+      "reference": "https://poe2db.tw/us/Styrns_Ferocity",
+      "sha256": "56632908c9599b1a691f91ed4d323a9e11a19945a53137380b34121dd2a280d8"
+    },
+    {
+      "id": "Styrns_Mountain",
+      "name": "Styrn's Mountain",
+      "names": [
+        "Styrn's Mountain",
+        "スターンの山"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-4",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/KnightsLegacy.webp",
+      "reference": "https://poe2db.tw/us/Styrns_Mountain",
+      "sha256": "83e98160f44f45088f1e6a302f9ca4824072a72744d8afa21e4d13abebcf5f44"
+    },
+    {
       "id": "Summon_Infernal_Hound",
       "name": "Summon Infernal Hound",
       "names": [
@@ -10809,6 +11582,19 @@
       "sha256": "bfd3d8d5e0f8a79a151f79ae6db1c73d917693f713ce55b03b7c05587bada620"
     },
     {
+      "id": "Tacatis_Ire",
+      "name": "Tacati's Ire",
+      "names": [
+        "Tacati's Ire",
+        "タカティの怒り"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-5",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageTacati.webp",
+      "reference": "https://poe2db.tw/us/Tacatis_Ire",
+      "sha256": "3ae03ee6b633e69d54b8b22dcfa4fdb80f323e3d5e58af1ca31d5b0fac2bdc20"
+    },
+    {
       "id": "Tame_Beast",
       "name": "Tame Beast",
       "names": [
@@ -10822,6 +11608,45 @@
       "sha256": "b310e76a16948c6dea6a5655cd72ab3621f6980fbdcfadf951f38d6881469f06"
     },
     {
+      "id": "Tangmazus_Thurible",
+      "name": "Tangmazu's Thurible",
+      "names": [
+        "Tangmazu's Thurible",
+        "タングマズの香炉"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-6",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/TangmazusThurible.webp",
+      "reference": "https://poe2db.tw/us/Tangmazus_Thurible",
+      "sha256": "06d79d1fc9f5750a3b255eee71d6b6fdf93feb17894b3b2cb3cbdd1db0a60a74"
+    },
+    {
+      "id": "Tasalios_Rhythm",
+      "name": "Tasalio's Rhythm",
+      "names": [
+        "Tasalio's Rhythm",
+        "タサリオのリズム"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-7",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageTasalio.webp",
+      "reference": "https://poe2db.tw/us/Tasalios_Rhythm",
+      "sha256": "ad27ba65a4a522c283cbe1f6b80c3e4b4e874b4c0876b7b82b96196b61f1801c"
+    },
+    {
+      "id": "Tawhoas_Tending",
+      "name": "Tawhoa's Tending",
+      "names": [
+        "Tawhoa's Tending",
+        "タウホアの加護"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-8",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Tukohama.webp",
+      "reference": "https://poe2db.tw/us/Tawhoas_Tending",
+      "sha256": "0a030e9f81cc00b9edd7f391bdceb4b51d1f061648cf6944e32c744943613e64"
+    },
+    {
       "id": "Tear",
       "name": "Tear",
       "names": [
@@ -10833,6 +11658,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/tearsupport.webp",
       "reference": "https://poe2db.tw/us/Tear",
       "sha256": "7297f27283c3bea207f126d8ff33c5c418c73a7e642594e8ab4097def8ad03b2"
+    },
+    {
+      "id": "Tecrods_Revenge",
+      "name": "Tecrod's Revenge",
+      "names": [
+        "Tecrod's Revenge",
+        "テクロッドの復讐"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-9",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageTecrod.webp",
+      "reference": "https://poe2db.tw/us/Tecrods_Revenge",
+      "sha256": "3be5ec3928d81561736ce94cc06483bde6b57f5c6da3eb83299d6ad7b598ac19"
     },
     {
       "id": "Tectonic_Slams",
@@ -11056,19 +11894,6 @@
       "sha256": "3513667fa52f699623a830a079837ccfef18229c6611d85e65fa1cad90a40e54"
     },
     {
-      "id": "Time_Snap",
-      "name": "Time Snap",
-      "names": [
-        "Time Snap",
-        "タイムスナップ"
-      ],
-      "support": false,
-      "src": "/images/poe2/skills/icons-52.svg#icon-14",
-      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/sorceresstemporalistreloadcooldown.webp",
-      "reference": "https://poe2db.tw/us/Time_Snap",
-      "sha256": "6ef650bed0af2ad57326d9e57080f2d372e9de69894370cfd43b4514627ef8c3"
-    },
-    {
       "id": "Time_of_Need",
       "name": "Time of Need",
       "names": [
@@ -11080,6 +11905,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/timeofneedskill.webp",
       "reference": "https://poe2db.tw/us/Time_of_Need",
       "sha256": "77b151c19cc1bff0a3c7518588efe11f88ff48a2a8f7fdaa8fa6306e91336dec"
+    },
+    {
+      "id": "Time_Snap",
+      "name": "Time Snap",
+      "names": [
+        "Time Snap",
+        "タイムスナップ"
+      ],
+      "support": false,
+      "src": "/images/poe2/skills/icons-52.svg#icon-14",
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/sorceresstemporalistreloadcooldown.webp",
+      "reference": "https://poe2db.tw/us/Time_Snap",
+      "sha256": "6ef650bed0af2ad57326d9e57080f2d372e9de69894370cfd43b4514627ef8c3"
     },
     {
       "id": "Tireless",
@@ -11173,6 +12011,19 @@
       "sha256": "a6d35b4376d12bc8762f7e209b2c7f294cd20f4db05ced4f03f4669df0b30dc2"
     },
     {
+      "id": "Tricksters_Shard",
+      "name": "Trickster's Shard",
+      "names": [
+        "Trickster's Shard",
+        "トリックスターの破片"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-10",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/TrickstersShard.webp",
+      "reference": "https://poe2db.tw/us/Tricksters_Shard",
+      "sha256": "f1775c3e2d73488f55f0f6ddb41c0a490343c367d233395234a972de244277d5"
+    },
+    {
       "id": "Trinity",
       "name": "Trinity",
       "names": [
@@ -11199,6 +12050,32 @@
       "sha256": "beee3a31c24d8f42f7eaf1515f24bf78f9bdf8a6c181f21688abe22140c4fd24"
     },
     {
+      "id": "Tuls_Avalanche",
+      "name": "Tul's Avalanche",
+      "names": [
+        "Tul's Avalanche",
+        "トゥルの雪崩"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-11",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/TulsProgeny.webp",
+      "reference": "https://poe2db.tw/us/Tuls_Avalanche",
+      "sha256": "6af34024f58b66aa8b999940866521e95397e47cbdc6cffd7a4ef103d1a7058a"
+    },
+    {
+      "id": "Tuls_Stillness",
+      "name": "Tul's Stillness",
+      "names": [
+        "Tul's Stillness",
+        "トゥルの静寂"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-12",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageTul.webp",
+      "reference": "https://poe2db.tw/us/Tuls_Stillness",
+      "sha256": "8e164310d4aebc56d437f869fc835adfd3505417cd96aa3b17e5720f6374bf6b"
+    },
+    {
       "id": "Tumult",
       "name": "Tumult",
       "names": [
@@ -11223,6 +12100,71 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/twisterskillicon.webp",
       "reference": "https://poe2db.tw/us/Twister",
       "sha256": "b73c592d5e0ffffe07c947fcc5795a208909e2d63dfc851061b679f52cf63ad1"
+    },
+    {
+      "id": "Uhtreds_Augury",
+      "name": "Uhtred's Augury",
+      "names": [
+        "Uhtred's Augury",
+        "ウートレドの予兆"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-13",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageUhtredGreater.webp",
+      "reference": "https://poe2db.tw/us/Uhtreds_Augury",
+      "sha256": "adee05e01f960505f21eb0b1133fd8fa6b63ab313facea57783c2f0ad300812e"
+    },
+    {
+      "id": "Uhtreds_Constellation",
+      "name": "Uhtred's Constellation",
+      "names": [
+        "Uhtred's Constellation",
+        "ウートレドの星座"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-14",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/UhtredsConstellation.webp",
+      "reference": "https://poe2db.tw/us/Uhtreds_Constellation",
+      "sha256": "fafe9fe8d95c2dce97a8daf207b09c1117ce671bb4981374b256feb0712fd839"
+    },
+    {
+      "id": "Uhtreds_Exodus",
+      "name": "Uhtred's Exodus",
+      "names": [
+        "Uhtred's Exodus",
+        "ウートレドの大移動"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-62.svg#icon-15",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageUhtredLesser.webp",
+      "reference": "https://poe2db.tw/us/Uhtreds_Exodus",
+      "sha256": "e2d8cced1cc33a6339b73509d9783092c0c5045125564bf5daf87a5652ef9769"
+    },
+    {
+      "id": "Uhtreds_Omen",
+      "name": "Uhtred's Omen",
+      "names": [
+        "Uhtred's Omen",
+        "ウートレドの前兆"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-0",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageUhtredStandard.webp",
+      "reference": "https://poe2db.tw/us/Uhtreds_Omen",
+      "sha256": "5534b3a293208cf70d1ec12afcb0ccf4a76978d96df6936ff82e82ab89d6ac9b"
+    },
+    {
+      "id": "Uhtreds_Rite",
+      "name": "Uhtred's Rite",
+      "names": [
+        "Uhtred's Rite",
+        "ウートレドの儀式"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-1",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/UthredsChalice.webp",
+      "reference": "https://poe2db.tw/us/Uhtreds_Rite",
+      "sha256": "5ef60b7dff2e4be2efd2d539fde9acec8cbcc17e9b4607c33e3d4a2522d424fb"
     },
     {
       "id": "Unabating",
@@ -11498,6 +12440,32 @@
       "sha256": "7d15f6fd9f1aae8bf051186b2a42d808146c345e8bb33f78d11592f7962c77af"
     },
     {
+      "id": "Uruks_Smelting",
+      "name": "Uruk's Smelting",
+      "names": [
+        "Uruk's Smelting",
+        "ウルクの製錬"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-2",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageArmourBreak.webp",
+      "reference": "https://poe2db.tw/us/Uruks_Smelting",
+      "sha256": "d2ad1d6e9fedc229985dfde0c86a5ebff3fa6dec09c5d638beb28e7c5cbf7f13"
+    },
+    {
+      "id": "Uul-Netols_Embrace",
+      "name": "Uul-Netol's Embrace",
+      "names": [
+        "Uul-Netol's Embrace",
+        "ウール・ネトルの抱擁"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-3",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageUulNetol.webp",
+      "reference": "https://poe2db.tw/us/Uul-Netols_Embrace",
+      "sha256": "892564c7101ca58ec816ef960215850b778b768a8afe2064975d93f9f0354fd8"
+    },
+    {
       "id": "Valakos_Charge",
       "name": "Valako's Charge",
       "names": [
@@ -11538,6 +12506,19 @@
       "sha256": "7109086b27bb8fa3ddb1e9a5286250cdda079208b5ab339651aa4cfb95a54f91"
     },
     {
+      "id": "Varashtas_Blessing",
+      "name": "Varashta's Blessing",
+      "names": [
+        "Varashta's Blessing",
+        "ヴァラシュタの祝福"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-4",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageDjinn.webp",
+      "reference": "https://poe2db.tw/us/Varashtas_Blessing",
+      "sha256": "50421f2de2a123900ba498eb93bbcf37008792c10504100f3b7dd678fd2500b1"
+    },
+    {
       "id": "Vaulting_Impact",
       "name": "Vaulting Impact",
       "names": [
@@ -11575,6 +12556,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/expeditionrunewordmanifest.webp",
       "reference": "https://poe2db.tw/us/Verisium_Manifestations",
       "sha256": "8b77bde6c2ad9c8558743f0b99a68e23353e916a75ff501eefe9929cdd5aaa8a"
+    },
+    {
+      "id": "Vilentas_Propulsion",
+      "name": "Vilenta's Propulsion",
+      "names": [
+        "Vilenta's Propulsion",
+        "ヴィレンタの推進力"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-5",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageVilenta.webp",
+      "reference": "https://poe2db.tw/us/Vilentas_Propulsion",
+      "sha256": "d7c7bb777b5a7f76506e4b66a1c7420a4d4c55079ab88de84f6e59d6893ddd95"
     },
     {
       "id": "Vine_Arrow",
@@ -11783,6 +12777,45 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/shockingmarkskill.webp",
       "reference": "https://poe2db.tw/us/Voltaic_Mark",
       "sha256": "9cef1a0cb0dbe538fda566590e5727ea43b7e0985faeac21c58b216603980284"
+    },
+    {
+      "id": "Voranas_Siege",
+      "name": "Vorana's Siege",
+      "names": [
+        "Vorana's Siege",
+        "ヴォラナの包囲"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-6",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/VoranasSiege.webp",
+      "reference": "https://poe2db.tw/us/Voranas_Siege",
+      "sha256": "87eb7e0669581d16b9bc4dc6c14c8edca271f84992bad7e93e8295a317122f81"
+    },
+    {
+      "id": "Vruuns_Aftermath",
+      "name": "Vruun's Aftermath",
+      "names": [
+        "Vruun's Aftermath",
+        "ヴルーンの余波"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-7",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/VruunsAftermath.webp",
+      "reference": "https://poe2db.tw/us/Vruuns_Aftermath",
+      "sha256": "c59d7531f2d0e869259c6d94e5a7a29178f3e8247c9432dd4818bdd464778a19"
+    },
+    {
+      "id": "Vruuns_Inevitability",
+      "name": "Vruun's Inevitability",
+      "names": [
+        "Vruun's Inevitability",
+        "ヴルーンの必然"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-8",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/VruunsSpike.webp",
+      "reference": "https://poe2db.tw/us/Vruuns_Inevitability",
+      "sha256": "713a7810b533123337e27a7d0ee8d9ecf733b169f68352e2bb27d522fd76be7a"
     },
     {
       "id": "Vulnerability",
@@ -12112,6 +13145,58 @@
       "sha256": "bd215f18cd6315cd9261d0eaa753fbb7e64a59c80d3c055fa891a640459192e7"
     },
     {
+      "id": "Xibaquas_Rending",
+      "name": "Xibaqua's Rending",
+      "names": [
+        "Xibaqua's Rending",
+        "シバクアの引き裂き"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-9",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageXibaqua.webp",
+      "reference": "https://poe2db.tw/us/Xibaquas_Rending",
+      "sha256": "9b67189a7f8d50e9045317635a6d5a9a09b1641e24fff2da83840f21a83be3ce"
+    },
+    {
+      "id": "Xophs_Pyre",
+      "name": "Xoph's Pyre",
+      "names": [
+        "Xoph's Pyre",
+        "ゾフの火葬"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-10",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/LineageXoph.webp",
+      "reference": "https://poe2db.tw/us/Xophs_Pyre",
+      "sha256": "7db394674afe4963a5fe37061aff71bd0939201a2c013746db99d01aa5b7cfe1"
+    },
+    {
+      "id": "Zarokhs_Refrain",
+      "name": "Zarokh's Refrain",
+      "names": [
+        "Zarokh's Refrain",
+        "ザロクの反復"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-11",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Zarokh.webp",
+      "reference": "https://poe2db.tw/us/Zarokhs_Refrain",
+      "sha256": "c017b3bc27a32f6897ed9b08c1a8a572d01b338656309ee2261f200be48a5575"
+    },
+    {
+      "id": "Zarokhs_Revolt",
+      "name": "Zarokh's Revolt",
+      "names": [
+        "Zarokh's Revolt",
+        "ザロクの反逆"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-12",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/ZarokhsRevolt.webp",
+      "reference": "https://poe2db.tw/us/Zarokhs_Revolt",
+      "sha256": "5587cdfbaaf6b30475c3f01a9e5ae28460af0083605afea92632a828d59b7bef"
+    },
+    {
       "id": "Zenith_I",
       "name": "Zenith I",
       "names": [
@@ -12137,6 +13222,19 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/manatenancesupport.webp",
       "reference": "https://poe2db.tw/us/Zenith_II",
       "sha256": "c3f07e8a64ea880b21dae760b0557dfe6f3ac812637db2fa7b26c388810218eb"
+    },
+    {
+      "id": "Zerphis_Infamy",
+      "name": "Zerphi's Infamy",
+      "names": [
+        "Zerphi's Infamy",
+        "ゼルフィの悪名"
+      ],
+      "support": true,
+      "src": "/images/poe2/skills/icons-63.svg#icon-13",
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/ZerphisLegacy.webp",
+      "reference": "https://poe2db.tw/us/Zerphis_Infamy",
+      "sha256": "e30eb16fec8373cd8be38dae156914f04dd12e1a1cddb43a217b53956eeddd66"
     }
   ]
 }

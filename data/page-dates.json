@@ -105,7 +105,7 @@
   "hashVersion": 2
  },
  "/equipment/headhunter/": {
-  "hash": "32f52fce551331a1",
+  "hash": "f157aa7f4738518f",
   "date": "2026-11-13",
   "hashVersion": 2
  },
@@ -130,7 +130,7 @@
   "hashVersion": 2
  },
  "/equipment/nightscale/": {
-  "hash": "f7faf2da5ed39355",
+  "hash": "aaf7fbf775e9cd49",
   "date": "2026-11-13",
   "hashVersion": 2
  },
@@ -355,7 +355,7 @@
   "hashVersion": 2
  },
  "/builds/druid/plant-oracle/": {
-  "hash": "35e24cadd66548aa",
+  "hash": "c78dfe4790718cd4",
   "date": "2026-11-13",
   "hashVersion": 2
  },
@@ -385,7 +385,7 @@
   "hashVersion": 2
  },
  "/guides/support-gems/": {
-  "hash": "c715aabad5f8a63a",
+  "hash": "40fae71444b1f7cd",
   "date": "2026-11-13",
   "hashVersion": 2
  },
@@ -515,7 +515,7 @@
   "hashVersion": 2
  },
  "/guides/unique-gear/": {
-  "hash": "ea80a4fa68fa9600",
+  "hash": "56b0f0fff1f2d100",
   "date": "2026-11-13",
   "hashVersion": 2
  },

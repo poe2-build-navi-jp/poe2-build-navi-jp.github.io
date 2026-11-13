@@ -9,9 +9,11 @@ catalog.entries=[...new Map([...catalog.entries].reverse().map(entry=>[entry.id,
 const cache=resolve(root,'tools/.skill-icon-cache');
 await mkdir(cache,{recursive:true});
 const size=16;
-for(let offset=0;offset<catalog.entries.length;offset+=size) {
- const entries=catalog.entries.slice(offset,offset+size);
- const filename=`icons-${String(offset/size).padStart(2,'0')}.svg`;
+const unpacked=catalog.entries.filter(entry=>entry.src.endsWith('.webp'));
+let sheet=1+Math.max(-1,...catalog.entries.map(entry=>Number(entry.src.match(/\/icons-(\d+)\.svg#/)?.[1]??-1)));
+for(let offset=0;offset<unpacked.length;offset+=size) {
+ const entries=unpacked.slice(offset,offset+size);
+ const filename=`icons-${String(sheet++).padStart(2,'0')}.svg`;
  let svg='<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">';
  for(let i=0;i<entries.length;i++) {
   const entry=entries[i],original=resolve(root,entry.src.slice(1));
@@ -23,4 +25,4 @@ for(let offset=0;offset<catalog.entries.length;offset+=size) {
  await writeFile(resolve(root,'images/poe2/skills',filename),svg+'</svg>\n');
 }
 await writeFile(file,JSON.stringify(catalog,null,2)+'\n');
-console.log(`Packed ${catalog.entries.length} original icons into ${Math.ceil(catalog.entries.length/size)} cacheable SVG sheets.`);
+console.log(`Packed ${unpacked.length} new original icons into ${Math.ceil(unpacked.length/size)} sheets; existing sheet URLs preserved.`);

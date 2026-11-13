@@ -10,6 +10,8 @@ const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const matcher=createSkillMatcher(skillIcons);
 assert.equal(matcher.matches('ツイスター（Twister）').length,1);
+for(const pair of ['ツイスター(Twister)','ツイスター ( Twister )','Twister（ツイスター）','Twister (ツイスター)','憤怒(Rage)'])assert.equal(matcher.matches(pair).length,1,pair);
+for(const name of ["Ahn's Citadel", "Kelari's Judgment", "Navira's Well"])assert(matcher.lookup(name),name);
 assert.equal(matcher.matches('Whirling Assault / Spark').length,2);
 assert.equal(matcher.matches('ツイスターリング https://test.example/Twister Twister.webp').length,0);
 assert.equal(matcher.matches('憤怒の状態 / Rage generation').length,0);
