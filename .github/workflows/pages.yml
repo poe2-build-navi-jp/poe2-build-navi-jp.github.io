@@ -29,10 +29,11 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - name: Check public search eligibility
+      - name: Check public search and skill images
         run: |
           npm ci --ignore-scripts
           npm run test:search
+          npm run test:skill-icons
       - name: Collect site files
         run: |
           mkdir _site

@@ -4,6 +4,8 @@ import {validRequest} from './simulator-model.js?v=161ef63cbd';
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;
 let loadedBytes=0,totalBytes=0;
+// These engine rows are placeholders, not usable skills. Retain them for existing saves.
+const internalSkills=new Set(['DoLiterallyNothingPlayer','UnusablePlayer','PlaytestAttack','PlaytestSlam','PlaytestSpell']);
 const progress=()=>postMessage({progress:`計算データを準備中：${(loadedBytes/1000000).toFixed(1)} / ${(totalBytes/1000000).toFixed(1)} MB（保存済みデータも利用）`});
 const digest = async bytes => [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');
 async function get(name) {
@@ -45,7 +47,7 @@ async function boot() {
   for (const [path,content] of Object.entries(dataFiles)) engine.stageDataFile(path,content);
   engine.initStagedData();
   dataFiles = Object.fromEntries(Object.entries(dataFiles).filter(([path])=>path.includes('passive_tree')));
-  gems = JSON.parse(engine.gemCatalogJson());
+  gems = JSON.parse(engine.gemCatalogJson()).map(gem=>internalSkills.has(gem.skill_id)?{...gem,ui_hidden:true}:gem);
   uniques = JSON.parse(engine.uniqueCatalogJson());
   minions = JSON.parse(engine.minionCatalogJson());
 }

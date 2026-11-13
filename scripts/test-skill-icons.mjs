@@ -6,16 +6,32 @@ import {JSDOM} from 'jsdom';
 import {skillIcons} from '../assets/skill-icon-data.js';
 import {createSkillMatcher} from '../assets/skill-icon-matcher.js';
 import {installSkillIcons} from '../assets/skill-icons.js';
+import {Worker} from 'node:worker_threads';
 const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const matcher=createSkillMatcher(skillIcons);
+const simulatorSource=await read('assets/simulator.js');
+const workerHash=createHash('sha256').update(await read('assets/simulator-worker.js')).digest('hex').slice(0,10);
+assert(simulatorSource.includes('./simulator-worker.js?v='+workerHash),'The browser must request the verified worker version');
 assert.equal(matcher.matches('ツイスター（Twister）').length,1);
 for(const pair of ['ツイスター(Twister)','ツイスター ( Twister )','Twister（ツイスター）','Twister (ツイスター)','憤怒(Rage)'])assert.equal(matcher.matches(pair).length,1,pair);
 for(const name of ["Ahn's Citadel", "Kelari's Judgment", "Navira's Well"])assert(matcher.lookup(name),name);
+for(const name of ['Companion: {0}','Soul Crystal: {0}',"Kelari's Brutality"])assert(matcher.lookup(name),name);
+assert.equal(matcher.matches('Coming Soon / Removed Skill / Playtest Attack').length,0);
+const worker=new Worker(new URL('./fixtures/simulator-worker-node.mjs',import.meta.url),{execArgv:[]});
+try {
+ const engineCatalog=await new Promise((resolve,reject)=>{worker.on('error',reject);worker.on('message',message=>{if(message.id===1)message.error?reject(Error(message.error)):resolve(message.result);});worker.postMessage({id:1,action:'boot'});});
+ for(const gem of engineCatalog.gems)assert(matcher.lookup(gem.name),`Missing engine skill image: ${gem.skill_id} / ${gem.name}`);
+ const hidden=engineCatalog.gems.filter(gem=>gem.ui_hidden);assert.equal(hidden.length,5);
+ for(const gem of hidden)assert.equal(matcher.lookup(gem.name).availability,'internal');
+ assert.equal(engineCatalog.gems.filter(gem=>!gem.ui_hidden).length,1068);
+} finally {await worker.terminate();}
 assert.equal(matcher.matches('Whirling Assault / Spark').length,2);
 assert.equal(matcher.matches('ツイスターリング https://test.example/Twister Twister.webp').length,0);
 assert.equal(matcher.matches('憤怒の状態 / Rage generation').length,0);
 assert.equal(matcher.matches('憤怒（Rage）').length,1);
+assert.equal(matcher.matches('要塞（Fortress）内のMapを進める').length,0);
+assert(matcher.lookup('円形陣地 I'));
 const catalog=JSON.parse(await read('data/skill-icons.json'));
 const sheets=new Map();
 for(const entry of catalog.entries) {

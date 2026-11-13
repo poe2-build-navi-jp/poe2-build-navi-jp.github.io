@@ -11,7 +11,7 @@ export function createSkillMatcher(entries) {
     for(const name of entry.names) {
       exact.set(key(name),entry);
       // Short support names are ordinary words, too. Prose needs a verified name pair.
-      if(!entry.support&&name.length>=3&&!aliases.has(key(name)))aliases.set(key(name),{name,entry});
+      if(entry.availability!=='internal'&&!entry.support&&name.length>=3&&!aliases.has(key(name)))aliases.set(key(name),{name,entry});
     }
     pairedNames.set(entry,[...entry.names].sort((a,b)=>b.length-a.length));
   }
@@ -26,7 +26,7 @@ export function createSkillMatcher(entries) {
     // and bracket style without compiling thousands of near-identical regular expressions.
     for(const paren of value.matchAll(/[（(]([^（）()\n]{1,160})[）)]/g)) {
       const entry=exact.get(key(paren[1].trim()));
-      if(!entry)continue;
+      if(!entry||entry.availability==='internal')continue;
       const left=value.slice(0,paren.index).trimEnd(),end=paren.index+paren[0].length;
       for(const name of pairedNames.get(entry)) {
         const start=left.length-name.length;
@@ -45,10 +45,10 @@ export function createSkillMatcher(entries) {
     }
     return found.sort((a,b)=>a.start-b.start);
   }
-  return {matches,lookup:value=>exact.get(key(value||'').replace(/: \{0\}$/,''))};
+  return {matches,lookup:value=>exact.get(key(value||''))||exact.get(key(value||'').replace(/: \{0\}$/,''))};
 }
 
-export const skillImageHtml = entry => `<img class="skill-icon" src="${escapeSkillText(entry.src)}" width="32" height="32" alt="" aria-hidden="true" loading="lazy" decoding="async">`;
+export const skillImageHtml = entry => `<img class="skill-icon" src="${escapeSkillText(entry.src)}" width="32" height="32" alt="" aria-hidden="true" loading="lazy" decoding="async"${entry.imageTitle?` title="${escapeSkillText(entry.imageTitle)}"`:''}>`;
 export function skillTextHtml(value, matcher) {
   let output='',position=0;
   for(const {start,end,entry} of matcher.matches(value)) {

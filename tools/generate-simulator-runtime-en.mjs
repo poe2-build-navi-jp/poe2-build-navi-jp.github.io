@@ -8,6 +8,16 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+// The browser also caches module workers. Update their source-language URLs before
+// deriving English files, so a new catalog policy cannot reuse an older worker.
+for(const file of ['simulator-worker.js','simulator.js']) {
+ let body=read('assets/'+file);
+ body=body.replace(/(\.\/simulator-(?:model|worker)\.js)(?:\?v=[a-f0-9]+)?/g,(_,reference)=>{
+  const hash=createHash('sha256').update(read('assets/'+reference.slice(2))).digest('hex').slice(0,10);
+  return reference+'?v='+hash;
+ });
+ fs.writeFileSync(path.join(root,'assets',file),body);
+}
 const overrides=JSON.parse(read('data/simulator-ui-en-overrides.json'));
 const dictionary=JSON.parse(read('data/simulator-ui-en.json'));
 const errorsModule="// Generated error translations; does not alter user-authored text.\nconst dictionary = "+JSON.stringify(dictionary)+";\nexport const translateRuntimeError = value => String(value).replace(/[^\\x00-\\x7f]+/g,term=>dictionary[term] ?? term);\n";

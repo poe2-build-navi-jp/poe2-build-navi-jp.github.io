@@ -9,11 +9,14 @@ const root=resolve(import.meta.dirname,'..');
 const read=p=>readFile(resolve(root,p),'utf8');
 const catalog=JSON.parse(await read('data/skill-icons.json'));
 const names=JSON.parse(await read('data/japanese-names.json')).names;
-const entries=catalog.entries.map(({id,name,names:aliases,support,src})=>{
+const entries=catalog.entries.map(({id,name,names:aliases,support,src,availability,imageTitle})=>{
   const base=name.replace(/ I$/,'');
-  const extra=name!==base?[base,names[base]?.ja].filter(Boolean):[];
+  // Glossary place names can share an English word with a support gem (Fortress).
+  // Only skill-database translations may extend a gem's aliases.
+  const translation=names[base]?.ref?.startsWith('https://poe2db.tw/')?names[base].ja:null;
+  const extra=name!==base?[base,translation].filter(Boolean):[];
   if(name==='Bind Spectre')extra.push('Spectre','スペクター');
-  return {id,name,names:[...new Set([...aliases,...extra])],support,src};
+  return {id,name,names:[...new Set([...aliases,...extra])],support,src,...(availability?{availability}:{}),...(imageTitle?{imageTitle}:{})};
 });
 const data='// Generated from data/skill-icons.json. Game artwork © Grinding Gear Games.\nexport const skillIcons='+JSON.stringify(entries)+';\n';
 await writeFile(resolve(root,'assets/skill-icon-data.js'),data);

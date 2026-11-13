@@ -13,7 +13,7 @@ let names=localization.names;
 function loadEditorCatalogs(){
  return editorCatalogPromise ||= Promise.all(['/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment.json?v=846e3f9450','/data/simulator-routes.json?v=856fb198d8'].map(async url=>{const response=await fetch(url);if(!response.ok)throw Error('編集用データを読み込めません。「再試行」を押してください。');return response.json();})).then(values=>{[localization,equipmentCatalog,routeCatalog]=values;names=localization.names;}).catch(error=>{editorCatalogPromise=null;throw error;});
 }
-const label=name=>name==='Companion: {0}'?'コンパニオン（召喚対象を設定）':name==='Spectre: {0}'?'スペクター（召喚対象を設定）':names[name] || name;
+const label=name=>name==='Soul Crystal: {0}'?'ソウルクリスタル（召喚対象を設定）':name==='Companion: {0}'?'コンパニオン（召喚対象を設定）':name==='Spectre: {0}'?'スペクター（召喚対象を設定）':names[name] || name;
 const nodeStats=node=>passiveDescriptions(node,localization,plan?.request.attribute_choices || {},!plan?.request.tree_version||plan.request.tree_version==='0_5');
 const examples=exampleData.examples;
 let namedPlans=[],namedStorageSnapshot=null,deletedPlan=null,deletePlanId=null,workspaceBackup=null,examplePreview=null,workspaceSequence=0;
@@ -46,7 +46,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- const current=new Worker(new URL('./simulator-worker.js?v=0a82d50ceb',import.meta.url),{type:'module'});worker=current;
+ const current=new Worker(new URL('./simulator-worker.js?v=2564face8b',import.meta.url),{type:'module'});worker=current;
  const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;bootPromise=null;catalog=null;for(const task of pending.values())task.reject(Error('読み込み・計算に失敗しました。「再試行」で構成を残したまま再開できます。'));pending.clear();};
  current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  current.onerror=fail;
@@ -234,7 +234,7 @@ function renderUniques(){
 }
 const gemOptionCache=new Map();
 function fullGemOptions(support,selected){
- if(!gemOptionCache.has(support))gemOptionCache.set(support, `<option value="">${support?'サポート':'スキル'}を選ぶ</option>`+catalog.gems.filter(g=>g.is_support===support).map(g=>`<option value="${esc(g.skill_id)}">${esc(label(g.name))}</option>`).join(''));
+ if(!gemOptionCache.has(support))gemOptionCache.set(support, `<option value="">${support?'サポート':'スキル'}を選ぶ</option>`+catalog.gems.filter(g=>g.is_support===support&&!g.ui_hidden).map(g=>`<option value="${esc(g.skill_id)}">${esc(label(g.name))}</option>`).join(''));
  return gemOptionCache.get(support).replace(`value="${esc(selected)}"`,`value="${esc(selected)}" selected`);
 }
 function gemOptions(support,selected){
@@ -245,7 +245,7 @@ function expandGemOptions(target){
  if(target.dataset.gemField!=='skill_id'||target.dataset.optionsLoaded)return;
  const selected=target.value,old=target.selectedOptions[0]?.cloneNode(true);
  target.innerHTML=fullGemOptions(target.dataset.support==='true',selected);
- if(selected&&!catalog.gems.some(g=>g.skill_id===selected)&&old)target.prepend(old);
+ if(selected&&!catalog.gems.some(g=>g.skill_id===selected&&!g.ui_hidden)&&old)target.prepend(old);
  target.value=selected;target.dataset.optionsLoaded='true';
 }
 document.addEventListener('focusin',event=>expandGemOptions(event.target));

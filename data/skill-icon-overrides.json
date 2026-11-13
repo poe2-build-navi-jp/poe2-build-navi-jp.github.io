@@ -2,7 +2,10 @@
   {
     "id": "Kelaris_Deception",
     "name": "Kelari's Deception",
-    "names": ["Kelari's Deception", "ケラリの幻惑"],
+    "names": [
+      "Kelari's Deception",
+      "ケラリの幻惑"
+    ],
     "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/SandDjinnExplosiveTeleport.webp",
     "reference": "https://poe2db.tw/us/Kelaris_Deception",
     "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder."
@@ -10,9 +13,831 @@
   {
     "id": "Ruzhans_Trap",
     "name": "Ruzhan's Trap",
-    "names": ["Ruzhan's Trap", "ルザンの罠"],
+    "names": [
+      "Ruzhan's Trap",
+      "ルザンの罠"
+    ],
     "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/passives/DiscipleoftheDjinn/FireDjinnFlameRunes.webp",
     "reference": "https://poe2db.tw/us/Ruzhans_Trap",
     "note": "The identically named ascendancy notable grants this command. Use its own icon instead of the listing's shared Roll Dodge placeholder."
+  },
+  {
+    "id": "Abyssal_Apparition",
+    "name": "Abyssal Apparition",
+    "names": [
+      "Abyssal Apparition",
+      "アビサルアパリション"
+    ],
+    "support": false,
+    "engineIds": [
+      "TriggeredAbyssalApparitionPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/abyssallichapparitionskill.webp",
+    "reference": "https://poe2db.tw/us/Abyssal_Apparition",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_on_Death",
+    "name": "Cast on Death",
+    "names": [
+      "Cast on Death",
+      "死亡時キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastOnDeathPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/DeathWalk.webp",
+    "reference": "https://poe2db.tw/us/Cast_on_Death",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_on_Freeze",
+    "name": "Cast on Freeze",
+    "names": [
+      "Cast on Freeze",
+      "凍結時キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastOnFreezePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonfreezeskill.webp",
+    "reference": "https://poe2db.tw/us/Cast_on_Freeze",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_on_Ignite",
+    "name": "Cast on Ignite",
+    "names": [
+      "Cast on Ignite",
+      "発火時キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastOnIgnitePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonigniteskill.webp",
+    "reference": "https://poe2db.tw/us/Cast_on_Ignite",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_on_Melee_Kill",
+    "name": "Cast on Melee Kill",
+    "names": [
+      "Cast on Melee Kill",
+      "近接キル時キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastOnMeleeKillPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonmeleekillskill.webp",
+    "reference": "https://poe2db.tw/us/Cast_on_Melee_Kill",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_on_Melee_Stun",
+    "name": "Cast on Melee Stun",
+    "names": [
+      "Cast on Melee Stun",
+      "近接スタン時キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastOnMeleeStunPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonmeleestunskill.webp",
+    "reference": "https://poe2db.tw/us/Cast_on_Melee_Stun",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_on_Shock",
+    "name": "Cast on Shock",
+    "names": [
+      "Cast on Shock",
+      "ショックフラッシュ"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastOnShockPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonshockskill.webp",
+    "reference": "https://poe2db.tw/us/Cast_on_Shock",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_when_Damage_Taken",
+    "name": "Cast when Damage Taken",
+    "names": [
+      "Cast when Damage Taken",
+      "被ダメージ時キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastWhenDamageTakenPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/icononfire.webp",
+    "reference": "https://poe2db.tw/us/Cast_when_Damage_Taken",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_when_Stunned",
+    "name": "Cast when Stunned",
+    "names": [
+      "Cast when Stunned",
+      "被スタン時キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastWhenStunnedPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/TectonicSlam.webp",
+    "reference": "https://poe2db.tw/us/Cast_when_Stunned",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Cast_while_Channelling",
+    "name": "Cast while Channelling",
+    "names": [
+      "Cast while Channelling",
+      "チャネリング中キャスト"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastWhileChannellingPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castwhilechannellingskill.webp",
+    "reference": "https://poe2db.tw/us/Cast_while_Channelling",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Chance_to_Freeze",
+    "name": "Chance to Freeze",
+    "names": [
+      "Chance to Freeze",
+      "凍結付与"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportChanceToFreezePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/Support/ChancetoFlee.webp",
+    "reference": "https://poe2db.tw/us/Chance_to_Freeze",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Coming_Soon",
+    "name": "Coming Soon",
+    "names": [
+      "Coming Soon",
+      "近日公開"
+    ],
+    "support": false,
+    "engineIds": [
+      "DoLiterallyNothingPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/VaalGems/VaalSmite.webp",
+    "reference": "https://poe2db.tw/us/Coming_Soon",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+    "availability": "internal"
+  },
+  {
+    "id": "Companion_Template",
+    "name": "Companion: {0}",
+    "names": [
+      "Companion: {0}",
+      "コンパニオン：{0}"
+    ],
+    "support": false,
+    "engineIds": [
+      "SummonBeastPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/huntresssummoncompanion.webp",
+    "reference": "https://poe2db.tw/us/Companion%3A_%7B0%7D",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Conductivity",
+    "name": "Conductivity",
+    "names": [
+      "Conductivity",
+      "コンダクティビティ"
+    ],
+    "support": false,
+    "engineIds": [
+      "ConductivityPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/Conductivity.webp",
+    "reference": "https://poe2db.tw/us/Conductivity",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Consecrate",
+    "name": "Consecrate",
+    "names": [
+      "Consecrate",
+      "コンセクレート"
+    ],
+    "support": false,
+    "engineIds": [
+      "StaffConsecratePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/bufficons/4k/consecrated.webp",
+    "reference": "https://poe2db.tw/us/Consecrate",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Curse_on_Block",
+    "name": "Curse on Block",
+    "names": [
+      "Curse on Block",
+      "ブロック時呪い"
+    ],
+    "support": false,
+    "engineIds": [
+      "MetaCastCurseOnBlockPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonmeleeblockskill.webp",
+    "reference": "https://poe2db.tw/us/Curse_on_Block",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Demon_Magus",
+    "name": "Demon Magus",
+    "names": [
+      "Demon Magus",
+      "デーモンメーガス"
+    ],
+    "support": false,
+    "engineIds": [
+      "DemonMagusPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/spellcastingminionsupport.webp",
+    "reference": "https://poe2db.tw/us/Demon_Magus",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Detonate_Minion",
+    "name": "Detonate Minion",
+    "names": [
+      "Detonate Minion",
+      "デトネートミニオン"
+    ],
+    "support": false,
+    "engineIds": [
+      "DestructiveLinkSkeletonBombadierMinion"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/witcharsonistskeleton.webp",
+    "reference": "https://poe2db.tw/us/Detonate_Minion",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Elemental_Siphon",
+    "name": "Elemental Siphon",
+    "names": [
+      "Elemental Siphon",
+      "エレメンタルサイフォン"
+    ],
+    "support": false,
+    "engineIds": [
+      "ElementalSiphonPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/elementalsiphonskillicon.webp",
+    "reference": "https://poe2db.tw/us/Elemental_Siphon",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Enervation",
+    "name": "Enervation",
+    "names": [
+      "Enervation",
+      "感電マナ吸収"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportShockManaRegenerationPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/EnervationSupportGem.webp",
+    "reference": "https://poe2db.tw/us/Enervation",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Flammability",
+    "name": "Flammability",
+    "names": [
+      "Flammability",
+      "フラマビリティ"
+    ],
+    "support": false,
+    "engineIds": [
+      "FlammabilityPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/Flammability.webp",
+    "reference": "https://poe2db.tw/us/Flammability",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Fusillade",
+    "name": "Fusillade",
+    "names": [
+      "Fusillade",
+      "一斉射撃"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportFusilladePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/FusilladeSupportGem.webp",
+    "reference": "https://poe2db.tw/us/Fusillade",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Gelid_Palm",
+    "name": "Gelid Palm",
+    "names": [
+      "Gelid Palm",
+      "ジェリッドパーム"
+    ],
+    "support": false,
+    "engineIds": [
+      "GelidPalmPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/FrostFury.webp",
+    "reference": "https://poe2db.tw/us/Gelid_Palm",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Greatwood_II",
+    "name": "Greatwood II",
+    "names": [
+      "Greatwood II",
+      "大樹 II"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportGreatwoodPlayerTwo"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Greatwood.webp",
+    "reference": "https://poe2db.tw/us/Greatwood_II",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Grenade",
+    "name": "Grenade",
+    "names": [
+      "Grenade",
+      "グレネード"
+    ],
+    "support": false,
+    "engineIds": [
+      "MeleeGrenadeLauncherPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/theredemption.webp",
+    "reference": "https://poe2db.tw/us/Grenade",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "His_Dark_Horizon",
+    "name": "His Dark Horizon",
+    "names": [
+      "His Dark Horizon",
+      "ヒズダークホライゾン"
+    ],
+    "support": false,
+    "engineIds": [
+      "DarkTempestPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/darktempest.webp",
+    "reference": "https://poe2db.tw/us/His_Dark_Horizon",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "His_Foul_Emergence",
+    "name": "His Foul Emergence",
+    "names": [
+      "His Foul Emergence",
+      "ヒズフォウルエマージェンス"
+    ],
+    "support": false,
+    "engineIds": [
+      "HisFoulEmergencePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/screamingdevastation.webp",
+    "reference": "https://poe2db.tw/us/His_Foul_Emergence",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "His_Grave_Command",
+    "name": "His Grave Command",
+    "names": [
+      "His Grave Command",
+      "ヒズグレーブコマンド"
+    ],
+    "support": false,
+    "engineIds": [
+      "GraveCommandPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/gravecommand.webp",
+    "reference": "https://poe2db.tw/us/His_Grave_Command",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "His_Scattering_Calamity",
+    "name": "His Scattering Calamity",
+    "names": [
+      "His Scattering Calamity",
+      "ヒズスキャタリングカラミティ"
+    ],
+    "support": false,
+    "engineIds": [
+      "ScatteringCalamityPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/scatteringcalamity.webp",
+    "reference": "https://poe2db.tw/us/His_Scattering_Calamity",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "His_Vile_Intrusion",
+    "name": "His Vile Intrusion",
+    "names": [
+      "His Vile Intrusion",
+      "ヒズヴァイルイントリュージョン"
+    ],
+    "support": false,
+    "engineIds": [
+      "VileDisruptionPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/viledisruption.webp",
+    "reference": "https://poe2db.tw/us/His_Vile_Intrusion",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "His_Winnowing_Flame",
+    "name": "His Winnowing Flame",
+    "names": [
+      "His Winnowing Flame",
+      "ヒズウィノーイングフレイム"
+    ],
+    "support": false,
+    "engineIds": [
+      "HisWinnowingFlamePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/winnowingflame.webp",
+    "reference": "https://poe2db.tw/us/His_Winnowing_Flame",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Hydra_Familiar",
+    "name": "Hydra Familiar",
+    "names": [
+      "Hydra Familiar",
+      "ヒドラ使い魔"
+    ],
+    "support": false,
+    "engineIds": [
+      "HydraPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/AncestorTotemSkill.webp",
+    "reference": "https://poe2db.tw/us/Hydra_Familiar",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Hypothermia",
+    "name": "Hypothermia",
+    "names": [
+      "Hypothermia",
+      "ハイポサーミア"
+    ],
+    "support": false,
+    "engineIds": [
+      "HypothermiaPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/Frostbite.webp",
+    "reference": "https://poe2db.tw/us/Hypothermia",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Ice_Fragments",
+    "name": "Ice Fragments",
+    "names": [
+      "Ice Fragments",
+      "アイスフラグメント"
+    ],
+    "support": false,
+    "engineIds": [
+      "IceFragmentsPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/iconbasicattack.webp",
+    "reference": "https://poe2db.tw/us/Ice_Fragments",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Infusion",
+    "name": "Infusion",
+    "names": [
+      "Infusion",
+      "インフュージョン"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportBuffedHeraldPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/BuffedHeraldSupportGem.webp",
+    "reference": "https://poe2db.tw/us/Infusion",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Invocation",
+    "name": "Invocation",
+    "names": [
+      "Invocation",
+      "インボケーション"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportInvocationPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/Support/UnleashSupport.webp",
+    "reference": "https://poe2db.tw/us/Invocation",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Kinetic_Bash",
+    "name": "Kinetic Bash",
+    "names": [
+      "Kinetic Bash",
+      "キネティックバッシュ"
+    ],
+    "support": false,
+    "engineIds": [
+      "HazardousHoldoutPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/bruteshieldblock.webp",
+    "reference": "https://poe2db.tw/us/Kinetic_Bash",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Nadir",
+    "name": "Nadir",
+    "names": [
+      "Nadir",
+      "下限"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportNadirPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/NadirSupportGem.webp",
+    "reference": "https://poe2db.tw/us/Nadir",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Playtest_Attack",
+    "name": "Playtest Attack",
+    "names": [
+      "Playtest Attack",
+      "プレイテストアタック"
+    ],
+    "support": false,
+    "engineIds": [
+      "PlaytestAttack"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/iconbasicattack.webp",
+    "reference": "https://poe2db.tw/us/Playtest_Attack",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+    "availability": "internal"
+  },
+  {
+    "id": "Playtest_Slam",
+    "name": "Playtest Slam",
+    "names": [
+      "Playtest Slam",
+      "プレイテストスラム"
+    ],
+    "support": false,
+    "engineIds": [
+      "PlaytestSlam"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/bruteleapslam.webp",
+    "reference": "https://poe2db.tw/us/Playtest_Slam",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+    "availability": "internal"
+  },
+  {
+    "id": "Playtest_Spell",
+    "name": "Playtest Spell",
+    "names": [
+      "Playtest Spell",
+      "プレイテストスペル"
+    ],
+    "support": false,
+    "engineIds": [
+      "PlaytestSpell"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/fireballskillstaff.webp",
+    "reference": "https://poe2db.tw/us/Playtest_Spell",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+    "availability": "internal"
+  },
+  {
+    "id": "Primal_Avatar",
+    "name": "Primal Avatar",
+    "names": [
+      "Primal Avatar",
+      "プライマルアバター"
+    ],
+    "support": false,
+    "engineIds": [
+      "PrimalAvatarPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/druidprimalavatar.webp",
+    "reference": "https://poe2db.tw/us/Primal_Avatar",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Removed_Skill",
+    "name": "Removed Skill",
+    "names": [
+      "Removed Skill",
+      "取り除かれたスキル"
+    ],
+    "support": false,
+    "engineIds": [
+      "UnusablePlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/BlankGem.webp",
+    "reference": "https://poe2db.tw/us/Removed_Skill",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+    "availability": "internal"
+  },
+  {
+    "id": "Shroud",
+    "name": "Shroud",
+    "names": [
+      "Shroud",
+      "シュラウド"
+    ],
+    "support": false,
+    "engineIds": [
+      "ShroudPlayer"
+    ],
+    "source": "https://web.poecdn.com/protected/image/poe2/announcements/conquerors/items/GemSkill_ShadowSmokeBomb.png?key=Ubph18Yxgf_GZScq2BS9mw",
+    "reference": "https://poe2db.tw/us/Shroud",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Smash_to_Smithereens",
+    "name": "Smash to Smithereens",
+    "names": [
+      "Smash to Smithereens",
+      "スマッシュトゥスミザリンズ"
+    ],
+    "support": false,
+    "engineIds": [
+      "SmashToSmithereensPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/icongroundslam.webp",
+    "reference": "https://poe2db.tw/us/Smash_to_Smithereens",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Soul_Crystal_Template",
+    "name": "Soul Crystal: {0}",
+    "names": [
+      "Soul Crystal: {0}",
+      "ソウルクリスタル: {0}"
+    ],
+    "support": false,
+    "engineIds": [
+      "SoulCrystalPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/gravecommand.webp",
+    "reference": "https://poe2db.tw/us/Soul_Crystal%3A_%7B0%7D",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Spinning_Inferno",
+    "name": "Spinning Inferno",
+    "names": [
+      "Spinning Inferno",
+      "スピニングインフェルノ"
+    ],
+    "support": false,
+    "engineIds": [
+      "SpinningInfernoPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/FlamesOfJudgement.webp",
+    "reference": "https://poe2db.tw/us/Spinning_Inferno",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Spreading_Frost",
+    "name": "Spreading Frost",
+    "names": [
+      "Spreading Frost",
+      "伝染する霜"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportSpreadingFrostPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/BlankBlueSupportGem.webp",
+    "reference": "https://poe2db.tw/us/Spreading_Frost",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Styrns_Anthem",
+    "name": "Styrn's Anthem",
+    "names": [
+      "Styrn's Anthem",
+      "スターンの賛歌"
+    ],
+    "support": true,
+    "engineIds": [
+      "SupportKnightsAnthem"
+    ],
+    "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/KnightsAnthem.webp",
+    "reference": "https://poe2db.tw/us/Styrns_Anthem",
+    "imageRole": "inventory",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Summon_Companion",
+    "name": "Summon Companion",
+    "names": [
+      "Summon Companion",
+      "コンパニオン召喚"
+    ],
+    "support": false,
+    "engineIds": [
+      "SummonMercenaryCompanionPlayer"
+    ],
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/summonmerccompanion.webp",
+    "reference": "https://poe2db.tw/us/Summon_Companion",
+    "imageRole": "skill",
+    "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists."
+  },
+  {
+    "id": "Kelaris_Brutality",
+    "name": "Kelari's Brutality",
+    "names": [
+      "Kelari's Brutality",
+      "ケラリの残虐"
+    ],
+    "support": false,
+    "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/sorceresssummonsanddjinn.webp",
+    "reference": "https://poe2db.tw/us/Kelari%2C_the_Tainted_Sands",
+    "imageRole": "granting-minion",
+    "imageTitle": "Kelari's Brutality / ケラリの残虐 — Kelari, the Tainted Sands / 汚染された砂、ケラリ",
+    "note": "The summon’s built-in KnifeThrowSandDjinn attack is documented in the minion record. It has no separate player gem icon; the image identifies its granting minion Kelari, not another command skill."
   }
 ]

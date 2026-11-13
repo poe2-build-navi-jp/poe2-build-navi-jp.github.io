@@ -1,5 +1,5 @@
-import {skillIcons} from './skill-icon-data.js?v=d2184e27d0';
-import {createSkillMatcher,skillTextHtml,skillImageHtml,skipSkillElement} from './skill-icon-matcher.js?v=07cc7e39cc';
+import {skillIcons} from './skill-icon-data.js?v=e02be58c1b';
+import {createSkillMatcher,skillTextHtml,skillImageHtml,skipSkillElement} from './skill-icon-matcher.js?v=afb5bc697b';
 
 const matcher=createSkillMatcher(skillIcons);
 export function installSkillIcons(document) {

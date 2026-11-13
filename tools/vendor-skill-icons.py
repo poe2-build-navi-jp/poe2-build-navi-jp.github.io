@@ -10,6 +10,7 @@ import re
 import time
 import subprocess
 import urllib.request
+import io
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
@@ -125,7 +126,7 @@ for kind in ["Skill_Gems", "Support_Gems"]:
 for override in json.loads((ROOT / "data/skill-icon-overrides.json").read_text()):
     entries = [entry for entry in entries if entry["id"] != override["id"]]
     filename = re.sub(r"[^a-z0-9]+", "-", override["id"].lower()).strip("-") + ".webp"
-    entries.append(override | {"support": False, "src": f"/images/poe2/skills/{filename}"})
+    entries.append(override | {"support": override.get("support", False), "src": f"/images/poe2/skills/{filename}"})
 
 
 entries = list({entry["id"]: entry for entry in reversed(entries)}.values())
@@ -135,15 +136,23 @@ def asset(entry):
     target = ROOT / entry["src"].lstrip("/")
     old = previous.get(entry["id"])
     if old and old["source"] == entry["source"] and (ROOT / old["src"].lstrip("/").split("#")[0]).exists():
-        return entry | {"src": old["src"], "sha256": old["sha256"]}
+        return entry | {key: old[key] for key in ["src", "sha256", "sourceFormat", "sourceSha256"] if key in old}
     cache_key = hashlib.sha256(entry["source"].encode()).hexdigest()[:16]
     cached = ROOT / "tools/.skill-icon-cache" / (cache_key + ".webp")
-    data = target.read_bytes() if target.exists() else cached.read_bytes() if cached.exists() else download(entry["source"])
+    data = download(entry["source"]) if entry["source"].split("?")[0].lower().endswith(".png") else target.read_bytes() if target.exists() else cached.read_bytes() if cached.exists() else download(entry["source"])
+    original = {}
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        from PIL import Image
+        original = {"sourceFormat": "png", "sourceSha256": hashlib.sha256(data).hexdigest()}
+        output = io.BytesIO()
+        with Image.open(io.BytesIO(data)) as image:
+            image.save(output, format="WEBP", lossless=True, exact=True)
+        data = output.getvalue()
     if data[:4] != b"RIFF" or data[8:12] != b"WEBP":
         raise ValueError(f"Not a WebP image: {entry['source']}")
     if not target.exists():
         target.write_bytes(data)
-    return entry | {"sha256": hashlib.sha256(data).hexdigest()}
+    return entry | original | {"sha256": hashlib.sha256(data).hexdigest()}
 
 
 print(f"Fetching {len(entries)} matched skill/support icons", flush=True)
