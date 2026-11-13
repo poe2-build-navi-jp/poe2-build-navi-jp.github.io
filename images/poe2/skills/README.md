@@ -1,5 +1,7 @@
 These are original Path of Exile 2 skill and support icons, identified through the English and Japanese PoE2DB catalogs on 2026-11-13. Game artwork belongs to Grinding Gear Games.
 
-Each SVG sheet embeds the original WebP bytes and exposes one named view per image. `data/skill-icons.json` records every skill name, source URL, reference page, SHA-256 and corresponding sheet fragment. No AI-generated icons or shared placeholder icons are substituted for a skill.
+Each SVG sheet exposes one named view per image. `data/skill-icons.json` records every skill name, source URL, reference page, SHA-256 and corresponding sheet fragment. Game records with no skill-panel art use their own inventory art. No generated or guessed artwork is used. WebP files retain their original bytes; original PNGs are converted losslessly with Pillow and retain a separate source SHA-256.
 
 Refresh with `python tools/vendor-skill-icons.py`, then run `node tools/enhance-skill-icons.mjs` and the normal site finishing steps. The import cache is excluded from Git; normal builds use the checked-in sheets and name catalog without external requests. Varashta command skills use the icons of their identically named granting ascendancy nodes; their provenance is recorded in the catalog, with manual exceptions in `data/skill-icon-overrides.json`.
+
+The engine's five internal test/removed entries are excluded from new selection but retain their original game placeholder art for loading existing data. `docs/audits/skill-image-coverage.json` records every engine ID and its image; a build fails if any ID is unidentified. Built-in minion attacks without a separate player-gem icon identify their granting minion, with that relationship stated in the image title and provenance.

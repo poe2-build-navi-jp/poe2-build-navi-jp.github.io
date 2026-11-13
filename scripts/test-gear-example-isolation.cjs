@@ -6,6 +6,7 @@ const {execFileSync} = require('node:child_process');
 const {JSDOM} = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
+const withoutSkillIcons = html => html.replace(/<span class="skill-name" data-skill-icon="[^"]+"><img\b[^>]*>([\s\S]*?)<\/span>/g,'$1');
 const html = read('gear-check/index.html');
 const script = read('assets/gear-check.js');
 const builds = JSON.parse(read('data/builds.json'));
@@ -182,7 +183,7 @@ function select(dom,id,level) {
     await fsp.cp(root,tmp,{recursive:true,filter:p=>!/(^|\/)(node_modules|\.git)$/.test(p)});
     for (let pass=0;pass<2;pass++) {
       for (const step of ['enhance-residual-pages','sync-asset-versions']) execFileSync(process.execPath,[path.join(tmp,'tools',`${step}.mjs`)],{cwd:tmp,stdio:'ignore'});
-      assert.equal(await fsp.readFile(path.join(tmp,'gear-check/index.html'),'utf8'),html, 'Sample enhancement must be repeatable');
+      assert.equal(withoutSkillIcons(await fsp.readFile(path.join(tmp,'gear-check/index.html'),'utf8')),withoutSkillIcons(html), 'Sample enhancement must be repeatable');
     }
     assert.equal(await fsp.readFile(path.join(tmp,'assets/gear-check.js'),'utf8'),script, 'Diagnosis logic is preserved');
   } finally { await fsp.rm(tmp,{recursive:true,force:true}); }

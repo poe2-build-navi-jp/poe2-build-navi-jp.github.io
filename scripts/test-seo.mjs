@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { JSDOM } from "jsdom";
 
 const root = resolve(import.meta.dirname, "..");
 const base = "https://poe2-build-navi-jp.github.io";
@@ -43,9 +44,11 @@ for (const url of urls) {
 
 const builds = JSON.parse(await readFile(resolve(root, "data/builds.json"), "utf8")).filter((build) => build.status !== "draft");
 const buildList = await readFile(resolve(root, "builds/index.html"), "utf8");
+const buildListDocument = new JSDOM(buildList).window.document;
 for (const build of builds) {
   const path = `/builds/${build.classSlug}/${build.slug}/`;
-  if (!buildList.includes(build.name) || !buildList.includes(path)) failures.push(`/builds/: missing initial HTML link for ${build.name}`);
+  const links = [...buildListDocument.querySelectorAll("a")];
+  if (!links.some(link => link.getAttribute("href") === path && link.closest("article")?.textContent.includes(build.name))) failures.push(`/builds/: missing initial HTML link for ${build.name}`);
 }
 
 if (failures.length) {

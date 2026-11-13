@@ -16,6 +16,24 @@
       "sha256": "5314bca77360f184e5057c5c0f12dd360e9218564394b098f93fa1b184f2f970"
     },
     {
+      "id": "Abyssal_Apparition",
+      "name": "Abyssal Apparition",
+      "names": [
+        "Abyssal Apparition",
+        "アビサルアパリション"
+      ],
+      "support": false,
+      "engineIds": [
+        "TriggeredAbyssalApparitionPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/abyssallichapparitionskill.webp",
+      "reference": "https://poe2db.tw/us/Abyssal_Apparition",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-0",
+      "sha256": "cc807e2943921cb03e94358594b0dc8d51ada0c25c887d9226b1d8895116ca06"
+    },
+    {
       "id": "Abyssal_Pact",
       "name": "Abyssal Pact",
       "names": [
@@ -1884,6 +1902,24 @@
       "sha256": "5971e620076efd1f011ef8634ba218d16388aa4d0839a16c61fd106d9b37673d"
     },
     {
+      "id": "Cast_on_Death",
+      "name": "Cast on Death",
+      "names": [
+        "Cast on Death",
+        "死亡時キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastOnDeathPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/DeathWalk.webp",
+      "reference": "https://poe2db.tw/us/Cast_on_Death",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-1",
+      "sha256": "26371ae6e39f6652a870e8b17c67566ced61ead6071bfb3ce2fde0229b67f507"
+    },
+    {
       "id": "Cast_on_Dodge",
       "name": "Cast on Dodge",
       "names": [
@@ -1910,6 +1946,78 @@
       "sha256": "c8391fe304e8d2be38804496446779fcb545858d731f7029a3fe1129a74a7da4"
     },
     {
+      "id": "Cast_on_Freeze",
+      "name": "Cast on Freeze",
+      "names": [
+        "Cast on Freeze",
+        "凍結時キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastOnFreezePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonfreezeskill.webp",
+      "reference": "https://poe2db.tw/us/Cast_on_Freeze",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-2",
+      "sha256": "d911fe9a6bde533ee4c065a3a0fd7609af6fa0af8e1415fdc24c3ebe0e711024"
+    },
+    {
+      "id": "Cast_on_Ignite",
+      "name": "Cast on Ignite",
+      "names": [
+        "Cast on Ignite",
+        "発火時キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastOnIgnitePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonigniteskill.webp",
+      "reference": "https://poe2db.tw/us/Cast_on_Ignite",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-3",
+      "sha256": "b0bb843db9fd72368476e70be702682399ba680d24510c8bcc061c023e53f02c"
+    },
+    {
+      "id": "Cast_on_Melee_Kill",
+      "name": "Cast on Melee Kill",
+      "names": [
+        "Cast on Melee Kill",
+        "近接キル時キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastOnMeleeKillPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonmeleekillskill.webp",
+      "reference": "https://poe2db.tw/us/Cast_on_Melee_Kill",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-4",
+      "sha256": "1bd0043ba53f0b5b50f4f9f2cfa8e12e630bbc1c4bbb357108b09dd7130eb0b3"
+    },
+    {
+      "id": "Cast_on_Melee_Stun",
+      "name": "Cast on Melee Stun",
+      "names": [
+        "Cast on Melee Stun",
+        "近接スタン時キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastOnMeleeStunPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonmeleestunskill.webp",
+      "reference": "https://poe2db.tw/us/Cast_on_Melee_Stun",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-5",
+      "sha256": "e62feaa6b1a646edadb11a6e03f5ad0ba46bcb5d4d3d328720b7b459cc354345"
+    },
+    {
       "id": "Cast_on_Minion_Death",
       "name": "Cast on Minion Death",
       "names": [
@@ -1921,6 +2029,78 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonminiondeath.webp",
       "reference": "https://poe2db.tw/us/Cast_on_Minion_Death",
       "sha256": "8ea091f5f719edc40507defe298ca1250c8e60be297ffe4557e52da11c4f6945"
+    },
+    {
+      "id": "Cast_on_Shock",
+      "name": "Cast on Shock",
+      "names": [
+        "Cast on Shock",
+        "ショックフラッシュ"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastOnShockPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonshockskill.webp",
+      "reference": "https://poe2db.tw/us/Cast_on_Shock",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-6",
+      "sha256": "bc853a9a456ade331356f74d5a26d3a892bbb5175215da7dbc1f83cf3c093962"
+    },
+    {
+      "id": "Cast_when_Damage_Taken",
+      "name": "Cast when Damage Taken",
+      "names": [
+        "Cast when Damage Taken",
+        "被ダメージ時キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastWhenDamageTakenPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/icononfire.webp",
+      "reference": "https://poe2db.tw/us/Cast_when_Damage_Taken",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-7",
+      "sha256": "f729bc54fb758e015bd174eec4bd80235ef69e580897cea1668d52ab85317673"
+    },
+    {
+      "id": "Cast_when_Stunned",
+      "name": "Cast when Stunned",
+      "names": [
+        "Cast when Stunned",
+        "被スタン時キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastWhenStunnedPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/TectonicSlam.webp",
+      "reference": "https://poe2db.tw/us/Cast_when_Stunned",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-8",
+      "sha256": "d160c0021f837e09d2c3c6df2701c14141acdc443d407a30d68bc59a8b95ca72"
+    },
+    {
+      "id": "Cast_while_Channelling",
+      "name": "Cast while Channelling",
+      "names": [
+        "Cast while Channelling",
+        "チャネリング中キャスト"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastWhileChannellingPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castwhilechannellingskill.webp",
+      "reference": "https://poe2db.tw/us/Cast_while_Channelling",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-9",
+      "sha256": "d9e888c8a9ced22ed20e786d1f02bc265a81c66df8f75f59c5c68e54133a247a"
     },
     {
       "id": "Catalysing_Elements",
@@ -2000,6 +2180,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/chainsupport.webp",
       "reference": "https://poe2db.tw/us/Chain_III",
       "sha256": "09959c045ef8382c66d4f3a279add462c7bc2769e24f7573f52e25d86fa20f47"
+    },
+    {
+      "id": "Chance_to_Freeze",
+      "name": "Chance to Freeze",
+      "names": [
+        "Chance to Freeze",
+        "凍結付与"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportChanceToFreezePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/Support/ChancetoFlee.webp",
+      "reference": "https://poe2db.tw/us/Chance_to_Freeze",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-10",
+      "sha256": "47f6860e9a11ad227b6553b6e1bbe686195864a7e22be5c7d856ace079956044"
     },
     {
       "id": "Chaos_Attunement",
@@ -2394,6 +2592,25 @@
       "sha256": "6bd1253a5769fcce3411f0ffecd28bbaa4fb298a2adee51fa7a0df5957e923cd"
     },
     {
+      "id": "Coming_Soon",
+      "name": "Coming Soon",
+      "names": [
+        "Coming Soon",
+        "近日公開"
+      ],
+      "support": false,
+      "engineIds": [
+        "DoLiterallyNothingPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/VaalGems/VaalSmite.webp",
+      "reference": "https://poe2db.tw/us/Coming_Soon",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+      "availability": "internal",
+      "src": "/images/poe2/skills/icons-65.svg#icon-11",
+      "sha256": "ea8f0de524d86541691dfb122d934f1802001aa5e7ebbfe9ede9e925d0464f9e"
+    },
+    {
       "id": "Commandment",
       "name": "Commandment",
       "names": [
@@ -2418,6 +2635,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/commiseratesupport.webp",
       "reference": "https://poe2db.tw/us/Commiserate",
       "sha256": "3932aea96eb7d537488c6fda78ebb17332b7e742d3d90b4adc6b2fd4b8e79cca"
+    },
+    {
+      "id": "Companion_Template",
+      "name": "Companion: {0}",
+      "names": [
+        "Companion: {0}",
+        "コンパニオン：{0}"
+      ],
+      "support": false,
+      "engineIds": [
+        "SummonBeastPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/huntresssummoncompanion.webp",
+      "reference": "https://poe2db.tw/us/Companion%3A_%7B0%7D",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-12",
+      "sha256": "81f5ab1762aaf33f5e389a451b3d9caa6cdba368d89087a60e322861e3c13361"
     },
     {
       "id": "Compressed_Duration_I",
@@ -2535,6 +2770,42 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/expeditionrunewordhazard.webp",
       "reference": "https://poe2db.tw/us/Conductive_Runes",
       "sha256": "114aab8f596349601787ec2bea8f1b440d1791df4b9bce11af862a71de24f49d"
+    },
+    {
+      "id": "Conductivity",
+      "name": "Conductivity",
+      "names": [
+        "Conductivity",
+        "コンダクティビティ"
+      ],
+      "support": false,
+      "engineIds": [
+        "ConductivityPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/Conductivity.webp",
+      "reference": "https://poe2db.tw/us/Conductivity",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-13",
+      "sha256": "c95f428071af6ec759ddfd3b867041125ba7960f48538f154db944d543a6fddd"
+    },
+    {
+      "id": "Consecrate",
+      "name": "Consecrate",
+      "names": [
+        "Consecrate",
+        "コンセクレート"
+      ],
+      "support": false,
+      "engineIds": [
+        "StaffConsecratePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/bufficons/4k/consecrated.webp",
+      "reference": "https://poe2db.tw/us/Consecrate",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-14",
+      "sha256": "939f220f95d4e9795604a01d7ec2eeccea850f6559b6459562095905cac3f4c0"
     },
     {
       "id": "Considered_Casting",
@@ -2953,6 +3224,24 @@
       "sha256": "91f23e5b90c8b000b2ff9dad7cf56791e3ef197791d9af94eb0b03a3a6d1a9f3"
     },
     {
+      "id": "Curse_on_Block",
+      "name": "Curse on Block",
+      "names": [
+        "Curse on Block",
+        "ブロック時呪い"
+      ],
+      "support": false,
+      "engineIds": [
+        "MetaCastCurseOnBlockPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/castonmeleeblockskill.webp",
+      "reference": "https://poe2db.tw/us/Curse_on_Block",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-65.svg#icon-15",
+      "sha256": "bb045fc27ede7468b4b523ae0ff4d53eb80adc4eedfa5d2ef9bec77c3ddf062c"
+    },
+    {
       "id": "Cursed_Ground",
       "name": "Cursed Ground",
       "names": [
@@ -3305,6 +3594,24 @@
       "sha256": "3a53805bc122c5911a7c6e76ec5413ae7ff590124de527e8ce6b8531efd85a4b"
     },
     {
+      "id": "Demon_Magus",
+      "name": "Demon Magus",
+      "names": [
+        "Demon Magus",
+        "デーモンメーガス"
+      ],
+      "support": false,
+      "engineIds": [
+        "DemonMagusPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/spellcastingminionsupport.webp",
+      "reference": "https://poe2db.tw/us/Demon_Magus",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-0",
+      "sha256": "6d565aa1644124d2560fdcb56bee1f619a87304d5987d0a88dca11db106d1df5"
+    },
+    {
       "id": "Derange",
       "name": "Derange",
       "names": [
@@ -3368,6 +3675,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/expeditiondetonateliving.webp",
       "reference": "https://poe2db.tw/us/Detonate_Living",
       "sha256": "965fbf6667b96a381c5b50e353cc94ed320cee7d68fe0bbc418ddebfa9450dd1"
+    },
+    {
+      "id": "Detonate_Minion",
+      "name": "Detonate Minion",
+      "names": [
+        "Detonate Minion",
+        "デトネートミニオン"
+      ],
+      "support": false,
+      "engineIds": [
+        "DestructiveLinkSkeletonBombadierMinion"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/witcharsonistskeleton.webp",
+      "reference": "https://poe2db.tw/us/Detonate_Minion",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-1",
+      "sha256": "76a6c0fac95521e4b86ba69d31916d500acdb7754265d226148388cff0d21fc6"
     },
     {
       "id": "Detonating_Arrow",
@@ -3839,6 +4164,24 @@
       "sha256": "064baeb4f9598e1204cfbddf1992d43d9a1cd46b122bc4007139b827309cf2b7"
     },
     {
+      "id": "Elemental_Siphon",
+      "name": "Elemental Siphon",
+      "names": [
+        "Elemental Siphon",
+        "エレメンタルサイフォン"
+      ],
+      "support": false,
+      "engineIds": [
+        "ElementalSiphonPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/elementalsiphonskillicon.webp",
+      "reference": "https://poe2db.tw/us/Elemental_Siphon",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-2",
+      "sha256": "d4249ea7e617be5ca38fb655a54b12b264d3321593baf7c04c2061df16b24485"
+    },
+    {
       "id": "Elemental_Storm",
       "name": "Elemental Storm",
       "names": [
@@ -4058,6 +4401,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/enervatingnovaweaponskill.webp",
       "reference": "https://poe2db.tw/us/Enervating_Nova",
       "sha256": "e90b07e8d84a8005c33ccade76342a133ec7dedad9a94152cb53f3a95b6f824d"
+    },
+    {
+      "id": "Enervation",
+      "name": "Enervation",
+      "names": [
+        "Enervation",
+        "感電マナ吸収"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportShockManaRegenerationPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/EnervationSupportGem.webp",
+      "reference": "https://poe2db.tw/us/Enervation",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-3",
+      "sha256": "9e9b9d113ec0d4298c37ab356840c7cec7a1fa570578da2ec9311a21ade13e54"
     },
     {
       "id": "Enfeeble",
@@ -4918,6 +5279,24 @@
       "sha256": "7ed15194449a571b24bfeaa764fb296cdf64f131425529737913513ef81787cf"
     },
     {
+      "id": "Flammability",
+      "name": "Flammability",
+      "names": [
+        "Flammability",
+        "フラマビリティ"
+      ],
+      "support": false,
+      "engineIds": [
+        "FlammabilityPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/Flammability.webp",
+      "reference": "https://poe2db.tw/us/Flammability",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-4",
+      "sha256": "5c52a6ce2da1a439a716681a365dca3059340c838505877ec86012c4795c5e3a"
+    },
+    {
       "id": "Flash_Grenade",
       "name": "Flash Grenade",
       "names": [
@@ -5404,6 +5783,24 @@
       "sha256": "7c00c02e4a466bb02bb1ac1a66c751fd50e50bca40a190f6403491f61ead6c20"
     },
     {
+      "id": "Fusillade",
+      "name": "Fusillade",
+      "names": [
+        "Fusillade",
+        "一斉射撃"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportFusilladePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/FusilladeSupportGem.webp",
+      "reference": "https://poe2db.tw/us/Fusillade",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-5",
+      "sha256": "61fba481b4daa055034601b17d9d42e5b0fb9908385eeba082be9ee87d244a01"
+    },
+    {
       "id": "Future-Past",
       "name": "Future-Past",
       "names": [
@@ -5508,6 +5905,24 @@
       "sha256": "c83ec825551186ff5daeb2017d63a52841b97c9ee650e006d6073c6c602c105b"
     },
     {
+      "id": "Gelid_Palm",
+      "name": "Gelid Palm",
+      "names": [
+        "Gelid Palm",
+        "ジェリッドパーム"
+      ],
+      "support": false,
+      "engineIds": [
+        "GelidPalmPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/FrostFury.webp",
+      "reference": "https://poe2db.tw/us/Gelid_Palm",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-6",
+      "sha256": "48fdb86fbd012197d539dc36a9668758f2e1c8258ca3bdc40dab159d23fdf302"
+    },
+    {
       "id": "Gem_Enthusiast",
       "name": "Gem Enthusiast",
       "names": [
@@ -5610,6 +6025,42 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/mortuary.webp",
       "reference": "https://poe2db.tw/us/Gorge",
       "sha256": "001d8f69a518ff1819757bfdebeb76de1d705ea161db9a13b8935d6cadefb46a"
+    },
+    {
+      "id": "Greatwood_II",
+      "name": "Greatwood II",
+      "names": [
+        "Greatwood II",
+        "大樹 II"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportGreatwoodPlayerTwo"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/Greatwood.webp",
+      "reference": "https://poe2db.tw/us/Greatwood_II",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-7",
+      "sha256": "25cc8e9571f9f7e1686084a5a2472929fdd7d45cf5a36a8d418ac8b1754a9ff1"
+    },
+    {
+      "id": "Grenade",
+      "name": "Grenade",
+      "names": [
+        "Grenade",
+        "グレネード"
+      ],
+      "support": false,
+      "engineIds": [
+        "MeleeGrenadeLauncherPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/theredemption.webp",
+      "reference": "https://poe2db.tw/us/Grenade",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-8",
+      "sha256": "f007fb27acc3d3bebfaa67ef13b29735afb04c0a6b851754417298658dfe1f20"
     },
     {
       "id": "Grim_Feast",
@@ -6069,6 +6520,114 @@
       "sha256": "9ebbf7b85cb6abf9a12df8d7658c3a05ad9bd2a85912c068fe229ea5885a3a3e"
     },
     {
+      "id": "His_Dark_Horizon",
+      "name": "His Dark Horizon",
+      "names": [
+        "His Dark Horizon",
+        "ヒズダークホライゾン"
+      ],
+      "support": false,
+      "engineIds": [
+        "DarkTempestPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/darktempest.webp",
+      "reference": "https://poe2db.tw/us/His_Dark_Horizon",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-9",
+      "sha256": "259d77c825608696b200a6e40928e1a64af91a86508c5cc249eb1a9c06ef0dd5"
+    },
+    {
+      "id": "His_Foul_Emergence",
+      "name": "His Foul Emergence",
+      "names": [
+        "His Foul Emergence",
+        "ヒズフォウルエマージェンス"
+      ],
+      "support": false,
+      "engineIds": [
+        "HisFoulEmergencePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/screamingdevastation.webp",
+      "reference": "https://poe2db.tw/us/His_Foul_Emergence",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-10",
+      "sha256": "77ca89f9128e4b5a0cc9b7087d6d283e744dcdadabb6d27c4d410f6622674771"
+    },
+    {
+      "id": "His_Grave_Command",
+      "name": "His Grave Command",
+      "names": [
+        "His Grave Command",
+        "ヒズグレーブコマンド"
+      ],
+      "support": false,
+      "engineIds": [
+        "GraveCommandPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/gravecommand.webp",
+      "reference": "https://poe2db.tw/us/His_Grave_Command",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-11",
+      "sha256": "31c79ae77e56315fc608b502f17483a3c72997ce96de232a07b751f799861359"
+    },
+    {
+      "id": "His_Scattering_Calamity",
+      "name": "His Scattering Calamity",
+      "names": [
+        "His Scattering Calamity",
+        "ヒズスキャタリングカラミティ"
+      ],
+      "support": false,
+      "engineIds": [
+        "ScatteringCalamityPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/scatteringcalamity.webp",
+      "reference": "https://poe2db.tw/us/His_Scattering_Calamity",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-12",
+      "sha256": "f3729f24581e7b1f3391b4c6daddb1ce523a6a905a5a1e8388f86e76aee387c3"
+    },
+    {
+      "id": "His_Vile_Intrusion",
+      "name": "His Vile Intrusion",
+      "names": [
+        "His Vile Intrusion",
+        "ヒズヴァイルイントリュージョン"
+      ],
+      "support": false,
+      "engineIds": [
+        "VileDisruptionPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/viledisruption.webp",
+      "reference": "https://poe2db.tw/us/His_Vile_Intrusion",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-13",
+      "sha256": "e594b59906fa253ae3e117d4ae493b5c0cb259ba90a86a0037ecce246eee6200"
+    },
+    {
+      "id": "His_Winnowing_Flame",
+      "name": "His Winnowing Flame",
+      "names": [
+        "His Winnowing Flame",
+        "ヒズウィノーイングフレイム"
+      ],
+      "support": false,
+      "engineIds": [
+        "HisWinnowingFlamePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/winnowingflame.webp",
+      "reference": "https://poe2db.tw/us/His_Winnowing_Flame",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-14",
+      "sha256": "1510fb9ba08dc51e46fb36602036aff3fefe6c1912a621f5db032061de94fd48"
+    },
+    {
       "id": "Hit_and_Run",
       "name": "Hit and Run",
       "names": [
@@ -6199,6 +6758,42 @@
       "sha256": "e6d67f7eb3547546da6084c23939c4425343698e893174c6732b4f3c36ac29e8"
     },
     {
+      "id": "Hydra_Familiar",
+      "name": "Hydra Familiar",
+      "names": [
+        "Hydra Familiar",
+        "ヒドラ使い魔"
+      ],
+      "support": false,
+      "engineIds": [
+        "HydraPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/AncestorTotemSkill.webp",
+      "reference": "https://poe2db.tw/us/Hydra_Familiar",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-66.svg#icon-15",
+      "sha256": "f743693f32418bb6fd3e8d2f3afa6e22192f3051e8d4e4070369528db2e7be89"
+    },
+    {
+      "id": "Hypothermia",
+      "name": "Hypothermia",
+      "names": [
+        "Hypothermia",
+        "ハイポサーミア"
+      ],
+      "support": false,
+      "engineIds": [
+        "HypothermiaPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/Frostbite.webp",
+      "reference": "https://poe2db.tw/us/Hypothermia",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-0",
+      "sha256": "683a0886925e6de285664624650ed798d1cabd71ad7edfc246691025b32b3e19"
+    },
+    {
       "id": "Ice_Bite_I",
       "name": "Ice Bite I",
       "names": [
@@ -6224,6 +6819,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/icebitesupport.webp",
       "reference": "https://poe2db.tw/us/Ice_Bite_II",
       "sha256": "9c2327f9b1712542189896a3f400a0fdcb414065b15c65dec4da81d80274436c"
+    },
+    {
+      "id": "Ice_Fragments",
+      "name": "Ice Fragments",
+      "names": [
+        "Ice Fragments",
+        "アイスフラグメント"
+      ],
+      "support": false,
+      "engineIds": [
+        "IceFragmentsPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/iconbasicattack.webp",
+      "reference": "https://poe2db.tw/us/Ice_Fragments",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-1",
+      "sha256": "137792291870e2bdafb172d54f60e6d93c96f52186ff18f800e03a0a26370fd2"
     },
     {
       "id": "Ice_Nova",
@@ -6552,6 +7165,24 @@
       "sha256": "3d735da33f0845a27047d0c247696c097afe0432928f160c9b8cd8865c0d60b8"
     },
     {
+      "id": "Infusion",
+      "name": "Infusion",
+      "names": [
+        "Infusion",
+        "インフュージョン"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportBuffedHeraldPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/BuffedHeraldSupportGem.webp",
+      "reference": "https://poe2db.tw/us/Infusion",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-2",
+      "sha256": "ef5255a1453b026d4b98558a1bd1a8f1b8f09e206267bc69cbbfc4989f43f0aa"
+    },
+    {
       "id": "Inhibitor",
       "name": "Inhibitor",
       "names": [
@@ -6615,6 +7246,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/monkbreachwalk.webp",
       "reference": "https://poe2db.tw/us/Into_the_Breach",
       "sha256": "90d640f189ff812b6917f99833bbcd9b743ba3982d35822424927da4ac35fa5a"
+    },
+    {
+      "id": "Invocation",
+      "name": "Invocation",
+      "names": [
+        "Invocation",
+        "インボケーション"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportInvocationPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/Support/UnleashSupport.webp",
+      "reference": "https://poe2db.tw/us/Invocation",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-3",
+      "sha256": "f56e3d8b001849b7e263074221a15bdb4c538b31a835727a4e7a59efc196e5f7"
     },
     {
       "id": "Iron_Ward",
@@ -6708,6 +7357,22 @@
       "sha256": "997476725df265d720c5978aab0add3a727968a154401715cecd57fbae684693"
     },
     {
+      "id": "Kelaris_Brutality",
+      "name": "Kelari's Brutality",
+      "names": [
+        "Kelari's Brutality",
+        "ケラリの残虐"
+      ],
+      "support": false,
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/sorceresssummonsanddjinn.webp",
+      "reference": "https://poe2db.tw/us/Kelari%2C_the_Tainted_Sands",
+      "imageRole": "granting-minion",
+      "imageTitle": "Kelari's Brutality / ケラリの残虐 — Kelari, the Tainted Sands / 汚染された砂、ケラリ",
+      "note": "The summon’s built-in KnifeThrowSandDjinn attack is documented in the minion record. It has no separate player gem icon; the image identifies its granting minion Kelari, not another command skill.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-4",
+      "sha256": "997476725df265d720c5978aab0add3a727968a154401715cecd57fbae684693"
+    },
+    {
       "id": "Kelaris_Deception",
       "name": "Kelari's Deception",
       "names": [
@@ -6773,6 +7438,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/monkkillingpalm.webp",
       "reference": "https://poe2db.tw/us/Killing_Palm",
       "sha256": "1662abf7ee4199c8af741ad6127d0156c3670c2e3a3b2899acfb9e67cb6b8f21"
+    },
+    {
+      "id": "Kinetic_Bash",
+      "name": "Kinetic Bash",
+      "names": [
+        "Kinetic Bash",
+        "キネティックバッシュ"
+      ],
+      "support": false,
+      "engineIds": [
+        "HazardousHoldoutPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/bruteshieldblock.webp",
+      "reference": "https://poe2db.tw/us/Kinetic_Bash",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-5",
+      "sha256": "178a4f237c2c87ccb054edb825e631350a7adb4743486234f9b57e8f6d4389b3"
     },
     {
       "id": "Knockback",
@@ -7957,6 +8640,24 @@
       "sha256": "fbeba6996295453b6f86a4cba53bb4ac946c570dde77cade75bb89c4176ffa48"
     },
     {
+      "id": "Nadir",
+      "name": "Nadir",
+      "names": [
+        "Nadir",
+        "下限"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportNadirPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/NadirSupportGem.webp",
+      "reference": "https://poe2db.tw/us/Nadir",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-6",
+      "sha256": "a55bd1194ebe50e2516e3ace1a021ad11cf3598344659dd43d8f71a80a3c7160"
+    },
+    {
       "id": "Navira%2C_the_Last_Mirage",
       "name": "Navira, the Last Mirage",
       "names": [
@@ -8573,6 +9274,63 @@
       "sha256": "ae3802f068092791cc037272c8e6178db515d470cf7d133db42e51c6339de890"
     },
     {
+      "id": "Playtest_Attack",
+      "name": "Playtest Attack",
+      "names": [
+        "Playtest Attack",
+        "プレイテストアタック"
+      ],
+      "support": false,
+      "engineIds": [
+        "PlaytestAttack"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/iconbasicattack.webp",
+      "reference": "https://poe2db.tw/us/Playtest_Attack",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+      "availability": "internal",
+      "src": "/images/poe2/skills/icons-67.svg#icon-7",
+      "sha256": "137792291870e2bdafb172d54f60e6d93c96f52186ff18f800e03a0a26370fd2"
+    },
+    {
+      "id": "Playtest_Slam",
+      "name": "Playtest Slam",
+      "names": [
+        "Playtest Slam",
+        "プレイテストスラム"
+      ],
+      "support": false,
+      "engineIds": [
+        "PlaytestSlam"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/bruteleapslam.webp",
+      "reference": "https://poe2db.tw/us/Playtest_Slam",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+      "availability": "internal",
+      "src": "/images/poe2/skills/icons-67.svg#icon-8",
+      "sha256": "2db79e31b943ecf2bcd78326c7416279ccad87de7c9d56e64a12be03e6ed9008"
+    },
+    {
+      "id": "Playtest_Spell",
+      "name": "Playtest Spell",
+      "names": [
+        "Playtest Spell",
+        "プレイテストスペル"
+      ],
+      "support": false,
+      "engineIds": [
+        "PlaytestSpell"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/fireballskillstaff.webp",
+      "reference": "https://poe2db.tw/us/Playtest_Spell",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+      "availability": "internal",
+      "src": "/images/poe2/skills/icons-67.svg#icon-9",
+      "sha256": "2b7fb677d122707360db4621d0d72de2903d7a0c8503e449d304966b1dbd6de7"
+    },
+    {
       "id": "Poison_I",
       "name": "Poison I",
       "names": [
@@ -8780,6 +9538,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/empowereddamagesupport.webp",
       "reference": "https://poe2db.tw/us/Premeditation",
       "sha256": "dc910ee656da30b2c82b679dfac1f201c7a49bf6b3291c22e07b516eecc83bce"
+    },
+    {
+      "id": "Primal_Avatar",
+      "name": "Primal Avatar",
+      "names": [
+        "Primal Avatar",
+        "プライマルアバター"
+      ],
+      "support": false,
+      "engineIds": [
+        "PrimalAvatarPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/druidprimalavatar.webp",
+      "reference": "https://poe2db.tw/us/Primal_Avatar",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-10",
+      "sha256": "6cfd148ae6ebdcf242bd4c5a4cb0e5d62bc3a6374824cb5e36cf3baabcd70514"
     },
     {
       "id": "Primal_Bounty",
@@ -9631,6 +10407,25 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/expeditionremnantsofkalguur.webp",
       "reference": "https://poe2db.tw/us/Remnants_of_Kalguur",
       "sha256": "46e990ee23e25ff7327d4cca629d55118810ebf0fcfac5bb8b80959e55fddb3f"
+    },
+    {
+      "id": "Removed_Skill",
+      "name": "Removed Skill",
+      "names": [
+        "Removed Skill",
+        "取り除かれたスキル"
+      ],
+      "support": false,
+      "engineIds": [
+        "UnusablePlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/BlankGem.webp",
+      "reference": "https://poe2db.tw/us/Removed_Skill",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists. Internal test/removed entry; not offered for new skill selection. Original game placeholder artwork is retained only for loading existing data.",
+      "availability": "internal",
+      "src": "/images/poe2/skills/icons-67.svg#icon-11",
+      "sha256": "e112c7200d3517500b2b9b86b1d6da186d5a8ebc381f24589962516eb4f424b8"
     },
     {
       "id": "Rend",
@@ -10592,6 +11387,26 @@
       "sha256": "0fbadda4b7338c757fdd1b12d1e091d5faeb4793b58c0da7760beed1f4c8c740"
     },
     {
+      "id": "Shroud",
+      "name": "Shroud",
+      "names": [
+        "Shroud",
+        "シュラウド"
+      ],
+      "support": false,
+      "engineIds": [
+        "ShroudPlayer"
+      ],
+      "source": "https://web.poecdn.com/protected/image/poe2/announcements/conquerors/items/GemSkill_ShadowSmokeBomb.png?key=Ubph18Yxgf_GZScq2BS9mw",
+      "reference": "https://poe2db.tw/us/Shroud",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-12",
+      "sourceFormat": "png",
+      "sourceSha256": "ba2f965601e0127d2ea2e4d9a51ca0e1fd7b29af5116192c74453cc81f4f36bb",
+      "sha256": "930f0690a4a37fca3a1b8a043711c1a6136822ceb498f68cb5ee3d251e719280"
+    },
+    {
       "id": "Siege_Ballista",
       "name": "Siege Ballista",
       "names": [
@@ -10826,6 +11641,24 @@
       "sha256": "73e087cc9c13d6464111d41f4dc2209a22bd3878ac4a9c82c1ca8b312f8c26ed"
     },
     {
+      "id": "Smash_to_Smithereens",
+      "name": "Smash to Smithereens",
+      "names": [
+        "Smash to Smithereens",
+        "スマッシュトゥスミザリンズ"
+      ],
+      "support": false,
+      "engineIds": [
+        "SmashToSmithereensPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/icongroundslam.webp",
+      "reference": "https://poe2db.tw/us/Smash_to_Smithereens",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-13",
+      "sha256": "e7225d8ec3241570392e3dc3c4a6f83760d1215ece299b46c6bbea9b1461abd3"
+    },
+    {
       "id": "Snap",
       "name": "Snap",
       "names": [
@@ -10902,6 +11735,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/witchunterspellaegis.webp",
       "reference": "https://poe2db.tw/us/Sorcery_Ward",
       "sha256": "13166b5b744c8323916631a646de4daf7671b8c40058000bb2f9f961162990a1"
+    },
+    {
+      "id": "Soul_Crystal_Template",
+      "name": "Soul Crystal: {0}",
+      "names": [
+        "Soul Crystal: {0}",
+        "ソウルクリスタル: {0}"
+      ],
+      "support": false,
+      "engineIds": [
+        "SoulCrystalPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/gravecommand.webp",
+      "reference": "https://poe2db.tw/us/Soul_Crystal%3A_%7B0%7D",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-14",
+      "sha256": "31c79ae77e56315fc608b502f17483a3c72997ce96de232a07b751f799861359"
     },
     {
       "id": "Soul_Drain",
@@ -11099,6 +11950,24 @@
       "sha256": "35ed9b1057a835b92015fe6e1ee38936b588fb9651152fd56b4927608b909986"
     },
     {
+      "id": "Spinning_Inferno",
+      "name": "Spinning Inferno",
+      "names": [
+        "Spinning Inferno",
+        "スピニングインフェルノ"
+      ],
+      "support": false,
+      "engineIds": [
+        "SpinningInfernoPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DArt/SkillIcons/4K/FlamesOfJudgement.webp",
+      "reference": "https://poe2db.tw/us/Spinning_Inferno",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-67.svg#icon-15",
+      "sha256": "c424523023a0763f859be6897f10660c4bfa6ee16f4bac5c87f4c189a61ce690"
+    },
+    {
       "id": "Spiral_Volley",
       "name": "Spiral Volley",
       "names": [
@@ -11162,6 +12031,24 @@
       "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/support/4k/splintertotemsupport.webp",
       "reference": "https://poe2db.tw/us/Splinter_Totem_II",
       "sha256": "ed1d349482d0d416ab2f3d45bec14464344c6db6f63386df843ee3c223f33139"
+    },
+    {
+      "id": "Spreading_Frost",
+      "name": "Spreading Frost",
+      "names": [
+        "Spreading Frost",
+        "伝染する霜"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportSpreadingFrostPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/BlankBlueSupportGem.webp",
+      "reference": "https://poe2db.tw/us/Spreading_Frost",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-68.svg#icon-0",
+      "sha256": "1af5dd43c17e22627f38657be9416c5bbf46e9a5671a4a001d5097cbc7f22693"
     },
     {
       "id": "Staggering_Palm",
@@ -11425,6 +12312,24 @@
       "sha256": "c4fa57c3e9a19600b78c22cce21f5e1b9e7bbfed901f731014f0479bbba39982"
     },
     {
+      "id": "Styrns_Anthem",
+      "name": "Styrn's Anthem",
+      "names": [
+        "Styrn's Anthem",
+        "スターンの賛歌"
+      ],
+      "support": true,
+      "engineIds": [
+        "SupportKnightsAnthem"
+      ],
+      "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/KnightsAnthem.webp",
+      "reference": "https://poe2db.tw/us/Styrns_Anthem",
+      "imageRole": "inventory",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-68.svg#icon-1",
+      "sha256": "cf91e1d16bdd00ca5bffdc5a1ae596f217363810480ce537407d34b5d5eb5ea8"
+    },
+    {
       "id": "Styrns_Ferocity",
       "name": "Styrn's Ferocity",
       "names": [
@@ -11449,6 +12354,24 @@
       "source": "https://cdn.poe2db.tw/image/Art/2DItems/Gems/New/NewSupport/Lineage/KnightsLegacy.webp",
       "reference": "https://poe2db.tw/us/Styrns_Mountain",
       "sha256": "83e98160f44f45088f1e6a302f9ca4824072a72744d8afa21e4d13abebcf5f44"
+    },
+    {
+      "id": "Summon_Companion",
+      "name": "Summon Companion",
+      "names": [
+        "Summon Companion",
+        "コンパニオン召喚"
+      ],
+      "support": false,
+      "engineIds": [
+        "SummonMercenaryCompanionPlayer"
+      ],
+      "source": "https://cdn.poe2db.tw/image/art/2dart/skillicons/4k/summonmerccompanion.webp",
+      "reference": "https://poe2db.tw/us/Summon_Companion",
+      "imageRole": "skill",
+      "note": "Image URL is taken from this exact skill record’s own itemboximage, not from related/support skill lists.",
+      "src": "/images/poe2/skills/icons-68.svg#icon-2",
+      "sha256": "d8702540ac5f360fd4374c33c947f0505df1b587c1806f4e5679f1f974aa546b"
     },
     {
       "id": "Summon_Infernal_Hound",
