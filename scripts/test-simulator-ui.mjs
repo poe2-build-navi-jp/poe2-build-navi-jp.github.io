@@ -5,6 +5,7 @@ import {resolve}from'node:path';
 import {pathToFileURL}from'node:url';
 import {JSDOM,VirtualConsole}from'jsdom';
 import * as model from '../assets/simulator-model.js';
+import {openSkillPicker} from '../assets/simulator-skill-picker.js';
 const root=resolve(import.meta.dirname,'..'),native=new Worker(new URL('./fixtures/simulator-worker-node.mjs',import.meta.url));
 let sequence=0;const pending=new Map();native.on('message',m=>{if(m.progress)return;const t=pending.get(m.id);if(!t)return;pending.delete(m.id);m.error?t.reject(Error(m.error)):t.resolve(m.result);});native.on('error',e=>{for(const p of pending.values())p.reject(e);});
 const rpc=(action,payload)=>new Promise((resolve,reject)=>{let id=++sequence;pending.set(id,{resolve,reject});native.postMessage({id,action,payload});});
@@ -12,6 +13,7 @@ const errors=[],vconsole=new VirtualConsole();vconsole.on('jsdomError',e=>{if(!e
 const dom=new JSDOM(await readFile(resolve(root,'simulator/index.html'),'utf8'),{url:'https://poe2-build-navi-jp.github.io/simulator/',runScripts:'outside-only',virtualConsole:vconsole});
 const w=dom.window,d=w.document;
 Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
+Object.assign(w,{openSkillPicker});
 let scrollCalls=0;w.HTMLElement.prototype.scrollIntoView=function(){scrollCalls++;};
 w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
 w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.replace(/^\//,''))));
@@ -19,6 +21,7 @@ w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),
 let calculationCalls=0,drawableNodes=0,holdReferencePreview=false,heldReferenceResponse=null;
 w.Worker=class{postMessage({id,action,payload}){if(action==='calculate')calculationCalls++;rpc(action,payload).then(result=>{if(action==='boot')drawableNodes=result.tree.filter(n=>Number.isFinite(n.x)&&Number.isFinite(n.y)).length;const deliver=()=>this.onmessage?.({data:{id,result}});if(holdReferencePreview&&action==='calculate'&&payload.character?.level===100&&payload.allocated_nodes?.length>100){holdReferencePreview=false;heldReferenceResponse=deliver;}else deliver();},error=>this.onmessage?.({data:{id,error:error.message}}));}};
 let code=await readFile(resolve(root,'assets/simulator.js'),'utf8');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
+code=code.replace(/import\('\.\/simulator-skill-picker\.js(?:\?v=[a-f0-9]+)?'\)/g,'Promise.resolve({openSkillPicker:window.openSkillPicker})');
 const wait=async predicate=>{const deadline=Date.now()+30000;while(!predicate()){if(Date.now()>deadline)throw Error('UI timeout: '+d.getElementById('sim-error').textContent+' '+d.getElementById('sim-status').textContent);await new Promise(r=>setTimeout(r,25));}};
 const click=selector=>{const e=d.querySelector(selector);assert.ok(e,selector);e.click();};
 const change=(selector,value)=>{const e=d.querySelector(selector);assert.ok(e,selector);e.value=value;e.dispatchEvent(new w.Event('change',{bubbles:true}));};
@@ -61,6 +64,11 @@ try{
  click('#sim-item-back');click('[data-weapon-set="2"]');await wait(ready);assert.equal(life(),weaponLife);click('[data-slot="weapon1"]');click('[data-equipment-mode="rare"]');change('#sim-rare-name','武器セット2');click('#sim-rare-add');change('[data-rare-row="0"] [data-rare-value="0"]','160');click('#sim-item-apply');await wait(ready);assert.equal(life(),weaponLife+160);
  click('#sim-item-back');click('[data-weapon-set="1"]');await wait(ready);assert.equal(life(),weaponLife+80);assert.ok(saved().request.items.find(i=>i.slot==='weapon1').text.includes('武器セット1'));assert.equal(saved().weaponSets.active,1);assert.ok(saved().weaponSets.sets[1].items[0].text.includes('武器セット2'));
  click('[data-tab="skills"]');const gemSelect=d.querySelector('[data-gem-field="skill_id"]');const selectedGem=gemSelect.value;assert.ok(gemSelect.options.length<=2);gemSelect.dispatchEvent(new w.FocusEvent('focusin',{bubbles:true}));assert.ok(gemSelect.options.length>100);assert.equal(gemSelect.value,selectedGem);for(const id of ['DoLiterallyNothingPlayer','UnusablePlayer','PlaytestAttack','PlaytestSlam','PlaytestSpell'])assert(![...gemSelect.options].some(option=>option.value===id),'Internal test skills must not be offered: '+id);change('[data-group="0"] [data-gem-field="level"]','10');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
+ click('[data-group="0"] [data-find-gem="0"]');await wait(()=>d.getElementById('sim-skill-picker')?.open);
+ const skillQuery=d.getElementById('sim-skill-search');skillQuery.value='Spark';skillQuery.dispatchEvent(new w.Event('input',{bubbles:true}));
+ assert(d.querySelector('[data-picker-skill="SparkPlayer"] .skill-icon'));
+ click('[data-picker-skill="SparkPlayer"]');await wait(ready);assert.equal(saved().request.socket_groups[0].gems[0].skill_id,'SparkPlayer');
+ click('#sim-history-undo');await wait(()=>ready()&&saved().request.socket_groups[0].gems[0].skill_id===selectedGem);assert.equal(saved().request.socket_groups[0].gems[0].skill_id,selectedGem);assert.equal(saved().request.socket_groups[0].gems[0].level,10);
  const overviewMap=d.getElementById('sim-tree-map'),overviewRect=overviewMap.getBoundingClientRect;overviewMap.getBoundingClientRect=()=>({left:0,top:0,width:1000,height:400});click('[data-tab="tree"]');await wait(()=>d.querySelectorAll('#sim-tree-nodes circle').length>0);assert.ok(Number(d.getElementById('sim-tree-svg').getAttribute('viewBox').split(' ')[3])>25000,'fit to the actual visible desktop aspect ratio');overviewMap.getBoundingClientRect=overviewRect;
  assert.match(d.getElementById('sim-point-count').textContent,/取得済み 0ノード/);assert.equal(d.querySelectorAll('#sim-tree-nodes circle.allocated').length,0,'starting points are not acquired nodes');assert.ok(d.querySelector('#sim-tree-nodes circle.start'));assert.equal(d.querySelectorAll('#sim-tree-edges :is(line,path).allocated').length,0,'zero owned nodes means zero gold edges');
  assert.ok(d.querySelectorAll('#sim-tree-svg :is(line,path).template').length>80,'verified connections must render on first open without toggling settings');assert.ok(d.querySelectorAll('#sim-tree-nodes circle').length>4000,'initial view shows the complete main tree');click('#sim-tree-center');await new Promise(r=>setTimeout(r,30));const visibleNodeCount=d.querySelectorAll('#sim-tree-nodes circle').length;assert.ok(visibleNodeCount<4913/2,'viewport should draw a fraction of the full tree');

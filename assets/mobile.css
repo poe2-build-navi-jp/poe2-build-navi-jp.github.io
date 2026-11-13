@@ -18,3 +18,11 @@
  .source-list a{word-break:break-word}
  .section .filter-note{color:var(--muted)}
 }
+
+@media(max-width:680px){
+ .article-page :is(p,li),.static-roadmap :is(p,li){font-size:16px;line-height:1.85}
+ .article-page :is(h2,h3),.static-roadmap summary{line-height:1.6}
+ .article-page :is(table,figure){max-width:100%}
+ .level-controls input{min-height:48px}
+ .level-controls button,.stage-button,.page-nav a,.footer-links a{touch-action:manipulation}
+}

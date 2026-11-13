@@ -14,7 +14,7 @@
     "test:indexnow": "node --test scripts/test-indexnow.mjs",
     "test:images": "node scripts/test-image-metadata.mjs",
     "test:skill-icons": "node scripts/test-skill-icons.mjs",
-    "test:simulator": "node scripts/test-simulator.mjs && node scripts/test-simulator-ui.mjs && node scripts/test-simulator-journey.mjs && node scripts/test-simulator-workspace.mjs && node scripts/test-simulator-tools.mjs && node scripts/test-simulator-next-five.mjs && node scripts/test-simulator-contrast.mjs",
+    "test:simulator": "node scripts/test-simulator.mjs && node scripts/test-simulator-ui.mjs && node scripts/test-simulator-skill-picker.mjs && node scripts/test-simulator-journey.mjs && node scripts/test-simulator-workspace.mjs && node scripts/test-simulator-tools.mjs && node scripts/test-simulator-next-five.mjs && node scripts/test-simulator-contrast.mjs",
     "test:search": "node scripts/test-search-eligibility.mjs && npm run test:dates",
     "test:dates": "node scripts/test-page-dates.mjs",
     "test:simulator:en": "node scripts/test-simulator-english.mjs && node scripts/test-simulator-data-english.mjs && node scripts/test-simulator-english-runtime.mjs"

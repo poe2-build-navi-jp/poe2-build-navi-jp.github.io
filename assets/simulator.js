@@ -1,5 +1,8 @@
 import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps, namedPlanKey, parseNamedPlans, putNamedPlan, upgradeAdvice, createEditHistory, appendEditHistory, moveEditHistory, PRICE_CURRENCIES, priceBookKey, priceAmount, parsePriceBook, budgetVerdict, drawComparisonCard, comparisonChanges, validateComparison, encodeComparisonLink, decodeComparisonLink, simulatorBackup, parseSimulatorBackup, restoreSimulatorBackup, isolatedChanges, candidateOrder} from './simulator-model.js?v=161ef63cbd';
 const $ = id => document.getElementById(id);
+const phoneLayout=window.matchMedia?.('(max-width: 720px)');
+function arrangeEditor(media){document.querySelector('.sim-layout').prepend(document.querySelector(media.matches?'.sim-editor':'.sim-results'));}
+if(phoneLayout){arrangeEditor(phoneLayout);if(phoneLayout.matches)$('sim-first-workbench').open=false;phoneLayout.addEventListener?.('change',arrangeEditor);}
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
 const [presets,exampleData] = await loadCatalogs();
@@ -254,7 +257,7 @@ function renderSkills(){
  $('sim-skill-groups').innerHTML=(plan.request.socket_groups || []).map((group,index)=>`<section class="sim-gem-group" data-group="${index}"><div class="sim-gem-group-head"><label class="sim-check"><input type="radio" name="main-skill" data-main="${index}"${(plan.request.main_socket_group || 0)===index?' checked':''}>計算する主力</label><button type="button" data-remove-group="${index}" aria-label="スキル組${index+1}を削除">組を削除</button></div>${group.gems.map((gem,j)=>{
  const entry=catalog.gems.find(g=>g.skill_id===gem.skill_id);const support=entry?.is_support || false;
  const summoner=catalog.minions.summoners.find(s=>s.skill_id===gem.skill_id);const monsters=summoner?catalog.minions.monsters.filter(m=>!m.name.startsWith('[DNT]')&&summoner.minion_ids.includes(m.id)):[];
- return `<div class="sim-gem-row" data-gem="${j}"><label>${support?'サポート':'スキル'}<span class="skill-select-field" data-skill-selected="${esc(entry?.name || '')}"><select data-gem-field="skill_id" data-support="${support}">${!entry?`<option value="${esc(gem.skill_id)}">${esc(label(gem.name_spec || gem.skill_id))}（未解決）</option>`:''}${gemOptions(support,gem.skill_id)}</select></span></label><label>Lv<input data-gem-field="level" type="number" min="1" max="40" value="${gem.level}"></label><label>品質<input data-gem-field="quality" type="number" min="0" max="30" value="${gem.quality}"></label><button type="button" data-remove-gem="${j}" aria-label="ジェム${j+1}を削除">×</button></div>${monsters.length?`<label>召喚する対象<select data-minion="${j}"><option value="">対象を選ぶ</option>${monsters.map(m=>`<option value="${esc(m.id)}"${gem.minion===m.id?' selected':''}>${esc(label(m.name))}</option>`).join('')}</select></label>`:''}`;
+ return `<div class="sim-gem-row" data-gem="${j}"><div class="sim-gem-choice"><label>${support?'サポート':'スキル'}<span class="skill-select-field" data-skill-selected="${esc(entry?.name || '')}"><select data-gem-field="skill_id" data-support="${support}">${!entry?`<option value="${esc(gem.skill_id)}">${esc(label(gem.name_spec || gem.skill_id))}（未解決）</option>`:''}${gemOptions(support,gem.skill_id)}</select></span></label><button type="button" class="sim-gem-find" data-find-gem="${j}" aria-haspopup="dialog">画像・名前で探す</button></div><label>Lv<input data-gem-field="level" type="number" inputmode="numeric" min="1" max="40" value="${gem.level}"></label><label>品質<input data-gem-field="quality" type="number" inputmode="numeric" min="0" max="30" value="${gem.quality}"></label><button type="button" data-remove-gem="${j}" aria-label="ジェム${j+1}を削除">×</button></div>${monsters.length?`<label>召喚する対象<select data-minion="${j}"><option value="">対象を選ぶ</option>${monsters.map(m=>`<option value="${esc(m.id)}"${gem.minion===m.id?' selected':''}>${esc(label(m.name))}</option>`).join('')}</select></label>`:''}`;
  }).join('')}<label class="sim-check"><input type="checkbox" data-enabled="${index}"${group.enabled?' checked':''}>このスキル組を有効にする</label><button type="button" class="sim-add-support" data-add-support="${index}">＋ サポートを追加</button></section>`).join('');
 }
 function renderTree(){treeNeedsFit=true;if(activeTab==='tree'){treeNeedsFit=false;fitTree();}renderTreeState();renderNodeCatalog();}
@@ -727,6 +730,16 @@ document.addEventListener('click',async event=>{
   if(target.id==='sim-change-build'){save();showChooser();return;}
   if(target.id==='sim-engine-retry'){await retryEngine();return;}
   if(!plan)return;
+  if(target.hasAttribute('data-find-gem')){
+   const group=target.closest('[data-group]').dataset.group,index=target.dataset.findGem;
+   const current=catalog.gems.find(gem=>gem.skill_id===plan.request.socket_groups[group].gems[index].skill_id);
+   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=56c93d7d2c');
+   openSkillPicker({document,gems:catalog.gems,label,support:current?.is_support||false,selected:current?.skill_id,returnFocus:target,onSelect:skillId=>{
+    const select=document.querySelector(`[data-group="${group}"] [data-gem="${index}"] select[data-gem-field="skill_id"]`);
+    if(!select)return;expandGemOptions(select);select.value=skillId;select.dispatchEvent(new Event('change',{bubbles:true}));
+   }});return;
+  }
+  if(target.id==='sim-mobile-edit'){document.querySelector('.sim-editor').scrollIntoView({block:'start'});return;}
   if(target.id==='sim-candidate-save'){await saveEquipmentCandidate();return;}
   if(target.id==='sim-compare-share'){await shareComparison();return;}
   if(target.id==='sim-compare-share-copy'){await copyComparison();return;}
