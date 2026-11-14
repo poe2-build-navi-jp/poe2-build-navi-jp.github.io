@@ -345,6 +345,11 @@
 }
 
 @media(max-height:480px){.sim-skill-picker{padding:8px;gap:4px}.sim-skill-picker>label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.sim-skill-picker-head h2{font-size:16px}.sim-skill-picker>input{min-height:44px;padding:8px}#sim-skill-count{font-size:12px;line-height:1.5}}
+.sim-passive-icon{display:inline-block;flex:none;vertical-align:middle;overflow:hidden;background-color:#080c10;background-repeat:no-repeat;border-radius:50%;pointer-events:none}
+.sim-node-title{display:flex;align-items:center;gap:12px;margin-bottom:12px;min-width:0}
+#sim-node-detail .sim-node-title h4{margin:0;overflow-wrap:anywhere;min-width:0}
+#sim-node-catalog-list button>.sim-passive-icon{float:left;margin:0 12px 8px 0}
+#sim-node-catalog-list button::after{content:'';display:block;clear:both}
 @media(max-width:720px){
  .simulator-page .sim-check{min-height:44px}
  .simulator-page .sim-check input{width:22px;height:22px;flex-shrink:0}

@@ -16,6 +16,7 @@ for(const file of ['simulator-worker.js','simulator.js']) {
   const hash=createHash('sha256').update(read('assets/'+reference.slice(2))).digest('hex').slice(0,10);
   return reference+'?v='+hash;
  });
+ body=body.replace(/(\/data\/passive-icons\.json)(?:\?v=[a-f0-9]+)?/g,(_,reference)=>reference+'?v='+createHash('sha256').update(read(reference.slice(1))).digest('hex').slice(0,10));
  fs.writeFileSync(path.join(root,'assets',file),body);
 }
 const overrides=JSON.parse(read('data/simulator-ui-en-overrides.json'));

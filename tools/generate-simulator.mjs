@@ -35,7 +35,7 @@ let worker=await readFile(resolve(root,'assets/simulator-worker.js'),'utf8');
 worker=worker.replace(/\.\/simulator-model\.js(?:\?v=[a-f0-9]+)?/g,`./simulator-model.js?v=${modelHash}`);
 await writeFile(resolve(root,'assets/simulator-worker.js'),worker);
 let client=await readFile(resolve(root,'assets/simulator.js'),'utf8');
-for(const [path,value] of [['./simulator-model.js',modelHash],['./simulator-worker.js',await hash('assets/simulator-worker.js')],['/data/simulator-presets.json',await hash('data/simulator-presets.json')],['/data/simulator-localization.json',await hash('data/simulator-localization.json')],['/data/simulator-equipment.json',await hash('data/simulator-equipment.json')],['/data/simulator-routes.json',await hash('data/simulator-routes.json')],['/data/simulator-examples.json',await hash('data/simulator-examples.json')]]){
+for(const [path,value] of [['./simulator-model.js',modelHash],['./simulator-worker.js',await hash('assets/simulator-worker.js')],['/data/simulator-presets.json',await hash('data/simulator-presets.json')],['/data/simulator-localization.json',await hash('data/simulator-localization.json')],['/data/simulator-equipment.json',await hash('data/simulator-equipment.json')],['/data/simulator-routes.json',await hash('data/simulator-routes.json')],['/data/simulator-examples.json',await hash('data/simulator-examples.json')],['/data/passive-icons.json',await hash('data/passive-icons.json')]]){
  client=client.replace(new RegExp(path.replaceAll('.','\\.')+'(?:\\?v=[a-f0-9]+)?','g'),`${path}?v=${value}`);
 }
 await writeFile(resolve(root,'assets/simulator.js'),client);

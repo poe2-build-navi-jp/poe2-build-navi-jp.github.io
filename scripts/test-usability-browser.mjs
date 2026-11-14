@@ -37,9 +37,16 @@ try{
    await page.locator('[data-equipment-choice]').click();await page.waitForFunction(()=>document.querySelector('#sim-item-text').value.length>10);await page.locator('#sim-item-apply').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor();await check('item-editor'+suffix);
    await page.locator('#sim-item-back').click();await page.locator('[data-slot="helmet"]').click();await page.locator('[data-equipment-mode="rare"]').click();await page.locator('[data-rare-quick="life"]').click();await page.locator('[data-rare-quick="all_res"]').click();assert.equal(await page.locator('[data-rare-row]').count(),2);await check('rare-editor'+suffix);
    await page.locator('#sim-item-reset').click();await page.locator('#sim-item-back').click();await page.locator('[data-slot="ring1"]>.equipment-icon').waitFor();
+   await page.locator('[data-tab="tree"]').click();await page.locator('#sim-tree-nodes circle[data-passive-icon]').first().waitFor();
+   assert.equal(await page.locator('#sim-tree-nodes circle[data-passive-icon]').count(),await page.locator('#sim-tree-nodes circle').count());
+   const art=await page.locator('#sim-passive-sheet').getAttribute('href');assert(art.startsWith('/images/poe2/passives/'));
+   assert((await page.request.get(base+art)).ok(),'local passive art must load');
+   await page.locator('#sim-node-catalog summary').click();assert.equal(await page.locator('#sim-node-catalog-list .sim-passive-icon').count(),30);await check('passive-catalog'+suffix);
+   await page.locator('#sim-node-catalog-list button').first().click();await page.locator('#sim-node-detail .sim-passive-icon').waitFor();await check('passive-detail'+suffix);
+   await page.locator('#sim-tree-open').click();await check('passive-tree'+suffix);await page.locator('#sim-tree-close').click();
   }
   assert.deepEqual(errors,[],`${width}: page errors`);await context.close();
  }
  await writeFile(resolve(output,'report.json'),JSON.stringify(reports,null,2)+'\n');
- console.log(`PASS: ${reports.length} Chromium views at 360/390/768/1366px; search, reading list, menu, JA/EN chooser, image picker, apply, rare edits and reset; no overflow or page errors.`);
+ console.log(`PASS: ${reports.length} Chromium views at 360/390/768/1366px; search, reading list, menu, JA/EN chooser, image picker, apply, rare edits, reset, passive tree/catalog/detail artwork; no overflow or page errors.`);
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve));}
