@@ -6,6 +6,8 @@ The root text file named by `KEY_FILE` in `scripts/indexnow-content.mjs` is this
 
 ## Current selection
 
+`docs/indexnow/2026-11-15-site-usability-changes.json` is the current reviewed plan: the Japanese and English simulator chooser content changed from `55bd9a0e` to `3fcbf0f4`. Shared search and reading shortcuts sit outside article content, so they do not create editorial hash changes on the other pages. No IndexNow submission has been sent for this update.
+
 `docs/indexnow/2026-11-12-decision-changes.json` is the newest reviewed plan: 8 canonical pages changed from `5b29dffb` to `d1aa60d4` (candidate comparisons, mobile summary, input differences, comparison URLs and two reproducible equipment articles). It has not been sent. The generated endgame item article also synchronizes one citation number with its unchanged source data.
 
 `docs/indexnow/2026-11-11-tools-changes.json` is the newest reviewed plan: the homepage and simulator changed from `da95e8d0` to `68a56e4f` (resume navigation, edit history, manual budget comparisons, PNG cards and calculation breakdowns). It has not been sent. The following information-page menu additions do not change the editorial hashes.
