@@ -35,6 +35,7 @@ jobs:
           npm ci --ignore-scripts
           npm run test:search
           npm run test:skill-icons
+          node scripts/test-passive-icons.mjs
           npm run test:usability
       - name: Install browser for responsive checks
         run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium

@@ -7,7 +7,7 @@ if(phoneLayout){arrangeEditor(phoneLayout);if(phoneLayout.matches)$('sim-first-w
 const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const clone = value => structuredClone(value);
 const [presets,exampleData] = await loadCatalogs();
-let localization={names:{}},equipmentCatalog,routeCatalog,editorCatalogPromise;
+let localization={names:{}},equipmentCatalog,routeCatalog,passiveIcons,editorCatalogPromise;
 async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets-en.json?v=51c8202b9e','/data/simulator-examples-en.json?v=d07d1f2ca2'].map(async url => {
  const r=await fetch(url);if(!r.ok)throw Error('The build list could not be loaded. Please retry.');return r.json();
 }));}catch(error){$('sim-catalog-error').hidden=false;$('sim-catalog-message').textContent=error.message;await new Promise(resolve=>{$('sim-catalog-retry').onclick=resolve;});$('sim-catalog-error').hidden=true;}}}
@@ -15,7 +15,7 @@ const trackSim=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag(
 let sharedReadOnly=false,incomingLevel=null,stageBackup=null,auditSequence=0,readyGeneration=0,entrySource='chooser';
 let names=localization.names;
 function loadEditorCatalogs(){
- return editorCatalogPromise ||= Promise.all(['/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment-en.json?v=24cf66f333','/data/simulator-routes-en.json?v=74a6831c43'].map(async url=>{const response=await fetch(url);if(!response.ok)throw Error('Editor data could not be loaded. Please retry.');return response.json();})).then(values=>{[localization,equipmentCatalog,routeCatalog]=values;names=localization.names;}).catch(error=>{editorCatalogPromise=null;throw error;});
+ return editorCatalogPromise ||= Promise.all([Promise.all(['/data/simulator-localization.json?v=3f5c9b399b','/data/simulator-equipment-en.json?v=24cf66f333','/data/simulator-routes-en.json?v=74a6831c43'].map(async url=>{const response=await fetch(url);if(!response.ok)throw Error('Editor data could not be loaded. Please retry.');return response.json();})),fetch('/data/passive-icons.json?v=df7e09cce9').then(response=>response.ok?response.json():null).catch(()=>null)]).then(([values,icons])=>{[localization,equipmentCatalog,routeCatalog]=values;passiveIcons=icons;names=localization.names;}).catch(error=>{editorCatalogPromise=null;throw error;});
 }
 const label=name=>name==='Soul Crystal: {0}'?'Soul Crystal (choose a summon)':name==='Companion: {0}'?'Companion (select a minion)':name==='Spectre: {0}'?'Spectre (select a minion)':name;
 const nodeStats=node=>passiveDescriptions(node,localization,plan?.request.attribute_choices || {},false);
@@ -279,7 +279,30 @@ function updateView(){
  });
 }
 function nodeClasses(id){const node=treeNodes.get(id);return [node.kind,startState.has(id)?'start':'',allocatedState.has(id)?'allocated':'',highlightState.has(id)?'preview':'',selectedState===id?'selected':'',queuedNodes.has(id)?'queued':'',templateVisible&&templateNodes.has(id)?'template':''].filter(Boolean).join(' ');}
+function passiveIcon(node){
+ const record=passiveIcons?.nodes?.[node?.skill];
+ // Historical trees may reuse IDs. Never give a renamed node another node's art.
+ if(!record||record.name!==node.name||record.kind!==node.kind)return null;
+ return passiveIcons.icons[record.icon]?{...passiveIcons.icons[record.icon],index:record.icon}:null;
+}
+function passiveIconMarkup(node,size=40){
+ const icon=passiveIcon(node);if(!icon)return '';
+ const sheet=passiveIcons.sheet,scale=size/sheet.tile;
+ return `<span class="sim-passive-icon" aria-hidden="true" data-passive-icon="${icon.index}" style="width:${size}px;height:${size}px;background-image:url('${esc(sheet.url)}');background-size:${sheet.width*scale}px ${sheet.height*scale}px;background-position:${-icon.x*scale}px ${-icon.y*scale}px"></span>`;
+}
+function ensurePassivePatterns(){
+ if(!passiveIcons||$('sim-passive-patterns'))return;
+ const defs=document.createElementNS(elementNS,'defs');defs.id='sim-passive-patterns';
+ const sheet=passiveIcons.sheet,image=document.createElementNS(elementNS,'image');image.id='sim-passive-sheet';image.setAttribute('href',sheet.url);image.setAttribute('width',sheet.width);image.setAttribute('height',sheet.height);defs.append(image);
+ for(const [index,icon]of passiveIcons.icons.entries()){
+  const pattern=document.createElementNS(elementNS,'pattern');
+  for(const [key,value]of Object.entries({id:`sim-passive-${index}`,width:1,height:1,viewBox:`${icon.x} ${icon.y} ${sheet.tile} ${sheet.tile}`,preserveAspectRatio:'xMidYMid slice'}))pattern.setAttribute(key,value);
+  const use=document.createElementNS(elementNS,'use');use.setAttribute('href','#sim-passive-sheet');pattern.append(use);defs.append(pattern);
+ }
+ $('sim-tree-svg').prepend(defs);
+}
 function drawTreeViewport(){
+ ensurePassivePatterns();
  const margin=150,left=view.x-view.w/2-margin,right=view.x+view.w/2+margin,top=view.y-view.h/2-margin,bottom=view.y+view.h/2+margin;
  const visible=new Set(),edges=new Set(),nodeFragment=document.createDocumentFragment(),edgeFragment=document.createDocumentFragment();
  for(const node of currentTree){
@@ -288,6 +311,7 @@ function drawTreeViewport(){
   const circle=document.createElementNS(elementNS,'circle');
   for(const [key,value]of Object.entries({cx:node.x,cy:node.y,r:node.kind==='keystone'?65:node.kind==='notable'?48:node.kind==='ascendancy_start'?80:28,'data-node':node.skill,'class':nodeClasses(node.skill)}))circle.setAttribute(key,value);
   circle.style.setProperty('--node-tint',nodeTint(node));
+  const icon=passiveIcon(node);if(icon){circle.style.fill=`url(#sim-passive-${icon.index})`;circle.dataset.passiveIcon=icon.index;}
   const title=document.createElementNS(elementNS,'title');title.textContent=[label(node.name),...nodeStats(node)].join('\n');circle.append(title);renderedNodes.set(node.skill,circle);nodeFragment.append(circle);
  }
  for(const edge of treeConnections){
@@ -368,7 +392,7 @@ function renderNodeCatalog(){
  const nodes=treeSearch.filter(({node,text})=>(!q||text.includes(q))&&(mode==='all'||mode==='allocated'&&isAllocatedNode(node)||mode==='ascendancy'&&node.ascendancy_id||node.kind===mode));
  const pages=Math.max(1,Math.ceil(nodes.length/30));nodePage=Math.max(0,Math.min(nodePage,pages-1));
  $('sim-node-catalog-count').textContent=`${nodes.length} nodes · Page ${nodePage+1} / ${pages}`;
- $('sim-node-catalog-list').innerHTML=nodes.slice(nodePage*30,nodePage*30+30).map(({node})=>`<button type="button" data-node-result="${node.skill}"><strong>${esc(label(node.name))}</strong><span>${passiveKind(node)}${isAllocatedNode(node)?' · Allocated':isStartNode(node)?' · Starting point (not counted as allocated)':''}</span>${nodeStats(node).map(line=>`<small>${esc(line)}</small>`).join('')}</button>`).join('') || '<p>No matching passives.</p>';
+ $('sim-node-catalog-list').innerHTML=nodes.slice(nodePage*30,nodePage*30+30).map(({node})=>`<button type="button" data-node-result="${node.skill}">${passiveIconMarkup(node)}<strong>${esc(label(node.name))}</strong><span>${passiveKind(node)}${isAllocatedNode(node)?' · Allocated':isStartNode(node)?' · Starting point (not counted as allocated)':''}</span>${nodeStats(node).map(line=>`<small>${esc(line)}</small>`).join('')}</button>`).join('') || '<p>No matching passives.</p>';
  $('sim-node-prev').disabled=nodePage===0;$('sim-node-next').disabled=nodePage===pages-1;
 }
 function renderQueuedSelection(){
@@ -387,7 +411,7 @@ function nodeDetail(id,{reveal=true,select=false,compact=false}={}){
  if(select&&!isStartNode(node)&&node.kind!=='mastery'&&!isAllocatedNode(node)){if(queuedNodes.has(id))queuedNodes.delete(id);else queuedNodes.add(id);}
  selectedNode=id;preview=null;++editSequence;
  const allocated=isAllocatedNode(node),start=Object.values(result?.tree_effects?.class_starts || {}).includes(id)||node.kind==='ascendancy_start',decorative=node.kind==='mastery';
- $('sim-node-detail').innerHTML=`<h4 tabindex="-1">${esc(label(node.name))}</h4><p>${passiveKind(node)} · ${start?'Starting point (not counted as allocated)':allocated?'Allocated':'Unallocated'}${node.ascendancy_id?' · Ascendancy':''}</p><ul>${nodeStats(node).map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${node.name==='Attribute'?`<label>Attribute for this node<select id="sim-node-attribute"><option value="str">+5 Strength</option><option value="dex">+5 Dexterity</option><option value="int">+5 Intelligence</option></select></label>`:''}${!start&&!decorative?`<div class="sim-actions"><button type="button" id="sim-node-preview" class="sim-primary">${queuedNodes.size?`Selected ${queuedNodes.size} nodes: preview allocation`:allocated?'Preview removals and changes':'Preview allocation path and changes'}</button></div>`:''}<div id="sim-node-preview-result" aria-live="polite"></div>`;
+ $('sim-node-detail').innerHTML=`<div class="sim-node-title">${passiveIconMarkup(node,56)}<h4 tabindex="-1">${esc(label(node.name))}</h4></div><p>${passiveKind(node)} · ${start?'Starting point (not counted as allocated)':allocated?'Allocated':'Unallocated'}${node.ascendancy_id?' · Ascendancy':''}</p><ul>${nodeStats(node).map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${node.name==='Attribute'?`<label>Attribute for this node<select id="sim-node-attribute"><option value="str">+5 Strength</option><option value="dex">+5 Dexterity</option><option value="int">+5 Intelligence</option></select></label>`:''}${!start&&!decorative?`<div class="sim-actions"><button type="button" id="sim-node-preview" class="sim-primary">${queuedNodes.size?`Selected ${queuedNodes.size} nodes: preview allocation`:allocated?'Preview removals and changes':'Preview allocation path and changes'}</button></div>`:''}<div id="sim-node-preview-result" aria-live="polite"></div>`;
  if($('sim-node-attribute'))$('sim-node-attribute').value=plan.request.attribute_choices?.[id] || 'str';renderTreeState();
  if(compact&&queuedNodes.size)$('sim-node-inspector').open=false;
  if(reveal&&!treeFullscreen){$('sim-node-detail').querySelector('h4').focus({preventScroll:true});$('sim-node-detail').scrollIntoView({block:'nearest',behavior:'instant'});}
