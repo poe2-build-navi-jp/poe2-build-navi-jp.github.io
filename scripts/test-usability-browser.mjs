@@ -41,8 +41,7 @@ try{
    assert.equal(await page.locator('#sim-tree-nodes circle[data-passive-icon]').count(),await page.locator('#sim-tree-nodes circle').count());
    const art=await page.locator('#sim-passive-sheet').getAttribute('href');assert(art.startsWith('/images/poe2/passives/'));
    assert((await page.request.get(base+art)).ok(),'local passive art must load');
-   // Phone tabs open the full-screen tree with its settings collapsed.
-   if(await page.locator('#sim-tree-settings').getAttribute('open')===null)await page.locator('#sim-tree-settings>summary').click();
+   if(!await page.locator('#sim-tree-settings').evaluate(element=>element.open))await page.locator('#sim-tree-settings>summary').click();
    await page.locator('#sim-node-catalog summary').click();assert.equal(await page.locator('#sim-node-catalog-list .sim-passive-icon').count(),30);await check('passive-catalog'+suffix);
    await page.locator('#sim-node-catalog-list button').first().click();await page.locator('#sim-node-detail .sim-passive-icon').waitFor();await check('passive-detail'+suffix);
    if(await page.locator('#sim-tree-open').isVisible())await page.locator('#sim-tree-open').click();
