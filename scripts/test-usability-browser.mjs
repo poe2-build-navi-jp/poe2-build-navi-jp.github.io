@@ -44,7 +44,9 @@ try{
    if(!await page.locator('#sim-tree-settings').evaluate(element=>element.open))await page.locator('#sim-tree-settings>summary').click();
    await page.locator('#sim-node-catalog summary').click();assert.equal(await page.locator('#sim-node-catalog-list .sim-passive-icon').count(),30);await check('passive-catalog'+suffix);
    await page.locator('#sim-node-catalog-list button').first().click();await page.locator('#sim-node-detail .sim-passive-icon').waitFor();await check('passive-detail'+suffix);
-   await page.locator('#sim-tree-open').click();await check('passive-tree'+suffix);await page.locator('#sim-tree-close').click();
+   if(await page.locator('#sim-tree-open').isVisible())await page.locator('#sim-tree-open').click();
+   if(await page.locator('#sim-tree-hide-node').isVisible())await page.locator('#sim-tree-hide-node').click();
+   await check('passive-tree'+suffix);await page.locator('#sim-tree-close').click();
   }
   assert.deepEqual(errors,[],`${width}: page errors`);await context.close();
  }
