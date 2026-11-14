@@ -893,7 +893,7 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)save();});
 $('sim-unique-search').addEventListener('input',()=>{if(catalog)renderUniques();});
 $('sim-node-search').addEventListener('input',()=>{
  const q=$('sim-node-search').value.trim().toLowerCase();const found=[];if(q)for(const item of treeSearch){if(item.text.includes(q))found.push(item.node);if(found.length===25)break;}
- nodePage=0;renderNodeCatalog();$('sim-node-search-results').innerHTML=found.map(n=>`<button type="button" data-node-result="${n.skill}"><strong>${esc(label(n.name))}</strong><small>${esc(nodeStats(n).join(' / '))}</small></button>`).join('')+(q&&!found.length?'<p>一致するノードがありません。</p>':'');
+ nodePage=0;renderNodeCatalog();$('sim-node-search-results').innerHTML=found.map(n=>`<button type="button" data-node-result="${n.skill}">${passiveIconMarkup(n)}<strong>${esc(label(n.name))}</strong><small>${esc(nodeStats(n).join(' / '))}</small></button>`).join('')+(q&&!found.length?'<p>一致するノードがありません。</p>':'');
 });
 let drag;
 const treeSvg=$('sim-tree-svg'),treeMap=$('sim-tree-map'),treePointers=new Map();
