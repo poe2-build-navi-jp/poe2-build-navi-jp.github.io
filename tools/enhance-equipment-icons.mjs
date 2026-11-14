@@ -11,9 +11,9 @@ const catalog=JSON.parse(await read('data/equipment-icons.json'));
 const entries=catalog.entries.map(({id,name,names,kind,baseId,uniqueId,itemBase,src})=>({id,name,names,kind,...(baseId?{baseId}:{}),...(uniqueId!==undefined?{uniqueId,itemBase}:{}),src}));
 await writeFile(resolve(root,'assets/equipment-icon-data.js'),'// Imported game artwork © Grinding Gear Games; see data/equipment-icons.json.\nexport const equipmentIcons='+JSON.stringify(entries)+';\n');
 const cached=new Map(await Promise.all(['skill-icon-matcher.js','equipment-icon-data.js','equipment-icon-matcher.js'].map(async name=>[name,await read('assets/'+name)])));
-for(const file of ['equipment-icon-matcher.js','equipment-icons.js']) {
+for(const file of ['equipment-icon-matcher.js','equipment-icons.js','simulator-equipment-picker.js','simulator-usability.js']) {
  let code=await read('assets/'+file);
- code=code.replace(/(\.\/(?:skill-icon-matcher|equipment-icon-data|equipment-icon-matcher)\.js)(?:\?v=[a-f0-9]+)?/g,(_,path)=>{
+ code=code.replace(/(\.\/(?:skill-icon-matcher|equipment-icon-data|equipment-icon-matcher|simulator-equipment-picker)\.js)(?:\?v=[a-f0-9]+)?/g,(_,path)=>{
   const name=path.slice(2),hash=createHash('sha256').update(cached.get(name)).digest('hex').slice(0,10);return path+'?v='+hash;
  });
  await writeFile(resolve(root,'assets/'+file),code);

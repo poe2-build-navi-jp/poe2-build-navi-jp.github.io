@@ -6,6 +6,7 @@ const marker = (name) => (html) => html.indexOf(`<!-- ${name}:start -->`);
 export const HEAD_BLOCKS = [
   ["skill-icons", marker("skill-icons")],
   ["equipment-icons", marker("equipment-icons")],
+  ["site-usability", marker("site-usability")],
   ["image-seo", marker("image-seo")],
   ["image-schema", marker("image-schema")],
   // inject-analytics adds this script without a marker.

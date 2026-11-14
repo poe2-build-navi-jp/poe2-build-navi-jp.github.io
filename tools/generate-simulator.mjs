@@ -1,6 +1,7 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {createHash} from 'node:crypto';
+import {improveChooser} from './simulator-chooser-layout.mjs';
 const root = resolve(import.meta.dirname,'..');
 const builds = JSON.parse(await readFile(resolve(root,'data/builds.json'),'utf8')).filter(b=>b.status==='verified');
 const site = JSON.parse(await readFile(resolve(root,'data/site.json'),'utf8'));
@@ -38,7 +39,7 @@ for(const [path,value] of [['./simulator-model.js',modelHash],['./simulator-work
  client=client.replace(new RegExp(path.replaceAll('.','\\.')+'(?:\\?v=[a-f0-9]+)?','g'),`${path}?v=${value}`);
 }
 await writeFile(resolve(root,'assets/simulator.js'),client);
-const cards = presets.map(p=>`<a class="sim-build-card" href="/simulator/?build=${esc(p.id)}" data-preset="${esc(p.id)}"><span>${esc(p.className)} / ${esc(p.ascendancyName)}</span><h2>${esc(p.name)}</h2><p>${esc(p.mainSkill)}</p><b>このビルドで作る <span aria-hidden="true">↗</span></b></a>`).join('');
+const cards = presets.map(p=>`<a class="sim-build-card" href="/simulator/?build=${esc(p.id)}" data-preset="${esc(p.id)}" data-build-class="${esc(p.class)}" data-build-keywords="${esc([...p.skills,p.ascendancy].join(' '))}"><span>${esc(p.className)} / ${esc(p.ascendancyName)}</span><h2>${esc(p.name)}</h2><p>${esc(p.mainSkill)}</p><b>このビルドで作る <span aria-hidden="true">↗</span></b></a>`).join('');
 const workspaceHtml=await readFile(resolve(root,'tools/simulator-workspace.html'),'utf8');
 const exampleData=JSON.parse(await readFile(resolve(root,'data/simulator-examples.json'),'utf8'));
 const sampleChoices=`<section id="sim-sample-choices" class="sim-sample-choices"><h2>装備入りの見本で操作を試す</h2><p>装備・主力ジェム・パッシブ入りの操作サンプルです。内容を見てから取り込み、自分の構成へ調整できます。</p><div class="sim-build-grid">${exampleData.examples.filter(e=>e.kind==='sample').map(e=>`<a class="sim-build-card" href="/simulator/?build=${esc(e.preset)}&amp;example=${esc(e.id)}"><span>Lv${e.level}・装備6点・パッシブ3点</span><h3>${esc(e.title)}</h3><b>見本の内容を見る →</b></a>`).join('')}</div></section>`;
@@ -54,7 +55,7 @@ const html = `<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta n
 <section id="sim-config" class="sim-panel" hidden><div class="sim-panel-heading"><h3>計算条件</h3><p>敵と報酬の条件をそろえて比較してください。追加の効果も日本語で設定できます。</p></div><label>敵の種類<select id="sim-enemy"><option value="none">通常の敵</option><option value="boss">ボス</option><option value="pinnacle">ピナクルボス</option><option value="uber">ウーバーボス</option></select></label><label class="sim-check"><input type="checkbox" id="sim-life-reward">溶岩の祠のライフ5%報酬を取得済み</label><label>追加する効果<select id="sim-config-modifier"></select></label><button id="sim-config-add" type="button">入力欄に追加</button><label>追加の効果（日本語・1行に1つ）<textarea id="sim-extra-mods" rows="6" spellcheck="false" placeholder="最大ライフ +100&#10;火耐性 +30%" aria-describedby="sim-extra-mods-help"></textarea></label><p id="sim-extra-mods-help" class="sim-muted">上の候補から追加して数値を編集できます。例：最大ライフ +100、火耐性 +30%、追加物理ダメージ 10〜20。入力した効果は「条件を反映」で適用されます。</p><button type="button" id="sim-config-apply" class="sim-primary">条件を反映</button><label>構成のメモ<textarea id="sim-notes" rows="5" maxlength="20000"></textarea></label><p class="sim-muted">保存ファイルに含まれるチャージ・状態異常などの設定は保持します。戦闘中の操作順やバフの稼働率は再現しません。</p></section></div></div></section>
 <aside id="sim-mobile-summary" class="sim-mobile-summary" hidden aria-label="編集中の計算結果"><div class="sim-mobile-summary-head"><span id="sim-mobile-summary-status">開始時との差</span><button id="sim-mobile-more" type="button">結果を詳しく</button></div><div id="sim-mobile-summary-values"></div></aside><noscript><p class="sim-noscript">シミュレーターの操作にはJavaScriptが必要です。ビルドガイドはJavaScriptなしでも読めます。</p></noscript></main><aside class="sim-footer" aria-label="計算エンジンの出典"><a href="/assets/simulator-engine/v0.0.46/LICENSE.txt">MITライセンス</a><p>Game data © Grinding Gear Games. 非公式ツールです。</p></aside></body></html>\n`;
 await mkdir(resolve(root,'simulator'),{recursive:true});
-await writeFile(resolve(root,'simulator/index.html'),html);
+await writeFile(resolve(root,'simulator/index.html'),improveChooser(html));
 for (const p of presets) {
   const file = resolve(root,`.${p.path}index.html`);
   let html = (await readFile(file,'utf8')).replace(/<!-- simulator-entry:start -->[\s\S]*?<!-- simulator-entry:end -->/g,'');

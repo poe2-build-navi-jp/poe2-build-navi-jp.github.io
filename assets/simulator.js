@@ -24,6 +24,7 @@ let editHistory=null,historyBusy=false,priceBook=null,priceStorageSnapshot=null,
 let decisionSequence=0,multiSequence=0,isolateSequence=0,candidateTable=null;
 let equipmentDraftVersion=0,candidateBusy=false,incomingComparison=null,comparisonSource=null,summaryBaseline=null,locationSequence=0;
 let itemSource='',equipmentMode='unique',rareDraft=null,editorBaseline=null;
+let uniqueDraftSequence=0;
 let worker,bootPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
 let selectedSlot='helmet',selectedNode=null,preview=null,activeTab='items',view={x:0,y:0,w:8500,h:6500},currentTree=[];
 const pending = new Map();
@@ -182,6 +183,7 @@ const utility=slot=>/^(Flask|Charm) /.test(slot);
 const itemList=()=>utility(selectedSlot)?(plan.request.flasks ||= []):(plan.request.items ||= []);
 function itemName(text){const lines=text.trim().split('\n');return /^Rarity:/i.test(lines[0])?lines[1] || '未装備':lines[0] || '未装備';}
 function renderSlots(){
+ ++uniqueDraftSequence;
  plan.weaponSets=weaponSetState(plan.request,plan.equipmentDrafts || {},plan.weaponSets);for(const b of document.querySelectorAll('[data-weapon-set]')){const active=+b.dataset.weaponSet===plan.weaponSets.active;b.setAttribute('aria-pressed',String(active));} $('sim-weapon-set-status').textContent=`武器スロット${plan.weaponSets.active}の装備でステータスを計算します。`;
  $('sim-slots').innerHTML=slots.map(([id,title])=>{const item=(utility(id)?plan.request.flasks:plan.request.items)?.find(i=>i.slot===id);return `<button type="button" data-slot="${id}" data-equipment-text="${esc(item?.text||'')}" aria-pressed="${id===selectedSlot}">${title}<small>${esc(item?label(itemName(item.text)):'未装備')}</small></button>`;}).join('');
  $('sim-slot-title').textContent=(selectedSlot.startsWith('weapon')?`武器スロット${plan.weaponSets.active} · `:'')+slots.find(s=>s[0]===selectedSlot)?.[1];itemSource=itemList().find(i=>i.slot===selectedSlot)?.text || '';$('sim-item-text').value=localizeItemText(itemSource,names);renderUniques();
@@ -768,7 +770,21 @@ document.addEventListener('click',async event=>{
   if(target.id==='sim-rare-add'){readRareDraft();if(rareDraft.modifiers.length>=10)throw Error('オプションは10行まで追加できます。');const def=equipmentCatalog.modifiers.find(m=>!rareDraft.modifiers.some(x=>x.id===m.id));rareDraft.modifiers.push({id:def.id,values:[...def.default]});renderRareModifiers();return;}
   if(target.dataset.rareRemove!==undefined){readRareDraft();rareDraft.modifiers.splice(+target.dataset.rareRemove,1);renderRareModifiers();return;}
   if(target.id==='sim-item-show-stats'){$('sim-stats').scrollIntoView({block:'start',behavior:'instant'});return;}
-  if(target.id==='sim-unique-draft'){const value=$('sim-unique').value;if(!value)return;const drafted=await rpc('unique',{id:+value,roll:+$('sim-roll').value});itemSource=drafted.text;$('sim-item-text').value=localizeItemText(itemSource,names);return;}
+  if(target.id==='sim-item-reset'){renderSlots();openItemEditor();document.dispatchEvent(new Event('sim-equipment-applied'));return;}
+  if(target.dataset.rareQuick){
+   if(equipmentMode!=='rare'||!rareDraft)return;
+   readRareDraft();const def=equipmentCatalog.modifiers.find(mod=>mod.id===target.dataset.rareQuick);if(!def)return;
+   let index=rareDraft.modifiers.findIndex(mod=>mod.id===def.id);
+   if(index<0){if(rareDraft.modifiers.length>=10)return;rareDraft.modifiers.push({id:def.id,values:[...def.default]});index=rareDraft.modifiers.length-1;renderRareModifiers();$('sim-rare-modifiers').dispatchEvent(new Event('input',{bubbles:true}));}
+   document.querySelector(`[data-rare-row="${index}"] [data-rare-value]`)?.focus();return;
+  }
+  if(target.id==='sim-unique-draft'){
+   const value=$('sim-unique').value;if(!value)return;
+   const token=++uniqueDraftSequence,version=generation,slot=selectedSlot,roll=$('sim-roll').value,initial=$('sim-item-text').value;
+   const drafted=await rpc('unique',{id:+value,roll:+roll});
+   if(token!==uniqueDraftSequence||version!==generation||slot!==selectedSlot||equipmentMode!=='unique'||$('sim-item-editor').hidden||$('sim-unique').value!==value||$('sim-roll').value!==roll||$('sim-item-text').value!==initial)return;
+   itemSource=drafted.text;$('sim-item-text').value=localizeItemText(itemSource,names);$('sim-item-text').dispatchEvent(new Event('input',{bubbles:true}));return;
+  }
   if(target.id==='sim-item-preview'){await previewEquipment();return;}
   if(target.id==='sim-item-apply'||target.id==='sim-item-remove'){
    let text='';
@@ -781,7 +797,7 @@ document.addEventListener('click',async event=>{
    plan.equipmentDrafts ||= {};
    if(text){list.push({slot:selectedSlot,text,...(utility(selectedSlot)?{active:true}:{})});if(equipmentMode==='rare')plan.equipmentDrafts[selectedSlot]=clone(rareDraft);else delete plan.equipmentDrafts[selectedSlot];}
    else delete plan.equipmentDrafts[selectedSlot];
-   trackSim('simulator_equipment_apply',{action:target.id==='sim-item-remove'?'remove':'apply',slot:selectedSlot});commit();renderSlots();$('sim-rare-dirty').textContent='変更を反映して再計算しています…';return;
+   trackSim('simulator_equipment_apply',{action:target.id==='sim-item-remove'?'remove':'apply',slot:selectedSlot});commit();renderSlots();$('sim-rare-dirty').textContent='変更を反映して再計算しています…';document.dispatchEvent(new Event('sim-equipment-applied'));return;
   }
   if(target.dataset.removeGroup!==undefined){plan.request.socket_groups.splice(+target.dataset.removeGroup,1);plan.request.main_socket_group=Math.max(0,Math.min(plan.request.main_socket_group || 0,plan.request.socket_groups.length-1));renderSkills();commit();return;}
   if(target.dataset.removeGem!==undefined){const group=plan.request.socket_groups[+target.closest('[data-group]').dataset.group];group.gems.splice(+target.dataset.removeGem,1);renderSkills();commit();return;}

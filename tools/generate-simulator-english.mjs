@@ -22,7 +22,7 @@ function translate(value) {
   if (hasJa(value)) missing.add(value);
   return value;
 }
-const japanese = read('simulator/index.html').replace(/<!-- simulator-language:start -->[\s\S]*?<!-- simulator-language:end -->/g,'');
+const japanese = read('simulator/index.html').replace(/<!-- simulator-language:start -->[\s\S]*?<!-- simulator-language:end -->/g,'').replace(/<!-- (site-tools|site-usability):start -->[\s\S]*?<!-- \1:end -->/g,'');
 const document = parse(japanese, {scriptingEnabled:false});
 function walk(node, fn) {fn(node); for(const child of node.childNodes || []) walk(child,fn);}
 function attr(node,key) {return node.attrs?.find(a=>a.name===key);}

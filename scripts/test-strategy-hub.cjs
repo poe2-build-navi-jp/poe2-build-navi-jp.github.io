@@ -55,7 +55,7 @@ for(const file of ['index.html','builds/index.html','guides/index.html','builds/
   const page=new JSDOM(read(file)).window.document;
   assert.equal(page.querySelectorAll('.site-nav a[href="/guides/"]').length,1,'Guide is available once in main menu');
 }
-assert(!doc.querySelector('form'),'No duplicate leveling form');
+assert(!doc.querySelector('main form'),'No duplicate leveling form in the guide hub');
 const site=JSON.parse(read('data/site.json'));
 assert(doc.querySelector('.guide-patch').textContent.includes(site.latestPatchCheckedAt));
 assert(doc.querySelector(`.guide-patch a[href="${site.latestPatchSource}"]`));

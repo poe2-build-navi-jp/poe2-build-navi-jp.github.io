@@ -34,6 +34,18 @@ jobs:
           npm ci --ignore-scripts
           npm run test:search
           npm run test:skill-icons
+          npm run test:usability
+      - name: Install browser for responsive checks
+        run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium
+      - name: Check phone, tablet and desktop usability
+        run: npm run test:usability:browser
+      - name: Keep responsive check screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: usability-screenshots
+          path: /tmp/poe2-usability-qa
+          if-no-files-found: ignore
       - name: Collect site files
         run: |
           mkdir _site
