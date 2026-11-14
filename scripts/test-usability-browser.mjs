@@ -42,6 +42,8 @@ try{
    const art=await page.locator('#sim-passive-sheet').getAttribute('href');assert(art.startsWith('/images/poe2/passives/'));
    assert((await page.request.get(base+art)).ok(),'local passive art must load');
    if(!await page.locator('#sim-tree-settings').evaluate(element=>element.open))await page.locator('#sim-tree-settings>summary').click();
+   await page.locator('#sim-node-search').fill('59779');await page.locator('#sim-node-search-results .sim-passive-icon').waitFor();
+   assert.equal(await page.locator('#sim-node-search-results .sim-passive-icon').count(),1);await check('passive-search'+suffix);await page.locator('#sim-node-search').fill('');
    await page.locator('#sim-node-catalog summary').click();assert.equal(await page.locator('#sim-node-catalog-list .sim-passive-icon').count(),30);await check('passive-catalog'+suffix);
    await page.locator('#sim-node-catalog-list button').first().click();await page.locator('#sim-node-detail .sim-passive-icon').waitFor();await check('passive-detail'+suffix);
    if(await page.locator('#sim-tree-open').isVisible())await page.locator('#sim-tree-open').click();
