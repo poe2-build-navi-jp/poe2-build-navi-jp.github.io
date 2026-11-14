@@ -17,6 +17,7 @@ export const BUILD_STEPS=[
  'generate-simulator-english', // finish English UI after Japanese-only enhancers
  'enhance-skill-icons',       // real game icons beside names in JA/EN and dynamic skill selectors
  'audit-skill-icons',         // fail the build if any engine skill lacks an identified image
+ 'enhance-equipment-icons',  // sourced local equipment artwork; inventory and simulator previews
  'generate-sitemap',         // after everything that changes <main>: it records each page's content date
  'enhance-page-schema',      // reads those dates
  'enhance-editorial-trust',  // visible editor, matching identity and source citations

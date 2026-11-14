@@ -6,3 +6,4 @@ node_modules/
 .env
 .env.*
 .claude/settings.local.json
+tools/.equipment-icon-cache/

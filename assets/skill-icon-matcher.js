@@ -62,7 +62,8 @@ export function skillTextHtml(value, matcher) {
 export const skipSkillTags=new Set(['head','script','style','svg','math','pre','code','textarea','input','select','option','noscript','template','nav','blockquote','q','cite','button']);
 export function skipSkillElement(tag,attrs) {
   return skipSkillTags.has(tag)||attrs.contenteditable!==undefined||attrs['data-skill-icon']!==undefined||
+    attrs['data-equipment-icon']!==undefined||attrs['data-equipment-text']!==undefined||
     attrs['data-skill-selected']!==undefined||attrs.translate==='no'||attrs['aria-live']||attrs.role==='status'||
     /^(?:sources?|source-list)(?:-|$)/.test(attrs.id||'')||attrs['aria-labelledby']==='sources-title'||
-    /(?:^|\s)(?:source-link|rating-quote|guide-share-box|breadcrumbs|skill-name)(?:\s|$)/.test(attrs.class||'');
+    /(?:^|\s)(?:source-link|rating-quote|guide-share-box|breadcrumbs|skill-name|equipment-select-field)(?:\s|$)/.test(attrs.class||'');
 }

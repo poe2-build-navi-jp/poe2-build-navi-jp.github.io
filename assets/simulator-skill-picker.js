@@ -1,5 +1,5 @@
 import {skillIcons} from './skill-icon-data.js?v=e02be58c1b';
-import {createSkillMatcher,skillImageHtml,escapeSkillText} from './skill-icon-matcher.js?v=afb5bc697b';
+import {createSkillMatcher,skillImageHtml,escapeSkillText} from './skill-icon-matcher.js?v=4b20b1824e';
 
 const matcher=createSkillMatcher(skillIcons);
 const sessions=new WeakMap();

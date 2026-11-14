@@ -39,7 +39,7 @@ for (const entry of sitemap.getElementsByTagName('url')) {
   }
   for (const loc of entry.getElementsByTagName('image:loc')) assert(visible.has(loc.textContent), `${path}: sitemap image absent from page`);
   for (const img of doc.querySelectorAll('main img')) {
-    assert(img.getAttribute('alt')?.trim() || (img.matches('.skill-icon[alt=""][aria-hidden="true"]') && img.closest('.skill-name')), `${path}: missing alt`);
+    assert(img.getAttribute('alt')?.trim() || (img.matches('.skill-icon[alt=""][aria-hidden="true"]') && img.closest('.skill-name')) || (img.matches('.equipment-icon[alt=""][aria-hidden="true"]') && img.closest('.equipment-name')), `${path}: missing alt`);
     assert(+img.getAttribute('width') > 0 && +img.getAttribute('height') > 0, `${path}: missing dimensions`);
   }
   if (path === '/' || path === '/beginner-builds/') {

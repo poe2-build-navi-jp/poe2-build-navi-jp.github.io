@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p
 const intents=JSON.parse(read('data/guide-search-intents.json')),site=JSON.parse(read('data/site.json')),dates=JSON.parse(read('data/page-dates.json'));
 function schemas(doc){let out=[];function visit(n){if(Array.isArray(n))n.forEach(visit);else if(n&&typeof n==='object'){out.push(n);if(n['@graph'])visit(n['@graph']);}}for(const s of doc.querySelectorAll('script[type="application/ld+json"]'))visit(JSON.parse(s.textContent));return out;}
 const strip=h=>h.replace(/<!-- guide-search-answer:start -->[\s\S]*?<!-- guide-search-answer:end -->/g,'');
-const withoutSkillIcons=h=>h.replace(/<span class="skill-name" data-skill-icon="[^"]+"><img\b[^>]*>([\s\S]*?)<\/span>/g,'$1');
+const withoutSkillIcons=h=>h.replace(/<span class="skill-name" data-skill-icon="[^"]+"><img\b[^>]*>([\s\S]*?)<\/span>/g,'$1').replace(/<span class="equipment-name" data-equipment-icon="[^"]+"><img\b[^>]*>([\s\S]*?)<\/span>/g,'$1');
 (async()=>{
  const {enhanceHtml}=await import(pathToFileURL(path.join(root,'tools/enhance-guide-search-intents.mjs')));
  assert(intents.length>=18);assert.equal(new Set(intents.map(i=>i.primaryIntent)).size,intents.length);assert.equal(new Set(intents.map(i=>i.path)).size,intents.length);

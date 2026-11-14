@@ -184,7 +184,7 @@ const itemList=()=>utility(selectedSlot)?(plan.request.flasks ||= []):(plan.requ
 function itemName(text){const lines=text.trim().split('\n');return /^Rarity:/i.test(lines[0])?lines[1] || 'Empty':lines[0] || 'Empty';}
 function renderSlots(){
  plan.weaponSets=weaponSetState(plan.request,plan.equipmentDrafts || {},plan.weaponSets);for(const b of document.querySelectorAll('[data-weapon-set]')){const active=+b.dataset.weaponSet===plan.weaponSets.active;b.setAttribute('aria-pressed',String(active));} $('sim-weapon-set-status').textContent=`Weapon set ${plan.weaponSets.active} equipment is used to calculate stats.`;
- $('sim-slots').innerHTML=slots.map(([id,title])=>{const item=(utility(id)?plan.request.flasks:plan.request.items)?.find(i=>i.slot===id);return `<button type="button" data-slot="${id}" aria-pressed="${id===selectedSlot}">${title}<small>${esc(item?label(itemName(item.text)):'Empty')}</small></button>`;}).join('');
+ $('sim-slots').innerHTML=slots.map(([id,title])=>{const item=(utility(id)?plan.request.flasks:plan.request.items)?.find(i=>i.slot===id);return `<button type="button" data-slot="${id}" data-equipment-text="${esc(item?.text||'')}" aria-pressed="${id===selectedSlot}">${title}<small>${esc(item?label(itemName(item.text)):'Empty')}</small></button>`;}).join('');
  $('sim-slot-title').textContent=(selectedSlot.startsWith('weapon')?`Weapon set ${plan.weaponSets.active} · `:'')+slots.find(s=>s[0]===selectedSlot)?.[1];itemSource=itemList().find(i=>i.slot===selectedSlot)?.text || '';$('sim-item-text').value=localizeItemText(itemSource,names);renderUniques();
 }
 function openItemEditor(){
@@ -734,7 +734,7 @@ document.addEventListener('click',async event=>{
   if(target.hasAttribute('data-find-gem')){
    const group=target.closest('[data-group]').dataset.group,index=target.dataset.findGem;
    const current=catalog.gems.find(gem=>gem.skill_id===plan.request.socket_groups[group].gems[index].skill_id);
-   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=56c93d7d2c');
+   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=c7bb0690cd');
    openSkillPicker({document,gems:catalog.gems,label,support:current?.is_support||false,selected:current?.skill_id,returnFocus:target,onSelect:skillId=>{
     const select=document.querySelector(`[data-group="${group}"] [data-gem="${index}"] select[data-gem-field="skill_id"]`);
     if(!select)return;expandGemOptions(select);select.value=skillId;select.dispatchEvent(new Event('change',{bubbles:true}));
