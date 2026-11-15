@@ -34,7 +34,8 @@ const preset = target.preset, auto = 'poe2-simulator:v1:' + preset;
 const named = JSON.stringify({version: 1, plans: [{id: 'qa-goal-target', name: 'QA target <img src=x onerror=alert(1)>', saved: target}]});
 const ready = async page => {
   try {
-    await page.waitForFunction(() => document.querySelector('#sim-stats')?.getAttribute('aria-busy') === 'false' && !!window.Poe2SimulatorLibrary?.goalData(), undefined, {timeout: 100000});
+    await page.waitForFunction(() => !document.querySelector('#sim-error')?.hidden || (document.querySelector('#sim-stats')?.getAttribute('aria-busy') === 'false' && !!window.Poe2SimulatorLibrary?.goalData()), undefined, {timeout: 100000});
+    if (await page.locator('#sim-error').isVisible()) throw Error(await page.locator('#sim-error').textContent());
   } catch (cause) {
     throw Error('Simulator initialization: ' + await page.locator('#sim-status').textContent() + ' / ' + await page.locator('#sim-error').textContent(), {cause});
   }
@@ -92,9 +93,9 @@ try {
           assert.equal(await page.evaluate(key => localStorage.getItem(key), goalKey(preset)), goal);
           assert.equal(await page.locator('[data-goal-group="gems"] summary span').textContent(), '1');
           if (locale) assert(!(await page.locator('#sim-goal-panel').innerText()).match(/[ぁ-んァ-ヶ一-龥]/), 'English target controls must be localized');
-          await page.goto(base + locale + '/simulator/?build=ranger-ice-shot-deadeye'); await ready(page); await open(page, '#sim-goal-panel');
+          await page.locator('#sim-change-build').click(); await page.locator('[data-preset="ranger-ice-shot-deadeye"]').click(); await ready(page); await open(page, '#sim-goal-panel');
           assert.equal(await page.locator('#sim-goal-active').isVisible(), false, 'targets are isolated by build');
-          await page.goto(base + locale + '/simulator/?build=' + preset); await ready(page); await open(page, '#sim-goal-panel');
+          await page.locator('#sim-change-build').click(); await page.locator('[data-preset="' + preset + '"]').click(); await ready(page); await open(page, '#sim-goal-panel');
           await open(page, '[data-goal-group="gems"]'); await open(page, '[data-goal-group="passives"]');
           const layout = await page.evaluate(() => ({width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
             outside: [...document.body.querySelectorAll('*')].map(element => ({element, rect: element.getBoundingClientRect()}))
