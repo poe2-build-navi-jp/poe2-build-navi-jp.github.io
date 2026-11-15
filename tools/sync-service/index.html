@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <title>POE2ビルドナビ 保存構成の同期</title>
+  </head>
+  <body>
+    <main>
+      <p>POE2ビルドナビ</p>
+      <h1>保存構成の同期</h1>
+      <p>
+        スマートフォンとPCで、名前を付けた構成と比較記録を共有するための保管庫です。構成の編集は<a
+          href="https://poe2-build-navi-jp.github.io/simulator/#sim-library"
+          >シミュレーター</a
+        >で行えます。
+      </p>
+      <p id="status" role="status" aria-live="polite">
+        接続コードを知っている端末だけが内容を読めます。コードは人に渡さず、安全な場所に控えてください。
+      </p>
+      <section id="setup">
+        <h2>保管庫を接続する</h2>
+        <button id="create" type="button">新しい保管庫を作る</button>
+        <label
+          >接続コード<input
+            id="code"
+            type="password"
+            autocomplete="off"
+            spellcheck="false"
+            autocapitalize="off"
+        /></label>
+        <button id="join" type="button">接続する</button>
+      </section>
+      <section id="connected" hidden>
+        <p id="records"></p>
+        <label
+          >保管庫の名前<input id="label" maxlength="40" autocomplete="off"
+        /></label>
+        <button id="save" type="button">名前を保存</button>
+        <button id="refresh" type="button">最新の内容を読む</button>
+        <details>
+          <summary>接続コードを表示</summary>
+          <p>別の端末のシミュレーターに入力してください。</p>
+          <input
+            id="recovery"
+            aria-label="復旧用の接続コード"
+            readonly
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </details>
+        <button id="disconnect" type="button">この画面の接続を解除</button>
+        <button id="revoke" type="button">保管庫を無効化する</button>
+      </section>
+      <p>
+        一時編集中の内容は別の端末へ移しません。通信できない間も端末内の構成は利用できます。同期容量は2MiBです。
+      </p>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

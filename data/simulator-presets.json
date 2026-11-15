@@ -84,7 +84,8 @@
       }
     ],
     "mainSkill": "ワーリングアサルト",
-    "path": "/builds/monk/whirling-assault/"
+    "path": "/builds/monk/whirling-assault/",
+    "contentRevision": "39a1364d45f54b40"
   },
   {
     "id": "mercenary-twister-gemling",
@@ -171,7 +172,8 @@
       }
     ],
     "mainSkill": "ツイスター",
-    "path": "/builds/mercenary/twister-gemling/"
+    "path": "/builds/mercenary/twister-gemling/",
+    "contentRevision": "3af01ddbfe8c2f18"
   },
   {
     "id": "warrior-shield-wall-smith",
@@ -258,7 +260,8 @@
       }
     ],
     "mainSkill": "シールドウォール",
-    "path": "/builds/warrior/shield-wall-smith/"
+    "path": "/builds/warrior/shield-wall-smith/",
+    "contentRevision": "fe64d37c8d2b576d"
   },
   {
     "id": "sorceress-sand-fire",
@@ -346,7 +349,8 @@
       }
     ],
     "mainSkill": "ケラリの幻惑 / ルザンの罠",
-    "path": "/builds/sorceress/sand-and-fire/"
+    "path": "/builds/sorceress/sand-and-fire/",
+    "contentRevision": "0c951cc693b4ab0b"
   },
   {
     "id": "huntress-companion",
@@ -433,7 +437,8 @@
       }
     ],
     "mainSkill": "テイムビースト",
-    "path": "/builds/huntress/companion/"
+    "path": "/builds/huntress/companion/",
+    "contentRevision": "c42390f0352ca31f"
   },
   {
     "id": "ranger-ice-shot-deadeye",
@@ -520,7 +525,8 @@
       }
     ],
     "mainSkill": "アイスショット",
-    "path": "/builds/ranger/ice-shot-deadeye/"
+    "path": "/builds/ranger/ice-shot-deadeye/",
+    "contentRevision": "1d91d980e7495f57"
   },
   {
     "id": "witch-minion-infernalist",
@@ -607,7 +613,8 @@
       }
     ],
     "mainSkill": "スケルタルスナイパー / スペクター",
-    "path": "/builds/witch/minion-infernalist/"
+    "path": "/builds/witch/minion-infernalist/",
+    "contentRevision": "0f2e2c54950e6476"
   },
   {
     "id": "druid-plant-oracle",
@@ -695,7 +702,8 @@
       }
     ],
     "mainSkill": "エンタングル / スラッシングヴァイン",
-    "path": "/builds/druid/plant-oracle/"
+    "path": "/builds/druid/plant-oracle/",
+    "contentRevision": "dc9aa11296f93ea4"
   },
   {
     "id": "witch-ed-contagion-lich",
@@ -783,7 +791,8 @@
       }
     ],
     "mainSkill": "エッセンスドレイン + コンテージョン",
-    "path": "/builds/witch/ed-contagion-lich/"
+    "path": "/builds/witch/ed-contagion-lich/",
+    "contentRevision": "7f9e3ccb1089fa68"
   },
   {
     "id": "mercenary-grenade-gemling",
@@ -870,7 +879,8 @@
       }
     ],
     "mainSkill": "エクスプローシブグレネード",
-    "path": "/builds/mercenary/grenade-gemling/"
+    "path": "/builds/mercenary/grenade-gemling/",
+    "contentRevision": "1983cfefcbd0cfb7"
   },
   {
     "id": "huntress-twister-spirit-walker",
@@ -957,7 +967,8 @@
       }
     ],
     "mainSkill": "ツイスター",
-    "path": "/builds/huntress/twister-spirit-walker/"
+    "path": "/builds/huntress/twister-spirit-walker/",
+    "contentRevision": "0563b6fdd7d6bfa5"
   },
   {
     "id": "sorceress-spark-stormweaver",
@@ -1045,6 +1056,7 @@
       }
     ],
     "mainSkill": "スパーク＋コメット",
-    "path": "/builds/sorceress/spark-stormweaver/"
+    "path": "/builds/sorceress/spark-stormweaver/",
+    "contentRevision": "3df471ddc75a6fd8"
   }
 ]

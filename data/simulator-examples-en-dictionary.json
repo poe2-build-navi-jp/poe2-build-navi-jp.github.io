@@ -30,5 +30,14 @@
   "灰のアービター：確認済み装備7点": "Arbiter of Ash: 7 verified items",
   "記事で特定できた装備7点のみ。新しい撃破記録のアクセサリー・品質・ルーン効果を流用していません。": "Only the 7 items identified in the article are included. Accessories, quality and rune effects from the newer clear record have not been reused.",
   "ソケット数・予約条件・ジェムLvは未確認のため補完していません。": "Socket counts, reservation conditions and gem levels are unverified and have not been filled in.",
-  "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in."
+  "灰のアービター記事の装備欄。品質・個別要求値の未記載箇所は補完していません。": "Equipment from the Arbiter of Ash article. Unspecified quality and individual requirements have not been filled in.",
+  "ツイスター・ジェムリング：参考完成構成": "Twister Gemling: fully entered reference",
+  "アイスショット・デッドアイ：参考完成構成": "Ice Shot Deadeye: fully entered reference",
+  "poe.ninjaのパッシブ取得元（装備・ジェムは別の計算例）": "poe.ninja passive source (equipment and gems are separate calculation examples)",
+  "主力ジェム・サポート・接続済みパッシブと、使用する全装備部位を入力した0.5.5の計算例です。公開キャラクターの装備を再現したものではありません。": "A 0.5.5 reference calculation with a main skill, supports, connected passives and every used equipment slot entered. It does not reproduce the source character’s equipment.",
+  "装備は明示した数値の仮レア装備です。ゲーム内の取得性・相場・最適性・ボス撃破を実証した完成ビルドではありません。": "Equipment consists of synthetic rare items with explicit values. Acquisition, market cost, optimization and boss kills have not been verified in gameplay.",
+  "パッシブ経路だけを公開キャラクターから参照し、通常ポイント上限に合わせて末端を調整しています。原典のユニーク装備・ジュエル・補助スキルは再現していません。": "Only the passive route is based on a public character. Terminal nodes are adjusted to fit the normal point budget. The source character’s unique items, jewels and auxiliary skills are not reproduced.",
+  "付与スキルなど一部のパッシブ効果は計算未対応です。取り込み後の「計算の確認事項」で確認してください。": "Some passive effects, including granted skills, are unsupported. Review Calculation diagnostics after loading the example.",
+  "正式版1.0の構成ではありません。メインスキルの参考計算であり、実戦の総ダメージ・耐久・強さを保証しません。": "This is not a verified 1.0 build. Values cover the selected main skill and do not establish total gameplay damage, survival or overall performance.",
+  "槍の見本はオフハンドを空けています。未入力の装備エラーではありません。": "The spear example intentionally leaves the offhand empty."
 }

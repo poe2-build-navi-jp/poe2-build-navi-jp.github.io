@@ -96,8 +96,8 @@
   },
   {
     "module": "",
-    "from": "${!example.level?' (estimate; kill setup Lvunverified)':''} / Equipment${itemCount} points / Normal passives${saved.request.allocated_nodes.length} points / ${saved.request.socket_groups.length?'Main gemLv'+saved.request.socket_groups[0].gems[0].level:'No skill or support configured'}",
-    "to": "${!example.level?' (estimate; level at kill unverified)':''} / ${itemCount} equipment pieces / ${saved.request.allocated_nodes.length} normal passives / ${saved.request.socket_groups.length?'Main gem Lv'+saved.request.socket_groups[0].gems[0].level:'No skill or support configured'}"
+    "from": "${!example.level?' (estimate; kill setup Lvunverified)':''} / Equipment${itemCount} points / Normal passives${normalCount} points / ${saved.request.socket_groups.length?'Main gemLv'+saved.request.socket_groups[0].gems[0].level:'No skill or support configured'}",
+    "to": "${!example.level?' (estimate; level at kill unverified)':''} / ${itemCount} equipment pieces / ${normalCount} normal passives / ${saved.request.socket_groups.length?'Main gem Lv'+saved.request.socket_groups[0].gems[0].level:'No skill or support configured'}"
   },
   {
     "module": "",

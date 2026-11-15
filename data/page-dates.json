@@ -5,13 +5,13 @@
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "b22a3fe6b146444d",
-  "date": "2026-11-15",
+  "hash": "fce42878cad8944f",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/en/simulator/": {
-  "hash": "e172ba814952a870",
-  "date": "2026-11-15",
+  "hash": "2b71cadd6bcdc877",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/search/": {
@@ -265,8 +265,8 @@
   "hashVersion": 2
  },
  "/privacy/": {
-  "hash": "b7a442208d57b6a2",
-  "date": "2026-11-10",
+  "hash": "1a0e340131130d14",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/terms/": {
@@ -335,8 +335,8 @@
   "hashVersion": 2
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "604b3c020fa4c2da",
-  "date": "2026-11-15",
+  "hash": "8c6518fbb969418b",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/builds/huntress/companion/": {

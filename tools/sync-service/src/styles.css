@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, sans-serif;
+  color: #263337;
+  background: #f5f2eb;
+  line-height: 1.7;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 24px 16px;
+}
+main {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fffdf8;
+  border: 1px solid #d7cec0;
+  border-radius: 16px;
+}
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+h2 {
+  font-size: 1.15rem;
+}
+label {
+  display: block;
+  margin: 16px 0;
+}
+input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  font: inherit;
+  padding: 8px 12px;
+  border: 1px solid #807565;
+  border-radius: 8px;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button {
+  min-height: 48px;
+  font: inherit;
+  padding: 8px 16px;
+  margin: 6px 4px 6px 0;
+  border: 1px solid #766248;
+  border-radius: 8px;
+  color: #fff;
+  background: #695033;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+a {
+  color: #64451e;
+}
+details {
+  margin: 20px 0;
+}
+#status {
+  padding: 12px;
+  border-left: 3px solid #946e35;
+  background: #f1e9db;
+  overflow-wrap: anywhere;
+}
+[hidden] {
+  display: none !important;
+}
+:focus-visible {
+  outline: 3px solid #0b7467;
+  outline-offset: 3px;
+}

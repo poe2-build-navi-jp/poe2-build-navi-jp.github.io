@@ -1,4 +1,5 @@
 .site-tools{background:#eae4d8;border-bottom:1px solid #c7bead;color:#172a37;padding:.55rem clamp(16px,6vw,88px);display:flex;gap:.65rem;align-items:center;flex-wrap:wrap;font:600 .85rem/1.4 system-ui,"Yu Gothic",sans-serif}
+.site-tools [data-build-updates]{display:inline-flex;align-items:center;min-height:44px;padding:7px 10px;border:1px solid #9a8052;border-radius:8px;color:#5b3b17;background:#fff6df;text-decoration:underline;overflow-wrap:anywhere}
 .site-tools form{display:flex;gap:.35rem;flex:1 1 280px;max-width:650px;margin:0}
 .site-tools input{flex:1 1 0;min-width:0;width:0;border:1px solid #a39b8c;background:#fff;border-radius:5px;padding:.55rem .7rem;color:#172a37;font:inherit}
 .site-tools button,.site-tools>a{min-height:44px;border:1px solid #998b73;background:#fffdf7;border-radius:5px;color:#243743;font:inherit;padding:.55rem .7rem;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
