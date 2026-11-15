@@ -99,7 +99,9 @@ try {
           const layout = await page.evaluate(() => ({width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
             outside: [...document.body.querySelectorAll('*')].map(element => ({element, rect: element.getBoundingClientRect()}))
               .filter(({rect}) => rect.width && (rect.right > innerWidth + 1 || rect.left < -1))
-              .slice(0, 15).map(({element, rect}) => ({tag: element.tagName, id: element.id, class: element.className?.baseVal ?? element.className, left: rect.left, right: rect.right, width: rect.width}))}));
+              .slice(0, 15).map(({element, rect}) => ({tag: element.tagName, id: element.id, class: element.className?.baseVal ?? element.className, left: rect.left, right: rect.right, width: rect.width})),
+            wide: [...document.body.querySelectorAll('*')].filter(element => element.clientWidth && element.scrollWidth > element.clientWidth + 1)
+              .slice(0, 20).map(element => ({tag: element.tagName, id: element.id, class: element.className?.baseVal ?? element.className, width: element.clientWidth, scroll: element.scrollWidth, overflow: getComputedStyle(element).overflowX}))}));
           assert(layout.scrollWidth <= layout.width + 1, label + ': overflow ' + JSON.stringify(layout));
           await page.locator('#sim-goal-panel').screenshot({path: resolve(output, label + '.png')});
           await page.locator('#sim-goal-clear').click();
