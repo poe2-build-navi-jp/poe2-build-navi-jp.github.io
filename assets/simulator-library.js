@@ -1,5 +1,5 @@
 import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=5e2b21adc0';
-import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=11fde0ff02';
+import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=1b78fc126c';
 import {newSyncCode} from './simulator-sync-crypto.js?v=6d43b0469b';
 
 const en = document.documentElement.lang === 'en';
@@ -26,6 +26,7 @@ function recordedConditions(record){
     [t('購入予定額B','Planned cost B')]:price(record.source.prices.entries.find(p=>p.id==='b')),[t('予算','Budget')]:price(record.source.prices.budget)};
 }
 function errorText(cause) {
+  if (cause.status === 402) return t('同期サービスの利用枠に達しています。自動再試行を停止しました。端末内の保存は利用できます。', 'The sync service has reached its usage allowance. Automatic retries are paused. Local saves remain available.');
   if (cause.status === 403) return t('接続コードが違うか、保管庫が無効化されています。端末内の保存は残っています。','The code is incorrect or the vault was revoked. Local saves remain available.');
   if (cause.status === 429) return t('同期サービスの利用上限に達しました。自動再試行を停止しました。端末内の保存は利用できます。','The sync service reached its usage limit. Automatic retries are paused. Local saves remain available.');
   if (cause.status === 409) return t('別の端末でも更新されました。最新の内容を読み直して同期します。','Another device updated the vault. Sync will reconcile with the latest revision.');

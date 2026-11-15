@@ -14,8 +14,9 @@ class Storage {
   removeItem(key){this.data.delete(key);}
 }
 class Service {
-  rooms=new Map(); writes=[]; loseReply=false;
+  rooms=new Map(); writes=[]; loseReply=false; unavailable=0;
   async request(operation,body){
+    if(this.unavailable)throw new SyncError(this.unavailable);
     let room=this.rooms.get(body.room);
     if(operation==='create'&&!room){room={token:body.token,revision:0,envelope:null,receipts:new Map(),revoked:false};this.rooms.set(body.room,room);}
     if(!room||room.token!==body.token||room.revoked)throw new SyncError(403);
@@ -67,6 +68,13 @@ assert.equal(service.writes.at(-1).requestId,request.requestId,'uncertain commit
 assert.equal(service.writes.at(-1).ciphertext,request.ciphertext,'uncertain commits retry identical ciphertext');
 await cb.sync();assert.equal(get(b)[0].name,'応答を失った保存');
 const disk=client(a);assert(await disk.restore());assert.equal(disk.code,code);
+const savedBeforeLimit=a.getItem(planKey),writesBeforeLimit=service.writes.length;
+service.unavailable=402;
+await assert.rejects(()=>disk.sync(),cause=>cause.status===402);
+assert.equal(disk.paused,true);await disk.sync();
+assert.equal(a.getItem(planKey),savedBeforeLimit);
+assert.equal(service.writes.length,writesBeforeLimit,'credit exhaustion cannot write or trigger automatic retries');
+service.unavailable=0;await disk.sync({manual:true});assert.equal(disk.paused,false);
 const bad=client(new Storage());await assert.rejects(()=>bad.connect(newSyncCode()),cause=>cause.status===403);assert.equal(bad.keys,null);
 const beforeDisconnect=a.getItem(planKey);ca.disconnect();assert.equal(a.getItem(SYNC_CREDENTIAL_KEY),null);assert.equal(a.getItem(planKey),beforeDisconnect);
 await cb.revoke();await assert.rejects(()=>disk.sync(),cause=>cause.status===403);assert.equal(a.getItem(planKey),beforeDisconnect);

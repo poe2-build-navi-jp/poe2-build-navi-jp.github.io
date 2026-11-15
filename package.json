@@ -24,7 +24,7 @@
     "test:passive-icons": "node scripts/test-passive-icons.mjs",
     "test:simulator:library:browser": "node scripts/test-simulator-library-browser.mjs",
     "test:simulator:goal:browser": "node scripts/test-simulator-goal-browser.mjs",
-    "test:community": "node scripts/test-community.mjs && node scripts/test-community-backend.mjs"
+    "test:community": "node scripts/test-community.mjs && node scripts/test-community-backend.mjs && node scripts/test-community-ui.mjs"
   },
   "devDependencies": {
     "axe-core": "^4.13.0",

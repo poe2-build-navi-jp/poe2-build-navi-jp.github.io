@@ -55,6 +55,11 @@ try {
         };
         try {
           await page.goto(path); await page.locator('#community-source option[value*="community-test-save"]').waitFor({state: 'attached'});
+          await page.waitForFunction(() => {
+            const text = document.querySelector('#community-list-status')?.textContent || '';
+            return text && !/読み込んでいます|Loading posts/.test(text);
+          }, undefined, {timeout: 45000});
+          if (/利用枠|usage allowance/.test(await page.locator('#community-list-status').textContent())) throw Error('PUBLIC_BACKEND_CREDITS_402');
           await withdrawAll(page); // Clean an interrupted run's disposable posts.
           await open(page, '#community-compose');
           await page.locator('#community-source').selectOption(saved.preset + ':community-test-save');

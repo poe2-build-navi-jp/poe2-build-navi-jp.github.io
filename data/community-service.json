@@ -3,5 +3,7 @@
   "origin": "https://poe2-bcr97h.v2.appdeploy.ai",
   "channel": "poe2-public-v1",
   "version": 1,
-  "lastSuccessfulSnapshot": "1794781037067"
+  "lastSuccessfulSnapshot": "1794781037067",
+  "availability": "credits-blocked",
+  "lastObservedHttpStatus": 402
 }

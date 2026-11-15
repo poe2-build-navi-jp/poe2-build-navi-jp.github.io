@@ -84,7 +84,7 @@ export class EncryptedBuildSync {
     const execute = () => this.cycle();
     this.running = (globalThis.navigator?.locks ? navigator.locks.request('poe2-build-sync-v1', execute) : execute())
       .catch(cause => {
-        if ([403,429].includes(cause.status)) this.paused = true;
+        if ([402,403,429].includes(cause.status)) this.paused = true;
         this.onStatus({state:'error', cause, paused:this.paused});
         throw cause;
       }).finally(() => {this.running = null;});

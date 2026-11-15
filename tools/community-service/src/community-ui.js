@@ -103,6 +103,7 @@ export async function mountCommunity(root, {api, catalog, getSources, publicBase
   const localUrl = id => location.pathname + '?build=' + encodeURIComponent(id);
   const errorText = cause => {
     const code = cause.message || '';
+    if (cause.status === 402) return t('公開サービスの利用枠に達しています。現在は投稿・閲覧・取り下げを処理できません。入力と端末内の保存構成は保持しています。', 'The public service has reached its usage allowance. Publishing, reading and withdrawal are currently unavailable. Your inputs and local saves are intact.');
     if (code === 'PUBLIC_LOCAL_CODE') return t('管理コードを端末に保存できません。控えたコードで復元するか、端末の保存設定を確認してください。投稿内容は変更していません。', 'The management code could not be saved on this device. Restore a saved code or check local storage. No post was changed.');
     if (/PUBLIC_(INPUT|BUDGET|SKILL|GEM|NODE|PRESET|TREE|JEWELS|SIZE)/.test(code)) return t('構成や入力内容を確認してください。対応中のデータ版・スキルを使い、ジュエルなし・64KB以下の構成を選べます。入力と元の保存は保持しています。', 'Check the inputs and build. Use supported data and skills, no jewels, and a snapshot under 64 KB. Your inputs and original save are intact.');
     if (cause.status === 404) return t('投稿が見つかりません。取り下げられた可能性があります。', 'This post was not found. It may have been withdrawn.');
