@@ -45,7 +45,7 @@ try {
         try {
           await page.goto('http://127.0.0.1:4173' + locale + '/simulator/?build=' + preset, {waitUntil: 'domcontentloaded'});
           await page.waitForFunction(() => document.querySelector('#sim-stats')?.getAttribute('aria-busy') === 'false' && !document.querySelector('#sim-planner-check')?.disabled, undefined, {timeout: 100000});
-          await page.locator('.sim-impact-details').first().waitFor();
+          await page.locator('.sim-impact-details').first().waitFor({state: 'attached'});
           const before = await page.evaluate(key => localStorage.getItem(key), auto);
           await open(page, '#sim-updates-panel');
           const target = '[data-update-id="one-zero-passive-review"]';
