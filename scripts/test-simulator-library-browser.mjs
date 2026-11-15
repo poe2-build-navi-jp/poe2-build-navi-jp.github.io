@@ -35,14 +35,15 @@ try{
      const {IframeTransport}=await import('/assets/simulator-sync.js');
      const {newSyncCode,syncKeys,encryptVault,decryptVault}=await import('/assets/simulator-sync-crypto.js');
      const transport=new IframeTransport(),keys=await syncKeys(newSyncCode()),auth={room:keys.room,token:keys.token};
+     const request=async(operation,body)=>{try{return await transport.request(operation,body);}catch(cause){throw Error(`Capacity ${operation}: HTTP ${cause.status||'unknown'}`);}};
      const size=2*1024*1024-512,value={version:1,records:{},padding:'x'.repeat(size)};
-     await transport.request('create',auth);
+     await request('create',auth);
      try{
       const envelope=await encryptVault(value,keys);
-      await transport.request('write',{...auth,revision:0,requestId:crypto.randomUUID(),...envelope});
-      const response=await transport.request('read',auth),decoded=await decryptVault(response.envelope,keys);
+      await request('write',{...auth,revision:0,requestId:crypto.randomUUID(),...envelope});
+      const response=await request('read',auth),decoded=await decryptVault(response.envelope,keys);
       return {expected:size,actual:decoded.padding.length};
-     }finally{await transport.request('revoke',auth);}
+     }finally{await request('revoke',auth);}
     });
     assert.equal(capacity.actual,capacity.expected,'a near-capacity snapshot must survive real encrypted storage');
    }

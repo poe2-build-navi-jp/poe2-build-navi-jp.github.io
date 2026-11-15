@@ -60,7 +60,10 @@ assert.equal((await call('upload-start',{...upload,revision:3,requestId:'expired
 tables.get('poe2_vaults').get(auth.room).uploadUntil=0;
 assert.equal((await call('upload-start',{...upload,revision:3,requestId:'replacement-upload-07'})).status,200,'an abandoned upload cannot lock the vault forever');
 assert.equal((await call('upload-chunk',{...upload,revision:3,requestId:'expired-upload-0006',index:0,ciphertext:'A'.repeat(100)})).status,409);
-assert.equal((await call('revoke')).data.revoked,true);
+fault.after='AppDatabaseUnknownOutcome';
+assert.equal((await call('revoke')).status,503);
+assert.equal((await call('read')).status,403,'revocation blocks access even when encrypted cleanup needs a retry');
+assert.equal((await call('revoke')).data.revoked,true,'revocation resumes cleanup after an ambiguous outcome');
 assert.equal(tables.get('poe2_vault_chunks').size,0,'revocation removes both bounded chunk banks');
 assert.equal((await call('read')).status,403);
 assert.equal((await call('write',{...second,revision:3,requestId:'revoked-request-003'})).status,403);

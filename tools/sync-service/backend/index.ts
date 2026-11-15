@@ -365,33 +365,30 @@ export const handler = router({
       try {
         const room = await authorize(body, true);
         if (!room) return error('SYNC_UNAUTHORIZED', 403);
-        if (room.revoked) return json({ revoked: true });
-        const metadata = db.tx.update(
-          TABLE,
-          [
-            {
-              id: body.room,
-              record: {
-                revoked: true,
-                revision: room.revision + 1,
-                count: 0,
-                iv: '',
-                hash: '',
-                receipts: [],
-              },
-              if: { revision: room.revision, revoked: false },
+        if (!room.revoked) {
+          const [updated] = await db.tx.update(TABLE, [{
+            id: body.room,
+            record: {
+              ...uploadCleared,
+              revoked: true,
+              revision: room.revision + 1,
+              count: 0,
+              iv: '',
+              hash: '',
+              receipts: [],
             },
-          ],
-          { patch: true }
+            if: { revision: room.revision, revoked: false },
+          }], { patch: true });
+          if (!updated) return error('SYNC_CONFLICT', 409);
+        }
+        // Access is already disabled. Clean both banks in bounded standalone
+        // calls; retrying after an ambiguous outcome resumes this cleanup.
+        const ids = Array.from(
+          { length: 38 },
+          (_, i) => `${body.room}-${i % 2}-${Math.floor(i / 2)}`
         );
-        const chunks = db.tx.delete(
-          CHUNKS,
-          Array.from(
-            { length: 38 },
-            (_, i) => `${body.room}-${i % 2}-${Math.floor(i / 2)}`
-          )
-        );
-        await db.transact([metadata, chunks]);
+        for (let start = 0; start < ids.length; start += 5)
+          await db.tx.delete(CHUNKS, ids.slice(start, start + 5));
         return json({ revoked: true });
       } catch (cause) {
         return failure(cause);
