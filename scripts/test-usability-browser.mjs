@@ -29,6 +29,12 @@ try{
   if(width<=768){await page.locator('.menu-button').click();assert.equal(await page.locator('.menu-button').getAttribute('aria-expanded'),'true');await page.keyboard.press('Escape');assert.equal(await page.locator('.menu-button').getAttribute('aria-expanded'),'false');}
   await page.locator('#site-quick-query').fill('テイミング');await page.locator('.site-tools form button').click();await page.waitForURL('**/search/?q=*');assert.equal(new URL(page.url()).searchParams.get('q'),'テイミング');
   await page.goto(base+'/equipment/the-taming/',{waitUntil:'domcontentloaded'});await page.locator('[data-reading-save]').click();assert.equal(await page.locator('[data-reading-save]').getAttribute('aria-pressed'),'true');await page.locator('[data-reading-open]').click();await check('reading-list');assert.equal(await page.locator('[data-reading-list="favorites"] a').count(),1);await page.locator('[data-reading-close]').click();
+  // Release news uses existing article/table styles and must fit the same viewports.
+  for(const slug of ['', 'shadow/', 'duelist/', 'campaign/', 'conquerors-of-wraeclast/', 'balance-changes/', 'exilecon-2026/']){
+   await page.goto(base+'/poe2-1-0/'+slug,{waitUntil:'domcontentloaded'});
+   assert.equal(await page.locator('main h1').count(),1);
+   await check('release-'+(slug.replaceAll('/','')||'hub'));
+  }
   for(const locale of ['', '/en']){
    const suffix=locale?'-en':'';await page.goto(base+locale+'/simulator/',{waitUntil:'domcontentloaded'});
    await page.locator('#sim-build-search').fill('Spark');assert.equal(await page.locator('[data-preset]:visible').count(),1);await page.locator('#sim-build-reset').click();assert.equal(await page.locator('[data-preset]:visible').count(),12);await check('chooser'+suffix);

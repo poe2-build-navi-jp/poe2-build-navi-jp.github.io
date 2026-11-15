@@ -365,9 +365,9 @@
     "publishedAt": "2026-09-12",
     "kicker": "POE2 1.0 / OFFICIAL DATE",
     "title": "PoE2 1.0正式版はいつ？｜公開予定日と確認済み情報",
-    "description": "PoE2 1.0正式版の公開予定日は2026年12月11日（PST）。基本プレイ無料化、Duelist追加、事前登録の締め切り、ExileConまでの日程を公式発表で確認できる範囲だけ案内します。",
+    "description": "PoE2 1.0は2026年12月11日（PST）に基本プレイ無料で公開予定。ExileCon発表済みの新クラス・Act 5・6・新リーグと日本時間の確認状況を案内。",
     "h1": "PoE2 1.0正式版はいつ公開？",
-    "answer": "公式発表では、Path of Exile 2の正式版1.0は2026年12月11日（PST）に、基本プレイ無料で公開予定です。新職業Duelistも1.0で追加されます。開始時刻は確認した公式発表に記載がなく、日程は変更される可能性があるため、公式発表を確認しながら更新します。",
+    "answer": "PoE2 1.0は2026年12月11日（PST）に基本プレイ無料で公開予定です。11月のExileConでShadow・Duelist、Act 5・6、新リーグが発表されました。開始時刻は確認した公式発表に記載がないため、日本時間の日時は断定していません。",
     "quickActions": [
       "公開予定日を公式情報で確認する",
       "1.0の確定情報と未発表情報を分けて読む",
@@ -398,26 +398,52 @@
           ],
           [
             "2026年11月7〜8日（ニュージーランド時間）",
-            "ExileCon 2026（オークランド）。PoE2 1.0の大型発表（基調講演）は日本時間11月7日（土）午前6時から（太平洋時間11月6日午後1時）"
+            "ExileCon 2026開催済み。Shadow・Duelist、Act 5・6、Conquerors of Wraeclastなどを発表"
           ],
           [
             "2026年12月11日（PST）",
-            "1.0正式版公開・基本プレイ無料化・Duelist追加。事前登録の締め切りも同日（PST）"
+            "1.0正式版公開・基本無料化・新クラス追加予定。開始時刻は未確認"
           ]
         ]
       },
       {
         "heading": "1.0で変わることとして公式が案内している内容",
         "bullets": [
-          "基本プレイ無料になる（現在のアーリーアクセスはアクセス権が必要。対象パックの購入や有効なキーなどで入手）",
-          "新職業Duelistと新しい武器種が加わる",
-          "事前登録した人へ、公開後に限定コスメのコードがメールで届く"
+          "正式版1.0は2026年12月11日（PST）に基本プレイ無料で公開予定です。",
+          "Shadow・Duelist、Act 5・6、新リーグConquerors of Wraeclastが発表されました。",
+          "パッシブ・サポートジェム・ユニーク装備・既存クラスにも変更が予定されています。"
+        ],
+        "links": [
+          {
+            "label": "Shadow：短剣・トラップ・Stealth",
+            "url": "/poe2-1-0/shadow/"
+          },
+          {
+            "label": "Duelist：剣・Stance",
+            "url": "/poe2-1-0/duelist/"
+          },
+          {
+            "label": "Act 5・6とキャンペーン",
+            "url": "/poe2-1-0/campaign/"
+          },
+          {
+            "label": "Conquerors of Wraeclastリーグ",
+            "url": "/poe2-1-0/conquerors-of-wraeclast/"
+          },
+          {
+            "label": "パッシブ・ジェム・既存クラス変更",
+            "url": "/poe2-1-0/balance-changes/"
+          },
+          {
+            "label": "ビルドの1.0対応状況",
+            "url": "/poe2-1-0/build-status/"
+          }
         ]
       },
       {
         "heading": "公開までにできること",
         "paragraphs": [
-          "公式は、pathofexile2.com/register での事前登録を案内しています。登録者が増えるほど全員がもらえるコスメが増える仕組みで、2026年9月21日の公式ニュースでは2つ目の報酬が解放され、残りは3つと案内されています。締め切りは12月11日（PST）です（当初の告知は12月10日）。",
+          "事前登録は公式の pathofexile2.com/register から行います。メール確認まで済ませる必要があり、報酬コードは公開後に配布される案内です。過去の解放数を現在の報酬数として扱わず、最新の到達状況は公式登録ページで確認してください。",
           "対応機種はSteam・Epic・PlayStation・Xboxが事前登録報酬の対象として公式FAQに挙げられています。2026年9月24日にはSteam Deck Verified（動作確認済み）になったと公式が発表しています。"
         ]
       },
@@ -429,8 +455,7 @@
           "正式版のTier順位",
           "各ビルドの正確なレベリング順",
           "正式版経済での装備相場",
-          "1.0での最終的なキャラクター・リーグ移行手順。既存の公式FAQでは、キャラクターを消去せず正式版Standardとは別のEarly Accessリーグに残す方針です",
-          "ExileConで発表される内容"
+          "1.0での最終的なキャラクター・リーグ移行手順。既存の公式FAQでは、キャラクターを消去せず正式版Standardとは別のEarly Accessリーグに残す方針です"
         ]
       },
       {
@@ -468,7 +493,7 @@
         "url": "/poe2-1-0/"
       },
       {
-        "label": "ExileCon 2026の日本時間と発表内容",
+        "label": "ExileCon 2026の発表まとめ",
         "url": "/poe2-1-0/exilecon-2026/"
       },
       {
@@ -542,6 +567,16 @@
         "name": "Path of Exile 2公式（Steam）：Two Weeks Until ExileCon 2026!（2026年10月25日）",
         "url": "https://steamcommunity.com/ogg/2694490/announcements/detail/699905228356458262",
         "checkedAt": "2026-11-03"
+      },
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
       }
     ]
   },
@@ -553,16 +588,105 @@
     "description": "PoE2は2026年12月11日（PST）の正式版1.0から基本無料です。対応機種（PC・PS5・Xbox Series）、入手先、クロスプレイ、今のうちに決めておくことを公式情報を基に案内します。",
     "h1": "PoE2はどうやって始める？無料化後の始め方",
     "answer": "Path of Exile 2は、2026年8月25日の公式発表で、12月11日（PST）に正式版として基本プレイ無料で公開予定と案内されています。各ストアでの最終的な入手・アカウント作成手順は未確認のため、公開時の公式案内と利用するストアの表示を確認してください。",
-    "quickActions": ["遊ぶ機種（PC・PS5・Xbox Series）を決める", "公開予定日の12月11日前後に、公式案内と利用するストアで入手方法を確認する", "4問の職業診断で最初の職業を決めておく"],
-    "sections": [
-      {"heading": "対応機種と入手先", "paragraphs": ["正式版1.0は、PlayStation 5、Xbox Series、PC（SteamとEpic Games Store）で2026年12月11日（PST）に公開予定と報じられています（Grinding Gear Gamesの発表に基づく報道）。", "アーリーアクセス開始時は、Steam・Epic Games Storeに加えて公式のスタンドアロン版PCクライアントでも配信されていました（公式FAQ）。"]},
-      {"heading": "今と12月11日以降の違い", "bullets": ["現在：アーリーアクセス中のため、早期アクセス権が必要です。通常は対象サポーターパックで入手できますが、付与済みのアクセス権や有効なキーでも参加できます。", "12月11日以降：アーリーアクセス終了後は基本プレイ無料になると、公式発表とSteamストアに記載されています。", "無料化を待つか今から始めるかは、1.0を待たずに操作に慣れたいかどうかで決めてください。現在の0.5.5の育成手順が1.0でも同じとは限りません。"]},
-      {"heading": "始めるまでの手順", "bullets": ["遊ぶ機種を決める。PCの場合は、必要スペック・推奨スペック（Windows 10、DirectX 12、空き容量100GB、VRAM 3GB以上など）を確認する。", "正式版の公開時に、利用するプラットフォームの公式案内とストア表示で、入手・インストール方法を確認する。各ストアの最終手順は未確認。", "公式サイトのニュース登録（pathofexile2.com/register）で、公開日や変更のお知らせを受け取れる。", "最初の職業を決めておく。迷う場合は4問の職業診断で候補を絞る。"], "paragraphs": ["正式版でのアカウント作成手順の詳細は、公開時に公式の案内を確認してから追記します。"]},
-      {"heading": "機種をまたいで遊べる？", "bullets": ["PC・PS5・Xbox Seriesの間でクロスプレイでき、同じパーティーで遊べます。", "遊ぶプラットフォームを連携し、同じサブアカウントを選ぶと、キャラクターの進行とアイテムを引き継げます。アーリーアクセス中は、各プラットフォームのアクセス権も必要です", "PlayStationで購入した課金アイテムは他機種では使えず、PC・Xboxで購入したものもPlayStationでは使えません。PC版とXbox版では、購入した同じサブアカウントで共有できます"]},
-      {"heading": "まだ公式に確認できていないこと", "bullets": ["1.0での最終的なキャラクター・リーグ移行手順。既存の公式FAQでは、キャラクターを消去せず正式版Standardとは別のEarly Accessリーグに残す方針です", "正式版でのMac対応（公式FAQではアーリーアクセス開始時は非対応。現在のSteamストアにはmacOSの動作環境が掲載されています）や、スタンドアロン版PCクライアントの扱い", "正式版のアカウント作成・連携の具体的な手順"], "paragraphs": ["ExileCon 2026（11月7〜8日）などの公式発表を確認し、確認できたものから追記します。"]}
+    "quickActions": [
+      "遊ぶ機種（PC・PS5・Xbox Series）を決める",
+      "公開予定日の12月11日前後に、公式案内と利用するストアで入手方法を確認する",
+      "4問の職業診断で最初の職業を決めておく"
     ],
-    "faq": [{"q":"PoE2は無料で遊べる？","a":"正式版1.0（2026年12月11日・PST公開予定）から基本プレイ無料です。現在のアーリーアクセス中は、早期アクセス権が必要です。通常は対象サポーターパックで入手できますが、付与済みのアクセス権や有効なキーでも参加できます。"}, {"q":"どの機種で遊べる？","a":"正式版はPC（Steam・Epic Games Store）、PS5、Xbox Seriesで公開予定と報じられています。"}, {"q":"機種をまたいで遊べる？","a":"PC・PS5・Xbox Seriesの間でクロスプレイでき、プラットフォームを連携して同じサブアカウントを選べば進行を引き継げます。"}],
-    "related": [{"label":"事前登録のやり方と報酬","url":"/poe2-1-0/pre-registration/"},{"label":"必要スペック・推奨スペック","url":"/poe2-1-0/system-requirements/"},{"label":"課金はどれを買う？","url":"/poe2-1-0/microtransactions/"},{"label":"4問で職業を絞る","url":"/class-check/"},{"label":"初心者ガイド（ビルド選びと基礎）","url":"/beginner-guide/"},{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"1.0の公開予定日","url":"/poe2-1-0/release-date/"}],
+    "sections": [
+      {
+        "heading": "対応機種と入手先",
+        "paragraphs": [
+          "正式版1.0は、PlayStation 5、Xbox Series、PC（SteamとEpic Games Store）で2026年12月11日（PST）に公開予定と報じられています（Grinding Gear Gamesの発表に基づく報道）。",
+          "アーリーアクセス開始時は、Steam・Epic Games Storeに加えて公式のスタンドアロン版PCクライアントでも配信されていました（公式FAQ）。"
+        ]
+      },
+      {
+        "heading": "今と12月11日以降の違い",
+        "bullets": [
+          "現在：アーリーアクセス中のため、早期アクセス権が必要です。通常は対象サポーターパックで入手できますが、付与済みのアクセス権や有効なキーでも参加できます。",
+          "12月11日以降：アーリーアクセス終了後は基本プレイ無料になると、公式発表とSteamストアに記載されています。",
+          "無料化を待つか今から始めるかは、1.0を待たずに操作に慣れたいかどうかで決めてください。現在の0.5.5の育成手順が1.0でも同じとは限りません。"
+        ],
+        "paragraphs": []
+      },
+      {
+        "heading": "始めるまでの手順",
+        "bullets": [
+          "遊ぶ機種を決める。PCの場合は、必要スペック・推奨スペック（Windows 10、DirectX 12、空き容量100GB、VRAM 3GB以上など）を確認する。",
+          "正式版の公開時に、利用するプラットフォームの公式案内とストア表示で、入手・インストール方法を確認する。各ストアの最終手順は未確認。",
+          "公式サイトのニュース登録（pathofexile2.com/register）で、公開日や変更のお知らせを受け取れる。",
+          "最初の職業を決めておく。迷う場合は4問の職業診断で候補を絞る。"
+        ],
+        "paragraphs": [
+          "正式版でのアカウント作成手順の詳細は、公開時に公式の案内を確認してから追記します。"
+        ]
+      },
+      {
+        "heading": "機種をまたいで遊べる？",
+        "bullets": [
+          "PC・PS5・Xbox Seriesの間でクロスプレイでき、同じパーティーで遊べます。",
+          "遊ぶプラットフォームを連携し、同じサブアカウントを選ぶと、キャラクターの進行とアイテムを引き継げます。アーリーアクセス中は、各プラットフォームのアクセス権も必要です",
+          "PlayStationで購入した課金アイテムは他機種では使えず、PC・Xboxで購入したものもPlayStationでは使えません。PC版とXbox版では、購入した同じサブアカウントで共有できます"
+        ],
+        "paragraphs": []
+      },
+      {
+        "heading": "まだ公式に確認できていないこと",
+        "bullets": [
+          "1.0での最終的なキャラクター・リーグ移行手順。既存の公式FAQでは、キャラクターを消去せず正式版Standardとは別のEarly Accessリーグに残す方針です",
+          "正式版でのMac対応（公式FAQではアーリーアクセス開始時は非対応。現在のSteamストアにはmacOSの動作環境が掲載されています）や、スタンドアロン版PCクライアントの扱い",
+          "正式版のアカウント作成・連携の具体的な手順"
+        ],
+        "paragraphs": [
+          "ExileCon 2026で新クラス・Act 5・6・新リーグが発表されました。内容は1.0情報ハブにまとめています。"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "PoE2は無料で遊べる？",
+        "a": "正式版1.0（2026年12月11日・PST公開予定）から基本プレイ無料です。現在のアーリーアクセス中は、早期アクセス権が必要です。通常は対象サポーターパックで入手できますが、付与済みのアクセス権や有効なキーでも参加できます。"
+      },
+      {
+        "q": "どの機種で遊べる？",
+        "a": "正式版はPC（Steam・Epic Games Store）、PS5、Xbox Seriesで公開予定と報じられています。"
+      },
+      {
+        "q": "機種をまたいで遊べる？",
+        "a": "PC・PS5・Xbox Seriesの間でクロスプレイでき、プラットフォームを連携して同じサブアカウントを選べば進行を引き継げます。"
+      }
+    ],
+    "related": [
+      {
+        "label": "事前登録のやり方と報酬",
+        "url": "/poe2-1-0/pre-registration/"
+      },
+      {
+        "label": "必要スペック・推奨スペック",
+        "url": "/poe2-1-0/system-requirements/"
+      },
+      {
+        "label": "課金はどれを買う？",
+        "url": "/poe2-1-0/microtransactions/"
+      },
+      {
+        "label": "4問で職業を絞る",
+        "url": "/class-check/"
+      },
+      {
+        "label": "初心者ガイド（ビルド選びと基礎）",
+        "url": "/beginner-guide/"
+      },
+      {
+        "label": "PoE2 1.0情報ハブ",
+        "url": "/poe2-1-0/"
+      },
+      {
+        "label": "1.0の公開予定日",
+        "url": "/poe2-1-0/release-date/"
+      }
+    ],
     "sources": [
       {
         "name": "Path of Exile 2公式：1.0・基本無料化の発表（2026年8月25日）",
@@ -593,6 +717,11 @@
         "name": "Path of Exile公式：アカウント統合とクロスプログレッション",
         "url": "https://www.pathofexile.com/forum/view-thread/3586288/filter-account-type/staff",
         "checkedAt": "2026-10-06"
+      },
+      {
+        "name": "GGG公式：ExileCon 2026発表",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
       }
     ]
   },
@@ -810,272 +939,321 @@
     "description": "PoE2正式版1.0で使えると確認できたビルドを一覧で案内します。0.5.5向けビルドの1.0対応状況と、確認の基準・順番をまとめています。",
     "h1": "PoE2 1.0のビルド対応状況",
     "answer": "本サイトは、1.0で確認できたビルドだけを「1.0で確認済み」として案内します。確認前のビルドは削除せず、0.5.5の手順を残したまま状況を表示します。各ビルドの状況は下の一覧で確認できます。",
-    "quickActions": ["下の一覧で、遊びたいビルドが1.0で確認済みか見る", "確認待ちのビルドは、スキル名や解禁Lvが変わっている可能性を前提に読む", "1.0の変更点は公式パッチノートとあわせて確認する"],
-    "sections": [
-      {"heading": "ビルドごとの1.0対応状況", "buildStatus": true},
-      {"heading": "「1.0で確認済み」にする基準", "bullets": ["主力スキルとサポートジェムが1.0に存在し、名前と解禁Lvが一致する", "アセンダンシーと主要なパッシブが削除・大幅変更されていない", "必須のユニークや装備条件、SSFでの成立可否が元ガイドと一致する", "元ガイドが1.0対応と明記している"], "paragraphs": ["次のすべてを確認できたビルドだけを「1.0で確認済み」にします。1つでも確認できない場合は確認待ちのままです。"]},
-      {"heading": "「1.0最強ビルド」を載せない理由", "paragraphs": ["1.0の公開直後は、公式パッチノートと実際のプレイ結果がそろうまで、各ビルドの強さを判断できません。本サイトは予想のランキングを確定情報のように載せず、確認できたものから順に更新します。"]},
-      {"heading": "確認の順番", "paragraphs": ["1.0対応の元ガイド（Maxroll・Mobalyticsなど）が出たビルドから、1本ずつ確認します。大きく変わって元ガイドが見つからないビルドは、掲載を見直します。"]}
-    ],
-    "faq": [{"q":"PoE2 1.0のおすすめビルドは？","a":"1.0で確認できたビルドから順に、このページで「確認済み」として案内します。確認前のビルドの強さは載せていません。"}, {"q":"0.5.5のビルドは1.0でもそのまま使える？","a":"確認できるまで断定できません。スキル名・解禁Lv・装備条件が変わっている可能性があるため、確認できたものから順に更新します。"}],
-    "related": [{"label":"PoE2 1.0情報ハブ","url":"/poe2-1-0/"},{"label":"Duelistの確認済み情報","url":"/poe2-1-0/duelist/"},{"label":"現在の初心者向けTier","url":"/tier-list/"},{"label":"職業別ビルド一覧","url":"/builds/"}],
-    "sources": [{"name":"Path of Exile 2公式：正式版1.0の発表","url":"https://www.pathofexile.com/forum/view-thread/3999366","checkedAt":"2026-09-27"}]
-  },
-  {
-    "path": "/poe2-1-0/duelist/",
-    "publishedAt": "2026-09-12",
-    "kicker": "POE2 1.0 / DUELIST",
-    "title": "PoE2 Duelist最新情報｜1.0で追加予定の新職業",
-    "description": "PoE2 1.0で追加予定のDuelist（デュエリスト）について、発表の経緯、遊べる時期、公式が紹介した内容を公式発表で確認できる範囲だけ案内。未発表のビルド情報とは分けて掲載します。",
-    "h1": "PoE2 Duelistの確認済み情報",
-    "answer": "DuelistはPoE2 1.0（2026年12月11日・PST公開予定）で追加される新職業です。公式は「待望の職業と武器種」と紹介しており、基本プレイ無料になる1.0から遊べます。公式の紹介映像は公開済みですが、本サイトでは正式版の確定数値、パッシブ、再現可能な育成手順をまだ確認していません。ビルドやTierは確認後に掲載します。",
     "quickActions": [
-      "追加時期は1.0公開予定日と一緒に確認する",
-      "未発表のビルド予想を確定情報として扱わない",
-      "公開後は対応パッチと最終確認日を確認する"
+      "下の一覧で、遊びたいビルドが1.0で確認済みか見る",
+      "確認待ちのビルドは、スキル名や解禁Lvが変わっている可能性を前提に読む",
+      "1.0の変更点は公式パッチノートとあわせて確認する"
     ],
     "sections": [
       {
-        "heading": "公式に確認できること",
+        "heading": "ビルドごとの1.0対応状況",
+        "buildStatus": true
+      },
+      {
+        "heading": "ExileCon発表で再確認が必要になった箇所",
+        "paragraphs": [
+          "サポートジェム、パッシブとジュエルソケット配置、ユニーク装備、既存アセンダンシーに変更が発表されています。現在の数値や取得ルートを、そのまま1.0の手順として使うことはできません。",
+          "シミュレーターの計算版も0.5.5.5のままです。発表映像だけを根拠に新ノードや補正値を計算へ混ぜず、実装データと検証がそろってから対応します。"
+        ],
+        "links": [
+          {
+            "label": "発表済みの変更箇所を見る",
+            "url": "/poe2-1-0/balance-changes/"
+          }
+        ]
+      },
+      {
+        "heading": "「1.0で確認済み」にする基準",
         "bullets": [
-          "1.0正式版（2026年12月11日・PST）で追加される",
-          "2026年8月25日のgamescom Opening Night Liveでトレーラーが公開された",
-          "公式は8月27日の紹介映像で「待望の職業と武器種」として紹介している",
-          "Steam Deck Verifiedの公式ニュースで「12月11日の基本無料化でDuelistとして遊べる」と案内されている"
-        ]
-      },
-      {
-        "heading": "発表から公開までの流れ",
-        "table": [
-          [
-            "2026年8月25日（PDT）",
-            "gamescomでトレーラー公開。1.0の公開日・基本無料化と同時に発表"
-          ],
-          [
-            "2026年8月27日",
-            "GGG LiveでDuelist Deep Dive（紹介映像）を公開"
-          ],
-          [
-            "2026年8月下旬〜",
-            "gamescom会場（ホール6.1）で、公開予定の内容を試遊できるブースを出展。公式の振り返りでは5日間で9,000人以上が来場"
-          ],
-          [
-            "2026年11月7〜8日（ニュージーランド時間）",
-            "ExileCon 2026で大型発表を行うと公式が案内"
-          ],
-          [
-            "2026年12月11日（PST）",
-            "1.0公開。Duelistが遊べるようになる"
-          ]
-        ]
-      },
-      {
-        "heading": "武器種について",
+          "主力スキルとサポートジェムが1.0に存在し、名前と解禁Lvが一致する",
+          "アセンダンシーと主要なパッシブが削除・大幅変更されていない",
+          "必須のユニークや装備条件、SSFでの成立可否が元ガイドと一致する",
+          "元ガイドが1.0対応と明記している"
+        ],
         "paragraphs": [
-          "公式は紹介映像の説明で、Duelistを新しい職業と武器種として紹介しています。公式のgamescom振り返り記事が紹介した試遊動画には「Swords」（剣）を題名に含むものがありますが、武器種の正式な仕様や日本語名は、このページでは公式の確定情報として扱いません。"
+          "次のすべてを確認できたビルドだけを「1.0で確認済み」にします。1つでも確認できない場合は確認待ちのままです。"
         ]
       },
       {
-        "heading": "ExileCon 2026で発表予定",
+        "heading": "「1.0最強ビルド」を載せない理由",
         "paragraphs": [
-          "公式は、ExileCon 2026を11月7〜8日（ニュージーランド時間）にオークランドで開催し、大型発表を行うと案内しています。Duelistの詳細が発表された場合は、公式情報で確認してから追記します。",
-          "公式によると、大型発表を含む基調講演は太平洋時間11月6日午後1時、日本時間では11月7日（土）午前6時から始まり、TwitchとYouTubeで無料配信されます。配信の時刻と見方はExileCon 2026のページにまとめています。"
+          "1.0の公開直後は、公式パッチノートと実際のプレイ結果がそろうまで、各ビルドの強さを判断できません。本サイトは予想のランキングを確定情報のように載せず、確認できたものから順に更新します。"
         ]
       },
       {
-        "heading": "現在は未登録の情報",
-        "bullets": [
-          "アセンダンシーの名前と内容",
-          "初心者向けDuelistビルド",
-          "Lv1からEndgameまでの8段階ロードマップ",
-          "正確なスキルとサポート構成",
-          "正確なパッシブノード",
-          "装備優先度、DPS、Tier、相場"
-        ]
-      },
-      {
-        "heading": "公開後に確認する順番",
+        "heading": "確認の順番",
         "paragraphs": [
-          "公式パッチノート、ゲーム内仕様、複数の段階別書面資料を確認し、初心者が再現できるものだけを職業ページとビルド詳細へ追加します。確認前の仮ビルドは作りません。今の8職業から選ぶ場合は、職業一覧や4問の職業診断を使えます。"
+          "1.0対応の元ガイド（Maxroll・Mobalyticsなど）が出たビルドから、1本ずつ確認します。大きく変わって元ガイドが見つからないビルドは、掲載を見直します。"
         ]
-      }
-    ],
-    "related": [
-      {
-        "label": "PoE2 1.0情報ハブ",
-        "url": "/poe2-1-0/"
-      },
-      {
-        "label": "ExileCon 2026の日本時間と発表内容",
-        "url": "/poe2-1-0/exilecon-2026/"
-      },
-      {
-        "label": "1.0公開予定日を見る",
-        "url": "/poe2-1-0/release-date/"
-      },
-      {
-        "label": "事前登録のやり方と報酬",
-        "url": "/poe2-1-0/pre-registration/"
-      },
-      {
-        "label": "1.0のビルド対応状況",
-        "url": "/poe2-1-0/build-status/"
-      },
-      {
-        "label": "4問の職業診断",
-        "url": "/class-check/"
-      },
-      {
-        "label": "現在の8職業を見る",
-        "url": "/classes/"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Path of Exile 2公式：0.5.5イベントリーグとDuelist Deep Dive（2026年8月27日）",
-        "url": "https://www.pathofexile.com/forum/view-thread/3999858",
-        "checkedAt": "2026-10-04"
-      },
-      {
-        "name": "Path of Exile 2公式：1.0公開予定日・Duelistの発表（2026年8月25日）",
-        "url": "https://www.pathofexile.com/forum/view-thread/3999366",
-        "checkedAt": "2026-10-04"
-      },
-      {
-        "name": "Steamニュース（公式）：gamescom Cologne 2026の振り返り（2026年9月6日）",
-        "url": "https://store.steampowered.com/news/app/2694490/view/686389990174754215",
-        "checkedAt": "2026-10-04"
-      },
-      {
-        "name": "Steamニュース（公式）：Steam Deck Verified（2026年9月24日）",
-        "url": "https://store.steampowered.com/news/app/2694490/view/710035792907469891",
-        "checkedAt": "2026-10-04"
-      },
-      {
-        "name": "Steamニュース（公式）：ExileCon 2026（2026年1月28日）",
-        "url": "https://store.steampowered.com/news/app/2694490/view/523114848066732372",
-        "checkedAt": "2026-10-04"
-      },
-      {
-        "name": "Steamニュース（公式）：One Month until ExileCon 2026（2026年10月6日）",
-        "url": "https://store.steampowered.com/news/app/2694490/view/669504028414052668",
-        "checkedAt": "2026-10-16"
-      },
-      {
-        "name": "Path of Exile 2公式（Steam）：Two Weeks Until ExileCon 2026!（2026年10月25日）",
-        "url": "https://steamcommunity.com/ogg/2694490/announcements/detail/699905228356458262",
-        "checkedAt": "2026-11-03"
       }
     ],
     "faq": [
       {
-        "q": "Duelistはいつから使える？",
-        "a": "1.0正式版が公開される2026年12月11日（PST）からです。公式のSteam Deck対応ニュースで、12月11日の基本無料化でDuelistとして遊べると案内されています。"
+        "q": "PoE2 1.0のおすすめビルドは？",
+        "a": "1.0で確認できたビルドから順に、このページで「確認済み」として案内します。確認前のビルドの強さは載せていません。"
       },
       {
-        "q": "Duelistは無料で遊べる？",
-        "a": "1.0は基本プレイ無料で公開されると公式が発表しています。Duelistの購入が必要という案内は、確認した公式発表にはありません。"
-      },
-      {
-        "q": "Duelistの武器は？",
-        "a": "公式は「新しい武器種」と紹介しています。試遊動画の題名には剣（Swords）を含むものがありますが、正式な仕様は公式情報を確認してから追記します。"
-      },
-      {
-        "q": "Duelistのおすすめビルドは？",
-        "a": "まだ掲載していません。スキルやパッシブの公式情報が出て、段階別の資料で確認できてから追加します。"
-      },
-      {
-        "q": "ExileConは日本時間の何時から見られる？",
-        "a": "基調講演（大型発表）は日本時間11月7日（土）午前6時からです（太平洋時間11月6日午後1時）。午前5時30分から事前番組があります。"
-      }
-    ]
-  },
-  {
-    "path": "/poe2-1-0/exilecon-2026/",
-    "publishedAt": "2026-11-03",
-    "kicker": "POE2 1.0 / EXILECON 2026",
-    "title": "ExileCon 2026はいつ？日本時間の配信時刻とPoE2 1.0発表まとめ",
-    "description": "ExileCon 2026のPoE2 1.0大型発表は日本時間11月7日（土）午前6時から。配信の見方（Twitch・YouTube）、事前番組、2日目の配信、見逃した時のアーカイブを公式発表で確認。発表内容は確認でき次第追記します。",
-    "h1": "ExileCon 2026の日本時間と発表内容",
-    "answer": "ExileCon 2026の基調講演（PoE2 1.0の大型発表）は、日本時間11月7日（土）午前6時から（太平洋時間11月6日午後1時）です。午前5時30分から事前番組があり、TwitchとYouTubeで無料配信されます。基調講演は約2時間で、PoE1とPoE2の両方の発表があります。発表内容は公式情報で確認でき次第、このページに追記します。",
-    "quickActions": [
-      "日本時間11月7日（土）午前6時の基調講演を、TwitchかYouTubeの公式チャンネルで見る",
-      "見逃したら、終了後すぐ公開されるアーカイブで確認する",
-      "発表のあとは、このページと1.0情報ハブで確認済みの内容を見る"
-    ],
-    "sections": [
-      {
-        "heading": "配信の日時（日本時間）",
-        "table": [
-          [
-            "基調講演の事前番組",
-            "11月7日（土）午前5時30分〜（太平洋時間11月6日午後0時30分）"
-          ],
-          [
-            "基調講演（大型発表）",
-            "11月7日（土）午前6時〜、約2時間（太平洋時間11月6日午後1時、ニュージーランド時間11月7日午前10時）"
-          ],
-          [
-            "2日目の配信",
-            "11月8日（日）午前5時〜（太平洋時間11月7日正午。10月6日の公式告知による）"
-          ]
-        ]
-      },
-      {
-        "heading": "どこで見られる？",
-        "bullets": [
-          "公式のTwitchチャンネル（twitch.tv/pathofexile）とYouTubeチャンネル（@playpathofexile）で無料配信されます。",
-          "2日間を通して、開発者のトーク、ゲームプレイの紹介、インタビュー、PoE1とPoE2のレース決勝なども配信されます。",
-          "配信中はTwitchドロップ（視聴で受け取れる報酬）が予定されていると公式が案内しています。内容は公式の告知で確認してください。"
-        ]
-      },
-      {
-        "heading": "見逃した場合",
-        "paragraphs": [
-          "基調講演は、生配信の終了後すぐにTwitchとYouTubeで見られるようになると公式が案内しています。開発者のトークやパネルは、ExileConの後に順次公開されます。",
-          "公式によると、新しい内容のトレーラーや告知ページは、基調講演で発表されると同時に公開されます。"
-        ]
-      },
-      {
-        "heading": "発表される内容",
-        "paragraphs": [
-          "公式は、ExileCon 2026でPath of Exile 2の1.0（正式版）に向けた最新の内容を発表すると案内しています。告知のタイトルは「Path of Exile 2 1.0 Full Reveal」です。",
-          "このページでは、発表後に公式の告知ページ・トレーラーで確認できた内容だけを追記します。予想やリーク情報は載せません。"
-        ],
-        "bullets": [
-          "発表内容：ExileConの後に追記します",
-          "このサイトのビルドへの影響：発表内容を確認してから、1.0のビルド対応状況ページに反映します"
-        ]
-      },
-      {
-        "heading": "会場と開催概要",
-        "bullets": [
-          "開催日：2026年11月7日（土）・8日（日）（ニュージーランド時間）",
-          "会場：ニュージーランド・オークランドのアオテア・センター（Aotea Centre）",
-          "Grinding Gear Gamesが主催する3回目のExileConです。会場は16歳以上が対象のイベントです。"
-        ]
+        "q": "0.5.5のビルドは1.0でもそのまま使える？",
+        "a": "確認できるまで断定できません。スキル名・解禁Lv・装備条件が変わっている可能性があるため、確認できたものから順に更新します。"
       }
     ],
     "related": [
       {
         "label": "PoE2 1.0情報ハブ",
         "url": "/poe2-1-0/"
-      },
-      {
-        "label": "1.0公開予定日を見る",
-        "url": "/poe2-1-0/release-date/"
       },
       {
         "label": "Duelistの確認済み情報",
         "url": "/poe2-1-0/duelist/"
       },
       {
-        "label": "1.0のビルド対応状況",
-        "url": "/poe2-1-0/build-status/"
+        "label": "現在の初心者向けTier",
+        "url": "/tier-list/"
       },
       {
-        "label": "事前登録のやり方と報酬",
-        "url": "/poe2-1-0/pre-registration/"
+        "label": "職業別ビルド一覧",
+        "url": "/builds/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Path of Exile 2公式：正式版1.0の発表",
+        "url": "https://www.pathofexile.com/forum/view-thread/3999366",
+        "checkedAt": "2026-09-27"
+      },
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
+      }
+    ]
+  },
+  {
+    "path": "/poe2-1-0/duelist/",
+    "publishedAt": "2026-09-12",
+    "kicker": "POE2 1.0 / DUELIST",
+    "title": "PoE2 Duelist｜剣・Stanceと2つのアセンダンシー【1.0公式発表】",
+    "description": "PoE2 1.0で追加予定のDuelistを公式情報で解説。Ready・Sand・Blood Stance、KnightとMaster-at-Arms、現在のビルドとの違いを整理。",
+    "h1": "PoE2 Duelistの確認済み情報",
+    "answer": "Duelist（デュエリスト）は、1.0で追加予定の剣を使う新クラスです。攻撃前の構え（Stance）で剣スキルを強化し、KnightとMaster-at-Armsの2つのアセンダンシーが発表されています。2026年12月11日（PST）の正式リリースに向けた紹介情報で、現在の0.5.5では使えません。",
+    "quickActions": [
+      "剣とStanceの組み合わせが好みに合うか確認する",
+      "KnightとMaster-at-Armsの名前を確認する",
+      "育成順やDPSは1.0対応資料が出てから比較する"
+    ],
+    "sections": [
+      {
+        "heading": "剣とStanceで戦う",
+        "paragraphs": [
+          "Duelistは素早い剣撃とタイミングを合わせた攻撃を使う職業として紹介されています。Ready Stanceは剣スキルを強化し、Sand Stance・Blood Stanceへ発展させることで組み合わせを広げます。",
+          "構えごとの最終倍率、切り替え条件や操作数は、このページで再現検証していません。剣を使うという発表だけで、初心者向け・高火力とは評価しません。"
+        ]
+      },
+      {
+        "heading": "発表されたアセンダンシー",
+        "table": [
+          [
+            "Knight",
+            "1.0で登場予定のDuelistアセンダンシー"
+          ],
+          [
+            "Master-at-Arms",
+            "1.0で登場予定のDuelistアセンダンシー"
+          ]
+        ],
+        "paragraphs": [
+          "英語名は公式発表の表記です。日本語ゲーム内の正式表記、全ノードの数値と完成ビルドは未登録です。"
+        ]
+      },
+      {
+        "heading": "公式映像で戦い方を確認",
+        "links": [
+          {
+            "label": "公式：Duelist紹介トレーラー",
+            "url": "https://www.youtube.com/watch?v=BwYNNQJO-AE"
+          }
+        ]
+      },
+      {
+        "heading": "ビルド公開前に確認すること",
+        "bullets": [
+          "主力スキルの解禁条件と、剣の更新方法",
+          "Stanceの強化対象と、サポートジェムとの組み合わせ",
+          "アセンダンシー・パッシブ・必須装備を含む段階別の育成手順"
+        ],
+        "paragraphs": [
+          "現在の職業診断やシミュレーターには仮のDuelistデータを入れていません。既存構成の保存・比較は現在の対応版のまま利用できます。"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "Shadow：短剣・トラップ・Stealth",
+        "url": "/poe2-1-0/shadow/"
+      },
+      {
+        "label": "Duelist：剣・Stance",
+        "url": "/poe2-1-0/duelist/"
+      },
+      {
+        "label": "Act 5・6とキャンペーン",
+        "url": "/poe2-1-0/campaign/"
+      },
+      {
+        "label": "Conquerors of Wraeclastリーグ",
+        "url": "/poe2-1-0/conquerors-of-wraeclast/"
+      },
+      {
+        "label": "パッシブ・ジェム・既存クラス変更",
+        "url": "/poe2-1-0/balance-changes/"
+      },
+      {
+        "label": "ビルドの1.0対応状況",
+        "url": "/poe2-1-0/build-status/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：Duelist紹介映像",
+        "url": "https://www.youtube.com/watch?v=BwYNNQJO-AE",
+        "checkedAt": "2026-11-15"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Duelistの武器は？",
+        "a": "剣です。Ready Stanceで剣スキルを強化し、Sand・Blood Stanceへ発展する仕組みが紹介されています。"
+      },
+      {
+        "q": "Duelistのアセンダンシーは？",
+        "a": "KnightとMaster-at-Armsが発表されています。正式版での全数値やおすすめの育成順は未検証です。"
+      },
+      {
+        "q": "現在Duelistを使える？",
+        "a": "1.0で追加予定のクラスです。現在の0.5.5向けビルド一覧には含めていません。"
+      }
+    ],
+    "searchAliases": [
+      "デュエリスト",
+      "Knight",
+      "Master-at-Arms",
+      "Stance",
+      "スタンス"
+    ]
+  },
+  {
+    "path": "/poe2-1-0/exilecon-2026/",
+    "publishedAt": "2026-11-03",
+    "kicker": "POE2 1.0 / EXILECON 2026",
+    "title": "ExileCon 2026発表まとめ｜PoE2 1.0の新クラス・Act 5・6・新リーグ",
+    "description": "ExileCon 2026で公開されたPoE2 1.0の公式情報を整理。Shadow・Duelist、全6Act、新リーグ、パッシブと既存ビルドへの変更を確認できます。",
+    "h1": "ExileCon 2026｜PoE2 1.0発表まとめ",
+    "answer": "ExileCon 2026は開催済みです。PoE2 1.0ではShadowとDuelist、Act 5・6、Conquerors of Wraeclastリーグ、大規模なバランス調整が発表されました。正式版の公開予定日は12月11日（PST）です。PoE1の発表とは分けて、PoE2の内容だけを整理しています。",
+    "quickActions": [
+      "下の分野別リンクから気になる変更を見る",
+      "現在の0.5.5ガイドとの違いを確認する",
+      "詳細の原典はGGG公式発表と紹介映像で確認する"
+    ],
+    "sections": [
+      {
+        "heading": "PoE2 1.0で発表された内容",
+        "links": [
+          {
+            "label": "Shadow：短剣・トラップ・Stealth",
+            "url": "/poe2-1-0/shadow/"
+          },
+          {
+            "label": "Duelist：剣・Stance",
+            "url": "/poe2-1-0/duelist/"
+          },
+          {
+            "label": "Act 5・6とキャンペーン",
+            "url": "/poe2-1-0/campaign/"
+          },
+          {
+            "label": "Conquerors of Wraeclastリーグ",
+            "url": "/poe2-1-0/conquerors-of-wraeclast/"
+          },
+          {
+            "label": "パッシブ・ジェム・既存クラス変更",
+            "url": "/poe2-1-0/balance-changes/"
+          },
+          {
+            "label": "ビルドの1.0対応状況",
+            "url": "/poe2-1-0/build-status/"
+          }
+        ]
+      },
+      {
+        "heading": "現在のサイトでの見方",
+        "paragraphs": [
+          "1.0の発表内容はこの情報セクションに集約しています。攻略記事・Tier・ビルド一覧の対応版は0.5.5のままで、発表前後の仕様を混ぜていません。",
+          "新クラスの名称や遊び方が発表されたことと、初心者向けビルドとして育成手順を検証できたことは別です。1.0対応状況で確認済みの範囲を確認してください。"
+        ]
+      },
+      {
+        "heading": "公式の発表・映像を見る",
+        "links": [
+          {
+            "label": "GGG公式：ExileCon 2026発表一覧",
+            "url": "https://www.pathofexile.com/forum/view-thread/4012710"
+          },
+          {
+            "label": "GGG公式：1.0発表特設ページ",
+            "url": "https://store.steampowered.com/sale/exilecon26/"
+          },
+          {
+            "label": "公式：1.0紹介映像",
+            "url": "https://www.youtube.com/watch?v=GiJ_2QdjoWg"
+          }
+        ]
+      },
+      {
+        "heading": "開催日程の記録",
+        "paragraphs": [
+          "会場はニュージーランド・オークランドのAotea Centre、開催は11月7〜8日（現地時間）でした。基調講演は日本時間11月7日午前6時の枠で案内されていました。現在は配信予約ではなく公式の発表ページ・アーカイブから確認できます。"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "Shadow：短剣・トラップ・Stealth",
+        "url": "/poe2-1-0/shadow/"
+      },
+      {
+        "label": "Duelist：剣・Stance",
+        "url": "/poe2-1-0/duelist/"
+      },
+      {
+        "label": "Act 5・6とキャンペーン",
+        "url": "/poe2-1-0/campaign/"
+      },
+      {
+        "label": "Conquerors of Wraeclastリーグ",
+        "url": "/poe2-1-0/conquerors-of-wraeclast/"
+      },
+      {
+        "label": "パッシブ・ジェム・既存クラス変更",
+        "url": "/poe2-1-0/balance-changes/"
+      },
+      {
+        "label": "ビルドの1.0対応状況",
+        "url": "/poe2-1-0/build-status/"
       }
     ],
     "sources": [
@@ -1103,24 +1281,26 @@
         "name": "Steamニュース（公式）：ExileCon 2026（2026年1月28日）",
         "url": "https://store.steampowered.com/news/app/2694490/view/523114848066732372",
         "checkedAt": "2026-11-03"
+      },
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
       }
     ],
     "faq": [
       {
-        "q": "ExileCon 2026は日本時間の何時から？",
-        "a": "基調講演（大型発表）は日本時間11月7日（土）午前6時からです。午前5時30分から事前番組があります。"
+        "q": "ExileCon 2026の発表内容は？",
+        "a": "PoE2ではShadow・Duelist、Act 5・6、新リーグConquerors of Wraeclast、パッシブや既存クラスなどの変更が発表されました。"
       },
       {
-        "q": "ExileCon 2026はどこで見られる？",
-        "a": "公式のTwitch（twitch.tv/pathofexile）とYouTube（@playpathofexile）で無料配信されます。"
-      },
-      {
-        "q": "見逃したらどうすればいい？",
-        "a": "基調講演は終了後すぐにTwitchとYouTubeでアーカイブが見られると公式が案内しています。"
-      },
-      {
-        "q": "ExileCon 2026では何が発表される？",
-        "a": "公式はPoE2 1.0（正式版）の内容を発表すると案内しています。具体的な内容は発表後、公式情報で確認してから追記します。"
+        "q": "1.0はもう公開された？",
+        "a": "いいえ。2026年11月15日の確認時点では、12月11日（PST）の公開予定です。発表内容とプレイ可能な仕様を分けて掲載しています。"
       }
     ]
   },
@@ -1471,6 +1651,500 @@
         "name": "Path of Exile公式：アカウントと機種間の課金アイテム制限",
         "url": "https://www.pathofexile.com/forum/view-thread/3586288/filter-account-type/staff",
         "checkedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "path": "/poe2-1-0/shadow/",
+    "publishedAt": "2026-11-15",
+    "kicker": "POE2 1.0 / OFFICIAL REVEAL",
+    "title": "PoE2 Shadow｜短剣・トラップ・Stealthとアセンダンシー",
+    "description": "Shadow（シャドウ）はPoE2 1.0で追加予定の新クラスです。短剣とトラップを使い、Stealthで接近して攻撃します。Assassin・Infiltratorの2つのアセンダンシーが発表されています。",
+    "h1": "PoE2 Shadowの戦い方とアセンダンシー",
+    "answer": "Shadow（シャドウ）はPoE2 1.0で追加予定の新クラスです。短剣とトラップを使い、Stealthで接近して攻撃します。Assassin・Infiltratorの2つのアセンダンシーが発表されています。",
+    "quickActions": [
+      "公式発表済みの内容を確認する",
+      "現在の0.5.5ガイドとの違いを確認する",
+      "育成・数値の検証状況は1.0対応状況を見る"
+    ],
+    "sections": [
+      {
+        "heading": "Shadowの戦い方",
+        "table": [
+          [
+            "武器",
+            "短剣（Daggers）・トラップ（Traps）"
+          ],
+          [
+            "新メカニクス",
+            "Stealth：近距離まで敵に認識されず、短剣スキルを強化"
+          ],
+          [
+            "コンボ",
+            "潜伏中にトラップを準備し、攻撃時に投げた順で起動"
+          ],
+          [
+            "アセンダンシー",
+            "Assassin / Infiltrator"
+          ]
+        ]
+      },
+      {
+        "heading": "Duelistとの選び分け",
+        "paragraphs": [
+          "Shadowは攻撃前の準備と奇襲、Duelistは剣と構えの組み合わせが紹介されています。どちらも新クラスですが、同じ近接職として装備や操作を共用できるとは限りません。",
+          "準備して一連の攻撃をつなぐ操作が好きならShadowの公式映像を見ておくと、求める戦い方に合うか判断しやすくなります。強さや育てやすさの評価は公開後の検証を待ちます。"
+        ]
+      },
+      {
+        "heading": "公式の紹介映像",
+        "links": [
+          {
+            "label": "GGG公式：Shadow紹介トレーラー",
+            "url": "https://www.youtube.com/watch?v=FD-lo79LtAM"
+          }
+        ]
+      },
+      {
+        "heading": "現時点で掲載していない情報",
+        "bullets": [
+          "アセンダンシーの全ノードと最終数値",
+          "スキル解禁Lvと8段階の育成順",
+          "必須装備、DPS、予算別の推奨構成"
+        ],
+        "paragraphs": [
+          "英語名は公式表記を使っています。既存の職業診断・パッシブツリー・シミュレーターに、推測のShadowデータは追加していません。"
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "1.0情報の全体を見る",
+        "url": "/poe2-1-0/"
+      },
+      {
+        "label": "Shadow：短剣・トラップ・Stealth",
+        "url": "/poe2-1-0/shadow/"
+      },
+      {
+        "label": "Duelist：剣・Stance",
+        "url": "/poe2-1-0/duelist/"
+      },
+      {
+        "label": "Act 5・6とキャンペーン",
+        "url": "/poe2-1-0/campaign/"
+      },
+      {
+        "label": "Conquerors of Wraeclastリーグ",
+        "url": "/poe2-1-0/conquerors-of-wraeclast/"
+      },
+      {
+        "label": "パッシブ・ジェム・既存クラス変更",
+        "url": "/poe2-1-0/balance-changes/"
+      },
+      {
+        "label": "ビルドの1.0対応状況",
+        "url": "/poe2-1-0/build-status/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Shadowはいつ使える？",
+        "a": "2026年12月11日（PST）公開予定の1.0で追加予定です。現在の0.5.5では使えません。"
+      },
+      {
+        "q": "Shadowのアセンダンシーは？",
+        "a": "AssassinとInfiltratorです。全ノードや最終的な育成手順は本サイトでは未検証です。"
+      }
+    ],
+    "searchAliases": [
+      "シャドウ",
+      "Assassin",
+      "Infiltrator",
+      "アサシン",
+      "Stealth",
+      "ステルス"
+    ]
+  },
+  {
+    "path": "/poe2-1-0/campaign/",
+    "publishedAt": "2026-11-15",
+    "kicker": "POE2 1.0 / OFFICIAL REVEAL",
+    "title": "PoE2 Act 5・6｜1.0の全6Actキャンペーンと既存攻略の違い",
+    "description": "PoE2 1.0ではAct 5とAct 6が追加され、全6Actのキャンペーンになります。新しい24エリア、18体の固有ボス、20を超えるChampion Rareとの遭遇が公式に紹介されています。",
+    "h1": "PoE2 Act 5・6と全6Actキャンペーン",
+    "answer": "PoE2 1.0ではAct 5とAct 6が追加され、全6Actのキャンペーンになります。新しい24エリア、18体の固有ボス、20を超えるChampion Rareとの遭遇が公式に紹介されています。",
+    "quickActions": [
+      "公式発表済みの内容を確認する",
+      "現在の0.5.5ガイドとの違いを確認する",
+      "育成・数値の検証状況は1.0対応状況を見る"
+    ],
+    "sections": [
+      {
+        "heading": "1.0で追加されるキャンペーン",
+        "table": [
+          [
+            "追加Act",
+            "Act 5・Act 6"
+          ],
+          [
+            "全体",
+            "全6Actのキャンペーン"
+          ],
+          [
+            "新エリア",
+            "24"
+          ],
+          [
+            "新しい固有ボス",
+            "18体"
+          ],
+          [
+            "Champion Rare",
+            "20を超える新しい遭遇"
+          ]
+        ]
+      },
+      {
+        "heading": "現在のAct攻略と混ぜないために",
+        "paragraphs": [
+          "本サイトのAct 1〜4・Interlude・Endgameの攻略は、記載された現行版の手順です。1.0で全6Actになるという発表だけから、既存のInterlude攻略をAct 5・6に読み替えることはできません。",
+          "新エリアの順路、クエスト報酬、永続ボーナス、各ボスの安全な対処は、実装後に確認してから攻略手順として追加します。ネタバレを含む物語の細部は、この概要には載せていません。"
+        ]
+      },
+      {
+        "heading": "公開前に準備できること",
+        "paragraphs": [
+          "耐性・ライフ・装備更新など、現在の版で基本操作を覚えるためのガイドは引き続き利用できます。Act到達レベルやジェムの解禁時期を1.0へ流用せず、正式版の進行条件を確認してください。"
+        ],
+        "links": [
+          {
+            "label": "現在の初心者ガイド",
+            "url": "/beginner-guide/"
+          },
+          {
+            "label": "1.0のビルド対応を確認",
+            "url": "/poe2-1-0/build-status/"
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "1.0情報の全体を見る",
+        "url": "/poe2-1-0/"
+      },
+      {
+        "label": "Shadow：短剣・トラップ・Stealth",
+        "url": "/poe2-1-0/shadow/"
+      },
+      {
+        "label": "Duelist：剣・Stance",
+        "url": "/poe2-1-0/duelist/"
+      },
+      {
+        "label": "Act 5・6とキャンペーン",
+        "url": "/poe2-1-0/campaign/"
+      },
+      {
+        "label": "Conquerors of Wraeclastリーグ",
+        "url": "/poe2-1-0/conquerors-of-wraeclast/"
+      },
+      {
+        "label": "パッシブ・ジェム・既存クラス変更",
+        "url": "/poe2-1-0/balance-changes/"
+      },
+      {
+        "label": "ビルドの1.0対応状況",
+        "url": "/poe2-1-0/build-status/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
+      }
+    ],
+    "faq": [
+      {
+        "q": "PoE2 1.0は何Act？",
+        "a": "Act 5・6の追加で全6Actになると公式に発表されています。"
+      },
+      {
+        "q": "現在のInterlude攻略をAct 5の攻略として使える？",
+        "a": "同じ手順とは確認していません。既存ページは現在の対応版の攻略として読み、1.0の新エリア攻略は確認後に追加します。"
+      }
+    ]
+  },
+  {
+    "path": "/poe2-1-0/conquerors-of-wraeclast/",
+    "publishedAt": "2026-11-15",
+    "kicker": "POE2 1.0 / OFFICIAL REVEAL",
+    "title": "PoE2 Conquerors of Wraeclast｜1.0新リーグの軍勢・城・指揮官",
+    "description": "Conquerors of WraeclastはPoE2 1.0で導入予定の新チャレンジリーグです。Varekと傭兵たちに協力し、兵を集め、城を攻略する仕組みが発表されています。",
+    "h1": "PoE2 Conquerors of Wraeclastの新リーグ情報",
+    "answer": "Conquerors of WraeclastはPoE2 1.0で導入予定の新チャレンジリーグです。Varekと傭兵たちに協力し、兵を集め、城を攻略する仕組みが発表されています。",
+    "quickActions": [
+      "公式発表済みの内容を確認する",
+      "現在の0.5.5ガイドとの違いを確認する",
+      "育成・数値の検証状況は1.0対応状況を見る"
+    ],
+    "sections": [
+      {
+        "heading": "リーグで行うこと",
+        "table": [
+          [
+            "探索と募集",
+            "70を超える新しい探索地点で兵の募集やミッションに挑戦"
+          ],
+          [
+            "城の攻略",
+            "宝物庫から装備を再鍛造する新クラフト素材を獲得"
+          ],
+          [
+            "拠点",
+            "3勢力から選び、独自の兵や要塞を利用"
+          ],
+          [
+            "指揮官",
+            "リアルタイムの仕組みでAtlas進行を指揮官に任せる"
+          ],
+          [
+            "勢力間の戦い",
+            "同勢力のプレイヤーと協力して他勢力の城を攻略"
+          ]
+        ]
+      },
+      {
+        "heading": "エンドゲームの新しい物語",
+        "paragraphs": [
+          "古代のBlood Lordの目覚めを阻止する物語と、Sanguarの血統をめぐる「The Blood Lord’s Promise」が紹介されています。軍勢の成長や城の攻略がエンドゲームの遊びに結び付きます。",
+          "参加条件、指揮官の待ち時間、クラフトの確率・対象・費用はここでは未検証です。発表された新要素を、確実に稼げる金策や最適な勢力選びとして案内していません。"
+        ]
+      },
+      {
+        "heading": "現在のリーグ攻略との関係",
+        "paragraphs": [
+          "現行0.5.5のForbidden Ritesとは別の新リーグです。既存キャラクターの扱いや新リーグへの参加手順は、開始前の公式案内で確認してください。以前のリーグの経済・報酬条件を、新リーグの条件として使うことはできません。"
+        ]
+      },
+      {
+        "heading": "公式の紹介映像",
+        "links": [
+          {
+            "label": "GGG公式：Conquerors of Wraeclastトレーラー",
+            "url": "https://www.youtube.com/watch?v=NVLdP41VBfk"
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "1.0情報の全体を見る",
+        "url": "/poe2-1-0/"
+      },
+      {
+        "label": "Shadow：短剣・トラップ・Stealth",
+        "url": "/poe2-1-0/shadow/"
+      },
+      {
+        "label": "Duelist：剣・Stance",
+        "url": "/poe2-1-0/duelist/"
+      },
+      {
+        "label": "Act 5・6とキャンペーン",
+        "url": "/poe2-1-0/campaign/"
+      },
+      {
+        "label": "Conquerors of Wraeclastリーグ",
+        "url": "/poe2-1-0/conquerors-of-wraeclast/"
+      },
+      {
+        "label": "パッシブ・ジェム・既存クラス変更",
+        "url": "/poe2-1-0/balance-changes/"
+      },
+      {
+        "label": "ビルドの1.0対応状況",
+        "url": "/poe2-1-0/build-status/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Conquerors of Wraeclastとは？",
+        "a": "PoE2 1.0で導入予定の新チャレンジリーグです。軍勢の募集、城の攻略、拠点や指揮官の仕組みが紹介されています。"
+      },
+      {
+        "q": "今のForbidden Ritesの続き？",
+        "a": "公式は1.0の新チャレンジリーグとして発表しています。現在のリーグの攻略や相場とは分けて確認してください。"
+      }
+    ]
+  },
+  {
+    "path": "/poe2-1-0/balance-changes/",
+    "publishedAt": "2026-11-15",
+    "kicker": "POE2 1.0 / OFFICIAL REVEAL",
+    "title": "PoE2 1.0変更点｜パッシブ・ジュエル・ジェム・既存クラス",
+    "description": "PoE2 1.0ではパッシブツリー、サポートジェム、ユニーク装備、既存クラスにも変更が発表されています。現在の取得ルートや計算結果を1.0へ流用する前に、変更対象を確認してください。",
+    "h1": "PoE2 1.0のパッシブ・ジェム・既存クラス変更",
+    "answer": "PoE2 1.0ではパッシブツリー、サポートジェム、ユニーク装備、既存クラスにも変更が発表されています。現在の取得ルートや計算結果を1.0へ流用する前に、変更対象を確認してください。",
+    "quickActions": [
+      "公式発表済みの内容を確認する",
+      "現在の0.5.5ガイドとの違いを確認する",
+      "育成・数値の検証状況は1.0対応状況を見る"
+    ],
+    "sections": [
+      {
+        "heading": "全ビルドで確認し直したい変更",
+        "table": [
+          [
+            "パッシブツリー",
+            "多数の新しいステータスを追加。ジュエルソケットはクラスター内へ移動"
+          ],
+          [
+            "サポートジェム",
+            "大規模なバランス調整"
+          ],
+          [
+            "アクティブスキル",
+            "Warrior・Witchなどに不足していたスキルを追加"
+          ],
+          [
+            "ユニーク装備",
+            "40を超える新規追加、70を超える既存品を改修"
+          ]
+        ]
+      },
+      {
+        "heading": "公式に挙げられた既存クラスの変更例",
+        "table": [
+          [
+            "Mercenary",
+            "リロードの基本的な仕組みを変更"
+          ],
+          [
+            "Infernalist",
+            "与えたスペルを使う悪魔ミニオン、最大3体のInfernal Hound、新しいCovenantスキル"
+          ],
+          [
+            "Blood Mage",
+            "新スキル・カースとCorrupted Bloodの再設計"
+          ],
+          [
+            "Acolyte of Chayula",
+            "Quarterstaffスキルを使う仲間、自身の命を犠牲にクローンへ魂を移す仕組み"
+          ]
+        ]
+      },
+      {
+        "heading": "今の構成を確認する順番",
+        "bullets": [
+          "主力とサポートの仕様が変わるか確認する",
+          "アセンダンシーの必須効果と必須ユニークを確認する",
+          "ジュエルソケットへ至る経路と必要ポイントを引き直す",
+          "同じ条件で火力・耐久を再計算してから候補を比較する"
+        ],
+        "paragraphs": [
+          "これは本サイトでの再確認手順です。変更対象に入ったことだけで上方・下方修正を断定するものではありません。最終値や相互作用を確認するまでは、1.0のTier順位を付けません。"
+        ]
+      },
+      {
+        "heading": "シミュレーターと保存構成の扱い",
+        "paragraphs": [
+          "現在のシミュレーターは0.5.5.5の計算データを使います。1.0のジュエル配置や新スキルを反映したものではありません。保存した構成は現在の版として比較でき、今回のニュース追加で保存形式やノードIDは変更していません。",
+          "1.0対応では、公式の完全なデータ・パッチノートと計算の検証が必要です。既存の構成を自動で新ツリーへ割り当てた扱いにはしません。"
+        ],
+        "links": [
+          {
+            "label": "掲載ビルドの対応状況",
+            "url": "/poe2-1-0/build-status/"
+          },
+          {
+            "label": "現在のシミュレーター",
+            "url": "/simulator/"
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "label": "1.0情報の全体を見る",
+        "url": "/poe2-1-0/"
+      },
+      {
+        "label": "Shadow：短剣・トラップ・Stealth",
+        "url": "/poe2-1-0/shadow/"
+      },
+      {
+        "label": "Duelist：剣・Stance",
+        "url": "/poe2-1-0/duelist/"
+      },
+      {
+        "label": "Act 5・6とキャンペーン",
+        "url": "/poe2-1-0/campaign/"
+      },
+      {
+        "label": "Conquerors of Wraeclastリーグ",
+        "url": "/poe2-1-0/conquerors-of-wraeclast/"
+      },
+      {
+        "label": "パッシブ・ジェム・既存クラス変更",
+        "url": "/poe2-1-0/balance-changes/"
+      },
+      {
+        "label": "ビルドの1.0対応状況",
+        "url": "/poe2-1-0/build-status/"
+      }
+    ],
+    "sources": [
+      {
+        "name": "GGG公式：ExileCon 2026 Announcements（11月6日発表）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4012710",
+        "checkedAt": "2026-11-15"
+      },
+      {
+        "name": "GGG公式：PoE2 Full Release発表・新クラス・リーグ・バランス変更",
+        "url": "https://store.steampowered.com/sale/exilecon26/",
+        "checkedAt": "2026-11-15"
+      }
+    ],
+    "faq": [
+      {
+        "q": "パッシブツリーは1.0で変わる？",
+        "a": "新しいステータスの追加とジュエルソケットのクラスター内への移動が発表されています。取得経路は1.0で再確認が必要です。"
+      },
+      {
+        "q": "現在のシミュレーターは1.0対応？",
+        "a": "いいえ。現在の計算版は0.5.5.5です。発表された変更を、未検証の数値で計算へ追加していません。"
       }
     ]
   }

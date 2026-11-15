@@ -15,8 +15,8 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "e111b09543bedb2f",
-  "date": "2026-11-14",
+  "hash": "8f660f0c9831ad4e",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/name-index/": {
@@ -240,8 +240,8 @@
   "hashVersion": 2
  },
  "/poe2-1-0/": {
-  "hash": "ea9fff5bbbf324b5",
-  "date": "2026-11-13",
+  "hash": "5cc0cec22b976516",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/issues/": {
@@ -275,8 +275,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "3a595bc1bc210f79",
-  "date": "2026-11-14",
+  "hash": "594cc63e7f1aa975",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -695,58 +695,78 @@
   "hashVersion": 2
  },
  "/poe2-1-0/release-date/": {
-  "hash": "5efebd22323ce9a8",
-  "date": "2026-11-11",
+  "hash": "f164f9561d9ad0a1",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/how-to-start/": {
-  "hash": "cc853bd703561ddb",
-  "date": "2026-11-11",
+  "hash": "7c64b4b058e89369",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/system-requirements/": {
-  "hash": "0060cf3ed0c91307",
-  "date": "2026-11-13",
+  "hash": "b7d8b7f8c5070deb",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/japanese/": {
-  "hash": "eb074e9a6b3714c2",
-  "date": "2026-11-13",
+  "hash": "a967353eb017108d",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/microtransactions/": {
-  "hash": "4fed4a1d9b1a1eb3",
-  "date": "2026-11-11",
+  "hash": "0ac406cc29c58255",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/controller/": {
-  "hash": "1cde5715a56e0a60",
-  "date": "2026-11-11",
+  "hash": "26463b74ed4628e2",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/pre-registration/": {
-  "hash": "c0b88b3ee5585b25",
-  "date": "2026-11-11",
+  "hash": "1ff6bdf49ddaaa18",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/build-status/": {
-  "hash": "f5110fd0b664638c",
-  "date": "2026-11-13",
+  "hash": "21d7c81265e267d9",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/duelist/": {
-  "hash": "7b1a4fb82ae2e18b",
-  "date": "2026-11-11",
+  "hash": "3ee4c1cc539e18fb",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/poe2-1-0/exilecon-2026/": {
-  "hash": "f4bf8c8ecb1004ee",
-  "date": "2026-11-11",
+  "hash": "5cc5d9e85c5e9193",
+  "date": "2026-11-15",
   "hashVersion": 2
  },
  "/what-is-poe2/": {
   "hash": "334f25152706cdbf",
   "date": "2026-11-13",
+  "hashVersion": 2
+ },
+ "/poe2-1-0/shadow/": {
+  "hash": "9de01e6d165311ac",
+  "date": "2026-11-15",
+  "hashVersion": 2
+ },
+ "/poe2-1-0/campaign/": {
+  "hash": "8337138a0ba33923",
+  "date": "2026-11-15",
+  "hashVersion": 2
+ },
+ "/poe2-1-0/conquerors-of-wraeclast/": {
+  "hash": "c4cdfb88814b8be8",
+  "date": "2026-11-15",
+  "hashVersion": 2
+ },
+ "/poe2-1-0/balance-changes/": {
+  "hash": "971687264f34e466",
+  "date": "2026-11-15",
   "hashVersion": 2
  }
 }

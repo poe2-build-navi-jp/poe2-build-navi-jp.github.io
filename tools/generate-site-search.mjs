@@ -53,8 +53,8 @@ export async function collectSearchEntries(root = defaultRoot) {
   };
   const guideMap = new Map();
   for (const g of [...guideData, ...strategy]) guideMap.set(`/guides/${g.slug}/`, g);
-  for (const p of pages.filter(p => /^\/guides\/[^/]+\/$/.test(p.path))) {
-    if (!guideMap.has(p.path)) guideMap.set(p.path, {title: p.h1 || p.title, summary: p.description, slug: p.path.split('/')[2]});
+  for (const p of pages.filter(p => /^\/(?:guides|poe2-1-0)\/[^/]+\/$/.test(p.path))) {
+    if (!guideMap.has(p.path)) guideMap.set(p.path, {title: p.h1 || p.title, summary: p.description, slug: p.path.split('/')[2], sections: p.sections, keywords: p.searchAliases});
   }
   for (const [href, g] of guideMap) {
     const intent = intents.find(item => item.path === href);

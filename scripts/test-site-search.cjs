@@ -45,7 +45,7 @@ function contrast(a, b) { const x = luminance(a), y = luminance(b); return (Math
   const outputRoot = path.join(temp, 'output');
   fs.mkdirSync(fixture);
   try {
-    for (const dir of ['data', 'guides', 'builds', 'dictionary', 'skills', 'equipment']) {
+    for (const dir of ['data', 'guides', 'builds', 'dictionary', 'skills', 'equipment', 'poe2-1-0']) {
       if (fs.existsSync(path.join(root, dir))) fs.cpSync(path.join(root, dir), path.join(fixture, dir), {recursive: true});
     }
     const data = await generator.generateSiteSearch({root: fixture, outputRoot});
