@@ -1,5 +1,5 @@
 import {parseNamedPlans, namedPlanKey} from './simulator-model.js?v=161ef63cbd';
-import {goalKey, makeGoal, parseGoal, compareGoal} from './simulator-goal-model.js?v=82a83372d6';
+import {goalKey, makeGoal, parseGoal, compareGoal} from './simulator-goal-model.js?v=9fc88e5370';
 
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;
@@ -33,7 +33,7 @@ function renderGems(section) {
     const own = row.currentLevel === null ? t('未設定', 'Not configured') : `Lv${row.currentLevel} / ${t('品質', 'quality ')}${row.currentQuality}%`;
     return `<li>${badge(row.status)}<b data-skill-selected="${escape(gemName(row.skillId))}">${name}</b>${parent}<p>${t('目標', 'Target')}: Lv${row.level} / ${t('品質', 'quality ')}${row.quality}%<br>${t('現在', 'Current')}: ${own}</p></li>`;
   });
-  return (section.mainDifferent ? `<p class="sim-goal-notice">${t('主力スキルの指定も目標と異なります。目標：', 'The main skill selection also differs. Target: ')}${escape(gemName(section.main))}</p>` : '') +
+  return (section.mainDifferent ? `<p class="sim-goal-notice">${t('主力スキルの指定も目標と異なります。目標：', 'The main skill selection also differs. Target: ')}${escape(gemName(section.main))} · ${t('スキル内の主力指定', 'Active skill selection ')}${section.mainActive}</p>` : '') +
     '<p class="sim-library-help">' + t('有効な同じスキルの組にあるジェムを照合します。Lv・品質は目標以上なら一致です。', 'Gems are checked in the matching enabled skill group. Levels and quality at or above the target count as a match.') + '</p>' + items;
 }
 
@@ -60,7 +60,8 @@ function renderReport(goal, current) {
   const passives = report.passives.available ? String(report.passives.missing) : '—';
   const gemGaps = report.gems.missing + report.gems.upgrades + Number(report.gems.mainDifferent);
   const passiveGaps = report.passives.available ? report.passives.missing + report.passives.choices : '—';
-  const unverified = report.gems.unknown || report.passives.unknown || report.equipment.unknown || !report.passives.available;
+  const unverified = report.gems.unknown || report.passives.unknown || report.equipment.unknown || !report.passives.available ||
+    !report.gems.rows.length || !report.passives.rows.length || !report.equipment.rows.length;
   const notices = [
     !report.character.sameAscendancy && t('アセンダンシーの指定が異なります。', 'The ascendancy selections differ.'),
     !report.character.sameData && t('計算データの版が異なるため、参考の照合です。', 'The calculation data versions differ; treat this as a reference check.'),
@@ -98,7 +99,15 @@ function render() {
   $('sim-goal-active').hidden = true;
   $('sim-goal-count').textContent = '';
   if (!raw) { $('sim-goal-result').replaceChildren(); return; }
-  try { renderReport(parseGoal(raw, state.preset), state.current); }
+  try {
+    const goal = parseGoal(raw, state.preset);
+    const selected = goal.source.kind + ':' + goal.source.id;
+    if (!$('sim-goal-select').value && candidates.some(candidate => candidate.kind + ':' + candidate.id === selected)) {
+      $('sim-goal-select').value = selected;
+      $('sim-goal-set').disabled = false;
+    }
+    renderReport(goal, state.current);
+  }
   catch { $('sim-goal-status').textContent = t('保存した目標を照合できません。目標を選び直してください。現在の構成と元の目標データは保持しています。', 'The saved target cannot be compared. Choose a target again. Your current build and original target data are intact.'); }
 }
 

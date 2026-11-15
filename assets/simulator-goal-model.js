@@ -89,9 +89,11 @@ function compareGems(current, target, gemInfo) {
     }
   }
   const main = request => anchor(request.socket_groups?.[request.main_socket_group || 0] || {gems: []});
+  const mainActive = request => request.socket_groups?.[request.main_socket_group || 0]?.main_active_skill || 1;
   return {rows, missing: rows.filter(row => ['missing', 'disabled'].includes(row.status)).length,
     upgrades: rows.filter(row => row.status === 'upgrade').length, unknown: rows.filter(row => row.status === 'unknown').length,
-    main: main(target) || null, mainDifferent: !!main(target) && main(current) !== main(target)};
+    main: main(target) || null, mainActive: mainActive(target),
+    mainDifferent: !!main(target) && (main(current) !== main(target) || mainActive(current) !== mainActive(target))};
 }
 
 function allocations(request) {

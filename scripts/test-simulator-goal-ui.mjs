@@ -97,6 +97,7 @@ try {
   assert.equal(d.getElementById('sim-goal-name').textContent, entry.name);
   assert.equal(d.getElementById('sim-goal-name').querySelector('img'), null);
   assert.match(d.getElementById('sim-goal-count').textContent, /ジェム 0/);
+  assert.match(d.getElementById('sim-goal-count').textContent, /未確認あり/, 'empty target sections cannot imply a fully checked build');
   w.localStorage.setItem(goals.goalKey(preset), 'broken target');
   w.dispatchEvent(new w.StorageEvent('storage', {key: goals.goalKey(preset)}));
   assert.equal(w.localStorage.getItem(goals.goalKey(preset)), 'broken target');

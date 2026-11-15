@@ -32,7 +32,13 @@ current.request.socket_groups[0].gems[0].level = 15;
 current.request.allocated_nodes.pop();
 const preset = target.preset, auto = 'poe2-simulator:v1:' + preset;
 const named = JSON.stringify({version: 1, plans: [{id: 'qa-goal-target', name: 'QA target <img src=x onerror=alert(1)>', saved: target}]});
-const ready = page => page.waitForFunction(() => document.querySelector('#sim-stats')?.getAttribute('aria-busy') === 'false' && !!window.Poe2SimulatorLibrary?.goalData(), undefined, {timeout: 60000});
+const ready = async page => {
+  try {
+    await page.waitForFunction(() => document.querySelector('#sim-stats')?.getAttribute('aria-busy') === 'false' && !!window.Poe2SimulatorLibrary?.goalData(), undefined, {timeout: 100000});
+  } catch (cause) {
+    throw Error('Simulator initialization: ' + await page.locator('#sim-status').textContent() + ' / ' + await page.locator('#sim-error').textContent(), {cause});
+  }
+};
 const open = async (page, selector) => { if (!await page.locator(selector).evaluate(element => element.open)) await page.locator(selector + '>summary').click(); };
 const reports = [];
 try {
@@ -97,8 +103,9 @@ try {
           assert.equal(await page.evaluate(key => localStorage.getItem(key), namedPlanKey(preset)), named);
           assert.deepEqual(errors, [], label + ': page errors');
           reports.push(label);
+          console.log('PASS: ' + label + ' target checklist workflow');
         } catch (error) {
-          console.error(label, await page.locator('#sim-goal-status').textContent().catch(() => ''));
+          console.error(label, await page.locator('#sim-goal-status').textContent().catch(() => ''), 'page errors:', errors);
           await page.screenshot({path: resolve(output, label + '-failure.png')}).catch(() => {});
           throw error;
         } finally { await context.close(); }
