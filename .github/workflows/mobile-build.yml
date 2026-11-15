@@ -32,6 +32,10 @@ jobs:
           xcode-version: '26.3'
       - name: Install project generator
         run: command -v xcodegen || brew install xcodegen
+      - name: Validate app startup with the actual WebKit rule compiler
+        run: |
+          swiftc mobile/ios/Sources/ContentRules.swift mobile/ios/Tests/main.swift -framework WebKit -o "$RUNNER_TEMP/poe2-startup-check"
+          "$RUNNER_TEMP/poe2-startup-check"
       - name: Generate Xcode project
         working-directory: mobile/ios
         run: xcodegen generate

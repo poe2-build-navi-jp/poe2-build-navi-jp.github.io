@@ -65,8 +65,7 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKUIDeleg
         NSLayoutConstraint.activate([errorPanel.centerXAnchor.constraint(equalTo: view.centerXAnchor), errorPanel.centerYAnchor.constraint(equalTo: view.centerYAnchor), errorPanel.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, constant: -40)])
         NotificationCenter.default.addObserver(self, selector: #selector(resume), name: UIApplication.didBecomeActiveNotification, object: nil)
         // App views do not run the website's advertising/analytics integrations.
-        let rules = #"[{"trigger":{"url-filter":"^https?://([^/]*\\.)?(googlesyndication\\.com|doubleclick\\.net|googleadservices\\.com|fundingchoicesmessages\\.google\\.com|googletagmanager\\.com|google-analytics\\.com)/"},"action":{"type":"block"}}]"#
-        WKContentRuleListStore.default().compileContentRuleList(forIdentifier: "poe2-app-content-v1", encodedContentRuleList: rules) { [weak self] list, error in
+        WKContentRuleListStore.default().compileContentRuleList(forIdentifier: AppContentRules.identifier, encodedContentRuleList: AppContentRules.json) { [weak self] list, error in
             guard let self else { return }
             guard let list else { self.message("通信設定を準備できませんでした。アプリを開き直してください。"); return }
             self.web.configuration.userContentController.add(list)
