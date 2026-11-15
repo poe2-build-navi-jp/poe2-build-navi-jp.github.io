@@ -36,6 +36,7 @@ jobs:
           npm run test:search
           npm run test:skill-icons
           node scripts/test-passive-icons.mjs
+          node scripts/test-mobile-host.mjs
           npm run test:usability
       - name: Install browser for responsive checks
         run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium
@@ -53,10 +54,11 @@ jobs:
           mkdir _site
           rsync -a ./ _site/ \
             --exclude '.git' --exclude '.github' --exclude '_site' --exclude 'node_modules' \
-            --exclude '/company/' --exclude '/docs/' --exclude '/tools/' --exclude '/scripts/' --exclude '/tests/' \
+            --exclude '/company/' --exclude '/docs/' --exclude '/tools/' --exclude '/scripts/' --exclude '/tests/' --exclude '/mobile/' \
             --exclude '/package.json' --exclude '/package-lock.json' --exclude '/.gitignore' --exclude '.indexnow' \
             --exclude '/NOTE_CONTENT_MAP.md' --exclude '/ASSET_SOURCES.md' --exclude '/README.md' \
             --exclude '/site-update.zip' --exclude '/.claude/'
+          node tools/stamp-mobile-release.mjs _site "$GITHUB_SHA"
           touch _site/.nojekyll
           test -f _site/index.html && test -f _site/sitemap.xml && test -f _site/ads.txt
       - uses: actions/configure-pages@v5
