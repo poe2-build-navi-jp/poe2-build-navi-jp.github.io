@@ -33,7 +33,7 @@ public final class MainActivity extends Activity {
     }
     private int dp(int value) { return (int)(value * getResources().getDisplayMetrics().density + .5f); }
     private Button button(String text, Runnable action) {
-        Button button = new Button(this); button.setText(text); button.setTextSize(13); button.setMinHeight(dp(48)); button.setMinimumWidth(dp(48));
+        Button button = new Button(this); button.setText(text); button.setTextSize(13); button.setPadding(dp(2), 0, dp(2), 0); button.setSingleLine(true); button.setMinHeight(dp(48)); button.setMinimumWidth(dp(48));
         button.setOnClickListener(v -> action.run()); return button;
     }
     @Override public void onCreate(Bundle state) {
@@ -58,7 +58,7 @@ public final class MainActivity extends Activity {
         WebSettings settings = web.getSettings(); settings.setJavaScriptEnabled(true); settings.setDomStorageEnabled(true);
         settings.setAllowFileAccess(false); settings.setAllowContentAccess(true); settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         settings.setJavaScriptCanOpenWindowsAutomatically(false); settings.setSupportMultipleWindows(false);
-        settings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        settings.setCacheMode(WebSettings.LOAD_DEFAULT); settings.setUseWideViewPort(true); settings.setLoadWithOverviewMode(true);
         CookieManager.getInstance().setAcceptThirdPartyCookies(web, false);
         if (!WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER) || !WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
             message("Android System WebViewとChromeを最新版に更新してから、アプリを開き直してください。"); return;
@@ -120,7 +120,7 @@ public final class MainActivity extends Activity {
     private void share(String text) { if (text == null) return; Intent intent = new Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, text); startActivity(Intent.createChooser(intent, "共有")); }
     private JSONArray favorites() { try { return new JSONArray(getPreferences(MODE_PRIVATE).getString("favorites", "[]")); } catch (JSONException error) { return new JSONArray(); } }
     private void more() {
-        new AlertDialog.Builder(this).setTitle("保存と共有").setItems(new String[]{"このページをお気に入りに追加", "お気に入りを開く", "全データのバックアップを書き出す", "アプリのバックアップを復元", "非公式アプリについて"}, (dialog, which) -> {
+        new AlertDialog.Builder(this).setTitle("保存と共有").setItems(new String[]{"このページをお気に入りに追加", "お気に入りを開く", "構成・保存記事をバックアップ", "アプリのバックアップを復元", "非公式アプリについて"}, (dialog, which) -> {
             if (which == 0) {
                 if (!allowed(Uri.parse(String.valueOf(web.getUrl())))) return;
                 try {

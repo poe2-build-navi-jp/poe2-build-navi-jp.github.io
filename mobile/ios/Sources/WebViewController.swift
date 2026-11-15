@@ -118,7 +118,7 @@ final class WebViewController: UIViewController, WKNavigationDelegate, WKUIDeleg
             self.message("お気に入りに保存しました。")
         })
         menu.addAction(UIAlertAction(title: "お気に入りを開く", style: .default) { [weak self] _ in self?.showFavorites() })
-        menu.addAction(UIAlertAction(title: "全データのバックアップを書き出す", style: .default) { [weak self] _ in self?.run("window.Poe2Host.exportBackup()") })
+        menu.addAction(UIAlertAction(title: "構成・保存記事をバックアップ", style: .default) { [weak self] _ in self?.run("window.Poe2Host.exportBackup()") })
         menu.addAction(UIAlertAction(title: "アプリのバックアップを復元", style: .default) { [weak self] _ in
             guard let self, self.ready else { return }
             let picker = UIDocumentPickerViewController(forOpeningContentTypes: [.json], asCopy: true)
