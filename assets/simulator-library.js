@@ -1,5 +1,5 @@
 import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=5e2b21adc0';
-import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=11fde0ff02';
+import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=1b78fc126c';
 import {newSyncCode} from './simulator-sync-crypto.js?v=6d43b0469b';
 
 const en = document.documentElement.lang === 'en';
@@ -26,6 +26,7 @@ function recordedConditions(record){
     [t('購入予定額B','Planned cost B')]:price(record.source.prices.entries.find(p=>p.id==='b')),[t('予算','Budget')]:price(record.source.prices.budget)};
 }
 function errorText(cause) {
+  if (cause.status === 402) return t('同期サービスの利用枠に達しています。自動再試行を停止しました。端末内の保存は利用できます。', 'The sync service has reached its usage allowance. Automatic retries are paused. Local saves remain available.');
   if (cause.status === 403) return t('接続コードが違うか、保管庫が無効化されています。端末内の保存は残っています。','The code is incorrect or the vault was revoked. Local saves remain available.');
   if (cause.status === 429) return t('同期サービスの利用上限に達しました。自動再試行を停止しました。端末内の保存は利用できます。','The sync service reached its usage limit. Automatic retries are paused. Local saves remain available.');
   if (cause.status === 409) return t('別の端末でも更新されました。最新の内容を読み直して同期します。','Another device updated the vault. Sync will reconcile with the latest revision.');
@@ -80,16 +81,18 @@ function renderUpdates() {
         title:{ja:p.name+'の育成ガイドが更新されています',en:p.name+' guide has been updated'},
         body:{ja:'保存後にスキル・装備・育成方針の案内が変わっています。記事を確認してから、手元の構成へ必要な変更を反映してください。',en:'Skill, equipment or progression guidance has changed since this build was saved. Review the guide before adapting your saved configuration.'},href:p.path}));
     shownNotices = relevantNotices([...notices, ...extra, ...revised], records, seen);
+    window.Poe2SimulatorNotices = shownNotices;
     const unread = shownNotices.filter(n=>n.unread).length;
     $('sim-update-count').textContent = unread ? t(`${unread}件の新着`,`${unread} unread`) : '';
     $('sim-updates-seen').disabled = !unread;
-    $('sim-update-list').innerHTML = shownNotices.length ? shownNotices.map(notice=>`<article><time datetime="${escape(notice.date)}">${escape(notice.date)} · ${notice.unread?t('未読','Unread'):t('既読','Read')}</time><h4>${escape(notice.title[en?'en':'ja'])}</h4><p>${escape(notice.body[en?'en':'ja'])}</p><a href="${escape(notice.href)}">${t('変更内容と確認範囲を見る','Read the changes and verification scope')}${en&&!notice.href.startsWith('/en/')?' (Japanese)':''}</a></article>`).join('')
+    $('sim-update-list').innerHTML = shownNotices.length ? shownNotices.map(notice=>`<article data-update-id="${escape(notice.id)}"><time datetime="${escape(notice.date)}">${escape(notice.date)} · ${notice.unread?t('未読','Unread'):t('既読','Read')}</time><h4>${escape(notice.title[en?'en':'ja'])}</h4><p>${escape(notice.body[en?'en':'ja'])}</p><a href="${escape(notice.href)}">${t('変更内容と確認範囲を見る','Read the changes and verification scope')}${en&&!notice.href.startsWith('/en/')?' (Japanese)':''}</a></article>`).join('')
       : `<p>${records.some(r=>r.kind==='plan')?t('保存構成に関係する新しい案内はありません。','There are no relevant notices for your saved builds.'):t('構成に名前を付けて保存すると、関連する更新をここで確認できます。','Save a named build to see relevant updates here.')}</p>`;
+    window.dispatchEvent(new window.CustomEvent('poe2:update-notices'));
   } catch (cause) { $('sim-update-list').textContent = errorText(cause); }
 }
 async function loadUpdates() {
   try {
-    const response = await fetch('/data/saved-build-updates.json?v=0485f35407');
+    const response = await fetch('/data/saved-build-updates.json?v=a8380e2fc6');
     if (!response.ok) throw Error('NOTICES_FETCH');
     const data = await response.json();
     if (data.version !== 1 || !Array.isArray(data.notices)) throw Error('NOTICES_FORMAT');

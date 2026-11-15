@@ -5,6 +5,8 @@ export const BUILD_STEPS=[
  'generate-simulator-examples', // real engine checks for optional examples and sourced equipment
  'enhance-simulator-comparisons', // calculated article tables and reproducible comparison links
  'generate-simulator',       // selectable build workbench and per-build entry links
+ 'generate-simulator-index', // exact game IDs for update review and official planner exports
+ 'generate-community',       // public build search and explicit opt-in publishing
  'generate-issues',
  'enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice',
  'generate-html-sitemap',    // reads page titles, so after the generators and the title changes

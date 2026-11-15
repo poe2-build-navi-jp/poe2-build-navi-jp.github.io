@@ -37,7 +37,7 @@ async function inject(directory = "") {
     const file = resolve(root, path);
     const original = await readFile(file, "utf8");
     if (!original.includes("</head>")) continue;
-    const pageTag = ["simulator/index.html","en/simulator/index.html"].includes(path) ? tag.replace("gtag('config'", "gtag('set','page_location',location.origin+location.pathname);gtag('config'") : tag;
+    const pageTag = ["simulator/index.html","en/simulator/index.html","community/index.html","en/community/index.html"].includes(path) ? tag.replace("gtag('config'", "gtag('set','page_location',location.origin+location.pathname);gtag('config'") : tag;
     let html = marker.test(original)
       ? original.replace(marker, pageTag)
       : original.replace(/<head([^>]*)>/, `<head$1>${pageTag}`);

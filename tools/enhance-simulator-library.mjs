@@ -6,7 +6,7 @@ const presets=JSON.parse(await readFile(new URL('data/simulator-presets.json',ro
 const noticesFile=new URL('data/saved-build-updates.json',root),noticeCatalog=JSON.parse(await readFile(noticesFile,'utf8'));
 noticeCatalog.guideRevisions=Object.fromEntries(presets.map(p=>[p.id,p.contentRevision]));
 await writeFile(noticesFile,JSON.stringify(noticeCatalog,null,2)+'\n');
-for(const name of ['simulator-library-model.js','simulator-sync.js','simulator-library.js','simulator-goal-model.js','simulator-goal.js']){
+for(const name of ['simulator-library-model.js','simulator-sync.js','simulator-library.js','simulator-goal-model.js','simulator-goal.js','simulator-impact-model.js','simulator-impact.js','simulator-planner-model.js','simulator-planner.js']){
   const file=new URL('assets/'+name,root);let source=await readFile(file,'utf8');
   for(const match of [...source.matchAll(/from '(\.\/simulator-[a-z-]+\.js)(?:\?v=[a-f0-9]+)?'/g)]){
     const hash=createHash('sha256').update(await readFile(new URL('assets/'+match[1].slice(2),root))).digest('hex').slice(0,10);
@@ -15,6 +15,10 @@ for(const name of ['simulator-library-model.js','simulator-sync.js','simulator-l
   if(name==='simulator-library.js'){
     const hash=createHash('sha256').update(await readFile(new URL('data/saved-build-updates.json',root))).digest('hex').slice(0,10);
     source=source.replace(/\/data\/saved-build-updates\.json(?:\?v=[a-f0-9]+)?/g,'/data/saved-build-updates.json?v='+hash);
+  }
+  for (const path of ['data/simulator-index.json', 'data/simulator-names.json']) {
+    const hash = createHash('sha256').update(await readFile(new URL(path, root))).digest('hex').slice(0, 10);
+    source = source.replace(new RegExp('/' + path.replaceAll('.', '\\.') + '(?:\\?v=[a-f0-9]+)?', 'g'), '/' + path + '?v=' + hash);
   }
   await writeFile(file,source);
 }
@@ -39,6 +43,33 @@ for (const en of [false, true]) {
   fragment(head, '<link rel="stylesheet" href="/assets/simulator-library.css">');
   fragment(body, '<script type="module" src="/assets/simulator-library.js"></script>');
   fragment(body, '<script type="module" src="/assets/simulator-goal.js"></script>');
+  fragment(body, '<script type="module" src="/assets/simulator-impact.js"></script>');
+  fragment(body, '<script type="module" src="/assets/simulator-planner.js"></script>');
+  fragment(body, '<script type="module" src="/assets/simulator-community.js"></script>');
+  fragment(nodes.get('sim-workspace').parentNode, '<details id="sim-community-panel" class="sim-workspace"><summary>' + t('構成を公開・みんなのビルド', 'Publish a build / community builds') + '</summary><p>' + t('現在の入力を投稿用に準備できます。次の画面で内容を確認して、一般公開を選ぶまで投稿されません。', 'Prepare your open draft for publishing. It stays private until you review the next page and explicitly publish it.') + '</p><div class="sim-actions"><button id="sim-community-prepare" type="button" disabled>' + t('現在の構成を投稿用に準備', 'Prepare this draft for publishing') + '</button><a href="' + (en ? '/en' : '') + '/community/">' + t('みんなのビルドを探す', 'Explore community builds') + '</a></div><p id="sim-community-status" role="status"></p></details>', nodes.get('sim-workspace'));
+  fragment(nodes.get('sim-workspace').parentNode, [
+    '<details id="sim-planner-panel" class="sim-workspace sim-planner-panel" hidden><summary>' + t('ゲーム内プランナーへ書き出す', 'Export to the in-game Build Planner') + '</summary>',
+    '<p>' + t('現在の入力か名前付き保存から、スキル・サポート・パッシブを公式の.build形式に変換します。', 'Convert skills, supports and passives from your open draft or a named save into the official .build format.') + '</p>',
+    '<label>' + t('書き出す構成', 'Configuration') + '<select id="sim-planner-source"></select></label>',
+    '<div class="sim-planner-controls"><label>' + t('ビルド名', 'Build name') + '<input id="sim-planner-name" maxlength="140"></label>',
+    '<label>' + t('作者名（任意）', 'Author (optional)') + '<input id="sim-planner-author" maxlength="80" autocomplete="off"></label>',
+    '<label>' + t('表示を開始するLv', 'Show from level') + '<input id="sim-planner-from" type="number" min="1" max="100" value="1" inputmode="numeric"></label>',
+    '<label>' + t('表示を終了するLv', 'Show through level') + '<input id="sim-planner-to" type="number" min="1" max="100" value="100" inputmode="numeric"></label></div>',
+    '<label class="sim-planner-check"><input id="sim-planner-passives" type="checkbox" checked>' + t('パッシブを含める', 'Include passives') + '</label>',
+    '<label class="sim-planner-check"><input id="sim-planner-skills" type="checkbox" checked>' + t('スキルとサポートを含める', 'Include skills and supports') + '</label>',
+    '<p class="sim-library-help">' + t('現在の入力を指定したレベル範囲の見本として出力します。装備・計算条件・個人メモは含めません。', 'This exports a snapshot for the selected level range. Equipment, calculation settings and private notes are excluded.') + '</p>',
+    '<button id="sim-planner-check" type="button" disabled>' + t('書き出す内容を確認', 'Review export') + '</button><div id="sim-planner-preview"></div>',
+    '<label id="sim-planner-partial-row" class="sim-planner-check" hidden><input id="sim-planner-partial" type="checkbox">' + t('表示された未対応項目を除いて書き出す', 'Export without the listed unsupported entries') + '</label>',
+    '<button id="sim-planner-download" type="button" disabled>' + t('.buildをダウンロード', 'Download .build') + '</button><p id="sim-planner-status" role="status" aria-live="polite"></p>',
+    '<details><summary>' + t('ゲームで読み込む手順・対応範囲', 'Loading the file and compatibility') + '</summary><ol><li>' +
+      t('PCでは、保存した.buildを次のフォルダに入れます。', 'On PC, place the downloaded .build in the folder below.') +
+      '<pre>Documents/My Games/Path of Exile 2/BuildPlanner</pre></li><li>' +
+      t('ゲーム内のBuild Plannerでビルド名を選びます。公式サイトで自分の.buildをアップロードして使う方法もあります。', 'Select the build name in the in-game Build Planner. You can also upload your .build on the official website.') +
+      '</li></ol><p class="sim-library-help">' +
+      t('公式のVersion 1（Experimental）形式を参照しています。IDと形式は収録データで検証していますが、ゲーム内実機での読み込みは未確認です。', 'Uses the official Version 1 experimental format. IDs and structure are checked against the bundled data; loading in the game client has not been tested.') +
+      '</p><a href="https://www.pathofexile.com/developer/docs/game#build-planner" target="_blank" rel="noopener">' +
+      t('公式の仕様・使い方', 'Official format and instructions') + '</a></details></details>',
+  ].join(''), nodes.get('sim-workspace'));
   fragment(nodes.get('sim-workspace').parentNode, `<details id="sim-goal-panel" class="sim-workspace sim-goal-panel" hidden><summary>${t('目標ビルドまでの不足を確認','Check what is missing from your target build')} <span id="sim-goal-count"></span></summary><p>${t('完成見本や保存構成を目標にして、今の構成との差を確認できます。照合するのは編集画面で反映した入力内容です。','Choose a reference or named save as your target and check the gaps in your current build. The check uses inputs you have applied in the editor.')}</p><div class="sim-goal-picker"><label>${t('目標にする構成','Target configuration')}<select id="sim-goal-select"><option value="">${t('ビルドを選ぶと目標を設定できます','Select a build to choose a target')}</option></select></label><button id="sim-goal-set" type="button" disabled>${t('この端末の目標にする','Set target on this device')}</button></div><p id="sim-goal-options-help" class="sim-library-help"></p><p id="sim-goal-status" role="status" aria-live="polite"></p><div id="sim-goal-active" hidden><h3 id="sim-goal-name"></h3><label class="sim-goal-matched"><input id="sim-goal-show-matched" type="checkbox">${t('一致した項目も表示','Show matching entries too')}</label><div id="sim-goal-result"></div><p class="sim-library-help">${t('目標に入力された項目を照合します。装備の違いは性能の優劣を示しません。火力・耐久はA/B比較でも確認できます。','Only entries configured in the target are checked. Equipment differences do not rank performance. Use A/B comparison to check damage and defences.')}</p></div><button id="sim-goal-clear" type="button" hidden>${t('この端末の目標設定を解除','Clear target on this device')}</button><p class="sim-library-help">${t('目標設定はこの端末に保存します。目標に選んだ構成の内容は、選び直すまで固定して保持します。','The target preference is saved on this device. Its inputs remain fixed until you select a target again.')}</p></details>`, nodes.get('sim-workspace'));
   const compare = nodes.get('sim-compare-plans');
   fragment(compare.parentNode, `<label class="sim-library-align"><input id="sim-library-align" type="checkbox" checked>${t('Aのレベル・報酬ポイント・一時効果に揃えて比較','Use A’s level, quest points and temporary effects for both builds')}</label><p class="sim-library-help">${t('敵は比較欄で共通指定。保存元は変更しません。主力スキル・武器セットが違う場合は参考比較と表示します。','The selected enemy applies to both builds. Original saves stay intact. Different main skills or weapon sets are flagged in the record.')}</p>`, compare);

@@ -3,8 +3,12 @@ on:
   pull_request:
     paths:
       - 'assets/simulator*'
+      - 'assets/community*'
       - 'assets/site-usability*'
       - 'data/simulator*'
+      - 'data/community*'
+      - 'community/**'
+      - 'en/community/**'
       - 'data/saved-build-updates.json'
       - 'simulator/**'
       - 'en/simulator/**'
@@ -12,6 +16,10 @@ on:
       - 'tools/enhance-simulator-library.mjs'
       - 'tools/generate-simulator*'
       - 'tools/sync-service/**'
+      - 'tools/community-service/**'
+      - 'tools/generate-community.mjs'
+      - 'scripts/test-community*'
+      - 'scripts/fixtures/community-db-sdk.mjs'
       - 'scripts/test-simulator*'
       - 'scripts/fixtures/sync-db-sdk.mjs'
       - '.github/workflows/simulator-library.yml'
@@ -28,8 +36,9 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run test:simulator && npm run test:simulator:en
+      - run: node --check assets/simulator-planner.js && node --check assets/community-ui.js && node scripts/test-community.mjs && node scripts/test-community-backend.mjs && node scripts/test-community-ui.mjs
       - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
-      - run: node scripts/test-simulator-goal-browser.mjs && npm run test:usability:browser && node scripts/test-simulator-library-browser.mjs
+      - run: node scripts/test-simulator-progress-browser.mjs && node scripts/test-simulator-goal-browser.mjs && npm run test:usability:browser
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -37,4 +46,40 @@ jobs:
           path: |
             /tmp/poe2-library-qa
             /tmp/poe2-goal-qa
+            /tmp/poe2-progress-qa
+          if-no-files-found: ignore
+  public-builds:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node scripts/test-community.mjs && node scripts/test-community-backend.mjs && node scripts/test-community-ui.mjs
+      - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
+      - run: node scripts/test-community-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-builds-responsive-screenshots
+          path: /tmp/poe2-community-qa
+          if-no-files-found: ignore
+  encrypted-sync:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
+      - run: node scripts/test-simulator-library-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: encrypted-sync-responsive-screenshots
+          path: /tmp/poe2-library-qa
           if-no-files-found: ignore

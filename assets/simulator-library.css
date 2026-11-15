@@ -61,3 +61,24 @@ html:has(body.simulator-page){scroll-behavior:auto}
 .sim-goal-panel pre{max-width:100%;max-height:300px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.8rem}
 @media(max-width:600px){.sim-goal-totals{grid-template-columns:repeat(2,minmax(0,1fr))}.sim-goal-picker>button{width:100%}.sim-goal-panel button{min-height:44px;max-width:100%}.sim-goal-list{max-height:360px}}
 @media(max-width:720px){html:has(body.simulator-page #sim-workbench:not([hidden])){scroll-padding-bottom:220px}}
+
+.sim-impact-details{margin-top:1rem;border-top:1px solid var(--line);padding-top:.75rem}
+.sim-impact-details>summary,.sim-impact-details section>details>summary{min-height:44px;font-weight:700;cursor:pointer}
+.sim-impact-details h5{font-size:1rem;margin:1rem 0 .5rem;overflow-wrap:anywhere}
+.sim-impact-list{max-height:300px;overflow:auto;overscroll-behavior:contain}
+.sim-impact-list small{display:block;font-size:.8rem}
+.sim-impact-badge{background:#f5e2bd;color:#5a3c0d;border-radius:4px;font-size:.75rem;padding:2px 5px}
+.sim-impact-active{border:2px solid #9b5e16;background:#fff5df;padding:16px;margin:1rem 2vw;scroll-margin-block:24px 220px}
+.sim-impact-active button{min-height:44px;overflow-wrap:anywhere}
+.sim-gem-row[data-impact-review],#sim-slots [data-impact-review]{outline:3px solid #aa641c;outline-offset:-3px;background:#fff1d5}
+.sim-gem-row[data-impact-review]::before{content:attr(data-impact-label);display:block;grid-column:1/-1;font-size:.8rem;font-weight:700;color:#73440c}
+#sim-tree circle[data-impact-review]{stroke:#c75b11!important;stroke-width:20!important}
+
+.sim-planner-panel{min-width:0}
+.sim-planner-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sim-planner-panel .sim-planner-check{display:flex;align-items:center;gap:10px;min-height:44px}
+.sim-planner-panel .sim-planner-check input{width:20px;min-height:20px;height:20px;flex:0 0 20px;margin:0}
+.sim-planner-panel>label:has(select){overflow:hidden}
+.sim-planner-panel pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:300px;overflow:auto;font-size:.8rem}
+.sim-planner-panel button{min-height:44px;overflow-wrap:anywhere;scroll-margin-block:24px 220px}
+@media(max-width:600px){.sim-planner-controls{grid-template-columns:minmax(0,1fr)}.sim-planner-panel button{width:100%}}

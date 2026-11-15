@@ -44,9 +44,10 @@ const open = async (page, selector) => { if (!await page.locator(selector).evalu
 const reports = [];
 try {
   for (const [engine, name] of [[chromium, 'chromium'], [webkit, 'webkit']]) {
-    const browser = await engine.launch();
-    try {
       for (const width of [320, 1366]) for (const locale of ['', '/en']) {
+        // A fresh process per case avoids accumulating WebKit's large WASM heaps.
+        // Each case still exercises a real reload with the saved draft and target.
+        const browser = await engine.launch();
         const context = await browser.newContext({viewport: {width, height: 900}, isMobile: width < 500, hasTouch: width < 500});
         const page = await context.newPage(), errors = [];
         page.on('pageerror', error => errors.push(error.message));
@@ -115,9 +116,8 @@ try {
           console.error(label, await page.locator('#sim-goal-status').textContent().catch(() => ''), 'page errors:', errors);
           await page.screenshot({path: resolve(output, label + '-failure.png')}).catch(() => {});
           throw error;
-        } finally { await context.close(); }
+        } finally { await context.close(); await browser.close(); }
       }
-    } finally { await browser.close(); }
   }
   console.log(`PASS: ${reports.join(', ')}; correct gaps, safe names, skill artwork, live updates, preserved inputs, passive navigation, reload, per-build targets, English UI and reset`);
 } finally { await new Promise(resolve => server.close(resolve)); }
