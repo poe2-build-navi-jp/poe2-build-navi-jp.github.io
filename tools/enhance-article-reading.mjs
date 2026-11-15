@@ -45,6 +45,19 @@ function enhance(original) {
   if (tag) replace(tag.endOffset - 1, tag.endOffset - 1, ` ${name}="${escape(value)}"`);
  };
 
+ // Only labeled action steps use the two-column layout. Plain bullets keep the full text width.
+ for (const list of content.filter(node => node.nodeName === 'ol' && hasClass(node.parentNode, 'content-action'))) {
+  const items = (list.childNodes || []).filter(node => node.nodeName === 'li');
+  if (!items.length || !items.every(item => (item.childNodes || []).some(node => node.nodeName === 'b'))) continue;
+  if (hasClass(list, 'action-steps')) continue;
+  const current = attrs(list).class;
+  if (!current) addAttr(list, 'class', 'action-steps');
+  else {
+   const location = list.sourceCodeLocation?.attrs?.class;
+   if (location) replace(location.startOffset, location.endOffset, `class="${escape(current)} action-steps"`);
+  }
+ }
+
  // Break long prose at sentence endings. Keep links and source references with
  // the sentence they qualify, and never change text or interactive markup.
  for (const node of content.filter(node => node.nodeName === 'p')) {

@@ -115,19 +115,21 @@
   ],
   "poe2One": {
     "releaseDate": "2026-12-11",
-    "sourceName": "GGG公式：ExileCon 2026発表",
-    "sourceUrl": "https://www.pathofexile.com/forum/view-thread/4012710",
+    "sourceName": "GGG公式の日本語告知",
+    "sourceUrl": "https://steamcommunity.com/app/2694490/?l=japanese",
     "duelistSourceUrl": "https://www.youtube.com/watch?v=BwYNNQJO-AE",
     "checkedAt": "2026-11-15",
     "confirmed": [
-      "正式版1.0は2026年12月11日（PST）に基本プレイ無料で公開予定です。",
-      "Shadow・Duelist、Act 5・6、新リーグConquerors of Wraeclastが発表されました。",
+      "正式版1.0は2026年12月12日（日本時間）に基本プレイ無料で公開予定です。米国表記は12月11日（PST／米国太平洋標準時）です。",
+      "シャドウ（Shadow）・デュエリスト（Duelist）、アクト5・6（第5・6章）、軍勢と攻城戦がテーマの新リーグが発表されました。",
       "パッシブ・サポートジェム・ユニーク装備・既存クラスにも変更が予定されています。"
     ],
     "unconfirmed": [
-      "日本時間の開始日時は、確認した公式発表に開始時刻がないため未確定です。",
-      "最終パッチノートの全数値と、再現可能な1.0の育成手順は本サイトでは未検証です。",
-      "1.0のTier・装備相場・DPSは未評価。掲載中の0.5.5ビルドとシミュレーターは1.0対応ではありません。"
-    ]
+      "日本時間の日付は12月12日と発表済みです。正確な開始時刻は未確認です。",
+      "武具マスター（Master-at-Arms）の実装時期は公式資料間で記述が異なるため、開始時から選べるとは断定していません。",
+      "最終的な数値と育成手順は未検証です。現在の0.5.5ビルドとシミュレーターは1.0対応ではありません。"
+    ],
+    "releaseDateJapan": "2026-12-12",
+    "releaseDateTimeZone": "America/Los_Angeles"
   }
 }

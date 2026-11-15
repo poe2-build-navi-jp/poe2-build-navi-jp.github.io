@@ -28,7 +28,7 @@ assert.match(JSON.stringify(dictionary.find(x=>x.slug==='support-gem')),/Solus I
 assert.doesNotMatch(JSON.stringify(dictionary),/ユニークのUnset Ring/);
 assert.doesNotMatch(JSON.stringify(seo),/Steamではサポーターパックの購入が必要/);
 assert.match(JSON.stringify(seo),/同じサブアカウント/);
-assert.match(JSON.stringify(seo),/12月11日（PST）/);
+assert.match(JSON.stringify(seo),/12月12日（日本時間）/);
 console.log('PASS: equipment types, pre-attack buffs, source scope, gem exceptions and access-rights regressions');
 const passive=dictionary.find(x=>x.slug==='passive-tree'),es=dictionary.find(x=>x.slug==='energy-shield'),mapping=dictionary.find(x=>x.slug==='mapping');
 assert.match(passive.metaDescription,/基本123/);

@@ -9,6 +9,10 @@ on:
       - 'tools/generate-discovery-pages.mjs'
       - 'tools/generate-site-search.mjs'
       - 'scripts/test-release-info.mjs'
+      - 'assets/styles.css'
+      - 'assets/guide-reading.css'
+      - 'tools/enhance-article-reading.mjs'
+      - 'scripts/test-reading-browser.mjs'
       - 'scripts/test-usability-browser.mjs'
       - '.github/workflows/release-info.yml'
 permissions:
@@ -24,11 +28,14 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: node scripts/test-release-info.mjs && npm run test:search && node scripts/test-seo.mjs && node scripts/test-site-search.cjs
-      - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium
+      - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
       - run: npm run test:usability:browser
+      - run: node scripts/test-reading-browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: release-responsive-screenshots
-          path: /tmp/poe2-usability-qa
+          path: |
+            /tmp/poe2-usability-qa
+            /tmp/poe2-reading-qa
           if-no-files-found: ignore

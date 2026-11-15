@@ -199,7 +199,7 @@ assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲�
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
 assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
-assert(seoPages.length === 22, "targeted SEO page count must be 22");
+assert(seoPages.length === 26, "targeted SEO page count must be 26");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
@@ -266,7 +266,7 @@ for (const build of builds.filter((item) => item.status === "verified")) {
 }
 const oneHub = await read("poe2-1-0/index.html");
 assert(oneHub.includes('id="one-build-impact"') && oneHub.includes("更新履歴"), "1.0 build impact/update history missing");
-assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("新職業Duelist") && oneHub.includes("1.0でまだ公式発表がない情報"), "1.0 search-intent sections missing");
+assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("/poe2-1-0/duelist/") && oneHub.includes("1.0でまだ確定・検証できない情報"), "1.0 search-intent sections missing");
 assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"') && oneHub.includes('href="/poe2-1-0/pre-registration/"') && oneHub.includes('href="/poe2-1-0/build-status/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
 for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1])) {
   const html = await read(`${path}index.html`);
@@ -287,7 +287,7 @@ for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.gith
   }
 }
 for (const page of seoPages.filter((item) => item.path.startsWith("/poe2-1-0/") && item.path !== "/poe2-1-0/duelist/")) assert(page.faq?.length >= 2, `${page.path}: 1.0 page needs at least 2 FAQ items`);
-assert(oneHub.includes("Early Accessから何が変わる？") && oneHub.includes("1.0を待たず、今から始めてもいい？") && oneHub.includes("1.0までに覚えておきたいこと") && oneHub.includes("現在選べる初心者向けビルド"), "1.0 beginner hub sections missing");
+assert(oneHub.includes("one-announcements") && oneHub.includes("/poe2-1-0/shadow/") && oneHub.includes("1.0を待たず、今から始めてもいい？") && oneHub.includes("1.0までに覚えておきたいこと") && oneHub.includes("現在選べる初心者向けビルド"), "1.0 beginner hub sections missing");
 assert(oneHub.includes("1.0から始める人が今やること") && oneHub.includes("初心者向けビルドを見る") && oneHub.includes("今使えるおすすめビルドを見る") && oneHub.includes("リーグスターターを見る"), "1.0 next-action section missing");
 const noteMap = await read("NOTE_CONTENT_MAP.md");
 assert(noteMap.includes("/best-builds/") && noteMap.includes("utm_source=note") && noteMap.includes("/builds/huntress/twister-spirit-walker/"), "note purpose mapping missing");

@@ -26,12 +26,12 @@ const contentPaths = [
 const paths = [...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1]), ...seoPaths, ...noindexPaths, ...contentPaths])];
 
 const released = site.gameVersion === site.nextGameVersion;
-const [y, m, d] = site.nextGameVersionReleaseDate.split("-").map(Number);
-const heading = released ? "PoE2 正式版1.0の情報" : `PoE2 1.0は${y}年${m}月${d}日公開予定`;
+const [y, m, d] = (site.nextGameVersionReleaseDateJapan || site.nextGameVersionReleaseDate).split("-").map(Number);
+const heading = released ? "PoE2 正式版1.0の情報" : `PoE2 1.0は${y}年${m}月${d}日（日本時間）公開予定`;
 export const ONE_LINK_MARKER = "<!-- one-link:start -->";
 const box = `${ONE_LINK_MARKER}<aside class="next-box one-link" aria-label="PoE2 1.0の情報"><b>${heading}</b><p><a href="/what-is-poe2/">PoE2とは</a>・<a href="/poe2-1-0/">1.0の確定情報</a>・<a href="/poe2-1-0/how-to-start/">始め方</a>・<a href="/poe2-1-0/system-requirements/">必要スペック</a></p></aside><!-- one-link:end -->`;
 
-const skip = (path) => path === "" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map|simulator)\//.test(path);
+const skip = (path) => path === "" || path.startsWith("en/") || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map|simulator)\//.test(path);
 const unescape = (v) => v.replace(/<[^>]+>/g, "").replaceAll("&quot;", '"').replaceAll("&#39;", "'").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&amp;", "&").trim();
 
 let linked = 0;
@@ -66,7 +66,7 @@ for (const path of paths) {
     linked++;
   }
   if (path.startsWith("poe2-1-0/") || seoPaths.includes(path)) {
-    const section = html.match(/<h2>よくある質問<\/h2>([\s\S]*?)<\/section>/)?.[1] ?? "";
+    const section = html.match(/<h2\b[^>]*>よくある質問<\/h2>([\s\S]*?)<\/section>/)?.[1] ?? "";
     const items = [...section.matchAll(/<details><summary>([\s\S]*?)<\/summary><p>([\s\S]*?)<\/p><\/details>/g)].map(([, q, a]) => ({ q: unescape(q), a: unescape(a) }));
     if (items.length) {
       const schema = JSON.stringify({

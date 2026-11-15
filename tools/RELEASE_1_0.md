@@ -1,7 +1,7 @@
 # PoE2 1.0 リリース手順書
 
-正式版1.0の公開予定日は 2026-12-11（PST）です（`data/site.json` `nextGameVersionReleaseDate`、
-出典は `data/discovery.json` `poe2One`）。本サイトの方針どおり、**確認できた内容だけ**を1.0対応として
+正式版1.0の公開予定日は日本時間2026-12-12、米国太平洋標準時では2026-12-11（PST）です（`data/site.json` `nextGameVersionReleaseDate`、
+日本時間は `nextGameVersionReleaseDateJapan`。出典は `data/discovery.json` `poe2One`）。本サイトの方針どおり、**確認できた内容だけ**を1.0対応として
 表示し、未確認の育成手順は削除せず「1.0では未確認」と明示して残します。
 
 残作業はいつでも次のコマンドで確認できます（読み取り専用）。
