@@ -96,7 +96,11 @@ try {
           assert.equal(await page.locator('#sim-goal-active').isVisible(), false, 'targets are isolated by build');
           await page.goto(base + locale + '/simulator/?build=' + preset); await ready(page); await open(page, '#sim-goal-panel');
           await open(page, '[data-goal-group="gems"]'); await open(page, '[data-goal-group="passives"]');
-          assert(!await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), label + ': overflow');
+          const layout = await page.evaluate(() => ({width: innerWidth, scrollWidth: document.documentElement.scrollWidth,
+            outside: [...document.body.querySelectorAll('*')].map(element => ({element, rect: element.getBoundingClientRect()}))
+              .filter(({rect}) => rect.width && (rect.right > innerWidth + 1 || rect.left < -1))
+              .slice(0, 15).map(({element, rect}) => ({tag: element.tagName, id: element.id, class: element.className?.baseVal ?? element.className, left: rect.left, right: rect.right, width: rect.width}))}));
+          assert(layout.scrollWidth <= layout.width + 1, label + ': overflow ' + JSON.stringify(layout));
           await page.locator('#sim-goal-panel').screenshot({path: resolve(output, label + '.png')});
           await page.locator('#sim-goal-clear').click();
           assert.equal(await page.evaluate(key => localStorage.getItem(key), goalKey(preset)), null);
