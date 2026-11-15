@@ -80,16 +80,18 @@ function renderUpdates() {
         title:{ja:p.name+'の育成ガイドが更新されています',en:p.name+' guide has been updated'},
         body:{ja:'保存後にスキル・装備・育成方針の案内が変わっています。記事を確認してから、手元の構成へ必要な変更を反映してください。',en:'Skill, equipment or progression guidance has changed since this build was saved. Review the guide before adapting your saved configuration.'},href:p.path}));
     shownNotices = relevantNotices([...notices, ...extra, ...revised], records, seen);
+    window.Poe2SimulatorNotices = shownNotices;
     const unread = shownNotices.filter(n=>n.unread).length;
     $('sim-update-count').textContent = unread ? t(`${unread}件の新着`,`${unread} unread`) : '';
     $('sim-updates-seen').disabled = !unread;
-    $('sim-update-list').innerHTML = shownNotices.length ? shownNotices.map(notice=>`<article><time datetime="${escape(notice.date)}">${escape(notice.date)} · ${notice.unread?t('未読','Unread'):t('既読','Read')}</time><h4>${escape(notice.title[en?'en':'ja'])}</h4><p>${escape(notice.body[en?'en':'ja'])}</p><a href="${escape(notice.href)}">${t('変更内容と確認範囲を見る','Read the changes and verification scope')}${en&&!notice.href.startsWith('/en/')?' (Japanese)':''}</a></article>`).join('')
+    $('sim-update-list').innerHTML = shownNotices.length ? shownNotices.map(notice=>`<article data-update-id="${escape(notice.id)}"><time datetime="${escape(notice.date)}">${escape(notice.date)} · ${notice.unread?t('未読','Unread'):t('既読','Read')}</time><h4>${escape(notice.title[en?'en':'ja'])}</h4><p>${escape(notice.body[en?'en':'ja'])}</p><a href="${escape(notice.href)}">${t('変更内容と確認範囲を見る','Read the changes and verification scope')}${en&&!notice.href.startsWith('/en/')?' (Japanese)':''}</a></article>`).join('')
       : `<p>${records.some(r=>r.kind==='plan')?t('保存構成に関係する新しい案内はありません。','There are no relevant notices for your saved builds.'):t('構成に名前を付けて保存すると、関連する更新をここで確認できます。','Save a named build to see relevant updates here.')}</p>`;
+    window.dispatchEvent(new window.CustomEvent('poe2:update-notices'));
   } catch (cause) { $('sim-update-list').textContent = errorText(cause); }
 }
 async function loadUpdates() {
   try {
-    const response = await fetch('/data/saved-build-updates.json?v=0485f35407');
+    const response = await fetch('/data/saved-build-updates.json?v=a8380e2fc6');
     if (!response.ok) throw Error('NOTICES_FETCH');
     const data = await response.json();
     if (data.version !== 1 || !Array.isArray(data.notices)) throw Error('NOTICES_FORMAT');

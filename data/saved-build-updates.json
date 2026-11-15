@@ -29,7 +29,16 @@
         "en": "Saved presets and calculation data target 0.5.5. Their performance and passive routes are not verified for 1.0. Review the announced changes before adapting a build."
       },
       "href": "/poe2-1-0/build-status/",
-      "source": "https://steamcommunity.com/app/2694490/?l=japanese"
+      "source": "https://steamcommunity.com/app/2694490/?l=japanese",
+      "basis": "review",
+      "targets": [
+        {
+          "kind": "passive"
+        },
+        {
+          "kind": "equipment"
+        }
+      ]
     },
     {
       "id": "one-zero-mercenary-reload",
@@ -48,7 +57,26 @@
         "en": "If you use a crossbow, review the announced ammunition and reload changes. This notice does not establish a direct buff to spear-based Twister."
       },
       "href": "/poe2-1-0/balance-changes/",
-      "source": "https://steamcommunity.com/app/2694490/?l=japanese"
+      "source": "https://steamcommunity.com/app/2694490/?l=japanese",
+      "basis": "review",
+      "targets": [
+        {
+          "kind": "equipment",
+          "itemClasses": [
+            "Crossbow"
+          ]
+        },
+        {
+          "kind": "gem",
+          "tags": [
+            "Crossbow",
+            "CrossbowAmmo",
+            "CrossbowAmmoSkill",
+            "Reloading"
+          ],
+          "support": false
+        }
+      ]
     },
     {
       "id": "one-zero-infernalist-review",
@@ -66,7 +94,16 @@
         "en": "Changes to Infernalist have been announced for 1.0. The current minion preset is not a verified 1.0 recommendation."
       },
       "href": "/poe2-1-0/balance-changes/",
-      "source": "https://steamcommunity.com/app/2694490/?l=japanese"
+      "source": "https://steamcommunity.com/app/2694490/?l=japanese",
+      "basis": "review",
+      "targets": [
+        {
+          "kind": "passive",
+          "ascendancies": [
+            "Witch1"
+          ]
+        }
+      ]
     }
   ],
   "engine": "0.0.46",

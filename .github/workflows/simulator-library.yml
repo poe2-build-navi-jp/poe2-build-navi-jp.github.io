@@ -29,7 +29,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run test:simulator && npm run test:simulator:en
       - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
-      - run: node scripts/test-simulator-goal-browser.mjs && npm run test:usability:browser && node scripts/test-simulator-library-browser.mjs
+      - run: node scripts/test-simulator-progress-browser.mjs && node scripts/test-simulator-goal-browser.mjs && npm run test:usability:browser && node scripts/test-simulator-library-browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -37,4 +37,5 @@ jobs:
           path: |
             /tmp/poe2-library-qa
             /tmp/poe2-goal-qa
+            /tmp/poe2-progress-qa
           if-no-files-found: ignore
