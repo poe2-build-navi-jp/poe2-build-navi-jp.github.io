@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "dataVersion": "0.5.5.5",
+  "notices": [
+    {
+      "id": "one-zero-passive-review",
+      "revision": 1,
+      "date": "2026-11-15",
+      "presets": [
+        "monk-whirling-assault",
+        "mercenary-twister-gemling",
+        "warrior-shield-wall-smith",
+        "sorceress-sand-fire",
+        "huntress-companion",
+        "ranger-ice-shot-deadeye",
+        "witch-minion-infernalist",
+        "druid-plant-oracle",
+        "witch-ed-contagion-lich",
+        "mercenary-grenade-gemling",
+        "huntress-twister-spirit-walker",
+        "sorceress-spark-stormweaver"
+      ],
+      "title": {
+        "ja": "1.0の公開前にパッシブと装備を再確認",
+        "en": "Review passives and equipment before 1.0"
+      },
+      "body": {
+        "ja": "保存構成と計算データは0.5.5用です。正式版1.0の対応確認が終わるまでは、1.0での強さ・取得ルートを保証しません。発表内容と今の構成を見比べてください。",
+        "en": "Saved presets and calculation data target 0.5.5. Their performance and passive routes are not verified for 1.0. Review the announced changes before adapting a build."
+      },
+      "href": "/poe2-1-0/build-status/",
+      "source": "https://steamcommunity.com/app/2694490/?l=japanese"
+    },
+    {
+      "id": "one-zero-mercenary-reload",
+      "revision": 1,
+      "date": "2026-11-15",
+      "presets": [
+        "mercenary-twister-gemling",
+        "mercenary-grenade-gemling"
+      ],
+      "title": {
+        "ja": "マーセナリー：1.0でクロスボウのリロード変更を発表",
+        "en": "Mercenary: crossbow reload changes announced for 1.0"
+      },
+      "body": {
+        "ja": "クロスボウを使う場合は弾薬・リロードの変更を再確認してください。槍のツイスターへの直接的な強化を示す案内ではありません。",
+        "en": "If you use a crossbow, review the announced ammunition and reload changes. This notice does not establish a direct buff to spear-based Twister."
+      },
+      "href": "/poe2-1-0/balance-changes/",
+      "source": "https://steamcommunity.com/app/2694490/?l=japanese"
+    },
+    {
+      "id": "one-zero-infernalist-review",
+      "revision": 1,
+      "date": "2026-11-15",
+      "presets": [
+        "witch-minion-infernalist"
+      ],
+      "title": {
+        "ja": "インファーナリスト：1.0の変更後に再検証が必要",
+        "en": "Infernalist: recheck the build after 1.0 changes"
+      },
+      "body": {
+        "ja": "1.0ではインファーナリストの変更が告知されています。現在のミニオン構成をそのまま完成版1.0の推奨構成として扱わないでください。",
+        "en": "Changes to Infernalist have been announced for 1.0. The current minion preset is not a verified 1.0 recommendation."
+      },
+      "href": "/poe2-1-0/balance-changes/",
+      "source": "https://steamcommunity.com/app/2694490/?l=japanese"
+    }
+  ],
+  "engine": "0.0.46",
+  "guideRevisions": {
+    "monk-whirling-assault": "39a1364d45f54b40",
+    "mercenary-twister-gemling": "3af01ddbfe8c2f18",
+    "warrior-shield-wall-smith": "fe64d37c8d2b576d",
+    "sorceress-sand-fire": "0c951cc693b4ab0b",
+    "huntress-companion": "c42390f0352ca31f",
+    "ranger-ice-shot-deadeye": "1d91d980e7495f57",
+    "witch-minion-infernalist": "0f2e2c54950e6476",
+    "druid-plant-oracle": "dc9aa11296f93ea4",
+    "witch-ed-contagion-lich": "7f9e3ccb1089fa68",
+    "mercenary-grenade-gemling": "1983cfefcbd0cfb7",
+    "huntress-twister-spirit-walker": "0563b6fdd7d6bfa5",
+    "sorceress-spark-stormweaver": "3df471ddc75a6fd8"
+  }
+}

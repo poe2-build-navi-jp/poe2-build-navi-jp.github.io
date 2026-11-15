@@ -15,6 +15,7 @@ export const BUILD_STEPS=[
  'generate-simulator-data-english', // English descriptions; immutable calculation requests
  'generate-simulator-runtime-en', // shared logic with reviewed English UI/data
  'generate-simulator-english', // finish English UI after Japanese-only enhancers
+ 'enhance-simulator-library', // bilingual saved-build notices, comparison journal and encrypted sync
  'enhance-skill-icons',       // real game icons beside names in JA/EN and dynamic skill selectors
  'audit-skill-icons',         // fail the build if any engine skill lacks an identified image
  'enhance-equipment-icons',  // sourced local equipment artwork; inventory and simulator previews

@@ -1,0 +1,59 @@
+import {readFile, writeFile} from 'node:fs/promises';
+import {parse, parseFragment, serialize} from 'parse5';
+import {createHash} from 'node:crypto';
+const root = new URL('../', import.meta.url);
+const presets=JSON.parse(await readFile(new URL('data/simulator-presets.json',root),'utf8'));
+const noticesFile=new URL('data/saved-build-updates.json',root),noticeCatalog=JSON.parse(await readFile(noticesFile,'utf8'));
+noticeCatalog.guideRevisions=Object.fromEntries(presets.map(p=>[p.id,p.contentRevision]));
+await writeFile(noticesFile,JSON.stringify(noticeCatalog,null,2)+'\n');
+for(const name of ['simulator-library-model.js','simulator-sync.js','simulator-library.js']){
+  const file=new URL('assets/'+name,root);let source=await readFile(file,'utf8');
+  for(const match of [...source.matchAll(/from '(\.\/simulator-[a-z-]+\.js)(?:\?v=[a-f0-9]+)?'/g)]){
+    const hash=createHash('sha256').update(await readFile(new URL('assets/'+match[1].slice(2),root))).digest('hex').slice(0,10);
+    source=source.replace(match[0],`from '${match[1]}?v=${hash}'`);
+  }
+  if(name==='simulator-library.js'){
+    const hash=createHash('sha256').update(await readFile(new URL('data/saved-build-updates.json',root))).digest('hex').slice(0,10);
+    source=source.replace(/\/data\/saved-build-updates\.json(?:\?v=[a-f0-9]+)?/g,'/data/saved-build-updates.json?v='+hash);
+  }
+  await writeFile(file,source);
+}
+const examples = JSON.parse(await readFile(new URL('data/simulator-examples.json', root), 'utf8'));
+const enExamples = JSON.parse(await readFile(new URL('data/simulator-examples-en.json', root), 'utf8'));
+const escape = v => String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+for (const en of [false, true]) {
+  const t = (ja, english) => en ? english : ja;
+  const file = new URL((en ? 'en/' : '') + 'simulator/index.html', root);
+  let html = await readFile(file, 'utf8');
+  html = html.replace(/<!-- sim-library:[\s\S]*?<!-- \/sim-library -->/g, '');
+  const doc = parse(html), nodes = new Map();
+  let head, body;
+  function walk(n) {if(n.tagName === 'head')head=n;if(n.tagName === 'body')body=n;const id=n.attrs?.find(a=>a.name==='id')?.value;if(id)nodes.set(id,n);for(const c of n.childNodes||[])walk(c);}
+  walk(doc);
+  function fragment(parent, content, before = null) {
+    const parts = parseFragment(`<!-- sim-library:enhancement -->${content}<!-- /sim-library -->`).childNodes;
+    for (const node of parts) node.parentNode = parent;
+    const index = before ? parent.childNodes.indexOf(before) : parent.childNodes.length;
+    parent.childNodes.splice(index, 0, ...parts);
+  }
+  fragment(head, '<link rel="stylesheet" href="/assets/simulator-library.css">');
+  fragment(body, '<script type="module" src="/assets/simulator-library.js"></script>');
+  const compare = nodes.get('sim-compare-plans');
+  fragment(compare.parentNode, `<label class="sim-library-align"><input id="sim-library-align" type="checkbox" checked>${t('Aのレベル・報酬ポイント・一時効果に揃えて比較','Use A’s level, quest points and temporary effects for both builds')}</label><p class="sim-library-help">${t('敵は比較欄で共通指定。保存元は変更しません。主力スキル・武器セットが違う場合は参考比較と表示します。','The selected enemy applies to both builds. Original saves stay intact. Different main skills or weapon sets are flagged in the record.')}</p>`, compare);
+  fragment(nodes.get('sim-compare-export'), `<label class="sim-library-name">${t('比較記録の名前','Comparison record name')}<input id="sim-journal-name" maxlength="60" autocomplete="off" placeholder="${t('例：指輪交換・ボス用','Example: boss ring swap')}"></label><button type="button" id="sim-journal-save">${t('この比較を記録する','Save this comparison')}</button><p id="sim-journal-save-status" role="status"></p>`);
+  const cards = (en ? enExamples : examples).examples.filter(e=>e.verification?.inputComplete);
+  const completions = cards.length ? `<section class="sim-library-complete"><h3>${t('装備・ジェム・パッシブを揃えた見本','Fully entered equipment, gems and passives')}</h3><p>${t('0.5.5用の参考完成構成です。計算と入力条件を確認済み。仮装備を含み、実プレイ・1.0での強さは未検証です。','Reference configurations for 0.5.5. Inputs and calculations were checked. Equipment includes synthetic examples; gameplay performance and 1.0 compatibility are unverified.')}</p><div class="sim-build-grid">${cards.map(e=>`<a class="sim-build-card" href="${en?'/en':''}/simulator/?build=${escape(e.preset)}&amp;example=${escape(e.id)}"><span>${t('計算・入力確認済み','Inputs and calculation checked')}</span><h4>${escape(e.title)}</h4><p>Lv${e.level} · ${e.saved.request.items.length}${t('部位',' item slots')} · ${e.saved.request.socket_groups[0].gems.length-1}${t('サポート',' supports')}</p><b>${t('内容を確認して試す →','Review and try →')}</b></a>`).join('')}</div></section>` : '';
+  const workbench = nodes.get('sim-workbench');
+  fragment(workbench.parentNode, `<section id="sim-library" class="sim-library" aria-labelledby="sim-library-title"><h2 id="sim-library-title">${t('保存した構成を使い続ける','Keep your saved builds useful')}</h2>${completions}<details id="sim-updates-panel"><summary>${t('保存構成に関係する更新','Updates relevant to saved builds')} <span id="sim-update-count"></span></summary><p>${t('名前を付けて保存した構成が対象です。アプリ・サイトを開いたときに案内します。','Notices apply to named saves and are checked while this app or page is open.')}</p><div id="sim-update-list" role="status"></div><button id="sim-updates-seen" type="button">${t('表示中の案内を既読にする','Mark these notices as read')}</button><button id="sim-updates-retry" type="button" hidden>${t('案内を再読み込み','Retry loading notices')}</button></details><details id="sim-journal-panel"><summary>${t('比較記録','Comparison journal')} <span id="sim-journal-count"></span></summary><p>${t('A/B比較の下で記録できます。保存時の計算値と条件を残します。開き直すと現在のデータで再計算します。','Save a record below the A/B results. Recorded values and conditions remain frozen; reopening recalculates with current data.')}</p><div id="sim-journal-list"></div><p id="sim-journal-status" role="status"></p><div id="sim-journal-delete-panel" hidden><p id="sim-journal-delete-name"></p><button type="button" id="sim-journal-delete-confirm">${t('この記録を削除','Delete this record')}</button><button type="button" id="sim-journal-delete-cancel">${t('戻る','Cancel')}</button></div></details><details id="sim-sync-panel"><summary>${t('スマホ・PCで構成を同期','Sync builds between phone and PC')}</summary><p>${t('名前付き構成と比較記録を自動同期します。一時編集中の構成はそのまま使えます。','Automatically sync named saves and comparison records while keeping your active draft in place.')}</p><p id="sim-sync-status" role="status" aria-live="polite">${t('未接続。端末内の保存は利用できます。','Not connected. Local saves remain available.')}</p><div id="sim-sync-setup"><button id="sim-sync-create" type="button">${t('新しく同期を始める','Create a sync vault')}</button><label>${t('他の端末の接続コード','Connection code from another device')}<input id="sim-sync-code" type="password" autocomplete="off" autocapitalize="off" spellcheck="false"></label><button id="sim-sync-join" type="button">${t('このコードで接続','Connect with this code')}</button></div><div id="sim-sync-connected" hidden><button id="sim-sync-now" type="button">${t('今すぐ同期','Sync now')}</button><details><summary>${t('別の端末をつなぐ・復旧コード','Connect another device / recovery code')}</summary><p>${t('別の端末のこの欄へ入力してください。コードを知る人は保存内容を読めるので、人に渡さず控えてください。','Enter this code in the same panel on your other device. Anyone with the code can read the vault, so keep it private and save a recovery copy.')}</p><input id="sim-sync-recovery" readonly autocomplete="off" spellcheck="false" aria-label="${t('復旧用の接続コード','Recovery connection code')}"><button id="sim-sync-copy" type="button">${t('コードをコピー','Copy code')}</button></details><button id="sim-sync-disconnect" type="button">${t('この端末の接続を解除','Disconnect this device')}</button><details><summary>${t('全端末の同期を解除する','Revoke access for all devices')}</summary><p>${t('保管庫の暗号文を削除し、今のコードを無効にします。端末内の構成は残ります。','Delete the encrypted cloud snapshot and invalidate this code. Local saves remain on each device.')}</p><button id="sim-sync-revoke" type="button">${t('保管庫を無効化','Revoke this vault')}</button></details></div><p class="sim-library-help">${t('内容は暗号化して保管。同期はシミュレーターを開いている間に行います。通信できないときは端末内に保存し、再接続時に同期します。容量2MiB。','Data is encrypted before upload. Sync runs while the simulator is open. Offline edits stay on your device and sync after reconnection. Vault limit: 2 MiB.')}</p></details></section>`);
+  await writeFile(file, serialize(doc) + '\n');
+}
+// Describe the opt-in storage behavior alongside the existing local-storage policy.
+const privacyFile=new URL('privacy/index.html',root);
+let privacy=await readFile(privacyFile,'utf8');
+privacy=privacy.replace(/<!-- simulator-sync-privacy:start -->[\s\S]*?<!-- simulator-sync-privacy:end -->/g,'')
+ .replace('この情報は本サイトのサーバーへ送信しません。','通常の端末内保存は端末内で行います。任意の端末間同期を有効にした場合の取り扱いは次のとおりです。');
+const privacyBlock='<!-- simulator-sync-privacy:start --><section id="simulator-sync-privacy"><h2>任意のビルド同期</h2><p>シミュレーターで「新しく同期を始める」または接続コードによる接続を選んだ場合だけ、名前付きの構成と比較記録を端末間で同期します。構成名・メモ・装備・ジェム・パッシブ・比較条件を端末で暗号化し、AppDeployの保管庫へ暗号文として保存します。一時編集中の自動保存、記事の閲覧履歴、他の端末内設定は同期対象に含めません。</p><p>サーバーには保管庫の識別子、認証用トークンのハッシュ、更新番号、暗号文を保存します。復旧用の接続コードと復号鍵はサーバーへ送りません。接続コードはこの端末のlocalStorageに保存し、保管庫を読むために利用します。同期リクエストにコードや構成本文を解析イベントとして添付しません。ホスティング事業者は通信元IPなどのアクセス情報を処理する場合があります。</p><p>接続コードを知る人は保存内容を復号できます。コードを紛失すると運営からの復旧はできません。「この端末の接続を解除」で端末の接続情報を消せます。「保管庫を無効化」で稼働中の保管庫の暗号文を削除し、同じコードでの読み書きを停止します。各端末に残る構成は、構成の削除機能で個別に管理できます。</p><p lang="en">Cross-device sync is optional. Named builds and comparison records are encrypted on your device before storage with AppDeploy. The recovery code and decryption key are not sent to the server. Keep the code private: it grants access to the vault. Disconnecting removes this device’s connection; revoking the vault removes its live encrypted snapshot and disables the code. Local saves remain on each device.</p></section><!-- simulator-sync-privacy:end -->';
+if(!/<h2\b[^>]*>Google Analytics<\/h2>/.test(privacy))throw Error('Privacy insertion point missing');
+privacy=privacy.replace(/(<h2\b[^>]*>Google Analytics<\/h2>)/,privacyBlock+'$1').replace('最終更新：2026年11月10日。','最終更新：2026年11月16日。');
+await writeFile(privacyFile,privacy);
+console.log('Enhanced Japanese and English simulator libraries');

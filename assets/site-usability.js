@@ -48,4 +48,42 @@ export function installSiteUsability(document) {
  }
  document.addEventListener('keydown',event=>{if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'&&!event.altKey&&!document.querySelector('dialog[open]')){const input=strip.querySelector('input[type="search"]');if(input){event.preventDefault();input.focus();input.select();}}});
 }
-if(typeof document!=='undefined')installSiteUsability(document);
+// A small notice link is shown only to visitors who already have named builds.
+// No saved build contents are included in the request or in analytics events.
+export function installSavedBuildNotices(document){
+ const window=document.defaultView,strip=document.querySelector('[data-site-tools]');
+ if(!strip||!window.fetch)return;
+ const en=document.documentElement.lang==='en';let catalog=null,loading=null;
+ const headers=()=>{
+  const rows=[];
+  for(let i=0;i<window.localStorage.length;i++){
+   const key=window.localStorage.key(i);if(!key?.startsWith('poe2-simulator:plans:v1:'))continue;
+   const raw=window.localStorage.getItem(key);if(!raw||raw.length>6000000)continue;
+   try{const data=JSON.parse(raw);if(data.version!==1||!Array.isArray(data.plans)||data.plans.length>12)continue;
+    for(const plan of data.plans)if(plan?.saved?.preset===key.slice('poe2-simulator:plans:v1:'.length))rows.push(plan.saved);
+   }catch{}
+  }
+  return rows;
+ };
+ const update=async()=>{try{
+  const rows=headers();let link=strip.querySelector('[data-build-updates]');
+  if(!rows.length){link?.remove();return;}
+  if(!catalog){loading||=(async()=>{const response=await window.fetch('/data/saved-build-updates.json',{cache:'no-cache'});if(!response.ok)throw Error('notices');return response.json();})();catalog=await loading;}
+  if(catalog.version!==1||!Array.isArray(catalog.notices))return;
+  const seen=JSON.parse(window.localStorage.getItem('poe2-simulator:updates-seen:v1')||'{}'),presets=new Set(rows.map(r=>r.preset));
+  const unread=new Set(catalog.notices.filter(n=>n.presets.some(p=>presets.has(p))&&seen[n.id]!==n.revision).map(n=>n.id));
+  const versionId=`calculation-${catalog.engine}-${catalog.dataVersion}`;
+  if(rows.some(r=>r.engine!==catalog.engine||r.calculation&&r.calculation.dataVersion!==catalog.dataVersion)&&seen[versionId]!==1)unread.add(versionId);
+  for(const row of rows){const revision=catalog.guideRevisions?.[row.preset],id=`guide-${row.preset}-${revision}`;
+   if(revision&&row.calculation?.guideRevision&&row.calculation.guideRevision!==revision&&seen[id]!==1)unread.add(id);
+  }
+  if(!unread.size){link?.remove();return;}
+  if(!link){link=document.createElement('a');link.dataset.buildUpdates='';link.href=(en?'/en':'')+'/simulator/#sim-updates-panel';strip.append(link);}
+  link.textContent=en?`Saved build updates (${unread.size})`:`保存構成の更新 ${unread.size}件`;
+ }catch{loading=null;}};
+ window.addEventListener('focus',update);window.addEventListener('online',update);
+ window.addEventListener('poe2:saved-builds',update);window.addEventListener('poe2:updates-seen',update);
+ window.addEventListener('storage',event=>{if(event.key?.startsWith('poe2-simulator:'))void update();});
+ void update();
+}
+if(typeof document!=='undefined'){installSiteUsability(document);installSavedBuildNotices(document);}

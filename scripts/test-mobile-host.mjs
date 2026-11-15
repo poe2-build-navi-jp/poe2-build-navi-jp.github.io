@@ -33,6 +33,9 @@ try {
   w.document.addEventListener('visibilitychange', () => { saves++; w.localStorage.setItem('poe2-simulator:v1:test', 'stale-editor'); });
   w.localStorage.setItem('poe2:reading-library:v1', '{"favorites":[]}');
   w.localStorage.setItem('unrelated', 'preserve-me');
+  w.localStorage.setItem('poe2-build-sync:code:v1', 'private-test-code');
+  w.localStorage.setItem('poe2-build-sync:state:v1', '{}');
+  w.localStorage.setItem('poe2-simulator:sync-code:v1', 'legacy-private-test-code');
   await w.Poe2Host.exportBackup();
   const file = messages.find(m => m.type === 'file');
   assert.equal(file.mime, 'application/json');

@@ -329,6 +329,650 @@
       }
     },
     {
+      "id": "complete-mercenary-twister-gemling",
+      "preset": "mercenary-twister-gemling",
+      "title": "ツイスター・ジェムリング：参考完成構成",
+      "kind": "sample",
+      "level": 100,
+      "source": {
+        "href": "https://poe.ninja/ja/poe2/builds/forbiddenrites/character/heygyus-0416/ResurrectForbidden#i=0&search=class%3DGemling%2BLegionnaire%26skills%3DTwister",
+        "label": "poe.ninjaのパッシブ取得元（装備・ジェムは別の計算例）",
+        "checkedAt": "2026-11-07"
+      },
+      "description": "主力ジェム・サポート・接続済みパッシブと、使用する全装備部位を入力した0.5.5の計算例です。公開キャラクターの装備を再現したものではありません。",
+      "omissions": [
+        "装備は明示した数値の仮レア装備です。ゲーム内の取得性・相場・最適性・ボス撃破を実証した完成ビルドではありません。",
+        "パッシブ経路だけを公開キャラクターから参照し、通常ポイント上限に合わせて末端を調整しています。原典のユニーク装備・ジュエル・補助スキルは再現していません。",
+        "付与スキルなど一部のパッシブ効果は計算未対応です。取り込み後の「計算の確認事項」で確認してください。",
+        "正式版1.0の構成ではありません。メインスキルの参考計算であり、実戦の総ダメージ・耐久・強さを保証しません。",
+        "槍の見本はオフハンドを空けています。未入力の装備エラーではありません。"
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "mercenary-twister-gemling",
+        "request": {
+          "character": {
+            "class_name": "Mercenary",
+            "ascendancy_name": "Gemling Legionnaire",
+            "level": 100
+          },
+          "allocated_nodes": [
+            97,
+            535,
+            2021,
+            2582,
+            3084,
+            3209,
+            3431,
+            4346,
+            4519,
+            4552,
+            5305,
+            7163,
+            7741,
+            7847,
+            9050,
+            10265,
+            10472,
+            10944,
+            11604,
+            11641,
+            11825,
+            13407,
+            13419,
+            13724,
+            14226,
+            14262,
+            14429,
+            14539,
+            14725,
+            14958,
+            15975,
+            16489,
+            16705,
+            17088,
+            17215,
+            17548,
+            17668,
+            17854,
+            18882,
+            18910,
+            19027,
+            20677,
+            21156,
+            21225,
+            21280,
+            21336,
+            21746,
+            23040,
+            24287,
+            24647,
+            24786,
+            24958,
+            25971,
+            26034,
+            26598,
+            26786,
+            27422,
+            27705,
+            28050,
+            28556,
+            29306,
+            29517,
+            30047,
+            30996,
+            31433,
+            32545,
+            32701,
+            32763,
+            33366,
+            34015,
+            34233,
+            34324,
+            34621,
+            34623,
+            34882,
+            35901,
+            38369,
+            38493,
+            38537,
+            38541,
+            38728,
+            39369,
+            42250,
+            42379,
+            42500,
+            42658,
+            42794,
+            42805,
+            43082,
+            43691,
+            43877,
+            44605,
+            44776,
+            45100,
+            45248,
+            48116,
+            48198,
+            48568,
+            48773,
+            49220,
+            50635,
+            51522,
+            51707,
+            51741,
+            54983,
+            54984,
+            55193,
+            55582,
+            55621,
+            56045,
+            56493,
+            56838,
+            56928,
+            57821,
+            59720,
+            59881,
+            59915,
+            60287,
+            60505,
+            60735,
+            61196,
+            61601,
+            61834,
+            62350,
+            62464,
+            62984,
+            63259,
+            63566,
+            63888,
+            65009,
+            65091
+          ],
+          "attribute_choices": {
+            "2582": "str",
+            "7741": "int",
+            "11604": "dex",
+            "11825": "dex",
+            "14262": "dex",
+            "16489": "int",
+            "16705": "dex",
+            "17088": "dex",
+            "18882": "dex",
+            "21280": "int",
+            "21746": "dex",
+            "24287": "dex",
+            "24647": "int",
+            "24786": "dex",
+            "24958": "dex",
+            "26598": "int",
+            "26786": "dex",
+            "27705": "str",
+            "28050": "dex",
+            "28556": "int",
+            "29517": "int",
+            "30047": "int",
+            "32701": "dex",
+            "34015": "dex",
+            "35901": "dex",
+            "42250": "dex",
+            "42379": "dex",
+            "42500": "dex",
+            "42658": "int",
+            "43691": "int",
+            "48116": "str",
+            "48568": "int",
+            "48773": "dex",
+            "51741": "dex",
+            "54984": "dex",
+            "56045": "dex",
+            "57821": "dex",
+            "59881": "int",
+            "60505": "dex",
+            "61196": "dex",
+            "63566": "int",
+            "63888": "int",
+            "65009": "int"
+          },
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n参考構成のトゲ付きの槍\nBarbed Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n参考構成の古代のバイザー\nAncient Visor\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+40% to Fire Resistance\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n参考構成の祭壇のローブ\nAltar Robe\nItem Level: 80\nQuality: 0\nImplicits: 0\n+120 to maximum Life\n+40% to Cold Resistance\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "gloves",
+              "text": "Rarity: RARE\n参考構成の年季の入ったカフス\nAged Cuffs\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n+30% to Fire Resistance\n+25 to Dexterity"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n参考構成の古代のレギンス\nAncient Leggings\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+40% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n参考構成のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+70 to maximum Life\n+30% to Fire Resistance\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "ring2",
+              "text": "Rarity: RARE\n参考構成のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+70 to maximum Life\n+30% to Lightning Resistance\n+20% to Chaos Resistance"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n参考構成の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n+25 to Strength\n+25 to Dexterity\n+25 to Intelligence"
+            },
+            {
+              "slot": "belt",
+              "text": "Rarity: RARE\n参考構成のダブルベルト\nDouble Belt\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n+25 to Strength\n+20% to Chaos Resistance"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "TwisterPlayer",
+                  "level": 20,
+                  "quality": 0
+                },
+                {
+                  "skill_id": "SupportElementalArmamentPlayer",
+                  "level": 1,
+                  "quality": 0
+                },
+                {
+                  "skill_id": "SupportRetreatPlayer",
+                  "level": 1,
+                  "quality": 0
+                },
+                {
+                  "skill_id": "SupportProjectileAccelerationPlayer",
+                  "level": 1,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 23,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n参考構成のトゲ付きの槍\nBarbed Spear\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "inputComplete": true,
+        "gameplayVerified": false,
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-16",
+        "life": 2118,
+        "dps": 624.648773311,
+        "allocated": 131,
+        "normalPoints": 122,
+        "questPoints": 23,
+        "removedForBudget": [],
+        "parsedItems": 9,
+        "requirementGaps": 0,
+        "connected": true,
+        "unsupportedCount": 2,
+        "sourceCharacter": "ResurrectForbidden",
+        "sourceCheckedAt": "2026-11-07"
+      }
+    },
+    {
+      "id": "complete-ranger-ice-shot-deadeye",
+      "preset": "ranger-ice-shot-deadeye",
+      "title": "アイスショット・デッドアイ：参考完成構成",
+      "kind": "sample",
+      "level": 100,
+      "source": {
+        "href": "https://poe.ninja/ja/poe2/builds/forbiddenrites/character/WOualey-0844/BowberKurw%C3%A0#i=0&search=class%3DDeadeye%26skills%3DIce%2BShot",
+        "label": "poe.ninjaのパッシブ取得元（装備・ジェムは別の計算例）",
+        "checkedAt": "2026-11-07"
+      },
+      "description": "主力ジェム・サポート・接続済みパッシブと、使用する全装備部位を入力した0.5.5の計算例です。公開キャラクターの装備を再現したものではありません。",
+      "omissions": [
+        "装備は明示した数値の仮レア装備です。ゲーム内の取得性・相場・最適性・ボス撃破を実証した完成ビルドではありません。",
+        "パッシブ経路だけを公開キャラクターから参照し、通常ポイント上限に合わせて末端を調整しています。原典のユニーク装備・ジュエル・補助スキルは再現していません。",
+        "付与スキルなど一部のパッシブ効果は計算未対応です。取り込み後の「計算の確認事項」で確認してください。",
+        "正式版1.0の構成ではありません。メインスキルの参考計算であり、実戦の総ダメージ・耐久・強さを保証しません。"
+      ],
+      "saved": {
+        "version": 1,
+        "engine": "0.0.46",
+        "preset": "ranger-ice-shot-deadeye",
+        "request": {
+          "character": {
+            "class_name": "Ranger",
+            "ascendancy_name": "Deadeye",
+            "level": 100
+          },
+          "allocated_nodes": [
+            30,
+            144,
+            535,
+            630,
+            1841,
+            2582,
+            2936,
+            3170,
+            3431,
+            3987,
+            4157,
+            4346,
+            4519,
+            5305,
+            5817,
+            9405,
+            10944,
+            11526,
+            11604,
+            11825,
+            12033,
+            12611,
+            13407,
+            13419,
+            13724,
+            13828,
+            14262,
+            15625,
+            15975,
+            16705,
+            17088,
+            17548,
+            17854,
+            18818,
+            20677,
+            20916,
+            21112,
+            21280,
+            21314,
+            21336,
+            21746,
+            21945,
+            22811,
+            24287,
+            24647,
+            24786,
+            25055,
+            25700,
+            26034,
+            26572,
+            26598,
+            27705,
+            27910,
+            28044,
+            28050,
+            28835,
+            29408,
+            29517,
+            31433,
+            31888,
+            32155,
+            32319,
+            32701,
+            32763,
+            33366,
+            33542,
+            34015,
+            34168,
+            34300,
+            34324,
+            34621,
+            35901,
+            35987,
+            36576,
+            36931,
+            38342,
+            38493,
+            38537,
+            38541,
+            38676,
+            38993,
+            39369,
+            39723,
+            41096,
+            41580,
+            41875,
+            42416,
+            42794,
+            42805,
+            43082,
+            43691,
+            44776,
+            46782,
+            46854,
+            47514,
+            48116,
+            48198,
+            48401,
+            48773,
+            49220,
+            49691,
+            50912,
+            51741,
+            52800,
+            53698,
+            53938,
+            54983,
+            54984,
+            55088,
+            55193,
+            55621,
+            56045,
+            56838,
+            56847,
+            57615,
+            57821,
+            59653,
+            59720,
+            60735,
+            61106,
+            61196,
+            61246,
+            61312,
+            61461,
+            61601,
+            61718,
+            61834,
+            62464,
+            62984,
+            63888,
+            64213,
+            65161
+          ],
+          "attribute_choices": {
+            "2582": "dex",
+            "11604": "dex",
+            "11825": "dex",
+            "14262": "dex",
+            "16705": "str",
+            "17088": "int",
+            "21280": "str",
+            "21746": "int",
+            "24287": "int",
+            "24647": "int",
+            "24786": "int",
+            "26598": "dex",
+            "27705": "int",
+            "28050": "str",
+            "29517": "dex",
+            "32701": "int",
+            "34015": "str",
+            "35901": "dex",
+            "43691": "str",
+            "48116": "int",
+            "48401": "dex",
+            "48773": "str",
+            "51741": "dex",
+            "54984": "dex",
+            "56045": "int",
+            "57821": "int",
+            "61196": "dex",
+            "61312": "dex",
+            "63888": "int"
+          },
+          "items": [
+            {
+              "slot": "weapon1",
+              "text": "Rarity: RARE\n参考構成の砲兵の弓\nArtillery Bow\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+            },
+            {
+              "slot": "weapon2",
+              "text": "Rarity: RARE\n参考構成の鈍頭の矢筒\nBlunt Quiver\nItem Level: 80\nQuality: 0\nImplicits: 0\nAdds 10 to 20 Physical Damage\n+200 to Accuracy Rating\n+30 to Dexterity"
+            },
+            {
+              "slot": "helmet",
+              "text": "Rarity: RARE\n参考構成の古代のバイザー\nAncient Visor\nItem Level: 80\nQuality: 0\nImplicits: 0\n+100 to maximum Life\n+40% to Fire Resistance\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "body",
+              "text": "Rarity: RARE\n参考構成の祭壇のローブ\nAltar Robe\nItem Level: 80\nQuality: 0\nImplicits: 0\n+120 to maximum Life\n+40% to Cold Resistance\n+30% to Lightning Resistance"
+            },
+            {
+              "slot": "gloves",
+              "text": "Rarity: RARE\n参考構成の年季の入ったカフス\nAged Cuffs\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n+30% to Fire Resistance\n+25 to Dexterity"
+            },
+            {
+              "slot": "boots",
+              "text": "Rarity: RARE\n参考構成の古代のレギンス\nAncient Leggings\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n25% increased Movement Speed\n+40% to Lightning Resistance"
+            },
+            {
+              "slot": "ring1",
+              "text": "Rarity: RARE\n参考構成のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+70 to maximum Life\n+30% to Fire Resistance\n+30% to Cold Resistance"
+            },
+            {
+              "slot": "ring2",
+              "text": "Rarity: RARE\n参考構成のアメジストの指輪\nAmethyst Ring\nItem Level: 80\nQuality: 0\nImplicits: 0\n+70 to maximum Life\n+30% to Lightning Resistance\n+20% to Chaos Resistance"
+            },
+            {
+              "slot": "amulet",
+              "text": "Rarity: RARE\n参考構成の不在のアミュレット\nAbsent Amulet\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n+25 to Strength\n+25 to Dexterity\n+25 to Intelligence"
+            },
+            {
+              "slot": "belt",
+              "text": "Rarity: RARE\n参考構成のダブルベルト\nDouble Belt\nItem Level: 80\nQuality: 0\nImplicits: 0\n+80 to maximum Life\n+25 to Strength\n+20% to Chaos Resistance"
+            }
+          ],
+          "flasks": [],
+          "jewels": [],
+          "socket_groups": [
+            {
+              "enabled": true,
+              "gems": [
+                {
+                  "skill_id": "IceShotPlayer",
+                  "level": 20,
+                  "quality": 0
+                },
+                {
+                  "skill_id": "SupportElementalArmamentPlayer",
+                  "level": 1,
+                  "quality": 0
+                },
+                {
+                  "skill_id": "SupportRapidAttacksPlayer",
+                  "level": 1,
+                  "quality": 0
+                },
+                {
+                  "skill_id": "SupportProjectileAccelerationPlayer",
+                  "level": 1,
+                  "quality": 0
+                }
+              ],
+              "main_active_skill": 1
+            }
+          ],
+          "main_socket_group": 0,
+          "config_inputs": {
+            "questInterlude 2Khari CrossingMolten Shrine": false
+          },
+          "breakdowns": [],
+          "enemy_tier": "none"
+        },
+        "questPoints": 24,
+        "notes": "",
+        "equipmentDrafts": {},
+        "weaponSets": {
+          "active": 1,
+          "sets": [
+            {
+              "items": [
+                {
+                  "slot": "weapon1",
+                  "text": "Rarity: RARE\n参考構成の砲兵の弓\nArtillery Bow\nItem Level: 80\nQuality: 0\nImplicits: 0\n100% increased Physical Damage\nAdds 10 to 20 Physical Damage\n15% increased Attack Speed"
+                },
+                {
+                  "slot": "weapon2",
+                  "text": "Rarity: RARE\n参考構成の鈍頭の矢筒\nBlunt Quiver\nItem Level: 80\nQuality: 0\nImplicits: 0\nAdds 10 to 20 Physical Damage\n+200 to Accuracy Rating\n+30 to Dexterity"
+                }
+              ],
+              "drafts": {}
+            },
+            {
+              "items": [],
+              "drafts": {}
+            }
+          ]
+        }
+      },
+      "verification": {
+        "inputComplete": true,
+        "gameplayVerified": false,
+        "engine": "0.0.46",
+        "data": "0.5.5.5",
+        "checkedAt": "2026-11-16",
+        "life": 2110,
+        "dps": 5410.596824656,
+        "allocated": 132,
+        "normalPoints": 123,
+        "questPoints": 24,
+        "removedForBudget": [
+          30657
+        ],
+        "parsedItems": 10,
+        "requirementGaps": 0,
+        "connected": true,
+        "unsupportedCount": 1,
+        "sourceCharacter": "BowberKurwà",
+        "sourceCheckedAt": "2026-11-07"
+      }
+    },
+    {
       "id": "record-divinity",
       "preset": "mercenary-twister-gemling",
       "title": "神性のアービター：確認済み装備10点",

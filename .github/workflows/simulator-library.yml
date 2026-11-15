@@ -1,0 +1,38 @@
+name: Check saved builds and device sync
+on:
+  pull_request:
+    paths:
+      - 'assets/simulator*'
+      - 'assets/site-usability*'
+      - 'data/simulator*'
+      - 'data/saved-build-updates.json'
+      - 'simulator/**'
+      - 'en/simulator/**'
+      - 'privacy/**'
+      - 'tools/enhance-simulator-library.mjs'
+      - 'tools/generate-simulator*'
+      - 'tools/sync-service/**'
+      - 'scripts/test-simulator*'
+      - 'scripts/fixtures/sync-db-sdk.mjs'
+      - '.github/workflows/simulator-library.yml'
+permissions:
+  contents: read
+jobs:
+  saved-builds:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run test:simulator && npm run test:simulator:en
+      - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
+      - run: npm run test:usability:browser && node scripts/test-simulator-library-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: saved-builds-responsive-screenshots
+          path: /tmp/poe2-library-qa
+          if-no-files-found: ignore

@@ -8,7 +8,7 @@
   // Registered at document start, before the simulator registers its autosave listeners.
   window.addEventListener('pagehide', event => { if (restoring) event.stopImmediatePropagation(); }, true);
   document.addEventListener('visibilitychange', event => { if (restoring) event.stopImmediatePropagation(); }, true);
-  const owned = key => key.startsWith('poe2-simulator:') || key.startsWith('poe2-template:') || key === 'poe2:reading-library:v1';
+  const owned = key => !key.startsWith('poe2-simulator:sync-') && (key.startsWith('poe2-simulator:') || key.startsWith('poe2-template:') || key === 'poe2:reading-library:v1');
   const post = message => {
     const apple = window.webkit?.messageHandlers?.Poe2Native;
     if (apple) apple.postMessage(message);
