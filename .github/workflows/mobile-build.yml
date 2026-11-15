@@ -1,0 +1,70 @@
+name: Build POE2 native apps
+on:
+  pull_request:
+    paths: ['mobile/**', 'scripts/test-mobile-host.mjs', 'tools/stamp-mobile-release.mjs', '.github/workflows/mobile-build.yml']
+  push:
+    branches: [main]
+    paths: ['mobile/**', 'scripts/test-mobile-host.mjs', 'tools/stamp-mobile-release.mjs', '.github/workflows/mobile-build.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mobile-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  bridge:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node scripts/test-mobile-host.mjs
+  ios:
+    needs: bridge
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install project generator
+        run: command -v xcodegen || brew install xcodegen
+      - name: Generate Xcode project
+        working-directory: mobile/ios
+        run: xcodegen generate
+      - name: Build unsigned iPhone and iPad archive
+        working-directory: mobile/ios
+        run: xcodebuild -project Poe2BuildNavi.xcodeproj -scheme Poe2BuildNavi -configuration Release -sdk iphoneos -archivePath "$RUNNER_TEMP/Poe2BuildNavi.xcarchive" CODE_SIGNING_ALLOWED=NO archive
+      - uses: actions/upload-artifact@v4
+        with:
+          name: poe2-ios-unsigned-xcarchive
+          path: ${{ runner.temp }}/Poe2BuildNavi.xcarchive
+          retention-days: 30
+  android:
+    needs: bridge
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - name: Prepare Android SDK
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Build test APK and unsigned release bundle
+        working-directory: mobile/android
+        run: gradle --no-daemon :app:assembleDebug :app:bundleRelease
+      - uses: actions/upload-artifact@v4
+        with:
+          name: poe2-android-debug-apk
+          path: mobile/android/app/build/outputs/apk/debug/*.apk
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: poe2-android-unsigned-aab
+          path: mobile/android/app/build/outputs/bundle/release/*.aab
+          retention-days: 30
