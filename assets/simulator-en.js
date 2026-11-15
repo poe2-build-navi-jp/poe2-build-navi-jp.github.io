@@ -123,6 +123,7 @@ function renderResults(){
  void updateBuildWarnings(result,plan.request);
  renderItemResult();$('sim-tree-live-stats').textContent=['Life','Armour','Evasion','CombinedDPS'].map(id=>`${statistics.find(s=>s[0]===id)[1]} ${number(displayStat(result,id),id)}`).join(' · ');
  $('sim-character-name').textContent=`${label(plan.request.character.class_name)} / ${label(plan.request.character.ascendancy_name)} · Equipment and passives use your settings`;
+ libraryEvent('goal-state');
 }
 async function selectPreset(id,{fromHistory=false,shared=null}={}){
  if(!fromHistory)++locationSequence;$('sim-mobile-summary').hidden=true;
@@ -1135,13 +1136,31 @@ document.addEventListener('click',event=>{
  if(id==='sim-first-compare-open'){$('sim-workspace').open=true;$('sim-workspace').scrollIntoView({block:'start'});}
 });
 
-// A bounded, read-only integration surface. Synced saves never replace the active draft.
+// Bounded snapshots and editor navigation. Neither navigation nor synced saves applies a build.
 window.Poe2SimulatorLibrary={
  presets:clone(presets),
  skillName:id=>{const gem=catalog?.gems.find(g=>g.skill_id===id);return gem?label(gem.name):id;},
  read:()=>({preset:selectedPreset?.id||null,runtime:clone(catalog?.runtime||{release:'0.0.46',dataVersion:'0.5.5.5'}),
   comparison:comparisonSnapshot&&comparisonSource?{snapshot:clone(comparisonSnapshot),source:clone(comparisonSource)}:null}),
  refresh:()=>{if(selectedPreset&&plan){invalidateComparison();if(priceDirty)return false;renderWorkspace();}else renderResume();return true;},
- open:async source=>{const aligned=$('sim-library-align');if(aligned)aligned.checked=false;await openComparison(source,++locationSequence);}
+ open:async source=>{const aligned=$('sim-library-align');if(aligned)aligned.checked=false;await openComparison(source,++locationSequence);},
+ goalData:()=>plan&&catalog&&!$('sim-workbench').hidden?{
+  preset:selectedPreset.id,current:clone(capturePlan()),
+  examples:clone(examples.filter(example=>example.preset===selectedPreset.id&&example.verification?.inputComplete))
+ }:null,
+ goalGem:id=>{const gem=catalog?.gems.find(gem=>gem.skill_id===id);return gem?{name:label(gem.name),support:gem.is_support}:null;},
+ goalNode:id=>{const node=treeNodes.get(id);return node?{name:label(node.name),kind:node.kind,attribute:node.name==='Attribute',icon:passiveIconMarkup(node,32)}:null;},
+ goalStarts:()=>Object.values(result?.tree_effects?.class_starts||{}),
+ goalItemName:text=>{const lines=text.trim().split('\n'),name=/^Rarity:\s*(RARE|MAGIC)$/i.test(lines[0])?lines[2]:itemName(text);return label(name||itemName(text));},
+ goalItemText:text=>localizeModifiers(text.split('\n'),equipmentCatalog,names),
+ goalNavigate:(kind,id=null)=>{
+  if(!plan||!catalog)return;
+  const tab={gems:'skills',passives:'tree',equipment:'items'}[kind];if(!tab)return;
+  setTab(tab);
+  if(tab==='tree'&&Number.isInteger(id)&&treeNodes.has(id)){
+   const node=treeNodes.get(id);view.x=node.x;view.y=node.y;view.w=4000;view.h=3000;updateView();nodeDetail(id,{select:false});
+  }
+  $('sim-'+tab).scrollIntoView({block:'start'});
+ }
 };
 libraryEvent('library-ready');
