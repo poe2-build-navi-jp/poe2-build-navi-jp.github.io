@@ -44,8 +44,12 @@ try {
   }
   const set = w.Storage.prototype.setItem;
   let once = true;
-  w.Storage.prototype.setItem = function (key, value) { if (key === 'poe2-simulator:v1:new' && once) { once = false; throw Error('quota'); } return set.call(this, key, value); };
-  assert.throws(() => w.Poe2Host.restoreBackup(backup([['poe2-simulator:v1:test', 'changed'], ['poe2-simulator:v1:new', 'new']])));
+  w.Storage.prototype.setItem = function (key, value) {
+    if (key === 'poe2-simulator:v1:fail' && once) { once = false; throw Error('quota'); }
+    if (key === 'poe2-simulator:v1:test' && value === 'editor-state' && this.getItem('poe2-simulator:v1:new') !== null) throw Error('quota still full until new keys are removed');
+    return set.call(this, key, value);
+  };
+  assert.throws(() => w.Poe2Host.restoreBackup(backup([['poe2-simulator:v1:test', 'changed'], ['poe2-simulator:v1:new', 'new'], ['poe2-simulator:v1:fail', 'new']])));
   assert.equal(w.localStorage.getItem('poe2-simulator:v1:test'), 'editor-state', 'rollback a partial restore on a storage failure');
   assert.equal(w.localStorage.getItem('poe2-simulator:v1:new'), null);
   w.Storage.prototype.setItem = set;

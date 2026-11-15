@@ -69,7 +69,9 @@
       const {entries} = parse(text), previous = entries.map(([key]) => [key, localStorage.getItem(key)]);
       try { for (const [key, value] of entries) localStorage.setItem(key, value); }
       catch (error) {
-        for (const [key, value] of previous) value === null ? localStorage.removeItem(key) : localStorage.setItem(key, value);
+        // Free all imported keys first, so quota cannot prevent restoring larger old values.
+        for (const [key] of entries) localStorage.removeItem(key);
+        for (const [key, value] of previous) if (value !== null) localStorage.setItem(key, value);
         throw error;
       }
       restoring = true; // Suppress the old editor's final autosave during the native reload.

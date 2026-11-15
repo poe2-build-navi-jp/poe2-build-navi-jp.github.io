@@ -22,7 +22,7 @@ Webブラウザーとアプリの保存領域は別。初回にSafari/Chromeの�
 
 ## iPhone / iPad：reki向け
 
-1. MacにXcodeとXcodeGenを用意する（`brew install xcodegen`）。iOS 17以降対応。
+1. MacにXcode 26以降とXcodeGenを用意する（`brew install xcodegen`）。CIはXcode 26.3で確認。アプリはiOS 17以降対応。
 2. リポジトリを取得し、`cd mobile/ios` → `xcodegen generate`。
 3. `Poe2BuildNavi.xcodeproj` をXcodeで開く。
 4. `Signing & Capabilities` でいつものApple Developer Teamを選ぶ。仮のBundle ID `jp.poe2buildnavi.app` はApp Store Connectと揃え、一度公開した後は変えない。
