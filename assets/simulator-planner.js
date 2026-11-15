@@ -71,7 +71,7 @@ function preview() {
         'tree-version': t('ツリー版が異なります', 'Different tree version'),
         meta: t('公式形式でメタジェムは非対応です', 'The official format does not support meta gems'),
         group: t('単一スキルの組として変換できません', 'Cannot represent this as a single skill group'),
-      }[entry.reason] || entry.reason)) + '</li>').join('') + '</ul></div>' : '') +
+      }[entry.reason] || entry.reason) + '</li>').join('') + '</ul></div>' : '') +
     '<details><summary>' + t('生成するJSONを見る', 'View generated JSON') + '</summary><pre>' +
       escape(JSON.stringify(result.build, null, 2)) + '</pre></details>';
   $('sim-planner-partial-row').hidden = !result.omissions.length;
