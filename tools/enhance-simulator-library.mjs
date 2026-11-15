@@ -16,6 +16,10 @@ for(const name of ['simulator-library-model.js','simulator-sync.js','simulator-l
     const hash=createHash('sha256').update(await readFile(new URL('data/saved-build-updates.json',root))).digest('hex').slice(0,10);
     source=source.replace(/\/data\/saved-build-updates\.json(?:\?v=[a-f0-9]+)?/g,'/data/saved-build-updates.json?v='+hash);
   }
+  for (const path of ['data/simulator-index.json', 'data/simulator-names.json']) {
+    const hash = createHash('sha256').update(await readFile(new URL(path, root))).digest('hex').slice(0, 10);
+    source = source.replace(new RegExp('/' + path.replaceAll('.', '\\.') + '(?:\\?v=[a-f0-9]+)?', 'g'), '/' + path + '?v=' + hash);
+  }
   await writeFile(file,source);
 }
 const examples = JSON.parse(await readFile(new URL('data/simulator-examples.json', root), 'utf8'));
@@ -41,6 +45,8 @@ for (const en of [false, true]) {
   fragment(body, '<script type="module" src="/assets/simulator-goal.js"></script>');
   fragment(body, '<script type="module" src="/assets/simulator-impact.js"></script>');
   fragment(body, '<script type="module" src="/assets/simulator-planner.js"></script>');
+  fragment(body, '<script type="module" src="/assets/simulator-community.js"></script>');
+  fragment(nodes.get('sim-workspace').parentNode, '<details id="sim-community-panel" class="sim-workspace"><summary>' + t('構成を公開・みんなのビルド', 'Publish a build / community builds') + '</summary><p>' + t('現在の入力を投稿用に準備できます。次の画面で内容を確認して、一般公開を選ぶまで投稿されません。', 'Prepare your open draft for publishing. It stays private until you review the next page and explicitly publish it.') + '</p><div class="sim-actions"><button id="sim-community-prepare" type="button" disabled>' + t('現在の構成を投稿用に準備', 'Prepare this draft for publishing') + '</button><a href="' + (en ? '/en' : '') + '/community/">' + t('みんなのビルドを探す', 'Explore community builds') + '</a></div><p id="sim-community-status" role="status"></p></details>', nodes.get('sim-workspace'));
   fragment(nodes.get('sim-workspace').parentNode, [
     '<details id="sim-planner-panel" class="sim-workspace sim-planner-panel" hidden><summary>' + t('ゲーム内プランナーへ書き出す', 'Export to the in-game Build Planner') + '</summary>',
     '<p>' + t('現在の入力か名前付き保存から、スキル・サポート・パッシブを公式の.build形式に変換します。', 'Convert skills, supports and passives from your open draft or a named save into the official .build format.') + '</p>',

@@ -5,12 +5,22 @@
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "8e5fc431d3bab982",
+  "hash": "6926a2d1bc92a969",
   "date": "2026-11-16",
   "hashVersion": 2
  },
  "/en/simulator/": {
-  "hash": "c0a026474300ba64",
+  "hash": "3f2a3dcbb2d02454",
+  "date": "2026-11-16",
+  "hashVersion": 2
+ },
+ "/community/": {
+  "hash": "a3776f40f02e49c7",
+  "date": "2026-11-16",
+  "hashVersion": 2
+ },
+ "/en/community/": {
+  "hash": "dc4914e079b2ccbb",
   "date": "2026-11-16",
   "hashVersion": 2
  },
@@ -265,7 +275,7 @@
   "hashVersion": 2
  },
  "/privacy/": {
-  "hash": "1a0e340131130d14",
+  "hash": "0491ebb7009fbde3",
   "date": "2026-11-16",
   "hashVersion": 2
  },
@@ -275,8 +285,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "7132649f82731918",
-  "date": "2026-11-15",
+  "hash": "45ccc9edad64695b",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/classes/monk/": {

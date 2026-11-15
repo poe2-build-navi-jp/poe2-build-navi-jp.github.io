@@ -107,7 +107,7 @@ document.addEventListener('click', event => {
 for (const event of ['poe2:library-ready', 'poe2:workspace', 'poe2:goal-state', 'poe2:saved-builds']) window.addEventListener(event, refresh);
 window.addEventListener('storage', event => { if (event.key === namedPlanKey(preset) || event.key === null) refresh(); });
 try {
-  const response = await fetch('/data/simulator-index.json');
+  const response = await fetch('/data/simulator-index.json?v=081a4b68e0');
   if (!response.ok) throw Error('PLANNER_INDEX');
   index = await response.json(); refresh();
 } catch {
