@@ -22,6 +22,9 @@ try{
   const check=async name=>{
    const layout=await page.evaluate(()=>({width:innerWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,dialogs:[...document.querySelectorAll('dialog[open]')].map(dialog=>{const box=dialog.getBoundingClientRect();return {left:box.left,right:box.right,top:box.top,bottom:box.bottom};})}));
    assert(!layout.overflow,`${width}/${name}: horizontal overflow`);
+   const prose=await page.locator('.content-action>ul>li').evaluateAll(items=>items.filter(li=>li.textContent.trim().length>35).map(li=>{const range=document.createRange();range.selectNodeContents(li);return {width:li.getBoundingClientRect().width,textWidth:Math.max(0,...[...range.getClientRects()].map(r=>r.width)),display:getComputedStyle(li).display};}));
+   for(const li of prose){assert.equal(li.display,'list-item',`${width}/${name}: prose must not be a grid`);assert(li.textWidth>=Math.min(li.width*.7,240),`${width}/${name}: prose squeezed into a narrow column`);}
+
    for(const box of layout.dialogs)assert(box.left>=0&&box.right<=layout.width+1&&box.top>=0&&box.bottom<=900,`${width}/${name}: dialog outside viewport`);
    await page.screenshot({path:resolve(output,`${width}-${name}.jpg`),type:'jpeg',quality:80});reports.push({width,name,...layout});
   };

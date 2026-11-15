@@ -5,6 +5,8 @@
   "gameVersion": "0.5.5",
   "nextGameVersion": "1.0",
   "nextGameVersionReleaseDate": "2026-12-11",
+  "nextGameVersionReleaseDateTimeZone": "America/Los_Angeles",
+  "nextGameVersionReleaseDateJapan": "2026-12-12",
   "lastUpdated": "2026-11-11",
   "latestPatch": "0.5.5f Hotfix",
   "latestPatchCheckedAt": "2026-11-11",

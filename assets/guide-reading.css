@@ -15,9 +15,9 @@
 .guide-reading .guide-meta{font-size:.9rem;line-height:1.8;margin:1rem 0;gap:.35rem 1rem}
 .guide-reading .content-action{padding:1.1rem 1.2rem;margin:1.5rem 0}
 .guide-reading .content-action h2{font-size:1.15rem;margin:0 0 .8rem}
-.guide-reading .content-action ol{padding:0;margin:0;gap:.6rem}
-.guide-reading .content-action li{grid-template-columns:4.5rem minmax(0,1fr);margin:0;gap:.65rem}
-.guide-reading .strategy-article .content-action li{grid-template-columns:1.5rem minmax(0,1fr)}
+.guide-reading .content-action .action-steps{padding:0;margin:0;gap:.6rem}
+.guide-reading .content-action .action-steps>li{grid-template-columns:4.5rem minmax(0,1fr);margin:0;gap:.65rem}
+.guide-reading .strategy-article .content-action .action-steps>li{grid-template-columns:1.5rem minmax(0,1fr)}
 .guide-reading .guide-toc{padding:1rem 1.2rem;background:transparent;border-radius:4px;margin:1.5rem 0}
 .guide-reading .guide-toc h2{margin:0 0 .5rem;font-size:1.15rem}
 .guide-reading .guide-toc ol,.guide-reading .guide-toc ul{margin:0;padding-left:1.4rem}
@@ -58,6 +58,7 @@
  .guide-reading .article-page .content-action h2,.guide-reading .article-page .guide-toc h2,.guide-reading .article-page .guide-verification h2{margin-top:0}
  .guide-reading .guide-direct-answer{padding:.9rem 1rem}
  .guide-reading .content-action{padding:1rem}
+ .guide-reading .content-action .action-steps>li,.guide-reading .strategy-article .content-action .action-steps>li{grid-template-columns:minmax(0,1fr);gap:.25rem}
  .guide-reading .guide-meta{font-size:.9rem}
  .guide-reading .guide-record-table th,.guide-reading .guide-record-table td{padding:.6rem;font-size:.95rem}
  .guide-reading .unique-gear-name-en{overflow-wrap:anywhere}

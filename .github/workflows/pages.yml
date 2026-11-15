@@ -40,15 +40,17 @@ jobs:
           node scripts/test-mobile-host.mjs
           npm run test:usability
       - name: Install browser for responsive checks
-        run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium
+        run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
       - name: Check phone, tablet and desktop usability
-        run: npm run test:usability:browser
+        run: npm run test:usability:browser && node scripts/test-reading-browser.mjs
       - name: Keep responsive check screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: usability-screenshots
-          path: /tmp/poe2-usability-qa
+          path: |
+            /tmp/poe2-usability-qa
+            /tmp/poe2-reading-qa
           if-no-files-found: ignore
       - name: Collect site files
         run: |
