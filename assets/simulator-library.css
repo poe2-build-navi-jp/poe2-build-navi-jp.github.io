@@ -33,6 +33,8 @@
 .sim-goal-picker label{display:grid;gap:.4rem;flex:1 1 260px;min-width:0}
 .sim-goal-picker select{width:100%;min-width:0;max-width:100%}
 .sim-goal-panel summary{overflow-wrap:anywhere}
+.sim-goal-panel :is(summary,button,input,select){scroll-margin-block:24px 220px}
+.sim-goal-panel>summary{min-height:44px}
 .sim-goal-panel>summary>span{display:block;font-size:.8rem;font-weight:400;margin-top:.25rem}
 .sim-goal-totals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin:1rem 0}
 .sim-goal-totals>div{padding:.8rem;border:1px solid #d5d0c7;background:#fffdf8;border-radius:8px;min-width:0}
