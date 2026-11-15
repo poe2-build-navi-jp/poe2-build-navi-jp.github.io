@@ -14,7 +14,7 @@ const preset=sample.preset,key=namedPlanKey(preset),auto='poe2-simulator:v1:'+pr
 const alternate=structuredClone(sample);alternate.request.character.level=60;alternate.request.extra_modifiers=['+100 to maximum Life'];
 sample.calculation={engine:'0.0.46',dataVersion:'0.5.4.0',guideRevision:'earlier-guide'};
 const entries=[{id:'qa-current',name:'QA current',saved:sample},{id:'qa-upgrade',name:'QA upgrade',saved:alternate}];
-const ready=page=>page.waitForFunction(()=>document.querySelector('#sim-stats')?.getAttribute('aria-busy')==='false'&&!!window.Poe2SimulatorLibrary,undefined,{timeout:60000});
+const ready=async page=>{try{await page.waitForFunction(()=>document.querySelector('#sim-stats')?.getAttribute('aria-busy')==='false'&&!!window.Poe2SimulatorLibrary,undefined,{timeout:100000});}catch(cause){throw Error('Simulator initialization: '+await page.locator('#sim-status').textContent()+' / '+await page.locator('#sim-error').textContent(),{cause});}};
 const expanded=async(page,id)=>{if(!await page.locator('#'+id).evaluate(el=>el.open))await page.locator('#'+id+'>summary').click();};
 const synced=page=>page.waitForFunction(()=>/件を同期済み|records synced/.test(document.querySelector('#sim-sync-status')?.textContent||''),undefined,{timeout:60000});
 const report=[];
@@ -94,7 +94,7 @@ try{
    assert.deepEqual(errors,[],`${type}: page errors`);
   }catch(cause){
    for(const [page,name]of [[a,'phone'],[b,'desktop']])if(page){
-    console.error(`${type}/${name}:`,await page.locator('#sim-sync-status').textContent().catch(()=>''));
+    console.error(`${type}/${name}:`,await page.locator('#sim-sync-status').textContent().catch(()=>''), 'page errors:', errors);
     await page.screenshot({path:resolve(output,`${type}-${name}-failure.png`)}).catch(()=>{});
    }
    throw cause;

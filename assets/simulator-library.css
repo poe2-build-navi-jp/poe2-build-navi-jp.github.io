@@ -28,3 +28,36 @@
 .sim-library .sim-build-card h4{font-size:1rem;margin:10px 0}
 .sim-library [hidden]{display:none!important}
 @media(max-width:480px){.sim-library{padding:16px}.sim-library button{width:100%;margin:6px 0}.sim-library .sim-build-grid{grid-template-columns:1fr}}
+.sim-goal-panel{margin-block:1rem;min-width:0}
+html:has(body.simulator-page){scroll-behavior:auto}
+.simulator-page .sim-tabs button{min-width:0;white-space:normal;overflow-wrap:anywhere}
+.sim-goal-picker{display:flex;align-items:end;gap:.7rem;flex-wrap:wrap}
+.sim-goal-picker label{display:grid;grid-template-columns:minmax(0,1fr);gap:.4rem;flex:1 1 260px;min-width:0;overflow:hidden}
+.sim-goal-picker label:focus-within{outline:3px solid var(--focus,#137467);outline-offset:3px}
+.sim-goal-picker select{width:100%;min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.sim-goal-panel summary{overflow-wrap:anywhere}
+.sim-goal-panel :is(summary,button,input,select){scroll-margin-block:24px}
+.sim-goal-panel>summary{scroll-margin-bottom:220px}
+.sim-goal-panel>summary{min-height:44px}
+.sim-goal-panel>summary>span{display:block;font-size:.8rem;font-weight:400;margin-top:.25rem}
+.sim-goal-totals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin:1rem 0}
+.sim-goal-totals>div{padding:.8rem;border:1px solid #d5d0c7;background:#fffdf8;border-radius:8px;min-width:0}
+.sim-goal-totals b{display:block;font-size:1.5rem;color:#27353b}
+.sim-goal-totals span{display:block;font-size:.8rem;line-height:1.5;color:#3e484b}
+.sim-goal-panel .sim-goal-matched{display:flex;gap:.5rem;align-items:center;margin:.7rem 0;min-height:44px}
+.sim-goal-panel .sim-goal-matched input{width:18px;height:18px;min-height:0;flex:0 0 18px;margin:0}
+.sim-goal-group{margin:.7rem 0;padding:.7rem;border:1px solid #d5d0c7;border-radius:8px}
+.sim-goal-group>summary{font-weight:700;cursor:pointer;min-height:36px}
+.sim-goal-group>summary>span{margin-left:.5rem;font-variant-numeric:tabular-nums}
+.sim-goal-list{list-style:none;padding:0;margin:.7rem 0;max-height:440px;overflow:auto;overscroll-behavior:contain}
+.sim-goal-list>li{border-top:1px solid #ded9d0;padding:.8rem .2rem;overflow-wrap:anywhere;min-width:0}
+.sim-goal-list :is(summary,button){scroll-margin-block:8px}
+.sim-goal-list>li>b,.sim-goal-list>li>small{display:block;margin-top:.35rem}
+.sim-goal-list>li>small{font-size:.8rem;color:#4b5251}
+.sim-goal-list p{margin:.4rem 0}
+.sim-goal-state{display:inline-block;border-radius:4px;background:#f6e9c9;color:#634716;font-size:.8rem;padding:.15rem .4rem}
+.sim-goal-state.is-match{background:#e5ede4;color:#29432f}
+.sim-goal-notice{padding:.6rem;border-left:3px solid #a47b2c;background:#fff5dc;color:#513d18}
+.sim-goal-panel pre{max-width:100%;max-height:300px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.8rem}
+@media(max-width:600px){.sim-goal-totals{grid-template-columns:repeat(2,minmax(0,1fr))}.sim-goal-picker>button{width:100%}.sim-goal-panel button{min-height:44px;max-width:100%}.sim-goal-list{max-height:360px}}
+@media(max-width:720px){html:has(body.simulator-page #sim-workbench:not([hidden])){scroll-padding-bottom:220px}}
