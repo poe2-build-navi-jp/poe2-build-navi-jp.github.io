@@ -17,6 +17,18 @@ const entries=[{id:'qa-current',name:'QA current',saved:sample},{id:'qa-upgrade'
 const ready=async page=>{try{await page.waitForFunction(()=>document.querySelector('#sim-stats')?.getAttribute('aria-busy')==='false'&&!!window.Poe2SimulatorLibrary,undefined,{timeout:100000});}catch(cause){throw Error('Simulator initialization: '+await page.locator('#sim-status').textContent()+' / '+await page.locator('#sim-error').textContent(),{cause});}};
 const expanded=async(page,id)=>{if(!await page.locator('#'+id).evaluate(el=>el.open))await page.locator('#'+id+'>summary').click();};
 const synced=page=>page.waitForFunction(()=>/件を同期済み|records synced/.test(document.querySelector('#sim-sync-status')?.textContent||''),undefined,{timeout:60000});
+const libraryCode=await readFile(resolve(root,'assets/simulator-library.js'),'utf8');
+const syncModule='/assets/'+libraryCode.match(/from '\.\/(simulator-sync\.js[^']*)'/)[1];
+const traceSync=page=>page.evaluate(async href=>{
+ const {EncryptedBuildSync}=await import(href);
+ for(const method of ['connect','sync']){
+  const original=EncryptedBuildSync.prototype[method];
+  EncryptedBuildSync.prototype[method]=async function(...args){
+   try{return await original.apply(this,args);}
+   catch(cause){console.error('SYNC_QA_FAILURE '+JSON.stringify({method,name:cause.name,message:cause.message,status:cause.status,stack:cause.stack}));throw cause;}
+  };
+ }
+},syncModule);
 const report=[];
 try{
  for(const [engine,type] of [[chromium,'chromium'],[webkit,'webkit']]){
@@ -25,11 +37,13 @@ try{
    const c=await browser.newContext({viewport:{width,height:900},isMobile:width<500,hasTouch:width<500});contexts.push(c);
    if(seed)await c.addInitScript(values=>{if(location.origin==='http://127.0.0.1:4173'&&!sessionStorage.getItem('qa-seeded')){for(const [k,v]of Object.entries(values))localStorage.setItem(k,v);sessionStorage.setItem('qa-seeded','1');}},seed);
    const page=await c.newPage();page.on('pageerror',cause=>errors.push(cause.message));
+   page.on('console',message=>{if(message.text().startsWith('SYNC_QA_FAILURE '))console.error(message.text());});
+   page.on('requestfailed',request=>{if(/appdeploy\.ai/.test(request.url())){const url=new URL(request.url());console.error('SYNC_QA_NETWORK',url.origin+url.pathname,request.failure()?.errorText);}});
    await page.route('**/*',route=>/google-analytics|googletagmanager|googlesyndication|doubleclick/.test(route.request().url())?route.abort():route.continue());return page;
   };
   try{
    a=await context(320,{[key]:JSON.stringify({version:1,plans:entries}),[auto]:JSON.stringify(sample)});
-   await a.goto(base+'/simulator/?build='+preset);await ready(a);await expanded(a,'sim-workspace');
+   await a.goto(base+'/simulator/?build='+preset);await ready(a);await traceSync(a);await expanded(a,'sim-workspace');
    if(type==='chromium'){
     const capacity=await a.evaluate(async()=>{
      const {IframeTransport}=await import('/assets/simulator-sync.js');
