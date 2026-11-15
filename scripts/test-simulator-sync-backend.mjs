@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {stripTypeScriptTypes} from 'node:module';
+import {createHash} from 'node:crypto';
 import {tables,fault} from './fixtures/sync-db-sdk.mjs';
 const source=(await readFile(new URL('../tools/sync-service/backend/index.ts',import.meta.url),'utf8'))
   .replace("from '@appdeploy/sdk'",`from '${new URL('./fixtures/sync-db-sdk.mjs',import.meta.url).href}'`);
@@ -30,9 +31,38 @@ fault.before='AppDatabaseQuotaExceeded';
 assert.equal((await call('write',{...second,revision:2,requestId:'quota-request-0003'})).status,429);
 assert.equal((await call('read')).data.revision,2);
 assert.equal((await call('write',{...second,revision:2,requestId:'oversized-request-03',ciphertext:'A'.repeat(2800001)})).status,400);
+// The complete 2 MiB encrypted payload must never cross a 1 MiB transport/SDK call.
+const ciphertext='L'.repeat(2799000),upload={...auth,revision:2,requestId:'multipart-request-004',iv:'v'.repeat(16),count:Math.ceil(ciphertext.length/150000),hash:createHash('sha256').update(JSON.stringify([2,'v'.repeat(16),ciphertext])).digest('hex')};
+assert.equal((await call('upload-start',upload)).status,200);
+assert.equal((await call('upload-start',{...upload,token:'x'.repeat(43)})).status,403);
+assert.equal((await call('upload-start',{...upload,requestId:'competing-request-005'})).status,409,'another upload cannot overwrite the leased chunk bank');
+assert.equal((await call('write',{...second,revision:2,requestId:'competing-small-0005'})).status,409,'legacy writes also respect active uploads');
+for(let index=0;index<upload.count;index++){
+ const fragment={...upload,index,ciphertext:ciphertext.slice(index*150000,(index+1)*150000)};
+ assert.equal((await call('upload-chunk',fragment)).status,200);
+ if(index===0){
+  assert.equal((await call('upload-commit',upload)).status,409,'incomplete uploads cannot publish');
+  assert.equal((await call('read')).data.revision,2,'readers keep the previous complete snapshot during upload');
+ }
+}
+assert.equal((await call('upload-start',upload)).status,200,'an interrupted transfer resumes the same request');
+fault.after='AppDatabaseUnknownOutcome';
+assert.equal((await call('upload-commit',upload)).status,503);
+assert.equal((await call('upload-commit',upload)).data.revision,3,'commit replay reconciles an ambiguous response');
+assert.equal((await call('upload-start',upload)).data.committed,true,'a repeated full transfer returns its existing receipt');
+assert.equal((await call('upload-start',{...upload,hash:'a'.repeat(64)})).status,409);
+const large=await call('read');assert.equal(large.data.revision,3);assert.equal(large.data.envelope.chunked,true);
+let restored='';for(let index=0;index<upload.count;index++)restored+=(await call('read-chunk',{...auth,revision:3,index})).data.ciphertext;
+assert.equal(restored,ciphertext);
+assert.equal((await call('upload-chunk',{...upload,index:0,ciphertext:'A'.repeat(100)})).status,409,'late uploads cannot mutate the committed snapshot');
+assert.equal((await call('read-chunk',{...auth,revision:2,index:0})).status,409);
+assert.equal((await call('upload-start',{...upload,revision:3,requestId:'expired-upload-0006'})).status,200);
+tables.get('poe2_vaults').get(auth.room).uploadUntil=0;
+assert.equal((await call('upload-start',{...upload,revision:3,requestId:'replacement-upload-07'})).status,200,'an abandoned upload cannot lock the vault forever');
+assert.equal((await call('upload-chunk',{...upload,revision:3,requestId:'expired-upload-0006',index:0,ciphertext:'A'.repeat(100)})).status,409);
 assert.equal((await call('revoke')).data.revoked,true);
 assert.equal(tables.get('poe2_vault_chunks').size,0,'revocation removes both bounded chunk banks');
 assert.equal((await call('read')).status,403);
 assert.equal((await call('write',{...second,revision:3,requestId:'revoked-request-003'})).status,403);
 assert.equal((await call('revoke')).data.revoked,true,'revocation can be retried safely');
-console.log('PASS: backend authorization, chunk persistence, conditional transactions, idempotency receipts, unknown-outcome reconciliation, usage limits and revocation');
+console.log('PASS: backend authorization, near-capacity bounded transfers, partial-upload isolation, lease races, conditional transactions, replay, unknown-outcome reconciliation, usage limits and revocation');

@@ -10,7 +10,57 @@ const permittedParents = new Set([
 ]);
 async function call(operation: string, body: unknown) {
   if (!operations.has(operation)) throw Error('SYNC_INPUT');
-  return (await api.post('/api/v1/' + operation, body)).data;
+  const request = body as Record<string, unknown>;
+  if (operation === 'write' && typeof request.ciphertext === 'string' &&
+      request.ciphertext.length > 600000) {
+    const ciphertext = request.ciphertext;
+    const hash = await sha256(JSON.stringify([request.revision, request.iv, ciphertext]));
+    const upload = {
+      room: request.room,
+      token: request.token,
+      revision: request.revision,
+      requestId: request.requestId,
+      iv: request.iv,
+      hash,
+      count: Math.ceil(ciphertext.length / 150000),
+    };
+    const started = (await api.post('/api/v1/upload-start', upload)).data;
+    if (started.committed) return { revision: started.revision };
+    for (let index = 0; index < upload.count; index++) {
+      await api.post('/api/v1/upload-chunk', {
+        ...upload,
+        index,
+        ciphertext: ciphertext.slice(index * 150000, (index + 1) * 150000),
+      });
+    }
+    return (await api.post('/api/v1/upload-commit', upload)).data;
+  }
+  const data = (await api.post('/api/v1/' + operation, body)).data;
+  if (operation !== 'read' || !data.envelope?.chunked) return data;
+  const envelope = data.envelope;
+  if (!Number.isInteger(envelope.count) || envelope.count < 1 || envelope.count > 19)
+    throw Error('SYNC_INPUT');
+  let ciphertext = '';
+  for (let index = 0; index < envelope.count; index++) {
+    const chunk = (await api.post('/api/v1/read-chunk', {
+      ...request,
+      revision: data.revision,
+      index,
+    })).data;
+    if (chunk.revision !== data.revision || typeof chunk.ciphertext !== 'string' ||
+        chunk.ciphertext.length > 150000) throw Error('SYNC_INPUT');
+    ciphertext += chunk.ciphertext;
+  }
+  if (ciphertext.length > 2800000 || await sha256(ciphertext) !== envelope.hash)
+    throw Error('SYNC_INPUT');
+  // Reject a snapshot superseded or revoked while its pieces were in flight.
+  const latest = (await api.post('/api/v1/read', { ...request, revision: data.revision })).data;
+  if (!latest.unchanged) throw { status: 409 };
+  return { revision: data.revision, envelope: { iv: envelope.iv, ciphertext } };
+}
+async function sha256(value: string) {
+  const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+  return Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('');
 }
 function apiFailure(cause: unknown) {
   const value = cause as {

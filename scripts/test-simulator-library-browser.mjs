@@ -69,6 +69,10 @@ try{
    assert.equal(await b.evaluate(k=>localStorage.getItem(k),auto),draftBefore,'remote saves cannot replace the active draft');
    assert.equal(await b.evaluate(k=>JSON.parse(localStorage.getItem(k)).plans.length,key),2);
    assert.equal(await b.locator('#sim-journal-count').textContent(),'1/40');
+   await expanded(b,'sim-workspace');
+   await b.locator('#sim-plan-name').fill('QA automatic sync');await b.locator('#sim-plan-create').click();
+   await a.waitForFunction(k=>JSON.parse(localStorage.getItem(k)).plans.some(p=>p.name==='QA automatic sync'),key,{timeout:90000});
+   assert.equal(await b.evaluate(k=>localStorage.getItem(k),auto),draftBefore,'automatic background sync preserves the working draft');
    await expanded(b,'sim-journal-panel');await b.locator('.sim-journal-record>summary').click();
    await b.locator('[data-journal-open]').click();await ready(b);
    assert.equal(await b.evaluate(k=>localStorage.getItem(k),auto),draftBefore,'reopening an archived comparison preserves the active autosave');
@@ -87,6 +91,12 @@ try{
    await a.waitForFunction(()=>document.querySelector('#sim-sync-status').textContent.includes('無効化しました'));
    await expanded(b,'sim-sync-panel');await b.locator('#sim-sync-now').click();await b.waitForFunction(()=>document.querySelector('#sim-sync-status').textContent.includes('revoked'));
    assert.deepEqual(errors,[],`${type}: page errors`);
+  }catch(cause){
+   for(const [page,name]of [[a,'phone'],[b,'desktop']])if(page){
+    console.error(`${type}/${name}:`,await page.locator('#sim-sync-status').textContent().catch(()=>''));
+    await page.screenshot({path:resolve(output,`${type}-${name}-failure.png`)}).catch(()=>{});
+   }
+   throw cause;
   }finally{for(const c of contexts)await c.close();await browser.close();}
  }
  console.log(`PASS: ${report.join(', ')}; fixed-condition journal, unchanged source saves, relevant/read notices, real encrypted cross-device sync, preserved drafts, English records, invalid-code rejection and revocation`);

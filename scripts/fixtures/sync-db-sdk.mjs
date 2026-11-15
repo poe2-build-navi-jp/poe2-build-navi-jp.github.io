@@ -6,6 +6,7 @@ const table=name=>{if(!tables.has(name))tables.set(name,new Map());return tables
 const operation=(kind,name,records,options={})=>({kind,name,records,options,
   then(resolve,reject){return transact([this]).then(result=>resolve(result[0]),reject);}});
 async function transact(operations){
+  if(Buffer.byteLength(JSON.stringify(operations))>1048576)throw databaseError('AppDatabaseRequestTooLarge');
   if(fault.before){const code=fault.before;fault.before='';throw databaseError(code);}
   for(const op of operations)if(op.kind==='update')for(const entry of op.records){
     const current=table(op.name).get(entry.id);
