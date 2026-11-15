@@ -115,18 +115,19 @@
   ],
   "poe2One": {
     "releaseDate": "2026-12-11",
-    "sourceName": "Path of Exile 2 公式サイト",
-    "sourceUrl": "https://www.pathofexile.com/forum/view-thread/3999366",
-    "duelistSourceUrl": "https://www.pathofexile.com/forum/view-thread/3999858",
-    "checkedAt": "2026-09-25",
+    "sourceName": "GGG公式：ExileCon 2026発表",
+    "sourceUrl": "https://www.pathofexile.com/forum/view-thread/4012710",
+    "duelistSourceUrl": "https://www.youtube.com/watch?v=BwYNNQJO-AE",
+    "checkedAt": "2026-11-15",
     "confirmed": [
-      "正式版1.0は2026年12月11日（PST）に公開予定です。",
-      "正式版1.0の公開時に基本プレイ無料へ移行予定です。",
-      "Duelistは正式版1.0で追加予定です。"
+      "正式版1.0は2026年12月11日（PST）に基本プレイ無料で公開予定です。",
+      "Shadow・Duelist、Act 5・6、新リーグConquerors of Wraeclastが発表されました。",
+      "パッシブ・サポートジェム・ユニーク装備・既存クラスにも変更が予定されています。"
     ],
     "unconfirmed": [
-      "1.0環境の最強ビルドやTierは、正式なパッチノートと実プレイ情報を確認するまで掲載しません。",
-      "現在掲載中の育成手順は0.5.5向けであり、1.0公開後に再確認します。"
+      "日本時間の開始日時は、確認した公式発表に開始時刻がないため未確定です。",
+      "最終パッチノートの全数値と、再現可能な1.0の育成手順は本サイトでは未検証です。",
+      "1.0のTier・装備相場・DPSは未評価。掲載中の0.5.5ビルドとシミュレーターは1.0対応ではありません。"
     ]
   }
 }

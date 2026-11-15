@@ -148,3 +148,7 @@ https://poe2-build-navi-jp.github.io/poe2-1-0/build-status/
 https://poe2-build-navi-jp.github.io/poe2-1-0/duelist/
 https://poe2-build-navi-jp.github.io/poe2-1-0/exilecon-2026/
 https://poe2-build-navi-jp.github.io/what-is-poe2/
+https://poe2-build-navi-jp.github.io/poe2-1-0/shadow/
+https://poe2-build-navi-jp.github.io/poe2-1-0/campaign/
+https://poe2-build-navi-jp.github.io/poe2-1-0/conquerors-of-wraeclast/
+https://poe2-build-navi-jp.github.io/poe2-1-0/balance-changes/

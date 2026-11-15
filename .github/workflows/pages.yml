@@ -33,6 +33,7 @@ jobs:
       - name: Check public search and skill images
         run: |
           npm ci --ignore-scripts
+          node scripts/test-release-info.mjs
           npm run test:search
           npm run test:skill-icons
           node scripts/test-passive-icons.mjs
