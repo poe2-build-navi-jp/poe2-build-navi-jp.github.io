@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        mode: [default]
+        variant: [optimize, coalesce, flatten]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -19,7 +19,9 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
+      - run: npm install --prefix "$RUNNER_TEMP/wasm-opt" --ignore-scripts --no-audit --no-fund binaryen@125.0.0
       - run: node node_modules/playwright-core/cli.js install --with-deps webkit
       - run: node scripts/diagnose-safari-jit.mjs
         env:
-          JSC_MODE: ${{ matrix.mode }}
+          WASM_VARIANT: ${{ matrix.variant }}
+          WASM_OPT: ${{ runner.temp }}/wasm-opt/node_modules/binaryen/bin/wasm-opt
