@@ -35,7 +35,7 @@ async function unpack(bundle) {
 }
 async function boot() {
   postMessage({progress:'計算エンジンとゲームデータを読み込んでいます（初回約9.3MB）…'});
-  runtime = await (await get('runtime.json?v=d1a7b910c9')).json();
+  runtime = await (await get('runtime.json?v=2ec49b4ef3')).json();
   totalBytes=runtime.wasm.bytes+runtime.data.bytes;progress();
   const [wasm,dataResponse] = await Promise.all([unpack(runtime.wasm),unpack(runtime.data)]);
   postMessage({progress:'計算エンジンを起動しています…'});
@@ -44,14 +44,18 @@ async function boot() {
   postMessage({progress:'ゲームデータを展開しています…'});
   const data = await dataResponse.json();
   if (data.version !== runtime.dataVersion) throw new Error('ゲームデータの版が一致しません。');
-  try {dataFiles = await stageVerifiedData(engine,data);}
+  try {
+    dataFiles = await stageVerifiedData(engine,data);
+    gems = JSON.parse(engine.gemCatalogJson()).map(gem=>internalSkills.has(gem.skill_id)?{...gem,ui_hidden:true}:gem);
+    uniques = JSON.parse(engine.uniqueCatalogJson());
+    minions = JSON.parse(engine.minionCatalogJson());
+  }
   catch(error) {
     if(error.message==='ENGINE_DATA_INTEGRITY')throw new Error('計算データの整合性を確認できません。再読み込みしてください。');
+    // A trapped instance can retain invalid Rust state. Only a new worker may retry boot.
+    error.code='ENGINE_STARTUP_FAILURE';
     throw error;
   }
-  gems = JSON.parse(engine.gemCatalogJson()).map(gem=>internalSkills.has(gem.skill_id)?{...gem,ui_hidden:true}:gem);
-  uniques = JSON.parse(engine.uniqueCatalogJson());
-  minions = JSON.parse(engine.minionCatalogJson());
 }
 const treeCache=new Map();
 function tree(version) {
@@ -103,6 +107,6 @@ self.onmessage = async ({data:{id,action,payload}}) => {
   } catch (error) {
     let message = error.message || String(error);
     try {message = JSON.parse(message).message || message;} catch {}
-    postMessage({id,error:message});
+    postMessage({id,error:message,errorCode:error.code || (error instanceof WebAssembly.RuntimeError?'ENGINE_STARTUP_FAILURE':undefined)});
   }
 };

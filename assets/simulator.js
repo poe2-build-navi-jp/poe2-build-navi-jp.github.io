@@ -52,12 +52,22 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- const current=new Worker(new URL('./simulator-worker.js?v=215bfdf266',import.meta.url),{type:'module'});worker=current;
- const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;bootPromise=null;catalog=null;for(const task of pending.values())task.reject(Error('読み込み・計算に失敗しました。「再試行」で構成を残したまま再開できます。'));pending.clear();};
- current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
- current.onerror=fail;
- const timer=setTimeout(fail,90000);
- bootPromise=Promise.all([rpc('boot'),loadEditorCatalogs()]).then(([data])=>{catalog=data;return data;}).catch(error=>{fail();throw error;}).finally(()=>clearTimeout(timer));return bootPromise;
+ let editorCatalogs;
+ let promise;
+ promise=(async()=>{
+  for(let attempt=0;attempt<4;attempt++){
+   let booting=true;
+   const current=new Worker(new URL('./simulator-worker.js?v=9cc9f93707',import.meta.url),{type:'module'});worker=current;
+   const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;catalog=null;if(!booting)bootPromise=null;for(const task of pending.values())task.reject(Error('読み込み・計算に失敗しました。「再試行」で構成を残したまま再開できます。'));pending.clear();};
+   current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);if(data.error){const error=Error(data.error);error.code=data.errorCode;task.reject(error);}else task.resolve(data.result);};
+   current.onerror=fail;
+   const timer=setTimeout(fail,90000);
+   try{editorCatalogs ||= loadEditorCatalogs();const[data]=await Promise.all([rpc('boot'),editorCatalogs]);catalog=data;booting=false;return data;}
+   catch(error){fail();if(error.code!=='ENGINE_STARTUP_FAILURE'||attempt===3)throw error;$('sim-status').textContent='起動を自動で再試行しています…';await new Promise(resolve=>setTimeout(resolve,250));}
+   finally{clearTimeout(timer);}
+  }
+ })().catch(error=>{if(bootPromise===promise)bootPromise=null;throw error;});
+ bootPromise=promise;return promise;
 }
 async function retryEngine(){
  $('sim-engine-retry').disabled=true;clearError();

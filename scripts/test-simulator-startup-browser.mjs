@@ -1,4 +1,4 @@
-// CI only: run the original and fixed loaders against the real engine, without retrying failures.
+// CI only: no test retries. Count the bounded recovery performed by the production frontend.
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
@@ -26,35 +26,34 @@ try{
    const context=await browser.newContext({viewport:{width,height:900},isMobile:width<500,hasTouch:width<500});
    await context.addInitScript(({auto,key,saved,named})=>{if(location.origin==='http://127.0.0.1:4173'&&!sessionStorage.getItem('startup-seed')){
     localStorage.setItem(auto,saved);localStorage.setItem(key,named);sessionStorage.setItem('startup-seed','1');}}, {auto,key,saved,named});
-   const page=await context.newPage(),errors=[];let legacyLoads=0;page.on('pageerror',error=>errors.push(error.message));
+   const page=await context.newPage(),errors=[];let legacyLoads=0,workerLoads=0;page.on('pageerror',error=>errors.push(error.message));
    page.on('console',message=>{if(message.type()==='error'||message.text().startsWith('STARTUP_TRACE '))console.log('BROWSER_CONSOLE '+message.text());});
    await context.route('**/*',async route=>{
     const url=new URL(route.request().url());
     if(url.origin!=='http://127.0.0.1:4173')return route.abort();
-    if(mode==='baseline'&&url.pathname.endsWith('/simulator-engine/v0.0.46/runtime.json')){
-      const runtime=JSON.parse(await readFile(resolve(root,'.'+url.pathname),'utf8'));
-      if(!runtime.originalWasm)throw Error('original runtime is missing');
-      runtime.wasm=runtime.originalWasm;
-      return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(runtime)});
+    if(mode==='baseline'&&/^\/assets\/simulator(?:-en)?\.js$/.test(url.pathname)){
+      const source=(await readFile(resolve(root,'.'+url.pathname),'utf8')).replace('attempt<4','attempt<1').replace('attempt===3','attempt===0');
+      return route.fulfill({status:200,contentType:'text/javascript',body:source});
     }
     if(mode==='baseline'&&url.pathname==='/assets/simulator-engine-loader.js'){
       legacyLoads++;return route.fulfill({status:200,contentType:'text/javascript',body:await readFile(resolve(root,'scripts/fixtures/simulator-engine-legacy-staging.js'),'utf8')});
     }
     if(/^\/assets\/simulator-worker(?:-en)?\.js$/.test(url.pathname)){
+      workerLoads++;
       let source=await readFile(resolve(root,'.'+url.pathname),'utf8');
-      source=source.replace('postMessage({id,error:message});',"console.error('STARTUP_TRACE '+error.stack);postMessage({id,error:message});");
       if(mode==='baseline')source=source.replace('await engine.default({module_or_path:await wasm.arrayBuffer()});','engine.initSync({module:await wasm.arrayBuffer()});');
       return route.fulfill({status:200,contentType:'text/javascript',body:source});
     }
     return route.continue();
    });
    try{for(const load of ['cold','reload']){
-    const started=Date.now();let error='';
+    const started=Date.now(),beforeLoads=workerLoads;let error='';
     try{
      if(load==='cold')await page.goto('http://127.0.0.1:4173'+locale+'/simulator/?build='+sample.preset,{waitUntil:'domcontentloaded'});else await page.reload({waitUntil:'domcontentloaded'});
      await page.waitForFunction(()=>!document.querySelector('#sim-error')?.hidden||(document.querySelector('#sim-stats')?.getAttribute('aria-busy')==='false'&&!!window.Poe2SimulatorLibrary?.goalData()),undefined,{timeout:100000});
      if(await page.locator('#sim-error').isVisible())throw Error(await page.locator('#sim-error').textContent());
      if(mode==='baseline')assert(legacyLoads>0,'the control must actually load the original staging code');
+     assert(workerLoads-beforeLoads>=1&&workerLoads-beforeLoads<=(mode==='baseline'?1:4),'production recovery must be bounded');
      const numbers=await page.locator('#sim-stats .sim-stat b').allTextContents();assert.equal(numbers.length,14);assert.notEqual(numbers[1],'—');
      if(!reference.has(locale))reference.set(locale,numbers);
      assert.deepEqual(numbers,reference.get(locale),'loader changes cannot alter calculation results');
@@ -63,7 +62,7 @@ try{
      assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),named,'startup/reload cannot alter named saves');
      assert.deepEqual(errors,[]);
     }catch(cause){error=cause.message;}
-    reports.push({browser:name,mode,index,locale:locale||'ja',width,load,milliseconds:Date.now()-started,error});
+    reports.push({browser:name,mode,index,locale:locale||'ja',width,load,milliseconds:Date.now()-started,engineStarts:workerLoads-beforeLoads,error});
     console.log(JSON.stringify(reports.at(-1)));
     if(error){await page.screenshot({path:resolve(output,`${name}-${mode}-${index}-${load}-failure.png`)}).catch(()=>{});if(mode==='fixed')throw Error(`${name}/${index}/${load}: ${error}`);break;}
    }}finally{await context.close();}
