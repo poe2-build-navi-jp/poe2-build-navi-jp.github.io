@@ -48,6 +48,7 @@ try{
    await page.locator('#sim-photo-text').fill(lang==='jpn'?'錆びたグレートヘルム\n最大ライフ +123\n冷気耐性 +27%\n特殊効果の確認が必要':'Rusted Greathelm\n+123 to maximum Life\n+35% to Fire Resistance\nUnresolved special effect');
    assert.match(await page.locator('#sim-photo-unresolved').textContent(),lang==='jpn'?/特殊効果/:/Unresolved/);
    assert.equal(await page.locator('#sim-photo-stage').isDisabled(),true);
+   await page.locator('#sim-photo-base').selectOption('Metadata/Items/Armours/Helmets/FourHelmetStr1');
    await page.locator('#sim-photo-name').fill('Photo QA');await page.locator('#sim-photo-confirmed').check();
    await page.screenshot({path:output+'/'+label+'-review.png',fullPage:false});
    assert(await page.locator('#sim-photo-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth+1),'dialog has no horizontal overflow');

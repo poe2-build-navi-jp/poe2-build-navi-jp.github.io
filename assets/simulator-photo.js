@@ -26,6 +26,7 @@ function renderReview({initial=false}={}){
    $('base').value=parsed.baseId;$('quality').value=parsed.quality;$('level').value=parsed.level;
    $('name').value=t('写真の装備','Photographed item');
   }
+  else if(!$('base').value&&parsed.baseId)$('base').value=parsed.baseId;
   $('options').replaceChildren();
   parsed.modifiers.forEach((mod,i)=>{
    const label=document.createElement('label'),input=document.createElement('input'),span=document.createElement('span');
