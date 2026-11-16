@@ -43,8 +43,8 @@ jobs:
             });
             const paths = files.map(file => file.filename);
             const common = paths.some(path => /^(assets\/simulator-service\.js|\.github\/workflows\/simulator-library\.yml)$/.test(path));
-            core.setOutput('sync', common || paths.some(path => /^(assets\/simulator-(sync|library-model)|tools\/sync-service\/|scripts\/test-simulator-library-browser)/.test(path)));
-            core.setOutput('public', common || paths.some(path => /^(assets\/community-(transport|model)|tools\/community-service\/backend\/|scripts\/test-community-browser)/.test(path)));
+            core.setOutput('sync', common || paths.some(path => /^(assets\/simulator-(sync|library)|tools\/sync-service\/|scripts\/test-simulator-library-browser)/.test(path)));
+            core.setOutput('public', common || paths.some(path => /^(assets\/community-(transport|model|ui)|tools\/community-service\/backend\/|scripts\/test-community-browser)/.test(path)));
   saved-builds:
     runs-on: ubuntu-24.04
     steps:
