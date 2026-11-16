@@ -1,5 +1,5 @@
 import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=3c9638fed8';
-import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=46fb6c98fc';
+import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=e8138f5cef';
 import {newSyncCode} from './simulator-sync-crypto.js?v=6d43b0469b';
 
 const en = document.documentElement.lang === 'en';
@@ -192,7 +192,7 @@ document.addEventListener('click', async event => {
       finally{connecting=false;renderConnection();}return;
     }
     if(id==='sim-sync-now'){await sync.sync({manual:true});return;}
-    if(id==='sim-sync-import-legacy'){await sync.importLegacy(sync.keys?sync.code:$('sim-sync-code').value.trim());renderConnection();return;}
+    if(id==='sim-sync-import-legacy'){try{await sync.importLegacy(sync.keys?sync.code:$('sim-sync-code').value.trim());}finally{renderConnection();}return;}
     if(id==='sim-sync-copy'){
       try{await navigator.clipboard.writeText(sync.code);statusBox.textContent=t('接続コードをコピーしました。人に渡さず、別の端末に入力してください。','Connection code copied. Keep it private and enter it on your other device.');}
       catch{$('sim-sync-recovery').focus();$('sim-sync-recovery').select();statusBox.textContent=t('接続コードを選択しました。コピーしてください。','Connection code selected. Copy it to your other device.');}return;

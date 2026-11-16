@@ -119,6 +119,15 @@ try {
   assert.deepEqual(new Set(get(migrated).map(plan=>plan.saved.notes)),new Set(['Unsynced current edit','Previous cloud edit']));
   await restored.importLegacy(migrationCode,legacy);assert.equal(get(migrated).length,2,'repeated imports reuse conflict copies');
   assert(legacy.rooms.get(migrationKeys.room).envelope,'legacy ciphertext is retained');
+  const interrupted=new EncryptedBuildSync({storage:migrated,presets,transport:replacement});await interrupted.restore();
+  let resume;
+  const pendingImport=interrupted.importLegacy(migrationCode,{request:async(op,input)=>{
+    await new Promise(resolve=>{resume=resolve;});return legacy.request(op,input);
+  }});
+  for(let turn=0;turn<100&&!resume;turn++)await new Promise(setImmediate);
+  assert(resume);interrupted.disconnect();resume();await pendingImport;
+  assert.equal(interrupted.keys,null,'disconnecting during legacy read must never reconnect in the background');
+  assert.equal(migrated.getItem(SYNC_CREDENTIAL_KEY),null);
 } finally {Date.now=realNow;}
 // Frozen calculation values, engine and data version participate in journal conflict identity.
 const journal=id=>({kind:'journal',preset:sample.preset,id,value:{id,name:'Frozen',source:{same:true},snapshot:{rows:[]},engine:'1.0.0',dataVersion:'one'}});

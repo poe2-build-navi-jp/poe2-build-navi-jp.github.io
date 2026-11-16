@@ -147,7 +147,7 @@ export async function mountCommunity(root, {api, catalog, getSources, publicBase
           : Object.values(filters).some(value => value !== '' && value != null)
             ? t('条件に一致する投稿はありません。条件を変えて探せます。', 'No matching posts. Try different filters.')
             : t('まだ投稿がありません。保存した構成を最初に投稿できます。', 'No posts yet. You can publish the first saved build.');
-      if (response.legacyNotice) $('list-status').textContent += t(' 復旧後の投稿を表示しています。以前の投稿は元の共有URL・管理コードから確認できます。', ' Showing posts made since recovery. Earlier posts remain accessible through their original share URLs and management codes when the previous server is available.');
+      if (response.legacyNotice) $('list-status').textContent += t(' 復旧後の投稿を表示しています。以前の投稿は旧サーバー復旧後、元の共有URL・管理コードから確認できます。', ' Showing posts made since recovery. Earlier posts remain accessible through their original share URLs and management codes when the previous server is available.');
     } catch (cause) {
       if (sequence === listing) $('list-status').textContent = errorText(cause);
     }

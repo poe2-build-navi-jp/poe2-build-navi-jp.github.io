@@ -178,15 +178,20 @@ export class EncryptedBuildSync {
   async importLegacy(code = this.code, transport = new LegacySyncTransport()) {
     if (!legacyAvailable()) throw Error('SYNC_LEGACY_PAUSED');
     if (this.keys && code !== this.code) throw Error('SYNC_ALREADY_CONNECTED');
+    const initialEpoch = this.epoch, initialKeys = this.keys;
+    const initialCurrent = () => initialEpoch === this.epoch && initialKeys === this.keys;
     const keys = await syncKeys(code);
+    if (!initialCurrent()) return;
     const data = await transport.request('read',{room:keys.room,token:keys.token});
     const legacy = data.envelope ? validateVault(await decryptVault(data.envelope,keys),this.presets) : {version:1,records:{}};
+    if (!initialCurrent()) return;
     // Authenticate with the old vault before a manually entered legacy code can create anything.
     if (!this.keys) await this.connect(code,true);
+    const epoch = this.epoch, currentKeys = this.keys;
+    const current = () => !!currentKeys && epoch === this.epoch && currentKeys === this.keys;
     await this.sync({manual:true});
     const execute = async () => {
-      const epoch = this.epoch, currentKeys = this.keys;
-      const current = () => epoch === this.epoch && currentKeys === this.keys;
+      if (!current()) return;
       const local = collectSyncRecords(this.storage,this.presets);
       const auth = {room:currentKeys.room,token:currentKeys.token};
       const data = await this.transport.request('read',auth);
@@ -201,8 +206,9 @@ export class EncryptedBuildSync {
       try { await this.transport.request('write',this.pending.body); }
       catch(cause) {if(cause.status===409)this.pending=null;throw cause;}
       // The ordinary cycle reconciles the durable receipt and preserves any edits made in flight.
-      this.meta.legacy = true;
+      if (current()) this.meta.legacy = true;
     };
+    if (!current()) return;
     if (this.running) await this.running;
     this.running = (globalThis.navigator?.locks ? navigator.locks.request('poe2-build-sync-v1',execute) : execute()).finally(()=>{this.running=null;});
     await this.running;
