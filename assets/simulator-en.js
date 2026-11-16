@@ -191,7 +191,7 @@ function restoreTreeEditor(){
  $('sim-tree-error').hidden=true;$('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
  $('sim-tree-close').disabled=false;$('sim-tree-close').textContent='Save and return';treeReturnFocus?.focus?.({preventScroll:true});updateView();
 }
-function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree'){if(treeNeedsFit){treeNeedsFit=false;fitTree();}else updateView();}}
+function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;libraryEvent('view-change',{tab:name});if(name==='tree'){if(treeNeedsFit){treeNeedsFit=false;fitTree();}else updateView();}}
 const slots=[['weapon1','Main hand'],['weapon2','Off-hand / shield'],['helmet','Helmet'],['body','Body armour'],['gloves','Gloves'],['boots','Boots'],['belt','Belt'],['amulet','Amulet'],['ring1','Ring 1'],['ring2','Ring 2'],['Flask 1','Flask 1'],['Flask 2','Flask 2'],['Charm 1','Charm 1'],['Charm 2','Charm 2'],['Charm 3','Charm 3']];
 const utility=slot=>/^(Flask|Charm) /.test(slot);
 const itemList=()=>utility(selectedSlot)?(plan.request.flasks ||= []):(plan.request.items ||= []);
@@ -221,6 +221,7 @@ function setEquipmentMode(mode){
  for(const b of document.querySelectorAll('[data-equipment-mode]'))b.setAttribute('aria-pressed',String(b.dataset.equipmentMode===mode));
  $('sim-unique-editor').hidden=mode!=='unique';$('sim-rare-editor').hidden=mode!=='rare';$('sim-item-source').hidden=mode==='rare';
  $('sim-item-apply').disabled=mode==='rare'&&!rareBasesForSlot(selectedSlot,equipmentCatalog).length;
+ libraryEvent('equipment-mode',{mode});
 }
 function renderRareEditor(){
  const bases=rareBasesForSlot(selectedSlot,equipmentCatalog);
