@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "b8f15a043b28a0f8312e5173edf89e225f054cdb",
+  "headCommit": "e1d04ebad664ec9500cca93a58aee8a3f771627a",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/",
+      "change": "updated",
+      "beforeHash": "da7af4f8c1e66c76cba67c82e69e85051f2ef30abc9d963b02a46d4a292223aa",
+      "afterHash": "00068ffc90c317da23dc1551967b724100966be128e098b3c3b6ef875e4bce1f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/sorceress/spark-stormweaver/",
+      "change": "updated",
+      "beforeHash": "ce190161a7092c3bcc66f833ff717b8d79f6a343fa7a05db28485d68a66ca41f",
+      "afterHash": "fc791a05d33894f52c6aad3513f9311ce4fd2e18022b3a29e08b7c9e5b418673"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/",
+      "change": "updated",
+      "beforeHash": "0af22cf010cf15b5a7a8dd4db1f45c57afa85fa18cee24ccf2c55bf9e3b83a1e",
+      "afterHash": "cd00dc1b4c0404c697cf6805e200e5458096fe1c0ba492b725badc390303871e"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/",
+      "change": "updated",
+      "beforeHash": "b40c5b6a577bde1e76fd06528f49ec25c45ac67b89f2fbd215b5d72a03b9470d",
+      "afterHash": "af178348d4ae24e1a5fd1941eb92917a60fd4eca2023ee0ce13fc0744ca60ab7"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/community/",
+      "change": "updated",
+      "beforeHash": "d5c510ab2f344b18d4521a62ad0a946db2e65a0375e232ab2b4402f816933efc",
+      "afterHash": "250fd6817bb20801ef13a36d0769e97ddca3af609be35112101f864fc3895c1c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/dps/",
+      "change": "updated",
+      "beforeHash": "cc78e833cf862442d7b252fc49e4dcc2f3497bb6fd86f213f63befe8a5d59ad1",
+      "afterHash": "6108010ccb009a7faba7584720c4edfed6ec5fe20e8425bda635d74c6787a18c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/league-starter/",
+      "change": "updated",
+      "beforeHash": "b24b8a0bda8ef402b0550b4b769609b68c4f97a32790c2fa9ae6ad427159c2f3",
+      "afterHash": "539aea67506fb78e8ad896154e0c49a59a72ceb065abb14b9084616624674200"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/passive-tree/",
+      "change": "updated",
+      "beforeHash": "44fcd5536c287b2ea26c20b02ebd18089a0bbb4a43e2244043db7b8e43fd845b",
+      "afterHash": "062690ac193b83590c6022f1a6bc3d3183b07e657ea109215e5649fc135583cd"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/en/simulator/",
+      "change": "updated",
+      "beforeHash": "53937056c610ce4108e5f141aea242bf71dd4b26c7ee3fb48165184d0e37d889",
+      "afterHash": "b6d53e4cb4a6f599fd4ea76644ce7f49210748125c0eaf613e98443c9007abf1"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/equipment/maligaros-virtuosity/",
+      "change": "updated",
+      "beforeHash": "c42d5a8899e14b84ed8aa3ed1888d67dca108f20dab4471cf5aca353cb5d1086",
+      "afterHash": "e986af9c1699e2237642b11e87a9d380cf4937e8d7b9eac995ef37995f42d631"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/equipment/nightscale/",
+      "change": "updated",
+      "beforeHash": "dfc7ee04bf523e09fe1f30ecee17f608ffca77c8c5f8be56c5643b5e954ef61e",
+      "afterHash": "a3501272a809b6ee7bb820504de757e77ff3cce4c9e3f997cec37fe9f4a74a53"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/equipment/unset-ring/",
+      "change": "updated",
+      "beforeHash": "d6ac480756a3d27e8a25559b62ba6e06caf780ec267d38d29a95ee3d5fb4586a",
+      "afterHash": "1566d591d2bbe068a1e8f1b3c1f33af702e2c9d413eff05d730d515441f1c0f3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/arbiter-of-divinity/",
+      "change": "updated",
+      "beforeHash": "9cbea98fa550dad6b7bca015e929c4bde248a169d1d0c86d959b07088535a538",
+      "afterHash": "9d3bb5d9d53372f31f769ec06962eda47ecf79fca9dda2be577d0cdf4ced5b34"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/atlas-progression/",
+      "change": "updated",
+      "beforeHash": "d084218b13378b0632f46b1805c856c3c5cf857f9345f7b748171106ef2e9079",
+      "afterHash": "7bfa6118d11318d14b95025800d323a2ad5b5ec02f4386dc2605bd9f26c68ea2"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/endgame-items/",
+      "change": "updated",
+      "beforeHash": "29e3f01b3792d62058ec3ab6637be8b44a2004e64742616bbc17c93b0d88d5eb",
+      "afterHash": "36e92e615b9efc1211a7c6b9a32834df8709fa4b5e86f00c321afbe4b005c547"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/mana-problem/",
+      "change": "updated",
+      "beforeHash": "25947e963e180a1b3606545e7514d4eb26628ae46b8a5af712832128f1790281",
+      "afterHash": "b4ff6c0319b2ea6a515a05a25436f8bf8a60361300f8c62deeda1ea9bd82758b"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/unique-gear/",
+      "change": "updated",
+      "beforeHash": "b8285b480a07cda981ab1a1c5475a203f2793d9ffa64c0d28f64102f29009306",
+      "afterHash": "8ec10fb3628877818a669d9ad5c35f6d3cc34939b92da32573bd45cea2a6e17d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/valuable-drops-act-4/",
+      "change": "updated",
+      "beforeHash": "71a1b07115428dae3ebe3bf7d37f993572146bd4649fd2b75902bae7ce6427d6",
+      "afterHash": "336d64362c0f525c94d981ea1b83d70603ea06c49df6c4570dfe466d6a3c4464"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/",
+      "change": "updated",
+      "beforeHash": "e8c81d86ff7858a15a55498640b4b4196d2023f13add3f5e7b54f527a1e31256",
+      "afterHash": "88da74ca15cf860d4a51c2e234ba31e34716340b9b43aeb6829e9655ddee12df"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/carry-over/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "d4592261f4e0610a42994071e9fd6ea01227e1bbefd36972497211c26e815b06"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/how-to-start/",
+      "change": "updated",
+      "beforeHash": "088fa87560a51f81128b391c449e82d440ca8785ba0ddbd487739977be42ff7f",
+      "afterHash": "e0a3a69be61fe9c627baa229361f4e86c34050aaa90352c631c94fabca6ff2ec"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/microtransactions/",
+      "change": "updated",
+      "beforeHash": "3a9bc4bf55e9248ea2ff5a6b21491cdd159e2c9291df8071bc43baf3bc0be36c",
+      "afterHash": "58363dec51d033eedca996fc2614a1a509d4aa094957710541f7d46e207725eb"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/release-date/",
+      "change": "updated",
+      "beforeHash": "2b1e96d7c6a0960fcb6f4f97a1bef3023e2280ed418ef572fd5e4aed4712985f",
+      "afterHash": "98406734c0328f813f0ab9055bfc3dbbadc57bda5431785ec4cc7ff7afcbd357"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/poe2-1-0/system-requirements/",
+      "change": "updated",
+      "beforeHash": "a4022d30659bfdede8a962f782eda4217a18ddf14259f6b2ca408ecbe2021797",
+      "afterHash": "4b6501485e5e53c1000ff720430b0e3a2bc84848d68fbbbc9efe101720b751a0"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/privacy/",
+      "change": "updated",
+      "beforeHash": "c32799f869d1e8119d64cfe29ba075e6021f5ba1c73faa8e6142224325ef5cbf",
+      "afterHash": "ab1fceceb34b0ae8ee73847270c56b7aa4c0c79d66a605d129ad8ddadfe0fef1"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/rating-criteria/",
+      "change": "updated",
+      "beforeHash": "71b15b938640d209c95ee49d262eeba1d7a39a884e8f64745165dc5483e1f6b4",
+      "afterHash": "78bdce4e7810b3506b3d5090dc53f3ea06d9fed122cdf84b6bc19b269fbdf597"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "dd6ee8e76d9e5c836a04b3e9b7447b277be2e8c91acea7af86a8b1e74c7d378d",
+      "afterHash": "51292e64362c95c75577c0e9fb4f599cc7db3c63b76274045c84ff3663ee96d9"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/simulator/",
+      "change": "updated",
+      "beforeHash": "5cb7e50cf3b34f89d17d57e02574822b0ddae7bd39a72f382f1c7a5df7c7e3cd",
+      "afterHash": "c58a576fedc2f552f597b7dc4e8efb1f1be6abf0f8b6b4981a2df63aeb1c3b44"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "b17741e63d463d90c8f98c5b1a1fee3fe9e413a9869e7569900eb05ac7352161",
+      "afterHash": "3b4b0d843402eb5de245d82a2672cd13072e77e5f5b272499c388df28b596ad5"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/skills/shield-wall/",
+      "change": "updated",
+      "beforeHash": "96020cc28100e3bdf73cbb71347108e49690e3cf421c8df69e1e111f6130e11c",
+      "afterHash": "7283239010ac6a2dd3bb5eee83349ca141c20793b4391362e1e6e4c69db47c1f"
+    }
+  ]
+}

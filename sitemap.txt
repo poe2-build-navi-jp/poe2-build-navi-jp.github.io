@@ -154,3 +154,4 @@ https://poe2-build-navi-jp.github.io/poe2-1-0/shadow/
 https://poe2-build-navi-jp.github.io/poe2-1-0/campaign/
 https://poe2-build-navi-jp.github.io/poe2-1-0/conquerors-of-wraeclast/
 https://poe2-build-navi-jp.github.io/poe2-1-0/balance-changes/
+https://poe2-build-navi-jp.github.io/poe2-1-0/carry-over/

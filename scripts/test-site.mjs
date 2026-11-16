@@ -199,7 +199,7 @@ assert(bestPage.includes('class="comparison-table"') && bestPage.includes("掲�
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
 assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
-assert(seoPages.length === 26, "targeted SEO page count must be 26");
+assert(seoPages.length === 27, "targeted SEO page count must be 27");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
@@ -233,7 +233,7 @@ for (const [before, after] of [
   assert(applyVersionTitle(switched, "0.5.5", "1.0") === switched, "release title must be idempotent");
   assert(applyVersionTitle(switched, null, "0.5.5") === sample, "release title must restore the original title and og:title");
 }
-for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/microtransactions/", "/poe2-1-0/controller/", "/poe2-1-0/pre-registration/", "/poe2-1-0/build-status/", "/poe2-1-0/duelist/", "/poe2-1-0/exilecon-2026/"]) {
+for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/microtransactions/", "/poe2-1-0/controller/", "/poe2-1-0/pre-registration/", "/poe2-1-0/carry-over/", "/poe2-1-0/build-status/", "/poe2-1-0/duelist/", "/poe2-1-0/exilecon-2026/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: 1.0 SEO page missing`);
 }
 assert(gearCheck.includes('id="gear-example-title"'), "gear check verified static example missing");
@@ -270,7 +270,7 @@ assert(oneHub.includes("正式版は無料で遊べる？") && oneHub.includes("
 assert(oneHub.includes('href="/poe2-1-0/how-to-start/"') && oneHub.includes('href="/poe2-1-0/system-requirements/"') && oneHub.includes('href="/poe2-1-0/japanese/"') && oneHub.includes('href="/poe2-1-0/microtransactions/"') && oneHub.includes('href="/poe2-1-0/controller/"') && oneHub.includes('href="/poe2-1-0/pre-registration/"') && oneHub.includes('href="/poe2-1-0/build-status/"'), "1.0 hub must link to the how-to-start and system-requirements pages");
 for (const path of [...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map((m) => m[1])) {
   const html = await read(`${path}index.html`);
-  const excluded = path === "" || path === "en/simulator/" || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map|simulator)\//.test(path);
+  const excluded = path === "" || path.startsWith("en/") || path.startsWith("poe2-1-0/") || /^(about|privacy|terms|editorial-policy|rating-criteria|site-map|simulator)\//.test(path);
   const boxes = (html.match(/<!-- one-link:start -->/g) || []).length;
   assert(boxes === (excluded ? 0 : 1), `${path || "/"}: 1.0 link box count ${boxes}, expected ${excluded ? 0 : 1}`);
   if (!excluded) {

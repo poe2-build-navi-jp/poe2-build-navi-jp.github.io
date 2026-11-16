@@ -181,8 +181,9 @@ function select(dom,id,level) {
   const tmp = await fsp.mkdtemp('/tmp/poe2-gear-example-');
   try {
     await fsp.cp(root,tmp,{recursive:true,filter:p=>!/(^|\/)(node_modules|\.git)$/.test(p)});
+    await fsp.symlink(path.join(root,'node_modules'),path.join(tmp,'node_modules'),'dir');
     for (let pass=0;pass<2;pass++) {
-      for (const step of ['enhance-residual-pages','sync-asset-versions']) execFileSync(process.execPath,[path.join(tmp,'tools',`${step}.mjs`)],{cwd:tmp,stdio:'ignore'});
+      for (const step of ['enhance-residual-pages','localize-japanese-names','sync-asset-versions']) execFileSync(process.execPath,[path.join(tmp,'tools',`${step}.mjs`)],{cwd:tmp,stdio:'ignore'});
       assert.equal(withoutSkillIcons(await fsp.readFile(path.join(tmp,'gear-check/index.html'),'utf8')),withoutSkillIcons(html), 'Sample enhancement must be repeatable');
     }
     assert.equal(await fsp.readFile(path.join(tmp,'assets/gear-check.js'),'utf8'),script, 'Diagnosis logic is preserved');

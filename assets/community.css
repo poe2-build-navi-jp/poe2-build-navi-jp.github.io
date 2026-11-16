@@ -69,3 +69,5 @@ body.community-body { background: #fcfaf4; color: #29271f; }
   .community-page .community-card { padding: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .community-page * { scroll-behavior: auto !important; } }
+/* The shared 1.0 box keeps its dark background; restore its light link color over the page accent. */
+.community-page .one-link a { color: var(--gold, #d8ad52); }
