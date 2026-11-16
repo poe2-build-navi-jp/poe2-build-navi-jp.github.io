@@ -31,13 +31,19 @@ try{
    await context.route('**/*',async route=>{
     const url=new URL(route.request().url());
     if(url.origin!=='http://127.0.0.1:4173')return route.abort();
+    if(mode==='baseline'&&url.pathname.endsWith('/simulator-engine/v0.0.46/runtime.json')){
+      const runtime=JSON.parse(await readFile(resolve(root,'.'+url.pathname),'utf8'));
+      if(!runtime.originalWasm)throw Error('original runtime is missing');
+      runtime.wasm=runtime.originalWasm;
+      return route.fulfill({status:200,contentType:'application/json',body:JSON.stringify(runtime)});
+    }
     if(mode==='baseline'&&url.pathname==='/assets/simulator-engine-loader.js'){
       legacyLoads++;return route.fulfill({status:200,contentType:'text/javascript',body:await readFile(resolve(root,'scripts/fixtures/simulator-engine-legacy-staging.js'),'utf8')});
     }
     if(/^\/assets\/simulator-worker(?:-en)?\.js$/.test(url.pathname)){
       let source=await readFile(resolve(root,'.'+url.pathname),'utf8');
       source=source.replace('postMessage({id,error:message});',"console.error('STARTUP_TRACE '+error.stack);postMessage({id,error:message});");
-      if(mode==='baseline')source=source.replace('const instance = await engine.default({module_or_path:await wasm.arrayBuffer()});','const instance = engine.initSync({module:await wasm.arrayBuffer()});');
+      if(mode==='baseline')source=source.replace('await engine.default({module_or_path:await wasm.arrayBuffer()});','engine.initSync({module:await wasm.arrayBuffer()});');
       return route.fulfill({status:200,contentType:'text/javascript',body:source});
     }
     return route.continue();

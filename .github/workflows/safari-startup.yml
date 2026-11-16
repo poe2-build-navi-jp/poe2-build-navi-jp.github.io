@@ -1,13 +1,17 @@
 name: Check Safari engine startup
 on:
   pull_request:
-    paths: ['assets/simulator-engine-loader.js', 'assets/simulator-worker*', 'scripts/test-simulator-startup-browser.mjs', 'scripts/test-simulator-engine-loader.mjs', 'scripts/fixtures/simulator-engine-legacy-staging.js', '.github/workflows/safari-startup.yml']
+    paths: ['assets/simulator-engine/**', 'assets/simulator-engine-loader.js', 'assets/simulator-worker*', 'scripts/test-simulator-startup-browser.mjs', 'scripts/test-simulator-engine-*.mjs', 'scripts/fixtures/simulator-engine-legacy-staging.js', 'tools/prepare-safari-engine.mjs', '.github/workflows/safari-startup.yml']
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   startup:
-    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -17,10 +21,11 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: node scripts/test-simulator-engine-loader.mjs
+      - run: node scripts/test-simulator-engine-compat.mjs
       - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
       - run: node scripts/test-simulator-startup-browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: safari-startup-comparison
+          name: safari-startup-comparison-${{ matrix.os }}
           path: /tmp/poe2-startup-qa

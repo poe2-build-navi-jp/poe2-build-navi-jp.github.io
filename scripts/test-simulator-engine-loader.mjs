@@ -1,9 +1,6 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {stageVerifiedData,reserveStartupArena} from '../assets/simulator-engine-loader.js';
-const arena=[];
-reserveStartupArena({__wbindgen_malloc:(bytes,align)=>{arena.push(['allocate',bytes,align]);return 2048;},__wbindgen_free:(...args)=>arena.push(['release',...args])});
-assert.deepEqual(arena,[['allocate',160*1024*1024,1],['release',2048,160*1024*1024,1]]);
+import {stageVerifiedData} from '../assets/simulator-engine-loader.js';
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const contents={'base/passive_tree.json':'[{"name":"日本語"}]','base/large.json':'{"data":"test"}'};
 const pack=()=>({version:'test',files:{...contents,'optional/sidecar.json':'{}','manifest.json':JSON.stringify({poe_version:'test',files:Object.fromEntries(Object.entries(contents).map(([path,text])=>[path,hash(Buffer.from(text))]))})}});

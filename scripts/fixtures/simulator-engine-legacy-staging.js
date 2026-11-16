@@ -5,4 +5,3 @@ export async function stageVerifiedData(engine,data) {
   engine.initStagedData();
   return Object.fromEntries(Object.entries(files).filter(([path])=>path.includes('passive_tree')));
 }
-export function reserveStartupArena() {}

@@ -7,38 +7,38 @@
   "wasm": {
     "parts": [
       {
-        "file": "wasm-00.bin",
+        "file": "compat-wasm-00.bin",
         "bytes": 524288,
-        "sha256": "53093f502eb1dd5eb6612fa88cb2ef7a5323cdb0b5c6e72db4a3dc20c51201c9"
+        "sha256": "d84569d11fd68fa34a34780ba1f6644cf99526d2765765315ffacc7f0df2ba62"
       },
       {
-        "file": "wasm-01.bin",
+        "file": "compat-wasm-01.bin",
         "bytes": 524288,
-        "sha256": "836348dd6887412d0fcb432ed2cf59738d264b87c247b6796d6bb33da3fcfb99"
+        "sha256": "2eb210f0ded8f215b8d0e25e9b3326be469abb3dd6b57d9d739b86f8bb642eb1"
       },
       {
-        "file": "wasm-02.bin",
+        "file": "compat-wasm-02.bin",
         "bytes": 524288,
-        "sha256": "84eee34cd9d0b07f00d59096be172bf59eff1a1a12863e92fa77bad179ac0ffd"
+        "sha256": "f61efffd4d64176825dcf9ff72af540c9442dc5230d58bd808e0fc623043f378"
       },
       {
-        "file": "wasm-03.bin",
+        "file": "compat-wasm-03.bin",
         "bytes": 524288,
-        "sha256": "d8df0a8f8bc2b0d753178846b9ba24568bd70e28b3705bfa17221e740f38c6a5"
+        "sha256": "c8171cbce45d7f6ce4f22546b8f75e2f2add2cd79ffbf7188cf0cb89636ed970"
       },
       {
-        "file": "wasm-04.bin",
+        "file": "compat-wasm-04.bin",
         "bytes": 524288,
-        "sha256": "d4b1ebbf4d17615a98ca587be0ae867fd6b87aa77e25403fbf9ca5be26018492"
+        "sha256": "2f35cd1801ca7939d89213dfafb5cebc7a49f7bf0ab29ce2712db147ba4a28d0"
       },
       {
-        "file": "wasm-05.bin",
-        "bytes": 165472,
-        "sha256": "195de2aba17cee40f63d59c4cd1bc093b2882dd9d620258b4371ec7e743264f6"
+        "file": "compat-wasm-05.bin",
+        "bytes": 173461,
+        "sha256": "2919eb97c5422ef352d52bbb566b1babc2fa6b2423800e98a88cd0be289a5ec0"
       }
     ],
-    "bytes": 2786912,
-    "sha256": "853def786373c84821b7517aa73090150a7387a9dfa4e382ae61f37e96c0cdd0"
+    "bytes": 2794901,
+    "sha256": "923bf162c1a37eb328eb6f3c8f2f8f68c377a18aa3fe922619c1bfcdad752109"
   },
   "data": {
     "parts": [
@@ -110,5 +110,47 @@
     ],
     "bytes": 6539268,
     "sha256": "a4b4eced7ef4e4c151abf863d0ffb0fce80a6b1315df1c612ddb327f3768e2a3"
+  },
+  "originalWasm": {
+    "parts": [
+      {
+        "file": "wasm-00.bin",
+        "bytes": 524288,
+        "sha256": "53093f502eb1dd5eb6612fa88cb2ef7a5323cdb0b5c6e72db4a3dc20c51201c9"
+      },
+      {
+        "file": "wasm-01.bin",
+        "bytes": 524288,
+        "sha256": "836348dd6887412d0fcb432ed2cf59738d264b87c247b6796d6bb33da3fcfb99"
+      },
+      {
+        "file": "wasm-02.bin",
+        "bytes": 524288,
+        "sha256": "84eee34cd9d0b07f00d59096be172bf59eff1a1a12863e92fa77bad179ac0ffd"
+      },
+      {
+        "file": "wasm-03.bin",
+        "bytes": 524288,
+        "sha256": "d8df0a8f8bc2b0d753178846b9ba24568bd70e28b3705bfa17221e740f38c6a5"
+      },
+      {
+        "file": "wasm-04.bin",
+        "bytes": 524288,
+        "sha256": "d4b1ebbf4d17615a98ca587be0ae867fd6b87aa77e25403fbf9ca5be26018492"
+      },
+      {
+        "file": "wasm-05.bin",
+        "bytes": 165472,
+        "sha256": "195de2aba17cee40f63d59c4cd1bc093b2882dd9d620258b4371ec7e743264f6"
+      }
+    ],
+    "bytes": 2786912,
+    "sha256": "853def786373c84821b7517aa73090150a7387a9dfa4e382ae61f37e96c0cdd0"
+  },
+  "compatibility": {
+    "tool": "Binaryen wasm-opt 125",
+    "pass": "llvm-memory-copy-fill-lowering",
+    "sourceWasmSha256": "808543244d0ab5e2164a08b2e0f0ff9361413f9006671cd050e54d8235b20d9b",
+    "wasmSha256": "bbe81f07d5d627a857f003d6e908cd96cc25912cf15a6c6c3eb8d1f4d5cf75bd"
   }
 }

@@ -1,6 +1,6 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
 import {validRequest} from './simulator-model.js?v=161ef63cbd';
-import {stageVerifiedData,reserveStartupArena} from './simulator-engine-loader.js?v=eb40bf3b91';
+import {stageVerifiedData} from './simulator-engine-loader.js?v=f85f6c4910';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;
@@ -35,12 +35,11 @@ async function unpack(bundle) {
 }
 async function boot() {
   postMessage({progress:'計算エンジンとゲームデータを読み込んでいます（初回約9.3MB）…'});
-  runtime = await (await get('runtime.json')).json();
+  runtime = await (await get('runtime.json?v=d1a7b910c9')).json();
   totalBytes=runtime.wasm.bytes+runtime.data.bytes;progress();
   const [wasm,dataResponse] = await Promise.all([unpack(runtime.wasm),unpack(runtime.data)]);
   postMessage({progress:'計算エンジンを起動しています…'});
-  const instance = await engine.default({module_or_path:await wasm.arrayBuffer()});
-  reserveStartupArena(instance);
+  await engine.default({module_or_path:await wasm.arrayBuffer()});
   if (engine.schemaVersion() !== 19 || runtime.schema !== 19) throw new Error('計算エンジンの版が一致しません。');
   postMessage({progress:'ゲームデータを展開しています…'});
   const data = await dataResponse.json();
