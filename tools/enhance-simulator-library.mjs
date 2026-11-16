@@ -1,6 +1,7 @@
 import {readFile, writeFile} from 'node:fs/promises';
 import {parse, parseFragment, serialize} from 'parse5';
 import {createHash} from 'node:crypto';
+import {growthMarkup} from './my-build-growth-layout.mjs';
 const root = new URL('../', import.meta.url);
 const presets=JSON.parse(await readFile(new URL('data/simulator-presets.json',root),'utf8'));
 const noticesFile=new URL('data/saved-build-updates.json',root),noticeCatalog=JSON.parse(await readFile(noticesFile,'utf8'));
@@ -42,6 +43,7 @@ for (const en of [false, true]) {
   }
   fragment(head, '<link rel="stylesheet" href="/assets/simulator-library.css">');
   fragment(body, '<script type="module" src="/assets/simulator-library.js"></script>');
+  fragment(nodes.get('sim-workspace').parentNode,growthMarkup(en,true),nodes.get('sim-workspace'));
   fragment(body, '<script type="module" src="/assets/simulator-goal.js"></script>');
   fragment(body, '<script type="module" src="/assets/simulator-impact.js"></script>');
   fragment(body, '<script type="module" src="/assets/simulator-planner.js"></script>');

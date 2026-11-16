@@ -1,5 +1,6 @@
-import {HOME_KEY,SEEN_KEY,readHomeRecords,selectHomeRecord,resumeHref,checkedPresets,readHomeGoal,summarizeHomeGoal,readSeen,homeNotices} from './my-build-home-model.js?v=4cc2349cc9';
-import {installBuildActions} from './my-build-actions.js?v=bd0031fa01';
+import {HOME_KEY,SEEN_KEY,readHomeRecords,selectHomeRecord,resumeHref,checkedPresets,readHomeGoal,summarizeHomeGoal,readSeen,homeNotices} from './my-build-home-model.js?v=331b1bec80';
+import {installBuildActions} from './my-build-actions.js?v=69eda43e44';
+import {installGrowthHistory} from './my-build-growth.js?v=705fbc2bf5';
 
 export function installMyBuildHome(document){
  const section=document.getElementById('my-build-home'),embedded=document.getElementById('my-build-presets');
@@ -15,6 +16,7 @@ export function installMyBuildHome(document){
  const message=(box,content)=>box.replaceChildren(make('p',content,'my-build-help'));
  const storage=()=>window.localStorage;
  const actions=installBuildActions(find('[data-my-build-actions]'));
+ const growth=installGrowthHistory(find('#my-build-growth'));
  const loadJSON=async url=>{
   const controller=new window.AbortController(),timeout=window.setTimeout(()=>controller.abort(),12000);
   try{const response=await window.fetch(url,{cache:'no-cache',credentials:'omit',signal:controller.signal});if(!response.ok)throw Error('HOME_FETCH');return await response.json();}finally{window.clearTimeout(timeout);}
@@ -67,10 +69,12 @@ export function installMyBuildHome(document){
   let result,preferred;
   try{result=readHomeRecords(storage(),presets);preferred=choice?JSON.stringify({version:1,key:choice}):storage().getItem(HOME_KEY);}catch{
    actions.update(null);
+   growth.update(null);
    section.hidden=false;grid.hidden=true;select.closest('label').hidden=true;showWarning(t('このブラウザーの保存を確認できません。ブラウザーの保存設定を確認してください。','Device saves could not be read. Check your browser’s storage settings.'));return;
   }
   current=selectHomeRecord(result.records,preferred);
   actions.update(current);
+  growth.update(current?.preset);
   section.hidden=!current&&!result.problems.length;
   if(section.hidden)return;
   grid.hidden=!current;select.closest('label').hidden=!current;
@@ -87,6 +91,7 @@ export function installMyBuildHome(document){
   if(record.at){const time=make('time',new Intl.DateTimeFormat(en?'en-GB':'ja-JP',{dateStyle:'medium',timeStyle:'short'}).format(new Date(record.at)));time.dateTime=new Date(record.at).toISOString();savedDate.replaceChildren(document.createTextNode(t('保存：','Saved: ')),time);}else savedDate.textContent=t('保存日時は記録されていません。','No save date is recorded.');
   find('[data-my-build-resume]').href=resumeHref(record,en);
   find('[data-my-build-goal-open]').href=resumeHref(record,en,'goal');
+  find('[data-my-build-growth-open]').href=resumeHref(record,en,'growth');
   const back=document.getElementById('sim-change-build');if(back){back.textContent=t('← マイビルド・一覧','← My builds / presets');back.setAttribute('aria-label',t('マイビルドホーム・ビルド一覧へ戻る','Back to My builds and presets'));}
   if(!viewTracked&&!section.closest('[hidden]')){track('my_build_home_view',record);viewTracked=true;}
   // The home stays light while editing; render the summaries when its chooser opens.
@@ -114,9 +119,9 @@ export function installMyBuildHome(document){
 
  // A goal link is a read-only shortcut into the existing goal editor. The query
  // survives the simulator’s normal history updates, including named-save loads.
- const initial=new URL(window.location.href);let revealed=false;
- const revealGoal=()=>{const panel=document.getElementById('sim-goal-panel');if(revealed||initial.searchParams.get('home')!=='goal'||!panel||panel.hidden||window.Poe2SimulatorLibrary?.goalData()?.preset!==initial.searchParams.get('build'))return;revealed=true;panel.open=true;panel.scrollIntoView({block:'start'});panel.querySelector('summary')?.focus({preventScroll:true});};
- const targetObserver=new window.MutationObserver(revealGoal),target=document.getElementById('sim-goal-panel');if(target)targetObserver.observe(target,{attributes:true,attributeFilter:['hidden']});window.addEventListener('poe2:build-change',revealGoal);revealGoal();
+ const initial=new URL(window.location.href),homeView=initial.searchParams.get('home')==='growth'?'growth':'goal';let revealed=false;
+ const revealGoal=()=>{const panel=document.getElementById('sim-'+homeView+'-panel');if(revealed||initial.searchParams.get('home')!==homeView||!panel||panel.hidden||window.Poe2SimulatorLibrary?.goalData()?.preset!==initial.searchParams.get('build'))return;revealed=true;panel.open=true;panel.scrollIntoView({block:'start'});panel.querySelector('summary')?.focus({preventScroll:true});};
+ const targetObserver=new window.MutationObserver(revealGoal),target=document.getElementById('sim-'+homeView+'-panel');if(target)targetObserver.observe(target,{attributes:true,attributeFilter:['hidden']});const stats=document.getElementById('sim-stats');if(stats)targetObserver.observe(stats,{attributes:true,attributeFilter:['aria-busy']});window.addEventListener('poe2:build-change',revealGoal);revealGoal();
  return {ready:refresh(),refresh,observers:[observer,targetObserver]};
 }
 if(typeof document!=='undefined')installMyBuildHome(document);

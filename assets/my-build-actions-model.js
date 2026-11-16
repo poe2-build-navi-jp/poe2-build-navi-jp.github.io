@@ -1,4 +1,4 @@
-import {recordKey} from './my-build-home-model.js?v=4cc2349cc9';
+import {recordKey} from './my-build-home-model.js?v=331b1bec80';
 
 export const ACTIONS_PREFIX='poe2-build-next-actions:v1:';
 export const ACTION_LIMIT=3;

@@ -43,8 +43,8 @@ export function selectHomeRecord(records,raw){
 export function resumeHref(record,en=false,view=''){
  const query=new URLSearchParams({build:record.preset});
  if(record.kind==='named')query.set('saved',record.id);
- if(view==='goal')query.set('home','goal');
- return (en?'/en':'')+'/simulator/?'+query+(view==='goal'?'#sim-goal-panel':'');
+ if(['goal','growth'].includes(view))query.set('home',view);
+ return (en?'/en':'')+'/simulator/?'+query+(['goal','growth'].includes(view)?'#sim-'+view+'-panel':'');
 }
 
 export function checkedPresets(value){

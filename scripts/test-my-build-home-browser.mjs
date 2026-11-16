@@ -73,8 +73,22 @@ try{for(const [type,browserName]of [[chromium,'chromium'],[webkit,'webkit']]){
    assert.equal(await page.locator('#sim-error').isVisible(),false);assert.equal(await page.evaluate(key=>localStorage.getItem(key),goalKey(preset)),values[goalKey(preset)]);
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),namedPlanKey(preset)),values[namedPlanKey(preset)]);
    await page.locator('#sim-change-build').click();await page.locator('#my-build-home').waitFor();await page.locator('[data-my-build-resume]').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor({state:'attached',timeout:100000});assert.equal(await page.locator('#sim-level').inputValue(),'85','one tap resumes the correct applied draft');
+   // Growth records freeze real committed engine results, rather than editor drafts.
+   await page.locator('#sim-growth-panel>summary').click();await page.locator('#sim-growth-panel [data-growth-label]').fill('Lv85の記録');await page.locator('[data-growth-save]').click();
+   const historyKey='poe2-build-growth:v1:'+preset;
+   const firstRecord=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).records[0],historyKey);assert.equal(firstRecord.level,85);assert(firstRecord.values.Life>0);
+   const lifeText=await page.locator('#sim-stats .sim-stat').nth(1).locator('b').textContent();assert.equal(Math.round(firstRecord.values.Life),Number(lifeText.replaceAll(',','')),'freeze the displayed engine value');
+   await page.locator('#sim-level').fill('86');await page.locator('#sim-level').dispatchEvent('change');await page.locator('#sim-stats[aria-busy="false"]').waitFor({state:'attached',timeout:100000});
+   await page.locator('#sim-growth-panel [data-growth-label]').fill('Lv86の記録');await page.locator('[data-growth-save]').click();
+   const history=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).records,historyKey);assert.deepEqual(history.map(row=>row.level),[86,85]);assert.deepEqual(history[1],firstRecord,'later calculations cannot rewrite frozen history');
+   const requestCount=requests.length;await page.goto(entry);await page.locator('#my-build-home').waitFor();await page.locator('#my-build-growth .growth-latest').filter({hasText:'Lv86'}).waitFor();assert.equal(await page.locator('#my-build-growth [data-growth-count]').textContent(),'2/30');
+   assert(!requests.slice(requestCount).some(url=>/\/simulator-engine\/|\/simulator-worker/.test(url)),'reading growth on the home does not start WASM');
+   await page.locator('#my-build-select').selectOption(otherPreset+':auto:');assert.equal(await page.locator('#my-build-growth [data-growth-count]').textContent(),'0/30','separate builds have separate growth histories');
+   await page.locator('#my-build-select').selectOption(preset+':auto:');assert.equal(await page.locator('#my-build-growth [data-growth-count]').textContent(),'2/30');
+   assert(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1));await page.locator('#my-build-growth').scrollIntoViewIfNeeded();await page.screenshot({path:resolve(output,label+'-growth.jpg'),type:'jpeg',quality:85});
+   await page.locator('[data-my-build-growth-open]').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor({state:'attached',timeout:100000});await page.locator('#sim-growth-panel[open]').waitFor();assert.equal(await page.locator('#sim-growth-panel [data-growth-count]').textContent(),'2/30','growth shortcut reveals the recording panel after boot');
    assert.deepEqual(errors,[]);assert(!requests.some(url=>url.includes('PRIVATE')||url.includes(encodeURIComponent(name))));
-   reports.push({browser:browserName,width,locale:locale||'ja',noEngineOnHome:true,goals:[1,2,1],nextActions:'add/check/edit/clear/delete/undo/persist/isolate',resumeLevel:85,result:'PASS'});console.log(JSON.stringify(reports.at(-1)));
+   reports.push({browser:browserName,width,locale:locale||'ja',noEngineOnHome:true,goals:[1,2,1],nextActions:'add/check/edit/clear/delete/undo/persist/isolate',growth:'real engine/frozen values/levels 85-86/reload/isolate',resumeLevel:85,result:'PASS'});console.log(JSON.stringify(reports.at(-1)));
   }catch(error){await page.screenshot({path:resolve(output,label+'-failure.jpg'),type:'jpeg'}).catch(()=>{});throw error;}
   finally{await context.close();}
  }}finally{await browser.close();}

@@ -1,4 +1,4 @@
-import {ACTION_LIMIT,actionsKey,parseActions,changeActions,saveActions} from './my-build-actions-model.js?v=3f886c82cb';
+import {ACTION_LIMIT,actionsKey,parseActions,changeActions,saveActions} from './my-build-actions-model.js?v=0f10b12102';
 
 export function installBuildActions(section){
  if(!section)return {update(){}};
@@ -68,7 +68,7 @@ export function installBuildActions(section){
    if(state.editing&&!next.some(item=>item.id===state.editing))state.editing=null;
    state.message=action.type==='check'?t(action.done?'完了にしました。':'未完了に戻しました。',action.done?'Marked as done.':'Marked as to do.'):action.type==='delete'||action.type==='clear'?t('削除しました。「削除を戻す」で元に戻せます。','Removed. Use Undo removal to restore.'):action.type==='restore'?t('削除を戻しました。','Removal undone.'):t('保存しました。','Saved.');
    render();
-   if(action.type==='add'||action.type==='edit')input.focus();
+   if(action.type==='add'||action.type==='edit')(input.disabled?list.querySelector('[data-action="edit"]'):input)?.focus();
    window.dispatchEvent(new window.CustomEvent('poe2:next-actions',{detail:{key:state.key}}));
   }catch(error){
    const messages={TEXT:t('1〜80文字で入力してください。','Enter 1–80 characters.'),LIMIT:t('保存できるのは3件までです。','You can keep up to three items.'),DUPLICATE:t('同じ内容の項目がすでにあります。','This item is already on the list.'),STALE:t('別の画面で更新されました。最新の一覧を表示しています。入力内容を確認して、もう一度保存してください。','This list changed in another view. Review the latest list and save your text again.')};

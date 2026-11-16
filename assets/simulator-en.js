@@ -28,7 +28,7 @@ let decisionSequence=0,multiSequence=0,isolateSequence=0,candidateTable=null;
 let equipmentDraftVersion=0,candidateBusy=false,incomingComparison=null,comparisonSource=null,summaryBaseline=null,locationSequence=0;
 let itemSource='',equipmentMode='unique',rareDraft=null,editorBaseline=null;
 let uniqueDraftSequence=0;
-let worker,bootPromise,recoveryPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
+let worker,bootPromise,recoveryPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0,resultHasDiagnostics=false;
 let selectedSlot='helmet',selectedNode=null,preview=null,activeTab='items',view={x:0,y:0,w:8500,h:6500},currentTree=[];
 const pending = new Map();
 const frame = window.requestAnimationFrame?.bind(window) || (fn=>setTimeout(fn,16));
@@ -155,6 +155,7 @@ function renderResults(){
  }).join('');
  const starts=new Set(Object.values(result.tree_effects?.class_starts || {})),normalPoints=(plan.request.allocated_nodes || []).filter(id=>!starts.has(id)&&!treeNodes.get(id)?.ascendancy_id).length;
  const diagnostics=[...(normalPoints>plan.request.character.level-1+plan.questPoints?['Allocated normal passives exceed current Lv and quest point limits.']:[]),...(result.unsupported_modifiers || []).map(v=>`Unsupported effect: ${unsupportedLabel(v)}`),...(result.item_errors || []).map(v=>`Item excluded from calculation: ${slots.find(s=>s[0]===v.slot)?.[1] || 'Equipment'}. Check the item data format.`),...(result.tree_effects?.warnings || []),...(plan.request.allocated_nodes || []).filter(id=>{const n=treeNodes.get(id);return n&&!n.stats.length&&n.kind==='notable';}).map(id=>`${label(treeNodes.get(id).name)}: No effect definition is available. Its individual effects are not included in the calculation.`)];
+ resultHasDiagnostics=diagnostics.length>0;
  $('sim-diagnostic-count').textContent=`(${diagnostics.length} notes)`;
  $('sim-diagnostic-body').innerHTML=`<p>${hasSkill?'Results for the selected skill and current calculation settings.':'No damage skill is available for calculation. Set a skill and its required weapon or minion.'}</p>${diagnostics.length?`<p>The following effects may not be included in the results.</p><ul>${diagnostics.map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`:'<p>The engine reported no unsupported effects or item errors. This does not guarantee support for every mechanic.</p>'}`;
  $('sim-diagnostics').open=diagnostics.length>0;
@@ -1197,6 +1198,9 @@ window.Poe2SimulatorLibrary={
  skillName:id=>{const gem=catalog?.gems.find(g=>g.skill_id===id);return gem?label(gem.name):id;},
  read:()=>({preset:selectedPreset?.id||null,runtime:clone(catalog?.runtime||{release:'0.0.46',dataVersion:'0.5.5.5'}),
   comparison:comparisonSnapshot&&comparisonSource?{snapshot:clone(comparisonSnapshot),source:clone(comparisonSource)}:null}),
+ growthData:()=>plan&&result&&catalog&&!sharedReadOnly&&!$('sim-workbench').hidden&&$('sim-stats').getAttribute('aria-busy')==='false'?{
+  saved:clone(capturePlan()),runtime:clone(catalog.runtime),values:Object.fromEntries(statistics.map(([id])=>[id,displayStat(result,id)])),warning:resultHasDiagnostics
+ }:null,
  refresh:()=>{if(selectedPreset&&plan){invalidateComparison();if(priceDirty)return false;renderWorkspace();}else renderResume();return true;},
  open:async source=>{const aligned=$('sim-library-align');if(aligned)aligned.checked=false;await openComparison(source,++locationSequence);},
  goalData:()=>plan&&catalog&&!$('sim-workbench').hidden?{
