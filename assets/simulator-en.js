@@ -28,7 +28,7 @@ let decisionSequence=0,multiSequence=0,isolateSequence=0,candidateTable=null;
 let equipmentDraftVersion=0,candidateBusy=false,incomingComparison=null,comparisonSource=null,summaryBaseline=null,locationSequence=0;
 let itemSource='',equipmentMode='unique',rareDraft=null,editorBaseline=null;
 let uniqueDraftSequence=0;
-let worker,bootPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
+let worker,bootPromise,recoveryPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
 let selectedSlot='helmet',selectedNode=null,preview=null,activeTab='items',view={x:0,y:0,w:8500,h:6500},currentTree=[];
 const pending = new Map();
 const frame = window.requestAnimationFrame?.bind(window) || (fn=>setTimeout(fn,16));
@@ -47,8 +47,34 @@ function setCurrentTree(nodes){
  $('sim-tree-nodes').replaceChildren();$('sim-tree-edges').replaceChildren();renderedNodes.clear();renderedEdges.clear();
 }
 
-function rpc(action,payload) {
+function workerRequest(action,payload) {
  return new Promise((resolve,reject)=>{const id=++sequence;pending.set(id,{resolve,reject});try{if(!worker)throw Error('Restart the calculation engine.');worker.postMessage({id,action,payload});}catch(error){pending.delete(id);reject(error);}});
+}
+function discardEngine(current,error){
+ if(worker!==current)return;
+ current?.terminate?.();worker=null;catalog=null;bootPromise=null;
+ for(const task of pending.values())task.reject(error);pending.clear();
+}
+function recoverEngine(current,error){
+ if(recoveryPromise)return recoveryPromise;
+ if(worker!==current)return engine();
+ discardEngine(current,error);$('sim-status').textContent='Restarting the calculation engine…';
+ let promise;promise=engine().finally(()=>{if(recoveryPromise===promise)recoveryPromise=null;});
+ recoveryPromise=promise;return promise;
+}
+async function rpc(action,payload){
+ for(let attempt=0;attempt<4;attempt++){
+  if(action!=='boot'&&recoveryPromise)await recoveryPromise;
+  const current=worker;
+  try{return await workerRequest(action,payload);}
+  catch(error){
+   // A successful boot can still be followed by a trapped first calculation.
+   // Only typed engine failures retry; invalid requests and corrupt packs do not.
+   if(action==='boot'||error.code!=='ENGINE_STARTUP_FAILURE')throw error;
+   if(attempt===3){discardEngine(current,error);throw error;}
+   await recoverEngine(current,error);
+  }
+ }
 }
 function engine() {
  if(bootPromise)return bootPromise;
@@ -61,7 +87,9 @@ function engine() {
    const current=new Worker(new URL('./simulator-worker-en.js?v=0f22d68261',import.meta.url),{type:'module'});worker=current;
    const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;catalog=null;if(!booting)bootPromise=null;for(const task of pending.values())task.reject(Error('Loading or calculation failed. Retry to resume without discarding your build.'));pending.clear();};
    current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);if(data.error){const error=Error(data.error);error.code=data.errorCode;task.reject(error);}else task.resolve(data.result);};
-   current.onerror=fail;
+   // Worker failures are handled below. Suppress stale module-load errors from
+   // a terminated worker rather than bubbling them into the new page's errors.
+   current.onerror=event=>{event?.preventDefault?.();fail();};
    const timer=setTimeout(fail,90000);
    try{editorCatalogs ||= loadEditorCatalogs();const[data]=await Promise.all([rpc('boot'),editorCatalogs]);catalog=data;booting=false;return data;}
    catch(error){fail();if(error.code!=='ENGINE_STARTUP_FAILURE'||attempt===3)throw error;$('sim-status').textContent='Restarting the calculation engine…';await new Promise(resolve=>setTimeout(resolve,250));}
@@ -191,7 +219,7 @@ function restoreTreeEditor(){
  $('sim-tree-error').hidden=true;$('sim-tree-full-header').hidden=true;$('sim-tree-settings').open=true;$('sim-node-inspector').open=true;document.body.style.overflow=treePageOverflow.body;document.documentElement.style.overflow=treePageOverflow.html;
  $('sim-tree-close').disabled=false;$('sim-tree-close').textContent='Save and return';treeReturnFocus?.focus?.({preventScroll:true});updateView();
 }
-function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;if(name==='tree'){if(treeNeedsFit){treeNeedsFit=false;fitTree();}else updateView();}}
+function setTab(name){activeTab=name;for(const button of document.querySelectorAll('[data-tab]'))button.setAttribute('aria-pressed',String(button.dataset.tab===name));for(const panel of ['items','skills','tree','config'])$(`sim-${panel}`).hidden=panel!==name;libraryEvent('view-change',{tab:name});if(name==='tree'){if(treeNeedsFit){treeNeedsFit=false;fitTree();}else updateView();}}
 const slots=[['weapon1','Main hand'],['weapon2','Off-hand / shield'],['helmet','Helmet'],['body','Body armour'],['gloves','Gloves'],['boots','Boots'],['belt','Belt'],['amulet','Amulet'],['ring1','Ring 1'],['ring2','Ring 2'],['Flask 1','Flask 1'],['Flask 2','Flask 2'],['Charm 1','Charm 1'],['Charm 2','Charm 2'],['Charm 3','Charm 3']];
 const utility=slot=>/^(Flask|Charm) /.test(slot);
 const itemList=()=>utility(selectedSlot)?(plan.request.flasks ||= []):(plan.request.items ||= []);
@@ -221,6 +249,7 @@ function setEquipmentMode(mode){
  for(const b of document.querySelectorAll('[data-equipment-mode]'))b.setAttribute('aria-pressed',String(b.dataset.equipmentMode===mode));
  $('sim-unique-editor').hidden=mode!=='unique';$('sim-rare-editor').hidden=mode!=='rare';$('sim-item-source').hidden=mode==='rare';
  $('sim-item-apply').disabled=mode==='rare'&&!rareBasesForSlot(selectedSlot,equipmentCatalog).length;
+ libraryEvent('equipment-mode',{mode});
 }
 function renderRareEditor(){
  const bases=rareBasesForSlot(selectedSlot,equipmentCatalog);

@@ -1,0 +1,26 @@
+name: Check simulator navigation and input
+on:
+  pull_request:
+    paths: ['assets/simulator*.js', 'assets/simulator-flow.css', 'simulator/**', 'en/simulator/**', 'scripts/test-simulator-flow-browser.mjs', '.github/workflows/simulator-flow.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulator-flow:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node scripts/test-usability.mjs
+      - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
+      - run: node scripts/test-simulator-flow-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: simulator-flow-screenshots
+          path: /tmp/poe2-flow-qa
