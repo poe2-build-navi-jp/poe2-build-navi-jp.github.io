@@ -22,6 +22,7 @@ try{
   try{
    await page.goto(base+locale+'/simulator/?build=mercenary-twister-gemling');await ready(page);await page.locator('[data-tab="items"]').click();await page.locator('[data-slot="helmet"]').click();
    const before=await plan(page),auto=await page.evaluate(()=>localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'));
+   await page.locator('#sim-flow-photo>summary').click();
    // The camera control uses the capture input, while PC screenshots use a normal chooser.
    const chooserEvent=page.waitForEvent('filechooser');await page.locator(width<500?'#sim-photo-camera':'#sim-photo-select').click();
    const chooser=await chooserEvent;assert.equal(await chooser.element().getAttribute('capture'),width<500?'environment':null);

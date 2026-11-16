@@ -10,19 +10,28 @@ const server=createServer(async(req,res)=>{try{let path=new URL(req.url,'http://
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const base='http://127.0.0.1:'+server.address().port,reports=[];
 try{for(const [type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
  const browser=await type.launch();
- try{for(const [width,locale]of [[320,''],[390,''],[768,'/en'],[1366,'/en']]){
-  const context=await browser.newContext({viewport:{width,height:844},isMobile:width<500,hasTouch:width<1000}),page=await context.newPage(),errors=[];
+ try{for(const [width,locale,height]of [[320,'',667],[390,'',844],[430,'/en',932],[600,'/en',720],[768,'/en',1024],[1366,'/en',900]]){
+  const mobile=width<=600,context=await browser.newContext({viewport:{width,height},isMobile:mobile,hasTouch:width<1000}),page=await context.newPage(),errors=[];
   page.on('pageerror',error=>errors.push(error.message));await context.route('**/*',route=>new URL(route.request().url()).origin===base?route.continue():route.abort());
   try{
    await page.goto(base+locale+'/simulator/?build=mercenary-twister-gemling',{waitUntil:'domcontentloaded'});
    await page.locator('#sim-flow-save-status').waitFor();await page.locator('#sim-stats[aria-busy="false"] .sim-stat').first().waitFor({state:'attached',timeout:60000});
    assert.equal(await page.locator('#sim-error').isVisible(),false);
    const measure=async()=>page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,nav:document.querySelector('.sim-flow-nav').getBoundingClientRect().toJSON(),editor:document.querySelector('#sim-item-list-title').getBoundingClientRect().toJSON(),apply:document.querySelector('#sim-item-apply').getBoundingClientRect().toJSON(),tools:document.querySelector('.sim-flow-tools').getBoundingClientRect().toJSON()}));
-   const first=await measure();assert.equal(first.overflow,false);assert(first.nav.height>=44);assert(first.nav.top<430,'navigation must appear before optional tools');assert(first.editor.top<720,'editing must be reachable in the first screen');assert(first.tools.top>first.editor.top);
+   const first=await measure();assert.equal(first.overflow,false);assert(first.nav.height>=44);assert(first.editor.top<(mobile?480:720),'editing must be reachable in the first screen');assert(first.tools.top>first.editor.top);
+   if(mobile){
+    assert(Math.abs(first.nav.bottom-height)<=1,'all five views must stay within thumb reach at the bottom');
+    const summary=await page.locator('#sim-mobile-summary').boundingBox();assert(summary.height<=80,'the default stat strip must leave space for the form');assert(summary.y+summary.height<=first.nav.top+1,'stats and navigation cannot overlap');
+    const initialSave=await page.evaluate(()=>localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'));
+    await page.locator('#sim-flow-summary-toggle').click();assert.equal(await page.locator('#sim-flow-summary-toggle').getAttribute('aria-expanded'),'true');assert.equal(await page.locator('#sim-mobile-summary-values small').first().isVisible(),true);
+    await page.locator('#sim-flow-summary-toggle').click();assert.equal(await page.locator('#sim-mobile-summary-values small').first().isVisible(),false);assert.equal(await page.evaluate(()=>localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling')),initialSave,'expanding deltas cannot change the build or comparison baseline');
+   }else assert(first.nav.top<430,'desktop navigation must appear before optional tools');
    assert.equal(await page.locator('#sim-slots button:visible').count(),10);await page.locator('#sim-flow-utilities').click();assert.equal(await page.locator('#sim-slots button:visible').count(),15);await page.locator('#sim-flow-utilities').click();
    const before=await page.locator('#sim-stats .sim-stat b').allTextContents(),key='poe2-simulator:v1:mercenary-twister-gemling';
    await page.locator('[data-slot="helmet"]').click();await page.locator('[data-equipment-mode="paste"]').click();
+   assert.equal(await page.locator('#sim-photo-camera').isVisible(),false);await page.locator('#sim-flow-photo>summary').click();assert.equal(await page.locator('#sim-photo-camera').isVisible(),true);await page.locator('#sim-flow-photo>summary').click();
    assert.equal(await page.locator('#sim-item-text').isVisible(),true);
+   if(mobile)assert(Number.parseFloat(await page.locator('#sim-item-text').evaluate(element=>getComputedStyle(element).fontSize))>=16,'iOS text entry must not trigger the small-input zoom');
    const draft='Rarity: Rare\nFlow QA\nBrimmed Helm\n--------\n+123 to maximum Life';await page.locator('#sim-item-text').fill(draft);
    const saved=await page.evaluate(key=>localStorage.getItem(key),key);
    await page.locator('#sim-view-results').click();assert.equal(await page.locator('.sim-editor').isVisible(),false);assert.equal(await page.locator('#sim-results-panel').isVisible(),true);assert.deepEqual(await page.locator('#sim-stats .sim-stat b').allTextContents(),before);
@@ -39,8 +48,8 @@ try{for(const [type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
    await page.locator('#sim-history-undo').click();await page.waitForFunction(()=>!window.Poe2SimulatorLibrary.goalData().current.request.items.some(item=>item.slot==='helmet')&&!document.querySelector('#sim-history-redo').disabled);assert.deepEqual(await page.locator('#sim-stats .sim-stat b').allTextContents(),before,'undo must retain the existing history behavior');
    await page.locator('[data-tab="items"]').click();await page.screenshot({path:resolve(output,`${name}-${width}-editor.jpg`),type:'jpeg',quality:85});
    assert.equal((await measure()).overflow,false);assert.deepEqual(errors,[]);
-   reports.push({browser:name,width,locale:locale||'ja',first,result:'PASS'});console.log(JSON.stringify(reports.at(-1)));
+   reports.push({browser:name,width,height,locale:locale||'ja',first,result:'PASS'});console.log(JSON.stringify(reports.at(-1)));
   }finally{await context.close();}
  }}finally{await browser.close();}
 }}finally{await writeFile(resolve(output,'results.json'),JSON.stringify(reports,null,2));server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
-console.log('PASS: first-screen editing, 5-view navigation, retained drafts, exact real-engine Life change, autosave, history, file controls and named saves at 320/390/768/1366px in Chromium and WebKit');
+console.log('PASS: first-screen editing, mobile bottom navigation, compact/expanded stats, photo disclosure, 16px inputs, retained drafts, exact real-engine Life change, autosave, history and named saves at 320/390/430/600/768/1366px in Chromium and WebKit');

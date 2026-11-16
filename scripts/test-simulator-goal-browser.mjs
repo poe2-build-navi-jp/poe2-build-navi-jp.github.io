@@ -82,6 +82,7 @@ try {
           await page.locator('[data-goal-edit="equipment"]').click();
           await page.locator('[data-slot="boots"]').click();
           await page.locator('[data-equipment-mode="rare"]').click();
+          if(!await page.locator('#sim-flow-rare-options').evaluate(element=>element.open))await page.locator('#sim-flow-rare-options>summary').click();
           await page.locator('#sim-rare-name').fill('UNAPPLIED INPUT');
           await page.locator('[data-goal-edit="equipment"]').click();
           assert.equal(await page.locator('#sim-rare-name').inputValue(), 'UNAPPLIED INPUT');

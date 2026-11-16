@@ -27,6 +27,7 @@ body.sim-flow .sim-flow-nav{display:grid;grid-template-columns:repeat(5,minmax(0
 body.sim-flow .sim-flow-nav button{display:block;width:100%;min-height:52px;padding:10px 4px;border:0;border-radius:6px;background:transparent;color:#50564c;font-size:15px;font-weight:650;white-space:normal;line-height:1.4}
 body.sim-flow .sim-flow-nav button[aria-pressed=true]{background:#fff;color:#713e1c;box-shadow:0 1px 4px #28281c20;border:0}
 body.sim-flow .sim-flow-nav button:focus-visible{outline:3px solid #a9602e;outline-offset:2px}
+.sim-flow-nav svg,#sim-flow-summary-toggle{display:none}
 .sim-flow-context{padding:0 4px;margin:12px 0;color:var(--flow-muted);font-size:14px;line-height:1.6}
 body.sim-flow .sim-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;align-items:start;gap:20px;padding:0;margin:0}
 body.sim-flow .sim-editor{grid-column:1;grid-row:1;order:0;border:1px solid var(--flow-line);border-radius:12px;background:#fff;overflow:visible}
@@ -121,6 +122,7 @@ body.sim-flow :is(.sim-panel,.sim-item-list,#sim-item-editor,#sim-results-panel)
  body.sim-flow:has(.sim-layout[data-view=results]) .sim-mobile-summary,body.sim-flow:has(.sim-tree-fullscreen) .sim-mobile-summary{display:none}
  body.sim-flow:has(.sim-layout[data-view=results]){padding-bottom:0}
 }
+
 @media(max-width:600px){
  body.sim-flow #sim-workbench{padding-left:10px;padding-right:10px}
  body.sim-flow .sim-toolbar{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;padding-top:10px;gap:10px 8px}
@@ -168,4 +170,82 @@ body.sim-flow :is(.sim-panel,.sim-item-list,#sim-item-editor,#sim-results-panel)
  body.sim-flow .sim-hero .sim-muted{font-size:12px;line-height:1.6}
  .sim-flow-entry{display:grid;grid-template-columns:1fr;margin-top:16px}
  body.sim-flow .sim-flow-entry a{font-size:14px;min-height:46px}
+}
+
+/* Secondary controls stay available without lengthening every item edit. */
+body.sim-flow .sim-flow-fold{margin:14px 0;border:1px solid var(--flow-line);border-radius:9px;background:#faf9f5;overflow:hidden}
+body.sim-flow .sim-flow-fold>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:12px 14px;font-size:14px;line-height:1.5;font-weight:650;cursor:pointer;list-style:none}
+.sim-flow-fold>summary::-webkit-details-marker{display:none}
+.sim-flow-fold>summary::after{content:'＋';font-size:18px;font-weight:400;flex:none}
+.sim-flow-fold[open]>summary::after{content:'−'}
+body.sim-flow .sim-flow-fold[open]>summary{border-bottom:1px solid var(--flow-line)}
+body.sim-flow .sim-flow-fold>:not(summary){margin:0;padding:14px;border:0;background:transparent}
+body.sim-flow .sim-flow-fold :is(h4,p):first-child{margin-top:0}
+body.sim-flow .sim-flow-photo-fold{background:#f6f0e4;border-color:#d5c7aa}
+body.sim-flow .sim-flow-photo-fold .sim-photo-entry{border-radius:0}
+body.sim-flow #sim-flow-candidate .sim-candidate-panel>h4,body.sim-flow #sim-flow-item-results #sim-item-result>h4{display:none}
+body.sim-flow .sim-flow-rare-options>label{margin-bottom:12px}
+body.sim-flow .sim-flow-rare-options .sim-rare-basics{margin-bottom:0}
+
+@media(max-width:600px){
+ body.sim-flow{--flow-nav-space:calc(64px + env(safe-area-inset-bottom,0px));-webkit-text-size-adjust:100%}
+ html:has(body.sim-flow){scroll-padding-top:0}
+ body.sim-flow #sim-workbench{padding-left:max(10px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right))}
+ body.sim-flow:has(#sim-workbench:not([hidden])){padding-bottom:calc(var(--sim-summary-space,78px) + var(--flow-nav-space) + 24px)}
+ body.sim-flow .sim-flow-nav{position:fixed;left:0;right:0;top:auto;bottom:0;z-index:120;width:auto;height:var(--flow-nav-space);margin:0;padding:4px max(8px,env(safe-area-inset-right)) env(safe-area-inset-bottom,0px) max(8px,env(safe-area-inset-left));border:0;border-top:1px solid #c9c4b7;border-radius:0;background:#fffdf8;box-shadow:none;gap:3px}
+ body.sim-flow:has(#sim-workbench[hidden]) .sim-flow-nav{display:none}
+ body.sim-flow .sim-flow-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:56px;padding:4px 1px;border-radius:8px;font-size:12px;line-height:1.4;font-weight:650;color:#565d50}
+ body.sim-flow .sim-flow-nav button[aria-pressed=true]{background:#f2e7d5;color:#783f1b;box-shadow:none}
+ .sim-flow-nav svg{display:block;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+ body.sim-flow .sim-flow-context{display:none}
+ body.sim-flow .sim-toolbar{padding-top:4px;padding-bottom:10px;gap:8px}
+ body.sim-flow .language-switch{margin-top:6px;margin-bottom:6px}
+ body.sim-flow #sim-change-build{min-height:44px;font-size:13px}
+ body.sim-flow .sim-toolbar .sim-actions>*{font-size:13px;min-height:46px}
+ body.sim-flow .sim-toolbar h2{margin:0 0 4px}
+ body.sim-flow #sim-status{margin-bottom:8px;font-size:13px}
+ body.sim-flow #sim-item-back{display:inline-flex;align-items:center;min-height:48px;margin-bottom:4px;padding:8px 0;font-size:14px}
+ body.sim-flow #sim-slot-title{font-size:22px;line-height:1.4;margin:4px 0 12px}
+ body.sim-flow #sim-slots button{min-height:72px;font-size:15px;line-height:1.4}
+ body.sim-flow #sim-slots small{font-size:13px;line-height:1.5}
+ body.sim-flow #sim-weapon-set-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%)}
+ body.sim-flow .sim-weapon-sets{margin-bottom:14px}
+ body.sim-flow :is(.sim-panel,.sim-item-list,#sim-item-editor,#sim-results-panel){scroll-margin-top:12px}
+ body.sim-flow .sim-panel :is(input:not([type=checkbox]):not([type=radio]),select,textarea),body.sim-flow dialog :is(input,select,textarea){font-size:16px;min-height:48px;line-height:1.5;border-radius:8px}
+ body.sim-flow .sim-panel label{font-size:14px;line-height:1.5}
+ body.sim-flow .sim-panel button{min-height:48px}
+ body.sim-flow .sim-equipment-modes{gap:6px;margin:12px 0 16px}
+ body.sim-flow .sim-equipment-modes button{font-size:14px;border-radius:8px}
+ body.sim-flow .sim-equipment-modes button[aria-pressed=true]{color:#fff;background:#55492e;border-color:#55492e}
+ body.sim-flow .sim-photo-entry button{font-size:14px;min-height:48px}
+ body.sim-flow .sim-equipment-find{font-size:14px;min-height:48px;border-radius:8px}
+ body.sim-flow .sim-quick-modifiers{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ body.sim-flow .sim-quick-modifiers button{font-size:14px;padding:10px 6px;border-radius:8px}
+ body.sim-flow .sim-rare-mod-row{padding:12px;border-radius:9px}
+ body.sim-flow .sim-rare-mod-row select{width:100%;text-overflow:ellipsis}
+ body.sim-flow .sim-rare-mod-row>[data-rare-remove]{min-height:44px;font-size:14px}
+ body.sim-flow .sim-flow-fold{margin:12px 0}
+ body.sim-flow .sim-flow-fold>summary{font-size:14px;min-height:52px}
+ body.sim-flow .sim-item-actions{bottom:calc(var(--sim-summary-space,78px) + var(--flow-nav-space));z-index:90;margin-top:16px;padding:8px;gap:6px;border-radius:10px}
+ body.sim-flow .sim-item-actions :is(#sim-item-apply,#sim-item-preview){font-size:14px;min-height:48px;border-radius:7px}
+ body.sim-flow .sim-item-actions .sim-editor-draft-status{font-size:12px;line-height:1.4}
+ body.sim-flow .sim-mobile-summary{bottom:var(--flow-nav-space);z-index:110;padding:6px max(8px,env(safe-area-inset-right)) 5px max(8px,env(safe-area-inset-left));border-color:#d7cfbe;box-shadow:0 -3px 10px #262d2110;background:#fffdf8}
+ body.sim-flow .sim-mobile-summary-head{display:none;min-height:36px;padding-right:48px;margin-bottom:4px;font-size:12px;line-height:1.5}
+ body.sim-flow #sim-mobile-summary-values{grid-template-columns:minmax(0,.9fr) minmax(0,.95fr) minmax(0,1.9fr);gap:5px;padding-right:46px}
+ body.sim-flow #sim-mobile-summary-values button{min-height:52px;gap:2px;padding:2px 0;line-height:1.4}
+ body.sim-flow #sim-mobile-summary-values span{font-size:12px;color:#59604f}
+ body.sim-flow #sim-mobile-summary-values b{font-size:17px;color:#252923;white-space:nowrap}
+ body.sim-flow #sim-mobile-summary-values .sim-mobile-resists{font-size:13px;letter-spacing:-.2px}
+ body.sim-flow #sim-mobile-summary-values small{display:none}
+ body.sim-flow #sim-flow-summary-toggle{display:flex;align-items:center;justify-content:center;position:absolute;right:max(8px,env(safe-area-inset-right));top:10px;min-width:44px;width:44px;min-height:44px;padding:4px;border:1px solid #d2c8b4;border-radius:7px;background:#f5efdf;color:#70431f;font-size:12px;font-weight:650}
+ body.sim-flow .sim-flow-summary-expanded .sim-mobile-summary-head{display:flex}
+ body.sim-flow .sim-flow-summary-expanded #sim-mobile-summary-values{padding-right:0}
+ body.sim-flow .sim-flow-summary-expanded #sim-mobile-summary-values small{display:block;font-size:12px}
+ body.sim-flow .sim-mobile-summary[aria-busy=true] #sim-mobile-summary-values b{color:#6c7167}
+ body.sim-flow:has(.sim-layout[data-view=results]){padding-bottom:calc(var(--flow-nav-space) + 16px)}
+ body.sim-flow .sim-flow-back{font-size:15px}
+ body.sim-flow.sim-flow-keyboard :is(.sim-flow-nav,.sim-mobile-summary){display:none}
+ body.sim-flow:has(.sim-tree-fullscreen) .sim-flow-nav{display:none}
+ body.sim-flow.sim-flow-keyboard .sim-item-actions{position:static}
+ body.sim-flow.sim-flow-keyboard:has(#sim-workbench:not([hidden])){padding-bottom:16px}
 }
