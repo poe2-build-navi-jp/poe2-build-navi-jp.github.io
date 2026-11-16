@@ -2,10 +2,10 @@ import {inspectEquipmentPhoto,equipmentPhotoText} from './simulator-photo-model.
 const $=id=>document.getElementById('sim-photo-'+id), en=document.documentElement.lang.startsWith('en');
 const t=(ja,english)=>en?english:ja;
 const dialog=$('dialog');
-let target=null,image=null,photoURL=null,serial=0,worker=null,workerPromise=null,parsed=null,busy=false;
+let target=null,image=null,photoURL=null,serial=0,worker=null,parsed=null,busy=false;
 const api=()=>window.Poe2SimulatorLibrary;
 const status=text=>{$('status').textContent=text;};
-const stopWorker=async()=>{const current=worker;worker=null;if(current)await current.terminate().catch(()=>{});};
+const stopWorker=async()=>{const current=worker;worker=null;current?.terminate();};
 function resetReview(){
  parsed=null;$('review').hidden=true;$('confirmed').checked=false;$('stage').disabled=true;
 }
@@ -71,39 +71,28 @@ async function loadImage(file){
 }
 async function read(){
  if(!image||busy)return;
- // An unfinished initialization is also a worker; never start a parallel one.
- if(workerPromise){status(t('前の読み取りを終了しています。少し待ってから再試行してください。','The previous reader is closing. Wait a moment and retry.'));return;}
  busy=true;$('read').disabled=true;resetReview();const token=++serial;
  status(t('端末内で読み取りを準備しています。初回は約7MBのデータを読み込みます…','Preparing on-device recognition. The first read downloads about 7 MB…'));
  let timer;
  let ownedWorker=null;
  try{
-  const {default:Tesseract}=await import('/assets/equipment-ocr/v7/tesseract.esm.min.js');
+  const {createPhotoReader}=await import('./simulator-photo-ocr.js?v=2a7877c36e');
   if(token!==serial)return;
-  const fail=new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('timeout')),120000);});
-  workerPromise=Tesseract.createWorker($('language').value,1,{
-   workerPath:'/assets/equipment-ocr/v7/worker.min.js',corePath:'/assets/equipment-ocr/v7',langPath:'/assets/equipment-ocr/v7',cachePath:'poe2-equipment-ocr-v7-best-int',workerBlobURL:false,
-   logger:m=>{if(token===serial&&m.status==='recognizing text')status(t(`文字を読み取り中… ${Math.round(m.progress*100)}%`,`Reading text… ${Math.round(m.progress*100)}%`));},
-   errorHandler:()=>{}
-  });
-  const pendingWorker=workerPromise;
-  pendingWorker.then(w=>{if(token!==serial)void w.terminate();},()=>{}).finally(()=>{if(workerPromise===pendingWorker)workerPromise=null;});
-  ownedWorker=await Promise.race([pendingWorker,fail]);
-  if(token!==serial){await ownedWorker.terminate();return;}
+  ownedWorker=createPhotoReader($('language').value,m=>{if(token===serial&&m.status==='recognizing text')status(t(`文字を読み取り中… ${Math.round(m.progress*100)}%`,`Reading text… ${Math.round(m.progress*100)}%`));});
   worker=ownedWorker;
-  await worker.setParameters({tessedit_pageseg_mode:Tesseract.PSM.SINGLE_BLOCK,preserve_interword_spaces:'1'});
+  timer=setTimeout(()=>ownedWorker.terminate(Error('timeout')),120000);
+  await ownedWorker.ready;if(token!==serial)return;
   const {left,top,right,bottom}=crop(),sx=image.width*left/100,sy=image.height*top/100,sw=image.width*(right-left)/100,sh=image.height*(bottom-top)/100;
   const canvas=document.createElement('canvas'),scale=Math.min(2,2200/Math.max(sw,sh));canvas.width=Math.round(sw*scale);canvas.height=Math.round(sh*scale);
   canvas.getContext('2d').drawImage(image,sx,sy,sw,sh,0,0,canvas.width,canvas.height);
-  const {data}=await Promise.race([worker.recognize(canvas),fail]);if(token!==serial)return;
+  const data=await ownedWorker.recognize(canvas);if(token!==serial)return;
   $('text').value=data.text;renderReview({initial:true});
   status(data.text.trim()?t('読み取りが終わりました。下の候補と未認識の行を確認してください。','Recognition finished. Review the candidates and unresolved lines below.'):t('文字が見つかりませんでした。説明欄を大きく撮り直してください。','No text found. Take a closer photo of the tooltip.'));
  }catch(error){if(token===serial)notifyError(error);}
  finally{
   clearTimeout(timer);
   if(worker===ownedWorker)worker=null;
-  if(ownedWorker)await ownedWorker.terminate().catch(()=>{});
-  // A timed-out initialization may still resolve later; invalidate its callback.
+  ownedWorker?.terminate();
   if(token===serial){++serial;busy=false;$('read').disabled=!image;check();}
  }
 }

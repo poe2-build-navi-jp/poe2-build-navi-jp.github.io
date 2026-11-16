@@ -4,7 +4,16 @@ import {createHash} from 'node:crypto';
 import {JSDOM} from 'jsdom';
 import {inspectEquipmentPhoto,equipmentPhotoText} from '../assets/simulator-photo-model.js';
 import {createWorker,PSM} from 'tesseract.js';
+import {createPhotoReader} from '../assets/simulator-photo-ocr.js';
 const root=new URL('../',import.meta.url),catalog=JSON.parse(await readFile(new URL('data/simulator-equipment.json',root)));
+// Regression: closing during model initialization must release the raw worker,
+// reject the pending read and allow a fresh reader after a network failure.
+const rawWorkers=[];
+globalThis.location={origin:'https://test.invalid'};
+globalThis.Worker=class{constructor(){this.terminated=0;rawWorkers.push(this);}postMessage(){}terminate(){this.terminated++;}};
+const boot=createPhotoReader('jpn');boot.terminate();await assert.rejects(boot.ready,/cancelled/);assert.equal(rawWorkers[0].terminated,1);
+const failedBoot=createPhotoReader('eng');rawWorkers[1].onerror();await assert.rejects(failedBoot.ready,/worker/);assert.equal(rawWorkers[1].terminated,1);
+delete globalThis.Worker;delete globalThis.location;
 const base=catalog.bases.find(b=>b.name==='Rusted Greathelm');
 for(const def of catalog.modifiers){
  const text=def.template.replace(/\{(\d+)\}/g,(_,i)=>def.default[+i]);

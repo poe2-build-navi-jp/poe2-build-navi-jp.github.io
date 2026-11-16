@@ -5,6 +5,8 @@ const root=new URL('../',import.meta.url);
 const modelHash=createHash('sha256').update(await readFile(new URL('assets/simulator-photo-model.js',root))).digest('hex').slice(0,10);
 const script=new URL('assets/simulator-photo.js',root);
 await writeFile(script,(await readFile(script,'utf8')).replace(/from '\.\/simulator-photo-model\.js(?:\?v=[a-f0-9]+)?'/,"from './simulator-photo-model.js?v="+modelHash+"'"));
+const ocrHash=createHash('sha256').update(await readFile(new URL('assets/simulator-photo-ocr.js',root))).digest('hex').slice(0,10);
+await writeFile(script,(await readFile(script,'utf8')).replace(/import\('\.\/simulator-photo-ocr\.js(?:\?v=[a-f0-9]+)?'\)/,"import('./simulator-photo-ocr.js?v="+ocrHash+"')"));
 for(const en of [false,true]){
  const t=(ja,english)=>en?english:ja,file=new URL((en?'en/':'')+'simulator/index.html',root);
  const doc=parse((await readFile(file,'utf8')).replace(/<!-- sim-photo:start -->[\s\S]*?<!-- sim-photo:end -->/g,'')),nodes=new Map();let head,body;
