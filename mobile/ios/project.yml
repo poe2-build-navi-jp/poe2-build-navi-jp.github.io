@@ -6,7 +6,7 @@ settings:
   base:
     SWIFT_VERSION: '5.0'
     MARKETING_VERSION: '1.0.0'
-    CURRENT_PROJECT_VERSION: '1'
+    CURRENT_PROJECT_VERSION: '2'
     PRODUCT_BUNDLE_IDENTIFIER: jp.poe2buildnavi.app
     TARGETED_DEVICE_FAMILY: '1,2'
 targets:
@@ -24,6 +24,8 @@ targets:
       path: Resources/Info.plist
       properties:
         CFBundleDisplayName: POE2ビルドナビ
+        NSCameraUsageDescription: 装備の説明欄を撮影し、端末内でオプションを読み取るためにカメラを使います。写真は送信しません。
+        NSPhotoLibraryUsageDescription: 選んだ装備画像から、端末内でオプションを読み取ります。写真は送信しません。
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait

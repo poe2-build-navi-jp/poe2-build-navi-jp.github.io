@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {Worker} from 'node:worker_threads';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {JSDOM,VirtualConsole} from 'jsdom';
+import * as model from '../assets/simulator-model.js';
+import {equipmentPhotoText,inspectEquipmentPhoto} from '../assets/simulator-photo-model.js';
+const root=resolve(import.meta.dirname,'..'),native=new Worker(new URL('./fixtures/simulator-worker-node.mjs',import.meta.url));
+let sequence=0;const pending=new Map();
+native.on('message',m=>{if(m.progress)return;const p=pending.get(m.id);if(!p)return;pending.delete(m.id);m.error?p.reject(Error(m.error)):p.resolve(m.result);});
+const rpc=(action,payload)=>new Promise((resolve,reject)=>{const id=++sequence;pending.set(id,{resolve,reject});native.postMessage({id,action,payload});});
+const errors=[],virtual=new VirtualConsole();virtual.on('jsdomError',e=>errors.push(e.message));
+const dom=new JSDOM(await readFile(resolve(root,'simulator/index.html'),'utf8'),{url:'https://poe2-build-navi-jp.github.io/simulator/',runScripts:'outside-only',virtualConsole:virtual}),w=dom.window,d=w.document;
+Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
+w.HTMLElement.prototype.scrollIntoView=function(){};
+w.fetch=async url=>new Response(await readFile(resolve(root,new URL(String(url),'https://test.local').pathname.slice(1))));
+w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>this.onmessage?.({data:{id,result}}),error=>this.onmessage?.({data:{id,error:error.message}}));}};
+const wait=async predicate=>{const deadline=Date.now()+30000;while(!predicate()){if(Date.now()>deadline)throw Error('photo UI timeout: '+d.getElementById('sim-error').textContent);await new Promise(r=>setTimeout(r,20));}};
+const click=selector=>{assert(d.querySelector(selector),selector);d.querySelector(selector).click();};
+const ready=()=>d.getElementById('sim-stats').getAttribute('aria-busy')==='false'&&!!w.Poe2SimulatorLibrary?.goalData();
+try{
+ const source=(await readFile(resolve(root,'assets/simulator.js'),'utf8')).replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
+ await w.eval(`(async()=>{${source}\n})()`);click('[data-preset="mercenary-twister-gemling"]');await wait(ready);click('[data-tab="items"]');click('[data-slot="helmet"]');
+ const stable=()=>{const value=w.Poe2SimulatorLibrary.goalData().current;delete value.savedAt;return JSON.stringify(value);};
+ const api=w.Poe2SimulatorLibrary,context=api.equipmentPhotoContext(),saved=stable(),auto='poe2-simulator:v1:mercenary-twister-gemling',before=w.localStorage.getItem(auto);
+ const r=inspectEquipmentPhoto('Rusted Greathelm\nQuality: 20\n+123 to maximum Life\n+35% to Fire Resistance',context),text=equipmentPhotoText({...r,name:'Photo QA'},context);
+ assert(api.equipmentPhotoStage(context.key,text));
+ assert.equal(stable(),saved,'staging cannot equip or modify the saved plan');assert.equal(w.localStorage.getItem(auto),before);
+ assert(!api.equipmentPhotoStage(context.key,text),'a prior draft token is stale after staging');
+ click('#sim-item-apply');await wait(()=>ready()&&api.goalData().current.request.items.some(i=>i.slot==='helmet'&&i.text.includes('+123 to maximum Life')));
+ const result=await rpc('calculate',api.goalData().current.request);assert.equal(result.item_errors?.length||0,0);assert.equal(result.unsupported_modifiers?.length||0,0);
+ click('#sim-history-undo');await wait(()=>ready()&&!api.goalData().current.request.items.some(i=>i.slot==='helmet'));
+ click('#sim-history-redo');await wait(()=>ready()&&api.goalData().current.request.items.some(i=>i.slot==='helmet'));
+ click('[data-slot="helmet"]');const old=api.equipmentPhotoContext();click('#sim-item-back');click('[data-slot="helmet"]');assert(!api.equipmentPhotoStage(old.key,text),'closing and reopening invalidates a capture');
+ const other=api.equipmentPhotoContext();click('#sim-item-back');click('[data-slot="body"]');assert(!api.equipmentPhotoStage(other.key,text),'a late capture cannot enter a different slot');
+ click('#sim-item-back');click('[data-slot="weapon1"]');const weapon=api.equipmentPhotoContext();click('[data-weapon-set="2"]');assert(!api.equipmentPhotoStage(weapon.key,text),'weapon set changes invalidate a capture');
+ const draft=api.equipmentPhotoContext();d.getElementById('sim-rare-name').value='Changed while capturing';assert(!api.equipmentPhotoStage(draft.key,text),'even an undispatched draft edit invalidates a capture');
+ await wait(ready);assert.deepEqual(errors,[]);console.log('PASS: real-engine explicit apply, undo/redo, unchanged autosave during staging, stale slot/session/weapon-set/draft protection');
+}catch(error){console.error(error);throw error;}
+finally{await new Promise(r=>setTimeout(r,100));dom.window.close();await native.terminate();}

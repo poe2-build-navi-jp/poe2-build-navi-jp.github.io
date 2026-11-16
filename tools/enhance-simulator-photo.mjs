@@ -1,0 +1,33 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {parse,parseFragment,serialize} from 'parse5';
+import {createHash} from 'node:crypto';
+const root=new URL('../',import.meta.url);
+const modelHash=createHash('sha256').update(await readFile(new URL('assets/simulator-photo-model.js',root))).digest('hex').slice(0,10);
+const script=new URL('assets/simulator-photo.js',root);
+await writeFile(script,(await readFile(script,'utf8')).replace(/from '\.\/simulator-photo-model\.js(?:\?v=[a-f0-9]+)?'/,"from './simulator-photo-model.js?v="+modelHash+"'"));
+for(const en of [false,true]){
+ const t=(ja,english)=>en?english:ja,file=new URL((en?'en/':'')+'simulator/index.html',root);
+ const doc=parse((await readFile(file,'utf8')).replace(/<!-- sim-photo:start -->[\s\S]*?<!-- sim-photo:end -->/g,'')),nodes=new Map();let head,body;
+ function walk(n){if(n.tagName==='head')head=n;if(n.tagName==='body')body=n;const id=n.attrs?.find(a=>a.name==='id')?.value;if(id)nodes.set(id,n);for(const c of n.childNodes||[])walk(c);}walk(doc);
+ function append(parent,html,before=null){const parts=parseFragment('<!-- sim-photo:start -->'+html+'<!-- sim-photo:end -->').childNodes;for(const n of parts)n.parentNode=parent;parent.childNodes.splice(before?parent.childNodes.indexOf(before):parent.childNodes.length,0,...parts);}
+ append(head,'<link rel="stylesheet" href="/assets/simulator-photo.css">');
+ append(body,'<script type="module" src="/assets/simulator-photo.js"></script>');
+ append(nodes.get('sim-item-editor'),`<div class="sim-photo-entry"><div class="sim-actions"><button id="sim-photo-camera" type="button" aria-haspopup="dialog">${t('カメラで装備を撮る','Photograph equipment')}</button><button id="sim-photo-select" type="button" aria-haspopup="dialog">${t('装備画像を選ぶ','Choose an item image')}</button></div><p id="sim-photo-help" role="status">${t('写真・スクリーンショットからオプションを読み取り、確認してから反映できます。','Read modifiers from a photo or screenshot, then review before applying.')}</p></div>`,nodes.get('sim-item-source'));
+ append(body,`<dialog id="sim-photo-dialog" class="sim-photo-dialog" aria-labelledby="sim-photo-title"><div class="sim-photo-head"><h2 id="sim-photo-title">${t('写真から装備を取り込む','Import equipment from a photo')}</h2><button type="button" id="sim-photo-close">${t('閉じる','Close')}</button></div>
+ <p>${t('取り込み先：','Target: ')}<strong id="sim-photo-target"></strong></p><p class="sim-photo-note">${t('写真は端末内で処理し、サーバーへ送信・保存しません。初回は読み取り用データを取得します。','Photos are processed on your device and are not uploaded or saved. The first read downloads recognition data.')}</p>
+ <div class="sim-actions"><button type="button" id="sim-photo-choose-camera">${t('カメラで撮り直す','Take another photo')}</button><button type="button" id="sim-photo-choose-file">${t('画像を選ぶ','Choose an image')}</button></div>
+ <input type="file" accept="image/*" capture="environment" id="sim-photo-capture" hidden><input type="file" accept="image/*" id="sim-photo-file" hidden>
+ <p id="sim-photo-status" role="status" aria-live="polite"></p>
+ <section id="sim-photo-crop" hidden><h3>${t('1. 装備の説明欄を枠に入れる','1. Frame the item tooltip')}</h3><canvas id="sim-photo-canvas" aria-label="${t('読み取る範囲のプレビュー','Recognition area preview')}"></canvas><div class="sim-photo-crop-controls">
+ ${[['left','左端','Left edge',0,95,0],['top','上端','Top edge',0,95,0],['right','右端','Right edge',5,100,100],['bottom','下端','Bottom edge',5,100,100]].map(([id,ja,english,min,max,value])=>`<label>${t(ja,english)} <output id="sim-photo-value-${id}">${value}%</output><input id="sim-photo-${id}" type="range" min="${min}" max="${max}" value="${value}"></label>`).join('')}</div><label>${t('画像内の言語','Image language')}<select id="sim-photo-language"><option value="jpn"${en?'':' selected'}>日本語</option><option value="eng"${en?' selected':''}>English</option></select></label><div class="sim-actions"><button type="button" id="sim-photo-rotate">${t('90°回転','Rotate 90°')}</button><button type="button" id="sim-photo-read" disabled>${t('文字を読み取る','Read text')}</button></div></section>
+ <section id="sim-photo-review" hidden><h3>${t('2. 読み取った内容を確認する','2. Review the recognized text')}</h3><p id="sim-photo-summary"></p><label>${t('読み取りテキスト（修正すると候補を再判定）','Recognized text (edit to recheck candidates)')}<textarea id="sim-photo-text" rows="10" maxlength="20000" spellcheck="false"></textarea></label>
+ <div class="sim-photo-fields"><label>${t('装備のベース','Item base')}<select id="sim-photo-base"></select></label><label>${t('装備名（自分用）','Item name (your label)')}<input id="sim-photo-name" maxlength="80"></label><label>${t('レアリティ','Rarity')}<select id="sim-photo-rarity"><option value="RARE">${t('レア','Rare')}</option><option value="UNIQUE">${t('ユニーク','Unique')}</option><option value="MAGIC">${t('マジック','Magic')}</option><option value="NORMAL">${t('ノーマル','Normal')}</option></select></label><label>${t('品質（%）','Quality (%)')}<input id="sim-photo-quality" type="number" min="0" max="30" inputmode="numeric" placeholder="${t('未読取：0として計算','Unread: calculated as 0')}"></label><label>${t('アイテムレベル','Item level')}<input id="sim-photo-level" type="number" min="1" max="100" inputmode="numeric" placeholder="${t('未読取','Unread')}"></label></div>
+ <h4>${t('反映するオプション','Modifiers to stage')}</h4><div id="sim-photo-options" class="sim-photo-options"></div>
+ <details open><summary>${t('未認識の行（反映されません）','Unresolved lines (not applied)')}</summary><pre id="sim-photo-unresolved"></pre></details>
+ <details><summary>${t('装備に表示されていた合計値','Displayed item totals')}</summary><pre id="sim-photo-properties"></pre><p>${t('合計値はオプションとして加算しません。計算はベース・品質・反映するオプションから行います。','Totals are not added as modifiers. Calculations use the base, quality and staged modifiers.')}</p></details>
+ <p class="sim-photo-note">${t('最大ライフ・耐性・能力値・速度・追加ダメージなどの定型オプションに対応。固有効果や読み取り違いは未認識の行に残ります。暗黙・ルーンの効果も写真に写るようにしてください。','Supports common Life, resistance, attribute, speed and added damage modifiers. Special effects or uncertain text remain unresolved. Include implicit and rune modifiers in the photo.')}</p>
+ <label class="sim-photo-confirm"><input id="sim-photo-confirmed" type="checkbox">${t('ベース・品質・数値を写真と照合しました。未認識の行は反映されないことを確認しました。','I checked the base, quality and numbers against the photo. I understand unresolved lines will not be applied.')}</label>
+ <button id="sim-photo-stage" type="button" disabled>${t('確認した候補を装備欄へ入れる','Stage reviewed candidates in the item editor')}</button><p>${t('装備はまだ変更されません。装備欄で比較し、「この装備を反映」を押すと確定します。','Your equipped item is unchanged until you preview and choose Apply this item in the editor.')}</p></section></dialog>`);
+ await writeFile(file,serialize(doc));
+}
+console.log('Enhanced Japanese and English equipment photo import');

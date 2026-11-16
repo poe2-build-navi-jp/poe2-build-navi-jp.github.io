@@ -5,11 +5,13 @@ import android.os.*;
 import android.content.*;
 import android.graphics.Color;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.view.*;
 import android.webkit.*;
 import android.widget.*;
 import androidx.webkit.WebViewCompat;
 import androidx.webkit.WebViewFeature;
+import androidx.core.content.FileProvider;
 import org.json.*;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -22,6 +24,8 @@ public final class MainActivity extends Activity {
     private TextView status;
     private Button refresh;
     private ValueCallback<Uri[]> chooser;
+    private Uri equipmentPhotoUri;
+    private File equipmentPhotoFile;
     private byte[] pendingBytes;
     private String pendingImport;
     private boolean ready = false, navigationFailed = false, updateAvailable = false;
@@ -100,9 +104,32 @@ public final class MainActivity extends Activity {
         web.setWebChromeClient(new WebChromeClient() {
             @Override public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> callback, FileChooserParams params) {
                 if (chooser != null) chooser.onReceiveValue(null);
+                if (equipmentPhotoFile != null) equipmentPhotoFile.delete();
+                equipmentPhotoFile = null; equipmentPhotoUri = null;
+                if (!allowed(Uri.parse(String.valueOf(view.getUrl())))) { callback.onReceiveValue(null); return true; }
                 chooser = callback;
-                try { startActivityForResult(params.createIntent(), PICK); return true; }
-                catch (ActivityNotFoundException error) { chooser = null; callback.onReceiveValue(null); return false; }
+                try {
+                    boolean image = Arrays.stream(params.getAcceptTypes()).anyMatch(type -> type.startsWith("image/"));
+                    if (params.isCaptureEnabled() && image) {
+                        // A full-resolution, temporary capture URI. The external camera owns
+                        // its permission; the app does not request broad camera/library access.
+                        File directory = new File(getCacheDir(), "equipment-camera");
+                        if (!directory.exists() && !directory.mkdirs()) throw new IOException();
+                        equipmentPhotoFile = File.createTempFile("equipment-", ".jpg", directory);
+                        equipmentPhotoUri = FileProvider.getUriForFile(MainActivity.this, getPackageName() + ".equipment-camera", equipmentPhotoFile);
+                        Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE).putExtra(MediaStore.EXTRA_OUTPUT, equipmentPhotoUri)
+                            .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                        camera.setClipData(ClipData.newRawUri("Equipment photo", equipmentPhotoUri));
+                        startActivityForResult(camera, PICK);
+                    } else startActivityForResult(params.createIntent(), PICK);
+                    return true;
+                } catch (ActivityNotFoundException | IOException error) {
+                    if (equipmentPhotoFile != null) equipmentPhotoFile.delete();
+                    equipmentPhotoFile = null; equipmentPhotoUri = null;
+                    chooser = null; callback.onReceiveValue(null);
+                    message("カメラを開けませんでした。「装備画像を選ぶ」で写真・スクリーンショットを選べます。");
+                    return true;
+                }
             }
         });
         if (Build.VERSION.SDK_INT >= 33) getOnBackInvokedDispatcher().registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT, () -> { if (web.canGoBack()) web.goBack(); else finish(); });
@@ -161,7 +188,13 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onActivityResult(int request, int result, Intent data) {
         super.onActivityResult(request, result, data);
-        if (request == PICK) { if (chooser != null) chooser.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(result, data)); chooser = null; return; }
+        if (request == PICK) {
+            Uri[] selected = equipmentPhotoUri != null ? (result == RESULT_OK ? new Uri[]{equipmentPhotoUri} : null) : WebChromeClient.FileChooserParams.parseResult(result, data);
+            if (chooser != null) chooser.onReceiveValue(selected);
+            chooser = null; equipmentPhotoUri = null;
+            if (result != RESULT_OK && equipmentPhotoFile != null) { equipmentPhotoFile.delete(); equipmentPhotoFile = null; }
+            return;
+        }
         Uri uri = result == RESULT_OK && data != null ? data.getData() : null;
         if (request == SAVE) {
             byte[] bytes = pendingBytes; pendingBytes = null;
@@ -192,5 +225,5 @@ public final class MainActivity extends Activity {
     @Override protected void onResume() { super.onResume(); if (web != null) { web.onResume(); if (ready) web.evaluateJavascript("window.Poe2Host?.checkForUpdate(); void 0", null); } }
     @Override protected void onPause() { if (web != null) web.onPause(); super.onPause(); }
     @Override public void onBackPressed() { if (web.canGoBack()) web.goBack(); else super.onBackPressed(); }
-    @Override protected void onDestroy() { if (chooser != null) chooser.onReceiveValue(null); if (web != null) { web.stopLoading(); web.destroy(); } pendingBytes = null; super.onDestroy(); }
+    @Override protected void onDestroy() { if (chooser != null) chooser.onReceiveValue(null); if (web != null) { web.stopLoading(); web.destroy(); } if (equipmentPhotoFile != null) equipmentPhotoFile.delete(); pendingBytes = null; super.onDestroy(); }
 }
