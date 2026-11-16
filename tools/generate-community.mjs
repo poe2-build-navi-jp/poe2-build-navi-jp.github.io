@@ -15,7 +15,7 @@ const catalog = {
   configKeys: ['questInterlude 2Khari CrossingMolten Shrine'],
 };
 await writeFile(new URL('data/community-catalog.json', root), JSON.stringify(catalog) + '\n');
-for (const name of ['community-model.js', 'community-ui.js', 'community-page.js', 'simulator-community.js']) {
+for (const name of ['community-model.js', 'community-ui.js', 'community-transport.js', 'community-page.js', 'simulator-community.js']) {
   let source = await read('assets/' + name);
   for (const match of [...source.matchAll(/from '(\.\/(?:community|simulator)-[a-z-]+\.js)(?:\?v=[a-f0-9]+)?'/g)]) {
     const hash = createHash('sha256').update(await read('assets/' + match[1].slice(2))).digest('hex').slice(0, 10);
@@ -50,7 +50,7 @@ for (const en of [false, true]) {
 const privacyFile = new URL('privacy/index.html', root);
 let privacy = await readFile(privacyFile, 'utf8');
 privacy = privacy.replace(/<!-- community-privacy:start -->[\s\S]*?<!-- community-privacy:end -->/g, '');
-const block = '<!-- community-privacy:start --><section id="community-privacy"><h2>任意のビルド公開・通報</h2><p>「みんなのビルド」で公開内容を確認し、一般公開のチェックを入れて投稿した場合だけ、ビルド名・投稿者名・説明・予算・用途と、反映済みの装備・ジェム・パッシブ・レベル・敵・計算条件をAppDeployへ保存し、誰でも閲覧できる状態にします。個人メモ、編集中の装備入力、同期用の接続コードは公開用データに含めません。説明や装備の名前に個人情報を入力しないでください。</p><p>投稿の管理コードは端末のlocalStorageに保存し、投稿・自分の投稿確認・取り下げ時にサービスへ送信します。サーバーにはコードのハッシュを保存します。別のコードに切り替えると、以前のコードも端末内で切替用に保持します。コードを知る人は投稿を取り下げられます。共有URLにコードは含めません。紛失したコードを運営から復旧することはできません。</p><p>取り下げ時は稼働中の公開構成と一覧を削除します。再送による復活を防ぐため、投稿ID・管理用ハッシュ・処理履歴は保持します。第三者がすでにコピーした内容までは取り消せません。通報は理由・補足・対象投稿ID・重複防止用識別子を運営確認用として非公開で保存します。ホスティング事業者は通信元IP等のアクセス情報を処理する場合があります。暗号化した端末間同期の保管庫とは別のサービスです。</p><p lang="en">Publishing is optional and requires a preview and explicit consent. Public snapshots include the displayed title, author, description, budget and applied build inputs. Private notes, equipment-editor drafts and sync codes are excluded. Keep your management code private; it allows withdrawal. Withdrawal removes the live public snapshot, while a hashed processing receipt prevents replay. Reports are stored privately for review.</p></section><!-- community-privacy:end -->';
+const block = '<!-- community-privacy:start --><section id="community-privacy"><h2>任意のビルド公開・通報</h2><p>「みんなのビルド」で公開内容を確認し、一般公開のチェックを入れて投稿した場合だけ、ビルド名・投稿者名・説明・予算・用途と、反映済みの装備・ジェム・パッシブ・レベル・敵・計算条件をChatGPT Sites上のCloudflare D1へ保存し、誰でも閲覧できる状態にします。以前のAppDeploy投稿は元のサーバーに残り、元の共有URL・管理コードで確認や取り下げを選ぶと以前のサービスにも接続します。個人メモ、編集中の装備入力、同期用の接続コードは公開用データに含めません。説明や装備の名前に個人情報を入力しないでください。</p><p>投稿の管理コードは端末のlocalStorageに保存し、投稿・自分の投稿確認・取り下げ時にサービスへ送信します。サーバーにはコードのハッシュを保存します。別のコードに切り替えると、以前のコードも端末内で切替用に保持します。コードを知る人は投稿を取り下げられます。共有URLにコードは含めません。紛失したコードを運営から復旧することはできません。</p><p>取り下げ時は稼働中の公開構成と一覧を削除します。再送による復活を防ぐため、投稿ID・管理用ハッシュ・処理履歴は保持します。第三者がすでにコピーした内容までは取り消せません。通報は理由・補足・対象投稿ID・重複防止用識別子を運営確認用として非公開で保存します。ホスティング事業者は通信元IP等のアクセス情報を処理する場合があります。暗号化した端末間同期の保管庫とは別のサービスです。</p><p lang="en">Publishing is optional and requires a preview and explicit consent. Public snapshots include the displayed title, author, description, budget and applied build inputs. Private notes, equipment-editor drafts and sync codes are excluded. Keep your management code private; it allows withdrawal. Withdrawal removes the live public snapshot, while a hashed processing receipt prevents replay. Reports are stored privately for review.</p></section><!-- community-privacy:end -->';
 privacy = privacy.replace(/(<h2\b[^>]*>Google Analytics<\/h2>)/, block + '$1');
 await writeFile(privacyFile, privacy);
 console.log('Generated bilingual community pages and privacy disclosure');
