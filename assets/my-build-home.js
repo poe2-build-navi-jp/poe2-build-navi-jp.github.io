@@ -91,7 +91,7 @@ export function installMyBuildHome(document){
   if(record.at){const time=make('time',new Intl.DateTimeFormat(en?'en-GB':'ja-JP',{dateStyle:'medium',timeStyle:'short'}).format(new Date(record.at)));time.dateTime=new Date(record.at).toISOString();savedDate.replaceChildren(document.createTextNode(t('保存：','Saved: ')),time);}else savedDate.textContent=t('保存日時は記録されていません。','No save date is recorded.');
   find('[data-my-build-resume]').href=resumeHref(record,en);
   find('[data-my-build-goal-open]').href=resumeHref(record,en,'goal');
-  find('[data-my-build-growth-open]').href=resumeHref(record,en,'growth');
+  const growthLink=find('[data-my-build-growth-open]');if(growthLink)growthLink.href=resumeHref(record,en,'growth');
   const back=document.getElementById('sim-change-build');if(back){back.textContent=t('← マイビルド・一覧','← My builds / presets');back.setAttribute('aria-label',t('マイビルドホーム・ビルド一覧へ戻る','Back to My builds and presets'));}
   if(!viewTracked&&!section.closest('[hidden]')){track('my_build_home_view',record);viewTracked=true;}
   // The home stays light while editing; render the summaries when its chooser opens.
