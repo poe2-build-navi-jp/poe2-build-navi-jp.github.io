@@ -138,7 +138,8 @@ $('stage').addEventListener('click',()=>{
   const text=equipmentPhotoText({baseId:$('base').value,name:$('name').value,quality:$('quality').value,level:$('level').value,rarity:$('rarity').value,modifiers},target);
   if(!api()?.equipmentPhotoStage(target.key,text)){status(t('編集対象が変わりました。閉じて、取り込み先の装備からやり直してください。','The editing target changed. Close this dialog and start again from the intended item.'));$('stage').disabled=true;return;}
   close();document.getElementById('sim-photo-help').textContent=t('読み取った候補を装備テキストに入れました。「交換する前に比較」で計算を確認し、「この装備を反映」で確定してください。','Candidates are staged in the item text. Preview the comparison, then choose Apply this item to confirm.');
-  document.getElementById('sim-item-text').focus();
+  const next=document.getElementById('sim-item-preview');
+  next.focus({preventScroll:true});next.scrollIntoView({block:'center',behavior:'instant'});
  }catch(error){notifyError(error);}
 });
 window.addEventListener('pagehide',()=>{++serial;void stopWorker();releaseImage();});

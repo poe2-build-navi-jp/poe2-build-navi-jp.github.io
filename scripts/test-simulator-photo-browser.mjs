@@ -54,7 +54,10 @@ try{
    assert(await page.locator('#sim-photo-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth+1),'dialog has no horizontal overflow');
    await page.locator('#sim-photo-stage').click();assert.equal(await page.locator('#sim-photo-dialog').isVisible(),false);assert.equal(await plan(page),before);
    assert.match(await page.locator('#sim-item-text').inputValue(),/123/);
-   await page.locator('#sim-item-apply').click();await ready(page);
+   await page.locator('#sim-item-apply').click();
+   await page.waitForFunction(()=>!document.querySelector('#sim-error').hidden||window.Poe2SimulatorLibrary.goalData().current.request.items.some(i=>i.slot==='helmet'&&i.text.includes('+123 to maximum Life')));
+   assert.equal(await page.locator('#sim-error').isVisible(),false);
+   await ready(page);
    assert(await page.evaluate(()=>window.Poe2SimulatorLibrary.goalData().current.request.items.some(i=>i.slot==='helmet'&&i.text.includes('+123 to maximum Life'))));
    await page.locator('#sim-history-undo').click();await page.waitForFunction(()=>document.querySelector('#sim-stats').getAttribute('aria-busy')==='false'&&!window.Poe2SimulatorLibrary.goalData().current.request.items.some(i=>i.slot==='helmet'));assert.equal(await plan(page),before);
    // Closing and a failed image do not remove or replace the equipped item.
