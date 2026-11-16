@@ -66,6 +66,7 @@ body.sim-flow #sim-slots:not([data-utilities-open]) button:is([data-slot^="Flask
 body.sim-flow #sim-flow-utilities{margin-top:12px;width:100%;min-height:44px;font-size:13px;padding:10px;border:1px dashed #c3b9a5;border-radius:7px;background:transparent}
 body.sim-flow .sim-equipment-modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:16px 0}
 body.sim-flow .sim-equipment-modes button{min-height:52px;font-size:13px;border-radius:7px;padding:8px}
+body.sim-flow .sim-equipment-modes button:last-child{grid-column:auto}
 body.sim-flow .sim-photo-entry{padding:14px;border:1px solid #d5c7aa;background:#f6f0e4;color:#3d422f;border-radius:8px;margin:16px 0}
 body.sim-flow .sim-photo-entry .sim-actions{gap:8px}
 body.sim-flow .sim-photo-entry button{min-height:46px;padding:10px 14px;font-size:14px;border-radius:6px}
@@ -122,7 +123,7 @@ body.sim-flow :is(.sim-panel,.sim-item-list,#sim-item-editor,#sim-results-panel)
 }
 @media(max-width:600px){
  body.sim-flow #sim-workbench{padding-left:10px;padding-right:10px}
- body.sim-flow .sim-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;padding-top:10px;gap:10px 8px}
+ body.sim-flow .sim-toolbar{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;padding-top:10px;gap:10px 8px}
  body.sim-flow .sim-toolbar>div:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) 104px;gap:0 10px;align-items:center}
  body.sim-flow #sim-change-build{grid-column:1;grid-row:1;min-height:36px;font-size:12px}
  body.sim-flow .sim-toolbar h2{font-size:20px;margin:4px 0}
@@ -130,7 +131,7 @@ body.sim-flow :is(.sim-panel,.sim-item-list,#sim-item-editor,#sim-results-panel)
  body.sim-flow #sim-character-name{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%)}
  body.sim-flow .sim-toolbar .sim-actions{grid-column:1;grid-row:2;max-width:none;margin-top:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
  body.sim-flow .sim-toolbar .sim-actions>*{justify-content:center;font-size:12px;padding:7px 5px;min-height:44px}
- body.sim-flow .sim-toolbar .sim-flow-file-menu{padding:0}
+ body.sim-flow .sim-toolbar .sim-flow-file-menu{position:static;padding:0}
  body.sim-flow .sim-flow-file-menu>summary{padding:9px 5px;font-size:12px;min-height:44px;white-space:nowrap}
  body.sim-flow .sim-flow-file-menu>summary::after{margin-left:4px}
  body.sim-flow #sim-flow-help{display:none}

@@ -52,6 +52,8 @@ export function installSimulatorFlow(document) {
  // Make a text payload an optional check for uniques; paste/photo staging opens it.
  const source=document.getElementById('sim-item-source'),payload=make('details','sim-flow-payload');payload.id='sim-item-payload';payload.append(make('summary','',text('装備テキストを確認・修正','Review or edit item text')));source.before(payload);payload.append(source);
  window.addEventListener('poe2:equipment-mode',event=>{payload.hidden=event.detail.mode==='rare';payload.open=event.detail.mode==='paste';});
+ const modes=document.querySelector('.sim-equipment-modes'),photo=document.querySelector('.sim-photo-entry');if(photo)modes.before(photo);
+ for(const mode of modes.querySelectorAll('[data-equipment-mode]')){mode.setAttribute('aria-label',mode.textContent);mode.textContent={unique:text('ユニーク','Unique'),rare:text('レアを作成','Create rare'),paste:text('テキスト','Paste text')}[mode.dataset.equipmentMode];}
 
  // Keep only preview and apply in the sticky action bar. Destructive/reset actions
  // stay in the ordinary document flow, away from the main apply target.

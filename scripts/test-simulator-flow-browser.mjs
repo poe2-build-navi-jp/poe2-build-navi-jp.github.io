@@ -15,7 +15,7 @@ try{for(const [type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
   page.on('pageerror',error=>errors.push(error.message));await context.route('**/*',route=>new URL(route.request().url()).origin===base?route.continue():route.abort());
   try{
    await page.goto(base+locale+'/simulator/?build=mercenary-twister-gemling',{waitUntil:'domcontentloaded'});
-   await page.locator('#sim-flow-save-status').waitFor();await page.locator('#sim-stats[aria-busy="false"] .sim-stat').first().waitFor({timeout:60000});
+   await page.locator('#sim-flow-save-status').waitFor();await page.locator('#sim-stats[aria-busy="false"] .sim-stat').first().waitFor({state:'attached',timeout:60000});
    assert.equal(await page.locator('#sim-error').isVisible(),false);
    const measure=async()=>page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,nav:document.querySelector('.sim-flow-nav').getBoundingClientRect().toJSON(),editor:document.querySelector('#sim-item-list-title').getBoundingClientRect().toJSON(),apply:document.querySelector('#sim-item-apply').getBoundingClientRect().toJSON(),tools:document.querySelector('.sim-flow-tools').getBoundingClientRect().toJSON()}));
    const first=await measure();assert.equal(first.overflow,false);assert(first.nav.height>=44);assert(first.nav.top<430,'navigation must appear before optional tools');assert(first.editor.top<720,'editing must be reachable in the first screen');assert(first.tools.top>first.editor.top);
@@ -28,15 +28,15 @@ try{for(const [type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
    await page.locator('#sim-view-results').click();assert.equal(await page.locator('.sim-editor').isVisible(),false);assert.equal(await page.locator('#sim-results-panel').isVisible(),true);assert.deepEqual(await page.locator('#sim-stats .sim-stat b').allTextContents(),before);
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),saved,'view switches cannot save an unconfirmed item');
    await page.locator('#sim-flow-back').click();assert.equal(await page.locator('#sim-item-text').inputValue(),draft);assert.equal(await page.locator('#sim-item-text').isVisible(),true,'return to the same open draft');
-   await page.locator('#sim-item-apply').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor();
+   await page.locator('#sim-item-apply').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor({state:'attached'});
    const applied=JSON.parse(await page.evaluate(key=>localStorage.getItem(key),key));assert(applied.request.items.some(item=>item.slot==='helmet'&&item.text.includes('123')));
    const after=await page.locator('#sim-stats .sim-stat b').allTextContents();assert.equal(Number(after[1].replaceAll(',',''))-Number(before[1].replaceAll(',','')),123);
    await page.locator('#sim-view-results').click();await page.screenshot({path:resolve(output,`${name}-${width}-results.jpg`),type:'jpeg',quality:85});
    await page.locator('[data-tab="skills"]').click();assert.equal(await page.locator('#sim-skills').isVisible(),true);assert.equal(await page.locator('#sim-view-results').getAttribute('aria-pressed'),'false');
    await page.locator('[data-tab="items"]').click();await page.locator('#sim-item-back').click();
-   await page.locator('.sim-flow-file-menu>summary').click();assert.equal(await page.locator('#sim-download').isVisible(),true);assert.equal(await page.locator('#sim-file').isEnabled(),true);await page.keyboard.press('Escape');assert.equal(await page.locator('.sim-flow-file-menu').evaluate(element=>element.open),false);
+   await page.locator('.sim-flow-file-menu>summary').click();assert.equal(await page.locator('#sim-download').isVisible(),true);assert.equal(await page.locator('#sim-file').isEnabled(),true);const menu=await page.locator('.sim-flow-file-panel').boundingBox();assert(menu.x>=0&&menu.x+menu.width<=width+1,'file controls must fit the phone');await page.keyboard.press('Escape');assert.equal(await page.locator('.sim-flow-file-menu').evaluate(element=>element.open),false);
    await page.locator('#sim-flow-saved').click();assert.equal(await page.locator('#sim-workspace').evaluate(element=>element.open),true);await page.locator('#sim-plan-name').fill('Flow QA saved build');await page.locator('#sim-plan-create').click();await page.locator('#sim-plan-status').filter({hasText:locale?'saved':'保存'}).waitFor();
-   await page.locator('#sim-history-undo').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor();assert.deepEqual(await page.locator('#sim-stats .sim-stat b').allTextContents(),before,'undo must retain the existing history behavior');
+   await page.locator('#sim-history-undo').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor({state:'attached'});assert.deepEqual(await page.locator('#sim-stats .sim-stat b').allTextContents(),before,'undo must retain the existing history behavior');
    await page.locator('[data-tab="items"]').click();await page.screenshot({path:resolve(output,`${name}-${width}-editor.jpg`),type:'jpeg',quality:85});
    assert.equal((await measure()).overflow,false);assert.deepEqual(errors,[]);
    reports.push({browser:name,width,locale:locale||'ja',first,result:'PASS'});console.log(JSON.stringify(reports.at(-1)));
