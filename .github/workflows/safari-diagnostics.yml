@@ -1,0 +1,25 @@
+name: Diagnose Safari JSC compiler tiers
+on:
+  pull_request:
+    paths: ['scripts/diagnose-safari-jit.mjs', '.github/workflows/safari-diagnostics.yml']
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [default, bbq, interpreter]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node node_modules/playwright-core/cli.js install --with-deps webkit
+      - run: node scripts/diagnose-safari-jit.mjs
+        env:
+          JSC_MODE: ${{ matrix.mode }}
