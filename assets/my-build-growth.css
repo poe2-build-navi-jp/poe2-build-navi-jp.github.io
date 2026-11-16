@@ -7,7 +7,10 @@
 .growth-latest{margin:12px 0;font-size:13px;font-weight:650;overflow-wrap:anywhere}
 .growth-level{margin:12px 0 8px;font-size:17px;font-weight:700;font-variant-numeric:tabular-nums}
 .growth-baseline,.growth-label{display:block;margin:10px 0;font-size:13px;font-weight:600}
+.growth-baseline{min-width:0;max-width:100%}
 .my-build-growth select,.my-build-growth input{display:block;width:100%;max-width:100%;min-width:0;min-height:48px;box-sizing:border-box;margin-top:5px;padding:10px;border:1px solid #bdb9ac;border-radius:6px;background:#fff;color:#293126;font:inherit;font-size:16px;line-height:1.5}
+/* WebKit's native select can retain the width of a long dated option. */
+.growth-baseline select{appearance:none;-webkit-appearance:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:32px;background-image:linear-gradient(45deg,transparent 50%,#5c6454 50%),linear-gradient(135deg,#5c6454 50%,transparent 50%);background-position:calc(100% - 17px) center,calc(100% - 12px) center;background-size:5px 5px;background-repeat:no-repeat}
 .my-build-growth button{min-height:44px;padding:8px 10px;border:1px solid #cfc7b5;border-radius:6px;background:#faf8f0;color:#5e4d31;font:inherit;font-size:13px;cursor:pointer;touch-action:manipulation}
 .my-build-growth [data-growth-save]{min-height:48px;background:#765023;color:#fff;border-color:#765023;font-size:15px;font-weight:650}
 .my-build-growth button:disabled{opacity:.65;cursor:default}
