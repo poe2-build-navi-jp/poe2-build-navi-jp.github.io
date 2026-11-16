@@ -42,8 +42,8 @@ const rpc=(action,payload)=>new Promise((resolve,reject)=>{const id=++sequence;t
 const errors=[],vc=new VirtualConsole();vc.on('jsdomError',error=>{if(!error.message.includes('navigation'))errors.push(error.message);});
 const dom=new JSDOM(await read('simulator/index.html'),{url:origin+'/simulator/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc}),w=dom.window,d=w.document;dialogs(w);Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
 w.fetch=async url=>new Response(await read(new URL(String(url),origin).pathname.slice(1)));
-let holdUnique=false,releaseUnique,runtimeTraps=1,workerStarts=0;
-w.Worker=class{constructor(){workerStarts++;}postMessage({id,action,payload}){if(action==='calculate'&&runtimeTraps>0){runtimeTraps--;queueMicrotask(()=>this.onmessage?.({data:{id,error:'QA trapped calculation',errorCode:'ENGINE_STARTUP_FAILURE'}}));return;}rpc(action,payload).then(result=>{const deliver=()=>this.onmessage?.({data:{id,result}});if(action==='unique'&&holdUnique){holdUnique=false;releaseUnique=deliver;}else deliver();},error=>this.onmessage?.({data:{id,error:error.message}}));}};
+let holdUnique=false,releaseUnique,runtimeTraps=1,workerStarts=0;const workerInstances=[];
+w.Worker=class{constructor(){workerStarts++;workerInstances.push(this);}postMessage({id,action,payload}){if(action==='calculate'&&runtimeTraps>0){runtimeTraps--;queueMicrotask(()=>this.onmessage?.({data:{id,error:'QA trapped calculation',errorCode:'ENGINE_STARTUP_FAILURE'}}));return;}rpc(action,payload).then(result=>{const deliver=()=>this.onmessage?.({data:{id,result}});if(action==='unique'&&holdUnique){holdUnique=false;releaseUnique=deliver;}else deliver();},error=>this.onmessage?.({data:{id,error:error.message}}));}};
 let code=await read('assets/simulator.js');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
 const wait=async predicate=>{const until=Date.now()+30000;while(!predicate()){if(Date.now()>until)throw Error('Timeout: '+d.getElementById('sim-error').textContent+' / '+d.querySelector('#sim-editor-draft-status')?.textContent);await new Promise(r=>setTimeout(r,20));}};
 const click=selector=>{const e=d.querySelector(selector);assert(e,selector);e.click();};
@@ -58,6 +58,7 @@ try{
  change('#sim-build-search','no-match-123','input');assert.equal(d.querySelector('#sim-build-empty').hidden,false);click('#sim-build-reset');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,12);
  click('[data-preset="mercenary-twister-gemling"]');await wait(ready);const before=JSON.stringify(saved().request.items);
  assert.equal(workerStarts,2,'a trapped first calculation must use a fresh worker');
+ const staleWorkerError=new w.Event('error',{cancelable:true});workerInstances[0].onerror(staleWorkerError);assert.equal(staleWorkerError.defaultPrevented,true,'handled errors from terminated workers must not bubble to the current page');assert.equal(d.querySelector('#sim-error').hidden,true);assert.equal(workerStarts,2);
  const untouched=w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling');
  click('#sim-view-results');assert.equal(d.querySelector('.sim-layout').dataset.view,'results');assert.equal(d.querySelector('#sim-view-results').getAttribute('aria-pressed'),'true');
  click('#sim-flow-back');assert.equal(d.querySelector('.sim-layout').dataset.view,'editing');assert.equal(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'),untouched);

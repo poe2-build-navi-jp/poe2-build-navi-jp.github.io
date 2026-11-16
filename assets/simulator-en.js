@@ -87,7 +87,9 @@ function engine() {
    const current=new Worker(new URL('./simulator-worker-en.js?v=0f22d68261',import.meta.url),{type:'module'});worker=current;
    const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;catalog=null;if(!booting)bootPromise=null;for(const task of pending.values())task.reject(Error('Loading or calculation failed. Retry to resume without discarding your build.'));pending.clear();};
    current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);if(data.error){const error=Error(data.error);error.code=data.errorCode;task.reject(error);}else task.resolve(data.result);};
-   current.onerror=fail;
+   // Worker failures are handled below. Suppress stale module-load errors from
+   // a terminated worker rather than bubbling them into the new page's errors.
+   current.onerror=event=>{event?.preventDefault?.();fail();};
    const timer=setTimeout(fail,90000);
    try{editorCatalogs ||= loadEditorCatalogs();const[data]=await Promise.all([rpc('boot'),editorCatalogs]);catalog=data;booting=false;return data;}
    catch(error){fail();if(error.code!=='ENGINE_STARTUP_FAILURE'||attempt===3)throw error;$('sim-status').textContent='Restarting the calculation engine…';await new Promise(resolve=>setTimeout(resolve,250));}
