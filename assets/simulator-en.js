@@ -53,7 +53,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('This browser does not support the calculator. Please use a current version of Safari, Chrome or Edge.'));
- const current=new Worker(new URL('./simulator-worker-en.js?v=7ca6e2dfa8',import.meta.url),{type:'module'});worker=current;
+ const current=new Worker(new URL('./simulator-worker-en.js?v=12b9d58577',import.meta.url),{type:'module'});worker=current;
  const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;bootPromise=null;catalog=null;for(const task of pending.values())task.reject(Error('Loading or calculation failed. Retry to resume without discarding your build.'));pending.clear();};
  current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  current.onerror=fail;

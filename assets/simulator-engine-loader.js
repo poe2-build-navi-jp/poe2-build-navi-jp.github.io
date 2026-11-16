@@ -2,6 +2,13 @@
 const encoder = new TextEncoder();
 const sha256 = async bytes => [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(n=>n.toString(16).padStart(2,'0')).join('');
 const invalid = () => {throw Error('ENGINE_DATA_INTEGRITY');};
+// Build the startup arena through Rust's allocator, then return it for reuse.
+// Growing memory directly would leave these pages outside the allocator's arena.
+export function reserveStartupArena(wasm) {
+  const bytes = 160 * 1024 * 1024;
+  const pointer = wasm.__wbindgen_malloc(bytes,1);
+  wasm.__wbindgen_free(pointer,bytes,1);
+}
 export async function stageVerifiedData(engine, data, {digest = sha256, yieldControl = () => new Promise(resolve=>setTimeout(resolve,0)), onProgress = () => {}} = {}) {
   const files = data?.files;
   if (!files || typeof files !== 'object' || Array.isArray(files) || typeof files['manifest.json'] !== 'string') invalid();

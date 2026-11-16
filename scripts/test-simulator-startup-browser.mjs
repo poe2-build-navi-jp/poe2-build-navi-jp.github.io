@@ -27,7 +27,7 @@ try{
    await context.addInitScript(({auto,key,saved,named})=>{if(location.origin==='http://127.0.0.1:4173'&&!sessionStorage.getItem('startup-seed')){
     localStorage.setItem(auto,saved);localStorage.setItem(key,named);sessionStorage.setItem('startup-seed','1');}}, {auto,key,saved,named});
    const page=await context.newPage(),errors=[];let legacyLoads=0;page.on('pageerror',error=>errors.push(error.message));
-   page.on('console',message=>{if(message.text().startsWith('STARTUP_TRACE '))console.log(message.text());});
+   page.on('console',message=>{if(message.type()==='error'||message.text().startsWith('STARTUP_TRACE '))console.log('BROWSER_CONSOLE '+message.text());});
    await context.route('**/*',async route=>{
     const url=new URL(route.request().url());
     if(url.origin!=='http://127.0.0.1:4173')return route.abort();
@@ -37,7 +37,7 @@ try{
     if(/^\/assets\/simulator-worker(?:-en)?\.js$/.test(url.pathname)){
       let source=await readFile(resolve(root,'.'+url.pathname),'utf8');
       source=source.replace('postMessage({id,error:message});',"console.error('STARTUP_TRACE '+error.stack);postMessage({id,error:message});");
-      if(mode==='baseline')source=source.replace('await engine.default({module_or_path:await wasm.arrayBuffer()});','engine.initSync({module:await wasm.arrayBuffer()});');
+      if(mode==='baseline')source=source.replace('const instance = await engine.default({module_or_path:await wasm.arrayBuffer()});','const instance = engine.initSync({module:await wasm.arrayBuffer()});');
       return route.fulfill({status:200,contentType:'text/javascript',body:source});
     }
     return route.continue();
