@@ -42,15 +42,16 @@
     const current = document.querySelector('meta[name="poe2-release"]')?.content;
     if (!current || checking || document.hidden) return;
     checking = true;
+    const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), 10000);
     try {
-      const response = await fetch('/mobile-version.json?t=' + Date.now(), {cache: 'no-store', credentials: 'omit'});
+      const response = await fetch('/mobile-version.json?t=' + Date.now(), {cache: 'no-store', credentials: 'omit', signal:controller.signal});
       if (!response.ok) return;
       const next = await response.json();
       if (next.schemaVersion === 1 && next.origin === ORIGIN && /^[a-f0-9]{40}$/.test(next.revision) && next.revision !== current && notified !== next.revision) {
         notified = next.revision; post({type: 'update', revision: next.revision});
       }
     } catch { /* Keep the editor and its saved data usable while offline. */ }
-    finally { checking = false; }
+    finally { clearTimeout(timeout); checking = false; }
   }
   window.Poe2Host = Object.freeze({
     equipmentCamera: true,
@@ -100,8 +101,9 @@
   function ready() {
     post({type: 'ready', revision: document.querySelector('meta[name="poe2-release"]')?.content || ''});
     checkForUpdate();
-    setInterval(checkForUpdate, 60000);
+    setInterval(checkForUpdate, 15000);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) checkForUpdate(); });
+    window.addEventListener('online', checkForUpdate);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready, {once: true}); else ready();
 })();

@@ -12,7 +12,7 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 // deriving English files, so a new catalog policy cannot reuse an older worker.
 for(const file of ['simulator-worker.js','simulator.js']) {
  let body=read('assets/'+file);
- body=body.replace(/(\.\/simulator-(?:model|worker)\.js)(?:\?v=[a-f0-9]+)?/g,(_,reference)=>{
+ body=body.replace(/(\.\/simulator-(?:model|worker|engine-loader)\.js)(?:\?v=[a-f0-9]+)?/g,(_,reference)=>{
   const hash=createHash('sha256').update(read('assets/'+reference.slice(2))).digest('hex').slice(0,10);
   return reference+'?v='+hash;
  });

@@ -73,6 +73,26 @@ try {
 const hostile = setup('https://example.com/');
 try { assert.equal(hostile.w.Poe2Host, undefined); assert.equal(hostile.messages.length, 0); } finally { hostile.w.close(); }
 
+const stalled = setup();
+try {
+  await tick();
+  const timers=[],nativeTimeout=stalled.w.setTimeout.bind(stalled.w),nativeClear=stalled.w.clearTimeout.bind(stalled.w);
+  stalled.w.setTimeout=(fn,delay,...args)=>delay===10000?(timers.push(fn),50000+timers.length):nativeTimeout(fn,delay,...args);
+  stalled.w.clearTimeout=id=>{if(id<50000)nativeClear(id);};
+  let first=true;
+  stalled.w.fetch=async(url,options)=>{
+    assert.equal(options.cache,'no-store');assert.equal(options.credentials,'omit');assert(options.signal);
+    if(first){first=false;return new Promise((resolve,reject)=>options.signal.addEventListener('abort',()=>reject(Error('aborted')),{once:true}));}
+    return {ok:true,json:async()=>({schemaVersion:1,origin,revision:latest})};
+  };
+  stalled.w.localStorage.setItem('poe2-simulator:v1:retained','editing');
+  const pending=stalled.w.Poe2Host.checkForUpdate();await tick();
+  assert.equal(timers.length,1);timers[0]();await pending;
+  stalled.w.dispatchEvent(new stalled.w.Event('online'));await tick();
+  assert.equal(stalled.messages.filter(message=>message.type==='update').length,1,'a timed-out check cannot permanently block updates after reconnection');
+  assert.equal(stalled.w.localStorage.getItem('poe2-simulator:v1:retained'),'editing');
+}finally{stalled.w.close();}
+
 const temp = await mkdtemp(join(tmpdir(), 'poe2-release-'));
 try {
   await mkdir(join(temp, 'simulator'));

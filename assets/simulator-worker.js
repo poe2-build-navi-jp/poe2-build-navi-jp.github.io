@@ -1,5 +1,6 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
 import {validRequest} from './simulator-model.js?v=161ef63cbd';
+import {stageVerifiedData} from './simulator-engine-loader.js?v=f85f6c4910';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);
 let ready, dataFiles, runtime, gems, uniques, minions;
@@ -43,10 +44,11 @@ async function boot() {
   postMessage({progress:'ゲームデータを展開しています…'});
   const data = await dataResponse.json();
   if (data.version !== runtime.dataVersion) throw new Error('ゲームデータの版が一致しません。');
-  dataFiles = data.files;
-  for (const [path,content] of Object.entries(dataFiles)) engine.stageDataFile(path,content);
-  engine.initStagedData();
-  dataFiles = Object.fromEntries(Object.entries(dataFiles).filter(([path])=>path.includes('passive_tree')));
+  try {dataFiles = await stageVerifiedData(engine,data);}
+  catch(error) {
+    if(error.message==='ENGINE_DATA_INTEGRITY')throw new Error('計算データの整合性を確認できません。再読み込みしてください。');
+    throw error;
+  }
   gems = JSON.parse(engine.gemCatalogJson()).map(gem=>internalSkills.has(gem.skill_id)?{...gem,ui_hidden:true}:gem);
   uniques = JSON.parse(engine.uniqueCatalogJson());
   minions = JSON.parse(engine.minionCatalogJson());

@@ -52,7 +52,7 @@ function rpc(action,payload) {
 function engine() {
  if(bootPromise)return bootPromise;
  if(!window.Worker || !window.DecompressionStream || !window.WebAssembly) return Promise.reject(Error('このブラウザは計算機能に対応していません。最新のSafari・Chrome・Edgeをご利用ください。'));
- const current=new Worker(new URL('./simulator-worker.js?v=2564face8b',import.meta.url),{type:'module'});worker=current;
+ const current=new Worker(new URL('./simulator-worker.js?v=9640050485',import.meta.url),{type:'module'});worker=current;
  const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;bootPromise=null;catalog=null;for(const task of pending.values())task.reject(Error('読み込み・計算に失敗しました。「再試行」で構成を残したまま再開できます。'));pending.clear();};
  current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);data.error?task.reject(Error(data.error)):task.resolve(data.result);};
  current.onerror=fail;
