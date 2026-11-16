@@ -58,6 +58,7 @@ try{
    assert(await page.evaluate(()=>window.Poe2SimulatorLibrary.goalData().current.request.items.some(i=>i.slot==='helmet'&&i.text.includes('+123 to maximum Life'))));
    await page.locator('#sim-history-undo').click();await page.waitForFunction(()=>document.querySelector('#sim-stats').getAttribute('aria-busy')==='false'&&!window.Poe2SimulatorLibrary.goalData().current.request.items.some(i=>i.slot==='helmet'));assert.equal(await plan(page),before);
    // Closing and a failed image do not remove or replace the equipped item.
+   await page.locator('[data-slot="helmet"]').click();
    const retry=page.waitForEvent('filechooser');await page.locator('#sim-photo-select').click();const input=await retry;
    await input.setFiles({name:'invalid.png',mimeType:'image/png',buffer:Buffer.from('not an image')});
    await page.waitForFunction(()=>/Cannot open|画像を開けません/.test(document.querySelector('#sim-photo-status').textContent));
