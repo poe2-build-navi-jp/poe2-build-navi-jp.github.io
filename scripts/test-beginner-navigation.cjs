@@ -65,7 +65,8 @@ for (const card of quickCards) {
 }
 for (const [index, card] of featuredCards.entries()) {
   assert.deepEqual([...card.querySelectorAll('.build-tags span')].map(tag => tag.textContent),
-    discovery.featuredBuildTags[discovery.featuredBuildIds[index]], 'featured tags must remain data-backed');
+    // localize-japanese-names.mjs annotates the standalone SSF label.
+    discovery.featuredBuildTags[discovery.featuredBuildIds[index]].map(tag => tag === 'SSF' ? 'SSF（ソロ・自力入手）' : tag), 'featured tags must remain data-backed');
 }
 
 assert.equal(only(beginner, 'h1').textContent.trim().length > 0, true);

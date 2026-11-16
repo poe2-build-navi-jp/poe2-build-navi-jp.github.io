@@ -39,7 +39,11 @@ for(const file of await htmlFiles(root)){
   links=links.replace(/<a\b[^>]*href="\/simulator\/(?:#sim-resume)?"[^>]*>[\s\S]*?<\/a>/g,'');
   return `${start}${links}<a href="/simulator/"${file===join(root,'simulator/index.html')?' aria-current="page"':''}>シミュレーター</a><a href="/simulator/#sim-resume">保存した構成</a>${end}`;
  });
- html=insertBlock(html,'</head>','site-icon',ICON_BLOCK);icons++;
+ // English pages: shared Japanese destinations keep English labels, as the /en/simulator/ generator writes them.
+ if(file.startsWith(join(root,'en')+'/'))html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>`${start}${links.replace('>攻略ガイド</a>','>Guides (Japanese)</a>').replace('>初心者おすすめ</a>','>Starter builds (Japanese)</a>').replace('>全体検索</a>','>Site search (Japanese)</a>')}${end}`);
+ // English pages label the (Japanese-only) feed in English, as en/simulator does.
+ const iconBlock=file.startsWith(join(root,'en')+'/')?ICON_BLOCK.replace('POE2ビルドナビの更新情報','POE2 Build Navi updates (Japanese)'):ICON_BLOCK;
+ html=insertBlock(html,'</head>','site-icon',iconBlock);icons++;
  // Pages generated with their own copy of the footer get the current shared one (same markup);
  // the rest get it after </main>.
  html=html.replace(/(?<!<!-- site-footer:start -->)<footer class="site-footer">[\s\S]*?<\/footer>/,m=>m===FOOTER?m:FOOTER);

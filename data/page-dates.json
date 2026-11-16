@@ -5,12 +5,12 @@
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "3b3d2f5451736bdd",
+  "hash": "05a9f1e7e71aac27",
   "date": "2026-11-16",
   "hashVersion": 2
  },
  "/en/simulator/": {
-  "hash": "697ec0cac0c1d4f1",
+  "hash": "4fbfe7cd2b871c7b",
   "date": "2026-11-16",
   "hashVersion": 2
  },
@@ -25,8 +25,8 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "3b814b0a695877f4",
-  "date": "2026-11-15",
+  "hash": "cedd4cec423be011",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/name-index/": {
@@ -50,8 +50,8 @@
   "hashVersion": 2
  },
  "/skills/shield-wall/": {
-  "hash": "abf344ede4773bbd",
-  "date": "2026-11-15",
+  "hash": "2bea6eec614930e1",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/skills/twister/": {
@@ -135,13 +135,13 @@
   "hashVersion": 2
  },
  "/equipment/maligaros-virtuosity/": {
-  "hash": "de7e8a0a9ebc67d5",
-  "date": "2026-11-15",
+  "hash": "c8cabe8d843d9714",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/equipment/nightscale/": {
-  "hash": "36e2feb743989b46",
-  "date": "2026-11-15",
+  "hash": "f4dfc054855d600f",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/equipment/redemption/": {
@@ -165,8 +165,8 @@
   "hashVersion": 2
  },
  "/equipment/unset-ring/": {
-  "hash": "afdd9a1fe77b1a5c",
-  "date": "2026-11-15",
+  "hash": "c9491133ec75ab37",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/equipment/runeseekers-call/": {
@@ -250,8 +250,8 @@
   "hashVersion": 2
  },
  "/poe2-1-0/": {
-  "hash": "f04f550eba0000ec",
-  "date": "2026-11-15",
+  "hash": "49429a0ac7b1a7eb",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/issues/": {
@@ -270,12 +270,12 @@
   "hashVersion": 2
  },
  "/rating-criteria/": {
-  "hash": "7be9a2d154e8ddaa",
-  "date": "2026-11-15",
+  "hash": "dd58e6a671475f17",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/privacy/": {
-  "hash": "d2214b4d390074b1",
+  "hash": "650ee0e32151335d",
   "date": "2026-11-16",
   "hashVersion": 2
  },
@@ -285,7 +285,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "45ccc9edad64695b",
+  "hash": "625ce4f6627003bc",
   "date": "2026-11-16",
   "hashVersion": 2
  },
@@ -340,12 +340,12 @@
   "hashVersion": 2
  },
  "/builds/warrior/shield-wall-smith/": {
-  "hash": "aec66cff656c9ef3",
-  "date": "2026-11-15",
+  "hash": "e7f0e14710ea5920",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/builds/sorceress/sand-and-fire/": {
-  "hash": "8c6518fbb969418b",
+  "hash": "5976aba1abc329c9",
   "date": "2026-11-16",
   "hashVersion": 2
  },
@@ -370,8 +370,8 @@
   "hashVersion": 2
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "1174c1c4570489a5",
-  "date": "2026-11-15",
+  "hash": "7d6150fe97fd10cd",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/builds/mercenary/grenade-gemling/": {
@@ -385,8 +385,8 @@
   "hashVersion": 2
  },
  "/builds/sorceress/spark-stormweaver/": {
-  "hash": "8865aeab5b123ca4",
-  "date": "2026-11-15",
+  "hash": "bde68e53a1b6a11e",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/guides/skill-gems/": {
@@ -445,8 +445,8 @@
   "hashVersion": 2
  },
  "/guides/atlas-progression/": {
-  "hash": "72cfe7665d36291b",
-  "date": "2026-11-15",
+  "hash": "9e4ebf7974536ccc",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/guides/waystones-tablets/": {
@@ -490,8 +490,8 @@
   "hashVersion": 2
  },
  "/guides/endgame-items/": {
-  "hash": "3ed66a02afb3441e",
-  "date": "2026-11-15",
+  "hash": "dbb0bf9e075c6949",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/guides/atlas-passive-trees/": {
@@ -525,13 +525,13 @@
   "hashVersion": 2
  },
  "/guides/unique-gear/": {
-  "hash": "2f9c66d71905aed0",
-  "date": "2026-11-15",
+  "hash": "6c36ac3444229ca0",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/guides/arbiter-of-divinity/": {
-  "hash": "7ef048d21ea3f35b",
-  "date": "2026-11-15",
+  "hash": "433216d590b92f5c",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/guides/mageblood-legacies/": {
@@ -585,8 +585,8 @@
   "hashVersion": 2
  },
  "/guides/valuable-drops-act-4/": {
-  "hash": "e0c3f88f5c8b14fd",
-  "date": "2026-11-15",
+  "hash": "f9fe6bee1efb70df",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/guides/xesht/": {
@@ -615,8 +615,8 @@
   "hashVersion": 2
  },
  "/dictionary/dps/": {
-  "hash": "3fbd2e8dd0b26e4e",
-  "date": "2026-11-15",
+  "hash": "85458dac1d80c5e2",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/dictionary/skill-gem/": {
@@ -630,8 +630,8 @@
   "hashVersion": 2
  },
  "/dictionary/passive-tree/": {
-  "hash": "bea68c0396d1c16c",
-  "date": "2026-11-15",
+  "hash": "38a88a663f83416c",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/dictionary/resistance/": {
@@ -650,8 +650,8 @@
   "hashVersion": 2
  },
  "/dictionary/league-starter/": {
-  "hash": "6509ca2f8192b58d",
-  "date": "2026-11-15",
+  "hash": "20705484361e1dd9",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/dictionary/ssf/": {
@@ -690,8 +690,8 @@
   "hashVersion": 2
  },
  "/guides/mana-problem/": {
-  "hash": "8ee89caa32193b46",
-  "date": "2026-11-15",
+  "hash": "708f164d524b786f",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/guides/cant-beat-boss/": {
@@ -705,18 +705,18 @@
   "hashVersion": 2
  },
  "/poe2-1-0/release-date/": {
-  "hash": "7317f78f7930713a",
-  "date": "2026-11-15",
+  "hash": "56361aaf096363e2",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/poe2-1-0/how-to-start/": {
-  "hash": "6b8b36e7b630a0c4",
-  "date": "2026-11-15",
+  "hash": "d0a92e715fdcaba9",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/poe2-1-0/system-requirements/": {
-  "hash": "7c47bfb2e5482a04",
-  "date": "2026-11-15",
+  "hash": "683cb3af34d12275",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/poe2-1-0/japanese/": {
@@ -725,8 +725,8 @@
   "hashVersion": 2
  },
  "/poe2-1-0/microtransactions/": {
-  "hash": "4c6916057eb24676",
-  "date": "2026-11-15",
+  "hash": "59d74000ca306a7d",
+  "date": "2026-11-16",
   "hashVersion": 2
  },
  "/poe2-1-0/controller/": {
@@ -777,6 +777,11 @@
  "/poe2-1-0/balance-changes/": {
   "hash": "785912e0813f2c36",
   "date": "2026-11-15",
+  "hashVersion": 2
+ },
+ "/poe2-1-0/carry-over/": {
+  "hash": "5570b9a53eab1320",
+  "date": "2026-11-16",
   "hashVersion": 2
  }
 }
