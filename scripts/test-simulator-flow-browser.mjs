@@ -23,7 +23,7 @@ try{for(const [type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
    const before=await page.locator('#sim-stats .sim-stat b').allTextContents(),key='poe2-simulator:v1:mercenary-twister-gemling';
    await page.locator('[data-slot="helmet"]').click();await page.locator('[data-equipment-mode="paste"]').click();
    assert.equal(await page.locator('#sim-item-text').isVisible(),true);
-   const draft='Rarity: Rare\nFlow QA\nLeather Cap\n--------\n+123 to maximum Life';await page.locator('#sim-item-text').fill(draft);
+   const draft='Rarity: Rare\nFlow QA\nBrimmed Helm\n--------\n+123 to maximum Life';await page.locator('#sim-item-text').fill(draft);
    const saved=await page.evaluate(key=>localStorage.getItem(key),key);
    await page.locator('#sim-view-results').click();assert.equal(await page.locator('.sim-editor').isVisible(),false);assert.equal(await page.locator('#sim-results-panel').isVisible(),true);assert.deepEqual(await page.locator('#sim-stats .sim-stat b').allTextContents(),before);
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),saved,'view switches cannot save an unconfirmed item');
