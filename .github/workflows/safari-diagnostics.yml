@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        mode: [default, bbq, interpreter]
+        mode: [default]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:

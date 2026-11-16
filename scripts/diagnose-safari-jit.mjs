@@ -14,8 +14,14 @@ const browser=await webkit.launch({env:{...process.env,...variants[mode]}}),repo
 console.log('DIAGNOSTIC',JSON.stringify({mode,platform:process.platform,arch:process.arch,webkit:browser.version(),options:variants[mode]}));
 try{for(let index=0;index<16;index++){
  const locale=index%2?'/en':'',context=await browser.newContext({viewport:{width:index%2?1366:320,height:900}}),page=await context.newPage();
- page.on('console',message=>{if(message.type()==='error')console.log('CONSOLE '+message.text());});
- await context.route('**/*',async route=>{const url=new URL(route.request().url());if(url.origin!=='http://127.0.0.1:4173')return route.abort();if(/^\/assets\/simulator-worker(?:-en)?\.js$/.test(url.pathname)){const body=(await readFile(resolve(root,'.'+url.pathname),'utf8')).replace('postMessage({id,error:message});',"console.error('TRACE '+error.stack);postMessage({id,error:message});");return route.fulfill({status:200,contentType:'text/javascript',body});}return route.continue();});
+ page.on('console',message=>{if(message.type()==='error'||message.text().startsWith('MEMORY_'))console.log('CONSOLE '+message.text());});
+ await context.route('**/*',async route=>{const url=new URL(route.request().url());if(url.origin!=='http://127.0.0.1:4173')return route.abort();if(/^\/assets\/simulator-worker(?:-en)?\.js$/.test(url.pathname)){
+  let body=await readFile(resolve(root,'.'+url.pathname),'utf8');
+  if(!body.includes('engine.initSync({module:await wasm.arrayBuffer()});')||!body.includes('engine.initStagedData();'))throw Error('Instrumentation anchor missing');
+  body=body.replace('engine.initSync({module:await wasm.arrayBuffer()});',"const wasmSnapshot=engine.initSync({module:await wasm.arrayBuffer()});console.log('MEMORY_INIT '+JSON.stringify({bytes:wasmSnapshot.memory.buffer.byteLength,sha:await digest(new Uint8Array(wasmSnapshot.memory.buffer))}));");
+  body=body.replace('engine.initStagedData();',"console.log('MEMORY_STAGED '+JSON.stringify({bytes:wasmSnapshot.memory.buffer.byteLength,sha:await digest(new Uint8Array(wasmSnapshot.memory.buffer))}));engine.initStagedData();");
+  body=body.replace('postMessage({id,error:message});',"console.error('TRACE '+error.stack);postMessage({id,error:message});");
+  return route.fulfill({status:200,contentType:'text/javascript',body});}return route.continue();});
  try{for(const load of ['cold','reload']){
   const started=Date.now();let error='';
   try{if(load==='cold')await page.goto('http://127.0.0.1:4173'+locale+'/simulator/?build=mercenary-twister-gemling',{waitUntil:'domcontentloaded'});else await page.reload({waitUntil:'domcontentloaded'});
