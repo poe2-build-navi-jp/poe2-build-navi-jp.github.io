@@ -38,11 +38,29 @@ try{for(const [type,browserName]of [[chromium,'chromium'],[webkit,'webkit']]){
    const bounds=await page.locator('[data-my-build-resume]').boundingBox();assert(bounds.height>=48);assert(bounds.y<900,'continue action must be on the first phone screen');
    assert(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1));
    const original=await savedSnapshot(page);
+   const taskInput=page.locator('[data-actions-input]'),taskRows=page.locator('.my-build-task');
+   const addTask=async text=>{await taskInput.fill(text);await page.locator('[data-actions-submit]').click();};
+   await addTask('指輪を交換');await addTask('指輪を交換');assert.equal(await taskRows.count(),1,'reject duplicate next steps');
+   await addTask('火耐性を75%にする');await addTask('<img src=x onerror=alert(1)>');assert.equal(await taskRows.count(),3);
+   assert.equal(await taskRows.locator('img').count(),0);assert.equal(await taskInput.isDisabled(),true);
+   await taskRows.nth(0).locator('input').check();assert.equal(await taskRows.nth(0).locator('input').isChecked(),true);
+   await page.reload();await page.locator('#my-build-home').waitFor();assert.equal(await taskRows.count(),3);assert.equal(await taskRows.nth(0).locator('input').isChecked(),true,'completed steps persist');
+   await taskRows.nth(1).locator('[data-action="edit"]').click();await taskInput.fill('冷気耐性を75%にする');await page.locator('[data-actions-submit]').click();assert((await taskRows.nth(1).textContent()).includes('冷気耐性'));
+   await page.locator('[data-actions-clear]').click();assert.equal(await taskRows.count(),2);await page.locator('[data-actions-undo]').click();assert.equal(await taskRows.count(),3);
+   await taskRows.nth(2).locator('[data-action="delete"]').click();assert.equal(await taskRows.count(),2);await page.locator('[data-actions-undo]').click();assert.equal(await taskRows.count(),3);
+   const editBounds=await taskRows.nth(0).locator('[data-action="edit"]').boundingBox();assert(editBounds.width>=44&&editBounds.height>=44);
+   assert(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),'long task text must wrap at phone widths');
    await page.locator('#my-build-select').selectOption(preset+':named:home-named');await page.locator('#my-build-name').filter({hasText:name}).waitFor();
+   assert.equal(await taskRows.count(),0,'a named save has its own next steps');await addTask('名前付き構成の次の目標');
    assert.equal(await page.locator('#my-build-name img').count(),0,'a private configuration name is text');assert.match(await page.locator('[data-my-build-resume]').getAttribute('href'),/saved=home-named/);
-   await page.reload();await page.locator('#my-build-name').filter({hasText:name}).waitFor();assert.equal(await page.locator('#my-build-select').inputValue(),preset+':named:home-named','remember the chosen configuration');
+   await page.reload();await page.locator('#my-build-name').filter({hasText:name}).waitFor();assert.equal(await page.locator('#my-build-select').inputValue(),preset+':named:home-named','remember the chosen configuration');assert.equal(await taskRows.count(),1,'named-save tasks persist');
    await page.locator('#my-build-select').selectOption(otherPreset+':auto:');await page.locator('[data-my-build-level]').filter({hasText:'83'}).waitFor();assert.equal(await page.locator('.my-build-goal-counts').count(),0,'another build does not inherit a target');
+   assert.equal(await taskRows.count(),0,'another preset cannot inherit tasks');await taskInput.fill('保存前の入力');await page.evaluate(()=>window.dispatchEvent(new Event('focus')));await page.waitForTimeout(150);assert.equal(await taskInput.inputValue(),'保存前の入力','dashboard refresh preserves typed text');
    await page.locator('#my-build-select').selectOption(preset+':auto:');await page.locator('.my-build-goal-counts dd').first().waitFor();
+   assert.equal(await taskRows.count(),3);
+   await page.locator('[data-my-build-actions]').scrollIntoViewIfNeeded();
+   await page.screenshot({path:resolve(output,label+'-next-actions.jpg'),type:'jpeg',quality:85});
+   await page.locator('#my-build-home').scrollIntoViewIfNeeded();
    await page.screenshot({path:resolve(output,label+'-home.jpg'),type:'jpeg',quality:85});
    assert.deepEqual(await savedSnapshot(page),original,'changing the displayed configuration cannot edit a save or goal');
    // An unavailable update/index endpoint cannot block the resume action.
@@ -56,9 +74,9 @@ try{for(const [type,browserName]of [[chromium,'chromium'],[webkit,'webkit']]){
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),namedPlanKey(preset)),values[namedPlanKey(preset)]);
    await page.locator('#sim-change-build').click();await page.locator('#my-build-home').waitFor();await page.locator('[data-my-build-resume]').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor({state:'attached',timeout:100000});assert.equal(await page.locator('#sim-level').inputValue(),'85','one tap resumes the correct applied draft');
    assert.deepEqual(errors,[]);assert(!requests.some(url=>url.includes('PRIVATE')||url.includes(encodeURIComponent(name))));
-   reports.push({browser:browserName,width,locale:locale||'ja',noEngineOnHome:true,goals:[1,2,1],resumeLevel:85,result:'PASS'});console.log(JSON.stringify(reports.at(-1)));
+   reports.push({browser:browserName,width,locale:locale||'ja',noEngineOnHome:true,goals:[1,2,1],nextActions:'add/check/edit/clear/delete/undo/persist/isolate',resumeLevel:85,result:'PASS'});console.log(JSON.stringify(reports.at(-1)));
   }catch(error){await page.screenshot({path:resolve(output,label+'-failure.jpg'),type:'jpeg'}).catch(()=>{});throw error;}
   finally{await context.close();}
  }}finally{await browser.close();}
 }}finally{await writeFile(resolve(output,'results.json'),JSON.stringify(reports,null,2));server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
-console.log('PASS: empty/returning home, recent and named selection, private text, persistent view preference, exact target gaps, failed data requests, direct goal navigation, correct resumed level and no horizontal overflow in Chromium/WebKit at 320/390/768/1366px.');
+console.log('PASS: empty/returning home, recent and named selection, three private next steps, completion/edit/removal/undo, persistent drafts, exact target gaps, failed requests, direct goal navigation, correct resumed level and no horizontal overflow in Chromium/WebKit at 320/390/768/1366px.');

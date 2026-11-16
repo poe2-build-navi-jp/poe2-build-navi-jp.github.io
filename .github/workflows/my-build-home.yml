@@ -1,7 +1,7 @@
 name: Check My builds home
 on:
   pull_request:
-    paths: ['assets/my-build-home*', 'assets/simulator-model*', 'assets/simulator-goal*', 'tools/my-build-home-layout.mjs', 'tools/enhance-site-usability.mjs', 'scripts/test-my-build-home*', 'index.html', 'simulator/**', 'en/simulator/**', 'data/simulator-presets*.json', 'data/simulator-index.json', 'data/saved-build-updates.json', '.github/workflows/my-build-home.yml']
+    paths: ['assets/my-build-home*', 'assets/my-build-actions*', 'assets/simulator-model*', 'assets/simulator-goal*', 'tools/my-build-home-layout.mjs', 'tools/enhance-site-usability.mjs', 'scripts/test-my-build-home*', 'scripts/test-my-build-actions*', 'index.html', 'simulator/**', 'en/simulator/**', 'data/simulator-presets*.json', 'data/simulator-index.json', 'data/saved-build-updates.json', '.github/workflows/my-build-home.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,6 +17,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: node scripts/test-my-build-home.mjs
+      - run: node scripts/test-my-build-actions.mjs
       - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
       - run: node scripts/test-my-build-home-browser.mjs
       - uses: actions/upload-artifact@v4

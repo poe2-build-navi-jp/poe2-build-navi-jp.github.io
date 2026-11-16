@@ -6,7 +6,7 @@ import {myBuildHomeMarkup} from './my-build-home-layout.mjs';
 const root=resolve(import.meta.dirname,'..');
 const [homePresets,homePresetsEn]=await Promise.all(['data/simulator-presets.json','data/simulator-presets-en.json'].map(async path=>JSON.parse(await readFile(resolve(root,path),'utf8'))));
 // Keep the home’s small, engine-free modules aligned with their model/data imports.
-for(const name of ['my-build-home-model.js','my-build-home.js']){
+for(const name of ['my-build-home-model.js','my-build-actions-model.js','my-build-actions.js','my-build-home.js']){
  const path=resolve(root,'assets',name);let source=await readFile(path,'utf8');
  for(const match of [...source.matchAll(/from '(\.\/[a-z-]+\.js)(?:\?v=[a-f0-9]+)?'/g)]){const hash=createHash('sha256').update(await readFile(resolve(root,'assets',match[1]))).digest('hex').slice(0,10);source=source.replace(match[0],`from '${match[1]}?v=${hash}'`);}
  for(const path of ['data/simulator-index.json']){const hash=createHash('sha256').update(await readFile(resolve(root,path))).digest('hex').slice(0,10);source=source.replace(new RegExp('/'+path.replaceAll('.','\\.')+'(?:\\?v=[a-f0-9]+)?','g'),'/'+path+'?v='+hash);}

@@ -1,4 +1,5 @@
 import {HOME_KEY,SEEN_KEY,readHomeRecords,selectHomeRecord,resumeHref,checkedPresets,readHomeGoal,summarizeHomeGoal,readSeen,homeNotices} from './my-build-home-model.js?v=4cc2349cc9';
+import {installBuildActions} from './my-build-actions.js?v=bd0031fa01';
 
 export function installMyBuildHome(document){
  const section=document.getElementById('my-build-home'),embedded=document.getElementById('my-build-presets');
@@ -13,6 +14,7 @@ export function installMyBuildHome(document){
  const track=(name,record=current)=>{if(record&&typeof window.gtag==='function')window.gtag('event',name,{source:document.querySelector('#sim-chooser')?'simulator':'home',build_id:record.preset,save_kind:record.kind});};
  const message=(box,content)=>box.replaceChildren(make('p',content,'my-build-help'));
  const storage=()=>window.localStorage;
+ const actions=installBuildActions(find('[data-my-build-actions]'));
  const loadJSON=async url=>{
   const controller=new window.AbortController(),timeout=window.setTimeout(()=>controller.abort(),12000);
   try{const response=await window.fetch(url,{cache:'no-cache',credentials:'omit',signal:controller.signal});if(!response.ok)throw Error('HOME_FETCH');return await response.json();}finally{window.clearTimeout(timeout);}
@@ -64,9 +66,11 @@ export function installMyBuildHome(document){
   const token=++sequence;retry.hidden=true;
   let result,preferred;
   try{result=readHomeRecords(storage(),presets);preferred=choice?JSON.stringify({version:1,key:choice}):storage().getItem(HOME_KEY);}catch{
+   actions.update(null);
    section.hidden=false;grid.hidden=true;select.closest('label').hidden=true;showWarning(t('このブラウザーの保存を確認できません。ブラウザーの保存設定を確認してください。','Device saves could not be read. Check your browser’s storage settings.'));return;
   }
   current=selectHomeRecord(result.records,preferred);
+  actions.update(current);
   section.hidden=!current&&!result.problems.length;
   if(section.hidden)return;
   grid.hidden=!current;select.closest('label').hidden=!current;

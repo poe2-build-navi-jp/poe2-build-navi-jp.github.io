@@ -9,7 +9,8 @@
 .my-build-picker{display:block;margin:0 0 16px;font-size:13px;font-weight:650}
 .my-build-picker select{display:block;width:100%;max-width:100%;min-width:0;min-height:48px;margin:5px 0 0;padding:10px 12px;border:1px solid #c9c3b5;border-radius:8px;background:#fff;color:#30372b;font-family:inherit;font-size:16px;font-weight:400;line-height:1.5;text-overflow:ellipsis}
 .my-build-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:14px;align-items:stretch}
-.my-build-current{grid-row:1/3;display:flex;flex-direction:column;align-items:stretch;padding:22px;border:1px solid #cbc3ae;border-radius:9px;background:#f3eddf;min-width:0}
+.my-build-column{display:flex;flex-direction:column;gap:14px;min-width:0}
+.my-build-current{display:flex;flex-direction:column;align-items:stretch;padding:22px;border:1px solid #cbc3ae;border-radius:9px;background:#f3eddf;min-width:0}
 .my-build-kind{margin:0 0 8px;color:#6e613f;font-size:12px;font-weight:650}
 .my-build-current #my-build-name{font-size:22px;line-height:1.45;margin:0 0 5px}
 .my-build-current [data-my-build-preset]{margin:0;color:#62675a;font-size:13px;overflow-wrap:anywhere}
@@ -20,7 +21,33 @@
 .my-build-date{margin:0 0 20px;font-size:12px;color:#606654}
 .my-build-resume{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:50px;margin-top:auto;padding:11px 15px;border-radius:7px;background:#765023;color:#fff!important;text-decoration:none;font-size:16px;font-weight:700}
 .my-build-resume:hover{background:#60401d;color:#fff}
-.my-build-goal,.my-build-updates{min-width:0;padding:18px;border:1px solid #dbd5c8;border-radius:9px;background:#fff}
+.my-build-goal,.my-build-updates,.my-build-actions{min-width:0;padding:18px;border:1px solid #dbd5c8;border-radius:9px;background:#fff}
+.my-build-actions-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.my-build-actions-head h3{margin-bottom:0}
+[data-actions-count]{font-size:12px;color:#62675c;white-space:nowrap;font-variant-numeric:tabular-nums}
+.my-build-tasks{list-style:none!important;margin:0!important;padding:0!important}
+.my-build-tasks .my-build-task{display:flex;align-items:center;flex-wrap:wrap;gap:0 8px;margin:0!important;padding:5px 0!important;border-bottom:1px solid #e5e0d6}
+.my-build-task-check{display:flex;align-items:center;gap:10px;flex:1 1 180px;min-width:0;min-height:48px;cursor:pointer}
+.my-build-task-check input{appearance:auto;flex:0 0 auto;width:22px;height:22px;margin:0;accent-color:#765023;cursor:pointer}
+.my-build-task-check span{font-size:14px;line-height:1.6;overflow-wrap:anywhere;white-space:pre-wrap}
+.my-build-task.is-done .my-build-task-check span{text-decoration:line-through;color:#68705f}
+.my-build-task-buttons{display:flex;gap:4px;margin-left:auto}
+.my-build-actions button{min-height:44px;padding:8px 10px;border:1px solid #cfc7b5;border-radius:6px;background:#faf8f0;color:#5e4d31;font:inherit;font-size:13px;cursor:pointer;touch-action:manipulation}
+.my-build-task-buttons button{min-width:44px;border-color:transparent;background:transparent}
+.my-build-task-buttons button:hover{background:#f4f0e6}
+.my-build-action-form{margin-top:14px}
+.my-build-action-form>label{display:block;margin-bottom:5px;font-size:13px;font-weight:650}
+.my-build-action-entry{display:flex;gap:8px;align-items:stretch}
+.my-build-action-entry input{display:block;min-width:0;width:100%;min-height:48px;padding:10px;border:1px solid #bdb9ac;border-radius:6px;background:#fff;color:#293126;font:inherit;font-size:16px;line-height:1.5}
+.my-build-action-entry input::placeholder{color:#707466;opacity:1}
+.my-build-action-entry button{min-width:60px;background:#765023;border-color:#765023;color:#fff;font-size:14px;font-weight:650}
+.my-build-actions button:disabled,.my-build-action-entry input:disabled{cursor:default;opacity:.65}
+.my-build-action-cancel{margin-top:8px}
+.my-build-action-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.my-build-action-tools:has(>[hidden]):not(:has(>:not([hidden]))){display:none}
+.my-build-action-status{margin:8px 0 0;font-size:13px;color:#795027;overflow-wrap:anywhere}
+.my-build-action-status:empty{display:none}
+.my-build-action-help{margin:10px 0 0;color:#606856;font-size:12px;line-height:1.6}
 .my-build-help{margin:8px 0 12px;font-size:13px;line-height:1.65;color:#5c6454;overflow-wrap:anywhere}
 .my-build-goal-name{margin:0 0 4px;font-size:14px;font-weight:650;overflow-wrap:anywhere}
 .my-build-goal-counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:10px 0;gap:8px}
@@ -41,7 +68,7 @@
 .my-build-warning{margin:12px 0 0;font-size:13px;color:#8b4823;overflow-wrap:anywhere}
 .my-build-warning:empty{display:none}
 .my-build-device{margin:12px 0 0;color:#606856;font-size:12px}
-.my-build-home :is(a,button,select):focus-visible{outline:3px solid #a36930;outline-offset:3px}
+.my-build-home :is(a,button,select,input):focus-visible{outline:3px solid #a36930;outline-offset:3px}
 .my-build-home[hidden],.my-build-home [hidden]{display:none!important}
 .sim-chooser>.my-build-home{margin:0 auto 24px}
 @media(max-width:720px){
@@ -49,12 +76,13 @@
  .my-build-head h2{font-size:22px}
  .my-build-intro{font-size:13px;margin-bottom:14px}
  .my-build-grid{grid-template-columns:minmax(0,1fr);gap:12px}
- .my-build-current{grid-row:auto;padding:16px}
+ .my-build-column{gap:12px}
+ .my-build-current{padding:16px}
  .my-build-current #my-build-name{font-size:20px}
  .my-build-metrics{margin:10px 0;gap:28px}
  .my-build-metrics dd{font-size:22px}
  .my-build-date{margin-bottom:12px}
- .my-build-goal,.my-build-updates{padding:15px}
+ .my-build-goal,.my-build-updates,.my-build-actions{padding:15px}
  .my-build-home h3{font-size:16px}
  .my-build-picker select{font-size:16px;min-height:48px}
  .my-build-resume{min-height:50px;font-size:16px}
