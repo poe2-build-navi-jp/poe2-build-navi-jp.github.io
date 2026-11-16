@@ -1,3 +1,4 @@
+import {growthMarkup} from './my-build-growth-layout.mjs';
 export function myBuildHomeMarkup(presets,en=false){
  const t=(ja,english)=>en?english:ja;
  const catalog=presets.map(({id,name,class:classId,className,path,contentRevision})=>({id,name,class:classId,className,path,contentRevision}));
@@ -25,6 +26,7 @@ export function myBuildHomeMarkup(presets,en=false){
   </section>
  </div><div class="my-build-column">
   <section class="my-build-goal" aria-labelledby="my-build-goal-title"><h3 id="my-build-goal-title">${t('目標までの残り','Your target')}</h3><div data-my-build-goal></div><a class="my-build-secondary" data-my-build-goal-open>${t('目標を確認・設定','Review or set a target')}</a></section>
+  ${growthMarkup(en)}
   <section class="my-build-updates" aria-labelledby="my-build-updates-title"><h3 id="my-build-updates-title">${t('この構成に関係する更新','Updates for this build')} <span data-my-build-update-count></span></h3><div data-my-build-updates aria-live="polite"></div><div class="my-build-update-actions"><button type="button" data-my-build-seen hidden>${t('表示した案内を既読にする','Mark shown updates as read')}</button><button type="button" data-my-build-retry hidden>${t('再読み込み','Retry')}</button></div></section>
  </div></div><p class="my-build-warning" data-my-build-warning role="status"></p><p class="my-build-device">${t('このブラウザーにある保存構成を表示しています。','Showing configurations saved in this browser.')}</p>
  </section><script id="my-build-presets" type="application/json">${json}</script><!-- my-build-home:end -->`;
