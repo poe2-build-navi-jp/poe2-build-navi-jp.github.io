@@ -1,5 +1,5 @@
-import {mountCommunity} from './community-ui.js?v=63db7614f7';
-import {PublicBuildTransport} from './community-transport.js?v=9032fee4ae';
+import {mountCommunity} from './community-ui.js?v=78859494db';
+import {PublicBuildTransport} from './community-transport.js?v=4d1ed0596b';
 import {parseNamedPlans, namedPlanKey} from './simulator-model.js?v=161ef63cbd';
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;

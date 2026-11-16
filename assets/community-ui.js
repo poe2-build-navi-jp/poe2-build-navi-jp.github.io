@@ -103,7 +103,8 @@ export async function mountCommunity(root, {api, catalog, getSources, publicBase
   const localUrl = id => location.pathname + '?build=' + encodeURIComponent(id);
   const errorText = cause => {
     const code = cause.message || '';
-    if (cause.status === 402) return t('公開サービスの利用枠に達しています。現在は投稿・閲覧・取り下げを処理できません。入力と端末内の保存構成は保持しています。', 'The public service has reached its usage allowance. Publishing, reading and withdrawal are currently unavailable. Your inputs and local saves are intact.');
+    if (code === 'PUBLIC_LEGACY_PAUSED') return t('以前の投稿サーバーは停止中です。11月17日9時以降に再確認できます。投稿や管理コードは削除していません。', 'The previous post server is unavailable. Try again after 00:00 UTC on November 17. Posts and management codes have not been deleted.');
+    if (cause.status === 402) return t('公開サービスが一時停止しています。入力と端末内の保存構成は保持しています。時間をおいて再試行してください。', 'The public service is temporarily unavailable. Your inputs and local saves are intact. Try again later.');
     if (code === 'PUBLIC_LOCAL_CODE') return t('管理コードを端末に保存できません。控えたコードで復元するか、端末の保存設定を確認してください。投稿内容は変更していません。', 'The management code could not be saved on this device. Restore a saved code or check local storage. No post was changed.');
     if (/PUBLIC_(INPUT|BUDGET|SKILL|GEM|NODE|PRESET|TREE|JEWELS|SIZE)/.test(code)) return t('構成や入力内容を確認してください。対応中のデータ版・スキルを使い、ジュエルなし・64KB以下の構成を選べます。入力と元の保存は保持しています。', 'Check the inputs and build. Use supported data and skills, no jewels, and a snapshot under 64 KB. Your inputs and original save are intact.');
     if (cause.status === 404) return t('投稿が見つかりません。取り下げられた可能性があります。', 'This post was not found. It may have been withdrawn.');
@@ -146,6 +147,7 @@ export async function mountCommunity(root, {api, catalog, getSources, publicBase
           : Object.values(filters).some(value => value !== '' && value != null)
             ? t('条件に一致する投稿はありません。条件を変えて探せます。', 'No matching posts. Try different filters.')
             : t('まだ投稿がありません。保存した構成を最初に投稿できます。', 'No posts yet. You can publish the first saved build.');
+      if (response.legacyNotice) $('list-status').textContent += t(' 復旧後の投稿を表示しています。以前の投稿は元の共有URL・管理コードから確認できます。', ' Showing posts made since recovery. Earlier posts remain accessible through their original share URLs and management codes when the previous server is available.');
     } catch (cause) {
       if (sequence === listing) $('list-status').textContent = errorText(cause);
     }
@@ -156,6 +158,7 @@ export async function mountCommunity(root, {api, catalog, getSources, publicBase
       $('mine').innerHTML = response.posts.map(post => card(post, true)).join('');
       $('manage-status').textContent = response.posts.length ? t(response.posts.length + '件の投稿を管理できます。', 'Manage ' + response.posts.length + ' posts.')
         : t('この管理コードの投稿はありません。', 'No posts for this management code.');
+      if (response.partial) $('manage-status').textContent = t('現在確認できる投稿は', 'Currently available posts: ') + response.posts.length + t('件です。以前の投稿サーバーに接続できないため、過去の投稿は未確認です。管理コードは残しています。', '. The previous server is unavailable, so earlier posts could not be checked. Your management code is intact.');
     } catch (cause) { $('manage-status').textContent = errorText(cause); }
   }
   async function detail(id, updateAddress = true) {

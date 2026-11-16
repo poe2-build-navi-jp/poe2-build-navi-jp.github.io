@@ -14,7 +14,7 @@ try {
     publicBase: location.href, simulatorBase: location.origin + '/simulator/',
     api: async operation => {
       if (operation === 'list') return {posts: [], nextToken: null};
-      throw Object.assign(new Error('CREDITS_USAGE_LIMIT_REACHED'), {status: 402});
+      throw Object.assign(new Error('APP_TEMPORARILY_UNAVAILABLE'), {status: 402});
     },
   });
   document.getElementById('community-source').value = 'source';
@@ -23,13 +23,13 @@ try {
   document.getElementById('community-consent').checked = true;
   document.getElementById('community-compose-form').dispatchEvent(new dom.window.Event('submit', {bubbles: true, cancelable: true}));
   for (let turn = 0; turn < 10 && document.getElementById('community-compose-fields').disabled; turn++) await new Promise(setImmediate);
-  assert.match(document.getElementById('community-post-status').textContent, /利用枠/);
+  assert.match(document.getElementById('community-post-status').textContent, /一時停止/);
   assert.equal(document.getElementById('community-title').value, 'Retained draft');
   assert.equal(document.getElementById('community-preview').hidden, false);
   assert.equal(document.getElementById('community-compose-fields').disabled, false);
   assert.equal(JSON.stringify(saved), sourceBefore);
   assert(!localStorage.getItem('poe2-simulator:v1:' + saved.preset));
-  console.log('PASS: HTTP 402 is explicit, preserves the reviewed draft and source, and does not write simulator saves');
+  console.log('PASS: Generic HTTP 402 does not claim quota exhaustion and, preserves the reviewed draft and source, and does not write simulator saves');
 } finally {
   dom.window.close();
   for (const key of ['window', 'document', 'localStorage', 'location', 'history']) delete globalThis[key];

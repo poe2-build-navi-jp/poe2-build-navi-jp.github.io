@@ -1,5 +1,5 @@
-import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=5e2b21adc0';
-import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=1b78fc126c';
+import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=3c9638fed8';
+import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=46fb6c98fc';
 import {newSyncCode} from './simulator-sync-crypto.js?v=6d43b0469b';
 
 const en = document.documentElement.lang === 'en';
@@ -26,7 +26,9 @@ function recordedConditions(record){
     [t('購入予定額B','Planned cost B')]:price(record.source.prices.entries.find(p=>p.id==='b')),[t('予算','Budget')]:price(record.source.prices.budget)};
 }
 function errorText(cause) {
-  if (cause.status === 402) return t('同期サービスの利用枠に達しています。自動再試行を停止しました。端末内の保存は利用できます。', 'The sync service has reached its usage allowance. Automatic retries are paused. Local saves remain available.');
+  if (cause.message === 'SYNC_LEGACY_PAUSED') return t('以前の保管庫は停止中です。11月17日9時以降に再試行できます。端末内の保存は残っています。', 'The previous vault is unavailable. Retry after 00:00 UTC on November 17. Local saves are intact.');
+  if (cause.message === 'SYNC_LEGACY_EMPTY') return t('この端末に移せる保存構成がありません。「以前の保管庫から読み込む」で復旧するか、保存構成のある端末から同期してください。', 'There are no local builds to transfer. Restore the previous vault, or sync from a device that has your saves.');
+  if (cause.status === 402) return t('同期サービスが一時停止しています。自動再試行を停止しました。端末内の保存は利用できます。', 'The sync service is temporarily unavailable. Automatic retries are paused. Local saves remain available.');
   if (cause.status === 403) return t('接続コードが違うか、保管庫が無効化されています。端末内の保存は残っています。','The code is incorrect or the vault was revoked. Local saves remain available.');
   if (cause.status === 429) return t('同期サービスの利用上限に達しました。自動再試行を停止しました。端末内の保存は利用できます。','The sync service reached its usage limit. Automatic retries are paused. Local saves remain available.');
   if (cause.status === 409) return t('別の端末でも更新されました。最新の内容を読み直して同期します。','Another device updated the vault. Sync will reconcile with the latest revision.');
@@ -42,7 +44,7 @@ function syncStatus(info) {
   else if (info.state === 'synced') text = t(`${info.count}件を同期済み · ${time(info.at)}`,`${info.count} records synced · ${time(info.at)}`)
     + (info.conflicts ? t(`。競合した${info.conflicts}件は別名コピーで保持しました。`,` · ${info.conflicts} conflicting edits were kept as separate copies.`) : '');
   else if (info.state === 'changed') { text = t('同期中にこの端末の保存が変わりました。編集内容を保持して再同期します。','Local saves changed during sync. They were kept and will sync again.'); scheduleSync(); }
-  else if (info.state === 'revoked') text = t('保管庫を無効化しました。端末内の保存は残っています。','The vault was revoked. Local saves remain on this device.');
+  else if (info.state === 'revoked') text = t('現在の保管庫を無効化しました。端末内の保存と以前のサーバーの保管庫は残っています。','The current vault was revoked. Local saves and the previous server’s vault remain separate.');
   else if (info.state === 'disconnected') text = t('この端末の接続を解除しました。端末内の保存は利用できます。','This device was disconnected. Local saves remain available.');
   else if (info.state === 'error') { text = errorText(info.cause); if (info.cause.status === 409) scheduleSync(4000); }
   if(pendingRefresh)text+=t(' 予定額を編集中のため、一覧の切替を保留しています。',' List refresh is deferred while you edit prices.');
@@ -190,6 +192,7 @@ document.addEventListener('click', async event => {
       finally{connecting=false;renderConnection();}return;
     }
     if(id==='sim-sync-now'){await sync.sync({manual:true});return;}
+    if(id==='sim-sync-import-legacy'){await sync.importLegacy(sync.keys?sync.code:$('sim-sync-code').value.trim());renderConnection();return;}
     if(id==='sim-sync-copy'){
       try{await navigator.clipboard.writeText(sync.code);statusBox.textContent=t('接続コードをコピーしました。人に渡さず、別の端末に入力してください。','Connection code copied. Keep it private and enter it on your other device.');}
       catch{$('sim-sync-recovery').focus();$('sim-sync-recovery').select();statusBox.textContent=t('接続コードを選択しました。コピーしてください。','Connection code selected. Copy it to your other device.');}return;

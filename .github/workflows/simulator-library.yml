@@ -19,13 +19,32 @@ on:
       - 'tools/community-service/**'
       - 'tools/generate-community.mjs'
       - 'scripts/test-community*'
+      - 'scripts/test-service-recovery.mjs'
       - 'scripts/fixtures/community-db-sdk.mjs'
       - 'scripts/test-simulator*'
       - 'scripts/fixtures/sync-db-sdk.mjs'
       - '.github/workflows/simulator-library.yml'
 permissions:
   contents: read
+  pull-requests: read
 jobs:
+  live-services:
+    runs-on: ubuntu-24.04
+    outputs:
+      sync: ${{ steps.paths.outputs.sync }}
+      public: ${{ steps.paths.outputs.public }}
+    steps:
+      - uses: actions/github-script@v7
+        id: paths
+        with:
+          script: |
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner, repo: context.repo.repo, pull_number: context.issue.number,
+            });
+            const paths = files.map(file => file.filename);
+            const common = paths.some(path => /^(assets\/simulator-service\.js|\.github\/workflows\/simulator-library\.yml)$/.test(path));
+            core.setOutput('sync', common || paths.some(path => /^(assets\/simulator-(sync|library-model)|tools\/sync-service\/|scripts\/test-simulator-library-browser)/.test(path)));
+            core.setOutput('public', common || paths.some(path => /^(assets\/community-(transport|model)|tools\/community-service\/backend\/|scripts\/test-community-browser)/.test(path)));
   saved-builds:
     runs-on: ubuntu-24.04
     steps:
@@ -36,7 +55,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run test:simulator && npm run test:simulator:en
-      - run: node --check assets/simulator-planner.js && node --check assets/community-ui.js && node scripts/test-community.mjs && node scripts/test-community-backend.mjs && node scripts/test-community-ui.mjs
+      - run: node --check assets/simulator-planner.js && node --check assets/community-ui.js && node scripts/test-community.mjs && node scripts/test-community-backend.mjs && node scripts/test-community-ui.mjs && node scripts/test-service-recovery.mjs
       - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
       - run: node scripts/test-simulator-progress-browser.mjs && node scripts/test-simulator-goal-browser.mjs && npm run test:usability:browser
       - uses: actions/upload-artifact@v4
@@ -49,6 +68,8 @@ jobs:
             /tmp/poe2-progress-qa
           if-no-files-found: ignore
   public-builds:
+    needs: live-services
+    if: needs.live-services.outputs.public == 'true'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +78,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: node scripts/test-community.mjs && node scripts/test-community-backend.mjs && node scripts/test-community-ui.mjs
+      - run: node scripts/test-community.mjs && node scripts/test-community-backend.mjs && node scripts/test-community-ui.mjs && node scripts/test-service-recovery.mjs
       - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
       - run: node scripts/test-community-browser.mjs
       - uses: actions/upload-artifact@v4
@@ -67,6 +88,8 @@ jobs:
           path: /tmp/poe2-community-qa
           if-no-files-found: ignore
   encrypted-sync:
+    needs: live-services
+    if: needs.live-services.outputs.sync == 'true'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4

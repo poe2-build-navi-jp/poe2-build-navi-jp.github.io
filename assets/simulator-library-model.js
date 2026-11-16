@@ -126,9 +126,10 @@ export async function mergeVault(local, remote, baseline = {}, {newId = () => cr
       records[key] = r?.deleted || !l ? tombstone(key) : r || tombstone(key);
       const survivor = !l || l.deleted ? r : l;
       if (survivor && !survivor.deleted) {
+        const content = record => record.kind === 'plan' ? record.value.saved : {
+          source:record.value.source,snapshot:record.value.snapshot,engine:record.value.engine,dataVersion:record.value.dataVersion};
         const sameContent = candidate => candidate && !candidate.deleted && candidate.kind === survivor.kind
-          && candidate.preset === survivor.preset && canonical(candidate.kind === 'plan' ? candidate.value.saved : candidate.value.source)
-          === canonical(survivor.kind === 'plan' ? survivor.value.saved : survivor.value.source);
+          && candidate.preset === survivor.preset && canonical(content(candidate)) === canonical(content(survivor));
         // Reconciliation after a lost network response reuses an already-preserved copy.
         if (!Object.entries(remote).some(([id, v]) => id !== key && sameContent(v))) {
           const copy = structuredClone(survivor), id = newId();

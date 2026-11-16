@@ -102,7 +102,7 @@ try{
     await page.screenshot({path:resolve(output,`${type}-${name}.png`)});report.push(`${type}/${name}`);
    }
    // This vault contains only disposable, generated QA fixtures.
-   await expanded(a,'sim-sync-panel');await a.getByText('全端末の同期を解除する',{exact:true}).click();await a.locator('#sim-sync-revoke').click();await a.locator('#sim-sync-revoke').click();
+   await expanded(a,'sim-sync-panel');await a.getByText('現在の保管庫の同期を解除する',{exact:true}).click();await a.locator('#sim-sync-revoke').click();await a.locator('#sim-sync-revoke').click();
    await a.waitForFunction(()=>document.querySelector('#sim-sync-status').textContent.includes('無効化しました'));
    await expanded(b,'sim-sync-panel');await b.locator('#sim-sync-now').click();await b.waitForFunction(()=>document.querySelector('#sim-sync-status').textContent.includes('revoked'));
    assert.deepEqual(errors,[],`${type}: page errors`);

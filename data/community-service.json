@@ -1,23 +1,21 @@
 {
-  "appId": "poe2-bcr97h",
-  "origin": "https://poe2-bcr97h.v2.appdeploy.ai",
-  "channel": "poe2-public-v1",
+  "origin": "https://poe2-build-services-20261116.ponyoaqua143.chatgpt.site",
+  "provider": "d1-20261116",
+  "projectId": "appgprj_6afac43071648191ad40a559f40e714b",
   "version": 1,
-  "lastSuccessfulSnapshot": "1794781037067",
+  "backendCommit": "6ace1722af91f7f0d05c3d9c0a2c7156514d8307",
   "availability": "operational",
   "lastObservedHttpStatus": 200,
-  "lastVerifiedAt": "2026-11-16T06:13:42Z",
+  "lastVerifiedAt": "2026-11-16T09:11:36.835417+00:00",
   "verification": {
-    "workflowRunId": 43771486837,
-    "jobId": 133125275103,
-    "browsers": [
-      "Chromium",
-      "WebKit"
-    ],
-    "viewportWidths": [
-      320,
-      1366
-    ],
-    "result": "success"
+    "result": "production-encrypted-write-read-revoke-and-public-write-read-owner-withdraw-pass"
+  },
+  "legacy": {
+    "appId": "poe2-bcr97h",
+    "origin": "https://poe2-bcr97h.v2.appdeploy.ai",
+    "lastSuccessfulSnapshot": "1794781037067",
+    "availability": "temporarily-unavailable",
+    "lastObservedHttpStatus": 402,
+    "dataRetained": true
   }
 }

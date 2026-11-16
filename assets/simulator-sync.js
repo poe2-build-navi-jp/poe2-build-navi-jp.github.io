@@ -1,13 +1,17 @@
 import {syncKeys, encryptVault, decryptVault} from './simulator-sync-crypto.js?v=6d43b0469b';
-import {collectSyncRecords, validateVault, mergeVault, recordHashes, canonical, applySyncRecords, prepareSyncWrites} from './simulator-library-model.js?v=5e2b21adc0';
+import {collectSyncRecords, validateVault, mergeVault, recordHashes, canonical, applySyncRecords, prepareSyncWrites} from './simulator-library-model.js?v=3c9638fed8';
+import {SyncHttpTransport, SERVICE_ORIGIN, SERVICE_PROVIDER, legacyAvailable} from './simulator-service.js?v=44af0fc40f';
 
-export const SYNC_ORIGIN = 'https://poe2-olc5ko.v2.appdeploy.ai';
+export const SYNC_ORIGIN = SERVICE_ORIGIN;
+export const LEGACY_SYNC_ORIGIN = 'https://poe2-olc5ko.v2.appdeploy.ai';
 export const SYNC_CREDENTIAL_KEY = 'poe2-build-sync:code:v1';
 export const SYNC_META_KEY = 'poe2-build-sync:state:v1';
 export class SyncError extends Error {
   constructor(status, message = 'SYNC_SERVICE') { super(message); this.status = status; }
 }
-export class IframeTransport {
+// Retain the export used by existing clients and QA; current traffic uses HTTPS directly.
+export class IframeTransport extends SyncHttpTransport {}
+export class LegacySyncTransport {
   constructor() { this.pending = new Map(); this.frame = null; this.ready = null; }
   async init() {
     if (this.ready) return this.ready;
@@ -15,10 +19,10 @@ export class IframeTransport {
       const frame = document.createElement('iframe');
       this.frame = frame;
       frame.hidden = true; frame.title = 'POE2 encrypted sync'; frame.referrerPolicy = 'no-referrer';
-      frame.src = SYNC_ORIGIN + '/';
+      frame.src = LEGACY_SYNC_ORIGIN + '/';
       const timeout = setTimeout(() => reject(new SyncError(503, 'SYNC_FRAME_BLOCKED')), 30000);
       window.addEventListener('message', event => {
-        if (event.origin !== SYNC_ORIGIN || event.source !== frame.contentWindow || event.data?.channel !== 'poe2-sync-v1') return;
+        if (event.origin !== LEGACY_SYNC_ORIGIN || event.source !== frame.contentWindow || event.data?.channel !== 'poe2-sync-v1') return;
         const item = this.pending.get(event.data.id);
         if (!item) return;
         this.pending.delete(event.data.id); clearTimeout(item.timeout);
@@ -37,7 +41,7 @@ export class IframeTransport {
       const id = crypto.randomUUID();
       const timeout = setTimeout(() => {this.pending.delete(id); reject(new SyncError(503, 'SYNC_TIMEOUT'));}, 30000);
       this.pending.set(id, {resolve, reject, timeout});
-      this.frame.contentWindow.postMessage({channel:'poe2-sync-v1', id, operation, body}, SYNC_ORIGIN);
+      this.frame.contentWindow.postMessage({channel:'poe2-sync-v1', id, operation, body}, LEGACY_SYNC_ORIGIN);
     });
   }
   async request(operation, body) { await this.init(); return this.send(operation, body); }
@@ -48,19 +52,23 @@ export class EncryptedBuildSync {
     Object.assign(this, {storage, presets, transport, onStatus, onApplied, conflictSuffix});
     this.keys = null; this.code = ''; this.meta = {baseline:{}}; this.cache = null;
     this.running = null; this.pending = null; this.epoch = 0; this.paused = false;
+    this.provider = transport.provider || SERVICE_PROVIDER; this.needsSeed = false;
   }
   async restore() {
     const code = this.storage.getItem(SYNC_CREDENTIAL_KEY);
     if (!code) return false;
     const keys = await syncKeys(code);
-    let meta = {baseline:{}};
+    let meta = {baseline:{}}; this.needsSeed = false;
     const raw = this.storage.getItem(SYNC_META_KEY);
     if (raw) {
       if (raw.length > 600000) throw Error('SYNC_FORMAT');
       const candidate = JSON.parse(raw);
-      if (candidate.room === keys.room && candidate.baseline && typeof candidate.baseline === 'object') meta = candidate;
+      if (candidate.room === keys.room && candidate.baseline && typeof candidate.baseline === 'object') {
+        if (candidate.provider === this.provider) meta = candidate;
+        else {meta = {baseline:{},legacy:true}; this.needsSeed = true;}
+      }
     }
-    this.code = code; this.keys = keys; this.meta = meta;
+    this.code = code; this.keys = keys; this.meta = meta; this.cache = null; this.pending = null;
     return true;
   }
   async connect(code, create = false) {
@@ -71,12 +79,12 @@ export class EncryptedBuildSync {
     const data = await this.transport.request('read', auth);
     const vault = data.envelope ? validateVault(await decryptVault(data.envelope, keys), this.presets) : {version:1, records:{}};
     this.storage.setItem(SYNC_CREDENTIAL_KEY, code);
-    this.code = code; this.keys = keys; this.meta = {room:keys.room, baseline:{}};
+    this.code = code; this.keys = keys; this.meta = {room:keys.room, provider:this.provider, baseline:{}}; this.needsSeed = false;
     this.cache = {revision:data.revision, vault}; this.paused = false; ++this.epoch;
     this.persist();
     return this.sync();
   }
-  persist() { this.storage.setItem(SYNC_META_KEY, JSON.stringify({...this.meta, room:this.keys.room})); }
+  persist() { this.storage.setItem(SYNC_META_KEY, JSON.stringify({...this.meta, room:this.keys.room, provider:this.provider})); }
   async sync({manual = false} = {}) {
     if (!this.keys || this.paused && !manual) return;
     if (this.running) return this.running;
@@ -95,6 +103,15 @@ export class EncryptedBuildSync {
     const current = () => epoch === this.epoch && this.keys === keys;
     const auth = {room:keys.room, token:keys.token};
     this.onStatus({state:'syncing'});
+    if (this.needsSeed) {
+      const local = collectSyncRecords(this.storage, this.presets);
+      if (!Object.keys(local.records).length) throw Error('SYNC_LEGACY_EMPTY');
+      // Only a restored, previously stored connection may seed local saves.
+      // A manually entered join code still never creates a vault.
+      await this.transport.request('create', auth);
+      if (!current()) return;
+      this.needsSeed = false;
+    }
     // Retry exactly the same ciphertext/request ID after an ambiguous transport outcome.
     if (this.pending) {
       const pending = this.pending;
@@ -146,6 +163,7 @@ export class EncryptedBuildSync {
     ++this.epoch; this.keys = null; this.code = ''; this.cache = null; this.pending = null;
     this.storage.removeItem(SYNC_CREDENTIAL_KEY); this.storage.removeItem(SYNC_META_KEY);
     this.meta = {baseline:{}}; this.paused = false;
+    this.needsSeed = false;
     this.onStatus({state:'disconnected'});
   }
   async revoke() {
@@ -156,5 +174,38 @@ export class EncryptedBuildSync {
     await this.transport.request('revoke', {room:keys.room, token:keys.token});
     this.disconnect();
     this.onStatus({state:'revoked'});
+  }
+  async importLegacy(code = this.code, transport = new LegacySyncTransport()) {
+    if (!legacyAvailable()) throw Error('SYNC_LEGACY_PAUSED');
+    if (this.keys && code !== this.code) throw Error('SYNC_ALREADY_CONNECTED');
+    const keys = await syncKeys(code);
+    const data = await transport.request('read',{room:keys.room,token:keys.token});
+    const legacy = data.envelope ? validateVault(await decryptVault(data.envelope,keys),this.presets) : {version:1,records:{}};
+    // Authenticate with the old vault before a manually entered legacy code can create anything.
+    if (!this.keys) await this.connect(code,true);
+    await this.sync({manual:true});
+    const execute = async () => {
+      const epoch = this.epoch, currentKeys = this.keys;
+      const current = () => epoch === this.epoch && currentKeys === this.keys;
+      const local = collectSyncRecords(this.storage,this.presets);
+      const auth = {room:currentKeys.room,token:currentKeys.token};
+      const data = await this.transport.request('read',auth);
+      const remote = data.envelope ? validateVault(await decryptVault(data.envelope,currentKeys),this.presets) : {version:1,records:{}};
+      const reconciled = await mergeVault(local.records,remote.records,this.meta.baseline,{suffix:this.conflictSuffix});
+      const merged = await mergeVault(legacy.records,reconciled.records,{}, {suffix:this.conflictSuffix});
+      const vault = validateVault({...remote,records:merged.records},this.presets);
+      prepareSyncWrites(vault.records,this.presets);
+      const envelope = await encryptVault(vault,currentKeys);
+      if (!current() || [...local.expected].some(([key,value])=>this.storage.getItem(key)!==value)) throw Error('SYNC_LOCAL_CHANGED');
+      this.pending = {body:{...auth,revision:data.revision,requestId:crypto.randomUUID(),...envelope},vault,localHashes:await recordHashes(local.records)};
+      try { await this.transport.request('write',this.pending.body); }
+      catch(cause) {if(cause.status===409)this.pending=null;throw cause;}
+      // The ordinary cycle reconciles the durable receipt and preserves any edits made in flight.
+      this.meta.legacy = true;
+    };
+    if (this.running) await this.running;
+    this.running = (globalThis.navigator?.locks ? navigator.locks.request('poe2-build-sync-v1',execute) : execute()).finally(()=>{this.running=null;});
+    await this.running;
+    await this.sync({manual:true});
   }
 }

@@ -3,7 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {namedPlanKey} from '../assets/simulator-model.js';
 import {newSyncCode, syncKeys, encryptVault, decryptVault, SYNC_LIMIT} from '../assets/simulator-sync-crypto.js';
 import {JOURNAL_KEY, collectSyncRecords, recordHashes, mergeVault, applySyncRecords, comparisonConditions, relevantNotices, validateVault} from '../assets/simulator-library-model.js';
-import {EncryptedBuildSync, SyncError, SYNC_CREDENTIAL_KEY} from '../assets/simulator-sync.js';
+import {EncryptedBuildSync, SyncError, SYNC_CREDENTIAL_KEY, SYNC_META_KEY} from '../assets/simulator-sync.js';
+import {LEGACY_RETRY_AT} from '../assets/simulator-service.js';
 
 const presets=JSON.parse(await readFile(new URL('../data/simulator-presets.json',import.meta.url)));
 const sample=JSON.parse(await readFile(new URL('../data/simulator-examples.json',import.meta.url))).examples[0].saved;
@@ -94,4 +95,36 @@ assert(comparisonConditions(changed).differences.includes('level'));
 const notices=[{id:'a',revision:2,presets:[sample.preset]},{id:'b',revision:1,presets:['unrelated']}];
 assert.deepEqual(relevantNotices(notices,Object.values(original.records),{a:1}).map(n=>[n.id,n.unread]),[['a',true]]);
 assert.equal(relevantNotices(notices,Object.values(original.records),{a:2})[0].unread,false);
+// A provider replacement must not reuse deletion baselines from the previous database.
+const migrated=new Storage(),replacement=new Service();set(migrated,[entry]);migrated.setItem(autosave,'UNCHANGED ACTIVE DRAFT');
+const migrationCode=newSyncCode(),migrationKeys=await syncKeys(migrationCode);
+migrated.setItem(SYNC_CREDENTIAL_KEY,migrationCode);
+migrated.setItem(SYNC_META_KEY,JSON.stringify({room:migrationKeys.room,baseline:await recordHashes(collectSyncRecords(migrated,presets).records)}));
+const restored=new EncryptedBuildSync({storage:migrated,presets,transport:replacement});
+assert(await restored.restore());await restored.sync();
+assert.equal(get(migrated)[0].id,entry.id,'provider migration cannot tombstone an unchanged local save');
+assert.equal(migrated.getItem(autosave),'UNCHANGED ACTIVE DRAFT');
+assert(JSON.parse(migrated.getItem(SYNC_META_KEY)).provider);
+const manual=new EncryptedBuildSync({storage:new Storage(),presets,transport:replacement}),roomCount=replacement.rooms.size;
+await assert.rejects(manual.connect(newSyncCode()),cause=>cause.status===403);
+assert.equal(replacement.rooms.size,roomCount,'manual join must not create unknown vaults');
+const legacy=new Service();await legacy.request('create',{room:migrationKeys.room,token:migrationKeys.token});
+const oldRecords=collectSyncRecords(migrated,presets).records;
+Object.values(oldRecords)[0].value.saved.notes='Previous cloud edit';
+legacy.rooms.get(migrationKeys.room).envelope=await encryptVault({version:1,records:oldRecords},migrationKeys);
+edit=get(migrated);edit[0].saved.notes='Unsynced current edit';set(migrated,edit);
+const realNow=Date.now;Date.now=()=>Math.max(realNow(),LEGACY_RETRY_AT+1);
+try {
+  await restored.importLegacy(migrationCode,legacy);
+  assert.deepEqual(new Set(get(migrated).map(plan=>plan.saved.notes)),new Set(['Unsynced current edit','Previous cloud edit']));
+  await restored.importLegacy(migrationCode,legacy);assert.equal(get(migrated).length,2,'repeated imports reuse conflict copies');
+  assert(legacy.rooms.get(migrationKeys.room).envelope,'legacy ciphertext is retained');
+} finally {Date.now=realNow;}
+// Frozen calculation values, engine and data version participate in journal conflict identity.
+const journal=id=>({kind:'journal',preset:sample.preset,id,value:{id,name:'Frozen',source:{same:true},snapshot:{rows:[]},engine:'1.0.0',dataVersion:'one'}});
+const oldJournal=journal('same'),newJournal=journal('same'),copyJournal=journal('other');
+newJournal.value.snapshot.rows=[{id:'Life',a:'100'}];copyJournal.value.snapshot.rows=[{id:'Life',a:'200'}];
+const journalKey=record=>'journal:'+record.preset+':'+record.id;
+const journalMerge=await mergeVault({[journalKey(oldJournal)]:oldJournal},{[journalKey(newJournal)]:newJournal,[journalKey(copyJournal)]:copyJournal},{},{newId:()=> 'preserved-journal'});
+assert(journalMerge.records['journal:'+sample.preset+':preserved-journal'],'same-source calculations with different frozen results cannot be discarded');
 console.log('PASS: encryption, authorization, cross-device persistence, preserved drafts, conflict copies, deletion, replay, revocation, save guards, comparison conditions and notice relevance');
