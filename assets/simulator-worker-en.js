@@ -40,7 +40,7 @@ async function boot() {
   totalBytes=runtime.wasm.bytes+runtime.data.bytes;progress();
   const [wasm,dataResponse] = await Promise.all([unpack(runtime.wasm),unpack(runtime.data)]);
   postMessage({progress:'Starting the calculation engine…'});
-  engine.initSync({module:await wasm.arrayBuffer()});
+  await engine.default({module_or_path:await wasm.arrayBuffer()});
   if (engine.schemaVersion() !== 19 || runtime.schema !== 19) throw new Error('Calculation engine version does not match.');
   postMessage({progress:'Unpacking game data…'});
   const data = await dataResponse.json();

@@ -39,7 +39,7 @@ async function boot() {
   totalBytes=runtime.wasm.bytes+runtime.data.bytes;progress();
   const [wasm,dataResponse] = await Promise.all([unpack(runtime.wasm),unpack(runtime.data)]);
   postMessage({progress:'計算エンジンを起動しています…'});
-  engine.initSync({module:await wasm.arrayBuffer()});
+  await engine.default({module_or_path:await wasm.arrayBuffer()});
   if (engine.schemaVersion() !== 19 || runtime.schema !== 19) throw new Error('計算エンジンの版が一致しません。');
   postMessage({progress:'ゲームデータを展開しています…'});
   const data = await dataResponse.json();

@@ -19,18 +19,27 @@ const server=createServer(async(req,res)=>{try{
 await new Promise(resolve=>server.listen(4173,'127.0.0.1',resolve));
 const reports=[],reference=new Map();
 try{
- for(const [type,name,count] of [[chromium,'chromium',2],[webkit,'webkit',8]])for(const mode of ['baseline','fixed']){
+ for(const [type,name,count] of [[chromium,'chromium',2],[webkit,'webkit',16]])for(const mode of ['baseline','fixed']){
   const browser=await type.launch();
   try{for(let index=0;index<count;index++){
    const locale=index%2?'/en':'',width=index%2?1366:320;
    const context=await browser.newContext({viewport:{width,height:900},isMobile:width<500,hasTouch:width<500});
    await context.addInitScript(({auto,key,saved,named})=>{if(location.origin==='http://127.0.0.1:4173'&&!sessionStorage.getItem('startup-seed')){
     localStorage.setItem(auto,saved);localStorage.setItem(key,named);sessionStorage.setItem('startup-seed','1');}}, {auto,key,saved,named});
-   const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
-   await page.route('**/*',async route=>{
+   const page=await context.newPage(),errors=[];let legacyLoads=0;page.on('pageerror',error=>errors.push(error.message));
+   page.on('console',message=>{if(message.text().startsWith('STARTUP_TRACE '))console.log(message.text());});
+   await context.route('**/*',async route=>{
     const url=new URL(route.request().url());
     if(url.origin!=='http://127.0.0.1:4173')return route.abort();
-    if(mode==='baseline'&&url.pathname==='/assets/simulator-engine-loader.js')return route.fulfill({status:200,contentType:'text/javascript',body:await readFile(resolve(root,'scripts/fixtures/simulator-engine-legacy-staging.js'),'utf8')});
+    if(mode==='baseline'&&url.pathname==='/assets/simulator-engine-loader.js'){
+      legacyLoads++;return route.fulfill({status:200,contentType:'text/javascript',body:await readFile(resolve(root,'scripts/fixtures/simulator-engine-legacy-staging.js'),'utf8')});
+    }
+    if(/^\/assets\/simulator-worker(?:-en)?\.js$/.test(url.pathname)){
+      let source=await readFile(resolve(root,'.'+url.pathname),'utf8');
+      source=source.replace('postMessage({id,error:message});',"console.error('STARTUP_TRACE '+error.stack);postMessage({id,error:message});");
+      if(mode==='baseline')source=source.replace('await engine.default({module_or_path:await wasm.arrayBuffer()});','engine.initSync({module:await wasm.arrayBuffer()});');
+      return route.fulfill({status:200,contentType:'text/javascript',body:source});
+    }
     return route.continue();
    });
    try{for(const load of ['cold','reload']){
@@ -39,6 +48,7 @@ try{
      if(load==='cold')await page.goto('http://127.0.0.1:4173'+locale+'/simulator/?build='+sample.preset,{waitUntil:'domcontentloaded'});else await page.reload({waitUntil:'domcontentloaded'});
      await page.waitForFunction(()=>!document.querySelector('#sim-error')?.hidden||(document.querySelector('#sim-stats')?.getAttribute('aria-busy')==='false'&&!!window.Poe2SimulatorLibrary?.goalData()),undefined,{timeout:100000});
      if(await page.locator('#sim-error').isVisible())throw Error(await page.locator('#sim-error').textContent());
+     if(mode==='baseline')assert(legacyLoads>0,'the control must actually load the original staging code');
      const numbers=await page.locator('#sim-stats .sim-stat b').allTextContents();assert.equal(numbers.length,14);assert.notEqual(numbers[1],'—');
      if(!reference.has(locale))reference.set(locale,numbers);
      assert.deepEqual(numbers,reference.get(locale),'loader changes cannot alter calculation results');
@@ -55,5 +65,5 @@ try{
  }
  const summary=reports.reduce((out,row)=>{const key=row.browser+'/'+row.mode;out[key]??={attempts:0,failures:0};out[key].attempts++;out[key].failures+=!!row.error;return out;},{});
  console.log('STARTUP SUMMARY',JSON.stringify(summary));
- assert.equal(summary['webkit/fixed'].attempts,16);assert.equal(summary['webkit/fixed'].failures,0);
+ assert.equal(summary['webkit/fixed'].attempts,32);assert.equal(summary['webkit/fixed'].failures,0);
 }finally{await writeFile(resolve(output,'results.json'),JSON.stringify(reports,null,2));server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
