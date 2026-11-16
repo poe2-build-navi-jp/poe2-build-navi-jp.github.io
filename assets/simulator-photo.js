@@ -24,6 +24,7 @@ function renderReview({initial=false}={}){
   parsed=inspectEquipmentPhoto($('text').value,target);
   if(initial){
    $('base').value=parsed.baseId;$('quality').value=parsed.quality;$('level').value=parsed.level;
+   $('rarity').value='RARE';
    $('name').value=t('写真の装備','Photographed item');
   }
   else if(!$('base').value&&parsed.baseId)$('base').value=parsed.baseId;
