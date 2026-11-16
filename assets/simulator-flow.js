@@ -37,13 +37,18 @@ export function installSimulatorFlow(document) {
  nav.classList.add('sim-flow-nav');nav.setAttribute('aria-label',text('シミュレーターの画面','Simulator views'));toolbar.after(nav);
  for(const tab of tabs){tab.setAttribute('aria-controls','sim-'+tab.dataset.tab);tab.textContent={items:text('装備','Gear'),skills:text('ジェム','Gems'),tree:text('パッシブ','Passives'),config:text('条件','Config')}[tab.dataset.tab];}
  const resultButton=button('sim-view-results',text('計算結果','Results'));resultButton.setAttribute('aria-pressed','false');resultButton.setAttribute('aria-controls','sim-results-panel');nav.append(resultButton);
+ // Keep a word beside each icon: the mobile navigation is also the thumb bar.
+ const icons={items:'M5 7h14v14H5z M9 7V4h6v3 M8 11h8 M8 15h8',skills:'m12 3 8 7-8 11-8-11Z M4 10h16 M8 4l4 17 4-17',tree:'M12 5v6 M6 17l6-6 6 6 M10 3h4v4h-4z M3 17h6v4H3z M15 17h6v4h-6z',config:'M5 3v18 M12 3v18 M19 3v18 M2 8h6 M9 16h6 M16 8h6',results:'M4 3v18h17 M8 17v-5 M13 17V8 M18 17V4'};
+ for(const control of [...tabs,resultButton]){const label=make('span','sim-flow-nav-label',control.textContent),icon=document.createElementNS('http://www.w3.org/2000/svg','svg'),path=document.createElementNS('http://www.w3.org/2000/svg','path');icon.setAttribute('viewBox','0 0 24 24');icon.setAttribute('aria-hidden','true');icon.setAttribute('focusable','false');path.setAttribute('d',icons[control.dataset.tab||'results']);icon.append(path);control.replaceChildren(icon,label);}
  results.id='sim-results-panel';results.setAttribute('tabindex','-1');
  const context=make('p','sim-flow-context');context.id='sim-flow-context';nav.after(context);
  const back=button('sim-flow-back',text('← 入力に戻る','← Back to editing'));back.className='sim-flow-back';results.prepend(back);
  function editing(tab=lastTab){lastTab=tab;layout.dataset.view='editing';resultButton.setAttribute('aria-pressed','false');context.textContent=copy[tab]||copy.items;for(const element of tabs)element.setAttribute('aria-pressed',String(element.dataset.tab===tab));}
  function showResults(){layout.dataset.view='results';resultButton.setAttribute('aria-pressed','true');for(const element of tabs)element.setAttribute('aria-pressed','false');context.textContent=copy.results;results.scrollIntoView({block:'start'});results.focus({preventScroll:true});}
  resultButton.addEventListener('click',showResults);
- back.addEventListener('click',()=>{tabs.find(tab=>tab.dataset.tab===lastTab)?.click();nav.scrollIntoView({block:'start'});});
+ const phoneWidth=()=>window.matchMedia?.('(max-width:600px)').matches;
+ back.addEventListener('click',()=>{tabs.find(tab=>tab.dataset.tab===lastTab)?.click();if(!phoneWidth())nav.scrollIntoView({block:'start'});});
+ nav.addEventListener('click',event=>{const tab=event.target.closest('[data-tab]')?.dataset.tab;if(tab&&phoneWidth())window.queueMicrotask(()=>document.getElementById('sim-'+tab)?.scrollIntoView({block:'start'}));});
  window.addEventListener('poe2:view-change',event=>editing(event.detail.tab));
  // Existing result shortcuts also switch out of the mobile editor view first.
  document.addEventListener('click',event=>{const target=event.target.closest('button');if(!target)return;if(['sim-mobile-more','sim-item-show-stats'].includes(target.id)||target.dataset.mobileDetail)showResults();if(target.id==='sim-mobile-edit')editing();},true);
@@ -55,6 +60,28 @@ export function installSimulatorFlow(document) {
  const modes=document.querySelector('.sim-equipment-modes'),photo=document.querySelector('.sim-photo-entry');if(photo)modes.before(photo);
  for(const mode of modes.querySelectorAll('[data-equipment-mode]')){mode.setAttribute('aria-label',mode.textContent);mode.textContent={unique:text('ユニーク','Unique'),rare:text('レアを作成','Create rare'),paste:text('テキスト','Paste text')}[mode.dataset.equipmentMode];}
 
+ // Secondary inputs open in place, keeping the current draft and every original
+ // control. No form values are copied and no build is applied by these toggles.
+ const fold=(element,id,label)=>{if(!element)return;const details=make('details','sim-flow-fold');details.id=id;details.append(make('summary','',label));element.before(details);details.append(element);return details;};
+ const photoFold=fold(photo,'sim-flow-photo',text('写真・スクショから装備を入力','Import gear from a photo'));
+ if(photoFold)photoFold.classList.add('sim-flow-photo-fold');
+ fold(document.querySelector('.sim-candidate-panel'),'sim-flow-candidate',text('予算付きの比較候補を作る','Save a candidate with a price'));
+ fold(document.getElementById('sim-item-result'),'sim-flow-item-results',text('反映後の数値・変更前との差','Applied stats and changes'));
+ const rareName=document.getElementById('sim-rare-name')?.closest('label'),rareBasics=document.querySelector('#sim-rare-fields .sim-rare-basics');
+ if(rareName&&rareBasics){const advanced=make('div','sim-flow-rare-options');rareName.before(advanced);advanced.append(rareName,rareBasics);fold(advanced,'sim-flow-rare-options',text('装備名・アイテムレベル・品質','Item name, level and quality'));}
+
+ // A short stat strip leaves room for the form. The visitor can expand the
+ // comparison deltas at any time without changing the calculation baseline.
+ const summary=document.getElementById('sim-mobile-summary');
+ if(summary){const expand=button('sim-flow-summary-toggle',text('差分','Delta'));expand.setAttribute('aria-expanded','false');expand.setAttribute('aria-label',text('比較の差分を表示','Show comparison changes'));expand.setAttribute('aria-controls','sim-mobile-summary-values sim-mobile-summary-status');summary.append(expand);
+  expand.addEventListener('click',()=>{const open=expand.getAttribute('aria-expanded')!=='true';expand.setAttribute('aria-expanded',String(open));expand.setAttribute('aria-label',open?text('比較の差分を閉じる','Hide comparison changes'):text('比較の差分を表示','Show comparison changes'));expand.textContent=open?text('閉じる','Close'):text('差分','Delta');summary.classList.toggle('sim-flow-summary-expanded',open);});
+ }
+
+ // VisualViewport reports the space above the on-screen keyboard on iOS. Keep
+ // fixed controls out of that reduced space while a visitor types a value.
+ const viewport=window.visualViewport;
+ if(viewport){const keyboard=()=>{const input=document.activeElement?.matches('input:not([type=checkbox]):not([type=radio]),textarea,select'),reduced=viewport.height<Math.max(window.innerHeight,document.documentElement.clientHeight)*.78;document.body.classList.toggle('sim-flow-keyboard',!!input&&reduced);};viewport.addEventListener('resize',keyboard);document.addEventListener('focusin',keyboard);document.addEventListener('focusout',()=>window.queueMicrotask(keyboard));}
+
  // Keep only preview and apply in the sticky action bar. Destructive/reset actions
  // stay in the ordinary document flow, away from the main apply target.
  const apply=document.getElementById('sim-item-apply'),itemActions=apply.closest('.sim-actions'),secondary=make('div','sim-flow-secondary-actions');itemActions.after(secondary);
@@ -64,6 +91,7 @@ export function installSimulatorFlow(document) {
 
  // Ten main equipment slots first; the five utility slots are explicitly expandable.
  const slots=document.getElementById('sim-slots'),utility=button('sim-flow-utilities',text('フラスコ・チャームを表示','Show flasks and charms'));utility.setAttribute('aria-expanded','false');utility.setAttribute('aria-controls','sim-slots');slots.after(utility);
+ const slotHelp=document.getElementById('sim-item-list-title')?.parentElement.querySelector('p');if(slotHelp)slotHelp.textContent=text('部位を選ぶと、装備を変更できます。','Choose a slot to change its gear.');
  utility.addEventListener('click',()=>{const expanded=utility.getAttribute('aria-expanded')!=='true';utility.setAttribute('aria-expanded',String(expanded));slots.toggleAttribute('data-utilities-open',expanded);utility.textContent=expanded?text('フラスコ・チャームを閉じる','Hide flasks and charms'):text('フラスコ・チャームを表示','Show flasks and charms');});
 
  const status=document.getElementById('sim-save-status'),refresh=()=>{const full=status.textContent;saveStatus.textContent=['この端末に保存済み','Saved on this device'].includes(full)?text('自動保存済み','Saved'):full;saveStatus.title=full;resultButton.disabled=tabs.every(tab=>tab.disabled);};

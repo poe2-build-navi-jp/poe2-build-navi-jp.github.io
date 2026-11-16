@@ -60,6 +60,9 @@ try{
  assert.equal(workerStarts,2,'a trapped first calculation must use a fresh worker');
  const staleWorkerError=new w.Event('error',{cancelable:true});workerInstances[0].onerror(staleWorkerError);assert.equal(staleWorkerError.defaultPrevented,true,'handled errors from terminated workers must not bubble to the current page');assert.equal(d.querySelector('#sim-error').hidden,true);assert.equal(workerStarts,2);
  const untouched=w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling');
+ click('#sim-flow-summary-toggle');assert.equal(d.querySelector('#sim-flow-summary-toggle').getAttribute('aria-expanded'),'true');click('#sim-flow-summary-toggle');
+ for(const id of ['sim-flow-photo','sim-flow-candidate','sim-flow-rare-options','sim-flow-item-results']){click('#'+id+'>summary');click('#'+id+'>summary');}
+ assert.equal(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'),untouched,'opening secondary controls must not apply or save a draft');
  click('#sim-view-results');assert.equal(d.querySelector('.sim-layout').dataset.view,'results');assert.equal(d.querySelector('#sim-view-results').getAttribute('aria-pressed'),'true');
  click('#sim-flow-back');assert.equal(d.querySelector('.sim-layout').dataset.view,'editing');assert.equal(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'),untouched);
  click('#sim-flow-utilities');assert.equal(d.querySelector('#sim-flow-utilities').getAttribute('aria-expanded'),'true');click('#sim-flow-utilities');
