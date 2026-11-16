@@ -105,10 +105,18 @@ export class EncryptedBuildSync {
     this.onStatus({state:'syncing'});
     if (this.needsSeed) {
       const local = collectSyncRecords(this.storage, this.presets);
-      if (!Object.keys(local.records).length) throw Error('SYNC_LEGACY_EMPTY');
       // Only a restored, previously stored connection may seed local saves.
       // A manually entered join code still never creates a vault.
-      await this.transport.request('create', auth);
+      if (Object.keys(local.records).length) await this.transport.request('create', auth);
+      else {
+        // Another migrated device may already have populated the new provider.
+        try {
+          const data = await this.transport.request('read',auth);
+          const vault = data.envelope ? validateVault(await decryptVault(data.envelope,keys),this.presets) : {version:1,records:{}};
+          if (!current()) return;
+          this.cache = {revision:data.revision,vault};
+        } catch(cause) {if(cause.status===403)throw Error('SYNC_LEGACY_EMPTY');throw cause;}
+      }
       if (!current()) return;
       this.needsSeed = false;
     }
@@ -187,6 +195,12 @@ export class EncryptedBuildSync {
     if (!initialCurrent()) return;
     // Authenticate with the old vault before a manually entered legacy code can create anything.
     if (!this.keys) await this.connect(code,true);
+    else {
+      // An authenticated legacy read also permits recovery on a device with no local copies.
+      await this.transport.request('create',{room:this.keys.room,token:this.keys.token});
+      if (!initialCurrent()) return;
+      this.needsSeed = false;
+    }
     const epoch = this.epoch, currentKeys = this.keys;
     const current = () => !!currentKeys && epoch === this.epoch && currentKeys === this.keys;
     await this.sync({manual:true});

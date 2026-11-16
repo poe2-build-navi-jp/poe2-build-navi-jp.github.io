@@ -1,5 +1,5 @@
 import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=3c9638fed8';
-import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=e8138f5cef';
+import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=b8302feefe';
 import {newSyncCode} from './simulator-sync-crypto.js?v=6d43b0469b';
 
 const en = document.documentElement.lang === 'en';

@@ -105,6 +105,11 @@ assert(await restored.restore());await restored.sync();
 assert.equal(get(migrated)[0].id,entry.id,'provider migration cannot tombstone an unchanged local save');
 assert.equal(migrated.getItem(autosave),'UNCHANGED ACTIVE DRAFT');
 assert(JSON.parse(migrated.getItem(SYNC_META_KEY)).provider);
+const migratedEmpty=new Storage();migratedEmpty.setItem(SYNC_CREDENTIAL_KEY,migrationCode);
+migratedEmpty.setItem(SYNC_META_KEY,JSON.stringify({room:migrationKeys.room,baseline:{}}));
+const migratedReader=new EncryptedBuildSync({storage:migratedEmpty,presets,transport:replacement});
+await migratedReader.restore();await migratedReader.sync();
+assert.equal(get(migratedEmpty)[0].id,entry.id,'an empty migrated device can read a vault already restored by another device');
 const manual=new EncryptedBuildSync({storage:new Storage(),presets,transport:replacement}),roomCount=replacement.rooms.size;
 await assert.rejects(manual.connect(newSyncCode()),cause=>cause.status===403);
 assert.equal(replacement.rooms.size,roomCount,'manual join must not create unknown vaults');
@@ -119,6 +124,12 @@ try {
   assert.deepEqual(new Set(get(migrated).map(plan=>plan.saved.notes)),new Set(['Unsynced current edit','Previous cloud edit']));
   await restored.importLegacy(migrationCode,legacy);assert.equal(get(migrated).length,2,'repeated imports reuse conflict copies');
   assert(legacy.rooms.get(migrationKeys.room).envelope,'legacy ciphertext is retained');
+  const emptyStorage=new Storage(),emptyService=new Service();
+  emptyStorage.setItem(SYNC_CREDENTIAL_KEY,migrationCode);
+  emptyStorage.setItem(SYNC_META_KEY,JSON.stringify({room:migrationKeys.room,baseline:{}}));
+  const emptyClient=new EncryptedBuildSync({storage:emptyStorage,presets,transport:emptyService});await emptyClient.restore();
+  await emptyClient.importLegacy(migrationCode,legacy);
+  assert.equal(get(emptyStorage)[0].saved.notes,'Previous cloud edit','authenticated recovery must work when this device has no local copies');
   const interrupted=new EncryptedBuildSync({storage:migrated,presets,transport:replacement});await interrupted.restore();
   let resume;
   const pendingImport=interrupted.importLegacy(migrationCode,{request:async(op,input)=>{
