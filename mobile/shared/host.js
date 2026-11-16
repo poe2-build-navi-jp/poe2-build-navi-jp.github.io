@@ -53,6 +53,7 @@
     finally { checking = false; }
   }
   window.Poe2Host = Object.freeze({
+    equipmentCamera: true,
     checkForUpdate,
     async exportBackup() {
       try {

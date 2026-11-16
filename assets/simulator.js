@@ -1,5 +1,6 @@
 import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps, namedPlanKey, parseNamedPlans, putNamedPlan, upgradeAdvice, createEditHistory, appendEditHistory, moveEditHistory, PRICE_CURRENCIES, priceBookKey, priceAmount, parsePriceBook, budgetVerdict, drawComparisonCard, comparisonChanges, validateComparison, encodeComparisonLink, decodeComparisonLink, simulatorBackup, parseSimulatorBackup, restoreSimulatorBackup, isolatedChanges, candidateOrder} from './simulator-model.js?v=161ef63cbd';
 const $ = id => document.getElementById(id);
+let itemPhotoEpoch=0;
 const phoneLayout=window.matchMedia?.('(max-width: 720px)');
 function arrangeEditor(media){document.querySelector('.sim-layout').prepend(document.querySelector(media.matches?'.sim-editor':'.sim-results'));}
 if(phoneLayout){arrangeEditor(phoneLayout);if(phoneLayout.matches)$('sim-first-workbench').open=false;phoneLayout.addEventListener?.('change',arrangeEditor);}
@@ -191,6 +192,7 @@ function renderSlots(){
  $('sim-slot-title').textContent=(selectedSlot.startsWith('weapon')?`武器スロット${plan.weaponSets.active} · `:'')+slots.find(s=>s[0]===selectedSlot)?.[1];itemSource=itemList().find(i=>i.slot===selectedSlot)?.text || '';$('sim-item-text').value=localizeItemText(itemSource,names);renderUniques();
 }
 function openItemEditor(){
+ ++itemPhotoEpoch;
  $('sim-item-preview-result').hidden=true;
  editorBaseline=result?Object.fromEntries(statistics.map(([id])=>[id,statValue(result,id)])):null;
  $('sim-item-list').hidden=true;$('sim-item-editor').hidden=false;
@@ -200,6 +202,7 @@ function openItemEditor(){
  $('sim-slot-title').focus({preventScroll:true});$('sim-item-editor').scrollIntoView({block:'start',behavior:'instant'});
 }
 function closeItemEditor(){
+ ++itemPhotoEpoch;
  $('sim-item-editor').hidden=true;$('sim-item-list').hidden=false;$('sim-item-list-title').focus({preventScroll:true});$('sim-item-list').scrollIntoView({block:'start',behavior:'instant'});
 }
 function setEquipmentMode(mode){
@@ -1136,7 +1139,20 @@ document.addEventListener('click',event=>{
 });
 
 // Bounded snapshots and editor navigation. Neither navigation nor synced saves applies a build.
+function equipmentPhotoContext(){
+ if(!plan||!equipmentCatalog||$('sim-workbench').hidden||$('sim-item-editor').hidden)return null;
+ return {slot:selectedSlot,title:$('sim-slot-title').textContent,
+  key:JSON.stringify([generation,itemPhotoEpoch,editSequence,equipmentDraftVersion,selectedSlot,plan.weaponSets.active,equipmentMode,[...$('sim-item-editor').querySelectorAll('input,select,textarea')].map(e=>e.value)]),
+  bases:clone(rareBasesForSlot(selectedSlot,equipmentCatalog)),modifiers:clone(equipmentCatalog.modifiers)};
+}
 window.Poe2SimulatorLibrary={
+ equipmentPhotoContext,
+ equipmentPhotoStage:(key,text)=>{
+  if(!key||equipmentPhotoContext()?.key!==key||typeof text!=='string'||text.length>20000)return false;
+  ++uniqueDraftSequence;itemSource=text;setEquipmentMode('paste');$('sim-item-text').value=localizeItemText(text,names);
+  $('sim-item-text').dispatchEvent(new Event('input',{bubbles:true}));
+  return true;
+ },
  presets:clone(presets),
  skillName:id=>{const gem=catalog?.gems.find(g=>g.skill_id===id);return gem?label(gem.name):id;},
  read:()=>({preset:selectedPreset?.id||null,runtime:clone(catalog?.runtime||{release:'0.0.46',dataVersion:'0.5.5.5'}),
