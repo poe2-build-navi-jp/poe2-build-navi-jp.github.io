@@ -16,6 +16,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
+      - run: node scripts/test-usability.mjs
       - run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
       - run: node scripts/test-simulator-flow-browser.mjs
       - uses: actions/upload-artifact@v4

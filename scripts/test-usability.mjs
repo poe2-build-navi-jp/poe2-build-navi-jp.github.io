@@ -42,8 +42,8 @@ const rpc=(action,payload)=>new Promise((resolve,reject)=>{const id=++sequence;t
 const errors=[],vc=new VirtualConsole();vc.on('jsdomError',error=>{if(!error.message.includes('navigation'))errors.push(error.message);});
 const dom=new JSDOM(await read('simulator/index.html'),{url:origin+'/simulator/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc}),w=dom.window,d=w.document;dialogs(w);Object.assign(w,model,{structuredClone,DecompressionStream,WebAssembly});
 w.fetch=async url=>new Response(await read(new URL(String(url),origin).pathname.slice(1)));
-let holdUnique=false,releaseUnique;
-w.Worker=class{postMessage({id,action,payload}){rpc(action,payload).then(result=>{const deliver=()=>this.onmessage?.({data:{id,result}});if(action==='unique'&&holdUnique){holdUnique=false;releaseUnique=deliver;}else deliver();},error=>this.onmessage?.({data:{id,error:error.message}}));}};
+let holdUnique=false,releaseUnique,runtimeTraps=1,workerStarts=0;
+w.Worker=class{constructor(){workerStarts++;}postMessage({id,action,payload}){if(action==='calculate'&&runtimeTraps>0){runtimeTraps--;queueMicrotask(()=>this.onmessage?.({data:{id,error:'QA trapped calculation',errorCode:'ENGINE_STARTUP_FAILURE'}}));return;}rpc(action,payload).then(result=>{const deliver=()=>this.onmessage?.({data:{id,result}});if(action==='unique'&&holdUnique){holdUnique=false;releaseUnique=deliver;}else deliver();},error=>this.onmessage?.({data:{id,error:error.message}}));}};
 let code=await read('assets/simulator.js');code=code.replace(/^import[^\n]+\n/,'').replaceAll('import.meta.url',JSON.stringify(pathToFileURL(resolve(root,'assets/simulator.js')).href));
 const wait=async predicate=>{const until=Date.now()+30000;while(!predicate()){if(Date.now()>until)throw Error('Timeout: '+d.getElementById('sim-error').textContent+' / '+d.querySelector('#sim-editor-draft-status')?.textContent);await new Promise(r=>setTimeout(r,20));}};
 const click=selector=>{const e=d.querySelector(selector);assert(e,selector);e.click();};
@@ -57,6 +57,7 @@ try{
  change('#sim-class-filter','Mercenary');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,1);
  change('#sim-build-search','no-match-123','input');assert.equal(d.querySelector('#sim-build-empty').hidden,false);click('#sim-build-reset');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,12);
  click('[data-preset="mercenary-twister-gemling"]');await wait(ready);const before=JSON.stringify(saved().request.items);
+ assert.equal(workerStarts,2,'a trapped first calculation must use a fresh worker');
  const untouched=w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling');
  click('#sim-view-results');assert.equal(d.querySelector('.sim-layout').dataset.view,'results');assert.equal(d.querySelector('#sim-view-results').getAttribute('aria-pressed'),'true');
  click('#sim-flow-back');assert.equal(d.querySelector('.sim-layout').dataset.view,'editing');assert.equal(w.localStorage.getItem('poe2-simulator:v1:mercenary-twister-gemling'),untouched);
@@ -68,6 +69,13 @@ try{
  click('#sim-item-back');click('[data-slot="helmet"]');click('[data-equipment-mode="rare"]');click('[data-rare-quick="life"]');await wait(()=>d.querySelectorAll('[data-rare-row]').length===1);click('[data-rare-quick="life"]');await wait(()=>d.activeElement?.hasAttribute('data-rare-value'));assert.equal(d.querySelectorAll('[data-rare-row]').length,1);click('[data-rare-quick="all_res"]');await wait(()=>d.querySelectorAll('[data-rare-row]').length===2);click('#sim-item-reset');await wait(()=>d.querySelector('[data-equipment-mode="unique"]').getAttribute('aria-pressed')==='true');assert.equal(d.querySelector('#sim-item-text').value,'');
  click('#sim-item-back');click('[data-slot="amulet"]');change('#sim-unique',String(astro.uniqueId));holdUnique=true;releaseUnique=null;click('#sim-unique-draft');await wait(()=>releaseUnique);click('#sim-item-back');click('[data-slot="belt"]');await wait(()=>d.querySelector('#sim-slot-title').textContent==='ベルト');releaseUnique();await new Promise(r=>setTimeout(r,40));assert.equal(d.querySelector('#sim-item-text').value,'','stale unique cannot fill another slot');
  const headhunter=[...d.querySelector('#sim-unique').options].find(option=>option.textContent.includes('ヘッドハンター'));change('#sim-unique',headhunter.value);holdUnique=true;releaseUnique=null;click('#sim-unique-draft');await wait(()=>releaseUnique);change('#sim-item-text','Typed replacement draft','input');releaseUnique();await new Promise(r=>setTimeout(r,40));assert.equal(d.querySelector('#sim-item-text').value,'Typed replacement draft','stale unique cannot overwrite newer typing');
+ runtimeTraps=4;const startsBefore=workerStarts;change('#sim-level','81');await wait(()=>!d.querySelector('#sim-error').hidden);
+ assert.equal(runtimeTraps,0);assert.equal(workerStarts-startsBefore,3,'four failed calculation attempts stop after three new workers');
+ assert.equal(saved().request.character.level,81,'keep the latest applied request after an exhausted recovery');
+ assert.equal(d.querySelector('#sim-item-text').value,'Typed replacement draft','engine recovery cannot replace an unapplied draft');
+ click('#sim-engine-retry');await wait(()=>ready()&&d.querySelector('#sim-error').hidden);
+ assert.equal(workerStarts-startsBefore,4,'manual retry must replace the final trapped worker');assert.equal(saved().request.character.level,81);
+ assert.equal(d.querySelector('#sim-item-text').value,'Typed replacement draft');
  assert.equal(errors.length,0,errors.join('\n'));
- console.log('PASS: shared search, device reading list, safe links, single menu handling, bilingual build/equipment search, image picker staging, quick modifiers, reset and stale draft protection.');
+ console.log('PASS: search, reading list, bilingual equipment input, staged drafts, first-calculation recovery, bounded trapped calculations, fresh-worker manual retry and retained requests/drafts.');
 }finally{dom.window.close();await native.terminate();}

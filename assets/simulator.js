@@ -27,7 +27,7 @@ let decisionSequence=0,multiSequence=0,isolateSequence=0,candidateTable=null;
 let equipmentDraftVersion=0,candidateBusy=false,incomingComparison=null,comparisonSource=null,summaryBaseline=null,locationSequence=0;
 let itemSource='',equipmentMode='unique',rareDraft=null,editorBaseline=null;
 let uniqueDraftSequence=0;
-let worker,bootPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
+let worker,bootPromise,recoveryPromise,catalog,plan,result,baseline,selectedPreset,generation=0,calculation=0,sequence=0;
 let selectedSlot='helmet',selectedNode=null,preview=null,activeTab='items',view={x:0,y:0,w:8500,h:6500},currentTree=[];
 const pending = new Map();
 const frame = window.requestAnimationFrame?.bind(window) || (fn=>setTimeout(fn,16));
@@ -46,8 +46,34 @@ function setCurrentTree(nodes){
  $('sim-tree-nodes').replaceChildren();$('sim-tree-edges').replaceChildren();renderedNodes.clear();renderedEdges.clear();
 }
 
-function rpc(action,payload) {
+function workerRequest(action,payload) {
  return new Promise((resolve,reject)=>{const id=++sequence;pending.set(id,{resolve,reject});try{if(!worker)throw Error('計算エンジンを再起動してください。');worker.postMessage({id,action,payload});}catch(error){pending.delete(id);reject(error);}});
+}
+function discardEngine(current,error){
+ if(worker!==current)return;
+ current?.terminate?.();worker=null;catalog=null;bootPromise=null;
+ for(const task of pending.values())task.reject(error);pending.clear();
+}
+function recoverEngine(current,error){
+ if(recoveryPromise)return recoveryPromise;
+ if(worker!==current)return engine();
+ discardEngine(current,error);$('sim-status').textContent='起動を自動で再試行しています…';
+ let promise;promise=engine().finally(()=>{if(recoveryPromise===promise)recoveryPromise=null;});
+ recoveryPromise=promise;return promise;
+}
+async function rpc(action,payload){
+ for(let attempt=0;attempt<4;attempt++){
+  if(action!=='boot'&&recoveryPromise)await recoveryPromise;
+  const current=worker;
+  try{return await workerRequest(action,payload);}
+  catch(error){
+   // A successful boot can still be followed by a trapped first calculation.
+   // Only typed engine failures retry; invalid requests and corrupt packs do not.
+   if(action==='boot'||error.code!=='ENGINE_STARTUP_FAILURE')throw error;
+   if(attempt===3){discardEngine(current,error);throw error;}
+   await recoverEngine(current,error);
+  }
+ }
 }
 function engine() {
  if(bootPromise)return bootPromise;

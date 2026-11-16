@@ -15,7 +15,7 @@ await new Promise(resolve=>server.listen(4173,'127.0.0.1',resolve));
 const reference=new Map();
 try{for(const[type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
  const browser=await type.launch();
- try{for(const locale of ['', '/en'])for(const mode of ['transient','exhausted','integrity']){
+ try{for(const locale of ['', '/en'])for(const mode of ['transient','exhausted','integrity','calculate']){
   const context=await browser.newContext({viewport:{width:320,height:900},isMobile:true,hasTouch:true});
   await context.addInitScript(({auto,key,saved,named})=>{if(location.origin==='http://127.0.0.1:4173'){localStorage.setItem(auto,saved);localStorage.setItem(key,named);}}, {auto,key,saved,named});
   let starts=0,allowReal=false;const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -23,15 +23,20 @@ try{for(const[type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
    const url=new URL(route.request().url());if(url.origin!=='http://127.0.0.1:4173')return route.abort();
    if(/^\/assets\/simulator-worker(?:-en)?\.js$/.test(url.pathname)){
     starts++;
-    const inject=!allowReal&&(mode==='exhausted'||mode==='integrity'||starts<=2);
+    const inject=!allowReal&&(mode==='exhausted'||mode==='integrity'||mode==='transient'&&starts<=2);
     if(inject)return route.fulfill({status:200,contentType:'text/javascript',body:`self.onmessage=({data})=>postMessage({id:data.id,error:'QA startup failure',${mode==='integrity'?'':"errorCode:'ENGINE_STARTUP_FAILURE'"}});`});
+    if(mode==='calculate'&&starts===1){
+     const source=await readFile(resolve(root,'.'+url.pathname),'utf8'),needle="else if (action === 'calculate') result = calculate(payload);";
+     assert(source.includes(needle),'inject only after the real worker boot succeeds');
+     return route.fulfill({status:200,contentType:'text/javascript',body:source.replace(needle,"else if (action === 'calculate') throw new WebAssembly.RuntimeError('QA first calculation failure');")});
+    }
    }
    return route.continue();
   });
   const ready=async()=>{await page.waitForFunction(()=>!document.querySelector('#sim-error')?.hidden||(document.querySelector('#sim-stats')?.getAttribute('aria-busy')==='false'&&!!window.Poe2SimulatorLibrary?.goalData()),undefined,{timeout:100000});assert.equal(await page.locator('#sim-error').isVisible(),false,await page.locator('#sim-error').textContent());};
   try{
    await page.goto('http://127.0.0.1:4173'+locale+'/simulator/?build='+sample.preset,{waitUntil:'domcontentloaded'});
-   if(mode!=='transient'){
+   if(mode==='exhausted'||mode==='integrity'){
     await page.locator('#sim-error').waitFor({state:'visible'});assert.equal(starts,mode==='exhausted'?4:1,'retryable failures stop at four; integrity errors must not loop');
     assert.equal(await page.evaluate(key=>localStorage.getItem(key),auto),saved,'a failed boot cannot overwrite the saved draft');
     assert.equal(await page.locator('#sim-engine-retry').isEnabled(),true);
@@ -39,7 +44,7 @@ try{for(const[type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
    }
    await ready();
    assert(starts>=(mode==='transient'?3:mode==='exhausted'?5:2));
-   assert(starts<=(mode==='transient'?4:mode==='exhausted'?8:5),'each user request has a separate, bounded startup budget');
+   assert(starts<=(mode==='exhausted'?20:mode==='integrity'?17:16),'each boot and calculation has a separate, bounded recovery budget');
    const stats=await page.locator('#sim-stats .sim-stat b').allTextContents();assert.equal(stats.length,14);
    if(!reference.has(locale))reference.set(locale,stats);assert.deepEqual(stats,reference.get(locale),'recovered calculations match a successful real engine');
    const{savedAt:before,...original}=JSON.parse(saved),{savedAt:after,...current}=JSON.parse(await page.evaluate(key=>localStorage.getItem(key),auto));assert.deepEqual(current,original);
@@ -48,4 +53,4 @@ try{for(const[type,name]of [[chromium,'chromium'],[webkit,'webkit']]){
   }finally{await context.close();}
  }}finally{await browser.close();}
 }}finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
-console.log('PASS: automatic fresh-worker recovery, bounded permanent failures, non-retryable integrity errors, manual retry, unchanged calculations and retained saves');
+console.log('PASS: automatic fresh-worker recovery after boot or first calculation, bounded permanent failures, non-retryable integrity errors, manual retry, unchanged calculations and retained saves');

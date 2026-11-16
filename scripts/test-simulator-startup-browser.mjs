@@ -32,7 +32,7 @@ try{
     const url=new URL(route.request().url());
     if(url.origin!=='http://127.0.0.1:4173')return route.abort();
     if(mode==='baseline'&&/^\/assets\/simulator(?:-en)?\.js$/.test(url.pathname)){
-      const source=(await readFile(resolve(root,'.'+url.pathname),'utf8')).replace('attempt<4','attempt<1').replace('attempt===3','attempt===0');
+      const source=(await readFile(resolve(root,'.'+url.pathname),'utf8')).replaceAll('attempt<4','attempt<1').replaceAll('attempt===3','attempt===0');
       return route.fulfill({status:200,contentType:'text/javascript',body:source});
     }
     if(mode==='baseline'&&url.pathname==='/assets/simulator-engine-loader.js'){
@@ -53,7 +53,7 @@ try{
      await page.waitForFunction(()=>!document.querySelector('#sim-error')?.hidden||(document.querySelector('#sim-stats')?.getAttribute('aria-busy')==='false'&&!!window.Poe2SimulatorLibrary?.goalData()),undefined,{timeout:100000});
      if(await page.locator('#sim-error').isVisible())throw Error(await page.locator('#sim-error').textContent());
      if(mode==='baseline')assert(legacyLoads>0,'the control must actually load the original staging code');
-     assert(workerLoads-beforeLoads>=1&&workerLoads-beforeLoads<=(mode==='baseline'?1:4),'production recovery must be bounded');
+     assert(workerLoads-beforeLoads>=1&&workerLoads-beforeLoads<=(mode==='baseline'?1:16),'boot and calculation recovery each have a bounded four-attempt budget');
      const numbers=await page.locator('#sim-stats .sim-stat b').allTextContents();assert.equal(numbers.length,14);assert.notEqual(numbers[1],'—');
      if(!reference.has(locale))reference.set(locale,numbers);
      assert.deepEqual(numbers,reference.get(locale),'loader changes cannot alter calculation results');
