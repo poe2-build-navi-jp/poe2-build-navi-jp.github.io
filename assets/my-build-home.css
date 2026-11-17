@@ -8,6 +8,9 @@
 .my-build-intro{margin:8px 0 18px;font-size:14px;color:#62675c}
 .my-build-picker{display:block;margin:0 0 16px;font-size:13px;font-weight:650}
 .my-build-picker select{display:block;width:100%;max-width:100%;min-width:0;min-height:48px;margin:5px 0 0;padding:10px 12px;border:1px solid #c9c3b5;border-radius:8px;background:#fff;color:#30372b;font-family:inherit;font-size:16px;font-weight:400;line-height:1.5;text-overflow:ellipsis}
+/* WebKit's native select keeps the width of its longest option; draw the arrow ourselves so it can shrink. */
+.my-build-picker{min-width:0;max-width:100%}
+.my-build-picker select{appearance:none;-webkit-appearance:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:34px;background-image:linear-gradient(45deg,transparent 50%,#5c6454 50%),linear-gradient(135deg,#5c6454 50%,transparent 50%);background-position:calc(100% - 19px) center,calc(100% - 14px) center;background-size:5px 5px;background-repeat:no-repeat}
 .my-build-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:14px;align-items:stretch}
 .my-build-column{display:flex;flex-direction:column;gap:14px;min-width:0}
 .my-build-current{display:flex;flex-direction:column;align-items:stretch;padding:22px;border:1px solid #cbc3ae;border-radius:9px;background:#f3eddf;min-width:0}
