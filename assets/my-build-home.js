@@ -24,6 +24,15 @@ export function installMyBuildHome(document){
  const index=()=>indexPromise||=(loadJSON('/data/simulator-index.json?v=081a4b68e0'));
  const notices=()=>noticePromise||=(loadJSON('/data/saved-build-updates.json'));
  const retry=find('[data-my-build-retry]'),seenButton=find('[data-my-build-seen]');
+ // Home page: a small square tile opens and closes the full panel. The choice is a per-browser convenience.
+ const toggle=find('[data-my-build-toggle]'),panel=find('[data-my-build-panel]'),OPEN_KEY='poe2-my-build-home-open';
+ let panelOpen=false;
+ const applyPanel=()=>{if(!toggle||!panel)return;panel.hidden=!panelOpen;toggle.setAttribute('aria-expanded',String(panelOpen));toggle.classList.toggle('is-open',panelOpen);find('[data-my-build-tile-state]').textContent=panelOpen?t('閉じる','Close'):t('開く','Open');};
+ if(toggle&&panel){
+  try{panelOpen=storage().getItem(OPEN_KEY)==='1';}catch{}
+  applyPanel();
+  toggle.addEventListener('click',()=>{panelOpen=!panelOpen;try{storage().setItem(OPEN_KEY,panelOpen?'1':'0');}catch{}applyPanel();track(panelOpen?'my_build_home_open':'my_build_home_close');void refresh();});
+ }
  const showWarning=content=>{warning.textContent=content;};
 
  async function renderGoal(record,token){
@@ -89,13 +98,14 @@ export function installMyBuildHome(document){
   find('[data-my-build-equipment]').textContent=t(`${record.equipment}部位`,`${record.equipment} slots`);
   const savedDate=find('[data-my-build-date]');
   if(record.at){const time=make('time',new Intl.DateTimeFormat(en?'en-GB':'ja-JP',{dateStyle:'medium',timeStyle:'short'}).format(new Date(record.at)));time.dateTime=new Date(record.at).toISOString();savedDate.replaceChildren(document.createTextNode(t('保存：','Saved: ')),time);}else savedDate.textContent=t('保存日時は記録されていません。','No save date is recorded.');
+  const tileMeta=find('[data-my-build-tile-meta]');if(tileMeta)tileMeta.textContent=(record.kind==='auto'?record.meta.name:record.name)+' · Lv'+record.saved.request.character.level;
   find('[data-my-build-resume]').href=resumeHref(record,en);
   find('[data-my-build-goal-open]').href=resumeHref(record,en,'goal');
   const growthLink=find('[data-my-build-growth-open]');if(growthLink)growthLink.href=resumeHref(record,en,'growth');
   const back=document.getElementById('sim-change-build');if(back){back.textContent=t('← マイビルド・一覧','← My builds / presets');back.setAttribute('aria-label',t('マイビルドホーム・ビルド一覧へ戻る','Back to My builds and presets'));}
   if(!viewTracked&&!section.closest('[hidden]')){track('my_build_home_view',record);viewTracked=true;}
   // The home stays light while editing; render the summaries when its chooser opens.
-  if(section.closest('[hidden]'))return;
+  if(section.closest('[hidden]')||panel?.hidden)return;
   await Promise.allSettled([renderGoal(record,token),renderUpdates(record,token)]);
  }
  const schedule=()=>{window.clearTimeout(timer);timer=window.setTimeout(()=>{void refresh();},80);};

@@ -43,8 +43,8 @@ assert.deepEqual(homeNotices(noticeCatalog,current).map(n=>n.id),['for-a']);asse
 assert.throws(()=>readSeen('{broken'));assert.equal(JSON.stringify(entries),before);
 
 const snapshot=storage=>Object.fromEntries(Array.from({length:storage.length},(_,i)=>{const key=storage.key(i);return [key,storage.getItem(key)];}));
-function fixture(en=false,values=entries,{offline=false,gate=null}={}){
- const catalog=en?enPresets:presets,dom=new JSDOM(`<html lang="${en?'en':'ja'}"><main>${myBuildHomeMarkup(catalog,en)}<h1>Existing introduction</h1></main></html>`,{url:'https://poe2-build-navi-jp.github.io/'+(en?'en/simulator/':''),pretendToBeVisual:true});
+function fixture(en=false,values=entries,{offline=false,gate=null,compact=false}={}){
+ const catalog=en?enPresets:presets,dom=new JSDOM(`<html lang="${en?'en':'ja'}"><main>${myBuildHomeMarkup(catalog,en,{compact})}<h1>Existing introduction</h1></main></html>`,{url:'https://poe2-build-navi-jp.github.io/'+(en?'en/simulator/':''),pretendToBeVisual:true});
  const w=dom.window,d=w.document,requests=[],analytics=[];w.structuredClone=structuredClone;w.HTMLElement.prototype.scrollIntoView=function(){};
  for(const [key,value]of Object.entries(values))w.localStorage.setItem(key,value);
  w.Worker=class{constructor(){throw Error('Home must not boot the calculation engine');}};
@@ -82,4 +82,15 @@ const empty=fixture(false,{});try{await installMyBuildHome(empty.d).ready;assert
 // A cached home from before tasks/history can load a refreshed module safely.
 const cached=fixture();try{cached.d.querySelector('[data-my-build-actions]').remove();cached.d.querySelector('#my-build-growth').remove();await installMyBuildHome(cached.d).ready;assert.equal(cached.d.querySelector('[data-my-build-level]').textContent,'85');assert.deepEqual([...cached.d.querySelectorAll('.my-build-goal-counts dd')].map(e=>e.textContent),['1','2','1']);assert.equal(cached.d.querySelector('[data-my-build-resume]').getAttribute('href'),resumeHref(current));}finally{cached.dom.window.close();}
 const blocked=fixture(false,{});try{Object.defineProperty(blocked.w,'localStorage',{get(){throw Error('blocked');}});await installMyBuildHome(blocked.d).ready;assert.match(blocked.d.querySelector('[data-my-build-warning]').textContent,/保存を確認できません/);assert.equal(blocked.d.querySelector('h1').textContent,'Existing introduction');}finally{blocked.dom.window.close();}
+// Home page tile: a small square opens and closes the panel; summaries load only once it is open; the choice is remembered.
+const tile=fixture(false,entries,{compact:true});try{
+ const {d,w,requests}=tile,home=installMyBuildHome(d);await home.ready;
+ const toggle=d.querySelector('[data-my-build-toggle]'),panel=d.querySelector('[data-my-build-panel]');
+ assert.equal(d.querySelector('#my-build-home').hidden,false);assert.equal(panel.hidden,true);assert.equal(toggle.getAttribute('aria-expanded'),'false');
+ assert.match(d.querySelector('[data-my-build-tile-meta]').textContent,/Lv85/);assert.equal(requests.length,0,'a closed tile does not load summaries');
+ toggle.click();await home.refresh();
+ assert.equal(panel.hidden,false);assert.equal(toggle.getAttribute('aria-expanded'),'true');assert.equal(w.localStorage.getItem('poe2-my-build-home-open'),'1');assert(requests.length>0,'opening loads summaries');
+ toggle.click();assert.equal(panel.hidden,true);assert.equal(w.localStorage.getItem('poe2-my-build-home-open'),'0');
+}finally{tile.dom.window.close();}
+const tileEmpty=fixture(false,{},{compact:true});try{await installMyBuildHome(tileEmpty.d).ready;assert.equal(tileEmpty.d.querySelector('#my-build-home').hidden,true,'no saves: no tile');}finally{tileEmpty.dom.window.close();}
 console.log('PASS: private read-only home, isolated corrupt saves, recent/pinned selection, named-save links, exact goal gaps, unknown tree safeguards, relevant/unread notices, safe text, no engine, offline continuation, stale fetch isolation, and JA/EN rendering.');
