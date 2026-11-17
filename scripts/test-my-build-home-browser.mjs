@@ -30,7 +30,15 @@ try{for(const [type,browserName]of [[chromium,'chromium'],[webkit,'webkit']]){
    await page.goto(entry,{waitUntil:'domcontentloaded'});await page.locator('#my-build-home[data-installed]').waitFor({state:'attached'});
    assert.equal(await page.locator('#my-build-home').isVisible(),false,'new visitors keep the existing introduction');
    await context.addInitScript(({origin,values})=>{if(location.origin===origin&&!sessionStorage.getItem('home-fixture')){for(const [key,value]of Object.entries(values))localStorage.setItem(key,value);sessionStorage.setItem('home-fixture','true');}},{origin:base,values});
-   await page.reload();await page.locator('#my-build-home').waitFor();await page.locator('.my-build-goal-counts dd').first().waitFor();
+   await page.reload();await page.locator('#my-build-home').waitFor();
+   if(!locale){
+    // Home page: the panel starts closed behind a small square tile.
+    const tile=page.locator('[data-my-build-toggle]'),tileBox=await tile.boundingBox();
+    assert(tileBox.width<=160&&tileBox.height<=160&&tileBox.width>=44,'My builds is a small square tile');
+    assert.equal(await page.locator('[data-my-build-panel]').isVisible(),false);
+    await tile.click();assert.equal(await tile.getAttribute('aria-expanded'),'true');
+   }
+   await page.locator('.my-build-goal-counts dd').first().waitFor();
    assert.deepEqual(await page.locator('.my-build-goal-counts dd').allTextContents(),['1','2','1']);assert.equal(await page.locator('[data-my-build-level]').textContent(),'85');
    assert(!requests.some(url=>/\/simulator-engine\/|\/simulator-worker/.test(url)),'a returning-visitor home must not start the calculation engine');
    assert.deepEqual(await savedSnapshot(page),values,'displaying the dashboard is read-only');
