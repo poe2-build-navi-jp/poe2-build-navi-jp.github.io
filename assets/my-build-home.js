@@ -31,7 +31,8 @@ export function installMyBuildHome(document){
  if(toggle&&panel){
   try{panelOpen=storage().getItem(OPEN_KEY)==='1';}catch{}
   applyPanel();
-  toggle.addEventListener('click',()=>{panelOpen=!panelOpen;try{storage().setItem(OPEN_KEY,panelOpen?'1':'0');}catch{}applyPanel();track(panelOpen?'my_build_home_open':'my_build_home_close');void refresh();});
+  toggle.addEventListener('click',()=>{panelOpen=!panelOpen;try{storage().setItem(OPEN_KEY,panelOpen?'1':'0');}catch{}applyPanel();track(panelOpen?'my_build_home_open':'my_build_home_close');if(panelOpen&&window.getComputedStyle(panel).position!=='absolute')panel.scrollIntoView({block:'start',behavior:'instant'});void refresh();});
+  section.addEventListener('keydown',event=>{if(event.key==='Escape'&&panelOpen){panelOpen=false;try{storage().setItem(OPEN_KEY,'0');}catch{}applyPanel();toggle.focus();}});
  }
  const showWarning=content=>{warning.textContent=content;};
 

@@ -91,6 +91,7 @@ const tile=fixture(false,entries,{compact:true});try{
  toggle.click();await home.refresh();
  assert.equal(panel.hidden,false);assert.equal(toggle.getAttribute('aria-expanded'),'true');assert.equal(w.localStorage.getItem('poe2-my-build-home-open'),'1');assert(requests.length>0,'opening loads summaries');
  toggle.click();assert.equal(panel.hidden,true);assert.equal(w.localStorage.getItem('poe2-my-build-home-open'),'0');
+ toggle.click();await home.refresh();panel.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));assert.equal(panel.hidden,true,'Escape closes the panel');assert.equal(d.activeElement,toggle,'focus returns to the tile');
 }finally{tile.dom.window.close();}
 const tileEmpty=fixture(false,{},{compact:true});try{await installMyBuildHome(tileEmpty.d).ready;assert.equal(tileEmpty.d.querySelector('#my-build-home').hidden,true,'no saves: no tile');}finally{tileEmpty.dom.window.close();}
 console.log('PASS: private read-only home, isolated corrupt saves, recent/pinned selection, named-save links, exact goal gaps, unknown tree safeguards, relevant/unread notices, safe text, no engine, offline continuation, stale fetch isolation, and JA/EN rendering.');
