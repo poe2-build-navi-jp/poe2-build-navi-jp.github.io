@@ -12334,6 +12334,20 @@
             "height": 456
           },
           {
+            "src": "/images/poe2/bodach/body-armour.webp",
+            "alt": "不屈なる者として死すの装備ツールチップ",
+            "caption": "不屈なる者として死す",
+            "width": 922,
+            "height": 525
+          },
+          {
+            "src": "/images/poe2/bodach/gloves.webp",
+            "alt": "悩ましい万力の装備ツールチップ",
+            "caption": "悩ましい万力",
+            "width": 595,
+            "height": 410
+          },
+          {
             "src": "/images/poe2/bodach/boots-atziri.webp",
             "alt": "アッツィリの歩みの装備ツールチップ",
             "caption": "アッツィリの歩み",
@@ -12369,7 +12383,7 @@
             "height": 540
           }
         ],
-        "screenshotsDisclosure": "装備のスクリーンショット8枚を見る"
+        "screenshotsDisclosure": "装備のスクリーンショット10枚を見る"
       },
       {
         "id": "changes",
@@ -12498,6 +12512,10 @@
       {
         "date": "2026-11-18",
         "summary": "ベルト・アミュレット・キャラクター画面（防御の詳細）の画像と、アーマー・回避力・受け流し・最大耐性の表示値を追加。"
+      },
+      {
+        "date": "2026-11-18",
+        "summary": "鎧（不屈なる者として死す）と手袋（悩ましい万力）の画像を追加。"
       }
     ]
   }
