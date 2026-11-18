@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "64fcf9776e2cd7690443065c9412948f4f3cb9dd",
+  "headCommit": "b33ebcfcd0d289bdfc708ab1b02f98ff02abb4ab",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "change": "updated",
+      "beforeHash": "6c276a6d4bb84ae4632f70efec27774ecd755e06858a8839550349ca225e8a42",
+      "afterHash": "c43d99e14245a1ac8ff15eb1b513493daceaac8ecff346beeb269c9f970ed34f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "9ca9c921daac1d2c4641ef0d0448153877bea2f8e813ef5f2584af259484394a",
+      "afterHash": "a7998c214fceff895f86d5fe86dbfcef0690f116e29ca30c62421feeb36631bf"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/arbiter-of-divinity/",
+      "change": "updated",
+      "beforeHash": "9d3bb5d9d53372f31f769ec06962eda47ecf79fca9dda2be577d0cdf4ced5b34",
+      "afterHash": "77def557cea1e292fe6562e488a53a9e02a915e2562b3496ca40e03b7fcf8d0c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/bodach/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "ce0500ab15943b600d462d433e487f285414773c99dbfd3686b4d25ec5ab2fad"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/pinnacle-bosses/",
+      "change": "updated",
+      "beforeHash": "83dedbeb5e088155ae188cc4e93e8e102766e0c8293ef9711275c471e4d85e5d",
+      "afterHash": "da46854e1047a36eecb4b7c623b92e2e8ea1c99038ab1b15ce32f32b22865f71"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/xesht/",
+      "change": "updated",
+      "beforeHash": "610a7a03747209d492542311930df7b3fee8b6f09650b76e00e4c01aa0d09d6e",
+      "afterHash": "77001443b2201f06d2e28c33ed717020c662d9eb26ea171341bb50ab9bccdcb7"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "51292e64362c95c75577c0e9fb4f599cc7db3c63b76274045c84ff3663ee96d9",
+      "afterHash": "188abb3542e49d9b43f5f4e29ec0ec04f5768ea186163603a1255f4fc92a815d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "3b4b0d843402eb5de245d82a2672cd13072e77e5f5b272499c388df28b596ad5",
+      "afterHash": "4381490abda51d1a8d39fd1c6fe56265412092d5f737ebc8aec67099b5973892"
+    }
+  ]
+}
