@@ -1,7 +1,7 @@
 {
  "/": {
-  "hash": "a72745f1fb85c18d",
-  "date": "2026-11-17",
+  "hash": "a0db642717852262",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/simulator/": {
@@ -25,8 +25,8 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "cedd4cec423be011",
-  "date": "2026-11-16",
+  "hash": "1e37186c7fe2af2a",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/name-index/": {
@@ -225,8 +225,8 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "58848996f03f9478",
-  "date": "2026-11-14",
+  "hash": "607319f2d9a0ef2a",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/dictionary/": {
@@ -285,8 +285,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "625ce4f6627003bc",
-  "date": "2026-11-16",
+  "hash": "7b30b261df53534e",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -515,8 +515,8 @@
   "hashVersion": 2
  },
  "/guides/pinnacle-bosses/": {
-  "hash": "b8f8d47b81e01020",
-  "date": "2026-11-15",
+  "hash": "175a3fd51a9e8553",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/guides/arbiter-of-ash-clear-record/": {
@@ -530,8 +530,8 @@
   "hashVersion": 2
  },
  "/guides/arbiter-of-divinity/": {
-  "hash": "433216d590b92f5c",
-  "date": "2026-11-16",
+  "hash": "13952bd27cecabe6",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/guides/mageblood-legacies/": {
@@ -590,8 +590,8 @@
   "hashVersion": 2
  },
  "/guides/xesht/": {
-  "hash": "dd1171efe1cff491",
-  "date": "2026-11-15",
+  "hash": "f06dc5b3d3bae748",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/guides/mageblood-acquisition/": {
@@ -607,6 +607,11 @@
  "/guides/simulator-boots-comparison/": {
   "hash": "75529618cc42f836",
   "date": "2026-11-15",
+  "hashVersion": 2
+ },
+ "/guides/bodach/": {
+  "hash": "cb32ef0ce13c85ba",
+  "date": "2026-11-18",
   "hashVersion": 2
  },
  "/dictionary/build/": {
