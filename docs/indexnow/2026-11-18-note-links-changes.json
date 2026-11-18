@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "ea6e8ed0aed5b90e15640f5d37e4a974205b2b30",
+  "headCommit": "05a1e6dec7c67399786b57e3ecedc21fbf45bcb9",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "change": "updated",
+      "beforeHash": "fe5bad2e25fcba68b3a678587304c9e6965c76a78ff473d0c3b72b9a684cd7ac",
+      "afterHash": "6c276a6d4bb84ae4632f70efec27774ecd755e06858a8839550349ca225e8a42"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/beginner-builds/",
+      "change": "updated",
+      "beforeHash": "30e4d798201b0c5a8d2bb3f200a1a9934cc764dd3be45398e8a00f3a022e6365",
+      "afterHash": "70dc3b0eea9850d12352bca4793f0a6423134e25315a8eea13fc1ed0abc52703"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/druid/plant-oracle/",
+      "change": "updated",
+      "beforeHash": "38109d49ee530fb0ac03341369fc85b77b3370a7c2de3623a6a63d21bc775fee",
+      "afterHash": "6b7258634ad021ad6e9cc0e428cf5e5bb24be50c3c3efb712ce4c7953c9ba1e5"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/huntress/companion/",
+      "change": "updated",
+      "beforeHash": "45f220806bb0b510b177f86e322928d9a74522d593262ede859077f7447f6c22",
+      "afterHash": "efdbd1a55c2eeb534e8345dd34c5f8df036be39974385b097b139ce56bf13386"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/",
+      "change": "updated",
+      "beforeHash": "311b5747e93e50673430d9b64b01c3c17b9c261db4214331e33661bfafbf8110",
+      "afterHash": "78325f1fcf292ae42e843fc603173a17fa950d2f684cf9612d68c86e50e0de4c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/",
+      "change": "updated",
+      "beforeHash": "755a641d1d9ff620b2a1bbeedc82e3e98266a2fb9f31f5ee1a57f5e6751a7370",
+      "afterHash": "37dc63b99f6e3de955d00f1e05455737ae26e0be36c00a3d98943dcdff4d2934"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/mercenary/twister-gemling/",
+      "change": "updated",
+      "beforeHash": "9045c0e04e8fa322d9e2559babd8e19d3f91eb2764c806285731384417767420",
+      "afterHash": "03d29f3ef9f8314c528310ff15fd137e1bb154264c804624ab1f5d87f7dfe209"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/",
+      "change": "updated",
+      "beforeHash": "265aa673a64b52c0fa7d5a31ab56a565a8f6e702a6694c317c560785b1927c6d",
+      "afterHash": "98c03b5f3498cc1d5cc38c2a75c4950680e61dcc1791e455a665b7f81d55e1be"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/",
+      "change": "updated",
+      "beforeHash": "136221079465c0df9c01acb754a9cffd9182dce20a48f2d972f410702bf95cfb",
+      "afterHash": "f558d6c09971d140573b222d3be0a3ea33d643064d16773a08a6c83474061e35"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/",
+      "change": "updated",
+      "beforeHash": "00068ffc90c317da23dc1551967b724100966be128e098b3c3b6ef875e4bce1f",
+      "afterHash": "2ecef247477b9eeb7a66ffe8e6b08b93a3ba238bf46ef8d852a7be1de864358b"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/sorceress/spark-stormweaver/",
+      "change": "updated",
+      "beforeHash": "fc791a05d33894f52c6aad3513f9311ce4fd2e18022b3a29e08b7c9e5b418673",
+      "afterHash": "3cfe6a6ebffde053f1ad916aa5eb3d906ff3af1ee97ad1e5e0ca13311622fd94"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/",
+      "change": "updated",
+      "beforeHash": "cd00dc1b4c0404c697cf6805e200e5458096fe1c0ba492b725badc390303871e",
+      "afterHash": "3dfcfc28a41c1cf21cf53bd80bcc69128b0faea1cd54a9a7030aaaf1e1b31e8d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/",
+      "change": "updated",
+      "beforeHash": "af178348d4ae24e1a5fd1941eb92917a60fd4eca2023ee0ce13fc0744ca60ab7",
+      "afterHash": "67f8630f284a6c3ebedd3d01a0a0cbe8d15ac84ecd9c2ad12c2a740872e82c21"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/",
+      "change": "updated",
+      "beforeHash": "844a6d874ed11d0ccf5ff6a6c0ed37a99cb14d20db576bb62a9b2543708a3c24",
+      "afterHash": "da0dee5b314817e2e9a07d8d63fa877917284e0e76f68364b1a8e574ab62927d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/tier-list/",
+      "change": "updated",
+      "beforeHash": "9674f55834100f42bfbd1cc63782cdbe0adc9ce42caee6ed65723643f2a857ba",
+      "afterHash": "58a626d0f961feaf0fff0d3eb94cbac8eb6189b178130b9cc0d9c3a60f02e210"
+    }
+  ]
+}
