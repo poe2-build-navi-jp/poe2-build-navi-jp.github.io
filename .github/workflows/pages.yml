@@ -21,6 +21,8 @@ jobs:
   deploy:
     # Keep the installed Playwright version on its supported browser/dependency platform.
     runs-on: ubuntu-24.04
+    # A slow package mirror once held the browser install for over 10 minutes; never wait 6 hours.
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -41,8 +43,34 @@ jobs:
           node scripts/test-passive-icons.mjs
           node scripts/test-mobile-host.mjs
           npm run test:usability
+      # Reuse the browser binaries and the system packages they need, so a slow Ubuntu mirror
+      # does not hold up publishing. Both caches change only when package-lock.json changes.
+      - name: Restore browser cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-browsers-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Restore browser system package cache
+        uses: actions/cache@v4
+        with:
+          path: ~/apt-cache
+          key: playwright-apt-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - name: Install browser for responsive checks
-        run: node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit
+        timeout-minutes: 25
+        run: |
+          echo 'APT::Keep-Downloaded-Packages "true";' | sudo tee /etc/apt/apt.conf.d/99keep-downloads >/dev/null
+          sudo rm -f /etc/apt/apt.conf.d/docker-clean
+          if ls ~/apt-cache/*.deb >/dev/null 2>&1; then sudo cp ~/apt-cache/*.deb /var/cache/apt/archives/; fi
+          # Each attempt stops after 10 minutes; a second attempt can reach a faster mirror.
+          for attempt in 1 2; do
+            if timeout 600 node node_modules/playwright-core/cli.js install --with-deps --only-shell chromium webkit; then
+              break
+            fi
+            if [ "$attempt" = 2 ]; then echo "Browser install failed twice" >&2; exit 1; fi
+            echo "Browser install attempt $attempt did not finish; retrying" >&2
+          done
+          mkdir -p ~/apt-cache
+          cp /var/cache/apt/archives/*.deb ~/apt-cache/ 2>/dev/null || true
       - name: Check phone, tablet and desktop usability
         run: npm run test:usability:browser && node scripts/test-reading-browser.mjs
       - name: Keep responsive check screenshots
