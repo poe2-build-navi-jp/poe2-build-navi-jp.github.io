@@ -395,3 +395,5 @@
 - 修正は、パイプラインの日付同期部分だけを順に実行：`SITEMAP_DATE=2026-11-18 node tools/generate-sitemap.mjs` → `enhance-page-schema` → `enhance-editorial-trust` → `sync-asset-versions`。14ページだけが 2026-11-18 になり、他ページの日付は変わらない。
 - `npm run build`（全体）は使わなかった：note-paid ブロックはどの生成スクリプトにも無く、全体ビルドで14ページから消えることを一時コピーで確認したため。
 - 要対応：次に誰かが全体ビルドをするとnote導線が消える。導線をデータ（data/）と生成スクリプトに移す必要がある。
+- 2026-11-18 追記：note導線をデータ化。data/note-paid.json（14件：path・title・lead・href・linkText）を、新しいビルド手順 tools/enhance-note-links.mjs が </main> 直前（1.0ボックスの後）へ入れる。日本語名の付与（localize-japanese-names）の後、generate-sitemap の前に実行するので、文言はそのままで、変更は日付台帳に記録される。全体ビルドで14ページすべてに残ることを確認。導線を増やす・直すときは data/note-paid.json を編集して npm run build する（HTMLを直接編集しない）。
+- 手編集のときにデプロイ時の印（<meta name="poe2-release">）がソースに入っていたので取り除いた。この印はデプロイ時に tools/stamp-mobile-release.mjs が付ける。
