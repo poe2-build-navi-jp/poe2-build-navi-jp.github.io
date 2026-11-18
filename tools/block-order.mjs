@@ -25,7 +25,9 @@ export const MAIN_END_BLOCKS = [
   ["build-feedback", marker("build-feedback")],
   ["term-links", marker("term-links")],
   ["build-history", marker("build-history")],
-  ["one-link", marker("one-link")]
+  ["one-link", marker("one-link")],
+  // enhance-note-links: the note article box, after the 1.0 box.
+  ["note-paid", marker("note-paid")]
 ];
 
 export function insertBlock(html, closing, name, block) {
