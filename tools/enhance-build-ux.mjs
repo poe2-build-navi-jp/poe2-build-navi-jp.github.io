@@ -85,7 +85,7 @@ for(const page of pages){
 for(const b of builds){
  const path=`builds/${b.classSlug}/${b.slug}/index.html`;
  let html=await read(path);
- html=html.replace(/対応環境 [^<]+・<a href="[^"]+" target="_blank" rel="noopener noreferrer">最新確認 [^<]+<\/a>・最終確認 [^<]+/,`対応環境 ${esc(b.version)}・育成手順の原典照合 ${esc(b.updatedAt)}・<a href="${esc(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式パッチノート確認 ${esc(site.latestPatchCheckedAt)}</a>`);
+ html=html.replace(/対応環境 [^<]+・<a href="[^"]+" target="_blank" rel="noopener noreferrer">最新確認 [^<]+<\/a>・最終確認 [^<]+/,`対応環境 ${esc(b.version)}・<a href="${esc(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">公式パッチノート確認 ${esc(site.latestPatchCheckedAt)}</a>・育成手順の原典照合 ${esc(b.updatedAt)}`);
  html=html.replace(/<div id="fact-grid" class="fact-grid">[\s\S]*?(?=<section id="level-card")/,`<div id="fact-grid" class="fact-grid"><div class="fact">対応パッチ：${esc(b.version)}</div><div class="fact">育成手順の原典照合：${esc(b.updatedAt)}</div>${b.mainSkillTiming?`<div class="fact"><small>主力スキル使用条件</small><b>${esc(b.mainSkillTiming.available)}</b></div><div class="fact"><small>主力への切替目安</small><b>${esc(b.mainSkillTiming.recommendedSwitch)}</b></div>`:''}</div></div>\n        `);
  if(!html.includes('id="now-action-guidance"'))html=html.replace('<p id="now-next"', '<p id="now-action-guidance" class="next-advice" hidden></p><p id="now-next"');
  html=html.replace('id="now-action-guidance" class="disclaimer"','id="now-action-guidance" class="next-advice"');

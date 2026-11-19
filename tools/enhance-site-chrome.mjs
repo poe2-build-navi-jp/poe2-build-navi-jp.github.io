@@ -21,26 +21,29 @@ for(const file of await htmlFiles(root)){
  const before=await readFile(file,'utf8');
  let html=before.replace(/<!-- site-icon:start -->[\s\S]*?<!-- site-icon:end -->/g,'').replace(/<!-- site-footer:start -->[\s\S]*?<!-- site-footer:end -->/g,'');
  if(!html.includes('</head>'))continue;
- // Information pages also need an always-visible route back to the tools.
- if(!/<nav\b[^>]*class="site-nav\b/.test(html))html=html.replace(/(<header\b[^>]*class="site-header"[^>]*>[\s\S]*?)(<\/header>)/,`$1<nav class="site-nav page-nav" aria-label="メインメニュー"><a href="/guides/">攻略ガイド</a><a href="/builds/">ビルドを探す</a><a href="/search/">全体検索</a></nav>$2`);
- html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>
-  links.includes('href="/guides/"')?nav:`${start}<a href="/guides/"${file===join(root,'guides/index.html')?' aria-current="page"':''}>攻略ガイド</a>${links}${end}`);
- html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>{
-  links=links.replace(/<a\b[^>]*href="\/beginner-builds\/"[^>]*>[\s\S]*?<\/a>/g,'');
-  const link=`<a href="/beginner-builds/"${file===join(root,'beginner-builds/index.html')?' aria-current="page"':''}>初心者おすすめ</a>`;
-  return `${start}${links.replace(/(<a\b[^>]*href="\/guides\/"[^>]*>[\s\S]*?<\/a>)/,`$1${link}`)}${end}`;
- });
- html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>links.includes('href="/search/"')?nav:`${start}${links}<a href="/search/"${file===join(root,'search/index.html')?' aria-current="page"':''}>全体検索</a>${end}`);
- html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>{
-  if (file === join(root, 'en/community/index.html')) {
-   links = links.replace(/<a\b[^>]*href="\/(?:en\/)?simulator\/(?:#sim-resume)?"[^>]*>[\s\S]*?<\/a>/g, '');
-   return `${start}${links}<a href="/en/simulator/">Simulator</a><a href="/en/simulator/#sim-resume">Saved builds</a>${end}`;
-  }
-  links=links.replace(/<a\b[^>]*href="\/simulator\/(?:#sim-resume)?"[^>]*>[\s\S]*?<\/a>/g,'');
-  return `${start}${links}<a href="/simulator/"${file===join(root,'simulator/index.html')?' aria-current="page"':''}>シミュレーター</a><a href="/simulator/#sim-resume">保存した構成</a>${end}`;
- });
- // English pages: shared Japanese destinations keep English labels, as the /en/simulator/ generator writes them.
- if(file.startsWith(join(root,'en')+'/'))html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>`${start}${links.replace('>攻略ガイド</a>','>Guides (Japanese)</a>').replace('>初心者おすすめ</a>','>Starter builds (Japanese)</a>').replace('>全体検索</a>','>Site search (Japanese)</a>')}${end}`);
+ // Unified main menu: the same destinations, in the same order, with the same
+ // labels on every page, so the header no longer changes from page to page.
+ // Links a page already carries that are not in the canonical set (the community
+ // pages' language switch, for example) are kept, just ahead of the search link.
+ const NAV_JA=[['/guides/','攻略ガイド'],['/beginner-builds/','初心者おすすめ'],['/tier-list/','初心者Tier'],['/league-starter/','スターター'],['/builds/','ビルド一覧'],['/gear-check/','装備診断'],['/beginner-guide/','初心者ガイド'],['/leveling/','レベリング'],['/dictionary/','用語辞典'],['/search/','全体検索'],['/simulator/','シミュレーター'],['/simulator/#sim-resume','保存した構成']];
+ const NAV_EN=[['/guides/','Guides (Japanese)'],['/beginner-builds/','Starter builds (Japanese)'],['/tier-list/','Beginner tier (Japanese)'],['/league-starter/','League starter (Japanese)'],['/builds/','Browse builds (Japanese)'],['/gear-check/','Gear check (Japanese)'],['/beginner-guide/','Beginner guide (Japanese)'],['/leveling/','Leveling (Japanese)'],['/dictionary/','Glossary (Japanese)'],['/search/','Site search (Japanese)'],['/en/simulator/','Simulator'],['/en/simulator/#sim-resume','Saved builds']];
+ const ownPath=file===join(root,'index.html')?'/':'/'+file.slice(root.length+1).replace(/index\.html$/,'');
+ const buildNav=existing=>{
+  const canon=file.startsWith(join(root,'en')+'/')?NAV_EN:NAV_JA;
+  const canonHrefs=new Set(canon.map(([href])=>href));
+  const extras=[];
+  for(const m of existing.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>[\s\S]*?<\/a>/g))
+   if(!canonHrefs.has(m[1])&&!extras.some(([,href])=>href===m[1]))extras.push([m[0],m[1]]);
+  const links=canon.map(([href,label])=>`<a href="${href}"${href===ownPath?' aria-current="page"':''}>${label}</a>`);
+  const at=links.findIndex(link=>link.includes('href="/search/"'));
+  return [...links.slice(0,at),...extras.map(([link])=>link),...links.slice(at)].join('');
+ };
+ if(/<nav\b[^>]*class="site-nav\b/.test(html)){
+  html=html.replace(/(<nav\b[^>]*class="site-nav[^\"]*"[^>]*>)([\s\S]*?)(<\/nav>)/,(nav,start,links,end)=>`${start}${buildNav(links)}${end}`);
+ } else {
+  // Information pages also need an always-visible route back to the tools.
+  html=html.replace(/(<header\b[^>]*class="site-header"[^>]*>[\s\S]*?)(<\/header>)/,(m,head,end)=>`${head}<nav class="site-nav page-nav" aria-label="メインメニュー">${buildNav('')}</nav>${end}`);
+ }
  // English pages label the (Japanese-only) feed in English, as en/simulator does.
  const iconBlock=file.startsWith(join(root,'en')+'/')?ICON_BLOCK.replace('POE2ビルドナビの更新情報','POE2 Build Navi updates (Japanese)'):ICON_BLOCK;
  html=insertBlock(html,'</head>','site-icon',iconBlock);icons++;

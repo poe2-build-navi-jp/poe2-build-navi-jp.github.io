@@ -33,7 +33,9 @@ export function synchronizePageDate(original,{date,url,title,today}) {
  if(!pageEntity)html=insertBlock(html,'</head>','page-date-schema',`<!-- page-date-schema:start --><script type="application/ld+json">${json({'@context':'https://schema.org','@type':'WebPage','@id':url+'#webpage',url,name:title,inLanguage:english?'en':'ja',dateModified:date})}</script><!-- page-date-schema:end -->`);
  const label=`<span class="page-updated">${dateLabel}<time datetime="${date}">${date}</time></span>`;
  if(html.includes('<!-- editorial-credit:start -->')) {
-  html=html.replace(/(<!-- editorial-credit:start -->[\s\S]*?)(<\/p><!-- editorial-credit:end -->)/,`$1${label}$2`);
+  // The freshest signal leads the credit line: readers see the page's update
+  // date before the older source-collation dates elsewhere on the page.
+  html=html.replace(/(<!-- editorial-credit:start --><p[^>]*>)/,`$1${label}`);
  } else {
   html=html.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/,`$1<!-- page-updated:start --><p class="page-updated">${dateLabel}<time datetime="${date}">${date}</time></p><!-- page-updated:end -->`);
  }

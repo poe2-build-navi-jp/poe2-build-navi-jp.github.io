@@ -68,7 +68,7 @@
 /* Keep comparison and discovery layouts wide while giving their prose room. */
 .guide-reading .article-page:is(.discovery-page,.wide-article){max-width:1050px}
 .guide-reading .article-page :is(p,li,dd,th,td){line-break:strict}
-.guide-reading .article-page :is(h1,h2,h3){overflow-wrap:anywhere}
+.guide-reading .article-page :is(h1,h2,h3){overflow-wrap:break-word;word-break:keep-all}
 .guide-reading .article-page .next-box :is(h3,p){color:inherit}
 .guide-reading .article-page .seo-visual{width:100%;margin-inline:0}
 .guide-reading .article-page .guide-toc summary{min-height:44px;cursor:pointer;line-height:1.6;font-weight:700}

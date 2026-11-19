@@ -206,3 +206,7 @@
    so its headings keep the hub's own (light) colours. */
 .guide-reading.guide-hub .article-page :is(h1,h2,h3){color:inherit}
 .guide-reading.guide-hub .guide-section-heading h2{color:#edf0f3}
+
+/* Layout fix 2026-11-19: the card action bar is a full-width bottom row,
+   not the 18px side column of the hub card grid. */
+.guide-hub .content-card .guide-card-action{grid-column:1/-1}
