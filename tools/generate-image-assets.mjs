@@ -44,9 +44,16 @@ const header = (kicker, title, subtitle, height = 630) => `<text x="64" y="74" f
 const card = (x, y, w, h, eyebrow, title, detail, accent = "#d4a95d") => `<g filter="url(#shadow)"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="22" fill="#182436" stroke="#31455d"/><rect x="${x}" y="${y}" width="8" height="${h}" rx="4" fill="${accent}"/><text x="${x + 28}" y="${y + 37}" fill="${accent}" font-family="sans-serif" font-size="18" font-weight="700">${esc(eyebrow)}</text><text x="${x + 28}" y="${y + 78}" fill="#fff" font-family="sans-serif" font-size="27" font-weight="700">${esc(short(title, 22))}</text><text x="${x + 28}" y="${y + 112}" fill="#b9c7d6" font-family="sans-serif" font-size="19">${esc(short(detail, 32))}</text></g>`;
 
 function guideVisual(title, subtitle, picks, filename) {
-  const positions = [[64,220],[624,220],[64,385],[624,385]];
-  const body = header("QUICK GUIDE", title, subtitle) + picks.slice(0, 4).map((pick, index) => card(...positions[index], 512, 130, pick.label, pick.title, pick.detail, pick.color)).join("");
-  return writeFile(resolve(out, "guides", filename), svg(body, title));
+  // Stacked single-column layout with large type: the old 2x2 grid shrank its 19px
+  // detail text to ~6px on phones. At 1200 wide shown on a ~370px phone the new
+  // 34px detail text lands around 10-11px and stays readable.
+  const items = picks.slice(0, 4);
+  const cardH = 196, gap = 30, top = 252;
+  const height = top + items.length * cardH + (items.length - 1) * gap + 76;
+  const bigCard = (y, pick) => `<g filter="url(#shadow)"><rect x="64" y="${y}" width="1072" height="${cardH}" rx="22" fill="#182436" stroke="#31455d"/><rect x="64" y="${y}" width="10" height="${cardH}" rx="5" fill="${pick.color || "#d4a95d"}"/><text x="98" y="${y + 54}" fill="${pick.color || "#d4a95d"}" font-family="sans-serif" font-size="30" font-weight="700">${esc(pick.label)}</text><text x="98" y="${y + 118}" fill="#fff" font-family="sans-serif" font-size="48" font-weight="700">${esc(short(pick.title, 20))}</text><text x="98" y="${y + 168}" fill="#b9c7d6" font-family="sans-serif" font-size="34">${esc(short(pick.detail, 29))}</text></g>`;
+  const bigHeader = `<text x="64" y="84" fill="#d4a95d" font-family="sans-serif" font-size="26" font-weight="700" letter-spacing="3">QUICK GUIDE</text><text x="64" y="158" fill="#f8fafc" font-family="sans-serif" font-size="54" font-weight="800">${esc(title)}</text><text x="64" y="210" fill="#c9d4df" font-family="sans-serif" font-size="30">${esc(subtitle)}</text>`;
+  const body = bigHeader + items.map((pick, index) => bigCard(top + index * (cardH + gap), pick)).join("");
+  return writeFile(resolve(out, "guides", filename), svg(body, title, height));
 }
 
 const byId = (id) => builds.find((build) => build.id === id);
