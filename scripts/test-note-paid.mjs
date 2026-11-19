@@ -16,7 +16,8 @@ for(const e of entries){
  assert(blocks[0].includes(`href="${e.href}"`)&&blocks[0].includes(e.linkText),`${e.path}: note box matches data`);
  const main=html.match(/<main[\s\S]*<\/main>/)?.[0]||'';
  assert(main.includes(blocks[0]),`${e.path}: note box is inside <main>`);
- const one=main.indexOf('<!-- one-link:end -->');assert(one===-1||one<main.indexOf(blocks[0]),`${e.path}: note box follows the 1.0 box`);
+ const one=main.indexOf('<!-- one-link:end -->');assert(one===-1||main.indexOf(blocks[0])<one,`${e.path}: note box sits up top, before the 1.0 box`);
+ assert(main.indexOf(blocks[0])<main.length*0.4,`${e.path}: note box is in the first part of <main> (right after the hero)`);
 }
 // Repeatable: rerunning the step changes nothing.
 const tmp=await mkdtemp('/tmp/poe2-note-');
@@ -26,4 +27,4 @@ try{
  for(let i=0;i<2;i++)execFileSync('node',[join(tmp,'tools/enhance-note-links.mjs')],{cwd:tmp,stdio:'ignore'});
  for(const e of entries)assert.equal(await readFile(join(tmp,'.'+e.path,'index.html'),'utf8'),await readFile(join(root,'.'+e.path,'index.html'),'utf8'),`${e.path}: rerun is stable`);
 }finally{await rm(tmp,{recursive:true,force:true});}
-console.log(`PASS: ${entries.length} note boxes come from data, sit after the 1.0 box, run before page dates and are stable on rebuild.`);
+console.log(`PASS: ${entries.length} note boxes come from data, sit right after the hero, run before page dates and are stable on rebuild.`);
