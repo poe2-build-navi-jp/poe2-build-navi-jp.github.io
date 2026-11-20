@@ -1,7 +1,7 @@
 {
  "/": {
-  "hash": "a6a63f14fa2ad1e7",
-  "date": "2026-11-19",
+  "hash": "c01156d344595542",
+  "date": "2026-11-21",
   "hashVersion": 2
  },
  "/simulator/": {
@@ -25,8 +25,8 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "9aac9ffd00f8a76d",
-  "date": "2026-11-19",
+  "hash": "4f698bfe3055fd53",
+  "date": "2026-11-21",
   "hashVersion": 2
  },
  "/name-index/": {
@@ -225,8 +225,8 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "6ac0dab9579888a9",
-  "date": "2026-11-19",
+  "hash": "2a7191b6c6db8b6e",
+  "date": "2026-11-21",
   "hashVersion": 2
  },
  "/dictionary/": {
@@ -285,8 +285,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "b53691fdff754498",
-  "date": "2026-11-19",
+  "hash": "f02b9c4afad3cd87",
+  "date": "2026-11-21",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -617,6 +617,11 @@
  "/guides/stuck-at-level-90/": {
   "hash": "25fed888899f58d6",
   "date": "2026-11-19",
+  "hashVersion": 2
+ },
+ "/guides/tangmazu/": {
+  "hash": "9b57fb0fd6318add",
+  "date": "2026-11-21",
   "hashVersion": 2
  },
  "/dictionary/build/": {
