@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "b33ebcfcd0d289bdfc708ab1b02f98ff02abb4ab",
+  "headCommit": "441220dca0d3aa5d552d552a8147c5b3309efd0e",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "change": "updated",
+      "beforeHash": "c43d99e14245a1ac8ff15eb1b513493daceaac8ecff346beeb269c9f970ed34f",
+      "afterHash": "abbe2b33b736c9e502144cd48a4920cbd0d934cce937dc66d9d8d7635d3fbdc8"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "a7998c214fceff895f86d5fe86dbfcef0690f116e29ca30c62421feeb36631bf",
+      "afterHash": "ecd1db32c40184d90aefd4699a87d66e16842115e5f595afee7ee4114acaf1e7"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/bodach/",
+      "change": "updated",
+      "beforeHash": "ce0500ab15943b600d462d433e487f285414773c99dbfd3686b4d25ec5ab2fad",
+      "afterHash": "a4d3451d59aad526701efcf14de18d0e037e5289a7248994b20441982ed99ea9"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/endgame-contents/",
+      "change": "updated",
+      "beforeHash": "6619f1fd1c0b379b154ad6f9a9963891f7f8d2ae518144ac7bcf505600758cd5",
+      "afterHash": "535a2665f49518928dd60deede7e4eeda5f695f19a66f1982a3582b472bd7c5e"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/ritual/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "8892b48be976253b3471cfa4d41d3e3ef52af3257c0866507fe80e74eae97b06"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "188abb3542e49d9b43f5f4e29ec0ec04f5768ea186163603a1255f4fc92a815d",
+      "afterHash": "333f82290c1391b256c2aa76e6f30ed240b484768421d000d1be442256cb2a48"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "4381490abda51d1a8d39fd1c6fe56265412092d5f737ebc8aec67099b5973892",
+      "afterHash": "5647c853f11cf40837e0e3e9dc0278c609a011b12913243cda07fff4c002aa65"
+    }
+  ]
+}
