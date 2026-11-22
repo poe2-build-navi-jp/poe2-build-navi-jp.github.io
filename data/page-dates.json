@@ -25,8 +25,8 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "4f698bfe3055fd53",
-  "date": "2026-11-21",
+  "hash": "73ab086f28104fbd",
+  "date": "2026-11-23",
   "hashVersion": 2
  },
  "/name-index/": {
@@ -225,8 +225,8 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "2a7191b6c6db8b6e",
-  "date": "2026-11-21",
+  "hash": "e3490c44b163170d",
+  "date": "2026-11-23",
   "hashVersion": 2
  },
  "/dictionary/": {
@@ -285,8 +285,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "f02b9c4afad3cd87",
-  "date": "2026-11-21",
+  "hash": "8f61da3622c6db45",
+  "date": "2026-11-23",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -485,8 +485,8 @@
   "hashVersion": 2
  },
  "/guides/endgame-contents/": {
-  "hash": "5979de38f574a80b",
-  "date": "2026-11-15",
+  "hash": "c0c3158348c196de",
+  "date": "2026-11-23",
   "hashVersion": 2
  },
  "/guides/endgame-items/": {
@@ -610,8 +610,13 @@
   "hashVersion": 2
  },
  "/guides/bodach/": {
-  "hash": "32ea31e4d01b3069",
-  "date": "2026-11-18",
+  "hash": "eb0d5ecb33248226",
+  "date": "2026-11-23",
+  "hashVersion": 2
+ },
+ "/guides/ritual/": {
+  "hash": "d36beec7a7eb64a7",
+  "date": "2026-11-23",
   "hashVersion": 2
  },
  "/guides/stuck-at-level-90/": {
