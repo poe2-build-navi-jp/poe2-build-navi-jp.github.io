@@ -31,8 +31,10 @@ node tools/release-readiness.mjs
    （サイトの主な内容が1.0対応になった時点で変える）。
 3. 全ページを生成し直す（`enhance-version-notice.mjs` だけでは、対応状況ページと1.0ボックスの見出しが切り替わらない）。
    ```
-   node tools/generate-pages.mjs && node tools/generate-sitemap.mjs && node tools/enhance-ratings.mjs && node tools/enhance-build-ux.mjs && node tools/enhance-version-notice.mjs && CHROMIUM_PATH=/opt/pw-browsers/chromium node tools/generate-og-images.mjs && node tools/sync-asset-versions.mjs && npm test
+   npm run build && npm test
    ```
+   （`npm run build` は `tools/build-steps.mjs` の全手順を順に実行する。個別のツールを並べて実行すると、
+   note導線などの後段の手順が抜けるので使わない。）
    これで自動的に次のように切り替わる。
    - 全ビルドページに「1.0では未確認」、一覧・Tier・職業ページ等に案内バナー。
    - タイトルに「0.5.5」を含む一覧・Tier・職業・ビルドページ（17ページ）は、「0.5.5」を外して末尾に「【1.0対応確認中】」
@@ -60,11 +62,7 @@ node tools/release-readiness.mjs
 `changeHistory` に変更内容を1行追記する。その後、次を実行する。
 
 ```
-node tools/enhance-ratings.mjs
-node tools/enhance-build-ux.mjs
-node tools/enhance-version-notice.mjs   # そのビルドの「未確認」表示が消える
-node tools/generate-og-images.mjs
-node tools/sync-asset-versions.mjs
+npm run build   # そのビルドの「未確認」表示が消える
 npm test
 ```
 

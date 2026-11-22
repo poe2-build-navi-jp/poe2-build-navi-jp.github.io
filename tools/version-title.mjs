@@ -8,6 +8,8 @@ const escRe = (v) => v.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function releaseTitle(title, oldVersion, game) {
   const v = escRe(oldVersion);
   const stripped = title
+    // A bracketed version such as （0.5.5） would otherwise leave empty brackets behind.
+    .replace(new RegExp(`[（(【\\[]\\s*${v}\\s*[）)】\\]]`), "")
     .replace(new RegExp(`｜${v}$`), "")
     .replace(new RegExp(` ?${v} ?`), " ")
     .replace(/ ｜/g, "｜").replace(/｜ /g, "｜").replace(/ {2,}/g, " ").trim();
@@ -15,6 +17,7 @@ export function releaseTitle(title, oldVersion, game) {
 }
 
 const OG = /<meta property="og:title" content="([^"]*)">/;
+const schemaName = (title) => `"name":${JSON.stringify(title.replaceAll("&amp;", "&"))}`;
 const escAttr = (v) => v.replaceAll("&", "&amp;").replaceAll('"', "&quot;");
 
 // Restores the original title and og:title, then (when oldVersion is given and the title contains it)
@@ -23,6 +26,8 @@ export function applyVersionTitle(html, oldVersion, game) {
   const saved = html.match(ORIGINAL);
   if (saved) {
     const { title, og } = JSON.parse(decodeURIComponent(saved[1]));
+    const shown = html.match(/<title>([^<]*)<\/title>/)?.[1];
+    if (shown && shown !== title) html = html.replaceAll(schemaName(shown), schemaName(title));
     html = html.replace(ORIGINAL, "").replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
     if (og !== undefined) html = html.replace(OG, `<meta property="og:title" content="${og}">`);
   }
@@ -33,6 +38,8 @@ export function applyVersionTitle(html, oldVersion, game) {
   const next = releaseTitle(title, oldVersion, game);
   const marker = `<!-- version-title:original ${encodeURIComponent(JSON.stringify({ title, og }))} -->`;
   html = html.replace(/<title>[^<]*<\/title>/, `${marker}<title>${next}</title>`);
+  // Structured data that repeats the page title (e.g. CollectionPage.name) follows it.
+  html = html.replaceAll(schemaName(title), schemaName(next));
   if (og !== undefined) html = html.replace(OG, `<meta property="og:title" content="${escAttr(og.includes(oldVersion) ? releaseTitle(og, oldVersion, game) : next)}">`);
   return html;
 }
