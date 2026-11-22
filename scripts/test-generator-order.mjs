@@ -8,7 +8,8 @@ import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 const root=resolve(import.meta.dirname,'..');
 const tools=['enhance-practical-help','enhance-page-schema','enhance-site-chrome','enhance-image-seo','enhance-ratings','enhance-build-ux','enhance-version-notice','enhance-one-hub','enhance-term-links','enhance-note-links','generate-og-images','inject-analytics'];
-const orders=[tools,[...tools].reverse(),['inject-analytics','enhance-practical-help','enhance-page-schema','generate-og-images','enhance-site-chrome','enhance-term-links','enhance-one-hub','enhance-build-ux','enhance-image-seo','enhance-version-notice','enhance-ratings'],['enhance-one-hub','enhance-build-ux','enhance-site-chrome','enhance-page-schema','inject-analytics','enhance-practical-help','enhance-ratings','generate-og-images','enhance-image-seo','enhance-term-links','enhance-version-notice']];
+const orders=[tools,[...tools].reverse(),['inject-analytics','enhance-note-links','enhance-practical-help','enhance-page-schema','generate-og-images','enhance-site-chrome','enhance-term-links','enhance-one-hub','enhance-build-ux','enhance-image-seo','enhance-version-notice','enhance-ratings'],['enhance-one-hub','enhance-build-ux','enhance-site-chrome','enhance-page-schema','inject-analytics','enhance-practical-help','enhance-ratings','generate-og-images','enhance-image-seo','enhance-term-links','enhance-version-notice','enhance-note-links']];
+for(const order of orders)for(const tool of tools)if(!order.includes(tool))throw new Error(`order is missing ${tool}`);
 const skip=new Set(['.git','node_modules']);
 async function htmlHashes(dir,base=dir,out=new Map()){
  for(const e of await readdir(dir,{withFileTypes:true})){

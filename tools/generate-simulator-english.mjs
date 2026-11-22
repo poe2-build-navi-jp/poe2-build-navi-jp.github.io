@@ -69,7 +69,7 @@ function appendHtml(parent,html,first=false) {
 }
 // All language versions have self canonicals; alternates never canonicalize EN to JA.
 head.childNodes=head.childNodes.filter(n=> !(n.tagName==='link' && attr(n,'hreflang')));
-appendHtml(head, `<link rel="alternate" hreflang="ja" href="${base}/simulator/"><link rel="alternate" hreflang="en" href="${enUrl}"><link rel="alternate" hreflang="x-default" href="${base}/simulator/"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ja_JP">`);
+appendHtml(head, `<!-- simulator-language:start --><link rel="alternate" hreflang="ja" href="${base}/simulator/"><link rel="alternate" hreflang="en" href="${enUrl}"><link rel="alternate" hreflang="x-default" href="${base}/simulator/"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ja_JP"><!-- simulator-language:end -->`);
 appendHtml(main,'<nav class="sim-language-switch" aria-label="Language" style="padding:12px 20px;display:flex;gap:16px;flex-wrap:wrap"><a href="/simulator/" lang="ja" hreflang="ja">日本語</a><a href="/en/simulator/" lang="en" hreflang="en" aria-current="page">English</a></nav>',true);
 // Preserve shared build IDs and save data when changing language.
 appendHtml(body,`<script>document.querySelectorAll('.sim-language-switch a').forEach(function(a){a.href=a.getAttribute('href')+location.search+location.hash;});</script>`);

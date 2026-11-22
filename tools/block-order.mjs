@@ -19,15 +19,26 @@ export const HEAD_BLOCKS = [
   ["og-image", marker("og-image")],
   ["site-icon", marker("site-icon")],
   // enhance-editorial-trust: shared Organization/WebSite identity on the home and about pages.
-  ["identity-schema", marker("identity-schema")]
+  ["identity-schema", marker("identity-schema")],
+  // Simulator pages: generate-simulator-english, enhance-simulator-library and enhance-simulator-photo
+  // append these after the shared blocks. Listing them keeps a re-inserted shared block (site-icon,
+  // og-image) in front of them instead of jumping past them to </head>.
+  ["simulator-language", marker("simulator-language")],
+  ["sim-library", (html) => html.indexOf("<!-- sim-library:enhancement -->")],
+  ["sim-photo", marker("sim-photo")]
 ];
 export const MAIN_END_BLOCKS = [
   ["build-feedback", marker("build-feedback")],
   ["term-links", marker("term-links")],
   ["build-history", marker("build-history")],
+  // enhance-version-notice: the latest patch review on the home, guides, simulator and 1.0 hub.
+  ["patch-review", marker("patch-review")],
   ["one-link", marker("one-link")],
-  // enhance-note-links: the note article box, after the 1.0 box.
-  ["note-paid", marker("note-paid")]
+  // enhance-note-links: the note article box. It normally sits right after the page hero, near the
+  // top of <main>; only on pages without a hero does it fall back to the end, after the 1.0 box.
+  // Count it as an end block only in that fallback position, or every other end block would be
+  // pulled up next to the hero whenever it is re-inserted after the note box.
+  ["note-paid", (html) => html.search(/<!-- note-paid:start -->(?:(?!<!-- note-paid:start -->)[\s\S])*?<!-- note-paid:end -->\s*<\/main>/)]
 ];
 
 export function insertBlock(html, closing, name, block) {

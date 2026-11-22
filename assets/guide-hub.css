@@ -67,6 +67,8 @@
 .guide-hub .content-card small{font-size:.65rem;letter-spacing:.06em;color:var(--guide-gold)}
 .guide-hub .content-card strong{font:750 1rem/1.65 system-ui,sans-serif}
 .guide-hub .content-card>span{color:#b1bbc6;font-size:.79rem;line-height:1.85}
+/* Skill/equipment names inside a dark card keep the card text colour (the light theme grey fails contrast here). */
+.guide-hub .content-card :is(.skill-name,.equipment-name){color:inherit}
 .guide-hub .content-card .guide-card-action{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #34404c;padding-top:12px;margin-top:auto;color:var(--guide-gold);font-size:.72rem}
 .guide-card-action b{font-size:1rem;font-weight:400}
 .guide-empty{text-align:center;padding:42px 20px;background:#182029;border:1px dashed #506071;border-radius:5px}

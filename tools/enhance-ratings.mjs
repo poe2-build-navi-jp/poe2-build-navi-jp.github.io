@@ -55,6 +55,9 @@ let criteria=ogBlock?insertBlock(rebuilt,'</head>','og-image',ogBlock):rebuilt;
 if(iconBlock)criteria=insertBlock(criteria,'</head>','site-icon',iconBlock);
 const footerBlock=existing.match(/<!-- site-footer:start -->[\s\S]*?<!-- site-footer:end -->/)?.[0];
 if(footerBlock)criteria=criteria.replace(/<\/main>(?![\s\S]*<\/main>)/,`</main>${footerBlock}`);
+// enhance-site-chrome owns the main menu; keep the one it wrote rather than this template's copy.
+const navBlock=existing.match(/<nav\b[^>]*class="site-nav\b[^"]*"[^>]*>[\s\S]*?<\/nav>/)?.[0];
+if(navBlock)criteria=criteria.replace(/<nav\b[^>]*class="site-nav\b[^"]*"[^>]*>[\s\S]*?<\/nav>/,()=>navBlock);
 await save('rating-criteria/index.html',criteria);
 
 // Link the criteria from the editorial policy and hub pages.
