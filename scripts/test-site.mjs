@@ -28,6 +28,8 @@ const terms = JSON.parse(await read("data/dictionary.json"));
 const seoPages = JSON.parse(await read("data/seo-pages.json"));
 const guideIntents = JSON.parse(await read("data/guide-search-intents.json"));
 const site = JSON.parse(await read("data/site.json"));
+// On release day, titles naming 0.5.5 switch to the "checking" form (tools/version-title.mjs).
+const shownTitle055 = (title) => `<title>${site.gameVersion === "0.5.5" ? title : releaseTitle(title, "0.5.5", site.gameVersion)}</title>`;
 const beginnerLanding = await read("beginner-builds/index.html");
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
@@ -46,7 +48,7 @@ assert((beginnerLanding.match(/class="purpose-card"/g) || []).length === 5, "beg
 assert((beginnerLanding.match(/class="discovery-card"/g) || []).length === 6, "beginner page must retain six featured choices");
 assert(beginnerLanding.indexOf('id="purpose-picks"') < beginnerLanding.indexOf('id="featured-builds"'), "beginner page must show quick choices before detailed comparison");
 assert(index.includes("PoE2 0.5.5 おすすめビルド｜職業別・初心者向け") && index.includes("現在Lvを入力して"), "homepage search intent/action message missing");
-assert(index.includes("<title>PoE2おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド</title>"), "homepage CTR-focused title missing");
+assert(index.includes(shownTitle055("PoE2おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド")), "homepage CTR-focused title missing");
 assert(index.includes("PoE2の日本語ビルドガイド。召喚・弓・近接など、好きな戦い方で初心者向けビルドを比較。"), "homepage Japanese build-site description missing");
 const homeRoutes = index.match(/<p id="home-build-routes">([\s\S]*?)<\/p>/)?.[1] || "";
 assert((index.match(/id="home-build-routes"/g) || []).length === 1, "homepage comparison routes must be present once after regeneration");
@@ -64,7 +66,7 @@ assert((index.match(/現在Lvから今やることを見る/g) || []).length <= 
 assert(index.indexOf('id="quick-class"') < index.indexOf('id="quick-build"') && index.indexOf('id="quick-build"') < index.indexOf('id="quick-level"'), "homepage flow must be class -> build -> level");
 assert(buildList.includes('id="class-choices"'), "build catalog class-first choices missing");
 assert(buildList.includes("<h1>PoE2 0.5.5 職業別ビルド一覧</h1>"), "build catalog search-focused H1 missing");
-assert(buildList.includes("<title>PoE2職業別ビルド一覧（0.5.5）｜主力スキル・操作・SSFで比較</title>"), "build catalog count-free title missing");
+assert(buildList.includes(shownTitle055("PoE2職業別ビルド一覧（0.5.5）｜主力スキル・操作・SSFで比較")), "build catalog count-free title missing");
 assert(!/ビルド\d+(?:選|本)/.test(buildList), "build catalog must not hardcode build count in SEO copy");
 assert(detailJs.includes('byId("gear-check-link")') && detailJs.includes("history.replaceState"), "level changes must update the gear-check link and shareable URL");
 assert(styles.includes("align-items:start") && styles.includes(".level-card{align-self:start"), "build hero must not stretch the level card");
@@ -100,7 +102,8 @@ for (const build of builds) {
     assert((page.match(/id="roadmap"/g) || []).length === 1, `${pagePath}: roadmap must appear once`);
     assert((page.match(/data-stage-index=/g) || []).length === 8, `${pagePath}: all 8 roadmap stages must be present in HTML`);
     assert(page.includes("この段階のパッシブツリーを見る"), `${pagePath}: stage passive source CTA missing`);
-    assert(page.includes(`<title>${build.seoTitle}</title>`), `${pagePath}: search-focused title missing`);
+    const shownTitle = build.version !== site.gameVersion && build.seoTitle.includes(build.version) ? releaseTitle(build.seoTitle, build.version, site.gameVersion) : build.seoTitle;
+    assert(page.includes(`<title>${shownTitle}</title>`), `${pagePath}: search-focused title missing (${shownTitle})`);
     assert(page.includes(`<meta name="description" content="${build.seoDescription}">`), `${pagePath}: build-specific description missing`);
     assert(withoutSkillIcons(page).includes(`<h1 id="build-name">PoE2 ${build.name} ビルド｜${build.version}育成</h1>`), `${pagePath}: search-focused H1 missing`);
     assert(withoutSkillIcons(page).includes(`${build.name}ビルドのよくある質問`), `${pagePath}: build-specific FAQ H2 missing`);
@@ -224,7 +227,8 @@ for (const [before, after] of [
   ["PoE2 モンクおすすめビルド・育成｜0.5.5", "PoE2 モンクおすすめビルド・育成【1.0対応確認中】"],
   ["PoE2 0.5.5初心者向けビルドTier｜育てやすさ比較", "PoE2 初心者向けビルドTier｜育てやすさ比較【1.0対応確認中】"],
   ["PoE2 ビルド｜0.5.5おすすめ・初心者向け日本語育成ナビ", "PoE2 ビルド｜おすすめ・初心者向け日本語育成ナビ【1.0対応確認中】"],
-  ["PoE2 植物オラクル 0.5.5｜Lv1〜Endgame育成", "PoE2 植物オラクル｜Lv1〜Endgame育成【1.0対応確認中】"]
+  ["PoE2 植物オラクル 0.5.5｜Lv1〜Endgame育成", "PoE2 植物オラクル｜Lv1〜Endgame育成【1.0対応確認中】"],
+  ["PoE2おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド", "PoE2おすすめビルド｜職業別比較・Lv別育成ガイド【1.0対応確認中】"]
 ]) assert(releaseTitle(before, "0.5.5", "1.0") === after, `release title for "${before}" must be "${after}"`);
 {
   const sample = '<head><title>PoE2 0.5.5 一覧｜ナビ</title><meta property="og:title" content="PoE2 0.5.5 一覧 &quot;A&quot;"></head>';
@@ -232,6 +236,12 @@ for (const [before, after] of [
   assert(switched.includes("<title>PoE2 一覧｜ナビ【1.0対応確認中】</title>") && !/og:title" content="[^"]*0\.5\.5/.test(switched), "release title must replace title and og:title");
   assert(applyVersionTitle(switched, "0.5.5", "1.0") === switched, "release title must be idempotent");
   assert(applyVersionTitle(switched, null, "0.5.5") === sample, "release title must restore the original title and og:title");
+}
+{
+  const sample = '<head><title>PoE2 最強ビルド｜0.5.5最新</title><script type="application/ld+json">{"@type":"CollectionPage","name":"PoE2 最強ビルド｜0.5.5最新"}</script></head>';
+  const switched = applyVersionTitle(sample, "0.5.5", "1.0");
+  assert(switched.includes('"name":"PoE2 最強ビルド｜最新【1.0対応確認中】"'), "release title must also switch the structured-data name that repeats the title");
+  assert(applyVersionTitle(switched, null, "0.5.5") === sample, "release title must restore the structured-data name");
 }
 for (const path of ["/poe2-1-0/release-date/", "/poe2-1-0/how-to-start/", "/poe2-1-0/system-requirements/", "/poe2-1-0/japanese/", "/poe2-1-0/microtransactions/", "/poe2-1-0/controller/", "/poe2-1-0/pre-registration/", "/poe2-1-0/carry-over/", "/poe2-1-0/build-status/", "/poe2-1-0/duelist/", "/poe2-1-0/exilecon-2026/"]) {
   assert(seoPages.some((page) => page.path === path), `${path}: 1.0 SEO page missing`);
