@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "441220dca0d3aa5d552d552a8147c5b3309efd0e",
+  "headCommit": "4de0828cb2272626aa9375da2cc1042a60fc088f",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "ecd1db32c40184d90aefd4699a87d66e16842115e5f595afee7ee4114acaf1e7",
+      "afterHash": "22bf42ba4b855d45e5bc6f7ef75ae60522cae81b3f501a5132e41cb3c6cc3d9f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/breach/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "0d64863110acea2bd216a6ede2b9a0d52c6077bd429619aa0c0fdb63d68c368f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/endgame-contents/",
+      "change": "updated",
+      "beforeHash": "535a2665f49518928dd60deede7e4eeda5f695f19a66f1982a3582b472bd7c5e",
+      "afterHash": "f573a564060bcac3d5131f0c08ead56b6b1f0ff16defeed8ac5b55820e0bc70e"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/ritual/",
+      "change": "updated",
+      "beforeHash": "8892b48be976253b3471cfa4d41d3e3ef52af3257c0866507fe80e74eae97b06",
+      "afterHash": "2973e554742edc753ec484bea3b468c5da3079b0f77038e3fae9eac3a709cb8d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/xesht/",
+      "change": "updated",
+      "beforeHash": "406db8e51a87843ae7c73d91f8fa7432b908fcd3a621311d364e59e3280e1596",
+      "afterHash": "422dd7cb3c0e52dacf9d7b79cd49c6e2415f31a8d3c44a6eddef3f840fd379c4"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "333f82290c1391b256c2aa76e6f30ed240b484768421d000d1be442256cb2a48",
+      "afterHash": "1d4b13a775d23c2f308de7cbfc783924e484094371980e13c8172c19a24bdf0d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "5647c853f11cf40837e0e3e9dc0278c609a011b12913243cda07fff4c002aa65",
+      "afterHash": "dce6fa2c7340722cfb2a0bdc2aaa199ec50e4bb5b2cef43039e8cc1d606d84a6"
+    }
+  ]
+}
