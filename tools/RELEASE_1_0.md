@@ -47,6 +47,26 @@ node tools/release-readiness.mjs
    `/poe2-1-0/` に「公開済み」と確認日を反映する。
 5. 変更をpushし、本番で表示を確認する。
 
+## 当日の再確認の順番（2026-11-23 時点の資料照合から）
+
+2026-11-23 に全ビルドの資料を照合し、Mobalytics 以外の資料の確認日を更新しました。Mobalytics は自動取得できない（HTTP 403）ため、当日はブラウザーで目視確認します。
+初心者向け評価の高いビルドから順に確認します（1.0 直後は初心者の検索が最も多いため）。
+
+| 順 | ビルド | 初心者向け | 自動で照合できた資料 | 目視が必要（Mobalytics） | 最初に見る資料 |
+|---|---|---|---|---|---|
+| 1 | witch-minion-infernalist | 5 | 3/5 | 2件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/skeletal-sniper-infernalist-build-guide |
+| 2 | witch-ed-contagion-lich | 5 | 4/5 | 1件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide |
+| 3 | warrior-shield-wall-smith | 3 | 4/6 | 2件（ブラウザーで目視） | https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview |
+| 4 | sorceress-sand-fire | 3 | 5/8 | 3件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide |
+| 5 | huntress-companion | 3 | 5/7 | 2件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/companion-spirit-walker-build-guide |
+| 6 | druid-plant-oracle | 3 | 3/5 | 2件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide |
+| 7 | mercenary-grenade-gemling | 3 | 3/4 | 1件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide |
+| 8 | sorceress-spark-stormweaver | 3 | 3/3 | なし | https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build |
+| 9 | monk-whirling-assault | 2 | 3/5 | 2件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide |
+| 10 | mercenary-twister-gemling | 2 | 2/3 | 1件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide |
+| 11 | ranger-ice-shot-deadeye | 2 | 3/5 | 2件（ブラウザーで目視） | https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide |
+| 12 | huntress-twister-spirit-walker | 2 | 5/5 | なし | https://maxroll.gg/poe2/build-guides/spirit-walker-twisters |
+
 ## ビルドごとの再確認（1本ずつ）
 
 1.0対応の元ガイドが出たビルドから、次をすべて確認する。どれかを確認できない場合はそのビルドを1.0対応にしない。
