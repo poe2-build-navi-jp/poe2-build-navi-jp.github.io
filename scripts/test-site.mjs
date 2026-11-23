@@ -29,6 +29,14 @@ const seoPages = JSON.parse(await read("data/seo-pages.json"));
 const guideIntents = JSON.parse(await read("data/guide-search-intents.json"));
 const site = JSON.parse(await read("data/site.json"));
 // On release day, titles naming 0.5.5 switch to the "checking" form (tools/version-title.mjs).
+// Home hero: the 1.0 notice switches with gameVersion (tools/enhance-one-hub.mjs).
+{
+  const notice = index.match(/<p class="hero-intro hero-release">([\s\S]*?)<\/p>/)?.[1] || "";
+  const released = site.gameVersion === site.nextGameVersion;
+  const [, m, d] = (site.nextGameVersionReleaseDateJapan || site.nextGameVersionReleaseDate).split("-").map(Number);
+  assert(notice.includes(released ? "PoE2 正式版1.0が公開されました" : `PoE2 1.0は${m}月${d}日（日本時間）公開予定`), "homepage 1.0 notice missing or not matching gameVersion");
+  for (const href of ["/poe2-1-0/how-to-start/", "/poe2-1-0/build-status/"]) assert(notice.includes(`href="${href}"`), `homepage 1.0 notice must link ${href}`);
+}
 const shownTitle055 = (title) => `<title>${site.gameVersion === "0.5.5" ? title : releaseTitle(title, "0.5.5", site.gameVersion)}</title>`;
 const beginnerLanding = await read("beginner-builds/index.html");
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
