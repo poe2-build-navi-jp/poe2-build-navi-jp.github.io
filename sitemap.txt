@@ -124,6 +124,7 @@ https://poe2-build-navi-jp.github.io/guides/bodach/
 https://poe2-build-navi-jp.github.io/guides/ritual/
 https://poe2-build-navi-jp.github.io/guides/breach/
 https://poe2-build-navi-jp.github.io/guides/delirium/
+https://poe2-build-navi-jp.github.io/guides/ailments/
 https://poe2-build-navi-jp.github.io/guides/stuck-at-level-90/
 https://poe2-build-navi-jp.github.io/guides/tangmazu/
 https://poe2-build-navi-jp.github.io/dictionary/build/

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "93eabf68bdb7ce9b9295c47ef5e52ac9dfedddaf",
+  "headCommit": "ffc98d3a4d9a9318257201b1c3d3562656474ba6",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "63c2c589447c439876ca909d48f41c560fb67c81b9aa8bdfd66b9b6f40f08a6f",
+      "afterHash": "1a5009ef1455b169b7c69dfc429dfde5ff5a6c18c29ff9304f203cf2d3182e20"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/ailments/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "bee63f152393db086ead0c839dd8b4f53f7dba22e60b6414131658bf8c6234a2"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/delirium/",
+      "change": "updated",
+      "beforeHash": "c7133850eab3d3d97fcda7c46b1fe66a68b773a627a2c5d0748c8c6040f67b2f",
+      "afterHash": "b24ed8e492dfd9369a9b13b7e06259b6c7660c0be0291249e42356939193f4f3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/xesht/",
+      "change": "updated",
+      "beforeHash": "422dd7cb3c0e52dacf9d7b79cd49c6e2415f31a8d3c44a6eddef3f840fd379c4",
+      "afterHash": "e112c9dba8e67feeb06872548641b13110715495af056e99c646873015eaf6bd"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "e3d425328b3e69aa5100ca46f2f5e20744bc2f3523a13d94f6c2388cd489c7fa",
+      "afterHash": "2b5efcbb5f83f11f5cbd7d4babdbb63f5b8c319f7bdc160c95ea624960cb4cdc"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "94bd7577f71fd4e19ab0ca27b8265eeea3991e5276e1841e242a298ecb0c26e4",
+      "afterHash": "2cbed7b56dc8c8e46cf76b2f777e06ae984de5e4e9fca8e1c61bc60bf3312115"
+    }
+  ]
+}

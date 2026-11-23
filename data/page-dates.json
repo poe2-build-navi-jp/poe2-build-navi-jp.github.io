@@ -25,7 +25,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "b9ad82f6700270f9",
+  "hash": "2a63405f0426b632",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -225,7 +225,7 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "0d3d543338cbfe5e",
+  "hash": "ec155cad56faa958",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -285,7 +285,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "a2c5b20f05065295",
+  "hash": "80de780c5122e4eb",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -590,7 +590,7 @@
   "hashVersion": 2
  },
  "/guides/xesht/": {
-  "hash": "1c1ccd980809e9ea",
+  "hash": "32a6ed4b374be407",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -625,7 +625,12 @@
   "hashVersion": 2
  },
  "/guides/delirium/": {
-  "hash": "d1e4da2fe3c14855",
+  "hash": "4888e056941d037c",
+  "date": "2026-11-23",
+  "hashVersion": 2
+ },
+ "/guides/ailments/": {
+  "hash": "81bf9f6ecdb6be2c",
   "date": "2026-11-23",
   "hashVersion": 2
  },
