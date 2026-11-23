@@ -1,9 +1,25 @@
 {
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-23",
   "gameVersion": "0.5.5",
   "engineDataVersion": "0.5.5.5",
   "scope": "公式差分の確認です。全ビルドの再検証日・実機プレイ日とは区別しています。",
   "patches": [
+    {
+      "version": "0.5.5h",
+      "publishedDate": "2026-11-18",
+      "url": "https://www.pathofexile.com/forum/view-thread/4016665",
+      "summary": "アトラスのデリリウムのクエストを進められない不具合を修正。Runes of Aldur以外のリーグで、ハードコアからソフトコア、SSFから通常へ移行したときに一部のエクスペディションのルーン鍛造レシピが失われる不具合を修正。シンダースパイダーの跳びかかりがダメージを与えない不具合を修正。",
+      "remaining": "記載なし。",
+      "impact": "進行・報酬に関する修正。掲載ノートにスキル・パッシブ数値の変更記載はありません。"
+    },
+    {
+      "version": "0.5.5f Restart",
+      "publishedDate": "2026-11-11",
+      "url": "https://www.pathofexile.com/forum/view-thread/4013657",
+      "summary": "0.5.5fで一部の隠れ家（Shoreline Hideoutなど）が再びロックされる不具合を修正。コラプト状態の先駆者のビーコンの報酬が失敗する不具合と、対象マップの光の柱が表示されない表示の不具合を修正。",
+      "remaining": "記載なし。",
+      "impact": "報酬・表示に関する修正。ビルド評価を変更する根拠としては扱いません。"
+    },
     {
       "version": "0.5.5f Hotfix",
       "publishedDate": "2026-11-10",

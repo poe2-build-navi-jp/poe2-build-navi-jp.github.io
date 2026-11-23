@@ -23,5 +23,8 @@
 1. 公式パッチノートを読み、`docs/templates/patch-notes-summary.json` をコピーして `【】` の部分を埋める。
 2. 完成したオブジェクトを `data/seo-pages.json` の `/poe2-1-0/exilecon-2026/` の後ろに追加する。
 3. 1.0ハブと公開予定日ページから、パッチノート要約へリンクする。
+   トップの1.0告知（`tools/enhance-one-hub.mjs`）は、`/poe2-1-0/patch-notes/` が `data/seo-pages.json` にあれば自動でリンクする。
+   `【】`・`YYYY-MM-DD`・「前後に調整」が1つでも残っていると `npm test` が止まる（埋め忘れ防止）。
 4. 掲載12ビルドについて、パッチノートで主力スキル・サポート・アセンダンシーの変更を探し、「掲載ビルドへの影響」表に書く。判断できないものは「要確認」とする。
-5. `npm run build`、全テスト、PR、マージ、公開サイトで確認。Search Consoleで新ページのインデックス登録をリクエスト（運営者）。
+5. `npm run build`、全テスト、コミットしてから IndexNow 計画を作る（`node scripts/indexnow-plan.mjs 前回計画のコミット 今回のコミット urls.txt docs/indexnow/日付-patch-notes-changes.json`）。
+   PR、マージ（計画がコミットを指すのでマージコミットで）、公開サイトで確認。Search Consoleで新ページのインデックス登録をリクエスト（運営者）。

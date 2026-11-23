@@ -28,6 +28,12 @@ const paths = [...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-na
 const released = site.gameVersion === site.nextGameVersion;
 const [y, m, d] = (site.nextGameVersionReleaseDateJapan || site.nextGameVersionReleaseDate).split("-").map(Number);
 const heading = released ? "PoE2 正式版1.0の情報" : `PoE2 1.0は${y}年${m}月${d}日（日本時間）公開予定`;
+// Home hero: one line about 1.0 that switches by itself on release day (data/site.json gameVersion).
+// The patch-notes summary is linked only once that page exists in data/seo-pages.json.
+const homeReleaseLinks = released
+  ? [["/poe2-1-0/how-to-start/", "始め方"], ...(seoPaths.includes("poe2-1-0/patch-notes/") ? [["/poe2-1-0/patch-notes/", "パッチノート要約"]] : []), ["/poe2-1-0/balance-changes/", "1.0の変更点"], ["/poe2-1-0/build-status/", "掲載ビルドの1.0対応状況"]]
+  : [["/poe2-1-0/how-to-start/", "始め方"], ["/poe2-1-0/carry-over/", "キャラの引き継ぎ"], ["/poe2-1-0/pre-registration/", "事前登録"], ["/poe2-1-0/build-status/", "掲載ビルドの1.0対応状況"]];
+const releaseNotice = `<p class="hero-intro hero-release"><b>${released ? "PoE2 正式版1.0が公開されました" : `PoE2 1.0は${m}月${d}日（日本時間）公開予定`}</b>：${homeReleaseLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join("・")}</p>`;
 export const ONE_LINK_MARKER = "<!-- one-link:start -->";
 const box = `${ONE_LINK_MARKER}<aside class="next-box one-link" aria-label="PoE2 1.0の情報"><b>${heading}</b><p><a href="/what-is-poe2/">PoE2とは</a>・<a href="/poe2-1-0/">1.0の確定情報</a>・<a href="/poe2-1-0/how-to-start/">始め方</a>・<a href="/poe2-1-0/system-requirements/">必要スペック</a></p></aside><!-- one-link:end -->`;
 
@@ -59,7 +65,7 @@ for (const path of paths) {
     // The hero can contain nested <section>s (the simulator card), so find its own closing tag.
     const at = sectionEnd(html, html.lastIndexOf("<section", html.indexOf('class="hero-actions"')));
     if (at === -1) throw new Error("index.html: hero section not found");
-    html = `${html.slice(0, at - "</div>".length)}<!-- poe2-intro:start --><p class="hero-intro"><a href="/what-is-poe2/">はじめての方へ：PoE2とは？どんなゲームかを見る</a></p><!-- poe2-intro:end --></div>${html.slice(at)}`;
+    html = `${html.slice(0, at - "</div>".length)}<!-- poe2-intro:start --><p class="hero-intro"><a href="/what-is-poe2/">はじめての方へ：PoE2とは？どんなゲームかを見る</a></p>${releaseNotice}<!-- poe2-intro:end --></div>${html.slice(at)}`;
   }
   if (!skip(path)) {
     html = insertBlock(html, "</main>", "one-link", box);

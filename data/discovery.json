@@ -1,9 +1,9 @@
 {
   "updatedAt": "2026-09-25",
   "patchVersion": "0.5.5",
-  "latestPatch": "0.5.5f Hotfix",
-  "latestPatchCheckedAt": "2026-11-11",
-  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4013539/page/1",
+  "latestPatch": "0.5.5h",
+  "latestPatchCheckedAt": "2026-11-23",
+  "latestPatchSource": "https://www.pathofexile.com/forum/view-thread/4016665",
   "featuredBuildIds": [
     "ranger-ice-shot-deadeye",
     "warrior-shield-wall-smith",
@@ -13,26 +13,88 @@
     "sorceress-spark-stormweaver"
   ],
   "featuredBuildTags": {
-    "ranger-ice-shot-deadeye": ["初心者", "遠距離"],
-    "warrior-shield-wall-smith": ["近接", "耐久重視"],
-    "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
-    "druid-plant-oracle": ["操作少なめ", "Lv1から主力継続"],
-    "monk-whirling-assault": ["近接", "機動力"],
-    "sorceress-spark-stormweaver": ["魔法", "Lv1から主力継続"]
+    "ranger-ice-shot-deadeye": [
+      "初心者",
+      "遠距離"
+    ],
+    "warrior-shield-wall-smith": [
+      "近接",
+      "耐久重視"
+    ],
+    "witch-minion-infernalist": [
+      "初心者",
+      "ミニオン",
+      "SSF"
+    ],
+    "druid-plant-oracle": [
+      "操作少なめ",
+      "Lv1から主力継続"
+    ],
+    "monk-whirling-assault": [
+      "近接",
+      "機動力"
+    ],
+    "sorceress-spark-stormweaver": [
+      "魔法",
+      "Lv1から主力継続"
+    ]
   },
   "buildTags": {
-    "monk-whirling-assault": ["近接", "機動力"],
-    "mercenary-twister-gemling": ["遠距離", "武器切替", "操作多め"],
-    "warrior-shield-wall-smith": ["近接", "耐久重視"],
-    "sorceress-sand-fire": ["召喚", "魔法", "SSF"],
-    "huntress-companion": ["相棒", "遠近両用", "構成切替"],
-    "ranger-ice-shot-deadeye": ["初心者", "遠距離"],
-    "witch-minion-infernalist": ["初心者", "ミニオン", "SSF"],
-    "druid-plant-oracle": ["初心者", "操作少なめ", "Lv1から主力"],
-    "witch-ed-contagion-lich": ["遠距離", "DoT"],
-    "mercenary-grenade-gemling": ["遠距離", "グレネード"]
-    ,"huntress-twister-spirit-walker": ["遠距離", "周回", "必須ユニークなし"]
-    ,"sorceress-spark-stormweaver": ["魔法", "遠距離", "Lv1から主力"]
+    "monk-whirling-assault": [
+      "近接",
+      "機動力"
+    ],
+    "mercenary-twister-gemling": [
+      "遠距離",
+      "武器切替",
+      "操作多め"
+    ],
+    "warrior-shield-wall-smith": [
+      "近接",
+      "耐久重視"
+    ],
+    "sorceress-sand-fire": [
+      "召喚",
+      "魔法",
+      "SSF"
+    ],
+    "huntress-companion": [
+      "相棒",
+      "遠近両用",
+      "構成切替"
+    ],
+    "ranger-ice-shot-deadeye": [
+      "初心者",
+      "遠距離"
+    ],
+    "witch-minion-infernalist": [
+      "初心者",
+      "ミニオン",
+      "SSF"
+    ],
+    "druid-plant-oracle": [
+      "初心者",
+      "操作少なめ",
+      "Lv1から主力"
+    ],
+    "witch-ed-contagion-lich": [
+      "遠距離",
+      "DoT"
+    ],
+    "mercenary-grenade-gemling": [
+      "遠距離",
+      "グレネード"
+    ],
+    "huntress-twister-spirit-walker": [
+      "遠距離",
+      "周回",
+      "必須ユニークなし"
+    ],
+    "sorceress-spark-stormweaver": [
+      "魔法",
+      "遠距離",
+      "Lv1から主力"
+    ]
   },
   "tiers": {
     "S": [
