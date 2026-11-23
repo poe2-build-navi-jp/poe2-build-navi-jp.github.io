@@ -28,6 +28,13 @@ const terms = JSON.parse(await read("data/dictionary.json"));
 const seoPages = JSON.parse(await read("data/seo-pages.json"));
 const guideIntents = JSON.parse(await read("data/guide-search-intents.json"));
 const site = JSON.parse(await read("data/site.json"));
+// Pages copied from docs/templates/ (e.g. the 1.0 patch-notes summary) must have every placeholder filled in.
+for (const page of seoPages) {
+  const text = JSON.stringify(page);
+  const left = text.match(/【[^】]*】|YYYY-MM-DD|前後に調整/);
+  // Stop here: later checks read the generated page and would hide this message.
+  if (left) throw new Error(`${page.path}: template placeholder left unfilled: ${left[0]}`);
+}
 // On release day, titles naming 0.5.5 switch to the "checking" form (tools/version-title.mjs).
 // Home hero: the 1.0 notice switches with gameVersion (tools/enhance-one-hub.mjs).
 {
