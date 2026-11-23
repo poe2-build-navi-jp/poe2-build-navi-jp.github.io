@@ -43,6 +43,13 @@ for (const entity of JSON.parse(await read("data/core-entities.json"))) {
   assert([...description].length >= 60 && [...description].length <= 125, `${file}: description must be 60-125 characters (now ${[...description].length})`);
   assert(description.includes(entity.englishName), `${file}: description must name ${entity.englishName}`);
 }
+// Wide guide screenshots: 800px and 1280px copies exist and are offered to the browser (tools/make-screenshot-variants.mjs).
+for (const guide of JSON.parse(await read("data/strategy-guides.json"))) for (const image of guide.sections.flatMap((section) => section.screenshots || [])) {
+  if (!(image.width > 1000)) continue;
+  const copies = [800, 1280].filter((width) => width < image.width).map((width) => [width, image.src.replace(/\.webp$/, `-${width}w.webp`)]);
+  for (const [, copy] of copies) assert(await access(resolve(root, "." + copy)).then(() => true, () => false), `${image.src}: missing ${copy} (run node tools/make-screenshot-variants.mjs)`);
+  assert((await read(`guides/${guide.slug}/index.html`)).includes(`srcset="${[...copies.map(([width, copy]) => `${copy} ${width}w`), `${image.src} ${image.width}w`].join(", ")}"`), `${guide.slug}: ${image.src} must offer the smaller copies`);
+}
 // Home hero: the 1.0 notice switches with gameVersion (tools/enhance-one-hub.mjs).
 {
   const notice = index.match(/<p class="hero-intro hero-release">([\s\S]*?)<\/p>/)?.[1] || "";
