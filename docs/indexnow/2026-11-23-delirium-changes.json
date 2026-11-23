@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "4de0828cb2272626aa9375da2cc1042a60fc088f",
+  "headCommit": "93eabf68bdb7ce9b9295c47ef5e52ac9dfedddaf",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "22bf42ba4b855d45e5bc6f7ef75ae60522cae81b3f501a5132e41cb3c6cc3d9f",
+      "afterHash": "63c2c589447c439876ca909d48f41c560fb67c81b9aa8bdfd66b9b6f40f08a6f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/breach/",
+      "change": "updated",
+      "beforeHash": "0d64863110acea2bd216a6ede2b9a0d52c6077bd429619aa0c0fdb63d68c368f",
+      "afterHash": "e52a8ee603dc2dc467c5f6498c5f8a9b38f4f546a12289d7b3123efa435c5647"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/delirium/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "c7133850eab3d3d97fcda7c46b1fe66a68b773a627a2c5d0748c8c6040f67b2f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/endgame-contents/",
+      "change": "updated",
+      "beforeHash": "f573a564060bcac3d5131f0c08ead56b6b1f0ff16defeed8ac5b55820e0bc70e",
+      "afterHash": "a91b804ef6c81b937b3131db3a4412060fb0f69f66e43966dea3cae2a9a17e6f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/ritual/",
+      "change": "updated",
+      "beforeHash": "2973e554742edc753ec484bea3b468c5da3079b0f77038e3fae9eac3a709cb8d",
+      "afterHash": "a6a611888476095e69a22b72b89e2970062d6c8851f67fb72adc35c18f0cba0b"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/tangmazu/",
+      "change": "updated",
+      "beforeHash": "182c848b32b874d6b84891388c7954e152c062e5a34002d7e81490cd6fa8b5d4",
+      "afterHash": "4f76dd09261f6651989ef2e7edfb558feeccbdb2ba06f9a05b9e4b339da8860e"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "1d4b13a775d23c2f308de7cbfc783924e484094371980e13c8172c19a24bdf0d",
+      "afterHash": "e3d425328b3e69aa5100ca46f2f5e20744bc2f3523a13d94f6c2388cd489c7fa"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "dce6fa2c7340722cfb2a0bdc2aaa199ec50e4bb5b2cef43039e8cc1d606d84a6",
+      "afterHash": "94bd7577f71fd4e19ab0ca27b8265eeea3991e5276e1841e242a298ecb0c26e4"
+    }
+  ]
+}

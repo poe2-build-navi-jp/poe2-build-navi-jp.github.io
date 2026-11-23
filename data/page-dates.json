@@ -25,7 +25,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "7633e222caee0280",
+  "hash": "b9ad82f6700270f9",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -225,7 +225,7 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "1ee9cace7d3205da",
+  "hash": "0d3d543338cbfe5e",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -285,7 +285,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "9116075f80be3c73",
+  "hash": "a2c5b20f05065295",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -485,7 +485,7 @@
   "hashVersion": 2
  },
  "/guides/endgame-contents/": {
-  "hash": "6c54ef84123a5a37",
+  "hash": "e75e61947a3de4de",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -615,12 +615,17 @@
   "hashVersion": 2
  },
  "/guides/ritual/": {
-  "hash": "841ce1c718b7aa96",
+  "hash": "5f87784b3d5fc56e",
   "date": "2026-11-23",
   "hashVersion": 2
  },
  "/guides/breach/": {
-  "hash": "cf9b6a4b730ed0e8",
+  "hash": "cd27a75ece88c214",
+  "date": "2026-11-23",
+  "hashVersion": 2
+ },
+ "/guides/delirium/": {
+  "hash": "d1e4da2fe3c14855",
   "date": "2026-11-23",
   "hashVersion": 2
  },
@@ -630,8 +635,8 @@
   "hashVersion": 2
  },
  "/guides/tangmazu/": {
-  "hash": "9b57fb0fd6318add",
-  "date": "2026-11-21",
+  "hash": "eea6cadb41d2fa7d",
+  "date": "2026-11-23",
   "hashVersion": 2
  },
  "/dictionary/build/": {
