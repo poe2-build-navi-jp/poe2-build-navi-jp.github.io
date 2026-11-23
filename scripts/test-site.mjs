@@ -36,6 +36,13 @@ for (const page of seoPages) {
   if (left) throw new Error(`${page.path}: template placeholder left unfilled: ${left[0]}`);
 }
 // On release day, titles naming 0.5.5 switch to the "checking" form (tools/version-title.mjs).
+// Skill and equipment pages: the search-result description is built from the page data and stays long enough to be shown as written.
+for (const entity of JSON.parse(await read("data/core-entities.json"))) {
+  const file = `${entity.kind === "skill" ? "skills" : "equipment"}/${entity.slug}/index.html`;
+  const description = (await read(file)).match(/<meta name="description" content="([^"]*)"/)?.[1] || "";
+  assert([...description].length >= 60 && [...description].length <= 125, `${file}: description must be 60-125 characters (now ${[...description].length})`);
+  assert(description.includes(entity.englishName), `${file}: description must name ${entity.englishName}`);
+}
 // Home hero: the 1.0 notice switches with gameVersion (tools/enhance-one-hub.mjs).
 {
   const notice = index.match(/<p class="hero-intro hero-release">([\s\S]*?)<\/p>/)?.[1] || "";
