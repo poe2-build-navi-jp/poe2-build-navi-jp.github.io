@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "fe9e22dc30d9287603c9c861a690db2e78d40d0a",
+  "headCommit": "45c6bfed44edb21f89b18c75c6817995682707b6",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "change": "updated",
+      "beforeHash": "5dfdec0c8f18cbec45a51455005d78ce11f8528e94e3cc2cc5af56af9013cc18",
+      "afterHash": "00d4ea872515dd312b5b088059aacd4d2d7f24c2e2c12b12905ca1c27a68c4c5"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/beginner-builds/",
+      "change": "updated",
+      "beforeHash": "351b6a6af96fc0a8500d368913af5cfe714f87a9ceb7fac22db528c268058b75",
+      "afterHash": "58d08510e3a8f56a61f04791192f59ae24d44c636391bf93eb2f9aa3cd7deec5"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/best-builds/",
+      "change": "updated",
+      "beforeHash": "c3f2ec24c1df7a1e025b5542c7994185c6bbcad76ec8160c80f777abde133065",
+      "afterHash": "ed0e8500e65ebd6e3780dc737120547a71042b0e17e2dccc39aae3b40f0f8a8c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "c2b404bfc00cafde33b6c1b35898e477af2b3080ea03a9264ba5d2ffe32f0730",
+      "afterHash": "87087336b8f10daca7a0063bbb5ad772721b260645cbac4fd354893cf2aff71f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/build-tier-list/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "96390e868a5daf9a3738930bbe4f83a5963883117b98e11fa634808d6ee8cbb7"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "3dc78158101b48e01faadaad2a1ac892c81023556e72ff555897c9fe35389613",
+      "afterHash": "d58e1aa8e9db471dc16cea5df2544c69fda93aed3083ca2d05de2e086cdf8713"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "c0f1e22b8e805508da2eb0615f25897787ac8d9c520e1251f40038a72e77b87e",
+      "afterHash": "eb14585dd0b4944ce8576afc7975f51351c1e74119108aa3ef05eb174e0382e4"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/tier-list/",
+      "change": "updated",
+      "beforeHash": "ed7b13340d5e8f2d869a4a8bbc3a9a170d04546526b8a471d75b3525dc16af3e",
+      "afterHash": "854b1bd825f099289a2a7f70847d6a90b1d9fe60f11d989ce566395ea5ae62c7"
+    }
+  ]
+}
