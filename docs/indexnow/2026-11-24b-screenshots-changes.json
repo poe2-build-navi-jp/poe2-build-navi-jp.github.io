@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "325bd1c6c0565740c9e88633321d049cc68acbbb",
+  "headCommit": "fe9e22dc30d9287603c9c861a690db2e78d40d0a",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/arbiter-of-divinity/",
+      "change": "updated",
+      "beforeHash": "a0cc94bb95eeeda43d46028b18f7a0d46bccfb477ae8f6874cf32c5ce3173c34",
+      "afterHash": "22de8ebca63f7940c8b65d8caa006e5c5a7200adbd4f50ba69efc853ea31c0c5"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/stuck-at-level-90/",
+      "change": "updated",
+      "beforeHash": "1f3e1e130ab1f0a8e273db9578489d5ef3bdeddab0d01928b63495bfa507386a",
+      "afterHash": "9c8fe6bc58fab178af38cc8f6ce0778a5526f7fd4ca8db53ef94fa7dec4038a2"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/tangmazu/",
+      "change": "updated",
+      "beforeHash": "4f76dd09261f6651989ef2e7edfb558feeccbdb2ba06f9a05b9e4b339da8860e",
+      "afterHash": "f0ad4bf47a84961757858a74b6148b2677ed03751a50dfeafda89e78b2a56ef8"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/xesht/",
+      "change": "updated",
+      "beforeHash": "e112c9dba8e67feeb06872548641b13110715495af056e99c646873015eaf6bd",
+      "afterHash": "7934dca8da456c79ffba0a82ad1d904b25b6147e23053ffbfba4386ffec64eea"
+    }
+  ]
+}

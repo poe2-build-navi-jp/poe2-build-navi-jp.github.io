@@ -1,3 +1,15 @@
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+const root = resolve(import.meta.dirname, '..');
+// Wide screenshots have smaller copies next to them (name-800w.webp and name-1280w.webp, made by
+// tools/make-screenshot-variants.mjs). The browser picks the one that fits the screen; the link still opens the original.
+export const SCREENSHOT_WIDTHS = [800, 1280];
+export const screenshotCopy = (src, width) => src.replace(/\.webp$/, `-${width}w.webp`);
+const srcset = image => {
+  const widths = SCREENSHOT_WIDTHS.filter(width => width < image.width);
+  if (!(image.width > 1000) || !widths.every(width => existsSync(resolve(root, '.' + screenshotCopy(image.src, width))))) return '';
+  return ` srcset="${[...widths.map(width => `${esc(screenshotCopy(image.src, width))} ${width}w`), `${esc(image.src)} ${image.width}w`].join(', ')}" sizes="(max-width: 900px) calc(100vw - 32px), 860px"`;
+};
 const esc = value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
 // Screenshot transcriptions are plain text, never executable HTML.
@@ -11,7 +23,7 @@ export function recordTable(table) {
 export function recordScreenshots(images = [], disclosure) {
   const figures = images.map(image => {
     if (!image.src?.startsWith('/images/') || !image.alt || !image.caption || !(image.width > 0) || !(image.height > 0)) throw new Error('Invalid guide screenshot');
-    return `<figure class="guide-record-image"><a href="${esc(image.src)}" aria-label="拡大：${esc(image.alt)}"><img src="${esc(image.src)}" alt="${esc(image.alt)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async"></a><figcaption>${esc(image.caption)} <a href="${esc(image.src)}">画像を拡大</a>。提供スクリーンショット／ゲーム内画像：Grinding Gear Games。</figcaption></figure>`;
+    return `<figure class="guide-record-image"><a href="${esc(image.src)}" aria-label="拡大：${esc(image.alt)}"><img src="${esc(image.src)}"${srcset(image)} alt="${esc(image.alt)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async"></a><figcaption>${esc(image.caption)} <a href="${esc(image.src)}">画像を拡大</a>。提供スクリーンショット／ゲーム内画像：Grinding Gear Games。</figcaption></figure>`;
   }).join('');
   return disclosure && images.length ? `<details class="guide-record-gallery"><summary>${esc(disclosure)}</summary>${figures}</details>` : figures;
 }
