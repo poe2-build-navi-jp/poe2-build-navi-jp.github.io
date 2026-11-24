@@ -60,7 +60,7 @@ for(const page of pages){
  html=html.replace(/<!-- build-ux:start -->[\s\S]*?<!-- build-ux:end -->/g,'');
  html=insertBlock(html,'</head>','build-ux','<!-- build-ux:start --><link rel="stylesheet" href="/assets/build-ux.css?v=1"><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-ux:end -->');
  if(page==='index.html'){
-  html=html.replace(/<div class="hero-actions"[^>]*>[\s\S]*?<\/div>/,`<div class="hero-actions" aria-label="まず何をしたい？"><a class="button" href="/beginner-builds/">初心者おすすめビルド</a><a class="button-secondary" href="/best-builds/">最強ビルドを目的別に比較</a><a class="button-secondary" href="/classes/">自分に合う職業を選ぶ</a><a class="button-secondary" href="/leveling/">現在Lvから続きを見る</a></div>`);
+  html=html.replace(/<div class="hero-actions"[^>]*>[\s\S]*?<\/div>/,`<div class="hero-actions" aria-label="まず何をしたい？"><a class="button" href="/beginner-builds/">初心者おすすめビルド</a><a class="button-secondary" href="/best-builds/">最強ビルドを目的別に比較</a><a class="button-secondary" href="/guides/build-tier-list/">最強ビルドTier表（S〜D）</a><a class="button-secondary" href="/classes/">自分に合う職業を選ぶ</a><a class="button-secondary" href="/leveling/">現在Lvから続きを見る</a></div>`);
   const quick=html.match(/<section id="quick-start"[\s\S]*?<\/section>/)?.[0];
   html=html.replace(/<!-- home-builds:start -->[\s\S]*?<!-- home-builds:end -->/g,'');
   if(quick)html=html.replace(quick,'');

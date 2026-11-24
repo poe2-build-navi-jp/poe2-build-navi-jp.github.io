@@ -1,6 +1,6 @@
 {
  "/": {
-  "hash": "67efacf5002650de",
+  "hash": "6af06fbbe7ee134d",
   "date": "2026-11-24",
   "hashVersion": 2
  },
@@ -25,7 +25,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "1b68b9668da657d6",
+  "hash": "e6cf191160eaf21c",
   "date": "2026-11-24",
   "hashVersion": 2
  },
@@ -220,12 +220,12 @@
   "hashVersion": 2
  },
  "/beginner-builds/": {
-  "hash": "054a4dbc250f6cfb",
+  "hash": "91775285185c6e1a",
   "date": "2026-11-24",
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "ec913f8e5dd5e609",
+  "hash": "2a46efe6349d6e8a",
   "date": "2026-11-24",
   "hashVersion": 2
  },
@@ -235,7 +235,7 @@
   "hashVersion": 2
  },
  "/tier-list/": {
-  "hash": "a705c4907bda6a14",
+  "hash": "2adfd65326ab7e95",
   "date": "2026-11-24",
   "hashVersion": 2
  },
@@ -245,7 +245,7 @@
   "hashVersion": 2
  },
  "/best-builds/": {
-  "hash": "f26f9843d3f68e15",
+  "hash": "1d68305d5c04fa63",
   "date": "2026-11-24",
   "hashVersion": 2
  },
@@ -285,7 +285,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "9461f505b61071a2",
+  "hash": "ed8fcfd887e50ec9",
   "date": "2026-11-24",
   "hashVersion": 2
  },
@@ -632,6 +632,11 @@
  "/guides/ailments/": {
   "hash": "96a487767dc03abf",
   "date": "2026-11-23",
+  "hashVersion": 2
+ },
+ "/guides/build-tier-list/": {
+  "hash": "ef50e223d330c7e3",
+  "date": "2026-11-24",
   "hashVersion": 2
  },
  "/guides/stuck-at-level-90/": {
