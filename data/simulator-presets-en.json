@@ -706,6 +706,85 @@
     "contentRevision": "dc9aa11296f93ea4"
   },
   {
+    "id": "druid-grim-pillars-oracle",
+    "name": "Grim Pillars (Spell Totem) Oracle",
+    "class": "Druid",
+    "className": "Druid",
+    "ascendancy": "Oracle",
+    "ascendancyName": "Oracle",
+    "skills": [
+      "Grim Pillars"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1–13 (Plants, early game)",
+        "mainSkill": "Charge up and fire Volcano, and weaken enemies with Frost Bomb. Progress with Entangle and Contagion, and add Bone Cage at level 6",
+        "supports": "Entangle with Upheaval I and Controlled Destruction. Volcano also uses Controlled Destruction. Bone Cage with Spell Cascade (strong single-target damage if you can get close). Ravenous Swarm with Corrosion. The guide's gem setups are examples per stage; they do not mean everything unlocks at that character level.",
+        "passivePriority": "Use the source's Plants Leveling stage tree. The first ascendancy, The Unseen Path, is the top priority (it opens totem passives you normally cannot reach and makes leveling easier). Check exact node names at the linked source.",
+        "gearPriority": "+Cold/all spell levels, spell damage, life, resistances, movement speed. Keep a sceptre with Spirit for later.",
+        "caution": "The Grim Pillars gem is not available at this stage (it drops from level 22 onward). Continue with the plant setup.",
+        "transitionCondition": "Reach level 14. Bonestorm becomes available."
+      },
+      {
+        "label": "Levels 14–29 (Bonestorm switch)",
+        "mainSkill": "Bonestorm becomes the main skill. Fully charge it and release it when enemies are close. Thunderstorm wets and strengthens the plants and Bonestorm, and also consumes Impale",
+        "supports": "Bonestorm with Rapid Casting I and Burgeon I. Thunderstorm with Living Lightning and Magnified Area I. Around level 18, add Accelerated Growth to Entangle. Thrashing Vines with Concentrated Area, Controlled Destruction and Lightning Attunement.",
+        "passivePriority": "The second half of the Plants Leveling tree. Map out the path to Ancestral Bond (the respec target) and the nodes that give 70% placement speed in advance.",
+        "gearPriority": "Spell levels, cast speed, life, resistances. Upgrade the sceptre prioritising maximum Spirit.",
+        "caution": "The Impale applied by Bonestorm is consumed by the summons from Thunderstorm's Living Lightning for large damage. Mind the order you use them in.",
+        "transitionCondition": "Obtain the Grim Pillars gem (drops from level 22 onward; most players get it via league mechanics around levels 30–40). Or be ready to decide to stay on plants until level 52."
+      },
+      {
+        "label": "Level 30 to campaign completion (respec preparation)",
+        "mainSkill": "Continue the plant setup (Bonestorm as the main skill). Once the respec conditions are met, you may switch to totems even mid-campaign",
+        "supports": "Keep the plant setup. Prepare Spell Totem and a fresh level 1 Entangle dedicated to detonation for the switch.",
+        "passivePriority": "Check the respec target tree. Ancestral Bond and placement-speed nodes (70% total) are prerequisites. Take the second ascendancy, The Lesser Harm, as the path to the third (no need to rush).",
+        "gearPriority": "A maximum-Spirit sceptre (around 150–210; the centre of the build). Stack Spirit together with the campaign quest rewards (the first 100).",
+        "caution": "A leveled Entangle has a high mana cost and cannot be used just for detonation. Create a fresh level 1 one. Its quality is worth investing in (extra chance to generate fissures).",
+        "transitionCondition": "All three are in place: 1) the Grim Pillars gem obtained, 2) a sceptre with Spirit, 3) Ancestral Bond taken."
+      },
+      {
+        "label": "Respec into totems",
+        "mainSkill": "Spell Totem + Grim Pillars. A level 1 Entangle with Biting Frost I detonates the pillars (skills that consume Freeze detonate the pillars immediately)",
+        "supports": "The totem-side Entangle with Biting Frost I, Living Lightning and Branching Fissures I.",
+        "passivePriority": "Take Ancestral Bond (doubles the totem limit, no cost or charges, but reserves 75 Spirit per totem). Weapon-set passives come into full use after the campaign: Set 1 (red) = all totem nodes, Set 2 (green) = cast speed, area of effect, critical and Arcane Surge.",
+        "gearPriority": "Securing Spirit is the top priority (75 per totem, 63 with Efficient Inscriptions). Aim for 300% totem placement speed.",
+        "caution": "Set Spell Totem to exactly level 14 including gear bonuses (level 14 is the breakpoint where the totem limit becomes 2; confirmed in poe2db's level table). Beyond that only totem resistances grow, which the ascendancy makes meaningless. Fix both weapons to both sets, or switching will change your Spirit and the totems will disappear. Grim Pillars is a Kalguur gem; raise or lower its gem level with the Thaumaturgic Flux currency.",
+        "transitionCondition": "Totems stay up permanently and you can clear pillars with Entangle detonations."
+      },
+      {
+        "label": "Starting maps",
+        "mainSkill": "Make Spell Totem + Grim Pillars your mapping mainstay. Use Mana Tempest after placing totems",
+        "supports": "Grim Pillars with Urgent Totems III, Efficiency II and Magnified Area II. Mana Tempest with Advancing Storm, Efficiency II and Lightning Mastery.",
+        "passivePriority": "Ascendancy order: The Unseen Path → The Lesser Harm → Forced Outcome → Unnamed Heartwood. After the third ascendancy, move critical chance to 30–40% (more is inefficient).",
+        "gearPriority": "Spirit (6 totems, about 400, is the final goal), +Cold spell levels, resistances, life/ES.",
+        "caution": "Do not use Mana Tempest before placing totems. Its effect lingers for 4 seconds after the cloud disappears, and totems benefit from it passively.",
+        "transitionCondition": "Totems stay up and detonations are stable in low-tier maps, and you can judge Spirit and mana shortages."
+      },
+      {
+        "label": "Early Endgame (Life version)",
+        "mainSkill": "Run Spell Totem + Grim Pillars with curse and exposure support",
+        "supports": "Elemental Weakness with Efficiency II, Cursed Ground and Heightened Curse. Frost Bomb with Spell Echo, Overabundance I and Efficiency II. Purity of Fire in a Spirit slot with Mysticism II, Clarity II and Vitality II. Also use Mana Drain.",
+        "passivePriority": "The Life-version endgame tree. Complete the weapon-set specialisation (24 points).",
+        "gearPriority": "+Cold spell skill levels are the top priority (a +5 wand roughly doubles damage). Then spell damage and elemental damage, cast speed, totem placement speed. Amulet: Solar (up to 65 Spirit) plus spell levels, anointed with Efficient Casting. Belt: the Darkness Enthroned variant that treats socketed items as body armour, with a Blossom rune socketed to secure Spirit. Charms such as Nascent Hope are cheap.",
+        "caution": "The Life version can handle the campaign and endgame bosses, but one-shots appear later on. For mana problems, first check gem levels (Overabundance) and address them with Efficiency-type supports. Stacking maximum mana itself also thickens your base recovery.",
+        "transitionCondition": "Mapping and bosses are stable on the Life version, and you start gathering gear for the ES switch (such as a high-ES body armour that keeps Spirit)."
+      },
+      {
+        "label": "Completed endgame setup (ES / Chaos Inoculation)",
+        "mainSkill": "Spell Totem + Grim Pillars. Use Chaos Inoculation to set life to 1 and nullify chaos damage and bleeding",
+        "supports": "In Endgame+++, add Compressed Duration II and Fire Mastery to Elemental Conflux. If you use the final piece, Rakiata's Flow, remove Frost Bomb and Elemental Weakness (lowering enemy resistances would cancel out its benefit).",
+        "passivePriority": "Take Chaos Inoculation. Move some damage nodes to shield nodes (in exchange for roughly 30% less damage).",
+        "gearPriority": "ES: the body armour is the hardest piece, needing 650+ ES while keeping Spirit. The helmet matters too because of a tree node. Gloves and boots around 200–250 ES; movement speed on boots is mandatory. Jewels: increased maximum shield % and recharge start speed. Final charms: The Fall of the Axe and Rite of Passage.",
+        "caution": "Only switch to ES when you have damage to spare. Right after switching you are weaker by the damage nodes moved to shield nodes.",
+        "transitionCondition": "Once complete, improve the Spirit, ES and critical bottlenecks one item at a time."
+      }
+    ],
+    "mainSkill": "Cast Grim Pillars with Spell Totem",
+    "path": "/builds/druid/grim-pillars-oracle/",
+    "contentRevision": "f4b00c98e10dea40"
+  },
+  {
     "id": "witch-ed-contagion-lich",
     "name": "Essence Drain / Contagion Lich",
     "class": "Witch",

@@ -5506,13 +5506,13 @@
   },
   {
     "slug": "unique-gear",
-    "title": "おすすめユニーク装備一覧｜12ビルドの最強候補と採用条件",
-    "summary": "PoE2 0.5.5の掲載12ビルド・32候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
+    "title": "おすすめユニーク装備一覧｜13ビルドの最強候補と採用条件",
+    "summary": "PoE2 0.5.5の掲載13ビルド・36候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
     "category": "basics",
-    "version": "掲載12ビルド：0.5.5／原典の版は出典欄で区別",
-    "checkedAt": "2026-10-12",
+    "version": "掲載13ビルド：0.5.5／原典の版は出典欄で区別",
+    "checkedAt": "2026-11-25",
     "publishedAt": "2026-10-12",
-    "updatedAt": "2026-11-04",
+    "updatedAt": "2026-11-25",
     "keywords": [
       "ワーリングアサルト・マーシャルアーティスト",
       "ツイスター・ジェムリング",
@@ -5593,13 +5593,13 @@
       "原典の構成名と、装備に必要な効果を合わせる",
       "交換後の耐性・Spirit・防御を確認して育成へ戻る"
     ],
-    "tocLabel": "掲載12ビルドからユニーク装備を探す",
+    "tocLabel": "掲載13ビルドからユニーク装備を探す",
     "sections": [
       {
         "id": "build-unique-summary",
-        "heading": "PoE2おすすめユニーク装備一覧｜12ビルドの選び方早見",
+        "heading": "PoE2おすすめユニーク装備一覧｜13ビルドの選び方早見",
         "paragraphs": [
-          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全32候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
+          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全36候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
         ],
         "gearSummary": true
       },
@@ -6072,6 +6072,81 @@
           39
         ],
         "quickAnswer": "ナイトスケールは直近会心時のマナ再生を持つタイプを選択。ヘッドハンターは周回、英雄の悲劇は原典のMirror Tier構成で比較します。"
+      },
+      {
+        "id": "druid-grim-pillars-oracle",
+        "heading": "グリムピラー（スペルトーテム）・オラクルのおすすめユニーク装備",
+        "buildId": "druid-grim-pillars-oracle",
+        "paragraphs": [
+          "原典で確認できたユニークは、スピリット確保のベルトとチャームが中心です。主力スペルのレベルと詠唱速度はレア装備で伸ばす構成のため、候補は4点に絞られます。"
+        ],
+        "gearOptions": [
+          {
+            "name": "Darkness Enthroned",
+            "slot": "ベルト",
+            "phase": "Mapping開始〜（スピリット確保）",
+            "purpose": "ソケットしたアイテムのボーナスを胴防具として扱う型でスピリットを確保する",
+            "conditions": "原典と同じ、ソケット品を胴扱いする型。開花のルーンをソケットするとLv100でスピリット約49が目安。",
+            "tradeoff": "ベルト枠をスピリット確保に使うため、耐性やライフは他の部位で補う前提になる。",
+            "rareAlternative": "スピリット・耐性・必要能力値のレアベルト",
+            "sourceRefs": [
+              52,
+              7
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "即位した闇"
+          },
+          {
+            "name": "Nascent Hope",
+            "slot": "チャーム",
+            "phase": "序盤〜Mapping（安価な候補）",
+            "purpose": "安価にチャーム枠を埋める序盤の候補",
+            "conditions": "原典が安価な候補として提示。完成形のチャームが揃うまでのつなぎ。",
+            "tradeoff": "完成形（斧の一振り・通過儀礼）へ買い替える前提の暫定枠。",
+            "rareAlternative": "不足する状態異常対策を補う通常チャーム",
+            "sourceRefs": [
+              53,
+              9
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "希望の芽吹き"
+          },
+          {
+            "name": "The Fall of the Axe",
+            "slot": "チャーム",
+            "phase": "Endgame完成形",
+            "purpose": "チャーム完成形の1枠",
+            "conditions": "原典の完成形チャーム2種のうちの1つ。通過儀礼とセットで切り替える。",
+            "tradeoff": "2枠を同時に買い替えるため、切替前に防御の不足を先に解消しておく。",
+            "rareAlternative": "効果の近い通常チャームで代用し、不足分は他部位で調整",
+            "sourceRefs": [
+              52,
+              50
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "斧の一振り"
+          },
+          {
+            "name": "Rite of Passage",
+            "slot": "チャーム",
+            "phase": "Endgame完成形",
+            "purpose": "チャーム完成形の1枠",
+            "conditions": "原典の完成形チャーム2種のうちの1つ。斧の一振りとセットで切り替える。",
+            "tradeoff": "2枠を同時に買い替えるため、切替前に防御の不足を先に解消しておく。",
+            "rareAlternative": "効果の近い通常チャームで代用し、不足分は他部位で調整",
+            "sourceRefs": [
+              52,
+              51
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "通過儀礼"
+          }
+        ],
+        "sourceRefs": [
+          52,
+          53
+        ],
+        "quickAnswer": "スピリットは即位した闇（胴扱い型＋開花のルーン）で確保。チャームは安価な希望の芽吹きから始め、完成形で斧の一振りと通過儀礼に切り替えます。"
       },
       {
         "id": "witch-ed-contagion-lich",
@@ -6644,9 +6719,35 @@
         "japaneseUrl": "https://poe2db.tw/jp/Talisman_of_Ralakesh",
         "checkedAt": "2026-10-12",
         "supports": "本文で言及するアイテムの日本語名を日本語ページのデータ本文で確認。今回、採用条件や効果の再評価は行っていません。"
+      },
+      {
+        "name": "PoE2DB: 斧の一振り（The Fall of the Axe）",
+        "url": "https://poe2db.tw/us/The_Fall_of_the_Axe",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別（銀のチャーム）と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/The_Fall_of_the_Axe"
+      },
+      {
+        "name": "PoE2DB: 通過儀礼（Rite of Passage）",
+        "url": "https://poe2db.tw/us/Rite_of_Passage",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別（黄金のチャーム）と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Rite_of_Passage"
+      },
+      {
+        "name": "kami-labs: Grim Pillars Totem Druid（Palsteron氏のMaxrollガイドのミラー・要約）",
+        "url": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-druide-grim-pillars-totem-saison-5/",
+        "checkedAt": "2026-11-25",
+        "supports": "完成形の装備（ベルトとチャーム2種）とスピリット計算を確認。Maxroll本文は直接確認できていないため、ミラー経由の照合として区別。"
+      },
+      {
+        "name": "Odealo: Grim Pillars Spell Totem Oracle Build",
+        "url": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "checkedAt": "2026-11-25",
+        "supports": "Endgame構成の装備候補（安価なチャーム含む）と長所・短所を確認。"
       }
     ],
-    "scope": "2026-10-12に各原典の本文・公開HTML内の構成別装備データとPoE2DBを照合。原典採用品・別原典の候補・効果から検討する候補を区別しています。ゲーム内実測、全装備の同条件比較、相場調査、各ビルドの育成8段階の全面再検証は行っていません。Maxrollは取得できなかったため今回の採用確認には使用していません。装備データの仕様と、原典作者による推奨・運営者の選び方を分けて記載。文章や画像の転載はしません。 日本語名はPoE2DB日本語ページの装備データ本文で照合。検索結果のタイトルに同名パッシブが混ざる場合は、装備種別とアイコンを確認して区別しています。",
+    "scope": "2026-10-12に各原典の本文・公開HTML内の構成別装備データとPoE2DBを照合。原典採用品・別原典の候補・効果から検討する候補を区別しています。ゲーム内実測、全装備の同条件比較、相場調査、各ビルドの育成手順の全面再検証は行っていません。Maxrollは取得できなかったため今回の採用確認には使用していません。装備データの仕様と、原典作者による推奨・運営者の選び方を分けて記載。文章や画像の転載はしません。 日本語名はPoE2DB日本語ページの装備データ本文で照合。検索結果のタイトルに同名パッシブが混ざる場合は、装備種別とアイコンを確認して区別しています。",
     "faq": [
       {
         "question": "全ビルドで一番強いユニークはどれ？",
@@ -6696,7 +6797,7 @@
       },
       {
         "href": "/guides/build-gear-buying-order/",
-        "label": "買う前に12ビルドの購入順を確認"
+        "label": "買う前に13ビルドの購入順を確認"
       }
     ],
     "ogImage": "/images/poe2/og/poe2-guides-unique-gear-og.webp",
@@ -6718,6 +6819,10 @@
       {
         "date": "2026-11-03",
         "summary": "資料照合日と編集日を区別する表示を追加。装備効果・ビルド採用条件の再検証ではありません。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "グリムピラー（スペルトーテム）・オラクルのビルド追加に合わせ、候補4点（即位した闇、希望の芽吹き、斧の一振り、通過儀礼）のセクションを追加。掲載は13ビルド・36候補になりました。"
       }
     ]
   },
@@ -9460,7 +9565,7 @@
         "links": [
           {
             "href": "/guides/build-gear-buying-order/",
-            "label": "12ビルドの装備購入順を見る"
+            "label": "13ビルドの装備購入順を見る"
           },
           {
             "href": "/guides/twister-gemling-transition/",
@@ -9507,13 +9612,13 @@
   },
   {
     "slug": "build-gear-buying-order",
-    "title": "ビルド別の装備購入順｜低予算から完成形へ進む12構成",
-    "summary": "掲載12ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
+    "title": "ビルド別の装備購入順｜低予算から完成形へ進む13構成",
+    "summary": "掲載13ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
     "category": "basics",
     "version": "0.5.5掲載構成",
-    "checkedAt": "2026-11-04",
+    "checkedAt": "2026-11-25",
     "publishedAt": "2026-11-04",
-    "updatedAt": "2026-11-04",
+    "updatedAt": "2026-11-25",
     "actions": [
       "自分のビルドと現在段階を選び、困っていることを1つ決める",
       "購入価格と、交換で失う耐性・能力値・Spiritを確認する",
@@ -9603,9 +9708,15 @@
         "url": "https://mobalytics.gg/poe-2/profile/animeprincess/builds/0-5-5-twister-gemling-comprehensive-leveling-guide",
         "checkedAt": "2026-11-04",
         "supports": "序盤の装備条件と、テイミング・タングルタン・高投資品の位置付け。snoobae85版とは別原典。"
+      },
+      {
+        "name": "Odealo: Grim Pillars Spell Totem Oracle Build",
+        "url": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "checkedAt": "2026-11-25",
+        "supports": "グリムピラー（スペルトーテム）・オラクルの装備優先を確認し、購入順へ再編集。"
       }
     ],
-    "scope": "掲載済み12ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+    "scope": "掲載済み13ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
     "structuredCitations": true,
     "keywords": [
       "装備購入順",
@@ -9633,13 +9744,17 @@
     "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
     "verification": {
       "method": "既存の個別ビルドの装備優先項目を再編集。ツイスター・アイスショットの作者解説と装備データは別途参照。",
-      "confirmed": "掲載済み12ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+      "confirmed": "掲載済み13ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
       "unverified": "12原典の全段階の再検証、全装備の購入価格、交換前後の同条件実測、最安クリア構成。"
     },
     "revisionNotes": [
       {
         "date": "2026-11-04",
         "summary": "初版公開。判断手順・比較項目と参照資料を掲載。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "グリムピラー（スペルトーテム）・オラクルの購入順セクションを追加。掲載は13構成になりました。"
       }
     ],
     "quickLinks": [
@@ -9649,7 +9764,7 @@
       },
       {
         "href": "#build-list",
-        "label": "12ビルドから選ぶ"
+        "label": "13ビルドから選ぶ"
       },
       {
         "href": "#before-after",
@@ -9708,7 +9823,7 @@
       },
       {
         "id": "build-list",
-        "heading": "掲載12ビルドから装備の購入順を選ぶ",
+        "heading": "掲載13ビルドから装備の購入順を選ぶ",
         "paragraphs": [
           "以下は必須購入ランキングではなく、個別ページの掲載済み育成データを使った確認順です。すでに満たしている防御項目へ買い直す必要はありません。段階ごとの細かいジェムや切替条件は、現在Lvの育成案内へ戻って照合してください。"
         ],
@@ -9744,6 +9859,10 @@
           {
             "href": "#druid-plant-oracle",
             "label": "植物オラクル"
+          },
+          {
+            "href": "#druid-grim-pillars-oracle",
+            "label": "グリムピラー（スペルトーテム）・オラクル"
           },
           {
             "href": "#witch-ed-contagion-lich",
@@ -9961,6 +10080,31 @@
         ],
         "sourceRefs": [
           8
+        ]
+      },
+      {
+        "id": "druid-grim-pillars-oracle",
+        "heading": "グリムピラー（スペルトーテム）・オラクルの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始で確認する項目：火・冷気・雷耐性の上限75%、カオス耐性、ライフ/ES、スピリット190。[source:15]"
+        ],
+        "bullets": [
+          "最初の1点：スピリット確保。即位した闇（ソケット品を胴扱いする型）に開花のルーンを挿し、常駐スキルが止まらない状態を先に作る。",
+          "火力・機能を買い足す：主力スペルのレベル・詠唱速度を比較し、耐性とライフ/ESの不足も同時に点検。",
+          "後回し・まとめて準備する品：チャーム完成形（斧の一振り・通過儀礼）は2枠セットで切り替える。序盤は安価な希望の芽吹きでつなぐ。"
+        ],
+        "links": [
+          {
+            "href": "/builds/druid/grim-pillars-oracle/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#druid-grim-pillars-oracle",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          15
         ]
       },
       {
@@ -14192,7 +14336,10 @@
             [
               "グリムピラー（スペルトーテム）・オラクル",
               "Grim Pillars Spell Totem Oracle",
-              "—"
+              {
+                "text": "グリムピラー（スペルトーテム）・オラクル",
+                "href": "/builds/druid/grim-pillars-oracle/"
+              }
             ],
             [
               "ホロウフォーム＋ワーリングアサルト・マーシャルアーティスト",
@@ -14684,7 +14831,7 @@
         "id": "site-builds",
         "heading": "このサイトの掲載ビルドはどこにある？",
         "paragraphs": [
-          "このサイトで育成手順を掲載している12ビルドのうち、9ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
+          "このサイトで育成手順を掲載している13ビルドのうち、10ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
         ],
         "table": {
           "caption": "掲載ビルドとMaxrollのTier",
@@ -14717,6 +14864,14 @@
               },
               "S（ミニオン型）",
               "Disciple of Varashta Minion"
+            ],
+            [
+              {
+                "text": "グリムピラー（スペルトーテム）・オラクル",
+                "href": "/builds/druid/grim-pillars-oracle/"
+              },
+              "S",
+              "Grim Pillars Spell Totem Oracle"
             ],
             [
               {
@@ -14962,6 +15117,10 @@
       {
         "date": "2026-11-25",
         "summary": "日本語名の照合を完了（PoE2DB日本語版で確認。Demon CalamityはMaxrollのビルド名のため中核スキル名で表記）。「このサイトの記事」欄と掲載ビルド表に各ビルドページへのリンクを追加。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "グリムピラー（スペルトーテム）・オラクルのビルドページを追加し、S Tier表の「このサイトの記事」欄と掲載ビルド表にリンクを追加。"
       }
     ]
   },

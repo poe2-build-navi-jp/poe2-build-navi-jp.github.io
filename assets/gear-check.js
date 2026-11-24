@@ -21,13 +21,29 @@ function populateBuilds(className, selectedBuild = "") {
   select.value = matches.some((build) => build.id === selectedBuild) ? selectedBuild : (matches[0]?.id || "");
 }
 
+// Same stage resolution as the build page: exact band label first, then a level
+// range written in the label (e.g. "Lv1〜13"), then the band position clamped to
+// the build's own stage count. Builds using the fixed band labels only take the
+// exact match.
+function resolveStage(buildStages, bandIndex, stageLabel, level) {
+  if (!buildStages?.length || bandIndex < 0) return undefined;
+  const exact = buildStages.find((item) => item.label === stageLabel);
+  if (exact) return exact;
+  const byRange = buildStages.find((item) => {
+    const range = /Lv\s*(\d+)\s*[〜~～\-–]\s*(\d+)/.exec(item.label || "");
+    return range && level >= Number(range[1]) && level <= Number(range[2]);
+  });
+  return byRange || buildStages[Math.min(bandIndex, buildStages.length - 1)];
+}
+
 function render() {
   const build = builds.find((item) => item.id === byId("gear-build").value);
   const level = committedLevel;
   const concern = byId("gear-concern").value;
   const budget = byId("gear-budget").value;
-  const stageLabel = STAGES.find(([min,max]) => level >= min && level <= max)?.[2];
-  const stage = build?.levelingStages?.find((item) => item.label === stageLabel);
+  const bandIndex = STAGES.findIndex(([min,max]) => level >= min && level <= max);
+  const stageLabel = STAGES[bandIndex]?.[2];
+  const stage = resolveStage(build?.levelingStages, bandIndex, stageLabel, level);
   const base = common[concern];
   byId("gear-result-title").textContent = build ? `${build.name} / Lv${level}` : `Lv${level}の装備チェック`;
   byId("gear-context").textContent = `${stageLabel}・悩み：${concernLabels[concern]}・予算：${budget}`;

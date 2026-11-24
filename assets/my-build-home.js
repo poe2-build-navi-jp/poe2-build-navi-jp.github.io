@@ -1,6 +1,6 @@
-import {HOME_KEY,SEEN_KEY,readHomeRecords,selectHomeRecord,resumeHref,checkedPresets,readHomeGoal,summarizeHomeGoal,readSeen,homeNotices} from './my-build-home-model.js?v=331b1bec80';
-import {installBuildActions} from './my-build-actions.js?v=69eda43e44';
-import {installGrowthHistory} from './my-build-growth.js?v=705fbc2bf5';
+import {HOME_KEY,SEEN_KEY,readHomeRecords,selectHomeRecord,resumeHref,checkedPresets,readHomeGoal,summarizeHomeGoal,readSeen,homeNotices} from './my-build-home-model.js?v=52fafd6df3';
+import {installBuildActions} from './my-build-actions.js?v=e77759f767';
+import {installGrowthHistory} from './my-build-growth.js?v=d75d03e102';
 
 export function installMyBuildHome(document){
  const section=document.getElementById('my-build-home'),embedded=document.getElementById('my-build-presets');

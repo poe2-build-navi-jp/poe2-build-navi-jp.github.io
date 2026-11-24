@@ -1,5 +1,5 @@
 import * as engine from './simulator-engine/v0.0.46/pobr_wasm.js';
-import {validRequest} from './simulator-model.js?v=161ef63cbd';
+import {validRequest} from './simulator-model.js?v=fdda84f09b';
 import {stageVerifiedData} from './simulator-engine-loader.js?v=f85f6c4910';
 
 const base = new URL('./simulator-engine/v0.0.46/', import.meta.url);

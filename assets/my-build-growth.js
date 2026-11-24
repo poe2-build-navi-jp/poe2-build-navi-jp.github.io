@@ -1,4 +1,4 @@
-import {GROWTH_PREFIX,GROWTH_LIMIT,GROWTH_STATS,growthKey,parseGrowth,makeGrowth,appendGrowth,growthDifference,saveGrowth} from './my-build-growth-model.js?v=c76e92e114';
+import {GROWTH_PREFIX,GROWTH_LIMIT,GROWTH_STATS,growthKey,parseGrowth,makeGrowth,appendGrowth,growthDifference,saveGrowth} from './my-build-growth-model.js?v=7929237694';
 
 export function installGrowthHistory(section){
  if(!section)return {update(){}};

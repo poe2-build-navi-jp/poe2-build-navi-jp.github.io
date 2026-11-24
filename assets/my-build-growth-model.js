@@ -1,4 +1,4 @@
-import {parseSave} from './simulator-model.js?v=161ef63cbd';
+import {parseSave} from './simulator-model.js?v=fdda84f09b';
 
 export const GROWTH_PREFIX='poe2-build-growth:v1:';
 export const GROWTH_LIMIT=30;

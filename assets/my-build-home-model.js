@@ -1,5 +1,5 @@
-import {parseSave, parseNamedPlans, namedPlanKey, ENGINE_VERSION} from './simulator-model.js?v=161ef63cbd';
-import {parseGoal, compareGoal, goalKey} from './simulator-goal-model.js?v=9fc88e5370';
+import {parseSave, parseNamedPlans, namedPlanKey, ENGINE_VERSION} from './simulator-model.js?v=fdda84f09b';
+import {parseGoal, compareGoal, goalKey} from './simulator-goal-model.js?v=cdd99600d0';
 
 export const HOME_KEY='poe2:my-build-home:v1';
 export const SEEN_KEY='poe2-simulator:updates-seen:v1';

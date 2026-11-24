@@ -72,6 +72,7 @@ https://poe2-build-navi-jp.github.io/builds/huntress/companion/
 https://poe2-build-navi-jp.github.io/builds/ranger/ice-shot-deadeye/
 https://poe2-build-navi-jp.github.io/builds/witch/minion-infernalist/
 https://poe2-build-navi-jp.github.io/builds/druid/plant-oracle/
+https://poe2-build-navi-jp.github.io/builds/druid/grim-pillars-oracle/
 https://poe2-build-navi-jp.github.io/builds/witch/ed-contagion-lich/
 https://poe2-build-navi-jp.github.io/builds/mercenary/grenade-gemling/
 https://poe2-build-navi-jp.github.io/builds/huntress/twister-spirit-walker/

@@ -1,4 +1,4 @@
-import {reviewPlans, noticeParts} from './simulator-impact-model.js?v=1d62c95463';
+import {reviewPlans, noticeParts} from './simulator-impact-model.js?v=c29fe023b8';
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;
 const escape = value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
@@ -121,7 +121,7 @@ const observer = new MutationObserver(records => {
 });
 observer.observe(document.body, {childList: true, subtree: true});
 try {
-  const responses = await Promise.all(['/data/simulator-index.json?v=081a4b68e0', '/data/simulator-names.json?v=ad066e41ef'].map(url => fetch(url)));
+  const responses = await Promise.all(['/data/simulator-index.json?v=081a4b68e0', '/data/simulator-names.json?v=b7cb378e42'].map(url => fetch(url)));
   if (responses.some(response => !response.ok)) throw Error('IMPACT_DATA');
   [index, names] = await Promise.all(responses.map(response => response.json()));
   render();

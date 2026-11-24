@@ -30,7 +30,8 @@ async function browser(url,stored,{failFirstCalculation=false}={}){
 }
 try{
  const catalog=await rpc('boot'),preset=presets.find(p=>p.id==='mercenary-twister-gemling');
- for(const p of presets){assert.equal(p.stages.length,8);for(const level of [1,10,11,20,21,40,41,65,66,75,76,90,91,100])assert(model.levelingStage(p,level));}
+ const buildStageCounts=new Map(JSON.parse(await readFile(resolve(root,'data/builds.json'),'utf8')).map(b=>[b.id,b.levelingStages.length]));
+ for(const p of presets){assert.equal(p.stages.length,buildStageCounts.get(p.id));for(const level of [1,10,11,20,21,40,41,65,66,75,76,90,91,100])assert(model.levelingStage(p,level));}
  const req=model.newPlan(preset,catalog.gems);req.extra_modifiers=['+999 to maximum Life'];
  let stored=model.makeSave(preset.id,req,0,'秘密のメモ');
  const failed=await browser('https://poe2-build-navi-jp.github.io/simulator/?build='+preset.id+'&level=18&from=guide',stored,{failFirstCalculation:true});

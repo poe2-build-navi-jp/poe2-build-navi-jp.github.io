@@ -1,4 +1,4 @@
-import {parseNamedPlans, namedPlanKey, ENGINE_VERSION, weaponSetState} from './simulator-model.js?v=161ef63cbd';
+import {parseNamedPlans, namedPlanKey, ENGINE_VERSION, weaponSetState} from './simulator-model.js?v=fdda84f09b';
 
 export function reviewPlans(storage, presets) {
   const plans = [], unreadable = [];

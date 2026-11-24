@@ -2442,6 +2442,274 @@
     ]
   },
   {
+    "id": "druid-grim-pillars-oracle",
+    "slug": "grim-pillars-oracle",
+    "classSlug": "druid",
+    "name": "グリムピラー（スペルトーテム）・オラクル",
+    "seoTitle": "PoE2 グリムピラー（スペルトーテム）・オラクル 0.5.5｜Lv1〜Endgame育成",
+    "seoDescription": "PoE2 0.5.5対応。グリムピラー（スペルトーテム）・オラクルのスキル、サポート、装備、パッシブを植物育成からEndgame+++（ES型）まで掲載。現在Lvを入力すると今やること3つを確認できます。",
+    "className": "ドルイド",
+    "ascendancy": "オラクル",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "status": "verified",
+    "mainSkill": "グリムピラー（Grim Pillars）をスペルトーテム（Spell Totem）で詠唱",
+    "beginnerRating": 3,
+    "damageRating": 4,
+    "defenseRating": 3,
+    "mappingRating": 4,
+    "bossRating": 4,
+    "difficulty": "序盤は植物で育成し、中盤にトーテムへリスペック。ジェムレベルの管理が細かい",
+    "budget": "固定価格なし",
+    "leagueStarter": true,
+    "ssf": null,
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "中（植物→トーテムのリスペックとジェムレベル管理あり）",
+      "gearDependence": "スピリット（セプター）が中心。防御は装備依存で後半はES化",
+      "operation": "少なめ（トーテム設置後は回避・起爆・補助に集中）",
+      "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-druide-grim-pillars-totem-saison-5/",
+      "ssfNote": "SSFでの成立可否は出典に明記されていない。グリムピラー（Grim Pillars）のジェム入手が遅れる点に注意"
+    },
+    "strengths": [
+      "トーテムが攻撃を担うため、設置後は回避と位置取りに集中できる（Odealoの長所「Safe totem playstyle」）。",
+      "マップ殲滅力が高い（Odealoの長所「Great clear」）。",
+      "単体火力も大きい（Odealoの長所「BIG single target damage」）。",
+      "ダメージの稼働率が高い（Odealoの長所「High damage uptime」）。",
+      "トーテムはマナ・ライフ・ルーンワードを消費しないため、グリムピラー（Grim Pillars）を実質ノーコストで回し続けられる（ガイドの仕組み解説）。",
+      "リーグスタート向きで安く始められ、投資次第で数百ディバイン級まで伸ばせる。Palsteron氏は「今までプレイした中で最高のリーグスタート（キャンペーン含む）」と評価している。"
+    ],
+    "weaknesses": [
+      "画面が見づらくなりやすい（Odealoの短所「Limited visual clarity」）。柱が自分の移動を妨げることもある（同「Pillars can block your movement」）。",
+      "スピリットが実質の上限で、トーテム6体に必要な約400スピリットは後半まで届かない。",
+      "グリムピラー（Grim Pillars）のジェムはLv22まで落ちず、入手はLv30〜40が普通。序盤の出品は高価。",
+      "ジェムレベルの管理が細かい（スペルトーテム（Spell Totem）は装備込みでちょうどLv14、エンタングル（Entangle）はLv1、フロストボム（Frost Bomb）とエレメンタルウィークネス（Elemental Weakness）はLv18止め）。",
+      "ライフ型は後半に一撃死があり、ES／カオスイノキュレーション（Chaos Inoculation）への移行は火力約30%低下と引き換えになる。",
+      "SSFでの成立可否は出典に明記されていない。ジェム入手がリーグメカニクス頼みで遅れる。"
+    ],
+    "levelingStages": [
+      {
+        "caution": "グリムピラー（Grim Pillars）のジェムはこの段階では手に入らない（ドロップはLv22以降）。植物構成のまま進める。",
+        "gearPriority": "+冷気/全スペルレベル、スペル威力、ライフ、耐性、移動速度。スピリット付きセプターは後半用に確保する。",
+        "label": "Lv1〜13（植物・序盤）",
+        "mainSkill": "ボルケーノ（Volcano）をチャージして撃ち、フロストボム（Frost Bomb）で敵を弱らせる。エンタングル（Entangle）とコンテージョン（Contagion）で進み、Lv6でボーンケージ（Bone Cage）を追加する",
+        "nowActions": [
+          "エンタングル（Entangle）を敵の進路へ置く",
+          "+スペルレベル付き武器を探す",
+          "スピリット付きセプターを拾ったら保管する"
+        ],
+        "passivePriority": "原典のPlants Leveling段階ツリーを使用。第1アセンダンシー「目に見えぬ道（The Unseen Path）」が絶対優先（通常は届かないトーテム系パッシブ等が開き、育成も楽になる）。正確なノード名はリンク先で確認。",
+        "replaceGear": "+スペルレベルまたはスペル威力のない武器を優先して比較。",
+        "supports": "エンタングル（Entangle）に隆起 I（Upheaval I）・破壊制御（Controlled Destruction）。ボルケーノ（Volcano）は破壊制御（Controlled Destruction）併用。ボーンケージ（Bone Cage）にスペルカスケード（Spell Cascade）（接近できれば単体火力が強い）。ラヴェナススウォーム（Ravenous Swarm）に腐食（Corrosion）。ガイドのジェム構成は段階別の例で、キャラクターLvでの全解禁を意味しない。",
+        "transitionCondition": "Lv14到達。ボーンストーム（Bonestorm）が使える。"
+      },
+      {
+        "caution": "ボーンストーム（Bonestorm）が付与する串刺し（Impale）は、サンダーストーム（Thunderstorm）のリビングライトニング（Living Lightning）の召喚体が消費して大きなダメージになる。使う順番を意識する。",
+        "gearPriority": "スペルレベル、キャスト速度、ライフ、耐性。セプターはスピリット最大値を優先して更新する。",
+        "label": "Lv14〜29（ボーンストーム転換）",
+        "mainSkill": "ボーンストーム（Bonestorm）が主力になる。フルチャージして接敵時に解放する。サンダーストーム（Thunderstorm）は植物とボーンストーム（Bonestorm）を濡らして強化し、串刺し（Impale）の消費役も担う",
+        "nowActions": [
+          "ボーンストーム（Bonestorm）をフルチャージで使う",
+          "リーグメカニクスでジェムを探す",
+          "スピリット最大のセプターへ更新する"
+        ],
+        "passivePriority": "Plants Leveling後半のツリー。リスペック先のアンセストラルボンド（Ancestral Bond）への導線と、設置速度70%分のノードを先に把握しておく。",
+        "replaceGear": "火力不足なら武器、死亡が多いなら防具と耐性を1部位ずつ更新。",
+        "supports": "ボーンストーム（Bonestorm）にキャストスピード増加 I（Rapid Casting I）・チャネリング蓄積 I（Burgeon I）。サンダーストーム（Thunderstorm）にリビングライトニング（Living Lightning）・効果範囲拡大 I（Magnified Area I）。Lv18前後でエンタングル（Entangle）に成長の加速（Accelerated Growth）を追加。スラッシングヴァイン（Thrashing Vines）に効果範囲集中（Concentrated Area）・破壊制御（Controlled Destruction）・ライトニングアチューンメント（Lightning Attunement）。",
+        "transitionCondition": "グリムピラー（Grim Pillars）のジェム入手（Lv22以降ドロップ、多くはLv30〜40でリーグメカニクス経由）。または植物のままLv52まで進める判断ができる。"
+      },
+      {
+        "caution": "育てたエンタングル（Entangle）はマナコストが高く、起爆専用には使えない。新規Lv1を作り直す。その品質は投資価値がある（亀裂の追加生成確率）。",
+        "gearPriority": "スピリット最大のセプター（150〜210が目安で、ビルドの中心）。スピリットはキャンペーンのクエスト報酬分（最初の100）と合わせて積み上げる。",
+        "label": "Lv30〜キャンペーン終了（リスペック準備）",
+        "mainSkill": "植物構成を継続（ボーンストーム（Bonestorm）主力）。リスペック条件が揃い次第、キャンペーン途中でもトーテムへ移行してよい",
+        "nowActions": [
+          "リスペック3条件を確認する",
+          "Lv1エンタングル（Entangle）を新規作成する",
+          "スピリットの内訳（クエスト・セプター・防具）を計算する"
+        ],
+        "passivePriority": "リスペック先のツリーを確認。アンセストラルボンド（Ancestral Bond）と設置速度ノード（合計70%）が前提。第2アセンダンシー「小さき害（The Lesser Harm）」は第3への経路として取得する（急がなくてよい）。",
+        "replaceGear": "セプターのスピリット量を最優先で比較し、次に武器のスペルレベルを見る。",
+        "supports": "植物構成を維持。移行用にスペルトーテム（Spell Totem）と、起爆専用の新規Lv1エンタングル（Entangle）を用意する。",
+        "transitionCondition": "①グリムピラー（Grim Pillars）のジェム入手 ②スピリット付きセプター ③アンセストラルボンド（Ancestral Bond）取得、の3点が揃う。"
+      },
+      {
+        "caution": "スペルトーテム（Spell Totem）は装備の+レベル込みで「ちょうどLv14」に合わせる（Lv14で上限が2体になる境目。poe2dbのレベル表で確認済み）。それ以上はトーテム耐性しか伸びず、アセンダンシーで無意味になる。両武器は両セットに固定しないと、切り替えでスピリットが変動してトーテムが消える。グリムピラー（Grim Pillars）はカルグール系ジェムで、ジェムレベルは通貨ソーマタージ・フラックス（Thaumaturgic Flux）で上げる／戻す。",
+        "gearPriority": "スピリット確保が最優先（トーテム1体75、効率的な刻印（Efficient Inscriptions）で63）。トーテム設置速度は300%を目標にする。",
+        "label": "トーテムへリスペック",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）。柱の起爆はLv1エンタングル（Entangle）＋バイティングフロスト I（Biting Frost I）が担う（凍結を消費するスキルは柱を即座に起爆する）",
+        "nowActions": [
+          "スペルトーテム（Spell Totem）の実効Lv14を確認する",
+          "両武器を両セットに固定する",
+          "動的カリング（Dynamic Culling）をオンにする"
+        ],
+        "passivePriority": "アンセストラルボンド（Ancestral Bond）取得（トーテム上限2倍・チャージ消費なし、代わりに1体75スピリットをリザーブ）。武器セットパッシブはキャンペーン後に本格運用：セット1（赤）＝トーテム系ノード全振り、セット2（緑）＝キャスト速度・効果範囲・クリティカル・アーケインサージ（Arcane Surge）。",
+        "replaceGear": "スピリットが不足する部位（セプター、アミュレット、胴の接頭辞）を優先して更新。",
+        "supports": "トーテム側エンタングル（Entangle）にバイティングフロスト I（Biting Frost I）・リビングライトニング（Living Lightning）・枝分かれする亀裂 I（Branching Fissures I）。",
+        "transitionCondition": "トーテムが常駐し、エンタングル（Entangle）の起爆で柱を処理できる。"
+      },
+      {
+        "caution": "マナテンペスト（Mana Tempest）はトーテム設置前に使わない。効果は雲が消えた後も4秒残り、トーテムは受動的に恩恵を受ける。",
+        "gearPriority": "スピリット（6体≒約400が最終目標）、+冷気スペルレベル、耐性、ライフ/ES。",
+        "label": "Mapping開始",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）を周回主力にする。マナテンペスト（Mana Tempest）はトーテム設置の後に使う",
+        "nowActions": [
+          "スピリットの内訳を確認する",
+          "耐性とライフ/ESを整える",
+          "フロストボム（Frost Bomb）とエレメンタルウィークネス（Elemental Weakness）をLv18で止める"
+        ],
+        "passivePriority": "アセンダンシーの取得順は、目に見えぬ道（The Unseen Path）→小さき害（The Lesser Harm）→強制された結果（Forced Outcome）→名もなき芯材（Unnamed Heartwood）。第3アセンダンシー取得後にクリティカル率を30〜40%へ移行する（それ以上は効率が落ちる）。",
+        "replaceGear": "倒される場合は防具と耐性、トーテム数が足りない場合はスピリット源を確認する。",
+        "supports": "グリムピラー（Grim Pillars）にトーテム高速設置 III（Urgent Totems III）・コスト軽減 II（Efficiency II）・効果範囲拡大 II（Magnified Area II）。マナテンペスト（Mana Tempest）に進行する嵐（Advancing Storm）・コスト軽減 II（Efficiency II）・雷マスタリー（Lightning Mastery）。",
+        "transitionCondition": "低Tierマップでトーテム常駐と起爆が安定し、スピリットとマナの不足を判断できる。"
+      },
+      {
+        "caution": "ライフ型でもキャンペーンとエンドボスは処理できるが、後半は一撃死が出る。マナ問題はまずジェムレベル（上限超過）を確認し、コスト軽減（Efficiency）系で対処する。最大マナ自体を積むと基礎回復も太くなる。",
+        "gearPriority": "+冷気スペルスキルレベルが最優先（ワンドの+5で火力がほぼ2倍）。次にスペル威力・元素ダメージ、キャスト速度、トーテム設置速度。アミュレットはソーラー（スピリット最大65）＋スペルレベル、彫り込みは効率的な詠唱（Efficient Casting）。ベルトは即位した闇（Darkness Enthroned）の「ソケット品を胴防具として扱う」型に開花のルーンを挿してスピリットを確保。チャームは希望の芽吹き（Nascent Hope）などが安価。",
+        "label": "Early Endgame（ライフ型）",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）＋呪い・曝露の補助で回す",
+        "nowActions": [
+          "ヴォラナの包囲（Vorana's Siege）を導入する（孤立した敵＝ボスへの火力）",
+          "最大マナを積んでマナ基盤を太くする",
+          "ES移行用の胴・兜を探す"
+        ],
+        "passivePriority": "ライフ型Endgameツリー。武器セット特化（24点）を完成させる。",
+        "replaceGear": "固定価格ではなく、現在の不足（スピリット、ES、マナ）へ効く装備を同条件出品と比較する。",
+        "supports": "エレメンタルウィークネス（Elemental Weakness）にコスト軽減 II（Efficiency II）・呪い領域（Cursed Ground）・呪いブースト（Heightened Curse）。フロストボム（Frost Bomb）にスペルエコー（Spell Echo）・上限超過 I（Overabundance I）・コスト軽減 II（Efficiency II）。スピリット枠のピュリティオブファイヤー（Purity of Fire）に秘術の障壁 II（Mysticism II）・クラリティ II（Clarity II）・バイタリティー II（Vitality II）。マナドレイン（Mana Drain）も併用する。",
+        "transitionCondition": "ライフ型で周回とボスが安定し、ES移行用の装備（スピリットと両立する高ESの胴など）を集め始める。"
+      },
+      {
+        "caution": "ES移行は火力に余裕がある時だけ行う。移行直後はダメージノードをシールドへ振り替えた分だけ弱くなる。",
+        "gearPriority": "ES：胴はスピリットを保ったままES650以上が最難関の1枚。兜もツリーのノードで重要。手袋・靴はES200〜250級、ブーツの移動速度は必須。ジュエルは最大シールド%増とリチャージ開始速度。チャーム完成形は斧の一振り（The Fall of the Axe）と通過儀礼（Rite of Passage）。",
+        "label": "Endgame完成（ES／カオスイノキュレーション）",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）。カオスイノキュレーション（Chaos Inoculation）でライフを1にし、混沌ダメージと出血を無効化する",
+        "nowActions": [
+          "移行の可否を火力の余力で判断する",
+          "ラキアタの流れ（Rakiata's Flow）導入時は呪い・曝露を外す",
+          "固定相場を使わず1部位ずつ更新する"
+        ],
+        "passivePriority": "カオスイノキュレーション（Chaos Inoculation）取得。ダメージノードの一部をシールドノードへ振り替える（火力約30%低下と引き換え）。",
+        "replaceGear": "ライフと混沌耐性は不要ステータスになる。ESとスピリットの両立を基準に1部位ずつ更新する。",
+        "supports": "Endgame+++ではエレメンタルコンフラックス（Elemental Conflux）に持続時間圧縮 II（Compressed Duration II）・火マスタリー（Fire Mastery）を追加する。最終ピースのラキアタの流れ（Rakiata's Flow）を使う場合は、フロストボム（Frost Bomb）とエレメンタルウィークネス（Elemental Weakness）を外す（敵耐性を下げる行為が利益を打ち消すため）。",
+        "transitionCondition": "完成後はスピリット・ES・クリティカルのボトルネックを1項目ずつ改善する。"
+      }
+    ],
+    "gearPriorities": [
+      "セプター：スピリット最大値（150〜210）が最重要で、ビルドの中心。Purity系インプリシット（火・雷・冷気）のセプターはスピリット系サポートをコストなしで挿せるため、スペル威力+40%やマナ回復などを実質無料で積める。Lv20未満でも6リンク化できる。",
+      "ワンド：+冷気スペルスキルレベルが最優先（+5で火力がほぼ2倍）。次にスペル威力・元素ダメージ、キャスト速度、トーテム設置速度。クリティカル率は第3アセンダンシー取得後にだけ意味を持つ。",
+      "アミュレット：ソーラーアミュレット（スピリット最大65）＋スペルレベル。彫り込み（アノイント）は効率的な詠唱（Efficient Casting）（マナコスト効率+20%）。最終形はステラーアミュレットへ移行する。",
+      "胴防具：ライフ型はライフ・マナ・耐性・スピリット（接頭辞で最大61）。ES型はスピリットを保ったままES650以上が必要で、このビルドで最も難しい1枚。兜もツリーのノード（兜から得るシールド増加）の関係で同じくらい重要。",
+      "ベルト：即位した闇（Darkness Enthroned）のうち「ソケットしたアイテムのボーナスを胴防具として扱う」型。開花のルーンを挿すとLv100で約49スピリットになる。",
+      "チャーム・その他：序盤は減速対策のシルバーチャーム、スタン対策のストーンチャーム、安価な希望の芽吹き（Nascent Hope）。完成形では最初の2つを斧の一振り（The Fall of the Axe）と通過儀礼（Rite of Passage）に替える。ブーツの移動速度は必須。混沌耐性はVoid Fluxで他耐性から変換するのが序盤の近道（変換でティアは下がり、インプリシットは動かない）。",
+      "ステータス優先はキャンペーンからEndgameまで不変：冷気スペルレベル→スペル威力・元素ダメージ→キャスト速度→トーテム設置速度。クリティカル率は第3アセンダンシー後に追加。"
+    ],
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "kami-labs: Grim Pillars Totem Druid（Palsteron氏のMaxrollガイドのミラー・要約）",
+        "type": "海外ガイドのミラー/要約（4つの進行バリアント、ジェム構成、装備、スピリット計算、アセンダンシー解説を参照。Maxroll本文はHTTP 403のため直接確認できていない）",
+        "url": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-druide-grim-pillars-totem-saison-5/"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Odealo: Grim Pillars Spell Totem Oracle Build",
+        "type": "海外Endgameガイド（長所・短所とアセンダンシー順を参照。自版はLv60+のEndgame前提で、序盤からグリムピラーで育てる構成ではないと明記）",
+        "url": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db日本語版: グリムピラー（Grim Pillars）",
+        "type": "日本語名と仕様の照合",
+        "url": "https://poe2db.tw/jp/Grim_Pillars"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db日本語版: スペルトーテム（Spell Totem）",
+        "type": "日本語名とレベル別仕様の照合（ジェムLv14でトーテム上限が2体になることを確認）",
+        "url": "https://poe2db.tw/jp/Spell_Totem"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db日本語版: アンセストラルボンド（Ancestral Bond）",
+        "type": "キーストーン仕様の照合（トーテム上限2倍、コスト・チャージ不要、1体につき75スピリットをリザーブ）",
+        "url": "https://poe2db.tw/jp/Ancestral_Bond"
+      }
+    ],
+    "audience": "トーテムに攻撃を任せて安全に周回し、安く始めて大きく伸ばしたい人",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": true,
+          "ssfConfirmed": false
+        },
+        "note": "主力ジェムが序盤に手に入らず、植物での育成とリスペック、ジェムレベルの管理が必要なため earlyMainSkill は加点しない。リーグスタートとしての評価自体は高い（Palsteron氏）。",
+        "score": 3,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "トーテムが攻撃を担い、プレイヤーは設置・起爆・回避に集中できる。Odealoの長所に「Safe totem playstyle」と明記。",
+            "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build"
+          },
+          "noDodgeRequirement": {
+            "basis": "トーテムが攻撃を担うため、プレイヤーは敵から離れて安全に立ち回れる。Odealoの長所に「Safe totem playstyle」と明記。",
+            "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build"
+          }
+        }
+      },
+      "boss": {
+        "basis": "長所",
+        "checkedAt": "2026-11-25",
+        "note": "単体火力は長所として明記。ただし最上位帯はヴォラナの包囲（Vorana's Siege）やES移行などの投資が前提になる（ミラー）。",
+        "quote": "BIG single target damage",
+        "score": 4,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "長所",
+        "checkedAt": "2026-11-25",
+        "note": "Odealoの長所欄に単体火力の大きさが挙げられている。ミラー側も投資次第で数百ディバイン級まで伸びる構成としている。",
+        "quote": "BIG single target damage",
+        "score": 4,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      },
+      "defense": {
+        "basis": "長所と短所が両方",
+        "checkedAt": "2026-11-25",
+        "note": "トーテム任せで安全に戦える一方、ライフ型は後半に一撃死があり、防御の完成にはES／カオスイノキュレーション（Chaos Inoculation）への移行と装備投資が必要（ミラー）。防御は装備依存。",
+        "quote": "Safe totem playstyle",
+        "score": 3,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      },
+      "mapping": {
+        "basis": "長所",
+        "checkedAt": "2026-11-25",
+        "note": "Odealoの長所欄に殲滅力の高さが挙げられている。",
+        "quote": "Great clear",
+        "score": 4,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      }
+    },
+    "mainSkillTiming": {
+      "available": "グリムピラー（Grim Pillars）のジェムはLv22以降にドロップし、レベルを下げられない。多くのプレイヤーはリーグメカニクス経由でLv30〜40に入手する",
+      "checkedAt": "2026-11-25",
+      "guide": "Palsteron氏のMaxrollガイド（ミラー経由で確認。Maxroll本文はHTTP 403で直接確認できていない）",
+      "recommendedSwitch": "ジェム入手、スピリット付きセプター、アンセストラルボンド（Ancestral Bond）の3点が揃ったらトーテムへリスペック。植物のままLv52まで進めるとジェム費用が約1/10になるというガイドの試算がある",
+      "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-druide-grim-pillars-totem-saison-5/"
+    },
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "新規下書きを作成（未公開）。Palsteron氏のMaxrollガイドをミラー（kami-labs）経由で確認し、Odealoの長所・短所、poe2db日本語版の名称・数値で裏取りした。Maxroll本文はHTTP 403で直接確認できていないため、その旨を出典に明記している。"
+      }
+    ]
+  },
+  {
     "id": "witch-ed-contagion-lich",
     "slug": "ed-contagion-lich",
     "classSlug": "witch",

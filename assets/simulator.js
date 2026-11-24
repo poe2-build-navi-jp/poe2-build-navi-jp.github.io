@@ -1,4 +1,4 @@
-import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps, namedPlanKey, parseNamedPlans, putNamedPlan, upgradeAdvice, createEditHistory, appendEditHistory, moveEditHistory, PRICE_CURRENCIES, priceBookKey, priceAmount, parsePriceBook, budgetVerdict, drawComparisonCard, comparisonChanges, validateComparison, encodeComparisonLink, decodeComparisonLink, simulatorBackup, parseSimulatorBackup, restoreSimulatorBackup, isolatedChanges, candidateOrder} from './simulator-model.js?v=161ef63cbd';
+import {newPlan, parseSave, makeSave, statValue, treeEdges, localizeItemText, restoreItemText, rareBasesForSlot, buildRareItem, passiveDescriptions, applyTreeAllocation, modifierJapanese, localizeModifiers, parseJapaneseModifiers, passiveComparison, weaponSetState, selectWeaponSet, drawableTreeEdges, acquiredTreeState, previewPassiveBatch, encodePlanLink, decodePlanLink, levelingStage, stageSkillCandidates, itemRequirements, resistanceGaps, namedPlanKey, parseNamedPlans, putNamedPlan, upgradeAdvice, createEditHistory, appendEditHistory, moveEditHistory, PRICE_CURRENCIES, priceBookKey, priceAmount, parsePriceBook, budgetVerdict, drawComparisonCard, comparisonChanges, validateComparison, encodeComparisonLink, decodeComparisonLink, simulatorBackup, parseSimulatorBackup, restoreSimulatorBackup, isolatedChanges, candidateOrder} from './simulator-model.js?v=fdda84f09b';
 const $ = id => document.getElementById(id);
 let itemPhotoEpoch=0;
 const phoneLayout=window.matchMedia?.('(max-width: 720px)');
@@ -9,7 +9,7 @@ const clone = value => structuredClone(value);
 const libraryEvent=(type,detail=null)=>window.dispatchEvent(new window.CustomEvent('poe2:'+type,{detail}));
 const [presets,exampleData] = await loadCatalogs();
 let localization={names:{}},equipmentCatalog,routeCatalog,passiveIcons,editorCatalogPromise;
-async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets.json?v=486a952997','/data/simulator-examples.json?v=a77518bdd6'].map(async url => {
+async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets.json?v=7e95b3b210','/data/simulator-examples.json?v=a77518bdd6'].map(async url => {
  const r=await fetch(url);if(!r.ok)throw Error('ビルド一覧を読み込めません。再試行してください。');return r.json();
 }));}catch(error){$('sim-catalog-error').hidden=false;$('sim-catalog-message').textContent=error.message;await new Promise(resolve=>{$('sim-catalog-retry').onclick=resolve;});$('sim-catalog-error').hidden=true;}}}
 const trackSim=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{page_path:location.pathname,...(selectedPreset?{build_id:selectedPreset.id}:{}),...extra});};
@@ -83,7 +83,7 @@ function engine() {
  promise=(async()=>{
   for(let attempt=0;attempt<4;attempt++){
    let booting=true;
-   const current=new Worker(new URL('./simulator-worker.js?v=9cc9f93707',import.meta.url),{type:'module'});worker=current;
+   const current=new Worker(new URL('./simulator-worker.js?v=099f6969b6',import.meta.url),{type:'module'});worker=current;
    const fail=()=>{if(worker!==current)return;current.terminate?.();worker=null;catalog=null;if(!booting)bootPromise=null;for(const task of pending.values())task.reject(Error('読み込み・計算に失敗しました。「再試行」で構成を残したまま再開できます。'));pending.clear();};
    current.onmessage=({data})=>{if(worker!==current)return;if(data.progress){$('sim-status').textContent=data.progress;return;}const task=pending.get(data.id);if(!task)return;pending.delete(data.id);if(data.error){const error=Error(data.error);error.code=data.errorCode;task.reject(error);}else task.resolve(data.result);};
    // Worker failures are handled below. Suppress stale module-load errors from
@@ -810,7 +810,7 @@ document.addEventListener('click',async event=>{
   if(target.hasAttribute('data-find-gem')){
    const group=target.closest('[data-group]').dataset.group,index=target.dataset.findGem;
    const current=catalog.gems.find(gem=>gem.skill_id===plan.request.socket_groups[group].gems[index].skill_id);
-   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=c7bb0690cd');
+   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=a8e5a0a1d8');
    openSkillPicker({document,gems:catalog.gems,label,support:current?.is_support||false,selected:current?.skill_id,returnFocus:target,onSelect:skillId=>{
     const select=document.querySelector(`[data-group="${group}"] [data-gem="${index}"] select[data-gem-field="skill_id"]`);
     if(!select)return;expandGemOptions(select);select.value=skillId;select.dispatchEvent(new Event('change',{bubbles:true}));

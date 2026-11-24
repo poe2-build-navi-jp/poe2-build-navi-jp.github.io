@@ -62,7 +62,7 @@ const shownTitle055 = (title) => `<title>${site.gameVersion === "0.5.5" ? title 
 const beginnerLanding = await read("beginner-builds/index.html");
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
-assert(builds.length === 12, "build count must be 12");
+assert(builds.length === 13, "build count must be 13");
 assert(new Set(builds.map((build) => build.className)).size === 8, "each playable class must have a build");
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");
@@ -109,8 +109,14 @@ for (const build of builds) {
   }
   assert(["verified", "partial", "needs-review", "draft"].includes(build.status), `${build.id}: invalid status`);
   assert(build.status === "verified", `${build.id}: public roadmap must be verified`);
-  assert(build.levelingStages.length === 8, `${build.id}: roadmap must have 8 stages`);
-  assert(build.levelingStages.every((stage, index) => stage.label === stageLabels[index]), `${build.id}: stage labels/order mismatch`);
+  assert(build.levelingStages.length >= 2, `${build.id}: roadmap must have at least 2 stages`);
+  if (build.levelingStages.length === stageLabels.length) {
+    assert(build.levelingStages.every((stage, index) => stage.label === stageLabels[index]), `${build.id}: stage labels/order mismatch`);
+  } else {
+    // Builds whose source guide uses its own stage partition keep their labels;
+    // they still need unique labels so each stage stays addressable.
+    assert(new Set(build.levelingStages.map((stage) => stage.label)).size === build.levelingStages.length, `${build.id}: stage labels must be unique`);
+  }
   for (const stage of build.levelingStages) {
     for (const field of stageFields) assert(typeof stage[field] === "string" && stage[field].trim(), `${build.id}/${stage.label}: missing ${field}`);
     assert(Array.isArray(stage.nowActions) && stage.nowActions.length === 3 && stage.nowActions.every(Boolean), `${build.id}/${stage.label}: nowActions must contain 3 actions`);
@@ -129,7 +135,7 @@ for (const build of builds) {
     assert(page.includes('data-build-status="verified"'), `${pagePath}: verified status missing`);
     assert(!page.includes('<p id="stage-status" class="pending">ビルド固有データ確認中</p>'), `${pagePath}: verified/confirming contradiction`);
     assert((page.match(/id="roadmap"/g) || []).length === 1, `${pagePath}: roadmap must appear once`);
-    assert((page.match(/data-stage-index=/g) || []).length === 8, `${pagePath}: all 8 roadmap stages must be present in HTML`);
+    assert((page.match(/data-stage-index=/g) || []).length === build.levelingStages.length, `${pagePath}: all roadmap stages must be present in HTML`);
     assert(page.includes("この段階のパッシブツリーを見る"), `${pagePath}: stage passive source CTA missing`);
     const shownTitle = build.version !== site.gameVersion && build.seoTitle.includes(build.version) ? releaseTitle(build.seoTitle, build.version, site.gameVersion) : build.seoTitle;
     assert(page.includes(`<title>${shownTitle}</title>`), `${pagePath}: search-focused title missing (${shownTitle})`);

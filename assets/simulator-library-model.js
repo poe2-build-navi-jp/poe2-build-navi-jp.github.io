@@ -1,4 +1,4 @@
-import {parseNamedPlans, namedPlanKey, validateComparison, ENGINE_VERSION} from './simulator-model.js?v=161ef63cbd';
+import {parseNamedPlans, namedPlanKey, validateComparison, ENGINE_VERSION} from './simulator-model.js?v=fdda84f09b';
 import {digest} from './simulator-sync-crypto.js?v=6d43b0469b';
 
 export const JOURNAL_KEY = 'poe2-simulator:comparison-journal:v1';

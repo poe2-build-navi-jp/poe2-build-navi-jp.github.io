@@ -706,6 +706,85 @@
     "contentRevision": "dc9aa11296f93ea4"
   },
   {
+    "id": "druid-grim-pillars-oracle",
+    "name": "グリムピラー（スペルトーテム）・オラクル",
+    "class": "Druid",
+    "className": "ドルイド",
+    "ascendancy": "Oracle",
+    "ascendancyName": "オラクル",
+    "skills": [
+      "Grim Pillars"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜13（植物・序盤）",
+        "mainSkill": "ボルケーノ（Volcano）をチャージして撃ち、フロストボム（Frost Bomb）で敵を弱らせる。エンタングル（Entangle）とコンテージョン（Contagion）で進み、Lv6でボーンケージ（Bone Cage）を追加する",
+        "supports": "エンタングル（Entangle）に隆起 I（Upheaval I）・破壊制御（Controlled Destruction）。ボルケーノ（Volcano）は破壊制御（Controlled Destruction）併用。ボーンケージ（Bone Cage）にスペルカスケード（Spell Cascade）（接近できれば単体火力が強い）。ラヴェナススウォーム（Ravenous Swarm）に腐食（Corrosion）。ガイドのジェム構成は段階別の例で、キャラクターLvでの全解禁を意味しない。",
+        "passivePriority": "原典のPlants Leveling段階ツリーを使用。第1アセンダンシー「目に見えぬ道（The Unseen Path）」が絶対優先（通常は届かないトーテム系パッシブ等が開き、育成も楽になる）。正確なノード名はリンク先で確認。",
+        "gearPriority": "+冷気/全スペルレベル、スペル威力、ライフ、耐性、移動速度。スピリット付きセプターは後半用に確保する。",
+        "caution": "グリムピラー（Grim Pillars）のジェムはこの段階では手に入らない（ドロップはLv22以降）。植物構成のまま進める。",
+        "transitionCondition": "Lv14到達。ボーンストーム（Bonestorm）が使える。"
+      },
+      {
+        "label": "Lv14〜29（ボーンストーム転換）",
+        "mainSkill": "ボーンストーム（Bonestorm）が主力になる。フルチャージして接敵時に解放する。サンダーストーム（Thunderstorm）は植物とボーンストーム（Bonestorm）を濡らして強化し、串刺し（Impale）の消費役も担う",
+        "supports": "ボーンストーム（Bonestorm）にキャストスピード増加 I（Rapid Casting I）・チャネリング蓄積 I（Burgeon I）。サンダーストーム（Thunderstorm）にリビングライトニング（Living Lightning）・効果範囲拡大 I（Magnified Area I）。Lv18前後でエンタングル（Entangle）に成長の加速（Accelerated Growth）を追加。スラッシングヴァイン（Thrashing Vines）に効果範囲集中（Concentrated Area）・破壊制御（Controlled Destruction）・ライトニングアチューンメント（Lightning Attunement）。",
+        "passivePriority": "Plants Leveling後半のツリー。リスペック先のアンセストラルボンド（Ancestral Bond）への導線と、設置速度70%分のノードを先に把握しておく。",
+        "gearPriority": "スペルレベル、キャスト速度、ライフ、耐性。セプターはスピリット最大値を優先して更新する。",
+        "caution": "ボーンストーム（Bonestorm）が付与する串刺し（Impale）は、サンダーストーム（Thunderstorm）のリビングライトニング（Living Lightning）の召喚体が消費して大きなダメージになる。使う順番を意識する。",
+        "transitionCondition": "グリムピラー（Grim Pillars）のジェム入手（Lv22以降ドロップ、多くはLv30〜40でリーグメカニクス経由）。または植物のままLv52まで進める判断ができる。"
+      },
+      {
+        "label": "Lv30〜キャンペーン終了（リスペック準備）",
+        "mainSkill": "植物構成を継続（ボーンストーム（Bonestorm）主力）。リスペック条件が揃い次第、キャンペーン途中でもトーテムへ移行してよい",
+        "supports": "植物構成を維持。移行用にスペルトーテム（Spell Totem）と、起爆専用の新規Lv1エンタングル（Entangle）を用意する。",
+        "passivePriority": "リスペック先のツリーを確認。アンセストラルボンド（Ancestral Bond）と設置速度ノード（合計70%）が前提。第2アセンダンシー「小さき害（The Lesser Harm）」は第3への経路として取得する（急がなくてよい）。",
+        "gearPriority": "スピリット最大のセプター（150〜210が目安で、ビルドの中心）。スピリットはキャンペーンのクエスト報酬分（最初の100）と合わせて積み上げる。",
+        "caution": "育てたエンタングル（Entangle）はマナコストが高く、起爆専用には使えない。新規Lv1を作り直す。その品質は投資価値がある（亀裂の追加生成確率）。",
+        "transitionCondition": "①グリムピラー（Grim Pillars）のジェム入手 ②スピリット付きセプター ③アンセストラルボンド（Ancestral Bond）取得、の3点が揃う。"
+      },
+      {
+        "label": "トーテムへリスペック",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）。柱の起爆はLv1エンタングル（Entangle）＋バイティングフロスト I（Biting Frost I）が担う（凍結を消費するスキルは柱を即座に起爆する）",
+        "supports": "トーテム側エンタングル（Entangle）にバイティングフロスト I（Biting Frost I）・リビングライトニング（Living Lightning）・枝分かれする亀裂 I（Branching Fissures I）。",
+        "passivePriority": "アンセストラルボンド（Ancestral Bond）取得（トーテム上限2倍・チャージ消費なし、代わりに1体75スピリットをリザーブ）。武器セットパッシブはキャンペーン後に本格運用：セット1（赤）＝トーテム系ノード全振り、セット2（緑）＝キャスト速度・効果範囲・クリティカル・アーケインサージ（Arcane Surge）。",
+        "gearPriority": "スピリット確保が最優先（トーテム1体75、効率的な刻印（Efficient Inscriptions）で63）。トーテム設置速度は300%を目標にする。",
+        "caution": "スペルトーテム（Spell Totem）は装備の+レベル込みで「ちょうどLv14」に合わせる（Lv14で上限が2体になる境目。poe2dbのレベル表で確認済み）。それ以上はトーテム耐性しか伸びず、アセンダンシーで無意味になる。両武器は両セットに固定しないと、切り替えでスピリットが変動してトーテムが消える。グリムピラー（Grim Pillars）はカルグール系ジェムで、ジェムレベルは通貨ソーマタージ・フラックス（Thaumaturgic Flux）で上げる／戻す。",
+        "transitionCondition": "トーテムが常駐し、エンタングル（Entangle）の起爆で柱を処理できる。"
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）を周回主力にする。マナテンペスト（Mana Tempest）はトーテム設置の後に使う",
+        "supports": "グリムピラー（Grim Pillars）にトーテム高速設置 III（Urgent Totems III）・コスト軽減 II（Efficiency II）・効果範囲拡大 II（Magnified Area II）。マナテンペスト（Mana Tempest）に進行する嵐（Advancing Storm）・コスト軽減 II（Efficiency II）・雷マスタリー（Lightning Mastery）。",
+        "passivePriority": "アセンダンシーの取得順は、目に見えぬ道（The Unseen Path）→小さき害（The Lesser Harm）→強制された結果（Forced Outcome）→名もなき芯材（Unnamed Heartwood）。第3アセンダンシー取得後にクリティカル率を30〜40%へ移行する（それ以上は効率が落ちる）。",
+        "gearPriority": "スピリット（6体≒約400が最終目標）、+冷気スペルレベル、耐性、ライフ/ES。",
+        "caution": "マナテンペスト（Mana Tempest）はトーテム設置前に使わない。効果は雲が消えた後も4秒残り、トーテムは受動的に恩恵を受ける。",
+        "transitionCondition": "低Tierマップでトーテム常駐と起爆が安定し、スピリットとマナの不足を判断できる。"
+      },
+      {
+        "label": "Early Endgame（ライフ型）",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）＋呪い・曝露の補助で回す",
+        "supports": "エレメンタルウィークネス（Elemental Weakness）にコスト軽減 II（Efficiency II）・呪い領域（Cursed Ground）・呪いブースト（Heightened Curse）。フロストボム（Frost Bomb）にスペルエコー（Spell Echo）・上限超過 I（Overabundance I）・コスト軽減 II（Efficiency II）。スピリット枠のピュリティオブファイヤー（Purity of Fire）に秘術の障壁 II（Mysticism II）・クラリティ II（Clarity II）・バイタリティー II（Vitality II）。マナドレイン（Mana Drain）も併用する。",
+        "passivePriority": "ライフ型Endgameツリー。武器セット特化（24点）を完成させる。",
+        "gearPriority": "+冷気スペルスキルレベルが最優先（ワンドの+5で火力がほぼ2倍）。次にスペル威力・元素ダメージ、キャスト速度、トーテム設置速度。アミュレットはソーラー（スピリット最大65）＋スペルレベル、彫り込みは効率的な詠唱（Efficient Casting）。ベルトは即位した闇（Darkness Enthroned）の「ソケット品を胴防具として扱う」型に開花のルーンを挿してスピリットを確保。チャームは希望の芽吹き（Nascent Hope）などが安価。",
+        "caution": "ライフ型でもキャンペーンとエンドボスは処理できるが、後半は一撃死が出る。マナ問題はまずジェムレベル（上限超過）を確認し、コスト軽減（Efficiency）系で対処する。最大マナ自体を積むと基礎回復も太くなる。",
+        "transitionCondition": "ライフ型で周回とボスが安定し、ES移行用の装備（スピリットと両立する高ESの胴など）を集め始める。"
+      },
+      {
+        "label": "Endgame完成（ES／カオスイノキュレーション）",
+        "mainSkill": "スペルトーテム（Spell Totem）＋グリムピラー（Grim Pillars）。カオスイノキュレーション（Chaos Inoculation）でライフを1にし、混沌ダメージと出血を無効化する",
+        "supports": "Endgame+++ではエレメンタルコンフラックス（Elemental Conflux）に持続時間圧縮 II（Compressed Duration II）・火マスタリー（Fire Mastery）を追加する。最終ピースのラキアタの流れ（Rakiata's Flow）を使う場合は、フロストボム（Frost Bomb）とエレメンタルウィークネス（Elemental Weakness）を外す（敵耐性を下げる行為が利益を打ち消すため）。",
+        "passivePriority": "カオスイノキュレーション（Chaos Inoculation）取得。ダメージノードの一部をシールドノードへ振り替える（火力約30%低下と引き換え）。",
+        "gearPriority": "ES：胴はスピリットを保ったままES650以上が最難関の1枚。兜もツリーのノードで重要。手袋・靴はES200〜250級、ブーツの移動速度は必須。ジュエルは最大シールド%増とリチャージ開始速度。チャーム完成形は斧の一振り（The Fall of the Axe）と通過儀礼（Rite of Passage）。",
+        "caution": "ES移行は火力に余裕がある時だけ行う。移行直後はダメージノードをシールドへ振り替えた分だけ弱くなる。",
+        "transitionCondition": "完成後はスピリット・ES・クリティカルのボトルネックを1項目ずつ改善する。"
+      }
+    ],
+    "mainSkill": "グリムピラーをスペルトーテムで詠唱",
+    "path": "/builds/druid/grim-pillars-oracle/",
+    "contentRevision": "f4b00c98e10dea40"
+  },
+  {
     "id": "witch-ed-contagion-lich",
     "name": "エッセンスドレイン・コンテージョン リッチ",
     "class": "Witch",
