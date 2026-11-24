@@ -14088,9 +14088,9 @@
     "summary": "海外の大手攻略サイトMaxrollが公開している0.5.5のリーグスタート向けTier表を、日本語名つきで整理しました。S Tierは4ビルド。アセンダンシーの評価と、このサイトで手順を確認できるビルドもあわせて案内します。",
     "category": "basics",
     "version": "0.5.5（Forbidden Rites）。1.0（2026年12月12日・日本時間）で大きく変わる見込みです",
-    "checkedAt": "2026-11-24",
+    "checkedAt": "2026-11-25",
     "publishedAt": "2026-11-24",
-    "updatedAt": "2026-11-24",
+    "updatedAt": "2026-11-25",
     "evidenceNote": "Tierの判定は運営者の評価ではなく、Maxrollが公開しているTier表をそのまま日本語にしたものです。Maxrollは各ビルドの判定理由を示していません。比較用に、PathofExile.ggのアセンダンシー評価（0.5時点）も併記しています。",
     "structuredCitations": true,
     "keywords": [
@@ -14176,12 +14176,18 @@
             [
               "ヴァラシュタの弟子のミニオン",
               "Disciple of Varashta Minion",
-              "砂と炎のヴァラシュタ"
+              {
+                "text": "砂と炎のヴァラシュタ",
+                "href": "/builds/sorceress/sand-and-fire/"
+              }
             ],
             [
               "ツイスター・ジェムリングリージョネア",
               "Twister Gemling",
-              "ツイスター・ジェムリング"
+              {
+                "text": "ツイスター・ジェムリング",
+                "href": "/builds/mercenary/twister-gemling/"
+              }
             ],
             [
               "グリムピラー（スペルトーテム）・オラクル",
@@ -14191,7 +14197,10 @@
             [
               "ホロウフォーム＋ワーリングアサルト・マーシャルアーティスト",
               "Hollow Form Whirling Assault Martial Artist",
-              "ワーリングアサルト・マーシャルアーティスト"
+              {
+                "text": "ワーリングアサルト・マーシャルアーティスト",
+                "href": "/builds/monk/whirling-assault/"
+              }
             ]
           ]
         },
@@ -14217,7 +14226,10 @@
             [
               "ワーリングアサルト・マーシャルアーティスト",
               "Whirling Assault Martial Artist",
-              "ワーリングアサルト・マーシャルアーティスト"
+              {
+                "text": "ワーリングアサルト・マーシャルアーティスト",
+                "href": "/builds/monk/whirling-assault/"
+              }
             ],
             [
               "ミニオン・スピリットウォーカー",
@@ -14232,7 +14244,10 @@
             [
               "エンタングル・オラクル",
               "Entangle Oracle",
-              "植物オラクル"
+              {
+                "text": "植物オラクル",
+                "href": "/builds/druid/plant-oracle/"
+              }
             ],
             [
               "ホロウフォーカス＋ストームウェーブ・マーシャルアーティスト",
@@ -14240,19 +14255,25 @@
               "—"
             ],
             [
-              "Infernal Legion（日本語名未確認）・チャユラの門弟",
+              "インファーナルリージョン・チャユラの門弟",
               "Infernal Legion Acolyte of Chayula",
               "—"
             ],
             [
               "ツイスター・スピリットウォーカー",
               "Twisters Spirit Walker",
-              "ツイスター・スピリットウォーカー"
+              {
+                "text": "ツイスター・スピリットウォーカー",
+                "href": "/builds/huntress/twister-spirit-walker/"
+              }
             ],
             [
               "アイスショット・デッドアイ",
               "Ice Shot Deadeye",
-              "アイスショット・デッドアイ"
+              {
+                "text": "アイスショット・デッドアイ",
+                "href": "/builds/ranger/ice-shot-deadeye/"
+              }
             ],
             [
               "シールドウォール・ウォーブリンガー",
@@ -14287,7 +14308,10 @@
             [
               "相棒（コンパニオン）・スピリットウォーカー",
               "Companion Spirit Walker",
-              "相棒スピリットウォーカー"
+              {
+                "text": "相棒スピリットウォーカー",
+                "href": "/builds/huntress/companion/"
+              }
             ],
             [
               "オイルバラージ・マーシャルアーティスト",
@@ -14351,12 +14375,12 @@
               "—"
             ],
             [
-              "Permafrost Bolt（日本語名未確認）・ウィッチハンター",
+              "パーマフロストボルト・ウィッチハンター",
               "Permafrost Bolt Witchhunter",
               "—"
             ],
             [
-              "Infernal Legion（日本語名未確認）・リッチ",
+              "インファーナルリージョン・リッチ",
               "Infernal Legion Lich",
               "—"
             ],
@@ -14383,7 +14407,10 @@
             [
               "エッセンスドレイン・リッチ",
               "Essence Drain Lich",
-              "ED・コンテージョン リッチ"
+              {
+                "text": "ED・コンテージョン リッチ",
+                "href": "/builds/witch/ed-contagion-lich/"
+              }
             ],
             [
               "ミニオン・シャーマン",
@@ -14396,7 +14423,7 @@
               "—"
             ],
             [
-              "Demon Calamity（日本語名未確認）・シャーマン",
+              "ウォーキングカラミティ（デーモンベア型）・シャーマン",
               "Demon Calamity Shaman",
               "—"
             ],
@@ -14423,58 +14450,72 @@
           "headers": [
             "Tier",
             "ビルド（日本語名）",
-            "Maxrollの表記"
+            "Maxrollの表記",
+            "このサイトの記事"
           ],
           "rows": [
             [
               "C",
               "スケルトンスナイパー・インファーナリスト",
-              "Skeletal Sniper Infernalist"
+              "Skeletal Sniper Infernalist",
+              {
+                "text": "スナイパーミニオン・インファーナリスト",
+                "href": "/builds/witch/minion-infernalist/"
+              }
             ],
             [
               "C",
               "ミニオン・インファーナリスト",
-              "Minion Army Infernalist"
+              "Minion Army Infernalist",
+              "—"
             ],
             [
               "C",
-              "Cold Spark（日本語名未確認）・パスファインダー",
-              "Cold Spark Pathfinder"
+              "スパーク（冷気型）・パスファインダー",
+              "Cold Spark Pathfinder",
+              "—"
             ],
             [
               "C",
               "ポイズンバーストアロー・パスファインダー",
-              "Poisonburst Arrow Pathfinder"
+              "Poisonburst Arrow Pathfinder",
+              "—"
             ],
             [
               "C",
               "スパイラルボレー（毒）・パスファインダー",
-              "Spiral Volley Poison Pathfinder"
+              "Spiral Volley Poison Pathfinder",
+              "—"
             ],
             [
               "C",
               "ボーンシャッター・タイタン",
-              "Boneshatter Titan"
+              "Boneshatter Titan",
+              "—"
             ],
             [
               "C",
               "アイスストライク・インヴォーカー",
-              "Ice Strike Invoker"
+              "Ice Strike Invoker",
+              "—"
             ],
             [
               "C",
               "スパイラルボレー・デッドアイ",
-              "Spiral Volley Deadeye"
+              "Spiral Volley Deadeye",
+              "—"
             ],
             [
               "D",
               "出血レーキ・アマゾン",
-              "Bleed Rake Amazon"
+              "Bleed Rake Amazon",
+              "—"
             ],
             [
               "D",
               "ポイズンバーストアロー・チャユラの門弟",
-              "Poisonburst Arrow Acolyte of Chayula"
+              "Poisonburst Arrow Acolyte of Chayula",
+              "—"
             ]
           ]
         },
@@ -14654,62 +14695,98 @@
           ],
           "rows": [
             [
-              "ツイスター・ジェムリング",
+              {
+                "text": "ツイスター・ジェムリング",
+                "href": "/builds/mercenary/twister-gemling/"
+              },
               "S",
               "Twister Gemling"
             ],
             [
-              "ワーリングアサルト・マーシャルアーティスト",
+              {
+                "text": "ワーリングアサルト・マーシャルアーティスト",
+                "href": "/builds/monk/whirling-assault/"
+              },
               "S（ホロウフォーム型）／A",
               "Hollow Form Whirling Assault Martial Artist／Whirling Assault Martial Artist"
             ],
             [
-              "砂と炎のヴァラシュタ",
+              {
+                "text": "砂と炎のヴァラシュタ",
+                "href": "/builds/sorceress/sand-and-fire/"
+              },
               "S（ミニオン型）",
               "Disciple of Varashta Minion"
             ],
             [
-              "植物オラクル",
+              {
+                "text": "植物オラクル",
+                "href": "/builds/druid/plant-oracle/"
+              },
               "A",
               "Entangle Oracle"
             ],
             [
-              "ツイスター・スピリットウォーカー",
+              {
+                "text": "ツイスター・スピリットウォーカー",
+                "href": "/builds/huntress/twister-spirit-walker/"
+              },
               "A",
               "Twisters Spirit Walker"
             ],
             [
-              "アイスショット・デッドアイ",
+              {
+                "text": "アイスショット・デッドアイ",
+                "href": "/builds/ranger/ice-shot-deadeye/"
+              },
               "A",
               "Ice Shot Deadeye"
             ],
             [
-              "相棒スピリットウォーカー",
+              {
+                "text": "相棒スピリットウォーカー",
+                "href": "/builds/huntress/companion/"
+              },
               "A",
               "Companion Spirit Walker"
             ],
             [
-              "ED・コンテージョン リッチ",
+              {
+                "text": "ED・コンテージョン リッチ",
+                "href": "/builds/witch/ed-contagion-lich/"
+              },
               "B",
               "Essence Drain Lich"
             ],
             [
-              "スナイパーミニオン・インファーナリスト",
+              {
+                "text": "スナイパーミニオン・インファーナリスト",
+                "href": "/builds/witch/minion-infernalist/"
+              },
               "C",
               "Skeletal Sniper Infernalist"
             ],
             [
-              "シールドウォール・スミス",
+              {
+                "text": "シールドウォール・スミス",
+                "href": "/builds/warrior/shield-wall-smith/"
+              },
               "—（同じスキルのウォーブリンガー型がA）",
               "Shield Wall Warbringer"
             ],
             [
-              "グレネード・ジェムリング",
+              {
+                "text": "グレネード・ジェムリング",
+                "href": "/builds/mercenary/grenade-gemling/"
+              },
               "—（掲載なし）",
               "—"
             ],
             [
-              "スパーク・ストームウィーバー",
+              {
+                "text": "スパーク・ストームウィーバー",
+                "href": "/builds/sorceress/spark-stormweaver/"
+              },
               "—（掲載なし）",
               "—"
             ]
@@ -14881,6 +14958,10 @@
       {
         "date": "2026-11-24",
         "summary": "MaxrollのTier表（0.5.5、2026年11月3日更新）をもとに公開。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "日本語名の照合を完了（PoE2DB日本語版で確認。Demon CalamityはMaxrollのビルド名のため中核スキル名で表記）。「このサイトの記事」欄と掲載ビルド表に各ビルドページへのリンクを追加。"
       }
     ]
   },
