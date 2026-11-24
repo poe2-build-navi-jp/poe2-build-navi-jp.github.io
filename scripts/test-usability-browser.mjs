@@ -40,7 +40,7 @@ try{
   }
   for(const locale of ['', '/en']){
    const suffix=locale?'-en':'';await page.goto(base+locale+'/simulator/',{waitUntil:'domcontentloaded'});
-   await page.locator('#sim-build-search').fill('Spark');assert.equal(await page.locator('[data-preset]:visible').count(),1);await page.locator('#sim-build-reset').click();assert.equal(await page.locator('[data-preset]:visible').count(),13);await check('chooser'+suffix);
+   await page.locator('#sim-build-search').fill('Spark');assert.equal(await page.locator('[data-preset]:visible').count(),1);await page.locator('#sim-build-reset').click();assert.equal(await page.locator('[data-preset]:visible').count(),14);await check('chooser'+suffix);
    await page.locator('[data-preset="mercenary-twister-gemling"]').click();await page.locator('.sim-stat').first().waitFor({state:'attached',timeout:60000});await page.locator('[data-slot="ring1"]').click();await page.locator('#sim-unique-editor .sim-equipment-find').click();
    await page.locator('#sim-equipment-search').fill('The Taming');await page.locator('[data-equipment-choice]').first().waitFor();assert.equal(await page.locator('[data-equipment-choice]').count(),1);await check('equipment-picker'+suffix);
    await page.locator('[data-equipment-choice]').click();await page.waitForFunction(()=>document.querySelector('#sim-item-text').value.length>10);await page.locator('#sim-item-apply').click();await page.locator('#sim-stats[aria-busy="false"]').waitFor({state:'attached'});await check('item-editor'+suffix);

@@ -441,6 +441,77 @@
     "contentRevision": "c42390f0352ca31f"
   },
   {
+    "id": "huntress-minion-spirit-walker",
+    "name": "Minion Army Spirit Walker",
+    "class": "Huntress",
+    "className": "Huntress",
+    "ascendancy": "Spirit Walker",
+    "ascendancyName": "Spirit Walker",
+    "skills": [
+      "Companion: {0}",
+      "Wolf Pack"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-21 (Crossbow Leveling)",
+        "mainSkill": "Progress with a crossbow. Flash Grenade is the leveling mainstay, Explosive Grenade is single-target for bosses you have stopped in place, Frost Bomb supports against bosses, and Crossbow Shot fills in as the basic attack",
+        "supports": "Attach area-expanding supports/runes to Flash Grenade (per Zizaran's video summary; check the original Maxroll planner for the exact gem setup).",
+        "passivePriority": "Use the pre-transition offensive tree. Follow the original leveling tree (planner).",
+        "gearPriority": "Flat added damage, Life and resistances. Minimal gear is fine (per Zizaran's video summary).",
+        "caution": "The finished army setup is not available at this stage. Do not force minions; progress with the crossbow (per the U4GM summary). Do not spend the gold saved for the respec.",
+        "transitionCondition": "Reach around level 22 and be able to attempt the Trial of the Sekhemas (first ascendancy)."
+      },
+      {
+        "label": "Level 22 to End of Act 2 (Transition Begins)",
+        "mainSkill": "Choose Spirit Walker at the first ascendancy and add the Wild Protector spirit bear to your army. Transition toward minions while still attacking with the crossbow",
+        "supports": "Give companions Minion Splash, Rage, Rapid Attacks and Hulking Minions type supports (per Zizaran's video summary).",
+        "passivePriority": "Respec passives from offence to minions (Switchblade Gaming puts the turning point at a level-22 respec costing about 7,000 gold). First ascendancy point: Wild Protector.",
+        "gearPriority": "Start looking for +minion skill levels on your helmet and sceptre, then minion damage and minion attack speed (per the U4GM summary).",
+        "caution": "The spirit bear does not count toward the companion limit (poe2db). Your Spirit reservation split determines how many companions and support skills you can run (per the U4GM summary).",
+        "transitionCondition": "Advance to Act 3, where you can take The Natural Order at the second ascendancy."
+      },
+      {
+        "label": "Act 3 to Campaign End (Army Online)",
+        "mainSkill": "With The Natural Order, Tame Beast can capture unique beasts. Build your army around Mighty Silverfist as the lead candidate, plus Wolf Pack and skeletal minions. You support with Pain Offering, Mark for Death and Charged Mark",
+        "supports": "Skeletal minions also serve as the target for Pain Offering (per the U4GM summary). Keep the companion support approach from the transition stage.",
+        "passivePriority": "Second ascendancy point: The Natural Order. Third: The Catha's Balance, which adds 60% of your main-hand weapon damage to your companions (order per Switchblade Gaming).",
+        "gearPriority": "Balance +minion skill levels (helmet and sceptre), Spirit, Life and resistances.",
+        "caution": "Only one Tamed Beast (unique beast) can accompany you at a time (The Natural Order, poe2db). Getting the companion you want (such as Mighty Silverfist or a beast with a Haste aura) takes targeted farming (a drawback in Zizaran's video summary).",
+        "transitionCondition": "Finish the campaign with your army roster assembled and ready for maps."
+      },
+      {
+        "label": "Starting maps",
+        "mainSkill": "Farm with your army. Stay in a safe position, maintain your marks and Pain Offering, and leave the killing to the army",
+        "supports": "Maintain the army's support setup and swap pieces to cover missing roles (area or single-target).",
+        "passivePriority": "Extend minion damage and companion nodes, and start building your defensive foundation (Evasion and Energy Shield).",
+        "gearPriority": "Minion skill levels, minion damage, minion attack speed and Spirit (endgame priorities per the U4GM summary).",
+        "caution": "Early defences tend to be unstable; you may need patchwork armour, evasion and block at times (a drawback in Zizaran's video summary).",
+        "transitionCondition": "Your army is stable in high-tier maps and you start collecting Energy Shield gear."
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Strengthen the army. Work on companion selection (such as beasts with auras) and aim for the finished ascendancy setup",
+        "supports": "Optimise supports for each companion's role. Check the original planner for exact combinations.",
+        "passivePriority": "Idolatry is the candidate for the fourth ascendancy point. It assumes idol gear, and its resistance penalty must be covered by gear (per Switchblade Gaming).",
+        "gearPriority": "Build your Energy Shield foundation and prepare the transition to Chaos Inoculation.",
+        "caution": "Switching to Chaos Inoculation before your Energy Shield is sufficiently developed leaves you fragile (per the U4GM summary).",
+        "transitionCondition": "Your Energy Shield is developed enough to transition to Chaos Inoculation."
+      },
+      {
+        "label": "Completed endgame setup (ES / Chaos Inoculation)",
+        "mainSkill": "Clear high-tier maps and bosses with an army centred on Mighty Silverfist",
+        "supports": "For companion and skeletal supports, treat the original Maxroll endgame planner setup as authoritative. The summaries do not confirm individual gems.",
+        "passivePriority": "Take Chaos Inoculation. Finish defences around Energy Shield and Evasion.",
+        "gearPriority": "Maximise minion skill levels and upgrade jewels as budget allows (per the U4GM summary; expensive ones can wait).",
+        "caution": "Strict attribute requirements are the biggest hurdle (a drawback in Zizaran's video summary). There is no way to recall minions, so companion positioning stays awkward (same source). Tablet modifiers that give unique monsters rare modifiers reportedly push companion critical stats close to the cap (same source).",
+        "transitionCondition": "After completion, keep improving through companion selection and jewels."
+      }
+    ],
+    "mainSkill": "An army of a unique beast captured with Tame Beast, the Wild Protector bear, Wolf Pack and skeletal minions",
+    "path": "/builds/huntress/minion-spirit-walker/",
+    "contentRevision": "b508f5c0029f9ae5"
+  },
+  {
     "id": "ranger-ice-shot-deadeye",
     "name": "Ice Shot Deadeye",
     "class": "Ranger",

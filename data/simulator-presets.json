@@ -441,6 +441,77 @@
     "contentRevision": "c42390f0352ca31f"
   },
   {
+    "id": "huntress-minion-spirit-walker",
+    "name": "ミニオン・スピリットウォーカー",
+    "class": "Huntress",
+    "className": "ハントレス",
+    "ascendancy": "Spirit Walker",
+    "ascendancyName": "スピリットウォーカー",
+    "skills": [
+      "Companion: {0}",
+      "Wolf Pack"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜21（クロスボウ育成）",
+        "mainSkill": "クロスボウで進める。フラッシュグレネード（Flash Grenade）が育成の主力、エクスプローシブグレネード（Explosive Grenade）は足を止めたボスへの単体用、フロストボム（Frost Bomb）はボス補助、クロスボウショット（Crossbow Shot）が通常攻撃の埋め草",
+        "supports": "フラッシュグレネード（Flash Grenade）に範囲拡大系のサポート／ルーンを付ける方針（Zizaran氏の動画要約の記述。個別のジェム構成は原典（Maxroll）のプランナーで確認すること）。",
+        "passivePriority": "移行前の攻撃系ツリーを使う。原典のレベリング用ツリー（プランナー）に従う。",
+        "gearPriority": "追加ダメージ（フラット）、ライフ、耐性。装備は最小限でよい（Zizaran氏の動画要約）。",
+        "caution": "完成形の軍団構成はこの段階では組めない。ミニオンに無理に寄せず、クロスボウで進める（U4GMの要約）。リスペック用のゴールドを使い切らない。",
+        "transitionCondition": "Lv22前後に到達し、セケマの試練（第1アセンダンシー）に挑める。"
+      },
+      {
+        "label": "Lv22〜Act 2終了（移行開始）",
+        "mainSkill": "第1アセンダンシーでスピリットウォーカーを選び、ワイルドプロテクター（Wild Protector）のクマの精霊を軍団に加える。クロスボウ攻撃と併用しながらミニオン寄りへ移行する",
+        "supports": "相棒にはミニオンスプラッシュ（Minion Splash）・憤怒（Rage）・アタックスピード増加（Rapid Attacks）・ミニオン巨大化（Hulking Minions）系を付ける方針（Zizaran氏の動画要約）。",
+        "passivePriority": "パッシブを攻撃系からミニオン系へ振り直す（Switchblade Gamingの解説ではLv22のリスペックが転機で、費用は約7,000ゴールドとされる）。アセンダンシー1点目はワイルドプロテクター（Wild Protector）。",
+        "gearPriority": "兜とセプターの+ミニオンスキルレベルを探し始める。次にミニオンダメージとミニオン攻撃速度（U4GMの要約）。",
+        "caution": "クマの精霊はコンパニオンの上限に数えられない（poe2db）。スピリットの予約配分で、連れられる相棒と支援スキルの数が決まる（U4GMの要約）。",
+        "transitionCondition": "Act 3へ進み、第2アセンダンシーで自然の秩序（The Natural Order）を取れる。"
+      },
+      {
+        "label": "Act 3〜キャンペーン終了（軍団化）",
+        "mainSkill": "自然の秩序（The Natural Order）でテイムビースト（Tame Beast）がユニーク獣を捕獲できるようになる。マイティ・シルバーフィスト（Mighty Silverfist）を主力候補に、ウルフパック（Wolf Pack）とスケルトン系ミニオンで軍団を編成する。本人はペインオファリング（Pain Offering）、死の呪印（Mark for Death）、電荷の呪印（Charged Mark）で支援する",
+        "supports": "スケルトン系ミニオンはペインオファリング（Pain Offering）の受け皿にもなる（U4GMの要約）。相棒のサポートは移行開始段階の方針を継続する。",
+        "passivePriority": "アセンダンシー2点目は自然の秩序（The Natural Order）。3点目はキャサのバランス（The Catha's Balance）で、メインハンド武器ダメージの60%がコンパニオンに加わる（Switchblade Gamingの取得順）。",
+        "gearPriority": "+ミニオンスキルレベル（兜・セプター）、スピリット、ライフ、耐性を両立させる。",
+        "caution": "同時に連れられるテイムビースト（ユニーク獣）は最大1体まで（自然の秩序（The Natural Order）、poe2db）。狙った相棒（マイティ・シルバーフィスト（Mighty Silverfist）やヘイストオーラ持ち）の入手には周回が要る（Zizaran氏の動画要約の短所）。",
+        "transitionCondition": "キャンペーンを終え、軍団の顔ぶれが揃ってマップに入れる。"
+      },
+      {
+        "label": "Mapping開始",
+        "mainSkill": "軍団で周回する。本人は安全な位置から呪印とペインオファリング（Pain Offering）を維持し、殺戮は軍団に任せる",
+        "supports": "軍団のサポート構成を維持し、不足する役割（範囲・単体）に合わせて入れ替える。",
+        "passivePriority": "ミニオンダメージと相棒系ノードを伸ばし、防御（回避・ES）の土台を作り始める。",
+        "gearPriority": "ミニオンスキルレベル、ミニオンダメージ、ミニオン攻撃速度、スピリット（U4GMの要約のEndgame優先度）。",
+        "caution": "序盤の防御は不安定になりやすい。防具・回避・ブロックの継ぎ接ぎが必要になる局面がある（Zizaran氏の動画要約の短所）。",
+        "transitionCondition": "高Tierマップで軍団が安定し、ES装備を集め始める。"
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "軍団の強化を進める。相棒の厳選（オーラ持ちの獣など）と、アセンダンシーの完成形を視野に入れる",
+        "supports": "相棒ごとの役割に合わせてサポートを最適化する。具体的な組み合わせは原典のプランナーで確認すること。",
+        "passivePriority": "アセンダンシー4点目は偶像崇拝（Idolatry）が候補。ただしアイドル系装備が前提で、耐性へのペナルティを装備で補う必要がある（Switchblade Gamingの解説）。",
+        "gearPriority": "ES基盤の構築。カオスイノキュレーション（Chaos Inoculation）への移行準備を進める。",
+        "caution": "ESが十分に育つ前にカオスイノキュレーション（Chaos Inoculation）へ移行すると脆くなる（U4GMの要約）。",
+        "transitionCondition": "ESが十分に育ち、カオスイノキュレーション（Chaos Inoculation）へ移行できる。"
+      },
+      {
+        "label": "Endgame完成（ES／カオスイノキュレーション）",
+        "mainSkill": "マイティ・シルバーフィスト（Mighty Silverfist）を中心とする軍団で高Tierマップとボスを処理する",
+        "supports": "相棒とスケルトン系のサポートは原典（Maxroll）のEndgameプランナー構成を正とする。要約資料では個別ジェムまで確認できない。",
+        "passivePriority": "カオスイノキュレーション（Chaos Inoculation）取得。防御はESと回避を軸に仕上げる。",
+        "gearPriority": "ミニオンスキルレベルの最大化と、予算に応じたジュエルのアップグレード（U4GMの要約。高額なものは後回しでよい）。",
+        "caution": "能力値要求が厳しいのが最大の難所（Zizaran氏の動画要約の短所）。ミニオンを呼び戻す手段がなく、相棒の位置取りには不便さが残る（同）。タブレットのModでユニークモンスターにレアModが付くと、相棒のクリティカルが上限近くまで伸びる報告がある（同）。",
+        "transitionCondition": "完成後は相棒の厳選とジュエルで伸ばす。"
+      }
+    ],
+    "mainSkill": "テイムビーストで捕獲したユニーク獣、ワイルドプロテクターのクマ、ウルフパックとスケルトン系ミニオンによる軍団",
+    "path": "/builds/huntress/minion-spirit-walker/",
+    "contentRevision": "b508f5c0029f9ae5"
+  },
+  {
     "id": "ranger-ice-shot-deadeye",
     "name": "アイスショット・デッドアイ",
     "class": "Ranger",

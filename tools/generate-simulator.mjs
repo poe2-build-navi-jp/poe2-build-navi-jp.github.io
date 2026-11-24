@@ -14,6 +14,7 @@ const skills = {
  'warrior-shield-wall-smith':['Shield Wall'],
  'sorceress-sand-fire':["Kelari's Deception","Ruzhan's Trap"],
  'huntress-companion':['Companion: {0}'],
+ 'huntress-minion-spirit-walker':['Companion: {0}','Wolf Pack'],
  'ranger-ice-shot-deadeye':['Ice Shot'],
  'witch-minion-infernalist':['Skeletal Sniper'],
  'druid-plant-oracle':['Entangle','Thrashing Vines'],

@@ -155,6 +155,10 @@
       "ja": "アズメリ山脈",
       "ref": "https://poe2db.tw/jp/Azmerian_Ranges"
     },
+    "Azmerian Wolf": {
+      "ja": "アズメリウルフ",
+      "ref": "https://poe2db.tw/jp/Azmerian_Wolf"
+    },
     "Balance of Power": {
       "ja": "力のバランス",
       "ref": "https://poe2db.tw/jp/Balance_of_Power"
@@ -367,6 +371,10 @@
       "ja": "チャージレギュレーション",
       "ref": "https://poe2db.tw/jp/Charge_Regulation"
     },
+    "Charged Mark": {
+      "ja": "電荷の呪印",
+      "ref": "https://poe2db.tw/jp/Charged_Mark"
+    },
     "Charged Staff": {
       "ja": "チャージドスタッフ",
       "ref": "https://poe2db.tw/jp/Charged_Staff"
@@ -502,6 +510,10 @@
     "Crisis Fragment": {
       "ja": "危機のフラグメント",
       "ref": "https://poe2db.tw/jp/Ancient_Crisis_Fragment"
+    },
+    "Crossbow Shot": {
+      "ja": "クロスボウショット",
+      "ref": "https://poe2db.tw/jp/Crossbow_Shot"
     },
     "Crux of Nothingness": {
       "ja": "無の中核",
@@ -1035,6 +1047,10 @@
       "ja": "エラミアのアイドル",
       "ref": "https://poe2db.tw/jp/Idol_of_Eramir"
     },
+    "Idolatry": {
+      "ja": "偶像崇拝",
+      "ref": "https://poe2db.tw/jp/Idolatry"
+    },
     "Ignagduk, the Bog Witch": {
       "ja": "沼地の魔女、イグナグドゥク",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -1243,6 +1259,10 @@
       "ja": "遅延起爆 II",
       "ref": "https://poe2db.tw/jp/Long_Fuse_II"
     },
+    "Loyalty": {
+      "ja": "忠誠",
+      "ref": "https://poe2db.tw/jp/Loyalty"
+    },
     "Lythara, the Wayward Spear": {
       "ja": "放浪の槍、リサラ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -1338,6 +1358,10 @@
     "Mind Over Matter": {
       "ja": "マインドオーバーマター",
       "ref": "https://poe2db.tw/jp/Mind_Over_Matter"
+    },
+    "Minion Splash I": {
+      "ja": "ミニオンスプラッシュ I",
+      "ref": "https://poe2db.tw/jp/Minion_Splash_I"
     },
     "Mnemonic Ring": {
       "ja": "ニーモニックリング",
@@ -1486,6 +1510,10 @@
     "Overabundance I": {
       "ja": "上限超過 I",
       "ref": "https://poe2db.tw/jp/Overabundance_I"
+    },
+    "Pain Offering": {
+      "ja": "ペインオファリング",
+      "ref": "https://poe2db.tw/jp/Pain_Offering"
     },
     "Parry": {
       "ja": "パリィ",
@@ -1903,9 +1931,17 @@
       "ja": "スケルトンアーソニスト",
       "ref": "https://poe2db.tw/jp/Skeletal_Arsonist"
     },
+    "Skeletal Cleric": {
+      "ja": "スケルトンクレリック",
+      "ref": "https://poe2db.tw/jp/Skeletal_Cleric"
+    },
     "Skeletal Sniper": {
       "ja": "スケルトンスナイパー",
       "ref": "https://poe2-build-navi-jp.github.io/skills/skeletal-sniper/"
+    },
+    "Skeletal Warrior": {
+      "ja": "スケルトンウォーリアー",
+      "ref": "https://poe2db.tw/jp/Skeletal_Warrior"
     },
     "Skysliver": {
       "ja": "スカイシルバー",
@@ -1958,6 +1994,10 @@
     "Spired Greathelm": {
       "ja": "尖塔のグレートヘルム",
       "ref": "https://poe2db.tw/jp/Spired_Greathelm"
+    },
+    "Spirit Vessel": {
+      "ja": "スピリットヴェセル",
+      "ref": "https://poe2db.tw/jp/Spirit_Vessel"
     },
     "Spirit Walker": {
       "ja": "スピリットウォーカー",
@@ -2206,6 +2246,10 @@
     "The Molten Vault": {
       "ja": "溶融した宝物庫",
       "ref": "https://poe2db.tw/jp/The_Molten_Vault"
+    },
+    "The Natural Order": {
+      "ja": "自然の秩序",
+      "ref": "https://poe2db.tw/jp/The_Natural_Order"
     },
     "The Origin Tower": {
       "ja": "起源の塔",
@@ -2499,6 +2543,10 @@
       "ja": "ボルト",
       "ref": "https://poe2db.tw/jp/Volt"
     },
+    "Voltaic Mark": {
+      "ja": "電流の呪印",
+      "ref": "https://poe2db.tw/jp/Voltaic_Mark"
+    },
     "Voltaic Staff": {
       "ja": "電撃のスタッフ",
       "ref": "https://poe2db.tw/jp/Voltaic_Staff"
@@ -2547,6 +2595,10 @@
       "ja": "ワーリングスラッシュ",
       "ref": "https://poe2db.tw/jp/Whirling_Slash"
     },
+    "Wild Protector": {
+      "ja": "ワイルドプロテクター",
+      "ref": "https://poe2db.tw/jp/Wild_Protector"
+    },
     "Wind Dancer": {
       "ja": "ウィンドダンサー",
       "ref": "https://poe2db.tw/jp/Wind_Dancer"
@@ -2570,6 +2622,10 @@
     "Withered Wand": {
       "ja": "枯れたワンド",
       "ref": "https://poe2db.tw/jp/Withered_Wand"
+    },
+    "Wolf Pack": {
+      "ja": "ウルフパック",
+      "ref": "https://poe2db.tw/jp/Wolf_Pack"
     },
     "Wombgift": {
       "ja": "母胎ギフト",

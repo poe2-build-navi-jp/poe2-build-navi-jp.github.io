@@ -42,7 +42,7 @@ try{
  const source=structuredClone(old.examples.find(e=>e.preset==='mercenary-twister-gemling').saved);source.notes='日本語メモはそのまま';
  w.localStorage.setItem('poe2-simulator:v1:mercenary-twister-gemling',JSON.stringify(source));
  await w.eval(`(async()=>{${code}\n})()`);
- assert.equal(d.querySelectorAll('[data-preset]').length,13);
+ assert.equal(d.querySelectorAll('[data-preset]').length,14);
  assert.doesNotMatch(d.getElementById('sim-build-grid')?.textContent||'',/[ぁ-んァ-ヶ一-龥]/);
  click('[data-preset="mercenary-twister-gemling"]');await wait(ready);
  assert.match(d.getElementById('sim-build-name').textContent,/Twister/);
