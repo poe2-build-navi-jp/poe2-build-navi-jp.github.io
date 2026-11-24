@@ -14082,6 +14082,809 @@
     ]
   },
   {
+    "slug": "build-tier-list",
+    "title": "最強ビルドTier表【0.5.5】｜S〜Dランクとアセンダンシー評価",
+    "metaDescription": "PoE2 0.5.5の最強ビルドTier表。Maxrollのリーグスタート向けTier表（2026年11月3日更新）の48ビルドをS〜Dで日本語名つきに整理し、アセンダンシー評価の比較と、このサイトの掲載ビルドの位置を確認できます。",
+    "summary": "海外の大手攻略サイトMaxrollが公開している0.5.5のリーグスタート向けTier表を、日本語名つきで整理しました。S Tierは4ビルド。アセンダンシーの評価と、このサイトで手順を確認できるビルドもあわせて案内します。",
+    "category": "basics",
+    "version": "0.5.5（Forbidden Rites）。1.0（2026年12月12日・日本時間）で大きく変わる見込みです",
+    "checkedAt": "2026-11-24",
+    "publishedAt": "2026-11-24",
+    "updatedAt": "2026-11-24",
+    "evidenceNote": "Tierの判定は運営者の評価ではなく、Maxrollが公開しているTier表をそのまま日本語にしたものです。Maxrollは各ビルドの判定理由を示していません。比較用に、PathofExile.ggのアセンダンシー評価（0.5時点）も併記しています。",
+    "structuredCitations": true,
+    "keywords": [
+      "最強ビルド",
+      "Tier表",
+      "ティア表",
+      "ティアリスト",
+      "0.5.5",
+      "リーグスタート",
+      "アセンダンシー",
+      "Maxroll",
+      "S Tier",
+      "おすすめビルド"
+    ],
+    "actions": [
+      "S・A Tierから、遊びたい戦い方（近接・弓・スペル・ミニオン）に合うビルドを1つ選ぶ",
+      "このサイトに記事があるビルドは、現在Lvからの育成手順を確認する",
+      "1.0公開後はTierが入れ替わるので、公開日以降の更新を確認する"
+    ],
+    "quickLinks": [
+      {
+        "href": "#tier-s",
+        "label": "S Tier"
+      },
+      {
+        "href": "#tier-a",
+        "label": "A Tier"
+      },
+      {
+        "href": "#ascendancy",
+        "label": "アセンダンシー評価"
+      },
+      {
+        "href": "#site-builds",
+        "label": "掲載ビルドの位置"
+      }
+    ],
+    "scope": "ビルドとアセンダンシーのTierはMaxrollのTier表（2026-11-24に確認）、比較用のアセンダンシー評価はPathofExile.gg（0.5時点、2026-06-22公開）、日本語名はPoE2DB日本語版で確認しました。",
+    "verification": {
+      "method": "MaxrollのTier表3つ（リーグスタート向けビルド、リーグスタート向けアセンダンシー、エンドゲームの稼ぎ方）とPathofExile.ggのアセンダンシーTier表を取得し、表記どおりに転記。日本語名はPoE2DB日本語版で照合。",
+      "confirmed": "各ビルドとアセンダンシーのTier、Tier表の更新日、Maxrollの説明文（正しく組めばどのアセンダンシーも強い、メタは常に動く）。",
+      "unverified": "Tierの判定基準と各ビルドの判定理由（Maxrollは記載なし）、ラダーでの使用率（poe.ninjaは取得できず）、1.0での評価。運営者が各ビルドを実際に比べた結果ではありません。"
+    },
+    "sections": [
+      {
+        "id": "conclusion",
+        "heading": "結論：0.5.5のS Tierは4ビルド",
+        "paragraphs": [
+          "Maxrollのリーグスタート向けTier表（2026年11月3日更新）では、S Tierは「ヴァラシュタの弟子のミニオン」「ツイスター・ジェムリングリージョネア」「グリムピラー（スペルトーテム）・オラクル」「ホロウフォーム＋ワーリングアサルト・マーシャルアーティスト」の4つです。A Tierに18、B Tierに16、C Tierに8、D Tierに2のビルドが並びます。[source:1]",
+          "Maxrollは「正しく組めば、どのアセンダンシーも強い」「エンドゲームのメタは常に動く」と書いており、各ビルドの判定理由は示していません。Tierは「今どのビルドが評価されているか」の目安として使い、最後は自分の遊び方と予算で選びましょう。[source:1]"
+        ],
+        "bullets": [
+          "このサイトの「初心者向けTier」は育てやすさ・操作の少なさで並べた別の表です。最強かどうかではなく、迷わず育てられるかで選びたい人はそちらを見てください。"
+        ],
+        "links": [
+          {
+            "href": "/tier-list/",
+            "label": "初心者向けTier（育てやすさで比較）"
+          },
+          {
+            "href": "/best-builds/",
+            "label": "目的別の最強ビルド比較（周回・ボス・予算）"
+          }
+        ],
+        "sourceRefs": [
+          1
+        ]
+      },
+      {
+        "id": "tier-s",
+        "heading": "S Tier：リーグスタートで最も評価が高い4ビルド",
+        "paragraphs": [
+          "表の「Maxrollの表記」は原文のままです。日本語名が確認できないスキルは英語名で載せています。[source:1][source:3]"
+        ],
+        "table": {
+          "caption": "S Tier（Maxroll：リーグスタート向けビルドTier表、0.5.5・2026-11-03更新）",
+          "headers": [
+            "ビルド（日本語名）",
+            "Maxrollの表記",
+            "このサイトの記事"
+          ],
+          "rows": [
+            [
+              "ヴァラシュタの弟子のミニオン",
+              "Disciple of Varashta Minion",
+              "砂と炎のヴァラシュタ"
+            ],
+            [
+              "ツイスター・ジェムリングリージョネア",
+              "Twister Gemling",
+              "ツイスター・ジェムリング"
+            ],
+            [
+              "グリムピラー（スペルトーテム）・オラクル",
+              "Grim Pillars Spell Totem Oracle",
+              "—"
+            ],
+            [
+              "ホロウフォーム＋ワーリングアサルト・マーシャルアーティスト",
+              "Hollow Form Whirling Assault Martial Artist",
+              "ワーリングアサルト・マーシャルアーティスト"
+            ]
+          ]
+        },
+        "sourceRefs": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "tier-a",
+        "heading": "A Tier：18ビルド",
+        "paragraphs": [
+          "マーシャルアーティスト・スピリットウォーカー・デッドアイ・チャユラの門弟が多く並びます。[source:1]"
+        ],
+        "table": {
+          "caption": "A Tier（Maxroll：リーグスタート向けビルドTier表、0.5.5・2026-11-03更新）",
+          "headers": [
+            "ビルド（日本語名）",
+            "Maxrollの表記",
+            "このサイトの記事"
+          ],
+          "rows": [
+            [
+              "ワーリングアサルト・マーシャルアーティスト",
+              "Whirling Assault Martial Artist",
+              "ワーリングアサルト・マーシャルアーティスト"
+            ],
+            [
+              "ミニオン・スピリットウォーカー",
+              "Minion Army Spirit Walker",
+              "—"
+            ],
+            [
+              "フォーリングサンダー・マーシャルアーティスト",
+              "Falling Thunder Martial Artist",
+              "—"
+            ],
+            [
+              "エンタングル・オラクル",
+              "Entangle Oracle",
+              "植物オラクル"
+            ],
+            [
+              "ホロウフォーカス＋ストームウェーブ・マーシャルアーティスト",
+              "Hollow Focus Storm Wave Martial Artist",
+              "—"
+            ],
+            [
+              "Infernal Legion（日本語名未確認）・チャユラの門弟",
+              "Infernal Legion Acolyte of Chayula",
+              "—"
+            ],
+            [
+              "ツイスター・スピリットウォーカー",
+              "Twisters Spirit Walker",
+              "ツイスター・スピリットウォーカー"
+            ],
+            [
+              "アイスショット・デッドアイ",
+              "Ice Shot Deadeye",
+              "アイスショット・デッドアイ"
+            ],
+            [
+              "シールドウォール・ウォーブリンガー",
+              "Shield Wall Warbringer",
+              "—"
+            ],
+            [
+              "サポーティングファイヤー・タクティシャン",
+              "Supporting Fire Tactician",
+              "—"
+            ],
+            [
+              "グレイシャルランス・デッドアイ",
+              "Glacial Lance Deadeye",
+              "—"
+            ],
+            [
+              "雷ミニオン・チャユラの門弟",
+              "Lightning Minion Acolyte of Chayula",
+              "—"
+            ],
+            [
+              "ツイスター・デッドアイ",
+              "Twister Deadeye",
+              "—"
+            ],
+            [
+              "ミニオン・チャユラの門弟",
+              "Minion Army Acolyte of Chayula",
+              "—"
+            ],
+            [
+              "相棒（コンパニオン）・スピリットウォーカー",
+              "Companion Spirit Walker",
+              "相棒スピリットウォーカー"
+            ],
+            [
+              "オイルバラージ・マーシャルアーティスト",
+              "Oil Barrage Martial Artist",
+              "—"
+            ],
+            [
+              "フロストボルト＋クリティカル時キャストのコメット・オラクル",
+              "Frostbolt Cast On Crit Comet Oracle",
+              "—"
+            ],
+            [
+              "フロストボルト＋クリティカル時キャストのコメット・ヴァラシュタの弟子",
+              "Frostbolt Cast on Crit Comet Disciple Of Varashta",
+              "—"
+            ]
+          ]
+        },
+        "sourceRefs": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "tier-b",
+        "heading": "B Tier：16ビルド",
+        "paragraphs": [
+          "シャーマン・リッチ・アマゾン・ウィッチハンターのビルドが中心です。[source:1]"
+        ],
+        "table": {
+          "caption": "B Tier（Maxroll：リーグスタート向けビルドTier表、0.5.5・2026-11-03更新）",
+          "headers": [
+            "ビルド（日本語名）",
+            "Maxrollの表記",
+            "このサイトの記事"
+          ],
+          "rows": [
+            [
+              "雷ミニオン・シャーマン",
+              "Lightning Minion Shaman",
+              "—"
+            ],
+            [
+              "アイスノヴァ＋スナップ・ストームウィーバー",
+              "Ice Nova Snap Stormweaver",
+              "—"
+            ],
+            [
+              "植物・ヴァラシュタの弟子",
+              "Disciple of Varashta Plant",
+              "—"
+            ],
+            [
+              "ミニオン・リッチ",
+              "Minion Army Lich",
+              "—"
+            ],
+            [
+              "アイスショット・アマゾン",
+              "Ice Shot Amazon",
+              "—"
+            ],
+            [
+              "Permafrost Bolt（日本語名未確認）・ウィッチハンター",
+              "Permafrost Bolt Witchhunter",
+              "—"
+            ],
+            [
+              "Infernal Legion（日本語名未確認）・リッチ",
+              "Infernal Legion Lich",
+              "—"
+            ],
+            [
+              "ライトニングアロー・デッドアイ",
+              "Lightning Arrow Deadeye",
+              "—"
+            ],
+            [
+              "オイルグレネード・ウィッチハンター",
+              "Oil Grenade Witchhunter",
+              "—"
+            ],
+            [
+              "ライトニングスピア・アマゾン",
+              "Lightning Spear Amazon",
+              "—"
+            ],
+            [
+              "雷ミニオン・リッチ",
+              "Lightning Minion Lich",
+              "—"
+            ],
+            [
+              "エッセンスドレイン・リッチ",
+              "Essence Drain Lich",
+              "ED・コンテージョン リッチ"
+            ],
+            [
+              "ミニオン・シャーマン",
+              "Minion Army Shaman",
+              "—"
+            ],
+            [
+              "ウォーキングカラミティ・シャーマン",
+              "Walking Calamity Shaman",
+              "—"
+            ],
+            [
+              "Demon Calamity（日本語名未確認）・シャーマン",
+              "Demon Calamity Shaman",
+              "—"
+            ],
+            [
+              "アーク・ストームウィーバー",
+              "Arc Stormweaver",
+              "—"
+            ]
+          ]
+        },
+        "sourceRefs": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "tier-cd",
+        "heading": "C・D Tier：10ビルド",
+        "paragraphs": [
+          "C・D Tierでも遊べないという意味ではありません。リーグ開始直後の進めやすさで比べたときの位置です。[source:1]"
+        ],
+        "table": {
+          "caption": "C・D Tier（Maxroll、0.5.5・2026-11-03更新）",
+          "headers": [
+            "Tier",
+            "ビルド（日本語名）",
+            "Maxrollの表記"
+          ],
+          "rows": [
+            [
+              "C",
+              "スケルトンスナイパー・インファーナリスト",
+              "Skeletal Sniper Infernalist"
+            ],
+            [
+              "C",
+              "ミニオン・インファーナリスト",
+              "Minion Army Infernalist"
+            ],
+            [
+              "C",
+              "Cold Spark（日本語名未確認）・パスファインダー",
+              "Cold Spark Pathfinder"
+            ],
+            [
+              "C",
+              "ポイズンバーストアロー・パスファインダー",
+              "Poisonburst Arrow Pathfinder"
+            ],
+            [
+              "C",
+              "スパイラルボレー（毒）・パスファインダー",
+              "Spiral Volley Poison Pathfinder"
+            ],
+            [
+              "C",
+              "ボーンシャッター・タイタン",
+              "Boneshatter Titan"
+            ],
+            [
+              "C",
+              "アイスストライク・インヴォーカー",
+              "Ice Strike Invoker"
+            ],
+            [
+              "C",
+              "スパイラルボレー・デッドアイ",
+              "Spiral Volley Deadeye"
+            ],
+            [
+              "D",
+              "出血レーキ・アマゾン",
+              "Bleed Rake Amazon"
+            ],
+            [
+              "D",
+              "ポイズンバーストアロー・チャユラの門弟",
+              "Poisonburst Arrow Acolyte of Chayula"
+            ]
+          ]
+        },
+        "sourceRefs": [
+          1,
+          3
+        ]
+      },
+      {
+        "id": "ascendancy",
+        "heading": "アセンダンシー評価：MaxrollとPathofExile.ggの比較",
+        "paragraphs": [
+          "アセンダンシー単位のTierも、Maxroll（0.5.5）では22種がS〜Dに分かれています。比較のため、PathofExile.ggのTier表（0.5時点の一般的な評価）も並べました。2つのサイトでS Tierが重なるのは、スピリットウォーカー・マーシャルアーティスト・デッドアイです。[source:2][source:4]",
+          "評価が大きく分かれるものもあります。ジェムリングリージョネアはMaxrollでS、PathofExile.ggでC、インファーナリストはMaxrollでB、PathofExile.ggでSです。PathofExile.ggの表は0.5時点のもので、0.5.5の変更は反映されていません。[source:2][source:4]"
+        ],
+        "table": {
+          "caption": "アセンダンシーのTier（Maxroll 0.5.5／PathofExile.gg 0.5）",
+          "headers": [
+            "アセンダンシー",
+            "英語名",
+            "Maxroll（0.5.5）",
+            "PathofExile.gg（0.5）"
+          ],
+          "rows": [
+            [
+              "ジェムリングリージョネア",
+              "Gemling Legionnaire",
+              "S",
+              "C"
+            ],
+            [
+              "ヴァラシュタの弟子",
+              "Disciple of Varashta",
+              "S",
+              "A"
+            ],
+            [
+              "スピリットウォーカー",
+              "Spirit Walker",
+              "S",
+              "S"
+            ],
+            [
+              "オラクル",
+              "Oracle",
+              "S",
+              "A"
+            ],
+            [
+              "マーシャルアーティスト",
+              "Martial Artist",
+              "S",
+              "S"
+            ],
+            [
+              "タイタン",
+              "Titan",
+              "S",
+              "A"
+            ],
+            [
+              "デッドアイ",
+              "Deadeye",
+              "S",
+              "S"
+            ],
+            [
+              "ウィッチハンター",
+              "Witchhunter",
+              "A",
+              "B"
+            ],
+            [
+              "アマゾン",
+              "Amazon",
+              "A",
+              "A"
+            ],
+            [
+              "タクティシャン",
+              "Tactician",
+              "A",
+              "A"
+            ],
+            [
+              "キタヴァの鍛冶屋",
+              "Smith of Kitava",
+              "A",
+              "D"
+            ],
+            [
+              "シャーマン",
+              "Shaman",
+              "A",
+              "A"
+            ],
+            [
+              "リッチ",
+              "Lich",
+              "A",
+              "A"
+            ],
+            [
+              "パスファインダー",
+              "Pathfinder",
+              "A",
+              "B"
+            ],
+            [
+              "チャユラの門弟",
+              "Acolyte of Chayula",
+              "B",
+              "B"
+            ],
+            [
+              "ストームウィーバー",
+              "Stormweaver",
+              "B",
+              "B"
+            ],
+            [
+              "インファーナリスト",
+              "Infernalist",
+              "B",
+              "S"
+            ],
+            [
+              "ブラッドメイジ",
+              "Blood Mage",
+              "B",
+              "A"
+            ],
+            [
+              "インヴォーカー",
+              "Invoker",
+              "C",
+              "B"
+            ],
+            [
+              "ウォーブリンガー",
+              "Warbringer",
+              "C",
+              "D"
+            ],
+            [
+              "リチュアリスト",
+              "Ritualist",
+              "D",
+              "D"
+            ],
+            [
+              "クロノマンサー",
+              "Chronomancer",
+              "D",
+              "C"
+            ]
+          ]
+        },
+        "sourceRefs": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "id": "site-builds",
+        "heading": "このサイトの掲載ビルドはどこにある？",
+        "paragraphs": [
+          "このサイトで育成手順を掲載している12ビルドのうち、9ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
+        ],
+        "table": {
+          "caption": "掲載ビルドとMaxrollのTier",
+          "headers": [
+            "掲載ビルド",
+            "MaxrollのTier",
+            "Maxrollの表記"
+          ],
+          "rows": [
+            [
+              "ツイスター・ジェムリング",
+              "S",
+              "Twister Gemling"
+            ],
+            [
+              "ワーリングアサルト・マーシャルアーティスト",
+              "S（ホロウフォーム型）／A",
+              "Hollow Form Whirling Assault Martial Artist／Whirling Assault Martial Artist"
+            ],
+            [
+              "砂と炎のヴァラシュタ",
+              "S（ミニオン型）",
+              "Disciple of Varashta Minion"
+            ],
+            [
+              "植物オラクル",
+              "A",
+              "Entangle Oracle"
+            ],
+            [
+              "ツイスター・スピリットウォーカー",
+              "A",
+              "Twisters Spirit Walker"
+            ],
+            [
+              "アイスショット・デッドアイ",
+              "A",
+              "Ice Shot Deadeye"
+            ],
+            [
+              "相棒スピリットウォーカー",
+              "A",
+              "Companion Spirit Walker"
+            ],
+            [
+              "ED・コンテージョン リッチ",
+              "B",
+              "Essence Drain Lich"
+            ],
+            [
+              "スナイパーミニオン・インファーナリスト",
+              "C",
+              "Skeletal Sniper Infernalist"
+            ],
+            [
+              "シールドウォール・スミス",
+              "—（同じスキルのウォーブリンガー型がA）",
+              "Shield Wall Warbringer"
+            ],
+            [
+              "グレネード・ジェムリング",
+              "—（掲載なし）",
+              "—"
+            ],
+            [
+              "スパーク・ストームウィーバー",
+              "—（掲載なし）",
+              "—"
+            ]
+          ]
+        },
+        "bullets": [
+          "砂と炎のヴァラシュタは、MaxrollのDisciple of Varashta Minionのガイドを資料の1つにしています。",
+          "掲載なしは「弱い」という意味ではなく、MaxrollのTier表に同じ組み合わせのガイドがないということです。"
+        ],
+        "links": [
+          {
+            "href": "/builds/mercenary/twister-gemling/",
+            "label": "ツイスター・ジェムリングの育成（S Tier）"
+          },
+          {
+            "href": "/builds/monk/whirling-assault/",
+            "label": "ワーリングアサルトの育成"
+          },
+          {
+            "href": "/builds/sorceress/sand-and-fire/",
+            "label": "砂と炎のヴァラシュタの育成"
+          }
+        ],
+        "sourceRefs": [
+          1
+        ]
+      },
+      {
+        "id": "farming",
+        "heading": "稼ぎ方のTier：リチュアルとタブレット周回がS",
+        "paragraphs": [
+          "Maxrollはエンドゲームの稼ぎ方のTier表も公開しています（0.5.5、2026年9月19日更新）。S Tierは「せん妄度200%のデリリウム＋アビス」「タブレット周回」「リチュアル」です。[source:5]"
+        ],
+        "table": {
+          "caption": "エンドゲームの稼ぎ方のTier（Maxroll、0.5.5）",
+          "headers": [
+            "Tier",
+            "稼ぎ方"
+          ],
+          "rows": [
+            [
+              "S",
+              "せん妄度200%のデリリウム＋アビス、タブレット周回、リチュアル"
+            ],
+            [
+              "A",
+              "デリリウムのボス連戦、ブリーチのレアモンスター狩り、シタデル（Citadel）探し"
+            ],
+            [
+              "B",
+              "アビスの宝箱、混沌の試練"
+            ],
+            [
+              "C",
+              "セケマの試練"
+            ],
+            [
+              "F",
+              "エッセンス、ストロングボックス"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/ritual/",
+            "label": "リチュアル攻略"
+          },
+          {
+            "href": "/guides/delirium/",
+            "label": "デリリウム攻略"
+          },
+          {
+            "href": "/guides/breach/",
+            "label": "ブリーチ攻略"
+          },
+          {
+            "href": "/guides/waystones-tablets/",
+            "label": "タブレットの使い方"
+          }
+        ],
+        "sourceRefs": [
+          5
+        ]
+      },
+      {
+        "id": "caution",
+        "heading": "Tier表を見るときの注意",
+        "bullets": [
+          "Tierはリーグスタート向けの評価です。高額装備をそろえた後の上限火力の順位ではありません。[source:1]",
+          "Maxrollは判定基準と各ビルドの理由を公開していません。このページでも理由は推測で書いていません。[source:1]",
+          "ラダーで実際に使われている割合（poe.ninja）は、このページでは取得できていません。",
+          "1.0（2026年12月12日・日本時間）でパッシブツリーや職業が大きく変わるため、Tierも入れ替わる見込みです。公開後に更新します。"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "PoE2 0.5.5で最強のビルドは？",
+        "answer": "MaxrollのリーグスタートTier表（2026年11月3日更新）のS Tierは、ヴァラシュタの弟子のミニオン、ツイスター・ジェムリングリージョネア、グリムピラー（スペルトーテム）・オラクル、ホロウフォーム＋ワーリングアサルト・マーシャルアーティストの4つです。[source:1]"
+      },
+      {
+        "question": "最強のアセンダンシーは？",
+        "answer": "Maxroll（0.5.5）のS Tierは、ジェムリングリージョネア、ヴァラシュタの弟子、スピリットウォーカー、オラクル、マーシャルアーティスト、タイタン、デッドアイの7つです。[source:2]"
+      },
+      {
+        "question": "初心者もS Tierから選ぶべき？",
+        "answer": "強さだけで選ぶ必要はありません。操作の少なさや育てやすさを重視するなら、このサイトの初心者向けTierも見て、遊びたい戦い方に合うものを選んでください。"
+      },
+      {
+        "question": "1.0でもこのTier表は使える？",
+        "answer": "1.0で大きな変更があるため、そのままは使えない見込みです。0.5.5時点の評価として参考にし、1.0公開後の更新を確認してください。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Maxroll：League Starter Build Tier List（0.5.5、2026年11月3日更新）",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list",
+        "checkedAt": "2026-11-24",
+        "supports": "リーグスタート向け48ビルドのS〜D Tier、更新日、「正しく組めばどのアセンダンシーも強い」「メタは常に動く」という説明。各ビルドの判定理由は記載なし。"
+      },
+      {
+        "name": "Maxroll：League Starter Ascendancy Tier List（0.5.5）",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-ascendancy-tier-list",
+        "checkedAt": "2026-11-24",
+        "supports": "22アセンダンシーのS〜D Tier。"
+      },
+      {
+        "name": "PoE2DB日本語版：アセンダンシーと各スキル（非公式ゲームデータ）",
+        "url": "https://poe2db.tw/jp/Ascendancy_class",
+        "checkedAt": "2026-11-24",
+        "supports": "アセンダンシー22種とスキル（グリムピラー、サポーティングファイヤー、グレイシャルランス、オイルバラージ、フロストボルト、ライトニングアロー、ライトニングスピア、ウォーキングカラミティ、スパイラルボレー、ポイズンバーストアロー、ボーンシャッター、アイスストライク、スナップ、ホロウフォーム、スペルトーテム、レーキ）の日本語名。"
+      },
+      {
+        "name": "PathofExile.gg：Path of Exile 2 Class and Ascendancy Tier List（0.5、2026年6月22日）",
+        "url": "https://pathofexile.gg/tier-list/",
+        "checkedAt": "2026-11-24",
+        "supports": "0.5時点のアセンダンシーのS〜D Tier（リーグスタートを中心にした一般的な評価）。"
+      },
+      {
+        "name": "Maxroll：Endgame Farming Tier List（0.5.5、2026年9月19日更新）",
+        "url": "https://maxroll.gg/poe2/tierlists/endgame-farming-tier-list",
+        "checkedAt": "2026-11-24",
+        "supports": "エンドゲームの稼ぎ方のS〜F Tier。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/tier-list/",
+        "label": "初心者向けTier（育てやすさで比較）"
+      },
+      {
+        "href": "/best-builds/",
+        "label": "目的別の最強ビルド比較"
+      },
+      {
+        "href": "/league-starter/",
+        "label": "リーグスターター"
+      },
+      {
+        "href": "/builds/",
+        "label": "職業別ビルド一覧"
+      },
+      {
+        "href": "/classes/",
+        "label": "職業の選び方"
+      }
+    ],
+    "revisionNotes": [
+      {
+        "date": "2026-11-24",
+        "summary": "MaxrollのTier表（0.5.5、2026年11月3日更新）をもとに公開。"
+      }
+    ]
+  },
+  {
     "slug": "stuck-at-level-90",
     "title": "難しい・すぐ死ぬ原因は耐性だった｜Lv92まで無死亡の実測記録",
     "summary": "運営者本人が、火耐性−3%のままエンドゲームを進め、雑魚にも瞬殺されてレベル90に届かなかった。装備を見直して火68%・雷69%まで上げたら、ライフとエナジーシールドの合計はむしろ減ったのに、レベル92まで一度も死ななかった。「PoE2は難しい」と感じたら、火力より先に耐性を見るべき理由を、実測値と計算で説明する。",
