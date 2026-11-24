@@ -6,7 +6,7 @@ const t = (ja, english) => en ? english : ja;
 const HANDOFF_KEY = 'poe2-community-compose:v1';
 const root = document.getElementById('community-app');
 try {
-  const response = await fetch('/data/community-catalog.json?v=fb329e58af');
+  const response = await fetch('/data/community-catalog.json?v=3177df3a7d');
   if (!response.ok) throw Error('PUBLIC_CATALOG');
   const catalog = await response.json();
   const transport = new PublicBuildTransport();

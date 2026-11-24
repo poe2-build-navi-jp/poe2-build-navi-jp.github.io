@@ -62,7 +62,7 @@ const shownTitle055 = (title) => `<title>${site.gameVersion === "0.5.5" ? title 
 const beginnerLanding = await read("beginner-builds/index.html");
 const stageLabels = ["Lv1〜10", "Lv11〜20", "Lv21〜30", "Lv31〜40", "Lv41〜キャンペーン終了", "Mapping開始", "Early Endgame", "Endgame完成"];
 const stageFields = ["mainSkill", "supports", "passivePriority", "gearPriority", "replaceGear", "caution", "transitionCondition"];
-assert(builds.length === 14, "build count must be 14");
+assert(builds.length === 15, "build count must be 15");
 assert(new Set(builds.map((build) => build.className)).size === 8, "each playable class must have a build");
 assert(classes.length === 8, "class count must be 8");
 assert(new Set(classes.map((item) => item.slug)).size === 8, "class slugs must be unique");

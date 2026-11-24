@@ -88,6 +88,76 @@
     "contentRevision": "39a1364d45f54b40"
   },
   {
+    "id": "monk-falling-thunder",
+    "name": "Falling Thunder Martial Artist",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "Martial Artist",
+    "skills": [
+      "Falling Thunder"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-15 (Act 1, Quarterstaff)",
+        "mainSkill": "For packs, Frozen Locus plus Herald of Ice. For single targets, Falling Thunder",
+        "supports": "Falling Thunder: Elemental Armament I, then Lightning Attunement. Frozen Locus: Elemental Armament I, then Cold Attunement. Wind Blast: Rage I, then Rapid Attacks I. Herald of Ice: Magnified Area I. The support setup covers what could be cross-checked against the original planner's per-stage table via a secondary summary; check the original for the exact current slots.",
+        "passivePriority": "Follow the original's Campaign per-stage tree. There is a first respec at level 10, so keep some gold in reserve.",
+        "gearPriority": "Use an Orb of Transmutation obtained from Clearfell's league mechanic reward on a Wrapped Quarterstaff. Look for a Long Quarterstaff in Red Vale. Gear: Life/ES, added damage on gloves and rings, movement speed on boots.",
+        "caution": "The original also calls Act 1 a rough spot. Boss damage is reduced for the first 5 seconds of the fight, so wait a little before spending Power Charges. Boss order: prepare a stun with Wind Blast, stun with Wing Blast to build 3 Power Charges, spend 1 with Rend for the lightning buff, place Frost Bomb at its feet, then Falling Thunder with the remaining 2.",
+        "transitionCondition": "Reach level 16 and have the gold for the second respec. Transition to Hollow Palm Technique."
+      },
+      {
+        "label": "Level 16 to End of Act 2 (Hollow Palm Transition)",
+        "mainSkill": "Unarmed attacks with Hollow Palm Technique are the mainstay. Falling Thunder for single targets",
+        "supports": "While on Hollow Palm you use no weapon and scale damage with melee skill levels. The Act 2 single-target loop: shock with Storm Wave, consume the shock with Siphoning Strike for Power Charges, then Falling Thunder. Check the original planner for exact support slots.",
+        "passivePriority": "Respec into Hollow Palm Technique at level 16. Finish the Trial of the Sekhemas at level 22 and take Hollow Focus Technique as your first ascendancy.",
+        "gearPriority": "Remove the quarterstaff. +melee skill levels on gloves and amulet matter most. Gear: Life, Evasion, ES and resistances.",
+        "caution": "Devour the Hollow Focus bell before a boss and you can start the fight with 3 Power Charges. Keep Frost Bomb's Exposure up.",
+        "transitionCondition": "Clear Acts 3-4 while staying on Hollow Palm."
+      },
+      {
+        "label": "Act 3 to Campaign End (Hollow Palm Continues)",
+        "mainSkill": "Hollow Palm unarmed attacks plus Falling Thunder",
+        "supports": "Keep the campaign setup. Maintain the Thrill of the Kill buff with Devour and Killing Palm finishers, and keep Rend's lightning buff up in boss fights. Check the original planner for exact support slots.",
+        "passivePriority": "Continue the original's Campaign tree. Second ascendancy: Way of the Stonefist, which converts glove modifiers so attack speed becomes Onslaught chance, added damage is gained as added damage, and defences convert to Evasion/ES.",
+        "gearPriority": "Keep upgrading gloves and amulet with melee skill levels. Start shifting gear toward Evasion and ES, and bring resistances close to the cap.",
+        "caution": "Hollow Palm starts falling off late. You do not need weapon upgrades in this phase, so save your crafting currency instead of spending it.",
+        "transitionCondition": "Reach the Interludes and level 54, with the materials to craft a Waxing Quarterstaff ready."
+      },
+      {
+        "label": "Interludes (Level 54, Return to Quarterstaff)",
+        "mainSkill": "Waxing Quarterstaff plus Falling Thunder",
+        "supports": "You return to a weapon, so put Falling Thunder's supports back to a weapon-based setup. Check the original planner for exact slots.",
+        "passivePriority": "Remove Hollow Palm Technique and rebuild the tree around a quarterstaff.",
+        "gearPriority": "Crafting a Waxing Quarterstaff with your saved currency is the top priority.",
+        "caution": "If you leave Hollow Palm's falloff unchecked you will stall in the Interludes. Return to a weapon soon after reaching level 54.",
+        "transitionCondition": "Finish the campaign. Start stockpiling the gems for the Whirling Assault setup for maps."
+      },
+      {
+        "label": "Mapping Begins (Whirling Assault Respec)",
+        "mainSkill": "Build energy with Whirling Assault, generate Power Charges with Reaper's Invocation into Profane Ritual. Spend them with Charged Staff and Falling Thunder",
+        "supports": "Whirling Assault is for building energy; Falling Thunder carries the damage. Adding Mantra of Destruction adds chaos damage based on the combo consumed.",
+        "passivePriority": "Respec into the maps tree. Switch to setting up Power Charges before bosses by clearing the Hollow Focus bell with Killing Palm.",
+        "gearPriority": "First purchase candidate: Ailith's Chimes. Whirling Assault has no inherent conversion, so the original advises an elemental-damage quarterstaff.",
+        "caution": "Until you have Ailith's Chimes, the finished charge engine is not online. Use Tempest Bell for the first charge generation in some situations.",
+        "transitionCondition": "Obtain Ailith's Chimes and take Martial Master."
+      },
+      {
+        "label": "Endgame Complete (CI, Charge Engine Complete)",
+        "mainSkill": "Alternate Whirling Assault and Falling Thunder. Build up to 6 Power Charges, then Falling Thunder",
+        "supports": "Whirling Assault: Culmination II plus Ailith's Chimes convert consumed combo into Power Charges. Falling Thunder: Nova Projectiles I for maps. The pinnacle-boss setup removes Nova Projectiles I and other utility. Critical stats are also supported by Charge Regulation, Blindside and Pinpoint Critical.",
+        "passivePriority": "Respec into Chaos Inoculation and rebuild ailment and stun thresholds around ES. Runic Meridians lets you socket additional runes. The original states Abasement and Shimmering Mirage are required to prevent permanent stuns and freezes. Martial Adept recovers ES when you consume combo.",
+        "gearPriority": "A Sinister Quarterstaff with high physical damage and critical chance. Gloves: Fists of Stone converted by Way of the Stonefist. Gear: Evasion/ES, 35% movement speed on boots. Raise Falling Thunder's level with Prism of Belief.",
+        "caution": "Herald of Ice explosions require Freeze. Secure cold damage through Heart of the Well or Fists of Stone's 'gain damage as cold'. If the big hit does not crit, you have to rebuild your charges from scratch.",
+        "transitionCondition": "The build is complete. After this, refine jewels to three modifiers and push every gear piece to its maximum rolls."
+      }
+    ],
+    "mainSkill": "Falling Thunder",
+    "path": "/builds/monk/falling-thunder/",
+    "contentRevision": "c4c5f32568cfc940"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

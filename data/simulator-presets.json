@@ -88,6 +88,76 @@
     "contentRevision": "39a1364d45f54b40"
   },
   {
+    "id": "monk-falling-thunder",
+    "name": "フォーリングサンダー・マーシャルアーティスト",
+    "class": "Monk",
+    "className": "モンク",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "マーシャルアーティスト",
+    "skills": [
+      "Falling Thunder"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜15（Act 1・クォータースタッフ）",
+        "mainSkill": "集団はフローズンローカス（Frozen Locus）＋ヘラルドオブアイス（Herald of Ice）。単体はフォーリングサンダー（Falling Thunder）",
+        "supports": "フォーリングサンダー（Falling Thunder）：元素武装 I（Elemental Armament I）→ ライトニングアチューンメント（Lightning Attunement）。フローズンローカス（Frozen Locus）：元素武装 I → コールドアチューンメント（Cold Attunement）。ウィンドブラスト（Wind Blast）：憤怒 I（Rage I）→ アタックスピード増加 I（Rapid Attacks I）。ヘラルドオブアイス（Herald of Ice）：効果範囲拡大 I（Magnified Area I）。サポート構成は原典プランナーの段階別表を二次要約で裏取りした範囲で、最新の正確な枠は原典参照。",
+        "passivePriority": "原典の「Campaign」段階別ツリーに沿う。Lv10で1回目のリスペックがあるため、ゴールドを少し残しておく。",
+        "gearPriority": "クリアフェルのリーグメカニクス報酬で得た変換のオーブを巻き布のクォータースタッフ（Wrapped Quarterstaff）に使う。レッドベールでロングクォータースタッフ（Long Quarterstaff）を探す。防具はライフ／ES、グローブと指輪は攻撃への追加ダメージ、ブーツは移動速度。",
+        "caution": "Act 1は原典でも難所とされる。ボス戦は開始直後5秒間ダメージが軽減されるため、パワーチャージの消費は少し待つ。ボスはウィンドブラスト（Wind Blast）でスタン準備→ウィングブラスト（Wing Blast）でスタンさせてパワーチャージ3つ→レンド（Rend）で1つ消費して雷バフ→フロストボム（Frost Bomb）を足元へ→残り2つでフォーリングサンダー（Falling Thunder）の順。",
+        "transitionCondition": "Lv16到達と、2回目のリスペック費用の確保。ホロウパームテクニック（Hollow Palm Technique）へ移行する。"
+      },
+      {
+        "label": "Lv16〜Act 2終了（ホロウパーム移行）",
+        "mainSkill": "ホロウパームテクニック（Hollow Palm Technique）の素手攻撃が主体。単体はフォーリングサンダー（Falling Thunder）",
+        "supports": "ホロウパーム中は武器を使わず、近接スキルレベルで火力を伸ばす。Act 2の単体はストームウェーブ（Storm Wave）で感電→サイフォンストライク（Siphoning Strike）で感電を消費してパワーチャージ→フォーリングサンダー（Falling Thunder）のループ。サポートの正確な枠は原典プランナー参照。",
+        "passivePriority": "Lv16でホロウパームテクニック（Hollow Palm Technique）へリスペック。Lv22でセケマの試練（Trial of the Sekhemas）を終え、最初のアセンダンシーにホロウフォーカス技法（Hollow Focus Technique）を取る。",
+        "gearPriority": "クォータースタッフを外す。グローブとアミュレットの「近接スキルレベル+」が最重要。防具はライフ／回避／ESと耐性。",
+        "caution": "ボス前にホロウフォーカス（Hollow Focus）のベルをデバウアー（Devour）すると、開幕からパワーチャージ3つで戦える。フロストボム（Frost Bomb）の曝露も切らさない。",
+        "transitionCondition": "ホロウパームのままAct 3〜4を進め切ること。"
+      },
+      {
+        "label": "Act 3〜キャンペーン終了（ホロウパーム継続）",
+        "mainSkill": "ホロウパームの素手攻撃＋フォーリングサンダー（Falling Thunder）",
+        "supports": "キャンペーン構成を継続。デバウアー（Devour）／キリングパーム（Killing Palm）のトドメでスリルオブキル（Thrill of the Kill）のバフを維持し、ボス戦ではレンド（Rend）の雷バフを切らさない。正確なサポート枠は原典プランナー参照。",
+        "passivePriority": "原典の「Campaign」ツリーを継続。2つ目のアセンダンシーは石拳の道（Way of the Stonefist）で、グローブのモッドが攻撃速度→猛攻チャンス、追加ダメージ→追加ダメージとして獲得、防御→回避／ESへ変換されて伸びる。",
+        "gearPriority": "近接スキルレベルのグローブ／アミュレットを更新し続ける。防具は回避・ES寄りに寄せ始め、耐性を上限へ近づける。",
+        "caution": "ホロウパームは終盤に失速し始める。武器更新が不要な期間なので、クラフト通貨は使わずに貯めておく。",
+        "transitionCondition": "Interludes到達とLv54。蝋塗りのクォータースタッフ（Waxing Quarterstaff）のクラフト素材が揃っていること。"
+      },
+      {
+        "label": "Interludes（Lv54・クォータースタッフへ帰還）",
+        "mainSkill": "蝋塗りのクォータースタッフ（Waxing Quarterstaff）＋フォーリングサンダー（Falling Thunder）",
+        "supports": "武器へ戻るため、フォーリングサンダー（Falling Thunder）のサポートを武器前提の構成に戻す。正確な枠は原典プランナー参照。",
+        "passivePriority": "ホロウパームテクニック（Hollow Palm Technique）を外し、クォータースタッフ前提のツリーへ組み替える。",
+        "gearPriority": "貯めた通貨で蝋塗りのクォータースタッフ（Waxing Quarterstaff）をクラフトするのが最優先。",
+        "caution": "ホロウパームの失速を放置するとInterludesで詰まる。Lv54になったら早めに武器へ戻る。",
+        "transitionCondition": "キャンペーン終了。マップ用にワーリングアサルト（Whirling Assault）構成のジェムを貯め始める。"
+      },
+      {
+        "label": "Mapping開始（ワーリングアサルト・リスペック）",
+        "mainSkill": "ワーリングアサルト（Whirling Assault）でエネルギーを貯め、リーパーズインボケーション（Reaper's Invocation）→プロファンリチュアル（Profane Ritual）でパワーチャージを生成。消費はチャージドスタッフ（Charged Staff）とフォーリングサンダー（Falling Thunder）",
+        "supports": "ワーリングアサルト（Whirling Assault）はエネルギー蓄積用で、ダメージはフォーリングサンダー（Falling Thunder）側が担う。マントラオブデストラクション（Mantra of Destruction）を挟むと、消費したコンボに応じて混沌ダメージが上乗る。",
+        "passivePriority": "マップ用のツリーへリスペック。ボス前にホロウフォーカス（Hollow Focus）のベルをキリングパーム（Killing Palm）で処理してパワーチャージを貯める運用に切り替える。",
+        "gearPriority": "最初の購入候補はエイリスの鐘（Ailith's Chimes）。ワーリングアサルト（Whirling Assault）には固有の変換がないため、元素ダメージのクォータースタッフが有利と原典は案内する。",
+        "caution": "エイリスの鐘（Ailith's Chimes）が揃うまでは完成形のチャージエンジンにならない。チャージ生成の初動にはテンペストベル（Tempest Bell）を使う場面がある。",
+        "transitionCondition": "エイリスの鐘（Ailith's Chimes）の入手と、武術の達人（Martial Master）の取得。"
+      },
+      {
+        "label": "Endgame完成（CI・チャージエンジン完成）",
+        "mainSkill": "ワーリングアサルト（Whirling Assault）とフォーリングサンダー（Falling Thunder）の交互運用。パワーチャージを6つまで貯めてフォーリングサンダー（Falling Thunder）",
+        "supports": "ワーリングアサルト（Whirling Assault）：究極の一撃 II（Culmination II）＋エイリスの鐘（Ailith's Chimes）で、消費したコンボをパワーチャージへ変換する。フォーリングサンダー（Falling Thunder）：マップ用にノヴァの投射物 I（Nova Projectiles I）。ピナクルボス専用構成ではノヴァの投射物 Iほかのユーティリティを外す。クリティカルはチャージレギュレーション（Charge Regulation）、死角攻撃（Blindside）、クリティカル集中（Pinpoint Critical）でも補う。",
+        "passivePriority": "カオスイノキュレーション（Chaos Inoculation）へリスペックし、状態異常とスタンの閾値をES基準に組み替える。ルーンの経絡（Runic Meridians）でルーンを追加装着。屈辱（Abasement）と煌めく幻影（Shimmering Mirage）は永久スタン／永久凍結の防止に必須と原典が明記。武術の熟達者（Martial Adept）がコンボ消費でES回復を担う。",
+        "gearPriority": "邪悪なクォータースタッフ（Sinister Quarterstaff）の高物理＋クリティカル率。グローブは石の拳（Fists of Stone）を石拳の道（Way of the Stonefist）で変換。防具は回避／ES、ブーツは移動速度35%。信仰のプリズム（Prism of Belief）でフォーリングサンダー（Falling Thunder）のレベルを伸ばす。",
+        "caution": "ヘラルドオブアイス（Herald of Ice）の爆発には凍結が必要。井戸の心臓（Heart of the Well）や石の拳（Fists of Stone）の「ダメージを冷気として追加」で冷気ダメージを確保する。一撃がクリティカルしなければチャージの再構築からやり直しになる。",
+        "transitionCondition": "完成形。以後はジュエルの3モッド化と各装備の最大ロール化を詰める。"
+      }
+    ],
+    "mainSkill": "フォーリングサンダー",
+    "path": "/builds/monk/falling-thunder/",
+    "contentRevision": "c4c5f32568cfc940"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "ツイスター・ジェムリング",
     "class": "Mercenary",

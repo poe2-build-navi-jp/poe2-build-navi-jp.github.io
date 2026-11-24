@@ -11,6 +11,10 @@
       "ja": "放棄された監獄",
       "ref": "https://poe2db.tw/jp/Abandoned_Prison"
     },
+    "Abasement": {
+      "ja": "屈辱",
+      "ref": "https://poe2db.tw/jp/Abasement"
+    },
     "Absent Amulet": {
       "ja": "不在のアミュレット",
       "ref": "https://poe2db.tw/jp/Absent_Amulet"
@@ -46,6 +50,10 @@
     "Ailith": {
       "ja": "エイリス",
       "ref": "https://poe2db.tw/jp/Ailith"
+    },
+    "Ailith's Chimes": {
+      "ja": "エイリスの鐘",
+      "ref": "https://poe2db.tw/jp/Ailiths_Chimes"
     },
     "An Audience with the King": {
       "ja": "王との謁見",
@@ -246,6 +254,10 @@
     "Blind": {
       "ja": "盲目",
       "ref": "https://poe2db.tw/jp/Blind_II"
+    },
+    "Blindside": {
+      "ja": "死角攻撃",
+      "ref": "https://poe2db.tw/jp/Blindside"
     },
     "Boat Charter": {
       "ja": "船の契約書",
@@ -527,6 +539,10 @@
       "ja": "結晶の過成長",
       "ref": "https://poe2db.tw/jp/Crystalline_Overgrowth"
     },
+    "Culmination II": {
+      "ja": "究極の一撃 II",
+      "ref": "https://poe2db.tw/jp/Culmination_II"
+    },
     "Curiously Durable Stone": {
       "ja": "奇妙に頑丈な石",
       "ref": "https://poe2db.tw/jp/Curiously_Durable_Stone"
@@ -579,6 +595,10 @@
       "ja": "ディスペア",
       "ref": "https://poe2db.tw/jp/Despair"
     },
+    "Devour": {
+      "ja": "デバウアー",
+      "ref": "https://poe2db.tw/jp/Devour"
+    },
     "Disciple of Varashta": {
       "ja": "ディサイプルオブヴァラシュタ",
       "ref": "https://poe2db.tw/jp/Disciple_of_Varashta"
@@ -603,13 +623,13 @@
       "ja": "ドリヤニ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
     },
-    "Doryani, Royal Thaumaturge": {
-      "ja": "宮廷魔術師、ドリヤニ",
-      "ref": "https://poe2-build-navi-jp.github.io/name-index/"
-    },
     "Doryani's Science": {
       "ja": "ドリヤニの科学",
       "ref": "https://poe2db.tw/jp/Doryanis_Science"
+    },
+    "Doryani, Royal Thaumaturge": {
+      "ja": "宮廷魔術師、ドリヤニ",
+      "ref": "https://poe2-build-navi-jp.github.io/name-index/"
     },
     "Doryanis Science": {
       "ja": "ドリヤニの科学",
@@ -795,6 +815,10 @@
       "ja": "火マスタリー",
       "ref": "https://poe2db.tw/jp/Fire_Mastery"
     },
+    "Fists of Stone": {
+      "ja": "石の拳",
+      "ref": "https://poe2db.tw/jp/Fists_of_Stone"
+    },
     "Flame Wall": {
       "ja": "フレイムウォール",
       "ref": "https://poe2db.tw/jp/Flame_Wall"
@@ -907,6 +931,10 @@
       "ja": "金のサークレット",
       "ref": "https://poe2db.tw/jp/Gold_Circlet"
     },
+    "Gothic Quarterstaff": {
+      "ja": "ゴシッククォータースタッフ",
+      "ref": "https://poe2db.tw/jp/Gothic_Quarterstaff"
+    },
     "Grand Expedition": {
       "ja": "グランドエクスペディション",
       "ref": "https://poe2db.tw/jp/The_Grand_Expedition"
@@ -1002,6 +1030,10 @@
     "Hollow Focus": {
       "ja": "ホロウフォーカス",
       "ref": "https://poe2db.tw/jp/Hollow_Focus"
+    },
+    "Hollow Focus Technique": {
+      "ja": "ホロウフォーカス技法",
+      "ref": "https://poe2db.tw/jp/Hollow_Focus_Technique"
     },
     "Hollow Palm Technique": {
       "ja": "ホロウパームテクニック",
@@ -1259,6 +1291,10 @@
       "ja": "遅延起爆 II",
       "ref": "https://poe2db.tw/jp/Long_Fuse_II"
     },
+    "Long Quarterstaff": {
+      "ja": "ロングクォータースタッフ",
+      "ref": "https://poe2db.tw/jp/Long_Quarterstaff"
+    },
     "Loyalty": {
       "ja": "忠誠",
       "ref": "https://poe2db.tw/jp/Loyalty"
@@ -1327,9 +1363,17 @@
       "ja": "吸収の呪印",
       "ref": "https://poe2db.tw/jp/Mark_of_Siphoning"
     },
+    "Martial Adept": {
+      "ja": "武術の熟達者",
+      "ref": "https://poe2db.tw/jp/Martial_Adept"
+    },
     "Martial Artist": {
       "ja": "マーシャルアーティスト",
       "ref": "https://poe2db.tw/jp/Martial_Artist"
+    },
+    "Martial Master": {
+      "ja": "武術の達人",
+      "ref": "https://poe2db.tw/jp/Martial_Master"
     },
     "Mastodon Badlands": {
       "ja": "マストドンの不毛地帯",
@@ -1434,6 +1478,10 @@
     "No Simple Battles": {
       "ja": "単純な戦いはない",
       "ref": "https://poe2db.tw/jp/No_Simple_Battles"
+    },
+    "Nova Projectiles I": {
+      "ja": "ノヴァの投射物 I",
+      "ref": "https://poe2db.tw/jp/Nova_Projectiles_I"
     },
     "Obliterator Bow": {
       "ja": "殲滅者の弓",
@@ -1575,9 +1623,17 @@
       "ja": "プライマルバウンティ",
       "ref": "https://poe2db.tw/jp/Primal_Bounty"
     },
+    "Prism of Belief": {
+      "ja": "信仰のプリズム",
+      "ref": "https://poe2db.tw/jp/Prism_of_Belief"
+    },
     "Prismatic Ring": {
       "ja": "プリズムの指輪",
       "ref": "https://poe2db.tw/jp/Prismatic_Ring"
+    },
+    "Profane Ritual": {
+      "ja": "プロファンリチュアル",
+      "ref": "https://poe2db.tw/jp/Profane_Ritual"
     },
     "Projectile Acceleration": {
       "ja": "投射物加速",
@@ -1622,6 +1678,10 @@
     "Pursuit II": {
       "ja": "追撃 II",
       "ref": "https://poe2db.tw/jp/Pursuit_II"
+    },
+    "Quarterstaff Strike": {
+      "ja": "クォータースタッフストライク",
+      "ref": "https://poe2db.tw/jp/Quarterstaff_Strike"
     },
     "Rage": {
       "ja": "憤怒",
@@ -1714,6 +1774,10 @@
     "Reality Wound": {
       "ja": "現実の傷",
       "ref": "https://poe2db.tw/jp/Reality_Wound"
+    },
+    "Reaper's Invocation": {
+      "ja": "リーパーズインボケーション",
+      "ref": "https://poe2db.tw/jp/Reapers_Invocation"
     },
     "Recruit the Ezomytes": {
       "ja": "エゾマイトを仲間に加える",
@@ -1819,6 +1883,10 @@
       "ja": "ルーンシーカーの呼び声",
       "ref": "https://poe2-build-navi-jp.github.io/equipment/runeseekers-call/"
     },
+    "Runic Meridians": {
+      "ja": "ルーンの経絡",
+      "ref": "https://poe2db.tw/jp/Runic_Meridians"
+    },
     "Runic Ward": {
       "ja": "ルーンワード",
       "ref": "https://poe2db.tw/jp/Runic_Ward"
@@ -1883,6 +1951,10 @@
       "ja": "シールドウォール",
       "ref": "https://poe2-build-navi-jp.github.io/skills/shield-wall/"
     },
+    "Shimmering Mirage": {
+      "ja": "煌めく幻影",
+      "ref": "https://poe2db.tw/jp/Shimmering_Mirage"
+    },
     "Shock": {
       "ja": "感電",
       "ref": "https://poe2db.tw/jp/Shock"
@@ -1923,9 +1995,17 @@
       "ja": "歌う大洞窟",
       "ref": "https://poe2db.tw/jp/Singing_Caverns"
     },
+    "Sinister Quarterstaff": {
+      "ja": "邪悪なクォータースタッフ",
+      "ref": "https://poe2db.tw/jp/Sinister_Quarterstaff"
+    },
     "Siphon Elements": {
       "ja": "サイフォンエレメント",
       "ref": "https://poe2db.tw/jp/Siphon_Elements"
+    },
+    "Siphoning Strike": {
+      "ja": "サイフォンストライク",
+      "ref": "https://poe2db.tw/jp/Siphoning_Strike"
     },
     "Skeletal Arsonist": {
       "ja": "スケルトンアーソニスト",
@@ -2327,6 +2407,10 @@
       "ja": "スラッシングヴァイン",
       "ref": "https://poe2db.tw/jp/Thrashing_Vines"
     },
+    "Thrill of the Kill": {
+      "ja": "スリルオブキル",
+      "ref": "https://poe2db.tw/jp/Thrill_of_the_Kill"
+    },
     "Thrillsteel": {
       "ja": "スリルスティール",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
@@ -2559,6 +2643,10 @@
       "ja": "ウォーバナー",
       "ref": "https://poe2db.tw/jp/War_Banner"
     },
+    "Waxing Quarterstaff": {
+      "ja": "蝋塗りのクォータースタッフ",
+      "ref": "https://poe2db.tw/jp/Waxing_Quarterstaff"
+    },
     "Way of the Stonefist": {
       "ja": "石拳の道",
       "ref": "https://poe2db.tw/jp/Way_of_the_Stonefist"
@@ -2599,6 +2687,10 @@
       "ja": "ワイルドプロテクター",
       "ref": "https://poe2db.tw/jp/Wild_Protector"
     },
+    "Wind Blast": {
+      "ja": "ウィンドブラスト",
+      "ref": "https://poe2db.tw/jp/Wind_Blast"
+    },
     "Wind Dancer": {
       "ja": "ウィンドダンサー",
       "ref": "https://poe2db.tw/jp/Wind_Dancer"
@@ -2610,6 +2702,10 @@
     "Window of Opportunity I": {
       "ja": "好機の幅 I",
       "ref": "https://poe2db.tw/jp/Window_of_Opportunity_I"
+    },
+    "Wing Blast": {
+      "ja": "ウィングブラスト",
+      "ref": "https://poe2db.tw/jp/Wing_Blast"
     },
     "Winged Spear": {
       "ja": "翼刃のスピア",
@@ -2634,6 +2730,10 @@
     "Wombgifts": {
       "ja": "母胎ギフト",
       "ref": "https://poe2db.tw/jp/Wombgifts"
+    },
+    "Wrapped Quarterstaff": {
+      "ja": "巻き布のクォータースタッフ",
+      "ref": "https://poe2db.tw/jp/Wrapped_Quarterstaff"
     },
     "Xesht": {
       "ja": "ゼシュト",

@@ -10,6 +10,7 @@ const classNames = {monk:'Monk',mercenary:'Mercenary',warrior:'Warrior',sorceres
 const asc = {'マーシャルアーティスト':'Martial Artist','ジェムリング・リージョネア':'Gemling Legionnaire','スミス・オブ・キタヴァ':'Smith of Kitava','ディサイプル・オブ・ヴァラシュタ':'Disciple of Varashta','スピリットウォーカー':'Spirit Walker','デッドアイ':'Deadeye','インファーナリスト':'Infernalist','オラクル':'Oracle','リッチ':'Lich','ストームウィーバー':'Stormweaver'};
 const skills = {
  'monk-whirling-assault':['Whirling Assault'],
+ 'monk-falling-thunder':['Falling Thunder'],
  'mercenary-twister-gemling':['Twister'],
  'warrior-shield-wall-smith':['Shield Wall'],
  'sorceress-sand-fire':["Kelari's Deception","Ruzhan's Trap"],
