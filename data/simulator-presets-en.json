@@ -795,6 +795,76 @@
     "contentRevision": "cfb8a822c7f40d8b"
   },
   {
+    "id": "sorceress-frostbolt-comet-varashta",
+    "name": "Frostbolt Cast On Crit Comet Disciple Of Varashta",
+    "class": "Sorceress",
+    "className": "Sorceress",
+    "ascendancy": "Disciple of Varashta",
+    "ascendancyName": "Disciple of Varashta",
+    "skills": [
+      "Frostbolt"
+    ],
+    "stages": [
+      {
+        "label": "Act 1 (Ice Nova + Frost Darts Leveling)",
+        "mainSkill": "Clear with Ice Nova and wear down single targets with Frost Darts. Use Frost Bomb and Snap to create Cold Infusion Remnants that strengthen Ice Nova and Frost Darts. Move with Pounce and keep Arctic Armour up as a persistent buff. Level with Spark until the Clearfell Encampment, then engrave Ice Nova and Frost Bomb from Renly and the Clearfell Encampment's Strange Campfire (as in the source).",
+        "supports": "Give Ice Nova Controlled Destruction and Ice Bite. Give Frost Darts Controlled Destruction and Rapid Casting. Give Frost Bomb Overabundance and Spell Cascade. Give Snap Magnified Area and Controlled Destruction.",
+        "passivePriority": "114 nodes in the campaign. Raise the Infusion holding cap with Frozen Limit and Infused Limits (source FAQ). Take efficient cold damage and Life nodes along the way.",
+        "gearPriority": "Magic/rare gear with plenty of Life and resistances. A wand + focus with cold spell damage. Boots with movement speed (per the source guide's FAQ on defenses).",
+        "caution": "Frostbolt does not work without Snakepit. Ice Nova and Frost Darts lose a lot of damage without cold Infusion, so collect Remnants with Frost Bomb and Snap (per the source guide).",
+        "transitionCondition": "Enter Act 2 and add Elemental Weakness."
+      },
+      {
+        "label": "Act 2 (Adding a Curse)",
+        "mainSkill": "Keep leveling with Ice Nova and Frost Darts, and lower enemy resistances with Elemental Weakness. Update Frost Bomb's supports to Spell Echo.",
+        "supports": "Give Ice Nova Controlled Destruction, Considered Casting and Ice Bite. Give Frost Darts Controlled Destruction and Considered Casting. Give Frost Bomb Overabundance and Spell Echo. Give Snap Magnified Area and Controlled Destruction. Give Elemental Weakness Heightened Curse and Efficiency.",
+        "passivePriority": "Head toward 114 nodes in the campaign. Progress into cold damage and critical nodes, preparing to add Frost Wall in Act 3 (source planner).",
+        "gearPriority": "Keep prioritizing Life and resistances. From Act 4, start switching to high-ES Intelligence gear (per the source guide's FAQ).",
+        "caution": "Defenses are thin in Acts 1–3. Raise Life and resistances, and use Frost Wall defensively as well (per the source guide's FAQ).",
+        "transitionCondition": "Enter Act 3 and add Frost Wall and Siphon Elements."
+      },
+      {
+        "label": "Act 3 to Maps (Adding Frost Wall)",
+        "mainSkill": "Create ice crystals with Frost Wall, and freeze enemies with Siphon Elements to collect cold Infusion. Give Frost Darts Elemental Focus and Cold Penetration to raise single-target damage.",
+        "supports": "Give Ice Nova Considered Casting, Astral Projection and Ice Bite II. Give Frost Darts Considered Casting, Elemental Focus and Cold Penetration. Give Frost Wall Icicle, Spell Cascade and Cooldown Recovery. Give Frost Bomb Overabundance, Spell Echo and Cooldown Recovery. Give Snap Magnified Area II, Elemental Focus and Cooldown Recovery. Give Elemental Weakness Heightened Curse, Efficiency and Prolonged Duration II. Give Siphon Elements Harmonic Remnants II and Remnant Potency.",
+        "passivePriority": "114 nodes in the campaign. Grow cold damage, critical and Life + ES (source planner).",
+        "gearPriority": "Start switching to high-ES Intelligence gear. Keep a Life + ES hybrid (per the source guide).",
+        "caution": "Infusion stacks up to 3. Raise the cap with Frozen Limit and Infused Limits (per the source guide's FAQ).",
+        "transitionCondition": "Clear the campaign and enter Maps. Add Cast on Elemental Ailment + Comet."
+      },
+      {
+        "label": "Maps (Starting Cast on Elemental Ailment + Comet)",
+        "mainSkill": "At Lv58, put Comet and Living Bomb in Cast on Elemental Ailment so Comets drop automatically on freeze. Comet is strengthened by Fire Remnants, and Living Bomb creates Fire Remnants automatically. Freeze enemies with Ice Nova and break Frost Wall crystals to build energy. For single targets, debuff with Sigil of Power and Elemental Weakness before attacking.",
+        "supports": "Give Ice Nova Astral Projection, Magnified Area II, Ice Bite II and Rising Tempest. Give Frost Darts Elemental Focus, Considered Casting, Cold Penetration and Cold Mastery. Give Frost Wall Spell Cascade, Icicle, Fortress and Cooldown Recovery II. Give Frost Bomb Overabundance, Spell Echo, Cooldown Recovery II and Potent Exposure. Give Snap Magnified Area II, Cooldown Recovery II, Elemental Focus and Innervate. Give Cast on Elemental Ailment Comet, Living Bomb, Efficiency II and Concentrated Area. Give Elemental Weakness Heightened Curse, Efficiency II, Focused Curse and Rapid Casting II. Give Sigil of Power Prolonged Duration II, Cooldown Recovery II and Magnified Area II. Give Siphon Elements Harmonic Remnants II and Remnant Potency III.",
+        "passivePriority": "141 nodes in Early Maps. Take Careful Assassin, Controlling Magic and Critical Exploit to prepare for the switch to Cast on Critical (as in the source). The goal is a Frostbolt critical chance of 70% or higher.",
+        "gearPriority": "Mana: prepare two jewels that recover 2% of maximum Mana on kill (source FAQ). Update your staff + focus toward cold spell levels and critical chance (source summary). Secure +30 or more Spirit on your body armour or amulet (as in the source).",
+        "caution": "One Comet needs 300 energy. A critical hit on a normal monster only generates 1 energy, so Comets stall when few enemies are frozen (source FAQ). Bosses freeze only about once every few seconds, so Cast on Elemental Ailment has low single-target damage (as in the source).",
+        "transitionCondition": "Once Frostbolt's critical chance is around 70%, switch from Cast on Elemental Ailment to Cast on Critical and move to the Frostbolt Swap (as in the source). Snakepit can be equipped at Lv32."
+      },
+      {
+        "label": "Frostbolt Swap (Lv32+)",
+        "mainSkill": "Switch to Frostbolt. Snakepit turns its pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Critical. Raise Comet to Lv21. Add Convalescence as a recovery tool.",
+        "supports": "Give Frostbolt Projectile Acceleration III, Multishot II, Pinpoint Critical and Ice Bite II. Give Cast on Critical Comet Lv21, Living Bomb Lv3, Efficiency II and Pinpoint Critical. Give Frost Wall Spell Cascade, Fortress, Cooldown Recovery II and Pinpoint Critical. Give Frost Bomb Overabundance, Spell Echo, Potent Exposure and Cooldown Recovery II. Give Elemental Weakness Efficiency II, Prolonged Duration II, Heightened Curse and Cursed Ground. Give Convalescence Second Wind III, Prolonged Duration II and Cooldown Recovery II. Give Sigil of Power Prolonged Duration II, Cooldown Recovery II and Magnified Area II.",
+        "passivePriority": "144 nodes for Frostbolt + CI. Grow ES in preparation for moving to Chaos Inoculation (source planner).",
+        "gearPriority": "Equip Snakepit on the left ring (the core of the fork). Prioritize cold spell levels and critical chance on your staff + focus (source summary). Maligaro's Virtuosity gloves avoid the Pinpoint Critical penalty if you have them (as in the source).",
+        "caution": "Snakepit works only in the left ring slot. Removing the fork effect with a Vaal Cultivation Orb reverts it to pierce (per the source guide's FAQ). Forked projectiles exploding can look like pierce, but that is normal behavior (per the source guide's FAQ).",
+        "transitionCondition": "Once your ES gear is ready and ES reaches 5,000–6,000, move to Chaos Inoculation and into the Endgame (as in the source)."
+      },
+      {
+        "label": "Endgame (CI + Min Maxed)",
+        "mainSkill": "Move to Chaos Inoculation and fight with Life 1 and an ES-focused 'blue Life'. Frostbolt stays the main skill. Once you take Baryanic Leylines, equip two Time-Lost Sapphires. Support Mana sustain with Mana Remnants.",
+        "supports": "Give Frostbolt Wildshards II, Vilenta's Propulsion, Pinpoint Critical, Efficiency II and Ice Bite II. Give Cast on Critical Comet Lv21, Living Bomb Lv3, Efficiency II, Pinpoint Critical and Concentrated Area. Give Frost Wall Spell Cascade, Fortress, Cooldown Recovery II, Rapid Casting II and Pinpoint Critical. Give Frost Bomb Overabundance, Spell Echo, Potent Exposure and Cooldown Recovery II. Give Elemental Weakness Heightened Curse, Prolonged Duration II, Efficiency II, Cursed Ground and Ritualistic Curse. Give Convalescence Prolonged Duration II, Second Wind III and Cooldown Recovery II. Give Mana Remnants Harmonic Remnants II and Remnant Potency. Give Sigil of Power Magnified Area II, Prolonged Duration II and Cooldown Recovery II.",
+        "passivePriority": "152 nodes at Min Maxed. Fill in Baryanic Leylines and many ES and critical nodes (source planner and summary). Allocate unconnected passives around keystones with From Nothing.",
+        "gearPriority": "Mageblood (belt), Rite of Passage (Spirit: Owl), From Nothing (a jewel that allocates unconnected passives around keystones), Time-Lost Sapphire (area + critical chance) (source planner, Min Maxed). Switch to CI gear (ES-focused; chaos resistance is no longer needed). Note that the body armour 'Soul Mantle' is the name of a rare item, not the unique Soul Mantle (source planner).",
+        "caution": "The planner's \"Wildshards III\" does not exist in the game (only I and II). This guide uses the highest tier, Wildshards II (see the research report). Min-maxed gear is a long-term goal to collect over most of the league (per the source guide).",
+        "transitionCondition": "Final form. From here, keep perfecting Time-Lost Sapphires and max-rolling each piece of gear."
+      }
+    ],
+    "mainSkill": "Frostbolt — Snakepit (left ring) turns pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Elemental Ailment / Cast on Critical. Before getting Snakepit, level with Ice Nova (clearing) and Frost Darts (single target), and switch to Frostbolt once you can equip Snakepit at Lv32. The Disciple of Varashta ascendancy Instruments of Power lets you use a staff and focus together, and Baryanic Leylines widens the area of Time-Lost Sapphires.",
+    "path": "/builds/sorceress/frostbolt-comet-varashta/",
+    "contentRevision": "bf0dcbbaaa879f66"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

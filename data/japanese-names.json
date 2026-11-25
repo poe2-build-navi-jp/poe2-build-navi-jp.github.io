@@ -279,6 +279,10 @@
       "ja": "バラージ",
       "ref": "https://poe2db.tw/jp/Barrage"
     },
+    "Baryanic Leylines": {
+      "ja": "バリャのレイライン",
+      "ref": "https://poe2db.tw/jp/Baryanic_Leylines"
+    },
     "Beacon of Azis": {
       "ja": "アジスの標",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
@@ -535,9 +539,17 @@
       "ja": "カニバリズム II",
       "ref": "https://poe2db.tw/jp/Cannibalism_II"
     },
+    "Careful Assassin": {
+      "ja": "注意深い暗殺者",
+      "ref": "https://poe2db.tw/jp/Careful_Assassin"
+    },
     "Cast on Critical": {
       "ja": "クリティカル時キャスト",
       "ref": "https://poe2db.tw/jp/Cast_on_Critical"
+    },
+    "Cast on Elemental Ailment": {
+      "ja": "元素系状態異常時キャスト",
+      "ref": "https://poe2db.tw/jp/Cast_on_Elemental_Ailment"
     },
     "Catha's Brilliance": {
       "ja": "キャサの輝き",
@@ -731,6 +743,10 @@
       "ja": "制御された変質",
       "ref": "https://poe2db.tw/jp/Controlled_Metamorphosis"
     },
+    "Controlling Magic": {
+      "ja": "支配の魔法",
+      "ref": "https://poe2db.tw/jp/Controlling_Magic"
+    },
     "Convalescence": {
       "ja": "コンヴァレッセンス",
       "ref": "https://poe2db.tw/jp/Convalescence"
@@ -794,6 +810,10 @@
     "Crisis Fragment": {
       "ja": "危機のフラグメント",
       "ref": "https://poe2db.tw/jp/Ancient_Crisis_Fragment"
+    },
+    "Critical Exploit": {
+      "ja": "致命的な抜け道",
+      "ref": "https://poe2db.tw/jp/Critical_Exploit"
     },
     "Crossbow Shot": {
       "ja": "クロスボウショット",
@@ -898,6 +918,10 @@
     "Delirium Tablet": {
       "ja": "デリリウムの石板",
       "ref": "https://poe2db.tw/jp/Delirium_Tablet"
+    },
+    "Dependable Ward": {
+      "ja": "信頼できる守り",
+      "ref": "https://poe2db.tw/jp/Dependable_Ward"
     },
     "Desecrated Modifiers": {
       "ja": "冒涜モッド",
@@ -1751,6 +1775,10 @@
       "ja": "アルティメイタムの刻印",
       "ref": "https://poe2db.tw/jp/Inscribed_Ultimatum"
     },
+    "Instruments of Power": {
+      "ja": "力の装具",
+      "ref": "https://poe2db.tw/jp/Instruments_of_Power"
+    },
     "Into the Breach": {
       "ja": "ブリーチ侵入",
       "ref": "https://poe2db.tw/jp/Into_the_Breach"
@@ -2183,6 +2211,10 @@
       "ja": "メギノルドのベルト",
       "ref": "https://poe2db.tw/jp/Meginords_Girdle"
     },
+    "Melding": {
+      "ja": "融合",
+      "ref": "https://poe2db.tw/jp/Melding"
+    },
     "Mighty Silverfist": {
       "ja": "マイティ・シルバーフィスト",
       "ref": "https://poe2db.tw/jp/Mighty_Silverfist"
@@ -2418,6 +2450,10 @@
     "Path of Mourning": {
       "ja": "哀悼者の道",
       "ref": "https://poe2db.tw/jp/Path_of_Mourning"
+    },
+    "Patient Barrier": {
+      "ja": "耐久性の高いバリア",
+      "ref": "https://poe2db.tw/jp/Patient_Barrier"
     },
     "Patient Devotion": {
       "ja": "忍耐の献身",
@@ -2930,6 +2966,10 @@
     "Sacred Flame": {
       "ja": "聖なる炎",
       "ref": "https://poe2db.tw/jp/Sacred_Flame"
+    },
+    "Sacred Rituals": {
+      "ja": "神聖な儀式",
+      "ref": "https://poe2db.tw/jp/Sacred_Rituals"
     },
     "Sacrifice": {
       "ja": "サクリファイス",
@@ -3478,6 +3518,10 @@
     "The Fall of the Axe": {
       "ja": "斧の一振り",
       "ref": "https://poe2db.tw/jp/The_Fall_of_the_Axe"
+    },
+    "The Fourth Teaching": {
+      "ja": "第4の教え",
+      "ref": "https://poe2db.tw/jp/The_Fourth_Teaching"
     },
     "The Genesis Tree": {
       "ja": "創生の樹",

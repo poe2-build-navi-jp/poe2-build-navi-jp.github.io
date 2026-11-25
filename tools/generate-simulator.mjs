@@ -29,6 +29,7 @@ const skills = {
  'druid-plant-oracle':['Entangle','Thrashing Vines'],
  'druid-grim-pillars-oracle':['Grim Pillars'],
  'druid-frostbolt-comet-oracle':['Frostbolt'],
+ 'sorceress-frostbolt-comet-varashta':['Frostbolt'],
  'witch-ed-contagion-lich':['Essence Drain','Contagion'],
  'mercenary-grenade-gemling':['Explosive Grenade'],
  'huntress-twister-spirit-walker':['Twister'],

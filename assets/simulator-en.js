@@ -10,7 +10,7 @@ const clone = value => structuredClone(value);
 const libraryEvent=(type,detail=null)=>window.dispatchEvent(new window.CustomEvent('poe2:'+type,{detail}));
 const [presets,exampleData] = await loadCatalogs();
 let localization={names:{}},equipmentCatalog,routeCatalog,passiveIcons,editorCatalogPromise;
-async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets-en.json?v=dafc40f3e8','/data/simulator-examples-en.json?v=60c3507b43'].map(async url => {
+async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets-en.json?v=66814414b1','/data/simulator-examples-en.json?v=60c3507b43'].map(async url => {
  const r=await fetch(url);if(!r.ok)throw Error('The build list could not be loaded. Please retry.');return r.json();
 }));}catch(error){$('sim-catalog-error').hidden=false;$('sim-catalog-message').textContent=error.message;await new Promise(resolve=>{$('sim-catalog-retry').onclick=resolve;});$('sim-catalog-error').hidden=true;}}}
 const trackSim=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{page_path:location.pathname,...(selectedPreset?{build_id:selectedPreset.id}:{}),...extra});};
