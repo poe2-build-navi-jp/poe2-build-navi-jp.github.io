@@ -655,6 +655,76 @@
     "contentRevision": "40a4afe8360c1860"
   },
   {
+    "id": "monk-oil-barrage",
+    "name": "オイルバラージ・マーシャルアーティスト",
+    "class": "Monk",
+    "className": "モンク",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "マーシャルアーティスト",
+    "skills": [
+      "Oil Barrage"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜13（ホロウパーム育成・Act 1前半）",
+        "mainSkill": "クォータースタッフで進め、Lv2でフローズンローカス（Frozen Locus）を設置し、グレイシャルカスケード（Glacial Cascade）の大スパイクで起爆する。Lv6でパウンス（Pounce）を移動用に、Lv10でヘラルドオブアイス（Herald of Ice）を追加。Lv13でホロウパームテクニック（Hollow Palm Technique）を取得し、クォータースタッフ不要になる",
+        "supports": "グレイシャルカスケードに効果範囲集中（Concentrated Area）＋憤怒 I（Rage I）。フローズンローカスにアイスバイト（Ice Bite）。ヘラルドオブアイスに効果範囲拡大（Magnified Area）。",
+        "passivePriority": "ホロウパームテクニックへ最速で進む。道中は効率の良い序盤ダメージノードを取る。装備とジェムの要求を満たす分の属性を取る（原典）。",
+        "gearPriority": "DPSの高いマジック／レアのクォータースタッフ。移動速度10%以上のブーツ。ライフの多い兜・胴・ベルト。職人のオーブで武器にソケットを作り、レッサールーンで補強してもよい（原典）。",
+        "caution": "グレイシャルカスケードのダメージは最後の大スパイクが大半を占める。フローズンローカスを一撃で壊すには大スパイクを当てること。凍結を消費すると250%または425%の追加ダメージ倍率が付く（原典）。",
+        "transitionCondition": "Lv13でホロウパームテクニックを取得し、Act 1を進める。"
+      },
+      {
+        "label": "Lv14〜キャンペーン終了（ストームウェーブ育成）",
+        "mainSkill": "Act 2（Lv22前後）でストームウェーブ（Storm Wave）に切り替え、フローズンローカスを起爆してクリアする。単体はウェーブオブフロスト（Wave of Frost）で凍結させ、グレイシャルカスケードの大スパイクで凍結を消費して大ダメージ。Act 3でヘラルドオブサンダー（Herald of Thunder）を追加",
+        "supports": "ストームウェーブに憤怒 II（Rage II）＋元素武装 II（Elemental Armament II）＋枝分かれする亀裂（Branching Fissures）。グレイシャルカスケードに効果範囲集中＋元素武装 II＋元素ダメージ集中（Elemental Focus）。フローズンローカスにアイスバイト II＋元素武装 II＋電気刺激（Innervate）。フロストボムに曝露ブースト（Potent Exposure）。ヘラルドオブアイスに効果範囲拡大 II＋元素武装 II。チャユラの手（Hand of Chayula）に凍結の呪印（Freezing Mark）＋エレメンタルウィークネス（Elemental Weakness）。ウェーブオブフロストに凍結持続（Deep Freeze）＋アイスバイト II。パウンスにクールダウン解消 II（Cooldown Recovery II）。",
+        "passivePriority": "武器セット2（パウンス用）のポイント配分を始める。最初のアセンダンシーは山の道（Way of the Mountain）→ホロウフォーカス技法（Hollow Focus Technique）。キャンペーン終盤はマップ移行に向けた強力なスケーリング用ノードへ振り直しがある（原典注記）。",
+        "gearPriority": "近接スキルレベル＋のグローブ・アミュレット、攻撃への元素フラットダメージのリング。ライフと耐性を優先。移動速度20〜30%のブーツ。トレードではビンデンの角笛（Horns of Bynden）や輝かしい歩調（Luminous Pace）が序盤の選択肢（原典）。",
+        "caution": "キャンペーン終盤にパッシブの振り直しが数か所ある。ゴールドが足りない場合はレア品を売って貯める（原典）。",
+        "transitionCondition": "キャンペーンをクリアし、Early Mapsに入る。300+元素DPSの棘のタリスマンを用意する。"
+      },
+      {
+        "label": "Early Maps（オイルバラージ切替）",
+        "mainSkill": "オイルバラージ（Oil Barrage）に切り替える。マップ開始時にホロウフォーカスの鐘をデバウアー（Devour）で消費して最初のパワーチャージを得て、オイルバラージでクリアする。鐘と倒した敵の死体をこまめにデバウアーしてパワーチャージを維持する。ワーリングアサルト（Whirling Assault）でテンペストベル（Tempest Bell）を置き、連鎖・分岐の起点を増やす",
+        "supports": "オイルバラージに跳弾 II（Ricochet II）＋分岐（Fork）＋サルヴォ（Salvo）＋ノヴァの投射物 I（Nova Projectiles I）。レンド（Rend）にチャージブースト（Heightened Charges）＋持続時間延長 II（Prolonged Duration II）＋憤怒 III（Rage III）。ホロウフォーカスにクールダウン解消 II＋効果範囲拡大 II＋上限超過 II（Overabundance II）。デバウアーに灼熱のクリティカル（Blazing Critical）＋スリルオブキル II（Thrill of the Kill II）＋チャージ追加付与 II（Charge Profusion II）＋憤怒 III。テンペストベルにアンセストラルコール II（Ancestral Call II）＋効果範囲拡大 II＋条件の報酬（Delayed Gratification）。ワーリングアサルトに手慣れたコンボ（Practiced Combo）＋憤怒 III＋アタックスピード増加 III（Rapid Attacks III）。チャユラの手に凍結の呪印＋エレメンタルウィークネス＋吸収の呪印 II（Mark of Siphoning II）。リフュテーション（Refutation）にクールダウン解消 II＋機動力（Mobility）＋コスト軽減 II（Efficiency II）。ウィンドダンサー（Wind Dancer）に効果範囲拡大 II＋スタン III（Stun III）＋断固の一撃 II（Enduring Impact II）。ゴーストダンス（Ghost Dance）にクールダウン解消 II＋クラリティ（Clarity）。チャージレギュレーション（Charge Regulation）を常駐バフとして使う。",
+        "passivePriority": "3つ目のアセンダンシーは石拳の道（Way of the Stonefist）。武器セット1は攻撃ノード、武器セット2はリフュテーション強化のパリィ系ノード（原典）。",
+        "gearPriority": "300+元素DPSの棘のタリスマン（Spiny Talisman、5〜20エグザルト＋追加投資10〜20エグザルトが目安）。各部位1〜2エグザルトの基本装備。石拳の道の取得後はグローブのMod優先度（クリティカルダメージ→基礎クリティカル率→攻撃速度→ヒット時オンスロート）に沿って選ぶ（原典）。",
+        "caution": "ノヴァの投射物は必ず I を使う。II を付けると他のジェムが全部入らなくなる（原典の強い警告）。クリティカル率が低いうちはブラスファミー＋リパルジョン＋エイリスの鐘の編成でパワーチャージ生成を補う選択肢がある（その代わりチャージレギュレーションとゴーストダンスの枠を使う）。",
+        "transitionCondition": "Lv77以上になり、タリスマンを380+元素DPSへ更新できる。アミュレットにソーマタージー発生装置を刻印する。"
+      },
+      {
+        "label": "Lv77〜Late Maps（タリスマン強化＋防御の底上げ）",
+        "mainSkill": "オイルバラージが主軸のまま。クリティカル率50%以上になったらクリティカル集中（Pinpoint Critical）を元素武装 IIに替える。スピリットヴェセル（Spirit Vessel）にオイルバラージを入れて単体火力を上げる",
+        "supports": "Early Mapsの構成に加え、オイルバラージにクリティカル集中（50%未満の間。50%以上で元素武装 IIへ）。レンドにチャージ温存（Perpetual Charge）を追加。ホロウフォーカスに持続時間延長 IIを追加。チャユラの手に電荷の呪印（Charged Mark）を追加。リフュテーションに持続時間延長 IIを追加。スピリットヴェセルにオイルバラージ＋曝露ブースト＋ミニオン巨大化（Hulking Minions）＋ロミラの報い（Romira's Requital）＋アマナムの十分の一税（Amanamu's Tithe）。",
+        "passivePriority": "4つ目のアセンダンシーはルーンの経絡（Runic Meridians）。クリティカル系ノードを詰め、クリティカル率を上げる。タイムロストジュエルはクリティカル率とクリティカルダメージ優先（1〜2Mod、半径はこの段階では不問）（原典）。",
+        "gearPriority": "380+元素DPSで近接／攻撃スキルレベル＋付きのタリスマン（10〜50エグザルト、任意で1〜2ディヴァイン）。スキルジェムをアンカットスキルジェム（Lv17〜18）で更新。アミュレットにソーマタージー発生装置を刻印。忘れられし看守（Forgotten Warden）で生存力を大きく上げる。タイムロストジュエル（クリティカル率＆クリティカルダメージ優先）（原典）。",
+        "caution": "ヴェルシウムアンビル（Versium Anvil）で石の拳（Fists of Stone）をルーンフォージの石の拳へ変換しないと、忘れられし看守のスピリットヴェセル構成でリフュテーションが使えない（原典）。リフュテーションはクリア中は使わないこと（重いスタンを受けるため）。",
+        "transitionCondition": "タリスマン490+元素DPS・クリティカル率15%以上、アイテムレアリティ150%に近づき、ジェムLv19〜20・品質20%まで育ったらEndgameへ。"
+      },
+      {
+        "label": "Endgame（クリティカル100%・高IIR）",
+        "mainSkill": "オイルバラージ（Lv20・品質20%）。パワーチャージ生成はソーマタージー発生装置＋石拳の道のグローブ（クリティカル時パワーチャージ）＋ホロウフォーカスのエイリスの鐘で自動化が進む。ボスではワーリングアサルトでテンペストベルを置いて単体火力を上げる",
+        "supports": "オイルバラージに元素武装 II（クリティカル集中は外す）。ホロウフォーカスにリビングライトニング II（Living Lightning II）＋究極の一撃 II（Culmination II）＋エイリスの鐘＋チャージ追加付与 II。レンドにアタックスピード増加 IIIを追加。チャユラの手に死の呪印 II（Mark for Death II）を追加。リフュテーションにキャストスピード増加 II（Rapid Casting II）を追加。ウィンドダンサーに盲目 II（Blind II）を追加。スピリットヴェセルはLate Mapsと同じ。",
+        "passivePriority": "クリティカル率を100%に近づける。エネルギーシールドと回避・受け流しのバランスを取る。効果範囲を広げるジュエル（クリティカル率＆クリティカルダメージ優先の3〜4Modタイムロストジュエル、サフィックス効果増加ジュエル）を詰める（原典）。",
+        "gearPriority": "490+元素DPS・クリティカル率15%以上・スキルレベル＋付きのタリスマン。アイテムレアリティ150%を目指す。移動速度35%以上の回避・受け流し付きブーツ。忘れられし看守はより良いロールへ更新。ジェムLv19〜20・品質20%（原典）。",
+        "caution": "チャネリングの遅延はスキル速度で後半解消される（原典の短所）。「当たらない立ち回り」が前提のビルドで、深淵モンスターなど一部の敵には高火力と範囲が要る（原典FAQ）。",
+        "transitionCondition": "Lv21ジェム・ラキアタの流れ・ザロークの贈り物など長期目標に進む準備ができたらAspirationalへ。"
+      },
+      {
+        "label": "Aspirational（Lv21ジェム・長期目標）",
+        "mainSkill": "オイルバラージ Lv21・品質0%（ラキアタの流れ使用時）。チャユラの手からエレメンタルウィークネスを外し、スピリットヴェセルからオイルバラージを外す（ラキアタの流れ構成の原典指示）。パウンスに替えてチャユラの手を使ってもよい。マッピング用にはブラスファミー＋リパルジョン編成へ組み替える選択肢がある（その場合はリフュテーションを外し、胴にスピリット＋50が必要）",
+        "supports": "オイルバラージにラキアタの流れ（Rakiata's Flow）。チャユラの手に呪印永続化（Eternal Mark）を追加。チャージレギュレーションにウートレドの大移動（Uhtred's Exodus）を追加。マッピング用はブラスファミーにリパルジョン＋リビングライトニング II＋究極の一撃 II＋エイリスの鐘＋チャージ追加付与 II。",
+        "passivePriority": "5Modジュエルと4〜5Modタイムロストジュエルでクリティカル率・クリティカルダメージを詰める。ジュエルは品質20%まで上げる（原典）。",
+        "gearPriority": "購入可能な最高元素DPS（または物理DPS）のタリスマン（クリティカル率15%以上・攻撃速度・スキルレベル＋）。兜にレイヴンタッチシャード（Raven-Touched Shard）を付け、アミュレットの刻印はソーマタージー発生装置からザロークの贈り物（Zarokh's Gift）へ更新する。アイテムレアリティ150%以上を維持。通過儀礼（Rite of Passage）の精霊は移動速度・スキル速度・追加雷ダメージのSpirit of the Stagを最優先、次にクリティカル率と回避のSpirit of the Cat、移動速度・スキル速度・アーマーブレイクのSpirit of the Wolf、エネルギーシールドとダメージのSpirit of the Owl、最大ライフと被ダメージ軽減のSpirit of the Bear（原典の優先順）。",
+        "caution": "Aspirational装備は長期目標で、リーグ中の大半の期間をかけて集めるもの（原典）。精霊の日本語名はpoe2dbで未確認のため英語表記（調査報告を参照）。",
+        "transitionCondition": "完成形。以後はジュエルの多Mod化と各装備の最大ロール化、タイムロストジュエルの厳選を進める。"
+      }
+    ],
+    "mainSkill": "オイルバラージ— パワーチャージを消費して連鎖・分岐・ノヴァの投射物を放つ。ホロウフォーカスの鐘や倒した敵の死体をデバウアーで消費してパワーチャージを生成する。序盤はフローズンローカス＋グレイシャルカスケード、Act 2からストームウェーブで育成し、Early Mapsでオイルバラージへ切り替える",
+    "path": "/builds/monk/oil-barrage/",
+    "contentRevision": "b73618eaec317b92"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "ツイスター・ジェムリング",
     "class": "Mercenary",

@@ -15,6 +15,7 @@ const skills = {
  'monk-infernal-legion-chayula':['Companion: {0}'],
  'monk-lightning-minion-chayula':['Spectre: {0}'],
  'monk-minion-chayula':['Spectre: {0}'],
+ 'monk-oil-barrage':['Oil Barrage'],
  'mercenary-twister-gemling':['Twister'],
  'warrior-shield-wall-smith':['Shield Wall'],
  'warrior-shield-wall-warbringer':['Shield Wall'],'mercenary-supporting-fire-tactician':['Supporting Fire'],
