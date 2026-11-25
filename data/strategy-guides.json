@@ -5506,10 +5506,10 @@
   },
   {
     "slug": "unique-gear",
-    "title": "おすすめユニーク装備一覧｜24ビルドの最強候補と採用条件",
-    "summary": "PoE2 0.5.5の掲載24ビルド・92候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
+    "title": "おすすめユニーク装備一覧｜25ビルドの最強候補と採用条件",
+    "summary": "PoE2 0.5.5の掲載25ビルド・100候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
     "category": "basics",
-    "version": "掲載24ビルド：0.5.5／原典の版は出典欄で区別",
+    "version": "掲載25ビルド：0.5.5／原典の版は出典欄で区別",
     "checkedAt": "2026-11-25",
     "publishedAt": "2026-10-12",
     "updatedAt": "2026-11-25",
@@ -5593,13 +5593,13 @@
       "原典の構成名と、装備に必要な効果を合わせる",
       "交換後の耐性・Spirit・防御を確認して育成へ戻る"
     ],
-    "tocLabel": "掲載24ビルドからユニーク装備を探す",
+    "tocLabel": "掲載25ビルドからユニーク装備を探す",
     "sections": [
       {
         "id": "build-unique-summary",
-        "heading": "PoE2おすすめユニーク装備一覧｜24ビルドの選び方早見",
+        "heading": "PoE2おすすめユニーク装備一覧｜25ビルドの選び方早見",
         "paragraphs": [
-          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全92候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
+          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全100候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
         ],
         "gearSummary": true
       },
@@ -6674,6 +6674,141 @@
           92
         ],
         "quickAnswer": "最初の購入は300+元素DPSのタリスマン。Lv77〜で忘れられし看守を入れてスピリットヴェセル構成を整え、完成形はタリスマン490+・クリティカル率15%以上・アイテムレアリティ150%です。"
+      },
+      {
+        "id": "druid-frostbolt-comet-oracle",
+        "heading": "フロストボルト＋クリティカル時キャストのコメット・オラクルのおすすめユニーク装備",
+        "buildId": "druid-frostbolt-comet-oracle",
+        "paragraphs": [
+          "スネークピットが中核のビルドで、Lv32で装備できてからフロストボルトへ切り替えます。Endgameではテンポラリスやメイジブラッドなど、原典プランナーの Min Maxed 構成のユニークを揃えます。ワンド＋フォーカスはレア品の厳選が中心です。"
+        ],
+        "gearOptions": [
+          {
+            "name": "Snakepit",
+            "slot": "指輪",
+            "phase": "Lv32〜（フロストボルト切替）",
+            "purpose": "フロストボルトの貫通を分岐に変え、爆発を重ねてクリアするビルドの中核",
+            "conditions": "Lv32で装備可能。左リングスロットに装備する（原典）。",
+            "tradeoff": "指輪枠を中核ユニークに使うため、耐性やライフは他の部位で補う必要がある。",
+            "rareAlternative": "分岐効果のないレアリングではフロストボルトの仕組みが成立しないため、スネークピットが必須",
+            "sourceRefs": [
+              93,
+              94
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "スネークピット"
+          },
+          {
+            "name": "Temporalis",
+            "slot": "胴",
+            "phase": "Endgame（CI・Min Maxed）",
+            "purpose": "原典プランナーの Min Maxed 構成で採用される胴",
+            "conditions": "原典プランナー Min Maxed で指定。CI移行後の完成形装備。",
+            "tradeoff": "胴枠を完成形構成に使うため、ESや耐性は他部位で補う必要がある。",
+            "rareAlternative": "ES値の高い知性レア胴",
+            "sourceRefs": [
+              93,
+              95
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "テンポラリス"
+          },
+          {
+            "name": "Kalandra's Touch",
+            "slot": "指輪",
+            "phase": "Endgame（Min Maxed）",
+            "purpose": "原典プランナーの Min Maxed 構成で採用される指輪",
+            "conditions": "原典プランナー Min Maxed で指定。",
+            "tradeoff": "指輪枠を完成形構成に使うため、耐性やライフは他の部位で補う必要がある。",
+            "rareAlternative": "不足する耐性・ライフを補うレアリング",
+            "sourceRefs": [
+              93,
+              96
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "カランドラの接触"
+          },
+          {
+            "name": "Mageblood",
+            "slot": "ベルト",
+            "phase": "Endgame（Min Maxed）",
+            "purpose": "原典プランナーの Min Maxed 構成で採用されるベルト",
+            "conditions": "原典プランナー Min Maxed で指定。",
+            "tradeoff": "ベルト枠を完成形構成に使うため、耐性やライフは他の部位で補う必要がある。",
+            "rareAlternative": "不足する耐性・ライフを補うレアベルト",
+            "sourceRefs": [
+              93,
+              97
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "メイジブラッド"
+          },
+          {
+            "name": "Nascent Hope",
+            "slot": "チャーム",
+            "phase": "Endgame（Min Maxed）",
+            "purpose": "原典プランナーの Min Maxed 構成で採用されるチャーム",
+            "conditions": "原典プランナー Min Maxed で指定。",
+            "tradeoff": "チャーム枠を完成形構成に使うため、状態異常対策は他の部位で補う必要がある。",
+            "rareAlternative": "不足する状態異常対策を補う通常チャーム",
+            "sourceRefs": [
+              93,
+              98
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "希望の芽吹き"
+          },
+          {
+            "name": "Rite of Passage",
+            "slot": "チャーム",
+            "phase": "Endgame（Min Maxed）",
+            "purpose": "原典プランナーの Min Maxed 構成で採用されるチャーム",
+            "conditions": "原典プランナー Min Maxed で指定。",
+            "tradeoff": "チャーム枠を完成形構成に使うため、状態異常対策は他の部位で補う必要がある。",
+            "rareAlternative": "不足する状態異常対策を補う通常チャーム",
+            "sourceRefs": [
+              93,
+              99
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "通過儀礼"
+          },
+          {
+            "name": "Runeseeker's Call",
+            "slot": "武器",
+            "phase": "Endgame（Min Maxed）",
+            "purpose": "原典プランナーの Min Maxed 構成で採用される武器",
+            "conditions": "原典プランナー Min Maxed で指定。",
+            "tradeoff": "武器枠を完成形構成に使うため、冷気スペルレベルとクリティカル率は他の部位でも補う必要がある。",
+            "rareAlternative": "冷気スペルレベルとクリティカル率の高いレアワンド＋フォーカス",
+            "sourceRefs": [
+              93,
+              100
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ルーンシーカーの呼び声"
+          },
+          {
+            "name": "Time-Lost Sapphire",
+            "slot": "ジュエル",
+            "phase": "Endgame（Min Maxed）",
+            "purpose": "範囲拡大とクリティカルダメージのModを優先するジュエル（原典サマリー）",
+            "conditions": "原典プランナー Min Maxed で指定。範囲拡大とクリティカルダメージのModを優先する。",
+            "tradeoff": "ジュエル枠を範囲＋クリティカルダメージに使うため、マナ維持や耐性は他のジュエルや装備で補う必要がある。",
+            "rareAlternative": "範囲拡大・クリティカルダメージを補うレアジュエル",
+            "sourceRefs": [
+              93,
+              101
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "タイムロストサファイア"
+          }
+        ],
+        "sourceRefs": [
+          93,
+          94
+        ],
+        "quickAnswer": "最初の購入は左リングのスネークピット。Lv32で装備してフロストボルトへ切り替えます。完成形はテンポラリスやメイジブラッドなど Min Maxed 構成のユニークと、範囲＋クリティカルダメージのタイムロストサファイアです。"
       },
       {
         "id": "mercenary-twister-gemling",
@@ -8007,6 +8142,68 @@
         "checkedAt": "2026-11-25",
         "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
         "japaneseUrl": "https://poe2db.tw/jp/Forgotten_Warden"
+      },
+      {
+        "name": "Maxroll: Frostbolt Cast On Crit Comet Oracle Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-oracle",
+        "checkedAt": "2026-11-25",
+        "supports": "フロストボルト＋クリティカル時キャストのコメット・オラクルの装備（スネークピットほか）と購入順を確認。本文を直接確認。"
+      },
+      {
+        "name": "PoE2DB: スネークピット（Snakepit）",
+        "url": "https://poe2db.tw/us/Snakepit",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Snakepit"
+      },
+      {
+        "name": "PoE2DB: テンポラリス（Temporalis）",
+        "url": "https://poe2db.tw/us/Temporalis",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Temporalis"
+      },
+      {
+        "name": "PoE2DB: カランドラの接触（Kalandra's Touch）",
+        "url": "https://poe2db.tw/us/Kalandras_Touch",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Kalandras_Touch"
+      },
+      {
+        "name": "PoE2DB: メイジブラッド（Mageblood）",
+        "url": "https://poe2db.tw/us/Mageblood",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Mageblood"
+      },
+      {
+        "name": "PoE2DB: 希望の芽吹き（Nascent Hope）",
+        "url": "https://poe2db.tw/us/Nascent_Hope",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Nascent_Hope"
+      },
+      {
+        "name": "PoE2DB: 通過儀礼（Rite of Passage）",
+        "url": "https://poe2db.tw/us/Rite_of_Passage",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Rite_of_Passage"
+      },
+      {
+        "name": "PoE2DB: ルーンシーカーの呼び声（Runeseeker's Call）",
+        "url": "https://poe2db.tw/us/Runeseekers_Call",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Runeseekers_Call"
+      },
+      {
+        "name": "PoE2DB: タイムロストサファイア（Time-Lost Sapphire）",
+        "url": "https://poe2db.tw/us/Time-Lost_Sapphire",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Time-Lost_Sapphire"
       }
     ],
     "scope": "2026-10-12に各原典の本文・公開HTML内の構成別装備データとPoE2DBを照合。原典採用品・別原典の候補・効果から検討する候補を区別しています。ゲーム内実測、全装備の同条件比較、相場調査、各ビルドの育成手順の全面再検証は行っていません。Maxrollは取得できなかったため今回の採用確認には使用していません。装備データの仕様と、原典作者による推奨・運営者の選び方を分けて記載。文章や画像の転載はしません。 日本語名はPoE2DB日本語ページの装備データ本文で照合。検索結果のタイトルに同名パッシブが混ざる場合は、装備種別とアイコンを確認して区別しています。",
@@ -8129,6 +8326,10 @@
       {
         "date": "2026-11-25",
         "summary": "オイルバラージ・マーシャルアーティストのビルド追加に合わせ、候補1点（忘れられし看守）のセクションを追加。掲載は24ビルド・92候補になりました。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "フロストボルト＋クリティカル時キャストのコメット・オラクルのビルド追加に合わせ、候補8点（スネークピット、テンポラリス、カランドラの接触、メイジブラッド、希望の芽吹き、通過儀礼、ルーンシーカーの呼び声、タイムロストサファイア）のセクションを追加。掲載は25ビルド・100候補になりました。"
       }
     ]
   },
@@ -10918,8 +11119,8 @@
   },
   {
     "slug": "build-gear-buying-order",
-    "title": "ビルド別の装備購入順｜低予算から完成形へ進む24構成",
-    "summary": "掲載24ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
+    "title": "ビルド別の装備購入順｜低予算から完成形へ進む25構成",
+    "summary": "掲載25ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
     "category": "basics",
     "version": "0.5.5掲載構成",
     "checkedAt": "2026-11-25",
@@ -11086,9 +11287,15 @@
         "url": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide",
         "checkedAt": "2026-11-25",
         "supports": "オイルバラージ・マーシャルアーティストの装備優先を確認し、購入順へ再編集。"
+      },
+      {
+        "name": "Maxroll: Frostbolt Cast On Crit Comet Oracle Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-oracle",
+        "checkedAt": "2026-11-25",
+        "supports": "フロストボルト＋クリティカル時キャストのコメット・オラクルの装備優先を確認し、購入順へ再編集。"
       }
     ],
-    "scope": "掲載済み24ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+    "scope": "掲載済み25ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
     "structuredCitations": true,
     "keywords": [
       "装備購入順",
@@ -11116,7 +11323,7 @@
     "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
     "verification": {
       "method": "既存の個別ビルドの装備優先項目を再編集。ツイスター・アイスショットの作者解説と装備データは別途参照。",
-      "confirmed": "掲載済み24ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+      "confirmed": "掲載済み25ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
       "unverified": "12原典の全段階の再検証、全装備の購入価格、交換前後の同条件実測、最安クリア構成。"
     },
     "revisionNotes": [
@@ -11171,6 +11378,10 @@
       {
         "date": "2026-11-25",
         "summary": "オイルバラージ・マーシャルアーティストの購入順セクションを追加。掲載は24構成になりました。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "フロストボルト＋クリティカル時キャストのコメット・オラクルの購入順セクションを追加。掲載は25構成になりました。"
       }
     ],
     "quickLinks": [
@@ -11180,7 +11391,7 @@
       },
       {
         "href": "#build-list",
-        "label": "24ビルドから選ぶ"
+        "label": "25ビルドから選ぶ"
       },
       {
         "href": "#before-after",
@@ -11239,7 +11450,7 @@
       },
       {
         "id": "build-list",
-        "heading": "掲載24ビルドから装備の購入順を選ぶ",
+        "heading": "掲載25ビルドから装備の購入順を選ぶ",
         "paragraphs": [
           "以下は必須購入ランキングではなく、個別ページの掲載済み育成データを使った確認順です。すでに満たしている防御項目へ買い直す必要はありません。段階ごとの細かいジェムや切替条件は、現在Lvの育成案内へ戻って照合してください。"
         ],
@@ -11599,6 +11810,31 @@
         ],
         "sourceRefs": [
           26
+        ]
+      },
+      {
+        "id": "druid-frostbolt-comet-oracle",
+        "heading": "フロストボルト＋クリティカル時キャストのコメット・オラクルの装備購入順",
+        "paragraphs": [
+          "掲載済みのAct 1〜Endgame完成段階で確認する項目：ユニーク必須の出発点は左リングのスネークピットで、Lv32で装備してフロストボルトへ切り替えます。CI移行後はES装備へ切り替え、完成形は Min Maxed 構成のユニークです。[source:27]"
+        ],
+        "bullets": [
+          "最初の1点：左リングのスネークピット。Lv32で装備できるようになったらフロストボルトへ切り替える。装備できない間はアイスノヴァ＋フロストダーツで進める。原典が切替条件とする品。",
+          "火力・機能を買い足す：冷気スペルレベルとクリティカル率のワンド＋フォーカスへ更新する。キル時最大マナ2%回復のジュエル2個を用意し、CI移行に向けES値の高い知性装備へ切り替える。",
+          "後回し・まとめて準備する品：テンポラリス・カランドラの接触・メイジブラッド・ルーンシーカーの呼び声・希望の芽吹き・通過儀礼と、範囲＋クリティカルダメージのタイムロストサファイア。原典プランナーの Min Maxed 構成は長期目標。"
+        ],
+        "links": [
+          {
+            "href": "/builds/druid/frostbolt-comet-oracle/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#druid-frostbolt-comet-oracle",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          27
         ]
       },
       {
@@ -16220,7 +16456,10 @@
             [
               "フロストボルト＋クリティカル時キャストのコメット・オラクル",
               "Frostbolt Cast On Crit Comet Oracle",
-              "—"
+              {
+                "text": "フロストボルト＋クリティカル時キャストのコメット・オラクル",
+                "href": "/builds/druid/frostbolt-comet-oracle/"
+              }
             ],
             [
               "フロストボルト＋クリティカル時キャストのコメット・ヴァラシュタの弟子",
@@ -16583,7 +16822,7 @@
         "id": "site-builds",
         "heading": "このサイトの掲載ビルドはどこにある？",
         "paragraphs": [
-          "このサイトで育成手順を掲載している24ビルドのうち、21ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
+          "このサイトで育成手順を掲載している25ビルドのうち、22ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
         ],
         "table": {
           "caption": "掲載ビルドとMaxrollのTier",
@@ -16744,6 +16983,14 @@
               },
               "A",
               "Oil Barrage Martial Artist"
+            ],
+            [
+              {
+                "text": "フロストボルト＋クリティカル時キャストのコメット・オラクル",
+                "href": "/builds/druid/frostbolt-comet-oracle/"
+              },
+              "A",
+              "Frostbolt Cast On Crit Comet Oracle"
             ],
             [
               {
@@ -17005,6 +17252,10 @@
       {
         "date": "2026-11-25",
         "summary": "オイルバラージ・マーシャルアーティストのビルドページを追加し、A Tier表の「このサイトの記事」欄と掲載ビルド表にリンクを追加。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "フロストボルト＋クリティカル時キャストのコメット・オラクルのビルドページを追加し、A Tier表の「このサイトの記事」欄と掲載ビルド表にリンクを追加。"
       }
     ]
   },

@@ -19,7 +19,7 @@ try{
  const expected=new Set(catalog.tree.flatMap(n=>n.connections.filter(id=>validNodes.has(id)).map(id=>[n.skill,id].sort((a,b)=>a-b).join(':'))));
  assert.equal(edges.length,expected.size,'every directed source connection must be rendered once');
  const presets=JSON.parse(await readFile(resolve(root,'data/simulator-presets.json'),'utf8'));
- assert.equal(presets.length,24);
+ assert.equal(presets.length,25);
  for(const preset of presets){const request=model.newPlan(preset,catalog.gems);assert.ok(request.socket_groups.length,`${preset.id}: primary skill resolved`);const result=await rpc('calculate',request);assert.ok(model.statValue(result,'Life')>0,preset.id);assert.equal(request.character.ascendancy_name,preset.ascendancy);}
  const request=model.newPlan(presets.find(p=>p.id==='mercenary-twister-gemling'),catalog.gems);
  const baseline=await rpc('calculate',request);

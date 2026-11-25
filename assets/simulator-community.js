@@ -21,7 +21,7 @@ if (button) {
   });
   for (const event of ['poe2:library-ready', 'poe2:workspace', 'poe2:goal-state']) window.addEventListener(event, refresh);
   try {
-    const response = await fetch('/data/community-catalog.json?v=d5b20c111e');
+    const response = await fetch('/data/community-catalog.json?v=1cd5fff474');
     if (!response.ok) throw Error('PUBLIC_CATALOG');
     catalog = await response.json(); refresh();
   } catch { status.textContent = t('投稿用データを読み込めませんでした。再読み込みで再試行できます。', 'Publishing data could not load. Reload to retry.'); }

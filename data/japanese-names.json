@@ -155,6 +155,10 @@
       "ja": "神性のアービター",
       "ref": "https://poe2db.tw/jp/Arbiter_of_Divinity"
     },
+    "Arbiter's Ignition": {
+      "ja": "アービターの着火",
+      "ref": "https://poe2db.tw/jp/Arbiters_Ignition"
+    },
     "Arc": {
       "ja": "アーク",
       "ref": "https://poe2db.tw/jp/Arc"
@@ -174,6 +178,10 @@
     "Archon of Undeath": {
       "ja": "不死のアルコン",
       "ref": "https://poe2db.tw/jp/Archon_of_Undeath"
+    },
+    "Arctic Armour": {
+      "ja": "アークティックアーマー",
+      "ref": "https://poe2db.tw/jp/Arctic_Armour"
     },
     "Arctic Howl": {
       "ja": "アークティックハウル",
@@ -198,6 +206,10 @@
     "Asinia": {
       "ja": "アシニア",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
+    },
+    "Astral Projection": {
+      "ja": "アストラルプロジェクション",
+      "ref": "https://poe2db.tw/jp/Astral_Projection"
     },
     "At Your Command": {
       "ja": "あなたの命ずるがままに",
@@ -366,6 +378,10 @@
     "Blindside": {
       "ja": "死角攻撃",
       "ref": "https://poe2db.tw/jp/Blindside"
+    },
+    "Blink": {
+      "ja": "ブリンク",
+      "ref": "https://poe2db.tw/jp/Blink"
     },
     "Blood of Rage": {
       "ja": "血の憤怒",
@@ -663,6 +679,10 @@
       "ja": "冷気マスタリー",
       "ref": "https://poe2db.tw/jp/Cold_Mastery"
     },
+    "Cold Penetration": {
+      "ja": "冷気耐性貫通",
+      "ref": "https://poe2db.tw/jp/Cold_Penetration"
+    },
     "Combat Frenzy": {
       "ja": "コンバットフレンジー",
       "ref": "https://poe2db.tw/jp/Combat_Frenzy"
@@ -718,6 +738,10 @@
     "Cool Headed": {
       "ja": "冷血",
       "ref": "https://poe2db.tw/jp/Cool_Headed"
+    },
+    "Cooldown Recovery": {
+      "ja": "クールダウン解消",
+      "ref": "https://poe2db.tw/jp/Cooldown_Recovery_II"
     },
     "Cooldown Recovery I": {
       "ja": "クールダウン解消 I",
@@ -983,6 +1007,10 @@
       "ja": "エルドリッチバッテリー",
       "ref": "https://poe2db.tw/jp/Eldritch_Battery"
     },
+    "Electromagnetism": {
+      "ja": "エレクトロマグネティズム",
+      "ref": "https://poe2db.tw/jp/Electromagnetism"
+    },
     "Elemental Armament": {
       "ja": "元素武装",
       "ref": "https://poe2db.tw/jp/Elemental_Armament_III"
@@ -1151,6 +1179,10 @@
       "ja": "爆発のリズム",
       "ref": "https://poe2db.tw/jp/Explosive_Rhythm"
     },
+    "Explosive Transmutation": {
+      "ja": "エクスプローシブトランスミューテーション",
+      "ref": "https://poe2db.tw/jp/Explosive_Transmutation"
+    },
     "Extraction": {
       "ja": "ライフ抽出",
       "ref": "https://poe2db.tw/jp/Extraction"
@@ -1235,6 +1267,10 @@
       "ja": "完璧なパターン",
       "ref": "https://poe2db.tw/jp/Flawless_Patterns"
     },
+    "Focused Curse": {
+      "ja": "迅速な呪い",
+      "ref": "https://poe2db.tw/jp/Focused_Curse"
+    },
     "Force of Will": {
       "ja": "意思の力",
       "ref": "https://poe2db.tw/jp/Force_of_Will"
@@ -1303,9 +1339,25 @@
       "ja": "フロストボム",
       "ref": "https://poe2db.tw/jp/Frost_Bomb"
     },
+    "Frost Darts": {
+      "ja": "フロストダーツ",
+      "ref": "https://poe2db.tw/jp/Frost_Darts"
+    },
     "Frost Nexus": {
       "ja": "フロストネクサス",
       "ref": "https://poe2db.tw/jp/Frost_Nexus"
+    },
+    "Frost Wall": {
+      "ja": "フロストウォール",
+      "ref": "https://poe2db.tw/jp/Frost_Wall"
+    },
+    "Frostbolt": {
+      "ja": "フロストボルト",
+      "ref": "https://poe2db.tw/jp/Frostbolt"
+    },
+    "Frozen Limit": {
+      "ja": "凍結の上限",
+      "ref": "https://poe2db.tw/jp/Frozen_Limit"
     },
     "Frozen Locus": {
       "ja": "フローズンローカス",
@@ -1382,6 +1434,10 @@
     "Glacial Rune": {
       "ja": "氷河のルーン",
       "ref": "https://poe2db.tw/jp/Glacial_Rune"
+    },
+    "Glaciation": {
+      "ja": "氷結",
+      "ref": "https://poe2db.tw/jp/Glaciation"
     },
     "Gold Circlet": {
       "ja": "金のサークレット",
@@ -1611,6 +1667,10 @@
       "ja": "アイスティップアロー",
       "ref": "https://poe2db.tw/jp/Ice-Tipped_Arrows"
     },
+    "Icicle": {
+      "ja": "氷柱",
+      "ref": "https://poe2db.tw/jp/Icicle"
+    },
     "Idol of Egrin": {
       "ja": "エグリンのアイドル",
       "ref": "https://poe2db.tw/jp/Idol_of_Egrin"
@@ -1670,6 +1730,10 @@
     "Infested Barrens": {
       "ja": "害虫の荒れ地",
       "ref": "https://poe2db.tw/jp/Infested_Barrens"
+    },
+    "Infused Limits": {
+      "ja": "インフューズの限界",
+      "ref": "https://poe2db.tw/jp/Infused_Limits"
     },
     "Ingenuity": {
       "ja": "創造力",
@@ -1938,6 +2002,10 @@
     "Liquid Emotions": {
       "ja": "液化した感情",
       "ref": "https://poe2db.tw/jp/Liquid_Emotions"
+    },
+    "Living Bomb": {
+      "ja": "リビングボム",
+      "ref": "https://poe2db.tw/jp/Living_Bomb"
     },
     "Living Death": {
       "ja": "生ける死",
@@ -2679,6 +2747,10 @@
       "ja": "レムナント吸引",
       "ref": "https://poe2db.tw/jp/Remnant_Attraction"
     },
+    "Remnant Potency": {
+      "ja": "レムナントブースト",
+      "ref": "https://poe2db.tw/jp/Remnant_Potency_III"
+    },
     "Remnant Potency I": {
       "ja": "レムナントブースト I",
       "ref": "https://poe2db.tw/jp/Remnant_Potency_I"
@@ -2690,6 +2762,10 @@
     "Remnant Potency III": {
       "ja": "レムナントブースト III",
       "ref": "https://poe2db.tw/jp/Remnant_Potency_III"
+    },
+    "Remnants of Kalguur": {
+      "ja": "レムナントオブカルグール",
+      "ref": "https://poe2db.tw/jp/Remnants_of_Kalguur"
     },
     "Rend": {
       "ja": "レンド",
@@ -3075,6 +3151,14 @@
       "ja": "キタヴァの鍛冶屋",
       "ref": "https://poe2db.tw/jp/Smith_of_Kitava"
     },
+    "Snakepit": {
+      "ja": "スネークピット",
+      "ref": "https://poe2db.tw/jp/Snakepit"
+    },
+    "Snap": {
+      "ja": "スナップ",
+      "ref": "https://poe2db.tw/jp/Snap"
+    },
     "Snipe": {
       "ja": "スナイプ",
       "ref": "https://poe2db.tw/jp/Snipe"
@@ -3215,6 +3299,10 @@
       "ja": "サンダー",
       "ref": "https://poe2db.tw/jp/Sunder"
     },
+    "Supercritical": {
+      "ja": "スーパークリティカル",
+      "ref": "https://poe2db.tw/jp/Supercritical"
+    },
     "Supporting Fire": {
       "ja": "サポーティングファイヤー",
       "ref": "https://poe2db.tw/jp/Supporting_Fire"
@@ -3290,6 +3378,10 @@
     "Temporal Chains": {
       "ja": "テンポラルチェーン",
       "ref": "https://poe2db.tw/jp/Temporal_Chains"
+    },
+    "Temporalis": {
+      "ja": "テンポラリス",
+      "ref": "https://poe2db.tw/jp/Temporalis"
     },
     "Tempting Offers": {
       "ja": "魅惑的な誘惑",
@@ -3762,6 +3854,10 @@
     "Vaal Beacon": {
       "ja": "ヴァールビーコン",
       "ref": "https://poe2db.tw/jp/Vaal_Beacon"
+    },
+    "Vaal Cultivation Orb": {
+      "ja": "ヴァール培養のオーブ",
+      "ref": "https://poe2db.tw/jp/Vaal_Cultivation_Orb"
     },
     "Vaal Guard": {
       "ja": "ヴァールガード",

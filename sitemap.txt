@@ -73,6 +73,7 @@ https://poe2-build-navi-jp.github.io/builds/monk/lightning-minion-chayula/
 https://poe2-build-navi-jp.github.io/builds/ranger/twister-deadeye/
 https://poe2-build-navi-jp.github.io/builds/monk/minion-chayula/
 https://poe2-build-navi-jp.github.io/builds/monk/oil-barrage/
+https://poe2-build-navi-jp.github.io/builds/druid/frostbolt-comet-oracle/
 https://poe2-build-navi-jp.github.io/builds/mercenary/twister-gemling/
 https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/
 https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/
