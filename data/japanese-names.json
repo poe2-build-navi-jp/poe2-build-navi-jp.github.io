@@ -71,6 +71,14 @@
       "ja": "アコヤのスピア",
       "ref": "https://poe2db.tw/jp/Akoyan_Spear"
     },
+    "Alpha's Howl": {
+      "ja": "アルファの遠吠え",
+      "ref": "https://poe2db.tw/jp/Alphas_Howl"
+    },
+    "Amanamu's Gaze": {
+      "ja": "アマナムの凝視",
+      "ref": "https://poe2db.tw/jp/Amanamus_Gaze"
+    },
     "Amanamu's Tithe": {
       "ja": "アマナムの十分の一税",
       "ref": "https://poe2db.tw/jp/Amanamus_Tithe"
@@ -190,6 +198,10 @@
     "Atop the World": {
       "ja": "世界の頂で",
       "ref": "https://poe2db.tw/jp/Atop_the_World"
+    },
+    "Atziri's Communion": {
+      "ja": "アッツィリの交感",
+      "ref": "https://poe2db.tw/jp/Atziris_Communion"
     },
     "Atziri's Disdain": {
       "ja": "アッツィリの軽蔑",
@@ -311,9 +323,17 @@
       "ja": "灼熱のクリティカル",
       "ref": "https://poe2db.tw/jp/Blazing_Critical"
     },
+    "Blazing Flux": {
+      "ja": "火炎フラックス",
+      "ref": "https://poe2db.tw/jp/Blazing_Flux"
+    },
     "Blind": {
       "ja": "盲目",
       "ref": "https://poe2db.tw/jp/Blind_II"
+    },
+    "Blinding Strike": {
+      "ja": "盲目にする一撃",
+      "ref": "https://poe2db.tw/jp/Blinding_Strike"
     },
     "Blindside": {
       "ja": "死角攻撃",
@@ -322,6 +342,10 @@
     "Boat Charter": {
       "ja": "船の契約書",
       "ref": "https://poe2db.tw/jp/Boat_Charter"
+    },
+    "Bombard Crossbow": {
+      "ja": "爆撃のクロスボウ",
+      "ref": "https://poe2db.tw/jp/Bombard_Crossbow"
     },
     "Bond of the Ape": {
       "ja": "サルの絆",
@@ -483,6 +507,10 @@
       "ja": "カオスオーブ",
       "ref": "https://poe2db.tw/jp/Chaos_Orb"
     },
+    "Chaos Zealot": {
+      "ja": "カオスゼロット",
+      "ref": "https://poe2db.tw/jp/Chaos_Zealot"
+    },
     "Charge Regulation": {
       "ja": "チャージレギュレーション",
       "ref": "https://poe2db.tw/jp/Charge_Regulation"
@@ -498,6 +526,10 @@
     "Chayula's Gift": {
       "ja": "チャユラの贈り物",
       "ref": "https://poe2db.tw/jp/Chayulas_Gift"
+    },
+    "Chilling Flux": {
+      "ja": "冷却フラックス",
+      "ref": "https://poe2db.tw/jp/Chilling_Flux"
     },
     "Chimeral Inscribed Ultimatum": {
       "ja": "キメラのアルティメイタムの刻印",
@@ -530,6 +562,10 @@
     "Clarity II": {
       "ja": "クラリティ II",
       "ref": "https://poe2db.tw/jp/Clarity_II"
+    },
+    "Clearfell": {
+      "ja": "クリアフェル",
+      "ref": "https://poe2db.tw/jp/Clearfell"
     },
     "Clearing the Way": {
       "ja": "道を掃討",
@@ -623,6 +659,10 @@
       "ja": "コンヴァレッセンス",
       "ref": "https://poe2db.tw/jp/Convalescence"
     },
+    "Cool Headed": {
+      "ja": "冷血",
+      "ref": "https://poe2db.tw/jp/Cool_Headed"
+    },
     "Copper Citadel": {
       "ja": "銅の城塞",
       "ref": "https://poe2db.tw/jp/Copper_Citadel"
@@ -646,6 +686,10 @@
     "Cowardly Fate": {
       "ja": "臆病者の運命",
       "ref": "https://poe2db.tw/jp/Cowardly_Fate"
+    },
+    "Crackling Flux": {
+      "ja": "雷撃フラックス",
+      "ref": "https://poe2db.tw/jp/Crackling_Flux"
     },
     "Craiceann's Rune of Warding": {
       "ja": "クレイシアンの守りのルーン",
@@ -674,6 +718,10 @@
     "Cryptic Key": {
       "ja": "謎の鍵",
       "ref": "https://poe2db.tw/jp/Cryptic_Key"
+    },
+    "Crystalline Flesh": {
+      "ja": "結晶化した肉",
+      "ref": "https://poe2db.tw/jp/Crystalline_Flesh"
     },
     "Crystalline Overgrowth": {
       "ja": "結晶の過成長",
@@ -750,6 +798,10 @@
     "Devour": {
       "ja": "デバウアー",
       "ref": "https://poe2db.tw/jp/Devour"
+    },
+    "Dialla's Desire": {
+      "ja": "ディアーラの欲望",
+      "ref": "https://poe2db.tw/jp/Diallas_Desire"
     },
     "Diretusk Boar": {
       "ja": "ダイアタスク・ボア",
@@ -879,6 +931,10 @@
       "ja": "発現する本能",
       "ref": "https://poe2db.tw/jp/Emergent_Instinct"
     },
+    "Empowering Remnants": {
+      "ja": "強化のレムナント",
+      "ref": "https://poe2db.tw/jp/Empowering_Remnants"
+    },
     "Energised Crystal": {
       "ja": "エネルギーを与えられたクリスタル",
       "ref": "https://poe2db.tw/jp/Energised_Crystal"
@@ -890,6 +946,10 @@
     "Enfolding Dawn": {
       "ja": "包み込む夜明け",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
+    },
+    "Enhanced Barrier": {
+      "ja": "強化バリア",
+      "ref": "https://poe2db.tw/jp/Enhanced_Barrier"
     },
     "Enigmatic Intensification": {
       "ja": "謎めいた増幅",
@@ -903,6 +963,10 @@
       "ja": "交錯する現実",
       "ref": "https://poe2db.tw/jp/Entwined_Realities"
     },
+    "Esh's Radiance": {
+      "ja": "エシュの輝き",
+      "ref": "https://poe2db.tw/jp/Eshs_Radiance"
+    },
     "Essence": {
       "ja": "エッセンス",
       "ref": "https://poe2db.tw/jp/Essence"
@@ -914,6 +978,10 @@
     "Essence Harvest": {
       "ja": "魂の収穫",
       "ref": "https://poe2db.tw/jp/Essence_Harvest"
+    },
+    "Essence Infusion": {
+      "ja": "エッセンス注入",
+      "ref": "https://poe2db.tw/jp/Essence_Infusion"
     },
     "Essence of Haste": {
       "ja": "迅速のエッセンス",
@@ -998,6 +1066,10 @@
     "Farrul's Rune of the Chase": {
       "ja": "ファルウルの追跡のルーン",
       "ref": "https://poe2db.tw/jp/Farruls_Rune_of_the_Chase"
+    },
+    "Feeding Frenzy II": {
+      "ja": "狂乱の餌付け II",
+      "ref": "https://poe2db.tw/jp/Feeding_Frenzy_II"
     },
     "Fervour": {
       "ja": "熱意",
@@ -1431,6 +1503,10 @@
       "ja": "創造力",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
     },
+    "Inner Faith": {
+      "ja": "内なる信仰",
+      "ref": "https://poe2db.tw/jp/Inner_Faith"
+    },
     "Inscribed Ultimatum": {
       "ja": "アルティメイタムの刻印",
       "ref": "https://poe2db.tw/jp/Inscribed_Ultimatum"
@@ -1527,9 +1603,17 @@
       "ja": "カタルの活力",
       "ref": "https://poe2db.tw/jp/Khatals_Rejuvenation"
     },
+    "Killer Instinct": {
+      "ja": "殺人者の本能",
+      "ref": "https://poe2db.tw/jp/Killer_Instinct"
+    },
     "Killing Palm": {
       "ja": "キリングパーム",
       "ref": "https://poe2db.tw/jp/Killing_Palm"
+    },
+    "Kite Runner": {
+      "ja": "カイトランナー",
+      "ref": "https://poe2db.tw/jp/Kite_Runner"
     },
     "Knockback": {
       "ja": "ノックバック",
@@ -1578,6 +1662,10 @@
     "Leap Slam": {
       "ja": "リープスラム",
       "ref": "https://poe2db.tw/jp/Leap_Slam"
+    },
+    "Legacy of Greymake": {
+      "ja": "グレイメイクの遺産",
+      "ref": "https://poe2db.tw/jp/Legacy_of_Greymake"
     },
     "Legacy of the Precursors": {
       "ja": "先人の遺産",
@@ -1699,6 +1787,10 @@
       "ja": "重傷",
       "ref": "https://poe2db.tw/jp/Maim"
     },
+    "Makeshift Crossbow": {
+      "ja": "間に合わせのクロスボウ",
+      "ref": "https://poe2db.tw/jp/Makeshift_Crossbow"
+    },
     "Makoru": {
       "ja": "マコル",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -1771,6 +1863,10 @@
       "ja": "マウドゥンの採石場",
       "ref": "https://poe2db.tw/jp/Mawdun_Quarry"
     },
+    "Meat Shield II": {
+      "ja": "ミートシールド II",
+      "ref": "https://poe2db.tw/jp/Meat_Shield_II"
+    },
     "Medallions": {
       "ja": "メダリオン",
       "ref": "https://poe2db.tw/jp/Medallions"
@@ -1790,6 +1886,10 @@
     "Mind Over Matter": {
       "ja": "マインドオーバーマター",
       "ref": "https://poe2db.tw/jp/Mind_Over_Matter"
+    },
+    "Mindful Awareness": {
+      "ja": "注意深い気づき",
+      "ref": "https://poe2db.tw/jp/Mindful_Awareness"
     },
     "Minion Mastery": {
       "ja": "ミニオンマスタリー",
@@ -1879,6 +1979,10 @@
       "ja": "屍霊術の手触り",
       "ref": "https://poe2db.tw/jp/Necrotic_Touch"
     },
+    "Necrotised Flesh": {
+      "ja": "壊死した肉",
+      "ref": "https://poe2db.tw/jp/Necrotised_Flesh"
+    },
     "Nightscale": {
       "ja": "ナイトスケール",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
@@ -1926,6 +2030,10 @@
     "Omen of Putrefaction": {
       "ja": "腐食のお告げ",
       "ref": "https://poe2db.tw/jp/Omen_of_Putrefaction"
+    },
+    "Onslaught": {
+      "ja": "猛攻",
+      "ref": "https://poe2db.tw/jp/Onslaught"
     },
     "Orb of Alchemy": {
       "ja": "錬金術のオーブ",
@@ -2007,6 +2115,10 @@
       "ja": "パウアスケール手袋",
       "ref": "https://poe2db.tw/jp/Pauascale_Gloves"
     },
+    "Perfect Jeweller's Orb": {
+      "ja": "宝飾職人のオーブ (完全)",
+      "ref": "https://poe2db.tw/jp/Perfect_Jewellers_Orb"
+    },
     "Perfect Strike": {
       "ja": "パーフェクトストライク",
       "ref": "https://poe2db.tw/jp/Perfect_Strike"
@@ -2018,6 +2130,10 @@
     "Physical Mastery": {
       "ja": "物理マスタリー",
       "ref": "https://poe2db.tw/jp/Physical_Mastery"
+    },
+    "Pierce III": {
+      "ja": "貫通 III",
+      "ref": "https://poe2db.tw/jp/Pierce_III"
     },
     "Pin": {
       "ja": "足止め",
@@ -2063,6 +2179,14 @@
       "ja": "プライマルバウンティ",
       "ref": "https://poe2db.tw/jp/Primal_Bounty"
     },
+    "Primate Idol": {
+      "ja": "サルのアイドル",
+      "ref": "https://poe2db.tw/jp/Primate_Idol"
+    },
+    "Prism Guardian": {
+      "ja": "プリズム・ガーディアン",
+      "ref": "https://poe2db.tw/jp/Prism_Guardian"
+    },
     "Prism of Belief": {
       "ja": "信仰のプリズム",
       "ref": "https://poe2db.tw/jp/Prism_of_Belief"
@@ -2070,6 +2194,10 @@
     "Prismatic Ring": {
       "ja": "プリズムの指輪",
       "ref": "https://poe2db.tw/jp/Prismatic_Ring"
+    },
+    "Profane Commander": {
+      "ja": "冒涜的な司令官",
+      "ref": "https://poe2db.tw/jp/Profane_Commander"
     },
     "Profane Ritual": {
       "ja": "プロファンリチュアル",
@@ -2263,9 +2391,17 @@
       "ja": "屈折装甲 II",
       "ref": "https://poe2db.tw/jp/Refraction_II"
     },
+    "Refutation": {
+      "ja": "リフュテーション",
+      "ref": "https://poe2db.tw/jp/Refutation"
+    },
     "Regal Orb": {
       "ja": "王者のオーブ",
       "ref": "https://poe2db.tw/jp/Regal_Orb"
+    },
+    "Relentless Fallen": {
+      "ja": "容赦ない堕落者",
+      "ref": "https://poe2db.tw/jp/Relentless_Fallen"
     },
     "Remnant Attraction": {
       "ja": "レムナント吸引",
@@ -2307,6 +2443,10 @@
       "ja": "ロードリ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
     },
+    "Right Hand of Darkness": {
+      "ja": "闇の右腕",
+      "ref": "https://poe2db.tw/jp/Right_Hand_of_Darkness"
+    },
     "Rigwald's Ferocity": {
       "ja": "リグワルドの獰猛",
       "ref": "https://poe2db.tw/jp/Rigwalds_Ferocity"
@@ -2342,6 +2482,10 @@
     "Rolling Slam": {
       "ja": "ローリングスラム",
       "ref": "https://poe2db.tw/jp/Rolling_Slam"
+    },
+    "Romira's Requital": {
+      "ja": "ロミラの報い",
+      "ref": "https://poe2db.tw/jp/Romiras_Requital"
     },
     "Rotting Bones": {
       "ja": "腐りゆく骨",
@@ -2495,6 +2639,10 @@
       "ja": "ショックウェーブトーテム",
       "ref": "https://poe2db.tw/jp/Shockwave_Totem"
     },
+    "Short Fuse I": {
+      "ja": "短縮起爆 I",
+      "ref": "https://poe2db.tw/jp/Short_Fuse_I"
+    },
     "Shred": {
       "ja": "シュレッド",
       "ref": "https://poe2db.tw/jp/Shred"
@@ -2563,9 +2711,17 @@
       "ja": "スケルトンクレリック",
       "ref": "https://poe2db.tw/jp/Skeletal_Cleric"
     },
+    "Skeletal Reaver": {
+      "ja": "スケルトンリーバー",
+      "ref": "https://poe2db.tw/jp/Skeletal_Reaver"
+    },
     "Skeletal Sniper": {
       "ja": "スケルトンスナイパー",
       "ref": "https://poe2-build-navi-jp.github.io/skills/skeletal-sniper/"
+    },
+    "Skeletal Storm Mage": {
+      "ja": "スケルトンストームメイジ",
+      "ref": "https://poe2db.tw/jp/Skeletal_Storm_Mage"
     },
     "Skeletal Warrior": {
       "ja": "スケルトンウォーリアー",
@@ -2670,6 +2826,10 @@
     "Stormweaver": {
       "ja": "ストームウィーバー",
       "ref": "https://poe2db.tw/jp/Stormweaver"
+    },
+    "Strong Hearted": {
+      "ja": "強心",
+      "ref": "https://poe2db.tw/jp/Strong_Hearted"
     },
     "Stun": {
       "ja": "スタン",
@@ -2951,6 +3111,10 @@
       "ja": "捜索",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
     },
+    "The Soul Meridian": {
+      "ja": "魂の経絡",
+      "ref": "https://poe2db.tw/jp/The_Soul_Meridian"
+    },
     "The Spires of Deshar": {
       "ja": "デシャールの尖塔",
       "ref": "https://poe2db.tw/jp/The_Spires_of_Deshar"
@@ -3086,6 +3250,10 @@
     "Uhtred's Chalice": {
       "ja": "ウートレドの杯",
       "ref": "https://poe2db.tw/jp/Uhtreds_Chalice"
+    },
+    "Uhtred's Constellation": {
+      "ja": "ウートレドの星座",
+      "ref": "https://poe2db.tw/jp/Uhtreds_Constellation"
     },
     "Uncut Gem": {
       "ja": "ジェムの原石",
@@ -3255,6 +3423,10 @@
       "ja": "忌まわしき財宝",
       "ref": "https://poe2db.tw/jp/Vile_Treasures"
     },
+    "Vilenta's Propulsion": {
+      "ja": "ヴィレンタの推進力",
+      "ref": "https://poe2db.tw/jp/Vilentas_Propulsion"
+    },
     "Viper Napuatzi": {
       "ja": "ヴァイパー・ナプアツィ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -3266,6 +3438,10 @@
     "Vitality II": {
       "ja": "バイタリティー II",
       "ref": "https://poe2db.tw/jp/Vitality_II"
+    },
+    "Void Flux": {
+      "ja": "虚無フラックス",
+      "ref": "https://poe2db.tw/jp/Void_Flux"
     },
     "Volcanic Warrens": {
       "ja": "火山地帯",
@@ -3302,6 +3478,14 @@
     "Warcaller's Bellow": {
       "ja": "ウォーコーラーの叫び",
       "ref": "https://poe2db.tw/jp/Warcallers_Bellow"
+    },
+    "Wardbound Minions": {
+      "ja": "ワードバウンドミニオン",
+      "ref": "https://poe2db.tw/jp/Wardbound_Minions"
+    },
+    "Warding Rune of Bodyguards": {
+      "ja": "護衛のワードルーン",
+      "ref": "https://poe2db.tw/jp/Warding_Rune_of_Bodyguards"
     },
     "Warding Rune of Heart": {
       "ja": "心臓のワードルーン",
@@ -3362,6 +3546,10 @@
     "Wild Protector": {
       "ja": "ワイルドプロテクター",
       "ref": "https://poe2db.tw/jp/Wild_Protector"
+    },
+    "Wildshards II": {
+      "ja": "ワイルドシャード II",
+      "ref": "https://poe2db.tw/jp/Wildshards_II"
     },
     "Wind Blast": {
       "ja": "ウィンドブラスト",
@@ -3434,6 +3622,10 @@
     "Yoke of Suffering": {
       "ja": "苦痛の頸木",
       "ref": "https://poe2db.tw/jp/Yoke_of_Suffering"
+    },
+    "Zarokh's Gift": {
+      "ja": "ザロクの贈り物",
+      "ref": "https://poe2db.tw/jp/Zarokhs_Gift"
     },
     "Zelina": {
       "ja": "血の巫女、ゼリナ",

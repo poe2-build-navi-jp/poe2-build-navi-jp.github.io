@@ -69,6 +69,7 @@ https://poe2-build-navi-jp.github.io/builds/monk/infernal-legion-chayula/
 https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-warbringer/
 https://poe2-build-navi-jp.github.io/builds/mercenary/supporting-fire-tactician/
 https://poe2-build-navi-jp.github.io/builds/ranger/glacial-lance-deadeye/
+https://poe2-build-navi-jp.github.io/builds/monk/lightning-minion-chayula/
 https://poe2-build-navi-jp.github.io/builds/mercenary/twister-gemling/
 https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/
 https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/

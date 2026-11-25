@@ -13,6 +13,7 @@ const skills = {
  'monk-falling-thunder':['Falling Thunder'],
  'monk-hollow-focus-storm-wave':['Storm Wave'],
  'monk-infernal-legion-chayula':['Companion: {0}'],
+ 'monk-lightning-minion-chayula':['Spectre: {0}'],
  'mercenary-twister-gemling':['Twister'],
  'warrior-shield-wall-smith':['Shield Wall'],
  'warrior-shield-wall-warbringer':['Shield Wall'],'mercenary-supporting-fire-tactician':['Supporting Fire'],

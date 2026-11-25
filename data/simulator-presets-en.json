@@ -445,6 +445,76 @@
     "contentRevision": "f30c845e0bb6273b"
   },
   {
+    "id": "monk-lightning-minion-chayula",
+    "name": "Lightning Minion Acolyte of Chayula",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Acolyte of Chayula",
+    "ascendancyName": "Acolyte of Chayula",
+    "skills": [
+      "Spectre: {0}"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1 to End of Act 3 (Crossbow and Grenade Leveling)",
+        "mainSkill": "For the first few levels, progress with Quarterstaff Strike, Falling Thunder and Killing Palm. Once you pick up a Makeshift Crossbow or buy one from Renly in Clearfell, Explosive Grenade becomes the main skill. Use Flash Grenade for packs and to stun bosses, and fill the gaps with Crossbow Shot while both are on cooldown.",
+        "supports": "Socket Explosive Grenade with Multishot I and Short Fuse I. Adding Lightning Attunement to Flash Grenade raises its damage and lets it shock. Spend the first Lesser Jeweller's Orb on Explosive Grenade and the second on Flash Grenade, and save the rest for the minion setup (per the source guide).",
+        "passivePriority": "Take Concussive Attack, Dizzying Sweep, Killer Instinct, Blinding Strike and Kite Runner to scale grenade damage (per the source guide).",
+        "gearPriority": "Prioritise a crossbow with high flat physical and lightning damage, and switch to a Bombard Crossbow early in Act 3. For armour, maximum Life and resistances on an armour or armour/evasion base are easiest to progress with. Pick up any helmet, amulet or sceptre with +1 to Minion Skills you come across for use after the transition (per the source guide).",
+        "caution": "This stage is not a minion setup (a stated downside in the source guide: Non-Minion leveling in Act 1-3). The source guide notes that evasion-only armour can feel rough early on. Pick up rares, identify them, then sell them to secure gold for the transition.",
+        "transitionCondition": "Reach Utzaal late in Act 3, where you can bind a Vaal Guard Spectre (around levels 41-43)."
+      },
+      {
+        "label": "Around Levels 41-43, Late Act 3 to End of Campaign (Minion Transition)",
+        "mainSkill": "Bind a bomb-throwing Vaal Guard with Bind Spectre and switch to the minion setup. Keep casting Flame Wall to summon Raging Spirits, and protect them with Wolf Pack and Loyalty. Spend leftover Spirit on a Skeletal Storm Mage or Skeletal Sniper to add Muster's effect and shock application (per the source guide).",
+        "supports": "Cut Loyalty, Minion Splash I, Last Gasp, Arcane Surge and Selfless Remnants with spare uncut support gems. Keep Flame Wall at a low level (level 5) to hold its mana cost down. Once you have a Greater Jeweller's Orb, you can also swap the Vaal Guard for a Skeletal Reaver (per the source guide).",
+        "passivePriority": "Respec into minions for about 35,000 gold. The core is Relentless Fallen, Lord of Horrors, Remnant Attraction and Empowering Remnants, Right Hand of Darkness, Necrotised Flesh and Crystalline Flesh, Vile Mending and Profane Commander. Take Ascendancy points in the order Waking Dream, then Choice of Power (per the source guide).",
+        "gearPriority": "+ to all Minion Skill Levels is the top priority (sceptre, helmet, amulet). The sceptre mod 'Attacks by allies in your Presence deal added damage' scales especially well because it is multiplied by Choice of Power and Waking Dream. Add Spirit on your body armour or amulet to raise the number of summons (per the source guide).",
+        "caution": "There are three same-named Vaal Guard variants (melee, 50 Spirit; ranged, 60 Spirit; bomb-throwing, 50 Spirit). Bind the bomb-throwing one. The source guide also warns this Spectre can cause performance issues. Damage can dip below the grenade setup right after the respec (per the source guide).",
+        "transitionCondition": "Finish the campaign and enter mapping, where you can switch to a Powered Zealot or Chaos Zealot Spectre."
+      },
+      {
+        "label": "Early Mapping (Spark Spectres)",
+        "mainSkill": "Replace the Vaal Guard with a Powered Zealot or Chaos Zealot Spectre that casts Spark. Powered Zealots can be found inside maps, Chaos Zealots sometimes in the Trial of Chaos. You support the army with Pain Offering and Despair (per the source guide).",
+        "supports": "Before switching, cut Wildshards II and Pierce III first. Spend the first Perfect Jeweller's Orb on Bind Spectre. Replace the Skeletal Storm Mage with Wardbound Minions and combine it with Warding Rune of Bodyguards to give your minions Onslaught. Also pick up Refutation (per the source guide).",
+        "passivePriority": "Take Enhanced Barrier, Mindful Awareness and Spectral Ward to raise ES and evasion, and The Soul Meridian to reduce minion Spirit reservation. Anoint the amulet with Essence Infusion (per the source guide).",
+        "gearPriority": "Get Alpha's Howl. It greatly increases Spirit and doubles your Presence radius while using Selfless Remnants and Waking Dream. A +2 to Minion Skills helmet can substitute if it is better. Prioritise reservation efficiency and movement speed on Bones of Ullr. Runeforge Enfolding Dawn (per the source guide).",
+        "caution": "Powered Zealots and Chaos Zealots also have same-named variants. Check that the one you bind costs 55 Spirit and fires large blue lightning orbs (Spark) by letting it attack a few times first. Keeping Wardbound Minions up takes about 100 Ward, and the gem should be level 16 at most — lower is better (per the source guide).",
+        "transitionCondition": "You can retire Flame Wall and Raging Spirits and move to the Mid setup (Skeletal Storm Mage + Convalescence)."
+      },
+      {
+        "label": "Mid (Army Complete)",
+        "mainSkill": "Replace Flame Wall and Raging Spirits with Skeletal Storm Mage and Convalescence. Put Despair on Blasphemy to turn the curse into an aura, and empower the army with Pain Offering. This is the polished stretch the source guide describes as 'Tanky (In the Mid setup)' and 'Few buttons in the Mid setup' (per the source guide).",
+        "supports": "Swap Pain Offering's support from Meat Shield II to Brutus' Brain. Give Wolf Pack Romira's Requital and Tecrod's Revenge (per the source guide).",
+        "passivePriority": "Use mana as a defensive layer with Heavy Buffer and Mind Over Matter. Reduce curse effect by 75% with Inner Faith and The Hollowkeeper. Swap the campaign flask reward for a mana flask upgrade. Anoint the amulet with Warlord Leader (per the source guide).",
+        "gearPriority": "Raise Spirit with Prism Guardian. Upgrade Alpha's Howl to a corrupted one with +1 to all Minion Skill Levels. Once Spirit passes 450, socket Amanamu's Gaze into Bones of Ullr for movement speed. Also prepare a Lavianga's Spirits mana flask (per the source guide).",
+        "caution": "You get tanky from this stage on, but as the source guide's downside states, this build is not recommended for Hardcore. Keeping Wardbound Minions up needs about 100 Ward, secured by runeforging Bones of Ullr and your gloves (Prism Guardian too, if that is not enough) (per the source guide).",
+        "transitionCondition": "Secure +55% or more minion cast speed, then move to the Late setup (switching to Vilenta's Propulsion)."
+      },
+      {
+        "label": "Late",
+        "mainSkill": "Once minion cast speed reaches +55% or more, swap Projectile Acceleration II for Vilenta's Propulsion. Add Uhtred's Constellation to Convalescence (per the source guide).",
+        "supports": "Dropping Blasphemy and self-casting Despair raises damage against pinnacle bosses and frees room for 2-3 more Spectres (per the source guide's FAQ). When you do, support Despair with Heightened Curse and similar.",
+        "passivePriority": "Keep Warlord Leader as the amulet anointment. Add minion critical stats and faster start of Energy Shield Recharge to sapphire jewels too (per the source guide).",
+        "gearPriority": "The top priority is a rare belt with the 'Surpassing chance for Minions to fire an additional Projectile' mod. Use a high-ES focus with +2 to Minion Skill Levels. Wear Cadigan's Epiphany on your gloves. A twice-corrupted Alpha's Howl (+20-30 Spirit, or an extra socket) is also worth considering (per the source guide).",
+        "caution": "Switching to Vilenta's Propulsion before meeting the +55% cast speed requirement lowers your damage. Confirm the requirement first (per the source guide).",
+        "transitionCondition": "You have the Min-Max gear ready, including switching the anointment to Zarokh's Gift and Sacrificial Regalia."
+      },
+      {
+        "label": "Min-Max (Completed Build)",
+        "mainSkill": "Replace Wolf Pack with Ghost Dance or Skeletal Sniper to optimise Spirit. Add Khatal's Rejuvenation to Into the Breach (skippable if it is too expensive). Snapshotting Remnants (entering the zone on weapon set II) adds another 20-30% damage, but the source guide treats it as a fully optional, advanced optimisation (per the source guide).",
+        "supports": "Swap Feeding Frenzy II on the Powered Zealot/Chaos Zealot for Dialla's Desire, and Lightning Attunement on the Skeletal Storm Mage for Esh's Radiance. Add Atziri's Communion to Blasphemy or Convalescence (per the source guide).",
+        "passivePriority": "Anoint the amulet with Zarokh's Gift. If you get a Megalomaniac with Right Hand of Darkness, respec the pathing to it (per the source guide).",
+        "gearPriority": "Sacrificial Regalia is the best body armour when it has the right mods. For Alpha's Howl, the completed form is a 2-socket one with Legacy of Greymake, either corrupted with +1 to all Minion Skill Levels or twice-corrupted with +25-30 Spirit. Mageblood is an alternative to the rare belt (per the source guide).",
+        "caution": "The source guide warns that if you use the snapshot tree without snapshotting, you lose about 50% of total damage. If you will not snapshot, stay on the regular tree. The fourth Ascendancy point is 'completely useless' according to the source guide, so there is no rush to take it (per the source guide).",
+        "transitionCondition": "Completed. From here on, it is about refining jewels and corruptions."
+      }
+    ],
+    "mainSkill": "A minion army build whose main damage comes from Spectres bound with Bind Spectre. Late in the campaign a bomb-throwing Vaal Guard carries the damage; from mapping onward, Powered Zealot/Chaos Zealot Spectres casting Spark take over, while Waking Dream's violet flame is passed to the minions with Selfless Remnants to stack added chaos damage.",
+    "path": "/builds/monk/lightning-minion-chayula/",
+    "contentRevision": "0826b3eeb05a6d3e"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

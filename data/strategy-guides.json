@@ -5506,10 +5506,10 @@
   },
   {
     "slug": "unique-gear",
-    "title": "おすすめユニーク装備一覧｜20ビルドの最強候補と採用条件",
-    "summary": "PoE2 0.5.5の掲載20ビルド・60候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
+    "title": "おすすめユニーク装備一覧｜21ビルドの最強候補と採用条件",
+    "summary": "PoE2 0.5.5の掲載21ビルド・69候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
     "category": "basics",
-    "version": "掲載19ビルド：0.5.5／原典の版は出典欄で区別",
+    "version": "掲載21ビルド：0.5.5／原典の版は出典欄で区別",
     "checkedAt": "2026-11-25",
     "publishedAt": "2026-10-12",
     "updatedAt": "2026-11-25",
@@ -5593,13 +5593,13 @@
       "原典の構成名と、装備に必要な効果を合わせる",
       "交換後の耐性・Spirit・防御を確認して育成へ戻る"
     ],
-    "tocLabel": "掲載19ビルドからユニーク装備を探す",
+    "tocLabel": "掲載21ビルドからユニーク装備を探す",
     "sections": [
       {
         "id": "build-unique-summary",
-        "heading": "PoE2おすすめユニーク装備一覧｜20ビルドの選び方早見",
+        "heading": "PoE2おすすめユニーク装備一覧｜21ビルドの選び方早見",
         "paragraphs": [
-          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全60候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
+          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全69候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
         ],
         "gearSummary": true
       },
@@ -6138,6 +6138,156 @@
           48
         ],
         "quickAnswer": "最初の購入はセプターに差すエラミアのアイドル。Endgameで聖なる炎・目の導きの掌・ウートレドの杯、完成形で通過儀礼・メイジブラッド（またはヘッドハンター）です。"
+      },
+      {
+        "id": "monk-lightning-minion-chayula",
+        "heading": "雷ミニオン・チャユラの門弟のおすすめユニーク装備",
+        "buildId": "monk-lightning-minion-chayula",
+        "paragraphs": [
+          "原典の購入順が明確なビルドです。マッピング開始でアルファの遠吠えが最優先で、移行時に包み込む夜明けとウルルの骨、Midでプリズム・ガーディアン、Lateでカディガンの啓示、完成形で生贄のレガリアとメイジブラッドを揃えます。スピリットと「全ミニオンスキルレベル+」が火力と防御の両方に直結します。"
+        ],
+        "gearOptions": [
+          {
+            "name": "Alpha's Howl",
+            "slot": "兜",
+            "phase": "Early Mapping",
+            "purpose": "スピリットを大きく伸ばし、献身のレムナント＋目覚めた夢使用時のプレゼンス半径を2倍にする",
+            "conditions": "マッピング開始時に原典が「really need」とする最優先品。高ければ+2ミニオンスキルの兜で代用する。",
+            "tradeoff": "兜枠をスピリット確保に使うため、ESや耐性は他部位で補う必要がある。",
+            "rareAlternative": "追加スピリットと全ミニオンスキルレベルを盛ったレア兜",
+            "sourceRefs": [
+              75,
+              76
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "アルファの遠吠え"
+          },
+          {
+            "name": "Enfolding Dawn",
+            "slot": "胴",
+            "phase": "Lv41〜43前後・ミニオン移行",
+            "purpose": "ルーンフォージして使う最良の防御選択肢。ESと回避の土台になる",
+            "conditions": "移行後にルーンフォージするのが原典の指定。Lv36の魂の外套も防御の選択肢だが、包み込む夜明けが最良とされる。",
+            "tradeoff": "ルーンフォージ前提のため、鍛造素材と相談して準備する。",
+            "rareAlternative": "ESと回避を盛ったレア胴",
+            "sourceRefs": [
+              75,
+              10
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "包み込む夜明け"
+          },
+          {
+            "name": "Bones of Ullr",
+            "slot": "靴",
+            "phase": "Lv41〜43前後・ミニオン移行",
+            "purpose": "予約効率を上げて召喚できるミニオン数を増やし、移動速度も伸ばす",
+            "conditions": "予約効率を優先して入手するのが原典の指定。アマナムの凝視を入れて移動速度をさらに伸ばす。",
+            "tradeoff": "靴枠を予約効率に使うため、耐性は他部位で補う必要がある。",
+            "rareAlternative": "移動速度と耐性を盛ったレア靴",
+            "sourceRefs": [
+              75,
+              15
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ウルルの骨"
+          },
+          {
+            "name": "Prism Guardian",
+            "slot": "盾",
+            "phase": "Mid",
+            "purpose": "スピリットを伸ばし、スピリット450以上への到達を助ける",
+            "conditions": "Mid構成で原典が指定。スピリットが450以上になったらウルルの骨のアマナムの凝視で移動速度を伸ばす。",
+            "tradeoff": "盾枠をスピリット確保に使うため、防御の不足は胴と手袋のES・回避で補う。",
+            "rareAlternative": "ESと耐性を盛ったレア盾",
+            "sourceRefs": [
+              75,
+              77
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "プリズム・ガーディアン"
+          },
+          {
+            "name": "Trenchtimbre",
+            "slot": "バックラー",
+            "phase": "Lv41〜43前後・ミニオン移行",
+            "purpose": "全ミニオンスキルレベル+2で、使い回し用の育成装備としてミニオンの火力と耐久を底上げする",
+            "conditions": "原典が育成装備の候補として挙げる。+2ロールを狙う。",
+            "tradeoff": "バックラー枠をミニオンレベルに使うため、防御寄りのバックラーとは比較が必要。",
+            "rareAlternative": "回避・ESと耐性を盛ったレアバックラー",
+            "sourceRefs": [
+              75,
+              12
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "トレンチティンバー"
+          },
+          {
+            "name": "Cadigan's Epiphany",
+            "slot": "手袋",
+            "phase": "Late",
+            "purpose": "Late構成で原典が指定する手袋。ミニオンの詠唱速度条件と合わせて装備を固める",
+            "conditions": "Late段階で原典が挙げる手袋。詠唱速度+55%の条件確認と合わせて準備する。",
+            "tradeoff": "手袋枠を構成指定品に使うため、ES・耐性の不足は他部位で補う。",
+            "rareAlternative": "ESと耐性、ミニオン関連Modを盛ったレア手袋",
+            "sourceRefs": [
+              75,
+              79
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "カディガンの啓示"
+          },
+          {
+            "name": "Sacrificial Regalia",
+            "slot": "鎧",
+            "phase": "Min-Max",
+            "purpose": "正しいModで揃えば最良の胴。Min-Max構成の防御と火力の土台になる",
+            "conditions": "Min-Max段階で原典が最良とする胴。Modの内容を確認してから買う。",
+            "tradeoff": "高投資の胴で、包み込む夜明けからの更新はModが揃ってから行う。",
+            "rareAlternative": "ESと回避を最大化したレア胴",
+            "sourceRefs": [
+              75,
+              78
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "生贄のレガリア"
+          },
+          {
+            "name": "Mageblood",
+            "slot": "ベルト",
+            "phase": "Min-Max",
+            "purpose": "レアベルトの代わりになる完成形の選択肢。フラスコ運用を大きく楽にする",
+            "conditions": "原典がMin-Maxの選択肢として挙げる。最重要のレアベルトMod（ミニオン追加投射物）が揃ってから比較する。",
+            "tradeoff": "最高額帯の装備で、他の完成パーツより先に買う理由は薄い。",
+            "rareAlternative": "ミニオン追加投射物Mod付きのレアベルト",
+            "sourceRefs": [
+              75,
+              27
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "メイジブラッド"
+          },
+          {
+            "name": "Lavianga's Spirits",
+            "slot": "フラスコ",
+            "phase": "Mid",
+            "purpose": "マナフラスコ。マナを防御層として使うMid構成の維持を助ける",
+            "conditions": "Mid構成で原典が用意すると述べるマナフラスコ。強力な緩衝材＋マインドオーバーマターの運用と合わせる。",
+            "tradeoff": "フラスコ枠をマナ用途に使うため、防御用フラスコとは枠の取り合いになる。",
+            "rareAlternative": "マナ回復を盛ったレアフラスコ",
+            "sourceRefs": [
+              75,
+              80
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ラヴィアンガの心"
+          }
+        ],
+        "sourceRefs": [
+          75,
+          76
+        ],
+        "quickAnswer": "最初の購入はアルファの遠吠え。移行時に包み込む夜明けとウルルの骨、Midでプリズム・ガーディアン、完成形は生贄のレガリアとメイジブラッド（またはレアベルト）です。"
       },
       {
         "id": "mercenary-twister-gemling",
@@ -7349,6 +7499,47 @@
         "checkedAt": "2026-11-25",
         "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
         "japaneseUrl": "https://poe2db.tw/jp/Uhtreds_Chalice"
+      },
+      {
+        "name": "Maxroll: Lightning Minion Acolyte of Chayula Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
+        "checkedAt": "2026-11-25",
+        "supports": "雷ミニオン・チャユラの門弟の装備（アルファの遠吠え、包み込む夜明け、ウルルの骨、プリズム・ガーディアン、トレンチティンバー、カディガンの啓示、生贄のレガリア、メイジブラッド、ラヴィアンガの心）と購入順を確認。本文を直接確認。"
+      },
+      {
+        "name": "PoE2DB: アルファの遠吠え（Alpha's Howl）",
+        "url": "https://poe2db.tw/us/Alphas_Howl",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Alphas_Howl"
+      },
+      {
+        "name": "PoE2DB: プリズム・ガーディアン（Prism Guardian）",
+        "url": "https://poe2db.tw/us/Prism_Guardian",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Prism_Guardian"
+      },
+      {
+        "name": "PoE2DB: 生贄のレガリア（Sacrificial Regalia）",
+        "url": "https://poe2db.tw/us/Sacrificial_Regalia",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Sacrificial_Regalia"
+      },
+      {
+        "name": "PoE2DB: カディガンの啓示（Cadigan's Epiphany）",
+        "url": "https://poe2db.tw/us/Cadigans_Epiphany",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Cadigans_Epiphany"
+      },
+      {
+        "name": "PoE2DB: ラヴィアンガの心（Lavianga's Spirits）",
+        "url": "https://poe2db.tw/us/Laviangas_Spirits",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Laviangas_Spirits"
       }
     ],
     "scope": "2026-10-12に各原典の本文・公開HTML内の構成別装備データとPoE2DBを照合。原典採用品・別原典の候補・効果から検討する候補を区別しています。ゲーム内実測、全装備の同条件比較、相場調査、各ビルドの育成手順の全面再検証は行っていません。Maxrollは取得できなかったため今回の採用確認には使用していません。装備データの仕様と、原典作者による推奨・運営者の選び方を分けて記載。文章や画像の転載はしません。 日本語名はPoE2DB日本語ページの装備データ本文で照合。検索結果のタイトルに同名パッシブが混ざる場合は、装備種別とアイコンを確認して区別しています。",
@@ -7455,6 +7646,10 @@
       {
         "date": "2026-11-25",
         "summary": "グレイシャルランス・デッドアイのビルド追加に合わせ、候補7点（エラミアのアイドル、聖なる炎、目の導きの掌、ウートレドの杯、通過儀礼、メイジブラッド、ヘッドハンター）のセクションを追加。掲載は20ビルド・60候補になりました。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "雷ミニオン・チャユラの門弟のビルド追加に合わせ、候補9点（アルファの遠吠え、包み込む夜明け、ウルルの骨、プリズム・ガーディアン、トレンチティンバー、カディガンの啓示、生贄のレガリア、メイジブラッド、ラヴィアンガの心）のセクションを追加。掲載は21ビルド・69候補になりました。"
       }
     ]
   },
@@ -10244,8 +10439,8 @@
   },
   {
     "slug": "build-gear-buying-order",
-    "title": "ビルド別の装備購入順｜低予算から完成形へ進む19構成",
-    "summary": "掲載20ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
+    "title": "ビルド別の装備購入順｜低予算から完成形へ進む21構成",
+    "summary": "掲載21ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
     "category": "basics",
     "version": "0.5.5掲載構成",
     "checkedAt": "2026-11-25",
@@ -10388,9 +10583,15 @@
         "url": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
         "checkedAt": "2026-11-25",
         "supports": "グレイシャルランス・デッドアイの装備優先を確認し、購入順へ再編集。"
+      },
+      {
+        "name": "Maxroll: Lightning Minion Acolyte of Chayula Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
+        "checkedAt": "2026-11-25",
+        "supports": "雷ミニオン・チャユラの門弟の装備優先を確認し、購入順へ再編集。"
       }
     ],
-    "scope": "掲載済み19ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+    "scope": "掲載済み21ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
     "structuredCitations": true,
     "keywords": [
       "装備購入順",
@@ -10418,7 +10619,7 @@
     "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
     "verification": {
       "method": "既存の個別ビルドの装備優先項目を再編集。ツイスター・アイスショットの作者解説と装備データは別途参照。",
-      "confirmed": "掲載済み19ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+      "confirmed": "掲載済み21ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
       "unverified": "12原典の全段階の再検証、全装備の購入価格、交換前後の同条件実測、最安クリア構成。"
     },
     "revisionNotes": [
@@ -10457,6 +10658,10 @@
       {
         "date": "2026-11-25",
         "summary": "グレイシャルランス・デッドアイの購入順セクションを追加。掲載は20構成になりました。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "雷ミニオン・チャユラの門弟の購入順セクションを追加。掲載は21構成になりました。"
       }
     ],
     "quickLinks": [
@@ -10466,7 +10671,7 @@
       },
       {
         "href": "#build-list",
-        "label": "19ビルドから選ぶ"
+        "label": "21ビルドから選ぶ"
       },
       {
         "href": "#before-after",
@@ -10525,7 +10730,7 @@
       },
       {
         "id": "build-list",
-        "heading": "掲載20ビルドから装備の購入順を選ぶ",
+        "heading": "掲載21ビルドから装備の購入順を選ぶ",
         "paragraphs": [
           "以下は必須購入ランキングではなく、個別ページの掲載済み育成データを使った確認順です。すでに満たしている防御項目へ買い直す必要はありません。段階ごとの細かいジェムや切替条件は、現在Lvの育成案内へ戻って照合してください。"
         ],
@@ -10785,6 +10990,31 @@
         ],
         "sourceRefs": [
           22
+        ]
+      },
+      {
+        "id": "monk-lightning-minion-chayula",
+        "heading": "雷ミニオン・チャユラの門弟の装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始〜Min-Max完成段階で確認する項目：マッピング開始時の最優先はアルファの遠吠えで、スピリットを大きく伸ばします。移行時に包み込む夜明けとウルルの骨、Midでプリズム・ガーディアンを揃えます。[source:23]"
+        ],
+        "bullets": [
+          "最初の1点：アルファの遠吠え。スピリットが大きく伸び、献身のレムナント＋目覚めた夢使用時のプレゼンス半径が2倍になる。原典がマッピング開始時に「really need」とする最優先品。",
+          "火力・機能を買い足す：包み込む夜明けをルーンフォージし、ウルルの骨で予約効率を上げる。Midでプリズム・ガーディアン、Lateでカディガンの啓示とレアベルトのミニオン追加投射物Modを狙う。",
+          "後回し・まとめて準備する品：生贄のレガリアと、2ソケット＋グレイメイクの遺産のアルファの遠吠えはMin-Maxの完成形。メイジブラッドはレアベルトの代わりの選択肢で、ザロクの贈り物への注入変更と合わせて揃える。"
+        ],
+        "links": [
+          {
+            "href": "/builds/monk/lightning-minion-chayula/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#monk-lightning-minion-chayula",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          23
         ]
       },
       {
@@ -15366,7 +15596,10 @@
             [
               "雷ミニオン・チャユラの門弟",
               "Lightning Minion Acolyte of Chayula",
-              "—"
+              {
+                "text": "雷ミニオン・チャユラの門弟",
+                "href": "/builds/monk/lightning-minion-chayula/"
+              }
             ],
             [
               "ツイスター・デッドアイ",
@@ -15757,7 +15990,7 @@
         "id": "site-builds",
         "heading": "このサイトの掲載ビルドはどこにある？",
         "paragraphs": [
-          "このサイトで育成手順を掲載している20ビルドのうち、17ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
+          "このサイトで育成手順を掲載している21ビルドのうち、18ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
         ],
         "table": {
           "caption": "掲載ビルドとMaxrollのTier",
@@ -15886,6 +16119,14 @@
               },
               "A",
               "Glacial Lance Deadeye"
+            ],
+            [
+              {
+                "text": "雷ミニオン・チャユラの門弟",
+                "href": "/builds/monk/lightning-minion-chayula/"
+              },
+              "A",
+              "Lightning Minion Acolyte of Chayula"
             ],
             [
               {
@@ -16131,6 +16372,10 @@
       {
         "date": "2026-11-25",
         "summary": "グレイシャルランス・デッドアイのビルドページを追加し、A Tier表の「このサイトの記事」欄と掲載ビルド表にリンクを追加。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "雷ミニオン・チャユラの門弟のビルドページを追加し、A Tier表の「このサイトの記事」欄と掲載ビルド表にリンクを追加。"
       }
     ]
   },
