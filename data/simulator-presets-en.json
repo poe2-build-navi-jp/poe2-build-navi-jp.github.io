@@ -585,6 +585,76 @@
     "contentRevision": "d615952c5f82ae79"
   },
   {
+    "id": "monk-minion-chayula",
+    "name": "Minion Acolyte of Chayula",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Acolyte of Chayula",
+    "ascendancyName": "Acolyte of Chayula",
+    "skills": [
+      "Spectre: {0}"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-37 (Crossbow and Grenade Leveling)",
+        "mainSkill": "Progress through the first 2-3 levels with a quarterstaff, then switch to Explosive Grenade and Flash Grenade once you have a Makeshift Crossbow (buyable from Renly). Use Frost Bomb to apply Exposure and War Banner to raise boss damage.",
+        "supports": "Socket Explosive Grenade with Multishot II and Elemental Armament I, Flash Grenade with Multishot II and Lightning Attunement, and Frost Bomb with Rapid Casting I. Into the Breach unlocks after taking the first Ascendancy (Remnant Potency II and Harmonic Remnants II).",
+        "passivePriority": "Take Concussive Attack, Dizzying Sweep, Killer Instinct, Blinding Strike and Kite Runner to scale grenade damage. Take Ascendancy points in the order Waking Dream, then Choice of Power (per the source guide).",
+        "gearPriority": "Prioritise a crossbow with high flat physical and lightning damage (switch to a Bombard Crossbow in Act 3). Prioritise maximum Life and resistances; an armour or armour/evasion base is preferable, as the source guide notes evasion-only armour feels rough early on. Pick up any helmet, amulet or sceptre with +1 to Minion Skills you come across for the late Act 3 transition.",
+        "caution": "The source guide notes that the early Act 1 stretch is rough for Monks. Do not overextend before Explosive Grenade unlocks. Pick up rares and sell them to start saving gold for the respec.",
+        "transitionCondition": "Reach Utzaal late in Act 3, where you can bind a Vaal Guard Spectre (around level 38)."
+      },
+      {
+        "label": "Levels 38-41 (Switching to Minions: Vaal Guard Spectre)",
+        "mainSkill": "Bind a bomb-throwing Vaal Guard with Bind Spectre, and summon Raging Spirits with Flame Wall. Empower the minions with Wolf Pack, Pain Offering and Despair.",
+        "supports": "Give the Vaal Guard Spectre Multishot II, Feeding Frenzy I and Muster. Give Raging Spirits Last Gasp, Minion Splash I and Feeding Frenzy. Give Pain Offering Meat Shield II and Danse Macabre. Give Into the Breach Remnant Potency II, Harmonic Remnants II and Selfless Remnants.",
+        "passivePriority": "Respec for about 35,000 gold around levels 41-43. Take Relentless Fallen for minion mobility and damage, Lord of Horrors and The Soul Meridian to reduce Spirit reservation, and Remnant Attraction and Empowering Remnants to strengthen Waking Dream and Choice of Power.",
+        "gearPriority": "+ to all Minion Skill Levels on your sceptre, helmet and amulet. A Rattling Sceptre is the best base, but the mods matter more than the base (per the source guide). High rolls of added damage to allies in your Presence (fire, cold, lightning or physical) scale damage greatly, as they are multiplied by Choice of Power and Waking Dream.",
+        "caution": "There are three same-named Vaal Guard monsters (melee, 50 Spirit; ranged, 60 Spirit; bomb-throwing, 50 Spirit). Bind the bomb-throwing one. The source guide notes that the bomb-throwing Spectre can cause performance issues; if your PC cannot handle it or it bothers you, a Skeletal Reaver can substitute. The source guide states that damage dips below the grenade setup right after the switch.",
+        "transitionCondition": "Once the Vaal Guard Spectre is bound and the passive respec (about 35,000 gold) is done, you can enter Act 4 with the minion setup."
+      },
+      {
+        "label": "Levels 42-59 (Skeletal Reaver: Act 4 to Interlude)",
+        "mainSkill": "Spend the first Greater Jeweller's Orb on Skeletal Reaver and replace the Vaal Guard. Apply shock with a Skeletal Storm Mage and heal with a Skeletal Cleric. Give the minions Onslaught with Refutation, and block to absorb damage in dangerous moments.",
+        "supports": "Give Skeletal Reaver Muster, Feeding Frenzy II, Last Gasp and Rage III. Give Raging Spirits Muster, Minion Splash II, Feeding Frenzy II and Last Gasp. Give Pain Offering Meat Shield II, Danse Macabre and Elemental Army. Give Refutation Prolonged Duration II and Cooldown Recovery II.",
+        "passivePriority": "Take Right Hand of Darkness, because Withered scales strongly with Waking Dream and Choice of Power. Take Necrotised Flesh, Crystalline Flesh and Vile Mending to raise minion survivability. Take Profane Commander to widen Spirit and your Presence radius.",
+        "gearPriority": "Keep + to all Minion Skill Levels on your sceptre, helmet and amulet. With a Shrine Sceptre, Spirit reservation supports such as Upwelling II are effectively free (per the source guide). Prioritise boots with movement speed, Life and resistances.",
+        "caution": "Refutation and Wardbound Minions are skill gems from Expedition encounters. Pick them up when you find them. Do not use Wardbound Minions until the Mid setup.",
+        "transitionCondition": "Finish the Interlude and enter maps, with the Skeletal Reaver setup in place and Refutation available."
+      },
+      {
+        "label": "Lv60〜79（Early Mapping）",
+        "mainSkill": "Keep Skeletal Reaver as the main damage dealer and keep summoning Raging Spirits with Flame Wall. Empower the whole army with Pain Offering, and weaken bosses and tough rares with Despair. Use Refutation on cooldown to give the minions Onslaught.",
+        "supports": "Give Skeletal Reaver Muster, Feeding Frenzy II, Last Gasp, Rage III and Minion Splash II. Give Pain Offering Meat Shield II, Danse Macabre, Magnified Area II and Prolonged Duration II. Give Despair Heightened Curse, Cursed Ground, Efficiency II and Prolonged Duration II. Give Refutation Cooldown Recovery II, Prolonged Duration II, Rapid Casting II and Mobility.",
+        "passivePriority": "Take Enhanced Barrier, Mindful Awareness and Spectral Ward to raise ES and evasion. Take Heavy Buffer to greatly raise ES and combine it with Mind Over Matter to use mana as a defensive layer. Take Inner Faith and The Hollowkeeper to reduce curse effect by 75%. Take Chayula's Gift as the third Ascendancy.",
+        "gearPriority": "Alpha's Howl is the top priority (greatly increased Spirit and doubled Presence radius). Runeforge Enfolding Dawn and use Bones of Ullr to raise the minion count. Prioritise ES on gloves. Anoint the amulet with Essence Infusion.",
+        "caution": "Cap your resistances and meet attribute requirements first, adjusting with Flux runes until elemental resistances are capped. Keeping Wardbound Minions up takes about 100 Ward, so only move to the Mid setup after securing that Ward.",
+        "transitionCondition": "Get a rare belt with 'Minions' attacks deal Melee Splash' and reach 450 or more Spirit."
+      },
+      {
+        "label": "Levels 80-89 (Mid: Plague Harvester)",
+        "mainSkill": "Switch to a Plague Harvester Spectre. It moves fast and jumps over obstacles, so it does not get stuck like a Skeletal Reaver. Drop Flame Wall and Raging Spirits, add Wardbound Minions (level 16 at most) and Convalescence, and turn Despair into an aura with Blasphemy.",
+        "supports": "Give the Plague Harvester Spectre Muster, Feeding Frenzy II, Rage III, Rapid Attacks II and Minion Mastery. Give Pain Offering Danse Macabre, Magnified Area II, Prolonged Duration II, Brutus' Brain and Efficiency II. Give Blasphemy and Despair Ritualistic Curse, Magnified Area II and Chaos Mastery. Give Wardbound Minions Efficiency II, Blind II, Rapid Casting II and Mobility. Give Convalescence Second Wind III, Cooldown Recovery II, Prolonged Duration II and Rapid Casting III.",
+        "passivePriority": "Use mana as a defensive layer with Heavy Buffer and Mind Over Matter. Anoint the amulet with Warlord Leader. On sapphire jewels, prioritise maximum ES, all elemental resistances for minions, minion attack and cast speed, minion damage, and faster start of Energy Shield Recharge. Optional: specialise weapon set II in Remnant nodes and snapshot by entering the zone on set II and switching to set I, which adds about 20-30% damage (if you skip this, stay on the base tree).",
+        "gearPriority": "A rare belt with 'Minions' attacks deal Melee Splash' is required. Maximise ES and evasion on body armour and gloves, with Deflection Rating on at least one piece, ideally both. For body armour, use a Rambler Jacket or a Sleek Jacket. Add Spirit with Prism Guardian. Once Spirit passes 450, socket Amanamu's Gaze into your boots for movement speed.",
+        "caution": "Wardbound Minions should be level 16 at most — lower is better, as it costs less Ward. Without about 100 Ward you cannot keep Onslaught up. Without the Melee Splash belt, the Spectre loses one support slot.",
+        "transitionCondition": "Once ES and evasion are high enough and you are comfortable using Convalescence and Refutation, you can add Khatal's Rejuvenation to Into the Breach."
+      },
+      {
+        "label": "Level 90+ (Late to Min-Max Completed Build)",
+        "mainSkill": "Recover ES with Convalescence, block enemy attacks with Refutation, and empower the whole army with Pain Offering. For Min-Max, take Bulwark with From Nothing, enable Warlord Berserker with Blood of Rage on a Megalomaniac, and grant the minions Rage with a Blood of the Warrior flask.",
+        "supports": "Give the Plague Harvester Spectre Feeding Frenzy II, Muster, Dialla's Desire, Uul-Netol's Embrace and Minion Splash II (the guide text's instruction; the planner has Rapid Attacks II instead, noted as a discrepancy). Give Pain Offering Danse Macabre, Magnified Area II, Prolonged Duration II, Brutus' Brain and Sacrificial Offering. Give Convalescence Uhtred's Constellation. Give the Skeletal Storm Mage Esh's Radiance.",
+        "passivePriority": "Take Bulwark with From Nothing, plus Warlord Leader, Warlord Berserker and Ally Attack Damage. Use a Megalomaniac with Blood of Rage. On sapphire jewels, prioritise maximum ES, all elemental resistances for minions, minion attack and cast speed, minion damage, minion critical chance and critical damage bonus, and faster start of Energy Shield Recharge.",
+        "gearPriority": "Maximise ES and evasion on body armour and gloves, and add Deflection Rating. For body armour, use a Rambler Jacket or a Sleek Jacket. Socket Legacy of Greymake into a 2-socket Alpha's Howl (corrupted with +1 to Minion Skills). Use a high-ES focus (+2 to Minion Skills). If you switch the belt to Mageblood, put Minion Splash II back on the Spectre.",
+        "caution": "Using the Blood of the Warrior flask while Rage is full does not trigger Warlord Berserker; use it after Rage has dropped. From 0 Rage, use it in three separate doses to bring the minions to maximum Rage (per the source guide). The source guide states that the fourth Ascendancy point is useless.",
+        "transitionCondition": "After completing the build, keep improving it by refining Spectres and jewels. Against pinnacle bosses, dropping Blasphemy and self-casting Despair raises damage (per the source guide's FAQ)."
+      }
+    ],
+    "mainSkill": "A minion army built around Spectres bound with Bind Spectre: Vaal Guard, then Skeletal Reaver, then Plague Harvester. Into the Breach Remnants are narrowed to added chaos damage with Choice of Power and passed to the minions with Selfless Remnants to scale damage. Level with a crossbow and Explosive Grenade early on, then switch to minions late in Act 3.",
+    "path": "/builds/monk/minion-chayula/",
+    "contentRevision": "40a4afe8360c1860"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

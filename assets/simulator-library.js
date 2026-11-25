@@ -94,7 +94,7 @@ function renderUpdates() {
 }
 async function loadUpdates() {
   try {
-    const response = await fetch('/data/saved-build-updates.json?v=f80c6c6300');
+    const response = await fetch('/data/saved-build-updates.json?v=64d4913cc8');
     if (!response.ok) throw Error('NOTICES_FETCH');
     const data = await response.json();
     if (data.version !== 1 || !Array.isArray(data.notices)) throw Error('NOTICES_FORMAT');

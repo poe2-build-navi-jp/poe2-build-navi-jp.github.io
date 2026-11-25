@@ -18,7 +18,7 @@ for(const [doc,path] of [[ja,'/simulator/'],[en,'/en/simulator/']]){
 assert(en.querySelector('a[href="/simulator/"]'));
 assert(ja.querySelector('a[href="/en/simulator/"]'));
 for(const el of ja.querySelectorAll('[id^="sim-"]'))assert(en.getElementById(el.id),'Missing English control: '+el.id);
-assert.equal(en.querySelectorAll('[data-preset]').length,22);
+assert.equal(en.querySelectorAll('[data-preset]').length,23);
 assert(en.querySelector('script[src*="simulator-en.js"]'));
 assert((await read('en/simulator/index.html')).includes("gtag('set','page_location',location.origin+location.pathname)"),'Do not send shared builds to analytics');
 assert((await read('sitemap.xml')).includes(base+'/en/simulator/'));

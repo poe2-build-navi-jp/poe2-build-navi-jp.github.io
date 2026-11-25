@@ -75,6 +75,10 @@
       "ja": "アコヤのスピア",
       "ref": "https://poe2db.tw/jp/Akoyan_Spear"
     },
+    "Ally Attack Damage": {
+      "ja": "味方アタックダメージ",
+      "ref": "https://poe2db.tw/jp/Ally_Attack_Damage"
+    },
     "Alpha's Howl": {
       "ja": "アルファの遠吠え",
       "ref": "https://poe2db.tw/jp/Alphas_Howl"
@@ -339,6 +343,10 @@
       "ja": "盲目",
       "ref": "https://poe2db.tw/jp/Blind_II"
     },
+    "Blind II": {
+      "ja": "盲目 II",
+      "ref": "https://poe2db.tw/jp/Blind_II"
+    },
     "Blinding Strike": {
       "ja": "盲目にする一撃",
       "ref": "https://poe2db.tw/jp/Blinding_Strike"
@@ -346,6 +354,14 @@
     "Blindside": {
       "ja": "死角攻撃",
       "ref": "https://poe2db.tw/jp/Blindside"
+    },
+    "Blood of Rage": {
+      "ja": "血の憤怒",
+      "ref": "https://poe2db.tw/jp/Blood_of_Rage"
+    },
+    "Blood of the Warrior": {
+      "ja": "戦士の血",
+      "ref": "https://poe2db.tw/jp/Blood_of_the_Warrior"
     },
     "Boat Charter": {
       "ja": "船の契約書",
@@ -443,6 +459,10 @@
       "ja": "ブルータスの脳",
       "ref": "https://poe2db.tw/jp/Brutus_Brain"
     },
+    "Bulwark": {
+      "ja": "バルワーク",
+      "ref": "https://poe2db.tw/jp/Bulwark"
+    },
     "Burgeon": {
       "ja": "チャネリング蓄積",
       "ref": "https://poe2db.tw/jp/Burgeon_II"
@@ -510,6 +530,10 @@
     "Chaos Inoculation": {
       "ja": "カオスイノキュレーション",
       "ref": "https://poe2db.tw/jp/Chaos_Inoculation"
+    },
+    "Chaos Mastery": {
+      "ja": "混沌マスタリー",
+      "ref": "https://poe2db.tw/jp/Chaos_Mastery"
     },
     "Chaos Orb": {
       "ja": "カオスオーブ",
@@ -675,6 +699,10 @@
       "ja": "冷血",
       "ref": "https://poe2db.tw/jp/Cool_Headed"
     },
+    "Cooldown Recovery I": {
+      "ja": "クールダウン解消 I",
+      "ref": "https://poe2db.tw/jp/Cooldown_Recovery_I"
+    },
     "Cooldown Recovery II": {
       "ja": "クールダウン解消 II",
       "ref": "https://poe2db.tw/jp/Cooldown_Recovery_II"
@@ -767,6 +795,10 @@
       "ja": "ダンスウィズデス",
       "ref": "https://poe2db.tw/jp/Dance_with_Death"
     },
+    "Danse Macabre": {
+      "ja": "死の舞踏",
+      "ref": "https://poe2db.tw/jp/Danse_Macabre"
+    },
     "Daresso's Passion": {
       "ja": "ダレッソの熱情",
       "ref": "https://poe2db.tw/jp/Daressos_Passion"
@@ -790,6 +822,10 @@
     "Deadly Fate": {
       "ja": "致死の運命",
       "ref": "https://poe2db.tw/jp/Deadly_Fate"
+    },
+    "Deathmarch": {
+      "ja": "死の行進",
+      "ref": "https://poe2db.tw/jp/Deathmarch"
     },
     "Deflect": {
       "ja": "受け流し",
@@ -930,6 +966,10 @@
     "Elemental Armament II": {
       "ja": "元素武装 II",
       "ref": "https://poe2db.tw/jp/Elemental_Armament_II"
+    },
+    "Elemental Army": {
+      "ja": "元素の軍勢",
+      "ref": "https://poe2db.tw/jp/Elemental_Army"
     },
     "Elemental Conflux": {
       "ja": "エレメンタルコンフラックス",
@@ -1106,6 +1146,10 @@
     "Farrul's Rune of the Chase": {
       "ja": "ファルウルの追跡のルーン",
       "ref": "https://poe2db.tw/jp/Farruls_Rune_of_the_Chase"
+    },
+    "Feeding Frenzy I": {
+      "ja": "狂乱の餌付け I",
+      "ref": "https://poe2db.tw/jp/Feeding_Frenzy_I"
     },
     "Feeding Frenzy II": {
       "ja": "狂乱の餌付け II",
@@ -1319,6 +1363,14 @@
       "ja": "グランドミラー",
       "ref": "https://poe2db.tw/jp/Grand_Mirror"
     },
+    "Grasp of the Void": {
+      "ja": "虚無を掴め",
+      "ref": "https://poe2db.tw/jp/Grasp_of_the_Void"
+    },
+    "Greater Iron Rune": {
+      "ja": "鉄のグレータールーン",
+      "ref": "https://poe2db.tw/jp/Greater_Iron_Rune"
+    },
     "Greater Jeweller's Orb": {
       "ja": "宝飾職人のオーブ (上級)",
       "ref": "https://poe2db.tw/jp/Greater_Jewellers_Orb"
@@ -1366,6 +1418,14 @@
     "Hard-Won Treasures": {
       "ja": "苦闘の末の財宝",
       "ref": "https://poe2db.tw/jp/Hard-Won_Treasures"
+    },
+    "Harmonic Remnants I": {
+      "ja": "共鳴のレムナント I",
+      "ref": "https://poe2db.tw/jp/Harmonic_Remnants_I"
+    },
+    "Harmonic Remnants II": {
+      "ja": "共鳴のレムナント II",
+      "ref": "https://poe2db.tw/jp/Harmonic_Remnants_II"
     },
     "Head of the King": {
       "ja": "王の首",
@@ -1439,6 +1499,10 @@
       "ja": "英雄の悲劇",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
     },
+    "Hex Bloom": {
+      "ja": "呪術の華",
+      "ref": "https://poe2db.tw/jp/Hex_Bloom"
+    },
     "Hilda": {
       "ja": "ヒルダ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -1507,9 +1571,17 @@
       "ja": "アイスティップアロー",
       "ref": "https://poe2db.tw/jp/Ice-Tipped_Arrows"
     },
+    "Idol of Egrin": {
+      "ja": "エグリンのアイドル",
+      "ref": "https://poe2db.tw/jp/Idol_of_Egrin"
+    },
     "Idol of Eramir": {
       "ja": "エラミアのアイドル",
       "ref": "https://poe2db.tw/jp/Idol_of_Eramir"
+    },
+    "Idol of Ralakesh": {
+      "ja": "ララケシュのアイドル",
+      "ref": "https://poe2db.tw/jp/Idol_of_Ralakesh"
     },
     "Idolatry": {
       "ja": "偶像崇拝",
@@ -1727,9 +1799,21 @@
       "ja": "リープスラム",
       "ref": "https://poe2db.tw/jp/Leap_Slam"
     },
+    "Legacy of Bismuth": {
+      "ja": "ビスマスの遺産",
+      "ref": "https://poe2db.tw/jp/Legacy_of_Bismuth"
+    },
+    "Legacy of Gold": {
+      "ja": "金の遺産",
+      "ref": "https://poe2db.tw/jp/Legacy_of_Gold"
+    },
     "Legacy of Greymake": {
       "ja": "グレイメイクの遺産",
       "ref": "https://poe2db.tw/jp/Legacy_of_Greymake"
+    },
+    "Legacy of Quicksilver": {
+      "ja": "水銀の遺産",
+      "ref": "https://poe2db.tw/jp/Legacy_of_Quicksilver"
     },
     "Legacy of Wanderlust": {
       "ja": "ワンダーラストの遺産",
@@ -1834,6 +1918,10 @@
     "Loyalty": {
       "ja": "忠誠",
       "ref": "https://poe2db.tw/jp/Loyalty"
+    },
+    "Lucid Dreaming": {
+      "ja": "明晰夢",
+      "ref": "https://poe2db.tw/jp/Lucid_Dreaming"
     },
     "Lythara, the Wayward Spear": {
       "ja": "放浪の槍、リサラ",
@@ -1974,6 +2062,10 @@
     "Minion Splash I": {
       "ja": "ミニオンスプラッシュ I",
       "ref": "https://poe2db.tw/jp/Minion_Splash_I"
+    },
+    "Minion Splash II": {
+      "ja": "ミニオンスプラッシュ II",
+      "ref": "https://poe2db.tw/jp/Minion_Splash_II"
     },
     "Mirage Archer": {
       "ja": "ミラージュアーチャー",
@@ -2379,6 +2471,10 @@
       "ja": "ラキアタの流れ",
       "ref": "https://poe2db.tw/jp/Rakiatas_Flow"
     },
+    "Rambler Jacket": {
+      "ja": "散策者のジャケット",
+      "ref": "https://poe2db.tw/jp/Rambler_Jacket"
+    },
     "Rapid Attacks": {
       "ja": "アタックスピード増加",
       "ref": "https://poe2db.tw/jp/Rapid_Attacks_III"
@@ -2406,6 +2502,10 @@
     "Rapid Casting II": {
       "ja": "キャストスピード増加 II",
       "ref": "https://poe2db.tw/jp/Rapid_Casting_II"
+    },
+    "Rapid Casting III": {
+      "ja": "キャストスピード増加 III",
+      "ref": "https://poe2db.tw/jp/Rapid_Casting_III"
     },
     "Rapid Reload": {
       "ja": "高速リロード",
@@ -2487,6 +2587,14 @@
       "ja": "レムナント吸引",
       "ref": "https://poe2db.tw/jp/Remnant_Attraction"
     },
+    "Remnant Potency I": {
+      "ja": "レムナントブースト I",
+      "ref": "https://poe2db.tw/jp/Remnant_Potency_I"
+    },
+    "Remnant Potency II": {
+      "ja": "レムナントブースト II",
+      "ref": "https://poe2db.tw/jp/Remnant_Potency_II"
+    },
     "Remnant Potency III": {
       "ja": "レムナントブースト III",
       "ref": "https://poe2db.tw/jp/Remnant_Potency_III"
@@ -2551,6 +2659,10 @@
       "ja": "リチュアル",
       "ref": "https://poe2db.tw/jp/Ritual"
     },
+    "Ritualistic Curse": {
+      "ja": "儀式的呪い",
+      "ref": "https://poe2db.tw/jp/Ritualistic_Curse"
+    },
     "Rog": {
       "ja": "ログ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -2590,6 +2702,14 @@
     "Rune of Culmination": {
       "ja": "集大成のルーン",
       "ref": "https://poe2db.tw/jp/Rune_of_Culmination"
+    },
+    "Rune of Reach": {
+      "ja": "射程のルーン",
+      "ref": "https://poe2db.tw/jp/Rune_of_Reach"
+    },
+    "Rune of the Blossom": {
+      "ja": "開花のルーン",
+      "ref": "https://poe2db.tw/jp/Rune_of_the_Blossom"
     },
     "Runed Spikes": {
       "ja": "ルーンの釘",
@@ -2643,6 +2763,14 @@
       "ja": "生贄の心臓",
       "ref": "https://poe2db.tw/jp/Sacrificial_Heart"
     },
+    "Sacrificial Lamb I": {
+      "ja": "生贄の子羊 I",
+      "ref": "https://poe2db.tw/jp/Sacrificial_Lamb_I"
+    },
+    "Sacrificial Offering": {
+      "ja": "犠牲のオファリング",
+      "ref": "https://poe2db.tw/jp/Sacrificial_Offering"
+    },
     "Sacrificial Regalia": {
       "ja": "生贄のレガリア",
       "ref": "https://poe2db.tw/jp/Sacrificial_Regalia"
@@ -2686,6 +2814,10 @@
     "Seasonal Blessing": {
       "ja": "季節の祝福",
       "ref": "https://poe2db.tw/jp/Seasonal_Blessing"
+    },
+    "Second Wind III": {
+      "ja": "セカンドウィンド III",
+      "ref": "https://poe2db.tw/jp/Second_Wind_III"
     },
     "Secrets of the Orb": {
       "ja": "オーブの秘密",
@@ -2854,6 +2986,14 @@
     "Solitary Confinement": {
       "ja": "監禁独房",
       "ref": "https://poe2db.tw/jp/Solitary_Confinement"
+    },
+    "Soul Core of Tacati": {
+      "ja": "タカティのソウルコア",
+      "ref": "https://poe2db.tw/jp/Soul_Core_of_Tacati"
+    },
+    "Soul Core of Topotante": {
+      "ja": "トポタンテのソウルコア",
+      "ref": "https://poe2db.tw/jp/Soul_Core_of_Topotante"
     },
     "Soul Mantle": {
       "ja": "魂の外套",
@@ -3643,6 +3783,10 @@
       "ja": "心臓のワードルーン",
       "ref": "https://poe2db.tw/jp/Warding_Rune_of_Heart"
     },
+    "Warlord Berserker": {
+      "ja": "ウォーロードのバーサーカー",
+      "ref": "https://poe2db.tw/jp/Warlord_Berserker"
+    },
     "Warlord Leader": {
       "ja": "ウォーロードのリーダー",
       "ref": "https://poe2db.tw/jp/Warlord_Leader"
@@ -3730,6 +3874,10 @@
     "Wither": {
       "ja": "ウィザー",
       "ref": "https://poe2db.tw/jp/Wither"
+    },
+    "Withered": {
+      "ja": "衰弱",
+      "ref": "https://poe2db.tw/jp/Withered"
     },
     "Withered Wand": {
       "ja": "枯れたワンド",
