@@ -158,6 +158,49 @@
     "contentRevision": "c4c5f32568cfc940"
   },
   {
+    "id": "monk-hollow-focus-storm-wave",
+    "name": "ホロウフォーカス＋ストームウェーブ・マーシャルアーティスト",
+    "class": "Monk",
+    "className": "モンク",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "マーシャルアーティスト",
+    "skills": [
+      "Storm Wave"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜キャンペーン終了（ツイスター育成）",
+        "mainSkill": "ワーリングスラッシュ（Whirling Slash）で段階を貯めてツイスター（Twister）を放つコンボ構成。ボスはウォーバナー（War Banner）かヘラルドオブアイス（Herald of Ice）",
+        "supports": "ジェム彫刻の優先順位は原典指定：フロストボム（Frost Bomb）を早めに切り、最初のLv3ジェムでファングオブフロスト（Fangs of Frost）。最初のLv5ジェム2つはバラージ（Barrage）とアイスティップアロー（Ice-Tipped Arrows）。最初のLv7ジェムで凍結の呪印（Freezing Mark）。サポートはワーリングスラッシュ（Whirling Slash）に憤怒 I（Rage I）とアタックスピード増加 I（Rapid Attacks I）、残りはツイスター（Twister）へ。ツイスターにはフロストネクサス（Frost Nexus）を繋いで冷気の地面を作り、後半はサルヴォ（Salvo）も候補。",
+        "passivePriority": "衝撃の一撃（Concussive Attack）へ最速で進み、次にダンスウィズデス（Dance with Death）を急ぐ。道中で武器セット1用の攻撃速度を取り、武器セット2用に山の精髄（Essence of the Mountain）と雹（Hail）で凍結蓄積と冷気ダメージを補う。最初のアセンダンシーは山の道（Way of the Mountain）で、凍結させている間のスタン・ダメージ・防御を助ける。",
+        "gearPriority": "武器セット1はワーリングスラッシュ（Whirling Slash）の速さ特化：Act 2以降は翼刃のスピア（Winged Spear）を探し、迅速のエッセンス（Essence of Haste）を使う。オフハンドは付けない。通貨があればスカイシルバー（Skysliver）も候補。武器セット2はツイスター（Twister）のダメージ特化：追加元素ダメージを盛り、攻撃速度は不要。序盤はバックラーでパリィ（Parry）→ファングオブフロスト（Fangs of Frost）を使い、後半はスピリットセプターへ替えてスピリットジェムを増やす。防具は序盤アーマー／回避、後に回避／ESへ移行。",
+        "caution": "モンクは全クラス中で最も序盤が弱く、ツイスター育成もAct 1が最弱点と原典が明記する。単体ローテーション中はワーリングスラッシュ（Whirling Slash）の風の雲から出てはいけない。回避ローリングをすると最初からやり直しになる。",
+        "transitionCondition": "キャンペーンを終えてマップに到達すること。"
+      },
+      {
+        "label": "Early Mapping（ストームウェーブ移行）",
+        "mainSkill": "単体はストームウェーブ（Storm Wave）。殲滅はシャタリングパーム（Shattering Palm）＋ヘラルドオブアイス（Herald of Ice）の氷爆発。ホロウフォーカス（Hollow Focus）の鐘とテンペストベル（Tempest Bell）が両方を底上げする",
+        "supports": "ヘラルドオブアイス（Herald of Ice）にアーマー破壊 III（Armour Break III）を繋ぎ、石拳の道（Way of the Stonefist）の追加物理ダメージでアーマー爆発（Armour Explosion）を起こすのが殲滅の核。シャタリングパーム（Shattering Palm）には効果範囲拡大 II（Magnified Area II）とアンセストラルコール II（Ancestral Call II）、憤怒 III（Rage III）も候補で、アイスバイト II（Ice Bite II）の発動源にもなる。ホロウフォーカス（Hollow Focus）の推奨枠は効果範囲拡大 II・クールダウン解消 IIなど（poe2db）。",
+        "passivePriority": "2つ目のアセンダンシーは石拳の道（Way of the Stonefist）。3つ目は武術の熟達者（Martial Adept）かホロウフォーカス技法（Hollow Focus Technique）。序盤のパワーチャージ生成はレゾナンス（Resonance）＋コンバットフレンジー（Combat Frenzy）でチャージドスタッフ（Charged Staff）に回す。激しい霜（Heavy Frost）と厚い氷（Thin Ice）、範囲ノードの眩暈の薙ぎ払い（Dizzying Sweep）系を取る。",
+        "gearPriority": "回避を可能な限り盛るのが主防御（受け流し・ESと併用）。序盤の頭は闇の痕跡（Vestige of Darkness）が優秀で、なければ冬の掌握（Grip of Winter）。武器は物理ダメージ最大のスタッフを探し、攻撃速度・クリティカルダメージボーナス・クリティカル率・近接スキルレベルも好条件。ただし近接スキルレベルはマナを重くする点に注意。グローブは石拳の道（Way of the Stonefist）の変換先として最重要で、攻撃への物理ダメージがヘラルドオブアイス（Herald of Ice）のアーマー破壊を可能にする。指輪には物理ダメージのライフ／マナリーチを最低1部位。",
+        "caution": "凍結が最大ダメージの前提。闇の痕跡（Vestige of Darkness）がなければ冬の掌握（Grip of Winter）で凍結しやすくする。マナ問題が出やすく、物理ダメージのマナリーチは最低限どこか1部位に必要。チャージドスタッフ（Charged Staff）は武器交換で効果が消える既知の不具合があると原典が注意している。",
+        "transitionCondition": "受け流し（Deflection）付き装備が2部位以上揃い、リネージサポートと完成形の武器に通貨を回せる段階に入ること。"
+      },
+      {
+        "label": "Endgame完成（リネージサポート・受け流し上限）",
+        "mainSkill": "シャタリングパーム（Shattering Palm）で殲滅し、ストームウェーブ（Storm Wave）の亀裂重なりでボスを溶かす。鐘はホロウフォーカス（Hollow Focus）とテンペストベル（Tempest Bell）の両方から供給される",
+        "supports": "ストームウェーブ（Storm Wave）のリネージサポート：カオムの狂気（Kaom's Madness）で亀裂追加、ガルカーンの決意（Garukhan's Resolve）はクリティカル特化の大きな伸び（高価）、ヴォラナの包囲（Vorana's Siege）は範囲と単体を両立。マナ対策はオシーンの誓い（Oisín's Oath）。フラグメントオブパスト（Fragments Of The Past）は重傷（Maim）と冷気の曝露（Cold Exposure）の付与に使うが、ルーンワードを消費する。憤怒 III（Rage III）は装備が整ったらシャタリングパーム（Shattering Palm）側へ移す。",
+        "passivePriority": "リズムのチャクラ（Chakra of Rhythm）＋集大成のルーン（Rune of Culmination）でシャタリングパーム（Shattering Palm）が1攻撃でコンボ2を得られるようになったら、武術の熟達者（Martial Adept）をホロウフォーカス技法（Hollow Focus Technique）へ切り替える。最後のアセンダンシーはルーンの経絡（Runic Meridians）。ホロウキーパー（The Hollowkeeper）はホロウの第一原理（First Principle of the Hollow）と守護者の最初の教え（First Teachings of the Keeper）の取得が前提。終盤はクリティカル系ノードを詰める。",
+        "gearPriority": "最良はクリティカルダメージボーナス・攻撃速度・クリティカル率の高いレアスタッフ。強化した二面性（Duality）も候補で、強化はダメージ版を選ぶ。受け流し（Deflection）は2部位以上で最終的に95%上限を目指す。アミュレットは近接スキル+3に全体防御と回避%、スピリットもあると胴で回避を妥協せずに済む。井戸の心臓（Heart of the Well）は二重ダメージの追加ダメージ化＋近接ヒット時の憤怒が理想。タイムロストサファイア（Time-Lost Sapphire）は眩暈の一撃（Dizzying Hits）付近に置く。",
+        "caution": "どのスキルにもアタックスピード増加 III（Rapid Attacks III）を繋がないこと（原典FAQの単体火力低下チェック項目）。エレメンタルウィークネス（Elemental Weakness）は高レベル帯ではレベル上げが必要で、知性の要求も重い。ストームウェーブの亀裂の重なりはボスの当たり判定ごとに適正距離が違い、経験で詰める要素が残る。",
+        "transitionCondition": "完成形。以後はジュエルと各装備の最大ロール化、クリティカルダメージの詰めを進める。"
+      }
+    ],
+    "mainSkill": "ストームウェーブ",
+    "path": "/builds/monk/hollow-focus-storm-wave/",
+    "contentRevision": "496eda3444cf3ae8"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "ツイスター・ジェムリング",
     "class": "Mercenary",

@@ -64,6 +64,7 @@ https://poe2-build-navi-jp.github.io/classes/witch/
 https://poe2-build-navi-jp.github.io/classes/druid/
 https://poe2-build-navi-jp.github.io/builds/monk/whirling-assault/
 https://poe2-build-navi-jp.github.io/builds/monk/falling-thunder/
+https://poe2-build-navi-jp.github.io/builds/monk/hollow-focus-storm-wave/
 https://poe2-build-navi-jp.github.io/builds/mercenary/twister-gemling/
 https://poe2-build-navi-jp.github.io/builds/warrior/shield-wall-smith/
 https://poe2-build-navi-jp.github.io/builds/sorceress/sand-and-fire/

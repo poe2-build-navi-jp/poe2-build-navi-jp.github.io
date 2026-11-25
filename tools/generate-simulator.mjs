@@ -11,6 +11,7 @@ const asc = {'マーシャルアーティスト':'Martial Artist','ジェムリ�
 const skills = {
  'monk-whirling-assault':['Whirling Assault'],
  'monk-falling-thunder':['Falling Thunder'],
+ 'monk-hollow-focus-storm-wave':['Storm Wave'],
  'mercenary-twister-gemling':['Twister'],
  'warrior-shield-wall-smith':['Shield Wall'],
  'sorceress-sand-fire':["Kelari's Deception","Ruzhan's Trap"],
