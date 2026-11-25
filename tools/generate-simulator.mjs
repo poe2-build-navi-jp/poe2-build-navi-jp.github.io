@@ -22,6 +22,7 @@ const skills = {
  'huntress-minion-spirit-walker':['Companion: {0}','Wolf Pack'],
  'ranger-ice-shot-deadeye':['Ice Shot'],
  'ranger-glacial-lance-deadeye':['Glacial Lance'],
+ 'ranger-twister-deadeye':['Twister'],
  'witch-minion-infernalist':['Skeletal Sniper'],
  'druid-plant-oracle':['Entangle','Thrashing Vines'],
  'druid-grim-pillars-oracle':['Grim Pillars'],

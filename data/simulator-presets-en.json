@@ -515,6 +515,76 @@
     "contentRevision": "0826b3eeb05a6d3e"
   },
   {
+    "id": "ranger-twister-deadeye",
+    "name": "Twister Deadeye",
+    "class": "Ranger",
+    "className": "Ranger",
+    "ascendancy": "Deadeye",
+    "ascendancyName": "Deadeye",
+    "skills": [
+      "Twister"
+    ],
+    "stages": [
+      {
+        "label": "Level 1 to Act 1 (Twister leveling start)",
+        "mainSkill": "Stack up to 3 whirlwinds with Whirling Slash, then consume them with Twister to empower it. Early on, parry with a buckler, then use Fangs of Frost to create chilled ground.",
+        "supports": "Whirling Slash stays at level 1: Rapid Attacks I, then Rage I. Twister: Retreat, then Prolonged Duration I. Ice-Tipped Arrows: Elemental Armament I. War Banner: Prolonged Duration I. Also use Frost Bomb. From the source planner (Campaign).",
+        "passivePriority": "Follow the source's 'Campaign' tree. Take attributes only as far as gear and gem requirements demand, and put the rest into Strength for Life. Weapon-set point allocation starts in Act 2.",
+        "gearPriority": "Weapon set 1: an attack-speed-first spear (a Winged Spear or Soaring Spear with an attack speed suffix; Skysliver if you have one). Keep the off hand empty to benefit from Dance with Death. Weapon set 2: a damage-focused spear. For armour in Acts 1-3, prioritise armour to reduce hits taken while parrying.",
+        "caution": "To level with Twister from level 1 in a fresh league, first make a Huntress mule character and pass a level 1 Whirling Slash, a spear and a buckler through the stash. Without a mule, level with Lightning Arrow + Lightning Rod and switch around level 10, once you have three level 3 gems and a decent spear. The source strongly insists on keeping Whirling Slash at level 1: levelling it only raises its mana cost. For movement the source recommends WASD controls; with mouse controls you must keep the cursor close to your character, which is awkward.",
+        "transitionCondition": "Reach Act 2 and cut Frost Nexus with your first level 2 uncut support gem."
+      },
+      {
+        "label": "Act 2 (Frost Nexus transition)",
+        "mainSkill": "The basic Twister + Whirling Slash rotation. Generate frenzy charges while moving with Cull the Weak, and freeze tough enemies with Freezing Mark.",
+        "supports": "Twister: Retreat, Frost Nexus, then Elemental Armament II. Ice-Tipped Arrows: Elemental Armament I, then Magnified Area I. Barrage: Rapid Casting, then Perpetual Charge. Cull the Weak: Thrill of the Kill II, then Charge Profusion. Freezing Mark: Prolonged Duration I. Herald of Ice: Elemental Armament II, then Magnified Area II. From the source planner (Maps).",
+        "passivePriority": "Start allocating weapon-set points in Act 2. Weapon set 1 is for Whirling Slash and Barrage; weapon set 2 holds everything else. Ice-Tipped Arrows must go in weapon set 2, or it will not work. Take Gathering Winds, then Avidity, as your first ascendancy points to boost frenzy charge generation.",
+        "gearPriority": "Once you take your second uncut spirit gem (level 6), switch to an Omen Sceptre. Keep prioritising armour on your gear, though from Act 3 onward you will also want evasion. On jewellery and gloves, prioritise added damage to attacks (flat damage).",
+        "caution": "Once Frost Nexus is socketed, it creates the chilled ground, so you can drop Fangs of Frost. Use Ice-Tipped Arrows on cooldown to convert your damage to cold and freeze enemies. Use Cull the Weak to generate frenzy charges while moving, and fire a frenzy-empowered Barrage into rare and magic packs. Against bosses, Freezing Mark creates ice ground together with Frost Nexus.",
+        "transitionCondition": "Reach Act 3 and cut Herald of Ice."
+      },
+      {
+        "label": "Act 3 to campaign completion (Herald of Ice)",
+        "mainSkill": "Herald of Ice explosions join the basic rotation (Ice-Tipped Arrows, then three Whirling Slashes, Barrage, then Twister).",
+        "supports": "Twister: keep Retreat, Frost Nexus and Elemental Armament II. Extend Herald of Ice to Elemental Armament II, Magnified Area II and Elemental Focus. Link Charge Profusion to Combat Frenzy. See the source planner for the exact sockets.",
+        "passivePriority": "Take Thrilling Chase as your third ascendancy point. Once you have a body armour with 1200+ evasion rating, start taking deflection nodes such as The Wild Cat, Trained Deflection and Enhanced Reflexes. Projectile speed, skill effect duration and area of effect all multiply Twister's damage.",
+        "gearPriority": "From Act 3 onward you will want evasion. On armour, prioritise Life and resistances above all, combining armour and evasion. Put a high-physical-damage spear in weapon set 2.",
+        "caution": "Cutting Herald of Ice makes clearing much easier, so do not skip cutting its support slots. If Whirling Slash struggles to crit the marked target, check Pinpoint Critical and Inexorable Critical II, and the Rune of Consistency on your helmet.",
+        "transitionCondition": "Finish the campaign and reach maps."
+      },
+      {
+        "label": "Mapping start (Maps)",
+        "mainSkill": "The Twister + Barrage combo with Salvo. Called Shots automatically applies Sniper's Mark to generate frenzy charges.",
+        "supports": "Twister: Retreat, Frost Nexus, Elemental Armament II, Acceleration, then Deliberation. Barrage: Perpetual Charge, Rapid Casting II, then Heightened Charges. Fire Salvo only after building 4+ seals. Called Shots' Sniper's Mark: Charged Mark, Eternal Mark, Ingenuity, then Charge Profusion. See the source planner for the exact sockets.",
+        "passivePriority": "Take Called Shots as your fourth ascendancy point. Swap Freezing Mark for Sniper's Mark and extend frenzy generation with Eternal Mark (only once your critical chance is high enough to spend the charges reliably). Deflection nodes become a serious investment once you have a 1500+ evasion body armour.",
+        "gearPriority": "Wake of Destruction creates elemental ground so you no longer need Frost Nexus. Your top purchase is The Taming, which keeps Twister empowered even without elemental ground. Serpent's Egg is good for boosting frenzy charge generation. Cover your mana with sapphires that recover 2% mana on kill.",
+        "caution": "Do not fire Twister too often. The source instructs you to wait until the Salvo + Barrage combo is stacked, then fire. Once Called Shots applies the mark, trigger it twice with Whirling Slash to generate up to 4 frenzy charges. Against bosses, build 4-6 frenzy charges first, then unleash the Salvo + Barrage + Twister combo.",
+        "transitionCondition": "Obtain The Taming, and be in a position to obtain Olroth's Conviction."
+      },
+      {
+        "label": "Endgame（Crit）",
+        "mainSkill": "The critical Twister + Barrage setup. Generate power charges with Spear Stab + Ailith's Chimes and extend them with Charge Regulation.",
+        "supports": "Barrage: Perpetual Charge, Rapid Casting II, Heightened Charges, Cooldown Recovery II, then Efficiency II. Twister: Retreat, Acceleration, Rakiata's Flow, Deliberation, then Salvo. Once you equip Olroth's Conviction, remove Salvo from Twister. Whirling Slash: Rapid Attacks III, Rage III, Pinpoint Critical, Inexorable Critical II, then Blazing Critical. Spear Stab: Culmination II, Ailith's Chimes, Charge Profusion, Rapid Attacks III, then Rage III. See the source planner for the exact sockets.",
+        "passivePriority": "Balance critical nodes with evasion and deflection nodes. Deflection nodes become a serious investment with a 1500+ evasion body armour. Use Heart of the Well's 'gain damage as fire' to balance Trinity. Put '% increased Energy Shield' on your rare sapphires.",
+        "gearPriority": "Top priority is Olroth's Conviction, which lets you use Barrage 3 times per cooldown. Your weapon should be a high-physical-damage spear. Aim for 10%+ critical chance on The Ordained. For your sceptre, Sacred Flame gives the most damage, but mind its interaction with Rakiata's Flow. For Trinity balance, choose from Guiding Palm of the Eye, Guiding Palm of the Heart or Guiding Palm of the Mind. Uhtred's Sidereus and Runeforged Sekhema Sandals are also candidates.",
+        "caution": "If you use Sacred Flame together with Rakiata's Flow, keep the boss away from you when firing Twister (they cancel each other out). Trinity has a breakpoint at level 23 for '+1% more elemental damage', so reach it with Uhtred's Augury or Uhtred's Omen. Garukhan's Resolve is the strongest lineage support for damage.",
+        "transitionCondition": "Reach the point where you can spend currency on expensive completed-build gear such as Mageblood or Headhunter."
+      },
+      {
+        "label": "Completed Endgame (Crit Aspirational)",
+        "mainSkill": "The completed Twister + Barrage setup. The final configuration adds Berserk and Ghost Dance.",
+        "supports": "Twister: Retreat, Acceleration, Rakiata's Flow, Garukhan's Resolve, then Deliberation. Barrage: Perpetual Charge, Heightened Charges, Olroth's Conviction, Uhtred's Constellation, then Efficiency II. Whirling Slash: Rapid Attacks III, Heightened Accuracy II, Blazing Critical, Pinpoint Critical, then Rigwald's Ferocity. Herald of Thunder: Elemental Armament II, Concentrated Area, Blindside, Esh's Radiance, then Esh's Prowess. See the source planner for the exact sockets.",
+        "passivePriority": "Take efficient flask nodes with Lavianga's Spirits. Beastial Skin is strong on an evasion body armour (it pairs well with Slipstrike Vest or Sleek Jacket). Choose a Controlled Metamorphosis with a small penalty to all elemental resistances (important when using Headhunter). Socket only good Time-Lost Jewels. If you have a good Megalomaniac, take extra jewel sockets toward the Shadow/Witch side.",
+        "gearPriority": "For Mageblood, the best is one that doubles Silver, Jade and Bismuth legacies. Headhunter is extremely strong in rare-dense content, but makes resistances and chaos resistance harder to cover. Kolr's Hunt marksman gloves are a luxury item. Uhtred's Sidereus, Runeforged Sekhema Sandals, Legacy of Wanderlust and Absent Amulet are also completed-build candidates.",
+        "caution": "If mana becomes a problem, use sapphires that recover 2% mana on kill and a mana flask; in the late game, use Lavianga's Spirits. Pure evasion or an ES/evasion hybrid is a matter of taste: the hybrid is somewhat tankier but leaves less freedom in the tree. The source warns that 'you are fragile while waiting for cooldowns in boss fights'.",
+        "transitionCondition": "Completed build. From here, work on 3-mod jewels, max rolls on each piece of gear, and strict Time-Lost Jewel selection."
+      }
+    ],
+    "mainSkill": "Twister",
+    "path": "/builds/ranger/twister-deadeye/",
+    "contentRevision": "d615952c5f82ae79"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

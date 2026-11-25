@@ -10,7 +10,7 @@ const clone = value => structuredClone(value);
 const libraryEvent=(type,detail=null)=>window.dispatchEvent(new window.CustomEvent('poe2:'+type,{detail}));
 const [presets,exampleData] = await loadCatalogs();
 let localization={names:{}},equipmentCatalog,routeCatalog,passiveIcons,editorCatalogPromise;
-async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets-en.json?v=448009220c','/data/simulator-examples-en.json?v=60c3507b43'].map(async url => {
+async function loadCatalogs(){for(;;){try{return await Promise.all(['/data/simulator-presets-en.json?v=5278d05b0a','/data/simulator-examples-en.json?v=60c3507b43'].map(async url => {
  const r=await fetch(url);if(!r.ok)throw Error('The build list could not be loaded. Please retry.');return r.json();
 }));}catch(error){$('sim-catalog-error').hidden=false;$('sim-catalog-message').textContent=error.message;await new Promise(resolve=>{$('sim-catalog-retry').onclick=resolve;});$('sim-catalog-error').hidden=true;}}}
 const trackSim=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{page_path:location.pathname,...(selectedPreset?{build_id:selectedPreset.id}:{}),...extra});};
@@ -811,7 +811,7 @@ document.addEventListener('click',async event=>{
   if(target.hasAttribute('data-find-gem')){
    const group=target.closest('[data-group]').dataset.group,index=target.dataset.findGem;
    const current=catalog.gems.find(gem=>gem.skill_id===plan.request.socket_groups[group].gems[index].skill_id);
-   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=a8e5a0a1d8');
+   const {openSkillPicker}=await import('./simulator-skill-picker.js?v=ab9d89bfc7');
    openSkillPicker({document,gems:catalog.gems,label,support:current?.is_support||false,selected:current?.skill_id,returnFocus:target,onSelect:skillId=>{
     const select=document.querySelector(`[data-group="${group}"] [data-gem="${index}"] select[data-gem-field="skill_id"]`);
     if(!select)return;expandGemOptions(select);select.value=skillId;select.dispatchEvent(new Event('change',{bubbles:true}));

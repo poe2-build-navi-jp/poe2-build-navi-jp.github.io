@@ -5506,10 +5506,10 @@
   },
   {
     "slug": "unique-gear",
-    "title": "おすすめユニーク装備一覧｜21ビルドの最強候補と採用条件",
-    "summary": "PoE2 0.5.5の掲載21ビルド・69候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
+    "title": "おすすめユニーク装備一覧｜22ビルドの最強候補と採用条件",
+    "summary": "PoE2 0.5.5の掲載22ビルド・82候補を比較。日本語名・英語名、用途、採用段階、必要条件、弱点、レア装備の代替と出典から、自分のビルドに合うユニーク装備を選べます。",
     "category": "basics",
-    "version": "掲載21ビルド：0.5.5／原典の版は出典欄で区別",
+    "version": "掲載22ビルド：0.5.5／原典の版は出典欄で区別",
     "checkedAt": "2026-11-25",
     "publishedAt": "2026-10-12",
     "updatedAt": "2026-11-25",
@@ -5593,13 +5593,13 @@
       "原典の構成名と、装備に必要な効果を合わせる",
       "交換後の耐性・Spirit・防御を確認して育成へ戻る"
     ],
-    "tocLabel": "掲載21ビルドからユニーク装備を探す",
+    "tocLabel": "掲載22ビルドからユニーク装備を探す",
     "sections": [
       {
         "id": "build-unique-summary",
-        "heading": "PoE2おすすめユニーク装備一覧｜21ビルドの選び方早見",
+        "heading": "PoE2おすすめユニーク装備一覧｜22ビルドの選び方早見",
         "paragraphs": [
-          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全69候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
+          "掲載原典の採用品・候補をビルド別に整理しました。以下の装備名は候補の一部で、強さ順ではありません。各ビルドの詳細では全82候補・組み合わせと、それぞれの採用条件・弱点・レア代替を確認できます。"
         ],
         "gearSummary": true
       },
@@ -6288,6 +6288,212 @@
           76
         ],
         "quickAnswer": "最初の購入はアルファの遠吠え。移行時に包み込む夜明けとウルルの骨、Midでプリズム・ガーディアン、完成形は生贄のレガリアとメイジブラッド（またはレアベルト）です。"
+      },
+      {
+        "id": "ranger-twister-deadeye",
+        "heading": "ツイスター・デッドアイのおすすめユニーク装備",
+        "buildId": "ranger-twister-deadeye",
+        "paragraphs": [
+          "原典の優先順が明確なビルドです。Mapping開始の最優先はテイミングで、元素の地面がなくても常にツイスターを強化できます。破滅の軌跡で元素の地面を作ればフロストネクサスを使わずに済み、繋ぎはベレクの指輪3種と蛇の卵です。Endgameはオルロスの信念が最優先で、バラージをクールダウンごとに3回使えるようになります。セプターは聖なる炎が最大ダメージで、完成形はメイジブラッドかヘッドハンターのベルトです。"
+        ],
+        "gearOptions": [
+          {
+            "name": "Skysliver",
+            "slot": "スピア",
+            "phase": "Act 1〜",
+            "purpose": "攻撃速度最優先のスピア候補。原典のCampaign構成で「あれば」とされる",
+            "conditions": "攻撃速度サフィックス付きのレアスピアが手に入るまでの候補として原典が挙げる。",
+            "tradeoff": "レアスピアの攻撃速度次第では不要になる。",
+            "rareAlternative": "攻撃速度サフィックス付きの翼刃のスピア／飛翔のスピア",
+            "sourceRefs": [
+              81,
+              22
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "スカイシルバー"
+          },
+          {
+            "name": "Wake of Destruction",
+            "slot": "靴",
+            "phase": "Mapping開始",
+            "purpose": "元素の地面を作り、フロストネクサスを使わずに済ませる",
+            "conditions": "Mapping開始で入手し、フロストネクサスを外す。",
+            "tradeoff": "靴枠を地面生成に使うため、移動速度・耐性の確保は他部位で補う。",
+            "rareAlternative": "フロストネクサスを継続し、靴は移動速度・耐性重視のレア品",
+            "sourceRefs": [
+              81,
+              82
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "破滅の軌跡"
+          },
+          {
+            "name": "Berek's Grip",
+            "slot": "指輪",
+            "phase": "キャンペーン",
+            "purpose": "序盤の繋ぎの指輪。火ダメージの追加で育成を底上げする",
+            "conditions": "Campaign構成の繋ぎ。後半はテイミングへ更新する。",
+            "tradeoff": "繋ぎのため長期使用はしない。",
+            "rareAlternative": "追加ダメージ付きのレア指輪",
+            "sourceRefs": [
+              81,
+              83
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ベレクの握り"
+          },
+          {
+            "name": "Berek's Pass",
+            "slot": "指輪",
+            "phase": "キャンペーン",
+            "purpose": "序盤の繋ぎの指輪。冷気ダメージの追加で凍結を助ける",
+            "conditions": "Campaign構成の繋ぎ。後半はテイミングへ更新する。",
+            "tradeoff": "繋ぎのため長期使用はしない。",
+            "rareAlternative": "追加ダメージ付きのレア指輪",
+            "sourceRefs": [
+              81,
+              84
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ベレクの山道"
+          },
+          {
+            "name": "Berek's Respite",
+            "slot": "指輪",
+            "phase": "キャンペーン",
+            "purpose": "序盤の繋ぎの指輪。雷ダメージの追加で育成を底上げする",
+            "conditions": "Campaign構成の繋ぎ。後半はテイミングへ更新する。",
+            "tradeoff": "繋ぎのため長期使用はしない。",
+            "rareAlternative": "追加ダメージ付きのレア指輪",
+            "sourceRefs": [
+              81,
+              85
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ベレクの休息"
+          },
+          {
+            "name": "Serpent's Egg",
+            "slot": "護符",
+            "phase": "Mapping開始",
+            "purpose": "フレンジーチャージ生成の強化",
+            "conditions": "Mapping開始で入手し、フレンジー生成を伸ばす。",
+            "tradeoff": "護符枠を使うため、耐性・ライフの確保は他部位で補う。",
+            "rareAlternative": "フレンジー生成を他で補えるレア護符",
+            "sourceRefs": [
+              81,
+              86
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "蛇の卵"
+          },
+          {
+            "name": "The Taming",
+            "slot": "指輪",
+            "phase": "Mapping開始",
+            "purpose": "最優先の買い物。元素の地面がなくても常にツイスターを強化できる",
+            "conditions": "Mapping開始の最優先購入。元素の地面の有無に依存しない。",
+            "tradeoff": "指輪枠を1つ使うため、耐性の確保は他部位で補う。",
+            "rareAlternative": "元素の地面に依存する構成のまま、フロストネクサスや破滅の軌跡で補う",
+            "sourceRefs": [
+              81,
+              4
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "テイミング"
+          },
+          {
+            "name": "Olroth's Conviction",
+            "slot": "護符",
+            "phase": "Endgame",
+            "purpose": "最優先の護符。バラージをクールダウンごとに3回使えるようになる",
+            "conditions": "Endgame構成の最優先品。入手したらツイスターからサルヴォを外す。",
+            "tradeoff": "高投資の護符で、他の完成パーツより先に買う理由は原典の優先順にある。",
+            "rareAlternative": "サルヴォをツイスターに残し、バラージの回転はクールダウン解消で補う",
+            "sourceRefs": [
+              81,
+              87
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "オルロスの信念"
+          },
+          {
+            "name": "Sacred Flame",
+            "slot": "セプター",
+            "phase": "Endgame",
+            "purpose": "セプターの最大ダメージの選択肢",
+            "conditions": "Endgameでクリティカル構成が安定してから狙う。ラキアタの流れとの相性に注意。",
+            "tradeoff": "高投資のセプターで、ラキアタの流れ併用時はボスとの距離に注意が要る。",
+            "rareAlternative": "目の導きの掌／心の導きの掌／精神の導きの掌からトリニティのバランスに合うものを選ぶ",
+            "sourceRefs": [
+              81,
+              73
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "聖なる炎"
+          },
+          {
+            "name": "The Ordained",
+            "slot": "スピア",
+            "phase": "Endgame",
+            "purpose": "Endgameのスピア候補。クリティカル率10%以上を目安にする",
+            "conditions": "物理ダメージの高いスピアとして原典が挙げる。クリティカル率10%以上が目安。",
+            "tradeoff": "クリティカル率の目安を満たす必要がある。",
+            "rareAlternative": "物理ダメージ・クリティカル率・投射物スキルレベル+のレアスピア",
+            "sourceRefs": [
+              81,
+              88
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "選ばれし者"
+          },
+          {
+            "name": "Guiding Palm of the Eye",
+            "slot": "セプター",
+            "phase": "Endgame",
+            "purpose": "トリニティのバランス調整に使うセプターの選択肢の1つ",
+            "conditions": "トリニティのバランスに合わせて心の導きの掌／精神の導きの掌から選ぶ。",
+            "tradeoff": "3種のうち1つを選ぶため、現在のトリニティの偏りを確認する。",
+            "rareAlternative": "聖なる炎を継続し、トリニティは他の手段で整える",
+            "sourceRefs": [
+              81,
+              23
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "目の導きの掌"
+          },
+          {
+            "name": "Mageblood",
+            "slot": "ベルト",
+            "phase": "Endgame完成（Aspirational）",
+            "purpose": "ベルトの完成形。銀・翡翠・ビスマスのレガシーを2倍化したものが最適",
+            "conditions": "完成形の段階で狙う。",
+            "tradeoff": "最高額帯の装備で、他の完成パーツより先に買う理由は薄い。",
+            "rareAlternative": "移動速度・回避・耐性を盛ったレアベルト",
+            "sourceRefs": [
+              81,
+              27
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "メイジブラッド"
+          },
+          {
+            "name": "Headhunter",
+            "slot": "ベルト",
+            "phase": "Endgame完成（Aspirational）",
+            "purpose": "レアの多いコンテンツで極めて強力な完成形のベルト",
+            "conditions": "原典はメイジブラッドと並べて「使える」とする完成形の選択肢。耐性と混沌耐性の確保が難しくなる。",
+            "tradeoff": "周回向けの効果で、ボス単独戦では真価を発揮しない。耐性の確保が難しくなる。",
+            "rareAlternative": "移動速度・回避・耐性を盛ったレアベルト",
+            "sourceRefs": [
+              81,
+              1
+            ],
+            "basis": "原典の該当構成で採用",
+            "nameJa": "ヘッドハンター"
+          }
+        ],
+        "quickAnswer": "最初の購入はテイミング。Endgameでオルロスの信念・聖なる炎、完成形でメイジブラッド（またはヘッドハンター）です。"
       },
       {
         "id": "mercenary-twister-gemling",
@@ -7540,6 +7746,61 @@
         "checkedAt": "2026-11-25",
         "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
         "japaneseUrl": "https://poe2db.tw/jp/Laviangas_Spirits"
+      },
+      {
+        "name": "Maxroll: Twister Deadeye Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
+        "checkedAt": "2026-11-25",
+        "supports": "ツイスター・デッドアイの装備（スカイシルバー、破滅の軌跡、ベレクの指輪3種、蛇の卵、テイミング、オルロスの信念、聖なる炎、選ばれし者、目の導きの掌、メイジブラッド、ヘッドハンター）と購入順を確認。本文と埋め込みプランナーを直接確認。"
+      },
+      {
+        "name": "PoE2DB: 破滅の軌跡（Wake of Destruction）",
+        "url": "https://poe2db.tw/us/Wake_of_Destruction",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Wake_of_Destruction"
+      },
+      {
+        "name": "PoE2DB: ベレクの握り（Berek's Grip）",
+        "url": "https://poe2db.tw/us/Bereks_Grip",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Bereks_Grip"
+      },
+      {
+        "name": "PoE2DB: ベレクの山道（Berek's Pass）",
+        "url": "https://poe2db.tw/us/Bereks_Pass",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Bereks_Pass"
+      },
+      {
+        "name": "PoE2DB: ベレクの休息（Berek's Respite）",
+        "url": "https://poe2db.tw/us/Bereks_Respite",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Bereks_Respite"
+      },
+      {
+        "name": "PoE2DB: 蛇の卵（Serpent's Egg）",
+        "url": "https://poe2db.tw/us/Serpents_Egg",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Serpents_Egg"
+      },
+      {
+        "name": "PoE2DB: オルロスの信念（Olroth's Conviction）",
+        "url": "https://poe2db.tw/us/Olroths_Conviction",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/Olroths_Conviction"
+      },
+      {
+        "name": "PoE2DB: 選ばれし者（The Ordained）",
+        "url": "https://poe2db.tw/us/The_Ordained",
+        "checkedAt": "2026-11-25",
+        "supports": "装備種別と効果。日本語名は日本語ページのタイトルで確認。",
+        "japaneseUrl": "https://poe2db.tw/jp/The_Ordained"
       }
     ],
     "scope": "2026-10-12に各原典の本文・公開HTML内の構成別装備データとPoE2DBを照合。原典採用品・別原典の候補・効果から検討する候補を区別しています。ゲーム内実測、全装備の同条件比較、相場調査、各ビルドの育成手順の全面再検証は行っていません。Maxrollは取得できなかったため今回の採用確認には使用していません。装備データの仕様と、原典作者による推奨・運営者の選び方を分けて記載。文章や画像の転載はしません。 日本語名はPoE2DB日本語ページの装備データ本文で照合。検索結果のタイトルに同名パッシブが混ざる場合は、装備種別とアイコンを確認して区別しています。",
@@ -7650,6 +7911,10 @@
       {
         "date": "2026-11-25",
         "summary": "雷ミニオン・チャユラの門弟のビルド追加に合わせ、候補9点（アルファの遠吠え、包み込む夜明け、ウルルの骨、プリズム・ガーディアン、トレンチティンバー、カディガンの啓示、生贄のレガリア、メイジブラッド、ラヴィアンガの心）のセクションを追加。掲載は21ビルド・69候補になりました。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "ツイスター・デッドアイのビルド追加に合わせ、候補13点（スカイシルバー、破滅の軌跡、ベレクの握り、ベレクの山道、ベレクの休息、蛇の卵、テイミング、オルロスの信念、聖なる炎、選ばれし者、目の導きの掌、メイジブラッド、ヘッドハンター）のセクションを追加。掲載は22ビルド・82候補になりました。"
       }
     ]
   },
@@ -10439,8 +10704,8 @@
   },
   {
     "slug": "build-gear-buying-order",
-    "title": "ビルド別の装備購入順｜低予算から完成形へ進む21構成",
-    "summary": "掲載21ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
+    "title": "ビルド別の装備購入順｜低予算から完成形へ進む22構成",
+    "summary": "掲載22ビルドの買い足し候補を、防御・主力火力・構成切替・高投資の順に整理。固定相場に頼らず、1点だけ買う段階とセットで揃える段階を分け、交換で失う能力も比較します。",
     "category": "basics",
     "version": "0.5.5掲載構成",
     "checkedAt": "2026-11-25",
@@ -10589,9 +10854,15 @@
         "url": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
         "checkedAt": "2026-11-25",
         "supports": "雷ミニオン・チャユラの門弟の装備優先を確認し、購入順へ再編集。"
+      },
+      {
+        "name": "Maxroll: Twister Deadeye Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
+        "checkedAt": "2026-11-25",
+        "supports": "ツイスター・デッドアイの装備優先を確認し、購入順へ再編集。"
       }
     ],
-    "scope": "掲載済み21ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+    "scope": "掲載済み22ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
     "structuredCitations": true,
     "keywords": [
       "装備購入順",
@@ -10619,7 +10890,7 @@
     "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
     "verification": {
       "method": "既存の個別ビルドの装備優先項目を再編集。ツイスター・アイスショットの作者解説と装備データは別途参照。",
-      "confirmed": "掲載済み21ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
+      "confirmed": "掲載済み22ビルドのMapping開始・Early Endgameの装備優先データを購入判断用に整理。全原典・全育成段階を本日に再検証したものではなく、参照資料の既存照合日は維持します。価格帯は実勢価格ではなく、読者の使える予算に応じた進め方です。",
       "unverified": "12原典の全段階の再検証、全装備の購入価格、交換前後の同条件実測、最安クリア構成。"
     },
     "revisionNotes": [
@@ -10662,6 +10933,10 @@
       {
         "date": "2026-11-25",
         "summary": "雷ミニオン・チャユラの門弟の購入順セクションを追加。掲載は21構成になりました。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "ツイスター・デッドアイの購入順セクションを追加。掲載は22構成になりました。"
       }
     ],
     "quickLinks": [
@@ -10671,7 +10946,7 @@
       },
       {
         "href": "#build-list",
-        "label": "21ビルドから選ぶ"
+        "label": "22ビルドから選ぶ"
       },
       {
         "href": "#before-after",
@@ -10730,7 +11005,7 @@
       },
       {
         "id": "build-list",
-        "heading": "掲載21ビルドから装備の購入順を選ぶ",
+        "heading": "掲載22ビルドから装備の購入順を選ぶ",
         "paragraphs": [
           "以下は必須購入ランキングではなく、個別ページの掲載済み育成データを使った確認順です。すでに満たしている防御項目へ買い直す必要はありません。段階ごとの細かいジェムや切替条件は、現在Lvの育成案内へ戻って照合してください。"
         ],
@@ -11015,6 +11290,31 @@
         ],
         "sourceRefs": [
           23
+        ]
+      },
+      {
+        "id": "ranger-twister-deadeye",
+        "heading": "ツイスター・デッドアイの装備購入順",
+        "paragraphs": [
+          "掲載済みのMapping開始〜Endgame完成段階で確認する項目：Mapping開始の最優先はテイミングで、元素の地面がなくても常にツイスターを強化できます。破滅の軌跡で元素の地面を作ればフロストネクサスを使わずに済みます。Endgameはオルロスの信念でバラージをクールダウンごとに3回使えるようにします。[source:24]"
+        ],
+        "bullets": [
+          "最初の1点：テイミング。元素の地面がなくてもツイスターを強化でき、Mapping開始の最優先品。破滅の軌跡で元素の地面を確保し、繋ぎはベレクの指輪3種と蛇の卵。",
+          "火力・機能を買い足す：オルロスの信念でバラージをクールダウンごとに3回使えるようにし、セプターは聖なる炎、またはトリニティのバランスに合う導きの掌へ更新する。選ばれし者はクリティカル率10%以上が目安。",
+          "後回し・まとめて準備する品：メイジブラッド（またはヘッドハンター）と、ガルカーンの決意などのリネージサポートは完成形。耐性と混沌耐性の確保と合わせて揃える。"
+        ],
+        "links": [
+          {
+            "href": "/builds/ranger/twister-deadeye/#level-card",
+            "label": "現在Lvの育成条件"
+          },
+          {
+            "href": "/guides/unique-gear/#ranger-twister-deadeye",
+            "label": "ユニークの用途・条件・代替"
+          }
+        ],
+        "sourceRefs": [
+          24
         ]
       },
       {
@@ -15604,7 +15904,10 @@
             [
               "ツイスター・デッドアイ",
               "Twister Deadeye",
-              "—"
+              {
+                "text": "ツイスター・デッドアイ",
+                "href": "/builds/ranger/twister-deadeye/"
+              }
             ],
             [
               "ミニオン・チャユラの門弟",
@@ -15990,7 +16293,7 @@
         "id": "site-builds",
         "heading": "このサイトの掲載ビルドはどこにある？",
         "paragraphs": [
-          "このサイトで育成手順を掲載している21ビルドのうち、18ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
+          "このサイトで育成手順を掲載している22ビルドのうち、19ビルドがMaxrollのTier表に同じスキルとアセンダンシーの組み合わせで載っています。[source:1]"
         ],
         "table": {
           "caption": "掲載ビルドとMaxrollのTier",
@@ -16127,6 +16430,14 @@
               },
               "A",
               "Lightning Minion Acolyte of Chayula"
+            ],
+            [
+              {
+                "text": "ツイスター・デッドアイ",
+                "href": "/builds/ranger/twister-deadeye/"
+              },
+              "A",
+              "Twister Deadeye"
             ],
             [
               {
@@ -16376,6 +16687,10 @@
       {
         "date": "2026-11-25",
         "summary": "雷ミニオン・チャユラの門弟のビルドページを追加し、A Tier表の「このサイトの記事」欄と掲載ビルド表にリンクを追加。"
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "ツイスター・デッドアイのビルドページを追加し、A Tier表の「このサイトの記事」欄と掲載ビルド表にリンクを追加。"
       }
     ]
   },

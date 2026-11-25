@@ -1,4 +1,4 @@
-import {skillIcons} from './skill-icon-data.js?v=1319d20d48';
+import {skillIcons} from './skill-icon-data.js?v=98f83833f6';
 import {createSkillMatcher,skillImageHtml,escapeSkillText} from './skill-icon-matcher.js?v=4b20b1824e';
 
 const matcher=createSkillMatcher(skillIcons);

@@ -6,7 +6,7 @@ const builds=JSON.parse(read('data/builds.json')).filter(b=>b.status!=='draft');
 const guide=JSON.parse(read('data/strategy-guides.json')).find(g=>g.slug==='unique-gear');
 const sections=guide.sections.filter(s=>s.buildId);
 assert.deepEqual(sections.map(s=>s.buildId).sort(),builds.map(b=>b.id).sort());
-assert.equal(new Set(sections.map(s=>s.buildId)).size,21);
+assert.equal(new Set(sections.map(s=>s.buildId)).size,22);
 const doc=new JSDOM(read('guides/unique-gear/index.html')).window.document;
 const options=sections.flatMap(s=>s.gearOptions);
 assert.equal(doc.querySelectorAll('.unique-gear-card').length,options.length);

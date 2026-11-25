@@ -53,9 +53,9 @@ const saved=()=>model.parseSave(w.localStorage.getItem('poe2-simulator:v1:mercen
 try{
  await w.eval(`(async()=>{${code}\n})()`);installSimulatorUsability(d);installSimulatorFlow(d);
  assert(d.querySelector('.sim-choice-title').compareDocumentPosition(d.querySelector('.sim-first-guide'))&w.Node.DOCUMENT_POSITION_FOLLOWING);
- change('#sim-build-search','ついすたー','input');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,2);
+ change('#sim-build-search','ついすたー','input');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,3);
  change('#sim-class-filter','Mercenary');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,1);
- change('#sim-build-search','no-match-123','input');assert.equal(d.querySelector('#sim-build-empty').hidden,false);click('#sim-build-reset');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,21);
+ change('#sim-build-search','no-match-123','input');assert.equal(d.querySelector('#sim-build-empty').hidden,false);click('#sim-build-reset');assert.equal(d.querySelectorAll('[data-preset]:not([hidden])').length,22);
  click('[data-preset="mercenary-twister-gemling"]');await wait(ready);const before=JSON.stringify(saved().request.items);
  assert.equal(workerStarts,2,'a trapped first calculation must use a fresh worker');
  const staleWorkerError=new w.Event('error',{cancelable:true});workerInstances[0].onerror(staleWorkerError);assert.equal(staleWorkerError.defaultPrevented,true,'handled errors from terminated workers must not bubble to the current page');assert.equal(d.querySelector('#sim-error').hidden,true);assert.equal(workerStarts,2);

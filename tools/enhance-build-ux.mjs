@@ -14,7 +14,7 @@ const url=b=>`/builds/${b.classSlug}/${b.slug}/`;
 // appears once; the group follows its main skill type (Attack with a ranged weapon / melee Attack /
 // Spell / Minion or Companion). JS shows one group at a time (tabs); without JS all groups are shown.
 const HOME_GROUPS=[
- ['ranged','遠距離','弓・クロスボウ・槍で離れて戦う',['ranger-ice-shot-deadeye','mercenary-twister-gemling','huntress-twister-spirit-walker','mercenary-grenade-gemling','ranger-glacial-lance-deadeye']],
+ ['ranged','遠距離','弓・クロスボウ・槍で離れて戦う',['ranger-ice-shot-deadeye','mercenary-twister-gemling','huntress-twister-spirit-walker','mercenary-grenade-gemling','ranger-glacial-lance-deadeye','ranger-twister-deadeye']],
  ['melee','近接','近づいて武器や盾で戦う',['monk-whirling-assault','warrior-shield-wall-smith','monk-falling-thunder','monk-hollow-focus-storm-wave','warrior-shield-wall-warbringer']],
  ['spell','魔法','スペル（魔法）を撃って戦う',['sorceress-spark-stormweaver','druid-plant-oracle','druid-grim-pillars-oracle','witch-ed-contagion-lich']],
  ['minion','召喚','召喚した仲間や相棒に戦わせる',['witch-minion-infernalist','sorceress-sand-fire','huntress-companion','huntress-minion-spirit-walker','monk-infernal-legion-chayula','mercenary-supporting-fire-tactician','monk-lightning-minion-chayula']]

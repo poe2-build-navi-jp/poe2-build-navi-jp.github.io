@@ -21,7 +21,7 @@ for(const term of terms){
  for(const source of term.sources)assert(d.querySelector('#term-sources').textContent.includes(source.checkedAt));
 }
 const builds=JSON.parse(read('data/builds.json'));
-assert.equal(builds.length,21);
+assert.equal(builds.length,22);
 for(const b of builds){
  const d=new JSDOM(read(`builds/${b.classSlug}/${b.slug}/index.html`)).window.document;
  assert(b.ratingEvidence && b.changeHistory.length && b.version);
