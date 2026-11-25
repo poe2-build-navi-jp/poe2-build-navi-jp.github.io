@@ -271,6 +271,49 @@
     "contentRevision": "07634eb3fc08cce0"
   },
   {
+    "id": "warrior-shield-wall-warbringer",
+    "name": "シールドウォール・ウォーブリンガー",
+    "class": "Warrior",
+    "className": "ウォリアー",
+    "ascendancy": "Warbringer",
+    "ascendancyName": "ウォーブリンガー",
+    "skills": [
+      "Shield Wall"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜22（両手メイス育成）",
+        "mainSkill": "ローリングスラム（Rolling Slam）とボーンシャッター（Boneshatter）が主体。単体はパーフェクトストライク（Perfect Strike）",
+        "supports": "通常攻撃：アタックスピード増加 II（Rapid Attacks II）＋効果範囲集中（Concentrated Area）。ローリングスラム（Rolling Slam）：スタン狙い I（Brink I）。ボーンシャッター（Boneshatter）：インパクトショックウェーブ（Impact Shockwave）＋効果範囲拡大 I（Magnified Area I）。パーフェクトストライク（Perfect Strike）：好機の幅 I（Window of Opportunity I）＋アタックスピード増加 I（Rapid Attacks I）。インファーナルクライ（Infernal Cry）：持続のウォークライ（Tireless）。ヘラルドオブアッシュ（Herald of Ash）を併用する。原典プランナー（Level 1-22）の構成。",
+        "passivePriority": "属性は装備とジェムの要求を満たす分を取り、残りは筋力でライフを伸ばす。最初のアセンダンシーは応えられた呼び声（Answered Call）で、トーテムに先祖の霊を宿してバフを得る。",
+        "gearPriority": "両手メイスと、ライフ／耐性／アーマーの防具。Lv22の移行と盾のギャンブルに備えてゴールドを残しておく。",
+        "caution": "序盤はアニメーションが遅いのが原典の短所。シールドウォール（Shield Wall）はまだ使えないため、両手メイスの火力で押し切る期間になる。",
+        "transitionCondition": "Lv22到達と、レベル7のアンカットスキルジェムの確保。ゴールドで盾をギャンブルし、アーマーの高い盾を用意する。"
+      },
+      {
+        "label": "Lv22〜キャンペーン終了（シールドウォール移行）",
+        "mainSkill": "シールドウォール（Shield Wall）の亀裂を、フォティファイイングクライ（Fortifying Cry）やインファーナルクライ（Infernal Cry）で起爆する。ショックウェーブトーテム（Shockwave Totem）が補助火力",
+        "supports": "シールドウォール（Shield Wall）：アタックスピード増加 I（Rapid Attacks I）＋ファイヤーインフュージョン（Fire Infusion）＋効果範囲拡大 I（Magnified Area I）。フォティファイイングクライ（Fortifying Cry）：ブルータリティ II（Brutality II）＋憤怒のクライ（Raging Cry）。インファーナルクライ（Infernal Cry）：持続のウォークライ（Tireless）＋憤怒のクライ（Raging Cry）。ショックウェーブトーテム（Shockwave Totem）：トーテム高速設置 I（Urgent Totems I）。リープスラム（Leap Slam）／シールドチャージ（Shield Charge）：アタックスピード増加 I（Rapid Attacks I）。キャンペーン後半のプランナーでは、シールドウォールに串刺し（Impale）が加わり、効果範囲拡大 II（Magnified Area II）など各サポートが上位級へ更新される。",
+        "passivePriority": "フォティファイイングクライ（Fortifying Cry）が使えるようになったら、応えられた呼び声（Answered Call）からウォーコーラーの叫び（Warcaller's Bellow）へ切り替える。ウォークライのクールダウンがなくなり、任意のタイミングで亀裂を起爆でき、近くの死体も爆発する。ウォークライ専用に武器セット2のパッシブを割り当てる。",
+        "gearPriority": "盾はアーマーが最も高いものを常に探す。武器のダメージは火力に無関係。胴はライフとアーマー、耐性は75%を目標にする。",
+        "caution": "マナが厳しい場合は、指輪かグローブにマナリーチを1つ付けると解決する。リープスラム（Leap Slam）／インファーナルクライ（Infernal Cry）／シールドチャージ（Shield Charge）のジェムはレベルを上げないのが原典FAQの指示。",
+        "transitionCondition": "キャンペーン終了と、アーンの城塞（Ahn's Citadel）／カオムの狂気（Kaom's Madness）のリネージサポートを揃える見込みが立つこと。"
+      },
+      {
+        "label": "Endgame完成（リネージサポートで亀裂を分岐）",
+        "mainSkill": "アーンの城塞（Ahn's Citadel）とカオムの狂気（Kaom's Madness）で分岐させたシールドウォール（Shield Wall）の亀裂を、フォティファイイングクライ（Fortifying Cry）／インファーナルクライ（Infernal Cry）／サンダー（Sunder）／移動スキルで起爆する",
+        "supports": "シールドウォール（Shield Wall）：アタックスピード増加 II（Rapid Attacks II）＋アーンの城塞（Ahn's Citadel）＋カオムの狂気（Kaom's Madness）＋重撃（Heft）＋レイジフォージド II（Rageforged II）。フォティファイイングクライ（Fortifying Cry）：憤怒のクライ（Raging Cry）＋ヘビースイング（Heavy Swing）＋ブルータリティ III（Brutality III）＋アタルイの血抜き（Atalui's Bloodletting）＋重撃（Heft）。サンダー（Sunder）：アタックスピード増加 III（Rapid Attacks III）＋リグワルドの獰猛（Rigwald's Ferocity）＋憤怒 III（Rage III）＋持続時間延長 II（Prolonged Duration II）。ウォーバナー（War Banner）：ダレッソの熱情（Daresso's Passion）＋効果範囲拡大 II（Magnified Area II）＋持続時間延長 II（Prolonged Duration II）。スカベンジドプレーティング（Scavenged Plating）とテイムビースト（Tame Beast）も原典プランナーに含まれる。",
+        "passivePriority": "金床の重さ（Anvil's Weight）で全てのダメージでアーマーブレイクできるようにし、内部破裂の衝撃（Imploding Impacts）で敵のアーマーを0未満まで下げる。最後にヒスイの遺産（Jade Heritage）で追加の物理ダメージ軽減と強力なガードスキルを得る。",
+        "gearPriority": "盾のアーマーを詰める。胴はライフ＋アーマー＋「アーマーが元素ダメージにも適用される」。グローブの攻撃速度、ジュエリーの冒涜スキルスピード。ユニークはスリルスティール（Thrillsteel）。",
+        "caution": "単体火力が足りない場合は、アーンの城塞（Ahn's Citadel）とカオムの狂気（Kaom's Madness）を効果範囲集中（Concentrated Area）と近距離戦闘 II（Close Combat II）に入れ替え、アーマーを割り切った相手にサンダー（Sunder）を使うのが原典FAQの解法。最終盤の伸びは控えめなのが原典の短所。",
+        "transitionCondition": "完成形。以後は盾・胴のアーマーと各装備の最大ロール化を詰める。"
+      }
+    ],
+    "mainSkill": "シールドウォール",
+    "path": "/builds/warrior/shield-wall-warbringer/",
+    "contentRevision": "af2fbc0f93bd8126"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "ツイスター・ジェムリング",
     "class": "Mercenary",

@@ -51,6 +51,10 @@
       "ja": "闇との対立",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
     },
+    "Ahn's Citadel": {
+      "ja": "アーンの城塞",
+      "ref": "https://poe2db.tw/jp/Ahns_Citadel"
+    },
     "Ailith": {
       "ja": "エイリス",
       "ref": "https://poe2db.tw/jp/Ailith"
@@ -94,6 +98,14 @@
     "Anomaly Map": {
       "ja": "アノマリーマップ",
       "ref": "https://poe2db.tw/jp/Anomaly_Map"
+    },
+    "Answered Call": {
+      "ja": "応えられた呼び声",
+      "ref": "https://poe2db.tw/jp/Answered_Call"
+    },
+    "Anvil's Weight": {
+      "ja": "金床の重さ",
+      "ref": "https://poe2db.tw/jp/Anvils_Weight"
     },
     "Apex of Filth": {
       "ja": "汚物の頂",
@@ -291,6 +303,10 @@
       "ja": "ウルルの骨",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
     },
+    "Boneshatter": {
+      "ja": "ボーンシャッター",
+      "ref": "https://poe2db.tw/jp/Boneshatter"
+    },
     "Bonestorm": {
       "ja": "ボーンストーム",
       "ref": "https://poe2db.tw/jp/Bonestorm"
@@ -343,9 +359,25 @@
       "ja": "スタン狙い",
       "ref": "https://poe2db.tw/jp/Brink_II"
     },
+    "Brink I": {
+      "ja": "スタン狙い I",
+      "ref": "https://poe2db.tw/jp/Brink_I"
+    },
     "Brittle Arm": {
       "ja": "脆い腕",
       "ref": "https://poe2db.tw/jp/Brittle_Arm"
+    },
+    "Brutality II": {
+      "ja": "ブルータリティ II",
+      "ref": "https://poe2db.tw/jp/Brutality_II"
+    },
+    "Brutality III": {
+      "ja": "ブルータリティ III",
+      "ref": "https://poe2db.tw/jp/Brutality_III"
+    },
+    "Brutus' Brain": {
+      "ja": "ブルータスの脳",
+      "ref": "https://poe2db.tw/jp/Brutus_Brain"
     },
     "Burgeon": {
       "ja": "チャネリング蓄積",
@@ -467,6 +499,10 @@
       "ja": "近距離戦闘 I",
       "ref": "https://poe2db.tw/jp/Close_Combat_I"
     },
+    "Close Combat II": {
+      "ja": "近距離戦闘 II",
+      "ref": "https://poe2db.tw/jp/Close_Combat_II"
+    },
     "Cluster Grenade": {
       "ja": "クラスターグレネード",
       "ref": "https://poe2db.tw/jp/Cluster_Grenade"
@@ -587,6 +623,10 @@
       "ja": "結晶の過成長",
       "ref": "https://poe2db.tw/jp/Crystalline_Overgrowth"
     },
+    "Culling Strike II": {
+      "ja": "カリングストライク II",
+      "ref": "https://poe2db.tw/jp/Culling_Strike_II"
+    },
     "Culmination II": {
       "ja": "究極の一撃 II",
       "ref": "https://poe2db.tw/jp/Culmination_II"
@@ -602,6 +642,10 @@
     "Dance with Death": {
       "ja": "ダンスウィズデス",
       "ref": "https://poe2db.tw/jp/Dance_with_Death"
+    },
+    "Daresso's Passion": {
+      "ja": "ダレッソの熱情",
+      "ref": "https://poe2db.tw/jp/Daressos_Passion"
     },
     "Dark Effigy": {
       "ja": "ダークエフィジー",
@@ -706,6 +750,10 @@
     "Eastern Enigma Chamber": {
       "ja": "東のエニグマの間",
       "ref": "https://poe2db.tw/jp/Eastern_Enigma_Chamber"
+    },
+    "Echoing Cry": {
+      "ja": "反響のクライ",
+      "ref": "https://poe2db.tw/jp/Echoing_Cry"
     },
     "Efficiency": {
       "ja": "コスト軽減",
@@ -894,6 +942,10 @@
     "Fire Attunement": {
       "ja": "ファイヤーアチューンメント",
       "ref": "https://poe2db.tw/jp/Fire_Attunement"
+    },
+    "Fire Infusion": {
+      "ja": "ファイヤーインフュージョン",
+      "ref": "https://poe2db.tw/jp/Fire_Infusion"
     },
     "Fire Mastery": {
       "ja": "火マスタリー",
@@ -1167,6 +1219,10 @@
       "ja": "ホロウパームテクニック",
       "ref": "https://poe2db.tw/jp/Hollow_Palm_Technique"
     },
+    "Holy Descent": {
+      "ja": "聖なる着地",
+      "ref": "https://poe2db.tw/jp/Holy_Descent"
+    },
     "Hourglass": {
       "ja": "砂時計",
       "ref": "https://poe2db.tw/jp/Hourglass"
@@ -1239,6 +1295,10 @@
       "ja": "串刺し",
       "ref": "https://poe2db.tw/jp/Impale"
     },
+    "Imploding Impacts": {
+      "ja": "内部破裂の衝撃",
+      "ref": "https://poe2db.tw/jp/Imploding_Impacts"
+    },
     "Infernal Cry": {
       "ja": "インファーナルクライ",
       "ref": "https://poe2db.tw/jp/Infernal_Cry"
@@ -1286,6 +1346,10 @@
     "It That Was Tul": {
       "ja": "トゥルだったもの",
       "ref": "https://poe2db.tw/jp/It_That_Was_Tul"
+    },
+    "Jade Heritage": {
+      "ja": "ヒスイの遺産",
+      "ref": "https://poe2db.tw/jp/Jade_Heritage"
     },
     "Jamanra, the Abomination": {
       "ja": "アボミネーション、ジャマンラ",
@@ -1891,6 +1955,10 @@
       "ja": "憤怒 III",
       "ref": "https://poe2db.tw/jp/Rage_III"
     },
+    "Rageforged II": {
+      "ja": "レイジフォージド II",
+      "ref": "https://poe2db.tw/jp/Rageforged_II"
+    },
     "Ragged Cloth": {
       "ja": "ボロボロの布",
       "ref": "https://poe2db.tw/jp/Ragged_Cloth"
@@ -2031,6 +2099,10 @@
       "ja": "ロードリ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
     },
+    "Rigwald's Ferocity": {
+      "ja": "リグワルドの獰猛",
+      "ref": "https://poe2db.tw/jp/Rigwalds_Ferocity"
+    },
     "Rip": {
       "ja": "切り裂き",
       "ref": "https://poe2db.tw/jp/Rip"
@@ -2058,6 +2130,10 @@
     "Rogue Exile": {
       "ja": "ローグエグザイル",
       "ref": "https://poe2db.tw/jp/Rogue_Exile"
+    },
+    "Rolling Slam": {
+      "ja": "ローリングスラム",
+      "ref": "https://poe2db.tw/jp/Rolling_Slam"
     },
     "Rotting Bones": {
       "ja": "腐りゆく骨",
@@ -2143,6 +2219,10 @@
       "ja": "サカワルの浸食のルーン",
       "ref": "https://poe2db.tw/jp/Saqawals_Rune_of_Erosion"
     },
+    "Scavenged Plating": {
+      "ja": "スカベンジドプレーティング",
+      "ref": "https://poe2db.tw/jp/Scavenged_Plating"
+    },
     "Scourge of the Skies": {
       "ja": "空のスカージ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -2183,6 +2263,10 @@
       "ja": "シャヴロンの鞄",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
     },
+    "Shield Charge": {
+      "ja": "シールドチャージ",
+      "ref": "https://poe2db.tw/jp/Shield_Charge"
+    },
     "Shield Wall": {
       "ja": "シールドウォール",
       "ref": "https://poe2-build-navi-jp.github.io/skills/shield-wall/"
@@ -2194,6 +2278,10 @@
     "Shock": {
       "ja": "感電",
       "ref": "https://poe2db.tw/jp/Shock"
+    },
+    "Shockwave Totem": {
+      "ja": "ショックウェーブトーテム",
+      "ref": "https://poe2db.tw/jp/Shockwave_Totem"
     },
     "Shred": {
       "ja": "シュレッド",
@@ -2803,6 +2891,10 @@
       "ja": "トーテム高速設置",
       "ref": "https://poe2db.tw/jp/Urgent_Totems_I"
     },
+    "Urgent Totems I": {
+      "ja": "トーテム高速設置 I",
+      "ref": "https://poe2db.tw/jp/Urgent_Totems_I"
+    },
     "Urgent Totems III": {
       "ja": "トーテム高速設置 III",
       "ref": "https://poe2db.tw/jp/Urgent_Totems_III"
@@ -2930,6 +3022,10 @@
     "War Banner": {
       "ja": "ウォーバナー",
       "ref": "https://poe2db.tw/jp/War_Banner"
+    },
+    "Warcaller's Bellow": {
+      "ja": "ウォーコーラーの叫び",
+      "ref": "https://poe2db.tw/jp/Warcallers_Bellow"
     },
     "Warding Rune of Heart": {
       "ja": "心臓のワードルーン",

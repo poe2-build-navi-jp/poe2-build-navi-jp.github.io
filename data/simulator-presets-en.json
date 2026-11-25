@@ -271,6 +271,49 @@
     "contentRevision": "07634eb3fc08cce0"
   },
   {
+    "id": "warrior-shield-wall-warbringer",
+    "name": "Shield Wall Warbringer",
+    "class": "Warrior",
+    "className": "Warrior",
+    "ascendancy": "Warbringer",
+    "ascendancyName": "Warbringer",
+    "skills": [
+      "Shield Wall"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-22 (Two-Handed Mace Leveling)",
+        "mainSkill": "Rolling Slam and Boneshatter are the core skills. Perfect Strike handles single targets.",
+        "supports": "Normal attacks: Rapid Attacks II plus Concentrated Area. Rolling Slam: Brink I. Boneshatter: Impact Shockwave plus Magnified Area I. Perfect Strike: Window of Opportunity I plus Rapid Attacks I. Infernal Cry: Tireless. Herald of Ash is used alongside. This is the source planner's Level 1-22 setup.",
+        "passivePriority": "Take only as much attribute as gear and gems require, and put the rest into Strength to grow Life. The first ascendancy is Answered Call, which houses ancestral spirits in your totems for buffs.",
+        "gearPriority": "A two-handed mace and armour with Life, resistances and Armour. Save gold for the switch at level 22 and for gambling a shield.",
+        "caution": "Slow animations early on are a listed downside of the source guide. Shield Wall cannot be used yet, so this stretch is carried by two-handed mace damage.",
+        "transitionCondition": "Reach level 22 and secure a level 7 Uncut Skill Gem. Gamble a shield with gold and prepare one with high Armour."
+      },
+      {
+        "label": "Level 22 to End of Campaign (Shield Wall Switch)",
+        "mainSkill": "Detonate the fissures of Shield Wall with Fortifying Cry and Infernal Cry. Shockwave Totem provides supporting damage.",
+        "supports": "Shield Wall: Rapid Attacks I plus Fire Infusion plus Magnified Area I. Fortifying Cry: Brutality II plus Raging Cry. Infernal Cry: Tireless plus Raging Cry. Shockwave Totem: Urgent Totems I. Leap Slam and Shield Charge: Rapid Attacks I. In the late-campaign planner, Shield Wall gains Impale and supports such as Magnified Area II are upgraded to higher tiers.",
+        "passivePriority": "Once Fortifying Cry is available, switch from Answered Call to Warcaller's Bellow. Warcries lose their cooldown, so you can detonate fissures at any time, and nearby corpses explode as well. Assign the weapon set 2 passives exclusively to warcries.",
+        "gearPriority": "Always look for the shield with the highest Armour. Weapon damage is irrelevant to your damage. The chest wants Life and Armour; aim for 75% resistances.",
+        "caution": "If mana is tight, a single mana leech roll on a ring or gloves solves it. The source guide's FAQ says not to level the Leap Slam, Infernal Cry or Shield Charge gems.",
+        "transitionCondition": "Finish the campaign and have a clear path to obtaining the Ahn's Citadel and Kaom's Madness lineage supports."
+      },
+      {
+        "label": "Endgame Complete (Branching Fissures with Lineage Supports)",
+        "mainSkill": "Detonate Shield Wall fissures branched by Ahn's Citadel and Kaom's Madness with Fortifying Cry, Infernal Cry, Sunder and movement skills.",
+        "supports": "Shield Wall: Rapid Attacks II plus Ahn's Citadel plus Kaom's Madness plus Heft plus Rageforged II. Fortifying Cry: Raging Cry plus Heavy Swing plus Brutality III plus Atalui's Bloodletting plus Heft. Sunder: Rapid Attacks III plus Rigwald's Ferocity plus Rage III plus Prolonged Duration II. War Banner: Daresso's Passion plus Magnified Area II plus Prolonged Duration II. Scavenged Plating and Tame Beast are also included in the source planner.",
+        "passivePriority": "Anvil's Weight lets all of your damage break Armour, and Imploding Impacts pushes enemy Armour below zero. Finally, Jade Heritage grants additional physical damage reduction and a powerful guard skill.",
+        "gearPriority": "Refine the shield's Armour. The chest wants Life plus Armour plus 'Armour also applies to Elemental Damage'. Attack speed on gloves and desecrated skill speed on jewellery. Thrillsteel is the unique candidate.",
+        "caution": "If single-target damage falls short, swap Ahn's Citadel and Kaom's Madness for Concentrated Area and Close Combat II, fully break the enemy's Armour, then use Sunder — the source FAQ's solution. Scaling in the very endgame is modest, a listed downside of the source guide.",
+        "transitionCondition": "The completed form. From here, refine the Armour of your shield and chest and push every gear piece toward maximum rolls."
+      }
+    ],
+    "mainSkill": "Shield Wall",
+    "path": "/builds/warrior/shield-wall-warbringer/",
+    "contentRevision": "af2fbc0f93bd8126"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",
