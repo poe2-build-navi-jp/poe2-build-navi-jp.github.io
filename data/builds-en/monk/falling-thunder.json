@@ -1,0 +1,264 @@
+{
+  "build": {
+    "ascendancy": "Martial Artist",
+    "audience": "Players who want to cycle combos and Power Charges and put out big numbers with a single melee hit",
+    "beginnerRating": 2,
+    "bossRating": 5,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Milkybk_'s Maxroll guide text directly and cross-checked names and numbers against the Japanese poe2db. Confirmed this is a different setup from the builds of the same name (Everseen's HCSSF-oriented build and Kevlar Peterson's Flicker Strike type)."
+      }
+    ],
+    "className": "Monk",
+    "classSlug": "monk",
+    "damageRating": 5,
+    "defenseRating": 3,
+    "difficulty": "Two respecs during the campaign plus a Hollow Palm transition, and combo and Power Charge management are assumed",
+    "gearPriorities": [
+      "Weapon: critical strike chance and damage. During the transition, elemental damage; in the finished form, a high-physical + critical Sinister Quarterstaff",
+      "Gloves: added damage to attacks, critical damage, attack speed (converted by Way of the Stonefist). During Hollow Palm, +levels to melee skills",
+      "Armor: Evasion / ES (Chaos Inoculation in the finished form). Boots: 35% movement speed. Amulet: +levels to melee skills and critical"
+    ],
+    "id": "monk-falling-thunder",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "Act 1 is called a difficult section even in the source. In boss fights, damage is reduced for the first 5 seconds after the fight starts, so wait a little before spending Power Charges. Boss sequence: prepare a stun with Wind Blast → stun with Wing Blast for 3 Power Charges → spend 1 with Rend for the lightning buff → place Frost Bomb at their feet → Falling Thunder with the remaining 2.",
+        "gearPriority": "Use the Orb of Transmutation obtained from Clearfell's league mechanic reward on a Wrapped Quarterstaff. Look for a Long Quarterstaff in Red Vale. Armor: Life / ES. Gloves and rings: added damage to attacks. Boots: movement speed.",
+        "label": "Lv1–15 (Act 1, Quarterstaff)",
+        "mainSkill": "For packs, Frozen Locus + Herald of Ice. For single target, Falling Thunder",
+        "nowActions": [
+          "Place Frozen Locus and break it with Quarterstaff Strike or Wind Blast",
+          "On bosses, make 3 Power Charges with Wing Blast before firing Falling Thunder",
+          "Upgrade to a Gothic Quarterstaff at Lv11"
+        ],
+        "passivePriority": "Follow the source's staged \"Campaign\" tree. There is a first respec at Lv10, so keep some gold in reserve.",
+        "replaceGear": "At Lv11, check Renly's Gothic Quarterstaff, craft it with your currency and upgrade. Open sockets and insert elemental runes.",
+        "supports": "Falling Thunder: Elemental Armament I → Lightning Attunement. Frozen Locus: Elemental Armament I → Cold Attunement. Wind Blast: Rage I → Rapid Attacks I. Herald of Ice: Magnified Area I. The support setup is covered only as far as it was cross-checked through a secondary summary of the source planner's staged table; for the latest exact slots, see the source guide.",
+        "transitionCondition": "Reach Lv16 and have the gold for the second respec saved. Transition to Hollow Palm Technique."
+      },
+      {
+        "caution": "Devour a Hollow Focus bell before a boss and you can start the fight with 3 Power Charges. Also keep Frost Bomb's Exposure up.",
+        "gearPriority": "Remove the Quarterstaff. +levels to melee skills on gloves and amulet is the top priority. Armor: Life / Evasion / ES and resistances.",
+        "label": "Lv16–End of Act 2 (Hollow Palm transition)",
+        "mainSkill": "Unarmed attacks with Hollow Palm Technique are the core. Single target is Falling Thunder",
+        "nowActions": [
+          "Respec into Hollow Palm Technique at Lv16",
+          "Secure +levels to melee skills on gloves and amulet",
+          "Finish the Trial of the Sekhemas at Lv22 and take Hollow Focus Technique"
+        ],
+        "passivePriority": "Respec into Hollow Palm Technique at Lv16. At Lv22, finish the Trial of the Sekhemas and take Hollow Focus Technique as your first ascendancy.",
+        "replaceGear": "Prioritize gloves / amulets with +levels to melee skills. You do not need to upgrade a weapon in this period, so save crafting currency.",
+        "supports": "During Hollow Palm you use no weapon and scale damage with melee skill levels. The Act 2 single-target loop: Shock with Storm Wave → consume the Shock with Siphoning Strike for a Power Charge → Falling Thunder. For exact support slots, see the source planner.",
+        "transitionCondition": "Push through Acts 3–4 still on Hollow Palm."
+      },
+      {
+        "caution": "Hollow Palm starts to fall off late. You do not need weapon upgrades in this period, so save your crafting currency instead of spending it.",
+        "gearPriority": "Keep updating gloves / amulet with +levels to melee skills. Start leaning armor toward Evasion / ES and bring resistances close to the cap.",
+        "label": "Act 3–Campaign End (Hollow Palm continues)",
+        "mainSkill": "Hollow Palm unarmed attacks + Falling Thunder",
+        "nowActions": [
+          "Push through the campaign still on Hollow Palm",
+          "Save your crafting currency",
+          "Before bosses, store Power Charges by Devouring a bell"
+        ],
+        "passivePriority": "Continue the source's \"Campaign\" tree. The second ascendancy is Way of the Stonefist: glove mods are converted and scale — attack speed → chance for Onslaught, added damage → gained as added damage, defenses → Evasion / ES.",
+        "replaceGear": "Update gloves with added damage and +levels to melee skills as the top priority.",
+        "supports": "Continue the campaign setup. Maintain the Thrill of the Kill buff with Devour / Killing Palm finishers, and do not let Rend's lightning buff drop in boss fights. For exact support slots, see the source planner.",
+        "transitionCondition": "Reach the Interludes and Lv54, with the crafting materials for a Waxing Quarterstaff ready."
+      },
+      {
+        "caution": "If you leave Hollow Palm's falloff unaddressed, you will stall in the Interludes. Once you hit Lv54, return to a weapon promptly.",
+        "gearPriority": "Crafting a Waxing Quarterstaff with your saved currency is the top priority.",
+        "label": "Interludes (Lv54, return to Quarterstaff)",
+        "mainSkill": "Waxing Quarterstaff + Falling Thunder",
+        "nowActions": [
+          "Craft a Waxing Quarterstaff at Lv54",
+          "Remove Hollow Palm Technique",
+          "Start securing gems for the Whirling Assault setup"
+        ],
+        "passivePriority": "Remove Hollow Palm Technique and rebuild the tree around a Quarterstaff.",
+        "replaceGear": "Replace gear that was all-in on +levels to melee skills for the unarmed setup with regular added damage / critical gear, piece by piece.",
+        "supports": "You are returning to a weapon, so return Falling Thunder's supports to the weapon-based setup. For exact slots, see the source planner.",
+        "transitionCondition": "Finish the campaign. Start stockpiling gems for the Whirling Assault setup for maps."
+      },
+      {
+        "caution": "Until you have Ailith's Chimes, the charge engine is not in its finished form. The opening charge generation sometimes uses Tempest Bell.",
+        "gearPriority": "The first purchase candidate is Ailith's Chimes. Whirling Assault has no inherent conversion, so the source advises that an elemental damage Quarterstaff is advantageous.",
+        "label": "Start of Mapping (respec to Whirling Assault)",
+        "mainSkill": "Build energy with Whirling Assault, generate Power Charges with Reaper's Invocation → Profane Ritual. Spend them on Charged Staff and Falling Thunder",
+        "nowActions": [
+          "Respec into the Whirling Assault setup",
+          "Make Ailith's Chimes your first purchase goal",
+          "Do not let the Charged Staff buff drop"
+        ],
+        "passivePriority": "Respec into the mapping tree. Switch to the routine of processing a Hollow Focus bell with Killing Palm before bosses to store Power Charges.",
+        "replaceGear": "Secure Ailith's Chimes as the top priority. After that, grow the weapon's elemental damage and critical.",
+        "supports": "Whirling Assault is for building energy; Falling Thunder carries the damage. Inserting Mantra of Destruction adds chaos damage in proportion to the combo consumed.",
+        "transitionCondition": "Obtain Ailith's Chimes and take Martial Master."
+      },
+      {
+        "caution": "Herald of Ice explosions need Freeze. Secure cold damage through Heart of the Well or the \"gain damage as cold\" on Fists of Stone. If the big hit does not crit, you have to rebuild your charges from scratch.",
+        "gearPriority": "A high-physical + critical strike chance Sinister Quarterstaff. Gloves: Fists of Stone, converted by Way of the Stonefist. Armor: Evasion / ES. Boots: 35% movement speed. Raise Falling Thunder's level with a Prism of Belief.",
+        "label": "Endgame (Finished) (CI, charge engine complete)",
+        "mainSkill": "Alternate Whirling Assault and Falling Thunder. Store up to 6 Power Charges, then Falling Thunder",
+        "nowActions": [
+          "Maintain the loop: 6 Power Charges → Falling Thunder",
+          "Transition to Chaos Inoculation and stack ES",
+          "Swap to a dedicated setup for pinnacle bosses"
+        ],
+        "passivePriority": "Respec into Chaos Inoculation and rebuild ailment and stun thresholds around ES. Add more runes with Runic Meridians. The source states that Abasement and Shimmering Mirage are required to prevent permanent stun / permanent freeze. Martial Adept recovers ES when you consume combo.",
+        "replaceGear": "Replace all Life mods with Evasion / ES. On the amulet, aim for max rolls of defensive mods and +levels to melee skills. Push gems to Lv20, 20% quality and 6 links.",
+        "supports": "Whirling Assault: Culmination II + Ailith's Chimes converts consumed combo into Power Charges. Falling Thunder: Nova Projectiles I for mapping. In the pinnacle-boss-only setup, remove Nova Projectiles I and other utility. Critical is also supplemented by Charge Regulation, Blindside and Pinpoint Critical.",
+        "transitionCondition": "The finished form. From here, progress with 3-mod jewels and max-rolling each gear piece."
+      }
+    ],
+    "mainSkill": "Falling Thunder",
+    "mainSkillTiming": {
+      "available": "Falling Thunder is a Tier 1 gem usable from Lv1 (poe2db). However, it only shows its true value once you have the means to generate Power Charges",
+      "checkedAt": "2026-11-25",
+      "guide": "Milkybk_'s Maxroll guide (text checked directly)",
+      "recommendedSwitch": "After the campaign, respec into the Whirling Assault setup. Once you have Ailith's Chimes and Martial Master, the charge engine is complete",
+      "source": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide"
+    },
+    "mappingRating": 4,
+    "name": "Falling Thunder Martial Artist",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": false
+        },
+        "note": "The main gem is Tier 1 and usable from Lv1, so only the early condition is counted as a confirmed condition. The source's weaknesses include \"Combo Based\", \"Melee\" and \"Rough Act 1\", and combo and Power Charge management plus melee dodging are assumed, so the operation and dodge conditions are not counted. SSF viability is not stated in the source.",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Falling Thunder is a Tier 1 gem requiring level 1 (poe2db). The source also builds its Act 1 boss rotation around it.",
+            "source": "https://poe2db.tw/us/Falling_Thunder"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "A setup that swaps supports specifically for pinnacle bosses is provided; this is a build whose calling card is single-target damage.",
+        "quote": "High Boss Damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide",
+        "sourceName": "Maxroll: Falling Thunder Martial Artist Build Guide"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "High boss damage is among the strengths. The summary also describes big single hits (nukes) on pinnacle bosses, and the design pushes critical strike chance close to 100%.",
+        "quote": "High Boss Damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide",
+        "sourceName": "Maxroll: Falling Thunder Martial Artist Build Guide"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "There are options for ES, Evasion and Deflect plus Chaos Inoculation, but it is melee and the early game is rough.",
+        "quote": "Melee / Rough Act 1",
+        "score": 3,
+        "source": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide",
+        "sourceName": "Maxroll: Falling Thunder Martial Artist Build Guide"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Designed to process packs with Herald of Ice explosions from Freeze. Great Scaling is also listed among the strengths.",
+        "quote": "Herald Explosions",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide",
+        "sourceName": "Maxroll: Falling Thunder Martial Artist Build Guide"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "High (the source's weaknesses are Combo Based / Melee / Rough Act 1. Many buttons, and charge management is needed at all times)",
+      "gearDependence": "Centered on the weapon (Quarterstaff) and gloves (Fists of Stone converted by Way of the Stonefist). The finished form requires the lineage support Ailith's Chimes",
+      "operation": "A lot (keep cycling the loop: generate Power Charges → maintain Rend → Falling Thunder)",
+      "source": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide",
+      "ssfNote": "Whether the build works in SSF is not stated in the source (Maxroll). A separate HCSSF-oriented guide of the same name exists (Everseen, Mobalytics), but it is not this entry's source"
+    },
+    "seoDescription": "PoE2 0.5.5: Falling Thunder Martial Artist — the Lv16 Hollow Palm transition, skills, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Falling Thunder Martial Artist Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "falling-thunder",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Falling Thunder Martial Artist Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by Milkybk_, updated September 3, 2026; text checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/falling-thunder-martial-artist-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List",
+        "type": "Overseas Tier list (0.5.5, updated November 3, 2026; this build is placed in A Tier)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "PoE2DB (Japanese): Falling Thunder",
+        "type": "Japanese skill data",
+        "url": "https://poe2db.tw/jp/Falling_Thunder"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db: Falling Thunder",
+        "type": "Game data (gem Tier 1, required level 1, 3 projectiles per Power Charge consumed)",
+        "url": "https://poe2db.tw/us/Falling_Thunder"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "allthings.how: Path of Exile 2 Falling Thunder Monk Build (Return of the Ancients 0.5)",
+        "type": "Overseas guide summary (a summary of the same guide as of 0.5.0; used only to cross-check the early-campaign support setup)",
+        "url": "https://allthings.how/path-of-exile-2-falling-thunder-monk-build-return-of-the-ancients-0-5/"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "A Power-Charge-spending Falling Thunder hit is huge, and boss damage is high (source strength: High Boss Damage).",
+      "If you freeze enemies with cold damage, Herald of Ice explosions can process packs (source strength: Herald Explosions).",
+      "Designed to push critical strike chance close to 100%, so it keeps growing as your gear improves (source strength: Great Scaling).",
+      "The main gem is Tier 1, so you can start using Falling Thunder from Lv1 (poe2db)."
+    ],
+    "updatedAt": "2026-09-03",
+    "version": "0.5.5",
+    "weaknesses": [
+      "A melee build, and Act 1 is rough (source weaknesses: Melee / Rough Act 1).",
+      "Combo and Power Charge management are assumed; there are many buttons and operation is complex (source weakness: Combo Based).",
+      "There are two respecs during the campaign, at Lv10 and Lv16, and the Lv16 one transitions you to Hollow Palm Technique.",
+      "The finished form requires Ailith's Chimes; without it, the charge engine does not turn.",
+      "If the big hit does not crit, you have to rebuild your Power Charges from scratch (source gear explanation)."
+    ]
+  },
+  "related": [
+    {
+      "id": "monk-whirling-assault",
+      "name": "Whirling Assault Martial Artist",
+      "classSlug": "monk",
+      "slug": "whirling-assault"
+    },
+    {
+      "id": "monk-hollow-focus-storm-wave",
+      "name": "Hollow Focus Storm Wave Martial Artist",
+      "classSlug": "monk",
+      "slug": "hollow-focus-storm-wave"
+    },
+    {
+      "id": "monk-infernal-legion-chayula",
+      "name": "Infernal Legion Acolyte of Chayula",
+      "classSlug": "monk",
+      "slug": "infernal-legion-chayula"
+    }
+  ]
+}

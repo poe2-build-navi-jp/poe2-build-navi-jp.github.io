@@ -275,8 +275,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "1256fd8fe4b56163",
-  "date": "2026-11-25",
+  "hash": "05515f270faad44c",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -447,6 +447,141 @@
  "/builds/sorceress/spark-stormweaver/": {
   "hash": "cf4fbce23f175588",
   "date": "2026-11-25",
+  "hashVersion": 2
+ },
+ "/en/builds/": {
+  "hash": "cb543e7d59604ba7",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/monk/whirling-assault/": {
+  "hash": "97f6224c11be52a8",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/monk/falling-thunder/": {
+  "hash": "d6e7af1403408be4",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/monk/hollow-focus-storm-wave/": {
+  "hash": "b269eeafe6c5a7df",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/monk/infernal-legion-chayula/": {
+  "hash": "8e43fd41ec92dd3b",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/warrior/shield-wall-warbringer/": {
+  "hash": "58d289aa05384977",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/mercenary/supporting-fire-tactician/": {
+  "hash": "c7e61cc560759041",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/ranger/glacial-lance-deadeye/": {
+  "hash": "50863481e9dd63d5",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/monk/lightning-minion-chayula/": {
+  "hash": "37e6cecb9eb862e4",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/ranger/twister-deadeye/": {
+  "hash": "cc50619c567eb8e8",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/monk/minion-chayula/": {
+  "hash": "988373afbbb524c4",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/monk/oil-barrage/": {
+  "hash": "b0e9b6131d88c8d5",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/druid/frostbolt-comet-oracle/": {
+  "hash": "bf9afb921bd30bd4",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/sorceress/frostbolt-comet-varashta/": {
+  "hash": "cc8d749a928a4bea",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/mercenary/twister-gemling/": {
+  "hash": "c207cd66472af2d6",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/warrior/shield-wall-smith/": {
+  "hash": "d1a98b37326f5543",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/sorceress/sand-and-fire/": {
+  "hash": "e0ef706bf3d41ad6",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/huntress/companion/": {
+  "hash": "42553b767a00257b",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/huntress/minion-spirit-walker/": {
+  "hash": "e36dba453030b028",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/ranger/ice-shot-deadeye/": {
+  "hash": "e8017b99b12d3811",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/witch/minion-infernalist/": {
+  "hash": "ebcecbeab8d8c371",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/druid/plant-oracle/": {
+  "hash": "ef00c0d3253205f8",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/druid/grim-pillars-oracle/": {
+  "hash": "442e9a534f4f53e9",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/witch/ed-contagion-lich/": {
+  "hash": "17e8c88df49d476f",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/mercenary/grenade-gemling/": {
+  "hash": "5ae0bcbbca73153a",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/huntress/twister-spirit-walker/": {
+  "hash": "c7a79850ebd9f371",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/en/builds/sorceress/spark-stormweaver/": {
+  "hash": "9617103bb6c32829",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/guides/skill-gems/": {

@@ -4,6 +4,8 @@ import { recordPageDate } from "./page-content.mjs";
 const root=resolve(import.meta.dirname,"..");
 const [builds,classes,guides,terms,seoPages,site]=await Promise.all(["builds","classes","guides","dictionary","seo-pages","site"].map(name=>readFile(resolve(root,`data/${name}.json`),"utf8").then(JSON.parse)));
 const strategyGuides=JSON.parse(await readFile(resolve(root,"data/strategy-guides.json"),"utf8"));
+// English build guides exist only for builds with a reviewed translation in data/builds-en.json.
+const enBuildIds=new Set(Object.keys(JSON.parse(await readFile(resolve(root,"data/builds-en.json"),"utf8"))));
 const coreEntities=JSON.parse(await readFile(resolve(root,'data/core-entities.json'),'utf8'));
 const base=site.baseUrl;
 const indexableBuilds=builds.filter(x=>x.status==="verified");
@@ -11,7 +13,7 @@ const noindex=new Set(JSON.parse(await readFile(resolve(root,"data/noindex.json"
 // Moved-page stubs (data/moved.json) are noindex redirects by design; never list them here,
 // even if a data source above starts producing their old paths again.
 for(const oldPath of Object.keys(JSON.parse(await readFile(resolve(root,"data/moved.json"),"utf8")).pages))noindex.add(oldPath);
-const urls=[...new Set(["/","/simulator/","/en/simulator/","/community/","/en/community/","/search/","/name-index/","/skills/","/equipment/",...coreEntities.map(e=>`/${e.kind==='skill'?'skills':'equipment'}/${e.slug}/`),"/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/beginner-builds/","/guides/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/issues/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/","/site-map/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...strategyGuides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])].filter(path=>!noindex.has(path));
+const urls=[...new Set(["/","/simulator/","/en/simulator/","/community/","/en/community/","/search/","/name-index/","/skills/","/equipment/",...coreEntities.map(e=>`/${e.kind==='skill'?'skills':'equipment'}/${e.slug}/`),"/builds/","/classes/","/leveling/","/gear-check/","/class-check/","/beginner-guide/","/beginner-builds/","/guides/","/dictionary/","/tier-list/","/league-starter/","/best-builds/","/poe2-1-0/","/issues/","/about/","/editorial-policy/","/rating-criteria/","/privacy/","/terms/","/site-map/",...classes.map(x=>`/classes/${x.slug}/`),...indexableBuilds.map(x=>`/builds/${x.classSlug}/${x.slug}/`),"\/en\/builds\/",...indexableBuilds.filter(x=>enBuildIds.has(x.id)).map(x=>`/en/builds/${x.classSlug}/${x.slug}/`),...guides.map(x=>`/guides/${x.slug}/`),...strategyGuides.map(x=>`/guides/${x.slug}/`),...terms.map(x=>`/dictionary/${x.slug}/`),...seoPages.map(x=>x.path)])].filter(path=>!noindex.has(path));
 const {ROADMAP_BUILD_IDS}=await import("./roadmap-builds.mjs");
 const priorityBuildIds=new Set(ROADMAP_BUILD_IDS);
 const imageMap=new Map([

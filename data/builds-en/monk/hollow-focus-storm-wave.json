@@ -1,0 +1,219 @@
+{
+  "build": {
+    "ascendancy": "Martial Artist",
+    "audience": "Players who want to run a fast-paced melee build that flattens maps with bell explosions and melts bosses with overlapping fissures",
+    "beginnerRating": 2,
+    "bossRating": 5,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Goratha's Maxroll guide text directly and cross-checked names against the Japanese poe2db. Note that the \"Hollow\" in the build name refers to Hollow Focus (the bells), not Hollow Palm Technique (unarmed) — the source uses a Quarterstaff throughout."
+      }
+    ],
+    "className": "Monk",
+    "classSlug": "monk",
+    "damageRating": 5,
+    "defenseRating": 4,
+    "difficulty": "Starts with leveling on a separate character, weapon set swapping, combo management, and positioning to overlap Storm Wave's fissures are assumed",
+    "gearPriorities": [
+      "Weapon: a high physical damage Quarterstaff. In the finished form, a rare with critical damage bonus, attack speed and critical strike chance; an upgraded Duality is also a candidate",
+      "Gloves: the most important slot, because Way of the Stonefist converts them. Physical damage to attacks, +levels to melee skills, attack speed",
+      "Armor: maximize Evasion, with Deflect on 2+ pieces. Amulet: +3 to melee skills and Evasion %. Rings: physical leech (Life / Mana)"
+    ],
+    "id": "monk-hollow-focus-storm-wave",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "Monk is the weakest of all classes early on, and the source states plainly that Act 1 is also the Twister leveling setup's weakest point. During the single-target rotation, do not leave Whirling Slash's wind cloud. Dodge rolling means starting over from the beginning.",
+        "gearPriority": "Weapon Set 1 is specialized for Whirling Slash speed: from Act 2, look for a Winged Spear and use an Essence of Haste. No off-hand. If you have the currency, Skysliver is also a candidate. Weapon Set 2 is specialized for Twister damage: stack added elemental damage; attack speed is not needed. Early on, use a Buckler for Parry → Fangs of Frost; later, switch to a Spirit sceptre to add more Spirit gems. Armor: Armour / Evasion early, moving to Evasion / ES later.",
+        "label": "Lv1–Campaign End (Twister leveling)",
+        "mainSkill": "A combo setup that builds stages with Whirling Slash and releases Twister. On bosses, War Banner or Herald of Ice",
+        "nowActions": [
+          "First create a Huntress, secure a spear and the Whirling Slash / Twister gems, and pass them to the Monk through the stash",
+          "Set Whirling Slash to Weapon Set 1 and everything else to Weapon Set 2",
+          "On bosses, follow the order: Whirling Slash ×3 → Ice-Tipped Arrows and Barrage → Twister"
+        ],
+        "passivePriority": "Rush Concussive Attack as fast as possible, then hurry to Dance with Death. On the way, take attack speed for Weapon Set 1, and use Essence of the Mountain and Hail for Weapon Set 2 to supplement freeze buildup and cold damage. The first ascendancy is Way of the Mountain, which helps with stun, damage and defense while you are freezing enemies.",
+        "replaceGear": "From Act 2, upgrade to a Winged Spear and prioritize using an Essence of Haste. Move armor bases from Armour / Evasion to Evasion / ES piece by piece.",
+        "supports": "Gem cutting priority is set by the source: cut Frost Bomb early, and Fangs of Frost with the first Lv3 gem. The first two Lv5 gems are Barrage and Ice-Tipped Arrows. Freezing Mark with the first Lv7 gem. For supports, put Rage I and Rapid Attacks I on Whirling Slash and the rest on Twister. Link Frost Nexus to Twister to create cold ground; later, Salvo is also a candidate.",
+        "transitionCondition": "Finish the campaign and reach maps."
+      },
+      {
+        "caution": "Freeze is the prerequisite for maximum damage. Without a Vestige of Darkness, use Grip of Winter to freeze more easily. Mana problems are common, and you need physical damage mana leech on at least one slot somewhere. The source warns of a known bug where Charged Staff's effect disappears on weapon swap.",
+        "gearPriority": "Stacking Evasion as high as possible is the main defense (combined with Deflect and ES). Early on, a Vestige of Darkness is excellent for the helmet; otherwise, Grip of Winter. For the weapon, look for maximum physical damage; attack speed, critical damage bonus, critical strike chance and +levels to melee skills are also good. Note that +levels to melee skills makes mana heavier. Gloves are the most important slot as the conversion target of Way of the Stonefist, and physical damage to attacks on them enables Herald of Ice's Armour Explosion. Rings need Life / Mana leech of physical damage on at least one slot.",
+        "label": "Early Mapping (switch to Storm Wave)",
+        "mainSkill": "Single target is Storm Wave. Clearing is Shattering Palm + Herald of Ice ice explosions. The Hollow Focus bell and Tempest Bell raise both",
+        "nowActions": [
+          "Switch to the three main skills: Storm Wave / Shattering Palm / Tempest Bell",
+          "On bosses, apply Elemental Weakness and Freezing Mark together with Hand of Chayula before you start hitting",
+          "Fire Storm Wave standing at the distance where its fissures overlap (too close or too far both lower single-target damage)"
+        ],
+        "passivePriority": "The second ascendancy is Way of the Stonefist. The third is Martial Adept or Hollow Focus Technique. Early Power Charge generation goes through Resonance + Combat Frenzy into Charged Staff. Take Heavy Frost and Thin Ice, and area nodes of the Dizzying Sweep family.",
+        "replaceGear": "Obtain a Vestige of Darkness early. If you have spare currency, Duality is another alternative candidate. Update gloves on the assumption of the Way of the Stonefist conversion, prioritizing physical damage to attacks and +levels to melee skills.",
+        "supports": "Link Armour Break III to Herald of Ice and cause Armour Explosion with the added physical damage from Way of the Stonefist — that is the core of clearing. Shattering Palm takes Magnified Area II and Ancestral Call II, with Rage III also a candidate, and it is also the trigger source for Ice Bite II. The recommended Hollow Focus setup is Magnified Area II, Cooldown Recovery II and similar (poe2db).",
+        "transitionCondition": "You have Deflect gear on 2+ pieces, and you reach the stage where you can spend currency on lineage supports and the finished weapon."
+      },
+      {
+        "caution": "Do not link Rapid Attacks III to any skill (a single-target damage loss check item in the source FAQ). Elemental Weakness needs leveling at high levels, and its Intelligence requirement is heavy. The proper distance for Storm Wave's fissure overlap differs per boss hitbox, and some of it has to be learned by experience.",
+        "gearPriority": "Best is a rare staff with high critical damage bonus, attack speed and critical strike chance. An upgraded Duality is also a candidate; choose the damage version for the upgrade. Aim for Deflect on 2+ pieces, eventually toward the 95% cap. The amulet wants +3 to melee skills with global defenses and Evasion %; having Spirit lets you avoid compromising Evasion on the chest. The ideal Heart of the Well turns double damage into gained damage plus Rage on melee hit. Place a Time-Lost Sapphire near Dizzying Hits.",
+        "label": "Endgame (Finished) (lineage supports, Deflect cap)",
+        "mainSkill": "Clear with Shattering Palm and melt bosses with Storm Wave's overlapping fissures. Bells are supplied by both Hollow Focus and Tempest Bell",
+        "nowActions": [
+          "Obtain Kaom's Madness first (relatively cheap, and it adds one fissure)",
+          "Increase Deflect gear to 2+ pieces and approach the 95% cap",
+          "Put a Druid talisman in Weapon Set 2 and make a Werewolf-form dash movement set"
+        ],
+        "passivePriority": "Once Chakra of Rhythm + Rune of Culmination lets Shattering Palm gain 2 combo from one attack, switch Martial Adept to Hollow Focus Technique. The final ascendancy is Runic Meridians. The Hollowkeeper requires First Principle of the Hollow and First Teachings of the Keeper. Late on, fill in critical nodes.",
+        "replaceGear": "Max-roll the rare staff and progress the Duality upgrade. Runes are specified in the source FAQ: Saqawal's Rune of Erosion on the helmet, Craiceann's Rune of Warding and Warding Rune of Heart on the chest, Rune of Culmination on the gloves, Farrul's Rune of the Chase on the boots.",
+        "supports": "Storm Wave lineage supports: Kaom's Madness adds a fissure, Garukhan's Resolve is a large gain for critical specialization (expensive), Vorana's Siege covers both area and single target. The mana measure is Oisín's Oath. Fragments Of The Past is used to apply Maim and Cold Exposure, but it consumes a runeword. Once your gear is ready, move Rage III over to Shattering Palm.",
+        "transitionCondition": "The finished form. From here, progress with jewels, max-rolling each gear piece, and pushing critical damage."
+      }
+    ],
+    "mainSkill": "Storm Wave",
+    "mainSkillTiming": {
+      "available": "Storm Wave is a Tier 7 gem, and the source FAQ says it is usable from Lv21. However, the source says Twister leveling is faster during the campaign, and full use starts after reaching maps.",
+      "checkedAt": "2026-11-25",
+      "guide": "Goratha's Maxroll guide (text checked directly)",
+      "recommendedSwitch": "Race through the campaign on Twister, then switch to the Storm Wave + Shattering Palm setup after reaching maps. The bells (Hollow Focus) come fully online when you take the Hollow Focus Technique ascendancy",
+      "source": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide"
+    },
+    "mappingRating": 5,
+    "name": "Hollow Focus Storm Wave Martial Artist",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": false
+        },
+        "note": "The main skill, Storm Wave, is a Tier 7 gem usable from Lv21, so only one early condition under the beginner criteria (main skill usable at Lv22 or below) can be confirmed. However, the leveling reality is the Twister setup, and it assumes preparing a Huntress first, weapon set swapping, combo management and positioning to overlap fissures, so the operation, dodge and SSF conditions cannot be confirmed. SSF viability is not stated in the source (the source mentions prices of uniques and lineage supports, and much of it assumes trade).",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Storm Wave is a Tier 7 gem usable from Lv21 (source FAQ). It meets this site's beginner criterion: \"at least one main skill usable from Lv22 or below.\"",
+            "source": "https://poe2db.tw/jp/Storm_Wave"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "Single-target damage from overlapping fissures is the calling card. Positioning mastery is assumed, but the source states plainly that it destroys bosses.",
+        "quote": "It destroys bosses with overlapping Storm Wave fissures",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
+        "sourceName": "Maxroll: Hollow Focus Storm Wave Martial Artist Build Guide"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "Storm Wave's fissure overlap is the single-target core, and it grows further with lineage supports (Kaom's Madness adds a fissure, Garukhan's Resolve specializes in critical).",
+        "quote": "It destroys bosses with overlapping Storm Wave fissures",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
+        "sourceName": "Maxroll: Hollow Focus Storm Wave Martial Artist Build Guide"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "The source rates it \"extremely tanky\" through Evasion, Deflect and Ghost Dance recovery, while the early-game Monk is soft, and reaching the Deflect cap requires securing 2+ gear pieces.",
+        "quote": "This build becomes extremely tanky through high Evasion, Deflection, and good recovery through Ghost Dance",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
+        "sourceName": "Maxroll: Hollow Focus Storm Wave Martial Artist Build Guide"
+      },
+      "mapping": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "The Hollow Focus bell explosions and the Shattering Palm + Herald of Ice Armour Explosion chain are the core of clearing.",
+        "quote": "obliterates maps by exploding the bells it generates with Hollow Focus",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
+        "sourceName": "Maxroll: Hollow Focus Storm Wave Martial Artist Build Guide"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "High (weapon set management, combos and positioning are needed at all times. There are moments during the leveling rotation where dodge rolling is off-limits)",
+      "gearDependence": "Centered on the weapon (Quarterstaff) and gloves (converted by Way of the Stonefist). In the finished form, the lineage supports Kaom's Madness / Garukhan's Resolve are the room to grow",
+      "operation": "A lot (the Twister leveling rotation is fixed: Whirling Slash ×3 → buff → Twister. After maps: Hand of Chayula debuffs → Shattering Palm → Tempest Bell → Storm Wave positioning)",
+      "source": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide",
+      "ssfNote": "Whether the build works in SSF is not stated in the source (Maxroll). The source mentions buying Skysliver and Duality and the prices of lineage supports (cheap / expensive), and much of it assumes trade"
+    },
+    "seoDescription": "PoE2 0.5.5: Hollow Focus Storm Wave Martial Artist — Twister leveling, skills, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Hollow Focus Storm Wave Martial Artist Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "hollow-focus-storm-wave",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Hollow Focus Storm Wave Martial Artist Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by Goratha, updated November 4, 2026; text checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/hollow-focus-storm-wave-martial-artist-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List",
+        "type": "Overseas Tier list (confirmed this build's placement and the link to the guide)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "PoE2DB (Japanese): Storm Wave",
+        "type": "Japanese skill data (Tier 7 gem)",
+        "url": "https://poe2db.tw/jp/Storm_Wave"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "PoE2DB (Japanese): Shattering Palm",
+        "type": "Japanese skill data (Tier 11 gem, Quarterstaff required)",
+        "url": "https://poe2db.tw/jp/Shattering_Palm"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "PoE2DB (Japanese): Hollow Focus",
+        "type": "Japanese skill data (bell spawn interval, cap of 3, shockwave)",
+        "url": "https://poe2db.tw/jp/Hollow_Focus"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "With Hollow Focus bell explosions and the Shattering Palm + Herald of Ice chain, map clearing is extremely fast (source: obliterates maps).",
+      "Overlapping Storm Wave fissures give high boss single-target damage (source: destroys bosses).",
+      "Recovery from Evasion, Deflect and Ghost Dance makes the finished form extremely tanky (source: extremely tanky).",
+      "Leveling on the Twister setup lets you race through the campaign (source: extremely fast leveling)."
+    ],
+    "updatedAt": "2026-11-04",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Monk is the weakest of all classes early on, and Act 1 is also the Twister leveling setup's weakest point (source gear explanation).",
+      "You need the preparation of creating a Huntress first to ready a spear and gems (source's recommended procedure).",
+      "Weapon set swapping and combo management are assumed, and dodge rolling during the leveling rotation breaks the sequence.",
+      "Storm Wave's single-target damage depends on positioning to overlap its fissures, and the proper distance differs per boss.",
+      "Mana problems are common, and the finished form's lineage supports include an expensive one (Garukhan's Resolve)."
+    ]
+  },
+  "related": [
+    {
+      "id": "monk-whirling-assault",
+      "name": "Whirling Assault Martial Artist",
+      "classSlug": "monk",
+      "slug": "whirling-assault"
+    },
+    {
+      "id": "monk-falling-thunder",
+      "name": "Falling Thunder Martial Artist",
+      "classSlug": "monk",
+      "slug": "falling-thunder"
+    },
+    {
+      "id": "monk-infernal-legion-chayula",
+      "name": "Infernal Legion Acolyte of Chayula",
+      "classSlug": "monk",
+      "slug": "infernal-legion-chayula"
+    }
+  ]
+}

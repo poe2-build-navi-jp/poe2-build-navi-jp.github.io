@@ -64,6 +64,9 @@ function detailPage(build) {
   <meta name="robots" content="${indexable ? "index,follow,max-image-preview:large" : "noindex,follow"}">
   <meta name="google-adsense-account" content="${publisher}">
   <link rel="canonical" href="${url}">
+  <link rel="alternate" hreflang="ja" href="${url}">
+  <link rel="alternate" hreflang="en" href="${url.replace(`${baseUrl}/`, `${baseUrl}/en/`)}">
+  <link rel="alternate" hreflang="x-default" href="${url}">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="POE2ビルドナビ">

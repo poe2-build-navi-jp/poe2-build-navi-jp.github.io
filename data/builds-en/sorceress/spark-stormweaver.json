@@ -1,0 +1,277 @@
+{
+  "build": {
+    "id": "sorceress-spark-stormweaver",
+    "slug": "spark-stormweaver",
+    "classSlug": "sorceress",
+    "name": "Spark Stormweaver",
+    "seoTitle": "PoE2 Spark Stormweaver Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: the Sorceress Spark Stormweaver, from campaign skills, supports and gear to the Comet that automatically triggers on critical strikes in Endgame. Check the three things to do now from your current level.",
+    "className": "Sorceress",
+    "ascendancy": "Stormweaver",
+    "version": "0.5.5",
+    "updatedAt": "2026-10-03",
+    "status": "verified",
+    "mainSkill": "Spark + Comet",
+    "beginnerRating": 3,
+    "damageRating": 3,
+    "defenseRating": 4,
+    "mappingRating": 4,
+    "bossRating": 4,
+    "difficulty": "The main skill continues from Lv1; the automatically triggered Comet is added in Endgame",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "The Sorceress can obtain Spark from the gem chest at the starting point and keep using the same main skill from Lv1 through Endgame.",
+      "Normal farming centers on spamming Spark, and in Endgame Comet automatically triggers on critical strikes (the source describes it as \"almost one button\").",
+      "The campaign leveling guide explicitly states that it also works in SSF (no trade)."
+    ],
+    "weaknesses": [
+      "Damage depends heavily on the staff's performance, according to the leveling guide's weakness column.",
+      "Boss fights require a multi-button rotation using Frost Bomb, Orb of Storms, Flame Wall and more in sequence.",
+      "In the overseas guide setup that adds CoC Comet, 121+ Spirit is the guideline. The separate mana-stacking finished form requires 90%+ critical strike chance, 5,000+ maximum mana and a rebuild of gear and tree, making it hard to assemble on a low budget."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Make Spark, obtained from the gem chest at the starting point, your main skill. Your second skill is Frost Bomb, followed by Flame Wall.",
+        "supports": "Strengthen Spark as the top priority. Once you create Orb of Storms, add Overabundance I and Unleash so you can place two at once.",
+        "passivePriority": "Take the route toward elemental damage, and put attribute nodes mainly into Intelligence. Only supplement the Strength and Dexterity needed for gear and gems.",
+        "gearPriority": "Lightning and all spell skill levels on the staff, then cast speed and spell damage. Armor is gear with Energy Shield.",
+        "replaceGear": "Replace staves with spell skill levels as the top priority. Merchant stock changes with level, so check every time you return to town.",
+        "caution": "This level band applies the source's \"Act 1\" content. The correspondence between level and progress is a guideline.",
+        "transitionCondition": "Reach Lv11. You have obtained Spark, Frost Bomb and Flame Wall, and can defeat packs of enemies with Spark.",
+        "nowActions": [
+          "Put Spark on your main attack button",
+          "Create Frost Bomb and use it together with Spark",
+          "Look for a staff with spell skill levels"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Spark + Frost Bomb. Create Orb of Storms with your first Lv3 Uncut Skill Gem, and cast Spark from within its area.",
+        "supports": "From Act 2, Lv2 Uncut Support Gems appear. Add Rising Tempest to Spark, then to Orb of Storms.",
+        "passivePriority": "While scaling elemental damage, aim for Secrets of the Orb, which lets you place three Orb of Storms.",
+        "gearPriority": "Skill levels and added damage on the staff, Life and resistances on armor, mana recovery rate.",
+        "replaceGear": "Once you obtain 30 Spirit (defeating The King in the Mists in Act 1), activate Mana Remnants.",
+        "caution": "Orb of Storms fires chaining lightning at enemies when you cast from within its area, so do not stray too far from where you placed it.",
+        "transitionCondition": "Reach Lv21. You can place two Orb of Storms and fight in the order Frost Bomb → Orb of Storms → Spark.",
+        "nowActions": [
+          "Create Orb of Storms and place two of them",
+          "Add Rising Tempest to Spark",
+          "Activate Mana Remnants with 30 Spirit"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Spam Frost Bomb → Orb of Storms → Spark. On bosses, use Elemental Weakness (a Lv7 Uncut Skill Gem).",
+        "supports": "With the Lesser Jeweller's Orb dropped by enemies around Lv25, open the third socket of Spark, then of Orb of Storms.",
+        "passivePriority": "After finishing Act 2's trial (Trial of the Sekhemas), take the Stormweaver's Storm's Recollection. A single Frost Bomb can create 6 Cold Infusions.",
+        "gearPriority": "The staff is the top priority. Armor in the order Life, resistances, Energy Shield, mana recovery rate.",
+        "replaceGear": "Optionally, hold a Chiming Staff (Lv25+) in Weapon Set 2 and use Sigil of Power. Set the other skills to Weapon Set 1 only.",
+        "caution": "The source states that the Chiming Staff (damage) and Wolf Form (movement speed) cannot be used at the same time — only one of them.",
+        "transitionCondition": "Reach Lv31. You have taken the ascendancy and can use Elemental Weakness and Frost Bomb in boss fights.",
+        "nowActions": [
+          "Finish the trial and take Storm's Recollection",
+          "Open Spark's third socket",
+          "Use Elemental Weakness on bosses"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Centered on Spark. On bosses, the order is Sigil of Power → Elemental Weakness → Frost Bomb → Orb of Storms → Spark.",
+        "supports": "From Act 3, Lv3 Uncut Support Gems appear. Raise Spark's supports to Zenith II.",
+        "passivePriority": "At Act 3's Temple of Chaos, finish Ultimatum (the Trial of Chaos) and obtain 2 ascendancy points.",
+        "gearPriority": "Skill levels, cast speed and spell damage on the staff. Armor takes resistances and Energy Shield.",
+        "replaceGear": "With 60 Spirit (The King in the Mists + Act 3's Ignagduk), replace Mana Remnants with Blasphemy and move Elemental Weakness into that socket.",
+        "caution": "The source guides you to keep mana above 90% while using Zenith. Keep your remaining mana up with mana recovery rate on the staff, rings and amulet, and with a mana flask.",
+        "transitionCondition": "Reach Lv41. Elemental Weakness is automated through Blasphemy, and you can reproduce the boss rotation.",
+        "nowActions": [
+          "Raise Spark's supports to Zenith II",
+          "Switch to Blasphemy at 60 Spirit",
+          "Finish the Trial of Chaos and gain 2 more ascendancy points"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Spark as the main skill, supplementing boss damage with Frost Bomb, Orb of Storms and Flame Wall.",
+        "supports": "From Act 4, Lv4 Uncut Support Gems appear. Add Considered Casting and Projectile Acceleration II to Spark.",
+        "passivePriority": "The second ascendancy is Constant Gale (permanent Arcane Surge). Advance the leveling tree until the campaign ends.",
+        "gearPriority": "A Voltaic Staff (item level 36+ gives +3–4 levels to lightning spell skills) has the most room to grow. Maintain resistances and Energy Shield as well.",
+        "replaceGear": "With 100 Spirit (the final reward from defeating Lythara in the Interlude), add Siphon Elements and Clarity I.",
+        "caution": "The Greater Jeweller's Orb rarely drops, so do not count on it. If one drops, use it on Spark, then on Orb of Storms.",
+        "transitionCondition": "Campaign complete. Resistances are sorted out, and you can defeat regular enemies and bosses centered on Spark.",
+        "nowActions": [
+          "Add Considered Casting to Spark",
+          "Aim to update to a Voltaic Staff",
+          "Add Siphon Elements at 100 Spirit"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Spam Spark against regular enemies. Against strong enemies, use the order Sigil of Power → Frost Bomb → Orb of Storms → Spark.",
+        "supports": "Maintain the Spark and Orb of Storms links, and add Efficiency II to mana-hungry skills to cover mana shortfalls.",
+        "passivePriority": "Move from the leveling tree to the Endgame tree. Check Cold Infusions, elemental damage and Energy Shield.",
+        "gearPriority": "Secure Energy Shield on the tiara, robe, gloves and sandals. Prefixes take Life and added Energy Shield, and resistances are supplemented with runes.",
+        "replaceGear": "Update one piece at a time in the order: insufficient resistances, insufficient defense, insufficient staff damage. Keep an amulet with Spirit, as you will use it later.",
+        "caution": "If you use Mana Tempest, leave its area as soon as you have gained the effect. Staying inside drains your mana rapidly.",
+        "transitionCondition": "You can farm centered on Spark while maintaining resistances in low-tier maps.",
+        "nowActions": [
+          "Sort out resistances and Energy Shield",
+          "Cover mana shortfalls with Efficiency II",
+          "Secure an amulet with Spirit"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "With 121+ Spirit, add Cast on Critical + Comet. Spark's critical strikes automatically trigger Comet, and the controls stay the same as before.",
+        "supports": "Add Pinpoint Critical to Spark, Cast on Critical and Orb of Storms to raise the critical strike chance.",
+        "passivePriority": "Taking Elemental Equilibrium makes Orb of Storms produce Cold Infusions and Frost Bomb produce Fire Infusions, strengthening Comet.",
+        "gearPriority": "Spirit (staff and amulet, the robe prefix, a helmet corruption, side quests) and critical strike chance.",
+        "replaceGear": "The source states the Maligaro's Virtuosity gloves are the key to its damage. After equipping Call of the Brotherhood, prioritize added cold damage over added lightning damage.",
+        "caution": "Pinpoint Critical lowers critical damage, so the source assumes it is used together with Maligaro's Virtuosity (which fixes the critical multiplier).",
+        "transitionCondition": "Comet triggers automatically, and you have enough Spirit including Convalescence for emergencies.",
+        "nowActions": [
+          "Raise Spirit to 121 or more",
+          "Add Cast on Critical and Comet",
+          "Raise the critical strike chance with Pinpoint Critical"
+        ]
+      },
+      {
+        "label": "Endgame (finished form)",
+        "mainSkill": "The option of rebuilding into a separate high-budget mana-stacking setup. Farming is Spark; bosses are Frost Bomb → Spark. Comet triggers automatically through Cast on Critical.",
+        "supports": "Keep Spark's critical strike chance at 90% or more. Strengthen supports in the priority order of the source's gem table, and also raise each skill's quality.",
+        "passivePriority": "The ascendancy is Constant Gale, Force of Will, Tempest Caller and Multiplying Squalls. Jewels prioritize critical strike chance, critical damage and spell damage.",
+        "gearPriority": "Maximum mana (5,000+ is the guideline), critical strike chance, Spirit. If you do not have an Absent Amulet (with Cast on Critical), supplement Spirit with a sceptre.",
+        "replaceGear": "Cloak of Defiance is not mandatory. If you use a regular Energy Shield chest instead, take Mind Over Matter in the passives.",
+        "caution": "This is a different author, gear set, passive tree and ascendancy from the preceding setup that uses Maligaro's Virtuosity. You cannot assume you can transition just by adding mana. Cross-check the required respec, gems and gear together. The source explicitly states it includes expensive gear and is not for a low-budget start. Unconfirmed in 1.0.",
+        "transitionCondition": "The 0.5.5 stage you are using is complete, and you can compare before and after the change in-game.",
+        "nowActions": [
+          "Aim for 5,000+ maximum mana",
+          "Keep Spark's critical strike chance at 90%+",
+          "Re-check the supported-version display before moving to 1.0"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Staff: lightning / all spell skill levels, added elemental damage, increased spell damage, cast speed",
+      "Armor: Life, resistances, Energy Shield, mana recovery rate (tiara, robe, gloves, sandals)",
+      "Endgame: 121+ Spirit and critical strike chance. The source states the Maligaro's Virtuosity gloves are the key to its damage."
+    ],
+    "sources": [
+      {
+        "name": "PoE Vault: Spark Sorceress or Witch Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas written leveling guide (the text is Patch 0.5; its change history has a 0.5.1 tree update on June 4, 2026, and the page's update display is September 3, 2026. The Act-by-Act steps were organized into level-band guidelines)"
+      },
+      {
+        "name": "Path of Exile 2 Guide: Stormweaver - CoC Comet Spark Build",
+        "url": "https://pathofexile.gg/stormweaver-coc-comet-spark-build/",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas written guide (early game, mid-to-late campaign and Endgame stages. Published July 17, 2026)"
+      },
+      {
+        "name": "PoE Vault: Spark Comet Stormweaver Mana Stacking Endgame Build",
+        "url": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-comet-stormweaver-mana-stacking-endgame-build",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (Patch 0.5.5, created September 9, 2026. Strengths / Weaknesses format)"
+      }
+    ],
+    "audience": "Players who want to keep casting the same spell from Lv1 and raise it to the automatically triggered Comet in Endgame",
+    "ratingEvidence": {
+      "checkedAt": "2026-10-03",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": false
+        },
+        "note": "Only the conditions counted as confirmed are tied to the source and the stage-by-stage steps. PoE Vault states that the campaign leveling guide works in SSF, but the finished Endgame form does not state it, so SSF is not counted as a confirmed condition. The finished form's \"incredibly tanky\" assumes 5,000+ maximum mana, so the defense condition is not counted as a confirmed condition either.",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "The leveling guide's Act 1 guides you to use Spark, obtained by the Sorceress from the gem chest at the starting point, as the main skill.",
+            "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build"
+          },
+          "moderateOperation": {
+            "basis": "The original guide lists \"This build is beginner-friendly and easy to play\" as a strength, saying it is beginner-friendly and easy to operate.",
+            "source": "https://pathofexile.gg/stormweaver-coc-comet-spark-build/"
+          }
+        }
+      },
+      "damage": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Spark bounces off walls to deal high single-target damage to quickly kill bosses. ／ Less damage output than Ice Nova or Arc builds.",
+        "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
+        "sourceName": "PoE Vault: Spark Sorceress or Witch Leveling Build",
+        "checkedAt": "2026-10-03",
+        "note": "The leveling guide's Strengths column lists the high single-target damage of Spark bouncing off walls, and its Weaknesses column lists lower damage output than Ice Nova or Arc builds (statements about the campaign. The same strength statement is also used as the basis for bosses)."
+      },
+      "defense": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "This Mana Stacking Stormweaver can easily reach 5,000+ Mana, scaling all the way to 8,000–10,000 Mana with higher investment, making the build incredibly tanky.",
+        "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-comet-stormweaver-mana-stacking-endgame-build",
+        "sourceName": "PoE Vault: Spark Comet Stormweaver Mana Stacking Endgame Build",
+        "checkedAt": "2026-10-03",
+        "note": "The Endgame guide's introduction explains that stacking maximum mana makes the build incredibly tanky. It assumes the finished form with 5,000+ maximum mana and is not a statement about durability during the campaign."
+      },
+      "mapping": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Despite its simple skill set, it clears maps very quickly without requiring perfect aim.",
+        "source": "https://pathofexile.gg/stormweaver-coc-comet-spark-build/",
+        "sourceName": "Path of Exile 2 Guide: Stormweaver - CoC Comet Spark Build",
+        "checkedAt": "2026-10-03",
+        "note": "It explains that despite its simple skill set, it clears maps very quickly without requiring perfect aim (resource published 2026-07-17)."
+      },
+      "boss": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Spark bounces off walls to deal high single-target damage to quickly kill bosses.",
+        "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
+        "sourceName": "PoE Vault: Spark Sorceress or Witch Leveling Build",
+        "checkedAt": "2026-10-03",
+        "note": "The leveling guide's Strengths column states that Spark bouncing off walls deals high single-target damage to kill bosses quickly. The same source's Weaknesses column also notes that boss fights involve a multi-button rotation."
+      }
+    },
+    "reviewedFacts": {
+      "operation": "Few for farming (centered on Spark); multiple skills on bosses (per the source)",
+      "gearDependence": "High (the source states that damage depends heavily on the staff's performance)",
+      "ssfNote": "The campaign leveling guide explicitly states it works in SSF (PoE Vault). SSF viability of the finished Endgame form is unconfirmed.",
+      "source": "https://www.poe-vault.com/poe2/sorceress/stormweaver/spark-leveling-build",
+      "checkedAt": "2026-10-03"
+    },
+    "changeHistory": [
+      {
+        "date": "2026-10-03",
+        "summary": "Newly published. Confirmed the Lv1 to Endgame steps in the stage-by-stage resources from PoE Vault (0.5 leveling, 0.5.5 Endgame) and pathofexile.gg."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Re-checked the sources' statements, the stages they apply to and the source information, and fixed mix-ups and overgeneralizations. Sources and dynamic setups that could not be confirmed are not treated as re-verified, and the overall leveling checked date has not been changed."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked the publication status, supported patch, update date, main skill and ascendancy of all 3 sources and updated the checked dates. PoE Vault's Endgame guide had its skill gems, passive tree and gear sections updated on October 9, 2026 for 0.5.5. The specific content of the update is not described, so this page's setup was not changed."
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "sorceress-frostbolt-comet-varashta",
+      "name": "Frostbolt + Cast on Critical Comet Disciple of Varashta",
+      "classSlug": "sorceress",
+      "slug": "frostbolt-comet-varashta"
+    },
+    {
+      "id": "sorceress-sand-fire",
+      "name": "Sand and Fire Varashta",
+      "classSlug": "sorceress",
+      "slug": "sand-and-fire"
+    }
+  ]
+}

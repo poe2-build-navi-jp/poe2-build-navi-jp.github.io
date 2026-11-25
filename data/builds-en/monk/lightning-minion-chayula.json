@@ -1,0 +1,271 @@
+{
+  "build": {
+    "ascendancy": "Acolyte of Chayula",
+    "audience": "Players who like letting a minion army do the fighting while they focus on debuffs and support. From the Mid setup onward it runs on few buttons",
+    "beginnerRating": 3,
+    "bossRating": 4,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Helm Breaker's Maxroll guide text directly and cross-checked names and mechanics against the Japanese poe2db. No mirror or summary sites were used. The ascendancy's official Japanese name is \"Acolyte of Chayula\". leagueStarter was set to true because the A Tier placement in Maxroll's League Starter Tier List was confirmed directly."
+      }
+    ],
+    "className": "Monk",
+    "classSlug": "monk",
+    "damageRating": 5,
+    "defenseRating": 4,
+    "difficulty": "Acts 1–3 start with non-minion crossbow / grenade leveling, and late in Act 3 (around Lv41–43) a respec of about 35,000 gold is required. Spectres have different variants under the same name, so you need to identify the right type",
+    "gearPriorities": [
+      "+levels to all minion skills: secure it on the sceptre, helmet and amulet. The top-priority stat, growing both minion damage and durability (source).",
+      "Spirit: decides how many Spectres you can have. Alpha's Howl grows it greatly, and also doubles the Presence radius when using Selfless Remnants (source).",
+      "Bones of Ullr: obtain it prioritizing reservation efficiency to increase the number of minions you can summon (source).",
+      "Defense: stack ES and Evasion on the chest and gloves. Having Deflect on both is strongly recommended (source).",
+      "Enfolding Dawn: runeforging it is considered the best defensive option (source).",
+      "Jewels: on Sapphires, prioritize increased maximum ES, minions' all elemental resistances, minion attack / cast speed, and increased minion damage (source)."
+    ],
+    "id": "monk-lightning-minion-chayula",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "This stage is not a minion setup (source weakness: Non-Minion leveling in Act 1-3). The source says Evasion-only armor makes the early game feel rough. Pick up rares, identify them, then sell them to secure gold for the transition.",
+        "gearPriority": "Prioritize a crossbow with high flat physical and lightning damage, and switch to a Bombard Crossbow early in Act 3. Armor: maximum Life and resistances; Armour or Armour / Evasion bases are easier to progress on. If you see a helmet, amulet or sceptre with +1 minion skills for after the transition, secure it (source).",
+        "label": "Lv1–End of Act 3 (crossbow / grenade leveling)",
+        "mainSkill": "For the first few levels, progress with Quarterstaff Strike, Falling Thunder and Killing Palm. Once you pick up a Makeshift Crossbow or buy one from Renly in Clearfell, Explosive Grenade becomes the main skill. Flash Grenade covers both pack clearing and boss stuns, and while both are on cooldown you fill in with Crossbow Shot",
+        "nowActions": [
+          "Pick up a crossbow and switch to grenade leveling",
+          "Secure movement speed and resistances on your boots",
+          "Secure gear with +minion skills when you see it"
+        ],
+        "passivePriority": "Grow grenade damage with Concussive Attack, Dizzying Sweep, Killer Instinct, Blinding Strike and Kite Runner (source).",
+        "replaceGear": "Update flasks to the newest ones every 10–15 levels (source). Killing The King in the Mists makes War Banner usable; after defeating the witch in The Azak Bog, switch to Wolf Pack. Apply Exposure with Frost Bomb and curse with Elemental Weakness (source).",
+        "supports": "Multishot I and Short Fuse I on Explosive Grenade. Putting Lightning Attunement on Flash Grenade grows its damage and also applies Shock. Use the first Lesser Jeweller's Orb on Explosive Grenade, the second on Flash Grenade, and save the rest for the minion setup (source).",
+        "transitionCondition": "Reach Utzaal late in Act 3 and become able to bind a Vaal Guard Spectre (around Lv41–43)."
+      },
+      {
+        "caution": "There are three different variants of Vaal Guard under the same name (melee type = 50 Spirit, ranged type = 60 Spirit, bomb type = 50 Spirit). Bind the type that throws bombs. The source also warns this Spectre can cause performance problems. Right after the respec there is a stretch where damage is lower than grenade leveling (source).",
+        "gearPriority": "+levels to all minion skills is the top priority (sceptre, helmet, amulet). The sceptre mod \"allies in your Presence gain added damage to attacks\" scales multiplicatively with Choice of Power and Waking Dream, so its growth is large. Increase summon counts with additional Spirit on the chest and amulet (source).",
+        "label": "Around Lv41–43, Late Act 3–Campaign End (minion transition)",
+        "mainSkill": "Bind the bomb-type Vaal Guard with Bind Spectre and transition to the minion setup. Spam Flame Wall to bring out Raging Spirits, and protect them with Wolf Pack and Loyalty. Spend leftover Spirit on a Skeletal Storm Mage or Skeletal Sniper to supplement the Muster effect and Shock application (source)",
+        "nowActions": [
+          "Bind a Vaal Guard (bomb type)",
+          "Respec your passives for about 35,000 gold",
+          "Maintain Raging Spirits with Flame Wall"
+        ],
+        "passivePriority": "Respec into minion specialization for about 35,000 gold. The core is Relentless Fallen, Lord of Horrors, Remnant Attraction and Empowering Remnants, Right Hand of Darkness, Necrotised Flesh and Crystalline Flesh, Vile Mending, and Profane Commander. The ascendancy order is Waking Dream → Choice of Power (source).",
+        "replaceGear": "If you obtain Enfolding Dawn and Bones of Ullr, use them. The Lv36 Soul Mantle is also a defensive option, but runeforging Enfolding Dawn is considered best. A Trenchtimbre with +2 minion skills is also a candidate as hand-me-down leveling gear (source).",
+        "supports": "Cut Loyalty, Minion Splash I, Last Gasp, Arcane Surge and Selfless Remnants with leftover Uncut Support Gems. Use Flame Wall at a low level (Lv5) to keep its Mana cost down. If you obtain a Greater Jeweller's Orb, there is also the option of replacing the Vaal Guard with a Skeletal Reaver (source).",
+        "transitionCondition": "Finish the campaign, enter mapping, and become able to switch to Powered Zealot / Chaos Zealot Spectres."
+      },
+      {
+        "caution": "Powered Zealots / Chaos Zealots also have different variants under the same name. They cost 55 Spirit; let them attack a few times to confirm they fire the big blue lightning orbs (Spark) before binding. Maintaining Wardbound Minions requires about 100 Ward, and the gem level should be at most 16, preferably low (source).",
+        "gearPriority": "Obtain Alpha's Howl. Spirit grows greatly, and the Presence radius when using Selfless Remnants + Waking Dream doubles. If it is expensive, substitute a helmet with +2 minion skills. For Bones of Ullr, prioritize reservation efficiency and movement speed. Runeforge Enfolding Dawn (source).",
+        "label": "Early Mapping (Spark Spectres)",
+        "mainSkill": "Replace the Vaal Guard with a Powered Zealot or Chaos Zealot Spectre that fires Spark. Powered Zealots are found in maps, and Chaos Zealots can be found in the Trial of Chaos. You support the army with Pain Offering and Despair (source)",
+        "nowActions": [
+          "Bind a Powered Zealot (55 Spirit, Spark type)",
+          "Obtain Alpha's Howl",
+          "Secure about 100 Ward and run Wardbound Minions"
+        ],
+        "passivePriority": "Grow ES and Evasion with Enhanced Barrier, Mindful Awareness and Spectral Ward, and reduce minions' Spirit reservation with The Soul Meridian. The amulet instill is Essence Infusion (source).",
+        "replaceGear": "A Rattling Sceptre is the best sceptre, but with a Shrine Sceptre you can use Upwelling II, Strong Hearted, Cool Headed and Vitality II at no additional Spirit cost. Maximize ES on gloves. For resistance adjustments, use Blazing Flux, Chilling Flux, Crackling Flux and Void Flux (source).",
+        "supports": "As a prerequisite for the switch, cut Wildshards II and Pierce III first. Use the first Perfect Jeweller's Orb on Bind Spectre. Replace the Skeletal Storm Mage with Wardbound Minions and combine it with Warding Rune of Bodyguards to grant minions Onslaught. Also secure Refutation (source).",
+        "transitionCondition": "Graduate from Flame Wall and Raging Spirits, and transition to the Mid setup (Skeletal Storm Mage + Convalescence)."
+      },
+      {
+        "caution": "From this stage it becomes tanky, but as the source's weaknesses state, it is not recommended for HC. Maintaining Wardbound Minions requires securing about 100 Ward through runeforging Bones of Ullr and the gloves (or a Prism Guardian if that is not enough) (source).",
+        "gearPriority": "Extend Spirit with a Prism Guardian. Update Alpha's Howl to a corrupted version with \"+1 to all minion skill levels\". Once Spirit exceeds 450, insert Amanamu's Gaze into Bones of Ullr to grow movement speed. Also prepare a Lavianga's Spirits Mana flask (source).",
+        "label": "Mid (army complete)",
+        "mainSkill": "Replace Flame Wall and Raging Spirits with Skeletal Storm Mage and Convalescence. Load Despair onto Blasphemy to turn it into a curse aura, and strengthen the army with Pain Offering. This is the polished stretch where the source's strengths include \"Tanky (In the Mid setup)\" and \"Few buttons in the Mid setup\" (source)",
+        "nowActions": [
+          "Turn the curse into an aura with Blasphemy + Despair",
+          "Obtain a Prism Guardian",
+          "Solidify defense with Heavy Buffer + Mind Over Matter"
+        ],
+        "passivePriority": "Use Heavy Buffer and Mind Over Matter to use Mana as a defensive layer. Inner Faith and The Hollowkeeper reduce curse effect on you by 75%. Swap the campaign flask rewards to Mana flask upgrades. The amulet instill is Warlord Leader (source).",
+        "replaceGear": "Choose chest and gloves bases with high ES and Evasion; having Deflect on both is strongly recommended. Put Warding Rune of Bodyguards in the sceptre, a Primate Idol in the second socket, and a Talisman of Ralakesh in the helmet (source).",
+        "supports": "Swap Pain Offering's support from Meat Shield II to Brutus' Brain. Put Romira's Requital and Tecrod's Revenge on Wolf Pack (source).",
+        "transitionCondition": "Secure +55% or more minion cast speed and advance to the Late setup (the switch to Vilenta's Propulsion)."
+      },
+      {
+        "caution": "If you switch to Vilenta's Propulsion before meeting the +55% cast speed condition, damage drops. Check the condition first (source).",
+        "gearPriority": "The most important is the rare belt mod \"chance for minions to fire an additional projectile (Surpassing)\". Use a high-ES focus with +2 minion skill levels. Put Cadigan's Epiphany in the gloves. Alpha's Howl can also aim for a double-corrupted version (+20–30 Spirit, or an additional socket) (source).",
+        "label": "Late",
+        "mainSkill": "Once minion cast speed reaches +55% or more, replace Projectile Acceleration II with Vilenta's Propulsion. Put Uhtred's Constellation on Convalescence (source)",
+        "nowActions": [
+          "Secure the rare belt's additional minion projectile mod",
+          "Obtain a high-ES focus with +2 minion skill levels",
+          "Confirm +55% cast speed, then switch to Vilenta's Propulsion"
+        ],
+        "passivePriority": "Keep the amulet instill at Warlord Leader. Add minion critical stats and faster ES recharge start to Sapphire jewels (source).",
+        "replaceGear": "Replace both rings with ones carrying minion mods (minion damage, attack / cast speed, minion resistances) (source).",
+        "supports": "Removing Blasphemy and self-casting Despair grows damage for pinnacle bosses and lets you add 2–3 more Spectres (source FAQ). In that case, put Heightened Curse and similar on Despair.",
+        "transitionCondition": "The amulet instill changes to Zarokh's Gift, and the Min-Max setup gear such as Sacrificial Regalia comes together."
+      },
+      {
+        "caution": "The source warns that if you do not snapshot with the snapshot tree, you lose about 50% of your total damage. If you will not do it, stay on the regular tree. The fourth ascendancy is stated in the source to be \"completely useless\", so there is no need to hurry it (source).",
+        "gearPriority": "If Sacrificial Regalia comes together with the right mods, it is the best chest. The finished Alpha's Howl is 2 sockets + Legacy of Greymake, either corrupted with \"+1 to all minion skill levels\" or double-corrupted with +25–30 Spirit. A Mageblood is also an option instead of the rare belt (source).",
+        "label": "Min-Max (finished form)",
+        "mainSkill": "Replace Wolf Pack with Ghost Dance or a Skeletal Sniper to optimize Spirit. Put Khatal's Rejuvenation on Into the Breach (can be omitted if expensive). Using the Remnant snapshot (entering with Weapon Set II) grows damage a further 20–30%, but it is an advanced optimization the source calls completely optional (source)",
+        "nowActions": [
+          "Change the instill to Zarokh's Gift",
+          "Aim for an Alpha's Howl with Legacy of Greymake",
+          "Replace Wolf Pack with Ghost Dance or a Skeletal Sniper"
+        ],
+        "passivePriority": "The amulet instill is Zarokh's Gift. If you obtain a Megalomaniac with Right Hand of Darkness, respec the pathing toward it (source).",
+        "replaceGear": "Replace the Amanamu's Gaze in Bones of Ullr with Farrul's Rune of the Chase, and secure movement speed with the Quicksilver-type effect of Legacy of Greymake (source).",
+        "supports": "Replace the Powered Zealot / Chaos Zealot's Feeding Frenzy II with Dialla's Desire, and the Skeletal Storm Mage's Lightning Attunement with Esh's Radiance. Put Atziri's Communion on Blasphemy or Convalescence (source).",
+        "transitionCondition": "The finished form. From here, rerolling jewels and corruptions is the focus."
+      }
+    ],
+    "mainSkill": "A minion army setup whose main force is Spectres bound with Bind Spectre. Late in the campaign it is bomb-type Vaal Guards; from mapping, Powered Zealot / Chaos Zealot Spectres firing Spark carry the damage, and Waking Dream's purple flames are transferred to the minions with Selfless Remnants to stack added chaos damage",
+    "mainSkillTiming": {
+      "available": "The main minion setup cannot be used until late Act 3. Acts 1–3 progress on crossbow leveling with Explosive Grenade and Flash Grenade, and after reaching Utzaal (around Lv41–43) you bind a bomb-type Vaal Guard with Bind Spectre and then transition",
+      "checkedAt": "2026-11-25",
+      "guide": "Helm Breaker's Maxroll guide (text checked directly)",
+      "recommendedSwitch": "Prepare around Lv41–43 and about 35,000 gold, bind the Vaal Guard (the type that throws bombs, 50 Spirit) first, then respec your passives. Vaal Guards also come in melee and ranged types under the same name, so choose the individual that throws bombs",
+      "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide"
+    },
+    "mappingRating": 4,
+    "name": "Lightning Minion Acolyte of Chayula",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": true,
+          "ssfConfirmed": false
+        },
+        "note": "The main minion setup starts after the transition late in Act 3 (around Lv41–43), and Acts 1–3 are crossbow / grenade leveling, so earlyMainSkill is not counted as a confirmed condition. From the Mid setup onward, the source's strengths include \"Few buttons\", and the minion army holds the front line while you support from behind, so the operation and dodge conditions are counted as confirmed conditions. SSF viability is not stated in the source.",
+        "score": 3,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "The source's strengths state \"Few buttons in the Mid setup\". From the Mid setup onward, you mainly maintain Pain Offering, Despair and Refutation, while the minion army does the processing.",
+            "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide"
+          },
+          "noDodgeRequirement": {
+            "basis": "Defense is built from stacking ES and Evasion, damage reduction from Loyalty and Wolf Pack, and Refutation's block; the source has no statement assuming dodge rolls. The minions hold the front line and you support from behind.",
+            "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "In boss fights you support with Pain Offering, Despair and Refutation, and the FAQ even has an optimization for pinnacle bosses: remove Blasphemy and self-cast Despair. However, there is no statement making single-target damage the calling card, so this stays at 4.",
+        "quote": "Very high damage",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Lightning Minion Acolyte of Chayula Build Guide (Helm Breaker)"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "The first of the source's strengths. On top of the Spark-firing Spectre army, the added chaos damage from Waking Dream and Choice of Power rides along and is transferred to the minions with Selfless Remnants.",
+        "quote": "Very high damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Lightning Minion Acolyte of Chayula Build Guide (Helm Breaker)"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "From the Mid setup onward it is tanky through stacking ES / Evasion, damage reduction from Loyalty and Wolf Pack, and Refutation's block (source strength). On the other hand, the weaknesses include \"Can be squishy until Mid setup\" and \"Not recommended for HC\", so it is fragile until finished.",
+        "quote": "Tanky (In the Mid setup)",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Lightning Minion Acolyte of Chayula Build Guide (Helm Breaker)"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "An army centered on Powered Zealot / Chaos Zealot Spectres firing Spark processes maps while you support. However, the source has no statement making clear speed the calling card, so this stays at 4.",
+        "quote": "Few buttons in the Mid setup",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Lightning Minion Acolyte of Chayula Build Guide (Helm Breaker)"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium to High (crossbow leveling → respec late in Act 3, and identifying the right Spectre variant is required)",
+      "gearDependence": "Centered on +levels to all minion skills (sceptre, helmet, amulet) and securing Spirit. No unique is mandatory for the campaign to function, but the source says you \"really need\" Alpha's Howl at the start of mapping",
+      "operation": "Low (few buttons from the Mid setup onward. You mainly maintain Pain Offering, Despair and Refutation)",
+      "source": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide",
+      "ssfNote": "Whether the build works in SSF is not stated in the source. The source says no unique is mandatory for the campaign to function, but from mapping onward much of it assumes specified uniques"
+    },
+    "seoDescription": "PoE2 0.5.5: Lightning Minion Acolyte of Chayula — skills, supports, gear and passives from crossbow / grenade leveling to Endgame (Min-Max). Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Lightning Minion Acolyte of Chayula Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "lightning-minion-chayula",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Lightning Minion Acolyte of Chayula Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by Helm Breaker, updated November 2, 2026; text checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/lightning-minion-acolyte-of-chayula-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List",
+        "type": "A Tier placement confirmed directly in the league starter Tier list (the basis for leagueStarter)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Skeletal Storm Mage",
+        "type": "Japanese name and mechanics cross-check (a lightning minion that supplements Shock application and the Muster effect)",
+        "url": "https://poe2db.tw/jp/Skeletal_Storm_Mage"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Wardbound Minions",
+        "type": "Japanese name and mechanics cross-check (consumes Ward to protect minions and grant Onslaught)",
+        "url": "https://poe2db.tw/jp/Wardbound_Minions"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Waking Dream",
+        "type": "Japanese name and mechanics cross-check (the ascendancy that is the source of Into the Breach and Flames of Chayula)",
+        "url": "https://poe2db.tw/jp/Waking_Dream"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "Very high damage (source strength: Very high damage). On top of the Spark-firing Spectre army, the added chaos damage from Waking Dream and Choice of Power rides along.",
+      "Tanky from the Mid setup onward (source strength: Tanky (In the Mid setup)). Stacking ES and Evasion, plus damage reduction from Loyalty and Wolf Pack and Refutation's block.",
+      "Few buttons from the Mid setup onward (source strength: Few buttons in the Mid setup). The minions do the processing, and you mainly maintain Pain Offering and Despair.",
+      "No unique is mandatory for the campaign to function (source). It grows with common uniques such as Enfolding Dawn and Bones of Ullr."
+    ],
+    "updatedAt": "2026-11-02",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Acts 1–3 are not minion leveling (source weakness: Non-Minion leveling in Act 1-3). You progress with a crossbow and grenades, and a respec of about 35,000 gold is needed late in Act 3.",
+      "Can be squishy until the Mid setup (source weakness: Can be squishy until Mid setup).",
+      "Not recommended for HC (source weakness: Not recommended for HC).",
+      "You must watch for Spectre variants. Both Vaal Guards and Powered Zealots / Chaos Zealots have different variants under the same name, and you must bind the right type (for Vaal Guards the bomb type; for the Zealots the 55-Spirit type that fires big blue lightning orbs) (source).",
+      "Whether the build works in SSF is not stated in the source."
+    ]
+  },
+  "related": [
+    {
+      "id": "monk-whirling-assault",
+      "name": "Whirling Assault Martial Artist",
+      "classSlug": "monk",
+      "slug": "whirling-assault"
+    },
+    {
+      "id": "monk-falling-thunder",
+      "name": "Falling Thunder Martial Artist",
+      "classSlug": "monk",
+      "slug": "falling-thunder"
+    },
+    {
+      "id": "monk-hollow-focus-storm-wave",
+      "name": "Hollow Focus Storm Wave Martial Artist",
+      "classSlug": "monk",
+      "slug": "hollow-focus-storm-wave"
+    }
+  ]
+}

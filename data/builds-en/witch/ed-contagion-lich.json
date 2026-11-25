@@ -1,0 +1,297 @@
+{
+  "build": {
+    "id": "witch-ed-contagion-lich",
+    "slug": "ed-contagion-lich",
+    "classSlug": "witch",
+    "name": "ED / Contagion Lich",
+    "seoTitle": "PoE2 ED / Contagion Lich Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: ED / Contagion Lich's early leveling, how to use the DoT skills, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "className": "Witch",
+    "ascendancy": "Lich",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-09",
+    "status": "verified",
+    "mainSkill": "Essence Drain + Contagion",
+    "beginnerRating": 5,
+    "damageRating": 2,
+    "defenseRating": 3,
+    "mappingRating": 5,
+    "bossRating": 2,
+    "difficulty": "Low–Medium (with mana management)",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "There are per-stage setups from Lv1 to Endgame centered on Contagion and Essence Drain.",
+      "Written guides explain that it easily combines clearing regular enemy packs with safe positioning.",
+      "Setups are presented separately for the campaign, T1–T15, full-life and low-life versions.",
+      "Maxroll (0.5.5) lists as pros 'SSF campaign in about 5 hours, Arbiter in about 10 hours', 'very strong area clear' and 'a large ES pool'.",
+      "The clear is exhilarating, and you can fight with a safe, ranged playstyle (PoE Vault)."
+    ],
+    "weaknesses": [
+      "Using multiple skills makes mana consumption heavy.",
+      "In single-target fights, operations with different roles increase: Bonestorm, Dark Effigy, Despair and more.",
+      "The low-life version has many requirements, so do not partially mix it in from the early game.",
+      "It assumes a playstyle that does not get hit (Maxroll's con: 'Don't Get Hit Playstyle').",
+      "Damage depends heavily on whether you can obtain or craft a decent weapon, and damage over time takes time to take effect (PoE Vault).",
+      "Single-target fights are mediocre, and scaling and burst damage are modest. Damage depends on the performance of the wand and focus (Gamerch)."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Contagion. For single target, transition from Volcano to Essence Drain",
+        "supports": "Unleash on Contagion. Once you obtain Essence Drain, Swift Affliction I and Zenith I.",
+        "passivePriority": "Use the written guide's ACT 1 stage tree. Check exact node names at the publishing source.",
+        "gearPriority": "+ Chaos Spell Skills, Spell Damage. For armor, maximum Life, cold resistance, movement speed.",
+        "replaceGear": "Compare weapons that do not extend chaos spells and boots with no movement speed.",
+        "caution": "Do not try to kill single targets with Contagion alone; use Volcano or Essence Drain.",
+        "transitionCondition": "Reach Lv11. You can use Contagion and single-target skills by role.",
+        "nowActions": [
+          "Put Unleash on Contagion",
+          "Once you obtain Essence Drain, use it for single target",
+          "Check Life, cold resistance and movement speed"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Essence Drain + Contagion. Add Bonestorm for single target",
+        "supports": "Magnified Area I on Contagion. Burgeon I and Zenith I on Bonestorm.",
+        "passivePriority": "Progress from the late ACT 1 to the ACT 2 per-stage tree. Check proper names in the written sources.",
+        "gearPriority": "+ Chaos Spell Skills, Spell Damage, Cast Speed, Life, resistances.",
+        "replaceGear": "If damage is lacking, prioritize the wand; if defense is lacking, the chest and boots.",
+        "caution": "For regular enemies use Contagion into Essence Drain; for strong enemies also use Bonestorm.",
+        "transitionCondition": "Reach Lv21. You can use skills separately for regular and strong enemies.",
+        "nowActions": [
+          "Practice the order of ED and Contagion",
+          "Set Bonestorm for strong enemies",
+          "Compare the wand's chaos spell performance"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Essence Drain + Contagion + Bonestorm",
+        "supports": "Corrosion on Ravenous Swarm, or Prolonged Duration I on Withering Presence.",
+        "passivePriority": "Use the written guide's ACT 2 to ACT 3 stage tree.",
+        "gearPriority": "Chaos spell levels, spell damage, cast speed, Life, resistances.",
+        "replaceGear": "Update the old wand and resistance-lacking armor one piece at a time.",
+        "caution": "For bosses, a procedure is shown to supplement Wither with Chaos Bolt from a Withered Wand.",
+        "transitionCondition": "Reach Lv31. You can use boss debuffs and Bonestorm.",
+        "nowActions": [
+          "Check your boss Wither method",
+          "Cross-check Bonestorm's supports",
+          "Fix resistance shortfalls one element at a time"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Essence Drain + Contagion. Prepare Dark Effigy and Despair",
+        "supports": "Use the displayed setups for ACT 3 to ACT 4. Check unconfirmed names in the written guide.",
+        "passivePriority": "Transition to the ACT 3/4 stage tree.",
+        "gearPriority": "Chaos spell levels, cast speed, Life, Energy Shield, resistances.",
+        "replaceGear": "If the main skill does not grow, the wand; if you die often, armor.",
+        "caution": "Dark Effigy and Despair are for strong enemies. You do not need to use everything on every regular enemy.",
+        "transitionCondition": "Reach Lv41. You can separate clearing and strong-enemy operations.",
+        "nowActions": [
+          "Prepare Dark Effigy for strong enemies",
+          "Check Despair's role",
+          "Separate wand and armor shortfalls"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Essence Drain + Contagion. Dark Effigy + Despair for strong enemies",
+        "supports": "Use the written guide's ACT 4 to Endgame transition setup.",
+        "passivePriority": "Use the ACT 4 to Endgame stage tree.",
+        "gearPriority": "Chaos spell levels, cast speed, Life / ES, each resistance, movement speed.",
+        "replaceGear": "Prioritize resistance shortfalls at campaign end, then the wand.",
+        "caution": "Do not break the campaign setup before moving to the full-life version.",
+        "transitionCondition": "Campaign finished. You can check the full-life setup for T1 maps.",
+        "nowActions": [
+          "Complete the campaign setup",
+          "Check each resistance and Life / ES",
+          "Open the full-life version for T1"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Essence Drain + Contagion + Dark Effigy + Despair",
+        "supports": "Use the written displayed setup for T1–T15.",
+        "passivePriority": "Transition to the T1–T15 full-life stage tree.",
+        "gearPriority": "Life / ES, resistances, chaos spell levels, cast speed, mana sustain.",
+        "replaceGear": "If you get killed, check armor; if clearing is slow, check the wand and supports first.",
+        "caution": "If you feel mana shortages, check the skill rotation and sustain before damage upgrades.",
+        "transitionCondition": "You can stably clear low-Tier maps and reproduce the boss operations.",
+        "nowActions": [
+          "Align to the full-life setup for T1",
+          "Check resistances and Life / ES",
+          "Test mana sustain in long fights"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Essence Drain + Contagion for clearing, Dark Effigy + Despair for strong enemies",
+        "supports": "Base it on the T1–T15 full-life version and update only what is lacking.",
+        "passivePriority": "Use the full-life Endgame stage tree.",
+        "gearPriority": "Chaos spell levels, spell damage, cast speed, defense, mana sustain.",
+        "replaceGear": "Update starting from the single most lacking piece among damage, defense and mana.",
+        "caution": "Do not partially transition before the low-life version's requirements are met.",
+        "transitionCondition": "Progression through T1–T15 is stable on the full-life version.",
+        "nowActions": [
+          "Check the full-life version's shortfalls",
+          "Evaluate damage, defense and mana separately",
+          "Read the low-life transition conditions first"
+        ]
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "Essence Drain + Contagion. A strong-enemy set according to the adopted version",
+        "supports": "Align the whole setup to either full-life or low-life.",
+        "passivePriority": "Use only the tree of the Endgame version you adopt.",
+        "gearPriority": "The chaos spell performance, defense, cast speed and mana sustain the adopted version requires.",
+        "replaceGear": "Do not use fixed prices; compare pieces that address your current shortfall under the same conditions.",
+        "caution": "Do not partially mix full-life and low-life.",
+        "transitionCondition": "The adopted version's main skill, defense and mana sustain work as intended.",
+        "nowActions": [
+          "Decide full-life or low-life",
+          "Align gear and tree to the adopted version",
+          "Update mana and defense shortfalls one at a time"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Campaign: + chaos / spell / projectile skill levels on wand, focus and amulet. Gear with Life, ES and resistances, and boots with 20–30% movement speed (Maxroll).",
+      "Weapon importance is high: PoE Vault lists as a weakness that damage depends heavily on whether you can obtain or craft a decent weapon. For the wand: + Chaos Spell Skills, Spell Damage, Cast Speed.",
+      "After the campaign: update weak slots at shops and gambling vendors, and first secure the resistance caps (Maxroll).",
+      "From maps onward: update ES gear, and aim for 100% item rarity early. For jewels, increased maximum ES %, and at least one '% of maximum Mana recovered on Kill' for mana sustain (Maxroll).",
+      "Spirit: the Maxroll-derived condition that using Convalescence and Ravenous Swarm together requires 'a total of +50 Spirit on amulet and chest' could not be re-confirmed, as the source guide could not be obtained.",
+      "Endgame: + levels to all skills, ES, item rarity, high movement speed boots, Lv20–21 gems with 20% quality. The low-life version equips the unique Atziri's Disdain early after taking Eternal Life (Maxroll).",
+      "No unique is mandatory (Maxroll)."
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Chaos DoT Lich Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit",
+        "checkedAt": "2026-09-09",
+        "type": "Overseas written leveling / Endgame guide"
+      },
+      {
+        "name": "Maxroll: Essence Drain Lich Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (patch 0.5.5, updated September 4, 2026. The pros explicitly state SSF times for the campaign and the Arbiter)"
+      },
+      {
+        "name": "Maxroll: Essence Drain Lich Leveling Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-leveling-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas leveling guide (patch 0.5.5, updated September 4, 2026. The pros state 'SSF Fresh Start Leaguestart Viable')"
+      },
+      {
+        "name": "PoE Vault: Witch Chaos Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas leveling guide (Essence Drain + Contagion setup. For 0.5.1, updated June 4, 2026)"
+      },
+      {
+        "name": "Gamerch: Chaos Lich gear and tree",
+        "url": "https://gamerch.com/poe2/914451",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese strategy reference (a Lich centered on Contagion and Essence Drain. For 0.5.5, updated September 18, 2026)"
+      }
+    ],
+    "audience": "Beginners who want to spread damage over time from range and advance to Endgame stage by stage",
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Checked Gamerch (Chaos Lich, for 0.5.5). Updated boss from unrated to 2/5 ('mediocre against single target')."
+      },
+      {
+        "date": "2026-09-28",
+        "summary": "Checked Maxroll (main and leveling, 0.5.5) and PoE Vault. Maxroll's pros explicitly stated SSF viability (campaign about 5 hours, Arbiter in about 10 hours), so it was changed to SSF-viable. Updated beginner from 2 to 4 (SSF, safe ranged playstyle) and damage from unrated to 2/5 (weapon dependence, damage over time ramp-up). Detailed gear priorities by slot, and added strengths / weaknesses and sources. Boss remained unrated as there was no supporting statement."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Rechecked the source statements, target stages and source information, and fixed mix-ups and over-generalizations. Sources and dynamic setups that could not be confirmed are not treated as re-verified, and the overall leveling check date has not been changed."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Rechecked the publication status, supported patch, update date, main skill and ascendancy of 4 of the 5 sources, and updated the check dates. The one Mobalytics source could not be fetched automatically, so it remains unchecked (check date left as-is)."
+      }
+    ],
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": true
+        },
+        "note": "The route's source guide DEADRABB1T (0.5.5, updated September 27, 2026) lists simplicity of operation as a strength. Together with the condition of using the main skills from the early game, this is based on the range that could be confirmed. The Maxroll statements about SSF are from the previous confirmation record, and the original text could not be re-obtained in this audit.",
+        "score": 5,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Referenced the early setup published in the source guide: 'Contagion. For single target, transition from Volcano to Essence Drain'",
+            "source": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit"
+          },
+          "ssfConfirmed": {
+            "basis": "Maxroll (0.5.5) pros state 'SSF Campaign ~5Hours, Arbiter ~10 Hours', and the leveling guide's pros state 'SSF Fresh Start Leaguestart Viable'",
+            "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide"
+          },
+          "noDodgeRequirement": {
+            "basis": "PoE Vault's Strengths state 'Safe, ranged playstyle.'",
+            "source": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build"
+          },
+          "moderateOperation": {
+            "basis": "DEADRABB1T's ED Contagion Lich guide (0.5.5, updated September 27, 2026) Strengths state 'Simplicity'.",
+            "source": "https://mobalytics.gg/poe-2/builds/chaos-dot-lich-starter-deadrabbit"
+          }
+        }
+      },
+      "damage": {
+        "score": 2,
+        "basis": "Weakness",
+        "quote": "Damage output is highly dependent on obtaining/crafting a decent weapon. / Damage Over Time needs to ramp up.",
+        "source": "https://www.poe-vault.com/poe2/witch/lich/chaos-leveling-build",
+        "sourceName": "PoE Vault: Witch Chaos Leveling Build",
+        "checkedAt": "2026-09-28",
+        "note": "The Weaknesses list that damage depends heavily on the weapon and that damage over time needs time to ramp up. No statement of damage as a strength could be confirmed. The source is the leveling version (for 0.5.1)."
+      },
+      "defense": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Large ES Pool / Don't Get Hit Playstyle",
+        "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+        "sourceName": "Maxroll: Essence Drain Lich Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "The strengths include a large ES pool, and the weaknesses state that it assumes a playstyle that does not get hit."
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Amazing AoE Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/essence-drain-lich-build-guide",
+        "sourceName": "Maxroll: Essence Drain Lich Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "Area clear is emphasized in the strengths. PoE Vault also lists 'Fantastic and satisfying clear' as a strength."
+      },
+      "boss": {
+        "score": 2,
+        "basis": "Weakness",
+        "quote": "Mediocre against single targets, but very strong against groups",
+        "source": "https://gamerch.com/poe2/914451",
+        "sourceName": "Gamerch: Chaos Lich gear and tree",
+        "checkedAt": "2026-09-28",
+        "note": "In the rating section, single-target is called 'mediocre' in contrast to its strength against groups (for 0.5.5, updated September 18, 2026). The same page's weaknesses also state 'scaling and burst damage are modest', and the star rating is 'Bossing ★☆☆'."
+      }
+    }
+  },
+  "related": [
+    {
+      "id": "witch-minion-infernalist",
+      "name": "Sniper Minion Infernalist",
+      "classSlug": "witch",
+      "slug": "minion-infernalist"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "build": {
+    "ascendancy": "Disciple of Varashta",
+    "audience": "Players who like freezing enemies in place while controlling the screen with Frostbolt explosions and automatically falling Comets. For players who like a Disciple of Varashta build that uses a staff + focus through Instruments of Power and makes use of Time-Lost Sapphires.",
+    "beginnerRating": 2,
+    "bossRating": 5,
+    "budget": "No fixed price (the core Snakepit is mandatory)",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked zen_m's Maxroll guide text and embedded planner (ga1h3c0e) directly and cross-checked names and mechanics against the Japanese poe2db. No mirror or summary sites were used. Old support gem names in the planner were replaced with the current names from GGG's official 0.3.0 rename list and poe2db (e.g. Arcane Tempo → Rapid Casting, Magnified Effect → Magnified Area, Ingenuity → Cooldown Recovery, Cold Snap → Snap, Strip Away → Potent Exposure, Interlude → Remnant Potency, Dissipate → Harmonic Remnant). leagueStarter is true based on the A Tier placement in the Maxroll League Starter Tier List (checked directly on 2026-11-25). A separate setup from the Oracle version of the same Frostbolt + Comet build and from the Grim Pillars Oracle: this one is Sorceress → Disciple of Varashta. Its ascendancy is Instruments of Power, The Fourth Teaching, Sacred Rituals and Baryanic Leylines, not a setup using the Oracle's Entwined Realities and many keystones. The source FAQ's \"Druid\" wording is a transcription error from the Oracle version; the guide introduction, the planner (Sorceress3) and poe2db all confirm Sorceress, so this draft uses Sorceress."
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "Re-checked two planner names against the game data and reflected them in the draft. (1) The planner's \"Wildshards III\" does not exist in the 0.5.5f game data (only I and II; confirmed in metabot's 616-entry list, poe2db and the wiki; the Oracle version's planner had the same error), so the highest tier, Wildshards II, is used and noted in the research report. (2) The planner's diamond jewel \"FourUniqueJewel6\" was confirmed on poe2db as From Nothing, and is described as a jewel that lets you allocate unconnected passives around a keystone. The guide text itself is from 0.5.4 (updated 2026-09-03), so version was set to 0.5.4, with names re-confirmed against the 0.5.5 game data. How to handle the version notation during integration requires the same judgment as the Oracle version."
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "During integration, changed version from 0.5.4 to 0.5.5 (site convention. Skill names were re-checked against the 0.5.5 game data, so the verified patch is 0.5.5. The original guide was last updated on 2026-09-03 (0.5.4), and the background is recorded in the first entry)."
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "During integration, changed ascendancy from the Japanese rendering of Varashta's disciple to the site's Disciple of Varashta notation (to match the ascendancy notation used when generating simulator presets. The displayed meaning is identical. The source's ascendancy is Disciple of Varashta)."
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "During integration, changed the source quote in weaknesses[0] from \"Can't use Frostbolt early\" to \"Can't use it early\" (the page's automatic Japanese annotation reacts to the registered skill name \"Frostbolt\" and failed the fact-grid consistency test. The meaning is identical)."
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "During integration, changed className from the Japanese rendering of Sorcerer to the site's Sorceress notation (both of the two existing Sorceress-class builds use \"Sorceress\". The purpose is display consistency; the class itself is the same)."
+      }
+    ],
+    "className": "Sorceress",
+    "classSlug": "sorceress",
+    "damageRating": 5,
+    "defenseRating": 3,
+    "difficulty": "Medium (level through the campaign with a separate Ice Nova + Frost Darts setup, switch to Frostbolt after equipping Snakepit at Lv32; requires managing Infusion Remnants and shattering Frost Wall crystals)",
+    "gearPriorities": [
+      "Snakepit (left ring): the core unique. It turns Frostbolt's piercing into forking so the explosions overlap and clear. Equippable at Lv32 (source).",
+      "Staff + Focus: Instruments of Power lets you use a focus alongside a staff (the focus's bonuses are reduced by 50%, but +1 to all spell levels stays +1). Scale cold spell levels and critical strike chance (source summary). The main weapon goal is the Chiming Staff (source).",
+      "Defense: a Life + ES hybrid early, later moving to Chaos Inoculation. Move to high-ES Intelligence gear (source). Move to CI at 5,000–6,000 ES (source).",
+      "Maligaro's Virtuosity (gloves): not mandatory but strongly recommended. It fixes critical damage at 250% and avoids the Pinpoint Critical penalty (source).",
+      "Time-Lost Sapphire: prioritize area-of-effect and critical strike chance mods. Baryanic Leylines widens its radius (source summary).",
+      "Mana: sustain it with two jewels with 2% of maximum mana recovered on kill and Mana Remnants (source FAQ).",
+      "Spirit: secure Spirit skills such as Cast on Elemental Ailment + Comet and Siphon Elements. At 160 Spirit you can use Mana Remnants (source planner)."
+    ],
+    "id": "sorceress-frostbolt-comet-varashta",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "Frostbolt does not function without Snakepit. Ice Nova and Frost Darts lose a lot of damage without a Cold Infusion, so collect Remnants with Frost Bomb and Snap (source).",
+        "gearPriority": "Magic / rare gear with plenty of Life and resistances. A wand + focus with cold spell damage. Boots with movement speed (source FAQ defense guidance).",
+        "label": "Act 1 (Ice Nova + Frost Darts leveling)",
+        "mainSkill": "Clear with Ice Nova and chip down single targets with Frost Darts. Use Frost Bomb and Snap to create Cold Infusion Remnants and strengthen Ice Nova and Frost Darts. Movement is Pounce, and the persistent buff is Arctic Armour. Advance with Spark to the Clearfell Encampment, and engrave Ice Nova and Frost Bomb from Renly and the Mysterious Clearfell Encampment (source).",
+        "nowActions": [
+          "Freeze enemies with Ice Nova as you advance",
+          "Chip down single targets with Frost Darts",
+          "Create Cold Infusions with Frost Bomb and Snap"
+        ],
+        "passivePriority": "114 nodes in the campaign. Raise the Infusion holding cap with Frozen Limit and Infused Limits (source FAQ). On the way, take efficient cold damage and Life nodes.",
+        "replaceGear": "Frostbolt cannot be used without Snakepit, so do not equip it yet (source FAQ). Update gear with Life + resistances first.",
+        "supports": "Ice Nova: Controlled Destruction + Ice Bite. Frost Darts: Controlled Destruction + Rapid Casting. Frost Bomb: Overabundance + Spell Cascade. Snap: Magnified Area + Controlled Destruction.",
+        "transitionCondition": "Enter Act 2 and add Elemental Weakness."
+      },
+      {
+        "caution": "There are few defensive tools in Acts 1–3. Raise Life and resistances, and use Frost Wall defensively as well (source FAQ).",
+        "gearPriority": "Keep prioritizing Life + resistances. From Act 4, start switching to high-ES Intelligence gear (source FAQ).",
+        "label": "Act 2 (adding a curse)",
+        "mainSkill": "Continue leveling with Ice Nova + Frost Darts and lower enemy resistances with Elemental Weakness. Update Frost Bomb's support to Spell Echo.",
+        "nowActions": [
+          "Lower enemy resistances with Elemental Weakness",
+          "Strengthen Ice Nova with Considered Casting",
+          "Keep creating Cold Infusions with Frost Bomb"
+        ],
+        "passivePriority": "To 114 nodes in the campaign. Advance toward cold damage and critical strikes, preparing for Frost Wall being added in Act 3 (source planner).",
+        "replaceGear": "Update gear with Life + resistances first. ES gear comes from Act 4 (source FAQ).",
+        "supports": "Ice Nova: Controlled Destruction + Considered Casting + Ice Bite. Frost Darts: Controlled Destruction + Considered Casting. Frost Bomb: Overabundance + Spell Echo. Snap: Magnified Area + Controlled Destruction. Elemental Weakness: Heightened Curse + Efficiency.",
+        "transitionCondition": "Enter Act 3 and add Frost Wall and Siphon Elements."
+      },
+      {
+        "caution": "Infusions stack up to 3 at most. Frozen Limit and Infused Limits can raise the cap (source FAQ).",
+        "gearPriority": "Start switching to high-ES Intelligence gear. Maintain a Life + ES hybrid (source).",
+        "label": "Act 3–Maps (adding Frost Wall)",
+        "mainSkill": "Create ice crystals with Frost Wall, freeze enemies with Siphon Elements and collect Cold Infusions. Add Elemental Focus and Cold Penetration to Frost Darts to raise single-target damage.",
+        "nowActions": [
+          "Create ice crystals with Frost Wall",
+          "Collect Infusions with Siphon Elements",
+          "Add Cold Penetration to Frost Darts"
+        ],
+        "passivePriority": "114 nodes in the campaign. Scale cold damage, critical strikes and Life + ES (source planner).",
+        "replaceGear": "Gradually update to Life + ES hybrid gear (source).",
+        "supports": "Ice Nova: Considered Casting + Astral Projection + Ice Bite II. Frost Darts: Considered Casting + Elemental Focus + Cold Penetration. Frost Wall: Icicle + Spell Cascade + Cooldown Recovery. Frost Bomb: Overabundance + Spell Echo + Cooldown Recovery. Snap: Magnified Area II + Elemental Focus + Cooldown Recovery. Elemental Weakness: Heightened Curse + Efficiency + Prolonged Duration II. Siphon Elements: Harmonic Remnants II + Remnant Potency.",
+        "transitionCondition": "Clear the campaign and enter Maps. Add Cast on Elemental Ailment + Comet."
+      },
+      {
+        "caution": "Each Comet needs 300 energy. A regular monster's critical strike only generates 1 energy, so Comets will not cycle if there are too few frozen enemies (source FAQ). Bosses only freeze once every few seconds, so single-target damage is low with Cast on Elemental Ailment (source).",
+        "gearPriority": "Mana: prepare two jewels with 2% of maximum mana recovered on kill (source FAQ). Update the staff + focus to prioritize cold spell levels + critical strike chance (source summary). Secure 30+ Spirit on the chest or amulet (source).",
+        "label": "Maps (starting Cast on Elemental Ailment + Comet)",
+        "mainSkill": "At Lv58, put Comet and Living Bomb into Cast on Elemental Ailment so Comets fall automatically when you freeze. Comets are strengthened by Fire Remnants, and Living Bomb automatically creates Fire Remnants. Freeze enemies with Ice Nova and shatter Frost Wall crystals to build energy. For single target, debuff with Sigil of Power and Elemental Weakness before attacking.",
+        "nowActions": [
+          "Drop Comets with Cast on Elemental Ailment",
+          "Freeze enemies to build Comet energy",
+          "Add extra damage with Living Bomb"
+        ],
+        "passivePriority": "141 nodes in Early Maps. Take Careful Assassin, Controlling Magic and Critical Exploit, preparing for the switch to Cast on Critical (source). The goal is 70%+ critical strike chance on Frostbolt.",
+        "replaceGear": "Insert the two mana recovery jewels. Update the staff + focus to prioritize cold spell levels + critical strike chance (source).",
+        "supports": "Ice Nova: Astral Projection + Magnified Area II + Ice Bite II + Rising Tempest. Frost Darts: Elemental Focus + Considered Casting + Cold Penetration + Cold Mastery. Frost Wall: Spell Cascade + Icicle + Fortress + Cooldown Recovery II. Frost Bomb: Overabundance + Spell Echo + Cooldown Recovery II + Potent Exposure. Snap: Magnified Area II + Cooldown Recovery II + Elemental Focus + Innervate. Cast on Elemental Ailment: Comet + Living Bomb + Efficiency II + Concentrated Area. Elemental Weakness: Heightened Curse + Efficiency II + Focused Curse + Rapid Casting II. Sigil of Power: Prolonged Duration II + Cooldown Recovery II + Magnified Area II. Siphon Elements: Harmonic Remnants II + Remnant Potency III.",
+        "transitionCondition": "Once Frostbolt's critical strike chance reaches around 70%, switch from Cast on Elemental Ailment to Cast on Critical and proceed to the Frostbolt swap (source). Snakepit can be equipped at Lv32."
+      },
+      {
+        "caution": "Snakepit is limited to the left ring slot. If a Vaal Cultivation Orb removes the forking effect, it reverts to piercing (source FAQ). Forked projectiles exploding can look like piercing, but that is normal behavior (source FAQ).",
+        "gearPriority": "Equip Snakepit in the left ring (the forking core). For the staff + focus, prioritize cold spell levels and critical strike chance (source summary). With Maligaro's Virtuosity gloves you can avoid the Pinpoint Critical penalty (source).",
+        "label": "Frostbolt Swap (Lv32+)",
+        "mainSkill": "Switch to Frostbolt. Snakepit turns piercing into forking, and the overlapping explosions clear the screen. Shatter Frost Wall's ice crystals with Frostbolt and fire Comets in rapid succession through Cast on Critical. Raise Comet to Lv21. Add Convalescence as a recovery tool.",
+        "nowActions": [
+          "Equip the forking ring in the left ring and switch to Frostbolt",
+          "Shatter Frost Wall's ice crystals with Frostbolt",
+          "Add a recovery tool with Convalescence"
+        ],
+        "passivePriority": "144 nodes with Frostbolt + CI. Scale ES in preparation for the move to Chaos Inoculation (source planner).",
+        "replaceGear": "Replace the left ring with Snakepit (the core). Maintain a Life + ES hybrid until the CI transition (source).",
+        "supports": "Frostbolt: Projectile Acceleration III + Multishot II + Pinpoint Critical + Ice Bite II. Cast on Critical: Comet Lv21 + Living Bomb Lv3 + Efficiency II + Pinpoint Critical. Frost Wall: Spell Cascade + Fortress + Cooldown Recovery II + Pinpoint Critical. Frost Bomb: Overabundance + Spell Echo + Potent Exposure + Cooldown Recovery II. Elemental Weakness: Efficiency II + Prolonged Duration II + Heightened Curse + Cursed Ground. Convalescence: Second Wind III + Prolonged Duration II + Cooldown Recovery II. Sigil of Power: Prolonged Duration II + Cooldown Recovery II + Magnified Area II.",
+        "transitionCondition": "Once your ES gear is ready and ES reaches 5,000–6,000, move to Chaos Inoculation and proceed to Endgame (source)."
+      },
+      {
+        "caution": "The planner's \"Wildshards III\" does not exist in the game (only I and II). This draft uses Wildshards II, the highest tier (see the research report). Min-maxed gear is a long-term goal collected over most of a league (per the source guide).",
+        "gearPriority": "Mageblood (belt), Rite of Passage (spirit: Owl), From Nothing (a jewel that lets you allocate unconnected passives around a keystone), Time-Lost Sapphire (area + critical strike chance) (source planner, Min Maxed). Move to the CI swap gear (ES specialization; chaos resistance is no longer needed). Note that the chest's \"Soul Mantle\" is the name of a rare item, not the Soul Mantle unique (source planner).",
+        "label": "Endgame (CI + min-maxed)",
+        "mainSkill": "Move to Chaos Inoculation and fight with Life 1 and ES specialization — the \"blue Life\" style. Frostbolt remains the core. Once you take Baryanic Leylines, equip two Time-Lost Sapphires. Supplement mana sustain with Mana Remnants.",
+        "nowActions": [
+          "Move to Chaos Inoculation",
+          "Add Frostbolt projectiles with Wildshards II",
+          "Get two Sapphire jewels that raise area and critical strike chance"
+        ],
+        "passivePriority": "152 nodes when min-maxed. Fill in Baryanic Leylines and many ES and critical nodes (source planner and summary). Allocate unconnected passives around a keystone with From Nothing.",
+        "replaceGear": "Move to the CI swap gear (ES specialization; chaos resistance is no longer needed). Note that the chest's \"Soul Mantle\" is the name of a rare item, not the Soul Mantle unique (source planner). Min-maxed gear is a long-term goal (source).",
+        "supports": "Frostbolt: Wildshards II + Vilenta's Propulsion + Pinpoint Critical + Efficiency II + Ice Bite II. Cast on Critical: Comet Lv21 + Living Bomb Lv3 + Efficiency II + Pinpoint Critical + Concentrated Area. Frost Wall: Spell Cascade + Fortress + Cooldown Recovery II + Rapid Casting II + Pinpoint Critical. Frost Bomb: Overabundance + Spell Echo + Potent Exposure + Cooldown Recovery II. Elemental Weakness: Heightened Curse + Prolonged Duration II + Efficiency II + Cursed Ground + Ritualistic Curse. Convalescence: Prolonged Duration II + Second Wind III + Cooldown Recovery II. Mana Remnants: Harmonic Remnants II + Remnant Potency. Sigil of Power: Magnified Area II + Prolonged Duration II + Cooldown Recovery II.",
+        "transitionCondition": "The finished form. From here, progress by refining the Time-Lost Sapphires and max-rolling each gear piece."
+      }
+    ],
+    "mainSkill": "Frostbolt — Snakepit (left ring) turns its piercing into forking, and the overlapping explosions clear the screen. Shatter Frost Wall's ice crystals with Frostbolt to fire Comets in rapid succession through Cast on Elemental Ailment / Cast on Critical. Before you have Snakepit, level with Ice Nova (clear) and Frost Darts (single target), and switch to Frostbolt once you can equip Snakepit at Lv32. The Disciple of Varashta ascendancy Instruments of Power lets you use a staff and focus together, and Baryanic Leylines widens the radius of Time-Lost Sapphires.",
+    "mainSkillTiming": {
+      "available": "Frostbolt comes into its own once you can equip Snakepit at Lv32 (source FAQ). Until then, level with Ice Nova + Frost Darts.",
+      "checkedAt": "2026-11-25",
+      "guide": "zen_m's Maxroll guide (text and embedded planner ga1h3c0e checked directly)",
+      "recommendedSwitch": "Once you can equip Snakepit (left ring) at Lv32, switch to Frostbolt. However, for triggering Comets, use Cast on Elemental Ailment until your critical strike chance reaches around 70%, and switch to Cast on Critical at around 70% (source). While you cannot equip it, proceed with Ice Nova + Frost Darts (source FAQ).",
+      "source": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide"
+    },
+    "mappingRating": 5,
+    "name": "Frostbolt + Cast on Critical Comet Disciple of Varashta",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": false
+        },
+        "note": "The main skill, Frostbolt, only comes online once you can equip Snakepit at Lv32, so it is not a main skill usable from Lv22 or below and the early condition is not counted as a confirmed condition. Operation is counted as confirmed because the source's strengths state \"Easy to play once using Frostbolt,\" but that is conditional on having started using Frostbolt, and Infusion Remnants must be managed during the campaign. The evasion condition is not stated in the source, so it is not counted as a confirmed condition. SSF is not stated in the source, and Snakepit is mandatory, so it is treated as unconfirmed.",
+        "score": 2,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "The source's strengths (Pros) state \"Easy to play once using Frostbolt.\" However, that is conditional on having started using Frostbolt, and Infusion Remnants must be managed during the campaign (source weakness: Relies on Infusion Remnants during the Campaign).",
+            "source": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "The introduction states \"amazing single target damage,\" and the mechanism of shattering Frost Wall's ice crystals with Frostbolt to fire Comets in rapid succession through Cast on Critical is the source of its single-target damage. At 70% critical strike chance it generates a large amount of energy.",
+        "quote": "High single target damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide",
+        "sourceName": "Maxroll: Frostbolt Cast on Crit Comet Disciple Of Varashta Build Guide (zen_m)"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "One of the source's top strengths is single-target damage, and the introduction also says \"Comets automatically fall down from the sky whenever you deal critical strikes, dealing massive amounts of damage.\" Clear is also rated as \"amazing clear while mapping.\"",
+        "quote": "High single target damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide",
+        "sourceName": "Maxroll: Frostbolt Cast on Crit Comet Disciple Of Varashta Build Guide (zen_m)"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "Early on it is a Life + ES hybrid, which the source calls \"solid defense,\" and later it moves to Chaos Inoculation, nullifying chaos damage and bleeding. Freeze itself is also defense. On the other hand, the FAQ states \"there are few defensive tools in Acts 1–3,\" so early defense is thin and this is rated 3.",
+        "quote": "Freezes everything",
+        "score": 3,
+        "source": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide",
+        "sourceName": "Maxroll: Frostbolt Cast on Crit Comet Disciple Of Varashta Build Guide (zen_m)"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "The explosions of Frostbolt forked by Snakepit overlap, and the introduction rates it as \"amazing clear while mapping.\" You advance while stopping enemies with Freeze.",
+        "quote": "Freezes everything",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide",
+        "sourceName": "Maxroll: Frostbolt Cast on Crit Comet Disciple Of Varashta Build Guide (zen_m)"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium (level through the campaign with a separate Ice Nova + Frost Darts setup, switch to Frostbolt after equipping Snakepit at Lv32; requires managing Infusion Remnants and shattering Frost Wall crystals)",
+      "gearDependence": "Snakepit (left ring) is a mandatory core unique. Cold spell levels and critical strike chance on the staff + focus, ES gear. Maligaro's Virtuosity gloves, Time-Lost Sapphire, Mageblood, Rite of Passage, From Nothing. Mana is sustained by two on-kill recovery jewels + Mana Remnants.",
+      "operation": "Moderate (shatter Frost Wall crystals with Frostbolt, collect Infusion Remnants, debuff before bosses. The source's strengths say \"Easy to play\" once you are using Frostbolt)",
+      "source": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide",
+      "ssfNote": "The source does not state SSF. Because Snakepit is mandatory, SSF is treated as unconfirmed and set to null."
+    },
+    "seoDescription": "PoE2 0.5.5: Frostbolt + Cast on Critical Comet Disciple of Varashta skills, supports, gear and passives, from Act 1 leveling to Endgame (Chaos Inoculation). Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Frostbolt + Cast on Critical Comet Disciple of Varashta Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "frostbolt-comet-varashta",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Frostbolt Cast on Crit Comet Disciple Of Varashta Build Guide",
+        "type": "Overseas league starter guide (patch 0.5.4, by zen_m, published June 16, 2026, updated September 3, 2026; guide text and embedded planner ga1h3c0e checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/frostbolt-cast-on-crit-comet-disciple-of-varashta-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List (0.5.5, updated November 3, 2026)",
+        "type": "Basis for the A Tier placement (checked directly on 2026-11-25; confirmed tier: \"A\" in the embedded JSON)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Snakepit",
+        "type": "Japanese name and mechanics cross-check (core unique, Pearl Ring)",
+        "url": "https://poe2db.tw/jp/Snakepit"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Frostbolt",
+        "type": "Japanese name and mechanics cross-check (main skill)",
+        "url": "https://poe2db.tw/jp/Frostbolt"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Cast on Elemental Ailment",
+        "type": "Japanese name cross-check (the Comet trigger used from Lv58)",
+        "url": "https://poe2db.tw/jp/Cast_on_Elemental_Ailment"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Disciple of Varashta",
+        "type": "Ascendancy and class cross-check (that it is Sorceress, and the Japanese names of Instruments of Power, The Fourth Teaching, Sacred Rituals and Baryanic Leylines)",
+        "url": "https://poe2db.tw/jp/Disciple_of_Varashta"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): From Nothing",
+        "type": "Japanese name cross-check (the planner's FourUniqueJewel6, a jewel that lets you allocate unconnected passives around a keystone)",
+        "url": "https://poe2db.tw/jp/From_Nothing"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Rite of Passage",
+        "type": "Japanese name cross-check (the Min Maxed charm, spirit: Owl — poe2db has no page for the spirit alone)",
+        "url": "https://poe2db.tw/jp/Rite_of_Passage"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "You can stop enemies almost completely with Freeze (source strength: Freezes everything). You control the screen with Frostbolt explosions and Comets.",
+      "High single-target damage (source strength: High single target damage). Shatter Frost Wall's ice crystals with Frostbolt and fire Comets in rapid succession through Cast on Critical.",
+      "Easy to play once you start using Frostbolt (source strength: Easy to play once using Frostbolt).",
+      "Defense can move from a Life + ES hybrid to Chaos Inoculation, making gear easy to assemble (source). It nullifies chaos damage and bleeding, and you no longer need chaos resistance."
+    ],
+    "updatedAt": "2026-09-03",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Frostbolt cannot be used early (source weakness: Can't use it early). Level with Ice Nova + Frost Darts until you can equip Snakepit at Lv32.",
+      "Relies on Infusion Remnants during the campaign (source weakness: Relies on Infusion Remnants during the Campaign). Ice Nova and Frost Darts deal little damage without a Cold Infusion.",
+      "Each Comet needs 300 energy, and a regular monster only generates 1 energy per critical strike (source FAQ). Comets will not cycle if there are too few frozen enemies.",
+      "Mana is always tight in boss fights (source FAQ). You need investment in mana regeneration rate, maximum mana, flask recovery and cost reduction.",
+      "There are few defensive tools in Acts 1–3 (source FAQ). The focus is on raising Life and resistances, switching to ES gear from Act 4."
+    ]
+  },
+  "related": [
+    {
+      "id": "sorceress-sand-fire",
+      "name": "Sand and Fire Varashta",
+      "classSlug": "sorceress",
+      "slug": "sand-and-fire"
+    },
+    {
+      "id": "sorceress-spark-stormweaver",
+      "name": "Spark Stormweaver",
+      "classSlug": "sorceress",
+      "slug": "spark-stormweaver"
+    }
+  ]
+}

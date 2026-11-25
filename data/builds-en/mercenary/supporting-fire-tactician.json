@@ -1,0 +1,241 @@
+{
+  "build": {
+    "ascendancy": "Tactician",
+    "audience": "Players who want to map comfortably, surrounded by a minion army while raining arrows over the whole screen.",
+    "beginnerRating": 3,
+    "bossRating": 4,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Shayd's Maxroll guide text directly and cross-checked names against the Japanese poe2db."
+      }
+    ],
+    "className": "Mercenary",
+    "classSlug": "mercenary",
+    "damageRating": 4,
+    "defenseRating": 5,
+    "difficulty": "There is one respec of about 21,700 gold at Lv36, but after the transition it is a one-button playstyle of firing Supporting Fire on cooldown.",
+    "gearPriorities": [
+      "Weapon (sceptre): \"+ to Level of all Minion Skills\" and Spirit. The finished form is a corrupted Chober Chaber with +4 to minion skills.",
+      "Armour: stack ES on helmet, gloves and boots. The finished form is Morior Invictus and Heroic Tragedy + Chaos Inoculation for over 10,000 ES.",
+      "Strength: directly tied to Supporting Fire's damage and to Life / ES, so stack it on all gear with priority. On the belt, also secure minion area-of-effect and command skill damage mods."
+    ],
+    "id": "mercenary-supporting-fire-tactician",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "The weapon set configuration (Permafrost Bolts on Set I, Fragmentation Rounds on Set II, Crossbow Shot shared by both sets) determines early comfort. When moving between Acts or zones, a reload is occasionally needed. Avoid gambling and expensive rare purchases during the campaign so you can secure the respec cost.",
+        "gearPriority": "Check vendor crossbows and sceptres every few levels, and buy an Iron Ring in Act 1. Movement speed on boots is mandatory. At Lv16, craft a Varnished Crossbow with a Lesser Essence of Ice or an Orb of Alchemy and insert a Glacial Rune (this carries crossbow leveling to the end). \"Added damage to attacks\" (cold and physical ideally) on gloves, rings and the crossbow is the top priority; the rest is Life and elemental resistances. Also pick up helmets and sceptres with \"+ to Level of all Minion Skills\" for later use.",
+        "label": "Lv1–Mid Act 2 (crossbow leveling)",
+        "mainSkill": "Permafrost Bolts for packs. For single target, freeze first, then Fragmentation Rounds.",
+        "nowActions": [
+          "Set up the weapon sets (Permafrost Bolts = Set I / Fragmentation Rounds = Set II)",
+          "At Lv16, craft a Varnished Crossbow and insert a Glacial Rune",
+          "Sell rares and save up for the respec cost (about 21,700 gold)"
+        ],
+        "passivePriority": "Keep crossbow nodes within an efficient range to hold down the respec cost. Rapid Reload and Adrenaline Rush help early on.",
+        "replaceGear": "The Lv16 Varnished Crossbow is effectively the final upgrade. Update flasks every 10–15 levels.",
+        "supports": "Permafrost Bolts is the main skill, Frost Bomb lowers elemental resistances, and Herald of Ice raises clear speed. On bosses, apply Freezing Mark, then use Fragmentation Rounds. See the source planner for the exact support slots.",
+        "transitionCondition": "Take Unleash Hell! in mid Act 2 and unlock Supporting Fire. However, wait until Lv36 for the full transition."
+      },
+      {
+        "caution": "As a rule, field one of each minion type; only Skeletal Sniper is used at 2–3, depending on Spirit, as single-target support. The minions' own damage does not matter (except the early sniper), and you still gain Muster's bonus even if they die.",
+        "gearPriority": "\"+ to Level of all Minion Skills\" is the top priority, secured on sceptre, helmet and amulet (it grows both minion damage and durability). Strength also ties directly to damage and Life. A Shrine Sceptre grants Purity of Fire, letting you use Upwelling I and Clarity I for free, making it the early best choice.",
+        "label": "Lv36–Campaign End (switch to Supporting Fire)",
+        "mainSkill": "Use Supporting Fire on cooldown. Line up one of each minion type for Muster.",
+        "nowActions": [
+          "Respec at Lv36 using about 21,700 gold",
+          "Engrave Supporting Fire's required supports (Fire Attunement / Multishot II / Bidding I / Muster) first",
+          "Line up one of each minion type (2–3 snipers)"
+        ],
+        "passivePriority": "Respec at Lv36. Growing Swarm and command skill cooldown recovery are the top priorities. Take Archon of Undeath, Lord of Horrors, At Your Command, Puppet Master and Gigantic Following. Put spare attribute points into Strength first.",
+        "replaceGear": "Fully replace crossbow-oriented gear with minion skill level and Strength gear.",
+        "supports": "Supporting Fire: Fire Attunement, Multishot II, Bidding I and Muster are the required slots at the transition (per the source's gem engraving priority). For single target, ignite the Skeletal Sniper's command skill (Gas Arrow) with Fire Attunement. Sceptre auras prioritize Upwelling II and Clarity II. Debuffs are Elemental Weakness and Frost Bomb.",
+        "transitionCondition": "Campaign finished, and the purchase funds (Exalted Orbs) for Enfolding Dawn are secured."
+      },
+      {
+        "caution": "If Supporting Fire is on cooldown at the moment you gain Archon of Undeath, the cooldown is not shortened retroactively. Trigger the Archon first with the Skeletal Arsonist's command, then fire.",
+        "gearPriority": "The first purchase is Enfolding Dawn; save Exalted Orbs and buy it right away (upgrading it with forging greatly grows Armour and ES). Next, Meginord's Girdle gives a large amount of Strength and cold resistance.",
+        "label": "Early Maps",
+        "mainSkill": "Supporting Fire handles clear, and the Skeletal Arsonist's command skill cycles Archon of Undeath and Puppet Master.",
+        "nowActions": [
+          "Buy the Spirit-securing unique chest with top priority",
+          "Buy Meginord's Girdle next",
+          "Maintain Puppet Master with the Skeletal Arsonist's command"
+        ],
+        "passivePriority": "Assemble the nodes related to Archon of Undeath. Once assembled, single-target damage shifts to Supporting Fire and you can reduce Skeletal Snipers.",
+        "replaceGear": "Purchase in the order Enfolding Dawn → Meginord's Girdle.",
+        "supports": "For Supporting Fire's Bidding, choose Bidding II for a single-target lean or Bidding III for stable clear, to taste. Skeletal Brute breaks Armour with Armour Break III and also handles intimidation on bosses.",
+        "transitionCondition": "Reach Red Maps, with funds to upgrade to Trenchtimbre or an Omen Sceptre."
+      },
+      {
+        "caution": "Use Infernal Legion I, not II, on Wolf Pack. Also, do not add Last Gasp to the Essence Harvest combination, or the harvest stops working.",
+        "gearPriority": "A +2 Trenchtimbre (once shield resistances are no longer needed). The Omen Sceptre is the best base, and Malice greatly grows single-target damage. Secure regeneration with Emergent Instinct and stabilize mana recovery with Lavianga's Spirits. On the belt, \"increased minion area of effect\" and \"minions deal increased damage with command skills\" are mandatory-class mods.",
+        "label": "Red Maps",
+        "mainSkill": "Supporting Fire handles both clear and bosses. Apply Predator's Mark and Cold Exposure with Pounce.",
+        "nowActions": [
+          "Aim for a buckler with +2 to Level of all Minion Skills",
+          "Switch to an Omen Sceptre and use Malice",
+          "Switch to applying Predator's Mark and Exposure with Pounce"
+        ],
+        "passivePriority": "With Resurging Archon, remove Skeletal Sniper completely and unify both clear and single target on Supporting Fire. Add Despair with Whispers of Doom. Necrotic Touch and Grip of Evil pair well with Malice. Licking Wounds raises Life and mana recovery.",
+        "replaceGear": "Once the amulet and chest provide enough Spirit, graduate from Enfolding Dawn.",
+        "supports": "Kurgal's Leash gives Supporting Fire Unholy Might (30% of physical damage gained as chaos). Grow chaos damage with Withering Presence, and defensively layer Blasphemy + Temporal Chains, later adding Despair. Mana recovery comes from Wolf Pack's Infernal Legion I + Essence Harvest.",
+        "transitionCondition": "Secure an amulet that can be instilled with Dominion, and Heroic Tragedy (Vorana inscription)."
+      },
+      {
+        "caution": "Heroic Tragedy must have the \"Vorana\" inscription (rolls do not matter). If you do not have a Megalomaniac with Growing Swarm, go take Growing Swarm by the normal path.",
+        "gearPriority": "Maximize ES on helmet, gloves and boots. Chober Chaber is a strict upgrade over Trenchtimbre; aim for a corrupted +4 to all minion skills one requiring 80–85 Intelligence. Morior Invictus requires all elemental resistances and all attributes, with reduced damage taken from critical strikes as the best third slot. Put Gigantic Following on the helmet with a Raven-Touched Shard, and another instillation on the gloves with Cadigan's Epiphany.",
+        "label": "Endgame (CI, Dominion obtained)",
+        "mainSkill": "Stacked shots of Supporting Fire. Maintain Archon of Undeath almost permanently, handling both clear and bosses with this alone.",
+        "nowActions": [
+          "Instill Dominion on the amulet",
+          "Move to Heroic Tragedy (Vorana inscription) + Chaos Inoculation",
+          "Aim for a +4 corrupted Chober Chaber"
+        ],
+        "passivePriority": "Instilling Dominion is the top priority (Archon of Undeath's recovery period disappears, so it can be maintained almost permanently). Heroic Tragedy's Black Scythe Training converts Strength into ES, and combined with Chaos Inoculation you aim for over 10,000 ES. Hold Chober Chaber in one hand with Giant's Blood.",
+        "replaceGear": "Fully replace Life mods with ES. At Min-Max, even Mageblood and Jiquani's Thesis come into view.",
+        "supports": "Vorana's Siege grows area and damage against isolated enemies. Uul-Netol's Embrace is a powerful lineage support that gains 40% of physical damage as chaos (an expensive Min-Max slot). On the minion side, finish with Amanamu's Tithe, Tecrod's Revenge, Brutus' Brain and Her Declaration.",
+        "transitionCondition": "The finished form. From here, refine jewel mods (maximum ES, ES recharge start speed, minion critical mods) and max-roll each gear piece."
+      }
+    ],
+    "mainSkill": "Supporting Fire",
+    "mainSkillTiming": {
+      "available": "Supporting Fire is the Tactician's ascendancy skill, granted by Unleash Hell! and unlocked in mid Act 2 (source / poe2db). It scales with +1% damage per 1 Strength and +1% area of effect per 3 Dexterity.",
+      "checkedAt": "2026-11-25",
+      "guide": "Shayd's Maxroll guide (guide text checked directly)",
+      "recommendedSwitch": "At Lv36, Supporting Fire's third support socket opens and the command skill cooldown recovery nodes are also in place, so respec for about 21,700 gold and transition (source FAQ). Additional sockets open at Lv65 (fourth) and Lv90 (fifth).",
+      "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide"
+    },
+    "mappingRating": 5,
+    "name": "Supporting Fire Tactician",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": true,
+          "ssfConfirmed": false
+        },
+        "note": "The main skill, Supporting Fire, is an ascendancy skill and cannot be used until mid Act 2, so the early condition is not counted as a confirmed condition. After the transition, play centers on one button, and the ranged attacks plus the minion shield keep the dodging requirement low, so two conditions are counted. SSF viability is not stated in the source.",
+        "score": 3,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "The source's strengths state \"1 Button Build\". After the transition, play centers on firing Supporting Fire on cooldown.",
+            "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide"
+          },
+          "noDodgeRequirement": {
+            "basis": "A ranged attack with a base area of effect of 14m, with a minion army surrounding you as a shield. The source describes a \"very comfy, laid back playstyle\" and does not assume dodge play.",
+            "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "With Dominion, Archon of Undeath is maintained almost permanently, and bosses are ground down with stacked Supporting Fire shots (per the source's passive explanation). Single-target damage is not stated in the strengths list, so this stays at 4.",
+        "quote": "enormous Single Target damage",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide",
+        "sourceName": "Maxroll: Supporting Fire Tactician Build Guide"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Strength directly grows Supporting Fire's damage, stacked with Muster and Archon of Undeath's 25% more. The strengths' wording centers on clear, so this stays at 4.",
+        "quote": "Scales Offense + Defense with One Stat",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide",
+        "sourceName": "Maxroll: Supporting Fire Tactician Build Guide"
+      },
+      "defense": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "Strength ties directly to Life and ES, and the finished form reaches over 10,000 ES with Heroic Tragedy + Chaos Inoculation. Stay Light, Use Cover also raises the efficiency of low Armour and Evasion.",
+        "quote": "Great Defensive Scaling",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide",
+        "sourceName": "Maxroll: Supporting Fire Tactician Build Guide"
+      },
+      "mapping": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "A rain of arrows with a base area of effect of 14m can process enemies before they are visible. Outstanding clear speed is listed among the source's strengths.",
+        "quote": "Phenomenal Clear",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide",
+        "sourceName": "Maxroll: Supporting Fire Tactician Build Guide"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium (there is a respec of about 21,700 gold at Lv36 and the effort of crossbow leveling early on, but operation after the transition centers on one button).",
+      "gearDependence": "Centered on \"+ to Level of all Minion Skills\" on sceptre, helmet and amulet, plus Strength. In the finished form, Chober Chaber and Morior Invictus are the big room to grow.",
+      "operation": "Low (fire Supporting Fire on cooldown, and maintain Archon of Undeath and Puppet Master with command skills).",
+      "source": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide",
+      "ssfNote": "Whether the build works in SSF is not stated in the source (Maxroll). The source states it \"functions without uniques\", but that is not an SSF statement, so it is treated as unconfirmed."
+    },
+    "seoDescription": "PoE2 0.5.5: Supporting Fire Tactician — the Lv36 respec transition, skills, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Supporting Fire Tactician Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "supporting-fire-tactician",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Supporting Fire Tactician Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by Shayd, updated October 19, 2026; guide text checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/supporting-fire-tactician-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List",
+        "type": "Overseas Tier list (0.5.5, updated November 3, 2026; this build is placed in A Tier)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Supporting Fire",
+        "type": "Japanese skill data",
+        "url": "https://poe2db.tw/jp/Supporting_Fire"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db: Supporting Fire",
+        "type": "Game data (ascendancy skill gem, granted by Unleash Hell!; +1% damage per 1 Strength, +1% area of effect per 3 Dexterity)",
+        "url": "https://poe2db.tw/us/Supporting_Fire"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "Supporting Fire's base area of effect is a wide 14m, and pack clear is extremely fast (source strength: Phenomenal Clear).",
+      "After the transition, a one-button playstyle of firing Supporting Fire on cooldown (source strength: 1 Button Build).",
+      "A single stat, Strength, grows both offense (Supporting Fire's damage) and defense (Life / ES) at once (source strength: Scales Offense + Defense with One Stat).",
+      "The source calls it an excellent league starter, and it is also placed in A Tier in Maxroll's League Starter Tier List (source strength: Amazing League Starter).",
+      "The finished form reaches over 10,000 ES with Heroic Tragedy and Chaos Inoculation (per the source's gear explanation)."
+    ],
+    "updatedAt": "2026-10-19",
+    "version": "0.5.5",
+    "weaknesses": [
+      "You must level with a crossbow early on, and the signature skill Supporting Fire cannot be used until mid Act 2 (source weakness: Have To Play Crossbows Early On).",
+      "A respec cost of about 21,700 gold applies at Lv36.",
+      "Because you field many minions, gear needs minion mods such as minion skill levels (source weakness: Minion Tax on Gear).",
+      "Suffix pressure is severe in Endgame (source weakness: Suffix Pressure Endgame)."
+    ]
+  },
+  "related": [
+    {
+      "id": "mercenary-twister-gemling",
+      "name": "Twister Gemling",
+      "classSlug": "mercenary",
+      "slug": "twister-gemling"
+    },
+    {
+      "id": "mercenary-grenade-gemling",
+      "name": "Grenade Gemling",
+      "classSlug": "mercenary",
+      "slug": "grenade-gemling"
+    }
+  ]
+}

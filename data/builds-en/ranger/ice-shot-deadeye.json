@@ -1,0 +1,322 @@
+{
+  "build": {
+    "id": "ranger-ice-shot-deadeye",
+    "slug": "ice-shot-deadeye",
+    "classSlug": "ranger",
+    "name": "Ice Shot Deadeye",
+    "seoTitle": "PoE2 Ice Shot Deadeye Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Ice Shot Deadeye — early skills, the Lv31 switch, supports, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "className": "Ranger",
+    "ascendancy": "Deadeye",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "status": "verified",
+    "mainSkill": "Ice Shot",
+    "beginnerRating": 2,
+    "damageRating": 4,
+    "defenseRating": 3,
+    "mappingRating": 5,
+    "bossRating": 4,
+    "difficulty": "Switch the main skill at Lv31",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "reviewedFacts": {
+      "ssfNote": "The source explains that early-mapping gear is obtainable in SSF (the finished form is unconfirmed).",
+      "source": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+      "checkedAt": "2026-09-27"
+    },
+    "strengths": [
+      "The Lv1–30 leveling setup and the Lv31-onward Ice Shot setup are published per stage.",
+      "Clear-oriented Ice Shot and single-target Snipe can be given separate roles.",
+      "Endgame can start from a non-crit form and transition later to match your gear."
+    ],
+    "weaknesses": [
+      "Ice Shot is not unlocked until Lv31, so early on you use Lightning Arrow and Lightning Rod.",
+      "Later defense and the crit transition depend on gear, and switching to the finished form too early tends to make it unstable.",
+      "Single-target fights require Snipe's charge and mana management.",
+      "Boss-oriented Snipe requires getting used to the release timing (Maxroll: \"Snipe can be tricky\"; Gamerch)."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Lightning Arrow + Lightning Rod",
+        "supports": "Lightning Arrow: Rapid Attacks I → Elemental Armament I. Lightning Rod: Concentrated Area.",
+        "passivePriority": "Use the source's lvl 1-14 per-stage tree. Check exact node names in the linked tree.",
+        "gearPriority": "Added attack damage on bow and quiver, Life, resistances, movement speed.",
+        "replaceGear": "Prioritize reviewing a bow whose damage has stalled and boots without movement speed.",
+        "caution": "Ice Shot cannot be used yet. Once you obtain a bow and quiver, do not leave them as plain items; check them with early crafting.",
+        "transitionCondition": "Reach Lv11. The flow of placing Lightning Rod and attacking with Lightning Arrow is stable.",
+        "nowActions": [
+          "Place Lightning Rod first",
+          "Attach early supports to Lightning Arrow",
+          "Check the added damage on bow and quiver"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Lightning Arrow + Lightning Rod",
+        "supports": "Continue the early supports and progress to the source's lvl 15-23 setup.",
+        "passivePriority": "Progress from the lvl 1-14 to the lvl 15-23 per-stage tree.",
+        "gearPriority": "Bow upgrade at Lv11, bows and sockets from Lv16, skill levels and added damage on the quiver.",
+        "replaceGear": "Check the bow around Lv11, and do not use up the upgrade materials for Lv16 onward.",
+        "caution": "In the source, the policy is not to use up expensive currency on early bows, but to save it for the next bow upgrade.",
+        "transitionCondition": "Reach Lv21. Upgrade materials for the bow are saved, and damage and resistances are maintained.",
+        "nowActions": [
+          "Compare bows around Lv11",
+          "Save materials for bow upgrades from Lv16 onward",
+          "Update Life and mana flasks"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Lightning Arrow + Lightning Rod until Lv23. In the source's lvl 24-30, Lightning Arrow continues, and Freezing Mark, Freezing Salvo, Ice-Tipped Arrows and others are added.",
+        "supports": "The source guides you to prepare 1 Lv7 skill gem, 2 Lv5 or 6 gems, and 4–5 supports for the switch. Use the Lv7 for Freezing Mark first, and add Snipe with the next Lv7. Snipe: Concentrated Area, Window of Opportunity I, Elemental Armament II.",
+        "passivePriority": "Use the lvl 24-30 per-stage tree, connecting to the Lv31 switch point.",
+        "gearPriority": "Bow, quiver, Life, resistances, movement speed. Also check the required Intelligence.",
+        "replaceGear": "Prioritize armour pieces that remain usable after the Lv31 switch, and do not over-invest in short-lived gear.",
+        "caution": "Until the switch gems and requirements at Lv24 are in place, keep the currently working main skills. This is the source's gem preparation plan, and should be checked separately from the Lv31 Ice Shot switch.",
+        "transitionCondition": "Reach Lv31. Ice Shot and the post-switch supports can be prepared.",
+        "nowActions": [
+          "Save 1 Lv7 skill gem and 2 Lv5 or 6 gems for the switch",
+          "Prioritize Freezing Mark, and add Snipe with the next Lv7",
+          "Prepare the conditions for Ice Shot and Herald of Ice for Lv31"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Switch to Ice Shot. Use Snipe for single target.",
+        "supports": "In the source's lvl 31-41, Ice Shot is listed with Rapid Attacks I, Elemental Armament II and Ice Bite I. Swap Herald of Thunder to Herald of Ice. Check owned gems, Spirit and attributes before transitioning.",
+        "passivePriority": "Move to the lvl 31-41 per-stage tree. Do not bulk-change to the finished tree.",
+        "gearPriority": "Added cold or physical attack damage, bow DPS, quiver, Life, resistances.",
+        "replaceGear": "If regular enemies cannot be cleared after the switch, compare the bow and quiver before the supports.",
+        "caution": "In the source, Freezing Mark is assigned to Weapon Set 2 and everything else to Set 1. If you want fewer operations, Freezing Salvo can be omitted. The Japanese play record's suggestion to wait until Lv36 is a record from the 0.4 environment; check current acquisition conditions in the current guide and in-game.",
+        "transitionCondition": "Reach Lv41. You can clear with Ice Shot and use Snipe for single target.",
+        "nowActions": [
+          "Decide on the switch to Ice Shot at Lv31",
+          "Set up Snipe for single target",
+          "Check the added damage on bow and quiver"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Ice Shot + Snipe",
+        "supports": "Use the source's lvl 42-59, then lvl 60+ setups in order. For unconfirmed slots, prioritize the source's display.",
+        "passivePriority": "Progress from the lvl 42-59 to the lvl 60+ per-stage tree.",
+        "gearPriority": "Bow, quiver, Life, Evasion, elemental resistances, movement speed, required attributes.",
+        "replaceGear": "If damage is lacking, bow and quiver; if you die often, armour pieces with low resistances and Life.",
+        "caution": "Check mana and consumption before bosses so Snipe does not stop midway from lack of mana.",
+        "transitionCondition": "Campaign finished. Ice Shot clear and Snipe single-target fights are stable.",
+        "nowActions": [
+          "Update in the order lvl 42-59 → 60+",
+          "Sort out resistances and Evasion",
+          "Check Snipe for mana shortfalls"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Ice Shot as the clear main skill, Snipe for strong enemies.",
+        "supports": "Transition to the Endgame guide's Early setup.",
+        "passivePriority": "Use the Early non-crit, Life / Evasion tree.",
+        "gearPriority": "All three elemental resistances, Life, Evasion, added cold and physical attack damage, bow and quiver.",
+        "replaceGear": "Fix armour pieces with resistance shortfalls first, then update bow and quiver.",
+        "caution": "At map start, use the source's Early non-crit form, and do not move to the crit form before gear is in place.",
+        "transitionCondition": "Low-Tier maps can be run stably, with no shortfalls in the three elemental resistances, Life or Evasion.",
+        "nowActions": [
+          "Move to the Early non-crit form",
+          "Check all three elemental resistances",
+          "Compare bow and quiver one slot at a time"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Ice Shot + Snipe",
+        "supports": "Progress in the order non-crit Midgame → non-crit Hybrid swap.",
+        "passivePriority": "Complete the source's non-crit Midgame, and consider the Hybrid swap only after meeting the gear conditions.",
+        "gearPriority": "Bow, quiver, added attack damage, resistances, Life and Evasion. When transitioning to Hybrid, also check ES.",
+        "replaceGear": "If defense is unstable, stop the Hybrid transition and improve the current Life and Evasion gear first.",
+        "caution": "The Hybrid is not an automatic upgrade. Do not half-mix gear and passives.",
+        "transitionCondition": "The non-crit form is stable and the gear needed for the Hybrid transition is in place.",
+        "nowActions": [
+          "Stabilize the non-crit form first",
+          "Check the gear for the Hybrid transition",
+          "Think about damage and defense shortfalls separately"
+        ]
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "Ice Shot as the main skill, keeping Snipe for single target until gear is in place.",
+        "supports": "Transition from Crit Hybrid to Uber Endgame only when the gear prerequisites are met.",
+        "passivePriority": "Use the Crit Hybrid per-stage tree as the baseline, and adopt the Uber version only after checking the source's gear conditions.",
+        "gearPriority": "High-performance bow and quiver, added damage, critical, defense, resistances, required attributes.",
+        "replaceGear": "Not by fixed price; update one slot at a time by the performance difference against listings under the same conditions as your current gear.",
+        "caution": "If gear is sufficient, removing Snipe is also an option, but do not assert fixed DPS or one-shot conditions.",
+        "transitionCondition": "Once finished, improve the bottlenecks among bow, single-target damage and defense one item at a time.",
+        "nowActions": [
+          "Check the gear conditions for the Crit transition",
+          "Judge in actual combat whether to keep Snipe",
+          "Update one slot at a time without using fixed market prices"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Bow and quiver: added attack damage and actual attack performance",
+      "Armour pieces: Life, Evasion, elemental resistances",
+      "Boots: movement speed. Later, also check required attributes and the ES transition conditions."
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Ice Shot Deadeye Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas verified leveling guide"
+      },
+      {
+        "name": "Mobalytics: Ice Shot Deadeye Endgame 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas verified Endgame guide"
+      },
+      {
+        "name": "note: 0.5 Ice Shot Deadeye Act test",
+        "url": "https://note.com/dybotiam/n/n20fcbdab59e4",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese play record"
+      },
+      {
+        "name": "Maxroll: Ice Shot Deadeye Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (patch 0.5.5, updated September 4, 2026; referenced as the basis for the ratings)"
+      },
+      {
+        "name": "Gamerch: Ice Shot build gems and recommended classes",
+        "url": "https://gamerch.com/poe2/955377",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese strategy material (source is for 0.5.0, updated September 14, 2026 at 14:39; referenced for strengths, weaknesses and gear priorities. Distinct from the site-wide navigation's 0.5.5 notation)"
+      }
+    ],
+    "audience": "Beginners who want to fight at range with a bow, switching between clear and single-target attacks.",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
+        },
+        "note": "Only the counted conditions are tied to the source. The main skill Ice Shot is from Lv31 (poe2db), so the early condition is not counted as a confirmed condition. Maxroll lists \"Snipe can be tricky\" as a con and Gamerch lists \"you need to get used to Snipe's timing\" as a weakness, so ease of operation is not counted either. SSF is mentioned by the source guide only up to early-mapping gear, so it is not counted.",
+        "score": 2,
+        "verifiedChecks": {
+          "noDodgeRequirement": {
+            "basis": "Maxroll (0.5.5, updated September 4, 2026) states \"Avoids most damage\" in its pros.",
+            "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide"
+          }
+        }
+      },
+      "damage": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Chunky Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "High single-target damage is listed among the strengths."
+      },
+      "defense": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Avoids most damage / Weak to Damage Over Time",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "The strengths say it \"avoids most damage\", and the weaknesses say it is \"weak to damage over time\"."
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Fast / Great Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "Speed and clear power are emphasized in the strengths."
+      },
+      "boss": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Chunky Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/ice-shot-deadeye-build-guide",
+        "sourceName": "Maxroll: Ice Shot Deadeye Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "High single-target damage is listed among the strengths."
+      }
+    },
+    "mainSkillTiming": {
+      "available": "Lv31 (the required character level of a level 9 skill gem)",
+      "recommendedSwitch": "From Lv31 onward, after preparing the gems, required Spirit and gear.",
+      "source": "https://poe2db.tw/us/Ice_Shot",
+      "guide": "https://mobalytics.gg/poe-2/builds/ice-shot-deadeye-leveling-guide",
+      "checkedAt": "2026-09-27"
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Checked Maxroll (0.5.5) and Gamerch (updated September 18). Counted safe positioning via Maxroll's pro \"Avoids most damage\", and updated beginner-friendliness from unrated to 2/5."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Re-checked the source's descriptions, applicable stages and source information, and fixed mix-ups and over-generalizations. Sources and dynamic setups that could not be confirmed are not treated as re-verified, and the overall leveling verification date has not been changed."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Reflected the current source text's Lv24 mini-switch and the Herald of Ice preparation at Lv31. Revised the guidance so you do not switch immediately on the numeric level band alone, but check owned gems and Spirit. The exact per-stage tabs are unconfirmed."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Additionally checked the contents of the per-stage tabs and made the skill and support guidance that had not been captured more concrete. This is not a verification of all gear conditions or actual in-game runs."
+      },
+      {
+        "date": "2026-10-08",
+        "summary": "Additionally checked the source guide's switch conditions and answers to common problems, and added links leading to the current stage's details. This is not a full re-verification of the 8 leveling stages or a date of hands-on play confirmation."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked the publication status, supported patch, update date, main skill and ascendancy of 3 of the 5 sources and updated the check dates. The 2 Mobalytics sources cannot be fetched automatically, so they remain unchecked (check dates left unchanged)."
+      }
+    ],
+    "practicalGuide": {
+      "checkedAt": "2026-10-08",
+      "heading": "When you're unsure about the Ice Shot switch or early damage",
+      "scope": "Fubgun's leveling guide text (title 0.5, tags 0.5.5 FR). The full dynamic support setups and actual in-game behavior have not been re-verified.",
+      "questions": [
+        {
+          "answer": "Lv31 is the guideline for starting to use it. Check reaching the level separately from having the required gems, Spirit and gear in place. If something is missing, keep the pre-switch Lightning Arrow + Lightning Rod setup.",
+          "question": "Must I always switch to Ice Shot at Lv31?"
+        },
+        {
+          "answer": "The source emphasizes added attack damage on early bows, quivers and the like. First compare your current weapon, and if supports are lacking, check moving them to the boss-oriented Lightning Rod side. Do not use early DPS judgments as proof of the finished form's optimal gear.",
+          "question": "What if damage is low before the Ice Shot switch?"
+        },
+        {
+          "answer": "The leveling source guides you to the Endgame guide after the campaign. Do not keep using early gear as the finished form; check the current stage's supports, gear and transition conditions together.",
+          "question": "Where do I separate the leveling and Endgame setups?"
+        }
+      ]
+    }
+  },
+  "related": [
+    {
+      "id": "ranger-glacial-lance-deadeye",
+      "name": "Glacial Lance Deadeye",
+      "classSlug": "ranger",
+      "slug": "glacial-lance-deadeye"
+    },
+    {
+      "id": "ranger-twister-deadeye",
+      "name": "Twister Deadeye",
+      "classSlug": "ranger",
+      "slug": "twister-deadeye"
+    }
+  ]
+}

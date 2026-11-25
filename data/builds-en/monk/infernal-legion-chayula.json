@@ -1,0 +1,268 @@
+{
+  "build": {
+    "ascendancy": "Acolyte of Chayula",
+    "audience": "Players who like \"zero-button\" play: pressing almost nothing while the area around their companion keeps burning, processing maps and bosses with DoT",
+    "beginnerRating": 2,
+    "bossRating": 5,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Shayd's Maxroll guide text directly and cross-checked names and mechanics against the Japanese poe2db. No mirror or summary sites were used. The ascendancy's official Japanese name is \"Acolyte of Chayula\". leagueStarter was set to true to match the site convention that all existing entries are true, but the source is not a dedicated league starter guide, so this needs confirmation at publication."
+      }
+    ],
+    "className": "Monk",
+    "classSlug": "monk",
+    "damageRating": 5,
+    "defenseRating": 4,
+    "difficulty": "Starts with melee leveling (Ice Strike) rather than minions, and around Lv56 requires a respec of about 40,000 gold and taming two rare beasts with specified mods",
+    "gearPriorities": [
+      "+levels to all minion skills: secure it on the sceptre, helmet and amulet. The top-priority stat, affecting both the companion's damage and durability (source).",
+      "Spirit: +92 or more additional Spirit from gear is the requirement to use Blackflame. With a Shrine Sceptre, you can use Spirit-reservation supports effectively for free (source).",
+      "Trenchtimbre: early on the +1 roll, updated to the +2 roll in red maps. Cheap and a large gain (source).",
+      "Companion maximum Life and increased minion area of effect: Infernal Legion II's base damage scales with the companion's maximum Life, and increased area translates directly into clear area (source).",
+      "Defense: build on Evasion / ES bases, and transition to Chaos Inoculation at about 6,000 ES. The finished form is about 10,000 ES + over 50% Evasion (source).",
+      "Jewels: prioritize \"increased minion area of effect\" (Ruby / Diamond), increased Presence area, and minion maximum Life (source)."
+    ],
+    "id": "monk-infernal-legion-chayula",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "The source calls the early part of Monk's Act 1 a rough section. Do not overextend until Ice Strike unlocks.",
+        "gearPriority": "A Quarterstaff with high physical / cold damage. For the remaining slots, prioritize maximum Life and resistances. Evasion or Evasion / ES bases are preferable, but mod content matters more than the base (source).",
+        "label": "Lv1–13 (Act 1 early: Quarterstaff)",
+        "mainSkill": "Progress with a high-damage Quarterstaff. Break Frozen Locus ice crystals with the tip of Glacial Cascade to cover both pack clearing and single target",
+        "nowActions": [
+          "Upgrade to a high-damage Quarterstaff",
+          "Prioritize maximum Life and resistances on gear",
+          "Replace flasks with the newest ones"
+        ],
+        "passivePriority": "Lay the groundwork toward Concussive Attack. Ideally take Hollow Palm Technique by the Count Geonor fight in Act 1 (source).",
+        "replaceGear": "Update flasks to the newest ones every 10–15 levels (source).",
+        "supports": "The policy is to supplement the Quarterstaff's damage with runes such as a Lesser Glacial Rune (source).",
+        "transitionCondition": "Ice Strike unlocks at Lv14."
+      },
+      {
+        "caution": "This stage is not a minion setup yet. To secure the respec cost (about 39,000–40,000 gold), pick up and sell rares, and do not buy expensive rares from vendors (source). Early defense is fragile — that is a weakness in the source.",
+        "gearPriority": "+levels to melee skills on gloves and amulet is the damage core. Balance Life and resistances. During the campaign, if you see minion gear for after the transition (a sceptre, or a helmet with +levels to all minion skills), secure it (source).",
+        "label": "Lv14–End of Act 4 (Ice Strike leveling)",
+        "mainSkill": "Ice Strike is the main skill. Explode frozen enemies with Herald of Ice, and dive into large packs with Shattering Palm. On bosses, place Tempest Bell and cycle the combo",
+        "nowActions": [
+          "Build freeze chains with Ice Strike and Herald of Ice",
+          "Save about 40,000 gold for the respec",
+          "Secure minion gear (sceptre, helmet) when you see it"
+        ],
+        "passivePriority": "Taking Hollow Palm Technique lets you fight without a weapon and frees you from hunting for melee weapons. Remnant Attraction makes collecting Flames of Chayula easier. The first ascendancy point is Waking Dream (source).",
+        "replaceGear": "After taking Hollow Palm Technique, you no longer need to update your weapon. If you have the funds, Thrillsteel and Yoke of Suffering are candidates (source).",
+        "supports": "Embitter is important: it converts Into the Breach's added chaos damage to cold so you can take Freeze (source). Cannibalism I and Clarity I supplement Life / Mana recovery. Putting Freezing Mark and Elemental Weakness on Hand of Chayula lets you apply both with one button (source).",
+        "transitionCondition": "Finish Act 4 and enter the Interludes. Lv56+ and 18+ weapon set points are the guide for the transition."
+      },
+      {
+        "caution": "Finish the taming before the respec. The Plague Harvester is around Khari Crossing in the Interludes, and the Diretusk Boar spawns fixed at the Troubled Camp in Act 3's Infested Barrens, where you can reroll its mods with checkpoint respawns (source FAQ). Be careful not to kill the rare beasts.",
+        "gearPriority": "A sceptre, helmet and amulet with +levels to all minion skills. A Shrine Sceptre is the best base, but mod content matters more than the base (source).",
+        "label": "Around Lv56–Transition (tame companions and respec)",
+        "mainSkill": "Tame the two companions first, then respec your passives and transition to the Infernal Legion II setup. The main companion is a Plague Harvester with the \"all damage can Ignite\" mod; the support companion is a Diretusk Boar with the \"all damage can Shock\" mod (source)",
+        "nowActions": [
+          "Tame a Plague Harvester (all damage can Ignite)",
+          "Tame a Diretusk Boar (all damage can Shock)",
+          "Respec your passives for about 40,000 gold"
+        ],
+        "passivePriority": "The respec costs about 40,000 gold. Vile Mending, Living Death, minion fire resistance and Unspoken Bond are required nodes so your companions do not kill themselves with Infernal Legion (source). Long Distance Relationship and Bond of the Ape extend the companion's area of effect. The ascendancy order is Waking Dream → Choice of Power → Chayula's Gift (source).",
+        "replaceGear": "Prepare Saitha's Spear in Weapon Set II (to Aggravate boss Ignites). Set both companions to Weapon Set I only, so a weapon swap can instantly heal and recall them (source).",
+        "supports": "Cut Infernal Legion II with a Lv5 Uncut Support Gem. Do not use Infernal Legion I — its fire resistance and area are insufficient (stated in the source). Put Selfless Remnants on Into the Breach to transfer the purple flame's effect to allies in your Presence. After taking Gigantic Following, replace Hulking Minions with Searing Flame II (source).",
+        "transitionCondition": "Both companions are tamed, the respec is done, and you can enter maps with Infernal Legion II."
+      },
+      {
+        "caution": "If a companion leaves your Presence, your maximum ES drops visibly. If it happens often, add more increased Presence area jewels (source).",
+        "gearPriority": "Obtain Trenchtimbre's +1 roll early and replace the Buckler. Using Blackflame requires +92 or more additional Spirit from gear. Saitha's Spear is cheap and powerful (source).",
+        "label": "Early Mapping",
+        "mainSkill": "Process maps with the companion's radial DoT. On entering a zone, enter with Weapon Set II (the Into the Breach snapshot), and apply Exposure with Frost Bomb. On bosses, have the companion apply Ignite, then weapon swap and Aggravate the Ignite with Spearfield (source)",
+        "nowActions": [
+          "Obtain a Buckler with +1 to all minion skill levels",
+          "Make a habit of entering zones with Weapon Set II",
+          "On bosses, follow the order: Ignite → Frost Bomb → Spearfield"
+        ],
+        "passivePriority": "The stage where you use Mind Over Matter to use Mana as a mitigation pool (source). On jewels, prioritize increased Presence area, aiming for a radius of about 7m (source).",
+        "replaceGear": "For the sceptre, prioritize mods. If a Shrine Sceptre is expensive, you may save with a Stoic Sceptre or similar (source).",
+        "supports": "With a Shrine Sceptre, you can use Spirit-reservation supports such as Upwelling II effectively for free. Put leftover Spirit into Ghost Dance. Enable Withering Presence only after obtaining Blackflame (source).",
+        "transitionCondition": "Enter the red map range, where you can aim for Trenchtimbre's +2 roll and Genesis Tree minion gear."
+      },
+      {
+        "caution": "Catha's Brilliance increases the companion's Spirit cost. If you come up short, take additional companion reservation nodes; if it is still not enough, go back to Infernal Legion II (source). The Elephant Tortoise setup deals about 80% more damage, but it requires AI herding (holding Direct Minions), and the source treats it as an alternative.",
+        "gearPriority": "Update Trenchtimbre to the +2 roll. Replace belt and rings with Genesis Tree minion pieces; the belt's \"increased minion area\" is the most important. Replace Blackflame with minion rings one by one (source).",
+        "label": "Red Maps (transition to the Wasp setup)",
+        "mainSkill": "Transition to the Wasp setup, which assumes Xoph's Pyre. The mains are a Plague Harvester with Shroud Walker and a Gargantuan Wasp, which teleport to enemies while spreading area Ignites. Put Catha's Brilliance on the other companion instead (source)",
+        "nowActions": [
+          "Obtain Xoph's Pyre and transition to the Wasp setup",
+          "Update Trenchtimbre to the +2 roll",
+          "Assemble increased minion area on jewels"
+        ],
+        "passivePriority": "The top jewel priority is \"increased minion area of effect\" (only rolls on Ruby and Diamond). Next, increased Presence area and minion maximum Life (source).",
+        "replaceGear": "If resistances are short, supplement with runes. Instilling Warlord Leader on the amulet extends the Presence radius and damage (source).",
+        "supports": "Scouring Flame is a strict upgrade over Searing Flame II. A Skeletal Cleric helps companions survive. Charged Mark and Sniper's Mark create shocked ground (source). Convalescence is insurance that starts ES recharge immediately when you take damage.",
+        "transitionCondition": "ES reaches about 6,000 and you can transition to Chaos Inoculation."
+      },
+      {
+        "caution": "A large part of your ES and Evasion depends on the companion being inside your Presence (source). There is no useful fourth ascendancy notable, so the fourth ascendancy is not urgent (stated in the source).",
+        "gearPriority": "Maximize ES on helmet, chest and focus (focus: +2 to all minion skill levels). Sacrificial Regalia, Jiquani's Thesis and Mageblood are finished-form candidates. Add Transcendent Limbs only after you finish rerolling your ideal companion (source).",
+        "label": "Endgame (Finished) (Chaos Inoculation form)",
+        "mainSkill": "After taking Chaos Inoculation, run with about 10,000 ES and over 50% Evasion. The companion's area Ignite is constant DPS, and you focus on Frost Bomb and debuff upkeep (source)",
+        "nowActions": [
+          "Transition to Chaos Inoculation at about 6,000 ES",
+          "Update the sceptre to a Shrine Sceptre with Purity of Fire",
+          "Keep rerolling companion mods"
+        ],
+        "passivePriority": "Add notables with Megalomaniac and Prism of Belief jewels. Defense and companion Life nodes also raise ES, Evasion and damage at the same time (source).",
+        "replaceGear": "Maximum Life and chaos resistance rolls become unnecessary after Chaos Inoculation. Update one slot at a time based on ES and minion stats (source).",
+        "supports": "At this stage the sceptre is assumed to be a Shrine Sceptre with Purity of Fire. If you cannot hold one, take Living Death in the passives (source).",
+        "transitionCondition": "After finishing, progress by rerolling companion mods (Shroud Walker + all damage can Ignite, etc.) and updating jewels."
+      }
+    ],
+    "mainSkill": "Attach Infernal Legion II to a companion tamed with Tame Beast (a Plague Harvester) for a radial DoT setup that constantly Ignites nearby enemies. Transfer Into the Breach's purple flames to the companion with Selfless Remnants to grow the Ignite with added chaos damage",
+    "mainSkillTiming": {
+      "available": "The main skill, Infernal Legion II, cannot be used early on. Around Lv56 you tame companions and respec your passives, then transition. Until then you level with a melee setup on Ice Strike (unlocks at Lv14)",
+      "checkedAt": "2026-11-25",
+      "guide": "Shayd's Maxroll guide (text checked directly)",
+      "recommendedSwitch": "Prepare Lv56+, 18+ weapon set points, about 40,000 gold and a Lv5 Uncut Support Gem; tame the two companions first (Plague Harvester = all damage can Ignite, Diretusk Boar = all damage can Shock), then respec. Do not use Infernal Legion I",
+      "source": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula"
+    },
+    "mappingRating": 4,
+    "name": "Infernal Legion Acolyte of Chayula",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": false
+        },
+        "note": "The main skill, Infernal Legion II, transitions in after a respec around Lv56, so earlyMainSkill is not counted as a confirmed condition. Mapping itself is low-operation — the source states \"Zero Button\" — but the melee leveling before the transition, the weapon swap on zone entry and managing the companion's Presence are required, so the remaining conditions cannot be confirmed. SSF viability is not stated in the source.",
+        "score": 2,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "The source's strengths state \"Zero Button Playstyle\", and its summary says \"Infernal Legion II combined with Companion provides a \\\"Zero-Button\\\" Playstyle when it comes to Mapping\". The companion's radial DoT does the processing, and you mainly maintain Frost Bomb and debuffs.",
+            "source": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "From the source's summary. You apply Ignite first, then weapon swap to add debuffs and Spearfield's Aggravate, so the Ignite remains during the swap and DPS does not drop.",
+        "quote": "Frost Bomb and Saitha's Spear lets you delete Bosses in mere seconds",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula",
+        "sourceName": "Maxroll: Infernal Legion Acolyte of Chayula Build Guide (Shayd)"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "The first of the source's strengths. Into the Breach's added chaos damage reaches 190% with no investment (source FAQ), and with the \"all damage can Ignite\" mod it rides directly onto the Ignite, nearly tripling DPS.",
+        "quote": "High Damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula",
+        "sourceName": "Maxroll: Infernal Legion Acolyte of Chayula Build Guide (Shayd)"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "The finished form is very tanky at about 10,000 ES + over 50% Evasion + Chaos Inoculation (source strength: \"Very Tanky Endgame\"). On the other hand, the early campaign is fragile — a source weakness (\"Squishy Early Game\").",
+        "quote": "Very Tanky Endgame",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula",
+        "sourceName": "Maxroll: Infernal Legion Acolyte of Chayula Build Guide (Shayd)"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "A constant radial DoT occurs around the companion and can be processed with zero buttons. However, it depends on the companion's AI and Presence area management, and rerolling companions with specified mods is assumed, so this is not rated 5.",
+        "quote": "Constant Radial DoT DPS",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula",
+        "sourceName": "Maxroll: Infernal Legion Acolyte of Chayula Build Guide (Shayd)"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium to High (melee leveling → respec around Lv56, and taming two companions with specified mods is required)",
+      "gearDependence": "Centered on +levels to all minion skills (sceptre, helmet, amulet), securing Spirit, and the companion's maximum Life. No unique is mandatory, but cheap uniques grow it",
+      "operation": "Low (mapping is zero-button. The weapon swap on zone entry and maintaining debuffs and Spearfield on bosses are needed)",
+      "source": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula",
+      "ssfNote": "Whether the build works in SSF is not stated in the source. The source says no unique is mandatory, but note that taming rare beasts with specified mods is assumed"
+    },
+    "seoDescription": "PoE2 0.5.5: Infernal Legion Acolyte of Chayula — skills, supports, gear and passives from Ice Strike leveling to Endgame (the Chaos Inoculation form). Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Infernal Legion Acolyte of Chayula Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "infernal-legion-chayula",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Infernal Legion Acolyte of Chayula Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by Shayd, updated November 4, 2026; text checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/infernal-legion-acolyte-of-chayula"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Infernal Legion II",
+        "type": "Japanese name and mechanics cross-check (a support gem that Ignites the area around the companion; base damage scales with the companion's maximum Life)",
+        "url": "https://poe2db.tw/jp/Infernal_Legion_II"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Waking Dream",
+        "type": "Japanese name and mechanics cross-check (the ascendancy that is the source of Into the Breach and Flames of Chayula)",
+        "url": "https://poe2db.tw/jp/Waking_Dream"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Tame Beast",
+        "type": "Japanese name and mechanics cross-check (can turn a rare beast into a companion while keeping its monster mods)",
+        "url": "https://poe2db.tw/jp/Tame_Beast"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Selfless Remnants",
+        "type": "Japanese name and mechanics cross-check (a support that also grants Remnant effects to allies in your Presence)",
+        "url": "https://poe2db.tw/jp/Selfless_Remnants"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "High damage. Into the Breach's added chaos damage reaches the 190% range at maximum, and combined with an \"all damage can Ignite\" companion, Ignite damage nearly triples (source).",
+      "Mapping is \"zero-button\". A constant radial DoT keeps occurring around the companion (source strength: Constant Radial DoT DPS).",
+      "The finished form's defense is very hard: about 10,000 ES, over 50% Evasion, and Chaos Inoculation gives full immunity to chaos damage, bleeding and poison (source strength: Very Tanky Endgame).",
+      "Bosses melt in seconds with Frost Bomb and Saitha's Spear's Spearfield (source summary).",
+      "No unique is mandatory for it to function. Cheap options such as Blackflame and Trenchtimbre can grow the early game (source)."
+    ],
+    "updatedAt": "2026-11-04",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Fragile early on (source weakness: Squishy Early Game). Leveling is melee Ice Strike, not minions, and Monk's Act 1 is especially rough.",
+      "Leveling is not a minion setup (source weakness: Non-Minion Leveling). Around Lv56, a respec of about 40,000 gold is required.",
+      "You must tame companions with specified mods (source weakness: Must Tame Specific Companion). A Plague Harvester (all damage can Ignite) and a Diretusk Boar (all damage can Shock) are the minimum requirement.",
+      "If you do not make the Weapon Set II snapshot on zone entry a habit, the Remnant pickup area stays narrow (source FAQ).",
+      "Whether the build works in SSF is not stated in the source."
+    ]
+  },
+  "related": [
+    {
+      "id": "monk-whirling-assault",
+      "name": "Whirling Assault Martial Artist",
+      "classSlug": "monk",
+      "slug": "whirling-assault"
+    },
+    {
+      "id": "monk-falling-thunder",
+      "name": "Falling Thunder Martial Artist",
+      "classSlug": "monk",
+      "slug": "falling-thunder"
+    },
+    {
+      "id": "monk-hollow-focus-storm-wave",
+      "name": "Hollow Focus Storm Wave Martial Artist",
+      "classSlug": "monk",
+      "slug": "hollow-focus-storm-wave"
+    }
+  ]
+}

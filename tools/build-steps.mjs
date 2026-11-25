@@ -17,6 +17,7 @@ export const BUILD_STEPS=[
  'generate-simulator-data-english', // English descriptions; immutable calculation requests
  'generate-simulator-runtime-en', // shared logic with reviewed English UI/data
  'generate-simulator-english', // finish English UI after Japanese-only enhancers
+ 'generate-build-pages-english', // English build guide pages and their per-build data, after Japanese-only enhancers
  'enhance-simulator-library', // bilingual saved-build notices, comparison journal and encrypted sync
  'prepare-equipment-ocr',    // pinned, self-hosted on-device recognition assets
  'enhance-simulator-photo',  // camera / screenshot review before equipment import

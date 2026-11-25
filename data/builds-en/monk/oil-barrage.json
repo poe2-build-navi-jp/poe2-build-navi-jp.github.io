@@ -1,0 +1,291 @@
+{
+  "build": {
+    "ascendancy": "Martial Artist",
+    "audience": "Players who like blanketing the whole screen with projectiles and cycling Power Charges recovered from bells and corpses. For Monk players who want to make the bells of Hollow Focus work.",
+    "beginnerRating": 2,
+    "bossRating": 5,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked havoc616's Maxroll guide text and embedded planner (bl5b6d0w) directly and cross-checked names and mechanics against the Japanese poe2db. No mirror or summary sites were used. Old support gem names in the planner were replaced with the current names from GGG's official 0.3.0 rename list (e.g. Twofold → Heightened Charges, Single Out → Mark for Death, Ingenuity → Cooldown Recovery, Charge Infusion → Charge Regulation). leagueStarter is true based on the A Tier placement in the Maxroll League Starter Tier List (checked directly on 2026-11-25). A separate setup from the existing Monk builds (Falling Thunder, Hollow Focus + Storm Wave, Infernal Legion, lightning minions, minions): an Oil Barrage build that Devours Hollow Focus bells to cycle Power Charges."
+      },
+      {
+        "date": "2026-11-25",
+        "summary": "During integration, fixed the draft's misspelling \"Zarohk's Gift\" to the correct \"Zarokh's Gift\" (confirmed against the name registered on the Japanese poe2db). Aligned the top-level ssf field from null to true (matching the source's explicit SSF statement and ratingEvidence.beginner.checks.ssfConfirmed=true, following this site's convention)."
+      }
+    ],
+    "className": "Monk",
+    "classSlug": "monk",
+    "damageRating": 5,
+    "defenseRating": 3,
+    "difficulty": "Medium (level with a different setup through the campaign, switch to Oil Barrage in Early Maps; requires keeping Power Charges up and managing Devour on bells and corpses)",
+    "gearPriorities": [
+      "Talisman: elemental DPS first. Aim for 300+ in Early Maps, 380+ from Lv77, 490+ in Endgame, with 15%+ critical strike chance and +skill levels (source).",
+      "Power Charge generation: anoint the amulet with Thaumaturgic Generator, Way of the Stonefist gloves (Power Charge on critical strike), and Ailith's Chimes on Hollow Focus (source).",
+      "Defense: a large ES pool + Evasion + Deflect. Prefer ES / Evasion bases, and use the Forgotten Warden's Spirit Vessel to reinforce defense and damage (source).",
+      "Critical: bring Oil Barrage's critical strike chance close to 100%. On Time-Lost Jewels, prioritize critical strike chance and critical damage (source).",
+      "Item rarity: aim for 100% → 150%. The upgrade rate to rare currency rises sharply (source FAQ).",
+      "Gloves (Way of the Stonefist): prioritize mods in the order critical damage → base critical strike chance → attack speed → Onslaught on hit (source).",
+      "Movement speed: boots at 10%+ early, 20–30% during the campaign, 35%+ in Endgame (source)."
+    ],
+    "id": "monk-oil-barrage",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "Most of Glacial Cascade's damage is in its final big spike. To break Frozen Locus in one hit, land that spike. Consuming Freeze adds a 250% or 425% extra damage multiplier (source).",
+        "gearPriority": "A high-DPS magic / rare Quarterstaff. Boots with 10%+ movement speed. Helmet, chest and belt with plenty of Life. You may socket the weapon with an Artificer's Orb and reinforce it with Lesser Runes (source).",
+        "label": "Lv1–13 (Hollow Palm leveling, Act 1 first half)",
+        "mainSkill": "Progress with a Quarterstaff, place Frozen Locus from Lv2 and detonate it with the big final spike of Glacial Cascade. Add Pounce at Lv6 for movement and Herald of Ice at Lv10. At Lv13 take Hollow Palm Technique and the Quarterstaff is no longer needed.",
+        "nowActions": [
+          "Place Frozen Locus and detonate it with Glacial Cascade's big spike",
+          "Take Hollow Palm Technique at Lv13",
+          "Get boots with 10%+ movement speed and armor pieces with plenty of Life"
+        ],
+        "passivePriority": "Rush Hollow Palm Technique as fast as possible. Take efficient early damage nodes on the way, and enough attributes to meet gear and gem requirements (source).",
+        "replaceGear": "Once you take Hollow Palm Technique at Lv13, the Quarterstaff no longer needs upgrading. Only equip pieces that raise DPS substantially (source).",
+        "supports": "Glacial Cascade: Concentrated Area + Rage I. Frozen Locus: Ice Bite. Herald of Ice: Magnified Area.",
+        "transitionCondition": "Take Hollow Palm Technique at Lv13 and continue through Act 1."
+      },
+      {
+        "caution": "There are several passive respecs late in the campaign. If you are short on gold, sell rare items to save up (source).",
+        "gearPriority": "Gloves and amulet with +levels to melee skills, rings with flat elemental damage to attacks. Prioritize Life and resistances. Boots with 20–30% movement speed. On trade, Horns of Bynden and Luminous Pace are early options (source).",
+        "label": "Lv14–Campaign End (Storm Wave leveling)",
+        "mainSkill": "Switch to Storm Wave in Act 2 (around Lv22) and clear by detonating Frozen Locus. For single target, freeze with Wave of Frost and consume the Freeze with Glacial Cascade's big spike for heavy damage. Add Herald of Thunder in Act 3.",
+        "nowActions": [
+          "Clear by detonating Frozen Locus with Storm Wave",
+          "Add Herald of Thunder to speed up clearing",
+          "Save the Greater Jeweller's Orb for Oil Barrage"
+        ],
+        "passivePriority": "Start allocating Weapon Set 2 points (for Pounce). First ascendancy: Way of the Mountain → Hollow Focus Technique. Late in the campaign there are respecs into strong scaling nodes for the move to maps (source note).",
+        "replaceGear": "Save the Greater Jeweller's Orb guaranteed in Act 4 for Oil Barrage (strong instruction in the source).",
+        "supports": "Storm Wave: Rage II + Elemental Armament II + Branching Fissures. Glacial Cascade: Concentrated Area + Elemental Armament II + Elemental Focus. Frozen Locus: Ice Bite II + Elemental Armament II + Innervate. Frost Bomb: Potent Exposure. Herald of Ice: Magnified Area II + Elemental Armament II. Hand of Chayula: Freezing Mark + Elemental Weakness. Wave of Frost: Deep Freeze + Ice Bite II. Pounce: Cooldown Recovery II.",
+        "transitionCondition": "Clear the campaign and enter Early Maps. Prepare a Spiny Talisman with 300+ elemental DPS."
+      },
+      {
+        "caution": "Always use Nova Projectiles I. With II socketed, the other gems no longer all fit (strong warning in the source). While your critical strike chance is low, you can support Power Charge generation with a Blasphemy + Repulsion + Ailith's Chimes setup (at the cost of the Charge Regulation and Ghost Dance slots).",
+        "gearPriority": "A Spiny Talisman with 300+ elemental DPS (guide price: 5–20 Exalted plus 10–20 Exalted of additional investment). Basic gear at 1–2 Exalted per slot. After taking Way of the Stonefist, choose gloves by the mod priority (critical damage → base critical strike chance → attack speed → Onslaught on hit) (source).",
+        "label": "Early Maps (switch to Oil Barrage)",
+        "mainSkill": "Switch to Oil Barrage. At the start of a map, Devour a Hollow Focus bell to gain your first Power Charge, then clear with Oil Barrage. Regularly Devour bells and the corpses of enemies you kill to keep Power Charges up. Place Tempest Bell with Whirling Assault to create more chain / fork starting points.",
+        "nowActions": [
+          "Devour a bell to gain Power Charges",
+          "Prepare a talisman with 300+ elemental DPS",
+          "Socket Nova Projectiles I into Oil Barrage"
+        ],
+        "passivePriority": "Third ascendancy: Way of the Stonefist. Weapon Set 1 takes attack nodes; Weapon Set 2 takes parry nodes that strengthen Refutation (source).",
+        "replaceGear": "Craft the talisman yourself by identifying rares and using Transmutation / Augmentation / Regal Orbs, or buy it on trade (source). Uncut Skill Gems (Lv14) and Uncut Support Gems (Lv5) drop more often in maps.",
+        "supports": "Oil Barrage: Ricochet II + Fork + Salvo + Nova Projectiles I. Rend: Heightened Charges + Prolonged Duration II + Rage III. Hollow Focus: Cooldown Recovery II + Magnified Area II + Overabundance II. Devour: Blazing Critical + Thrill of the Kill II + Charge Profusion II + Rage III. Tempest Bell: Ancestral Call II + Magnified Area II + Delayed Gratification. Whirling Assault: Practiced Combo + Rage III + Rapid Attacks III. Hand of Chayula: Freezing Mark + Elemental Weakness + Mark of Siphoning II. Refutation: Cooldown Recovery II + Mobility + Efficiency II. Wind Dancer: Magnified Area II + Stun III + Enduring Impact II. Ghost Dance: Cooldown Recovery II + Clarity. Use Charge Regulation as a persistent buff.",
+        "transitionCondition": "Reach Lv77+ and be able to upgrade the talisman to 380+ elemental DPS. Anoint the amulet with Thaumaturgic Generator."
+      },
+      {
+        "caution": "Unless you convert Fists of Stone into Runeforged Fists of Stone with a Versium Anvil, Refutation cannot be used in the Forgotten Warden's Spirit Vessel setup (source). Do not use Refutation while clearing (you would take heavy stuns).",
+        "gearPriority": "A talisman with 380+ elemental DPS and +levels to melee / attack skills (10–50 Exalted, optionally 1–2 Divine). Upgrade skill gems with Uncut Skill Gems (Lv17–18). Anoint the amulet with Thaumaturgic Generator. The Forgotten Warden raises survivability substantially. Time-Lost Jewel (critical strike chance and critical damage first) (source).",
+        "label": "Lv77–Late Maps (stronger talisman + defense)",
+        "mainSkill": "Oil Barrage stays the core skill. Once your critical strike chance reaches 50%+, swap Pinpoint Critical for Elemental Armament II. Put Oil Barrage into Spirit Vessel to raise single-target damage.",
+        "nowActions": [
+          "Anoint the amulet with Thaumaturgic Generator",
+          "At 50%+ critical strike chance, swap Pinpoint Critical for Elemental Armament II",
+          "Raise survivability with a chest piece that summons a guardian (Forgotten Warden)"
+        ],
+        "passivePriority": "Fourth ascendancy: Runic Meridians. Fill in critical nodes and raise your critical strike chance. On Time-Lost Jewels prioritize critical strike chance and critical damage (1–2 mods; radius does not matter at this stage) (source).",
+        "replaceGear": "Upgrade each slot to the 5–10 Exalted range. Completing the third and fourth ascendancies is a large power gain, but you may wait until you feel confident (source).",
+        "supports": "On top of the Early Maps setup: Oil Barrage takes Pinpoint Critical (while below 50%; swap to Elemental Armament II at 50%+). Rend adds Perpetual Charge. Hollow Focus adds Prolonged Duration II. Hand of Chayula adds Charged Mark. Refutation adds Prolonged Duration II. Spirit Vessel: Oil Barrage + Potent Exposure + Hulking Minions + Romira's Requital + Amanamu's Tithe.",
+        "transitionCondition": "Move to Endgame once the talisman reaches 490+ elemental DPS with 15%+ critical strike chance, item rarity approaches 150%, and gems are at Lv19–20 with 20% quality."
+      },
+      {
+        "caution": "The channeling delay is resolved later by skill speed (source weakness). The build assumes a \"don't get hit\" playstyle, and some enemies such as Abyss monsters need high damage and area coverage (source FAQ).",
+        "gearPriority": "A talisman with 490+ elemental DPS, 15%+ critical strike chance and +skill levels. Aim for 150% item rarity. Boots with 35%+ movement speed, Evasion and Deflect. Upgrade the Forgotten Warden to better rolls. Gems at Lv19–20 with 20% quality (source).",
+        "label": "Endgame (100% crit, high item rarity)",
+        "mainSkill": "Oil Barrage (Lv20, 20% quality). Power Charge generation becomes increasingly automatic: Thaumaturgic Generator + Way of the Stonefist gloves (Power Charge on critical strike) + Ailith's Chimes on Hollow Focus. On bosses, place Tempest Bell with Whirling Assault to raise single-target damage.",
+        "nowActions": [
+          "Bring critical strike chance close to 100%",
+          "Aim for 150% item rarity",
+          "Upgrade the talisman to 490+ elemental DPS"
+        ],
+        "passivePriority": "Bring critical strike chance close to 100%. Balance Energy Shield with Evasion and Deflect. Fill in area-of-effect jewels (3–4 mod Time-Lost Jewels prioritizing critical strike chance and critical damage, and suffix-effect jewels) (source).",
+        "replaceGear": "Whenever you replace the amulet, always re-anoint Thaumaturgic Generator (strong warning in the source).",
+        "supports": "Oil Barrage: Elemental Armament II (Pinpoint Critical removed). Hollow Focus: Living Lightning II + Culmination II + Ailith's Chimes + Charge Profusion II. Rend adds Rapid Attacks III. Hand of Chayula adds Mark for Death II. Refutation adds Rapid Casting II. Wind Dancer adds Blind II. Spirit Vessel stays as in Late Maps.",
+        "transitionCondition": "Move to Aspirational once you are ready for long-term goals such as Lv21 gems, Rakiata's Flow and Zarokh's Gift."
+      },
+      {
+        "caution": "Aspirational gear is a long-term goal collected over most of a league (source). The spirits are given in English here because their Japanese names could not be confirmed on poe2db.",
+        "gearPriority": "The highest elemental DPS (or physical DPS) talisman you can buy (15%+ critical strike chance, attack speed, +skill levels). Put a Raven-Touched Shard on the helmet and upgrade the amulet anoint from Thaumaturgic Generator to Zarokh's Gift. Keep item rarity at 150%+. Rite of Passage spirits, in priority order: Spirit of the Stag (movement speed, skill speed, added lightning damage) first, then Spirit of the Cat (critical strike chance and evasion), Spirit of the Wolf (movement speed, skill speed, armour break), Spirit of the Owl (Energy Shield and damage), Spirit of the Bear (maximum Life and damage reduction) (source priority order).",
+        "label": "Aspirational (Lv21 gems, long-term goals)",
+        "mainSkill": "Oil Barrage Lv21, 0% quality (when using Rakiata's Flow). Remove Elemental Weakness from Hand of Chayula and remove Oil Barrage from Spirit Vessel (instructions for the Rakiata's Flow setup in the source). You may use Hand of Chayula instead of Pounce. For mapping there is an option to rebuild into a Blasphemy + Repulsion setup.",
+        "nowActions": [
+          "Raise the main skill to Lv21",
+          "Switch to the Rakiata's Flow setup",
+          "Use separate setups for mapping and for bosses"
+        ],
+        "passivePriority": "Fill critical strike chance and critical damage with 5-mod jewels and 4–5 mod Time-Lost Jewels. Raise jewels to 20% quality (source).",
+        "replaceGear": "Many talismans look higher-DPS because of a Greater Iron Rune; when buying, be careful of numbers that include the rune (source note).",
+        "supports": "Oil Barrage: Rakiata's Flow. Hand of Chayula adds Eternal Mark. Charge Regulation adds Uhtred's Exodus. For mapping, Blasphemy takes Repulsion + Living Lightning II + Culmination II + Ailith's Chimes + Charge Profusion II.",
+        "transitionCondition": "The finished form. From here, progress by adding more mods to jewels, max-rolling each gear piece, and refining the Time-Lost Jewel."
+      }
+    ],
+    "mainSkill": "Oil Barrage — spends Power Charges to fire chaining, forking Nova projectiles. Generate Power Charges by using Devour on the bells of Hollow Focus or on the corpses of enemies you kill. Level with Frozen Locus + Glacial Cascade early, switch to Storm Wave from Act 2, and swap to Oil Barrage in Early Maps.",
+    "mainSkillTiming": {
+      "available": "Oil Barrage is designed to be switched to in Early Maps (source). Save the Greater Jeweller's Orb guaranteed in Act 4 for Oil Barrage.",
+      "checkedAt": "2026-11-25",
+      "guide": "havoc616's Maxroll guide (text and embedded planner checked directly)",
+      "recommendedSwitch": "After finishing the campaign, prepare a Spiny Talisman with 300+ elemental DPS, create Oil Barrage with an Uncut Skill Gem (Lv14), and then switch. The swap needs skill gems and gold for passive / ascendancy respecs (the source notes gold is usually not the bottleneck).",
+      "source": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide"
+    },
+    "mappingRating": 4,
+    "name": "Oil Barrage Martial Artist",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": false,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": true
+        },
+        "note": "The main skill, Oil Barrage, only comes online after the switch in Early Maps, so it is not a main skill usable from Lv22 or below and the early condition is not counted as confirmed. The source does not list ease of operation as a strength, and there are many moving parts to manage: Devouring bells and corpses, placing Tempest Bell, and more. The defenses are layered, but the source lists a \"don't get hit\" playstyle as a weakness, so evasion and positioning are assumed and the defense condition is not counted as confirmed. SSF is confirmed: the source's strengths state \"SSF Campaign ~4Hours, Arbiter ~8Hours\" and the leveling guide lists \"SSF Fresh Start Leaguestart Viable\" as a strength.",
+        "score": 2,
+        "verifiedChecks": {
+          "ssfConfirmed": {
+            "basis": "The source's strengths state \"SSF Campaign ~4Hours, Arbiter ~8Hours\" and the leveling guide's strengths list \"SSF Fresh Start Leaguestart Viable.\" Reaching the campaign end in about 4 hours and the Arbiter in about 8 hours is presented as achievable in SSF.",
+            "source": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "The introduction states \"tremendous single target damage, which is easy to scale.\" Tempest Bell adds another starting point to raise single-target damage, and Refutation's parry applies a debuff of 50%+ increased damage taken. Reaching the Arbiter in about 8 hours is also listed as a strength.",
+        "quote": "Oil Barrage also does tremendous single target damage, which is easy to scale.",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide",
+        "sourceName": "Maxroll: Oil Barrage Martial Artist Build Guide (havoc616)"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "The first strength in the source. The introduction also calls it \"tremendous single target damage, which is easy to scale,\" and it grows further with Tempest Bell and Refutation's debuff.",
+        "quote": "Big Single Target Damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide",
+        "sourceName": "Maxroll: Oil Barrage Martial Artist Build Guide (havoc616)"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "Layered defenses — a large ES pool + Evasion + Deflect + Wind Dancer + Ghost Dance — are a strength. On the other hand, the weakness is a \"don't get hit\" playstyle, and the FAQ notes some enemies such as Abyss monsters need high damage and area coverage, so this is rated 3.",
+        "quote": "Layered Defences",
+        "score": 3,
+        "source": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide",
+        "sourceName": "Maxroll: Oil Barrage Martial Artist Build Guide (havoc616)"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Chaining, forking Nova projectiles cover the whole screen. However, there is a channeling delay that skill speed only resolves later, so this is not rated 5.",
+        "quote": "Screen-Wide Clear",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide",
+        "sourceName": "Maxroll: Oil Barrage Martial Artist Build Guide (havoc616)"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium (level with a different setup through the campaign, switch to Oil Barrage in Early Maps; requires keeping Power Charges up and managing Devour on bells and corpses)",
+      "gearDependence": "The talisman's elemental DPS (300+ → 380+ → 490+) and critical strike chance, plus Power Charge generation (Thaumaturgic Generator anoint, Way of the Stonefist gloves, Ailith's Chimes). No unique is mandatory, but the Forgotten Warden is the defensive milestone from Lv77 onward.",
+      "operation": "High (maintain Power Charges by Devouring bells and corpses, place Tempest Bell with Whirling Assault, apply debuffs with Hand of Chayula and Refutation, Frost Bomb and freeze management on bosses)",
+      "source": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide",
+      "ssfNote": "The source's strengths state \"SSF Campaign ~4Hours, Arbiter ~8Hours\" and the leveling guide's strengths list \"SSF Fresh Start Leaguestart Viable.\" Reaching the campaign end in about 4 hours and the Arbiter in about 8 hours is presented as achievable in SSF."
+    },
+    "seoDescription": "PoE2 0.5.5: Oil Barrage Martial Artist skills, supports, gear and passives, from Hollow Palm leveling to Endgame (Rakiata's Flow setup). Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Oil Barrage Martial Artist Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "oil-barrage",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Oil Barrage Martial Artist Build Guide",
+        "type": "Endgame guide (patch 0.5.5, by havoc616, updated September 4, 2026; guide text and embedded planner bl5b6d0w checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/oil-barrage-martial-artist-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Storm Wave Monk Leveling Build Guide",
+        "type": "Leveling source (by havoc616; Hollow Palm route, Lv13 timing and Herald additions checked)",
+        "url": "https://maxroll.gg/poe2/build-guides/storm-wave-monk-leveling-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List (0.5.5, updated November 3, 2026)",
+        "type": "Basis for the A Tier placement (checked directly on 2026-11-25)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Oil Barrage",
+        "type": "Japanese name and mechanics cross-check (main skill)",
+        "url": "https://poe2db.tw/jp/Oil_Barrage"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Forgotten Warden",
+        "type": "Japanese name and mechanics cross-check (unique chest; the source of Spirit Vessel)",
+        "url": "https://poe2db.tw/jp/Forgotten_Warden"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Spiny Talisman",
+        "type": "Japanese name and mechanics cross-check (talisman base)",
+        "url": "https://poe2db.tw/jp/Spiny_Talisman"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Charge Regulation",
+        "type": "Japanese name and mechanics cross-check (current name of the planner's old Charge Infusion)",
+        "url": "https://poe2db.tw/jp/Charge_Regulation"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "GGG official: The Third Edict Item Filter Information",
+        "type": "0.3.0 support gem rename list (basis for replacing the planner's old names with the current names)",
+        "url": "https://www.pathofexile.com/forum/view-thread/3828542"
+      }
+    ],
+    "ssf": true,
+    "status": "verified",
+    "strengths": [
+      "A league starter that reaches the campaign end in about 4 hours and the Arbiter in about 8 hours even in SSF (listed as a strength in the source).",
+      "Very large single-target damage (source strength: Big Single Target Damage). The source calls Oil Barrage \"tremendous single target damage, which is easy to scale.\"",
+      "Screen-wide clear (source strength: Screen-Wide Clear). Chaining, forking Nova projectiles cover the whole screen.",
+      "Layered defenses (source strength: Layered Defences). A large ES pool + Evasion + Deflect + Wind Dancer + Ghost Dance.",
+      "No unique is mandatory (source). The Forgotten Warden is a useful defensive upgrade while progressing, but it is not required."
+    ],
+    "updatedAt": "2026-09-04",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Built around a \"don't get hit\" playstyle (source weakness: Don't Get Hit Playstyle). You need evasion, positioning and killing from range.",
+      "There is a channeling delay (source weakness). Skill speed resolves it later on.",
+      "The main skill, Oil Barrage, is not usable until Early Maps (source). The campaign is played with a different Frozen Locus + Storm Wave setup.",
+      "The swap needs skill gems, passive / ascendancy respec gold, and a 300+ elemental DPS talisman (source).",
+      "Power Charges must be maintained (source). Damage falls off if you do not regularly Devour bells and corpses. Generation is unstable early while your critical strike chance is low."
+    ]
+  },
+  "related": [
+    {
+      "id": "monk-whirling-assault",
+      "name": "Whirling Assault Martial Artist",
+      "classSlug": "monk",
+      "slug": "whirling-assault"
+    },
+    {
+      "id": "monk-falling-thunder",
+      "name": "Falling Thunder Martial Artist",
+      "classSlug": "monk",
+      "slug": "falling-thunder"
+    },
+    {
+      "id": "monk-hollow-focus-storm-wave",
+      "name": "Hollow Focus Storm Wave Martial Artist",
+      "classSlug": "monk",
+      "slug": "hollow-focus-storm-wave"
+    }
+  ]
+}

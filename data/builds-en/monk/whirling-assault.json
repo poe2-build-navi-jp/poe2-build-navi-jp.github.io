@@ -1,0 +1,294 @@
+{
+  "build": {
+    "id": "monk-whirling-assault",
+    "slug": "whirling-assault",
+    "classSlug": "monk",
+    "name": "Whirling Assault Martial Artist",
+    "seoTitle": "PoE2 Whirling Assault Martial Artist Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Whirling Assault Martial Artist — the Lv41 switch, skills, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "className": "Monk",
+    "ascendancy": "Martial Artist",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "status": "verified",
+    "mainSkill": "Whirling Assault",
+    "beginnerRating": 2,
+    "damageRating": 5,
+    "defenseRating": 3,
+    "mappingRating": 4,
+    "bossRating": 5,
+    "difficulty": "Medium (switch setups at Lv41)",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "Whirling Assault lets you attack while moving, so maps flow smoothly.",
+      "Combined with Falling Thunder, you can convert charges into single-target damage or wide-area attacks.",
+      "A leveling route from Lv1 to Lv41 is provided.",
+      "Maxroll (0.5.5) lists \"SSF Campaign ~4 hours, Arbiter ~8 hours\" among its strengths."
+    ],
+    "weaknesses": [
+      "Whirling Assault cannot be used until Lv41, so you have to switch skills partway through the campaign.",
+      "The early Glacial Cascade route is described as having low durability, so keeping gear updated and dodging matter.",
+      "In Endgame you need to generate the first Power Charge and keep Charged Staff up, so it is not a complete one-button setup.",
+      "The main skill, Whirling Assault, is a Tier 11 gem usable only from Lv41 (poe2db). Until then you progress with other skills."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Glacial Cascade + Frozen Locus",
+        "supports": "Glacial Cascade: Concentrated Area → Cold Attunement. Frozen Locus: Ice Bite I → Cold Attunement.",
+        "passivePriority": "Follow the staged \"Glacial 1-22\" tree. Individual node names cannot be extracted safely, so check the pickup order in the source tree below.",
+        "gearPriority": "On the weapon, prioritize increased physical damage and added damage. Boots: movement speed. Armor: resistances, Life, Evasion.",
+        "replaceGear": "Prioritize replacing a weapon whose damage is not growing, and boots without movement speed.",
+        "caution": "Place Frozen Locus on enemy packs and break it with Glacial Cascade from behind. Add Herald of Ice at Lv10.",
+        "transitionCondition": "Reach Lv11, with the basic Frozen Locus + Glacial Cascade combo stable.",
+        "nowActions": [
+          "Upgrade Glacial Cascade as the top priority",
+          "Place Frozen Locus, then break it with Glacial Cascade",
+          "Look for boots with movement speed"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Glacial Cascade + Frozen Locus. From Lv14, add Tempest Flurry (once its requirements are met) to apply Shock on bosses.",
+        "supports": "Continue the early setup. Put Shock on Tempest Flurry and use it to apply Shock to bosses.",
+        "passivePriority": "Continue the staged \"Glacial 1-22\" tree. Do not stray from the cold / attack pathing.",
+        "gearPriority": "Weapon: increased physical and added damage. Boots: movement speed. Everything else: resistances, Life, Evasion.",
+        "replaceGear": "Replace weapons that are far below your current level, and armor pieces lacking defenses or resistances.",
+        "caution": "Tempest Flurry is not the main skill for regular clearing; use it to apply Shock to bosses.",
+        "transitionCondition": "Reach Lv21, and be able to reproduce the Frozen Locus + Glacial Cascade combo in boss fights.",
+        "nowActions": [
+          "Keep updating Glacial Cascade first",
+          "Apply Shock with Tempest Flurry only in boss fights",
+          "Secure armor with resistances and Life"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Glacial Cascade until Lv22. From Lv22 you can move to the Storm Wave route.",
+        "supports": "For Storm Wave's support setup, use the \"Stormwave 22+\" stage of the 0.5.5 guide. For slots whose names cannot be confirmed, see the source guide.",
+        "passivePriority": "Switch to the staged \"Stormwave 22+\" tree. Take Hollow Palm Technique only if you understand its gear requirements.",
+        "gearPriority": "If you adopt Hollow Palm, remove the weapon. Otherwise keep using a strong Quarterstaff.",
+        "replaceGear": "Before switching to Hollow Palm, assemble Evasion / Energy Shield gear that keeps your damage working without a weapon.",
+        "caution": "Hollow Palm is not automatically optimal; a good Quarterstaff can deal more damage.",
+        "transitionCondition": "Reach Lv31, and decide between the Storm Wave setup and continuing with Glacial Cascade.",
+        "nowActions": [
+          "Decide at Lv22 whether to move to Storm Wave",
+          "Check the gear requirements before adopting Hollow Palm",
+          "Do not sell your weapon right after switching"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Storm Wave, or keep Glacial Cascade if it is stable.",
+        "supports": "Maintain the staged setup of your chosen leveling route, and prepare the gems for Lv41.",
+        "passivePriority": "Progress so you can connect into the staged \"Lv41+ Whirling\" tree. Check individual nodes in the source tree.",
+        "gearPriority": "Prioritize resistances, Life and Evasion, and also check the Dexterity / Intelligence requirements after the Lv41 switch.",
+        "replaceGear": "Replace in advance any slots that would not meet gear requirements after the Lv41 switch.",
+        "caution": "Whirling Assault unlocks at Lv41. Do not remove your current main skill early.",
+        "transitionCondition": "Reach Lv41, have Whirling Assault ready, and meet the required attributes.",
+        "nowActions": [
+          "Prepare Whirling Assault for Lv41",
+          "Check the required Dexterity and Intelligence",
+          "Keep your pre-switch main skill in place"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Whirling Assault as the main skill, combined with Staggering Palm, Tempest Bell and Mantra of Destruction.",
+        "supports": "The source's leveling tab lists Magnified Area II, Rage II, Heavy Swing and Pursuit II. Adding Pursuit II is presented as the priority use for a Greater Jeweller's Orb. Add supports only once slots, owned gems and attribute requirements are met.",
+        "passivePriority": "Switch to the \"Leveling Whirling 41+\" tree of the 0.5.5 guide.",
+        "gearPriority": "Quarterstaff: added damage, increased damage, +levels to melee / attack skills, critical, attack speed. Armor: resistances, Life, Evasion.",
+        "replaceGear": "If a good Quarterstaff outperforms Hollow Palm, go back to the weapon setup.",
+        "caution": "The leveling tab presents mana options: Conservative Casting, Mana Leech, or Pounce with Mark of Siphoning. Choose after checking your owned gems and attribute requirements.",
+        "transitionCondition": "Finish the campaign. You can clear with Whirling Assault and use Staggering Palm, Tempest Bell and Mantra of Destruction as the situation calls for.",
+        "nowActions": [
+          "Switch to Whirling Assault",
+          "Check mana and support requirements in the leveling setup",
+          "Set up Tempest Bell and Mantra of Destruction for bosses"
+        ]
+      },
+      {
+        "label": "Start of Mapping",
+        "mainSkill": "Killing Palm → Charged Staff → Whirling Assault → Falling Thunder.",
+        "supports": "In the source's \"Early Endgame Whirling\", check the supports that fit your owned gems and slot count. Do not assume the Late Endgame 5-link setup or the high-tier Falling Thunder supports are available at the start of mapping.",
+        "passivePriority": "Move to the \"Early Endgame Whirling\" tree. For the ascendancy, check the current guide, which includes Way of the Stonefist.",
+        "gearPriority": "First stabilize resistances and defenses, then grow the Quarterstaff's damage, melee skill levels, critical and attack speed.",
+        "replaceGear": "Check in order: armor lacking resistances, boots lacking movement speed, a Quarterstaff whose damage has stalled.",
+        "caution": "At the start of a map, make your first Power Charge with Killing Palm before activating Charged Staff.",
+        "transitionCondition": "You can keep Charged Staff from dropping, and chain into Falling Thunder after roughly two Whirling Assaults.",
+        "nowActions": [
+          "Make the first charge with Killing Palm",
+          "Keep Charged Staff up",
+          "Use Falling Thunder after Whirling Assault"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Whirling Assault as the clearing main skill, Falling Thunder as charge spender and single-target damage.",
+        "supports": "For Whirling Assault, swap between Efficiency II and critical supports depending on your mana situation. Add reflection / area supports to Falling Thunder in stages.",
+        "passivePriority": "Complete the Early Endgame tree before moving to Late Endgame. Avoid changing all passives at once.",
+        "gearPriority": "Melee skill levels, critical strike chance, Evasion, maximum ES, global defenses, and any missing resistances.",
+        "replaceGear": "If defenses are unstable, prioritize Evasion, ES and resistances over damage gear.",
+        "caution": "There are other charge methods such as Hollow Focus, but the current guide treats the Charged Staff approach as the stable option.",
+        "transitionCondition": "Charge generation and mana sustain are stable, and your upgrade goals toward Late Endgame gear are clear.",
+        "nowActions": [
+          "Find out why your charges are dropping",
+          "Swap supports depending on whether you have mana problems",
+          "Stabilize Evasion, ES and resistances first"
+        ]
+      },
+      {
+        "label": "Endgame (Finished)",
+        "mainSkill": "Repeat the basic rotation: Whirling Assault ×2 → Falling Thunder.",
+        "supports": "Finished candidates: Whirling Assault with Magnified Area II, Elemental Armament II, Rage III, Ancestral Call II, Efficiency II. If you have no mana problems, swap Efficiency II for a critical support.",
+        "passivePriority": "Base it on the Late Endgame Whirling tree, adjusted to cover your gear's critical, Evasion, ES and resistance gaps.",
+        "gearPriority": "Compare in order: a strong Quarterstaff, melee skill levels, critical strike chance / damage, Evasion, ES, global defenses.",
+        "replaceGear": "Update one slot at a time, comparing not the price but your current gaps against actual listed performance.",
+        "caution": "Fixed prices and DPS cannot be guaranteed as of publication, so do not state them as numeric targets.",
+        "transitionCondition": "Once finished, update the critical, defense and mana bottlenecks one item at a time.",
+        "nowActions": [
+          "Stabilize the basic rotation",
+          "Check your critical, Evasion and ES gaps",
+          "Compare upgrade gains one slot at a time"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Weapon: added damage, increased damage, +levels to melee / attack skills, critical, attack speed",
+      "Boots: movement speed → resistances, Life, Evasion",
+      "Armor: resistances, Life, Evasion. In Endgame, also value ES and global defenses"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas build guide"
+      },
+      {
+        "name": "Mobalytics: Martial Artist League Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/martial-artist-leveling-and-early-mapping-nicktew",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas leveling guide"
+      },
+      {
+        "name": "PoE2DB (Japanese): Whirling Assault",
+        "url": "https://poe2db.tw/jp/Whirling_Assault",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese skill data"
+      },
+      {
+        "name": "Maxroll: Whirling Assault Martial Artist Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (patch 0.5.5, updated September 4, 2026; its strengths state the SSF times to finish the campaign and reach the Arbiter)"
+      },
+      {
+        "name": "poe2db: Whirling Assault",
+        "url": "https://poe2db.tw/us/Whirling_Assault",
+        "checkedAt": "2026-11-23",
+        "type": "Game data (gem Tier 11 and the required character level at each level)"
+      }
+    ],
+    "audience": "Players who want to fight in melee while moving, and progress from Lv1 to Endgame on a single page",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": false,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": false
+        },
+        "note": "Only the confirmed conditions are tied to the source. The main skill, Whirling Assault, is switched to from Lv41, so the early condition is not counted as a confirmed condition. NickTew's leveling guide describes the Glacial Cascade setup as easy to operate, but the finished form requires generating the first Power Charge and keeping Charged Staff up. The leveling operation rating is not extended to the finished form, so the operation condition is not counted as a confirmed condition either. Maxroll's statements on SSF and defense are the previous verification basis, and the original text could not be re-fetched in this audit.",
+        "score": 2,
+        "verifiedChecks": {
+          "ssfConfirmed": {
+            "basis": "Maxroll (0.5.5, updated September 4, 2026) states \"SSF Campaign ~4Hours, Arbiter ~8Hours\" in its strengths.",
+            "source": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide"
+          }
+        }
+      },
+      "damage": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Spin to Win ONE-Shot Bosses",
+        "source": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "sourceName": "Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5",
+        "checkedAt": "2026-09-07",
+        "note": "The guide title emphasizes \"one-shot bosses.\""
+      },
+      "defense": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Large ES Pool / Don't Get Hit Playstyle",
+        "source": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
+        "sourceName": "Maxroll: Whirling Assault Martial Artist Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "The strengths list a large ES pool, while the weaknesses assume a \"don't get hit\" playstyle."
+      },
+      "mapping": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Strong AoE Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/whirling-assault-martial-artist-build-guide",
+        "sourceName": "Maxroll: Whirling Assault Martial Artist Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "Strong area clear is listed among the strengths."
+      },
+      "boss": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Spin to Win ONE-Shot Bosses",
+        "source": "https://mobalytics.gg/poe-2/builds/martial-artist-league-starter-scorpius",
+        "sourceName": "Mobalytics: Spin to Win ONE-Shot Bosses 0.5.5",
+        "checkedAt": "2026-09-07",
+        "note": "The guide title emphasizes \"one-shot bosses.\""
+      }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Changed SSF to viable and updated the beginner rating from unrated to 2/5, because Maxroll (0.5.5) states in its strengths that the build works in SSF (campaign in about 4 hours, Arbiter in about 8 hours). Confirmed on poe2db that Whirling Assault unlocks at Lv41."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Re-checked the source's statements, covered stages and source information, and fixed mix-ups and over-generalizations. Sources and dynamic setups that could not be confirmed were not treated as re-verified, and the verification date for leveling as a whole was not changed."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Separated the confirmation scope between the source text and the per-stage tabs. Supports and operation from other stages are not recommended as-is; requirements and unconfirmed points are stated. This is not a re-verification of the exact full loadout."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Re-fetched the selected stage tab and corrected mix-ups in the Lv41 leveling main and support skills. Limited the supports and mana measures to what the leveling tab states."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked 3 of the 5 sources for publication status, supported patch, update date, main skill and ascendancy, and updated the check dates. The 2 Mobalytics sources cannot be fetched automatically, so they remain unchecked (check dates unchanged)."
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "monk-falling-thunder",
+      "name": "Falling Thunder Martial Artist",
+      "classSlug": "monk",
+      "slug": "falling-thunder"
+    },
+    {
+      "id": "monk-hollow-focus-storm-wave",
+      "name": "Hollow Focus Storm Wave Martial Artist",
+      "classSlug": "monk",
+      "slug": "hollow-focus-storm-wave"
+    },
+    {
+      "id": "monk-infernal-legion-chayula",
+      "name": "Infernal Legion Acolyte of Chayula",
+      "classSlug": "monk",
+      "slug": "infernal-legion-chayula"
+    }
+  ]
+}
