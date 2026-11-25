@@ -314,6 +314,67 @@
     "contentRevision": "af2fbc0f93bd8126"
   },
   {
+    "id": "mercenary-supporting-fire-tactician",
+    "name": "サポーティングファイヤー・タクティシャン",
+    "class": "Mercenary",
+    "className": "マーセナリー",
+    "ascendancy": "Tactician",
+    "ascendancyName": "タクティシャン",
+    "skills": [
+      "Supporting Fire"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜Act 2中盤（クロスボウ育成）",
+        "mainSkill": "集団はパーマフロストボルト（Permafrost Bolts）。単体は凍結させてからフラグメンテーション弾（Fragmentation Rounds）",
+        "supports": "パーマフロストボルト（Permafrost Bolts）を主力に、フロストボム（Frost Bomb）で元素耐性を下げ、ヘラルドオブアイス（Herald of Ice）で処理速度を上げる。ボスは凍結の呪印（Freezing Mark）を付けてからフラグメンテーション弾（Fragmentation Rounds）。正確なサポート枠は原典プランナー参照。",
+        "passivePriority": "クロスボウ系ノードを効率よく取る範囲に留め、リスペック費用を抑える。高速リロード（Rapid Reload）とアドレナリンラッシュ（Adrenaline Rush）が序盤の助けになる。",
+        "gearPriority": "商人のクロスボウとセプターを数レベルごとに確認し、Act 1で鉄の指輪（Iron Ring）を買う。ブーツの移動速度は必須。Lv16でニス塗りのクロスボウ（Varnished Crossbow）を氷のレッサーエッセンス（Lesser Essence of Ice）か錬金術のオーブ（Orb of Alchemy）で作り、氷河のルーン（Glacial Rune）を入れる（これでクロスボウ育成は最後まで持つ）。グローブ・指輪・クロスボウの「攻撃にダメージ追加」（冷気と物理が理想）が最優先で、残りはライフと元素耐性。後で使う「全ミニオンスキルレベル+」のヘルムとセプターも拾っておく。",
+        "caution": "武器セットの設定（パーマフロストボルトをセットI、フラグメンテーション弾をセットII、クロスボウショットは両セット共通）が序盤の快適さを左右する。Actやゾーンを移動すると、まれに再装填が必要になる。リスペック費用を確保するため、キャンペーン中はギャンブルや高額なレア購入を避ける。",
+        "transitionCondition": "Act 2中盤で地獄を解き放て！（Unleash Hell!）を取り、サポーティングファイヤー（Supporting Fire）が解禁されること。ただし本格移行はLv36まで待つ。"
+      },
+      {
+        "label": "Lv36〜キャンペーン終了（サポーティングファイヤー移行）",
+        "mainSkill": "サポーティングファイヤー（Supporting Fire）をクールダウンごとに使用。招集（Muster）のためにミニオンを各種1体ずつ並べる",
+        "supports": "サポーティングファイヤー（Supporting Fire）：ファイヤーアチューンメント（Fire Attunement）、マルチショット II（Multishot II）、命令 I（Bidding I）、招集（Muster）が移行時の必須枠（原典のジェム刻印優先度）。単体はスケルトンスナイパー（Skeletal Sniper）の指揮スキル（ガスアロー（Gas Arrow））を、ファイヤーアチューンメントで点火して使う。セプターのオーラは溢れる魔力の加護 II（Upwelling II）とクラリティ II（Clarity II）が優先。デバフはエレメンタルウィークネス（Elemental Weakness）とフロストボム（Frost Bomb）。",
+        "passivePriority": "Lv36でリスペック。成長する群れ（Growing Swarm）と指揮スキルのクールダウン回復が最優先。不死のアルコン（Archon of Undeath）、恐怖の君主（Lord of Horrors）、あなたの命ずるがままに（At Your Command）、パペットマスター（Puppet Master）、巨大な一団（Gigantic Following）を取る。余った能力値は筋力を優先。",
+        "gearPriority": "「全ミニオンスキルレベル+」が最優先で、セプター・ヘルム・アミュレットで確保する（ミニオンの火力と耐久の両方が伸びる）。筋力も火力とライフに直結する。神殿のセプター（Shrine Sceptre）はピュリティオブファイヤー（Purity of Fire）を付与するため、溢れる魔力の加護 I（Upwelling I）とクラリティ I（Clarity I）を無料で使えて序盤の最適解になる。",
+        "caution": "ミニオンは各種1体ずつが原則で、スケルトンスナイパー（Skeletal Sniper）だけは単体火力の補助としてスピリット次第で2〜3体使う。ミニオン自身のダメージは（序盤のスナイパーを除き）重要ではなく、死んでも招集（Muster）のボーナスは得られる。",
+        "transitionCondition": "キャンペーン終了と、包み込む夜明け（Enfolding Dawn）の購入資金（高貴なオーブ（Exalted Orb））の確保。"
+      },
+      {
+        "label": "Mapping開始（Early）",
+        "mainSkill": "サポーティングファイヤー（Supporting Fire）が殲滅を担い、スケルトンアーソニスト（Skeletal Arsonist）の指揮スキルで不死のアルコン（Archon of Undeath）とパペットマスター（Puppet Master）を回す",
+        "supports": "サポーティングファイヤー（Supporting Fire）の命令（Bidding）は、単体寄りの命令 II（Bidding II）か、殲滅が安定する命令 III（Bidding III）かを好みで選ぶ。スケルトンブルート（Skeletal Brute）はアーマー破壊 III（Armour Break III）でアーマーを割り、ボスへの威嚇も担う。",
+        "passivePriority": "不死のアルコン（Archon of Undeath）関連のノードを揃えていく。揃うと単体火力がサポーティングファイヤー側に寄り、スケルトンスナイパー（Skeletal Sniper）を減らせるようになる。",
+        "gearPriority": "最初の購入は包み込む夜明け（Enfolding Dawn）で、高貴なオーブ（Exalted Orb）を貯めてすぐに買う（鍛造で強化するとアーマーとESが大きく伸びる）。次にメギノルドのベルト（Meginord's Girdle）で大量の筋力と冷気耐性を得る。",
+        "caution": "不死のアルコン（Archon of Undeath）を得た時点でサポーティングファイヤーがクールダウン中だと、クールダウンは後付けで短縮されない。先にスケルトンアーソニスト（Skeletal Arsonist）の指揮でアルコンを発動させてから撃つこと。",
+        "transitionCondition": "Red Maps到達と、トレンチティンバー（Trenchtimbre）やお告げのセプター（Omen Sceptre）への更新資金。"
+      },
+      {
+        "label": "Red Maps",
+        "mainSkill": "サポーティングファイヤー（Supporting Fire）が殲滅とボスの両方を担当。パウンス（Pounce）でプレデターの呪印（Predator's Mark）と冷気の曝露（Cold Exposure）を付ける",
+        "supports": "クルガルの鎖（Kurgal's Leash）でサポーティングファイヤー（Supporting Fire）にアンホーリーマイト（Unholy Might）（物理ダメージの30%を混沌として追加）を付ける。衰弱の存在感（Withering Presence）で混沌ダメージを伸ばし、防御面はブラスファミー（Blasphemy）＋テンポラルチェーン（Temporal Chains）、後にはディスペア（Despair）も重ねる。マナ回復はウルフパック（Wolf Pack）のインファーナルリージョン I（Infernal Legion I）＋魂の収穫（Essence Harvest）。",
+        "passivePriority": "再び起きるアルコン（Resurging Archon）でスケルトンスナイパー（Skeletal Sniper）を完全に外し、殲滅も単体もサポーティングファイヤーに一本化する。ウィスパーオブドゥーム（Whispers of Doom）でディスペア（Despair）を追加。屍霊術の手触り（Necrotic Touch）と悪の掌握（Grip of Evil）はマリス（Malice）と好相性。傷舐め（Licking Wounds）でライフとマナの回復を底上げする。",
+        "gearPriority": "トレンチティンバー（Trenchtimbre）の+2品（盾の耐性が不要になったら）。お告げのセプター（Omen Sceptre）が最適ベースで、マリス（Malice）が単体火力を大きく伸ばす。発現する本能（Emergent Instinct）で再生を確保し、ラヴィアンガの心（Lavianga's Spirits）でマナ回復を安定させる。ベルトは「ミニオンの効果範囲拡大」と「ミニオンが指揮スキルで与えるダメージ増加」が必須クラス。",
+        "caution": "ウルフパック（Wolf Pack）のインファーナルリージョンは II ではなく I を使うこと。また、魂の収穫（Essence Harvest）の組み合わせに死に際（Last Gasp）を付けると収穫が働かなくなるので付けない。",
+        "transitionCondition": "支配（Dominion）をインスタレーションできるアミュレットと、英雄の悲劇（Heroic Tragedy、Vorana銘）の確保。"
+      },
+      {
+        "label": "Endgame完成（CI・支配取得）",
+        "mainSkill": "サポーティングファイヤー（Supporting Fire）の重ね撃ち。不死のアルコン（Archon of Undeath）をほぼ常時維持し、殲滅もボスもこれ1つで処理する",
+        "supports": "ヴォラナの包囲（Vorana's Siege）で範囲と孤立した敵へのダメージを伸ばす。ウール・ネトルの抱擁（Uul-Netol's Embrace）は物理ダメージの40%を混沌として追加する強力なリネージサポート（高額なMin-Max枠）。ミニオン側はアマナムの十分の一税（Amanamu's Tithe）、テクロッドの復讐（Tecrod's Revenge）、ブルータスの脳（Brutus' Brain）、彼女の宣言（Her Declaration）で詰める。",
+        "passivePriority": "支配（Dominion）のインスタレーションが最優先（不死のアルコン（Archon of Undeath）の回復期間が消え、ほぼ常時維持できる）。英雄の悲劇（Heroic Tragedy）のブラックサイストレーニング（Black Scythe Training）で筋力がESに変換され、カオスイノキュレーション（Chaos Inoculation）と組み合わせてES 10,000超を狙う。ジャイアンズブラッド（Giant's Blood）でチョーバー・チェバー（Chober Chaber）を片手で持つ。",
+        "gearPriority": "ヘルム・グローブ・ブーツでESを最大化する。チョーバー・チェバー（Chober Chaber）はトレンチティンバー（Trenchtimbre）の厳密な上位互換で、全ミニオンスキル+4のコラプト品・知力要求80〜85のものを狙う。不屈なる者として死す（Morior Invictus）は全元素耐性と全能力値が必須で、3枠目は被クリティカルダメージ軽減が最適。レイヴンタッチシャード（Raven-Touched Shard）でヘルムに巨大な一団（Gigantic Following）を、カディガンの啓示（Cadigan's Epiphany）でグローブにもう1つのインスタレーションを入れる。",
+        "caution": "英雄の悲劇（Heroic Tragedy）は「Vorana」銘であることが必須（数値は不問）。成長する群れ（Growing Swarm）入りのメガロマニアック（Megalomaniac）がない場合は、通常の経路で成長する群れ（Growing Swarm）を取りに行く。",
+        "transitionCondition": "完成形。以後はジュエルのモッド（ES最大値、ESリチャージ開始速度、ミニオンのクリティカル系）と各装備の最大ロール化を詰める。"
+      }
+    ],
+    "mainSkill": "サポーティングファイヤー",
+    "path": "/builds/mercenary/supporting-fire-tactician/",
+    "contentRevision": "2948f88fa3de6680"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "ツイスター・ジェムリング",
     "class": "Mercenary",

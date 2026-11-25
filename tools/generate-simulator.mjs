@@ -7,7 +7,7 @@ const builds = JSON.parse(await readFile(resolve(root,'data/builds.json'),'utf8'
 const site = JSON.parse(await readFile(resolve(root,'data/site.json'),'utf8'));
 const esc = s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const classNames = {monk:'Monk',mercenary:'Mercenary',warrior:'Warrior',sorceress:'Sorceress',huntress:'Huntress',ranger:'Ranger',witch:'Witch',druid:'Druid'};
-const asc = {'マーシャルアーティスト':'Martial Artist','ジェムリング・リージョネア':'Gemling Legionnaire','スミス・オブ・キタヴァ':'Smith of Kitava','ディサイプル・オブ・ヴァラシュタ':'Disciple of Varashta','スピリットウォーカー':'Spirit Walker','デッドアイ':'Deadeye','インファーナリスト':'Infernalist','オラクル':'Oracle','リッチ':'Lich','ストームウィーバー':'Stormweaver','チャユラの門弟':'Acolyte of Chayula','ウォーブリンガー':'Warbringer'};
+const asc = {'マーシャルアーティスト':'Martial Artist','ジェムリング・リージョネア':'Gemling Legionnaire','スミス・オブ・キタヴァ':'Smith of Kitava','ディサイプル・オブ・ヴァラシュタ':'Disciple of Varashta','スピリットウォーカー':'Spirit Walker','デッドアイ':'Deadeye','インファーナリスト':'Infernalist','オラクル':'Oracle','リッチ':'Lich','ストームウィーバー':'Stormweaver','チャユラの門弟':'Acolyte of Chayula','ウォーブリンガー':'Warbringer','タクティシャン':'Tactician'};
 const skills = {
  'monk-whirling-assault':['Whirling Assault'],
  'monk-falling-thunder':['Falling Thunder'],
@@ -15,7 +15,7 @@ const skills = {
  'monk-infernal-legion-chayula':['Companion: {0}'],
  'mercenary-twister-gemling':['Twister'],
  'warrior-shield-wall-smith':['Shield Wall'],
- 'warrior-shield-wall-warbringer':['Shield Wall'],
+ 'warrior-shield-wall-warbringer':['Shield Wall'],'mercenary-supporting-fire-tactician':['Supporting Fire'],
  'sorceress-sand-fire':["Kelari's Deception","Ruzhan's Trap"],
  'huntress-companion':['Companion: {0}'],
  'huntress-minion-spirit-walker':['Companion: {0}','Wolf Pack'],

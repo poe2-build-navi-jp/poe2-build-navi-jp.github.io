@@ -121,7 +121,7 @@ const observer = new MutationObserver(records => {
 });
 observer.observe(document.body, {childList: true, subtree: true});
 try {
-  const responses = await Promise.all(['/data/simulator-index.json?v=081a4b68e0', '/data/simulator-names.json?v=b694f0056b'].map(url => fetch(url)));
+  const responses = await Promise.all(['/data/simulator-index.json?v=081a4b68e0', '/data/simulator-names.json?v=3e39bf334b'].map(url => fetch(url)));
   if (responses.some(response => !response.ok)) throw Error('IMPACT_DATA');
   [index, names] = await Promise.all(responses.map(response => response.json()));
   render();

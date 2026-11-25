@@ -314,6 +314,67 @@
     "contentRevision": "af2fbc0f93bd8126"
   },
   {
+    "id": "mercenary-supporting-fire-tactician",
+    "name": "Supporting Fire Tactician",
+    "class": "Mercenary",
+    "className": "Mercenary",
+    "ascendancy": "Tactician",
+    "ascendancyName": "Tactician",
+    "skills": [
+      "Supporting Fire"
+    ],
+    "stages": [
+      {
+        "label": "Lv1 to mid Act 2 (crossbow leveling)",
+        "mainSkill": "Packs: Permafrost Bolts. Single target: freeze first, then Fragmentation Rounds",
+        "supports": "Permafrost Bolts as the main skill, Frost Bomb to lower elemental resistances, and Herald of Ice for clear speed. On bosses, apply Freezing Mark, then use Fragmentation Rounds. See the source planner for the exact support setup.",
+        "passivePriority": "Keep crossbow nodes within an efficient range to limit respec costs. Rapid Reload and Adrenaline Rush help in the early game.",
+        "gearPriority": "Check vendor crossbows and sceptres every few levels, and buy an Iron Ring in Act 1. Movement speed on boots is mandatory. At Lv16, craft a Varnished Crossbow with a Lesser Essence of Ice or an Orb of Alchemy and socket a Glacial Rune (this carries the crossbow leveling to the end). Flat added damage on gloves, rings and the crossbow (cold and physical are ideal) is the top priority; the rest goes to Life and elemental resistances. Also pick up helms and sceptres with +levels to all minion skills for later use.",
+        "caution": "Weapon set configuration (Permafrost Bolts on set I, Fragmentation Rounds on set II, Crossbow Shot shared by both sets) drives early comfort. Moving between acts or zones occasionally requires a reload. Avoid gambling and expensive rare purchases during the campaign to save the respec cost.",
+        "transitionCondition": "Taking Unleash Hell! in mid Act 2, which unlocks Supporting Fire. The full transition still waits until Lv36."
+      },
+      {
+        "label": "Lv36 to campaign end (Supporting Fire transition)",
+        "mainSkill": "Use Supporting Fire on cooldown. Line up one of each minion type for Muster",
+        "supports": "Supporting Fire: Fire Attunement, Multishot II, Bidding I and Muster are the required slots at transition (per the source's Gem Engraving Priority). For single target, ignite the Skeletal Sniper's command skill (Gas Arrow) with Fire Attunement. Sceptre auras prioritize Upwelling II and Clarity II. Debuffs are Elemental Weakness and Frost Bomb.",
+        "passivePriority": "Respec at Lv36. Growing Swarm and command skill cooldown recovery are the top priorities. Take Archon of Undeath, Lord of Horrors, At Your Command, Puppet Master and Gigantic Following. Spend leftover attributes on Strength first.",
+        "gearPriority": "+levels to all minion skills is the top priority, secured on the sceptre, helm and amulet (it scales both minion damage and durability). Strength also feeds damage and Life directly. A Shrine Sceptre grants Purity of Fire, letting you run Upwelling I and Clarity I for free, which makes it the best early option.",
+        "caution": "Keep one of each minion type as a rule; only the Skeletal Sniper may be run at 2-3 copies, depending on Spirit, as single-target support. Minion damage itself does not matter (except the early Sniper), and the Muster bonus is gained even if they die.",
+        "transitionCondition": "Campaign completion, and securing the purchase funds (Exalted Orbs) for Enfolding Dawn."
+      },
+      {
+        "label": "Mapping start (Early)",
+        "mainSkill": "Supporting Fire handles clearing, while the Skeletal Arsonist's command skill cycles Archon of Undeath and Puppet Master",
+        "supports": "For Supporting Fire's Bidding, choose Bidding II for single target or Bidding III for stable clearing, to taste. The Skeletal Brute breaks armour with Armour Break III and also intimidates bosses.",
+        "passivePriority": "Fill out the Archon of Undeath related nodes. Once complete, single-target damage shifts to Supporting Fire and you can reduce Skeletal Snipers.",
+        "gearPriority": "The first purchase is Enfolding Dawn; save Exalted Orbs and buy it immediately (crafting upgrades greatly raise its Armour and ES). Next, Meginord's Girdle for a large amount of Strength and cold resistance.",
+        "caution": "If Supporting Fire is on cooldown at the moment you gain Archon of Undeath, the cooldown is not shortened retroactively. Trigger the Archon with the Skeletal Arsonist's command first, then fire.",
+        "transitionCondition": "Reaching Red Maps, and funds to upgrade to Trenchtimbre and an Omen Sceptre."
+      },
+      {
+        "label": "Red Maps",
+        "mainSkill": "Supporting Fire handles both clearing and bosses. Apply Predator's Mark and Cold Exposure with Pounce",
+        "supports": "Kurgal's Leash gives Supporting Fire Unholy Might (gain 30% of physical damage as chaos). Scale chaos damage with Withering Presence, and defend with Blasphemy + Temporal Chains, later adding Despair. Mana recovery comes from the Wolf Pack's Infernal Legion I + Essence Harvest.",
+        "passivePriority": "Resurging Archon removes the Skeletal Sniper entirely, unifying both clearing and single target on Supporting Fire. Add Despair with Whispers of Doom. Necrotic Touch and Grip of Evil pair well with Malice. Licking Wounds raises Life and Mana recovery.",
+        "gearPriority": "A +2 Trenchtimbre (once shield resistances are no longer needed). An Omen Sceptre is the best base, and Malice greatly raises single-target damage. Secure regeneration with Emergent Instinct and stabilize mana recovery with Lavianga's Spirits. The belt must have the minion area of effect and minion command skill damage mod classes.",
+        "caution": "Use Infernal Legion I, not II, on the Wolf Pack. Also, do not add Last Gasp to the Essence Harvest setup, or the harvest stops working.",
+        "transitionCondition": "Securing an amulet that can be instilled with Dominion, and Heroic Tragedy (Vorana inscription)."
+      },
+      {
+        "label": "Endgame complete (CI, Dominion obtained)",
+        "mainSkill": "Stack Supporting Fire casts. Keep Archon of Undeath up almost permanently, handling both clearing and bosses with this alone",
+        "supports": "Vorana's Siege extends area and damage against isolated enemies. Uul-Netol's Embrace is a powerful lineage support that gains 40% of physical damage as chaos (an expensive Min-Max slot). Fill out the minion side with Amanamu's Tithe, Tecrod's Revenge, Brutus' Brain and Her Declaration.",
+        "passivePriority": "Instilling Dominion is the top priority (it removes Archon of Undeath's recovery period, keeping it up almost permanently). Heroic Tragedy's Black Scythe Training converts Strength to ES, and combined with Chaos Inoculation you aim for over 10,000 ES. Giant's Blood lets you wield Chober Chaber in one hand.",
+        "gearPriority": "Maximize ES on the helm, gloves and boots. Chober Chaber is a strict upgrade over Trenchtimbre; aim for a corrupted +4 to all minion skills roll with an 80-85 Intelligence requirement. Morior Invictus requires all elemental resistances and all attributes, with reduced critical damage taken as the optimal third line. Use a Raven-Touched Shard to put Gigantic Following on the helm, and Cadigan's Epiphany for another instillation on the gloves.",
+        "caution": "Heroic Tragedy must bear the 'Vorana' inscription (the numbers do not matter). If you do not have a Megalomaniac with Growing Swarm, path to Growing Swarm the normal way.",
+        "transitionCondition": "The complete form. From here, refine jewel mods (maximum ES, ES recharge start speed, minion critical mods) and max rolls on each gear piece."
+      }
+    ],
+    "mainSkill": "Supporting Fire",
+    "path": "/builds/mercenary/supporting-fire-tactician/",
+    "contentRevision": "2948f88fa3de6680"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

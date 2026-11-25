@@ -1,21 +1,21 @@
 {
  "/": {
-  "hash": "0941a23ee5119153",
+  "hash": "92518282b662a7d9",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "58356c0eded1080c",
+  "hash": "1a6fe68480a3a529",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/en/simulator/": {
-  "hash": "ba56353cab201ec7",
+  "hash": "4a021b944619a19c",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "94aa50b7402f5b73",
+  "hash": "27c8bf51576fde87",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -105,12 +105,12 @@
   "hashVersion": 2
  },
  "/equipment/headhunter/": {
-  "hash": "b01e7a656b3d1096",
+  "hash": "188beb11c23965e2",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/equipment/darkness-enthroned/": {
-  "hash": "69bc488ab27bb0ab",
+  "hash": "ed7b63195d9025eb",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -165,7 +165,7 @@
   "hashVersion": 2
  },
  "/equipment/morior-invictus/": {
-  "hash": "8c262072455aec3a",
+  "hash": "96f098e198ee6601",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -175,22 +175,22 @@
   "hashVersion": 2
  },
  "/equipment/mageblood/": {
-  "hash": "581d38109c26f2d1",
+  "hash": "d3574da8fa45705d",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/builds/": {
-  "hash": "aad7b342cd831b44",
+  "hash": "a6b6d52288b2fbba",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/classes/": {
-  "hash": "12ed119a348e561d",
+  "hash": "8e6e2554249f2b4e",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/leveling/": {
-  "hash": "4e036b150446602e",
+  "hash": "1ef05bb55258ad39",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -200,7 +200,7 @@
   "hashVersion": 2
  },
  "/class-check/": {
-  "hash": "e0fdc49264146f3a",
+  "hash": "6c7a822d9d50409b",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -210,12 +210,12 @@
   "hashVersion": 2
  },
  "/beginner-builds/": {
-  "hash": "aea48bdf56aa7876",
+  "hash": "821679f44437b18c",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "2b1a44367f5b26a2",
+  "hash": "fd33bb589afa413e",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -230,17 +230,17 @@
   "hashVersion": 2
  },
  "/league-starter/": {
-  "hash": "2c4c497418680e8b",
+  "hash": "d2b3138732c593f7",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/best-builds/": {
-  "hash": "ede4736f02d13b77",
+  "hash": "d886bbaffa396874",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/poe2-1-0/": {
-  "hash": "636008763797bfc6",
+  "hash": "26f8c4ca873a9cd1",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -260,7 +260,7 @@
   "hashVersion": 2
  },
  "/rating-criteria/": {
-  "hash": "b7e921198dd2fcc4",
+  "hash": "99bc0f212654d06c",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -275,7 +275,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "336cb4a940140e9f",
+  "hash": "54bf2d275dfe055b",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -285,7 +285,7 @@
   "hashVersion": 2
  },
  "/classes/mercenary/": {
-  "hash": "9c682808164c9ec0",
+  "hash": "e48fa73c8871e40a",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -344,8 +344,13 @@
   "date": "2026-11-25",
   "hashVersion": 2
  },
+ "/builds/mercenary/supporting-fire-tactician/": {
+  "hash": "6093457c143b4e7c",
+  "date": "2026-11-25",
+  "hashVersion": 2
+ },
  "/builds/mercenary/twister-gemling/": {
-  "hash": "d199658b11705060",
+  "hash": "69d98c36a32e1ce0",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -395,7 +400,7 @@
   "hashVersion": 2
  },
  "/builds/mercenary/grenade-gemling/": {
-  "hash": "01d380813100da76",
+  "hash": "6100982f8d4020b9",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -420,7 +425,7 @@
   "hashVersion": 2
  },
  "/guides/passive-tree/": {
-  "hash": "718b4c81bd89fa0e",
+  "hash": "bf6cd863a0911e83",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -435,12 +440,12 @@
   "hashVersion": 2
  },
  "/guides/increase-damage/": {
-  "hash": "41307e045cc10470",
+  "hash": "2c9722c3272b9af2",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/why-i-die/": {
-  "hash": "98951d5b66e6a1cc",
+  "hash": "055dc44bc58a42cd",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -545,7 +550,7 @@
   "hashVersion": 2
  },
  "/guides/unique-gear/": {
-  "hash": "54a1d7465f3c7407",
+  "hash": "6ae89ab1dc6cd956",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -590,7 +595,7 @@
   "hashVersion": 2
  },
  "/guides/build-gear-buying-order/": {
-  "hash": "67076706cd33c9ef",
+  "hash": "de0a3c9b5cdc6510",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -655,7 +660,7 @@
   "hashVersion": 2
  },
  "/guides/build-tier-list/": {
-  "hash": "cd26a0eb4f890c2e",
+  "hash": "9905ea1f02d896cb",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -670,12 +675,12 @@
   "hashVersion": 2
  },
  "/dictionary/build/": {
-  "hash": "af5a78213980ef2e",
+  "hash": "f47cec752b51352f",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/dictionary/dps/": {
-  "hash": "6cf9c2f5b75622b6",
+  "hash": "5225b66175d1fc5f",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -720,12 +725,12 @@
   "hashVersion": 2
  },
  "/dictionary/ascendancy/": {
-  "hash": "dc05249885c85cd5",
+  "hash": "3705993d8b164783",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/dictionary/spirit/": {
-  "hash": "a743eceb483846c8",
+  "hash": "79a3b31c377a380d",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -735,17 +740,17 @@
   "hashVersion": 2
  },
  "/guides/poe2-0-5-5-builds/": {
-  "hash": "da9975b5e041a195",
+  "hash": "fd0780fda166289a",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/forbidden-rites-beginner/": {
-  "hash": "3e9a3bf730b6d5c7",
+  "hash": "cb2921ba422b6588",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/gear-upgrade/": {
-  "hash": "d8231c248d362ccc",
+  "hash": "113bcdb1c8d039f6",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -760,7 +765,7 @@
   "hashVersion": 2
  },
  "/guides/slow-mapping/": {
-  "hash": "a580b3efb58b4246",
+  "hash": "b3cc115fb2966391",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -800,7 +805,7 @@
   "hashVersion": 2
  },
  "/poe2-1-0/build-status/": {
-  "hash": "750d40c46f00844a",
+  "hash": "c363d7bc21191fc4",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -835,7 +840,7 @@
   "hashVersion": 2
  },
  "/poe2-1-0/balance-changes/": {
-  "hash": "efb5f1e38f632918",
+  "hash": "e9d75ca6ee6db486",
   "date": "2026-11-25",
   "hashVersion": 2
  },
