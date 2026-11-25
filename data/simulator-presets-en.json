@@ -375,6 +375,76 @@
     "contentRevision": "2948f88fa3de6680"
   },
   {
+    "id": "ranger-glacial-lance-deadeye",
+    "name": "Glacial Lance Deadeye",
+    "class": "Ranger",
+    "className": "Ranger",
+    "ascendancy": "Deadeye",
+    "ascendancyName": "Deadeye",
+    "skills": [
+      "Glacial Lance"
+    ],
+    "stages": [
+      {
+        "label": "Act 1 (Twister Leveling)",
+        "mainSkill": "Twister + Whirling Slash. For bosses, use Parry → Fangs of Frost to create chilled ground, then attack.",
+        "supports": "Generate chilled ground with Frost Nexus. Keep Whirling Slash at level 1 to save mana (per the source guide). Also use War Banner for single targets.",
+        "passivePriority": "Prioritise damage early. Critical strikes are hard to scale yet, so leave them for later (per the source guide). See the source guide for the per-stage tree.",
+        "gearPriority": "Life and resistances on most slots. Large added damage (any element) on rings, spear and gloves. Update the spear every 5–10 levels, prioritising physical and cold damage and attack speed suffixes.",
+        "caution": "If you leave the Whirling Slash whirlwind and fire Twister, the whirlwind collapses and you lose the added damage. Always fire from inside the whirlwind.",
+        "transitionCondition": "Act 2 begins. Barrage and Ice-Tipped Arrows become available."
+      },
+      {
+        "label": "Early Act 2 to the First Trial (Twister Continued)",
+        "mainSkill": "Continue with Twister. Spend Frenzy Charges with Barrage to add projectiles, and use Ice-Tipped Arrows on cooldown.",
+        "supports": "Ice-Tipped Arrows shards speed up pack clearing, so Whirling Slash is used less often. Use Freezing Mark on tough rares and bosses, and Charged Mark to also apply shocked ground.",
+        "passivePriority": "Keep prioritising damage; do not lean into critical strikes yet (per the source guide).",
+        "gearPriority": "Keep updating the spear. Maintain life and resistances.",
+        "caution": "Parry and Fangs of Frost can be removed once Act 2 begins (per the source guide). Do not switch to Glacial Lance until you finish the first trial.",
+        "transitionCondition": "Clear the first trial so Glacial Lance (tier 7, from level 22) and the Mirage Deadeye ascendancy become available."
+      },
+      {
+        "label": "After the First Trial to Campaign End (Glacial Lance Switch)",
+        "mainSkill": "Glacial Lance. Summon Mirage Deadeye by attacking and Mirage Archer with a dodge roll.",
+        "supports": "Mirage Archer requires a tier 8 Spirit gem (per poe2db; the source guide lists Tier 7+). For bosses, place War Banner, apply Freezing Mark with Pounce, then freeze with Arctic Howl once the freeze is prepared and trigger Raging Cry. Fire Barrage with Frenzy Charges from Combat Frenzy.",
+        "passivePriority": "Ascendancy order: Mirage Deadeye → Gathering Winds → Called Shots → Avidity (per the source guide). Keep prioritising damage on the tree.",
+        "gearPriority": "Use a Shrine Sceptre (resistances) or an Omen Sceptre (boss critical chance). Attack speed and damage on the weapon set 2 talisman scale Pounce and Arctic Howl (lower priority). Fill attribute and resistance gaps with runes.",
+        "caution": "Pounce requires a talisman in the weapon set 2 off-hand. Use both Mirages on cooldown.",
+        "transitionCondition": "Campaign finished. Glacial Lance and both Mirages are running smoothly."
+      },
+      {
+        "label": "Mapping Begins (Early Mapping)",
+        "mainSkill": "Glacial Lance + both Mirages. Mana Remnants speeds up mana recovery and Mirage resummoning.",
+        "supports": "Adding Khatal's Rejuvenation to Mana Remnants makes it easier to maintain 40% cooldown recovery speed. Refraction II on War Banner adds Deflect (requires 10 additional Spirit). Also use Ghost Dance to recover Energy Shield based on evasion (from the source guide's introduction).",
+        "passivePriority": "Prioritise Frenzy Charge nodes until you socket the Idol of Eramir into your sceptre. Take critical strikes only after you have a good spear (per the source guide).",
+        "gearPriority": "The top damage priority right after reaching maps is the Idol of Eramir socketed into your sceptre (charge generation is effectively doubled). Stack evasion, Energy Shield and Deflect on body armour, gloves, boots and helmet, and make the helmet pure Energy Shield (preparation for Subterfuge Mask). Prepare the Valako's Roar charm early as well. Secure 240 total Spirit between amulet and sceptre.",
+        "caution": "Using Barrage with Olroth's Conviction requires Ward on your gear, with a total of roughly 1.5–2× the cost as a guideline (source guide FAQ). A Thaumaturgic Generator installation is expensive, so do not put one on an amulet you will replace soon.",
+        "transitionCondition": "You can clear low-tier maps stably and have the Idol of Eramir and 240 Spirit in place."
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "Glacial Lance + Barrage. The stage where you scale with critical strikes.",
+        "supports": "With Olroth's Conviction, Barrage can be used 3 times and is effectively always available (requires Ward). Moving from a Shrine Sceptre with Purity of Ice to Guiding Palm of the Eye lets you socket Vitality II and Cannibalism II for free.",
+        "passivePriority": "Once you have a good spear with a critical chance roll, take all the critical nodes. Take Subterfuge Mask only after you have a good Energy Shield helmet (per the source guide).",
+        "gearPriority": "Pick up an Akoyan Spear (drops in area level 78), create two good modifiers with Orbs of Transmutation and Augmentation, then use essences and a Preserved Jawbone to reach four modifiers. Sacred Flame is a big upgrade for the sceptre. Overflow mana with Uhtred's Chalice and Mana Remnants.",
+        "caution": "Critical strikes depend on weapon quality. Do not lean into critical nodes until you have a good spear.",
+        "transitionCondition": "The Akoyan Spear craft progresses and the critical setup stabilises."
+      },
+      {
+        "label": "Endgame Complete (Aspirational)",
+        "mainSkill": "Glacial Lance. High-speed clearing while firing on the move.",
+        "supports": "Combining Rite of Passage with Spirit of the Wolf lets all damage break armour, spreading Herald of Ice and Armour Explosion. The Fall of the Axe grants slow immunity and Onslaught.",
+        "passivePriority": "The source guide's Aspirational tree. Hail assumes Barrage and Olroth's Conviction. Take Crimson Assault via Controlled Metamorphosis, Time-Lost Emerald and From Nothing. Remove all elemental penetration investment on the assumption of using Rakiata's Flow. Put spare attributes into Strength (life).",
+        "gearPriority": "The belt slot comes into its own with Mageblood, and Headhunter also works. Stack movement speed, attack speed and evasion heavily.",
+        "caution": "The Aspirational tree assumes multiple jewels and includes Controlled Metamorphosis, which lowers resistances. Do not lean into it before your gear is ready.",
+        "transitionCondition": "After completion, improve bottlenecks one at a time: spear, charge generation and defences."
+      }
+    ],
+    "mainSkill": "Glacial Lance",
+    "path": "/builds/ranger/glacial-lance-deadeye/",
+    "contentRevision": "f30c845e0bb6273b"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

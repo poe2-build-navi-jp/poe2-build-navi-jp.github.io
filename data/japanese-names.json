@@ -67,6 +67,10 @@
       "ja": "エイリスの鐘",
       "ref": "https://poe2db.tw/jp/Ailiths_Chimes"
     },
+    "Akoyan Spear": {
+      "ja": "アコヤのスピア",
+      "ref": "https://poe2db.tw/jp/Akoyan_Spear"
+    },
     "Amanamu's Tithe": {
       "ja": "アマナムの十分の一税",
       "ref": "https://poe2db.tw/jp/Amanamus_Tithe"
@@ -147,6 +151,10 @@
       "ja": "不死のアルコン",
       "ref": "https://poe2db.tw/jp/Archon_of_Undeath"
     },
+    "Arctic Howl": {
+      "ja": "アークティックハウル",
+      "ref": "https://poe2db.tw/jp/Arctic_Howl"
+    },
     "Armour Break III": {
       "ja": "アーマー破壊 III",
       "ref": "https://poe2db.tw/jp/Armour_Break_III"
@@ -194,6 +202,10 @@
     "Avatar of Fire": {
       "ja": "アバターオブファイヤー",
       "ref": "https://poe2db.tw/jp/Avatar_of_Fire"
+    },
+    "Avidity": {
+      "ja": "熱望",
+      "ref": "https://poe2db.tw/jp/Avidity"
     },
     "Azmadi, the Faridun Prince": {
       "ja": "ファリドゥンの王子、アズマディ",
@@ -427,6 +439,10 @@
       "ja": "影の呼び声",
       "ref": "https://poe2db.tw/jp/Call_of_the_Shadows"
     },
+    "Called Shots": {
+      "ja": "コールショット",
+      "ref": "https://poe2db.tw/jp/Called_Shots"
+    },
     "Candlemass, the Living Rite": {
       "ja": "キャンドルマス",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
@@ -434,6 +450,10 @@
     "Cannibalism I": {
       "ja": "カニバリズム I",
       "ref": "https://poe2db.tw/jp/Cannibalism_I"
+    },
+    "Cannibalism II": {
+      "ja": "カニバリズム II",
+      "ref": "https://poe2db.tw/jp/Cannibalism_II"
     },
     "Cast on Critical": {
       "ja": "クリティカル時キャスト",
@@ -595,6 +615,10 @@
       "ja": "破壊制御",
       "ref": "https://poe2db.tw/jp/Controlled_Destruction"
     },
+    "Controlled Metamorphosis": {
+      "ja": "制御された変質",
+      "ref": "https://poe2db.tw/jp/Controlled_Metamorphosis"
+    },
     "Convalescence": {
       "ja": "コンヴァレッセンス",
       "ref": "https://poe2db.tw/jp/Convalescence"
@@ -630,6 +654,10 @@
     "Crater": {
       "ja": "クレーター",
       "ref": "https://poe2db.tw/jp/Crater"
+    },
+    "Crimson Assault": {
+      "ja": "クリムゾンアサルト",
+      "ref": "https://poe2db.tw/jp/Crimson_Assault"
     },
     "Crisis Fragment": {
       "ja": "危機のフラグメント",
@@ -694,6 +722,10 @@
     "Deadly Fate": {
       "ja": "致死の運命",
       "ref": "https://poe2db.tw/jp/Deadly_Fate"
+    },
+    "Deflect": {
+      "ja": "受け流し",
+      "ref": "https://poe2db.tw/jp/Deflect"
     },
     "Deflection": {
       "ja": "受け流し",
@@ -1071,6 +1103,10 @@
       "ja": "地底より",
       "ref": "https://poe2db.tw/jp/From_Below"
     },
+    "From Nothing": {
+      "ja": "虚空より来たる",
+      "ref": "https://poe2db.tw/jp/From_Nothing"
+    },
     "Frost Bomb": {
       "ja": "フロストボム",
       "ref": "https://poe2db.tw/jp/Frost_Bomb"
@@ -1098,6 +1134,10 @@
     "Gas Grenade": {
       "ja": "ガスグレネード",
       "ref": "https://poe2db.tw/jp/Gas_Grenade"
+    },
+    "Gathering Winds": {
+      "ja": "風集め",
+      "ref": "https://poe2db.tw/jp/Gathering_Winds"
     },
     "Gembloom Skull": {
       "ja": "ジェムに侵された頭蓋骨",
@@ -1142,6 +1182,10 @@
     "Glacial Cascade": {
       "ja": "グレイシャルカスケード",
       "ref": "https://poe2db.tw/jp/Glacial_Cascade"
+    },
+    "Glacial Lance": {
+      "ja": "グレイシャルランス",
+      "ref": "https://poe2db.tw/jp/Glacial_Lance"
     },
     "Glacial Rune": {
       "ja": "氷河のルーン",
@@ -1479,6 +1523,10 @@
       "ja": "太陽の大祭司、ケツーリ",
       "ref": "https://poe2-build-navi-jp.github.io/name-index/"
     },
+    "Khatal's Rejuvenation": {
+      "ja": "カタルの活力",
+      "ref": "https://poe2db.tw/jp/Khatals_Rejuvenation"
+    },
     "Killing Palm": {
       "ja": "キリングパーム",
       "ref": "https://poe2db.tw/jp/Killing_Palm"
@@ -1751,6 +1799,14 @@
       "ja": "ミニオンスプラッシュ I",
       "ref": "https://poe2db.tw/jp/Minion_Splash_I"
     },
+    "Mirage Archer": {
+      "ja": "ミラージュアーチャー",
+      "ref": "https://poe2db.tw/jp/Mirage_Archer"
+    },
+    "Mirage Deadeye": {
+      "ja": "ミラージュデッドアイ",
+      "ref": "https://poe2db.tw/jp/Mirage_Deadeye"
+    },
     "Mnemonic Ring": {
       "ja": "ニーモニックリング",
       "ref": "https://poe2db.tw/jp/Mnemonic_Ring"
@@ -1854,6 +1910,10 @@
     "Oil Grenade": {
       "ja": "オイルグレネード",
       "ref": "https://poe2db.tw/jp/Oil_Grenade"
+    },
+    "Olroth's Conviction": {
+      "ja": "オルロスの信念",
+      "ref": "https://poe2db.tw/jp/Olroths_Conviction"
     },
     "Olroth's Resolve": {
       "ja": "オルロスの決意",
@@ -1995,6 +2055,10 @@
       "ja": "プレデターの呪印",
       "ref": "https://poe2db.tw/jp/Predators_Mark"
     },
+    "Preserved Jawbone": {
+      "ja": "保存された顎骨",
+      "ref": "https://poe2db.tw/jp/Preserved_Jawbone"
+    },
     "Primal Bounty": {
       "ja": "プライマルバウンティ",
       "ref": "https://poe2db.tw/jp/Primal_Bounty"
@@ -2046,6 +2110,10 @@
     "Purity of Fire": {
       "ja": "ピュリティオブファイヤー",
       "ref": "https://poe2db.tw/jp/Purity_of_Fire"
+    },
+    "Purity of Ice": {
+      "ja": "ピュリティオブアイス",
+      "ref": "https://poe2db.tw/jp/Purity_of_Ice"
     },
     "Pursuit": {
       "ja": "追撃",
@@ -2191,6 +2259,10 @@
       "ja": "贖罪",
       "ref": "https://poe2-build-navi-jp.github.io/guides/unique-gear/"
     },
+    "Refraction II": {
+      "ja": "屈折装甲 II",
+      "ref": "https://poe2db.tw/jp/Refraction_II"
+    },
     "Regal Orb": {
       "ja": "王者のオーブ",
       "ref": "https://poe2db.tw/jp/Regal_Orb"
@@ -2322,6 +2394,10 @@
     "Sacred Bloom": {
       "ja": "聖なる花",
       "ref": "https://poe2db.tw/jp/Sacred_Bloom"
+    },
+    "Sacred Flame": {
+      "ja": "聖なる炎",
+      "ref": "https://poe2db.tw/jp/Sacred_Flame"
     },
     "Sacrifice": {
       "ja": "サクリファイス",
@@ -2563,6 +2639,10 @@
       "ja": "スピリットウォーカー",
       "ref": "https://poe2db.tw/jp/Spirit_Walker"
     },
+    "Spirit of the Wolf": {
+      "ja": "オオカミの魂",
+      "ref": "https://poe2db.tw/jp/Spirit_of_the_Wolf"
+    },
     "Staggering Palm": {
       "ja": "スタッガリングパーム",
       "ref": "https://poe2db.tw/jp/Staggering_Palm"
@@ -2594,6 +2674,10 @@
     "Stun": {
       "ja": "スタン",
       "ref": "https://poe2db.tw/jp/Stun_III"
+    },
+    "Subterfuge Mask": {
+      "ja": "偽装の仮面",
+      "ref": "https://poe2db.tw/jp/Subterfuge_Mask"
     },
     "Summoning Circle": {
       "ja": "サモ二ングサークル",
@@ -2694,6 +2778,10 @@
     "Thaumaturgic Flux": {
       "ja": "ソーマタージ・フラックス",
       "ref": "https://poe2db.tw/jp/Thaumaturgic_Flux_%28Level_1%29"
+    },
+    "Thaumaturgic Generator": {
+      "ja": "ソーマタージー発生装置",
+      "ref": "https://poe2db.tw/jp/Thaumaturgic_Generator"
     },
     "Thawing Charm": {
       "ja": "解凍のチャーム",
@@ -2927,6 +3015,10 @@
       "ja": "サンダーストーム",
       "ref": "https://poe2db.tw/jp/Thunderstorm"
     },
+    "Time-Lost Emerald": {
+      "ja": "タイムロストエメラルド",
+      "ref": "https://poe2db.tw/jp/Time-Lost_Emerald"
+    },
     "Time-Lost Sapphire": {
       "ja": "タイムロストサファイア",
       "ref": "https://poe2db.tw/jp/Time-Lost_Sapphire"
@@ -2990,6 +3082,10 @@
     "Tyranny's Grip": {
       "ja": "圧政の手",
       "ref": "https://poe2db.tw/jp/Tyrannys_Grip"
+    },
+    "Uhtred's Chalice": {
+      "ja": "ウートレドの杯",
+      "ref": "https://poe2db.tw/jp/Uhtreds_Chalice"
     },
     "Uncut Gem": {
       "ja": "ジェムの原石",
@@ -3110,6 +3206,10 @@
     "Vaal Ruins": {
       "ja": "ヴァールの遺跡",
       "ref": "https://poe2db.tw/jp/Vaal_Ruins"
+    },
+    "Valako's Roar": {
+      "ja": "ヴァラコの雄叫び",
+      "ref": "https://poe2db.tw/jp/Valakos_Roar"
     },
     "Vanguard": {
       "ja": "ヴァンガード",

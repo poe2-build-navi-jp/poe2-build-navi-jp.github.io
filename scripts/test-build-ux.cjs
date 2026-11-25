@@ -9,11 +9,11 @@ w.eval(fs.readFileSync('assets/catalog-static.js','utf8'));
 const cards=[...d.querySelectorAll('.catalog-card')];
 const visible=()=>cards.filter(c=>!c.hidden);
 const choose=(id,value)=>{d.getElementById(id).value=value;d.getElementById(id).dispatchEvent(new w.Event('change'));};
-assert.equal(cards.length,19);assert.equal(visible().length,19);
+assert.equal(cards.length,20);assert.equal(visible().length,20);
 choose('filter-unlock','Lv40まで');assert.deepEqual(visible().map(c=>c.dataset.buildId).sort(),['druid-plant-oracle','ranger-ice-shot-deadeye','sorceress-spark-stormweaver','warrior-shield-wall-smith']);
 choose('filter-style','召喚');assert.equal(visible().length,0);assert.equal(d.getElementById('filter-empty').hidden,false);
 d.getElementById('relax-filter').click();assert.equal(visible().length,4);
-d.getElementById('reset-filters').click();assert.equal(visible().length,19);
+d.getElementById('reset-filters').click();assert.equal(visible().length,20);
 choose('filter-ssf','確認済のみ');assert(visible().every(c=>c.dataset.ssf==='true'));
 d.getElementById('reset-filters').click();
 const buttons=cards.map(c=>c.querySelector('[data-compare]'));
@@ -23,8 +23,8 @@ d.querySelector('.ux-compare-card button').click();assert.equal(buttons[3].disab
 assert([...d.querySelectorAll('.ux-compare-card > a')].every(a=>a.search==='?level=1'&&a.hash==='#now'));
 buttons.filter(b=>b.getAttribute('aria-pressed')==='true').forEach(b=>b.click());assert.equal(d.getElementById('show-compare').disabled,true);
 const initial=new JSDOM(fs.readFileSync('builds/index.html','utf8')).window.document;
-assert.equal(initial.querySelectorAll('.catalog-card').length,19);assert.equal(initial.getElementById('advanced-filters').hidden,true);
-console.log('PASS: 19 static cards, unlock/SSF/style filters, zero results recovery, compare max 3, remove, focus, Lv1 links, JS-off content');
+assert.equal(initial.querySelectorAll('.catalog-card').length,20);assert.equal(initial.getElementById('advanced-filters').hidden,true);
+console.log('PASS: 20 static cards, unlock/SSF/style filters, zero results recovery, compare max 3, remove, focus, Lv1 links, JS-off content');
 (async()=>{
  const data=JSON.parse(fs.readFileSync('data/builds.json','utf8'));
  const {rows}=await import('../tools/build-facts.mjs');

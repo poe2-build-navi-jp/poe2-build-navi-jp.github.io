@@ -375,6 +375,76 @@
     "contentRevision": "2948f88fa3de6680"
   },
   {
+    "id": "ranger-glacial-lance-deadeye",
+    "name": "グレイシャルランス・デッドアイ",
+    "class": "Ranger",
+    "className": "レンジャー",
+    "ascendancy": "Deadeye",
+    "ascendancyName": "デッドアイ",
+    "skills": [
+      "Glacial Lance"
+    ],
+    "stages": [
+      {
+        "label": "Act 1（ツイスター育成）",
+        "mainSkill": "ツイスター（Twister）+ ワーリングスラッシュ（Whirling Slash）。ボスにはパリィ（Parry）→ファングオブフロスト（Fangs of Frost）で冷却の大地を作ってから叩く",
+        "supports": "フロストネクサス（Frost Nexus）で冷却の大地を生成する。ワーリングスラッシュはマナ節約のためLv1のまま固定（原典）。単体にはウォーバナー（War Banner）も使う。",
+        "passivePriority": "序盤はダメージ優先で進める。クリティカルは伸ばしにくいので後回し（原典）。段階別ツリーは原典参照。",
+        "gearPriority": "ほとんどの部位にライフと耐性。指輪・スピア・グローブには大きな追加ダメージ（属性は問わない）。スピアは5〜10レベルごとに更新し、物理・冷気ダメージと攻撃速度のサフィックスを優先。",
+        "caution": "ワーリングスラッシュの旋風から出てツイスターを撃つと旋風が崩れて追加ダメージを失う。必ず旋風の中で撃つこと。",
+        "transitionCondition": "Act 2開始。バラージ（Barrage）とアイスティップアロー（Ice-Tipped Arrows）を用意できる。"
+      },
+      {
+        "label": "Act 2序盤〜最初の試練（ツイスター継続）",
+        "mainSkill": "ツイスター継続。バラージ（Barrage）でフレンジーチャージを消費して投射物を追加し、アイスティップアロー（Ice-Tipped Arrows）はクールダウンごとに使う",
+        "supports": "アイスティップアローの氷の破片で集団処理が進むため、ワーリングスラッシュの使用頻度は下がる。硬いレアやボスには凍結の呪印（Freezing Mark）を使い、電荷の呪印（Charged Mark）で感電の大地も付与する。",
+        "passivePriority": "ダメージ優先を継続し、クリティカルにはまだ寄せない（原典）。",
+        "gearPriority": "スピアの更新を継続。ライフと耐性を維持する。",
+        "caution": "パリィとファングオブフロストはAct 2開始で外してよい（原典）。最初の試練を終えるまではグレイシャルランスへ移らない。",
+        "transitionCondition": "最初の試練をクリアし、グレイシャルランス（ティア7・Lv22から）とアセンダンシーのミラージュデッドアイ（Mirage Deadeye）が使える。"
+      },
+      {
+        "label": "最初の試練後〜キャンペーン終了（グレイシャルランス移行）",
+        "mainSkill": "グレイシャルランス（Glacial Lance）。攻撃でミラージュデッドアイ（Mirage Deadeye）、回避ロールでミラージュアーチャー（Mirage Archer）を召喚する",
+        "supports": "ミラージュアーチャーにはティア8のSpiritジェムが必要（poe2db。原典はTier 7+と表記）。ボス戦はウォーバナー（War Banner）を置き、パウンス（Pounce）で凍結の呪印を付与し、凍結準備が整ったらアークティックハウル（Arctic Howl）で凍結させて憤怒のクライ（Raging Cry）を発動する。コンバットフレンジー（Combat Frenzy）のフレンジーチャージでバラージを撃つ。",
+        "passivePriority": "アセンダンシーはミラージュデッドアイ→風集め（Gathering Winds）→コールショット（Called Shots）→熱望（Avidity）の順（原典）。ツリーはダメージ優先を継続。",
+        "gearPriority": "セプターは神殿のセプター（耐性）かお告げのセプター（ボス用クリティカル率）。武器セット2のタリスマンに攻撃速度とダメージを付けるとパウンスとアークティックハウルが伸びる（優先度は低め）。ルーンで能力値と耐性の不足を埋める。",
+        "caution": "パウンスには武器セット2のオフハンドにタリスマンが必要。ミラージュ2種はクールダウンごとに使うこと。",
+        "transitionCondition": "キャンペーン終了。グレイシャルランスとミラージュ2種の運用が安定している。"
+      },
+      {
+        "label": "Mapping開始（Early Mapping）",
+        "mainSkill": "グレイシャルランス + ミラージュ2種。マナレムナント（Mana Remnants）でマナ回復とミラージュの再召喚を早める",
+        "supports": "マナレムナントにカタルの活力（Khatal's Rejuvenation）を付けるとクールダウン回復速度40%を維持しやすい。ウォーバナーには屈折装甲 II（Refraction II）で受け流し（Deflect）を上乗せできる（追加で10 Spiritが必要）。ゴーストダンス（Ghost Dance）で回避に応じたES回復も使う（原典の導入）。",
+        "passivePriority": "セプターにエラミアのアイドル（Idol of Eramir）を差すまではフレンジーチャージのノードを優先。クリティカルは良いスピアができてから（原典）。",
+        "gearPriority": "マップ到達直後の火力最優先は、セプターに差すエラミアのアイドル（チャージ生成が実質2倍）。胴・グローブ・ブーツ・兜で回避・ES・受け流しを積み、兜は純ESにする（偽装の仮面の下準備）。ヴァラコの雄叫び（Valako's Roar）のチャームも早めに用意する。アミュレットとセプターで合計240 Spiritを確保する。",
+        "caution": "バラージをオルロスの信念（Olroth's Conviction）で使うには装備にウォードが必要で、総量はコストの1.5〜2倍が目安（原典FAQ）。ソーマタージー発生装置（Thaumaturgic Generator）のインスタレーションは高価なので、すぐ買い替えるアミュレットには付けない。",
+        "transitionCondition": "低Tierマップを安定して周回でき、エラミアのアイドルと240 Spiritが揃う。"
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "グレイシャルランス + バラージ。クリティカルで伸ばす段階",
+        "supports": "バラージにオルロスの信念（Olroth's Conviction）を付けると3回使用でき、実質常時使える（ウォード前提）。ピュリティオブアイス（Purity of Ice）付きの神殿のセプターから目の導きの掌（Guiding Palm of the Eye）へ移行すると、バイタリティー II（Vitality II）やカニバリズム II（Cannibalism II）を無料で差せる。",
+        "passivePriority": "クリティカル率ロールの付いた良いスピアができたら、クリティカルのノードを全て取る。偽装の仮面（Subterfuge Mask）は良いES兜ができてから取る（原典）。",
+        "gearPriority": "エリアLv78で落ちるアコヤのスピア（Akoyan Spear）を拾い、変換・増強のオーブで良いモッドを2つ作り、エッセンスと保存された顎骨（Preserved Jawbone）で4モッド化する。セプターは聖なる炎（Sacred Flame）が大きな伸び。ウートレドの杯（Uhtred's Chalice）とマナレムナントでマナを溢れさせる。",
+        "caution": "クリティカルは武器の質が前提。良いスピアがないうちはクリティカルノードへ寄せない。",
+        "transitionCondition": "アコヤのスピアのクラフトが進み、クリティカル構成が安定する。"
+      },
+      {
+        "label": "Endgame完成（Aspirational）",
+        "mainSkill": "グレイシャルランス。移動しながら撃ち続ける高速周回",
+        "supports": "通過儀礼（Rite of Passage）にオオカミの魂（Spirit of the Wolf）を合わせると全ダメージでアーマーを破壊でき、ヘラルドオブアイス（Herald of Ice）とアーマー爆発（Armour Explosion）を拡散できる。斧の一振り（The Fall of the Axe）で鈍化防止とオンスロートを得る。",
+        "passivePriority": "原典のAspirationalツリー。雹（Hail）はバラージとオルロスの信念が前提。制御された変質（Controlled Metamorphosis）、タイムロストエメラルド（Time-Lost Emerald）、虚空より来たる（From Nothing）でクリムゾンアサルト（Crimson Assault）を取る。ラキアタの流れ（Rakiata's Flow）を使う前提で元素貫通への投資は全て外す。能力値の余りは筋力（ライフ）へ回す。",
+        "gearPriority": "ベルトはメイジブラッド（Mageblood）で真価を発揮し、ヘッドハンター（Headhunter）も使える。移動速度・攻撃速度・回避を大きく積む。",
+        "caution": "Aspirationalツリーは複数のジュエルが前提で、耐性が下がる制御された変質も含む。装備が揃う前に寄せない。",
+        "transitionCondition": "完成後はスピア、チャージ生成、防御のボトルネックを1項目ずつ改善する。"
+      }
+    ],
+    "mainSkill": "グレイシャルランス",
+    "path": "/builds/ranger/glacial-lance-deadeye/",
+    "contentRevision": "f30c845e0bb6273b"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "ツイスター・ジェムリング",
     "class": "Mercenary",
