@@ -48,5 +48,5 @@ for (const entry of sitemap.getElementsByTagName('url')) {
   }
   pages++;
 }
-assert.equal(images, 34, 'unexpected diagram metadata coverage');
+assert.equal(images, 35, 'unexpected diagram metadata coverage');
 console.log(`PASS: ${pages} pages, ${images} displayed ImageObjects, rights links, sitemap alignment, alt and dimensions`);

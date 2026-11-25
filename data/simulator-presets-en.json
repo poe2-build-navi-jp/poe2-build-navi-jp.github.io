@@ -201,6 +201,76 @@
     "contentRevision": "496eda3444cf3ae8"
   },
   {
+    "id": "monk-infernal-legion-chayula",
+    "name": "Infernal Legion Acolyte of Chayula",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Acolyte of Chayula",
+    "ascendancyName": "Acolyte of Chayula",
+    "skills": [
+      "Companion: {0}"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-13 (Early Act 1: Quarterstaff)",
+        "mainSkill": "Progress with a high-damage quarterstaff. Shatter the ice crystals of Frozen Locus with the tip of Glacial Cascade, covering both packs and single targets.",
+        "supports": "Supplement damage with runes such as Lesser Glacial Rune on the quarterstaff (per the source guide).",
+        "passivePriority": "Build the foundation toward Concussive Attack. Ideally take Hollow Palm Technique by the Count Geonor fight in Act 1 (per the source guide).",
+        "gearPriority": "A quarterstaff with high physical and cold damage. Other slots prioritize maximum life and resistances. Evasion or evasion/ES bases are preferred, but the modifiers matter more than the base (per the source guide).",
+        "caution": "The source guide calls early Act 1 on Monk a rough stretch. Do not overextend until Ice Strike is unlocked.",
+        "transitionCondition": "Ice Strike is unlocked at level 14."
+      },
+      {
+        "label": "Levels 14 to End of Act 4 (Ice Strike Leveling)",
+        "mainSkill": "Ice Strike is the main skill. Detonate frozen enemies with Herald of Ice and dive into large packs with Shattering Palm. For bosses, place a Tempest Bell and run the combo.",
+        "supports": "Embitter matters: it converts the extra chaos damage of Into the Breach to cold so you can freeze (per the source guide). Cannibalism I and Clarity I support life and mana recovery. Socketing Freezing Mark and Elemental Weakness into Hand of Chayula lets you apply both with one button (per the source guide).",
+        "passivePriority": "Taking Hollow Palm Technique lets you fight without a weapon, freeing you from melee weapon upgrades. Remnant Attraction makes collecting Flames of Chayula easier. The first ascendancy point is Waking Dream (per the source guide).",
+        "gearPriority": "Gloves and an amulet with +levels to melee skills are the core of your damage. Balance life and resistances. If you spot minion gear for after the switch during the campaign (a sceptre, or a helmet with +levels to all minion skills), set it aside (per the source guide).",
+        "caution": "This stage is not a minion setup yet. To secure the respec cost (roughly 39,000-40,000 gold), pick up and sell rares, and do not buy expensive rares from vendors (per the source guide). Weak defences early on are a listed downside of the source guide.",
+        "transitionCondition": "Finish Act 4 and enter the Interludes. Level 56+ and 18+ weapon set points are the benchmarks for the switch."
+      },
+      {
+        "label": "Around Level 56: The Switch (Capture Companions and Respec)",
+        "mainSkill": "Capture both companions first, then respec your passives and switch to the Infernal Legion II setup. The main companion is a Plague Harvester with the 'All Damage Ignites' modifier; the support companion is a Diretusk Boar with 'All Damage Shocks' (per the source guide).",
+        "supports": "Cut Infernal Legion II with a level 5 Uncut Support Gem. Do not use Infernal Legion I: it lacks fire resistance and radius (stated in the source guide). Put Selfless Remnants on Into the Breach to share the purple flame effect with allies in your presence. After taking Gigantic Following, swap Hulking Minions for Searing Flame II (per the source guide).",
+        "passivePriority": "The respec costs about 40,000 gold. Vile Mending, Living Death, minion fire resistance and Unspoken Bond are mandatory nodes so your companion does not destroy itself with Infernal Legion (per the source guide). Long Distance Relationship and Bond of the Ape extend your companion's area of effect. Ascendancy order: Waking Dream, then Choice of Power, then Chayula's Gift (per the source guide).",
+        "gearPriority": "A sceptre, helmet and amulet with +levels to all minion skills. A Shrine Sceptre is the ideal base, but the modifiers matter more than the base (per the source guide).",
+        "caution": "Capture the companions before respeccing. The Plague Harvester appears near Khari Crossing in the Interludes, and the Diretusk Boar at the Troubled Camp in the Infested Barrens (Act 3); both are fixed spawns whose modifiers can be rerolled with checkpoint respawns (source guide FAQ). Be careful not to kill the rare beasts.",
+        "transitionCondition": "Both companions are captured, the respec is done, and you can enter maps with Infernal Legion II."
+      },
+      {
+        "label": "Early Mapping",
+        "mainSkill": "Clear maps with your companion's surrounding DoT. Enter each zone in weapon set II (the Into the Breach snapshot) and apply exposure with Frost Bomb. For bosses, let your companion apply the ignite, then weapon-swap and aggravate the ignite with Spearfield (per the source guide).",
+        "supports": "With a Shrine Sceptre, spirit-reservation supports such as Upwelling II are effectively free. Put leftover spirit into Ghost Dance. Enable Withering Presence after you obtain Blackflame (per the source guide).",
+        "passivePriority": "At this stage, Mind Over Matter lets you use mana as a mitigation pool (per the source guide). On jewels, prioritize increased presence area of effect, aiming for a radius of about 7 metres (per the source guide).",
+        "gearPriority": "Get a +1-roll Trenchtimbre early and replace your buckler. Using Blackflame requires +92 or more additional spirit from gear. Saitha's Spear is cheap and powerful (per the source guide).",
+        "caution": "If your companion leaves your presence, your maximum Energy Shield visibly drops. If it happens often, add more presence area of effect jewels (per the source guide).",
+        "transitionCondition": "You reach the red-map tier and can aim for a +2-roll Trenchtimbre and Genesis Tree minion gear."
+      },
+      {
+        "label": "Red Maps (Switching to the Wasp Setup)",
+        "mainSkill": "Switch to the wasp setup built around Xoph's Pyre. The main companions are a Plague Harvester with Shroud Walker and a Gargantuan Wasp, teleporting to enemies while spreading area ignites. Swap the other companion to Catha's Brilliance (per the source guide).",
+        "supports": "Scouring Flame is a strict upgrade over Searing Flame II. Skeletal Cleric helps your companions survive. Charged Mark and Sniper's Mark create shocked ground (per the source guide). Convalescence is insurance that starts Energy Shield recharge immediately when you take damage.",
+        "passivePriority": "The top jewel priority is 'Minions have increased area of effect' (it only rolls on ruby and diamond jewels). Next are presence area of effect and minion maximum life (per the source guide).",
+        "gearPriority": "Upgrade Trenchtimbre to a +2 roll. Move your belt and rings to Genesis Tree minion pieces; minion area of effect on the belt matters most. Replace Blackflame with minion rings over time (per the source guide).",
+        "caution": "Catha's Brilliance increases your companion's spirit cost. If spirit is short, take additional companion reservation nodes; if it is still short, go back to Infernal Legion II (per the source guide). The Elephant Tortoise setup deals about 80% more damage but requires steering the AI (holding Direct Minions), so the source guide treats it as an alternative.",
+        "transitionCondition": "Your Energy Shield reaches about 6,000 and you can switch to Chaos Inoculation."
+      },
+      {
+        "label": "Endgame Complete (Chaos Inoculation Setup)",
+        "mainSkill": "After taking Chaos Inoculation, run with about 10,000 Energy Shield and over 50% evasion. Your companion's area ignite provides constant DPS while you focus on Frost Bomb and keeping debuffs up (per the source guide).",
+        "supports": "At this stage the sceptre is assumed to be a Shrine Sceptre with Purity of Fire. If you do not have one, take Living Death on the passive tree (per the source guide).",
+        "passivePriority": "Add notables with jewels such as Megalomaniac and Prism of Belief. Defence and companion life nodes scale Energy Shield, evasion and damage at the same time (per the source guide).",
+        "gearPriority": "Maximize Energy Shield on your helmet, body armour and focus (the focus should have +2 to level of all minion skills). Sacrificial Regalia, Jiquani's Thesis and Mageblood are final-form candidates. Attach Transcendent Limbs only after you finish rolling your ideal companion (per the source guide).",
+        "caution": "A large part of your Energy Shield and evasion depends on your companion staying in your presence (per the source guide). The fourth ascendancy notable has nothing useful, so there is no rush to complete the fourth ascendancy (stated in the source guide).",
+        "transitionCondition": "Once complete, keep improving through companion modifier rolling (such as Shroud Walker plus All Damage Ignites) and jewel upgrades."
+      }
+    ],
+    "mainSkill": "A companion captured with Tame Beast (Plague Harvester) wearing Infernal Legion II, constantly igniting enemies around it with an area DoT. The purple flames of Into the Breach are shared with the companion through Selfless Remnants, scaling the ignite with extra chaos damage.",
+    "path": "/builds/monk/infernal-legion-chayula/",
+    "contentRevision": "07634eb3fc08cce0"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",

@@ -201,6 +201,76 @@
     "contentRevision": "496eda3444cf3ae8"
   },
   {
+    "id": "monk-infernal-legion-chayula",
+    "name": "インファーナルリージョン・チャユラの門弟",
+    "class": "Monk",
+    "className": "モンク",
+    "ascendancy": "Acolyte of Chayula",
+    "ascendancyName": "チャユラの門弟",
+    "skills": [
+      "Companion: {0}"
+    ],
+    "stages": [
+      {
+        "label": "Lv1〜13（Act 1序盤：クォータースタッフ）",
+        "mainSkill": "ダメージの高いクォータースタッフで進める。フローズンローカス（Frozen Locus）の氷結晶をグレイシャルカスケード（Glacial Cascade）の先端で割って、集団処理と単体を兼ねる",
+        "supports": "クォータースタッフには氷河のレッサールーン（Lesser Glacial Rune）などのルーンでダメージを補う方針（原典）。",
+        "passivePriority": "衝撃の一撃（Concussive Attack）方面への土台作り。ホロウパームテクニック（Hollow Palm Technique）はAct 1のカウンテ・ゲオナー戦までに取るのが理想（原典）。",
+        "gearPriority": "物理／冷気ダメージの高いクォータースタッフ。残りの部位は最大ライフと耐性優先。回避または回避／ESベースが望ましいが、ベースよりModの内容を優先する（原典）。",
+        "caution": "モンクのAct 1序盤は厳しい区間と原典が述べる。アイスストライク（Ice Strike）解禁までは無理をしない。",
+        "transitionCondition": "Lv14でアイスストライク（Ice Strike）が解禁される。"
+      },
+      {
+        "label": "Lv14〜Act 4終了（アイスストライク育成）",
+        "mainSkill": "アイスストライク（Ice Strike）が主力。ヘラルドオブアイス（Herald of Ice）で凍結した敵を爆発させ、シャタリングパーム（Shattering Palm）で大きな集団に突入する。ボスはテンペストベル（Tempest Bell）を置いてコンボを回す",
+        "supports": "冷気獲得（Embitter）でブリーチ侵入（Into the Breach）の追加カオスダメージを冷気に変換し、凍結を取れるようにするのが重要（原典）。カニバリズム I（Cannibalism I）とクラリティ I（Clarity I）でライフ／マナ回復を補う。チャユラの手（Hand of Chayula）に凍結の呪印（Freezing Mark）とエレメンタルウィークネス（Elemental Weakness）を載せると、ボタン1つで両方入れられる（原典）。",
+        "passivePriority": "ホロウパームテクニック（Hollow Palm Technique）を取ると武器なしで戦えるようになり、近接武器探しから解放される。レムナント吸引（Remnant Attraction）でチャユラの炎の回収が楽になる。アセンダンシー1点目は目覚めた夢（Waking Dream）（原典）。",
+        "gearPriority": "手袋とアミュレットの「近接スキルレベル+」が火力の主軸。ライフと耐性を両立させる。キャンペーン中から、移行後用のミニオン装備（セプター、兜の全ミニオンスキルレベル）を見かけたら確保しておく（原典）。",
+        "caution": "この段階はまだミニオン構成ではない。リスペック費用（約39,000〜40,000ゴールド）を確保するため、レア品は拾って売り、商店で高額なレア品を買わない（原典）。序盤の防御は脆いのが原典の短所。",
+        "transitionCondition": "Act 4を終えて幕間（Interlude）に入る。Lv56以上・武器セットポイント18以上が移行の目安になる。"
+      },
+      {
+        "label": "Lv56前後〜移行（相棒捕獲とリスペック）",
+        "mainSkill": "相棒2体を先に捕獲してからパッシブを振り直し、インファーナルリージョン II（Infernal Legion II）構成へ移行する。主力の相棒は疫病の摘出者（Plague Harvester）で「全ダメージが発火」のMod付き、支援の相棒はダイアタスク・ボア（Diretusk Boar）で「全ダメージが感電」のMod付き（原典）",
+        "supports": "インファーナルリージョン IIはLv5のアンカットサポートジェムで切る。インファーナルリージョン Iは火耐性と範囲が足りないため使わない（原典明記）。ブリーチ侵入（Into the Breach）に献身のレムナント（Selfless Remnants）を付け、紫の炎の効果をプレゼンス内の味方へ移す。巨大な一団（Gigantic Following）を取った後は、ミニオン巨大化（Hulking Minions）を灼熱の炎 II（Searing Flame II）に替える（原典）。",
+        "passivePriority": "リスペック費用は約40,000ゴールド。邪悪な修復（Vile Mending）、生ける死（Living Death）、ミニオン火耐性、語らぬ絆（Unspoken Bond）は、インファーナルリージョンで相棒が自滅しないための必須ノード（原典）。遠距離の絆（Long Distance Relationship）とサルの絆（Bond of the Ape）で相棒の効果範囲を伸ばす。アセンダンシーは目覚めた夢（Waking Dream）→選択の力（Choice of Power）→チャユラの贈り物（Chayula's Gift）の順（原典）。",
+        "gearPriority": "全ミニオンスキルレベル付きのセプター・兜・アミュレット。神殿のセプター（Shrine Sceptre）が最適ベースだが、Modの内容の方がベースより重要（原典）。",
+        "caution": "捕獲はリスペックの前に済ませる。疫病の摘出者は幕間のカーリ・クロッシング（Khari Crossing）付近、ダイアタスク・ボアはAct 3・害虫の荒れ地（Infested Barrens）のTroubled Campに固定出現し、チェックポイントのリスポーンでModを厳選できる（原典FAQ）。レア獣を倒してしまわないよう注意する。",
+        "transitionCondition": "相棒2体の捕獲とリスペックが終わり、インファーナルリージョン IIでマップに入れる。"
+      },
+      {
+        "label": "Early Mapping",
+        "mainSkill": "相棒の周囲DoTでマップを処理する。本人はゾーン入場時に武器セットII（ブリーチ侵入のスナップショット）で入り、フロストボム（Frost Bomb）で露出を入れる。ボスは相棒に発火を付けさせてから武器スワップし、スピアフィールド（Spearfield）で発火を重度化（Aggravate）する（原典）",
+        "supports": "神殿のセプター（Shrine Sceptre）なら溢れる魔力の加護 II（Upwelling II）などのスピリット予約サポートを実質無料で使える。余ったスピリットにはゴーストダンス（Ghost Dance）。衰弱の存在感（Withering Presence）はブラックフレイム（Blackflame）を入手してから有効化する（原典）。",
+        "passivePriority": "マインドオーバーマター（Mind Over Matter）でマナを軽減プールとして使う段階（原典）。ジュエルではプレゼンス範囲拡大を優先し、半径約7mを目安にする（原典）。",
+        "gearPriority": "トレンチティンバー（Trenchtimbre）の+1ロールを早めに入手してバックラーを替える。ブラックフレイム（Blackflame）の使用には装備からの追加スピリット+92以上が条件。サイザの槍（Saitha's Spear）は安価で強力（原典）。",
+        "caution": "相棒がプレゼンスの外に出ると最大ESが目に見えて下がる。頻発するならプレゼンス範囲拡大のジュエルを増やす（原典）。",
+        "transitionCondition": "レッドマップ帯に入り、トレンチティンバーの+2ロールとジェネシスツリー産のミニオン装備を狙える。"
+      },
+      {
+        "label": "Red Maps（ワスプ構成への移行）",
+        "mainSkill": "ゾフの火葬（Xoph's Pyre）を前提にワスプ構成へ移行する。主力はシュラウドウォーカー（Shroud Walker）付きの疫病の摘出者（Plague Harvester）とガルガンチュアワスプ（Gargantuan Wasp）で、敵へ瞬間移動しながら範囲発火を撒く。もう1体の相棒にはキャサの輝き（Catha's Brilliance）を付け替える（原典）",
+        "supports": "スカリングフレイム（Scouring Flame）は灼熱の炎 II（Searing Flame II）の上位互換。スケルトンクレリック（Skeletal Cleric）で相棒の生存を補助する。電荷の呪印（Charged Mark）とスナイパーの呪印（Sniper's Mark）で感電の地面を作る（原典）。コンヴァレッセンス（Convalescence）は被ダメージ時にESリチャージを即時開始する保険。",
+        "passivePriority": "ジュエルの最優先は「ミニオンの効果範囲拡大」（ルビーとダイヤモンドにのみ付く）。次にプレゼンス範囲拡大、ミニオン最大ライフ（原典）。",
+        "gearPriority": "トレンチティンバー（Trenchtimbre）を+2ロールへ更新する。ベルトと指輪はジェネシスツリー産のミニオン物へ替え、ベルトの「ミニオン範囲拡大」が最重要。ブラックフレイム（Blackflame）はミニオン指輪へ順次置き換える（原典）。",
+        "caution": "キャサの輝き（Catha's Brilliance）は相棒のスピリット消費が増える。足りなければ追加の相棒予約ノードを取り、それでも足りなければインファーナルリージョン IIに戻す（原典）。ゾウガメ（Elephant Tortoise）構成は約80%高火力だが、AIの誘導（Direct Minionsの押し続け）が必要で、原典では代替案扱い。",
+        "transitionCondition": "ESが約6,000に届き、カオスイノキュレーション（Chaos Inoculation）へ移行できる。"
+      },
+      {
+        "label": "Endgame完成（カオスイノキュレーション型）",
+        "mainSkill": "カオスイノキュレーション（Chaos Inoculation）取得後、ES約10,000と回避50%超で回す。相棒の範囲発火が常時DPSとなり、本人はフロストボム（Frost Bomb）とデバフ維持に徹する（原典）",
+        "supports": "セプターはこの段階ではピュリティオブファイヤー（Purity of Fire）付きの神殿のセプター（Shrine Sceptre）が前提になる。持てなければ生ける死（Living Death）をパッシブで取る（原典）。",
+        "passivePriority": "メガロマニアック（Megalomaniac）や信仰のプリズム（Prism of Belief）のジュエルでノータブルを足す。防御と相棒ライフのノードは、ES・回避・火力を同時に伸ばす（原典）。",
+        "gearPriority": "兜・胴・フォーカスのES最大化（フォーカスは全ミニオンスキルレベル+2）。生贄のレガリア（Sacrificial Regalia）、ジクアニの命題（Jiquani's Thesis）、メイジブラッド（Mageblood）が最終形の候補。理想の相棒の厳選が終わってからTranscendent Limbsを付ける（原典）。",
+        "caution": "ESと回避の大きな部分は、相棒がプレゼンス内にいることに依存する（原典）。4つ目のアセンダンシーノータブルには有用なものがなく、第4アセンダンシーは急がなくてよい（原典明記）。",
+        "transitionCondition": "完成後は相棒のMod厳選（シュラウドウォーカー＋全ダメージが発火など）とジュエルの更新で伸ばす。"
+      }
+    ],
+    "mainSkill": "テイムビーストで捕獲した相棒（疫病の摘出者）にインファーナルリージョン IIを付け、周囲の敵を常時発火させる範囲DoT構成。ブリーチ侵入の紫の炎を献身のレムナントで相棒に移し、追加カオスダメージで発火を伸ばす",
+    "path": "/builds/monk/infernal-legion-chayula/",
+    "contentRevision": "07634eb3fc08cce0"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "ツイスター・ジェムリング",
     "class": "Mercenary",

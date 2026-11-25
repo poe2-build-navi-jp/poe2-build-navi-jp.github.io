@@ -1,21 +1,21 @@
 {
  "/": {
-  "hash": "9f1ca877433033d7",
+  "hash": "da4974080165124c",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/simulator/": {
-  "hash": "87d7482697142fea",
+  "hash": "3a372172897ef4d2",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/en/simulator/": {
-  "hash": "a6072826c0d1e1d5",
+  "hash": "98fa156a8bcc4566",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "ea380f8da900fd4d",
+  "hash": "0b1789475b995721",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -55,7 +55,7 @@
   "hashVersion": 2
  },
  "/equipment/the-taming/": {
-  "hash": "fcbf69210b7b9632",
+  "hash": "0be30da37246eff3",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -80,7 +80,7 @@
   "hashVersion": 2
  },
  "/skills/essence-drain/": {
-  "hash": "e442577d01e1a5e4",
+  "hash": "e63f1fde73e4cd3a",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -155,8 +155,8 @@
   "hashVersion": 2
  },
  "/equipment/unset-ring/": {
-  "hash": "73f5449a71cbfae5",
-  "date": "2026-11-24",
+  "hash": "622cd5bb1739c250",
+  "date": "2026-11-25",
   "hashVersion": 2
  },
  "/equipment/runeseekers-call/": {
@@ -180,17 +180,17 @@
   "hashVersion": 2
  },
  "/builds/": {
-  "hash": "e37c074bd94fa6cf",
+  "hash": "87dc9c29189cf3d9",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/classes/": {
-  "hash": "a29823136bc5b0b2",
+  "hash": "bfae10b50f5da064",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/leveling/": {
-  "hash": "7b6af3e6228deab6",
+  "hash": "536f9e4f870fe3d7",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -200,7 +200,7 @@
   "hashVersion": 2
  },
  "/class-check/": {
-  "hash": "fad65e29f506ebac",
+  "hash": "e8b65247ed98560c",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -210,12 +210,12 @@
   "hashVersion": 2
  },
  "/beginner-builds/": {
-  "hash": "422153d7d193f45c",
+  "hash": "ec440db3c2664172",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "988ea8885720b8b7",
+  "hash": "d6c449e1040673bb",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -230,17 +230,17 @@
   "hashVersion": 2
  },
  "/league-starter/": {
-  "hash": "68ccfc60701ba742",
+  "hash": "7beb49cab211cd36",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/best-builds/": {
-  "hash": "72ad1a354fe45de3",
+  "hash": "0e7e108109b8aef4",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/poe2-1-0/": {
-  "hash": "96f9ceedb291ec53",
+  "hash": "70b01965f15c4487",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -260,7 +260,7 @@
   "hashVersion": 2
  },
  "/rating-criteria/": {
-  "hash": "9c5922ae86ae9793",
+  "hash": "32c1188486a93783",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -275,12 +275,12 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "8547357e1f378def",
+  "hash": "7df4b5a726fb1e1b",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/classes/monk/": {
-  "hash": "10fb7b97ff887af1",
+  "hash": "3cefc0eccc559bcd",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -320,17 +320,22 @@
   "hashVersion": 2
  },
  "/builds/monk/whirling-assault/": {
-  "hash": "66157b0bb1d9d05d",
+  "hash": "22d6bc7b0fa12c3f",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/builds/monk/falling-thunder/": {
-  "hash": "6534f3e6c049295e",
+  "hash": "59b443a5b70c1364",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/builds/monk/hollow-focus-storm-wave/": {
-  "hash": "09463f735e63b409",
+  "hash": "60a8dfacef254daa",
+  "date": "2026-11-25",
+  "hashVersion": 2
+ },
+ "/builds/monk/infernal-legion-chayula/": {
+  "hash": "e39c2dc31fef83ac",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -350,7 +355,7 @@
   "hashVersion": 2
  },
  "/builds/huntress/companion/": {
-  "hash": "cc46f8eb7b7c5f09",
+  "hash": "5aa5358574cf28a4",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -380,7 +385,7 @@
   "hashVersion": 2
  },
  "/builds/witch/ed-contagion-lich/": {
-  "hash": "d976fe9f446e7467",
+  "hash": "8f71e9665a5dc670",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -410,27 +415,27 @@
   "hashVersion": 2
  },
  "/guides/passive-tree/": {
-  "hash": "a485605ebe97d884",
+  "hash": "74bc8a2a401c6616",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/equipment-basics/": {
-  "hash": "5d67c8167174628e",
-  "date": "2026-11-15",
+  "hash": "0bf84d044a6de0f5",
+  "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/resistance/": {
-  "hash": "c96b81bbd6e64e3d",
+  "hash": "a57cd5afeae5bf19",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/increase-damage/": {
-  "hash": "f6088fc2ca6601e6",
+  "hash": "f25688e8113f41d9",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/why-i-die/": {
-  "hash": "fb836117b1d62a9e",
+  "hash": "98951d5b66e6a1cc",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -505,8 +510,8 @@
   "hashVersion": 2
  },
  "/guides/atlas-passive-trees/": {
-  "hash": "d7489a496f3e6e39",
-  "date": "2026-11-24",
+  "hash": "f1e3b2b3cb291331",
+  "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/ascendancy-trials/": {
@@ -535,7 +540,7 @@
   "hashVersion": 2
  },
  "/guides/unique-gear/": {
-  "hash": "f16a1a40f0380731",
+  "hash": "7e4fc58477562162",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -580,7 +585,7 @@
   "hashVersion": 2
  },
  "/guides/build-gear-buying-order/": {
-  "hash": "ffb1e990f2be2838",
+  "hash": "04a6356015bac4d6",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -645,7 +650,7 @@
   "hashVersion": 2
  },
  "/guides/build-tier-list/": {
-  "hash": "6dc4b750f9d28030",
+  "hash": "4b8fe29c831cfd3f",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -660,12 +665,12 @@
   "hashVersion": 2
  },
  "/dictionary/build/": {
-  "hash": "ff1fbf3c852bf0c5",
+  "hash": "f01cd78705c95725",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/dictionary/dps/": {
-  "hash": "88d963fc014b6d1f",
+  "hash": "7956ef58f51fc3d1",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -675,22 +680,22 @@
   "hashVersion": 2
  },
  "/dictionary/support-gem/": {
-  "hash": "54c9ecbce2716fbc",
+  "hash": "a2b2422383447ef6",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/dictionary/passive-tree/": {
-  "hash": "c30e127be048dd30",
+  "hash": "845d4d8a731949b8",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/dictionary/resistance/": {
-  "hash": "71e7c8e83cb52cb4",
+  "hash": "0df4b99e52f76a2d",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/dictionary/mapping/": {
-  "hash": "59633b4b4727a944",
+  "hash": "61a13ac0a07d64ad",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -710,12 +715,12 @@
   "hashVersion": 2
  },
  "/dictionary/ascendancy/": {
-  "hash": "77e10fc5774a0b31",
+  "hash": "fa0ee0444f8f5cda",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/dictionary/spirit/": {
-  "hash": "354f451a20b47fe0",
+  "hash": "a743eceb483846c8",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -725,17 +730,17 @@
   "hashVersion": 2
  },
  "/guides/poe2-0-5-5-builds/": {
-  "hash": "c77e243523188ac2",
+  "hash": "629997590314672b",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/forbidden-rites-beginner/": {
-  "hash": "1ad61f20a4622e63",
+  "hash": "a7a5b4b0fd82e226",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/gear-upgrade/": {
-  "hash": "ec4d7951d6a062aa",
+  "hash": "3e51b0a7c47d9b15",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -745,12 +750,12 @@
   "hashVersion": 2
  },
  "/guides/cant-beat-boss/": {
-  "hash": "34302418e76f24e3",
+  "hash": "2dce6b3e73487c59",
   "date": "2026-11-25",
   "hashVersion": 2
  },
  "/guides/slow-mapping/": {
-  "hash": "761020c69d226aaf",
+  "hash": "576bfce9ed4c5d4f",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -790,7 +795,7 @@
   "hashVersion": 2
  },
  "/poe2-1-0/build-status/": {
-  "hash": "8d4235c89e4cd57e",
+  "hash": "0a799e4b4a7aa270",
   "date": "2026-11-25",
   "hashVersion": 2
  },
@@ -825,7 +830,7 @@
   "hashVersion": 2
  },
  "/poe2-1-0/balance-changes/": {
-  "hash": "ed1e0f1fe12e35a6",
+  "hash": "efb06e21c5cc90fe",
   "date": "2026-11-25",
   "hashVersion": 2
  },

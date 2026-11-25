@@ -353,7 +353,7 @@ Corrupted Precursor Beacon（コラプト状態の先駆者のビーコン）で
 サイトマップ	Sitemap (Japanese)
 MITライセンス	MIT license
 Game data © Grinding Gear Games. 非公式ツールです。	Game data © Grinding Gear Games. Unofficial tool.
-PoE2の掲載16ビルドから育成方針を選び、装備・スキル・パッシブをブラウザで編集。変更前後のDPS・ライフ・耐性を比較し、構成の自動保存と保存ファイルの読み書きができます。	Plan a Path of Exile 2 build in your browser. Edit gear, gems and the passive tree, compare estimated DPS, Life and resistances, and save or share your setup.
+PoE2の掲載17ビルドから育成方針を選び、装備・スキル・パッシブをブラウザで編集。変更前後のDPS・ライフ・耐性を比較し、構成の自動保存と保存ファイルの読み書きができます。	Plan a Path of Exile 2 build in your browser. Edit gear, gems and the passive tree, compare estimated DPS, Life and resistances, and save or share your setup.
 ビルドを選んで、自分の装備・ジェム・パッシブを試す。	Choose a PoE2 build and experiment with your gear, gems and passive tree.
 POE2ビルドナビの更新情報	POE2 Build Navi updates (Japanese)
 POE2ビルドナビ ホーム	POE2 Build Navi home (Japanese)
@@ -404,3 +404,7 @@ POE2ビルドナビ ホーム	POE2 Build Navi home (Japanese)
 （2026-11-11公開）	(published November 11, 2026)
 0.5.5fで一部の隠れ家（Shoreline Hideoutなど）が再びロックされる不具合を修正。コラプト状態の先駆者のビーコンの報酬が失敗する不具合と、対象マップの光の柱が表示されない表示の不具合を修正。	Fixed an issue introduced in 0.5.5f where some unlocked hideouts, such as Shoreline Hideout, could become locked again. Fixed Corrupted Precursor Beacon item rewards failing, and light beams on affected maps sometimes not rendering.
 報酬・表示に関する修正。ビルド評価を変更する根拠としては扱いません。	Fixes to rewards and visuals. Not treated as grounds for changing build ratings.
+
+インファーナルリージョン・チャユラの門弟	Infernal Legion Acolyte of Chayula
+テイムビーストで捕獲した相棒（疫病の摘出者）にインファーナルリージョン IIを付け、周囲の敵を常時発火させる範囲DoT構成。ブリーチ侵入の紫の炎を献身のレムナントで相棒に移し、追加カオスダメージで発火を伸ばす	A companion captured with Tame Beast (Plague Harvester) wearing Infernal Legion II, constantly igniting enemies around it with an area DoT. The purple flames of Into the Breach are shared with the companion through Selfless Remnants, scaling the ignite with extra chaos damage.
+モンク / チャユラの門弟	Monk / Acolyte of Chayula
