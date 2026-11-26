@@ -77,7 +77,7 @@ assert((beginnerLanding.match(/class="purpose-card"/g) || []).length === 5, "beg
 assert((beginnerLanding.match(/class="discovery-card"/g) || []).length === 6, "beginner page must retain six featured choices");
 assert(beginnerLanding.indexOf('id="purpose-picks"') < beginnerLanding.indexOf('id="featured-builds"'), "beginner page must show quick choices before detailed comparison");
 assert(index.includes("PoE2 0.5.5 おすすめビルド｜職業別・初心者向け") && index.includes("現在Lvを入力して"), "homepage search intent/action message missing");
-assert(index.includes(shownTitle055("PoE2おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド")), "homepage CTR-focused title missing");
+assert(index.includes(shownTitle055("PoE2攻略・おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド")), "homepage CTR-focused title missing");
 assert(index.includes("PoE2の日本語ビルドガイド。召喚・弓・近接など、好きな戦い方で初心者向けビルドを比較。"), "homepage Japanese build-site description missing");
 const homeRoutes = index.match(/<p id="home-build-routes">([\s\S]*?)<\/p>/)?.[1] || "";
 assert((index.match(/id="home-build-routes"/g) || []).length === 1, "homepage comparison routes must be present once after regeneration");

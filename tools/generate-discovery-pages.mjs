@@ -74,9 +74,9 @@ let home = restoreMobileSummary(await readFile(resolve(root, "index.html"), "utf
 home = home.replace(/<section id="featured-builds"[\s\S]*?<\/section>/g, "");
 home = home.replace(/<!-- poe2-about-hub:start -->[\s\S]*?<!-- poe2-about-hub:end -->/g, "");
 home = home
-  .replace(/<title>.*?<\/title>/, "<title>PoE2おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド</title>")
+  .replace(/<title>.*?<\/title>/, "<title>PoE2攻略・おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド</title>")
   .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="PoE2の日本語ビルドガイド。召喚・弓・近接など、好きな戦い方で初心者向けビルドを比較。現在Lvを入れると、次に使うスキル・装備・パッシブが3つにまとまります。">')
-  .replace(/<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="PoE2おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド">')
+  .replace(/<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="PoE2攻略・おすすめビルド（0.5.5）｜職業別比較・Lv別育成ガイド">')
   .replace(/<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="PoE2の日本語ビルドガイド。召喚・弓・近接など、好きな戦い方で初心者向けビルドを比較。現在Lvを入れると、次に使うスキル・装備・パッシブが3つにまとまります。">')
   .replace(/<section class="hero(?: hero-focused)?"[\s\S]*?<\/section>\s*(?:<section id="purpose-picks"[\s\S]*?<\/section>\s*)?(?:<section id="featured-builds"[\s\S]*?<\/section>\s*)?<section id="choose-class"/, `<section class="hero hero-focused" aria-labelledby="hero-title"><div><p class="eyebrow">PATH OF EXILE 2 / JAPANESE BUILD GUIDE</p><h1 id="hero-title">PoE2 0.5.5 おすすめビルド｜職業別・初心者向け</h1><p class="lead">目的別にビルドを選び、現在Lvを入力すると、スキル・装備・パッシブの「今やること」を3つ表示します。</p><div class="journey-steps" aria-label="使い方"><span><b>1</b>おすすめを選ぶ</span><span><b>2</b>ビルドを開く</span><span><b>3</b>現在Lvを入力</span><span><b>4</b>今やること3つ</span></div><div class="hero-actions"><a class="button" href="/beginner-builds/">初心者おすすめビルド</a><a class="button-secondary" href="#choose-class">職業から選ぶ</a></div><div class="status-note">対応環境 <span id="site-version">${esc(discovery.patchVersion)}</span>・<a href="${esc(discovery.latestPatchSource)}" target="_blank" rel="noopener noreferrer">最新確認 ${esc(discovery.latestPatch)}</a>・最終確認 <span id="last-updated">${esc(discovery.latestPatchCheckedAt)}</span></div></div></section>${beginnerEntry}<section id="choose-class"`)
   .replace("<h2 id=\"classes-title\">まず職業を選んでください</h2>", "<h2 id=\"classes-title\">職業から探す</h2>")

@@ -13,7 +13,9 @@ const read=p=>readFile(resolve(root,p),'utf8');
 const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const terms=JSON.parse(await read('data/dictionary.json'));
 const sitemap=await read('sitemap.xml');
-const paths=[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map(m=>m[1])
+// This runs before generate-sitemap, so a guide added in this build is not in sitemap.xml yet: take guides from the data too.
+const dataGuides=JSON.parse(await read('data/strategy-guides.json')).map(g=>`guides/${g.slug}/`);
+const paths=[...new Set([...[...sitemap.matchAll(/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/([^<]*)<\/loc>/g)].map(m=>m[1]),...dataGuides])]
  .filter(p=>/^(builds\/[^/]+\/[^/]+|classes\/[^/]+|guides\/[^/]+|dictionary\/[^/]+|what-is-poe2)\/$/.test(p));
 // Words that mark each term in running text (ASCII ones must stand alone).
 const ALIASES={build:['ビルド'],dps:['DPS'],'skill-gem':['スキルジェム'],'support-gem':['サポートジェム','サポート(?!ー|パック)'],'passive-tree':['パッシブ'],resistance:['耐性'],mapping:['Mapping','マッピング'],endgame:['Endgame','エンドゲーム'],'league-starter':['リーグスターター'],ssf:['SSF'],ascendancy:['アセンダンシー'],spirit:['Spirit','スピリット'],'energy-shield':['エナジーシールド','ES']};

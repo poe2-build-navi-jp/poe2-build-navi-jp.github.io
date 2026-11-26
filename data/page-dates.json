@@ -1,7 +1,7 @@
 {
  "/": {
-  "hash": "6af06fbbe7ee134d",
-  "date": "2026-11-24",
+  "hash": "a3f40380cff0f84f",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/simulator/": {
@@ -285,8 +285,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "ed8fcfd887e50ec9",
-  "date": "2026-11-24",
+  "hash": "497a283e42360b41",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -635,8 +635,8 @@
   "hashVersion": 2
  },
  "/guides/build-tier-list/": {
-  "hash": "ef50e223d330c7e3",
-  "date": "2026-11-24",
+  "hash": "388605102a7a1725",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/guides/stuck-at-level-90/": {
