@@ -118,6 +118,6 @@ img,svg{display:block;max-width:100%}
 .catalog-card>dl{grid-column:3}
 .catalog-card>a.button{grid-column:4}
 .catalog-card>button{grid-column:4}
-.rating-checks li .skill-name,.rating-checks li .equipment-name{flex:none}
+.rating-checks li .skill-name,.rating-checks li .equipment-name{flex:0 1 auto;min-width:0}
 @media(max-width:960px){.catalog-card>div:first-of-type,.catalog-card>.catalog-fit,.catalog-card>dl,.catalog-card>a.button,.catalog-card>button{grid-column:auto}}
 @media(max-width:680px){.tier-card>*{grid-column:auto}}
