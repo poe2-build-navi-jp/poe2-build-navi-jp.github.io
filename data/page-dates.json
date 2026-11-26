@@ -1,6 +1,6 @@
 {
  "/": {
-  "hash": "3c431d6c61e03c2d",
+  "hash": "f327367d2d27fd8b",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -15,7 +15,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "3efc1fb2deef0606",
+  "hash": "9ef9d046682acfd4",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -330,7 +330,7 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "a409ee3df29beac5",
+  "hash": "19b0a4d20451117c",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -390,7 +390,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "f33c3b5382ccae40",
+  "hash": "13b09b523b5e0f56",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -962,6 +962,11 @@
  "/guides/tangmazu/": {
   "hash": "5aa2193124fb43f5",
   "date": "2026-11-24",
+  "hashVersion": 2
+ },
+ "/guides/atziri-temple/": {
+  "hash": "e2e48ae64fb1d31c",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/dictionary/build/": {

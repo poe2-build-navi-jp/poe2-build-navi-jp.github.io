@@ -71,6 +71,17 @@
   ],
   "records": [
     {
+      "slug": "atziri-temple",
+      "title": "アッツィリの神殿：全13部屋を攻略し赤き女王を撃破",
+      "label": "攻略記録・アッツィリの神殿",
+      "image": "/images/poe2/atziri-temple/treasure-room.webp",
+      "imageAlt": "アッツィリの神殿の財宝部屋。中央のアッツィリの宝物と周囲の王家の財宝箱",
+      "width": 1920,
+      "height": 1080,
+      "answer": "ライフ1,895・ES1,221。ボス部屋は王家の連絡通路が必須で、配置ミスは神殿を閉じればリセットできる実測つき。",
+      "action": "13部屋の進め方・連絡通路・報酬を見る"
+    },
+    {
       "slug": "tangmazu",
       "title": "タングマズ：Lv92ジェムリングで撃破",
       "label": "撃破報告・デリリウムのピナクル",
