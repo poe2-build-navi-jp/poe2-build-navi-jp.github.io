@@ -1,0 +1,284 @@
+{
+  "build": {
+    "id": "druid-grim-pillars-oracle",
+    "slug": "grim-pillars-oracle",
+    "classSlug": "druid",
+    "name": "Grim Pillars (Spell Totem) Oracle",
+    "seoTitle": "PoE2 Grim Pillars (Spell Totem) Oracle Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Grim Pillars (Spell Totem) Oracle skills, supports, gear and passives, from plant leveling to Endgame+++ (ES version). Enter your current level to see the three things to do now.",
+    "className": "Druid",
+    "ascendancy": "Oracle",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "status": "verified",
+    "mainSkill": "Cast Grim Pillars with Spell Totem",
+    "beginnerRating": 3,
+    "damageRating": 4,
+    "defenseRating": 3,
+    "mappingRating": 4,
+    "bossRating": 4,
+    "difficulty": "Level with plants early, respec to totems mid-game. Gem level management is detailed",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium (a plant-to-totem respec and gem level management)",
+      "gearDependence": "Spirit (sceptre) is central. Defense is gear-dependent, moving to ES later on",
+      "operation": "Few (after placing totems, concentrate on evasion, detonation and support)",
+      "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-druide-grim-pillars-totem-saison-5/",
+      "ssfNote": "Whether it works in SSF is not stated in the sources. Note that obtaining the Grim Pillars gem is delayed."
+    },
+    "strengths": [
+      "Because the totems handle the attacking, after placing them you can concentrate on evasion and positioning (Odealo strength: Safe totem playstyle).",
+      "High map clear power (Odealo strength: Great clear).",
+      "Large single-target damage as well (Odealo strength: BIG single target damage).",
+      "High damage uptime (Odealo strength: High damage uptime).",
+      "Totems do not consume mana, Life or Runewards, so Grim Pillars can effectively be cycled at no cost (the guide's mechanics explanation).",
+      "Suited to league start and cheap to begin, scaling to the several-hundred-Divine class with investment. Palsteron rates it \"the best league start I have ever played (including the campaign).\""
+    ],
+    "weaknesses": [
+      "The screen tends to become hard to read (Odealo weakness: Limited visual clarity). The pillars can also block your own movement (same source: Pillars can block your movement).",
+      "Spirit is effectively the cap, and the roughly 400 Spirit needed for 6 totems is not reachable until late.",
+      "The Grim Pillars gem does not drop until Lv22, and Lv30–40 is normal for obtaining it. Early listings are expensive.",
+      "Gem level management is detailed (Spell Totem at exactly Lv14 including gear, Entangle at Lv1, Frost Bomb and Elemental Weakness stopped at Lv18).",
+      "The Life version has one-shot deaths later on, and moving to ES / Chaos Inoculation trades off about a 30% damage loss.",
+      "Whether it works in SSF is not stated in the sources. Gem acquisition depends on the league mechanic and is delayed."
+    ],
+    "levelingStages": [
+      {
+        "caution": "The Grim Pillars gem cannot be obtained at this stage (it drops from Lv22 onward). Proceed with the plant setup.",
+        "gearPriority": "+cold / all spell levels, spell power, Life, resistances, movement speed. Keep any sceptre with Spirit for later.",
+        "label": "Lv1–13 (plants, early game)",
+        "mainSkill": "Charge and fire Volcano, and weaken enemies with Frost Bomb. Advance with Entangle and Contagion, adding Bone Cage at Lv6.",
+        "nowActions": [
+          "Place Entangle in the enemy's path",
+          "Look for a weapon with +spell levels",
+          "If you pick up a sceptre with Spirit, store it"
+        ],
+        "passivePriority": "Use the source's Plants Leveling stage tree. The first ascendancy, The Unseen Path, is the absolute priority (it opens totem-related passives and the like that are normally out of reach, and makes leveling easier too). Check the exact node names at the linked source.",
+        "replaceGear": "Prioritize comparing weapons without +spell levels or spell power.",
+        "supports": "Entangle: Upheaval I + Controlled Destruction. Volcano is also used with Controlled Destruction. Bone Cage: Spell Cascade (strong single-target damage if you can get close). Ravenous Swarm: Corrosion. The guide's gem setups are stage-by-stage examples and do not mean everything unlocks at that character level.",
+        "transitionCondition": "Reach Lv14. Bonestorm becomes usable."
+      },
+      {
+        "caution": "The Impale that Bonestorm applies is consumed by Thunderstorm's Living Lightning summons for large damage. Be conscious of the order you use them in.",
+        "gearPriority": "Spell levels, cast speed, Life, resistances. Update the sceptre prioritizing maximum Spirit.",
+        "label": "Lv14–29 (Bonestorm switch)",
+        "mainSkill": "Bonestorm becomes the main skill. Fully charge it and release it when enemies engage. Thunderstorm wets the plants and Bonestorm to strengthen them, and also consumes Impale.",
+        "nowActions": [
+          "Use Bonestorm at full charge",
+          "Look for gems in the league mechanic",
+          "Update to a maximum-Spirit sceptre"
+        ],
+        "passivePriority": "The second half of the Plants Leveling tree. In advance, get a picture of the route to Ancestral Bond, the respec destination, and the nodes covering 70% placement speed.",
+        "replaceGear": "If damage is lacking, update the weapon; if you die often, update armor and resistances one piece at a time.",
+        "supports": "Bonestorm: Rapid Casting I + Burgeon I. Thunderstorm: Living Lightning + Magnified Area I. Around Lv18, add Accelerated Growth to Entangle. Thrashing Vines: Concentrated Area + Controlled Destruction + Lightning Attunement.",
+        "transitionCondition": "Obtain the Grim Pillars gem (drops from Lv22 onward; most players get it at Lv30–40 via the league mechanic). Or be able to judge that you will continue with plants to Lv52."
+      },
+      {
+        "caution": "A leveled Entangle has a high mana cost and cannot be used just for detonation. Create a fresh Lv1 one. Its quality is worth investing in (chance to generate additional fissures).",
+        "gearPriority": "A maximum-Spirit sceptre (150–210 is the guideline, and the center of the build). Stack Spirit together with the campaign quest rewards (the first 100).",
+        "label": "Lv30–Campaign End (respec preparation)",
+        "mainSkill": "Continue the plant setup (Bonestorm as the main skill). Once the respec conditions are met, you may move to totems even mid-campaign.",
+        "nowActions": [
+          "Check the 3 respec conditions",
+          "Create a fresh Lv1 Entangle",
+          "Calculate the Spirit breakdown (quests, sceptre, armor)"
+        ],
+        "passivePriority": "Check the respec destination tree. Ancestral Bond and the placement speed nodes (70% total) are prerequisites. Take the second ascendancy, The Lesser Harm, as a path to the third (no need to rush it).",
+        "replaceGear": "Compare sceptres by Spirit amount first, then look at the weapon's spell levels.",
+        "supports": "Maintain the plant setup. Prepare Spell Totem and a fresh Lv1 Entangle dedicated to detonation for the transition.",
+        "transitionCondition": "All three are in place: (1) the Grim Pillars gem obtained, (2) a sceptre with Spirit, (3) Ancestral Bond taken."
+      },
+      {
+        "caution": "Spell Totem must be adjusted to exactly Lv14 including gear +levels (Lv14 is the breakpoint where the totem cap becomes 2; confirmed in poe2db's level table). Beyond that, only totem resistance grows, and the ascendancy makes it meaningless. Both weapons must be fixed to both sets, or switching will change your Spirit and the totems will disappear. Grim Pillars is a Kalguuran gem, and its gem level is raised or lowered with the currency Thaumaturgic Flux.",
+        "gearPriority": "Securing Spirit is the top priority (75 per totem, 63 with Efficient Inscriptions). Aim for 300% totem placement speed.",
+        "label": "Respec to Totems",
+        "mainSkill": "Spell Totem + Grim Pillars. Detonation of the pillars is handled by Lv1 Entangle + Biting Frost I (a skill that consumes Freeze detonates the pillars immediately).",
+        "nowActions": [
+          "Confirm Spell Totem's effective Lv14",
+          "Fix both weapons to both sets",
+          "Turn on Dynamic Culling"
+        ],
+        "passivePriority": "Take Ancestral Bond (doubles the totem cap, no cost or charge consumption; instead, each totem reserves 75 Spirit). Weapon set passives come into full use after the campaign: Set 1 (red) = all totem nodes, Set 2 (green) = cast speed, area of effect, critical strikes, Arcane Surge.",
+        "replaceGear": "Prioritize updating the pieces where Spirit falls short (sceptre, amulet, chest prefix).",
+        "supports": "The totem-side Entangle: Biting Frost I + Living Lightning + Branching Fissures I.",
+        "transitionCondition": "Totems stay up permanently, and you can clear the pillars with Entangle detonations."
+      },
+      {
+        "caution": "Do not use Mana Tempest before placing totems. Its effect lingers for 4 seconds after the cloud disappears, and the totems benefit from it passively.",
+        "gearPriority": "Spirit (the final goal for 6 totems is about 400), +cold spell levels, resistances, Life / ES.",
+        "label": "Early Maps",
+        "mainSkill": "Make Spell Totem + Grim Pillars the clearing main skill. Use Mana Tempest after placing the totems.",
+        "nowActions": [
+          "Check the Spirit breakdown",
+          "Sort out resistances and Life / ES",
+          "Stop Frost Bomb and Elemental Weakness at Lv18"
+        ],
+        "passivePriority": "The ascendancy order is The Unseen Path → The Lesser Harm → Forced Outcome → Unnamed Heartwood. After taking the third ascendancy, shift critical strike chance to 30–40% (beyond that, efficiency drops).",
+        "replaceGear": "If you die, check armor and resistances; if you do not have enough totems, check your Spirit sources.",
+        "supports": "Grim Pillars: Urgent Totems III + Efficiency II + Magnified Area II. Mana Tempest: Advancing Storm + Efficiency II + Lightning Mastery.",
+        "transitionCondition": "Totem uptime and detonation are stable in low-tier maps, and you can judge Spirit and mana shortfalls."
+      },
+      {
+        "caution": "The Life version can handle the campaign and endgame bosses, but one-shot deaths appear later on. For mana problems, first check gem levels (Overabundance), and deal with them through Efficiency-type supports. Stacking maximum mana itself also fattens your base recovery.",
+        "gearPriority": "+levels to cold spell skills is the top priority (a wand's +5 roughly doubles damage). Next, spell power and elemental damage, cast speed, totem placement speed. The amulet is Solar (up to 65 Spirit) + spell levels, with the Efficient Casting anoint. The belt is the Darkness Enthroned type that treats socketed items as body armour, with a Rune of Blooming socketed to secure Spirit. Charms such as Nascent Hope are cheap.",
+        "label": "Early Endgame (Life-based)",
+        "mainSkill": "Run Spell Totem + Grim Pillars with curse and exposure support.",
+        "nowActions": [
+          "Introduce Vorana's Siege (damage against isolated enemies = bosses)",
+          "Stack maximum mana to fatten the mana base",
+          "Look for a chest and helmet for the ES transition"
+        ],
+        "passivePriority": "The Life-based Endgame tree. Complete the weapon set specialization (24 points).",
+        "replaceGear": "Rather than a fixed price, compare against listings under the same conditions for gear that addresses your current shortfall (Spirit, ES, mana).",
+        "supports": "Elemental Weakness: Efficiency II + Cursed Ground + Heightened Curse. Frost Bomb: Spell Echo + Overabundance I + Efficiency II. In the Spirit slots, Purity of Fire with Mysticism II + Clarity II + Vitality II. Mana Drain is also used alongside.",
+        "transitionCondition": "Clearing and bosses are stable on the Life version, and you start gathering gear for the ES transition (a high-ES chest that coexists with Spirit, and the like)."
+      },
+      {
+        "caution": "Only make the ES transition when you have damage to spare. Right after transitioning, you are weaker by exactly the damage nodes you moved into shield nodes.",
+        "gearPriority": "ES: the chest keeping Spirit while reaching 650+ ES is the single hardest piece. The helmet is also important due to a tree node. Gloves and boots at the 200–250 ES class, and movement speed on boots is mandatory. Jewels take increased maximum shield % and recharge start speed. The finished charms are The Fall of the Axe and Rite of Passage.",
+        "label": "Endgame (ES / Chaos Inoculation)",
+        "mainSkill": "Spell Totem + Grim Pillars. Take Chaos Inoculation to set Life to 1 and nullify chaos damage and bleeding.",
+        "nowActions": [
+          "Judge whether to transition by your damage headroom",
+          "When introducing Rakiata's Flow, remove curses and exposure",
+          "Update one piece at a time without using fixed market prices"
+        ],
+        "passivePriority": "Take Chaos Inoculation. Move some damage nodes into shield nodes (in exchange for about a 30% damage loss).",
+        "replaceGear": "Life and chaos resistance become unneeded stats. Update one piece at a time based on coexisting ES and Spirit.",
+        "supports": "In Endgame+++, Elemental Conflux adds Compressed Duration II + Fire Mastery. If you use the final piece, Rakiata's Flow, remove Frost Bomb and Elemental Weakness (lowering enemy resistances would cancel out the benefit).",
+        "transitionCondition": "Once complete, improve the bottlenecks — Spirit, ES, critical strikes — one item at a time."
+      }
+    ],
+    "gearPriorities": [
+      "Sceptre: maximum Spirit (150–210) is the most important stat and the center of the build. A sceptre with a Purity-type implicit (fire, lightning or cold) can socket Spirit-related supports at no cost, so you can effectively stack things like +40% spell power or mana recovery for free. It can be made 6-linked even below Lv20.",
+      "Wand: +levels to cold spell skills is the top priority (at +5, damage roughly doubles). Next, spell power and elemental damage, cast speed, totem placement speed. Critical strike chance only matters after taking the third ascendancy.",
+      "Amulet: a Solar Amulet (up to 65 maximum Spirit) + spell levels. The anoint is Efficient Casting (+20% mana cost efficiency). The final form moves to a Stellar Amulet.",
+      "Chest: the Life version takes Life, mana, resistances and Spirit (up to 61 from a prefix). The ES version needs 650+ ES while keeping Spirit, and is the single hardest piece in this build. The helmet is about as important, due to the tree node (increased shield gained from the helmet).",
+      "Belt: the Darkness Enthroned variant that \"treats socketed items' bonuses as body armour.\" Socketing a Rune of Blooming gives about 49 Spirit at Lv100.",
+      "Charms and more: early on, a Silver Charm against slows, a Stone Charm against stuns, and the cheap Nascent Hope. In the finished form, replace the first two with The Fall of the Axe and Rite of Passage. Movement speed on boots is mandatory. For chaos resistance, converting from other resistances with Void Flux is an early shortcut (conversion lowers the tier, and implicits do not move).",
+      "The stat priority is unchanged from the campaign to Endgame: cold spell levels → spell power and elemental damage → cast speed → totem placement speed. Critical strike chance is added after the third ascendancy."
+    ],
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "kami-labs: Grim Pillars Totem Druid (a mirror / summary of Palsteron's Maxroll guide)",
+        "type": "Mirror / summary of an overseas guide (referenced for the four progression variants, gem setups, gear, Spirit calculations and ascendancy explanations. The Maxroll text could not be checked directly due to HTTP 403)",
+        "url": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-druide-grim-pillars-totem-saison-5/"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Odealo: Grim Pillars Spell Totem Oracle Build",
+        "type": "Overseas Endgame guide (referenced for strengths, weaknesses and ascendancy order. Its own version assumes Endgame at Lv60+ and explicitly states it is not a setup that levels with Grim Pillars from the early game)",
+        "url": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Grim Pillars",
+        "type": "Japanese name and mechanics cross-check",
+        "url": "https://poe2db.tw/jp/Grim_Pillars"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Spell Totem",
+        "type": "Japanese name and per-level mechanics cross-check (confirmed the totem cap becomes 2 at gem Lv14)",
+        "url": "https://poe2db.tw/jp/Spell_Totem"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Ancestral Bond",
+        "type": "Keystone mechanics cross-check (doubles the totem cap, no cost or charges, reserves 75 Spirit per totem)",
+        "url": "https://poe2db.tw/jp/Ancestral_Bond"
+      }
+    ],
+    "audience": "Players who want to leave the attacking to totems, clear safely, start cheap and scale up a long way",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": true,
+          "ssfConfirmed": false
+        },
+        "note": "The main gem cannot be obtained early, and plant leveling, a respec and gem level management are required, so earlyMainSkill is not counted as a confirmed condition. The build's rating as a league starter itself is high (Palsteron).",
+        "score": 3,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "The totems handle the attacking, and the player can concentrate on placement, detonation and evasion. Odealo's strengths explicitly state \"Safe totem playstyle.\"",
+            "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build"
+          },
+          "noDodgeRequirement": {
+            "basis": "Because the totems handle the attacking, the player can fight safely away from enemies. Odealo's strengths explicitly state \"Safe totem playstyle.\"",
+            "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Large single-target damage is explicitly listed as a strength. However, the top tiers assume investment such as Vorana's Siege and the ES transition (mirror).",
+        "quote": "BIG single target damage",
+        "score": 4,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Odealo's strengths list large single-target damage. The mirror side also presents it as a setup that scales to the several-hundred-Divine class with investment.",
+        "quote": "BIG single target damage",
+        "score": 4,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "You can fight safely by leaving things to the totems, but the Life version has one-shot deaths later on, and completing the defense requires the move to ES / Chaos Inoculation and gear investment (mirror). Defense is gear-dependent.",
+        "quote": "Safe totem playstyle",
+        "score": 3,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Odealo's strengths list high clear power.",
+        "quote": "Great clear",
+        "score": 4,
+        "source": "https://odealo.com/articles/grim-pillars-totem-oracle-poe-2-build",
+        "sourceName": "Odealo: Grim Pillars Spell Totem Oracle Build"
+      }
+    },
+    "mainSkillTiming": {
+      "available": "The Grim Pillars gem drops from Lv22 onward and its level cannot be lowered. Most players obtain it at Lv30–40 via the league mechanic.",
+      "checkedAt": "2026-11-25",
+      "guide": "Palsteron's Maxroll guide (checked via a mirror. The Maxroll text could not be checked directly due to HTTP 403)",
+      "recommendedSwitch": "Once all three are in place — the gem obtained, a sceptre with Spirit, and Ancestral Bond — respec to totems. The guide estimates that continuing with plants to Lv52 makes the gem cost about 1/10 as much.",
+      "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-druide-grim-pillars-totem-saison-5/"
+    },
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Palsteron's Maxroll guide via a mirror (kami-labs) and cross-checked it against Odealo's strengths and weaknesses and the names and numbers on the Japanese poe2db. The Maxroll text itself could not be checked directly due to HTTP 403, and that is stated in the sources."
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "druid-frostbolt-comet-oracle",
+      "name": "Frostbolt + Cast on Critical Comet Oracle",
+      "classSlug": "druid",
+      "slug": "frostbolt-comet-oracle"
+    },
+    {
+      "id": "druid-plant-oracle",
+      "name": "Plant Oracle",
+      "classSlug": "druid",
+      "slug": "plant-oracle"
+    }
+  ]
+}

@@ -9,6 +9,38 @@ const entities=await read('data/core-entities.json'),builds=await read('data/bui
 const gearGuide=(await read('data/strategy-guides.json')).find(g=>g.slug==='unique-gear');
 const gearKey=v=>String(v).replace(/[’']/g,"'").toLowerCase();
 const gearCards=(gearGuide?.sections||[]).filter(s=>s.buildId).flatMap(s=>(s.gearOptions||[]).map(o=>({...o,buildId:s.buildId})));
+const strategyGuides=await read('data/strategy-guides.json');
+const shopping=await read('data/unique-gear-shopping.json').catch(()=>({items:{}}));
+// Matched leveling stages per skill, computed once for all skills: when two skills of the
+// same build are used in (nearly) the same stages, their "how it is used per level band"
+// tables come out near-identical, so the duplication is detected here and resolved below.
+const skillRows=new Map();
+for(const e of entities.filter(x=>x.kind==='skill')){
+ const names=[e.name,e.englishName,...(e.aliases||[])];
+ const rows=e.buildIds.map(id=>builds.find(b=>b.id===id&&b.status!=='draft')).filter(Boolean)
+  .map(b=>[b,(b.levelingStages||[]).filter(s=>names.some(n=>`${s.mainSkill||''}${s.supports||''}`.includes(n)))])
+  .filter(([,st])=>st.length);
+ skillRows.set(e.slug,rows);
+}
+const stageSignature=rows=>new Set(rows.flatMap(([b,st])=>st.map(s=>`${b.id}|${s.label}`)));
+// slug -> slug of the skill page that keeps the full table. The primary is the skill the
+// shared build names first in its main-skill line; ties fall back to entity order.
+const compactUsage=new Map();
+for(const a of entities.filter(x=>x.kind==='skill')){
+ for(const b of entities.filter(x=>x.kind==='skill')){
+  if(a.slug>=b.slug)continue;
+  const sa=stageSignature(skillRows.get(a.slug)||[]),sb=stageSignature(skillRows.get(b.slug)||[]);
+  if(!sa.size||!sb.size)continue;
+  const inter=[...sa].filter(x=>sb.has(x)).length,union=new Set([...sa,...sb]).size;
+  if(inter/union<0.75)continue;
+  const shared=(skillRows.get(a.slug)||[]).map(([bd])=>bd).find(bd=>(skillRows.get(b.slug)||[]).some(([x])=>x.id===bd.id));
+  if(!shared)continue;
+  const pos=e=>[e.name,e.englishName].map(n=>shared.mainSkill.indexOf(n)).filter(i=>i>=0);
+  const pa=pos(a),pb=pos(b);
+  const aFirst=pa.length&&pb.length?Math.min(...pa)<Math.min(...pb):pa.length>pb.length;
+  compactUsage.set(aFirst?b.slug:a.slug,aFirst?a.slug:b.slug);
+ }
+}
 const entityByName=new Map(entities.filter(e=>e.kind==='equipment').map(e=>[gearKey(e.englishName),e]));
 const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const path=e=>`/${e.kind==='skill'?'skills':'equipment'}/${e.slug}/`;
@@ -37,10 +69,58 @@ for(const e of entities){
    const seen=new Set();
    extra.push(['alternatives',`同じ部位（${[...slots].map(esc).join('・')}）のほかの候補`,`<p>掲載ビルドで同じ部位に使われているユニーク装備です。ビルドが違えば役割も違うため、自分のビルドの原典を優先してください。</p><ul>${others.filter(o=>{const k=gearKey(o.name)+o.buildId;if(seen.has(k))return false;seen.add(k);return true;}).map(o=>{const page=entityByName.get(gearKey(o.name));const name=esc(o.nameJa||o.name)+(o.nameJa?`（${esc(o.name)}）`:'');return `<li>${page?`<a href="${path(page)}">${name}</a>`:`<a href="/guides/unique-gear/#${esc(o.buildId)}">${name}</a>`}：${esc(o.purpose)}（${buildName(o.buildId)}、${esc(o.phase)}）${cite(o.sourceRefs)}</li>`;}).join('')}</ul>`]);
   }
+  const relatedGuides=strategyGuides.filter(g=>g.slug===e.slug||(g.title||'').includes(e.name)||(g.related||[]).some(r=>r.url===path(e))||(g.quickLinks||[]).some(r=>r.url===path(e)));
+  const guideTable=(g)=>{for(const s of g.sections||[])if(s.table&&s.table.rows&&s.table.rows.length)return s.table;return null;};
+  if(relatedGuides.length)extra.push(['related-guide','詳しい入手方法・関連ガイド',relatedGuides.slice(0,2).map(g=>{const t=guideTable(g);return `<h3><a href="/guides/${g.slug}/">${esc(g.title)}</a></h3><p>${esc(g.summary||'')}</p>${(g.actions||[]).length?`<ol>${g.actions.map(a=>`<li>${esc(a)}</li>`).join('')}</ol>`:''}${t?`<p>${esc(t.caption||'手順の表')}</p><ul>${t.rows.map(r=>`<li>${r.map(c=>esc(c)).join('：')}</li>`).join('')}</ul>`:''}${(g.sections||[]).length?`<ul>${g.sections.slice(0,10).map(s=>`<li>${esc(s.heading)}</li>`).join('')}</ul>`:''}`;}).join('')]);
+  const mateBuildIds=new Set([...selected.map(b=>b.id),...gearCards.filter(o=>gearKey(o.name)===gearKey(e.englishName)).map(o=>o.buildId)]);
+  const mates=gearCards.filter(o=>mateBuildIds.has(o.buildId)&&gearKey(o.name)!==gearKey(e.englishName));
+  if(mates.length){
+   const seenMate=new Set();
+   extra.push(['set-mates','同じビルドで一緒に挙げられている装備',`<p>同じビルドのおすすめ装備として、原典で一緒に挙げられているユニーク装備です。部位ごとに役割が違うため、まとめて更新する前提で確認してください。</p><ul>${mates.filter(o=>{const k=gearKey(o.name)+o.buildId;if(seenMate.has(k))return false;seenMate.add(k);return true;}).slice(0,6).map(o=>{const page=entityByName.get(gearKey(o.name));const name=esc(o.nameJa||o.name)+(o.nameJa?`（${esc(o.name)}）`:'');return `<li>${page?`<a href="${path(page)}">${name}</a>`:`<a href="/guides/unique-gear/#${esc(o.buildId)}">${name}</a>`}：${esc(o.purpose)}（${buildName(o.buildId)}、${esc(o.phase)}）</li>`;}).join('')}</ul>`]);
+  }
+  if(!selected.length){
+   const cardBuilds=[...new Map(gearCards.filter(o=>gearKey(o.name)===gearKey(e.englishName)&&o.buildId).map(o=>[o.buildId,builds.find(b=>b.id===o.buildId)])).values()].filter(Boolean);
+   if(cardBuilds.length)extra.push(['priorities','おすすめ装備に挙げたビルドの装備の優先順位',`<p>この装備は候補の1つです。挙げているビルドが装備全体で何を優先しているかを先に確認してください。</p>${cardBuilds.map(b=>`<h3>${buildName(b.id)}</h3><ul>${(b.gearPriorities||[]).map(v=>`<li>${esc(v)}</li>`).join('')}</ul>`).join('')}`]);
+  }
+  const shopItem=(shopping.items||{})[e.englishName];
+  if(shopItem?.obtain)extra.push(['obtain','入手先',`<p>${esc(shopItem.obtain)}</p>`]);
+  const itemNames=[e.name,e.englishName];
+  const gearNotes=[],seenGear=new Set();
+  for(const b of selected){
+   const fields=[];
+   for(const s of b.levelingStages||[])for(const f of ['gearPriority','replaceGear','caution'])if(s[f])fields.push([s.label,s[f]]);
+   for(const v of b.gearPriorities||[])fields.push(['装備の優先順位',v]);
+   for(const [label,v] of fields)for(const part of String(v).split(/(?<=。)/)){const t=part.trim();if(t&&itemNames.some(n=>t.includes(n))&&!seenGear.has(t)){seenGear.add(t);gearNotes.push([b,label,t]);}}
+  }
+  if(gearNotes.length)extra.push(['gear-notes','ビルドの装備方針での扱い',`<p>掲載ビルドの装備方針のうち、この装備の名前に触れている記述を抜き出しました。</p><ul>${gearNotes.slice(0,5).map(([b,label,t])=>`<li>${buildName(b.id)}（${esc(label)}）：${esc(t)}</li>`).join('')}</ul>`]);
  }else{
   const names=[e.name,e.englishName,...(e.aliases||[])];
-  const rows=selected.map(b=>[b,(b.levelingStages||[]).filter(s=>names.some(n=>`${s.mainSkill||''}${s.supports||''}`.includes(n)))]).filter(([,st])=>st.length);
-  if(rows.length)extra.push(['usage','レベル帯ごとの使われ方',`<p>掲載ビルドの育成手順のうち、このスキルが登場するレベル帯を抜き出しました。サポートジェムの構成と、各段階の注意も合わせて確認できます。原典と確認日は各ビルド記事に掲載しています。</p>${rows.map(([b,st])=>`<h3>${buildName(b.id)}</h3><div class="table-scroll"><table class="entity-stages"><thead><tr><th scope="col">レベル帯</th><th scope="col">主な操作</th><th scope="col">サポート・補足</th></tr></thead><tbody>${st.map(s=>`<tr><th scope="row">${esc(s.label)}</th><td data-label="主な操作">${esc(s.mainSkill)}</td><td data-label="サポート・補足">${esc(s.supports)}${s.caution?`<br><span class="entity-caution">注意：${esc(s.caution)}</span>`:''}</td></tr>`).join('')}</tbody></table></div>`).join('')}`]);
+  const rows=skillRows.get(e.slug)||[];
+  if(rows.length&&compactUsage.has(e.slug)){
+   const primary=entities.find(x=>x.slug===compactUsage.get(e.slug));
+   extra.push(['usage','レベル帯ごとの使われ方',`<p>このスキルは掲載ビルドでは${primary?`<a href="${path(primary)}">${esc(primary.name)}</a>`:''}と組み合わせて使うため、段階ごとの表はそちらのページにまとめました。ここでは使う段階だけを示します。</p>${rows.map(([b,st])=>`<h3>${buildName(b.id)}</h3><p>使う段階：${st.map(s=>esc(s.label)).join('、')}</p><p><a href="/builds/${b.classSlug}/${b.slug}/#roadmap">このビルドの育成手順を見る</a></p>`).join('')}`]);
+  }else if(rows.length){
+   extra.push(['usage','レベル帯ごとの使われ方',`<p>掲載ビルドの育成手順のうち、このスキルが登場するレベル帯を抜き出しました。サポートジェムの構成と、各段階の注意も合わせて確認できます。原典と確認日は各ビルド記事に掲載しています。</p>${rows.map(([b,st])=>`<h3>${buildName(b.id)}</h3><div class="table-scroll"><table class="entity-stages"><thead><tr><th scope="col">レベル帯</th><th scope="col">主な操作</th><th scope="col">サポート・補足</th></tr></thead><tbody>${st.map(s=>`<tr><th scope="row">${esc(s.label)}</th><td data-label="主な操作">${esc(s.mainSkill)}</td><td data-label="サポート・補足">${esc(s.supports)}${s.caution?`<br><span class="entity-caution">注意：${esc(s.caution)}</span>`:''}</td></tr>`).join('')}</tbody></table></div>`).join('')}`]);
+   const prio=rows.map(([b,st])=>[b,st.filter(s=>s.passivePriority||s.gearPriority)]).filter(([,st])=>st.length);
+   if(prio.length)extra.push(['stage-priorities','使う段階の装備・パッシブの優先',`<p>このスキルを使う段階で、掲載ビルドが優先している装備とパッシブです。スキル単体の効果だけでなく、段階ごとの前提と合わせて確認してください。</p>${prio.map(([b,st])=>`<h3>${buildName(b.id)}</h3><dl class="entity-usage">${st.map(s=>`<div><dt>${esc(s.label)}</dt><dd>${s.gearPriority?`装備：${esc(s.gearPriority)}`:''}${s.gearPriority&&s.passivePriority?'<br>':''}${s.passivePriority?`パッシブ：${esc(s.passivePriority)}`:''}</dd></div>`).join('')}</dl>`).join('')}`]);
+  }
+  const skillNotes=[],seenNote=new Set();
+  for(const b of selected){
+   for(const s of b.levelingStages||[]){
+    const fields=[['caution',s.caution],['transitionCondition',s.transitionCondition],['nowActions',(s.nowActions||[]).join('。')]];
+    for(const [,v] of fields){if(!v)continue;for(const part of String(v).split(/(?<=。)/)){const t=part.trim();if(t&&names.some(n=>t.includes(n))&&!seenNote.has(t)){seenNote.add(t);skillNotes.push([b,s.label,t]);}}}
+   }
+  }
+  if(skillNotes.length)extra.push(['skill-notes','このスキルに触れた注意・切替条件',`<p>掲載ビルドの育成手順のうち、このスキルの名前に触れている注意と切替条件を抜き出しました。</p><ul>${skillNotes.slice(0,6).map(([b,label,t])=>`<li>${buildName(b.id)}（${esc(label)}）：${esc(t)}</li>`).join('')}</ul>`]);
+  // For skills whose stage table is summarised on a partner skill's page (or that appear in
+  // only a few stages), quote the clauses that name the skill so the page still carries its
+  // own per-stage role instead of only a pointer.
+  const totalStages=rows.reduce((n,[,st])=>n+st.length,0);
+  if(compactUsage.has(e.slug)||totalStages<=3){
+   const clauses=[],seenClause=new Set();
+   for(const b of selected)for(const s of b.levelingStages||[])for(const v of [s.mainSkill,s.supports]){if(!v)continue;for(const part of String(v).split(/[、。]/)){const t=part.trim();if(t.length>=8&&names.some(n=>t.includes(n))&&!seenClause.has(t)){seenClause.add(t);clauses.push([b,s.label,t]);}}}
+   if(clauses.length)extra.push(['skill-role','段階ごとの役割（記述の抜粋）',`<p>掲載ビルドの手順から、このスキルの名前に触れている記述を段階ごとに抜き出しました。</p><ul>${clauses.slice(0,8).map(([b,label,t])=>`<li>${buildName(b.id)}（${esc(label)}）：${esc(t)}</li>`).join('')}</ul>`]);
+  }
  }
  for(const section of e.sections||[]){
   if(!/^[a-z0-9-]+$/.test(section.id))throw Error('Invalid section');
@@ -62,7 +142,9 @@ for(const e of entities){
 for(const kind of ['skill','equipment']){
  const name=kind==='skill'?'スキル':'装備',url=site.baseUrl+`/${kind==='skill'?'skills':'equipment'}/`,items=entities.filter(e=>e.kind===kind),title=`PoE2 ${name}一覧｜掲載ビルドで使う効果・条件・入手方法`;
  const schema=[{'@context':'https://schema.org','@type':'CollectionPage',name:title,url,mainEntity:{'@type':'ItemList',itemListElement:items.map((e,i)=>({'@type':'ListItem',position:i+1,name:e.name,url:site.baseUrl+path(e)}))}}];
- const html=head(title,`PoE2の掲載ビルドで使う${name}${items.length}件の一覧。${items.slice(0,4).map(e=>e.name).join('・')}など、効果・必要条件・入手方法と採用ビルドを日本語で確認できます。`,url,schema)+`<nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li>${name}一覧</li></ol></nav><article class="article-page"><h1>${title}</h1><p>${kind==='equipment'?'掲載ビルドや用途別に調べた装備':'掲載ビルドに登場するスキル'}から、確認できた${items.length}件を掲載しています。全${name}のデータベースではありません。</p><p>${kind==='skill'?'スキルは、掲載ビルドで主力または育成途中に使うものです。各ページでは効果と使う条件に加えて、ビルドのどのレベル帯で使うかを確認できます。':'装備は、掲載ビルドの原典にあるユニーク装備と、用途別に確認したベースアイテムです。各ページでは効果と必要条件に加えて、ビルドでの用途・採用条件・外したときの代わり、同じ部位のほかの候補を確認できます。'}</p><ul>${items.map(e=>{const slots=[...new Set([...gearCards.filter(o=>gearKey(o.name)===gearKey(e.englishName)).map(o=>o.slot),...(e.slot?[e.slot]:[])])];const used=e.buildIds.map(id=>builds.find(b=>b.id===id)).filter(Boolean);return `<li><h2><a href="${path(e)}">${esc(e.name)}（${esc(e.englishName)}）</a></h2><p>${esc(e.summary)}</p><p>${slots.length?`部位：${slots.map(esc).join('・')}／`:''}${used.length?'採用ビルド：':'用途別の候補（特定ビルドでの採用は未確認）'}${used.map(b=>`<a href="/builds/${b.classSlug}/${b.slug}/">${esc(b.name)}</a>`).join('、')}</p></li>`;}).join('')}</ul><p><a href="/search/">攻略・ビルドもまとめて探す</a> · <a href="/name-index/">ボス・クエスト・NPCの名前索引</a></p></article></main>${FOOTER}</body></html>`;
+ const recordGuides=['stuck-at-level-90','arbiter-of-ash-clear-record'].map(slug=>strategyGuides.find(g=>g.slug===slug)).filter(Boolean);
+ const firstHand=`<aside class="next-box"><h2>運営者の実測・記録と評価基準</h2><p>掲載ビルドの評価は、海外ガイドの順位ではなく<a href="/rating-criteria/">このサイトの評価基準</a>に沿って付けています。運営者自身のプレイ記録も公開しています。</p><ul>${recordGuides.map(g=>`<li><a href="/guides/${g.slug}/">${esc(g.title)}</a>：${esc(String(g.summary||'').slice(0,120))}</li>`).join('')}</ul></aside>`;
+ const html=head(title,`PoE2の掲載ビルドで使う${name}${items.length}件の一覧。${items.slice(0,4).map(e=>e.name).join('・')}など、効果・必要条件・入手方法と採用ビルドを日本語で確認できます。`,url,schema)+`<nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li>${name}一覧</li></ol></nav><article class="article-page"><h1>${title}</h1><p>${kind==='equipment'?'掲載ビルドや用途別に調べた装備':'掲載ビルドに登場するスキル'}から、確認できた${items.length}件を掲載しています。全${name}のデータベースではありません。</p><p>${kind==='skill'?'スキルは、掲載ビルドで主力または育成途中に使うものです。各ページでは効果と使う条件に加えて、ビルドのどのレベル帯で使うかを確認できます。':'装備は、掲載ビルドの原典にあるユニーク装備と、用途別に確認したベースアイテムです。各ページでは効果と必要条件に加えて、ビルドでの用途・採用条件・外したときの代わり、同じ部位のほかの候補を確認できます。'}</p><ul>${items.map(e=>{const slots=[...new Set([...gearCards.filter(o=>gearKey(o.name)===gearKey(e.englishName)).map(o=>o.slot),...(e.slot?[e.slot]:[])])];const used=e.buildIds.map(id=>builds.find(b=>b.id===id)).filter(Boolean);const srows=kind==='skill'?(skillRows.get(e.slug)||[]):[];const range=srows.map(([b,st])=>`${esc(b.name)}：${esc(st[0].label)}〜${esc(st[st.length-1].label)}`).join('、');const relGuide=kind==='equipment'?strategyGuides.find(g=>g.slug===e.slug||(g.title||'').includes(e.name)):null;return `<li><h2><a href="${path(e)}">${esc(e.name)}（${esc(e.englishName)}）</a></h2><p>${esc(e.summary)}</p><p>${slots.length?`部位：${slots.map(esc).join('・')}／`:''}${used.length?'採用ビルド：':'用途別の候補（特定ビルドでの採用は未確認）'}${used.map(b=>`<a href="/builds/${b.classSlug}/${b.slug}/">${esc(b.name)}</a>`).join('、')}</p>${range?`<p>使う段階：${range}</p>`:''}${relGuide?`<p>詳しい入手方法：<a href="/guides/${relGuide.slug}/">${esc(relGuide.title)}</a></p>`:''}</li>`;}).join('')}</ul>${firstHand}<p><a href="/search/">攻略・ビルドもまとめて探す</a> · <a href="/name-index/">ボス・クエスト・NPCの名前索引</a></p></article></main>${FOOTER}</body></html>`;
  await mkdir(resolve(root,kind==='skill'?'skills':'equipment'),{recursive:true});await writeFile(resolve(root,kind==='skill'?'skills':'equipment','index.html'),html);
 }
 // Add reciprocal, compact references without changing the build's current-level navigation.

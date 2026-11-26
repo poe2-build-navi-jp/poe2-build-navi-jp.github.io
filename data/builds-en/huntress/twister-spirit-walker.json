@@ -1,0 +1,283 @@
+{
+  "build": {
+    "id": "huntress-twister-spirit-walker",
+    "slug": "twister-spirit-walker",
+    "classSlug": "huntress",
+    "name": "Twister Spirit Walker",
+    "seoTitle": "PoE2 Twister Spirit Walker Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Twister Spirit Walker's early skills, weapon sets, combos, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "className": "Huntress",
+    "ascendancy": "Spirit Walker",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-24",
+    "status": "verified",
+    "mainSkill": "Twister",
+    "beginnerRating": 2,
+    "damageRating": 4,
+    "defenseRating": 2,
+    "mappingRating": 5,
+    "bossRating": 4,
+    "difficulty": "Medium (two weapon sets and combo operation)",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "Published sources say you can start leveling with no mandatory uniques.",
+      "You can create a whirlwind with Whirling Slash and launch it with Twister, chaining into area attacks.",
+      "The direction for the early game, campaign and Endgame references overseas guides. The numeric level bands are this site's organizational guide, and the sources do not guarantee transitions at each level."
+    ],
+    "weaknesses": [
+      "It requires assigning two weapon sets and multiple skills, and is not a complete one-button setup.",
+      "You need to practice the order of Whirling Slash, Ice-Tipped Arrows and Twister.",
+      "Endgame unique candidates are optional, and base gear and resistances must be sorted out first."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Once you have a spear and the needed gems, create a whirlwind with Whirling Slash and chain into Twister. Pounce is for movement, Shred is a werewolf-form support candidate; neither is treated as the published route's main skill.",
+        "supports": "Early on, prioritize supports that extend physical damage and attack speed; check names you do not have in the source's stage table.",
+        "passivePriority": "The source's Early Game stage. Check the route toward projectiles, attack speed and cold.",
+        "gearPriority": "Physical damage on the spear, movement speed on boots, Life and resistances on armor.",
+        "replaceGear": "Prioritize replacing a spear whose physical damage is low for your current level, and boots with no movement speed.",
+        "caution": "Whirling Slash is used to generate whirlwinds, not for damage, so the source guides keeping it at Lv1.",
+        "transitionCondition": "A progress guide around Lv11. Check your spear upgrade and the basic Whirling Slash → Twister combo.",
+        "nowActions": [
+          "Prepare a spear and the Whirling Slash / Twister gems",
+          "Keep Whirling Slash at Lv1 and chain into Twister",
+          "Secure boots with movement speed and resistances"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Create a whirlwind with Whirling Slash and launch it into enemy packs with Twister.",
+        "supports": "Prioritize Twister's damage and area. Use War Banner as support once obtained.",
+        "passivePriority": "Continue the source's Early Game stage, checking in the order projectiles, attack speed, cold.",
+        "gearPriority": "Physical damage on the spear, Life, resistances, Evasion. Keep movement speed on boots.",
+        "replaceGear": "If damage stalls, replace the spear; if defense feels shaky, replace the slots lacking resistances and Life.",
+        "caution": "Do not over-level Whirling Slash; prioritize updating the Twister side.",
+        "transitionCondition": "Reach Lv21. You can reproduce the basic combo of making a whirlwind and launching it with Twister.",
+        "nowActions": [
+          "Create a whirlwind with Whirling Slash",
+          "Launch the whirlwind at enemies with Twister",
+          "Prioritize gem updates on the Twister side"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Twister. If you adopt Barrage, use it before firing the Twister you want to strengthen.",
+        "supports": "Prioritize Twister and Ice-Tipped Arrows, and add Barrage for single-target fights in stages.",
+        "passivePriority": "The source's Mid Campaign stage. After taking Spirit Walker, check the current route including Primal Bounty.",
+        "gearPriority": "Prepare both weapon sets, and check physical damage on the spear, added cold, Life and resistances.",
+        "replaceGear": "First arrange skill assignments and gear requirements so the main skills work correctly on both weapon sets.",
+        "caution": "Ascendancy timing varies with progress, so do not apply names ahead of time before you obtain them.",
+        "transitionCondition": "Reach Lv31. Weapon set switching and the three-skill combo are stable.",
+        "nowActions": [
+          "Add Ice-Tipped Arrows to the combo",
+          "Set up both weapon sets",
+          "Prepare Barrage for single-target fights"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Use Whirling Slash three or more times, prepare with Ice-Tipped Arrows and Barrage, then fire Twister.",
+        "supports": "Prioritize updating Twister, Barrage and Ice-Tipped Arrows, and keep the whirlwind-generating Whirling Slash at Lv1.",
+        "passivePriority": "The source's Mid Campaign stage. Extend projectiles, cold and attack speed, and check Evasion and Deflect for defense.",
+        "gearPriority": "A high physical damage spear, movement speed, Life, resistances, Evasion.",
+        "replaceGear": "The weapon is top priority, then fix resistance and movement speed shortfalls.",
+        "caution": "If the number of whirlwinds and the skill order break down, damage falls, so check the operation in single-target fights.",
+        "transitionCondition": "Reach Lv41. You can reproduce the combo in both clearing and single-target fights.",
+        "nowActions": [
+          "Create multiple whirlwinds before attacking",
+          "Prioritize updating Twister and Barrage",
+          "Check Evasion, Deflect and resistances"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Whirling Slash → Ice-Tipped Arrows → Barrage → Twister. For movement and support, check the source's weapon set assignments.",
+        "supports": "Match the source's Mid / Late Campaign setup and prioritize completing the links of the three main skills.",
+        "passivePriority": "The source's Mid / Late Campaign stage. Check the current route that adopts Dance with Death and the weapon set assignments.",
+        "gearPriority": "Physical damage on the spear, Life, resistances, Evasion, movement speed. Secure enough Spirit for the needed skills.",
+        "replaceGear": "Before the campaign ends, update slots lacking elemental resistances and the old spear.",
+        "caution": "Do not break the per-weapon-set skill assignments, and prioritize base defense over optional uniques.",
+        "transitionCondition": "Campaign finished. Resistances are in order and the basic combo handles both regular enemies and bosses.",
+        "nowActions": [
+          "Fix the skills per weapon set",
+          "Sort out resistances before the campaign ends",
+          "Update the spear and armor before optional uniques"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Use Whirling Slash three or more times, use Ice-Tipped Arrows and Barrage, then chain into Twister.",
+        "supports": "Prioritize the main skills' links and keep support skills up with no Spirit shortfall.",
+        "passivePriority": "Transition to the source's Early Endgame stage. Check attack speed, cold, critical and evasion-based defense.",
+        "gearPriority": "Elemental resistances, Life, Evasion, physical and added damage on the spear, movement speed.",
+        "replaceGear": "Update one piece at a time in the order: unmet resistances, insufficient defense, insufficient spear damage.",
+        "caution": "Do not assume Endgame uniques from right after mapping starts; first sort out resistances and defense with rare gear.",
+        "transitionCondition": "The combo is stable in low-Tier maps and you can maintain resistances and defense.",
+        "nowActions": [
+          "Sort out elemental resistances and Evasion first",
+          "Update the spear's physical and added damage",
+          "Check the combo of using Barrage before Twister"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Twister as the main skill, with Barrage and Ice-Tipped Arrows supplementing single-target damage.",
+        "supports": "Complete the main links and secure the needed Spirit to maintain support effects.",
+        "passivePriority": "The source's Endgame stage. Extend critical, cold and attack speed, and check the balance with Evasion and Energy Shield.",
+        "gearPriority": "High physical and added damage on the spear, Spirit, Life or Energy Shield, Evasion, resistances.",
+        "replaceGear": "Within a range that does not drop base defense, choose pieces that update damage and Spirit together.",
+        "caution": "The published sources' Endgame gear is a target example, and the same items are not necessarily mandatory.",
+        "transitionCondition": "While maintaining the Endgame setup's skills and Spirit, you can balance defense and damage.",
+        "nowActions": [
+          "Check the Endgame stage passives",
+          "Secure the needed Spirit",
+          "Update the spear and gear without dropping defense"
+        ]
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "Prepare whirlwinds with Whirling Slash, strengthen the next attack with Ice-Tipped Arrows and Barrage, then fire Twister.",
+        "supports": "Align with the same support setup as the Endgame stage in use, and update step by step according to what you have.",
+        "passivePriority": "Check the source's Endgame tree and align critical, cold, attack speed and evasion-based defense to the same stage.",
+        "gearPriority": "A high-performance spear, needed Spirit, resistances, Evasion, Life or Energy Shield. Consider optional uniques only after base gear is complete.",
+        "replaceGear": "Compare one piece at a time among pieces that raise damage while keeping defense, and do not force optional uniques.",
+        "caution": "Unconfirmed for 1.0. After the full release, recheck the patch notes and per-stage sources.",
+        "transitionCondition": "The 0.5.5 stage in use is aligned, and you can compare before and after changes in game.",
+        "nowActions": [
+          "Align the Endgame setup and gear stage",
+          "Update one piece at a time while keeping defense",
+          "Recheck the version label before the 1.0 transition"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Spear: physical damage, added damage, attack speed",
+      "Armor: Life or Energy Shield, Evasion, resistances, Deflect",
+      "Support: needed Spirit and movement speed on boots"
+    ],
+    "sources": [
+      {
+        "name": "note: Spirit Walker (Huntress) Twister build complete guide",
+        "url": "https://note.com/fresh_okapi3816/n/nbe96101eda53",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese supplementary article (contains a link to this site. Not treated as independent corroboration or as a basis for the numeric level bands)"
+      },
+      {
+        "name": "Path of Exile 2 Guide: Spirit Walker Elemental Twister Build",
+        "url": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas written guide (Early Game, Campaign and Endgame stages)"
+      },
+      {
+        "name": "Maxroll: Spirit Walker Twisters Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (patch 0.5.5, updated September 2, 2026. Pros/Cons format)"
+      },
+      {
+        "name": "PoE2DB: Barrage",
+        "url": "https://poe2db.tw/us/Barrage",
+        "checkedAt": "2026-11-23",
+        "type": "Skill mechanics (strengthens the next matching bow / spear attack)"
+      },
+      {
+        "name": "PoE2DB: Twister",
+        "url": "https://poe2db.tw/us/Twister",
+        "checkedAt": "2026-11-23",
+        "type": "Skill requirements (Tier 1, spear)"
+      }
+    ],
+    "audience": "Players who want to start with no mandatory uniques and gradually build up area clearing with Twister",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": false
+        },
+        "note": "The confirmed conditions are limited to what could be verified. The note article describes the operation as simple, while the overseas guides say the combo needs practice. Because it uses weapon sets and multiple skills, the operation condition is not counted as a confirmed condition. 'No uniques required' does not state that it works in SSF, so the SSF condition is not counted as a confirmed condition either.",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "On PoE2DB, Twister is confirmed as a Tier 1 spear skill usable from gem Lv1. This confirmation is based on the skill's requirements, not on the source's numeric level bands.",
+            "source": "https://poe2db.tw/us/Twister"
+          }
+        }
+      },
+      "damage": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Big Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "sourceName": "Maxroll: Spirit Walker Twisters Build Guide",
+        "checkedAt": "2026-09-27",
+        "note": "The Pros list high single-target damage (the same statement is also used as the boss basis)."
+      },
+      "defense": {
+        "score": 2,
+        "basis": "Weakness",
+        "quote": "Can be vulnerable due to long setup time for damage",
+        "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "sourceName": "Maxroll: Spirit Walker Twisters Build Guide",
+        "checkedAt": "2026-09-27",
+        "note": "The Cons note that the long setup time before dealing damage creates openings."
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "This build can clear maps incredibly fast",
+        "source": "https://pathofexile.gg/spirit-walker-elemental-twister-build/",
+        "sourceName": "Path of Exile 2 Guide: Spirit Walker Elemental Twister Build",
+        "checkedAt": "2026-09-26",
+        "note": "Map clearing speed is emphasized (the source is from the 0.5 period, published July 17, 2026)."
+      },
+      "boss": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Big Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+        "sourceName": "Maxroll: Spirit Walker Twisters Build Guide",
+        "checkedAt": "2026-09-27",
+        "note": "The Pros list high single-target damage (the same statement is also used as the damage basis)."
+      }
+    },
+    "reviewedFacts": {
+      "ssfNote": "Maxroll explicitly states no uniques are required (it does not state it is for SSF). SSF viability is unconfirmed.",
+      "source": "https://maxroll.gg/poe2/build-guides/spirit-walker-twisters",
+      "checkedAt": "2026-09-28"
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Unified the SSF criteria to 'only when a source explicitly states it is for SSF'. Maxroll's 'no uniques required' alone does not make it SSF-viable, so SSF was removed and the beginner rating changed from 3 to 2."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Fixed the incorrect operation order that used Barrage after Twister. Corrected a source explanation about Lv11–20 that was not in the source, and changed the main skill's early availability condition to PoE2DB. Also corrected the early guidance that treated Pounce and Shred as main skills to their roles in the source: movement and transformation support."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Rechecked the publication status, supported patch, update date, main skill and ascendancy of all 5 sources, and updated the check dates."
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "huntress-companion",
+      "name": "Companion Spirit Walker",
+      "classSlug": "huntress",
+      "slug": "companion"
+    },
+    {
+      "id": "huntress-minion-spirit-walker",
+      "name": "Minion Spirit Walker",
+      "classSlug": "huntress",
+      "slug": "minion-spirit-walker"
+    }
+  ]
+}

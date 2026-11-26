@@ -211,7 +211,9 @@ export async function decodePlanLink(value) {
 }
 export function levelingStage(preset,level){
   const index=level<=10?0:level<=20?1:level<=30?2:level<=40?3:level<=65?4:level<=75?5:level<=90?6:7;
-  return preset.stages?.[index] || null;
+  // Builds may have fewer than 8 stages; later levels belong to the final stage.
+  const clamped=preset.stages?Math.min(index,preset.stages.length-1):index;
+  return preset.stages?.[clamped] || null;
 }
 export function stageSkillCandidates(stage,gems,names){
   if(!stage)return [];

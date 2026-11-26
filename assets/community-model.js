@@ -1,4 +1,4 @@
-import {parseSave, weaponSetState, ENGINE_VERSION} from './simulator-model.js?v=161ef63cbd';
+import {parseSave, weaponSetState, ENGINE_VERSION} from './simulator-model.js?v=fdda84f09b';
 export const PUBLIC_LIMIT = 64000;
 export const PUBLIC_PURPOSES = ['leveling', 'mapping', 'boss', 'all'];
 export const PUBLIC_CURRENCIES = ['exalted', 'divine', 'chaos'];

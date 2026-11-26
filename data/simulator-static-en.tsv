@@ -61,6 +61,10 @@ Lv80・装備6点・パッシブ3点	Level 80 · 6 items · 3 passives
 モンク / マーシャルアーティスト	Monk / Martial Artist
 ワーリングアサルト・マーシャルアーティスト	Whirling Assault Martial Artist
 ワーリングアサルト	Whirling Assault
+フォーリングサンダー・マーシャルアーティスト	Falling Thunder Martial Artist
+フォーリングサンダー	Falling Thunder
+ホロウフォーカス＋ストームウェーブ・マーシャルアーティスト	Hollow Focus Storm Wave Martial Artist
+ストームウェーブ	Storm Wave
 このビルドで作る 	Start this build 
 マーセナリー / ジェムリング・リージョネア	Mercenary / Gemling Legionnaire
 ツイスター・ジェムリング	Twister Gemling
@@ -74,6 +78,8 @@ Lv80・装備6点・パッシブ3点	Level 80 · 6 items · 3 passives
 ハントレス / スピリットウォーカー	Huntress / Spirit Walker
 相棒スピリットウォーカー	Companion Spirit Walker
 テイムビースト	Tame Beast
+ミニオン・スピリットウォーカー	Minion Army Spirit Walker
+テイムビーストで捕獲したユニーク獣、ワイルドプロテクターのクマ、ウルフパックとスケルトン系ミニオンによる軍団	An army of a unique beast captured with Tame Beast, the Wild Protector bear, Wolf Pack and skeletal minions
 レンジャー / デッドアイ	Ranger / Deadeye
 アイスショット・デッドアイ	Ice Shot Deadeye
 アイスショット	Ice Shot
@@ -83,6 +89,8 @@ Lv80・装備6点・パッシブ3点	Level 80 · 6 items · 3 passives
 ドルイド / オラクル	Druid / Oracle
 植物オラクル	Plant Oracle
 エンタングル / スラッシングヴァイン	Entangle / Thrashing Vines
+グリムピラー（スペルトーテム）・オラクル	Grim Pillars (Spell Totem) Oracle
+グリムピラーをスペルトーテムで詠唱	Cast Grim Pillars with Spell Totem
 ウィッチ / リッチ	Witch / Lich
 エッセンスドレイン・コンテージョン リッチ	Essence Drain / Contagion Lich
 エッセンスドレイン + コンテージョン	Essence Drain + Contagion
@@ -345,7 +353,7 @@ Corrupted Precursor Beacon（コラプト状態の先駆者のビーコン）で
 サイトマップ	Sitemap (Japanese)
 MITライセンス	MIT license
 Game data © Grinding Gear Games. 非公式ツールです。	Game data © Grinding Gear Games. Unofficial tool.
-PoE2の掲載12ビルドから育成方針を選び、装備・スキル・パッシブをブラウザで編集。変更前後のDPS・ライフ・耐性を比較し、構成の自動保存と保存ファイルの読み書きができます。	Plan a Path of Exile 2 build in your browser. Edit gear, gems and the passive tree, compare estimated DPS, Life and resistances, and save or share your setup.
+PoE2の掲載19ビルドから育成方針を選び、装備・スキル・パッシブをブラウザで編集。変更前後のDPS・ライフ・耐性を比較し、構成の自動保存と保存ファイルの読み書きができます。	Plan a Path of Exile 2 build in your browser. Edit gear, gems and the passive tree, compare estimated DPS, Life and resistances, and save or share your setup.
 ビルドを選んで、自分の装備・ジェム・パッシブを試す。	Choose a PoE2 build and experiment with your gear, gems and passive tree.
 POE2ビルドナビの更新情報	POE2 Build Navi updates (Japanese)
 POE2ビルドナビ ホーム	POE2 Build Navi home (Japanese)
@@ -396,3 +404,33 @@ POE2ビルドナビ ホーム	POE2 Build Navi home (Japanese)
 （2026-11-11公開）	(published November 11, 2026)
 0.5.5fで一部の隠れ家（Shoreline Hideoutなど）が再びロックされる不具合を修正。コラプト状態の先駆者のビーコンの報酬が失敗する不具合と、対象マップの光の柱が表示されない表示の不具合を修正。	Fixed an issue introduced in 0.5.5f where some unlocked hideouts, such as Shoreline Hideout, could become locked again. Fixed Corrupted Precursor Beacon item rewards failing, and light beams on affected maps sometimes not rendering.
 報酬・表示に関する修正。ビルド評価を変更する根拠としては扱いません。	Fixes to rewards and visuals. Not treated as grounds for changing build ratings.
+
+インファーナルリージョン・チャユラの門弟	Infernal Legion Acolyte of Chayula
+テイムビーストで捕獲した相棒（疫病の摘出者）にインファーナルリージョン IIを付け、周囲の敵を常時発火させる範囲DoT構成。ブリーチ侵入の紫の炎を献身のレムナントで相棒に移し、追加カオスダメージで発火を伸ばす	A companion captured with Tame Beast (Plague Harvester) wearing Infernal Legion II, constantly igniting enemies around it with an area DoT. The purple flames of Into the Breach are shared with the companion through Selfless Remnants, scaling the ignite with extra chaos damage.
+モンク / チャユラの門弟	Monk / Acolyte of Chayula
+
+シールドウォール・ウォーブリンガー	Shield Wall Warbringer
+シールドウォール（Shield Wall）	Shield Wall
+ウォリアー / ウォーブリンガー	Warrior / Warbringer
+
+サポーティングファイヤー・タクティシャン	Supporting Fire Tactician
+サポーティングファイヤー（Supporting Fire）	Supporting Fire
+サポーティングファイヤー	Supporting Fire
+マーセナリー / タクティシャン	Mercenary / Tactician
+PoE2の掲載26ビルドから育成方針を選び、装備・スキル・パッシブをブラウザで編集。変更前後のDPS・ライフ・耐性を比較し、構成の自動保存と保存ファイルの読み書きができます。	Plan a Path of Exile 2 build in your browser. Edit gear, gems and the passive tree, compare estimated DPS, Life and resistances, and save or share your setup.
+グレイシャルランス・デッドアイ	Glacial Lance Deadeye
+グレイシャルランス（Glacial Lance）	Glacial Lance
+グレイシャルランス	Glacial Lance
+
+雷ミニオン・チャユラの門弟	Lightning Minion Acolyte of Chayula
+バインドスペクターで縛ったスペクターを主力にするミニオン軍団構成。キャンペーン終盤はヴァールガード（爆弾型）、マッピングからはスパークを放つ電気の狂信者／カオスゼロットのスペクターが火力を担い、目覚めた夢の紫の炎を献身のレムナントでミニオンへ移して追加カオスダメージを重ねる	A minion army build whose main damage comes from Spectres bound with Bind Spectre. Late in the campaign a bomb-throwing Vaal Guard carries the damage; from mapping onward, Powered Zealot/Chaos Zealot Spectres casting Spark take over, while Waking Dream's violet flame is passed to the minions with Selfless Remnants to stack added chaos damage.
+ツイスター・デッドアイ	Twister Deadeye
+ツイスター（Twister）	Twister
+ミニオン・チャユラの門弟	Minion Acolyte of Chayula
+バインドスペクターで束縛したヴァールガード、スケルトンリーバー、プレイグハーヴェスターを中心とするミニオンアーミー。ブリーチ侵入のレムナントを選択の力でカオス追加ダメージに絞り、献身のレムナントでミニオンへ移して火力を伸ばす。序盤はクロスボウ＋エクスプローシブグレネードで育成し、Act 3終盤でミニオンへ切り替える	A minion army built around Spectres bound with Bind Spectre: Vaal Guard, then Skeletal Reaver, then Plague Harvester. Into the Breach Remnants are narrowed to added chaos damage with Choice of Power and passed to the minions with Selfless Remnants to scale damage. Level with a crossbow and Explosive Grenade early on, then switch to minions late in Act 3.
+オイルバラージ・マーシャルアーティスト	Oil Barrage Martial Artist
+オイルバラージ— パワーチャージを消費して連鎖・分岐・ノヴァの投射物を放つ。ホロウフォーカスの鐘や倒した敵の死体をデバウアーで消費してパワーチャージを生成する。序盤はフローズンローカス＋グレイシャルカスケード、Act 2からストームウェーブで育成し、Early Mapsでオイルバラージへ切り替える	Oil Barrage consumes Power Charges to fire chaining, forking and Nova projectiles. Generate Power Charges by consuming Hollow Focus bells and slain enemies' corpses with Devour. Level with Frozen Locus and Glacial Cascade early on, switch to Storm Wave from Act 2, and change to Oil Barrage in Early Maps.
+フロストボルト＋クリティカル時キャストのコメット・オラクル	Frostbolt Cast On Crit Comet Oracle
+フロストボルト— スネークピット（左リング）で貫通が分岐に変わり、爆発が重なってクリアする。フロストウォールの氷の結晶をフロストボルトで破壊してクリティカル時キャストでコメットを連発する。スネークピット入手前はアイスノヴァ（クリア）とフロストダーツ（単体）で育成し、Lv32でスネークピットを装備できたらフロストボルトへ切り替える	Frostbolt — Snakepit (left ring) turns pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Critical. Before getting Snakepit, level with Ice Nova (clearing) and Frost Darts (single target), and switch to Frostbolt once you can equip Snakepit at Lv32.
+フロストボルト＋クリティカル時キャストのコメット・ヴァラシュタの弟子	Frostbolt Cast On Crit Comet Disciple Of Varashta
+フロストボルト— スネークピット（左リング）で貫通が分岐に変わり、爆発が重なってクリアする。フロストウォールの氷の結晶をフロストボルトで破壊して元素系状態異常時キャスト／クリティカル時キャストでコメットを連発する。スネークピット入手前はアイスノヴァ（クリア）とフロストダーツ（単体）で育成し、Lv32でスネークピットを装備できたらフロストボルトへ切り替える。ヴァラシュタの弟子のアセンダンシー「力の装具」でスタッフとフォーカスを併用し、「バリャのレイライン」でタイムロストサファイアの範囲を広げる	Frostbolt — Snakepit (left ring) turns pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Elemental Ailment / Cast on Critical. Before getting Snakepit, level with Ice Nova (clearing) and Frost Darts (single target), and switch to Frostbolt once you can equip Snakepit at Lv32. The Disciple of Varashta ascendancy Instruments of Power lets you use a staff and focus together, and Baryanic Leylines widens the area of Time-Lost Sapphires.

@@ -1,0 +1,311 @@
+{
+  "build": {
+    "id": "sorceress-sand-fire",
+    "slug": "sand-and-fire",
+    "classSlug": "sorceress",
+    "name": "Sand and Fire Varashta",
+    "seoTitle": "PoE2 Sand and Fire Varashta Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Sand and Fire Varashta leveling skills, setup switches, gear and passives organized from Lv1 to Endgame. Check the next three actions from your current level.",
+    "className": "Sorceress",
+    "ascendancy": "Disciple of Varashta",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "mainSkill": "Kelari's Deception / Ruzhan's Trap",
+    "beginnerRating": 3,
+    "damageRating": 5,
+    "defenseRating": 5,
+    "mappingRating": 3,
+    "bossRating": 4,
+    "difficulty": "Setup switch at the first ascendancy",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "Stage-by-stage guides from Lv1 through the campaign to Endgame are published.",
+      "After taking the first ascendancy, you can move to Kelari's command skills (PoE Vault recommends taking it at Lv21–22).",
+      "Maxroll (0.5.5) lists \"very tanky\" and \"very high damage\" as strengths.",
+      "Djinn are not killed, so you do not need to invest in minion survivability. The command skills' mana costs are also very low (PoE Vault).",
+      "The passive Archon of Undeath can greatly shorten the command skills' cooldowns, making bosses easy to beat by spamming (Gamerch)."
+    ],
+    "weaknesses": [
+      "Until you take the first ascendancy, the build is not in its intended form.",
+      "You must manage command skill cooldowns and multiple actions. PoE Vault calls it \"high APM (actions per minute), with a feel unlike a typical summoning build,\" and Maxroll also says it \"can be button intensive.\"",
+      "Djinn attacks do not have a wide area, so scattered enemies take effort to handle (PoE Vault).",
+      "Maxroll lists minion-related issues and visual clarity as weaknesses."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Lv1–5: Entangle + Contagion. From Lv6: Essence Drain + Contagion.",
+        "supports": "Contagion: Unleash, Magnified Area. Essence Drain: Chain, Swift Affliction.",
+        "passivePriority": "Use the source's Act 1 stage-by-stage tree. Check the exact nodes to take at the linked source.",
+        "gearPriority": "During the campaign, prioritize Armour, Life and missing resistances.",
+        "replaceGear": "Update armor pieces where defense is lacking.",
+        "caution": "Use Frost Bomb and Volcano as support. Add Raging Spirits only after securing a Tier 4 Spirit gem and the Spirit for its reservation. The Lv4 gem version requires character Lv10, 21 Intelligence and a base reservation of 30 Spirit, so reaching Lv6 alone is not enough to add it.",
+        "transitionCondition": "Reach Lv11. The Essence Drain and Contagion combination is stable.",
+        "nowActions": [
+          "Move to Essence Drain at Lv6",
+          "Apply Exposure with Frost Bomb",
+          "Check Armour and resistances"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Essence Drain + Contagion. Use Frost Bomb, Volcano and Raging Spirits as support.",
+        "supports": "Continue the early supports and advance to the source's Act 2 setup. Check unconfirmed slots in the source.",
+        "passivePriority": "Until the first ascendancy, continue the source's spell leveling tree.",
+        "gearPriority": "Armour, Life, missing resistances. Also secure the attributes and gold for the setup switch.",
+        "replaceGear": "Prioritize armor pieces with insufficient defense, and avoid over-investing in spell gear right before the switch.",
+        "caution": "Around Lv22 you will switch to the minion version, so do not think of the spell tree as the finished form.",
+        "transitionCondition": "You can proceed to the first ascendancy and have kept gold for the switch.",
+        "nowActions": [
+          "Continue Essence Drain and Contagion",
+          "Progress the first ascendancy",
+          "Keep gold for the respec"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "After the first ascendancy, switch to Kelari's Deception + Kelari's Brutality.",
+        "supports": "For area, Magnified Area II is a switch candidate; for single target, Concentrated Area.",
+        "passivePriority": "After the first ascendancy, respec from the spell tree to the minion stage-by-stage tree.",
+        "gearPriority": "While keeping Armour, check the minion-related requirements and defense.",
+        "replaceGear": "Review spell-only gear that does not fit the new setup, one piece at a time.",
+        "caution": "Prepare the command skills and supports before switching, and do not leave the in-between state in place for long.",
+        "transitionCondition": "You can handle regular enemies and single targets with Kelari's command skills.",
+        "nowActions": [
+          "Complete the first ascendancy",
+          "Switch to Kelari's command skills",
+          "Respec from the spell tree to the minion tree"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Kelari's Deception + Kelari's Brutality. From Lv40, add Ruzhan's Trap.",
+        "supports": "At Lv36, Muster is an addition candidate. Check Ruzhan's supports in the source at switch time.",
+        "passivePriority": "Continue the source's Act 3 to Act 4 stage-by-stage tree.",
+        "gearPriority": "Armour, Life, resistances, required attributes.",
+        "replaceGear": "Update pieces that do not meet the conditions needed to add Ruzhan.",
+        "caution": "Ruzhan's Trap comes at Lv40 onward. Do not remove your existing clear tools first.",
+        "transitionCondition": "Reach Lv40. Ruzhan's Trap can be used at the start of combat.",
+        "nowActions": [
+          "Check Muster at Lv36",
+          "Prepare Ruzhan for Lv40",
+          "Be conscious of command skill cooldowns"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Place Ruzhan's Trap at the start, and give Kelari's Deception and Brutality commands in between.",
+        "supports": "Move Ruzhan's Trap to the source's Act 4+ setup. Check the Kelari supports at the same stage.",
+        "passivePriority": "Use the Act 4+ minion stage-by-stage tree and connect to the post-campaign defensive version.",
+        "gearPriority": "Armour, Life, elemental resistances, effective minion attributes.",
+        "replaceGear": "Prioritize armor pieces with insufficient defense, and update minion gear after confirming its actual effect.",
+        "caution": "The command order differs between regular enemies and bosses. Against regular enemies, prioritize the trap; against strong enemies, layer Deception over Brutality.",
+        "transitionCondition": "Campaign complete. Ruzhan's and Kelari's commands can be used on every cooldown.",
+        "nowActions": [
+          "Use Ruzhan's Trap at the start of combat",
+          "Insert Kelari's commands in between",
+          "Sort out resistances before the campaign ends"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Ruzhan's Trap + Kelari's commands. Add a mapping Spectre only if the conditions are met.",
+        "supports": "Kelari: built around Bidding II, Muster and Hulking Minions, with the rest checked against the source's current setup. Move Ruzhan to the source's Mapping setup as well.",
+        "passivePriority": "Move to the minion and defense tree for the start of mapping. Do not change everything to the finished form before your gear is ready.",
+        "gearPriority": "First resistances and defense. Next, minion gem levels, damage and attack speed.",
+        "replaceGear": "If you die in maps, check armor; if clearing is slow, check gear that benefits minions.",
+        "caution": "Check Spectre candidates' acquisition locations and abilities in the source, and if you have not obtained one, do not force it into the finished setup.",
+        "transitionCondition": "The command order and defense are stable in low-tier maps, and the purpose of the Spectre slot is clear.",
+        "nowActions": [
+          "Stabilize resistances and defense first",
+          "Check minion gem levels",
+          "Add a Spectre after checking its acquisition conditions"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Center on Ruzhan's Trap, layer Kelari's commands, and run Bind Spectre as a farming support.",
+        "supports": "Kelari takes Bidding II, Muster and Hulking Minions, among others; Ruzhan's source candidates are Bidding III, Muster, Long Fuse II, Hulking Minions and Magnified Area II.",
+        "passivePriority": "Advance to the Endgame minion and ES stages. Make the defense switch only after your gear is ready.",
+        "gearPriority": "Maximum ES, ES from the focus, minion critical strikes and damage, recharge, resistances.",
+        "replaceGear": "Do not change everything from Armour leveling gear to ES gear at once; update one piece at a time while maintaining resistances and actual defense.",
+        "caution": "There is a noted bug warning in the guide regarding Ruzhan's Exposure interaction, so check the current behavior in-game.",
+        "transitionCondition": "ES and resistances are stable, and you can explain each minion's role and the Spirit allocation.",
+        "nowActions": [
+          "Make the ES transition one piece at a time",
+          "Cross-check the minion supports against the source",
+          "Check Ruzhan's current behavior"
+        ]
+      },
+      {
+        "label": "Endgame (finished form)",
+        "mainSkill": "Center on Ruzhan's Trap and Kelari's commands, combined with Spectres whose purpose you have confirmed.",
+        "supports": "Align Kelari's and Ruzhan's finished candidates with the source, adjusted to your gear and Spirit allocation.",
+        "passivePriority": "Base it on the current Endgame stage-by-stage tree, adjusted to ES, minion and resistance shortfalls.",
+        "gearPriority": "Minion gem levels, maximum ES, ES from the focus, minion damage, recharge, resistances.",
+        "replaceGear": "Not a fixed price: judge one piece at a time by your current shortfall and the performance difference against listings under the same conditions.",
+        "caution": "This setup has many command skills. Separate the action order for farming and for bosses, and do not target unverified numerical DPS.",
+        "transitionCondition": "Once complete, improve minion damage, ES and defensive actions one item at a time.",
+        "nowActions": [
+          "Separate the action order for farming and for bosses",
+          "Check ES and resistance shortfalls",
+          "Compare minion gear one piece at a time"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Weapon: a sceptre is mandatory. Prioritize +minion skill levels, Spirit, \"increased damage for nearby allies\" and \"increased critical damage bonus for nearby allies\" (PoE Vault).",
+      "Off-hand: a focus is recommended. A shield is about equal defensively (PoE Vault).",
+      "Armor: during the campaign, Armour, Life and missing resistances (original guide). PoE Vault emphasizes ES, and Maxroll's Endgame setup stacks ES, ES recovery and block chance. Time the ES transition to the source's stages.",
+      "Resistances: runes prioritize maintaining the resistance caps above all (PoE Vault).",
+      "From Act 4 onward: look for Spirit, ES and +minion skill levels (PoE Vault). Boots take movement speed.",
+      "No unique is mandatory (Maxroll). Enfolding Dawn (best when upgraded with Runeforge) and Bones of Ullr are useful. Defensively, a Lv36 Soul Mantle and the Lv51 Waveshaper are also candidates (Maxroll).",
+      "The required attributes for the setup switch."
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Sandscorcher Campaign Guide 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas campaign guide"
+      },
+      {
+        "name": "Mobalytics: SSF Sand & Fire Varashta 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas campaign and Endgame guide"
+      },
+      {
+        "name": "note: 0.5 Varashta Endgame setup",
+        "url": "https://note.com/poe2_sat/n/n5d5723c96d96",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese supplementary resource"
+      },
+      {
+        "name": "Mobalytics: Sandscorcher Endgame 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/sandscorcher-disciple-of-varashta",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas Endgame guide"
+      },
+      {
+        "name": "Maxroll: Disciple of Varashta Minion Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas campaign and Endgame guide (patch 0.5.5, updated November 8, 2026; referenced as the basis for the ratings)"
+      },
+      {
+        "name": "PoE Vault: Djinn Commander Disciple of Varashta Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas leveling guide (Kelari and Ruzhan command setup. 0.5.5, updated August 28, 2026)"
+      },
+      {
+        "name": "Gamerch: Minion Varashta gear and tree",
+        "url": "https://gamerch.com/poe2/954611",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese strategy resource (a setup using Kelari's commands as the main skills. 0.5.5, updated September 18, 2026)"
+      },
+      {
+        "name": "PoE2DB: Raging Spirits",
+        "url": "https://poe2db.tw/us/Raging_Spirits",
+        "checkedAt": "2026-11-23",
+        "type": "Skill conditions (Tier 4, gem Lv4 requires Lv10 / 21 Intelligence, base reservation 30 Spirit)"
+      }
+    ],
+    "status": "verified",
+    "audience": "Players who, even in a summoning build, want to enjoy caster-like play using command skills themselves",
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Checked Gamerch (Minion Varashta, 0.5.5). Updated bosses from unrated to 4/5 (based on the text saying bosses can be beaten easily by spamming)."
+      },
+      {
+        "date": "2026-09-28",
+        "summary": "Checked PoE Vault (Djinn Commander, 0.5.5) and Maxroll (September 27 update). Updated mapping from unrated to 2/5 (the Djinn attack range weakness) and beginner-friendliness from 2 to 3 (the main skill is usable from the first ascendancy at Lv21–22). Made the gear priorities concrete per slot and added strengths, weaknesses and sources. Bosses remained unrated, as there was no supporting statement."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Fixed the early Raging Spirits guidance, changing it from the Lv6 leveling guideline to the actual gem, attribute and Spirit usage conditions."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked the publication status, supported patch, update date, main skill and ascendancy of 5 of the 8 sources and updated the checked dates. The 3 Mobalytics entries could not be fetched automatically, so they remain unchecked (checked dates left as they were). The Maxroll minion guide had been updated on November 8, 2026, but since there was no description of the changes, this page's setup was not changed. The main skills (Kelari's Deception, Ruzhan's Trap) and the ascendancy were the same."
+      }
+    ],
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": false
+        },
+        "note": "Only the conditions counted as confirmed are tied to the source. Ease of operation is not counted as a confirmed condition, because PoE Vault lists \"Very few unique buttons\" as a strength but \"High APM\" as a weakness, and Maxroll also writes \"Can be button intensive.\"",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "PhazePlays' leveling guide (updated September 1, 2026, 0.5.5 FR tag / text 0.5) explains that you move to Kelari and Kelari's Deception at the first ascendancy from Lv22 onward. Ruzhan and Ruzhan's Trap are at Lv40 onward, the second ascendancy stage, and it does not mean both are usable from the start.",
+            "source": "https://mobalytics.gg/poe-2/profile/phazeplays/builds/0-4-phazeplays-sandscorcher-campaign-guide"
+          },
+          "ssfConfirmed": {
+            "basis": "Cross-checked a campaign SSF guide and an Endgame guide for (HC) SSF.",
+            "source": "https://mobalytics.gg/poe-2/builds/minion2win-varashta-campaign-build-guide"
+          }
+        }
+      },
+      "damage": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Very high damage",
+        "source": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
+        "sourceName": "Maxroll: Disciple of Varashta Minion Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "The high damage is emphasized in the strengths (Maxroll, 0.5.5, updated September 27, 2026)."
+      },
+      "defense": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Very tanky",
+        "source": "https://maxroll.gg/poe2/build-guides/disciple-of-varashta-minion-build-guide",
+        "sourceName": "Maxroll: Disciple of Varashta Minion Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "The high durability is emphasized in the strengths (Maxroll, 0.5.5, updated September 27, 2026)."
+      },
+      "mapping": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Djinn attacks don’t have great AoE coverage. Enemies that are spread out may require more effort to kill than a traditional spellcaster build.",
+        "source": "https://www.poe-vault.com/poe2/sorceress/disciple-of-varashta/djinn-commander-leveling-build",
+        "sourceName": "PoE Vault: Djinn Commander Disciple of Varashta Leveling Build",
+        "checkedAt": "2026-09-28",
+        "note": "The quote is from the weakness column of PoE Vault's leveling guide (0.5.5), rating that scattered enemies take extra effort to handle. On the other hand, PhazePlays' Endgame guide lists comfortable farming as a strength. The scope of the rating differs between leveling and Endgame and between authors' setups."
+      },
+      "boss": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "The Archon of Undeath passive massively boosts the cooldown recovery rate, so bosses can be taken down easily by spamming Kelari's Deception.",
+        "source": "https://gamerch.com/poe2/954611",
+        "sourceName": "Gamerch: Minion Varashta gear and tree",
+        "checkedAt": "2026-09-28",
+        "note": "In the explanation of the main skill Kelari's Deception, it explains as a strength that bosses can be beaten easily (a statement in the body text, not the strengths column. There is no emphasis wording, so this is 4). The resource is 0.5.5 (updated September 18, 2026), and its star rating is also \"Boss clear ★★★.\""
+      }
+    }
+  },
+  "related": [
+    {
+      "id": "sorceress-frostbolt-comet-varashta",
+      "name": "Frostbolt + Cast on Critical Comet Disciple of Varashta",
+      "classSlug": "sorceress",
+      "slug": "frostbolt-comet-varashta"
+    },
+    {
+      "id": "sorceress-spark-stormweaver",
+      "name": "Spark Stormweaver",
+      "classSlug": "sorceress",
+      "slug": "spark-stormweaver"
+    }
+  ]
+}

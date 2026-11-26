@@ -1,0 +1,351 @@
+{
+  "build": {
+    "id": "warrior-shield-wall-smith",
+    "slug": "shield-wall-smith",
+    "classSlug": "warrior",
+    "name": "Shield Wall Smith",
+    "seoTitle": "PoE2 Shield Wall Smith Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Shield Wall Smith — early skills, the Lv22 switch, durable gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "className": "Warrior",
+    "ascendancy": "Smith of Kitava",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "mainSkill": "Shield Wall",
+    "beginnerRating": 3,
+    "damageRating": 3,
+    "defenseRating": 4,
+    "mappingRating": 4,
+    "bossRating": 3,
+    "difficulty": "Switch the main skill at Lv22",
+    "reviewedFacts": {
+      "gearDependence": "Gear is easy to put together in early maps",
+      "ssfNote": "A separate setup by Lexd explicitly marks its Tier 1–5 and Tier 5–10 map stages as SSF-oriented. Whether the listed Lundburgerr version works in SSF through its finished form is unconfirmed.",
+      "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+      "checkedAt": "2026-09-27",
+      "ssfSource": "https://mobalytics.gg/poe-2/builds/avatar-of-fire-smith-of-kitava-lexd"
+    },
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "After obtaining the first ascendancy, durability is easy to get in the campaign.",
+      "Per-stage Act, Maps and Endgame setups are published.",
+      "Smith of Kitava's resistance support assumes the nodes taken and gear resistances. The ascendancy's general potential does not guarantee this build's durability in its finished form.",
+      "The build works with little gear investment, and from early maps it is easy to divert gear slots to item rarity (Kami-labs)."
+    ],
+    "weaknesses": [
+      "Shield Wall's Tier 7, gem Lv7 version requires character Lv22, 41 Strength and a shield with Armour. In the source, you switch in Act 2 at Lv22 once the gem and shield conditions are met.",
+      "At high gear budgets, damage and clear do not scale as much as other setups, per the source.",
+      "In 0.5, Fortifying Cry's behavior changed, and single-target damage from Act 3 onward drops by 30% in the worst case (Kami-labs).",
+      "The Act 1 Rolling Slam → Boneshatter sequence requires practicing animation cancelling. Perfect Strike at Lv14 deals no damage if you miss the timing (Kami-labs)."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Rolling Slam + Boneshatter",
+        "supports": "Rolling Slam: Rapid Attacks. Brink is an optional slot for when stun buildup is insufficient. Boneshatter: Impact Shockwave, Magnified Area.",
+        "passivePriority": "Use the source's Act 1 per-stage tree. Check the exact nodes taken at the linked tree.",
+        "gearPriority": "Keep the mace and armour pieces at your current level, prioritizing Life and resistances.",
+        "replaceGear": "If stun buildup or damage is lacking, update the mace.",
+        "caution": "Chain from Rolling Slam's first hit into Boneshatter before the second hit. Keep Rolling Slam at Lv1.",
+        "transitionCondition": "Reach Lv11. You can reliably chain from Rolling Slam into Boneshatter.",
+        "nowActions": [
+          "Chain from Rolling Slam's first hit into Boneshatter",
+          "Keep Rolling Slam at Lv1",
+          "Check the level of your mace and armour pieces"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Rolling Slam + Boneshatter. From Lv14, add Perfect Strike for single target.",
+        "supports": "Perfect Strike: Window of Opportunity, Concentrated Area. Herald of Ash: Magnified Area.",
+        "passivePriority": "Use the source's Act 2 - Pre Level 22 per-stage tree.",
+        "gearPriority": "Mace damage, Armour, Life, resistances, movement speed.",
+        "replaceGear": "If single-target damage is still lacking after adding Perfect Strike, check the mace first.",
+        "caution": "Shield Wall is from Lv22. Do not remove your current main skills first.",
+        "transitionCondition": "Reach Lv21. You have started looking for a high-Armour shield for the Lv22 switch.",
+        "nowActions": [
+          "Add Perfect Strike at Lv14",
+          "Use Perfect Strike in single-target fights",
+          "Start looking for a high-Armour shield for Lv22"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Switch to Shield Wall from Lv22.",
+        "supports": "Until Lv22, keep Rolling Slam + Boneshatter (Perfect Strike for single target). In Act 2 - Shield Wall Swap, Shield Wall: Rapid Attacks I, Magnified Area I, Fire Attunement. Infernal Cry: Tireless, Raging Cry. Freezing Mark: Mark for Death, Mark of Siphoning.",
+        "supportSourceStage": "Act 2 - Shield Wall Swap",
+        "passivePriority": "Move to the source's Act 2 - Shield Wall Swap per-stage tree.",
+        "gearPriority": "The author gives Lv22 and shield Armour of 80+ as the guideline for switching. This is not a game usage requirement or a measured guarantee. Also check Life and resistances on armour pieces.",
+        "replaceGear": "At the Shield Wall switch, update the shield with top priority.",
+        "caution": "Do not remove your main skills before Lv22, and after switching, practice the operation of detonating the wall.",
+        "transitionCondition": "Placing Shield Wall and detonating it becomes stable.",
+        "nowActions": [
+          "Switch to Shield Wall at Lv22",
+          "Equip a shield with a high Armour value",
+          "Practice placing and detonating the wall"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Continue with Shield Wall as the main skill. The source presents a plan to add Fortifying Cry with the first Lv9+ gem, then Sunder next.",
+        "supports": "In Act 3, upgrade Shield Wall's Magnified Area to II. Fortifying Cry: Raging Cry, Fire Attunement, Close Combat I. Sunder: Prolonged Duration II, Rapid Attacks I. Check the gems you own, slots and attribute requirements.",
+        "supportSourceStage": "Act 3",
+        "passivePriority": "Use the source's Act 3 per-stage tree. Prioritize Smith's defensive effects and gear requirements.",
+        "gearPriority": "Shield Armour, chest defense, Life, missing resistances, movement speed.",
+        "replaceGear": "Compare the shield first, since it directly affects damage and wall performance; if defense is lacking, update the chest piece.",
+        "caution": "The main skill's performance depends heavily on the shield, so do not keep updating only the weapon. The source presents an option to temporarily remove Leap Slam when skill slots are short.",
+        "transitionCondition": "Reach Lv41. You can vary wall placement between regular enemies and bosses.",
+        "nowActions": [
+          "Compare shield Armour values",
+          "Check the Act 3 per-stage tree",
+          "Vary how you place the wall by enemy type"
+        ],
+        "actionGuidance": {
+          "actionIndex": 1,
+          "what": "The Act 3 passive tree",
+          "where": "The \"Act 3\" per-stage tree in the source guide",
+          "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr"
+        }
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Use Shield Wall as the center of both clear and single target.",
+        "supports": "Check the supports for Shield Wall and its supporting skills in the source's \"Skill Gems\" → \"Act 4\", then \"Interludes\", in that order. Stage-specific support names are unconfirmed.",
+        "supportSourceStage": "Act 4 → Interludes",
+        "passivePriority": "Progress from the Act 4 to the Interludes per-stage trees, connecting to Maps after the campaign.",
+        "gearPriority": "High-Armour shield, Armour armour pieces, Life, elemental resistances, movement speed.",
+        "replaceGear": "Prioritize resistances that are short at campaign end and a shield whose performance has stalled.",
+        "caution": "Smith makes resistances easier to arrange, but do not assume unconfirmed caps or that gear is unnecessary.",
+        "transitionCondition": "Campaign finished. The shield's performance and your defenses can withstand the start of low-Tier maps.",
+        "nowActions": [
+          "Progress in the order Act 4 → Interludes",
+          "Check the Armour of your shield and chest piece",
+          "Sort out resistances before the campaign ends"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Advance while controlling your path and enemy packs with Shield Wall, then detonate it.",
+        "supports": "Check the supports for Shield Wall and clear skills in the source's \"Skill Gems\" → \"Maps\". The source text uses wall + warcry or Shield Charge when clearing. Stage-specific support names are unconfirmed.",
+        "supportSourceStage": "Maps",
+        "passivePriority": "Use the Maps per-stage tree; do not bulk-change the campaign tree by guessing.",
+        "gearPriority": "Stabilize resistances and Life, and update the high-Armour shield and chest armour piece.",
+        "replaceGear": "If you die often, armour pieces first; if wall damage is lacking, the shield takes top priority.",
+        "caution": "How you land the wall changes between narrow and open terrain. Do not fix the placement position.",
+        "transitionCondition": "You can stably run low-Tier maps and keep landing the wall on bosses.",
+        "nowActions": [
+          "Move to the Maps per-stage tree",
+          "Stabilize resistances and Life first",
+          "Vary the wall's position to match the terrain"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Keep Shield Wall as the main skill, switching placement between clear and bosses.",
+        "supports": "First check the source's \"Skill Gems\" → \"Maps\". If moving to the high-investment setup, also check the skills, supports and gear prerequisites of \"Giga Endgame\" together. Stage-specific support names are unconfirmed.",
+        "supportSourceStage": "Maps → Giga Endgame",
+        "passivePriority": "Complete the Maps tree, and move to the Endgame side once gear is in place.",
+        "gearPriority": "Shield Armour, armour piece Armour, Life, resistances, movement speed.",
+        "replaceGear": "For single-target damage, the shield; for insufficient defense, the chest and the slots with missing resistances.",
+        "caution": "Damage scaling at high investment is not the same as other setups. Do not set a fixed DPS target.",
+        "transitionCondition": "You can tell whether clear or bosses are the shortfall.",
+        "nowActions": [
+          "Work out whether the shortfall is damage or defense",
+          "Compare the shield and chest separately",
+          "Move to the Endgame setup only once gear is in place"
+        ]
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "Keep Shield Wall as the main skill, repeating placement and detonation to match terrain and enemy size.",
+        "supports": "Check the finished form's supports in the source's \"Skill Gems\" → \"Giga Endgame\". If changing to the Avatar of Fire version, cross-check the skills, gear and tree of the separate source together. Stage-specific support names are unconfirmed.",
+        "supportSourceStage": "Giga Endgame (the Avatar of Fire version is a separate source)",
+        "passivePriority": "Use the Giga Endgame per-stage tree as the baseline. When changing to the Avatar of Fire version, do so after checking the source's gear prerequisites.",
+        "gearPriority": "Update the high-performance shield, Armour, defense, Life and resistances in order of shortfall.",
+        "replaceGear": "Do not use fixed prices; judge by the performance difference against listings under the same conditions as your current shield and armour pieces.",
+        "caution": "The Avatar of Fire version is not an automatic upgrade. Do not partially mix gear and trees.",
+        "transitionCondition": "Once finished, improve the bottlenecks among shield, defense and operation one item at a time.",
+        "nowActions": [
+          "Settle on one finished form",
+          "Check the source's gear prerequisites",
+          "Update the shield and defenses in order of shortfall"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Shield (most important): Armour value and increased Armour %. Shield Wall adds 5–7 physical damage per 15 shield Armour, so damage is also decided by the shield (poe2db; changed from 6–8 in 0.5.0). An Armour-based shield is required to use it.",
+      "At the Lv22 switch: prepare a high-Armour shield in advance.",
+      "Resistances: if your setup takes Coal Stoker, 50% of your Fire Resistance modifiers also apply to Cold and Lightning Resistance (current effect text on poe2db). Check the actual nodes taken in the source's per-stage trees, and do not build gear around this effect if the node is not taken.",
+      "Once the required resistances are secured, spare suffixes can go to damage or item rarity (Maxroll / Kami-labs).",
+      "Early maps: there is an option to use the unique Thrillsteel for permanent Onslaught to speed up mapping (Kami-labs).",
+      "Armour pieces: Life and missing resistances. Use armour pieces that match your current level."
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas verified leveling guide"
+      },
+      {
+        "name": "Mobalytics: Shield Wall + Avatar of Fire 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/avatar-of-fire-smith-of-kitava-lexd",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas Endgame guide"
+      },
+      {
+        "name": "Maxroll: Smith of Kitava Ascendancy Overview",
+        "url": "https://maxroll.gg/poe2/resources/smith-of-kitava-ascendancy-overview",
+        "checkedAt": "2026-11-23",
+        "type": "Shared ascendancy reference material. Not used as the basis for nodes taken or durability performance in the listed Shield Wall setup."
+      },
+      {
+        "name": "Kami-labs: Build Guerrier Shieldwall Smith Kitava (Saison 5)",
+        "url": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-guerrier-shieldwall-smith-kitava-saison-5/",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas explainer article (explains the same 8-stage setup as the original Mobalytics guide. 0.5, published May 28, 2026)"
+      },
+      {
+        "name": "poe2db: Shield Wall",
+        "url": "https://poe2db.tw/us/Shield_Wall",
+        "checkedAt": "2026-11-23",
+        "type": "Game data (gem Tier, added damage from shield Armour, change history)"
+      },
+      {
+        "name": "poe2db: Coal Stoker of Smith of Kitava (Fire Resistance modifiers)",
+        "url": "https://poe2db.tw/us/Smith_of_Kitava",
+        "checkedAt": "2026-11-23"
+      }
+    ],
+    "status": "verified",
+    "audience": "Players looking for a durable league starter whose gear is easy to put together.",
+    "changeHistory": [
+      {
+        "date": "2026-10-02",
+        "summary": "Separated the usage requirements from the leveling switch guideline, which had been conflated. Unified poe2db's Tier 7, gem Lv7 row (character Lv22, 41 Strength, a shield with Armour) and the source's Act 2 switch into separate entries. Added a link to the source's Act 3 tree directly under the Lv37 actions. This is not a re-verification of the 8 leveling stages."
+      },
+      {
+        "date": "2026-09-29",
+        "summary": "Re-checked the rating evidence. Changed durability from general ascendancy discussion to this build's source statement, \"high durability in the campaign after the first ascendancy\". Tied the Lv22 early-main-skill condition to the Shield Wall switch rather than Rolling Slam, and spelled out the gear and resistance conditions. This is not a re-verification of the 8 leveling stages."
+      },
+      {
+        "date": "2026-09-28",
+        "summary": "Checked the Kami-labs explainer article and poe2db. Updated damage and boss from unrated to 3/5 (both a boss-damage strength and the 0.5 single-target damage reduction weakness). Stated in the gear priorities that shield Armour determines damage, and added strengths, weaknesses and sources. Re-checked the Maxroll ascendancy overview."
+      },
+      {
+        "date": "2026-09-27",
+        "summary": "Spelled out the Skill Gems stages to check in the source from Lv22 onward and the switch order. Stage-specific support names remain unconfirmed. Reflected the Maps play described in the source text."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Re-checked the source's descriptions, applicable stages and source information, and fixed mix-ups and over-generalizations. Sources and dynamic setups that could not be confirmed are not treated as re-verified, and the overall leveling verification date has not been changed."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Additionally checked the contents of the per-stage tabs and made the skill and support guidance that had not been captured more concrete. This is not a verification of all gear conditions or actual in-game runs."
+      },
+      {
+        "date": "2026-10-08",
+        "summary": "Additionally checked the source guide's switch conditions and answers to common problems, and added links leading to the current stage's details. This is not a full re-verification of the 8 leveling stages or a date of hands-on play confirmation."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked the publication status, supported patch, update date, main skill and ascendancy of 4 of the 6 sources and updated the check dates. The 2 Mobalytics sources cannot be fetched automatically, so they remain unchecked (check dates left unchanged)."
+      }
+    ],
+    "ratingEvidence": {
+      "checkedAt": "2026-09-29",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
+        },
+        "note": "Only the confirmed conditions are tied to the source and per-stage procedures. SSF is unconfirmed. Kami-labs lists the early combo and Perfect Strike as needing practice among the weaknesses, so ease of operation is not counted as a confirmed condition.",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "The listed build's main skill, Shield Wall, is usable at Lv22. The source guide states explicitly that Rolling Slam + Boneshatter is used as the substitute until the Act 2, Lv22 switch.",
+            "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr"
+          },
+          "noDodgeRequirement": {
+            "basis": "The source's strengths state the campaign durability after the first ascendancy.",
+            "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr"
+          }
+        }
+      },
+      "damage": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Boss obliteration : Shield Wall was already destroying bosses in 0.4 with very little investment ／ Nerf to Fortifying Cry in 0.5 : -30% single target damage in the worst case after Act 3",
+        "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-guerrier-shieldwall-smith-kitava-saison-5/",
+        "sourceName": "Kami-labs: Shieldwall Smith Kitava (article explaining the original Mobalytics guide, 0.5)",
+        "checkedAt": "2026-09-28",
+        "note": "The same source lists high boss-killing damage in its Strengths section and the 0.5 single-target damage reduction (30% in the worst case) in its Weaknesses section. The same text is also used as the basis for boss."
+      },
+      "defense": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Very tanky in campaign after you ascend the first time",
+        "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "sourceName": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "checkedAt": "2026-09-29",
+        "note": "The listed build's source lists the campaign durability after obtaining the first ascendancy as a strength. It does not assert the same durability before ascending or from maps onward. The general ascendancy elemental-resistance potential is not included in this judgment."
+      },
+      "mapping": {
+        "score": 4,
+        "basis": "Strength",
+        "note": "The source lists the endgame setup's screen-wide clear as a strength. This is not a numerical comparison of clear speed.",
+        "quote": "Screen wide clear with the endgame setup",
+        "source": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+        "sourceName": "Mobalytics: Shield Wall Smith Leaguestarter 0.5.5",
+        "checkedAt": "2026-09-27"
+      },
+      "boss": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Boss obliteration : Shield Wall was already destroying bosses in 0.4 with very little investment ／ Nerf to Fortifying Cry in 0.5 : -30% single target damage in the worst case after Act 3",
+        "source": "https://kami-labs.fr/en/path-of-exile-2/builds-path-of-exile-2/build-guerrier-shieldwall-smith-kitava-saison-5/",
+        "sourceName": "Kami-labs: Shieldwall Smith Kitava (article explaining the original Mobalytics guide, 0.5)",
+        "checkedAt": "2026-09-28",
+        "note": "The same source lists high boss-killing damage in its Strengths and the 0.5 single-target damage reduction (30% in the worst case) in its Weaknesses. The same text is also used as the basis for damage."
+      }
+    },
+    "mainSkillTiming": {
+      "available": "Tier 7, gem Lv7 version: requires character Lv22, 41 Strength and a shield with Armour. Higher-tier gems raise the requirements as well.",
+      "recommendedSwitch": "In the source, from Act 2 at Lv22. Switch after preparing a gem and shield that meet the usage requirements.",
+      "source": "https://poe2db.tw/us/Shield_Wall",
+      "guide": "https://mobalytics.gg/poe-2/builds/warrior-league-start-lundburgerr",
+      "checkedAt": "2026-10-02"
+    },
+    "practicalGuide": {
+      "checkedAt": "2026-10-08",
+      "heading": "When you're unsure about Shield Wall's usage requirements, detonation, or boss fights",
+      "scope": "Cross-checked Lundburgerr's leveling guide text (title 0.5, tags 0.5.5 FR) against poe2db's usage requirements. The full support names for the later stages and actual in-game behavior have not been re-verified.",
+      "questions": [
+        {
+          "answer": "The Tier 7, gem Lv7 version requires character Lv22, 41 Strength and a shield with Armour. Higher-tier gems have different requirements. Check the equipped shield and the in-game gem display, and if a requirement is unmet, keep the previous stage's setup.",
+          "question": "What if Shield Wall still can't be used at Lv22?"
+        },
+        {
+          "answer": "The source's clear procedure is to place the wall and use a warcry or Shield Charge. The game data also explains destruction by your own corresponding skills. Separate placing the wall from detonating it, and check which skills your current stage uses.",
+          "question": "Does Shield Wall attack just by placing it?"
+        },
+        {
+          "answer": "The source guides you to use Sunder after Armour Break. If you have not taken it, do not copy the finished form as-is; check your current stage's setup. Fortifying Cry is also a support added after you obtain it.",
+          "question": "When should I use Sunder in boss fights?"
+        }
+      ]
+    }
+  },
+  "related": [
+    {
+      "id": "warrior-shield-wall-warbringer",
+      "name": "Shield Wall Warbringer",
+      "classSlug": "warrior",
+      "slug": "shield-wall-warbringer"
+    }
+  ]
+}

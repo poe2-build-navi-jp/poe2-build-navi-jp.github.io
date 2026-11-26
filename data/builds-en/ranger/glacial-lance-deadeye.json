@@ -1,0 +1,255 @@
+{
+  "build": {
+    "ascendancy": "Deadeye",
+    "audience": "Players who want to map at high speed alongside mirages while freezing the whole screen.",
+    "beginnerRating": 3,
+    "bossRating": 4,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked aer0's Maxroll guide text directly and cross-checked names and numbers against the Japanese poe2db. Confirmed the A Tier placement in Maxroll's League Starter Tier List."
+      }
+    ],
+    "className": "Ranger",
+    "classSlug": "ranger",
+    "damageRating": 4,
+    "defenseRating": 3,
+    "difficulty": "Twister leveling until the first trial in Act 2. After the transition, there is timing management for the two mirages and Barrage.",
+    "gearPriorities": [
+      "Spear: added physical and cold damage and attack speed. Update every 5–10 levels; the finished form is a crafted Akoyan Spear.",
+      "Sceptre: right after reaching maps, the base for socketing the Idol of Eramir. Together with the amulet, secure 240 Spirit.",
+      "Armour: Evasion, ES and Deflect. The helmet is pure ES (for Subterfuge Mask). Rings and gloves take added damage."
+    ],
+    "id": "ranger-glacial-lance-deadeye",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "If you leave Whirling Slash's whirlwind and fire Twister, the whirlwind collapses and you lose the added damage. Always fire from inside the whirlwind.",
+        "gearPriority": "Life and resistances on most slots. Large added damage on rings, spear and gloves (any element). Update the spear every 5–10 levels, prioritizing physical and cold damage and attack speed suffixes.",
+        "label": "Act 1 (Twister leveling)",
+        "mainSkill": "Twister + Whirling Slash. On bosses, Parry → Fangs of Frost to create chilled ground, then attack.",
+        "nowActions": [
+          "Keep Whirling Slash at Lv1",
+          "Fire Twister from inside the whirlwind",
+          "Update the spear every 5–10 levels"
+        ],
+        "passivePriority": "Push damage first early on. Critical is hard to scale, so leave it for later (source). See the source for the per-stage tree.",
+        "replaceGear": "Update the spear with top priority. Also review rings and gloves with no added damage.",
+        "supports": "Frost Nexus generates chilled ground. Keep Whirling Slash fixed at Lv1 to save mana (source). War Banner is also used for single target.",
+        "transitionCondition": "Act 2 begins. Barrage and Ice-Tipped Arrows can be prepared."
+      },
+      {
+        "caution": "Parry and Fangs of Frost can be removed at the start of Act 2 (source). Do not move to Glacial Lance until the first trial is finished.",
+        "gearPriority": "Continue updating the spear. Maintain Life and resistances.",
+        "label": "Early Act 2 – First Trial (continue Twister)",
+        "mainSkill": "Continue Twister. Barrage consumes Frenzy Charges to add projectiles, and Ice-Tipped Arrows is used on cooldown.",
+        "nowActions": [
+          "Add Barrage and Ice-Tipped Arrows",
+          "Use Freezing Mark on tough enemies",
+          "Clear the first trial"
+        ],
+        "passivePriority": "Continue damage first, and do not lean into critical yet (source).",
+        "replaceGear": "Prioritize reviewing a spear whose damage has stalled and armour pieces with low resistances.",
+        "supports": "Ice-Tipped Arrows' ice shards speed up pack clear, so Whirling Slash is used less often. Use Freezing Mark on tough rares and bosses, and Charged Mark also applies shocked ground.",
+        "transitionCondition": "Clear the first trial, making Glacial Lance (Tier 7, from Lv22) and the Mirage Deadeye ascendancy available."
+      },
+      {
+        "caution": "Pounce requires a talisman in Weapon Set 2's off-hand. Use both mirages on cooldown.",
+        "gearPriority": "Sceptre: a Shrine Sceptre (resistances) or an Omen Sceptre (boss critical chance). Attack speed and damage on the Weapon Set 2 talisman also grow Pounce and Arctic Howl (lower priority). Fill attribute and resistance shortfalls with runes.",
+        "label": "After the First Trial – Campaign End (switch to Glacial Lance)",
+        "mainSkill": "Glacial Lance. Attacks summon Mirage Deadeye, and dodge rolls summon Mirage Archer.",
+        "nowActions": [
+          "Switch to Glacial Lance after the first trial",
+          "Prepare a Tier 8 Spirit gem and enable Mirage Archer",
+          "On bosses, use Pounce → Arctic Howl in that order"
+        ],
+        "passivePriority": "Ascendancy order: Mirage Deadeye → Gathering Winds → Called Shots → Avidity (source). The tree continues damage first.",
+        "replaceGear": "Continue updating the spear. If Spirit is short, secure it with the sceptre and amulet.",
+        "supports": "Mirage Archer requires a Tier 8 Spirit gem (poe2db; the source writes Tier 7+). In boss fights, place War Banner, apply Freezing Mark with Pounce, and once freeze is primed, freeze with Arctic Howl and trigger Raging Cry. Fire Barrage with Combat Frenzy's Frenzy Charges.",
+        "transitionCondition": "Campaign finished. Glacial Lance and both mirages are operated stably."
+      },
+      {
+        "caution": "Using Barrage with Olroth's Conviction requires Ward on gear, with a total of 1.5–2× the cost as the guideline (source FAQ). Instilling Thaumaturgic Generator is expensive, so do not put it on an amulet you will replace soon.",
+        "gearPriority": "Right after reaching maps, the top damage priority is the Idol of Eramir socketed into the sceptre (charge generation effectively doubles). Stack Evasion, ES and Deflect on chest, gloves, boots and helmet, and make the helmet pure ES (preparation for Subterfuge Mask). Prepare Valako's Roar charm early as well. Secure a total of 240 Spirit from the amulet and sceptre.",
+        "label": "Early Maps",
+        "mainSkill": "Glacial Lance + both mirages. Mana Remnants recover mana and speed up mirage re-summoning.",
+        "nowActions": [
+          "Socket the Idol of Eramir into the sceptre",
+          "Secure 240 Spirit from the amulet and sceptre",
+          "Make the helmet pure ES in preparation for Subterfuge Mask"
+        ],
+        "passivePriority": "Prioritize Frenzy Charge nodes until the Idol of Eramir is socketed into the sceptre. Critical comes after a good spear is crafted (source).",
+        "replaceGear": "Do not socket an expensive Idol of Eramir into a bad sceptre. Choose the sceptre that receives the idol carefully.",
+        "supports": "Adding Khatal's Rejuvenation to Mana Remnants makes it easier to maintain 40% cooldown recovery speed. War Banner can gain Deflect with Refraction II (requires 10 additional Spirit). Ghost Dance also recovers ES based on Evasion (per the source's introduction).",
+        "transitionCondition": "Low-Tier maps can be run stably, and the Idol of Eramir and 240 Spirit are in place."
+      },
+      {
+        "caution": "Critical assumes weapon quality. Do not lean into critical nodes while you have no good spear.",
+        "gearPriority": "Pick up an Akoyan Spear that drops at area Lv78, create two good mods with Transmutation and Augmentation Orbs, and make it 4-mod with an essence and a Preserved Jawbone. The Sacred Flame sceptre is a big gain. Overflow mana with Uhtred's Chalice and Mana Remnants.",
+        "label": "Endgame",
+        "mainSkill": "Glacial Lance + Barrage. The stage where you scale with critical.",
+        "nowActions": [
+          "Pick up and craft an Akoyan Spear at area Lv78",
+          "Aim for a Sacred Flame sceptre",
+          "Check the transition conditions for Guiding Palm of the Eye (40 Spirit on the amulet)"
+        ],
+        "passivePriority": "Once a good spear with a critical strike chance roll is crafted, take all the critical nodes. Take Subterfuge Mask only after a good ES helmet is crafted (source).",
+        "replaceGear": "Compare the spear's critical strike chance roll with top priority. The finished belt is pursued in the next stage.",
+        "supports": "Adding Olroth's Conviction to Barrage lets you use it 3 times, making it effectively always available (Ward required). Moving from a Shrine Sceptre with Purity of Ice to Guiding Palm of the Eye lets you socket Vitality II and Cannibalism II for free.",
+        "transitionCondition": "The Akoyan Spear craft progresses and the critical setup is stable."
+      },
+      {
+        "caution": "The Aspirational tree assumes multiple jewels and includes Controlled Metamorphosis, which lowers resistances. Do not lean into it before gear is in place.",
+        "gearPriority": "The belt reaches its full value with Mageblood, and Headhunter is also usable. Stack movement speed, attack speed and Evasion heavily.",
+        "label": "Endgame (Aspirational)",
+        "mainSkill": "Glacial Lance. High-speed mapping, firing continuously while moving.",
+        "nowActions": [
+          "Aim for the finished form's unique belt",
+          "Check the Aspirational tree's jewel prerequisites",
+          "If adopting Rakiata's Flow, remove elemental penetration"
+        ],
+        "passivePriority": "The source's Aspirational tree. Hail assumes Barrage and Olroth's Conviction. Take Crimson Assault via Controlled Metamorphosis, a Time-Lost Emerald and From Nothing. On the assumption of using Rakiata's Flow, remove all investment into elemental penetration. Put spare attributes into Strength (Life).",
+        "replaceGear": "Not by fixed price; update one slot at a time by the performance difference against your current gear.",
+        "supports": "Combining Rite of Passage with Spirit of the Wolf lets all damage break Armour, and spreads Herald of Ice and Armour Explosion. The Fall of the Axe grants slow prevention and Onslaught.",
+        "transitionCondition": "Once finished, improve the bottlenecks among spear, charge generation and defense one item at a time."
+      }
+    ],
+    "mainSkill": "Glacial Lance",
+    "mainSkillTiming": {
+      "available": "Glacial Lance is a Tier 7 spear skill requiring level 22 (poe2db Tier 7; matches the site's verified same-tier conversion). The source is structured to switch not by level but after clearing the first trial in Act 2.",
+      "checkedAt": "2026-11-25",
+      "guide": "aer0's Maxroll guide (guide text checked directly)",
+      "recommendedSwitch": "Switch after obtaining the ascendancy (Mirage Deadeye) in the first trial. Enabling Mirage Archer requires a Tier 8 Spirit gem (poe2db; the source writes Tier 7+).",
+      "source": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye"
+    },
+    "mappingRating": 5,
+    "name": "Glacial Lance Deadeye",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": false
+        },
+        "note": "The main skill Glacial Lance is usable from Lv22 as a Tier 7 gem, so the early condition under the beginner standard (Lv22 or below) is counted as a confirmed condition. Operation is also counted because the source summary states explicitly \"only a few buttons; one-button mapping is smooth and easy\". However, Mirage Archer is summoned by dodge roll, so dodge operation is built into the rotation and the dodge condition is not counted. SSF viability is not stated in the source (\"functions without uniques\" is not an SSF statement).",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Glacial Lance is a Tier 7 gem (poe2db). Tier 7's required level 22 matches the site's verified same-tier conversion (Shield Wall and others).",
+            "source": "https://poe2db.tw/jp/Glacial_Lance"
+          },
+          "moderateOperation": {
+            "basis": "Maxroll's summary states explicitly \"only has a few total buttons. One button mapping is smooth and easy\".",
+            "source": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Good boss damage is among the strengths. The summary also says large bosses can be brought down with Barrage's rapid fire.",
+        "quote": "Good Boss Damage",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
+        "sourceName": "Maxroll: Glacial Lance Deadeye Build Guide"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Good boss damage is among the strengths. The introduction also highlights large cold damage.",
+        "quote": "Good Boss Damage",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
+        "sourceName": "Maxroll: Glacial Lance Deadeye Build Guide"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "There are layers of full-screen freeze, Evasion, Deflect and ES, while the weaknesses state explicitly that it is not designed to keep taking boss attacks head-on.",
+        "quote": "Full Screen Freezes / Not Made To Facetank Bosses",
+        "score": 3,
+        "source": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
+        "sourceName": "Maxroll: Glacial Lance Deadeye Build Guide"
+      },
+      "mapping": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "Clear speed and full-screen freezes are emphasized in the strengths.",
+        "quote": "Great Clear Speed / Full Screen Freezes",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
+        "sourceName": "Maxroll: Glacial Lance Deadeye Build Guide"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium (the source summary says \"only a few buttons; one-button mapping is smooth\", while boss fights have the procedure War Banner placement → Pounce → Arctic Howl).",
+      "gearDependence": "Centered on the spear's update frequency and quality. Right after reaching maps, the Idol of Eramir socketed into the sceptre is the top damage priority, and the finished form is a crafted Akoyan Spear and a Mageblood-class belt.",
+      "operation": "Mapping centers on Glacial Lance and dodge rolls. Boss fights have more steps.",
+      "source": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye",
+      "ssfNote": "The source (Maxroll) states it \"functions without uniques\", but does not state whether it works in SSF. It also contains trade-assuming descriptions such as buying the Idol of Eramir and instillations on amulets, so it is not treated as SSF-confirmed."
+    },
+    "seoDescription": "PoE2 0.5.5: Glacial Lance Deadeye — early skills, the Act 2 switch, supports, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Glacial Lance Deadeye Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "glacial-lance-deadeye",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Glacial Lance Deadeye Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by aer0, updated September 12, 2026; guide text checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/glacial-lance-deadeye"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List",
+        "type": "Overseas Tier list (0.5.5; confirmed this build is placed in A Tier and linked to this guide)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Glacial Lance",
+        "type": "Japanese skill data (Tier 7, converts 80% of physical to cold, shards explode when a Frenzy Charge is consumed)",
+        "url": "https://poe2db.tw/jp/Glacial_Lance"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Uncut Skill Gem (gem cutting table)",
+        "type": "Game data (per-Tier gem list for spears: Twister / Whirling Slash are Tier 1, Fangs of Frost is Tier 3, Barrage is Tier 5, Glacial Lance is Tier 7)",
+        "url": "https://poe2db.tw/jp/Uncut_Skill_Gem"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "You can clear while freezing the whole screen, with fast clear speed (source strengths: Great Clear Speed / Full Screen Freezes).",
+      "Mirage Deadeye and Mirage Archer help with both clear and single-target attacks (per the source's introduction and summary).",
+      "Single-target damage is also good, and large bosses can be brought down with Barrage's rapid fire (source strength: Good Boss Damage).",
+      "It functions without uniques, and you can play safely behind defensive layers of freeze, Evasion, Deflect and ES (per the source's introduction and its summary, \"safe and fast league starter\")."
+    ],
+    "updatedAt": "2026-09-12",
+    "version": "0.5.5",
+    "weaknesses": [
+      "It is not designed to keep taking boss attacks head-on (source weakness: Not Made To Facetank Bosses).",
+      "Deep Endgame needs gear (source weakness: Needs Some Gear for Deep Endgame). The Idol of Eramir and Thaumaturgic Generator instillations tend to be expensive.",
+      "The signature Glacial Lance is a Tier 7 gem, from Lv22. You level with Twister until the first trial in Act 2.",
+      "Running Barrage with Olroth's Conviction requires Ward on gear, and it stalls if you do not meet the guideline of 1.5–2× the cost (source FAQ)."
+    ]
+  },
+  "related": [
+    {
+      "id": "ranger-twister-deadeye",
+      "name": "Twister Deadeye",
+      "classSlug": "ranger",
+      "slug": "twister-deadeye"
+    },
+    {
+      "id": "ranger-ice-shot-deadeye",
+      "name": "Ice Shot Deadeye",
+      "classSlug": "ranger",
+      "slug": "ice-shot-deadeye"
+    }
+  ]
+}

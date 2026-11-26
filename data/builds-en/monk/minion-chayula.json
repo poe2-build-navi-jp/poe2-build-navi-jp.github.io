@@ -1,0 +1,287 @@
+{
+  "build": {
+    "ascendancy": "Acolyte of Chayula",
+    "audience": "Players who like \"commander\" play: letting a horde of minions fight while they focus on curses and buff upkeep",
+    "beginnerRating": 2,
+    "bossRating": 3,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Helm Breaker's Maxroll guide text and embedded planner directly and cross-checked names and mechanics against the Japanese poe2db. No mirror or summary sites were used. The planner's old support gem names were replaced with the current names from GGG's official 0.3.0 rename list (e.g. Scattershot → Multishot, Primal Armament → Elemental Armament, Figurehead → Selfless Remnants). leagueStarter is true based on the A Tier placement in the Maxroll League Starter Tier List (the site's Tier list was checked on 2026-11-24). The requested name \"Minion Disciple of Chayula\" was corrected to the guide's actual name, \"Minion Army Acolyte of Chayula\"."
+      }
+    ],
+    "className": "Monk",
+    "classSlug": "monk",
+    "damageRating": 5,
+    "defenseRating": 4,
+    "difficulty": "Medium to High (Acts 1–3 are grenade leveling → a respec of about 35,000 gold around Lv41–43, and identifying and binding the right Vaal Guard is required)",
+    "gearPriorities": [
+      "+levels to all minion skills: secure it on the sceptre, helmet and amulet. The top-priority stat, growing both minion damage and durability (source).",
+      "Spirit: increase the number of minions you can summon with additional Spirit from gear. Alpha's Howl is the top priority for its large Spirit increase + doubled Presence radius. A Prism Guardian is also used to add Spirit (source).",
+      "Added damage to allies in your Presence: a high roll of this sceptre mod grows damage greatly, because Choice of Power and Waking Dream multiply it (source).",
+      "A melee splash belt: a requirement for the Mid setup. A rare belt with \"minion attacks have melee splash\" frees one support slot on the Spectre (source).",
+      "Defense: stack ES and Evasion, and reduce damage taken with Loyalty and Wolf Pack. In the Mid setup, ES + Evasion + about 100 Ward is the foundation (source).",
+      "Jewels: on Sapphire jewels, prioritize maximum ES, minions' all elemental resistances, minion attack / cast speed, and minion damage. From Mid onward, faster ES recharge start; in Min-Max, minion critical as well (source)."
+    ],
+    "id": "monk-minion-chayula",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "The source calls the early part of Monk's Act 1 a rough section. Do not overextend until Explosive Grenade unlocks. Pick up and sell rares, and start saving gold for the respec.",
+        "gearPriority": "A crossbow with high physical / lightning damage (a Bombard Crossbow in Act 3). Prioritize maximum Life and resistances. Armour or Armour / Evasion bases are preferable, but the source says Evasion-only is rough early on. If you see a helmet, amulet or sceptre with +1 minion skills, secure it (for the switch late in Act 3).",
+        "label": "Lv1–37 (crossbow / grenade leveling)",
+        "mainSkill": "Progress the first 2–3 levels with a Quarterstaff, and once you have a Makeshift Crossbow (can be bought from Renly), proceed with Explosive Grenade and Flash Grenade. Apply Exposure with Frost Bomb and raise boss damage with War Banner",
+        "nowActions": [
+          "Obtain a crossbow",
+          "Proceed with Explosive Grenade and Flash Grenade",
+          "Prioritize maximum Life and resistances on gear"
+        ],
+        "passivePriority": "Raise grenade damage with Concussive Attack, Dizzying Sweep, Killer Instinct, Blinding Strike and Kite Runner. The first ascendancy order is Waking Dream → Choice of Power (source).",
+        "replaceGear": "Update flasks to the newest ones every 10–15 levels (source).",
+        "supports": "Explosive Grenade: Multishot II and Elemental Armament I. Flash Grenade: Multishot II and Lightning Attunement. Frost Bomb: Rapid Casting I. Into the Breach unlocks after taking the first ascendancy (Remnant Potency II + Harmonic Remnants II).",
+        "transitionCondition": "Reach Utzaal late in Act 3 and become able to bind a Vaal Guard Spectre (around Lv38)."
+      },
+      {
+        "caution": "There are three monsters named Vaal Guard (melee / 50 Spirit, ranged / 60 Spirit, bomb type / 50 Spirit). Bind the type that throws bombs. Bomb-type Spectres can cause performance problems (source note). If your PC cannot handle it or you find it unpleasant, you can substitute a Skeletal Reaver. Right after the switch, damage is lower than grenade leveling (stated in the source).",
+        "gearPriority": "A sceptre, helmet and amulet with +levels to all minion skills. A Rattling Sceptre is the best base, but mod content matters more than the base (source). A high roll of added damage to allies in your Presence (fire / cold / lightning / physical) grows damage greatly, because Choice of Power and Waking Dream multiply it.",
+        "label": "Lv38–41 (switch to minions: Vaal Guard Spectre)",
+        "mainSkill": "Bind a bomb-throwing Vaal Guard with Bind Spectre, and bring out Raging Spirits with Flame Wall. Strengthen the minions with Wolf Pack + Pain Offering + Despair",
+        "nowActions": [
+          "Bind a bomb-throwing Vaal Guard",
+          "Bring out Raging Spirits with Flame Wall",
+          "Respec your passives for about 35,000 gold"
+        ],
+        "passivePriority": "Respec for about 35,000 gold around Lv41–43. Relentless Fallen for minion mobility and damage; Lord of Horrors and The Soul Meridian to reduce Spirit reservation; Remnant Attraction and Empowering Remnants to strengthen Waking Dream and Choice of Power.",
+        "replaceGear": "Replace helmet, amulet and sceptre with +1–2 minion skill versions. If you have leftover Spirit, add one Skeletal Storm Mage.",
+        "supports": "Vaal Guard Spectre: Multishot II + Feeding Frenzy I + Muster. Raging Spirits: Last Gasp + Minion Splash I + Feeding Frenzy. Pain Offering: Meat Shield II + Danse Macabre. Into the Breach: Remnant Potency II + Harmonic Remnants II + Selfless Remnants.",
+        "transitionCondition": "The Vaal Guard Spectre is bound, the passive respec (about 35,000 gold) is done, and you can enter Act 4 on the minion setup."
+      },
+      {
+        "caution": "Refutation and Wardbound Minions are skill gems from Expedition encounters. If you find them, keep them. Wardbound Minions is not used until the Mid setup.",
+        "gearPriority": "Maintain +levels to all minion skills on the sceptre, helmet and amulet. With a Shrine Sceptre, you can use Spirit-reservation supports such as Upwelling II effectively for free (source). Prioritize boots with movement speed, Life and resistances.",
+        "label": "Lv42–59 (Skeletal Reaver: Act 4–Interludes)",
+        "mainSkill": "Use the first Greater Jeweller's Orb on a Skeletal Reaver and replace the Vaal Guard. Apply Shock with a Skeletal Storm Mage and heal with a Skeletal Cleric. Put Onslaught on minions with Refutation, and block with it in dangerous moments",
+        "nowActions": [
+          "Use the Greater Jeweller's Orb on a Skeletal Reaver",
+          "Use the defensive skills found in Expedition",
+          "Supplement healing with a Skeletal Cleric"
+        ],
+        "passivePriority": "Take Right Hand of Darkness, because Withered scales greatly with Waking Dream and Choice of Power. Raise minion survivability with Necrotised Flesh, Crystalline Flesh and Vile Mending. Widen Spirit and Presence area with Profane Commander.",
+        "replaceGear": "At Lv36, Soul Mantle becomes a defensive option. If you have Enfolding Dawn, runeforging it is best (source).",
+        "supports": "Skeletal Reaver: Muster + Feeding Frenzy II + Last Gasp + Rage III. Raging Spirits: Muster + Minion Splash II + Feeding Frenzy II + Last Gasp. Pain Offering: Meat Shield II + Danse Macabre + Elemental Army. Refutation: Prolonged Duration II + Cooldown Recovery II.",
+        "transitionCondition": "Finish the Interludes and enter maps. The Skeletal Reaver setup is in place and you can use Refutation."
+      },
+      {
+        "caution": "First cap your resistances and meet attribute requirements. Until elemental resistances are capped, adjust with Flux runes. Without about 100 Ward you cannot maintain Wardbound Minions, so transition to the Mid setup only after securing Ward.",
+        "gearPriority": "Alpha's Howl is the top priority (large Spirit increase + doubled Presence radius). Runeforge Enfolding Dawn, and increase minion counts with Bones of Ullr. Gloves prioritize ES above all. Instill Essence Infusion on the amulet.",
+        "label": "Lv60–79 (Early Mapping)",
+        "mainSkill": "Keep the Skeletal Reaver as the main force and keep bringing out Raging Spirits with Flame Wall. Strengthen all minions with Pain Offering, and weaken bosses and tough rares with Despair. Use Refutation on cooldown to put Onslaught on minions",
+        "nowActions": [
+          "Obtain the helmet that doubles Presence radius",
+          "Cap resistances and meet attribute requirements",
+          "Runeforge a high-ES chest piece"
+        ],
+        "passivePriority": "Raise ES and Evasion with Enhanced Barrier, Mindful Awareness and Spectral Ward. Greatly extend ES with Heavy Buffer, and combine it with Mind Over Matter to use Mana for defense. Inner Faith and The Hollowkeeper reduce curse effect on you by 75%. The third ascendancy is Chayula's Gift.",
+        "replaceGear": "If Alpha's Howl is expensive, substitute a helmet with +2 minion skills (source). The sceptre is a Shrine Sceptre or a Rattling Sceptre. Boots (Bones of Ullr) gain Ward through runeforging.",
+        "supports": "Skeletal Reaver: Muster + Feeding Frenzy II + Last Gasp + Rage III + Minion Splash II. Pain Offering: Meat Shield II + Danse Macabre + Magnified Area II + Prolonged Duration II. Despair: Heightened Curse + Cursed Ground + Efficiency II + Prolonged Duration II. Refutation: Cooldown Recovery II + Prolonged Duration II + Rapid Casting II + Mobility.",
+        "transitionCondition": "Obtain a rare belt with \"minion attacks have melee splash\", and Spirit reaches 450 or more."
+      },
+      {
+        "caution": "Wardbound Minions is at most Lv16; lower is better because it consumes less Ward. Without about 100 Ward you cannot maintain Onslaught. Without the melee splash belt, the Spectre loses one support slot.",
+        "gearPriority": "A rare belt with \"minion attacks have melee splash\" is required. Maximize ES and Evasion on the chest and gloves, and put Deflection Rating on at least one piece, preferably both. The chest is a Rambler Jacket or a Sleek Jacket. Add Spirit with a Prism Guardian. At 450+ Spirit, insert Amanamu's Gaze into the boots to raise movement speed.",
+        "label": "Lv80–89 (Mid: Plague Harvester)",
+        "mainSkill": "Switch to a Plague Harvester Spectre. It moves fast and leaps over obstacles, so it does not get stuck like the Skeletal Reaver. Remove Flame Wall and Raging Spirits, and add Wardbound Minions (max Lv16) and Convalescence. Turn Despair into an aura with Blasphemy",
+        "nowActions": [
+          "Obtain a rare belt with melee splash",
+          "Switch to a Plague Harvester Spectre",
+          "Secure Ward up to about 100"
+        ],
+        "passivePriority": "Use Heavy Buffer and Mind Over Matter to use Mana for defense. Change the amulet instill to Warlord Leader. Sapphire jewels prioritize maximum ES, minions' all elemental resistances, minion attack / cast speed, minion damage, and faster ES recharge start. Optional: specialize Weapon Set II in Remnant nodes and snapshot by switching Set II → Set I on zone entry for about 20–30% more damage (if you will not do it, proceed on the base tree).",
+        "replaceGear": "Update Alpha's Howl to a corrupted version with \"+1 minion skills\". Bones of Ullr may prioritize reservation efficiency over movement speed (if Spirit is 450+). Secure about 100 Ward on the gloves through runeforging.",
+        "supports": "Plague Harvester Spectre: Muster + Feeding Frenzy II + Rage III + Rapid Attacks II + Minion Mastery. Pain Offering: Danse Macabre + Magnified Area II + Prolonged Duration II + Brutus' Brain + Efficiency II. Blasphemy + Despair: Ritualistic Curse + Magnified Area II + Chaos Mastery. Wardbound Minions: Efficiency II + Blind II + Rapid Casting II + Mobility. Convalescence: Second Wind III + Cooldown Recovery II + Prolonged Duration II + Rapid Casting III.",
+        "transitionCondition": "ES and Evasion have grown enough, and you are used to running Convalescence and Refutation. You can put Khatal's Rejuvenation into Into the Breach."
+      },
+      {
+        "caution": "If you use the Blood of the Warrior flask while Rage is at maximum, Warlord Berserker does not trigger. Use it after Rage has dropped. From 0 Rage, using it in three separate doses maxes the minions' Rage (source). The source states the fourth ascendancy is useless.",
+        "gearPriority": "Maximize ES and Evasion on the chest and gloves, and add Deflect. The chest is a Rambler Jacket or a Sleek Jacket. Insert Legacy of Greymake into a 2-socket Alpha's Howl (corrupted with +1 minion skills). A high-ES focus (+2 minion skills). If you replace the belt with a Mageblood, return Minion Splash II to the Spectre.",
+        "label": "Lv90+ (Late–Min-Max finished form)",
+        "mainSkill": "Recover ES with Convalescence, block enemy attacks with Refutation, and strengthen all minions with Pain Offering. In Min-Max, take Bulwark with From Nothing, enable Warlord Berserker with a Megalomaniac carrying Blood of Rage, and grant minions Rage with the Blood of the Warrior flask",
+        "nowActions": [
+          "Change the amulet instill to the late-game one",
+          "Set up a system that can grant minions Rage",
+          "Update the Spectre's supports to their final form"
+        ],
+        "passivePriority": "Take Bulwark with From Nothing, and take Warlord Leader, Warlord Berserker and Ally Attack Damage. The Megalomaniac carries Blood of Rage. Sapphire jewels prioritize maximum ES, minions' all elemental resistances, minion attack / cast speed, minion damage, minion critical strike chance and critical damage bonus, and faster ES recharge start.",
+        "replaceGear": "Change the amulet instill to Zarokh's Gift. Insert Cadigan's Epiphany into the gloves. If you have Sacrificial Regalia, it is a finished-form chest candidate. In addition to Lavianga's Spirits, prepare a Blood of the Warrior flask.",
+        "supports": "Plague Harvester Spectre: Feeding Frenzy II + Muster + Dialla's Desire + Uul-Netol's Embrace + Minion Splash II (per the text's instructions; the planner has Rapid Attacks II, and the discrepancy is noted). Pain Offering: Danse Macabre + Magnified Area II + Prolonged Duration II + Brutus' Brain + Sacrificial Offering. Convalescence: Uhtred's Constellation. Skeletal Storm Mage: Esh's Radiance.",
+        "transitionCondition": "After finishing, progress by rerolling the Spectre and updating jewels. For pinnacle bosses, removing Blasphemy and self-casting Despair raises damage (source FAQ)."
+      }
+    ],
+    "mainSkill": "A minion army centered on the Vaal Guards, Skeletal Reavers and Plague Harvesters bound with Bind Spectre. Into the Breach's Remnants are narrowed to added chaos damage by Choice of Power and transferred to the minions with Selfless Remnants to grow damage. Early on you level with a crossbow + Explosive Grenade and switch to minions late in Act 3",
+    "mainSkillTiming": {
+      "available": "The main minion army starts late in Act 3 (around Lv41–43), once you bind a Vaal Guard Spectre. Until then you progress on the crossbow + Explosive Grenade leveling setup",
+      "checkedAt": "2026-11-25",
+      "guide": "Helm Breaker's Maxroll guide (text checked directly)",
+      "recommendedSwitch": "Prepare Lv41–43, reaching Utzaal, about 35,000 gold, and a helmet / sceptre with +1–2 minion skills; bind the bomb-throwing Vaal Guard (of the three same-named variants, the bomb type at 50 Spirit) first, then respec. Note that right after the switch, damage is lower than grenade leveling",
+      "source": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide"
+    },
+    "mappingRating": 4,
+    "name": "Minion Army Acolyte of Chayula",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": false
+        },
+        "note": "The main minion army starts after the switch late in Act 3 (around Lv41–43) and is not a main skill usable from Lv1, so the early condition is not counted as a confirmed condition. The source states the Mid setup has \"few buttons\", so only the operation condition is counted as a confirmed condition. Defense is founded on ES + Evasion + Refutation's block, and it is fragile until Mid, so the dodge condition is not counted. SSF viability is not stated in the source.",
+        "score": 2,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "The source's strengths state \"Few buttons in the Mid setup\", and the rotation from Mid onward is mainly maintaining Pain Offering and Wardbound Minions. On bosses you only add Despair and Refutation.",
+            "source": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "The source has no statement praising boss damage. The FAQ recommends the adjustment \"remove Blasphemy and self-cast Despair instead\" for pinnacle bosses, and the finished form as-is needs work for pinnacle bosses, so this is rated 3.",
+        "quote": "You can remove Blasphemy and self cast Despair instead.",
+        "score": 3,
+        "source": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Minion Army Acolyte of Chayula Build Guide (Helm Breaker)"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "The first of the source's strengths. Added damage to allies in your Presence is multiplied by Choice of Power and Waking Dream, and grows a further 20–30% with the Remnant snapshot (optional).",
+        "quote": "Very high damage",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Minion Army Acolyte of Chayula Build Guide (Helm Breaker)"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "In the Mid setup it is tanky through ES + Evasion, damage reduction from Loyalty / Wolf Pack, and Refutation's block (source strength: \"Tanky (In the Mid setup)\"). On the other hand, being fragile until Mid is a source weakness (\"Can be squishy until Mid setup\").",
+        "quote": "Tanky (In the Mid setup)",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Minion Army Acolyte of Chayula Build Guide (Helm Breaker)"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "A horde of minions does the processing, and the Mid setup has few buttons. The Plague Harvester moves fast and leaps over obstacles, so it rarely gets stuck. However, Vaal Guard Spectres can cause performance problems, and leveling until Mid relies on grenades, so this is not rated 5.",
+        "quote": "Few buttons in the Mid setup",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide",
+        "sourceName": "Maxroll: Minion Army Acolyte of Chayula Build Guide (Helm Breaker)"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium to High (grenade leveling → respec around Lv41–43, and identifying and binding the right Vaal Guard is required)",
+      "gearDependence": "Centered on +levels to all minion skills (sceptre, helmet, amulet), securing Spirit, and added damage to allies in your Presence. No unique is mandatory, but Alpha's Howl is a major milestone at the start of mapping",
+      "operation": "Low (the Mid setup has few buttons. Maintaining Pain Offering and Wardbound Minions, plus Despair and Refutation on bosses, is needed)",
+      "source": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide",
+      "ssfNote": "Whether the build works in SSF is not stated in the source. The source says no unique is mandatory during the campaign, but note that obtaining Expedition skill gems (Refutation, Wardbound Minions) is assumed"
+    },
+    "seoDescription": "PoE2 0.5.5: Minion Army Acolyte of Chayula — skills, supports, gear and passives from crossbow leveling to Endgame (the Plague Harvester setup). Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Minion Army Acolyte of Chayula Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "minion-chayula",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Minion Army Acolyte of Chayula Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by Helm Breaker, updated November 2, 2026; text and embedded planner checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/minion-army-acolyte-of-chayula-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Bind Spectre",
+        "type": "Japanese name and mechanics cross-check (a skill that binds a monster as a Spectre; the planner's internal name is Summon Spectre)",
+        "url": "https://poe2db.tw/jp/Bind_Spectre"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Plague Harvester",
+        "type": "Japanese name and mechanics cross-check (the Mid setup's main Spectre; appears in Act 2's The Dreadnaught)",
+        "url": "https://poe2db.tw/jp/Plague_Harvester"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Vaal Guard",
+        "type": "Japanese name and mechanics cross-check (the bomb-type Spectre bound late in Act 3; choose the bomb type among the three same-named variants)",
+        "url": "https://poe2db.tw/jp/Vaal_Guard"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Waking Dream",
+        "type": "Japanese name and mechanics cross-check (the ascendancy that is the source of Into the Breach and Flames of Chayula)",
+        "url": "https://poe2db.tw/jp/Waking_Dream"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Selfless Remnants",
+        "type": "Japanese name and mechanics cross-check (a support that also grants Remnant effects to allies in your Presence; the planner's old name was Figurehead)",
+        "url": "https://poe2db.tw/jp/Selfless_Remnants"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "GGG official: The Third Edict Item Filter Information",
+        "type": "The 0.3.0 support gem rename list (the basis for replacing the planner's old names with the current names)",
+        "url": "https://www.pathofexile.com/forum/view-thread/3828542"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List (0.5.5, updated November 3, 2026)",
+        "type": "The basis for the A Tier placement (the site's Tier list was checked against primary sources on 2026-11-24; the Tier list page itself currently returns 403/404 via both curl and browser, so it could not be re-checked directly)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "Very high damage (source strength: Very high damage). Added damage to allies in your Presence grows multiplicatively through Choice of Power and Waking Dream.",
+      "Tanky defense in the Mid setup (source strength: Tanky (In the Mid setup)). On top of ES + Evasion, damage reduction from Loyalty and Wolf Pack and Refutation's block stack up.",
+      "Few buttons in the Mid setup (source strength: Few buttons in the Mid setup). Maintaining Pain Offering and Wardbound Minions is the core, and you can focus on curses and debuffs yourself.",
+      "No unique is mandatory during the campaign. It can be grown with cheap options such as Enfolding Dawn and Bones of Ullr (source).",
+      "The Plague Harvester moves fast and leaps over obstacles, so it rarely gets stuck or caught like the Skeletal Reaver (source)."
+    ],
+    "updatedAt": "2026-11-02",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Not recommended for HC (source weakness: Not recommended for HC).",
+      "Acts 1–3 leveling is not minions (source weakness: Non-Minion leveling in Act 1-3). A respec of about 35,000 gold is needed around Lv41–43, and right after the switch damage is lower than grenade leveling (stated in the source).",
+      "Can be squishy until the Mid setup (source weakness: Can be squishy until Mid setup).",
+      "Vaal Guard Spectres can cause performance problems (source note). If your PC cannot handle it or you find it unpleasant, you can substitute a Skeletal Reaver.",
+      "The Remnant snapshot (optional) requires weapon set management, and if you take it but do not execute it, damage drops by about 50% (source). You can also ignore it and proceed on the base tree.",
+      "Whether the build works in SSF is not stated in the source."
+    ]
+  },
+  "related": [
+    {
+      "id": "monk-whirling-assault",
+      "name": "Whirling Assault Martial Artist",
+      "classSlug": "monk",
+      "slug": "whirling-assault"
+    },
+    {
+      "id": "monk-falling-thunder",
+      "name": "Falling Thunder Martial Artist",
+      "classSlug": "monk",
+      "slug": "falling-thunder"
+    },
+    {
+      "id": "monk-hollow-focus-storm-wave",
+      "name": "Hollow Focus Storm Wave Martial Artist",
+      "classSlug": "monk",
+      "slug": "hollow-focus-storm-wave"
+    }
+  ]
+}

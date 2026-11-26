@@ -1,0 +1,204 @@
+{
+  "build": {
+    "ascendancy": "Warbringer",
+    "audience": "Players who want to start a bold melee build that detonates fissures spread across the whole screen, on a low budget.",
+    "beginnerRating": 3,
+    "bossRating": 3,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked cArn_'s Maxroll guide text and embedded planner directly and cross-checked names and numbers against the Japanese poe2db. A separate setup from the existing Shield Wall Smith (Smith of Kitava), with a different ascendancy."
+      }
+    ],
+    "className": "Warrior",
+    "classSlug": "warrior",
+    "damageRating": 4,
+    "defenseRating": 5,
+    "difficulty": "Switch to the main setup at Lv22. Involves managing Exertion on warcries and splitting passives by weapon set for warcry use.",
+    "gearPriorities": [
+      "Shield: the highest-Armour one (Shield Wall's damage scales with the shield's Armour. The source FAQ states explicitly that weapon damage is irrelevant to its damage).",
+      "Chest: high Life and Armour. The \"Armour also applies to elemental damage\" mod has a large impact on durability.",
+      "Everywhere: secure resistances up to 75% and stack Life. Attack speed on gloves and desecrated skill speed on jewellery improve feel and clear speed. Thrillsteel is a candidate unique."
+    ],
+    "id": "warrior-shield-wall-warbringer",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "Slow animations early on are a weakness in the source. Shield Wall is not available yet, so this is a stretch where you push through on two-handed mace damage.",
+        "gearPriority": "A two-handed mace and armour pieces with Life / resistances / Armour. Save gold for the Lv22 transition and for gambling a shield.",
+        "label": "Lv1–22 (two-handed mace leveling)",
+        "mainSkill": "Rolling Slam and Boneshatter are the core. Perfect Strike for single target.",
+        "nowActions": [
+          "Progress with Rolling Slam and Boneshatter on a two-handed mace until Lv22",
+          "Save gold for the transition cost and shield gambling",
+          "Take Answered Call with the first ascendancy"
+        ],
+        "passivePriority": "Take enough attributes to meet gear and gem requirements, and put the rest into Strength to grow Life. First ascendancy is Answered Call, which houses an ancestral spirit in your totems for buffs.",
+        "replaceGear": "Upgrade the two-handed mace with whatever drops. The shield is not used until the Lv22 transition.",
+        "supports": "Normal attack: Rapid Attacks II + Concentrated Area. Rolling Slam: Brink I. Boneshatter: Impact Shockwave + Magnified Area I. Perfect Strike: Window of Opportunity I + Rapid Attacks I. Infernal Cry: Tireless. Also use Herald of Ash. Setup from the source planner (Level 1-22).",
+        "transitionCondition": "Reach Lv22 and secure a level 7 Uncut Skill Gem. Gamble a shield with gold and prepare a high-Armour shield."
+      },
+      {
+        "caution": "If mana is tight, one source of mana leech on a ring or gloves solves it. Do not level the Leap Slam / Infernal Cry / Shield Charge gems (instruction in the source FAQ).",
+        "gearPriority": "Always look for the shield with the highest Armour. Weapon damage is irrelevant to your damage. Chest with Life and Armour; aim for 75% resistances.",
+        "label": "Lv22–Campaign End (switch to Shield Wall)",
+        "mainSkill": "Detonate Shield Wall's fissures with Fortifying Cry or Infernal Cry. Shockwave Totem provides supplementary damage.",
+        "nowActions": [
+          "At Lv22, gamble a high-Armour shield and switch to Shield Wall",
+          "Once Fortifying Cry is available, switch to Warcaller's Bellow",
+          "Get used to the rotation of alternating Shield Wall and warcries"
+        ],
+        "passivePriority": "Once Fortifying Cry becomes available, switch from Answered Call to Warcaller's Bellow. Warcries lose their cooldown, so you can detonate fissures at any time, and nearby corpses also explode. Allocate Weapon Set 2 passives exclusively for warcries.",
+        "replaceGear": "Replace the shield immediately whenever one with higher Armour appears. Swap the two-handed mace for a one-handed mace + shield.",
+        "supports": "Shield Wall: Rapid Attacks I + Fire Infusion + Magnified Area I. Fortifying Cry: Brutality II + Raging Cry. Infernal Cry: Tireless + Raging Cry. Shockwave Totem: Urgent Totems I. Leap Slam / Shield Charge: Rapid Attacks I. In the late-campaign planner, Shield Wall gains Impale and supports are upgraded to higher tiers such as Magnified Area II.",
+        "transitionCondition": "Finish the campaign and have a clear path to obtaining the Ahn's Citadel and Kaom's Madness lineage supports."
+      },
+      {
+        "caution": "If single-target damage is lacking, the source FAQ's solution is to swap Ahn's Citadel and Kaom's Madness for Concentrated Area and Close Combat II, and use Sunder on enemies whose Armour is fully broken. Modest scaling in the very endgame is a weakness in the source.",
+        "gearPriority": "Push the shield's Armour. Chest with Life + Armour + \"Armour also applies to elemental damage\". Attack speed on gloves, desecrated skill speed on jewellery. Thrillsteel as the unique.",
+        "label": "Endgame (branching fissures with lineage supports)",
+        "mainSkill": "Detonate the fissures of a Shield Wall branched by Ahn's Citadel and Kaom's Madness with Fortifying Cry / Infernal Cry / Sunder / movement skills.",
+        "nowActions": [
+          "Obtain both lineage supports and branch the fissures",
+          "On bosses, fully break Armour before using Sunder",
+          "Keep updating the Armour of your shield and chest"
+        ],
+        "passivePriority": "With Anvil's Weight, make all damage break Armour, and with Imploding Impacts lower enemy Armour below 0. Finally, Jade Heritage grants additional physical damage reduction and a powerful guard skill.",
+        "replaceGear": "Keep updating the shield and chest Armour while maintaining Life and resistances. Push gems to Lv20, 20% quality and 6 links.",
+        "supports": "Shield Wall: Rapid Attacks II + Ahn's Citadel + Kaom's Madness + Heft + Rageforged II. Fortifying Cry: Raging Cry + Heavy Swing + Brutality III + Atalui's Bloodletting + Heft. Sunder: Rapid Attacks III + Rigwald's Ferocity + Rage III + Prolonged Duration II. War Banner: Daresso's Passion + Magnified Area II + Prolonged Duration II. Scavenged Plating and Tame Beast are also included in the source planner.",
+        "transitionCondition": "The finished form. From here, refine the shield and chest Armour and max-roll each gear piece."
+      }
+    ],
+    "mainSkill": "Shield Wall",
+    "mainSkillTiming": {
+      "available": "Shield Wall is a Tier 7 gem requiring character Lv22, 41 Strength and a shield with Armour (poe2db). Higher-tier gems raise the requirements as well.",
+      "checkedAt": "2026-11-25",
+      "guide": "cArn_'s Maxroll guide (guide text and embedded planner checked directly)",
+      "recommendedSwitch": "In the source, obtain the level 7 gem at Lv22, gamble a high-Armour shield with gold, and then switch.",
+      "source": "https://poe2db.tw/us/Shield_Wall"
+    },
+    "mappingRating": 4,
+    "name": "Shield Wall Warbringer",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "noDodgeRequirement": true,
+          "ssfConfirmed": false
+        },
+        "note": "The main skill, Shield Wall, is usable from Lv22, so the early condition is counted as a confirmed condition. Operation involves alternating Shield Wall with two warcries plus Exertion management and per-weapon-set passives, so the operation condition is not counted. Durability is counted because the source summary states the build is extremely tanky against elemental hits. SSF viability is not stated in the source.",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Shield Wall is a Tier 7 gem requiring level 22 (poe2db). The source also spells out the procedure of obtaining the level 7 gem at Lv22 and switching.",
+            "source": "https://poe2db.tw/jp/Shield_Wall"
+          },
+          "noDodgeRequirement": {
+            "basis": "The source summary states \"EXTREMELY tanky character impervious to elemental hits\", and the design can take hits head-on thanks to Jade Heritage's additional physical reduction and guard.",
+            "source": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "The source FAQ has a dedicated entry on fixing insufficient single-target damage (swapping the lineage supports to Concentrated Area + Close Combat II, and using Sunder after fully breaking Armour), so as-is it leans toward a weakness. It works after the swap.",
+        "quote": "I struggle with single target on bosses, how to fix it ?",
+        "score": 3,
+        "source": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide",
+        "sourceName": "Maxroll: Shield Wall Warbringer Build Guide"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "Good damage and speed on a low budget is a strength, while modest scaling in the very endgame is stated as a weakness.",
+        "quote": "Good damage and speed on low budget / Lower scaling in the very endgame",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide",
+        "sourceName": "Maxroll: Shield Wall Warbringer Build Guide"
+      },
+      "defense": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "The summary calls it extremely tanky against elemental hits, built on gear with \"Armour also applies to elemental damage\" and Jade Heritage's additional physical reduction and guard.",
+        "quote": "EXTREMELY tanky character impervious to elemental hits",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide",
+        "sourceName": "Maxroll: Shield Wall Warbringer Build Guide"
+      },
+      "mapping": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "Fissures spread across the whole screen and can be detonated by any skill. Warcaller's Bellow making warcries explode corpses is listed as a strength.",
+        "quote": "Corpse explosions",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide",
+        "sourceName": "Maxroll: Shield Wall Warbringer Build Guide"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium to high (Exertion management on two warcries, Sunder timing, and per-weapon-set passives dedicated to warcries. The source notes that a simple rotation of alternating the warcries makes little difference).",
+      "gearDependence": "Weapon damage is irrelevant; the shield's Armour is the key to damage. No unique is mandatory, and Thrillsteel takes you to the next stage.",
+      "operation": "Frequent (the basics are alternating Shield Wall → warcry detonation. On bosses, use Sunder after fully breaking Armour, and War Banner once Glory is charged).",
+      "source": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide",
+      "ssfNote": "Whether the build works in SSF is not stated in the source (Maxroll)."
+    },
+    "seoDescription": "PoE2 0.5.5: Shield Wall Warbringer — the Lv22 switch, skills, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Shield Wall Warbringer Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "shield-wall-warbringer",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Shield Wall Warbringer Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by cArn_, updated September 7, 2026; guide text and embedded planner checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/shield-wall-warbringer-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List",
+        "type": "Overseas Tier list (for 0.5.5; confirmed directly that this build is placed in A Tier)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Shield Wall",
+        "type": "Japanese skill data",
+        "url": "https://poe2db.tw/jp/Shield_Wall"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db: Shield Wall",
+        "type": "Game data (gem Tier 7, required level 22)",
+        "url": "https://poe2db.tw/us/Shield_Wall"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "Gear is easy to acquire and the build works with no uniques (source strength: Easy to acquire gear; the guide text states it functions without uniques).",
+      "Good damage and speed even on a low budget (source strength: Good damage and speed on low budget).",
+      "With Warcaller's Bellow, warcries also explode corpses, chaining your clear (source strength: Corpse explosions).",
+      "Extremely tanky against elemental hits (source summary: EXTREMELY tanky character impervious to elemental hits)."
+    ],
+    "updatedAt": "2026-09-07",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Animations are slow early on (source weakness: Slow animations early on).",
+      "Scaling in the very endgame is modest (source weakness: Lower scaling in the very endgame).",
+      "Single-target damage tends to fall short as-is, and for bosses you need to swap the lineage supports to Concentrated Area + Close Combat II (source FAQ).",
+      "The main skill, Shield Wall, cannot be used until Lv22, so you level with a two-handed mace early on."
+    ]
+  },
+  "related": [
+    {
+      "id": "warrior-shield-wall-smith",
+      "name": "Shield Wall Smith",
+      "classSlug": "warrior",
+      "slug": "shield-wall-smith"
+    }
+  ]
+}

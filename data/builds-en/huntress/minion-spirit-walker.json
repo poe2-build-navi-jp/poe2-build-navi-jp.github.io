@@ -1,0 +1,273 @@
+{
+  "build": {
+    "ascendancy": "Spirit Walker",
+    "audience": "Players who like summoner play — letting an army fight while they support — and can enjoy an early setup switch",
+    "beginnerRating": 3,
+    "bossRating": 4,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Zizaran's Maxroll guide via a summary (U4GM), and cross-checked with the Exile Codex video summary, Switchblade Gaming's ascendancy guide, SlashSkill's ranking, and names and mechanics on the Japanese poe2db. The Maxroll text could not be checked directly due to HTTP 403, and that is stated in the sources. The guide's own update date is unconfirmed, so updatedAt provisionally uses the update date of Maxroll's League Starter Tier List (2026-11-03)."
+      }
+    ],
+    "className": "Huntress",
+    "classSlug": "huntress",
+    "damageRating": 4,
+    "defenseRating": 3,
+    "difficulty": "Level with a crossbow early, respec into the minion setup at Lv22. Requires companion selection and Spirit management",
+    "gearPriorities": [
+      "Sceptre: + minion skill levels and Spirit. The base for the army's numbers and damage (U4GM summary).",
+      "Helmet: + minion skill levels. Look for it with top priority alongside the sceptre (U4GM summary).",
+      "Minion damage and minion attack speed: stack them across all gear (U4GM summary).",
+      "Spirit: decides how many companions and support skills you can run at once. Calculate the reservation allocation first (U4GM summary).",
+      "Defense: early on, added damage, Life and resistances (Zizaran's video summary). Later, grow ES and prepare for the Chaos Inoculation transition (U4GM summary).",
+      "Jewels: leave special jewel upgrades for later, within what the budget allows (U4GM summary)."
+    ],
+    "id": "huntress-minion-spirit-walker",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "The finished army setup cannot be assembled at this stage. Do not force minions; progress with the crossbow (U4GM summary). Do not spend all the gold for the respec.",
+        "gearPriority": "Flat added damage, Life, resistances. Gear can be minimal (Zizaran's video summary).",
+        "label": "Lv1–21 (crossbow leveling)",
+        "mainSkill": "Progress with a crossbow. Flash Grenade is the leveling mainstay, Explosive Grenade is single-target for bosses you have stopped in place, Frost Bomb supports bosses, and Crossbow Shot fills in as the basic attack",
+        "nowActions": [
+          "Clear packs with Flash Grenade",
+          "Update to gear with added damage, Life and resistances",
+          "Keep gold saved for the respec"
+        ],
+        "passivePriority": "Use the pre-transition attack tree. Follow the source guide's leveling tree (planner).",
+        "replaceGear": "Compare crossbows by added damage first.",
+        "supports": "Plan to attach area-expanding supports / runes to Flash Grenade (per Zizaran's video summary. Check the exact gem setup in the source guide's (Maxroll) planner).",
+        "transitionCondition": "Reach around Lv22 and be able to attempt the Trial of the Sekhemas (first ascendancy)."
+      },
+      {
+        "caution": "The bear spirit does not count toward the companion limit (poe2db). Spirit reservation allocation decides how many companions and support skills you can run (U4GM summary).",
+        "gearPriority": "Start looking for + minion skill levels on helmet and sceptre. Next, minion damage and minion attack speed (U4GM summary).",
+        "label": "Lv22–End of Act 2 (transition begins)",
+        "mainSkill": "Choose Spirit Walker at the first ascendancy and add the Wild Protector bear spirit to the army. Transition toward minions while still using crossbow attacks",
+        "nowActions": [
+          "Take Wild Protector",
+          "Respec passives to minion-based",
+          "Look for a helmet and sceptre with + minion skill levels"
+        ],
+        "passivePriority": "Respec passives from attack-based to minion-based (Switchblade Gaming's guide puts the Lv22 respec as the turning point, at a cost of about 7,000 gold). The first ascendancy point is Wild Protector.",
+        "replaceGear": "Consider switching the weapon from a crossbow to a sceptre with minion skill levels.",
+        "supports": "Plan to give companions Minion Splash, Rage, Rapid Attacks and Hulking Minions type supports (Zizaran's video summary).",
+        "transitionCondition": "Advance to Act 3 and be able to take The Natural Order at the second ascendancy."
+      },
+      {
+        "caution": "You can take at most 1 Tamed Beast (unique beast) at a time (The Natural Order, poe2db). Obtaining a targeted companion (the Mighty Silverfist or one with a Haste aura) requires farming (a weakness in Zizaran's video summary).",
+        "gearPriority": "Balance + minion skill levels (helmet / sceptre), Spirit, Life and resistances.",
+        "label": "Act 3–Campaign End (forming the army)",
+        "mainSkill": "With The Natural Order, Tame Beast can capture unique beasts. Build the army around the Mighty Silverfist as the main candidate, with Wolf Pack and Skeletal minions. You support with Pain Offering, Mark for Death and Charged Mark",
+        "nowActions": [
+          "Aim to capture the Mighty Silverfist",
+          "Settle the use of Pain Offering and marks",
+          "Check the Spirit breakdown"
+        ],
+        "passivePriority": "The second ascendancy point is The Natural Order. The third is The Catha's Balance, where 60% of the main-hand weapon's damage is added to companions (Switchblade Gaming's order).",
+        "replaceGear": "If Spirit is short, prioritize updating the sceptre and Spirit sources.",
+        "supports": "Skeletal minions also serve as targets for Pain Offering (U4GM summary). Companion supports continue the plan from the transition stage.",
+        "transitionCondition": "Finish the campaign with the army's lineup in place and enter maps."
+      },
+      {
+        "caution": "Early defense tends to be unstable. There are points where a patchwork of armor, evasion and block is needed (a weakness in Zizaran's video summary).",
+        "gearPriority": "Minion skill levels, minion damage, minion attack speed, Spirit (the Endgame priorities in the U4GM summary).",
+        "label": "Early Maps",
+        "mainSkill": "Clear with the army. You maintain marks and Pain Offering from a safe position and leave the killing to the army",
+        "nowActions": [
+          "Sort out resistances and Life",
+          "Review the companion lineup",
+          "Start looking for ES gear"
+        ],
+        "passivePriority": "Extend minion damage and companion nodes, and start building the defense base (evasion / ES).",
+        "replaceGear": "If you get killed, update armor and resistances; if damage is lacking, update slots with + minion skill levels.",
+        "supports": "Keep the army's support setup, and swap according to the role that is lacking (area / single target).",
+        "transitionCondition": "The army is stable in high-Tier maps and you start gathering ES gear."
+      },
+      {
+        "caution": "Transitioning to Chaos Inoculation before ES has grown enough leaves you fragile (U4GM summary).",
+        "gearPriority": "Build an ES base. Prepare the transition to Chaos Inoculation.",
+        "label": "Early Endgame",
+        "mainSkill": "Continue strengthening the army. Work on companion selection (beasts with auras and the like) with the finished ascendancy in view",
+        "nowActions": [
+          "Swap to ES gear step by step",
+          "Continue companion selection",
+          "Cover attribute shortfalls with gear"
+        ],
+        "passivePriority": "The fourth ascendancy point candidate is Idolatry. However, it assumes Idol gear, and the resistance penalty must be covered by gear (Switchblade Gaming's guide).",
+        "replaceGear": "Update starting from high-ES chest and helmet pieces.",
+        "supports": "Optimize supports for each companion's role. Check exact combinations in the source guide's planner.",
+        "transitionCondition": "ES has grown enough to transition to Chaos Inoculation."
+      },
+      {
+        "caution": "Strict attribute requirements are the biggest hurdle (a weakness in Zizaran's video summary). There is no way to recall minions, and companion positioning inconveniences remain (same source). There are reports that with certain Tablet mods, when a unique monster gains rare mods, the companion's critical strike chance grows close to the cap (same source).",
+        "gearPriority": "Maximize minion skill levels, and upgrade jewels according to budget (U4GM summary. Expensive ones can wait).",
+        "label": "Endgame (ES / Chaos Inoculation)",
+        "mainSkill": "Handle high-Tier maps and bosses with an army centered on the Mighty Silverfist",
+        "nowActions": [
+          "Resolve attribute shortfalls",
+          "Upgrade jewels within budget",
+          "Continue selecting companion mods"
+        ],
+        "passivePriority": "Take Chaos Inoculation. Finish defense around ES and evasion.",
+        "replaceGear": "Life stats are no longer needed. Update one piece at a time based on ES and minion stats.",
+        "supports": "The source guide's (Maxroll) Endgame planner setup is authoritative for companion and Skeletal supports. The summary sources could not confirm individual gems.",
+        "transitionCondition": "After completion, extend the build through companion selection and jewels."
+      }
+    ],
+    "mainSkill": "An army of unique beasts captured with Tame Beast, the Wild Protector bear spirit, Wolf Pack and Skeletal minions",
+    "mainSkillTiming": {
+      "available": "The core of the army setup (Tame Beast and the ascendancy nodes) is not available early. The transition begins from the first ascendancy (Trial of the Sekhemas, around Lv22)",
+      "checkedAt": "2026-11-25",
+      "guide": "Zizaran's Maxroll guide (checked via the U4GM summary. The Maxroll text itself could not be checked directly due to HTTP 403)",
+      "recommendedSwitch": "Around Lv22, once you finish the Trial of the Sekhemas, take Wild Protector and respec passives from attack-based to minion-based. In Act 3, take The Natural Order and start capturing unique beasts",
+      "source": "https://vishalbharat.in/read-blog/95242_u4gm-guide-to-poe-2-0-5-5-minion-army-spirit-walker.html"
+    },
+    "mappingRating": 4,
+    "name": "Minion Spirit Walker",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": false,
+          "moderateOperation": true,
+          "noDodgeRequirement": true,
+          "ssfConfirmed": false
+        },
+        "note": "The main army setup only comes together after the Lv22 transition, and early play requires crossbow leveling and a respec, so earlyMainSkill is not counted as a confirmed condition. SSF viability is not stated in the sources.",
+        "score": 3,
+        "verifiedChecks": {
+          "moderateOperation": {
+            "basis": "The army does the killing while you focus on positioning, debuffs and Pain Offering. Switchblade Gaming's guide states: 'You manage positioning, apply debuffs, and cast Pain Offering. The companions do the killing.'",
+            "source": "https://www.switchbladegaming.com/path-of-exile-2/huntress-spirit-walker-guide/"
+          },
+          "noDodgeRequirement": {
+            "basis": "Companions also serve as tanks, so you can fight from away from enemies. Zizaran's video summary (Exile Codex) lists as a strength: 'Companions tank and deal damage, smoothing both clear and single-target'",
+            "source": "https://exile.codex-wiki.com/builds/my-strongest-starter-ever-spirit-walker-summoner-guide/"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Reported via Zizaran as a level that three-shots bosses (Exile Codex, a video from the 0.5 period). The same page's rating also gives Bossing 4/5.",
+        "quote": "one-shotting most content, three-shotting bosses",
+        "score": 4,
+        "source": "https://exile.codex-wiki.com/builds/my-strongest-starter-ever-spirit-walker-summoner-guide/",
+        "sourceName": "Exile Codex: My STRONGEST Starter Ever! Spirit Walker Summoner Guide (Zizaran)"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "The scaling once companions and supporting nodes are online is said to be large. It also sits in A Tier in the 0.5.5 Tier list.",
+        "quote": "Massive scaling once companions and supporting nodes are online, with reports of three-shotting bosses",
+        "score": 4,
+        "source": "https://exile.codex-wiki.com/builds/my-strongest-starter-ever-spirit-walker-summoner-guide/",
+        "sourceName": "Exile Codex: My STRONGEST Starter Ever! Spirit Walker Summoner Guide (Zizaran)"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "There is the reassurance of companions tanking, but early defense is unstable, and the finished form assumes ES / Chaos Inoculation (U4GM summary).",
+        "quote": "Early defenses are awkward in the current game state, forcing temporary armour/evasion/block patchwork",
+        "score": 3,
+        "source": "https://exile.codex-wiki.com/builds/my-strongest-starter-ever-spirit-walker-summoner-guide/",
+        "sourceName": "Exile Codex: My STRONGEST Starter Ever! Spirit Walker Summoner Guide (Zizaran)"
+      },
+      "mapping": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "A setup chosen as best overall in SlashSkill's 0.5 minion ranking. Exile Codex's rating also gives Mapping 4/5.",
+        "quote": "runs a full companion army that clears maps and kills bosses with very little input",
+        "score": 4,
+        "source": "https://www.slashskill.com/poe-2-best-minion-builds-0-5-every-top-summoner-and-companion-build-ranked/",
+        "sourceName": "SlashSkill: PoE 2 Best Minion Builds (0.5)"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium (crossbow leveling → respec to minions at Lv22, with companion selection)",
+      "gearDependence": "Centered on minion skill levels (helmet / sceptre) and securing Spirit. Defense moves to ES in the later half",
+      "operation": "Low (the army handles combat; you maintain positioning, marks and offerings)",
+      "source": "https://vishalbharat.in/read-blog/95242_u4gm-guide-to-poe-2-0-5-5-minion-army-spirit-walker.html",
+      "ssfNote": "Whether it works in SSF is not stated in the sources. Note that capturing specific unique beasts (such as the Mighty Silverfist) is a prerequisite."
+    },
+    "seoDescription": "PoE2 0.5.5: Minion Spirit Walker's skills, supports, gear and passives from crossbow leveling to Endgame (ES setup). Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Minion Spirit Walker Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "minion-spirit-walker",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "U4GM: Guide to PoE 2 0.5.5 Minion Army Spirit Walker (via mirror)",
+        "type": "Summary of an overseas guide (referenced for the progression, skills and gear direction of Zizaran's Maxroll guide. The Maxroll text could not be checked directly due to HTTP 403)",
+        "url": "https://vishalbharat.in/read-blog/95242_u4gm-guide-to-poe-2-0-5-5-minion-army-spirit-walker.html"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Exile Codex: My STRONGEST Starter Ever! Spirit Walker Summoner Guide (Zizaran)",
+        "type": "Summary of Zizaran's video guide (referenced for strengths / weaknesses, early gems and companion supports. The source is a video from the 0.5 period)",
+        "url": "https://exile.codex-wiki.com/builds/my-strongest-starter-ever-spirit-walker-summoner-guide/"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Switchblade Gaming: PoE2 Huntress Spirit Walker Guide (Build 2 — Minion Army Beast Tamer)",
+        "type": "Ascendancy guide (cross-checking the ascendancy order and the army's components. Verified at the 0.5.0 point)",
+        "url": "https://www.switchbladegaming.com/path-of-exile-2/huntress-spirit-walker-guide/"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "SlashSkill: PoE 2 Best Minion Builds (0.5)",
+        "type": "Build ranking article (referenced for the overall evaluation of Zookeeper Spirit Walker. From the 0.5 period)",
+        "url": "https://www.slashskill.com/poe-2-best-minion-builds-0-5-every-top-summoner-and-companion-build-ranked/"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Wild Protector",
+        "type": "Japanese name and mechanics cross-check (confirmed the bear spirit does not count toward the companion limit)",
+        "url": "https://poe2db.tw/jp/Wild_Protector"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): The Natural Order",
+        "type": "Japanese name and mechanics cross-check (Tame Beast can capture unique beasts; at most 1 at a time)",
+        "url": "https://poe2db.tw/jp/The_Natural_Order"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "The army handles combat, so you can focus on positioning and support (Switchblade Gaming's guide states 'The companions do the killing').",
+      "Companions serve as both tank and damage, smoothly handling both clear and single target (Zizaran's video summary, Exile Codex).",
+      "Leveling is cheap and stable. Early gear only needs added damage, Life and resistances (same source).",
+      "Huge scaling potential. There are reports of one-shotting most content and three-shotting bosses (same source).",
+      "Listed as A Tier in Maxroll's League Starter Tier List (updated November 3, 2026), and a setup Zizaran adopted as his own league starter."
+    ],
+    "updatedAt": "2026-11-03",
+    "version": "0.5.5",
+    "weaknesses": [
+      "The main army setup cannot be used from the start. You level with a crossbow (grenades) until Lv22, and need gold for the passive respec (U4GM summary / Zizaran's video summary).",
+      "Attribute requirements are strict, and you can easily end up chasing stats (a weakness in Zizaran's video summary).",
+      "Early defense is unstable, and there are points where you need a patchwork of armour, evasion and block (same source).",
+      "Obtaining specific companions (the Mighty Silverfist, beasts with a Haste aura) requires targeted farming (same source).",
+      "There is no way to recall minions (a Convocation equivalent), leaving positioning inconveniences (same source).",
+      "Whether it works in SSF is not stated in the sources."
+    ]
+  },
+  "related": [
+    {
+      "id": "huntress-companion",
+      "name": "Companion Spirit Walker",
+      "classSlug": "huntress",
+      "slug": "companion"
+    },
+    {
+      "id": "huntress-twister-spirit-walker",
+      "name": "Twister Spirit Walker",
+      "classSlug": "huntress",
+      "slug": "twister-spirit-walker"
+    }
+  ]
+}

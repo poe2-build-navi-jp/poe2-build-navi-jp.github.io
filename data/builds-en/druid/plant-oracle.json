@@ -1,0 +1,305 @@
+{
+  "build": {
+    "id": "druid-plant-oracle",
+    "slug": "plant-oracle",
+    "classSlug": "druid",
+    "name": "Plant Oracle",
+    "seoTitle": "PoE2 Plant Oracle Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Plant Oracle skills, supports, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "className": "Druid",
+    "ascendancy": "Oracle",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "status": "verified",
+    "mainSkill": "Entangle / Thrashing Vines",
+    "beginnerRating": 3,
+    "damageRating": 2,
+    "defenseRating": 3,
+    "mappingRating": 4,
+    "bossRating": 2,
+    "difficulty": "The main skill continues from Lv1; triggered setups are added later",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "reviewedFacts": {
+      "difficulty": "Low (normal clearing centers on the main skill)",
+      "operation": "Few (centered on the main skill)",
+      "gearDependence": "Defense is gear-dependent (a low-budget setup exists)",
+      "source": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+      "checkedAt": "2026-09-26"
+    },
+    "strengths": [
+      "Entangle can be kept as the main skill from Lv1 through Endgame.",
+      "The basic clearing actions are easy to keep few, and plant-based rooting can also be used.",
+      "A leveling guide and an Endgame guide are published by the same author.",
+      "Maxroll (0.5.5) lists \"easy map clear,\" \"auto-targeting\" and \"cheap to start at league start\" as strengths.",
+      "High pack-clearing ability and few actions to perform (Gamerch)."
+    ],
+    "weaknesses": [
+      "Defense is gear-dependent, and ES and chaos resistance must be sorted out later on.",
+      "Watch out for running out of mana in long boss fights.",
+      "The triggered setup from the second ascendancy onward must only be switched to once the required gems and Spirit are ready.",
+      "Damage is hard to land on bosses that keep moving, and burst damage is on the low side (Gamerch). Maxroll also says top-tier bosses require gear investment.",
+      "The screen tends to become hard to read (Maxroll weakness: Visual Clutter).",
+      "Whether it works in SSF is not stated in the sources. Maxroll lists being cheap to start as a strength, while listing that top-tier bosses require gear investment as a weakness."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Entangle. On bosses, also use whatever single-target support spell you have.",
+        "supports": "Entangle is usable from Lv1. The source's Skill Gems section shows a Lv20 gem setup example; it does not mean all listed supports can be obtained at character Lv1. Check the early acquisition slots in the source's leveling steps.",
+        "passivePriority": "Use the source's early stage-by-stage tree. Check the exact node names at the linked source.",
+        "gearPriority": "+physical / all spell levels, spell / physical spell power, Life, ES or Armour, resistances, movement speed.",
+        "replaceGear": "Prioritize comparing weapons without +spell levels or spell power.",
+        "caution": "Entangle has a time lag before its damage occurs. Place it at the enemy's feet, then take distance.",
+        "transitionCondition": "Reach Lv11. You can handle regular enemies with Entangle and use a support skill on strong enemies.",
+        "nowActions": [
+          "Place Entangle in the enemy's path",
+          "Look for a weapon with +spell levels",
+          "Check Life, resistances and movement speed"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Continue with Entangle as the main skill. After defeating the Executioner, once you can obtain Thunderstorm, manually layer it over the plants to grant Overgrowth and Shock.",
+        "supports": "Add the source's leveling setup in stages. For unconfirmed support names, the source takes priority.",
+        "passivePriority": "Use the leveling guide's stage-by-stage tree closest to your current level.",
+        "gearPriority": "+physical / all spell levels, spell power, cast speed, defense, resistances.",
+        "replaceGear": "If the main skill's growth stalls, update the weapon; if defense is lacking, update the chest and resistance pieces.",
+        "caution": "Do not hunt for finished gear from the early game; prioritize weapons and armor that work at your current level.",
+        "transitionCondition": "Reach Lv21. You can steadily advance by repeating Entangle placement and movement.",
+        "nowActions": [
+          "Cross-check Entangle's supports against the source",
+          "Compare your weapon's spell performance",
+          "Sort out resistances and movement speed"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Entangle + manual Thunderstorm. On strong enemies, layer Thunderstorm over the plants, and prepare a single-target support tool as well.",
+        "supports": "The source's leveling Skill Gems list Entangle with Zenith II, Explosive Growth II, Branching Fissures II and Considered Casting. However, this is a Lv20 gem setup example and does not mean all slots unlock at character Lv21.",
+        "passivePriority": "Advance to the mid-game stage-by-stage tree and connect to the route after taking the ascendancy.",
+        "gearPriority": "Spell levels, physical spell power, added lightning damage, cast speed, Life, resistances.",
+        "replaceGear": "If damage is lacking, update the weapon; if you die often, update armor one piece at a time.",
+        "caution": "Added lightning damage is a candidate for Shock, but even if it rolls on gear, that does not mean it is always the top priority.",
+        "transitionCondition": "Reach Lv31. You can check the first ascendancy stage and the main skill's gear conditions.",
+        "nowActions": [
+          "Progress the ascendancy acquisition",
+          "Check Entangle's damage sources",
+          "Separate damage and defense shortfalls"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Entangle as the clearing main skill, adding Thrashing Vines for strong enemies. Until automation, manually layer Thunderstorm over the plants.",
+        "supports": "The source's leveling setup lists Entangle with Zenith II, Explosive Growth II, Branching Fissures II and Considered Casting, and Thrashing Vines with Concentrated Area, Explosive Growth II and Rapid Casting II. Adopt them according to availability and slot count.",
+        "passivePriority": "Use the mid-game Oracle stage-by-stage tree.",
+        "gearPriority": "Spell levels, cast speed, Life, ES / Armour, resistances, movement speed.",
+        "replaceGear": "First adjust any pieces where required attributes fall short after adding Thrashing Vines.",
+        "caution": "Do not confuse the clearing and single-target plants; only add actions on strong enemies.",
+        "transitionCondition": "Reach Lv41. You can use Entangle and Thrashing Vines by role.",
+        "nowActions": [
+          "Set Thrashing Vines for strong enemies",
+          "Check required attributes",
+          "Separate your actions for clearing and for bosses"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Entangle + Thrashing Vines + manual Thunderstorm. At the end of the campaign, once the conditions for Cast on Critical are met, automate Thunderstorm.",
+        "supports": "Use the setup from the second half of the leveling guide and prepare the triggered setup after the second ascendancy.",
+        "passivePriority": "Use the late-campaign stage-by-stage tree.",
+        "gearPriority": "Spell levels, cast speed, Life, ES / Armour, all three elemental resistances, movement speed.",
+        "replaceGear": "Prioritize the resistances that fall short at the end of the campaign and any weapon whose damage has stalled.",
+        "caution": "Use Thunderstorm manually even before automation. The source explains that it moves to Cast on Critical at the very end of the campaign. Until the second ascendancy, the required gems and Spirit are all in place, layer it over the plants manually.",
+        "transitionCondition": "Campaign complete. The second ascendancy and the triggered setup can be prepared.",
+        "nowActions": [
+          "Check the late-campaign tree",
+          "Sort out all three elemental resistances",
+          "Prepare the gems and Spirit for the triggered setup"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Entangle + Thrashing Vines. After meeting the conditions, add Cast on Critical + Thunderstorm.",
+        "supports": "After obtaining Forced Outcome, set Thunderstorm into Cast on Critical. The source's leveling setup also lists Shock and Magnified Area II. If the ascendancy is not yet taken, do not treat it as already automated.",
+        "passivePriority": "Move to the Oracle stage-by-stage tree for the start of maps.",
+        "gearPriority": "Resistances, Life / ES, chaos resistance, spell levels, Spirit, cast speed.",
+        "replaceGear": "If you die in maps, check armor and resistances before the weapon; if the trigger does not fire, check Spirit and the gem conditions.",
+        "caution": "Do not treat the triggered setup as complete before meeting the second ascendancy and the required conditions.",
+        "transitionCondition": "In low-tier maps, Entangle, Thrashing Vines and the automated Thunderstorm each work as intended.",
+        "nowActions": [
+          "Check whether you have obtained Forced Outcome",
+          "Connect Cast on Critical and Thunderstorm",
+          "Check resistances, ES and chaos resistance"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Entangle as the clearing main skill, Thrashing Vines for single target, Thunderstorm triggered automatically.",
+        "supports": "In the source's Cheap version, Entangle has Zenith II, Explosive Growth II, Branching Fissures II, Heft and Physical Mastery, and Thrashing Vines has Rapid Casting II, Physical Mastery, Considered Casting, Concentrated Area and Heft. Check slot counts and attributes.",
+        "passivePriority": "Use the Cheap-stage Endgame tree, and do not move to the expensive version before your gear is ready.",
+        "gearPriority": "ES, chaos resistance, spell levels, critical strikes, cast speed, Spirit, mana sustain.",
+        "replaceGear": "If mana runs out in long fights, check mana sustain and defense shortfalls before damage gear.",
+        "caution": "Defense is gear-dependent. Do not scale only damage and put ES and chaos resistance off until later.",
+        "transitionCondition": "Clearing and bosses are stable on the Cheap setup, and you can judge mana and defense shortfalls.",
+        "nowActions": [
+          "Complete the Cheap setup first",
+          "Check ES and chaos resistance",
+          "Test mana sustain in long fights"
+        ]
+      },
+      {
+        "label": "Endgame (finished form)",
+        "mainSkill": "Entangle + Thrashing Vines + automated Thunderstorm",
+        "supports": "In the source's Cheap version, Entangle has Zenith II, Explosive Growth II, Branching Fissures II, Heft and Physical Mastery. Cast on Critical has Thunderstorm, Shock, Efficiency II, Boundless Energy II and Zenith II. Do not mix with the high-investment version.",
+        "passivePriority": "Choose one stage from the Endgame guide to adopt, and align gear and tree to the same stage.",
+        "gearPriority": "ES, chaos resistance, spell levels, critical strikes, cast speed, Spirit, mana sustain.",
+        "replaceGear": "Rather than a fixed price, compare against listings under the same conditions for gear that addresses your current shortfall.",
+        "caution": "The source has an explanation about adjusting Thunderstorm inside Cast on Critical to Lv18 including gear +skills to reduce the mana burden. Do not mix it with the Expensive / Mirror Tier versions, and check mana and chaos resistance in long fights.",
+        "transitionCondition": "Once complete, improve the bottlenecks — single-target damage, ES / chaos resistance, mana — one item at a time.",
+        "nowActions": [
+          "Decide which Endgame stage to adopt",
+          "Check ES, chaos resistance and mana",
+          "Update one piece at a time without using fixed market prices"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Weapon (staff): among suffixes, +levels to physical spell skills is the top priority, followed by critical strike chance, critical damage bonus and cast speed. Prefixes: increased physical spell damage, \"gain damage as extra damage,\" and increased spell damage (Gamerch).",
+      "Campaign: check shops for weapons with +physical spell / +spell skill levels. Maxroll uses a Life-based setup that reduces damage taken with Armour and \"Armour also applies to elemental damage.\"",
+      "Armor: ES, movement speed on boots, Spirit on the chest, maximum mana. Gloves take critical damage. Secure resistances including chaos resistance (Gamerch).",
+      "Amulet: ES, +spell skill levels, critical damage, resistances (Gamerch).",
+      "Cheap uniques: the Nightscale gloves supplement critical strike chance and mana recovery and can be used from leveling onward. The Waveshaper chest can be used from leveling through Endgame (Gamerch).",
+      "Endgame: ES, chaos resistance, Spirit, mana sustain. Maxroll's Endgame setup casts spells using Life (with the Atalui's Bloodletting and Lifetap support gems) and runs Mind Over Matter together with Eldritch Battery."
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Plant Oracle Druid Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide",
+        "checkedAt": "2026-09-27",
+        "type": "Overseas verified leveling guide"
+      },
+      {
+        "name": "Mobalytics: Plant Oracle Druid Endgame 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+        "checkedAt": "2026-10-04",
+        "type": "Overseas verified Endgame guide (by Raxx, 0.5.5, updated September 3, 2026; has a strengths and weaknesses list)"
+      },
+      {
+        "name": "note: 0.5 Entangle GP Totem Oracle notes",
+        "url": "https://note.com/cosine1016/n/n76a4972476a0",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese play record"
+      },
+      {
+        "name": "Gamerch: Plant Oracle review and explanation",
+        "url": "https://gamerch.com/poe2/954990",
+        "checkedAt": "2026-11-23",
+        "type": "Japanese strategy resource (updated September 1, 2026, 12:17; referenced for strengths, weaknesses and gear mod priorities. The article's own supported-patch notation is unconfirmed)"
+      },
+      {
+        "name": "Maxroll: Entangle Oracle Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (patch 0.5.5, updated September 2, 2026)"
+      }
+    ],
+    "audience": "Beginners who want to keep using the same main skill from Lv1 and raise a plant build with few basic actions",
+    "ratingEvidence": {
+      "checkedAt": "2026-10-04",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": false
+        },
+        "note": "Only the conditions counted as confirmed are tied to the source and the stage-by-stage steps. Unconfirmed defense and SSF conditions are not counted as confirmed conditions.",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Referenced the \"Entangle. On bosses, also use whatever single-target support spell you have\" listed in the original guide's early setup.",
+            "source": "https://mobalytics.gg/poe-2/builds/plant-oracle-druid-leveling-build-guide"
+          },
+          "moderateOperation": {
+            "basis": "Gamerch (updated September 1, 2026) explicitly lists \"few actions to perform\" as a strength. Raxx's current leveling and Endgame guides also list few actions as a strength. However, Thunderstorm must be used manually on strong enemies during the campaign.",
+            "source": "https://gamerch.com/poe2/954990"
+          }
+        }
+      },
+      "damage": {
+        "score": 2,
+        "basis": "Weakness",
+        "quote": "Low burst damage",
+        "source": "https://gamerch.com/poe2/954990",
+        "sourceName": "Gamerch: Plant Oracle build review and explanation",
+        "checkedAt": "2026-09-28",
+        "note": "The weakness column lists low burst damage (the same column also has \"damage is hard to land on bosses that keep moving\"). No statement describing damage as a strength could be confirmed."
+      },
+      "defense": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Energy Shield Defense ／ Defense is Gear Dependent",
+        "source": "https://mobalytics.gg/poe-2/builds/plant-druid-oracle-endgame-guide",
+        "sourceName": "Mobalytics: Raxx's 0.5.5 Plant Oracle Druid Endgame Build Guide",
+        "checkedAt": "2026-10-04",
+        "note": "Raxx's Endgame guide (0.5.5, updated September 3, 2026) lists Energy Shield defense in its strengths, and \"defense is gear dependent\" and \"chaos resistance is required\" in its weaknesses."
+      },
+      "mapping": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Easy Map Clear",
+        "source": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
+        "sourceName": "Maxroll: Entangle Oracle Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "Easy map clear is listed as a strength. Gamerch also lists \"high pack-clearing ability\" as a strength."
+      },
+      "boss": {
+        "score": 2,
+        "basis": "Weakness",
+        "quote": "Pinnacles Require Investment",
+        "source": "https://maxroll.gg/poe2/build-guides/entangle-oracle-build-guide",
+        "sourceName": "Maxroll: Entangle Oracle Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "The weaknesses state \"top-tier bosses require gear investment.\" Gamerch also lists \"damage is hard to land on bosses that keep moving\" as a weakness."
+      }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Checked Maxroll (0.5.5) and Gamerch (updated September 18). Updated damage from unrated to 2/5 (burst damage is on the low side) and beginner-friendliness from 2 to 3 (few actions to perform). Made the gear priorities concrete per slot and added strengths and weaknesses. Fixed the error describing Atalui's Bloodletting as a unique item (it is a support gem). Defense had no supporting statement and remained unrated."
+      },
+      {
+        "date": "2026-09-27",
+        "summary": "Added the leveling and Cheap Endgame supports confirmed in the source. Added a note not to confuse the source's Lv20 gem notation with unlocking at that character level."
+      },
+      {
+        "date": "2026-10-04",
+        "summary": "Added a source for defense. Raxx's Endgame guide (0.5.5) lists Energy Shield defense as a strength and \"defense is gear dependent\" as a weakness, so defense was updated to \"both a strength and a weakness in the source.\""
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Re-checked the source's statements, the stages they apply to and the source information, and fixed mix-ups and overgeneralizations. Sources and dynamic setups that could not be confirmed are not treated as re-verified, and the overall leveling checked date has not been changed."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked the publication status, supported patch, update date, main skill and ascendancy of 3 of the 5 sources and updated the checked dates. The 2 Mobalytics entries could not be fetched automatically, so they remain unchecked (checked dates left as they were)."
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "druid-frostbolt-comet-oracle",
+      "name": "Frostbolt + Cast on Critical Comet Oracle",
+      "classSlug": "druid",
+      "slug": "frostbolt-comet-oracle"
+    },
+    {
+      "id": "druid-grim-pillars-oracle",
+      "name": "Grim Pillars (Spell Totem) Oracle",
+      "classSlug": "druid",
+      "slug": "grim-pillars-oracle"
+    }
+  ]
+}

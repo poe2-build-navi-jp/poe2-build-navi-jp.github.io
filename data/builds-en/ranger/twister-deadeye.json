@@ -1,0 +1,264 @@
+{
+  "build": {
+    "ascendancy": "Deadeye",
+    "audience": "Players who want to map with freezing and shattering, unleashing tornadoes across the whole screen.",
+    "beginnerRating": 2,
+    "bossRating": 4,
+    "budget": "No fixed price",
+    "changeHistory": [
+      {
+        "date": "2026-11-25",
+        "summary": "Created a new draft (unpublished). Checked Legi's Maxroll guide text and embedded planner directly and cross-checked names and numbers against the Japanese poe2db. A separate setup, with a different ascendancy, from the existing Twister Gemling (Mercenary) and Twister Spirit Walker (Huntress). Support gems renamed in 0.3.0 were replaced with the current official names."
+      }
+    ],
+    "className": "Ranger",
+    "classSlug": "ranger",
+    "damageRating": 4,
+    "defenseRating": 3,
+    "difficulty": "Assumes weapon set usage, keeping Whirling Slash at Lv1, Parry timing, and mark and Salvo management.",
+    "gearPriorities": [
+      "Weapons: Weapon Set 1 is a spear prioritizing attack speed (Winged Spear / Soaring Spear, with an attack speed suffix; Skysliver is also a candidate). Weapon Set 2 is a spear with physical damage, critical strike chance and + to projectile skill levels. The off-hand is basically an Omen Sceptre, with Sacred Flame as the maximum-damage option.",
+      "Gear: The top priorities are The Taming and Olroth's Conviction. Early stopgaps are Wake of Destruction and Berek's Grip / Berek's Pass / Berek's Respite, and Serpent's Egg. The finished form is Mageblood and Headhunter.",
+      "Armour: Armour-focused in Acts 1–3, shifting to Evasion and Deflection from Act 3 onward, with ES / Evasion hybrid also an option late. On armour pieces, Life and resistances are the top priority, and the chest's Evasion Rating is the guideline for Deflection nodes (1200+ → 1500+). Jewellery takes added damage to attacks and mana recovery on kill."
+    ],
+    "id": "ranger-twister-deadeye",
+    "leagueStarter": true,
+    "levelingStages": [
+      {
+        "caution": "To level with Twister from Lv1 in a fresh league, you must first create a Huntress mule character and pass a Lv1 Whirling Slash, a spear and a buckler through the stash. Without a mule, level with Lightning Arrow + Lightning Rod and switch around Lv10, once you have 3 Lv3 gems and a decent spear. Keeping Whirling Slash at Lv1 is a strong instruction in the source; leveling it only increases mana cost. WASD movement is the source's recommendation; with mouse movement you must keep the cursor near your character, which is awkward to operate.",
+        "gearPriority": "Weapon Set 1 is a spear prioritizing attack speed (Winged Spear or Soaring Spear, with an attack speed suffix; Skysliver if you have it). Leave the off-hand empty to receive Dance with Death's benefit. Weapon Set 2 is a damage-focused spear. Armour pieces are Armour-focused in Acts 1–3 to suppress damage taken while parrying.",
+        "label": "Lv1–Act 1 (start Twister leveling)",
+        "mainSkill": "Stack Whirling Slash's wind vortex up to 3 layers and consume it with Twister to strengthen it. Early on, use the buckler to Parry → Fangs of Frost to create cold ground.",
+        "nowActions": [
+          "Create a Huntress mule and pass Whirling Slash, a spear and a buckler through the stash (without a mule, level with Lightning Arrow to around Lv10)",
+          "Keep Whirling Slash at Lv1 and progress with the procedure vortex ×3 → Twister",
+          "Parry with the buckler → create cold ground with Fangs of Frost to strengthen Twister"
+        ],
+        "passivePriority": "Follow the source's \"Campaign\" tree. Take enough attributes to meet gear and gem requirements, and put the rest into Strength to grow Life. Weapon set point allocation starts in Act 2.",
+        "replaceGear": "When a spear with an attack speed suffix appears, update Weapon Set 1 with it. Once you take the second Uncut Spirit Gem (Lv6), replace the buckler with an Omen Sceptre.",
+        "supports": "Whirling Slash is kept at Lv1: Rapid Attacks I → Rage I. Twister: Retreat → Prolonged Duration I. Ice-Tipped Arrows: Elemental Armament I. War Banner: Prolonged Duration I. Frost Bomb is also used. Setup from the source planner (Campaign).",
+        "transitionCondition": "Reach Act 2 and cut Frost Nexus with the first Lv2 Uncut Support Gem."
+      },
+      {
+        "caution": "Once you cut Frost Nexus, it creates the cold ground, so Fangs of Frost can be removed. Use Ice-Tipped Arrows on cooldown, converting damage to cold to freeze. Cull the Weak is used for Frenzy Charge generation while moving, and against rare or magic packs you fire a Frenzy-empowered Barrage. On bosses, Freezing Mark creates ice ground together with Frost Nexus.",
+        "gearPriority": "Once you take the second Uncut Spirit Gem (Lv6), switch to an Omen Sceptre. Armour pieces stay Armour-focused, and from Act 3 you will also want Evasion. Jewellery and gloves prioritize added damage to attacks (flat damage).",
+        "label": "Act 2 (switch to Frost Nexus)",
+        "mainSkill": "The basic Twister + Whirling Slash rotation. Cull the Weak generates Frenzy Charges while moving, and Freezing Mark freezes tough enemies.",
+        "nowActions": [
+          "Cut Frost Nexus with the first Lv2 support gem and remove Fangs of Frost",
+          "Switch to an Omen Sceptre with the second Spirit Gem (Lv6)",
+          "Take the Gathering Winds → Avidity ascendancy in the first trial"
+        ],
+        "passivePriority": "Start weapon set point allocation in Act 2. Weapon Set 1 is Whirling Slash and Barrage; Weapon Set 2 is everything else. Ice-Tipped Arrows must be placed on Weapon Set 2 (otherwise it does not function). The first ascendancy is Gathering Winds → Avidity to grow Frenzy Charge generation.",
+        "replaceGear": "Equip the Omen Sceptre in Weapon Set 2's off-hand. When a high-attack-speed spear appears, update Weapon Set 1 with it.",
+        "supports": "Twister: Retreat → Frost Nexus → Elemental Armament II. Ice-Tipped Arrows: Elemental Armament I → Magnified Area I. Barrage: Rapid Casting → Perpetual Charge. Cull the Weak: Thrill of the Kill II → Charge Profusion. Freezing Mark: Prolonged Duration I. Herald of Ice: Elemental Armament II → Magnified Area II. Setup from the source planner (Maps).",
+        "transitionCondition": "Reach Act 3 and cut Herald of Ice."
+      },
+      {
+        "caution": "Cutting Herald of Ice makes clear much easier, so do not neglect carving out the support slots. If landing criticals on the marked target with Whirling Slash is difficult, check Pinpoint Critical, Inexorable Critical II and a Rune of Consistency on the helmet.",
+        "gearPriority": "From Act 3, Evasion becomes desirable. On armour pieces, prioritize Life and resistances while combining Armour and Evasion. Put a high-physical-damage spear on Weapon Set 2.",
+        "label": "Act 3–Campaign End (Herald of Ice)",
+        "mainSkill": "The basic rotation (Ice-Tipped Arrows → Whirling Slash ×3 → Barrage → Twister) gains Herald of Ice's explosions.",
+        "nowActions": [
+          "Cut Herald of Ice to raise clear",
+          "Once a chest with 1200+ Evasion appears, start taking Deflection nodes",
+          "Take Thrilling Chase with the third ascendancy"
+        ],
+        "passivePriority": "The third ascendancy is Thrilling Chase. Once you obtain an Evasion chest (1200+ Evasion Rating), start taking Deflection nodes such as The Wild Cat / Trained Deflection / Enhanced Reflexes. Projectile speed, skill effect duration and area of effect become Twister's damage multipliers.",
+        "replaceGear": "Once a chest with an Evasion Rating of 1200+ appears, switch defenses together with the Deflection nodes. Jewellery prioritizes added damage to attacks.",
+        "supports": "Twister: continue Retreat → Frost Nexus → Elemental Armament II. Extend Herald of Ice to Elemental Armament II → Magnified Area II → Elemental Focus. Link Charge Profusion to Combat Frenzy. See the source planner for the exact slots.",
+        "transitionCondition": "Campaign finished and maps reached."
+      },
+      {
+        "caution": "Do not fire Twister too often. The source instructs you to wait for the combination layered with Salvo and Barrage before releasing it. Once Called Shots applies a mark, trigger it twice with Whirling Slash to generate up to 4 Frenzy Charges. On bosses, store 4–6 Frenzy Charges, then release the Salvo + Barrage + Twister combination.",
+        "gearPriority": "Wake of Destruction creates elemental ground, so you no longer need Frost Nexus. The top purchase priority is The Taming, which lets you always strengthen Twister even without elemental ground. Serpent's Egg is good for strengthening Frenzy Charge generation. Jewellery covers mana with Sapphires granting 2% mana recovery on kill.",
+        "label": "Early Maps",
+        "mainSkill": "The Twister + Barrage Salvo combination. Called Shots automatically applies Sniper's Mark to generate Frenzy Charges.",
+        "nowActions": [
+          "Obtain boots that create elemental ground and do without Frost Nexus",
+          "Buy The Taming with top priority",
+          "Take Called Shots with the fourth ascendancy and switch to Sniper's Mark"
+        ],
+        "passivePriority": "The fourth ascendancy is Called Shots. Replace Freezing Mark with Sniper's Mark, and grow Frenzy generation with Eternal Mark (only when your critical strike chance is sufficient to consume them stably). Deflection nodes are brought into full use with a chest of 1500+ Evasion.",
+        "replaceGear": "Obtain Wake of Destruction early, then buy The Taming with top priority. Berek's Grip / Berek's Pass / Berek's Respite are stopgaps until The Taming.",
+        "supports": "Twister: Retreat → Frost Nexus → Elemental Armament II → Acceleration → Deliberation. Barrage: Perpetual Charge → Rapid Casting II → Heightened Charges. Release Salvo only after storing 4+ seals. Called Shots' Sniper's Mark: Charged Mark → Eternal Mark → Ingenuity → Charge Profusion. See the source planner for the exact slots.",
+        "transitionCondition": "Obtain The Taming, with a prospect of obtaining Olroth's Conviction."
+      },
+      {
+        "caution": "When using Sacred Flame and Rakiata's Flow together, keep the boss away from you when using Twister (they cancel each other out). Trinity has a breakpoint at Lv23 of \"+1% more elemental damage\", so reach it with Uhtred's Augury or Uhtred's Omen. Garukhan's Resolve is the strongest lineage support for damage.",
+        "gearPriority": "The top priority is Olroth's Conviction, which lets you use Barrage 3 times on cooldown. The weapon is a high-physical-damage spear. Use 10%+ critical strike chance as the guideline for The Ordained. The sceptre's Sacred Flame is the maximum damage, but mind its synergy with Rakiata's Flow. For Trinity's balance, choose from Guiding Palm of the Eye / Guiding Palm of the Heart / Guiding Palm of the Mind. Uhtred's Sidereus and Runeforged Sekhema Sandals are also candidates.",
+        "label": "Endgame (Crit)",
+        "mainSkill": "The Twister + Barrage critical setup. Generate Power Charges with Spear Stab + Ailith's Chimes and extend them with Charge Regulation.",
+        "nowActions": [
+          "Obtain with top priority the talisman that lets Barrage be used 3 times on cooldown, and remove Salvo from Twister",
+          "Balance Trinity's elements and reach the Lv23 breakpoint",
+          "Generate Power Charges with Spear Stab + Ailith's Chimes"
+        ],
+        "passivePriority": "Balance critical nodes with Evasion / Deflection nodes. Deflection nodes are brought into full use with a chest of 1500+ Evasion. Balance Trinity with Heart of the Well's \"gain damage as extra Fire\". Put \"increased Energy Shield %\" on rare Sapphires.",
+        "replaceGear": "Once you obtain Olroth's Conviction, remove Salvo from Twister. Combined with Uhtred's Constellation, Barrage becomes easier to use. Secure around 200 Ward so Barrage can be run with Olroth's Conviction.",
+        "supports": "Barrage: Perpetual Charge → Rapid Casting II → Heightened Charges → Cooldown Recovery II → Efficiency II. Twister: Retreat → Acceleration → Rakiata's Flow → Deliberation → Salvo. Once Olroth's Conviction is in, remove Salvo from Twister. Whirling Slash: Rapid Attacks III → Rage III → Pinpoint Critical → Inexorable Critical II → Blazing Critical. Spear Stab: Culmination II → Ailith's Chimes → Charge Profusion → Rapid Attacks III → Rage III. See the source planner for the exact slots.",
+        "transitionCondition": "You reach the stage where currency can go toward expensive finished-form gear such as Mageblood and Headhunter."
+      },
+      {
+        "caution": "If mana problems arise, handle them with Sapphires granting 2% mana recovery on kill and a mana flask, and late on with Lavianga's Spirits. Pure Evasion or an ES / Evasion hybrid is a matter of taste; the hybrid is somewhat tankier but reduces tree freedom. The source warns that \"during boss fights you are vulnerable while waiting for cooldowns\".",
+        "gearPriority": "For Mageblood, one with doubled Silver, Jade and Bismuth legacies is best. Headhunter is extremely powerful in rare-heavy content, but securing resistances and chaos resistance becomes harder. Kolr's Hunt's Marksman Gloves are a luxury item. Uhtred's Sidereus, Runeforged Sekhema Sandals, Legacy of Wanderlust and Absent Amulet are also finished-form candidates.",
+        "label": "Endgame (Crit Aspirational)",
+        "mainSkill": "The finished Twister + Barrage form. The final setup adds Berserk and Ghost Dance.",
+        "nowActions": [
+          "Assemble the finished form's unique belt",
+          "Fill in the Garukhan's Resolve and Her Declaration / Seraph's Heart lineage supports",
+          "Incorporate Berserk and Ghost Dance into the final setup"
+        ],
+        "passivePriority": "Take efficient flask nodes with Lavianga's Spirits. On an Evasion chest, Beastial Skin is powerful (pairs well with Slipstrike Vest and Sleek Jacket). For Controlled Metamorphosis, choose one with a small penalty to all elemental resistances (important when using Headhunter). Socket only good Time-Lost Jewels. If a Megalomaniac is a good item, take additional jewel sockets toward the Shadow / Witch side.",
+        "replaceGear": "Her Declaration and Seraph's Heart are expensive lineage supports; before them, use Herbalism II and Clarity II. Jewels prioritize skill effect duration, ailment magnitude, critical strike chance and critical damage.",
+        "supports": "Twister: Retreat → Acceleration → Rakiata's Flow → Garukhan's Resolve → Deliberation. Barrage: Perpetual Charge → Heightened Charges → Olroth's Conviction → Uhtred's Constellation → Efficiency II. Whirling Slash: Rapid Attacks III → Heightened Accuracy II → Blazing Critical → Pinpoint Critical → Rigwald's Ferocity. Herald of Thunder: Elemental Armament II → Concentrated Area → Blindside → Esh's Radiance → Esh's Prowess. See the source planner for the exact slots.",
+        "transitionCondition": "The finished form. From here, progress with 3-mod jewels, max-rolling each gear piece, and strict selection of Time-Lost Jewels."
+      }
+    ],
+    "mainSkill": "Twister",
+    "mainSkillTiming": {
+      "available": "Twister is a Tier 1 gem usable from Lv1 (poe2db). However, leveling with Twister from Lv1 in a fresh league requires a Huntress mule; without a mule, level with Lightning Arrow + Lightning Rod until around Lv10.",
+      "checkedAt": "2026-11-25",
+      "guide": "Legi's Maxroll guide (guide text and embedded planner checked directly)",
+      "recommendedSwitch": "Rather than a switch, it is staged strengthening: to Frost Nexus in Act 2, to Called Shots → Sniper's Mark at the fourth ascendancy, and removing Salvo from Twister once Olroth's Conviction is obtained.",
+      "source": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide"
+    },
+    "mappingRating": 5,
+    "name": "Twister Deadeye",
+    "ratingEvidence": {
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "noDodgeRequirement": false,
+          "ssfConfirmed": false
+        },
+        "note": "The main skill Twister is a Tier 1 gem usable from Lv1, so only the early condition is counted as a confirmed condition. However, starting from Lv1 in a fresh league requires a Huntress mule. The source calls weapon set usage \"extremely important\", and there is also Parry timing and mark and Salvo management, so the operation condition is not counted. Evasion and Deflection are the defensive foundation and you are squishy early on, so the dodge condition is not counted either. SSF viability is not stated in the source (the author is known as an SSF player, but this guide contains no SSF statement).",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Twister is a Tier 1 gem requiring level 1 (poe2db). The source also states explicitly that you can \"start at Lv1 and play through to Endgame\".",
+            "source": "https://poe2db.tw/jp/Twister"
+          }
+        }
+      },
+      "boss": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "It is listed as a strength that it handles both bossing and mapping, while a weakness is being vulnerable during boss fights while waiting for cooldowns.",
+        "quote": "Versatile for both bossing and Mapping",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
+        "sourceName": "Maxroll: Twister Deadeye Build Guide"
+      },
+      "checkedAt": "2026-11-25",
+      "damage": {
+        "basis": "Strength",
+        "checkedAt": "2026-11-25",
+        "note": "Twister's clear, spreading across the whole screen, is the signature. The source evaluates The Taming as always strengthening Twister with 100% added elemental damage, Trinity as a large damage multiplier, and Garukhan's Resolve as the strongest lineage support.",
+        "quote": "Big Coverage",
+        "score": 4,
+        "source": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
+        "sourceName": "Maxroll: Twister Deadeye Build Guide"
+      },
+      "defense": {
+        "basis": "Both a strength and a weakness",
+        "checkedAt": "2026-11-25",
+        "note": "There are layers of Evasion, Deflection and ES, while the source's weaknesses state explicitly that you are squishy early and vulnerable during boss fights while waiting for cooldowns.",
+        "quote": "Squishy Early",
+        "score": 3,
+        "source": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
+        "sourceName": "Maxroll: Twister Deadeye Build Guide"
+      },
+      "mapping": {
+        "basis": "Strength (emphasized)",
+        "checkedAt": "2026-11-25",
+        "note": "Screen-wide clear and freezes are emphasized in the strengths. Herald of Ice's explosions also help clear.",
+        "quote": "Big Coverage / Satisfying Freezes and Shatters",
+        "score": 5,
+        "source": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
+        "sourceName": "Maxroll: Twister Deadeye Build Guide"
+      }
+    },
+    "reviewedFacts": {
+      "checkedAt": "2026-11-25",
+      "difficulty": "Medium to high (weapon set management, Parry, and mark and Salvo management are constantly required. WASD movement is recommended).",
+      "gearDependence": "Centered on the two weapon set spears and the sceptre. No unique is mandatory, and The Taming and Olroth's Conviction are the room to grow.",
+      "operation": "Frequent (the basic rotation of Ice-Tipped Arrows → Whirling Slash ×3 → Barrage → Twister, plus weapon set switching, Parry, mark consumption and waiting on Salvo).",
+      "source": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide",
+      "ssfNote": "Whether the build works in SSF is not stated in the source (Maxroll). The author Legi is known as an SSF player, but this guide is aimed at league start and also introduces trade-assuming purchases such as The Taming and Mageblood. \"Functions without uniques\" is not an SSF statement."
+    },
+    "seoDescription": "PoE2 0.5.5: Twister Deadeye — Lv1 leveling, weapon set usage, supports, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "seoTitle": "PoE2 Twister Deadeye Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "slug": "twister-deadeye",
+    "sources": [
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: Twister Deadeye Build Guide",
+        "type": "Overseas Endgame guide (patch 0.5.5, by Legi, updated September 4, 2026; guide text and embedded planner checked directly)",
+        "url": "https://maxroll.gg/poe2/build-guides/twister-deadeye-build-guide"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "Maxroll: League Starter Build Tier List",
+        "type": "Overseas Tier list (0.5.5, updated November 3, 2026; confirmed this build is placed in A Tier and linked to this guide)",
+        "url": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Twister",
+        "type": "Japanese skill data (Tier 1 gem)",
+        "url": "https://poe2db.tw/jp/Twister"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2db (Japanese): Uncut Skill Gem (gem cutting table)",
+        "type": "Game data (per-Tier gem list for spears and bows: Twister / Whirling Slash are Tier 1, Fangs of Frost / Cull the Weak are Tier 3, Barrage / Ice-Tipped Arrows are Tier 5)",
+        "url": "https://poe2db.tw/jp/Uncut_Skill_Gem"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "GGG official: The Third Edict Item Filter Information",
+        "type": "Official forum (the 0.3.0 support gem rename list; confirmed the before/after names for Rapid Attacks, Magnified Area, Prolonged Duration, Rapid Casting, Charge Profusion, Knockback, Life Leech, Heightened Charges, Efficiency, Mark for Death, Charge Regulation, Heightened Accuracy and Cooldown Recovery)",
+        "url": "https://www.pathofexile.com/forum/view-thread/3828542"
+      },
+      {
+        "checkedAt": "2026-11-25",
+        "name": "poe2wiki: Cull the Weak",
+        "type": "English skill data (Tier 3 spear skill; a dash + culling strike that grants a Frenzy Charge on kill)",
+        "url": "https://www.poe2wiki.net/wiki/Cull_the_Weak"
+      }
+    ],
+    "ssf": null,
+    "status": "verified",
+    "strengths": [
+      "Unleashes elemental Twisters across the whole screen, with a wide clear area (source strength: Big Coverage).",
+      "Freezes and shatters feel satisfying, and you can map while freezing the whole screen (source strength: Satisfying Freezes and Shatters).",
+      "Versatile enough to handle both bosses and maps (source strength: Versatile for both bossing and Mapping).",
+      "It functions without uniques and is suited to league start (per the source's introduction: does not require any Uniques to function)."
+    ],
+    "updatedAt": "2026-09-04",
+    "version": "0.5.5",
+    "weaknesses": [
+      "Squishy early on (source weakness: Squishy Early).",
+      "Vulnerable during boss fights while waiting for cooldowns (source weakness: Vulnerable during boss fights while waiting for cooldowns).",
+      "Weapon set usage is extremely important, and the build does not function if the assignments are wrong (per the source's gear explanation).",
+      "Leveling with Twister from Lv1 in a fresh league requires the preparation of creating a Huntress mule character first (per the source's skill priority).",
+      "WASD movement is recommended, and with mouse movement Whirling Slash is hard to operate (source FAQ)."
+    ]
+  },
+  "related": [
+    {
+      "id": "ranger-glacial-lance-deadeye",
+      "name": "Glacial Lance Deadeye",
+      "classSlug": "ranger",
+      "slug": "glacial-lance-deadeye"
+    },
+    {
+      "id": "ranger-ice-shot-deadeye",
+      "name": "Ice Shot Deadeye",
+      "classSlug": "ranger",
+      "slug": "ice-shot-deadeye"
+    }
+  ]
+}

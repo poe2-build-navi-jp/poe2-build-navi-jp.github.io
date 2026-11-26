@@ -1,5 +1,5 @@
-import {parseNamedPlans, namedPlanKey} from './simulator-model.js?v=161ef63cbd';
-import {goalKey, makeGoal, parseGoal, compareGoal} from './simulator-goal-model.js?v=9fc88e5370';
+import {parseNamedPlans, namedPlanKey} from './simulator-model.js?v=fdda84f09b';
+import {goalKey, makeGoal, parseGoal, compareGoal} from './simulator-goal-model.js?v=cdd99600d0';
 
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;

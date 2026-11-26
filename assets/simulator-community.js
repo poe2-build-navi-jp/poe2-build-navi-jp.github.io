@@ -1,4 +1,4 @@
-import {publicSnapshot} from './community-model.js?v=ea87b2cb4c';
+import {publicSnapshot} from './community-model.js?v=2dabb0f8a4';
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;
 const button = document.getElementById('sim-community-prepare');
@@ -21,7 +21,7 @@ if (button) {
   });
   for (const event of ['poe2:library-ready', 'poe2:workspace', 'poe2:goal-state']) window.addEventListener(event, refresh);
   try {
-    const response = await fetch('/data/community-catalog.json?v=010720c1b5');
+    const response = await fetch('/data/community-catalog.json?v=d2c535fce7');
     if (!response.ok) throw Error('PUBLIC_CATALOG');
     catalog = await response.json(); refresh();
   } catch { status.textContent = t('投稿用データを読み込めませんでした。再読み込みで再試行できます。', 'Publishing data could not load. Reload to retry.'); }

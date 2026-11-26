@@ -28,16 +28,20 @@ for (const name of ['community-model.js', 'community-ui.js', 'community-transpor
   await writeFile(new URL('assets/' + name, root), source);
 }
 const base = 'https://poe2-build-navi-jp.github.io';
+// Pages listed in data/noindex.json stay reachable but out of search (same rule as the
+// rest of the site; generate-sitemap.mjs also skips them).
+const noindexPaths = new Set(JSON.parse(await read('data/noindex.json')).paths);
 for (const en of [false, true]) {
   const t = (ja, english) => en ? english : ja;
   const prefix = en ? '/en' : '';
+  const robots = noindexPaths.has(`${prefix}/community/`) ? 'noindex,follow' : 'index,follow';
   const title = t('PoE2 みんなのビルド｜構成の投稿・検索・共有', 'PoE2 community builds | Publish and explore configurations');
   const description = t('装備・ジェム・パッシブをまとめたPoE2の構成を投稿。スキル・予算・用途で探し、シミュレーターで確認して共有できます。', 'Publish a Path of Exile 2 configuration with equipment, gems and passives. Find builds by skill, budget and purpose, then inspect them in the simulator.');
   const directory = new URL((en ? 'en/' : '') + 'community/', root);
   await mkdir(directory, {recursive: true});
   await writeFile(new URL('index.html', directory), `<!doctype html>
 <html lang="${en ? 'en' : 'ja'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="index,follow"><link rel="canonical" href="${base}${prefix}/community/">
+<title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="${robots}"><link rel="canonical" href="${base}${prefix}/community/">
 <link rel="alternate" hreflang="ja" href="${base}/community/"><link rel="alternate" hreflang="en" href="${base}/en/community/"><link rel="alternate" hreflang="x-default" href="${base}/community/">
 <meta property="og:type" content="website"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${base}${prefix}/community/">
 <link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/community.css"><script type="module" src="/assets/community-page.js"></script>

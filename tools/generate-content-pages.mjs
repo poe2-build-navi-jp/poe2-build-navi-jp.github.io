@@ -7,6 +7,7 @@ const guides = JSON.parse(await readFile(resolve(root, "data/guides.json"), "utf
 const terms = JSON.parse(await readFile(resolve(root, "data/dictionary.json"), "utf8"));
 const site = JSON.parse(await readFile(resolve(root, "data/site.json"), "utf8"));
 const builds = JSON.parse(await readFile(resolve(root, "data/builds.json"), "utf8"));
+const stratGuides = JSON.parse(await readFile(resolve(root, "data/strategy-guides.json"), "utf8"));
 const base = "https://poe2-build-navi-jp.github.io";
 const publisher = "ca-pub-7738997902416481";
 const esc = (v) => String(v).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -21,14 +22,61 @@ const termExamples = (term) => term.buildExamples?.length ? `<h2>このサイト
   if (!build) throw new Error(`${term.slug}: unknown build ${ex.id}`);
   return `<li><a href="/builds/${build.classSlug}/${build.slug}/">${esc(build.name)}</a>：${esc(ex.text)}</li>`;
 }).join("")}</ul>` : "";
+// Generated from the site's own data (no shared template text): sentences in the listed
+// builds' leveling stages and in guide bodies that actually mention the term, so each
+// dictionary/guide page shows where the term matters in practice.
+const sentencesOf = (value) => String(value ?? "").split(/(?<=。)/).map((s) => s.trim()).filter(Boolean);
+const termKeys = (term) => [...new Set([term.term, ...(term.usageKeys || [])])];
+const usageInBuilds = (term) => {
+  const keys = termKeys(term);
+  const out = [];
+  for (const build of builds) {
+    const fields = [];
+    for (const s of build.levelingStages || []) {
+      for (const k of ["mainSkill", "supports", "gearPriority", "passivePriority", "caution", "transitionCondition"]) if (s[k]) fields.push([s.label, s[k]]);
+      for (const a of s.nowActions || []) fields.push([s.label, a]);
+    }
+    for (const v of build.gearPriorities || []) fields.push(["装備の優先順位", v]);
+    if (build.ssfNote) fields.push(["SSFの実績", build.ssfNote]);
+    const found = [];
+    for (const [label, value] of fields) for (const sentence of sentencesOf(value)) if (keys.some((k) => sentence.includes(k))) found.push([label, sentence]);
+    const dedup = [...new Map(found.map((f) => [f[1], f])).values()].slice(0, 3);
+    if (dedup.length) out.push([build, dedup]);
+    if (out.length >= 4) break;
+  }
+  return out.length ? `<h2>掲載ビルドの手順での使われ方</h2><p>掲載ビルドの育成手順から、「${esc(term.term)}」に触れている記述を抜き出しました。定義だけでなく、実際の育成のどの場面で関係するかを確認できます。</p><ul>${out.map(([build, items]) => `<li><a href="/builds/${build.classSlug}/${build.slug}/">${esc(build.name)}</a><ul>${items.map(([label, s]) => `<li>${esc(label)}：${esc(s)}</li>`).join("")}</ul></li>`).join("")}</ul>` : "";
+};
+const usageInGuides = (term) => {
+  const keys = termKeys(term);
+  const out = [];
+  for (const g of stratGuides) {
+    const texts = [g.summary || "", ...(g.sections || []).flatMap((s) => [...(s.paragraphs || []), ...(s.bullets || [])])];
+    const hit = texts.flatMap(sentencesOf).find((s) => keys.some((k) => s.includes(k)));
+    if (hit) out.push([g, hit]);
+    if (out.length >= 3) break;
+  }
+  return out.length ? `<h2>この用語を扱うガイド</h2><ul>${out.map(([g, s]) => `<li><a href="/guides/${g.slug}/">${esc(g.title)}</a>：${esc(s)}</li>`).join("")}</ul>` : "";
+};
+// Terms that mention each other in their own explanations, linked with their one-liners.
+const relatedTerms = (term) => {
+  const myTexts = [term.description, term.importance, ...(term.sections || []).flatMap((s) => [...(s.paragraphs || []), ...(s.bullets || [])])].join(" ");
+  const rel = terms.filter((t) => t.slug !== term.slug && (myTexts.includes(t.term) || [t.description, t.importance].join(" ").includes(term.term)));
+  return rel.length ? `<h2>関連する用語</h2><ul>${rel.slice(0, 4).map((t) => `<li><a href="/dictionary/${t.slug}/">${esc(t.term)}</a>：${esc(t.oneLine)}</li>`).join("")}</ul>` : "";
+};
+// The ビルド term page promises examples of the listed builds in its own description;
+// assemble that list from builds.json instead of leaving it as a stub.
+const buildListForTerm = (term) => term.slug !== "build" ? "" : `<h2>掲載ビルドの例</h2><p>現在掲載している${builds.length}ビルドです。同じ職業でも主力スキルと育て方が変わることを、実際の例で確認できます。</p><ul>${builds.map((b) => `<li><a href="/builds/${b.classSlug}/${b.slug}/">${esc(b.name)}</a>（${esc(b.className)}／${esc(b.ascendancy)}）：主力は${esc(b.mainSkill)}。${esc(b.audience)}</li>`).join("")}</ul>`;
 const termSources = (term) => term.sources?.length ? `<section class="sources"${term.provenance?' id="term-sources"':term.evidence?' id="guide-evidence-sources"':''}><h2>確認した情報源</h2><p>${term.provenance?'以下は資料を確認した日であり、全仕様の現在の動作や実プレイを再検証した日ではありません。':term.evidence?esc(term.evidence.version)+'。資料に記載された範囲の説明であり、現行の全仕様を実機検証したものではありません。':`数値や仕様はPath of Exile 2 ${esc(term.version || site.gameVersion)}時点のものです。正式版1.0で変わる可能性があります。`}</p><ul class="source-list">${term.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a><span>確認日 ${esc(s.checkedAt)}</span></li>`).join("")}</ul></section>` : "";
 
+// Guides that share a slug with a dictionary term reuse that term's usage keys; the others
+// declare their own in guides.json (usageTerm / usageKeys).
+const guideTermOf = (guide) => terms.find((t) => t.slug === guide.slug) || { term: guide.usageTerm || guide.title, usageKeys: guide.usageKeys || [] };
 for (const guide of guides) {
   const dir = resolve(root, "guides", guide.slug);
   const url = `${base}/guides/${guide.slug}/`;
   const actions = guide.actions.map((x, i) => `<li><b>${["最優先", "次", "その次"][i]}</b><span>${esc(x)}</span></li>`).join("");
   const details = guide.details.map((x) => `<p>${esc(x)}</p>`).join("");
-  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${guide.title}｜初心者ガイド`, guide.metaDescription || guide.summary, url)}${evidenceStyles(guide.evidence)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/beginner-guide/">初心者ガイド</a></li><li>${esc(guide.title)}</li></ol></nav><article class="article-page"><p class="section-kicker">BEGINNER GUIDE</p><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.summary)}</p><section class="content-action"><h2>今日確認すること</h2><ol>${actions}</ol></section>${evidenceBlock(guide.evidence)}<section><h2>初心者向け説明</h2>${details}</section>${termSections(guide)}${termExamples(guide)}${termSources(guide)}<aside class="next-box"><b>次の行動</b><p>${esc(guide.nextText || "関連する画面を開いて、今の自分に必要な項目を確認してください。")}</p><a class="button" href="${guide.related}">${esc(guide.relatedLabel || "関連ページへ")}</a>${(guide.links || []).map((l) => `<a class="button button-ghost" href="${esc(l.href)}">${esc(l.label)}</a>`).join("")}</aside><p><a href="/beginner-guide/">${guides.length}章の一覧へ戻る</a></p></article></main></body></html>`;
+  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${guide.title}｜初心者ガイド`, guide.metaDescription || guide.summary, url)}${evidenceStyles(guide.evidence)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/beginner-guide/">初心者ガイド</a></li><li>${esc(guide.title)}</li></ol></nav><article class="article-page"><p class="section-kicker">BEGINNER GUIDE</p><h1>${esc(guide.title)}</h1><p class="lead">${esc(guide.summary)}</p><section class="content-action"><h2>今日確認すること</h2><ol>${actions}</ol></section>${evidenceBlock(guide.evidence)}<section><h2>初心者向け説明</h2>${details}</section>${termSections(guide)}${termExamples(guide)}${usageInBuilds(guideTermOf(guide))}${usageInGuides(guideTermOf(guide))}${termSources(guide)}<aside class="next-box"><b>次の行動</b><p>${esc(guide.nextText || "関連する画面を開いて、今の自分に必要な項目を確認してください。")}</p><a class="button" href="${guide.related}">${esc(guide.relatedLabel || "関連ページへ")}</a>${(guide.links || []).map((l) => `<a class="button button-ghost" href="${esc(l.href)}">${esc(l.label)}</a>`).join("")}</aside><p><a href="/beginner-guide/">${guides.length}章の一覧へ戻る</a></p></article></main></body></html>`;
   await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
 }
 
@@ -40,11 +88,11 @@ const termProvenance = term => {
 for (const term of terms) {
   const dir = resolve(root, "dictionary", term.slug);
   const url = `${base}/dictionary/${term.slug}/`;
-  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${term.term}とは｜初心者用語辞典`, term.metaDescription || `${term.term}をPOE2初心者向けに説明。${term.oneLine}`, url)}${evidenceStyles(term.provenance)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/dictionary/">用語辞典</a></li><li>${esc(term.term)}</li></ol></nav><article class="article-page"><p class="section-kicker">DICTIONARY</p><h1>${esc(term.term)}</h1><section class="term-lead"><h2>一言でいうと</h2><p>${esc(term.oneLine)}</p></section><section class="term-action"><h2>次にすること</h2><p>${esc(term.action)}</p></section>${termProvenance(term)}<h2>初心者向け説明</h2><p>${esc(term.description)}</p>${termSections(term)}<h2>なぜ重要？</h2><p>${esc(term.importance)}</p>${termExamples(term)}${termSources(term)}<div class="section-cta"><a class="button" href="${term.guide}">関連ガイド</a><a class="button button-ghost" href="/dictionary/">用語一覧</a></div></article></main></body></html>`;
+  const html = `<!doctype html><html lang="ja"><head>${head(`POE2 ${term.term}とは｜初心者用語辞典`, term.metaDescription || `${term.term}をPOE2初心者向けに説明。${term.oneLine}`, url)}${evidenceStyles(term.provenance)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li><a href="/dictionary/">用語辞典</a></li><li>${esc(term.term)}</li></ol></nav><article class="article-page"><p class="section-kicker">DICTIONARY</p><h1>${esc(term.term)}</h1><section class="term-lead"><h2>一言でいうと</h2><p>${esc(term.oneLine)}</p></section><section class="term-action"><h2>次にすること</h2><p>${esc(term.action)}</p></section>${termProvenance(term)}<h2>初心者向け説明</h2><p>${esc(term.description)}</p>${termSections(term)}<h2>なぜ重要？</h2><p>${esc(term.importance)}</p>${termExamples(term)}${buildListForTerm(term)}${usageInBuilds(term)}${usageInGuides(term)}${relatedTerms(term)}${termSources(term)}<div class="section-cta"><a class="button" href="${term.guide}">関連ガイド</a><a class="button button-ghost" href="/dictionary/">用語一覧</a></div></article></main></body></html>`;
   await mkdir(dir, { recursive: true }); await writeFile(resolve(dir, "index.html"), html);
 }
 
-const guideCards = guides.map((g, i) => `<a class="content-card" href="/guides/${g.slug}/"><small>第${i + 1}章</small><strong>${esc(g.title)}</strong><span>${esc(g.summary)}</span></a>`).join("");
+const guideCards = guides.map((g, i) => `<a class="content-card" href="/guides/${g.slug}/"><small>第${i + 1}章</small><strong>${esc(g.title)}</strong><span>${esc(g.summary)}</span>${g.details?.[0] ? `<span>${esc(g.details[0].slice(0, 100))}</span>` : ""}</a>`).join("");
 const problemCards = [
   ["耐性が分からない", "/guides/resistance/", "装備交換前後の耐性を確認します。"],
   ["火力が出ない", "/guides/increase-damage/", "武器・スキル・サポートを順に確認します。"],
@@ -62,7 +110,7 @@ const beginnerPicks = discovery.beginnerPurposes.map(({ label, buildId }) => {
 }).join("");
 await writeFile(resolve(root, "beginner-guide/index.html"), `<!doctype html><html lang="ja"><head>${head("PoE2初心者向けおすすめビルド・育成ガイド", "PoE2初心者向けのおすすめビルドと序盤の育成ガイド。クラスとビルドを選び、現在Lvから今やること3つを確認できます。", `${base}/beginner-guide/`)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li>初心者ガイド</li></ol></nav><article class="article-page wide-article"><p class="section-kicker">BEGINNER GUIDE / ${guides.length} CHAPTERS</p><h1>PoE2初心者向けおすすめビルド・育成ガイド</h1><p>初めてなら、遊びたい戦い方から候補を1つ選び、ビルド詳細へ現在Lvを入力してください。</p><div class="update-strip"><span>対応環境：${esc(site.siteVersion)}</span><span><a href="${esc(site.latestPatchSource)}" target="_blank" rel="noopener noreferrer">最新確認：${esc(site.latestPatch)}</a></span><span>最終確認：${esc(site.latestPatchCheckedAt)}</span></div><section class="content-action choice-summary" aria-labelledby="beginner-next-title"><h2 id="beginner-next-title">初心者はまずここから</h2><ol><li>近接・遠距離・召喚など、続けやすい戦い方を選ぶ</li><li>途中で主力スキルが変わる時期を確認する</li><li>ビルド詳細で現在Lvを入力し、今やること3つを見る</li></ol><p>完成形を最初から再現する必要はありません。迷ったら複数のビルドを同時に進めず、選んだ1つのロードマップへ戻ってください。「最強」という言葉だけで選ばず、操作しやすさと育成途中の切替時期で比べます。</p><div class="purpose-grid">${beginnerPicks}</div><div class="section-cta"><a class="button" href="/classes/">おすすめクラスを選ぶ</a><a class="button-secondary" href="/class-check/">4問で自分に合う職業を見る</a><a class="button-secondary" href="/leveling/">現在Lvから育成を見る</a><a class="button-secondary" href="/best-builds/">目的別おすすめを見る</a><a class="button-secondary" href="/builds/">全ビルドを見る</a></div></section><section aria-labelledby="problem-guides-title"><h2 id="problem-guides-title">困りごとから探す</h2><p>検索した悩みに直接答えるページから、関連ビルドと現在Lvナビへ進めます。</p><div class="content-grid">${problemCards}</div></section><section aria-labelledby="chapters-title"><h2 id="chapters-title">基礎から学ぶ${guides.length}章</h2><div class="content-grid">${guideCards}</div></section></article></main></body></html>`);
 
-const termCards = terms.map((t) => `<a class="content-card" href="/dictionary/${t.slug}/"><strong>${esc(t.term)}</strong><span>${esc(t.oneLine)}</span></a>`).join("");
+const termCards = terms.map((t) => { const firstSentence = `${(t.description || "").split("。")[0]}。`; return `<a class="content-card" href="/dictionary/${t.slug}/"><strong>${esc(t.term)}</strong><span>${esc(t.oneLine)}</span>${firstSentence !== t.oneLine ? `<span>${esc(firstSentence)}</span>` : ""}</a>`; }).join("");
 await writeFile(resolve(root, "dictionary/index.html"), `<!doctype html><html lang="ja"><head>${head("POE2初心者用語辞典｜独立解説ページ", `POE2初心者向けの用語辞典。DPS・スキル・耐性・Mapping・アセンダンシーなど${terms.length}語を1語1ページで解説し、別サイトへ戻らずに意味を確認できます。`, `${base}/dictionary/`)}</head><body>${header}<main class="page-main"><nav class="breadcrumbs" aria-label="パンくず"><ol><li><a href="/">ホーム</a></li><li>用語辞典</li></ol></nav><article class="article-page wide-article"><p class="section-kicker">DICTIONARY</p><h1>分からない言葉を、その場で確認</h1><p>各用語は独立URLで詳しく説明し、次に読むガイドへつなげています。</p><div class="content-grid dictionary-cards">${termCards}</div></article></main></body></html>`);
 
 console.log(`Generated ${guides.length} guide pages and ${terms.length} dictionary pages.`);

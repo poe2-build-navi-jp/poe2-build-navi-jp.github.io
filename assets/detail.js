@@ -12,6 +12,21 @@ const STAGES = [
 const byId = (id) => document.getElementById(id);
 const text = (value) => value === null || value === undefined || value === "" ? "確認中" : String(value);
 const stageIndexFor = (level) => Math.max(0, STAGES.findIndex((stage) => level >= stage.min && level <= stage.max));
+// Resolve which of the build's own leveling stages applies at the current level.
+// Builds written against the fixed bands match the STAGES label exactly and never
+// reach the fallbacks: a level range written in the label (e.g. "Lv1〜13"), then
+// the band position clamped to the build's own stage count.
+function resolveBuildStageIndex(index) {
+  const stages = build?.levelingStages || [];
+  if (!stages.length) return -1;
+  const exact = stages.findIndex((item) => item.label === STAGES[index].label);
+  if (exact >= 0) return exact;
+  const byRange = stages.findIndex((item) => {
+    const range = /Lv\s*(\d+)\s*[〜~～\-–]\s*(\d+)/.exec(item.label || "");
+    return range && level >= Number(range[1]) && level <= Number(range[2]);
+  });
+  return byRange >= 0 ? byRange : Math.min(index, stages.length - 1);
+}
 let build;
 let level = 1;
 let selectedTrouble = null;
@@ -62,24 +77,26 @@ function stageItem(label, value) {
 }
 
 function renderStage(index, scroll = false) {
+  const target = build ? resolveBuildStageIndex(index) : index;
   const details = [...document.querySelectorAll("#roadmap details[data-stage-index]")];
   details.forEach((item, itemIndex) => {
-    const current = itemIndex === index;
+    const current = itemIndex === target;
     item.open = current;
     item.toggleAttribute("data-current", current);
     const marker = item.querySelector(".current-stage-marker");
     if (marker) marker.hidden = !current;
   });
-  if (scroll) details[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (scroll) details[target]?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function renderNow(index) {
   const stage = STAGES[index];
   byId("now-stage").textContent = stage.label;
   byId("now-next").textContent = `次の目標：${stage.next}`;
-  const currentStage = build.levelingStages?.find((item) => item.label === stage.label);
+  const stagePosition = resolveBuildStageIndex(index);
+  const currentStage = stagePosition >= 0 ? build.levelingStages[stagePosition] : undefined;
   const stageLink = byId("now-stage-detail");
-  if (stageLink) stageLink.href = `#roadmap-stage-${index}`;
+  if (stageLink) stageLink.href = `#roadmap-stage-${stagePosition >= 0 ? stagePosition : index}`;
   const verifiedActions = currentStage?.nowActions;
   const actions = verifiedActions || [
     "現在レベルと育成段階が合っているか確認する",
@@ -191,7 +208,8 @@ function setLevel(value, fromUser = true) {
 
 function renderTrouble(type) {
   selectedTrouble = type;
-  const stage = build.levelingStages?.[stageIndexFor(level)];
+  const stagePosition = resolveBuildStageIndex(stageIndexFor(level));
+  const stage = stagePosition >= 0 ? build.levelingStages?.[stagePosition] : undefined;
   if (!stage) return;
   const manaWeakness = (build.weaknesses || []).find((item) => /マナ|Mana/i.test(item));
   const plans = {

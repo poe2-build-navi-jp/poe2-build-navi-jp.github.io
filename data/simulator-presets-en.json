@@ -88,6 +88,783 @@
     "contentRevision": "39a1364d45f54b40"
   },
   {
+    "id": "monk-falling-thunder",
+    "name": "Falling Thunder Martial Artist",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "Martial Artist",
+    "skills": [
+      "Falling Thunder"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-15 (Act 1, Quarterstaff)",
+        "mainSkill": "For packs, Frozen Locus plus Herald of Ice. For single targets, Falling Thunder",
+        "supports": "Falling Thunder: Elemental Armament I, then Lightning Attunement. Frozen Locus: Elemental Armament I, then Cold Attunement. Wind Blast: Rage I, then Rapid Attacks I. Herald of Ice: Magnified Area I. The support setup covers what could be cross-checked against the original planner's per-stage table via a secondary summary; check the original for the exact current slots.",
+        "passivePriority": "Follow the original's Campaign per-stage tree. There is a first respec at level 10, so keep some gold in reserve.",
+        "gearPriority": "Use an Orb of Transmutation obtained from Clearfell's league mechanic reward on a Wrapped Quarterstaff. Look for a Long Quarterstaff in Red Vale. Gear: Life/ES, added damage on gloves and rings, movement speed on boots.",
+        "caution": "The original also calls Act 1 a rough spot. Boss damage is reduced for the first 5 seconds of the fight, so wait a little before spending Power Charges. Boss order: prepare a stun with Wind Blast, stun with Wing Blast to build 3 Power Charges, spend 1 with Rend for the lightning buff, place Frost Bomb at its feet, then Falling Thunder with the remaining 2.",
+        "transitionCondition": "Reach level 16 and have the gold for the second respec. Transition to Hollow Palm Technique."
+      },
+      {
+        "label": "Level 16 to End of Act 2 (Hollow Palm Transition)",
+        "mainSkill": "Unarmed attacks with Hollow Palm Technique are the mainstay. Falling Thunder for single targets",
+        "supports": "While on Hollow Palm you use no weapon and scale damage with melee skill levels. The Act 2 single-target loop: shock with Storm Wave, consume the shock with Siphoning Strike for Power Charges, then Falling Thunder. Check the original planner for exact support slots.",
+        "passivePriority": "Respec into Hollow Palm Technique at level 16. Finish the Trial of the Sekhemas at level 22 and take Hollow Focus Technique as your first ascendancy.",
+        "gearPriority": "Remove the quarterstaff. +melee skill levels on gloves and amulet matter most. Gear: Life, Evasion, ES and resistances.",
+        "caution": "Devour the Hollow Focus bell before a boss and you can start the fight with 3 Power Charges. Keep Frost Bomb's Exposure up.",
+        "transitionCondition": "Clear Acts 3-4 while staying on Hollow Palm."
+      },
+      {
+        "label": "Act 3 to Campaign End (Hollow Palm Continues)",
+        "mainSkill": "Hollow Palm unarmed attacks plus Falling Thunder",
+        "supports": "Keep the campaign setup. Maintain the Thrill of the Kill buff with Devour and Killing Palm finishers, and keep Rend's lightning buff up in boss fights. Check the original planner for exact support slots.",
+        "passivePriority": "Continue the original's Campaign tree. Second ascendancy: Way of the Stonefist, which converts glove modifiers so attack speed becomes Onslaught chance, added damage is gained as added damage, and defences convert to Evasion/ES.",
+        "gearPriority": "Keep upgrading gloves and amulet with melee skill levels. Start shifting gear toward Evasion and ES, and bring resistances close to the cap.",
+        "caution": "Hollow Palm starts falling off late. You do not need weapon upgrades in this phase, so save your crafting currency instead of spending it.",
+        "transitionCondition": "Reach the Interludes and level 54, with the materials to craft a Waxing Quarterstaff ready."
+      },
+      {
+        "label": "Interludes (Level 54, Return to Quarterstaff)",
+        "mainSkill": "Waxing Quarterstaff plus Falling Thunder",
+        "supports": "You return to a weapon, so put Falling Thunder's supports back to a weapon-based setup. Check the original planner for exact slots.",
+        "passivePriority": "Remove Hollow Palm Technique and rebuild the tree around a quarterstaff.",
+        "gearPriority": "Crafting a Waxing Quarterstaff with your saved currency is the top priority.",
+        "caution": "If you leave Hollow Palm's falloff unchecked you will stall in the Interludes. Return to a weapon soon after reaching level 54.",
+        "transitionCondition": "Finish the campaign. Start stockpiling the gems for the Whirling Assault setup for maps."
+      },
+      {
+        "label": "Mapping Begins (Whirling Assault Respec)",
+        "mainSkill": "Build energy with Whirling Assault, generate Power Charges with Reaper's Invocation into Profane Ritual. Spend them with Charged Staff and Falling Thunder",
+        "supports": "Whirling Assault is for building energy; Falling Thunder carries the damage. Adding Mantra of Destruction adds chaos damage based on the combo consumed.",
+        "passivePriority": "Respec into the maps tree. Switch to setting up Power Charges before bosses by clearing the Hollow Focus bell with Killing Palm.",
+        "gearPriority": "First purchase candidate: Ailith's Chimes. Whirling Assault has no inherent conversion, so the original advises an elemental-damage quarterstaff.",
+        "caution": "Until you have Ailith's Chimes, the finished charge engine is not online. Use Tempest Bell for the first charge generation in some situations.",
+        "transitionCondition": "Obtain Ailith's Chimes and take Martial Master."
+      },
+      {
+        "label": "Endgame Complete (CI, Charge Engine Complete)",
+        "mainSkill": "Alternate Whirling Assault and Falling Thunder. Build up to 6 Power Charges, then Falling Thunder",
+        "supports": "Whirling Assault: Culmination II plus Ailith's Chimes convert consumed combo into Power Charges. Falling Thunder: Nova Projectiles I for maps. The pinnacle-boss setup removes Nova Projectiles I and other utility. Critical stats are also supported by Charge Regulation, Blindside and Pinpoint Critical.",
+        "passivePriority": "Respec into Chaos Inoculation and rebuild ailment and stun thresholds around ES. Runic Meridians lets you socket additional runes. The original states Abasement and Shimmering Mirage are required to prevent permanent stuns and freezes. Martial Adept recovers ES when you consume combo.",
+        "gearPriority": "A Sinister Quarterstaff with high physical damage and critical chance. Gloves: Fists of Stone converted by Way of the Stonefist. Gear: Evasion/ES, 35% movement speed on boots. Raise Falling Thunder's level with Prism of Belief.",
+        "caution": "Herald of Ice explosions require Freeze. Secure cold damage through Heart of the Well or Fists of Stone's 'gain damage as cold'. If the big hit does not crit, you have to rebuild your charges from scratch.",
+        "transitionCondition": "The build is complete. After this, refine jewels to three modifiers and push every gear piece to its maximum rolls."
+      }
+    ],
+    "mainSkill": "Falling Thunder",
+    "path": "/builds/monk/falling-thunder/",
+    "contentRevision": "c4c5f32568cfc940"
+  },
+  {
+    "id": "monk-hollow-focus-storm-wave",
+    "name": "Hollow Focus Storm Wave Martial Artist",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "Martial Artist",
+    "skills": [
+      "Storm Wave"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1 to Campaign End (Twister Leveling)",
+        "mainSkill": "A combo setup that builds stages with Whirling Slash and releases Twister. For bosses, use War Banner or Herald of Ice",
+        "supports": "Gem-engraving priorities follow the source guide: cut Frost Bomb early, and take Fangs of Frost with the first level 3 gem. The first two level 5 gems go to Barrage and Ice-Tipped Arrows. Take Freezing Mark with the first level 7 gem. Supports go to Whirling Slash (Rage I and Rapid Attacks I); the rest go to Twister. Link Frost Nexus to Twister to create cold ground; Salvo is also an option later on.",
+        "passivePriority": "Rush to Concussive Attack first, then hurry to Dance with Death. Along the way, take attack speed for weapon set 1, and Essence of the Mountain plus Hail for weapon set 2 to support freeze buildup and cold damage. The first ascendancy is Way of the Mountain, which helps with stun, damage, and defense while enemies are frozen.",
+        "gearPriority": "Weapon set 1 is built for Whirling Slash speed: from Act 2, look for a Winged Spear and use an Essence of Haste. No off-hand. If you have the currency, Skysliver is also an option. Weapon set 2 is built for Twister damage: stack added elemental damage; attack speed is not needed. Early on, use a buckler to Parry into Fangs of Frost; later, switch to a spirit sceptre to add spirit gems. Armour starts as Armour/Evasion and later shifts to Evasion/ES.",
+        "caution": "The source guide states that Monk has the weakest early game of all classes, and Act 1 is the weakest point even for Twister leveling. During the single-target rotation, do not leave the wind cloud of Whirling Slash. Dodge rolling forces you to start over.",
+        "transitionCondition": "Finish the campaign and reach maps."
+      },
+      {
+        "label": "Early Mapping (Storm Wave Transition)",
+        "mainSkill": "Storm Wave for single targets. Clearing uses Shattering Palm plus the ice explosions of Herald of Ice. The bells from Hollow Focus and Tempest Bell support both",
+        "supports": "Link Armour Break III to Herald of Ice; the added physical damage from Way of the Stonefist triggers Armour Explosion, which is the core of the clear. Shattering Palm takes Magnified Area II and Ancestral Call II, with Rage III also an option, and it serves as a trigger for Ice Bite II. Recommended links for Hollow Focus include Magnified Area II and Cooldown Reduction II (per poe2db).",
+        "passivePriority": "The second ascendancy is Way of the Stonefist. The third is Martial Adept or Hollow Focus Technique. Early power charge generation runs through Resonance plus Combat Frenzy, feeding Charged Staff. Take Heavy Frost and Thin Ice, plus area nodes in the Dizzying Sweep cluster.",
+        "gearPriority": "Stack as much Evasion as possible as the main defense (combined with Deflection and ES). For the early helmet, Vestige of Darkness is excellent; otherwise use Grip of Winter. For the weapon, look for a staff with maximum physical damage; attack speed, critical damage bonus, critical strike chance, and melee skill levels are also desirable. Note that melee skill levels make mana costs heavier. Gloves are the most important piece as the conversion target of Way of the Stonefist: physical damage to attacks enables Armour Break from Herald of Ice. At least one ring needs physical damage life/mana leech.",
+        "caution": "Freeze is a prerequisite for maximum damage. Without Vestige of Darkness, use Grip of Winter to make freezing easier. Mana problems are common; physical damage mana leech is needed on at least one piece. The source guide warns of a known bug where Charged Staff loses its effect when you swap weapons.",
+        "transitionCondition": "Have Deflection gear on at least two pieces and reach the point where you can spend currency on lineage supports and the final weapon."
+      },
+      {
+        "label": "Endgame Complete (Lineage Supports, Deflection Cap)",
+        "mainSkill": "Clear with Shattering Palm and melt bosses with overlapping Storm Wave fissures. Bells are supplied by both Hollow Focus and Tempest Bell",
+        "supports": "Lineage supports for Storm Wave: Kaom's Madness adds a fissure; Garukhan's Resolve is a large critical-focused boost (expensive); Vorana's Siege covers both area and single target. Oisín's Oath addresses mana. Fragments Of The Past applies Maim and Cold Exposure but consumes a runeword. Once your gear is ready, move Rage III to Shattering Palm.",
+        "passivePriority": "Once Chakra of Rhythm plus Rune of Culmination lets Shattering Palm gain 2 combo from a single attack, switch Martial Adept to Hollow Focus Technique. The final ascendancy is Runic Meridians. The Hollowkeeper requires First Principle of the Hollow and First Teachings of the Keeper first. In the late game, fill out the critical nodes.",
+        "gearPriority": "The best weapon is a rare staff with high critical damage bonus, attack speed, and critical strike chance. An empowered Duality is also an option; choose the damage empowerment. Push Deflection on at least two pieces toward the 95% cap. The amulet wants +3 to melee skills, global defenses, and Evasion rating; having Spirit as well lets the chest keep Evasion without compromise. The ideal Heart of the Well converts double damage to added damage and grants Rage on melee hit. Place the Time-Lost Sapphire near Dizzying Hits.",
+        "caution": "Do not link Rapid Attacks III to any skill (a source FAQ checklist item, as it lowers single-target damage). Elemental Weakness needs leveling at high levels and has a heavy Intelligence requirement. The right distance for overlapping Storm Wave fissures differs with each boss's hitbox and has to be learned by feel.",
+        "transitionCondition": "The completed form. From here, maximize jewels and each gear piece's rolls and refine critical damage."
+      }
+    ],
+    "mainSkill": "Storm Wave",
+    "path": "/builds/monk/hollow-focus-storm-wave/",
+    "contentRevision": "496eda3444cf3ae8"
+  },
+  {
+    "id": "monk-infernal-legion-chayula",
+    "name": "Infernal Legion Acolyte of Chayula",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Acolyte of Chayula",
+    "ascendancyName": "Acolyte of Chayula",
+    "skills": [
+      "Companion: {0}"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-13 (Early Act 1: Quarterstaff)",
+        "mainSkill": "Progress with a high-damage quarterstaff. Shatter the ice crystals of Frozen Locus with the tip of Glacial Cascade, covering both packs and single targets.",
+        "supports": "Supplement damage with runes such as Lesser Glacial Rune on the quarterstaff (per the source guide).",
+        "passivePriority": "Build the foundation toward Concussive Attack. Ideally take Hollow Palm Technique by the Count Geonor fight in Act 1 (per the source guide).",
+        "gearPriority": "A quarterstaff with high physical and cold damage. Other slots prioritize maximum life and resistances. Evasion or evasion/ES bases are preferred, but the modifiers matter more than the base (per the source guide).",
+        "caution": "The source guide calls early Act 1 on Monk a rough stretch. Do not overextend until Ice Strike is unlocked.",
+        "transitionCondition": "Ice Strike is unlocked at level 14."
+      },
+      {
+        "label": "Levels 14 to End of Act 4 (Ice Strike Leveling)",
+        "mainSkill": "Ice Strike is the main skill. Detonate frozen enemies with Herald of Ice and dive into large packs with Shattering Palm. For bosses, place a Tempest Bell and run the combo.",
+        "supports": "Embitter matters: it converts the extra chaos damage of Into the Breach to cold so you can freeze (per the source guide). Cannibalism I and Clarity I support life and mana recovery. Socketing Freezing Mark and Elemental Weakness into Hand of Chayula lets you apply both with one button (per the source guide).",
+        "passivePriority": "Taking Hollow Palm Technique lets you fight without a weapon, freeing you from melee weapon upgrades. Remnant Attraction makes collecting Flames of Chayula easier. The first ascendancy point is Waking Dream (per the source guide).",
+        "gearPriority": "Gloves and an amulet with +levels to melee skills are the core of your damage. Balance life and resistances. If you spot minion gear for after the switch during the campaign (a sceptre, or a helmet with +levels to all minion skills), set it aside (per the source guide).",
+        "caution": "This stage is not a minion setup yet. To secure the respec cost (roughly 39,000-40,000 gold), pick up and sell rares, and do not buy expensive rares from vendors (per the source guide). Weak defences early on are a listed downside of the source guide.",
+        "transitionCondition": "Finish Act 4 and enter the Interludes. Level 56+ and 18+ weapon set points are the benchmarks for the switch."
+      },
+      {
+        "label": "Around Level 56: The Switch (Capture Companions and Respec)",
+        "mainSkill": "Capture both companions first, then respec your passives and switch to the Infernal Legion II setup. The main companion is a Plague Harvester with the 'All Damage Ignites' modifier; the support companion is a Diretusk Boar with 'All Damage Shocks' (per the source guide).",
+        "supports": "Cut Infernal Legion II with a level 5 Uncut Support Gem. Do not use Infernal Legion I: it lacks fire resistance and radius (stated in the source guide). Put Selfless Remnants on Into the Breach to share the purple flame effect with allies in your presence. After taking Gigantic Following, swap Hulking Minions for Searing Flame II (per the source guide).",
+        "passivePriority": "The respec costs about 40,000 gold. Vile Mending, Living Death, minion fire resistance and Unspoken Bond are mandatory nodes so your companion does not destroy itself with Infernal Legion (per the source guide). Long Distance Relationship and Bond of the Ape extend your companion's area of effect. Ascendancy order: Waking Dream, then Choice of Power, then Chayula's Gift (per the source guide).",
+        "gearPriority": "A sceptre, helmet and amulet with +levels to all minion skills. A Shrine Sceptre is the ideal base, but the modifiers matter more than the base (per the source guide).",
+        "caution": "Capture the companions before respeccing. The Plague Harvester appears near Khari Crossing in the Interludes, and the Diretusk Boar at the Troubled Camp in the Infested Barrens (Act 3); both are fixed spawns whose modifiers can be rerolled with checkpoint respawns (source guide FAQ). Be careful not to kill the rare beasts.",
+        "transitionCondition": "Both companions are captured, the respec is done, and you can enter maps with Infernal Legion II."
+      },
+      {
+        "label": "Early Mapping",
+        "mainSkill": "Clear maps with your companion's surrounding DoT. Enter each zone in weapon set II (the Into the Breach snapshot) and apply exposure with Frost Bomb. For bosses, let your companion apply the ignite, then weapon-swap and aggravate the ignite with Spearfield (per the source guide).",
+        "supports": "With a Shrine Sceptre, spirit-reservation supports such as Upwelling II are effectively free. Put leftover spirit into Ghost Dance. Enable Withering Presence after you obtain Blackflame (per the source guide).",
+        "passivePriority": "At this stage, Mind Over Matter lets you use mana as a mitigation pool (per the source guide). On jewels, prioritize increased presence area of effect, aiming for a radius of about 7 metres (per the source guide).",
+        "gearPriority": "Get a +1-roll Trenchtimbre early and replace your buckler. Using Blackflame requires +92 or more additional spirit from gear. Saitha's Spear is cheap and powerful (per the source guide).",
+        "caution": "If your companion leaves your presence, your maximum Energy Shield visibly drops. If it happens often, add more presence area of effect jewels (per the source guide).",
+        "transitionCondition": "You reach the red-map tier and can aim for a +2-roll Trenchtimbre and Genesis Tree minion gear."
+      },
+      {
+        "label": "Red Maps (Switching to the Wasp Setup)",
+        "mainSkill": "Switch to the wasp setup built around Xoph's Pyre. The main companions are a Plague Harvester with Shroud Walker and a Gargantuan Wasp, teleporting to enemies while spreading area ignites. Swap the other companion to Catha's Brilliance (per the source guide).",
+        "supports": "Scouring Flame is a strict upgrade over Searing Flame II. Skeletal Cleric helps your companions survive. Charged Mark and Sniper's Mark create shocked ground (per the source guide). Convalescence is insurance that starts Energy Shield recharge immediately when you take damage.",
+        "passivePriority": "The top jewel priority is 'Minions have increased area of effect' (it only rolls on ruby and diamond jewels). Next are presence area of effect and minion maximum life (per the source guide).",
+        "gearPriority": "Upgrade Trenchtimbre to a +2 roll. Move your belt and rings to Genesis Tree minion pieces; minion area of effect on the belt matters most. Replace Blackflame with minion rings over time (per the source guide).",
+        "caution": "Catha's Brilliance increases your companion's spirit cost. If spirit is short, take additional companion reservation nodes; if it is still short, go back to Infernal Legion II (per the source guide). The Elephant Tortoise setup deals about 80% more damage but requires steering the AI (holding Direct Minions), so the source guide treats it as an alternative.",
+        "transitionCondition": "Your Energy Shield reaches about 6,000 and you can switch to Chaos Inoculation."
+      },
+      {
+        "label": "Endgame Complete (Chaos Inoculation Setup)",
+        "mainSkill": "After taking Chaos Inoculation, run with about 10,000 Energy Shield and over 50% evasion. Your companion's area ignite provides constant DPS while you focus on Frost Bomb and keeping debuffs up (per the source guide).",
+        "supports": "At this stage the sceptre is assumed to be a Shrine Sceptre with Purity of Fire. If you do not have one, take Living Death on the passive tree (per the source guide).",
+        "passivePriority": "Add notables with jewels such as Megalomaniac and Prism of Belief. Defence and companion life nodes scale Energy Shield, evasion and damage at the same time (per the source guide).",
+        "gearPriority": "Maximize Energy Shield on your helmet, body armour and focus (the focus should have +2 to level of all minion skills). Sacrificial Regalia, Jiquani's Thesis and Mageblood are final-form candidates. Attach Transcendent Limbs only after you finish rolling your ideal companion (per the source guide).",
+        "caution": "A large part of your Energy Shield and evasion depends on your companion staying in your presence (per the source guide). The fourth ascendancy notable has nothing useful, so there is no rush to complete the fourth ascendancy (stated in the source guide).",
+        "transitionCondition": "Once complete, keep improving through companion modifier rolling (such as Shroud Walker plus All Damage Ignites) and jewel upgrades."
+      }
+    ],
+    "mainSkill": "A companion captured with Tame Beast (Plague Harvester) wearing Infernal Legion II, constantly igniting enemies around it with an area DoT. The purple flames of Into the Breach are shared with the companion through Selfless Remnants, scaling the ignite with extra chaos damage.",
+    "path": "/builds/monk/infernal-legion-chayula/",
+    "contentRevision": "07634eb3fc08cce0"
+  },
+  {
+    "id": "warrior-shield-wall-warbringer",
+    "name": "Shield Wall Warbringer",
+    "class": "Warrior",
+    "className": "Warrior",
+    "ascendancy": "Warbringer",
+    "ascendancyName": "Warbringer",
+    "skills": [
+      "Shield Wall"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-22 (Two-Handed Mace Leveling)",
+        "mainSkill": "Rolling Slam and Boneshatter are the core skills. Perfect Strike handles single targets.",
+        "supports": "Normal attacks: Rapid Attacks II plus Concentrated Area. Rolling Slam: Brink I. Boneshatter: Impact Shockwave plus Magnified Area I. Perfect Strike: Window of Opportunity I plus Rapid Attacks I. Infernal Cry: Tireless. Herald of Ash is used alongside. This is the source planner's Level 1-22 setup.",
+        "passivePriority": "Take only as much attribute as gear and gems require, and put the rest into Strength to grow Life. The first ascendancy is Answered Call, which houses ancestral spirits in your totems for buffs.",
+        "gearPriority": "A two-handed mace and armour with Life, resistances and Armour. Save gold for the switch at level 22 and for gambling a shield.",
+        "caution": "Slow animations early on are a listed downside of the source guide. Shield Wall cannot be used yet, so this stretch is carried by two-handed mace damage.",
+        "transitionCondition": "Reach level 22 and secure a level 7 Uncut Skill Gem. Gamble a shield with gold and prepare one with high Armour."
+      },
+      {
+        "label": "Level 22 to End of Campaign (Shield Wall Switch)",
+        "mainSkill": "Detonate the fissures of Shield Wall with Fortifying Cry and Infernal Cry. Shockwave Totem provides supporting damage.",
+        "supports": "Shield Wall: Rapid Attacks I plus Fire Infusion plus Magnified Area I. Fortifying Cry: Brutality II plus Raging Cry. Infernal Cry: Tireless plus Raging Cry. Shockwave Totem: Urgent Totems I. Leap Slam and Shield Charge: Rapid Attacks I. In the late-campaign planner, Shield Wall gains Impale and supports such as Magnified Area II are upgraded to higher tiers.",
+        "passivePriority": "Once Fortifying Cry is available, switch from Answered Call to Warcaller's Bellow. Warcries lose their cooldown, so you can detonate fissures at any time, and nearby corpses explode as well. Assign the weapon set 2 passives exclusively to warcries.",
+        "gearPriority": "Always look for the shield with the highest Armour. Weapon damage is irrelevant to your damage. The chest wants Life and Armour; aim for 75% resistances.",
+        "caution": "If mana is tight, a single mana leech roll on a ring or gloves solves it. The source guide's FAQ says not to level the Leap Slam, Infernal Cry or Shield Charge gems.",
+        "transitionCondition": "Finish the campaign and have a clear path to obtaining the Ahn's Citadel and Kaom's Madness lineage supports."
+      },
+      {
+        "label": "Endgame Complete (Branching Fissures with Lineage Supports)",
+        "mainSkill": "Detonate Shield Wall fissures branched by Ahn's Citadel and Kaom's Madness with Fortifying Cry, Infernal Cry, Sunder and movement skills.",
+        "supports": "Shield Wall: Rapid Attacks II plus Ahn's Citadel plus Kaom's Madness plus Heft plus Rageforged II. Fortifying Cry: Raging Cry plus Heavy Swing plus Brutality III plus Atalui's Bloodletting plus Heft. Sunder: Rapid Attacks III plus Rigwald's Ferocity plus Rage III plus Prolonged Duration II. War Banner: Daresso's Passion plus Magnified Area II plus Prolonged Duration II. Scavenged Plating and Tame Beast are also included in the source planner.",
+        "passivePriority": "Anvil's Weight lets all of your damage break Armour, and Imploding Impacts pushes enemy Armour below zero. Finally, Jade Heritage grants additional physical damage reduction and a powerful guard skill.",
+        "gearPriority": "Refine the shield's Armour. The chest wants Life plus Armour plus 'Armour also applies to Elemental Damage'. Attack speed on gloves and desecrated skill speed on jewellery. Thrillsteel is the unique candidate.",
+        "caution": "If single-target damage falls short, swap Ahn's Citadel and Kaom's Madness for Concentrated Area and Close Combat II, fully break the enemy's Armour, then use Sunder — the source FAQ's solution. Scaling in the very endgame is modest, a listed downside of the source guide.",
+        "transitionCondition": "The completed form. From here, refine the Armour of your shield and chest and push every gear piece toward maximum rolls."
+      }
+    ],
+    "mainSkill": "Shield Wall",
+    "path": "/builds/warrior/shield-wall-warbringer/",
+    "contentRevision": "af2fbc0f93bd8126"
+  },
+  {
+    "id": "mercenary-supporting-fire-tactician",
+    "name": "Supporting Fire Tactician",
+    "class": "Mercenary",
+    "className": "Mercenary",
+    "ascendancy": "Tactician",
+    "ascendancyName": "Tactician",
+    "skills": [
+      "Supporting Fire"
+    ],
+    "stages": [
+      {
+        "label": "Lv1 to mid Act 2 (crossbow leveling)",
+        "mainSkill": "Packs: Permafrost Bolts. Single target: freeze first, then Fragmentation Rounds",
+        "supports": "Permafrost Bolts as the main skill, Frost Bomb to lower elemental resistances, and Herald of Ice for clear speed. On bosses, apply Freezing Mark, then use Fragmentation Rounds. See the source planner for the exact support setup.",
+        "passivePriority": "Keep crossbow nodes within an efficient range to limit respec costs. Rapid Reload and Adrenaline Rush help in the early game.",
+        "gearPriority": "Check vendor crossbows and sceptres every few levels, and buy an Iron Ring in Act 1. Movement speed on boots is mandatory. At Lv16, craft a Varnished Crossbow with a Lesser Essence of Ice or an Orb of Alchemy and socket a Glacial Rune (this carries the crossbow leveling to the end). Flat added damage on gloves, rings and the crossbow (cold and physical are ideal) is the top priority; the rest goes to Life and elemental resistances. Also pick up helms and sceptres with +levels to all minion skills for later use.",
+        "caution": "Weapon set configuration (Permafrost Bolts on set I, Fragmentation Rounds on set II, Crossbow Shot shared by both sets) drives early comfort. Moving between acts or zones occasionally requires a reload. Avoid gambling and expensive rare purchases during the campaign to save the respec cost.",
+        "transitionCondition": "Taking Unleash Hell! in mid Act 2, which unlocks Supporting Fire. The full transition still waits until Lv36."
+      },
+      {
+        "label": "Lv36 to campaign end (Supporting Fire transition)",
+        "mainSkill": "Use Supporting Fire on cooldown. Line up one of each minion type for Muster",
+        "supports": "Supporting Fire: Fire Attunement, Multishot II, Bidding I and Muster are the required slots at transition (per the source's Gem Engraving Priority). For single target, ignite the Skeletal Sniper's command skill (Gas Arrow) with Fire Attunement. Sceptre auras prioritize Upwelling II and Clarity II. Debuffs are Elemental Weakness and Frost Bomb.",
+        "passivePriority": "Respec at Lv36. Growing Swarm and command skill cooldown recovery are the top priorities. Take Archon of Undeath, Lord of Horrors, At Your Command, Puppet Master and Gigantic Following. Spend leftover attributes on Strength first.",
+        "gearPriority": "+levels to all minion skills is the top priority, secured on the sceptre, helm and amulet (it scales both minion damage and durability). Strength also feeds damage and Life directly. A Shrine Sceptre grants Purity of Fire, letting you run Upwelling I and Clarity I for free, which makes it the best early option.",
+        "caution": "Keep one of each minion type as a rule; only the Skeletal Sniper may be run at 2-3 copies, depending on Spirit, as single-target support. Minion damage itself does not matter (except the early Sniper), and the Muster bonus is gained even if they die.",
+        "transitionCondition": "Campaign completion, and securing the purchase funds (Exalted Orbs) for Enfolding Dawn."
+      },
+      {
+        "label": "Mapping start (Early)",
+        "mainSkill": "Supporting Fire handles clearing, while the Skeletal Arsonist's command skill cycles Archon of Undeath and Puppet Master",
+        "supports": "For Supporting Fire's Bidding, choose Bidding II for single target or Bidding III for stable clearing, to taste. The Skeletal Brute breaks armour with Armour Break III and also intimidates bosses.",
+        "passivePriority": "Fill out the Archon of Undeath related nodes. Once complete, single-target damage shifts to Supporting Fire and you can reduce Skeletal Snipers.",
+        "gearPriority": "The first purchase is Enfolding Dawn; save Exalted Orbs and buy it immediately (crafting upgrades greatly raise its Armour and ES). Next, Meginord's Girdle for a large amount of Strength and cold resistance.",
+        "caution": "If Supporting Fire is on cooldown at the moment you gain Archon of Undeath, the cooldown is not shortened retroactively. Trigger the Archon with the Skeletal Arsonist's command first, then fire.",
+        "transitionCondition": "Reaching Red Maps, and funds to upgrade to Trenchtimbre and an Omen Sceptre."
+      },
+      {
+        "label": "Red Maps",
+        "mainSkill": "Supporting Fire handles both clearing and bosses. Apply Predator's Mark and Cold Exposure with Pounce",
+        "supports": "Kurgal's Leash gives Supporting Fire Unholy Might (gain 30% of physical damage as chaos). Scale chaos damage with Withering Presence, and defend with Blasphemy + Temporal Chains, later adding Despair. Mana recovery comes from the Wolf Pack's Infernal Legion I + Essence Harvest.",
+        "passivePriority": "Resurging Archon removes the Skeletal Sniper entirely, unifying both clearing and single target on Supporting Fire. Add Despair with Whispers of Doom. Necrotic Touch and Grip of Evil pair well with Malice. Licking Wounds raises Life and Mana recovery.",
+        "gearPriority": "A +2 Trenchtimbre (once shield resistances are no longer needed). An Omen Sceptre is the best base, and Malice greatly raises single-target damage. Secure regeneration with Emergent Instinct and stabilize mana recovery with Lavianga's Spirits. The belt must have the minion area of effect and minion command skill damage mod classes.",
+        "caution": "Use Infernal Legion I, not II, on the Wolf Pack. Also, do not add Last Gasp to the Essence Harvest setup, or the harvest stops working.",
+        "transitionCondition": "Securing an amulet that can be instilled with Dominion, and Heroic Tragedy (Vorana inscription)."
+      },
+      {
+        "label": "Endgame complete (CI, Dominion obtained)",
+        "mainSkill": "Stack Supporting Fire casts. Keep Archon of Undeath up almost permanently, handling both clearing and bosses with this alone",
+        "supports": "Vorana's Siege extends area and damage against isolated enemies. Uul-Netol's Embrace is a powerful lineage support that gains 40% of physical damage as chaos (an expensive Min-Max slot). Fill out the minion side with Amanamu's Tithe, Tecrod's Revenge, Brutus' Brain and Her Declaration.",
+        "passivePriority": "Instilling Dominion is the top priority (it removes Archon of Undeath's recovery period, keeping it up almost permanently). Heroic Tragedy's Black Scythe Training converts Strength to ES, and combined with Chaos Inoculation you aim for over 10,000 ES. Giant's Blood lets you wield Chober Chaber in one hand.",
+        "gearPriority": "Maximize ES on the helm, gloves and boots. Chober Chaber is a strict upgrade over Trenchtimbre; aim for a corrupted +4 to all minion skills roll with an 80-85 Intelligence requirement. Morior Invictus requires all elemental resistances and all attributes, with reduced critical damage taken as the optimal third line. Use a Raven-Touched Shard to put Gigantic Following on the helm, and Cadigan's Epiphany for another instillation on the gloves.",
+        "caution": "Heroic Tragedy must bear the 'Vorana' inscription (the numbers do not matter). If you do not have a Megalomaniac with Growing Swarm, path to Growing Swarm the normal way.",
+        "transitionCondition": "The complete form. From here, refine jewel mods (maximum ES, ES recharge start speed, minion critical mods) and max rolls on each gear piece."
+      }
+    ],
+    "mainSkill": "Supporting Fire",
+    "path": "/builds/mercenary/supporting-fire-tactician/",
+    "contentRevision": "2948f88fa3de6680"
+  },
+  {
+    "id": "ranger-glacial-lance-deadeye",
+    "name": "Glacial Lance Deadeye",
+    "class": "Ranger",
+    "className": "Ranger",
+    "ascendancy": "Deadeye",
+    "ascendancyName": "Deadeye",
+    "skills": [
+      "Glacial Lance"
+    ],
+    "stages": [
+      {
+        "label": "Act 1 (Twister Leveling)",
+        "mainSkill": "Twister + Whirling Slash. For bosses, use Parry → Fangs of Frost to create chilled ground, then attack.",
+        "supports": "Generate chilled ground with Frost Nexus. Keep Whirling Slash at level 1 to save mana (per the source guide). Also use War Banner for single targets.",
+        "passivePriority": "Prioritise damage early. Critical strikes are hard to scale yet, so leave them for later (per the source guide). See the source guide for the per-stage tree.",
+        "gearPriority": "Life and resistances on most slots. Large added damage (any element) on rings, spear and gloves. Update the spear every 5–10 levels, prioritising physical and cold damage and attack speed suffixes.",
+        "caution": "If you leave the Whirling Slash whirlwind and fire Twister, the whirlwind collapses and you lose the added damage. Always fire from inside the whirlwind.",
+        "transitionCondition": "Act 2 begins. Barrage and Ice-Tipped Arrows become available."
+      },
+      {
+        "label": "Early Act 2 to the First Trial (Twister Continued)",
+        "mainSkill": "Continue with Twister. Spend Frenzy Charges with Barrage to add projectiles, and use Ice-Tipped Arrows on cooldown.",
+        "supports": "Ice-Tipped Arrows shards speed up pack clearing, so Whirling Slash is used less often. Use Freezing Mark on tough rares and bosses, and Charged Mark to also apply shocked ground.",
+        "passivePriority": "Keep prioritising damage; do not lean into critical strikes yet (per the source guide).",
+        "gearPriority": "Keep updating the spear. Maintain life and resistances.",
+        "caution": "Parry and Fangs of Frost can be removed once Act 2 begins (per the source guide). Do not switch to Glacial Lance until you finish the first trial.",
+        "transitionCondition": "Clear the first trial so Glacial Lance (tier 7, from level 22) and the Mirage Deadeye ascendancy become available."
+      },
+      {
+        "label": "After the First Trial to Campaign End (Glacial Lance Switch)",
+        "mainSkill": "Glacial Lance. Summon Mirage Deadeye by attacking and Mirage Archer with a dodge roll.",
+        "supports": "Mirage Archer requires a tier 8 Spirit gem (per poe2db; the source guide lists Tier 7+). For bosses, place War Banner, apply Freezing Mark with Pounce, then freeze with Arctic Howl once the freeze is prepared and trigger Raging Cry. Fire Barrage with Frenzy Charges from Combat Frenzy.",
+        "passivePriority": "Ascendancy order: Mirage Deadeye → Gathering Winds → Called Shots → Avidity (per the source guide). Keep prioritising damage on the tree.",
+        "gearPriority": "Use a Shrine Sceptre (resistances) or an Omen Sceptre (boss critical chance). Attack speed and damage on the weapon set 2 talisman scale Pounce and Arctic Howl (lower priority). Fill attribute and resistance gaps with runes.",
+        "caution": "Pounce requires a talisman in the weapon set 2 off-hand. Use both Mirages on cooldown.",
+        "transitionCondition": "Campaign finished. Glacial Lance and both Mirages are running smoothly."
+      },
+      {
+        "label": "Mapping Begins (Early Mapping)",
+        "mainSkill": "Glacial Lance + both Mirages. Mana Remnants speeds up mana recovery and Mirage resummoning.",
+        "supports": "Adding Khatal's Rejuvenation to Mana Remnants makes it easier to maintain 40% cooldown recovery speed. Refraction II on War Banner adds Deflect (requires 10 additional Spirit). Also use Ghost Dance to recover Energy Shield based on evasion (from the source guide's introduction).",
+        "passivePriority": "Prioritise Frenzy Charge nodes until you socket the Idol of Eramir into your sceptre. Take critical strikes only after you have a good spear (per the source guide).",
+        "gearPriority": "The top damage priority right after reaching maps is the Idol of Eramir socketed into your sceptre (charge generation is effectively doubled). Stack evasion, Energy Shield and Deflect on body armour, gloves, boots and helmet, and make the helmet pure Energy Shield (preparation for Subterfuge Mask). Prepare the Valako's Roar charm early as well. Secure 240 total Spirit between amulet and sceptre.",
+        "caution": "Using Barrage with Olroth's Conviction requires Ward on your gear, with a total of roughly 1.5–2× the cost as a guideline (source guide FAQ). A Thaumaturgic Generator installation is expensive, so do not put one on an amulet you will replace soon.",
+        "transitionCondition": "You can clear low-tier maps stably and have the Idol of Eramir and 240 Spirit in place."
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "Glacial Lance + Barrage. The stage where you scale with critical strikes.",
+        "supports": "With Olroth's Conviction, Barrage can be used 3 times and is effectively always available (requires Ward). Moving from a Shrine Sceptre with Purity of Ice to Guiding Palm of the Eye lets you socket Vitality II and Cannibalism II for free.",
+        "passivePriority": "Once you have a good spear with a critical chance roll, take all the critical nodes. Take Subterfuge Mask only after you have a good Energy Shield helmet (per the source guide).",
+        "gearPriority": "Pick up an Akoyan Spear (drops in area level 78), create two good modifiers with Orbs of Transmutation and Augmentation, then use essences and a Preserved Jawbone to reach four modifiers. Sacred Flame is a big upgrade for the sceptre. Overflow mana with Uhtred's Chalice and Mana Remnants.",
+        "caution": "Critical strikes depend on weapon quality. Do not lean into critical nodes until you have a good spear.",
+        "transitionCondition": "The Akoyan Spear craft progresses and the critical setup stabilises."
+      },
+      {
+        "label": "Endgame Complete (Aspirational)",
+        "mainSkill": "Glacial Lance. High-speed clearing while firing on the move.",
+        "supports": "Combining Rite of Passage with Spirit of the Wolf lets all damage break armour, spreading Herald of Ice and Armour Explosion. The Fall of the Axe grants slow immunity and Onslaught.",
+        "passivePriority": "The source guide's Aspirational tree. Hail assumes Barrage and Olroth's Conviction. Take Crimson Assault via Controlled Metamorphosis, Time-Lost Emerald and From Nothing. Remove all elemental penetration investment on the assumption of using Rakiata's Flow. Put spare attributes into Strength (life).",
+        "gearPriority": "The belt slot comes into its own with Mageblood, and Headhunter also works. Stack movement speed, attack speed and evasion heavily.",
+        "caution": "The Aspirational tree assumes multiple jewels and includes Controlled Metamorphosis, which lowers resistances. Do not lean into it before your gear is ready.",
+        "transitionCondition": "After completion, improve bottlenecks one at a time: spear, charge generation and defences."
+      }
+    ],
+    "mainSkill": "Glacial Lance",
+    "path": "/builds/ranger/glacial-lance-deadeye/",
+    "contentRevision": "f30c845e0bb6273b"
+  },
+  {
+    "id": "monk-lightning-minion-chayula",
+    "name": "Lightning Minion Acolyte of Chayula",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Acolyte of Chayula",
+    "ascendancyName": "Acolyte of Chayula",
+    "skills": [
+      "Spectre: {0}"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1 to End of Act 3 (Crossbow and Grenade Leveling)",
+        "mainSkill": "For the first few levels, progress with Quarterstaff Strike, Falling Thunder and Killing Palm. Once you pick up a Makeshift Crossbow or buy one from Renly in Clearfell, Explosive Grenade becomes the main skill. Use Flash Grenade for packs and to stun bosses, and fill the gaps with Crossbow Shot while both are on cooldown.",
+        "supports": "Socket Explosive Grenade with Multishot I and Short Fuse I. Adding Lightning Attunement to Flash Grenade raises its damage and lets it shock. Spend the first Lesser Jeweller's Orb on Explosive Grenade and the second on Flash Grenade, and save the rest for the minion setup (per the source guide).",
+        "passivePriority": "Take Concussive Attack, Dizzying Sweep, Killer Instinct, Blinding Strike and Kite Runner to scale grenade damage (per the source guide).",
+        "gearPriority": "Prioritise a crossbow with high flat physical and lightning damage, and switch to a Bombard Crossbow early in Act 3. For armour, maximum Life and resistances on an armour or armour/evasion base are easiest to progress with. Pick up any helmet, amulet or sceptre with +1 to Minion Skills you come across for use after the transition (per the source guide).",
+        "caution": "This stage is not a minion setup (a stated downside in the source guide: Non-Minion leveling in Act 1-3). The source guide notes that evasion-only armour can feel rough early on. Pick up rares, identify them, then sell them to secure gold for the transition.",
+        "transitionCondition": "Reach Utzaal late in Act 3, where you can bind a Vaal Guard Spectre (around levels 41-43)."
+      },
+      {
+        "label": "Around Levels 41-43, Late Act 3 to End of Campaign (Minion Transition)",
+        "mainSkill": "Bind a bomb-throwing Vaal Guard with Bind Spectre and switch to the minion setup. Keep casting Flame Wall to summon Raging Spirits, and protect them with Wolf Pack and Loyalty. Spend leftover Spirit on a Skeletal Storm Mage or Skeletal Sniper to add Muster's effect and shock application (per the source guide).",
+        "supports": "Cut Loyalty, Minion Splash I, Last Gasp, Arcane Surge and Selfless Remnants with spare uncut support gems. Keep Flame Wall at a low level (level 5) to hold its mana cost down. Once you have a Greater Jeweller's Orb, you can also swap the Vaal Guard for a Skeletal Reaver (per the source guide).",
+        "passivePriority": "Respec into minions for about 35,000 gold. The core is Relentless Fallen, Lord of Horrors, Remnant Attraction and Empowering Remnants, Right Hand of Darkness, Necrotised Flesh and Crystalline Flesh, Vile Mending and Profane Commander. Take Ascendancy points in the order Waking Dream, then Choice of Power (per the source guide).",
+        "gearPriority": "+ to all Minion Skill Levels is the top priority (sceptre, helmet, amulet). The sceptre mod 'Attacks by allies in your Presence deal added damage' scales especially well because it is multiplied by Choice of Power and Waking Dream. Add Spirit on your body armour or amulet to raise the number of summons (per the source guide).",
+        "caution": "There are three same-named Vaal Guard variants (melee, 50 Spirit; ranged, 60 Spirit; bomb-throwing, 50 Spirit). Bind the bomb-throwing one. The source guide also warns this Spectre can cause performance issues. Damage can dip below the grenade setup right after the respec (per the source guide).",
+        "transitionCondition": "Finish the campaign and enter mapping, where you can switch to a Powered Zealot or Chaos Zealot Spectre."
+      },
+      {
+        "label": "Early Mapping (Spark Spectres)",
+        "mainSkill": "Replace the Vaal Guard with a Powered Zealot or Chaos Zealot Spectre that casts Spark. Powered Zealots can be found inside maps, Chaos Zealots sometimes in the Trial of Chaos. You support the army with Pain Offering and Despair (per the source guide).",
+        "supports": "Before switching, cut Wildshards II and Pierce III first. Spend the first Perfect Jeweller's Orb on Bind Spectre. Replace the Skeletal Storm Mage with Wardbound Minions and combine it with Warding Rune of Bodyguards to give your minions Onslaught. Also pick up Refutation (per the source guide).",
+        "passivePriority": "Take Enhanced Barrier, Mindful Awareness and Spectral Ward to raise ES and evasion, and The Soul Meridian to reduce minion Spirit reservation. Anoint the amulet with Essence Infusion (per the source guide).",
+        "gearPriority": "Get Alpha's Howl. It greatly increases Spirit and doubles your Presence radius while using Selfless Remnants and Waking Dream. A +2 to Minion Skills helmet can substitute if it is better. Prioritise reservation efficiency and movement speed on Bones of Ullr. Runeforge Enfolding Dawn (per the source guide).",
+        "caution": "Powered Zealots and Chaos Zealots also have same-named variants. Check that the one you bind costs 55 Spirit and fires large blue lightning orbs (Spark) by letting it attack a few times first. Keeping Wardbound Minions up takes about 100 Ward, and the gem should be level 16 at most — lower is better (per the source guide).",
+        "transitionCondition": "You can retire Flame Wall and Raging Spirits and move to the Mid setup (Skeletal Storm Mage + Convalescence)."
+      },
+      {
+        "label": "Mid (Army Complete)",
+        "mainSkill": "Replace Flame Wall and Raging Spirits with Skeletal Storm Mage and Convalescence. Put Despair on Blasphemy to turn the curse into an aura, and empower the army with Pain Offering. This is the polished stretch the source guide describes as 'Tanky (In the Mid setup)' and 'Few buttons in the Mid setup' (per the source guide).",
+        "supports": "Swap Pain Offering's support from Meat Shield II to Brutus' Brain. Give Wolf Pack Romira's Requital and Tecrod's Revenge (per the source guide).",
+        "passivePriority": "Use mana as a defensive layer with Heavy Buffer and Mind Over Matter. Reduce curse effect by 75% with Inner Faith and The Hollowkeeper. Swap the campaign flask reward for a mana flask upgrade. Anoint the amulet with Warlord Leader (per the source guide).",
+        "gearPriority": "Raise Spirit with Prism Guardian. Upgrade Alpha's Howl to a corrupted one with +1 to all Minion Skill Levels. Once Spirit passes 450, socket Amanamu's Gaze into Bones of Ullr for movement speed. Also prepare a Lavianga's Spirits mana flask (per the source guide).",
+        "caution": "You get tanky from this stage on, but as the source guide's downside states, this build is not recommended for Hardcore. Keeping Wardbound Minions up needs about 100 Ward, secured by runeforging Bones of Ullr and your gloves (Prism Guardian too, if that is not enough) (per the source guide).",
+        "transitionCondition": "Secure +55% or more minion cast speed, then move to the Late setup (switching to Vilenta's Propulsion)."
+      },
+      {
+        "label": "Late",
+        "mainSkill": "Once minion cast speed reaches +55% or more, swap Projectile Acceleration II for Vilenta's Propulsion. Add Uhtred's Constellation to Convalescence (per the source guide).",
+        "supports": "Dropping Blasphemy and self-casting Despair raises damage against pinnacle bosses and frees room for 2-3 more Spectres (per the source guide's FAQ). When you do, support Despair with Heightened Curse and similar.",
+        "passivePriority": "Keep Warlord Leader as the amulet anointment. Add minion critical stats and faster start of Energy Shield Recharge to sapphire jewels too (per the source guide).",
+        "gearPriority": "The top priority is a rare belt with the 'Surpassing chance for Minions to fire an additional Projectile' mod. Use a high-ES focus with +2 to Minion Skill Levels. Wear Cadigan's Epiphany on your gloves. A twice-corrupted Alpha's Howl (+20-30 Spirit, or an extra socket) is also worth considering (per the source guide).",
+        "caution": "Switching to Vilenta's Propulsion before meeting the +55% cast speed requirement lowers your damage. Confirm the requirement first (per the source guide).",
+        "transitionCondition": "You have the Min-Max gear ready, including switching the anointment to Zarokh's Gift and Sacrificial Regalia."
+      },
+      {
+        "label": "Min-Max (Completed Build)",
+        "mainSkill": "Replace Wolf Pack with Ghost Dance or Skeletal Sniper to optimise Spirit. Add Khatal's Rejuvenation to Into the Breach (skippable if it is too expensive). Snapshotting Remnants (entering the zone on weapon set II) adds another 20-30% damage, but the source guide treats it as a fully optional, advanced optimisation (per the source guide).",
+        "supports": "Swap Feeding Frenzy II on the Powered Zealot/Chaos Zealot for Dialla's Desire, and Lightning Attunement on the Skeletal Storm Mage for Esh's Radiance. Add Atziri's Communion to Blasphemy or Convalescence (per the source guide).",
+        "passivePriority": "Anoint the amulet with Zarokh's Gift. If you get a Megalomaniac with Right Hand of Darkness, respec the pathing to it (per the source guide).",
+        "gearPriority": "Sacrificial Regalia is the best body armour when it has the right mods. For Alpha's Howl, the completed form is a 2-socket one with Legacy of Greymake, either corrupted with +1 to all Minion Skill Levels or twice-corrupted with +25-30 Spirit. Mageblood is an alternative to the rare belt (per the source guide).",
+        "caution": "The source guide warns that if you use the snapshot tree without snapshotting, you lose about 50% of total damage. If you will not snapshot, stay on the regular tree. The fourth Ascendancy point is 'completely useless' according to the source guide, so there is no rush to take it (per the source guide).",
+        "transitionCondition": "Completed. From here on, it is about refining jewels and corruptions."
+      }
+    ],
+    "mainSkill": "A minion army build whose main damage comes from Spectres bound with Bind Spectre. Late in the campaign a bomb-throwing Vaal Guard carries the damage; from mapping onward, Powered Zealot/Chaos Zealot Spectres casting Spark take over, while Waking Dream's violet flame is passed to the minions with Selfless Remnants to stack added chaos damage.",
+    "path": "/builds/monk/lightning-minion-chayula/",
+    "contentRevision": "0826b3eeb05a6d3e"
+  },
+  {
+    "id": "ranger-twister-deadeye",
+    "name": "Twister Deadeye",
+    "class": "Ranger",
+    "className": "Ranger",
+    "ascendancy": "Deadeye",
+    "ascendancyName": "Deadeye",
+    "skills": [
+      "Twister"
+    ],
+    "stages": [
+      {
+        "label": "Level 1 to Act 1 (Twister leveling start)",
+        "mainSkill": "Stack up to 3 whirlwinds with Whirling Slash, then consume them with Twister to empower it. Early on, parry with a buckler, then use Fangs of Frost to create chilled ground.",
+        "supports": "Whirling Slash stays at level 1: Rapid Attacks I, then Rage I. Twister: Retreat, then Prolonged Duration I. Ice-Tipped Arrows: Elemental Armament I. War Banner: Prolonged Duration I. Also use Frost Bomb. From the source planner (Campaign).",
+        "passivePriority": "Follow the source's 'Campaign' tree. Take attributes only as far as gear and gem requirements demand, and put the rest into Strength for Life. Weapon-set point allocation starts in Act 2.",
+        "gearPriority": "Weapon set 1: an attack-speed-first spear (a Winged Spear or Soaring Spear with an attack speed suffix; Skysliver if you have one). Keep the off hand empty to benefit from Dance with Death. Weapon set 2: a damage-focused spear. For armour in Acts 1-3, prioritise armour to reduce hits taken while parrying.",
+        "caution": "To level with Twister from level 1 in a fresh league, first make a Huntress mule character and pass a level 1 Whirling Slash, a spear and a buckler through the stash. Without a mule, level with Lightning Arrow + Lightning Rod and switch around level 10, once you have three level 3 gems and a decent spear. The source strongly insists on keeping Whirling Slash at level 1: levelling it only raises its mana cost. For movement the source recommends WASD controls; with mouse controls you must keep the cursor close to your character, which is awkward.",
+        "transitionCondition": "Reach Act 2 and cut Frost Nexus with your first level 2 uncut support gem."
+      },
+      {
+        "label": "Act 2 (Frost Nexus transition)",
+        "mainSkill": "The basic Twister + Whirling Slash rotation. Generate frenzy charges while moving with Cull the Weak, and freeze tough enemies with Freezing Mark.",
+        "supports": "Twister: Retreat, Frost Nexus, then Elemental Armament II. Ice-Tipped Arrows: Elemental Armament I, then Magnified Area I. Barrage: Rapid Casting, then Perpetual Charge. Cull the Weak: Thrill of the Kill II, then Charge Profusion. Freezing Mark: Prolonged Duration I. Herald of Ice: Elemental Armament II, then Magnified Area II. From the source planner (Maps).",
+        "passivePriority": "Start allocating weapon-set points in Act 2. Weapon set 1 is for Whirling Slash and Barrage; weapon set 2 holds everything else. Ice-Tipped Arrows must go in weapon set 2, or it will not work. Take Gathering Winds, then Avidity, as your first ascendancy points to boost frenzy charge generation.",
+        "gearPriority": "Once you take your second uncut spirit gem (level 6), switch to an Omen Sceptre. Keep prioritising armour on your gear, though from Act 3 onward you will also want evasion. On jewellery and gloves, prioritise added damage to attacks (flat damage).",
+        "caution": "Once Frost Nexus is socketed, it creates the chilled ground, so you can drop Fangs of Frost. Use Ice-Tipped Arrows on cooldown to convert your damage to cold and freeze enemies. Use Cull the Weak to generate frenzy charges while moving, and fire a frenzy-empowered Barrage into rare and magic packs. Against bosses, Freezing Mark creates ice ground together with Frost Nexus.",
+        "transitionCondition": "Reach Act 3 and cut Herald of Ice."
+      },
+      {
+        "label": "Act 3 to campaign completion (Herald of Ice)",
+        "mainSkill": "Herald of Ice explosions join the basic rotation (Ice-Tipped Arrows, then three Whirling Slashes, Barrage, then Twister).",
+        "supports": "Twister: keep Retreat, Frost Nexus and Elemental Armament II. Extend Herald of Ice to Elemental Armament II, Magnified Area II and Elemental Focus. Link Charge Profusion to Combat Frenzy. See the source planner for the exact sockets.",
+        "passivePriority": "Take Thrilling Chase as your third ascendancy point. Once you have a body armour with 1200+ evasion rating, start taking deflection nodes such as The Wild Cat, Trained Deflection and Enhanced Reflexes. Projectile speed, skill effect duration and area of effect all multiply Twister's damage.",
+        "gearPriority": "From Act 3 onward you will want evasion. On armour, prioritise Life and resistances above all, combining armour and evasion. Put a high-physical-damage spear in weapon set 2.",
+        "caution": "Cutting Herald of Ice makes clearing much easier, so do not skip cutting its support slots. If Whirling Slash struggles to crit the marked target, check Pinpoint Critical and Inexorable Critical II, and the Rune of Consistency on your helmet.",
+        "transitionCondition": "Finish the campaign and reach maps."
+      },
+      {
+        "label": "Mapping start (Maps)",
+        "mainSkill": "The Twister + Barrage combo with Salvo. Called Shots automatically applies Sniper's Mark to generate frenzy charges.",
+        "supports": "Twister: Retreat, Frost Nexus, Elemental Armament II, Acceleration, then Deliberation. Barrage: Perpetual Charge, Rapid Casting II, then Heightened Charges. Fire Salvo only after building 4+ seals. Called Shots' Sniper's Mark: Charged Mark, Eternal Mark, Ingenuity, then Charge Profusion. See the source planner for the exact sockets.",
+        "passivePriority": "Take Called Shots as your fourth ascendancy point. Swap Freezing Mark for Sniper's Mark and extend frenzy generation with Eternal Mark (only once your critical chance is high enough to spend the charges reliably). Deflection nodes become a serious investment once you have a 1500+ evasion body armour.",
+        "gearPriority": "Wake of Destruction creates elemental ground so you no longer need Frost Nexus. Your top purchase is The Taming, which keeps Twister empowered even without elemental ground. Serpent's Egg is good for boosting frenzy charge generation. Cover your mana with sapphires that recover 2% mana on kill.",
+        "caution": "Do not fire Twister too often. The source instructs you to wait until the Salvo + Barrage combo is stacked, then fire. Once Called Shots applies the mark, trigger it twice with Whirling Slash to generate up to 4 frenzy charges. Against bosses, build 4-6 frenzy charges first, then unleash the Salvo + Barrage + Twister combo.",
+        "transitionCondition": "Obtain The Taming, and be in a position to obtain Olroth's Conviction."
+      },
+      {
+        "label": "Endgame（Crit）",
+        "mainSkill": "The critical Twister + Barrage setup. Generate power charges with Spear Stab + Ailith's Chimes and extend them with Charge Regulation.",
+        "supports": "Barrage: Perpetual Charge, Rapid Casting II, Heightened Charges, Cooldown Recovery II, then Efficiency II. Twister: Retreat, Acceleration, Rakiata's Flow, Deliberation, then Salvo. Once you equip Olroth's Conviction, remove Salvo from Twister. Whirling Slash: Rapid Attacks III, Rage III, Pinpoint Critical, Inexorable Critical II, then Blazing Critical. Spear Stab: Culmination II, Ailith's Chimes, Charge Profusion, Rapid Attacks III, then Rage III. See the source planner for the exact sockets.",
+        "passivePriority": "Balance critical nodes with evasion and deflection nodes. Deflection nodes become a serious investment with a 1500+ evasion body armour. Use Heart of the Well's 'gain damage as fire' to balance Trinity. Put '% increased Energy Shield' on your rare sapphires.",
+        "gearPriority": "Top priority is Olroth's Conviction, which lets you use Barrage 3 times per cooldown. Your weapon should be a high-physical-damage spear. Aim for 10%+ critical chance on The Ordained. For your sceptre, Sacred Flame gives the most damage, but mind its interaction with Rakiata's Flow. For Trinity balance, choose from Guiding Palm of the Eye, Guiding Palm of the Heart or Guiding Palm of the Mind. Uhtred's Sidereus and Runeforged Sekhema Sandals are also candidates.",
+        "caution": "If you use Sacred Flame together with Rakiata's Flow, keep the boss away from you when firing Twister (they cancel each other out). Trinity has a breakpoint at level 23 for '+1% more elemental damage', so reach it with Uhtred's Augury or Uhtred's Omen. Garukhan's Resolve is the strongest lineage support for damage.",
+        "transitionCondition": "Reach the point where you can spend currency on expensive completed-build gear such as Mageblood or Headhunter."
+      },
+      {
+        "label": "Completed Endgame (Crit Aspirational)",
+        "mainSkill": "The completed Twister + Barrage setup. The final configuration adds Berserk and Ghost Dance.",
+        "supports": "Twister: Retreat, Acceleration, Rakiata's Flow, Garukhan's Resolve, then Deliberation. Barrage: Perpetual Charge, Heightened Charges, Olroth's Conviction, Uhtred's Constellation, then Efficiency II. Whirling Slash: Rapid Attacks III, Heightened Accuracy II, Blazing Critical, Pinpoint Critical, then Rigwald's Ferocity. Herald of Thunder: Elemental Armament II, Concentrated Area, Blindside, Esh's Radiance, then Esh's Prowess. See the source planner for the exact sockets.",
+        "passivePriority": "Take efficient flask nodes with Lavianga's Spirits. Beastial Skin is strong on an evasion body armour (it pairs well with Slipstrike Vest or Sleek Jacket). Choose a Controlled Metamorphosis with a small penalty to all elemental resistances (important when using Headhunter). Socket only good Time-Lost Jewels. If you have a good Megalomaniac, take extra jewel sockets toward the Shadow/Witch side.",
+        "gearPriority": "For Mageblood, the best is one that doubles Silver, Jade and Bismuth legacies. Headhunter is extremely strong in rare-dense content, but makes resistances and chaos resistance harder to cover. Kolr's Hunt marksman gloves are a luxury item. Uhtred's Sidereus, Runeforged Sekhema Sandals, Legacy of Wanderlust and Absent Amulet are also completed-build candidates.",
+        "caution": "If mana becomes a problem, use sapphires that recover 2% mana on kill and a mana flask; in the late game, use Lavianga's Spirits. Pure evasion or an ES/evasion hybrid is a matter of taste: the hybrid is somewhat tankier but leaves less freedom in the tree. The source warns that 'you are fragile while waiting for cooldowns in boss fights'.",
+        "transitionCondition": "Completed build. From here, work on 3-mod jewels, max rolls on each piece of gear, and strict Time-Lost Jewel selection."
+      }
+    ],
+    "mainSkill": "Twister",
+    "path": "/builds/ranger/twister-deadeye/",
+    "contentRevision": "d615952c5f82ae79"
+  },
+  {
+    "id": "monk-minion-chayula",
+    "name": "Minion Acolyte of Chayula",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Acolyte of Chayula",
+    "ascendancyName": "Acolyte of Chayula",
+    "skills": [
+      "Spectre: {0}"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-37 (Crossbow and Grenade Leveling)",
+        "mainSkill": "Progress through the first 2-3 levels with a quarterstaff, then switch to Explosive Grenade and Flash Grenade once you have a Makeshift Crossbow (buyable from Renly). Use Frost Bomb to apply Exposure and War Banner to raise boss damage.",
+        "supports": "Socket Explosive Grenade with Multishot II and Elemental Armament I, Flash Grenade with Multishot II and Lightning Attunement, and Frost Bomb with Rapid Casting I. Into the Breach unlocks after taking the first Ascendancy (Remnant Potency II and Harmonic Remnants II).",
+        "passivePriority": "Take Concussive Attack, Dizzying Sweep, Killer Instinct, Blinding Strike and Kite Runner to scale grenade damage. Take Ascendancy points in the order Waking Dream, then Choice of Power (per the source guide).",
+        "gearPriority": "Prioritise a crossbow with high flat physical and lightning damage (switch to a Bombard Crossbow in Act 3). Prioritise maximum Life and resistances; an armour or armour/evasion base is preferable, as the source guide notes evasion-only armour feels rough early on. Pick up any helmet, amulet or sceptre with +1 to Minion Skills you come across for the late Act 3 transition.",
+        "caution": "The source guide notes that the early Act 1 stretch is rough for Monks. Do not overextend before Explosive Grenade unlocks. Pick up rares and sell them to start saving gold for the respec.",
+        "transitionCondition": "Reach Utzaal late in Act 3, where you can bind a Vaal Guard Spectre (around level 38)."
+      },
+      {
+        "label": "Levels 38-41 (Switching to Minions: Vaal Guard Spectre)",
+        "mainSkill": "Bind a bomb-throwing Vaal Guard with Bind Spectre, and summon Raging Spirits with Flame Wall. Empower the minions with Wolf Pack, Pain Offering and Despair.",
+        "supports": "Give the Vaal Guard Spectre Multishot II, Feeding Frenzy I and Muster. Give Raging Spirits Last Gasp, Minion Splash I and Feeding Frenzy. Give Pain Offering Meat Shield II and Danse Macabre. Give Into the Breach Remnant Potency II, Harmonic Remnants II and Selfless Remnants.",
+        "passivePriority": "Respec for about 35,000 gold around levels 41-43. Take Relentless Fallen for minion mobility and damage, Lord of Horrors and The Soul Meridian to reduce Spirit reservation, and Remnant Attraction and Empowering Remnants to strengthen Waking Dream and Choice of Power.",
+        "gearPriority": "+ to all Minion Skill Levels on your sceptre, helmet and amulet. A Rattling Sceptre is the best base, but the mods matter more than the base (per the source guide). High rolls of added damage to allies in your Presence (fire, cold, lightning or physical) scale damage greatly, as they are multiplied by Choice of Power and Waking Dream.",
+        "caution": "There are three same-named Vaal Guard monsters (melee, 50 Spirit; ranged, 60 Spirit; bomb-throwing, 50 Spirit). Bind the bomb-throwing one. The source guide notes that the bomb-throwing Spectre can cause performance issues; if your PC cannot handle it or it bothers you, a Skeletal Reaver can substitute. The source guide states that damage dips below the grenade setup right after the switch.",
+        "transitionCondition": "Once the Vaal Guard Spectre is bound and the passive respec (about 35,000 gold) is done, you can enter Act 4 with the minion setup."
+      },
+      {
+        "label": "Levels 42-59 (Skeletal Reaver: Act 4 to Interlude)",
+        "mainSkill": "Spend the first Greater Jeweller's Orb on Skeletal Reaver and replace the Vaal Guard. Apply shock with a Skeletal Storm Mage and heal with a Skeletal Cleric. Give the minions Onslaught with Refutation, and block to absorb damage in dangerous moments.",
+        "supports": "Give Skeletal Reaver Muster, Feeding Frenzy II, Last Gasp and Rage III. Give Raging Spirits Muster, Minion Splash II, Feeding Frenzy II and Last Gasp. Give Pain Offering Meat Shield II, Danse Macabre and Elemental Army. Give Refutation Prolonged Duration II and Cooldown Recovery II.",
+        "passivePriority": "Take Right Hand of Darkness, because Withered scales strongly with Waking Dream and Choice of Power. Take Necrotised Flesh, Crystalline Flesh and Vile Mending to raise minion survivability. Take Profane Commander to widen Spirit and your Presence radius.",
+        "gearPriority": "Keep + to all Minion Skill Levels on your sceptre, helmet and amulet. With a Shrine Sceptre, Spirit reservation supports such as Upwelling II are effectively free (per the source guide). Prioritise boots with movement speed, Life and resistances.",
+        "caution": "Refutation and Wardbound Minions are skill gems from Expedition encounters. Pick them up when you find them. Do not use Wardbound Minions until the Mid setup.",
+        "transitionCondition": "Finish the Interlude and enter maps, with the Skeletal Reaver setup in place and Refutation available."
+      },
+      {
+        "label": "Lv60〜79（Early Mapping）",
+        "mainSkill": "Keep Skeletal Reaver as the main damage dealer and keep summoning Raging Spirits with Flame Wall. Empower the whole army with Pain Offering, and weaken bosses and tough rares with Despair. Use Refutation on cooldown to give the minions Onslaught.",
+        "supports": "Give Skeletal Reaver Muster, Feeding Frenzy II, Last Gasp, Rage III and Minion Splash II. Give Pain Offering Meat Shield II, Danse Macabre, Magnified Area II and Prolonged Duration II. Give Despair Heightened Curse, Cursed Ground, Efficiency II and Prolonged Duration II. Give Refutation Cooldown Recovery II, Prolonged Duration II, Rapid Casting II and Mobility.",
+        "passivePriority": "Take Enhanced Barrier, Mindful Awareness and Spectral Ward to raise ES and evasion. Take Heavy Buffer to greatly raise ES and combine it with Mind Over Matter to use mana as a defensive layer. Take Inner Faith and The Hollowkeeper to reduce curse effect by 75%. Take Chayula's Gift as the third Ascendancy.",
+        "gearPriority": "Alpha's Howl is the top priority (greatly increased Spirit and doubled Presence radius). Runeforge Enfolding Dawn and use Bones of Ullr to raise the minion count. Prioritise ES on gloves. Anoint the amulet with Essence Infusion.",
+        "caution": "Cap your resistances and meet attribute requirements first, adjusting with Flux runes until elemental resistances are capped. Keeping Wardbound Minions up takes about 100 Ward, so only move to the Mid setup after securing that Ward.",
+        "transitionCondition": "Get a rare belt with 'Minions' attacks deal Melee Splash' and reach 450 or more Spirit."
+      },
+      {
+        "label": "Levels 80-89 (Mid: Plague Harvester)",
+        "mainSkill": "Switch to a Plague Harvester Spectre. It moves fast and jumps over obstacles, so it does not get stuck like a Skeletal Reaver. Drop Flame Wall and Raging Spirits, add Wardbound Minions (level 16 at most) and Convalescence, and turn Despair into an aura with Blasphemy.",
+        "supports": "Give the Plague Harvester Spectre Muster, Feeding Frenzy II, Rage III, Rapid Attacks II and Minion Mastery. Give Pain Offering Danse Macabre, Magnified Area II, Prolonged Duration II, Brutus' Brain and Efficiency II. Give Blasphemy and Despair Ritualistic Curse, Magnified Area II and Chaos Mastery. Give Wardbound Minions Efficiency II, Blind II, Rapid Casting II and Mobility. Give Convalescence Second Wind III, Cooldown Recovery II, Prolonged Duration II and Rapid Casting III.",
+        "passivePriority": "Use mana as a defensive layer with Heavy Buffer and Mind Over Matter. Anoint the amulet with Warlord Leader. On sapphire jewels, prioritise maximum ES, all elemental resistances for minions, minion attack and cast speed, minion damage, and faster start of Energy Shield Recharge. Optional: specialise weapon set II in Remnant nodes and snapshot by entering the zone on set II and switching to set I, which adds about 20-30% damage (if you skip this, stay on the base tree).",
+        "gearPriority": "A rare belt with 'Minions' attacks deal Melee Splash' is required. Maximise ES and evasion on body armour and gloves, with Deflection Rating on at least one piece, ideally both. For body armour, use a Rambler Jacket or a Sleek Jacket. Add Spirit with Prism Guardian. Once Spirit passes 450, socket Amanamu's Gaze into your boots for movement speed.",
+        "caution": "Wardbound Minions should be level 16 at most — lower is better, as it costs less Ward. Without about 100 Ward you cannot keep Onslaught up. Without the Melee Splash belt, the Spectre loses one support slot.",
+        "transitionCondition": "Once ES and evasion are high enough and you are comfortable using Convalescence and Refutation, you can add Khatal's Rejuvenation to Into the Breach."
+      },
+      {
+        "label": "Level 90+ (Late to Min-Max Completed Build)",
+        "mainSkill": "Recover ES with Convalescence, block enemy attacks with Refutation, and empower the whole army with Pain Offering. For Min-Max, take Bulwark with From Nothing, enable Warlord Berserker with Blood of Rage on a Megalomaniac, and grant the minions Rage with a Blood of the Warrior flask.",
+        "supports": "Give the Plague Harvester Spectre Feeding Frenzy II, Muster, Dialla's Desire, Uul-Netol's Embrace and Minion Splash II (the guide text's instruction; the planner has Rapid Attacks II instead, noted as a discrepancy). Give Pain Offering Danse Macabre, Magnified Area II, Prolonged Duration II, Brutus' Brain and Sacrificial Offering. Give Convalescence Uhtred's Constellation. Give the Skeletal Storm Mage Esh's Radiance.",
+        "passivePriority": "Take Bulwark with From Nothing, plus Warlord Leader, Warlord Berserker and Ally Attack Damage. Use a Megalomaniac with Blood of Rage. On sapphire jewels, prioritise maximum ES, all elemental resistances for minions, minion attack and cast speed, minion damage, minion critical chance and critical damage bonus, and faster start of Energy Shield Recharge.",
+        "gearPriority": "Maximise ES and evasion on body armour and gloves, and add Deflection Rating. For body armour, use a Rambler Jacket or a Sleek Jacket. Socket Legacy of Greymake into a 2-socket Alpha's Howl (corrupted with +1 to Minion Skills). Use a high-ES focus (+2 to Minion Skills). If you switch the belt to Mageblood, put Minion Splash II back on the Spectre.",
+        "caution": "Using the Blood of the Warrior flask while Rage is full does not trigger Warlord Berserker; use it after Rage has dropped. From 0 Rage, use it in three separate doses to bring the minions to maximum Rage (per the source guide). The source guide states that the fourth Ascendancy point is useless.",
+        "transitionCondition": "After completing the build, keep improving it by refining Spectres and jewels. Against pinnacle bosses, dropping Blasphemy and self-casting Despair raises damage (per the source guide's FAQ)."
+      }
+    ],
+    "mainSkill": "A minion army built around Spectres bound with Bind Spectre: Vaal Guard, then Skeletal Reaver, then Plague Harvester. Into the Breach Remnants are narrowed to added chaos damage with Choice of Power and passed to the minions with Selfless Remnants to scale damage. Level with a crossbow and Explosive Grenade early on, then switch to minions late in Act 3.",
+    "path": "/builds/monk/minion-chayula/",
+    "contentRevision": "40a4afe8360c1860"
+  },
+  {
+    "id": "monk-oil-barrage",
+    "name": "Oil Barrage Martial Artist",
+    "class": "Monk",
+    "className": "Monk",
+    "ascendancy": "Martial Artist",
+    "ascendancyName": "Martial Artist",
+    "skills": [
+      "Oil Barrage"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-13 (Hollow Palm Leveling, First Half of Act 1)",
+        "mainSkill": "Progress with a quarterstaff. At level 2, place Frozen Locus and detonate it with Glacial Cascade's big spike. At level 6, add Pounce for movement, and at level 10, add Herald of Ice. At level 13, take Hollow Palm Technique, after which you no longer need a quarterstaff.",
+        "supports": "Give Glacial Cascade Concentrated Area and Rage I. Give Frozen Locus Ice Bite. Give Herald of Ice Magnified Area.",
+        "passivePriority": "Rush to Hollow Palm Technique as fast as possible. Take efficient early damage nodes along the way, and enough attributes to meet gear and gem requirements (per the source guide).",
+        "gearPriority": "A magic or rare quarterstaff with high DPS. Boots with 10% or more movement speed. Helmet, body armour and belt with plenty of Life. You may use an Artificer's Orb to socket the weapon and reinforce it with Lesser Runes (per the source guide).",
+        "caution": "Most of Glacial Cascade's damage comes from the final big spike. To break Frozen Locus in one hit, land the big spike on it. Consuming a freeze adds a 250% or 425% damage multiplier (per the source guide).",
+        "transitionCondition": "Take Hollow Palm Technique at level 13 and continue through Act 1."
+      },
+      {
+        "label": "Levels 14 to End of Campaign (Storm Wave Leveling)",
+        "mainSkill": "Switch to Storm Wave in Act 2 (around level 22) and clear by detonating Frozen Locus. Freeze single targets with Wave of Frost, then consume the freeze with Glacial Cascade's big spike for heavy damage. Add Herald of Thunder in Act 3.",
+        "supports": "Give Storm Wave Rage II, Elemental Armament II and Branching Fissures. Give Glacial Cascade Concentrated Area, Elemental Armament II and Elemental Focus. Give Frozen Locus Ice Bite II, Elemental Armament II and Innervate. Give Frost Bomb Potent Exposure. Give Herald of Ice Magnified Area II and Elemental Armament II. Give Hand of Chayula Freezing Mark and Elemental Weakness. Give Wave of Frost Deep Freeze and Ice Bite II. Give Pounce Cooldown Recovery II.",
+        "passivePriority": "Start allocating points for weapon set 2 (for Pounce). Take Ascendancy points in the order Way of the Mountain, then Hollow Focus Technique. Near the end of the campaign there is a respec toward strong scaling nodes for the move to maps (per the source guide's note).",
+        "gearPriority": "Gloves and amulet with + to melee skill levels, and rings with flat elemental damage to attacks. Prioritise Life and resistances. Boots with 20-30% movement speed. When trading, Horns of Bynden and Luminous Pace are early options (per the source guide).",
+        "caution": "There are a few passive respecs near the end of the campaign. If you are short on gold, sell rares to save up (per the source guide).",
+        "transitionCondition": "Clear the campaign and enter Early Maps. Prepare a Spiny Talisman with 300+ elemental DPS."
+      },
+      {
+        "label": "Early Maps (Switching to Oil Barrage)",
+        "mainSkill": "Switch to Oil Barrage. At the start of a map, consume a Hollow Focus bell with Devour to gain your first Power Charge, then clear with Oil Barrage. Keep consuming bells and slain enemies' corpses with Devour to maintain Power Charges. Place a Tempest Bell with Whirling Assault to add more chaining and forking origins.",
+        "supports": "Give Oil Barrage Ricochet II, Fork, Salvo and Nova Projectiles I. Give Rend Heightened Charges, Prolonged Duration II and Rage III. Give Hollow Focus Cooldown Recovery II, Magnified Area II and Overabundance II. Give Devour Blazing Critical, Thrill of the Kill II, Charge Profusion II and Rage III. Give Tempest Bell Ancestral Call II, Magnified Area II and Delayed Gratification. Give Whirling Assault Practiced Combo, Rage III and Rapid Attacks III. Give Hand of Chayula Freezing Mark, Elemental Weakness and Mark of Siphoning II. Give Refutation Cooldown Recovery II, Mobility and Efficiency II. Give Wind Dancer Magnified Area II, Stun III and Enduring Impact II. Give Ghost Dance Cooldown Recovery II and Clarity. Use Charge Regulation as a permanent buff.",
+        "passivePriority": "Take Way of the Stonefist as the third Ascendancy. Weapon set 1 takes attack nodes; weapon set 2 takes parry nodes that strengthen Refutation (per the source guide).",
+        "gearPriority": "A Spiny Talisman with 300+ elemental DPS (about 5-20 Exalted Orbs, plus 10-20 more Exalted Orbs of extra investment). Basic gear of 1-2 Exalted Orbs per slot. After taking Way of the Stonefist, choose gloves by the mod priority critical damage, then base critical chance, then attack speed, then Onslaught on hit (per the source guide).",
+        "caution": "Always use Nova Projectiles I. Socketing tier II leaves no room for the other gems (a strong warning in the source guide). While critical chance is low, you can supplement Power Charge generation with a Blasphemy, Repulsion and Ailith's Chimes setup instead (at the cost of the Charge Regulation and Ghost Dance slots).",
+        "transitionCondition": "Reach level 77 or higher and update the talisman to 380+ elemental DPS. Engrave the amulet with Thaumaturgic Generator."
+      },
+      {
+        "label": "Levels 77 to Late Maps (Stronger Talisman and Better Defences)",
+        "mainSkill": "Oil Barrage stays the main skill. Once critical chance passes 50%, replace Pinpoint Critical with Elemental Armament II. Put Oil Barrage in Spirit Vessel to raise single-target damage.",
+        "supports": "In addition to the Early Maps setup, add Pinpoint Critical to Oil Barrage (while below 50% critical chance; switch to Elemental Armament II above 50%). Add Perpetual Charge to Rend. Add Prolonged Duration II to Hollow Focus. Add Charged Mark to Hand of Chayula. Add Prolonged Duration II to Refutation. Give Spirit Vessel Oil Barrage, Potent Exposure, Hulking Minions, Romira's Requital and Amanamu's Tithe.",
+        "passivePriority": "Take Runic Meridians as the fourth Ascendancy. Fill in critical nodes to raise critical chance. On Time-Lost Jewels, prioritise critical chance and critical damage (1-2 mods; the radius does not matter at this stage) (per the source guide).",
+        "gearPriority": "A talisman with 380+ elemental DPS and + to melee or attack skill levels (10-50 Exalted Orbs, optionally 1-2 Divine Orbs). Upgrade skill gems with Uncut Skill Gems (levels 17-18). Engrave the amulet with Thaumaturgic Generator. Greatly raise survivability with Forgotten Warden. Use Time-Lost Jewels, prioritising critical chance and critical damage (per the source guide).",
+        "caution": "Without converting Fists of Stone into Runeforged Fists of Stone at the Versium Anvil, Refutation cannot be used in the Forgotten Warden Spirit Vessel setup (per the source guide). Do not use Refutation while clearing (it causes heavy stuns).",
+        "transitionCondition": "Move to Endgame once the talisman reaches 490+ elemental DPS and 15% or more critical chance, item rarity approaches 150%, and gems reach levels 19-20 with 20% quality."
+      },
+      {
+        "label": "Endgame (Near 100% Critical Chance, High Item Rarity)",
+        "mainSkill": "Oil Barrage (level 20, 20% quality). Power Charge generation becomes increasingly automatic with Thaumaturgic Generator, Way of the Stonefist gloves (Power Charge on critical hit) and Hollow Focus's Ailith's Chimes. Against bosses, place a Tempest Bell with Whirling Assault to raise single-target damage.",
+        "supports": "Give Oil Barrage Elemental Armament II (remove Pinpoint Critical). Give Hollow Focus Living Lightning II, Culmination II, Ailith's Chimes and Charge Profusion II. Add Rapid Attacks III to Rend. Add Mark for Death II to Hand of Chayula. Add Rapid Casting II to Refutation. Add Blind II to Wind Dancer. Spirit Vessel stays the same as in Late Maps.",
+        "passivePriority": "Push critical chance toward 100%. Balance Energy Shield with evasion and Deflect. Fill in area-of-effect jewels (3-4-mod Time-Lost Jewels prioritising critical chance and critical damage, and jewels that increase suffix effects) (per the source guide).",
+        "gearPriority": "A talisman with 490+ elemental DPS, 15% or more critical chance and + to skill levels. Aim for 150% item rarity. Boots with 35% or more movement speed, evasion and Deflect. Update Forgotten Warden to a better roll. Gems at levels 19-20 with 20% quality (per the source guide).",
+        "caution": "The channelling delay is resolved by skill speed later on (a weakness listed in the source guide). This build assumes a 'don't get hit' playstyle, and some enemies such as Abyss monsters need high damage and area (per the source guide's FAQ).",
+        "transitionCondition": "Move to Aspirational once you are ready for long-term goals such as level 21 gems, Rakiata's Flow and Zarokh's Gift."
+      },
+      {
+        "label": "Aspirational (Level 21 Gems, Long-Term Goals)",
+        "mainSkill": "Oil Barrage at level 21 and 0% quality (when using Rakiata's Flow). Remove Elemental Weakness from Hand of Chayula and remove Oil Barrage from Spirit Vessel (the source guide's instruction for the Rakiata's Flow setup). You may use Hand of Chayula instead of Pounce. For mapping, you can switch to a Blasphemy and Repulsion setup instead (in that case, drop Refutation and add +50 Spirit on the body armour).",
+        "supports": "Give Oil Barrage Rakiata's Flow. Add Eternal Mark to Hand of Chayula. Add Uhtred's Exodus to Charge Regulation. For mapping, give Blasphemy Repulsion, Living Lightning II, Culmination II, Ailith's Chimes and Charge Profusion II.",
+        "passivePriority": "Fill in critical chance and critical damage with 5-mod jewels and 4-5-mod Time-Lost Jewels. Raise jewels to 20% quality (per the source guide).",
+        "gearPriority": "The highest elemental DPS (or physical DPS) talisman you can buy (15% or more critical chance, attack speed and + to skill levels). Put a Raven-Touched Shard on the helmet, and change the amulet engraving from Thaumaturgic Generator to Zarokh's Gift. Keep item rarity at 150% or higher. For Rite of Passage spirits, prioritise Spirit of the Stag (movement speed, skill speed and added lightning damage) first, then Spirit of the Cat (critical chance and evasion), Spirit of the Wolf (movement speed, skill speed and armour break), Spirit of the Owl (Energy Shield and damage), and Spirit of the Bear (maximum Life and reduced damage taken), in that order (per the source guide).",
+        "caution": "Aspirational gear is a long-term goal, gathered over most of the league (per the source guide). The spirits' Japanese names are unconfirmed on poe2db, so they are shown in English (see the research report).",
+        "transitionCondition": "Completed build. From here, work on multi-mod jewels, max rolls on each piece of gear, and strict Time-Lost Jewel selection."
+      }
+    ],
+    "mainSkill": "Oil Barrage consumes Power Charges to fire chaining, forking and Nova projectiles. Generate Power Charges by consuming Hollow Focus bells and slain enemies' corpses with Devour. Level with Frozen Locus and Glacial Cascade early on, switch to Storm Wave from Act 2, and change to Oil Barrage in Early Maps.",
+    "path": "/builds/monk/oil-barrage/",
+    "contentRevision": "b73618eaec317b92"
+  },
+  {
+    "id": "druid-frostbolt-comet-oracle",
+    "name": "Frostbolt Cast On Crit Comet Oracle",
+    "class": "Druid",
+    "className": "Druid",
+    "ascendancy": "Oracle",
+    "ascendancyName": "Oracle",
+    "skills": [
+      "Frostbolt"
+    ],
+    "stages": [
+      {
+        "label": "Act 1 (Ice Nova + Frost Darts Leveling)",
+        "mainSkill": "Clear with Ice Nova and wear down single targets with Frost Darts. Create cold Infusion Remnants with Frost Bomb and Snap to empower Ice Nova and Frost Darts. Move with Pounce; keep Arctic Armour as a permanent buff.",
+        "supports": "Give Ice Nova Controlled Destruction and Magnified Area. Give Frost Darts Controlled Destruction and Rapid Casting. Give Frost Bomb Overabundance and Spell Cascade. Give Snap Magnified Area and Controlled Destruction.",
+        "passivePriority": "45 nodes by Acts 1–2. Raise the Infusion cap with Frozen Limit and Infused Limits (per the source guide's FAQ). Take efficient cold damage and Life nodes along the way.",
+        "gearPriority": "Magic/rare gear with plenty of Life and resistances. A wand + focus with cold spell damage. Boots with movement speed (per the source guide's FAQ on defenses).",
+        "caution": "Frostbolt does not work without Snakepit. Ice Nova and Frost Darts lose a lot of damage without cold Infusion, so collect Remnants with Frost Bomb and Snap (per the source guide).",
+        "transitionCondition": "Enter Act 2 and add Elemental Weakness."
+      },
+      {
+        "label": "Act 2 (Adding a Curse)",
+        "mainSkill": "Keep leveling with Ice Nova and Frost Darts, and lower enemy resistances with Elemental Weakness. Update Frost Bomb's supports to Spell Echo.",
+        "supports": "Give Ice Nova Controlled Destruction, Magnified Area and Considered Casting. Give Frost Darts Controlled Destruction and Considered Casting. Give Frost Bomb Overabundance and Spell Echo. Give Snap Magnified Area and Controlled Destruction. Give Elemental Weakness Heightened Curse and Efficiency.",
+        "passivePriority": "68 nodes by Act 3. Head toward cold damage and critical, preparing for the Frost Wall addition in Act 3 (per the source planner).",
+        "gearPriority": "Keep prioritizing Life and resistances. From Act 4, start switching to high-ES Intelligence gear (per the source guide's FAQ).",
+        "caution": "Defenses are thin in Acts 1–3. Raise Life and resistances, and use Frost Wall defensively as well (per the source guide's FAQ).",
+        "transitionCondition": "Enter Act 3 and add Frost Wall and Siphon Elements."
+      },
+      {
+        "label": "Act 3 to Maps (Adding Frost Wall)",
+        "mainSkill": "Create ice crystals with Frost Wall, and freeze enemies with Siphon Elements to collect cold Infusion. Give Frost Darts Elemental Focus and Cold Penetration to raise single-target damage.",
+        "supports": "Give Ice Nova Considered Casting, Astral Projection and Magnified Area II. Give Frost Darts Considered Casting, Elemental Focus and Cold Penetration. Give Frost Wall Icicle, Spell Cascade and Cooldown Recovery. Give Frost Bomb Overabundance, Spell Echo and Cooldown Recovery. Give Snap Magnified Area II, Elemental Focus and Cooldown Recovery. Give Elemental Weakness Heightened Curse, Efficiency and Prolonged Duration II. Give Siphon Elements Harmonic Remnants II and Remnant Potency.",
+        "passivePriority": "76 nodes in Act 4, 112 in the Interlude. Raise cold damage, critical, Life and ES (per the source planner).",
+        "gearPriority": "Start switching to high-ES Intelligence gear. Keep a Life + ES hybrid (per the source guide).",
+        "caution": "Infusion stacks up to 3. Raise the cap with Frozen Limit and Infused Limits (per the source guide's FAQ).",
+        "transitionCondition": "Clear the campaign and enter Maps. Add Cast on Critical + Comet."
+      },
+      {
+        "label": "Maps (Starting Cast on Critical + Comet)",
+        "mainSkill": "Put Comet and Living Bomb in Cast on Critical so critical hits automatically drop Comets. Freeze enemies with Ice Nova and break Frost Wall crystals to build energy. For single targets, debuff with Sigil of Power and Elemental Weakness first.",
+        "supports": "Give Ice Nova Magnified Area II, Astral Projection, Supercritical and Rising Tempest. Give Frost Darts Elemental Focus, Considered Casting, Supercritical and Cold Penetration. Give Frost Wall Spell Cascade, Icicle, Cooldown Recovery II and Fortress. Give Frost Bomb Overabundance, Spell Echo, Cooldown Recovery II and Potent Exposure. Give Snap Magnified Area II, Cooldown Recovery II, Elemental Focus and Rising Tempest. Give Cast on Critical Comet, Living Bomb, Efficiency II and Supercritical. Give Elemental Weakness Heightened Curse, Efficiency II, Focused Curse and Rapid Casting II. Give Sigil of Power Prolonged Duration II, Cooldown Recovery II and Magnified Area II. Give Siphon Elements Harmonic Remnants II and Remnant Potency III.",
+        "passivePriority": "140 nodes in Maps. Take Oracle ascendancy nodes such as Entwined Realities plus many keystones (per the source guide's summary).",
+        "gearPriority": "Mana: prepare two jewels with 2% of maximum Mana recovered on kill (per the source guide's FAQ). Update the wand + focus toward cold spell levels and critical chance (per the source guide's summary).",
+        "caution": "One Comet needs 300 energy. A critical hit on a normal monster generates only 1 energy, so Comet stalls when few enemies are frozen (per the source guide's FAQ).",
+        "transitionCondition": "Once you reach Lv32 and can equip Snakepit in the left ring, switch to the Frostbolt swap."
+      },
+      {
+        "label": "Frostbolt Swap (Lv32+)",
+        "mainSkill": "Switch to Frostbolt. Snakepit turns its pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Critical. Raise Comet to Lv21. Add Convalescence as a recovery tool.",
+        "supports": "Give Frostbolt Projectile Acceleration III, Multishot II, Supercritical and Rapid Casting II. Give Cast on Critical Comet at Lv21, Living Bomb, Efficiency II and Supercritical. Give Frost Wall Spell Cascade, Fortress, Supercritical and Cooldown Recovery II. Give Frost Bomb Overabundance, Spell Echo, Potent Exposure and Cooldown Recovery II. Give Elemental Weakness Efficiency II, Prolonged Duration II, Heightened Curse and Cursed Ground. Give Convalescence Second Wind III, Prolonged Duration II and Cooldown Recovery II. Give Sigil of Power Prolonged Duration II, Cooldown Recovery II and Magnified Area II. Note: in the CI version of the planner, Frostbolt's 5th slot is Ice Bite II.",
+        "passivePriority": "145–146 nodes with CI + Frostbolt. Raise ES to prepare for the Chaos Inoculation transition (per the source planner).",
+        "gearPriority": "Equip Snakepit in the left ring (the fork core). Prioritize cold spell levels and critical chance on the wand + focus (per the source guide's summary).",
+        "caution": "Snakepit works only in the left ring slot. Removing the fork effect with a Vaal Cultivation Orb reverts it to pierce (per the source guide's FAQ). Forked projectiles exploding can look like pierce, but that is normal behavior (per the source guide's FAQ).",
+        "transitionCondition": "Once your ES gear is ready and you can transition to Chaos Inoculation, move to Endgame."
+      },
+      {
+        "label": "Endgame (CI + High Budget / Min Maxed)",
+        "mainSkill": "Transition to Chaos Inoculation and fight with 1 Life and an ES-focused \"blue Life\". Frostbolt stays the main skill. Add Boundless Energy II to the second Cast on Critical to speed up Comet rotation. Move with Blink, and sustain with Remnants of Kalguur and Mana Remnants. The planner also has a Spark variant as an alternative to Frostbolt.",
+        "supports": "Give Frostbolt Wildshards II, Vilenta's Propulsion, Supercritical, Rising Tempest and Efficiency II. Give Cast on Critical Comet at Lv21, Efficiency II, Elemental Focus, Concentrated Area and Boundless Energy II. Give the second Cast on Critical Comet, Living Bomb, Efficiency II, Concentrated Area and Elemental Focus (per the source guide's High Budget version). Give Blink Dialla's Desire, Cooldown Recovery II and Uhtred's Augury. Give Frost Wall Spell Cascade, Fortress, Magnified Area II, Rapid Casting II and Glaciation. Give Frost Bomb Spell Echo, Potent Exposure, Magnified Area II and Rapid Casting II. Give Sigil of Power Magnified Area II, Prolonged Duration II and Rapid Casting II. Give Remnants of Kalguur Harmonic Remnants II. Give Explosive Transmutation Magnified Area II, Arbiter's Ignition, Spell Cascade, Efficiency II and Electromagnetism. Give Siphon Elements Harmonic Remnants II and Remnant Potency. Give Mana Remnants Harmonic Remnants II, Remnant Potency and Khatal's Rejuvenation. Give Spark Pierce III, Vilenta's Propulsion, Rakiata's Flow, Efficiency II and Ice Bite II. Note: in the High Budget version of the planner, Frostbolt is Wildshards II, Vilenta's Propulsion, Efficiency II, Ice Bite II and Rakiata's Flow.",
+        "passivePriority": "159 nodes at Min Max. Use Entwined Realities and many keystones to push critical chance, critical damage and ES (per the source planner and summary).",
+        "gearPriority": "Temporalis (body), Kalandra's Touch (ring), Mageblood (belt), Runeseeker's Call (weapon), Nascent Hope and Rite of Passage (charms), Time-Lost Sapphire (area + critical damage) (per the source planner's Min Maxed setup).",
+        "caution": "The planner's \"Wildshards III\" does not exist in the game (only I and II). This guide uses the highest tier, Wildshards II (see the research report). Min-maxed gear is a long-term goal to collect over most of the league (per the source guide).",
+        "transitionCondition": "Final form. From here, keep perfecting Time-Lost Sapphires and max-rolling each piece of gear."
+      }
+    ],
+    "mainSkill": "Frostbolt — Snakepit (left ring) turns pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Critical. Before getting Snakepit, level with Ice Nova (clearing) and Frost Darts (single target), and switch to Frostbolt once you can equip Snakepit at Lv32.",
+    "path": "/builds/druid/frostbolt-comet-oracle/",
+    "contentRevision": "cfb8a822c7f40d8b"
+  },
+  {
+    "id": "sorceress-frostbolt-comet-varashta",
+    "name": "Frostbolt Cast On Crit Comet Disciple Of Varashta",
+    "class": "Sorceress",
+    "className": "Sorceress",
+    "ascendancy": "Disciple of Varashta",
+    "ascendancyName": "Disciple of Varashta",
+    "skills": [
+      "Frostbolt"
+    ],
+    "stages": [
+      {
+        "label": "Act 1 (Ice Nova + Frost Darts Leveling)",
+        "mainSkill": "Clear with Ice Nova and wear down single targets with Frost Darts. Use Frost Bomb and Snap to create Cold Infusion Remnants that strengthen Ice Nova and Frost Darts. Move with Pounce and keep Arctic Armour up as a persistent buff. Level with Spark until the Clearfell Encampment, then engrave Ice Nova and Frost Bomb from Renly and the Clearfell Encampment's Strange Campfire (as in the source).",
+        "supports": "Give Ice Nova Controlled Destruction and Ice Bite. Give Frost Darts Controlled Destruction and Rapid Casting. Give Frost Bomb Overabundance and Spell Cascade. Give Snap Magnified Area and Controlled Destruction.",
+        "passivePriority": "114 nodes in the campaign. Raise the Infusion holding cap with Frozen Limit and Infused Limits (source FAQ). Take efficient cold damage and Life nodes along the way.",
+        "gearPriority": "Magic/rare gear with plenty of Life and resistances. A wand + focus with cold spell damage. Boots with movement speed (per the source guide's FAQ on defenses).",
+        "caution": "Frostbolt does not work without Snakepit. Ice Nova and Frost Darts lose a lot of damage without cold Infusion, so collect Remnants with Frost Bomb and Snap (per the source guide).",
+        "transitionCondition": "Enter Act 2 and add Elemental Weakness."
+      },
+      {
+        "label": "Act 2 (Adding a Curse)",
+        "mainSkill": "Keep leveling with Ice Nova and Frost Darts, and lower enemy resistances with Elemental Weakness. Update Frost Bomb's supports to Spell Echo.",
+        "supports": "Give Ice Nova Controlled Destruction, Considered Casting and Ice Bite. Give Frost Darts Controlled Destruction and Considered Casting. Give Frost Bomb Overabundance and Spell Echo. Give Snap Magnified Area and Controlled Destruction. Give Elemental Weakness Heightened Curse and Efficiency.",
+        "passivePriority": "Head toward 114 nodes in the campaign. Progress into cold damage and critical nodes, preparing to add Frost Wall in Act 3 (source planner).",
+        "gearPriority": "Keep prioritizing Life and resistances. From Act 4, start switching to high-ES Intelligence gear (per the source guide's FAQ).",
+        "caution": "Defenses are thin in Acts 1–3. Raise Life and resistances, and use Frost Wall defensively as well (per the source guide's FAQ).",
+        "transitionCondition": "Enter Act 3 and add Frost Wall and Siphon Elements."
+      },
+      {
+        "label": "Act 3 to Maps (Adding Frost Wall)",
+        "mainSkill": "Create ice crystals with Frost Wall, and freeze enemies with Siphon Elements to collect cold Infusion. Give Frost Darts Elemental Focus and Cold Penetration to raise single-target damage.",
+        "supports": "Give Ice Nova Considered Casting, Astral Projection and Ice Bite II. Give Frost Darts Considered Casting, Elemental Focus and Cold Penetration. Give Frost Wall Icicle, Spell Cascade and Cooldown Recovery. Give Frost Bomb Overabundance, Spell Echo and Cooldown Recovery. Give Snap Magnified Area II, Elemental Focus and Cooldown Recovery. Give Elemental Weakness Heightened Curse, Efficiency and Prolonged Duration II. Give Siphon Elements Harmonic Remnants II and Remnant Potency.",
+        "passivePriority": "114 nodes in the campaign. Grow cold damage, critical and Life + ES (source planner).",
+        "gearPriority": "Start switching to high-ES Intelligence gear. Keep a Life + ES hybrid (per the source guide).",
+        "caution": "Infusion stacks up to 3. Raise the cap with Frozen Limit and Infused Limits (per the source guide's FAQ).",
+        "transitionCondition": "Clear the campaign and enter Maps. Add Cast on Elemental Ailment + Comet."
+      },
+      {
+        "label": "Maps (Starting Cast on Elemental Ailment + Comet)",
+        "mainSkill": "At Lv58, put Comet and Living Bomb in Cast on Elemental Ailment so Comets drop automatically on freeze. Comet is strengthened by Fire Remnants, and Living Bomb creates Fire Remnants automatically. Freeze enemies with Ice Nova and break Frost Wall crystals to build energy. For single targets, debuff with Sigil of Power and Elemental Weakness before attacking.",
+        "supports": "Give Ice Nova Astral Projection, Magnified Area II, Ice Bite II and Rising Tempest. Give Frost Darts Elemental Focus, Considered Casting, Cold Penetration and Cold Mastery. Give Frost Wall Spell Cascade, Icicle, Fortress and Cooldown Recovery II. Give Frost Bomb Overabundance, Spell Echo, Cooldown Recovery II and Potent Exposure. Give Snap Magnified Area II, Cooldown Recovery II, Elemental Focus and Innervate. Give Cast on Elemental Ailment Comet, Living Bomb, Efficiency II and Concentrated Area. Give Elemental Weakness Heightened Curse, Efficiency II, Focused Curse and Rapid Casting II. Give Sigil of Power Prolonged Duration II, Cooldown Recovery II and Magnified Area II. Give Siphon Elements Harmonic Remnants II and Remnant Potency III.",
+        "passivePriority": "141 nodes in Early Maps. Take Careful Assassin, Controlling Magic and Critical Exploit to prepare for the switch to Cast on Critical (as in the source). The goal is a Frostbolt critical chance of 70% or higher.",
+        "gearPriority": "Mana: prepare two jewels that recover 2% of maximum Mana on kill (source FAQ). Update your staff + focus toward cold spell levels and critical chance (source summary). Secure +30 or more Spirit on your body armour or amulet (as in the source).",
+        "caution": "One Comet needs 300 energy. A critical hit on a normal monster only generates 1 energy, so Comets stall when few enemies are frozen (source FAQ). Bosses freeze only about once every few seconds, so Cast on Elemental Ailment has low single-target damage (as in the source).",
+        "transitionCondition": "Once Frostbolt's critical chance is around 70%, switch from Cast on Elemental Ailment to Cast on Critical and move to the Frostbolt Swap (as in the source). Snakepit can be equipped at Lv32."
+      },
+      {
+        "label": "Frostbolt Swap (Lv32+)",
+        "mainSkill": "Switch to Frostbolt. Snakepit turns its pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Critical. Raise Comet to Lv21. Add Convalescence as a recovery tool.",
+        "supports": "Give Frostbolt Projectile Acceleration III, Multishot II, Pinpoint Critical and Ice Bite II. Give Cast on Critical Comet Lv21, Living Bomb Lv3, Efficiency II and Pinpoint Critical. Give Frost Wall Spell Cascade, Fortress, Cooldown Recovery II and Pinpoint Critical. Give Frost Bomb Overabundance, Spell Echo, Potent Exposure and Cooldown Recovery II. Give Elemental Weakness Efficiency II, Prolonged Duration II, Heightened Curse and Cursed Ground. Give Convalescence Second Wind III, Prolonged Duration II and Cooldown Recovery II. Give Sigil of Power Prolonged Duration II, Cooldown Recovery II and Magnified Area II.",
+        "passivePriority": "144 nodes for Frostbolt + CI. Grow ES in preparation for moving to Chaos Inoculation (source planner).",
+        "gearPriority": "Equip Snakepit on the left ring (the core of the fork). Prioritize cold spell levels and critical chance on your staff + focus (source summary). Maligaro's Virtuosity gloves avoid the Pinpoint Critical penalty if you have them (as in the source).",
+        "caution": "Snakepit works only in the left ring slot. Removing the fork effect with a Vaal Cultivation Orb reverts it to pierce (per the source guide's FAQ). Forked projectiles exploding can look like pierce, but that is normal behavior (per the source guide's FAQ).",
+        "transitionCondition": "Once your ES gear is ready and ES reaches 5,000–6,000, move to Chaos Inoculation and into the Endgame (as in the source)."
+      },
+      {
+        "label": "Endgame (CI + Min Maxed)",
+        "mainSkill": "Move to Chaos Inoculation and fight with Life 1 and an ES-focused 'blue Life'. Frostbolt stays the main skill. Once you take Baryanic Leylines, equip two Time-Lost Sapphires. Support Mana sustain with Mana Remnants.",
+        "supports": "Give Frostbolt Wildshards II, Vilenta's Propulsion, Pinpoint Critical, Efficiency II and Ice Bite II. Give Cast on Critical Comet Lv21, Living Bomb Lv3, Efficiency II, Pinpoint Critical and Concentrated Area. Give Frost Wall Spell Cascade, Fortress, Cooldown Recovery II, Rapid Casting II and Pinpoint Critical. Give Frost Bomb Overabundance, Spell Echo, Potent Exposure and Cooldown Recovery II. Give Elemental Weakness Heightened Curse, Prolonged Duration II, Efficiency II, Cursed Ground and Ritualistic Curse. Give Convalescence Prolonged Duration II, Second Wind III and Cooldown Recovery II. Give Mana Remnants Harmonic Remnants II and Remnant Potency. Give Sigil of Power Magnified Area II, Prolonged Duration II and Cooldown Recovery II.",
+        "passivePriority": "152 nodes at Min Maxed. Fill in Baryanic Leylines and many ES and critical nodes (source planner and summary). Allocate unconnected passives around keystones with From Nothing.",
+        "gearPriority": "Mageblood (belt), Rite of Passage (Spirit: Owl), From Nothing (a jewel that allocates unconnected passives around keystones), Time-Lost Sapphire (area + critical chance) (source planner, Min Maxed). Switch to CI gear (ES-focused; chaos resistance is no longer needed). Note that the body armour 'Soul Mantle' is the name of a rare item, not the unique Soul Mantle (source planner).",
+        "caution": "The planner's \"Wildshards III\" does not exist in the game (only I and II). This guide uses the highest tier, Wildshards II (see the research report). Min-maxed gear is a long-term goal to collect over most of the league (per the source guide).",
+        "transitionCondition": "Final form. From here, keep perfecting Time-Lost Sapphires and max-rolling each piece of gear."
+      }
+    ],
+    "mainSkill": "Frostbolt — Snakepit (left ring) turns pierce into fork, so overlapping explosions clear packs. Break Frost Wall crystals with Frostbolt to fire Comets repeatedly through Cast on Elemental Ailment / Cast on Critical. Before getting Snakepit, level with Ice Nova (clearing) and Frost Darts (single target), and switch to Frostbolt once you can equip Snakepit at Lv32. The Disciple of Varashta ascendancy Instruments of Power lets you use a staff and focus together, and Baryanic Leylines widens the area of Time-Lost Sapphires.",
+    "path": "/builds/sorceress/frostbolt-comet-varashta/",
+    "contentRevision": "bf0dcbbaaa879f66"
+  },
+  {
     "id": "mercenary-twister-gemling",
     "name": "Twister Gemling",
     "class": "Mercenary",
@@ -441,6 +1218,77 @@
     "contentRevision": "c42390f0352ca31f"
   },
   {
+    "id": "huntress-minion-spirit-walker",
+    "name": "Minion Army Spirit Walker",
+    "class": "Huntress",
+    "className": "Huntress",
+    "ascendancy": "Spirit Walker",
+    "ascendancyName": "Spirit Walker",
+    "skills": [
+      "Companion: {0}",
+      "Wolf Pack"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1-21 (Crossbow Leveling)",
+        "mainSkill": "Progress with a crossbow. Flash Grenade is the leveling mainstay, Explosive Grenade is single-target for bosses you have stopped in place, Frost Bomb supports against bosses, and Crossbow Shot fills in as the basic attack",
+        "supports": "Attach area-expanding supports/runes to Flash Grenade (per Zizaran's video summary; check the original Maxroll planner for the exact gem setup).",
+        "passivePriority": "Use the pre-transition offensive tree. Follow the original leveling tree (planner).",
+        "gearPriority": "Flat added damage, Life and resistances. Minimal gear is fine (per Zizaran's video summary).",
+        "caution": "The finished army setup is not available at this stage. Do not force minions; progress with the crossbow (per the U4GM summary). Do not spend the gold saved for the respec.",
+        "transitionCondition": "Reach around level 22 and be able to attempt the Trial of the Sekhemas (first ascendancy)."
+      },
+      {
+        "label": "Level 22 to End of Act 2 (Transition Begins)",
+        "mainSkill": "Choose Spirit Walker at the first ascendancy and add the Wild Protector spirit bear to your army. Transition toward minions while still attacking with the crossbow",
+        "supports": "Give companions Minion Splash, Rage, Rapid Attacks and Hulking Minions type supports (per Zizaran's video summary).",
+        "passivePriority": "Respec passives from offence to minions (Switchblade Gaming puts the turning point at a level-22 respec costing about 7,000 gold). First ascendancy point: Wild Protector.",
+        "gearPriority": "Start looking for +minion skill levels on your helmet and sceptre, then minion damage and minion attack speed (per the U4GM summary).",
+        "caution": "The spirit bear does not count toward the companion limit (poe2db). Your Spirit reservation split determines how many companions and support skills you can run (per the U4GM summary).",
+        "transitionCondition": "Advance to Act 3, where you can take The Natural Order at the second ascendancy."
+      },
+      {
+        "label": "Act 3 to Campaign End (Army Online)",
+        "mainSkill": "With The Natural Order, Tame Beast can capture unique beasts. Build your army around Mighty Silverfist as the lead candidate, plus Wolf Pack and skeletal minions. You support with Pain Offering, Mark for Death and Charged Mark",
+        "supports": "Skeletal minions also serve as the target for Pain Offering (per the U4GM summary). Keep the companion support approach from the transition stage.",
+        "passivePriority": "Second ascendancy point: The Natural Order. Third: The Catha's Balance, which adds 60% of your main-hand weapon damage to your companions (order per Switchblade Gaming).",
+        "gearPriority": "Balance +minion skill levels (helmet and sceptre), Spirit, Life and resistances.",
+        "caution": "Only one Tamed Beast (unique beast) can accompany you at a time (The Natural Order, poe2db). Getting the companion you want (such as Mighty Silverfist or a beast with a Haste aura) takes targeted farming (a drawback in Zizaran's video summary).",
+        "transitionCondition": "Finish the campaign with your army roster assembled and ready for maps."
+      },
+      {
+        "label": "Starting maps",
+        "mainSkill": "Farm with your army. Stay in a safe position, maintain your marks and Pain Offering, and leave the killing to the army",
+        "supports": "Maintain the army's support setup and swap pieces to cover missing roles (area or single-target).",
+        "passivePriority": "Extend minion damage and companion nodes, and start building your defensive foundation (Evasion and Energy Shield).",
+        "gearPriority": "Minion skill levels, minion damage, minion attack speed and Spirit (endgame priorities per the U4GM summary).",
+        "caution": "Early defences tend to be unstable; you may need patchwork armour, evasion and block at times (a drawback in Zizaran's video summary).",
+        "transitionCondition": "Your army is stable in high-tier maps and you start collecting Energy Shield gear."
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Strengthen the army. Work on companion selection (such as beasts with auras) and aim for the finished ascendancy setup",
+        "supports": "Optimise supports for each companion's role. Check the original planner for exact combinations.",
+        "passivePriority": "Idolatry is the candidate for the fourth ascendancy point. It assumes idol gear, and its resistance penalty must be covered by gear (per Switchblade Gaming).",
+        "gearPriority": "Build your Energy Shield foundation and prepare the transition to Chaos Inoculation.",
+        "caution": "Switching to Chaos Inoculation before your Energy Shield is sufficiently developed leaves you fragile (per the U4GM summary).",
+        "transitionCondition": "Your Energy Shield is developed enough to transition to Chaos Inoculation."
+      },
+      {
+        "label": "Completed endgame setup (ES / Chaos Inoculation)",
+        "mainSkill": "Clear high-tier maps and bosses with an army centred on Mighty Silverfist",
+        "supports": "For companion and skeletal supports, treat the original Maxroll endgame planner setup as authoritative. The summaries do not confirm individual gems.",
+        "passivePriority": "Take Chaos Inoculation. Finish defences around Energy Shield and Evasion.",
+        "gearPriority": "Maximise minion skill levels and upgrade jewels as budget allows (per the U4GM summary; expensive ones can wait).",
+        "caution": "Strict attribute requirements are the biggest hurdle (a drawback in Zizaran's video summary). There is no way to recall minions, so companion positioning stays awkward (same source). Tablet modifiers that give unique monsters rare modifiers reportedly push companion critical stats close to the cap (same source).",
+        "transitionCondition": "After completion, keep improving through companion selection and jewels."
+      }
+    ],
+    "mainSkill": "An army of a unique beast captured with Tame Beast, the Wild Protector bear, Wolf Pack and skeletal minions",
+    "path": "/builds/huntress/minion-spirit-walker/",
+    "contentRevision": "b508f5c0029f9ae5"
+  },
+  {
     "id": "ranger-ice-shot-deadeye",
     "name": "Ice Shot Deadeye",
     "class": "Ranger",
@@ -704,6 +1552,85 @@
     "mainSkill": "Entangle / Thrashing Vines",
     "path": "/builds/druid/plant-oracle/",
     "contentRevision": "dc9aa11296f93ea4"
+  },
+  {
+    "id": "druid-grim-pillars-oracle",
+    "name": "Grim Pillars (Spell Totem) Oracle",
+    "class": "Druid",
+    "className": "Druid",
+    "ascendancy": "Oracle",
+    "ascendancyName": "Oracle",
+    "skills": [
+      "Grim Pillars"
+    ],
+    "stages": [
+      {
+        "label": "Levels 1–13 (Plants, early game)",
+        "mainSkill": "Charge up and fire Volcano, and weaken enemies with Frost Bomb. Progress with Entangle and Contagion, and add Bone Cage at level 6",
+        "supports": "Entangle with Upheaval I and Controlled Destruction. Volcano also uses Controlled Destruction. Bone Cage with Spell Cascade (strong single-target damage if you can get close). Ravenous Swarm with Corrosion. The guide's gem setups are examples per stage; they do not mean everything unlocks at that character level.",
+        "passivePriority": "Use the source's Plants Leveling stage tree. The first ascendancy, The Unseen Path, is the top priority (it opens totem passives you normally cannot reach and makes leveling easier). Check exact node names at the linked source.",
+        "gearPriority": "+Cold/all spell levels, spell damage, life, resistances, movement speed. Keep a sceptre with Spirit for later.",
+        "caution": "The Grim Pillars gem is not available at this stage (it drops from level 22 onward). Continue with the plant setup.",
+        "transitionCondition": "Reach level 14. Bonestorm becomes available."
+      },
+      {
+        "label": "Levels 14–29 (Bonestorm switch)",
+        "mainSkill": "Bonestorm becomes the main skill. Fully charge it and release it when enemies are close. Thunderstorm wets and strengthens the plants and Bonestorm, and also consumes Impale",
+        "supports": "Bonestorm with Rapid Casting I and Burgeon I. Thunderstorm with Living Lightning and Magnified Area I. Around level 18, add Accelerated Growth to Entangle. Thrashing Vines with Concentrated Area, Controlled Destruction and Lightning Attunement.",
+        "passivePriority": "The second half of the Plants Leveling tree. Map out the path to Ancestral Bond (the respec target) and the nodes that give 70% placement speed in advance.",
+        "gearPriority": "Spell levels, cast speed, life, resistances. Upgrade the sceptre prioritising maximum Spirit.",
+        "caution": "The Impale applied by Bonestorm is consumed by the summons from Thunderstorm's Living Lightning for large damage. Mind the order you use them in.",
+        "transitionCondition": "Obtain the Grim Pillars gem (drops from level 22 onward; most players get it via league mechanics around levels 30–40). Or be ready to decide to stay on plants until level 52."
+      },
+      {
+        "label": "Level 30 to campaign completion (respec preparation)",
+        "mainSkill": "Continue the plant setup (Bonestorm as the main skill). Once the respec conditions are met, you may switch to totems even mid-campaign",
+        "supports": "Keep the plant setup. Prepare Spell Totem and a fresh level 1 Entangle dedicated to detonation for the switch.",
+        "passivePriority": "Check the respec target tree. Ancestral Bond and placement-speed nodes (70% total) are prerequisites. Take the second ascendancy, The Lesser Harm, as the path to the third (no need to rush).",
+        "gearPriority": "A maximum-Spirit sceptre (around 150–210; the centre of the build). Stack Spirit together with the campaign quest rewards (the first 100).",
+        "caution": "A leveled Entangle has a high mana cost and cannot be used just for detonation. Create a fresh level 1 one. Its quality is worth investing in (extra chance to generate fissures).",
+        "transitionCondition": "All three are in place: 1) the Grim Pillars gem obtained, 2) a sceptre with Spirit, 3) Ancestral Bond taken."
+      },
+      {
+        "label": "Respec into totems",
+        "mainSkill": "Spell Totem + Grim Pillars. A level 1 Entangle with Biting Frost I detonates the pillars (skills that consume Freeze detonate the pillars immediately)",
+        "supports": "The totem-side Entangle with Biting Frost I, Living Lightning and Branching Fissures I.",
+        "passivePriority": "Take Ancestral Bond (doubles the totem limit, no cost or charges, but reserves 75 Spirit per totem). Weapon-set passives come into full use after the campaign: Set 1 (red) = all totem nodes, Set 2 (green) = cast speed, area of effect, critical and Arcane Surge.",
+        "gearPriority": "Securing Spirit is the top priority (75 per totem, 63 with Efficient Inscriptions). Aim for 300% totem placement speed.",
+        "caution": "Set Spell Totem to exactly level 14 including gear bonuses (level 14 is the breakpoint where the totem limit becomes 2; confirmed in poe2db's level table). Beyond that only totem resistances grow, which the ascendancy makes meaningless. Fix both weapons to both sets, or switching will change your Spirit and the totems will disappear. Grim Pillars is a Kalguur gem; raise or lower its gem level with the Thaumaturgic Flux currency.",
+        "transitionCondition": "Totems stay up permanently and you can clear pillars with Entangle detonations."
+      },
+      {
+        "label": "Starting maps",
+        "mainSkill": "Make Spell Totem + Grim Pillars your mapping mainstay. Use Mana Tempest after placing totems",
+        "supports": "Grim Pillars with Urgent Totems III, Efficiency II and Magnified Area II. Mana Tempest with Advancing Storm, Efficiency II and Lightning Mastery.",
+        "passivePriority": "Ascendancy order: The Unseen Path → The Lesser Harm → Forced Outcome → Unnamed Heartwood. After the third ascendancy, move critical chance to 30–40% (more is inefficient).",
+        "gearPriority": "Spirit (6 totems, about 400, is the final goal), +Cold spell levels, resistances, life/ES.",
+        "caution": "Do not use Mana Tempest before placing totems. Its effect lingers for 4 seconds after the cloud disappears, and totems benefit from it passively.",
+        "transitionCondition": "Totems stay up and detonations are stable in low-tier maps, and you can judge Spirit and mana shortages."
+      },
+      {
+        "label": "Early Endgame (Life version)",
+        "mainSkill": "Run Spell Totem + Grim Pillars with curse and exposure support",
+        "supports": "Elemental Weakness with Efficiency II, Cursed Ground and Heightened Curse. Frost Bomb with Spell Echo, Overabundance I and Efficiency II. Purity of Fire in a Spirit slot with Mysticism II, Clarity II and Vitality II. Also use Mana Drain.",
+        "passivePriority": "The Life-version endgame tree. Complete the weapon-set specialisation (24 points).",
+        "gearPriority": "+Cold spell skill levels are the top priority (a +5 wand roughly doubles damage). Then spell damage and elemental damage, cast speed, totem placement speed. Amulet: Solar (up to 65 Spirit) plus spell levels, anointed with Efficient Casting. Belt: the Darkness Enthroned variant that treats socketed items as body armour, with a Blossom rune socketed to secure Spirit. Charms such as Nascent Hope are cheap.",
+        "caution": "The Life version can handle the campaign and endgame bosses, but one-shots appear later on. For mana problems, first check gem levels (Overabundance) and address them with Efficiency-type supports. Stacking maximum mana itself also thickens your base recovery.",
+        "transitionCondition": "Mapping and bosses are stable on the Life version, and you start gathering gear for the ES switch (such as a high-ES body armour that keeps Spirit)."
+      },
+      {
+        "label": "Completed endgame setup (ES / Chaos Inoculation)",
+        "mainSkill": "Spell Totem + Grim Pillars. Use Chaos Inoculation to set life to 1 and nullify chaos damage and bleeding",
+        "supports": "In Endgame+++, add Compressed Duration II and Fire Mastery to Elemental Conflux. If you use the final piece, Rakiata's Flow, remove Frost Bomb and Elemental Weakness (lowering enemy resistances would cancel out its benefit).",
+        "passivePriority": "Take Chaos Inoculation. Move some damage nodes to shield nodes (in exchange for roughly 30% less damage).",
+        "gearPriority": "ES: the body armour is the hardest piece, needing 650+ ES while keeping Spirit. The helmet matters too because of a tree node. Gloves and boots around 200–250 ES; movement speed on boots is mandatory. Jewels: increased maximum shield % and recharge start speed. Final charms: The Fall of the Axe and Rite of Passage.",
+        "caution": "Only switch to ES when you have damage to spare. Right after switching you are weaker by the damage nodes moved to shield nodes.",
+        "transitionCondition": "Once complete, improve the Spirit, ES and critical bottlenecks one item at a time."
+      }
+    ],
+    "mainSkill": "Cast Grim Pillars with Spell Totem",
+    "path": "/builds/druid/grim-pillars-oracle/",
+    "contentRevision": "f4b00c98e10dea40"
   },
   {
     "id": "witch-ed-contagion-lich",

@@ -1,0 +1,346 @@
+{
+  "build": {
+    "id": "witch-minion-infernalist",
+    "slug": "minion-infernalist",
+    "classSlug": "witch",
+    "name": "Sniper Minion Infernalist",
+    "seoTitle": "PoE2 Sniper Minion Infernalist Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Sniper Minion Infernalist's summon skills, early leveling, gear and passives from Lv1 to Endgame. Enter your current level to see the three things to do now.",
+    "className": "Witch",
+    "ascendancy": "Infernalist",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "status": "verified",
+    "mainSkill": "Skeletal Sniper / Spectre",
+    "beginnerRating": 5,
+    "damageRating": 5,
+    "defenseRating": 5,
+    "mappingRating": 3,
+    "bossRating": 5,
+    "difficulty": "Switch summon targets in Act 3 and around Lv67",
+    "reviewedFacts": {
+      "gearDependence": "Gear upgrades are easy to understand (stated in the source guide)",
+      "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+      "checkedAt": "2026-09-26"
+    },
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": true,
+    "strengths": [
+      "Per-stage sources are published for each Act, the Interludes, and Lv67–90.",
+      "Minions handle attacking, so the player can easily focus on watching the boss's movements.",
+      "Gear goals — minion levels, Spirit and defense — are easy to understand.",
+      "PoE Vault's leveling version introduces it as a safe, ranged playstyle that attacks almost automatically.",
+      "About the Endgame Spectre version, PoE Vault introduces it as 'easy to play' with 'very high single-target damage' (a source for 0.5).",
+      "Maxroll (0.5.5) explicitly states the build works without any unique items.",
+      "Defense specialized in ES can withstand large hits and recover quickly. PoE Vault says it feels 'very durable'."
+    ],
+    "weaknesses": [
+      "Movement speed is slower than high-speed clearing builds, and minion AI can get stuck in narrow places (PoE Vault also lists minion AI problems as a weakness).",
+      "You need to switch the Spectre setup in Act 3 and around Lv67.",
+      "Later durability depends on gear updates across multiple areas: ES, block and resistances.",
+      "Starting Spectre play requires a certain amount of Spirit (PoE Vault).",
+      "The Lineage support gems used in Endgame are expensive (PoE Vault)."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Skeletal Sniper + Flame Wall. Use Contagion + Unearth to help with clearing",
+        "supports": "Skeletal Sniper: Multishot I. Flame Wall: Ignite I. Add Frost Bomb for Exposure.",
+        "passivePriority": "Use the source's per-stage Lvl 5 and Lvl 10 trees in order.",
+        "gearPriority": "Minion skill levels, Spirit, Life, ES, resistances. Also check the Rattling Sceptre.",
+        "replaceGear": "Prioritize comparing sceptres with minion levels or Spirit.",
+        "caution": "Do not miss the Act 1 skill and support reward quests. Do not overspend supports on Contagion and Unearth.",
+        "transitionCondition": "Reach Lv11. You can handle Rares and bosses with the Flame Wall and Sniper combination.",
+        "nowActions": [
+          "Put Multishot I on the Sniper",
+          "Put Ignite I on Flame Wall",
+          "Check the Act 1 reward quests"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Continue centered on Skeletal Sniper + Flame Wall",
+        "supports": "Progress to the source's End of Act 1 setup, and keep Frost Bomb for Exposure.",
+        "passivePriority": "Use the End of Act 1 per-stage tree.",
+        "gearPriority": "Minion levels, Spirit, Life, ES, elemental resistances.",
+        "replaceGear": "Check minion levels on sceptre, amulet and helmet, and slots with Spirit.",
+        "caution": "Maintain not only minion count but also the combination with Flame Wall and your own defense.",
+        "transitionCondition": "Reach Lv21. Act 1 rewards collected, and neither minions nor your own resistances are lacking.",
+        "nowActions": [
+          "Look for gear with minion levels",
+          "Check your total Spirit",
+          "Update Life, ES and resistances"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Centered on Skeletal Sniper. Keep the current setup until the Act 3 Spectre switch",
+        "supports": "Use the source's End of Act 2 and Act 3 - Before Spectre Swap setups in order.",
+        "passivePriority": "Progress from the End of Act 2 to the pre-switch Act 3 per-stage tree.",
+        "gearPriority": "Minion levels, Spirit, Life, ES, resistances, movement speed.",
+        "replaceGear": "Before the Spectre switch, avoid exchanges that break the current summon setup.",
+        "caution": "Do not remove the Sniper setup before securing the switch target.",
+        "transitionCondition": "Reach the Vaal Guard Spectre switch point in Act 3, and be able to check the target and the needed gems.",
+        "nowActions": [
+          "Check the End of Act 2 tree",
+          "Prepare for the Act 3 Spectre switch",
+          "Keep the current Sniper setup"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Once you reach the Act 3 switch point and have the target and the needed Spirit, gradually switch to Vaal Guard Spectre. If you have not reached it, continue with Skeletal Sniper",
+        "supports": "Use the source's Act 3 - Vaal Guard Spectres setup. For names that cannot be confirmed, the source's display takes priority.",
+        "passivePriority": "Transition to the Act 3 - Vaal Guard Spectres per-stage tree.",
+        "gearPriority": "Minion levels, Spirit, defense, resistances.",
+        "replaceGear": "If you cannot meet the Spectre's needed Spirit, prioritize reviewing Spirit slots.",
+        "caution": "Switch only once the summon target, supports and Spirit are all in place, and do not leave a halfway setup for long.",
+        "transitionCondition": "Reach Lv41. If the Act 3 switch conditions are unmet, keep the Sniper; once met, transition to Vaal Guard Spectre.",
+        "nowActions": [
+          "Once you reach the Act 3 switch point, secure a Vaal Guard Spectre (if not reached, continue with the Sniper)",
+          "Check the needed Spirit",
+          "Cross-check the post-switch supports against the source"
+        ],
+        "actionGuidance": {
+          "actionIndex": 2,
+          "where": "Source guide 'Skill Gems' → 'Act 3 - Vaal Guard Spectres' stage",
+          "what": "The Vaal Guard Spectre support setup and needed Spirit",
+          "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+        }
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Continue with Skeletal Sniper until the summon target and needed Spirit are in place in Utzaal, Act 3. After the switch, progress through the campaign with Vaal Guard Spectre as the main minion",
+        "supports": "Before the switch, keep the source's Act 3 - Before Spectre Swap. After the switch, progress in order from Act 3 - Vaal Guard Spectres to End of Act 4 and End of Interludes.",
+        "passivePriority": "Before the switch use Act 3 - Before Spectre Swap; after the switch use the per-stage trees from Act 3 - Vaal Guard Spectres through End of Act 4 and End of Interludes.",
+        "gearPriority": "Minion levels, Spirit, Life / ES, gear related to block, resistances.",
+        "replaceGear": "If you die often, check your own armor, shield and resistances before minion damage.",
+        "caution": "If minions lag behind in narrow corridors, change your own position to guide them again.",
+        "transitionCondition": "Campaign and Interludes finished. You can prepare for the next Spectre switch around Lv67.",
+        "nowActions": [
+          "Keep the Sniper until you secure a Vaal Guard (50 Spirit) in Utzaal, Act 3, and after switching progress Act 4 → Interludes",
+          "Sort out your own defense and resistances",
+          "Prepare the Lv67 Spectre switch"
+        ],
+        "actionGuidance": {
+          "actionIndex": 0,
+          "where": "Source guide 'FAQ' → 'When do I swap to Vaal Guards?' and 'Act 3 - Before Spectre Swap'",
+          "what": "Reaching Utzaal and a 50 Spirit Vaal Guard. If not reached, continue with Skeletal Sniper",
+          "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+        }
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Judge the switch from Vaal Guard Spectre to Powered Zealot around Lv67",
+        "supports": "Use the source's Lvl 67 - Powered Zealot Swap, Lvl 70 and Lvl 75 setups in order.",
+        "passivePriority": "Follow the per-stage trees for Lvl 67, 70 and 75 in order.",
+        "gearPriority": "Minion levels, Spirit, ES, block, elemental resistances, movement speed.",
+        "replaceGear": "If switch conditions are lacking, keep the Vaal Guard setup and update Spirit and defense gear first.",
+        "caution": "Do not release the current summon setup before securing the new Spectre.",
+        "transitionCondition": "Low-Tier maps are stable, and you can decide on the Powered Zealot setup or continuing the current setup.",
+        "nowActions": [
+          "Check the Lv67 switch conditions",
+          "Secure the new Spectre first",
+          "Check ES, block and resistances"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "A Spectre setup including Powered Zealot",
+        "supports": "Update in stages to the source's Lvl 80, Lvl 85 and Lvl 90 setups.",
+        "passivePriority": "Use the per-stage trees Lvl 80 → 85 → 90 in order.",
+        "gearPriority": "Minion levels, Spirit, ES, block, resistances, stats that help minions.",
+        "replaceGear": "If defense is lacking, prioritize ES, block and resistances; if clearing is lacking, prioritize minion levels and Spirit.",
+        "caution": "ES Recharge changed in 0.5, so do not assume the old defensive feel.",
+        "transitionCondition": "The per-stage setups around Lv90 are in place, and you can judge damage and defense shortfalls separately.",
+        "nowActions": [
+          "Check in the order Lvl 80 → 85 → 90",
+          "Diagnose defense and minion damage separately",
+          "Check ES Recharge behavior in actual combat"
+        ]
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "A Sniper / Spectre army as the main force, with Flame Wall and Exposure support used by situation",
+        "supports": "Compare the source's Day 4, Day 6 and Final Update, and use only the setup that matches your adopted gear stage.",
+        "passivePriority": "Base it on the Final Update for 0.5 tree, adjusted for gear shortfalls.",
+        "gearPriority": "Update minion levels, Spirit, ES, block and resistances in order of shortfall.",
+        "replaceGear": "Do not use fixed prices or DPS; compare one piece at a time that directly addresses your current shortfall.",
+        "caution": "Do not mix the Final Update with mid-stage gear and trees without a plan. Minion AI and visibility remain weaknesses.",
+        "transitionCondition": "After completion, improve the bottlenecks of Spirit, minion damage and your own defense one item at a time.",
+        "nowActions": [
+          "Decide on a single finished stage to adopt",
+          "Check Spirit and minion levels",
+          "Update ES, block and resistances in order of shortfall"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Sceptre: increased Spirit, increased minion damage, + levels to all minion skills. Check the Rattling Sceptre from early on (PoE Vault).",
+      "Off-hand: PoE Vault's Endgame Spectre version uses a Focus (ES, + levels to all minion skills). The Maxroll version uses a high-block shield (ES, Life, resistances).",
+      "Helmet and amulet: + levels to all minion skills, ES, Life. Reservation efficiency on the helmet and Spirit on the amulet are also effective (PoE Vault).",
+      "Chest: ES gear with Spirit. Gloves: ES, Life, resistances (PoE Vault). Maxroll also guides getting as much ES as possible on chest, boots, helmet, gloves and amulet.",
+      "Resistances and attributes: do not fix them to specific slots; meet 75% elemental resistances and required attributes with the total across all gear (Maxroll).",
+      "Rings: Life, resistances, minion damage or minion attack / cast speed (PoE Vault).",
+      "No unique is mandatory (Maxroll). The boots Bones of Ullr (reservation efficiency for undead minions) are PoE Vault's top-priority target, and Maxroll also introduces them as useful. If you obtain Exalted / Chaos Orbs during the campaign, there is also a plan to spend them on purchases such as Enfolding Dawn (Maxroll)."
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Detailed SSF Minion Infernalist 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas Lv1–Endgame guide"
+      },
+      {
+        "name": "Mobalytics: Witch Minions Leveling 0.5.5",
+        "url": "https://mobalytics.gg/poe-2/builds/witch-minions-leveling",
+        "checkedAt": "2026-09-07",
+        "type": "Overseas leveling guide"
+      },
+      {
+        "name": "Maxroll: Skeletal Sniper Infernalist Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/skeletal-sniper-infernalist-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (patch 0.5.5, updated September 3, 2026)"
+      },
+      {
+        "name": "PoE Vault: Infernalist Minion Leveling Build",
+        "url": "https://www.poe-vault.com/poe2/witch/infernalist/minion-leveling-build",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas leveling guide (for 0.5. Sniper → switch to Vaal Guard Spectre in Utzaal, Act 3)"
+      },
+      {
+        "name": "PoE Vault: Infernalist Spectre Build Guide",
+        "url": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (Powered Zealot Spectre version, for 0.5, updated June 24, 2026)"
+      }
+    ],
+    "audience": "Beginners who want to leave attacking to summoned allies and focus on enemy movement and dodging",
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Checked the body text of PoE Vault (Spectre version) and updated defense from unrated to 5/5 ('very durable', an ES defense that withstands large hits)."
+      },
+      {
+        "date": "2026-09-28",
+        "summary": "Checked PoE Vault's leveling and Spectre versions and Maxroll (0.5.5). Updated damage and boss to 5/5 ('Incredible single target damage') and beginner from 4 to 5 ('Easy to play'). Detailed gear priorities by slot, and added strengths / weaknesses and sources. Defense and mapping remained unrated as there was no supporting statement."
+      },
+      {
+        "date": "2026-09-27",
+        "summary": "Added the condition that after Lv41 as well, the Sniper setup is kept until the Act 3 switch point, summon target and Spirit are met."
+      },
+      {
+        "date": "2026-09-27",
+        "summary": "Specified that the Vaal Guard Spectre switch at Lv31–40 is not decided by level alone, and requires the relevant Act 3 location and preparation of Spirit and the summon target."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Rechecked the source statements, target stages and source information, and fixed mix-ups and over-generalizations. Sources and dynamic setups that could not be confirmed are not treated as re-verified, and the overall leveling check date has not been changed."
+      },
+      {
+        "date": "2026-10-08",
+        "summary": "Additionally checked the source guide's switch conditions and answers to common problems, and added guidance leading to the current stage's details. This is not a check date for a full re-verification of all 8 leveling stages or actual gameplay."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Rechecked the publication status, supported patch, update date, main skill and ascendancy of 3 of the 5 sources, and updated the check dates. The two Mobalytics sources could not be fetched automatically, so they remain unchecked (check dates left as-is)."
+      }
+    ],
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": true,
+          "ssfConfirmed": true,
+          "noDodgeRequirement": true
+        },
+        "note": "Only the conditions that were counted are tied to the sources and per-stage steps. All four conditions could be confirmed in the sources, so it is 5/5.",
+        "score": 5,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "Referenced the early setup published in the source guide: 'Skeletal Sniper + Flame Wall. Use Contagion + Unearth to help with clearing'",
+            "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+          },
+          "ssfConfirmed": {
+            "basis": "The source explicitly states the full route is for SSF",
+            "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling"
+          },
+          "noDodgeRequirement": {
+            "basis": "PoE Vault (leveling version) Strengths state 'Safe, ranged playstyle.' and 'Allows you to focus on avoiding damage.'",
+            "source": "https://www.poe-vault.com/poe2/witch/infernalist/minion-leveling-build"
+          },
+          "moderateOperation": {
+            "basis": "PoE Vault (Powered Zealot Spectre version, for 0.5) Strengths state 'Easy to play.'",
+            "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide"
+          }
+        }
+      },
+      "damage": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "note": "The Strengths list very high single-target damage with an emphasizing word. The source is the Endgame Powered Zealot Spectre version (for 0.5, updated June 24, 2026), and the same statement is also used as the boss basis.",
+        "quote": "Incredible single target damage.",
+        "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "sourceName": "PoE Vault: Infernalist Spectre Build Guide",
+        "checkedAt": "2026-09-28"
+      },
+      "defense": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "a purely Energy Shield focused defense that will let you absorb large hits and recover with rapid Recharge Delay and Recharge Rate. ／ the build should feel very durable.",
+        "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "sourceName": "PoE Vault: Infernalist Spectre Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "The body text (Build Mechanics and the Ascendancy explanation) explains as a strength that the purely ES-focused defense lets you absorb large hits and recover ES quickly, and that the build feels 'very durable' (a statement in the body text, not the Strengths list). The source is the Endgame Powered Zealot Spectre version, for 0.5."
+      },
+      "mapping": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "note": "Thy's SSF Minion Infernalist guide (0.5.5, updated September 4, 2026) lists balancing map clearing and bossing as a strength, while listing being slower than most other builds and minions lagging behind as weaknesses. This is the author's evaluation of this leveling / SSF route.",
+        "quote": "clears maps and melts bosses / Slower than most builds",
+        "source": "https://mobalytics.gg/poe-2/builds/thyworm-infernalist-leveling",
+        "sourceName": "Mobalytics: Thy's Detailed SSF Minion Infernalist Guide for 0.5.5",
+        "checkedAt": "2026-10-06"
+      },
+      "boss": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "note": "The Strengths list very high single-target damage with an emphasizing word (the same statement is also used as the damage basis. The source is for 0.5).",
+        "quote": "Incredible single target damage.",
+        "source": "https://www.poe-vault.com/poe2/witch/infernalist/spectre-build-guide",
+        "sourceName": "PoE Vault: Infernalist Spectre Build Guide",
+        "checkedAt": "2026-09-28"
+      }
+    },
+    "practicalGuide": {
+      "checkedAt": "2026-10-08",
+      "heading": "If you are stuck on minion Spirit shortages or the Spectre switch",
+      "scope": "Cross-checked against the FAQ and gear direction of Thy's 0.5.5 guide. The dynamic support setups for all stages and actual behavior have not been re-verified.",
+      "questions": [
+        {
+          "question": "I am Lv37 but cannot switch to Vaal Guard?",
+          "answer": "Level alone does not trigger the switch. The source guide targets the grenade-throwing 50 Spirit Vaal Guard after reaching Utzaal in Act 3. Keep the Skeletal Sniper setup until the target and the needed Spirit are in place."
+        },
+        {
+          "question": "When minion Spirit is short, which gear should I check?",
+          "answer": "The source guide names the sceptre, amulet and chest as slots that can have Spirit. Compare the needed amount for the summon you want to use against your current gear, and also check minion levels for damage and your own defense."
+        },
+        {
+          "question": "Powered Zealot — can I switch as soon as I hit Lv67?",
+          "answer": "The source author gives Lv65–70 as a switch guide, and recommends moving once you have a 5-link and the needed supports. With a 4-link, the author's judgment is to prioritize Vaal Guard. Do not treat level alone as a mandatory condition or a guarantee of the switch."
+        }
+      ]
+    }
+  },
+  "related": [
+    {
+      "id": "witch-ed-contagion-lich",
+      "name": "ED / Contagion Lich",
+      "classSlug": "witch",
+      "slug": "ed-contagion-lich"
+    }
+  ]
+}

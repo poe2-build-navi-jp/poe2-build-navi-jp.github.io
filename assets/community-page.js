@@ -1,12 +1,12 @@
-import {mountCommunity} from './community-ui.js?v=fa82c1b8d6';
+import {mountCommunity} from './community-ui.js?v=a820c781a7';
 import {PublicBuildTransport} from './community-transport.js?v=4d1ed0596b';
-import {parseNamedPlans, namedPlanKey} from './simulator-model.js?v=161ef63cbd';
+import {parseNamedPlans, namedPlanKey} from './simulator-model.js?v=fdda84f09b';
 const en = document.documentElement.lang === 'en';
 const t = (ja, english) => en ? english : ja;
 const HANDOFF_KEY = 'poe2-community-compose:v1';
 const root = document.getElementById('community-app');
 try {
-  const response = await fetch('/data/community-catalog.json?v=010720c1b5');
+  const response = await fetch('/data/community-catalog.json?v=d2c535fce7');
   if (!response.ok) throw Error('PUBLIC_CATALOG');
   const catalog = await response.json();
   const transport = new PublicBuildTransport();

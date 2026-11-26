@@ -1,5 +1,5 @@
 import {syncKeys, encryptVault, decryptVault} from './simulator-sync-crypto.js?v=6d43b0469b';
-import {collectSyncRecords, validateVault, mergeVault, recordHashes, canonical, applySyncRecords, prepareSyncWrites} from './simulator-library-model.js?v=3c9638fed8';
+import {collectSyncRecords, validateVault, mergeVault, recordHashes, canonical, applySyncRecords, prepareSyncWrites} from './simulator-library-model.js?v=aee355aa91';
 import {SyncHttpTransport, SERVICE_ORIGIN, SERVICE_PROVIDER, legacyAvailable} from './simulator-service.js?v=44af0fc40f';
 
 export const SYNC_ORIGIN = SERVICE_ORIGIN;

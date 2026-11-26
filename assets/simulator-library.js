@@ -1,5 +1,5 @@
-import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=3c9638fed8';
-import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=b8302feefe';
+import {JOURNAL_KEY, JOURNAL_LIMIT, parseJournal, makeJournalRecord, savedBuildHeaders, relevantNotices} from './simulator-library-model.js?v=aee355aa91';
+import {EncryptedBuildSync, IframeTransport, SYNC_CREDENTIAL_KEY} from './simulator-sync.js?v=acae935b76';
 import {newSyncCode} from './simulator-sync-crypto.js?v=6d43b0469b';
 
 const en = document.documentElement.lang === 'en';
@@ -94,7 +94,7 @@ function renderUpdates() {
 }
 async function loadUpdates() {
   try {
-    const response = await fetch('/data/saved-build-updates.json?v=a8380e2fc6');
+    const response = await fetch('/data/saved-build-updates.json?v=62074b1c7f');
     if (!response.ok) throw Error('NOTICES_FETCH');
     const data = await response.json();
     if (data.version !== 1 || !Array.isArray(data.notices)) throw Error('NOTICES_FORMAT');

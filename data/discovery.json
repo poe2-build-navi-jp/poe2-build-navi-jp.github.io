@@ -44,6 +44,66 @@
       "近接",
       "機動力"
     ],
+    "monk-falling-thunder": [
+      "近接",
+      "構成切替",
+      "操作多め"
+    ],
+    "monk-hollow-focus-storm-wave": [
+      "近接",
+      "構成切替",
+      "操作多め"
+    ],
+    "monk-oil-barrage": [
+      "近接",
+      "構成切替",
+      "操作多め"
+    ],
+    "druid-frostbolt-comet-oracle": [
+      "魔法",
+      "構成切替",
+      "操作多め"
+    ],
+    "sorceress-frostbolt-comet-varashta": [
+      "魔法",
+      "構成切替",
+      "操作多め"
+    ],
+    "monk-infernal-legion-chayula": [
+      "相棒",
+      "構成切替",
+      "操作少なめ"
+    ],
+    "warrior-shield-wall-warbringer": [
+      "近接",
+      "耐久重視",
+      "操作多め"
+    ],
+    "mercenary-supporting-fire-tactician": [
+      "ミニオン",
+      "構成切替",
+      "操作少なめ"
+    ],
+    "ranger-glacial-lance-deadeye": [
+      "遠距離",
+      "周回",
+      "操作少なめ"
+    ],
+    "monk-lightning-minion-chayula": [
+      "ミニオン",
+      "構成切替",
+      "操作少なめ"
+    ],
+    "ranger-twister-deadeye": [
+      "遠距離",
+      "構成切替",
+      "操作多め"
+    ],
+    "monk-minion-chayula": [
+      "ミニオン",
+      "構成切替",
+      "操作少なめ"
+    ],
     "mercenary-twister-gemling": [
       "遠距離",
       "武器切替",
@@ -63,6 +123,11 @@
       "遠近両用",
       "構成切替"
     ],
+    "huntress-minion-spirit-walker": [
+      "ミニオン",
+      "相棒",
+      "構成切替"
+    ],
     "ranger-ice-shot-deadeye": [
       "初心者",
       "遠距離"
@@ -76,6 +141,11 @@
       "初心者",
       "操作少なめ",
       "Lv1から主力"
+    ],
+    "druid-grim-pillars-oracle": [
+      "魔法",
+      "操作少なめ",
+      "構成切替"
     ],
     "witch-ed-contagion-lich": [
       "遠距離",

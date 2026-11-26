@@ -1,0 +1,289 @@
+{
+  "build": {
+    "id": "mercenary-grenade-gemling",
+    "slug": "grenade-gemling",
+    "classSlug": "mercenary",
+    "name": "Grenade Gemling",
+    "seoTitle": "PoE2 Grenade Gemling Legionnaire Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Grenade Gemling — early leveling, detonation order, skills, gear and passives, checkable by your current level.",
+    "className": "Mercenary",
+    "ascendancy": "Gemling Legionnaire",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-09",
+    "status": "verified",
+    "mainSkill": "Explosive Grenade",
+    "beginnerRating": 3,
+    "damageRating": 4,
+    "defenseRating": 3,
+    "mappingRating": 4,
+    "bossRating": 4,
+    "difficulty": "Medium (multiple grenades)",
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "There is a per-stage written guide that keeps grenades as the axis from Lv1 to Endgame.",
+      "Explosive, Flash, Gas, Oil and Cluster Grenade can be used by situation.",
+      "Setups are presented separately from ACT 1 to Uber Endgame.",
+      "The author of the separate PoE Vault setup (0.5) explains that it can clear with the 1–2 buttons of Oil Grenade and Explosive Grenade, and can be started on a low budget."
+    ],
+    "weaknesses": [
+      "Using multiple grenades tends to create many on-screen effects.",
+      "The crossbow and each slot's attack performance need to be updated in stages.",
+      "The Endgame version must not be partially brought into the early game; stages need to be aligned.",
+      "When aiming for a one-shot Cluster Grenade in the separate PoE Vault setup (0.5), sticking close to bosses and high Life regeneration to support Berserk are required. This is not a condition shared by all stages of the listed leveling route."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Explosive Grenade. Frost Bomb and Flash Grenade as support.",
+        "supports": "Explosive Grenade: Multishot + Elemental Armament. Flash Grenade: Multishot.",
+        "passivePriority": "ACT 1 stage tree. The priority nodes confirmed in writing are Demolitionist and Grenadier.",
+        "gearPriority": "Crossbow physical / elemental damage, projectile levels. Boot movement speed, added damage on gloves and rings.",
+        "replaceGear": "Prioritize the old crossbow and boots without movement speed.",
+        "caution": "Use Explosive Grenade as the main skill, and use Frost Bomb for Exposure.",
+        "transitionCondition": "Reach Lv11. You can use Explosive Grenade and the support skills by role.",
+        "nowActions": [
+          "Attach supports to Explosive Grenade",
+          "Compare crossbow damage",
+          "Look for boots with movement speed"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Explosive Grenade + Flash Grenade. Gas Grenade once obtained.",
+        "supports": "Explosive Grenade: Multishot I, Elemental Armament I. Flash / Gas Grenade: Multishot I. Gas also takes Elemental Armament I. If using Herald of Ash, Magnified Area I and Swift Affliction I (per the source ACT 1 acquisition order).",
+        "passivePriority": "Progress to the ACT 2 stage tree and check the path toward Repeating Explosives.",
+        "gearPriority": "Crossbow, added damage on gloves and rings, Life, resistances, movement speed.",
+        "replaceGear": "If damage is lacking, the crossbow; if defense is lacking, chest and helmet first.",
+        "caution": "Do not add new grenades all at once; add them after confirming their roles.",
+        "transitionCondition": "Reach Lv21. You can distinguish the roles of Flash and Gas.",
+        "nowActions": [
+          "Confirm Flash Grenade's role",
+          "Try Gas Grenade once obtained",
+          "Review the crossbow and resistances"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Explosive Grenade + Flash / Gas Grenade",
+        "supports": "Start from the early confirmed Multishot I and Elemental Armament I on Explosive Grenade. For additional slots, check the stage adopted in the source's Skill Gems → ACT 2 / 3.",
+        "passivePriority": "ACT 3 stage tree. Check the acquisition order of Demolitionist, Grenadier and Repeating Explosives in the listed tree.",
+        "gearPriority": "Crossbow, projectile levels, added damage, Life, Armour, resistances.",
+        "replaceGear": "The old crossbow first, then armour pieces short on Life / resistances.",
+        "caution": "Check the cooldowns and throwing order of multiple grenades in actual combat.",
+        "transitionCondition": "Reach Lv31. The order of main and support grenades is stable.",
+        "nowActions": [
+          "Cross-check the per-stage tree against your current position",
+          "Fix the throwing order",
+          "Check Life, Armour and resistances"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Add multiple grenades with Explosive Grenade as the main skill.",
+        "supports": "Use the ACT 3/4 displayed setup.",
+        "passivePriority": "Check the ACT 3/4 stage tree and acquisition of the first ascendancy.",
+        "gearPriority": "Crossbow, added damage, projectile levels, Armour, Life, resistances.",
+        "replaceGear": "If damage stalls, the crossbow; if deaths increase, armour pieces.",
+        "caution": "Cross-check the ascendancy against the written guide's order and your current gem conditions.",
+        "transitionCondition": "Reach Lv41. You can move to the late-campaign setup.",
+        "nowActions": [
+          "Check your ascendancy acquisition status",
+          "Compare the effect of crossbow upgrades",
+          "Use support grenades only when needed"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Adopt from Explosive, Flash, Gas, Oil and Cluster Grenade as the stage display shows.",
+        "supports": "Use the ACT 4 / Interludes displayed setup.",
+        "passivePriority": "Use the ACT 4 and Interludes per-stage trees.",
+        "gearPriority": "Crossbow, projectile levels, added damage, Armour, Life, all resistances.",
+        "replaceGear": "At campaign end, prioritize resistance shortfalls and the old crossbow.",
+        "caution": "Do not partially adopt Endgame grenades before their requirements are met.",
+        "transitionCondition": "Campaign finished. You can move to the Early Endgame display.",
+        "nowActions": [
+          "Align skills to the ACT 4 setup",
+          "Check all resistances and Armour",
+          "Read the Early Endgame version's conditions"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "Explosive Grenade as the main skill, Flash and Gas Grenade as support. Check adoption of Oil and Cluster Grenade in the source's Early Endgame tab.",
+        "supports": "Cross-check your current grenades and supports in the source's Skill Gems → Early Endgame. The ACT 1 support setup is not necessarily the Endgame finished form as-is.",
+        "passivePriority": "Move to the Early Endgame stage tree.",
+        "gearPriority": "Crossbow, projectile levels, added damage, Life, Armour, resistances.",
+        "replaceGear": "If you get killed, armour pieces; if clear is slow, the crossbow and supports.",
+        "caution": "Even when screen effects are heavy, prioritize dangerous areas and your own position.",
+        "transitionCondition": "In low-Tier maps, the main and support grenades work as their roles intend.",
+        "nowActions": [
+          "Align everything to the Early Endgame version",
+          "Check armour pieces and resistances",
+          "Re-check the grenade order"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Centered on Explosive Grenade, progressing while checking the adoption slots for Flash, Gas, Oil and Cluster Grenade in the source's Mid Endgame version.",
+        "supports": "Check the main and support links in the source's Skill Gems → Mid Endgame. Align Equipment and Passive Tree to the same Mid Endgame version.",
+        "passivePriority": "Use the Mid Endgame stage tree.",
+        "gearPriority": "Crossbow, added damage, projectile levels, defense, required attributes.",
+        "replaceGear": "Separate damage and defense shortfalls, and update from the single slot with the highest effect.",
+        "caution": "Keep the Mid Endgame version until the Uber version's gear prerequisites are in place.",
+        "transitionCondition": "Clear and boss operations are stable on the Mid Endgame version.",
+        "nowActions": [
+          "Align to the Mid Endgame version",
+          "Separate damage and defense shortfalls",
+          "Check the Uber version's conditions first"
+        ]
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "The source's Uber Endgame version centered on Explosive Grenade. Check the adoption slots for Flash, Gas, Oil and Cluster Grenade in the Uber Endgame Skill Gems section.",
+        "supports": "Cross-check each grenade's supports in the source's Skill Gems → Uber Endgame. Switch only when attributes, gear and passives can also be aligned to the Uber version.",
+        "passivePriority": "Use the Uber Endgame stage tree.",
+        "gearPriority": "The adopted version's crossbow, projectile levels, added damage, defense, required attributes.",
+        "replaceGear": "Do not use fixed market prices; compare slots that address your current shortfall under the same conditions.",
+        "caution": "Do not partially mix Early / Mid / Uber gear and trees. Check the gear numbers required for the next stage in the adopted version of the source, and maintain the currently working setup until they are met.",
+        "transitionCondition": "The adopted stage's main skill, supports and defenses work as their roles intend.",
+        "nowActions": [
+          "Decide which Endgame stage to adopt",
+          "Align gear and tree to the same stage",
+          "Update shortfall slots one at a time"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Crossbow: physical / elemental damage, projectile levels",
+      "Gloves and rings: added damage, Life, resistances",
+      "Armour pieces: Armour, Life, resistances, boot movement speed"
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: Grenades Gemling League Starter",
+        "url": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter",
+        "checkedAt": "2026-09-27",
+        "type": "Overseas written leveling and Endgame guide"
+      },
+      {
+        "name": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas leveling guide (patch 0.5.5, updated September 4, 2026; its pros list \"SSF Fresh Start Leaguestart Viable\")"
+      },
+      {
+        "name": "PoE Vault: Grenadier Gemling Legionnaire Build Guide",
+        "url": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (Cluster, Oil and Explosive Grenade setup; for 0.5, updated July 15, 2026)"
+      },
+      {
+        "name": "aoeah: PoE 2 0.5.5 Best Gemling Build",
+        "url": "https://www.aoeah.com/news/4788--poe-2-055-best-gemling-build--top-3-best-league-start--endgame-gemling-builds",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas explainer article (0.5.5; introduces Grenade Gemling as tested in SSF from Act I to the Arbiter of Divinity)"
+      }
+    ],
+    "audience": "Beginners who want to use grenades at range and progress from Lv1 on the same attack axis.",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": true
+        },
+        "note": "Checked the early main skill and the defense strength in the same source as the listed route. The 1–2 button evaluation of the separate PoE Vault setup is not counted in the operation condition. The match between the SSF intro article and the listed setup is unconfirmed, so it is not counted in the SSF condition either.",
+        "score": 3,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "References the \"Explosive Grenade, with Frost Bomb and Flash Grenade as support\" listed in the source guide's early setup.",
+            "source": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter"
+          },
+          "moderateOperation": {
+            "basis": "The separate PoE Vault setup (0.5) describes clearing with Oil Grenade + Explosive Grenade in 1–2 buttons. This is not a basis confirming easy operation across the whole listed DEADRABB1T leveling route or in boss fights.",
+            "source": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide"
+          },
+          "noDodgeRequirement": {
+            "basis": "The listed route's DEADRABB1T source (0.5.5, updated September 22, 2026) states \"Fast and Tanky\" among its strengths. This is the author's evaluation presenting durability as a strength; it does not mean you never take hits or are unkillable.",
+            "source": "https://mobalytics.gg/poe-2/builds/deadrabbit-grenades-gemling-league-starter"
+          }
+        }
+      },
+      "damage": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "High Single Target Damage",
+        "source": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "sourceName": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "High single-target damage is listed among the strengths (the weakness \"Delayed Damage\" is about delay in delivery, not the amount of damage)."
+      },
+      "defense": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Don't Get Hit Playstyle",
+        "source": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "sourceName": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "The quote is a weakness from Maxroll's leveling guide. On the other hand, the listed route's source DEADRABB1T lists durability as a strength, and the separate PoE Vault setup also describes defensive strengths. Evaluations differ by stage and setup, and this is not a basis for concluding that the whole listed route has low durability. The Maxroll original text could not be re-fetched this time."
+      },
+      "mapping": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "Easy 1/2 button clear with Oil Grenade and Explosive Grenade.",
+        "source": "https://www.poe-vault.com/poe2/mercenary/gemling-legionnaire/grenadier-build-guide",
+        "sourceName": "PoE Vault: Grenadier Gemling Legionnaire Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "A description of clear operation in the separate PoE Vault setup (KingdomTwelve, 0.5, updated July 15, 2026). It is not used as a basis for applying it as-is to each leveling stage of the listed DEADRABB1T route."
+      },
+      "boss": {
+        "score": 4,
+        "basis": "Strength",
+        "quote": "High Single Target Damage",
+        "source": "https://maxroll.gg/poe2/build-guides/explosive-grenade-gas-grenade-mercenary-leveling-build-guide",
+        "sourceName": "Maxroll: Explosive Grenade Gas Grenade Mercenary Leveling Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "High single-target damage is listed among the strengths."
+      }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Checked PoE Vault (Grenadier, 0.5), aoeah (0.5.5) and Maxroll (0.5.5). Updated mapping from unrated to 4/5 (easy clear with 1–2 buttons). Since SSF testing through to the Arbiter was explicitly stated, changed to SSF-viable, and updated beginner-friendliness from 2 to 4 (easy operation, SSF)."
+      },
+      {
+        "date": "2026-09-27",
+        "summary": "Added the source's early support acquisition order and where to check the three later setups to some stages. The exact supports and gear thresholds for each later slot have not been cross-checked."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Re-checked the source's descriptions, applicable stages and source information, and fixed mix-ups and over-generalizations. Sources and dynamic setups that could not be confirmed are not treated as re-verified, and the overall leveling verification date has not been changed. For the beginner conditions, adopted the durability strength from the same setup's source, and excluded the SSF claim and the other setup's operation evaluation, whose basis in the same setup was insufficient."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked the publication status, supported patch, update date, main skill and ascendancy of 3 of the 4 sources and updated the check dates. The 1 Mobalytics source cannot be fetched automatically, so it remains unchecked (check date left unchanged)."
+      }
+    ],
+    "reviewedFacts": {
+      "ssfNote": "An intro article reports SSF results from Act I to the Arbiter. Whether the original measured records match the listed finished gear is unconfirmed."
+    }
+  },
+  "related": [
+    {
+      "id": "mercenary-supporting-fire-tactician",
+      "name": "Supporting Fire Tactician",
+      "classSlug": "mercenary",
+      "slug": "supporting-fire-tactician"
+    },
+    {
+      "id": "mercenary-twister-gemling",
+      "name": "Twister Gemling",
+      "classSlug": "mercenary",
+      "slug": "twister-gemling"
+    }
+  ]
+}

@@ -14,10 +14,10 @@ const url=b=>`/builds/${b.classSlug}/${b.slug}/`;
 // appears once; the group follows its main skill type (Attack with a ranged weapon / melee Attack /
 // Spell / Minion or Companion). JS shows one group at a time (tabs); without JS all groups are shown.
 const HOME_GROUPS=[
- ['ranged','遠距離','弓・クロスボウ・槍で離れて戦う',['ranger-ice-shot-deadeye','mercenary-twister-gemling','huntress-twister-spirit-walker','mercenary-grenade-gemling']],
- ['melee','近接','近づいて武器や盾で戦う',['monk-whirling-assault','warrior-shield-wall-smith']],
- ['spell','魔法','スペル（魔法）を撃って戦う',['sorceress-spark-stormweaver','druid-plant-oracle','witch-ed-contagion-lich']],
- ['minion','召喚','召喚した仲間や相棒に戦わせる',['witch-minion-infernalist','sorceress-sand-fire','huntress-companion']]
+ ['ranged','遠距離','弓・クロスボウ・槍で離れて戦う',['ranger-ice-shot-deadeye','mercenary-twister-gemling','huntress-twister-spirit-walker','mercenary-grenade-gemling','ranger-glacial-lance-deadeye','ranger-twister-deadeye']],
+ ['melee','近接','近づいて武器や盾で戦う',['monk-whirling-assault','warrior-shield-wall-smith','monk-falling-thunder','monk-hollow-focus-storm-wave','warrior-shield-wall-warbringer','monk-oil-barrage']],
+ ['spell','魔法','スペル（魔法）を撃って戦う',['sorceress-spark-stormweaver','druid-plant-oracle','druid-grim-pillars-oracle','witch-ed-contagion-lich','druid-frostbolt-comet-oracle','sorceress-frostbolt-comet-varashta']],
+ ['minion','召喚','召喚した仲間や相棒に戦わせる',['witch-minion-infernalist','sorceress-sand-fire','huntress-companion','huntress-minion-spirit-walker','monk-infernal-legion-chayula','mercenary-supporting-fire-tactician','monk-lightning-minion-chayula','monk-minion-chayula']]
 ];
 const tierOf=id=>Object.entries(discovery.tiers).find(([,list])=>list.some(t=>t.id===id))?.[0];
 function homeBuildsHtml(){
@@ -94,7 +94,7 @@ for(const b of builds){
  const records=(b.changeHistory||[]).map(r=>`<li><time>${esc(r.date)}</time> ${esc(r.summary)}</li>`).join('');
  const review=b.reviewedFacts;
  const reviewedItems=review?[['操作難易度',review.difficulty],['操作量',review.operation],['装備の条件',review.gearDependence],['SSF',review.ssfNote]].filter(([,value])=>value).map(([label,value])=>`<li>${esc(label)}：${esc(value)}</li>`).join(''):'';
- const reviewHtml=review?`<p>${esc(review.checkedAt)}：元ガイドの比較項目を追加確認しました。育成8段階の全内容を再検証した日付ではありません。</p><ul>${reviewedItems}</ul><p><a href="${esc(review.source)}" target="_blank" rel="noopener noreferrer">確認した元ガイドを見る</a></p>`:'';
+ const reviewHtml=review?`<p>${esc(review.checkedAt)}：元ガイドの比較項目を追加確認しました。育成${b.levelingStages.length}段階の全内容を再検証した日付ではありません。</p><ul>${reviewedItems}</ul><p><a href="${esc(review.source)}" target="_blank" rel="noopener noreferrer">確認した元ガイドを見る</a></p>`:'';
  html=insertBlock(html,'</main>','build-history',`<!-- build-history:start --><section id="update-history" class="section"><h2>資料確認・更新履歴</h2><p>ビルド資料確認日：${esc(b.updatedAt)}／対応 ${esc(b.version)}。過去の具体的な変更理由は記録されていません。</p>${records?`<ul>${records}</ul>`:''}${reviewHtml}<p>2026-09-26：比較項目・再訪導線を整備。ゲーム内の育成内容を再検証した日ではありません。</p><a href="/builds/#advanced-filters">他のビルドと比較する</a> ・ <a href="/leveling/">別のLv・ビルドから探す</a></section><script type="module" src="/assets/build-ux.js?v=1"></script><!-- build-history:end -->`);
  html=html.replace(/<p id="build-update-notice"[^>]*><\/p>/g,'').replace('<section id="now"','<p id="build-update-notice" role="status" hidden></p><section id="now"');
  html=html.replace(/\/assets\/detail\.js(?:\?[^"']*)?/g,'/assets/detail.js?v=ux-20260926');

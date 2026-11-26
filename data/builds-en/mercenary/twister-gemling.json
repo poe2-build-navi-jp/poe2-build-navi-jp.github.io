@@ -1,0 +1,290 @@
+{
+  "build": {
+    "id": "mercenary-twister-gemling",
+    "slug": "twister-gemling",
+    "classSlug": "mercenary",
+    "name": "Twister Gemling",
+    "seoTitle": "PoE2 Twister Gemling Legionnaire Build Guide 0.5.5 | Lv1 to Endgame Leveling",
+    "seoDescription": "PoE2 0.5.5: Twister Gemling — weapon sets, skill order, gear and passives from Lv1 to Endgame. Enter your current level to see the next three actions.",
+    "className": "Mercenary",
+    "ascendancy": "Gemling Legionnaire",
+    "version": "0.5.5",
+    "updatedAt": "2026-09-07",
+    "mainSkill": "Twister",
+    "beginnerRating": 2,
+    "damageRating": 5,
+    "defenseRating": 3,
+    "mappingRating": 5,
+    "bossRating": 2,
+    "difficulty": "Managing the order of multiple skills",
+    "reviewedFacts": {
+      "difficulty": "Multiple operations (per the source)",
+      "operation": "Frequent (coordination of multiple skills)",
+      "gearDependence": "High (later damage and effect strengthening)",
+      "source": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+      "checkedAt": "2026-09-26"
+    },
+    "budget": "No fixed price",
+    "leagueStarter": true,
+    "ssf": null,
+    "strengths": [
+      "Once you obtain the needed gems in Act 1, the Whirling Slash and Twister combination can be your main setup.",
+      "Per-stage gear, skill and passive setups are published.",
+      "Its clear power is so high that you hardly ever get hit at all (Maxroll)."
+    ],
+    "weaknesses": [
+      "Whirling Slash is recommended to be kept at Lv1 to hold down mana consumption, so you need to be careful not to level it by mistake.",
+      "You need to learn the per-weapon-set skill assignments and the rotation.",
+      "Whether the build works in SSF is not stated in the sources. Maxroll's guide also presents an optimization route that assumes uniques, so substitute gear may need consideration in SSF.",
+      "If it feels squishy, you need to reduce damage passives and take Evasion / Evasion-ES passives (Maxroll FAQ)."
+    ],
+    "levelingStages": [
+      {
+        "label": "Lv1–10",
+        "mainSkill": "Whirling Slash ×3 → Twister",
+        "supports": "Whirling Slash: Rage, Rapid Attacks. Twister: Retreat, Elemental Armament.",
+        "passivePriority": "Use the source's Campaign Start per-stage tree. Check the exact nodes taken in the linked tree.",
+        "gearPriority": "Added damage on spear, gloves and rings, movement speed on boots, Life, resistances.",
+        "replaceGear": "Prioritize updating a spear that lacks added damage.",
+        "caution": "Keep Whirling Slash at Lv1 to hold down its mana cost.",
+        "transitionCondition": "Reach Lv11. You can reliably chain from 3 Whirling Slashes into Twister.",
+        "nowActions": [
+          "Keep Whirling Slash at Lv1",
+          "Use it 3 times, then chain into Twister",
+          "Check the added damage on spear, gloves and rings"
+        ]
+      },
+      {
+        "label": "Lv11–20",
+        "mainSkill": "Whirling Slash → Twister. For single target, also use Parry → Fangs of Frost.",
+        "supports": "Continue the early Rage, Rapid Attacks, Retreat and Elemental Armament. Add War Banner as the first Spirit skill.",
+        "passivePriority": "Progress to the source's Early Campaign per-stage tree. Check specific node names in the source tree.",
+        "gearPriority": "Spear, gloves and rings with added damage, boots with movement speed, Life and resistances.",
+        "replaceGear": "If the weapon's base performance has fallen behind your current level, update the spear first.",
+        "caution": "Fangs of Frost is not a required operation for normal mapping; use it as support against strong enemies.",
+        "transitionCondition": "Reach Lv21. You can switch between War Banner and the single-target support operations.",
+        "nowActions": [
+          "Set up War Banner",
+          "Add Fangs of Frost against strong enemies",
+          "Secure boots with movement speed"
+        ]
+      },
+      {
+        "label": "Lv21–30",
+        "mainSkill": "Continue Whirling Slash ×3 → Twister.",
+        "supports": "Maintain the 4 main supports, and match additional slots to the source's Campaign Progression setup. Do not assert unconfirmed names.",
+        "passivePriority": "Move to the Campaign Progression per-stage tree. Prioritize the source tree for the order of acquisition.",
+        "gearPriority": "Start separating spears for movement and for attacks. Armour pieces: Life, resistances, movement speed.",
+        "replaceGear": "If both movement and attacks stall on the same single spear, split into two weapon sets.",
+        "caution": "Do not confuse the roles: Weapon Set 1 is for speed, Weapon Set 2 is for Twister's damage.",
+        "transitionCondition": "Reach Lv31. Weapon set switching per skill is stable.",
+        "nowActions": [
+          "Separate spears for movement and for attacks",
+          "Assign Twister to the attack set",
+          "Fill in Life and missing resistances"
+        ]
+      },
+      {
+        "label": "Lv31–40",
+        "mainSkill": "Whirling Slash / Fangs of Frost are used on the speed set, Twister on the attack set.",
+        "supports": "Maintain the existing supports toward Late Campaign. Make changes one slot at a time after checking the source's per-stage setup.",
+        "passivePriority": "Use the late Campaign Progression per-stage tree. Also check the attributes needed to meet gear conditions.",
+        "gearPriority": "Damage on the attack spear, usability of the speed spear, boot movement speed, Life, resistances.",
+        "replaceGear": "If damage is lacking, the attack spear; if defense is lacking, armour pieces with low resistances or Life.",
+        "caution": "Doing movement operations with the damage spear changes the feel, so check the assignments.",
+        "transitionCondition": "Reach Lv41. Both weapon sets and the main rotation are established.",
+        "nowActions": [
+          "Check the weapon set assignments",
+          "Prioritize updating the attack spear",
+          "Prepare War Banner before bosses"
+        ]
+      },
+      {
+        "label": "Lv41–Campaign End",
+        "mainSkill": "Whirling Slash ×3 → Twister. Against strong enemies, use Parry → Fangs of Frost first.",
+        "supports": "Update gradually to the source's Late Campaign setup. For slots whose names cannot be verified, prioritize the source's display.",
+        "passivePriority": "Use the Late Campaign per-stage tree, and sort out resistances and gear conditions before the campaign ends.",
+        "gearPriority": "Damage on the attack spear, Life, elemental resistances, movement speed.",
+        "replaceGear": "Slots that fall short on resistances at campaign end, and the attack spear whose damage has stalled.",
+        "caution": "Maximum damage assumes multiple operations. Do not add too many operations against regular enemies.",
+        "transitionCondition": "Campaign finished. The main rotation, weapon switching and resistances are stable.",
+        "nowActions": [
+          "Update to the Late Campaign setup",
+          "Fill in missing resistances before the campaign ends",
+          "Practice the operation order for strong enemies"
+        ]
+      },
+      {
+        "label": "Early Maps",
+        "mainSkill": "The listed Early Atlas setup uses a Lv1 Whirling Slash gem on Weapon Set 1 and a Lv16 Twister gem on Set 2. Barrage, Ice-Tipped Arrows, Sniper's Mark, Combat Frenzy, Charge Regulation, Wind Dancer, Ghost Dance and Parry are also listed.",
+        "supports": "Whirling Slash: Rage III, Rapid Attacks III, Knockback, Blazing Critical. Twister: Prolonged Duration II, Projectile Acceleration III, Salvo, Pinpoint Critical. This is the source's listed setup and does not guarantee availability at map start. Adopt it after meeting slots, owned gems and attribute requirements.",
+        "passivePriority": "Move to the Early Atlas per-stage tree. Do not bulk-change the campaign tree by guessing.",
+        "gearPriority": "Compare Life and resistances on armour pieces, boot movement speed, and added damage on the attack spear. Keep the speed / attack weapon sets separate and check where movement and attacks fall short.",
+        "replaceGear": "If you get killed in maps, update slots with missing resistances or Life before damage gear.",
+        "caution": "The Early Atlas listed skill list does not include War Banner or Fangs of Frost. Refer to the source's shared operation explanation and the stage-specific list separately. Do not lose sight of dangerous ground or boss actions.",
+        "transitionCondition": "You can stably run low-Tier maps and reproduce the operation order for strong enemies.",
+        "nowActions": [
+          "Move to the Early Atlas tree",
+          "Stabilize Life and resistances first",
+          "Prioritize settings that keep dangerous ground visible"
+        ]
+      },
+      {
+        "label": "Early Endgame",
+        "mainSkill": "Keep Twister as the main skill, and check the source Early / Mid Endgame Skill Gems and operation order in the same version. Do not automatically carry the early Parry, Fangs of Frost and War Banner setup into the finished form.",
+        "supports": "Progress from Atlas Progression to the source's Early Endgame setup. Check mana consumption before and after changes.",
+        "passivePriority": "Follow the per-stage trees in the order Atlas Progression, Late Atlas, Early Endgame.",
+        "gearPriority": "First Life and resistances, then compare added damage on the attack spear and movement speed on the speed spear and boots. Cross-check against the adopted version in the source's Early / Mid Endgame gear tabs.",
+        "replaceGear": "If single-target damage is lacking, the attack spear; if you die often, armour pieces.",
+        "caution": "Gear dependence is high, so compare by missing items rather than fixed prices or DPS.",
+        "transitionCondition": "You can judge whether clear, single target or defense is the bottleneck.",
+        "nowActions": [
+          "Work out whether the shortfall is damage or defense",
+          "Follow the source's Atlas stages in order",
+          "Compare gear one slot at a time"
+        ]
+      },
+      {
+        "label": "Endgame",
+        "mainSkill": "The source Endgame's basic order: Sniper's Mark → Whirling Slash 3 or more times → Ice-Tipped Arrows and Barrage → Twister. With a buckler setup, adding a Parry before attacking is another candidate.",
+        "supports": "Base it on the source setup from Mid Endgame to Late Endgame, adjusting to your gear and mana.",
+        "passivePriority": "Complete the Mid Endgame and Late Endgame per-stage trees in order. Check the source for exact node names.",
+        "gearPriority": "Compare, by shortfall: ① Life and resistances on armour pieces, ② added damage on the attack spear, gloves and rings, ③ movement speed on the speed set and boots. Check high-investment-version-specific gear conditions in the source's Late Endgame.",
+        "replaceGear": "If you die often, Life and resistances on armour pieces; if damage is lacking, the attack spear and gloves / rings with added damage; if movement is slow, compare from the speed set and boots.",
+        "caution": "The source states that on October 3, 2026 it updated the Late Endgame supports and the body armour Augment, increasing the required Spirit. Check the required total across all skills in the latest version you adopt. Do not carry the early Fangs of Frost / War Banner setup into the finished form as-is.",
+        "transitionCondition": "Once finished, improve shortcomings in damage, defense and operability one item at a time.",
+        "nowActions": [
+          "Check the order from Sniper's Mark through Barrage and Twister",
+          "Cross-check the Late Endgame version's supports, body armour and required Spirit together",
+          "Update one slot at a time while maintaining missing attributes and defenses"
+        ]
+      }
+    ],
+    "gearPriorities": [
+      "Early: added damage on spear, gloves and rings",
+      "Boots: movement speed",
+      "Armour pieces: maximum Life and resistances",
+      "Weapon Set 1 (movement): prioritize attack speed, and focus on positioning with Whirling Slash.",
+      "Weapon Set 2 (damage): prioritize base damage, and grow Twister's power.",
+      "For defense, secure Evasion in addition to Life.",
+      "The unique The Taming is a Prismatic Ring, not an amulet. When adopting it, check what you trade off against the ring slot's resistances and attributes. Follow the adopted source's stage for acquisition order; acquisition in SSF is not guaranteed."
+    ],
+    "sources": [
+      {
+        "name": "Mobalytics: 0.5.5 Twister Gemling Legionnaire",
+        "url": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire",
+        "checkedAt": "2026-09-27",
+        "type": "Overseas leveling and Endgame guide"
+      },
+      {
+        "name": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "url": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "checkedAt": "2026-11-23",
+        "type": "Overseas Endgame guide (patch 0.5.5, updated November 4, 2026)"
+      },
+      {
+        "name": "poe2db: The Taming",
+        "url": "https://poe2db.tw/us/The_Taming",
+        "checkedAt": "2026-11-23",
+        "type": "Item type (Prismatic Ring)"
+      }
+    ],
+    "status": "verified",
+    "audience": "Players who want to use Twister from early on, switching weapon sets as they progress.",
+    "ratingEvidence": {
+      "checkedAt": "2026-09-28",
+      "beginner": {
+        "checks": {
+          "earlyMainSkill": true,
+          "moderateOperation": false,
+          "ssfConfirmed": false,
+          "noDodgeRequirement": false
+        },
+        "note": "Only the counted conditions are tied to the source and per-stage procedures. Unconfirmed operation, defense and SSF conditions are not counted.",
+        "score": 2,
+        "verifiedChecks": {
+          "earlyMainSkill": {
+            "basis": "References the \"Whirling Slash ×3 → Twister\" listed in the source guide's early setup.",
+            "source": "https://mobalytics.gg/poe-2/builds/twister-gemling-legionnaire"
+          }
+        }
+      },
+      "damage": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Insane DPS",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "Damage is emphasized in the strengths."
+      },
+      "defense": {
+        "score": 3,
+        "basis": "Both a strength and a weakness",
+        "quote": "Defensively the build goes for Evasion and Deflection, but with the screen clear potential rarely ever gets hit at all. ／ I feel squishy, what can I do?",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-28",
+        "note": "The summary text lists as a strength that its clear power means it rarely gets hit at all, while the FAQ covers \"if you feel squishy\" and guides you to cut damage and take Evasion (text and FAQ descriptions; 0.5.5, updated September 19, 2026)."
+      },
+      "mapping": {
+        "score": 5,
+        "basis": "Strength (emphasized)",
+        "quote": "Very Fast Mobility",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "Movement speed is emphasized in the strengths."
+      },
+      "boss": {
+        "score": 2,
+        "basis": "Weakness",
+        "quote": "No Walls Hurts Single Target",
+        "source": "https://maxroll.gg/poe2/build-guides/gemling-legionnaire-twister-build-guide",
+        "sourceName": "Maxroll: Gemling Legionnaire Twister Build Guide",
+        "checkedAt": "2026-09-26",
+        "note": "The weakness states that single-target damage drops in places with no walls."
+      }
+    },
+    "changeHistory": [
+      {
+        "date": "2026-09-28",
+        "summary": "Checked the Maxroll text and FAQ (0.5.5, updated September 19) and updated defense from unrated to 3/5 (both the strength that you rarely get hit at all, and the FAQ guiding players who feel squishy to trade damage for Evasion)."
+      },
+      {
+        "date": "2026-09-27",
+        "summary": "Organized the later gear replacement order based on the source's early gear priorities and weapon set play. Late Endgame-specific gear thresholds are unconfirmed."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Corrected The Taming's type from amulet to ring. Matched the updated Mobalytics source by adding the Endgame operation order and the Late Endgame Spirit re-check. This is not a re-verification date for all 8 stages."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Separated the checked scope between the source text and the per-stage tabs. No longer recommends supports or operations from other stages as-is, and states acquisition conditions and unconfirmed points. This is not a re-verification of the exact full loadout."
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "Additionally checked the contents of the per-stage tabs and made the skill and support guidance that had not been captured more concrete. This is not a verification of all gear conditions or actual in-game runs."
+      },
+      {
+        "date": "2026-11-23",
+        "summary": "Re-checked the publication status, supported patch, update date, main skill and ascendancy of 2 of the 3 sources and updated the check dates. The 1 Mobalytics source cannot be fetched automatically, so it remains unchecked (check date left unchanged). Maxroll's guide for the same setup was updated on November 4, 2026, adding an alternative candidate for players Salvo does not suit, and a defense-leaning body armour option. There is no change to the main skill or ascendancy."
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "mercenary-supporting-fire-tactician",
+      "name": "Supporting Fire Tactician",
+      "classSlug": "mercenary",
+      "slug": "supporting-fire-tactician"
+    },
+    {
+      "id": "mercenary-grenade-gemling",
+      "name": "Grenade Gemling",
+      "classSlug": "mercenary",
+      "slug": "grenade-gemling"
+    }
+  ]
+}

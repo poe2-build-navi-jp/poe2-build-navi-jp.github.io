@@ -1,4 +1,4 @@
-import {parseSave, weaponSetState} from './simulator-model.js?v=161ef63cbd';
+import {parseSave, weaponSetState} from './simulator-model.js?v=fdda84f09b';
 const plain = (value, limit) => String(value || '').replace(/[\u0000-\u001f<>]/g, ' ').trim().slice(0, limit);
 
 export function plannerExport(value, index, options = {}) {

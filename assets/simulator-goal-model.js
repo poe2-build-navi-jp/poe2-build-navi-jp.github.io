@@ -1,4 +1,4 @@
-import {parseSave, weaponSetState} from './simulator-model.js?v=161ef63cbd';
+import {parseSave, weaponSetState} from './simulator-model.js?v=fdda84f09b';
 
 export const goalKey = preset => 'poe2-simulator-goal:v1:' + preset;
 const slots = new Set(['weapon1', 'weapon2', 'helmet', 'body', 'gloves', 'boots', 'belt', 'amulet', 'ring1', 'ring2', 'Flask 1', 'Flask 2', 'Charm 1', 'Charm 2', 'Charm 3']);
