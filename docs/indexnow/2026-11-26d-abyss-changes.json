@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "281036dd71124e37ac2a3565eb8c0eaf0b19b58b",
+  "headCommit": "0eaf3186ded6f5363596d57c76067654b33b9065",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "95883840a91f2f2fa23655e45c1d7d6bd34cbe03bc3f53192d7cc6c58d42b032",
+      "afterHash": "ca5593dd02d10c93ccc91bbe3ed85c9e5caee4dc43ebec16634780d961056687"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/abyss/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "6bfcdb19d83bb22ebd65086205b9a810a47008e8a391c7b4184d6f4fbdb42f5b"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/breach/",
+      "change": "updated",
+      "beforeHash": "e52a8ee603dc2dc467c5f6498c5f8a9b38f4f546a12289d7b3123efa435c5647",
+      "afterHash": "c595904f97613177c53c0ba398ed68256cbe856744749b607691860f96e836ed"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/delirium/",
+      "change": "updated",
+      "beforeHash": "cd56e291922ac36c1fac88d5047d545a3a01e95d1c82375d848ae7b42f0ea2e4",
+      "afterHash": "23dfa5b0a948347a10ecd2666a58dc8737c39128f1facf523cf076ee844f9d46"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/ritual/",
+      "change": "updated",
+      "beforeHash": "a6a611888476095e69a22b72b89e2970062d6c8851f67fb72adc35c18f0cba0b",
+      "afterHash": "219295ec36c633451b14591f0240a896dfefbb3e34ec15cd628d5de708cc99a3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "4324ee0d72a18a4e2da4bb6bc80050eb9bd7a52df6a2640fcf7c292168683672",
+      "afterHash": "d58224a9ae2eaebf7dd66f7057378f949ec5961227691b6592aba6ceafb3577c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "e3440848e552a93a7e8a1ee0d0e50fc6815361215504bee17c1027d5ab9a3340",
+      "afterHash": "b271cc054d79cf90e1de1ebf042ece608ca5e20ce8ab731799b03c3606790bf2"
+    }
+  ]
+}

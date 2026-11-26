@@ -25,14 +25,14 @@ const groups=[
  {id:'progress',label:'エンドゲーム',title:'キャンペーン後・エンドゲーム',intro:'初回の進め方、専用アイテム、Atlasツリーと個別コンテンツを確認。',slugs:['after-campaign','mapping']},
  {id:'updates',label:'更新・パッチ',title:'アップデートを確認する',intro:'公式の変更内容と、自分のビルドへの影響を分けて読みます。',slugs:[]}
 ];
-const defaults={'campaign-progression':'campaign','trial-of-chaos':'trials','atlas-progression':'progress','waystones-tablets':'progress','campaign-route':'campaign','ascendancy-trials':'trials','currency-crafting':'crafting','atlas-waystones':'progress','expedition':'progress','ritual':'progress','breach':'progress','delirium':'progress','patch-notes-guide':'updates'};
+const defaults={'campaign-progression':'campaign','trial-of-chaos':'trials','atlas-progression':'progress','waystones-tablets':'progress','campaign-route':'campaign','ascendancy-trials':'trials','currency-crafting':'crafting','atlas-waystones':'progress','expedition':'progress','ritual':'progress','breach':'progress','abyss':'progress','delirium':'progress','patch-notes-guide':'updates'};
 const seen=new Set(groups.flatMap(g=>g.slugs));
 for(const g of extra){if(!g.slug||seen.has(g.slug))continue;const id=defaults[g.slug]||({endgame:'progress'}[g.category]||g.category);const group=groups.find(x=>x.id===id)||groups.find(x=>x.id==='basics');group.slugs.push(g.slug);seen.add(g.slug);}
 const activeGroups=groups.filter(g=>g.slugs.length).sort((a,b)=>(a.id==='campaign'?-1:b.id==='campaign'?1:0));
 const campaign=activeGroups.find(g=>g.id==='campaign');
 if(campaign){const order=['act-1-walkthrough','act-2-walkthrough','act-3-walkthrough','act-4-walkthrough','interlude-walkthrough'];campaign.slugs.sort((a,b)=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99));}
 const progress=activeGroups.find(g=>g.id==='progress');
-if(progress){const order=['after-campaign','mapping','endgame-contents','endgame-items','atlas-progression','atlas-passive-trees','waystones-tablets','expedition','ritual','breach','delirium'];progress.slugs.sort((a,b)=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99));}
+if(progress){const order=['after-campaign','mapping','endgame-contents','endgame-items','atlas-progression','atlas-passive-trees','waystones-tablets','expedition','ritual','breach','delirium','abyss'];progress.slugs.sort((a,b)=>(order.includes(a)?order.indexOf(a):99)-(order.includes(b)?order.indexOf(b):99));}
 const entry=slug=>{
  const path=`/guides/${slug}/`,g=extra.find(x=>x.slug===slug)||guides.find(x=>x.slug===slug),p=pages.find(x=>x.path===path);
  if(!g&&!p)throw new Error(`Guide missing from shared data: ${path}`);

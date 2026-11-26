@@ -3,7 +3,7 @@
   <url><loc>https://poe2-build-navi-jp.github.io/</loc><lastmod>2026-11-27</lastmod><priority>1.0</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/simulator/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/en/simulator/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/search/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/search/</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/name-index/</loc><lastmod>2026-11-12</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/skills/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/equipment/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
@@ -66,7 +66,7 @@
   <url><loc>https://poe2-build-navi-jp.github.io/class-check/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/beginner-guide/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/beginner-builds/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/dictionary/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/tier-list/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-beginner-build-tier.svg</image:loc></image:image></url>
   <url><loc>https://poe2-build-navi-jp.github.io/league-starter/</loc><lastmod>2026-11-25</lastmod><priority>0.7</priority><image:image><image:loc>https://poe2-build-navi-jp.github.io/images/poe2/guides/poe2-league-starter-builds.svg</image:loc></image:image></url>
@@ -185,9 +185,10 @@
   <url><loc>https://poe2-build-navi-jp.github.io/guides/simulator-ring-comparison/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/simulator-boots-comparison/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/bodach/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/ritual/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/breach/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://poe2-build-navi-jp.github.io/guides/delirium/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/ritual/</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/breach/</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/delirium/</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://poe2-build-navi-jp.github.io/guides/abyss/</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/ailments/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/build-tier-list/</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://poe2-build-navi-jp.github.io/guides/stuck-at-level-90/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
