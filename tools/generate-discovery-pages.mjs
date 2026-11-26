@@ -105,7 +105,9 @@ home = home
   .replace(/(<h1 id="hero-title">)[\s\S]*?(<\/h1>)/, "$1PoE2 0.5.5 おすすめビルド｜職業別・初心者向け$2")
   .replace(/(<section class="hero hero-focused"[\s\S]*?<p class="lead">)[\s\S]*?(<\/p>)/, `$1最初の1体を選ぶなら戦い方から。育成の途中なら、現在Lvを入力して次のスキル・装備・パッシブを確認できます。$2`)
   .replace(/<p id="home-build-routes">[\s\S]*?<\/p>/g, "")
+  .replace(/<p class="home-lang-switch">[\s\S]*?<\/p>/g, "")
   .replace(/(<section class="hero hero-focused"[\s\S]*?<p class="lead">[\s\S]*?<\/p>)/, `$1<p id="home-build-routes"><a href="/builds/">全${builds.length}ビルドを職業・条件で比較</a> ／ <a href="/best-builds/">最強ビルドを探すなら：周回・ボス・防御の目的別候補</a></p>`);
+home = home.replace(/(<p id="home-build-routes">[\s\S]*?<\/p>)/, `$1<p class="home-lang-switch"><a class="button-secondary" href="/en/builds/" hreflang="en" lang="en">🌐 English — Build Guides</a></p>`);
 // enhance-build-ux moves the resume section right after the quick picks, so the hero pattern above
 // no longer matches on a regenerated page; refresh the quick picks on their own.
 home = home.replace(/<section id="purpose-picks"[\s\S]*?<\/section>/, beginnerEntry);
