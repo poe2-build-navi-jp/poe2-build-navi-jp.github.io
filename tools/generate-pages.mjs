@@ -152,6 +152,7 @@ await import('./generate-strategy-articles.mjs');
 await import('./generate-strategy-hub.mjs');
 await (await import('./enhance-guide-search-intents.mjs')).main();
 await import('./generate-core-entities.mjs');
+await import('./generate-ascendancies.mjs');
 await (await import('./generate-site-search.mjs')).generateSiteSearch();
 await import('./enhance-residual-pages.mjs');
 await import('./generate-image-assets.mjs');

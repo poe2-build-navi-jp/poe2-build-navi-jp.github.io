@@ -6,7 +6,7 @@ import {formatJapaneseNames,root} from './japanese-names.mjs';
 
 const noTranslate=new Set(['head','script','style','svg','math','pre','code','textarea','noscript','template','blockquote','q','cite']);
 const skipId=new Set(['sources','source-list']);
-const skipClass=new Set(['unique-gear-trade-row','unique-gear-name-en','guide-share-box','source-link','rating-quote']);
+const skipClass=new Set(['unique-gear-trade-row','unique-gear-name-en','name-en','guide-share-box','source-link','rating-quote']);
 const inline=new Set(['a','b','strong','em','small','span','sup','abbr','mark','i','u','#text']);
 const escapeText=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 // Translate standalone interface labels, leaving source titles, identifiers and English pages intact.

@@ -19,6 +19,7 @@ const noindexPaths = JSON.parse(await read("data/noindex.json")).paths.map((path
 const contentPaths = [
   "search/","name-index/","skills/","equipment/",
   ...JSON.parse(await read("data/core-entities.json")).map(e=>`${e.kind==='skill'?'skills':'equipment'}/${e.slug}/`),
+  "ascendancies/",...JSON.parse(await read("data/ascendancies.json")).ascendancies.map((a) => `ascendancies/${a.slug}/`),
   ...JSON.parse(await read("data/dictionary.json")).map((term) => `dictionary/${term.slug}/`),
   ...JSON.parse(await read("data/guides.json")).map((guide) => `guides/${guide.slug}/`),
   ...JSON.parse(await read("data/strategy-guides.json")).map((guide) => `guides/${guide.slug}/`)

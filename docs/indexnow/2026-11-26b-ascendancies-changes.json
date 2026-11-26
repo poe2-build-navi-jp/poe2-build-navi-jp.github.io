@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "6c490c9aaea78b55ba15daeaf3021c4b30e819d8",
+  "headCommit": "8087d7afc45b4d16a59b722a7ca6e2faf723270f",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/",
+      "change": "updated",
+      "beforeHash": "138f2f9eb54f5edecccf932e73c7a7a70707ca9141254c5cf534efd20f975c80",
+      "afterHash": "b96b9655bb4c9852687c3be995a7501356d8e9f8b51d0008c502f1b6323cdeff"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "edaa5963eba515fc6c915cc9ca7780afd330c5b39dc1e34101a69316128eb6ce"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/acolyte-of-chayula/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "52a0dad6523edacb9a8378358f43f60aa74e1280445f2760c76da64777e97849"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/amazon/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "a4b22ead68559c1727d463dd52a9497ec6afec609201bdf65e1d8961608dc9f3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/blood-mage/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "0c44c89b2da30b04f4eaf0a6494db2ca354c112a9a695aa325a1c4271bd44be1"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/chronomancer/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "9681d25d089f2c1df7a8e92ce62b9f89b68f71a1f919060f22e0ae6110cb7217"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/deadeye/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "e4fb5c18a07642ab5fa0e141f91f033a5f98adf5c61963f121968b7ca565cc6e"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/disciple-of-varashta/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "439c3a9a23c3c27d0da087be0fd901838ff7fae85f027d474c41f872bd7229f3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/gemling-legionnaire/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "2d0754f850055a8515530e4314d45ac848be106ddeaade29169dde1854529d09"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/infernalist/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "1819556731847e295860d0c97386ccd1cb826618f31593e9004e703c9de5da94"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/invoker/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "5052312369cdf4e128b8e67d557376ed9c905ab57de9211a917895a8e2d41255"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/lich/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "7cd0dc46ecc1bd107cf0366e9e09f18b741d95c9af662faaa8b9295fc3d88f30"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/martial-artist/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "383594dada3e1f07048b294abc6213e46e558d8db0baa4ae63b3a5290d423d72"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/oracle/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "85f133d36a88578515374ba58f343bca385a382b16294d7a4353e9399a46f331"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/pathfinder/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "0bb25d37ec2f2db2a1c0864fb44865b49344d1c10ece940f4b3afd29467670e1"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/ritualist/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "cad348dcce621b71bdb5b91e0b9b15b695f448a7e3adaa37a539c9486519ec6c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/shaman/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "db4bd88591c9975cb44f922b870f480affc6e053a483339a20eabf4f407c288a"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/smith-of-kitava/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "9aa6c0f5c857d44a513460122cea6c3a743d1cfbb4f072c56838304e7f69286c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/spirit-walker/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "e4cac162289c51f66dd96418e98453f8ba0c852d938e0ad979371181a101c0b0"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/stormweaver/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "cb6712fa5dad9bd66908eba7bdf7b2de17e99fd98416c9d16d5b227d0755d73a"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/tactician/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "b147a19234bf7a0f095978399bc4a31f9e7144456778c0201fd70b829c585db3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/titan/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "98801bc62e2a37bb46f6114509b5b26fe41562f4e2ab4ea73d4cebbdbe9713be"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/warbringer/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "bb23a11f1127fd769f34480e04dcb294800d775ab692864475e48905187c49bb"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/ascendancies/witchhunter/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "f9269547f834d2e6c55b0cca151ce91b1e8a71142946d7417d09159f3c477e8c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/druid/",
+      "change": "updated",
+      "beforeHash": "0df916ff6f934956679a161bdf3262d7dee5956b05e0d7bf3d6fcb6d77a339b9",
+      "afterHash": "2b8849b082052fa078c7383c73e1e9ba24fcfdbb7da5f688c6c20f90ee11cfc3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/huntress/",
+      "change": "updated",
+      "beforeHash": "7beb60cc66492ae38b0152e4266390ca5de7dc537af89bff091fd174567dfc39",
+      "afterHash": "847e832b94a8ce7223086bca06042aac5800faea068b6fd97887a9925e62dd6a"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/mercenary/",
+      "change": "updated",
+      "beforeHash": "ace92474591005ac4075ee43497418bfa1b91f59cd00e6371ee214823d7927c5",
+      "afterHash": "54b3aca7ff26b20a388301fb1e4b899471f487fe696beef251e2633daa2c533a"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/monk/",
+      "change": "updated",
+      "beforeHash": "403790d29d8ba5b6195c75e05f5c501560213d49cc3f6167312be78092914aa6",
+      "afterHash": "9ac441c98164e81a77899b0f8ce729fdd7613550d31d6548832bfdad09dbe57a"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/ranger/",
+      "change": "updated",
+      "beforeHash": "f4947bf059ed6e73039f77463efdf3eef26b1e69a13b2675c1239be9038ad100",
+      "afterHash": "b00856720d3f8675c1de9c15f48b74b1192c16c75eabcfd26356c07813ebf58c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/sorceress/",
+      "change": "updated",
+      "beforeHash": "c6a60e887a17d63d4c82e63fe3ce92dd07a7168ba126f7454d5858dd29a6e202",
+      "afterHash": "3772510a1f8375f28bfc6f0b3d8b1208613d222a6b32243a135830d7f6510d1e"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/warrior/",
+      "change": "updated",
+      "beforeHash": "f04e0bab4d65298325b7f164df51d7e3bde9e368db58784ea8b72bd633206035",
+      "afterHash": "a02d4dc1882a6f4242dd6f13b49b291bd3c8b03b91e7549c6114b98c38532bc3"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/classes/witch/",
+      "change": "updated",
+      "beforeHash": "a6e794b38b29697762923ed194a725607b538ee8f45b48bff32a96e47a27a832",
+      "afterHash": "6290bc2c433e13840731cd6bb1575fe43283127639cc46d1df3e539849c555d8"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/build-tier-list/",
+      "change": "updated",
+      "beforeHash": "c5e0ef6d90862aefe967848daefed56ef19304810b9287e6438d220e5082a109",
+      "afterHash": "02f70bf644946e501cfe3a264bc23b251d5995605a661c823c5fad16ef051947"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "ba35008272578d7c8d9c358ad66b72be1ad8e7f834912e1286abec0ce498b529",
+      "afterHash": "1b2be7ca8784f3de5da0f9e88d094692ed1d3b7dd078009dd5408b01f3fe994e"
+    }
+  ]
+}
