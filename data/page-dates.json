@@ -15,8 +15,8 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "03ee6d7c0441ecab",
-  "date": "2026-11-25",
+  "hash": "3efc1fb2deef0606",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/name-index/": {
@@ -330,8 +330,8 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "4ddb4aa20ef3e7e6",
-  "date": "2026-11-25",
+  "hash": "a409ee3df29beac5",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/dictionary/": {
@@ -390,7 +390,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "2c37fd40d224f9cc",
+  "hash": "f33c3b5382ccae40",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -925,18 +925,23 @@
   "hashVersion": 2
  },
  "/guides/ritual/": {
-  "hash": "5f87784b3d5fc56e",
-  "date": "2026-11-23",
+  "hash": "add16d5ef2e49ec4",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/guides/breach/": {
-  "hash": "cd27a75ece88c214",
-  "date": "2026-11-23",
+  "hash": "297e8d48b81fd56f",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/guides/delirium/": {
-  "hash": "3ffb5649942e9b8e",
-  "date": "2026-11-24",
+  "hash": "7e86593eda74deb2",
+  "date": "2026-11-27",
+  "hashVersion": 2
+ },
+ "/guides/abyss/": {
+  "hash": "5fb7ff9605652219",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/guides/ailments/": {
