@@ -1,6 +1,6 @@
 {
  "/": {
-  "hash": "a3f40380cff0f84f",
+  "hash": "7ec4d011446379a9",
   "date": "2026-11-26",
   "hashVersion": 2
  },
@@ -42,6 +42,121 @@
  "/equipment/": {
   "hash": "3fa7d91aa71e3600",
   "date": "2026-11-24",
+  "hashVersion": 2
+ },
+ "/ascendancies/": {
+  "hash": "bf2bec541c72705a",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/titan/": {
+  "hash": "c885ea902497f9dd",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/warbringer/": {
+  "hash": "b39f6a40310d3ba9",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/smith-of-kitava/": {
+  "hash": "5f672c5fbeab5863",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/witchhunter/": {
+  "hash": "cf43e11d51edb293",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/gemling-legionnaire/": {
+  "hash": "d3e05b145b7eb5ce",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/tactician/": {
+  "hash": "671bca6c16d6872a",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/invoker/": {
+  "hash": "c712b2bb636178ab",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/acolyte-of-chayula/": {
+  "hash": "cbd6bfab8c8eb634",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/martial-artist/": {
+  "hash": "89e2f3f95588865e",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/deadeye/": {
+  "hash": "6b52346352577636",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/pathfinder/": {
+  "hash": "34a488fb7ed0607c",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/amazon/": {
+  "hash": "bed202b1e37073bb",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/ritualist/": {
+  "hash": "d1f11fc0f1ad6fb7",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/spirit-walker/": {
+  "hash": "3dc47b9d8f61fa70",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/stormweaver/": {
+  "hash": "01f83db21ba13e33",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/chronomancer/": {
+  "hash": "cc32e555df2e2f0b",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/disciple-of-varashta/": {
+  "hash": "2e74bf007b624801",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/blood-mage/": {
+  "hash": "e63d9e57babc762f",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/infernalist/": {
+  "hash": "2285c6167b3b9cad",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/lich/": {
+  "hash": "49261dc045960622",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/oracle/": {
+  "hash": "d167aa9d05d45a0c",
+  "date": "2026-11-26",
+  "hashVersion": 2
+ },
+ "/ascendancies/shaman/": {
+  "hash": "e0c3ad10215e5289",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/skills/whirling-assault/": {
@@ -285,48 +400,48 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "497a283e42360b41",
+  "hash": "4d9049b922514528",
   "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/monk/": {
-  "hash": "4bb30f1cc17b5032",
-  "date": "2026-11-24",
+  "hash": "08ba02bbbe5afd70",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/mercenary/": {
-  "hash": "5d176dccfaf55dda",
-  "date": "2026-11-24",
+  "hash": "1a095e2d6aeb89fa",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/warrior/": {
-  "hash": "675fbd1df01aeda7",
-  "date": "2026-11-24",
+  "hash": "4c5a39c199cfa989",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/sorceress/": {
-  "hash": "9f58510ad1c654ef",
-  "date": "2026-11-24",
+  "hash": "5173d070fef5d904",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/huntress/": {
-  "hash": "606c5a333b18db85",
-  "date": "2026-11-24",
+  "hash": "0f7559e1b6a1d235",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/ranger/": {
-  "hash": "48dea1ae394bea22",
-  "date": "2026-11-24",
+  "hash": "a6a263dfc1d4fb8b",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/witch/": {
-  "hash": "c9f9750cbf7f98be",
-  "date": "2026-11-24",
+  "hash": "5247a57429df5acc",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/classes/druid/": {
-  "hash": "5f82e77d1fda99fc",
-  "date": "2026-11-24",
+  "hash": "10adf3e32107f48e",
+  "date": "2026-11-26",
   "hashVersion": 2
  },
  "/builds/monk/whirling-assault/": {
@@ -635,7 +750,7 @@
   "hashVersion": 2
  },
  "/guides/build-tier-list/": {
-  "hash": "388605102a7a1725",
+  "hash": "f479751a89399775",
   "date": "2026-11-26",
   "hashVersion": 2
  },

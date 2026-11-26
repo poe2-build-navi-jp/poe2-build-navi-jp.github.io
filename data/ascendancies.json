@@ -1,0 +1,1303 @@
+{
+  "checkedAt": "2026-11-26",
+  "sources": {
+    "poe2db": "PoE2DB日本語版（非公式ゲームデータ）",
+    "maxrollAscendancy": "https://maxroll.gg/poe2/tierlists/league-starter-ascendancy-tier-list",
+    "maxrollBuilds": "https://maxroll.gg/poe2/tierlists/league-starter-build-tier-list",
+    "pathofexilegg": "https://pathofexile.gg/tier-list/"
+  },
+  "ascendancies": [
+    {
+      "slug": "titan",
+      "name": "タイタン",
+      "alias": null,
+      "englishName": "Titan",
+      "classSlug": "warrior",
+      "className": "ウォリアー",
+      "theme": "スラムと余震、アーマー・ライフを伸ばすノードが中心です。",
+      "nodes": [
+        {
+          "en": "Earthbreaker",
+          "ja": "大地を破壊するもの",
+          "effect": "自ら使用するスラムスキルは25%の確率で余震を追加で1回引き起こす"
+        },
+        {
+          "en": "Ancestral Empowerment",
+          "ja": "先祖による強化",
+          "effect": "自ら使用するスラムの二発目は先祖の加護を受ける"
+        },
+        {
+          "en": "Crushing Impacts",
+          "ja": "壊滅する衝撃",
+          "effect": "ヒットはクラッシングブローとなり、ヘビースタン状態の敵へのダメージが25%上昇する"
+        },
+        {
+          "en": "Hulking Form",
+          "ja": "巨大な姿",
+          "effect": "スモールパッシブスキルの効果が50%増加する"
+        },
+        {
+          "en": "Mysterious Lineage",
+          "ja": "神秘的な血統",
+          "effect": "最大ライフが15%上昇する"
+        },
+        {
+          "en": "Stone Skin",
+          "ja": "石の皮膚",
+          "effect": "装備中の鎧から得られるアーマーが50%上昇する"
+        }
+      ],
+      "maxrollTier": "S",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [
+        {
+          "tier": "C",
+          "name": "ボーンシャッター・タイタン",
+          "maxrollName": "Boneshatter Titan"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Titan"
+    },
+    {
+      "slug": "warbringer",
+      "name": "ウォーブリンガー",
+      "alias": null,
+      "englishName": "Warbringer",
+      "classSlug": "warrior",
+      "className": "ウォリアー",
+      "theme": "アーマー破壊、ウォークライ、トーテム、ブロックを強化するノードが中心です。",
+      "nodes": [
+        {
+          "en": "Anvil's Weight",
+          "ja": "金床の重さ",
+          "effect": "与えたヒットダメージの10%と同量のアーマーを破壊する"
+        },
+        {
+          "en": "Imploding Impacts",
+          "ja": "内部破裂の衝撃",
+          "effect": "完全アーマー破壊でヒットから受ける全てのダメージを増加させ、敵のアーマーを0以下に破壊できる"
+        },
+        {
+          "en": "Warcaller's Bellow",
+          "ja": "ウォーコーラーの叫び",
+          "effect": "ウォークライが死体を爆破し、ウォークライのクールダウンを無視する"
+        },
+        {
+          "en": "Answered Call",
+          "ja": "応えられた呼び声",
+          "effect": "トーテムの最大数+1、トーテム召喚時にアンセストラルスピリットをトリガーする"
+        },
+        {
+          "en": "Renly's Training",
+          "ja": "レンリーのトレーニング",
+          "effect": "盾の数値の代わりに35%の基礎ブロック率を獲得する"
+        },
+        {
+          "en": "Turtle Charm",
+          "ja": "亀のお守り",
+          "effect": "ブロックしたヒットからダメージの20%を受け、ブロック率の最大値は75%"
+        }
+      ],
+      "maxrollTier": "C",
+      "pathofexileggTier": "D",
+      "maxrollBuilds": [
+        {
+          "tier": "A",
+          "name": "シールドウォール・ウォーブリンガー",
+          "maxrollName": "Shield Wall Warbringer"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Warbringer"
+    },
+    {
+      "slug": "smith-of-kitava",
+      "name": "キタヴァの鍛冶屋",
+      "alias": "スミス・オブ・キタヴァ",
+      "englishName": "Smith of Kitava",
+      "classSlug": "warrior",
+      "className": "ウォリアー",
+      "theme": "火ダメージ・近接と、装備中の鎧にボーナスを付ける鍛冶のノードが中心です。",
+      "nodes": [
+        {
+          "en": "Coal Stoker",
+          "ja": "石炭係",
+          "effect": "火耐性のモッドはその数値の50%の冷気耐性と雷耐性も付与する"
+        },
+        {
+          "en": "Forged in Flame",
+          "ja": "炎で鍛えられて",
+          "effect": "火耐性の最大値のモッドは冷気耐性と雷耐性の最大値も付与する"
+        },
+        {
+          "en": "Living Weapon",
+          "ja": "生ける武器",
+          "effect": "マニフェストウェポンを付与する"
+        },
+        {
+          "en": "Heat of the Forge",
+          "ja": "鍛冶場の熱",
+          "effect": "ヒット時火スペルを付与する"
+        },
+        {
+          "en": "Smith's Masterwork",
+          "ja": "鍛冶屋の傑作",
+          "effect": "ノーマルの鎧だけ使用でき、接続されたノータブルごとにアーマー+200"
+        },
+        {
+          "en": "Tantalum Alloy ほか",
+          "ja": "耐熱の合金 ほか",
+          "effect": "鎧に火耐性+75%などのボーナスを付ける鍛冶のノードが12個ある"
+        }
+      ],
+      "maxrollTier": "A",
+      "pathofexileggTier": "D",
+      "maxrollBuilds": [],
+      "siteBuildIds": [
+        "warrior-shield-wall-smith"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Smith_of_Kitava"
+    },
+    {
+      "slug": "witchhunter",
+      "name": "ウィッチハンター",
+      "alias": null,
+      "englishName": "Witchhunter",
+      "classSlug": "mercenary",
+      "className": "マーセナリー",
+      "theme": "敵のコンセントレーションを削る仕組みと、カリング・爆発・ソーサリーワードのノードが中心です。",
+      "nodes": [
+        {
+          "en": "Witchbane",
+          "ja": "ウイッチベイン",
+          "effect": "敵は最大ライフの30%と同量のコンセントレーションを持ち、ヒットでそれを破壊する"
+        },
+        {
+          "en": "No Mercy",
+          "ja": "慈悲はない",
+          "effect": "敵の喪失コンセントレーションに応じてダメージが最大40%上昇する"
+        },
+        {
+          "en": "Pitiless Killer",
+          "ja": "無慈悲な殺し屋",
+          "effect": "カリングストライクを得る"
+        },
+        {
+          "en": "Obsessive Rituals",
+          "ja": "執念の儀式",
+          "effect": "ソーサリーワードを付与し、アーマーと回避力が50%低下する"
+        },
+        {
+          "en": "Zealous Inquisition",
+          "ja": "熱狂的な異端審問",
+          "effect": "倒した敵が10%の確率で爆発する（アンデッドとデーモンには確率二倍）"
+        },
+        {
+          "en": "Weapon Master",
+          "ja": "ウェポンマスター",
+          "effect": "100パッシブスキルポイントが武器セットスキルポイントになる"
+        }
+      ],
+      "maxrollTier": "A",
+      "pathofexileggTier": "B",
+      "maxrollBuilds": [
+        {
+          "tier": "B",
+          "name": "Permafrost Bolt（日本語名未確認）・ウィッチハンター",
+          "maxrollName": "Permafrost Bolt Witchhunter"
+        },
+        {
+          "tier": "B",
+          "name": "オイルグレネード・ウィッチハンター",
+          "maxrollName": "Oil Grenade Witchhunter"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Witchhunter"
+    },
+    {
+      "slug": "gemling-legionnaire",
+      "name": "ジェムリングリージョネア",
+      "alias": "ジェムリング・リージョネア",
+      "englishName": "Gemling Legionnaire",
+      "classSlug": "mercenary",
+      "className": "マーセナリー",
+      "theme": "ジェムの品質・レベル・能力値要求を強化し、サポートジェムの色でボーナスを得るノードが中心です。",
+      "nodes": [
+        {
+          "en": "Bolstering / Motoric / Neurological Implants",
+          "ja": "強化用・運動強化・神経インプラント",
+          "effect": "筋力・器用さ・知性の装備要求を持つ全てのスキルのレベル+2（それぞれ）"
+        },
+        {
+          "en": "Essence of Virtue",
+          "ja": "美徳のエッセンス",
+          "effect": "ヴァーチュアスバリアを付与する"
+        },
+        {
+          "en": "Advanced Thaumaturgy",
+          "ja": "上級ソーマタージー",
+          "effect": "ジェムの品質がソケットされたスキルに追加の効果を付与する"
+        },
+        {
+          "en": "Adaptive Capability",
+          "ja": "適応能力",
+          "effect": "ジェムの要求能力値は最も高い能力値によって満たされる"
+        },
+        {
+          "en": "Integrated Efficiency",
+          "ja": "統合された効率",
+          "effect": "連結したサポートジェムの色ごとにダメージ・クリティカル率・スキルスピードが増加する"
+        },
+        {
+          "en": "Thaumaturgical Infusion",
+          "ja": "ソーマタージの注入",
+          "effect": "ソケットしたサポートジェム3個ごとに対応する耐性の最大値+1%"
+        }
+      ],
+      "maxrollTier": "S",
+      "pathofexileggTier": "C",
+      "maxrollBuilds": [
+        {
+          "tier": "S",
+          "name": "ツイスター・ジェムリングリージョネア",
+          "maxrollName": "Twister Gemling"
+        }
+      ],
+      "siteBuildIds": [
+        "mercenary-twister-gemling",
+        "mercenary-grenade-gemling"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Gemling_Legionnaire"
+    },
+    {
+      "slug": "tactician",
+      "name": "タクティシャン",
+      "alias": null,
+      "englishName": "Tactician",
+      "classSlug": "mercenary",
+      "className": "マーセナリー",
+      "theme": "バナー、足止め、トーテム、存在下の味方を強化するノードが中心です。",
+      "nodes": [
+        {
+          "en": "A Solid Plan",
+          "ja": "確かな計画",
+          "effect": "永続バフのリザーブが50%低下する"
+        },
+        {
+          "en": "Watch How I Do It",
+          "ja": "私のやり方を見ていろ",
+          "effect": "存在下の味方がメインハンド武器の25%と同量の追加アタックダメージを獲得する"
+        },
+        {
+          "en": "Right Where We Want Them",
+          "ja": "狙い通りの位置",
+          "effect": "投射物ダメージが足止めを蓄積し、足止めされた敵は行動できなくなる"
+        },
+        {
+          "en": "Cannons, Ready!",
+          "ja": "大砲発射準備！",
+          "effect": "トーテムの最大数+1、トーテムのスキルスピードが30%上昇（アタック投射物を放った時だけ使用）"
+        },
+        {
+          "en": "Unleash Hell!",
+          "ja": "地獄を解き放て！",
+          "effect": "サポーティングファイヤーを付与する"
+        },
+        {
+          "en": "Stay Light, Use Cover",
+          "ja": "素早く動け、身を隠せ",
+          "effect": "200%のアーマーで防御し、回避率と物理ダメージ軽減率の最大値は50%"
+        }
+      ],
+      "maxrollTier": "A",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [
+        {
+          "tier": "A",
+          "name": "サポーティングファイヤー・タクティシャン",
+          "maxrollName": "Supporting Fire Tactician"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Tactician"
+    },
+    {
+      "slug": "invoker",
+      "name": "インヴォーカー",
+      "alias": null,
+      "englishName": "Invoker",
+      "classSlug": "monk",
+      "className": "モンク",
+      "theme": "雷・冷気の追加ダメージ、元素耐性の無視、回避力からのスピリットを得るノードが中心です。",
+      "nodes": [
+        {
+          "en": "I am the Thunder...",
+          "ja": "私は雷であり...",
+          "effect": "ダメージの10%を追加雷ダメージとして獲得し、感電時に25%の確率で感電領域を生成する"
+        },
+        {
+          "en": "I am the Blizzard...",
+          "ja": "私は吹雪であり...",
+          "effect": "ダメージの10%を追加冷気ダメージとして獲得し、凍結時に冷却領域を生成する"
+        },
+        {
+          "en": "Sunder my Enemies...",
+          "ja": "...我が敵を切り裂け",
+          "effect": "クリティカルヒットは敵モンスターのマイナスでない元素耐性を無視する"
+        },
+        {
+          "en": "...and Scatter Them to the Winds",
+          "ja": "...敵を粉砕し、風に乗って飛ばせ",
+          "effect": "近接クリティカルヒット時にエレメンタルエクスプレッションをトリガーする"
+        },
+        {
+          "en": "Lead me through Grace...",
+          "ja": "恵みを通して導き...",
+          "effect": "鎧のESと回避力からスピリットを得る（装備品からはスピリットを得られなくなる）"
+        },
+        {
+          "en": "...and I Shall Rage",
+          "ja": "...そして我は怒る",
+          "effect": "アンバウンドアバターを付与する"
+        }
+      ],
+      "maxrollTier": "C",
+      "pathofexileggTier": "B",
+      "maxrollBuilds": [
+        {
+          "tier": "C",
+          "name": "アイスストライク・インヴォーカー",
+          "maxrollName": "Ice Strike Invoker"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Invoker"
+    },
+    {
+      "slug": "acolyte-of-chayula",
+      "name": "チャユラの門弟",
+      "alias": null,
+      "englishName": "Acolyte of Chayula",
+      "classSlug": "monk",
+      "className": "モンク",
+      "theme": "混沌ダメージ、ダークネス、チャユラの炎（レムナント）を扱うノードが中心です。",
+      "nodes": [
+        {
+          "en": "Embrace the Darkness",
+          "ja": "闇を抱擁せよ",
+          "effect": "スピリットが0になり、受けたダメージはライフやESの前にダークネスをリザーブする"
+        },
+        {
+          "en": "Chayula's Gift",
+          "ja": "チャユラの贈り物",
+          "effect": "混沌耐性の最大値+10%、混沌耐性が二倍になる"
+        },
+        {
+          "en": "Sap of Nightmares",
+          "ja": "悪夢の受益",
+          "effect": "リーチによる回復が混沌ダメージにも基づくようになる"
+        },
+        {
+          "en": "Archon of Chayula",
+          "ja": "チャユラのアルコン",
+          "effect": "アルコンオブチャユラを付与する"
+        },
+        {
+          "en": "Waking Dream",
+          "ja": "目覚めた夢",
+          "effect": "ブリーチ侵入を付与する"
+        },
+        {
+          "en": "Choice of Power / Mana / Life",
+          "ja": "選択の力・マナ・ライフ",
+          "effect": "プレイヤーが生成したレムナントの効果が50%増加し、チャユラの炎の色が変わる"
+        }
+      ],
+      "maxrollTier": "B",
+      "pathofexileggTier": "B",
+      "maxrollBuilds": [
+        {
+          "tier": "A",
+          "name": "Infernal Legion（日本語名未確認）・チャユラの門弟",
+          "maxrollName": "Infernal Legion Acolyte of Chayula"
+        },
+        {
+          "tier": "A",
+          "name": "雷ミニオン・チャユラの門弟",
+          "maxrollName": "Lightning Minion Acolyte of Chayula"
+        },
+        {
+          "tier": "A",
+          "name": "ミニオン・チャユラの門弟",
+          "maxrollName": "Minion Army Acolyte of Chayula"
+        },
+        {
+          "tier": "D",
+          "name": "ポイズンバーストアロー・チャユラの門弟",
+          "maxrollName": "Poisonburst Arrow Acolyte of Chayula"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Acolyte_of_Chayula"
+    },
+    {
+      "slug": "martial-artist",
+      "name": "マーシャルアーティスト",
+      "alias": null,
+      "englishName": "Martial Artist",
+      "classSlug": "monk",
+      "className": "モンク",
+      "theme": "コンボ、ホロウ系の技法、ルーンのタトゥーと石の拳を扱うノードが中心です。",
+      "nodes": [
+        {
+          "en": "Martial Master",
+          "ja": "武術の達人",
+          "effect": "どの武器セットでもコンボを構築・維持でき、全てのアタックヒットでコンボを獲得できる"
+        },
+        {
+          "en": "Hollow Form Technique",
+          "ja": "ホロウフォーム技法",
+          "effect": "ホロウフォームを付与する"
+        },
+        {
+          "en": "Hollow Focus Technique",
+          "ja": "ホロウフォーカス技法",
+          "effect": "ホロウフォーカスを付与する"
+        },
+        {
+          "en": "Runic Meridians",
+          "ja": "ルーンの経絡",
+          "effect": "兜・鎧・手袋・靴にルーン限定のソケットを獲得する"
+        },
+        {
+          "en": "Way of the Mountain",
+          "ja": "山の道",
+          "effect": "敵を移動不可にした時に山の教えを獲得する"
+        },
+        {
+          "en": "Way of the Stonefist",
+          "ja": "石拳の道",
+          "effect": "装備中の手袋のベースタイプが石の拳に変化し、能力値要求を無視する"
+        }
+      ],
+      "maxrollTier": "S",
+      "pathofexileggTier": "S",
+      "maxrollBuilds": [
+        {
+          "tier": "S",
+          "name": "ホロウフォーム＋ワーリングアサルト・マーシャルアーティスト",
+          "maxrollName": "Hollow Form Whirling Assault Martial Artist"
+        },
+        {
+          "tier": "A",
+          "name": "ワーリングアサルト・マーシャルアーティスト",
+          "maxrollName": "Whirling Assault Martial Artist"
+        },
+        {
+          "tier": "A",
+          "name": "フォーリングサンダー・マーシャルアーティスト",
+          "maxrollName": "Falling Thunder Martial Artist"
+        },
+        {
+          "tier": "A",
+          "name": "ホロウフォーカス＋ストームウェーブ・マーシャルアーティスト",
+          "maxrollName": "Hollow Focus Storm Wave Martial Artist"
+        },
+        {
+          "tier": "A",
+          "name": "オイルバラージ・マーシャルアーティスト",
+          "maxrollName": "Oil Barrage Martial Artist"
+        }
+      ],
+      "siteBuildIds": [
+        "monk-whirling-assault"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Martial_Artist"
+    },
+    {
+      "slug": "deadeye",
+      "name": "デッドアイ",
+      "alias": null,
+      "englishName": "Deadeye",
+      "classSlug": "ranger",
+      "className": "レンジャー",
+      "theme": "投射物の追加、距離によるダメージ、フレンジーチャージと呪印を強化するノードが中心です。",
+      "nodes": [
+        {
+          "en": "Endless Munitions",
+          "ja": "尽きない弾薬",
+          "effect": "スキルは追加の投射物を1個放つ"
+        },
+        {
+          "en": "Far Shot",
+          "ja": "ファーショット",
+          "effect": "投射物は遠くへ飛ぶほどヒットダメージが上昇し、7m以降は20%"
+        },
+        {
+          "en": "Gathering Winds",
+          "ja": "風集め",
+          "effect": "スキル使用時に追い風を獲得し、ヒットを受けると全て失う"
+        },
+        {
+          "en": "Avidity",
+          "ja": "熱望",
+          "effect": "フレンジーチャージ獲得時に50%の確率で1個追加で獲得する"
+        },
+        {
+          "en": "Called Shots",
+          "ja": "狙い撃ち",
+          "effect": "コールショットを付与する"
+        },
+        {
+          "en": "Bullseye",
+          "ja": "ブルズアイ",
+          "effect": "呪印を消費した時にその敵にクリティカルウィークネスを10スタック付与する"
+        }
+      ],
+      "maxrollTier": "S",
+      "pathofexileggTier": "S",
+      "maxrollBuilds": [
+        {
+          "tier": "A",
+          "name": "アイスショット・デッドアイ",
+          "maxrollName": "Ice Shot Deadeye"
+        },
+        {
+          "tier": "A",
+          "name": "グレイシャルランス・デッドアイ",
+          "maxrollName": "Glacial Lance Deadeye"
+        },
+        {
+          "tier": "A",
+          "name": "ツイスター・デッドアイ",
+          "maxrollName": "Twister Deadeye"
+        },
+        {
+          "tier": "B",
+          "name": "ライトニングアロー・デッドアイ",
+          "maxrollName": "Lightning Arrow Deadeye"
+        },
+        {
+          "tier": "C",
+          "name": "スパイラルボレー・デッドアイ",
+          "maxrollName": "Spiral Volley Deadeye"
+        }
+      ],
+      "siteBuildIds": [
+        "ranger-ice-shot-deadeye"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Deadeye"
+    },
+    {
+      "slug": "pathfinder",
+      "name": "パスファインダー",
+      "alias": null,
+      "englishName": "Pathfinder",
+      "classSlug": "ranger",
+      "className": "レンジャー",
+      "theme": "毒、フラスコ、混合物（コンコクション）スキルと、他職業の開始地点へ伸ばすノードが中心です。",
+      "nodes": [
+        {
+          "en": "Overwhelming Toxicity",
+          "ja": "圧倒する毒物",
+          "effect": "一度に付与できる毒のスタック数が二倍になり、毒持続時間が50%低下する"
+        },
+        {
+          "en": "Relentless Pursuit",
+          "ja": "容赦ない追跡",
+          "effect": "スピードが減速の影響を受けない"
+        },
+        {
+          "en": "Sustainable Practices",
+          "ja": "持続可能な戦術",
+          "effect": "回避力の50%が元素ダメージ軽減も付与する"
+        },
+        {
+          "en": "Enduring Elixirs",
+          "ja": "持続するエリクサー",
+          "effect": "未リザーブライフがフルでもライフフラスコの効果が取り除かれない"
+        },
+        {
+          "en": "Explosive / Shattering / Fulminating / Acidic / Bleeding Concoction",
+          "ja": "各種の混合物",
+          "effect": "5種類のコンコクションスキルを付与する"
+        },
+        {
+          "en": "Path of the Sorceress / Warrior",
+          "ja": "ソーサレス・ウォーリアーの道",
+          "effect": "その職業の開始地点からパッシブを割り当てられ、4パッシブポイントを得る"
+        }
+      ],
+      "maxrollTier": "A",
+      "pathofexileggTier": "B",
+      "maxrollBuilds": [
+        {
+          "tier": "C",
+          "name": "Cold Spark（日本語名未確認）・パスファインダー",
+          "maxrollName": "Cold Spark Pathfinder"
+        },
+        {
+          "tier": "C",
+          "name": "ポイズンバーストアロー・パスファインダー",
+          "maxrollName": "Poisonburst Arrow Pathfinder"
+        },
+        {
+          "tier": "C",
+          "name": "スパイラルボレー（毒）・パスファインダー",
+          "maxrollName": "Spiral Volley Poison Pathfinder"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Pathfinder"
+    },
+    {
+      "slug": "amazon",
+      "name": "アマゾン",
+      "alias": null,
+      "englishName": "Amazon",
+      "classSlug": "huntress",
+      "className": "ハントレス",
+      "theme": "命中力からのクリティカル・追加ダメージ、ウィークネスの露呈、エレメンタルサージのノードが中心です。",
+      "nodes": [
+        {
+          "en": "Critical Strike",
+          "ja": "クリティカルストライク",
+          "effect": "アタックの命中率が100%を超過でき、超過分の25%と同量のクリティカルヒット率を獲得する"
+        },
+        {
+          "en": "Penetrate",
+          "ja": "貫通",
+          "effect": "武器アタックは武器の命中力の25%と同量の追加物理ダメージを持つ"
+        },
+        {
+          "en": "Predatory Instinct",
+          "ja": "捕食者の本能",
+          "effect": "レア・ユニークの敵にウィークネスを露呈し、その敵へのダメージが50%上昇する"
+        },
+        {
+          "en": "In for the Kill",
+          "ja": "止めを刺せ",
+          "effect": "オープンウィークネスの敵が存在下にいる間、移動スピード20%・スキルスピード40%増加"
+        },
+        {
+          "en": "Elemental Surge",
+          "ja": "エレメンタルサージ",
+          "effect": "エレメンタルサージを付与する"
+        },
+        {
+          "en": "Mystic Harvest",
+          "ja": "神秘の収穫",
+          "effect": "ライフリーチが元素ダメージにも基づくようになる"
+        }
+      ],
+      "maxrollTier": "A",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [
+        {
+          "tier": "B",
+          "name": "アイスショット・アマゾン",
+          "maxrollName": "Ice Shot Amazon"
+        },
+        {
+          "tier": "B",
+          "name": "ライトニングスピア・アマゾン",
+          "maxrollName": "Lightning Spear Amazon"
+        },
+        {
+          "tier": "D",
+          "name": "出血レーキ・アマゾン",
+          "maxrollName": "Bleed Rake Amazon"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Amazon"
+    },
+    {
+      "slug": "ritualist",
+      "name": "リチュアリスト",
+      "alias": null,
+      "englishName": "Ritualist",
+      "classSlug": "huntress",
+      "className": "ハントレス",
+      "theme": "指輪・アミュレット・チャームの枠と効果を増やすノードが中心です。開始時に最大マナ・スピリット・元素耐性が下がります。",
+      "nodes": [
+        {
+          "en": "Unfurled Finger",
+          "ja": "吊るされた指",
+          "effect": "指輪スロット+1"
+        },
+        {
+          "en": "Mystic Attunement",
+          "ja": "神秘との調和",
+          "effect": "装備中の指輪およびアミュレットから得られるボーナスが25%増加する"
+        },
+        {
+          "en": "Intricate Sigils",
+          "ja": "精巧な紋章",
+          "effect": "チャームスロット+1、獲得チャームチャージが20%上昇する"
+        },
+        {
+          "en": "Mind Phylacteries",
+          "ja": "思考の護符",
+          "effect": "チャージが足りない時に最大マナの25%を消費してチャームをトリガーできる"
+        },
+        {
+          "en": "Wildwood Persistence",
+          "ja": "ワイルドウッドのしぶとさ",
+          "effect": "喪失中の未リザーブライフ5%ごとにライフ回復レートが10%増加する"
+        },
+        {
+          "en": "",
+          "ja": "開始時の代償",
+          "effect": "最大マナ30%減少、スピリット25%減少、全ての元素耐性-20%"
+        }
+      ],
+      "maxrollTier": "D",
+      "pathofexileggTier": "D",
+      "maxrollBuilds": [],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Ritualist"
+    },
+    {
+      "slug": "spirit-walker",
+      "name": "スピリットウォーカー",
+      "alias": null,
+      "englishName": "Spirit Walker",
+      "classSlug": "huntress",
+      "className": "ハントレス",
+      "theme": "コンパニオン（相棒）と、シカ・フクロウ・クマの精霊の力を使うノードが中心です。",
+      "nodes": [
+        {
+          "en": "The Natural Order",
+          "ja": "自然の秩序",
+          "effect": "テイムビーストでユニークの獣を捕獲できる（一度に1体まで）"
+        },
+        {
+          "en": "The Catha's Balance",
+          "ja": "キャサのバランス",
+          "effect": "コンパニオンはメインハンド武器ダメージの60%と同量の追加アタックダメージを与える"
+        },
+        {
+          "en": "Idolatry",
+          "ja": "偶像崇拝",
+          "effect": "装備品のアイドルの数ごとにコンパニオンのダメージが10%増加する"
+        },
+        {
+          "en": "Vivid Stampede",
+          "ja": "ビビッドスタンピード",
+          "effect": "移動でビビッドウィスプをため、アタック時にビビッドスタンピードをトリガーする"
+        },
+        {
+          "en": "Primal Bounty",
+          "ja": "プライマルバウンティー",
+          "effect": "ドッジでオウルフェザーを使い、プライマルバウンティーを強化する"
+        },
+        {
+          "en": "Wild Protector",
+          "ja": "ワイルドプロテクター",
+          "effect": "ワイルドプロテクターを付与する"
+        }
+      ],
+      "maxrollTier": "S",
+      "pathofexileggTier": "S",
+      "maxrollBuilds": [
+        {
+          "tier": "A",
+          "name": "ミニオン・スピリットウォーカー",
+          "maxrollName": "Minion Army Spirit Walker"
+        },
+        {
+          "tier": "A",
+          "name": "ツイスター・スピリットウォーカー",
+          "maxrollName": "Twisters Spirit Walker"
+        },
+        {
+          "tier": "A",
+          "name": "相棒（コンパニオン）・スピリットウォーカー",
+          "maxrollName": "Companion Spirit Walker"
+        }
+      ],
+      "siteBuildIds": [
+        "huntress-companion",
+        "huntress-twister-spirit-walker"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Spirit_Walker"
+    },
+    {
+      "slug": "stormweaver",
+      "name": "ストームウィーバー",
+      "alias": null,
+      "englishName": "Stormweaver",
+      "classSlug": "sorceress",
+      "className": "ソーサレス",
+      "theme": "感電・冷却の強化と、スペルのクリティカル時のエレメンタルストームのノードが中心です。",
+      "nodes": [
+        {
+          "en": "Tempest Caller",
+          "ja": "テンペストコーラー",
+          "effect": "スペルによるクリティカルヒット時にエレメンタルストームをトリガーする"
+        },
+        {
+          "en": "Multiplying Squalls",
+          "ja": "次々と襲うスコール",
+          "effect": "元素スキルの上限+2"
+        },
+        {
+          "en": "Shaper of Storms",
+          "ja": "嵐を形作る者",
+          "effect": "ヒットによる全てのダメージが感電確率に寄与する"
+        },
+        {
+          "en": "Shaper of Winter",
+          "ja": "冬を形作る者",
+          "effect": "ヒットによる全てのダメージが冷却の強度に寄与する"
+        },
+        {
+          "en": "Strike Twice",
+          "ja": "二度落ちる雷",
+          "effect": "対象は感電2スタックの影響を同時に受けることがある（強度は25%低下）"
+        },
+        {
+          "en": "Force of Will",
+          "ja": "意思の力",
+          "effect": "ダメージの20%をライフより先にマナで受ける"
+        }
+      ],
+      "maxrollTier": "B",
+      "pathofexileggTier": "B",
+      "maxrollBuilds": [
+        {
+          "tier": "B",
+          "name": "アイスノヴァ＋スナップ・ストームウィーバー",
+          "maxrollName": "Ice Nova Snap Stormweaver"
+        },
+        {
+          "tier": "B",
+          "name": "アーク・ストームウィーバー",
+          "maxrollName": "Arc Stormweaver"
+        }
+      ],
+      "siteBuildIds": [
+        "sorceress-spark-stormweaver"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Stormweaver"
+    },
+    {
+      "slug": "chronomancer",
+      "name": "クロノマンサー",
+      "alias": null,
+      "englishName": "Chronomancer",
+      "classSlug": "sorceress",
+      "className": "ソーサレス",
+      "theme": "時間を扱うスキル（テンポラルリフト、タイムフリーズ、タイムスナップ）と減速のノードが中心です。",
+      "nodes": [
+        {
+          "en": "Footprints in the Sand",
+          "ja": "砂漠の足跡",
+          "effect": "テンポラルリフトを付与する"
+        },
+        {
+          "en": "Ultimate Command",
+          "ja": "究極の命令",
+          "effect": "タイムフリーズを付与する"
+        },
+        {
+          "en": "Unbound Encore",
+          "ja": "解放された再演",
+          "effect": "タイムスナップを付与する"
+        },
+        {
+          "en": "Phased Form",
+          "ja": "フェーズ形態",
+          "effect": "受けるダメージが30%低下し、4秒後にそのヒットの30%を受ける"
+        },
+        {
+          "en": "Now and Again",
+          "ja": "時折",
+          "effect": "カスケード可能なスペルは20%の確率でエコーし、繰り返し可能なスペルは20%の確率で繰り返す"
+        },
+        {
+          "en": "Apex of the Moment",
+          "ja": "最高潮",
+          "effect": "存在下の敵は20%減速を受ける"
+        }
+      ],
+      "maxrollTier": "D",
+      "pathofexileggTier": "C",
+      "maxrollBuilds": [],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Chronomancer"
+    },
+    {
+      "slug": "disciple-of-varashta",
+      "name": "ヴァラシュタの弟子",
+      "alias": "ディサイプル・オブ・ヴァラシュタ",
+      "englishName": "Disciple of Varashta",
+      "classSlug": "sorceress",
+      "className": "ソーサレス",
+      "theme": "3体のジン（ナヴィラ・ケラリ・ルザン）を呼び出して命令するスキルと、ESを守りに使うノードが中心です。",
+      "nodes": [
+        {
+          "en": "Barya of Navira / Kelari / Ruzhan",
+          "ja": "ナヴィラ・ケラリ・ルザンのバリャ",
+          "effect": "それぞれのジン（ナヴィラ、ケラリ、ルザン）を付与する"
+        },
+        {
+          "en": "Kelari's Deception ほか",
+          "ja": "ケラリの欺き ほか",
+          "effect": "ジンへの命令スキル（各ジンに3種類）を付与する"
+        },
+        {
+          "en": "Sacred Rituals",
+          "ja": "神聖な儀式",
+          "effect": "アーマーによる物理ダメージ軽減の計算時に現在のESの60%をアーマーに加算する"
+        },
+        {
+          "en": "The Fourth Teaching",
+          "ja": "第4の教え",
+          "effect": "ESリチャージの基礎遅延時間-1秒、低ES時にリチャージレートが40%上昇する"
+        },
+        {
+          "en": "Varashta's Intuition",
+          "ja": "ヴァラシュタの直感",
+          "effect": "元素ダメージの100%をライフの前にマナで受ける"
+        },
+        {
+          "en": "Instruments of Power",
+          "ja": "力の装具",
+          "effect": "スタッフ装備中にフォーカスを装備できる（フォーカスのボーナスは50%減少）"
+        }
+      ],
+      "maxrollTier": "S",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [
+        {
+          "tier": "S",
+          "name": "ヴァラシュタの弟子のミニオン",
+          "maxrollName": "Disciple of Varashta Minion"
+        },
+        {
+          "tier": "A",
+          "name": "フロストボルト＋クリティカル時キャストのコメット・ヴァラシュタの弟子",
+          "maxrollName": "Frostbolt Cast on Crit Comet Disciple Of Varashta"
+        },
+        {
+          "tier": "B",
+          "name": "植物・ヴァラシュタの弟子",
+          "maxrollName": "Disciple of Varashta Plant"
+        }
+      ],
+      "siteBuildIds": [
+        "sorceress-sand-fire"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Disciple_of_Varashta"
+    },
+    {
+      "slug": "blood-mage",
+      "name": "ブラッドメイジ",
+      "alias": null,
+      "englishName": "Blood Mage",
+      "classSlug": "witch",
+      "className": "ウィッチ",
+      "theme": "ライフをコストにしたスペル、スペルのクリティカル、ライフリーチと出血のノードが中心です。",
+      "nodes": [
+        {
+          "en": "Sanguimancy",
+          "ja": "血魔術",
+          "effect": "ライフレムナントを付与し、スキルは基礎マナコストと同量の基礎ライフコストを獲得する"
+        },
+        {
+          "en": "Sunder the Flesh",
+          "ja": "肉を切り裂け",
+          "effect": "スペルの基礎クリティカルヒット率は15%"
+        },
+        {
+          "en": "Vitality Siphon",
+          "ja": "生命力吸収",
+          "effect": "スペルダメージの20%をライフとしてリーチする"
+        },
+        {
+          "en": "Gore Spike",
+          "ja": "血塗れの棘",
+          "effect": "現在のライフ50ごとにクリティカルダメージボーナスが1%増加する"
+        },
+        {
+          "en": "Crimson Power",
+          "ja": "深紅の力",
+          "effect": "装備中の鎧のアイテムESの100%と同量の追加最大ライフを獲得する"
+        },
+        {
+          "en": "Blood Barbs",
+          "ja": "血の茨",
+          "effect": "元素ダメージが出血の強度にも寄与し、呪い状態の対象への出血は悪化する"
+        }
+      ],
+      "maxrollTier": "B",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Blood_Mage"
+    },
+    {
+      "slug": "infernalist",
+      "name": "インファーナリスト",
+      "alias": null,
+      "englishName": "Infernalist",
+      "classSlug": "witch",
+      "className": "ウィッチ",
+      "theme": "インファーナルフレイム、悪魔形態、ヘルハウンド、可燃性・発火を扱うノードが中心です。",
+      "nodes": [
+        {
+          "en": "Pyromantic Pact",
+          "ja": "火術の契約",
+          "effect": "最大マナが二倍の最大インファーナルフレイムに置き換わり、スキルコストとしてインファーナルフレイムを獲得する"
+        },
+        {
+          "en": "Demonic Possession",
+          "ja": "悪魔の憑依",
+          "effect": "悪魔形態を付与する"
+        },
+        {
+          "en": "Loyal Hellhound",
+          "ja": "忠実なヘルハウンド",
+          "effect": "インファーナルハウンド召喚を付与する"
+        },
+        {
+          "en": "Bringer of Flame",
+          "ja": "炎をもたらすもの",
+          "effect": "プレイヤーと存在下の味方の全てのダメージが可燃性と発火の強度に寄与する"
+        },
+        {
+          "en": "Beidat's Gaze / Hand / Will",
+          "ja": "ベイダットの凝視・手・意思",
+          "effect": "ライフの25%をリザーブして最大マナ・ES・スピリットを得る"
+        },
+        {
+          "en": "Grinning Immolation",
+          "ja": "笑みを浮かべた焼身",
+          "effect": "クリティカルダメージボーナスが50%上昇し、クリティカル時に自分が発火する"
+        }
+      ],
+      "maxrollTier": "B",
+      "pathofexileggTier": "S",
+      "maxrollBuilds": [
+        {
+          "tier": "C",
+          "name": "スケルトンスナイパー・インファーナリスト",
+          "maxrollName": "Skeletal Sniper Infernalist"
+        },
+        {
+          "tier": "C",
+          "name": "ミニオン・インファーナリスト",
+          "maxrollName": "Minion Army Infernalist"
+        }
+      ],
+      "siteBuildIds": [
+        "witch-minion-infernalist"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Infernalist"
+    },
+    {
+      "slug": "lich",
+      "name": "リッチ",
+      "alias": null,
+      "englishName": "Lich",
+      "classSlug": "witch",
+      "className": "ウィッチ",
+      "theme": "ES、呪い、パワーチャージ、アンホーリーマイトを扱うノードが中心です。",
+      "nodes": [
+        {
+          "en": "Incessant Cacophony",
+          "ja": "絶え間ない不協和音",
+          "effect": "呪いの持続時間が無限になり、呪いを追加で1個付与できる"
+        },
+        {
+          "en": "Price of Power",
+          "ja": "力の代価",
+          "effect": "スペルはパワーチャージを1個消費しダメージが40%上昇する"
+        },
+        {
+          "en": "Eternal Life",
+          "ja": "永遠の命",
+          "effect": "ESを持っている時にライフを変化させることができない"
+        },
+        {
+          "en": "Rupture the Soul",
+          "ja": "魂を引き裂け",
+          "effect": "倒した呪い状態の敵が33%の確率で爆発し、最大ライフの4分の1の混沌ダメージを与える"
+        },
+        {
+          "en": "Necromantic Conduit",
+          "ja": "死霊術の回路",
+          "effect": "低マナでない時にプレイヤーと存在下の味方はアンホーリーマイトを持つ"
+        },
+        {
+          "en": "Crystalline Phylactery",
+          "ja": "結晶の魂の器",
+          "effect": "ユニーク以外の基本ジュエルだけソケットでき、ジュエルのボーナスが100%増加する"
+        }
+      ],
+      "maxrollTier": "A",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [
+        {
+          "tier": "B",
+          "name": "ミニオン・リッチ",
+          "maxrollName": "Minion Army Lich"
+        },
+        {
+          "tier": "B",
+          "name": "Infernal Legion（日本語名未確認）・リッチ",
+          "maxrollName": "Infernal Legion Lich"
+        },
+        {
+          "tier": "B",
+          "name": "雷ミニオン・リッチ",
+          "maxrollName": "Lightning Minion Lich"
+        },
+        {
+          "tier": "B",
+          "name": "エッセンスドレイン・リッチ",
+          "maxrollName": "Essence Drain Lich"
+        }
+      ],
+      "siteBuildIds": [
+        "witch-ed-contagion-lich"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Lich"
+    },
+    {
+      "slug": "oracle",
+      "name": "オラクル",
+      "alias": null,
+      "englishName": "Oracle",
+      "classSlug": "druid",
+      "className": "ドルイド",
+      "theme": "トーテム、キーストーン周辺のパッシブ、クリティカルと「運命」を扱うノードが中心です。",
+      "nodes": [
+        {
+          "en": "Entwined Realities",
+          "ja": "交錯する現実",
+          "effect": "割り当てたキーストーンの中型半径内のパッシブを、ツリーに繋げずに割り当てられる"
+        },
+        {
+          "en": "Unnamed Heartwood",
+          "ja": "名もなき芯材",
+          "effect": "召喚できるトーテムの最大数+1"
+        },
+        {
+          "en": "Forced Outcome",
+          "ja": "強制された結果",
+          "effect": "クリティカル必然"
+        },
+        {
+          "en": "The Lesser Harm",
+          "ja": "小さき害",
+          "effect": "プレイヤーへの敵のクリティカルヒット率が不幸になる"
+        },
+        {
+          "en": "Fateful Vision",
+          "ja": "宿命の幻視",
+          "effect": "運命の調和を付与する"
+        },
+        {
+          "en": "Converging Paths",
+          "ja": "収束する道",
+          "effect": "無防備の瞬間を付与する"
+        }
+      ],
+      "maxrollTier": "S",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [
+        {
+          "tier": "S",
+          "name": "グリムピラー（スペルトーテム）・オラクル",
+          "maxrollName": "Grim Pillars Spell Totem Oracle"
+        },
+        {
+          "tier": "A",
+          "name": "エンタングル・オラクル",
+          "maxrollName": "Entangle Oracle"
+        },
+        {
+          "tier": "A",
+          "name": "フロストボルト＋クリティカル時キャストのコメット・オラクル",
+          "maxrollName": "Frostbolt Cast On Crit Comet Oracle"
+        }
+      ],
+      "siteBuildIds": [
+        "druid-plant-oracle"
+      ],
+      "poe2db": "https://poe2db.tw/jp/Oracle"
+    },
+    {
+      "slug": "shaman",
+      "name": "シャーマン",
+      "alias": null,
+      "englishName": "Shaman",
+      "classSlug": "druid",
+      "className": "ドルイド",
+      "theme": "元素ダメージ、憤怒、受けた属性への適応、ルーン・アイドルを扱うノードが中心です。",
+      "nodes": [
+        {
+          "en": "Turning of the Seasons",
+          "ja": "季節の変わり目",
+          "effect": "存在下の敵は曝露状態になり、ダメージの10%をランダムな元素の追加ダメージとして獲得する"
+        },
+        {
+          "en": "Bringer of the Apocalypse",
+          "ja": "アポカリプスをもたらすもの",
+          "effect": "アポカリプスを付与する"
+        },
+        {
+          "en": "Furious Wellspring",
+          "ja": "激昂の源泉",
+          "effect": "憤怒の最大数+7、憤怒が毎秒最大値の6%自動回復する"
+        },
+        {
+          "en": "Reactive Growth",
+          "ja": "反応的成長",
+          "effect": "受ける元素ダメージが10%低下し、受けた属性に適応する"
+        },
+        {
+          "en": "Sacred Flow",
+          "ja": "聖なる流れ",
+          "effect": "空のチャームスロットの数ごとにスピリット+40"
+        },
+        {
+          "en": "Wisdom of the Maji",
+          "ja": "マジの知恵",
+          "effect": "ルーンおよびアイドルの絆モッドから恩恵を受けられるようになる"
+        }
+      ],
+      "maxrollTier": "A",
+      "pathofexileggTier": "A",
+      "maxrollBuilds": [
+        {
+          "tier": "B",
+          "name": "雷ミニオン・シャーマン",
+          "maxrollName": "Lightning Minion Shaman"
+        },
+        {
+          "tier": "B",
+          "name": "ミニオン・シャーマン",
+          "maxrollName": "Minion Army Shaman"
+        },
+        {
+          "tier": "B",
+          "name": "ウォーキングカラミティ・シャーマン",
+          "maxrollName": "Walking Calamity Shaman"
+        },
+        {
+          "tier": "B",
+          "name": "Demon Calamity（日本語名未確認）・シャーマン",
+          "maxrollName": "Demon Calamity Shaman"
+        }
+      ],
+      "siteBuildIds": [],
+      "poe2db": "https://poe2db.tw/jp/Shaman"
+    }
+  ]
+}
