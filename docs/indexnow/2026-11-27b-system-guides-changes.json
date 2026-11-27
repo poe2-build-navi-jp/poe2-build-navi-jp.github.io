@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "290c336f0710f18892c032d5dc01fe480684dda8",
+  "headCommit": "3b8967c60e4695ae9df58e6957cc3e95c83827da",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/dictionary/league-starter/",
+      "change": "updated",
+      "beforeHash": "3ca2968320ecc3b5b10b0b50f9ebf0776072d589e08845e27dd48af76b98ee2b",
+      "afterHash": "274832a4470198d2ad57126fb8b8b37d8c676df7ea09a5885a873331f94a3b5d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "4146755c974d4b4e41873f809029a241f773cc698601f65719fbc020339912b6",
+      "afterHash": "900c5420ec822666f337e6193c9cde97a752277f40b0e93e99236bd3e57470a6"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/build-tier-list/",
+      "change": "updated",
+      "beforeHash": "593548edd9b3dbdae57ebb905cd2707f8acef114ebbf1b9f93df4e519a99b759",
+      "afterHash": "3b25477d4fe4d09d8051576dd441a28ffb4456c552de554713ee4f16994a70b6"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/corruption/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "adfc01f47e2d7eac7732321f0754ec77b48b0bd97aa09569cbf200650e14194c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/currency-guide/",
+      "change": "updated",
+      "beforeHash": "16a8d4df31a595c41327feab2221c6504806d06378385cd8f8d495604dfd41e2",
+      "afterHash": "88ea9cd56bd979b047642ed310b4f6ebcc0fdcd11f74bc502ab60231c7138b8f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/leagues/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "2ebd17590eb4e3d3bbfe45392e02af982de62ccf6482f532616bf2441ff1a420"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/tier-16-waystones/",
+      "change": "updated",
+      "beforeHash": "ef884ed08fddf9d42b273f291712d374caee70bb6175c17f7190c9b4f5e89f53",
+      "afterHash": "0cc4ef4f57665302460081676ac48431bb57102c0048cda6d026a291bb13901d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "a2cb953ef1e94c1982ad5eb0b090ec06b6c91f75785beca7dc8b48f66cee45e6",
+      "afterHash": "b123af4a0c8ce2719d9dfa86ae0853672a459f7f4cac745e26921be2d6a1813c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "1ded3b1d9ffc74b078067e51972c9e9057b0ce47ed981dc68123d7e6303cf52e",
+      "afterHash": "63c5ae96af28f884a7f76985ae08b854d03e8ef65bd8c99e30c48bca76d2c318"
+    }
+  ]
+}
