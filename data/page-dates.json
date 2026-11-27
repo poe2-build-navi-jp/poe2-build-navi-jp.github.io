@@ -15,7 +15,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "02d2fce079c90825",
+  "hash": "ed06e3d6bbe0c475",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -330,7 +330,7 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "e3dc073f4a11c577",
+  "hash": "570ba7676c7241be",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -390,7 +390,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "d9fd3cfb107b66b0",
+  "hash": "a627076408faa9cb",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -850,8 +850,8 @@
   "hashVersion": 2
  },
  "/guides/tier-16-waystones/": {
-  "hash": "ebfe45c0754cf1f8",
-  "date": "2026-11-15",
+  "hash": "93a61d806bd61335",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/guides/trade/": {
@@ -865,8 +865,13 @@
   "hashVersion": 2
  },
  "/guides/currency-guide/": {
-  "hash": "d6b74844ab44521a",
-  "date": "2026-11-15",
+  "hash": "f7e55dd8b0433714",
+  "date": "2026-11-27",
+  "hashVersion": 2
+ },
+ "/guides/corruption/": {
+  "hash": "3c13deb9fb0a1484",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/guides/runeseekers-call/": {
@@ -955,7 +960,12 @@
   "hashVersion": 2
  },
  "/guides/build-tier-list/": {
-  "hash": "4aaa8f8630bebbd7",
+  "hash": "86e416882fa9cdbf",
+  "date": "2026-11-27",
+  "hashVersion": 2
+ },
+ "/guides/leagues/": {
+  "hash": "1bd3520c25dc9a28",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -1015,8 +1025,8 @@
   "hashVersion": 2
  },
  "/dictionary/league-starter/": {
-  "hash": "0e2f6303579d520d",
-  "date": "2026-11-25",
+  "hash": "ead98872e1401d08",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/dictionary/ssf/": {

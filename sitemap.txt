@@ -172,6 +172,7 @@ https://poe2-build-navi-jp.github.io/guides/tier-16-waystones/
 https://poe2-build-navi-jp.github.io/guides/trade/
 https://poe2-build-navi-jp.github.io/guides/loot-filter/
 https://poe2-build-navi-jp.github.io/guides/currency-guide/
+https://poe2-build-navi-jp.github.io/guides/corruption/
 https://poe2-build-navi-jp.github.io/guides/runeseekers-call/
 https://poe2-build-navi-jp.github.io/guides/beginner-currency-farming/
 https://poe2-build-navi-jp.github.io/guides/build-gear-buying-order/
@@ -190,6 +191,7 @@ https://poe2-build-navi-jp.github.io/guides/abyss/
 https://poe2-build-navi-jp.github.io/guides/map-events/
 https://poe2-build-navi-jp.github.io/guides/ailments/
 https://poe2-build-navi-jp.github.io/guides/build-tier-list/
+https://poe2-build-navi-jp.github.io/guides/leagues/
 https://poe2-build-navi-jp.github.io/guides/stuck-at-level-90/
 https://poe2-build-navi-jp.github.io/guides/tangmazu/
 https://poe2-build-navi-jp.github.io/guides/atziri-temple/
