@@ -15,7 +15,7 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "9ef9d046682acfd4",
+  "hash": "02d2fce079c90825",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -330,7 +330,7 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "19b0a4d20451117c",
+  "hash": "e3dc073f4a11c577",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -390,7 +390,7 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "13b09b523b5e0f56",
+  "hash": "d9fd3cfb107b66b0",
   "date": "2026-11-27",
   "hashVersion": 2
  },
@@ -875,8 +875,8 @@
   "hashVersion": 2
  },
  "/guides/beginner-currency-farming/": {
-  "hash": "3c5da9a59bcff2f6",
-  "date": "2026-11-25",
+  "hash": "53b5cf6071ce4f40",
+  "date": "2026-11-27",
   "hashVersion": 2
  },
  "/guides/build-gear-buying-order/": {
@@ -940,7 +940,12 @@
   "hashVersion": 2
  },
  "/guides/abyss/": {
-  "hash": "5fb7ff9605652219",
+  "hash": "335063f6a898295b",
+  "date": "2026-11-27",
+  "hashVersion": 2
+ },
+ "/guides/map-events/": {
+  "hash": "fece52012d9c52c4",
   "date": "2026-11-27",
   "hashVersion": 2
  },

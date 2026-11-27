@@ -187,6 +187,7 @@ https://poe2-build-navi-jp.github.io/guides/ritual/
 https://poe2-build-navi-jp.github.io/guides/breach/
 https://poe2-build-navi-jp.github.io/guides/delirium/
 https://poe2-build-navi-jp.github.io/guides/abyss/
+https://poe2-build-navi-jp.github.io/guides/map-events/
 https://poe2-build-navi-jp.github.io/guides/ailments/
 https://poe2-build-navi-jp.github.io/guides/build-tier-list/
 https://poe2-build-navi-jp.github.io/guides/stuck-at-level-90/
