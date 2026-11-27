@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "8576de2346333eed5999e007e8f635cdd0ebff92",
+  "headCommit": "71ee8a629e1a29b2f77a296b040cf39f4757151d",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "f9d93aee2091f89a5f38ba18fd058513dbfdf26a79e099ea1a9cce2b420bd632",
+      "afterHash": "4146755c974d4b4e41873f809029a241f773cc698601f65719fbc020339912b6"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/abyss/",
+      "change": "updated",
+      "beforeHash": "6bfcdb19d83bb22ebd65086205b9a810a47008e8a391c7b4184d6f4fbdb42f5b",
+      "afterHash": "f0ecb67cbebbbfc7db278d0f0152214d450713b1ff4c04263196f5c9a666c546"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/beginner-currency-farming/",
+      "change": "updated",
+      "beforeHash": "2379e2a31a447d1d0c026d39bfbb690d349cfd33b6b66aff84aecbb07ebb4772",
+      "afterHash": "c2518f0cb57bb23e335449cac5b6255c27f0ac0eebdec97110884afd19cd291c"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/map-events/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "b108266913eec8e2c7649ac275acb6138a668d0ebe4d92bb742cf75a1f4d836d"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "82ea5dab7726ec722dd227cea3ee21e79cd2b42f88aa2f052507741a5f50f5e9",
+      "afterHash": "a2cb953ef1e94c1982ad5eb0b090ec06b6c91f75785beca7dc8b48f66cee45e6"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "4b390eded2c8acf7639830e1e3b0ce8f010a27d361903afdcdaaed399fa84e5e",
+      "afterHash": "1ded3b1d9ffc74b078067e51972c9e9057b0ce47ed981dc68123d7e6303cf52e"
+    }
+  ]
+}
