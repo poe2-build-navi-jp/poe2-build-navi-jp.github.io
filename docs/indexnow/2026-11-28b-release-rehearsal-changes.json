@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "a12de4e89b3a9e6f7b01e42760d30dfc61c3c04c",
+  "headCommit": "ca118a1175ba9cc21bc300b7b4e7ab50946305f1",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/bosses/",
+      "change": "updated",
+      "beforeHash": "fa3440795873f81dfeecc0c40bce41d626419b7830ba9b094bfb9c402c8d2153",
+      "afterHash": "def7426da6b909d586f66504f01b2ce029f25a1e096dacb9d7d07b326f405028"
+    }
+  ]
+}
