@@ -15,7 +15,10 @@ assert.equal(new Set(data.ascendancies.map(a=>a.slug)).size,22,'unique slugs');
 assert.match(sitemap,/<loc>https:\/\/poe2-build-navi-jp\.github\.io\/ascendancies\/<\/loc>/);
 for(const a of data.ascendancies){
  const html=await read(`ascendancies/${a.slug}/index.html`);
- const title=html.match(/<title>([^<]*)<\/title>/)[1];
+ // After a major release the shown title is rewritten (tools/version-title.mjs); the original stays in a head comment.
+ const saved=html.match(/<!-- version-title:original (.*?) -->/)?.[1];
+ const title=saved?JSON.parse(decodeURIComponent(saved)).title:html.match(/<title>([^<]*)<\/title>/)[1];
+ assert.ok(title.includes(`（${data.version}）`),`${a.slug}: title names the checked version, not the live game version`);
  assert.equal(text(html.match(/<h1>([\s\S]*?)<\/h1>/)[1]),title.replaceAll('&amp;','&'),`${a.slug}: h1 matches title`);
  assert.ok(title.includes(a.name)&&title.includes(a.englishName),`${a.slug}: title names`);
  assert.ok(sitemap.includes(`/ascendancies/${a.slug}/</loc>`),`${a.slug}: in sitemap`);

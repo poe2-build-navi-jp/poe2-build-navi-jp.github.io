@@ -141,6 +141,8 @@ function roadmapHtml(build) {
 }
 
 const NAV_EN = `<a href="/guides/">Guides (Japanese)</a><a href="/beginner-builds/">Starter builds (Japanese)</a><a href="/tier-list/">Beginner tier (Japanese)</a><a href="/league-starter/">League starter (Japanese)</a><a href="/builds/">Browse builds (Japanese)</a><a href="/gear-check/">Gear check (Japanese)</a><a href="/beginner-guide/">Beginner guide (Japanese)</a><a href="/leveling/">Leveling (Japanese)</a><a href="/dictionary/">Glossary (Japanese)</a><a href="/search/">Site search (Japanese)</a><a href="/en/builds/">Build guides</a><a href="/en/simulator/">Simulator</a><a href="/en/simulator/#sim-resume">Saved builds</a>`;
+// Placed last in <head>: enhancers insert their blocks before site-icon, so the page's own assets must come
+// before it or the block order would depend on which tool ran first (npm run test:order).
 const ICON_EN = `<!-- site-icon:start --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" title="POE2 Build Navi updates (Japanese)" href="/feed.xml"><!-- site-icon:end -->`;
 const FOOTER_EN = `<footer class="site-footer"><div class="footer-row"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">P2</span><span>POE2<br>Build Navi</span></div><nav class="footer-links" aria-label="Site information"><a href="/about/">About (Japanese)</a><a href="/editorial-policy/">Editorial policy (Japanese)</a><a href="/privacy/">Privacy (Japanese)</a><a href="/terms/">Terms (Japanese)</a><a href="/issues/">Issues and reports (Japanese)</a><a href="/site-map/">Sitemap (Japanese)</a></nav></div><p class="fine">Path of Exile 2 is a trademark of Grinding Gear Games. This site is not affiliated with or endorsed by Grinding Gear Games.</p></footer>`;
 const headerHtml = `<header class="site-header"><a class="brand" href="/" aria-label="POE2 Build Navi home"><span class="brand-mark">POE2</span><span>Build Navi</span></a><button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button><nav id="site-nav" class="site-nav" aria-label="Main menu">${NAV_EN}</nav></header>`;
@@ -174,15 +176,13 @@ function detailPage(build, related) {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(build.seoTitle)}">
 <meta name="twitter:description" content="${esc(build.seoDescription)}">
-${ICON_EN}
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/assets/level-input.css">
 <link rel="stylesheet" href="/assets/build-answer.css">
 <link rel="stylesheet" href="/assets/mobile.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisher}" crossorigin="anonymous"></script>
 <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` }, { "@type": "ListItem", position: 2, name: "Build guides", item: `${baseUrl}/en/builds/` }, { "@type": "ListItem", position: 3, name: build.className, item: `${baseUrl}/classes/${build.classSlug}/` }, { "@type": "ListItem", position: 4, name: build.name, item: `${baseUrl}${enPath}` }] })}</script>
-<script type="module" src="/assets/detail-en.js"></script>
-</head>
+<script type="module" src="/assets/detail-en.js"></script>${ICON_EN}</head>
 <body data-page="build-detail">
 <a class="skip-link" href="#main">Skip to main content</a>
 ${headerHtml}
@@ -238,11 +238,9 @@ function listPage() {
 <meta property="og:description" content="English PoE2 0.5.5 build guides for all 8 classes: ${builds.length} builds with a Lv1-to-Endgame leveling roadmap, source-checked strengths, weaknesses and gear priorities.">
 <meta property="og:url" content="${baseUrl}/en/builds/">
 <meta name="twitter:card" content="summary_large_image">
-${ICON_EN}
 <link rel="stylesheet" href="/assets/styles.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisher}" crossorigin="anonymous"></script>
-<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` }, { "@type": "ListItem", position: 2, name: "Build guides", item: `${baseUrl}/en/builds/` }] })}</script>
-</head>
+<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` }, { "@type": "ListItem", position: 2, name: "Build guides", item: `${baseUrl}/en/builds/` }] })}</script>${ICON_EN}</head>
 <body data-page="builds-en">
 <a class="skip-link" href="#main">Skip to main content</a>
 ${headerHtml}

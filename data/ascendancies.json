@@ -1,5 +1,6 @@
 {
   "checkedAt": "2026-11-26",
+  "version": "0.5.5",
   "sources": {
     "poe2db": "PoE2DB日本語版（非公式ゲームデータ）",
     "maxrollAscendancy": "https://maxroll.gg/poe2/tierlists/league-starter-ascendancy-tier-list",
