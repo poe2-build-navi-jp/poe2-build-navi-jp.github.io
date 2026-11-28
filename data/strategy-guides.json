@@ -94,6 +94,10 @@
       {
         "href": "/guides/after-campaign/",
         "label": "キャンペーン終了後にすること"
+      },
+      {
+        "href": "/guides/bosses/",
+        "label": "ボス一覧"
       }
     ],
     "version": "参照仕様：0.3.0・0.5.0・0.5.5b・0.5.5c",
@@ -848,6 +852,10 @@
       {
         "href": "/guides/campaign-progression/",
         "label": "他のActで進めない時の確認順"
+      },
+      {
+        "href": "/guides/passive-respec/",
+        "label": "パッシブの振り直し方"
       }
     ],
     "faq": [
@@ -4426,6 +4434,10 @@
       {
         "href": "/guides/permanent-rewards/",
         "label": "恒久報酬の取り忘れ確認"
+      },
+      {
+        "href": "/guides/passive-respec/",
+        "label": "パッシブの振り直し方"
       }
     ],
     "sections": [
@@ -5126,6 +5138,602 @@
     "checkedAt": "2026-11-23"
   },
   {
+    "slug": "bosses",
+    "title": "ボス一覧｜Act1〜4・間幕・試練・エンドゲームのボスと攻略記事",
+    "metaDescription": "PoE2のボスを一覧にまとめました。Act1〜4と間幕のボス、セケマ・混沌の試練のボス、ゼシュト・ボダック・アッツィリなどエンドゲームの主なボスを、日本語名と英語名、戦う場所、攻略記事へのリンク付きで確認できます。",
+    "summary": "キャンペーン・試練・エンドゲームのボスを、日本語名と英語名、どこで戦うかと一緒に並べました。詳しい対策は各攻略記事へ進んでください。",
+    "category": "basics",
+    "version": "参照：2026-11-28時点（0.5.5）。1.0でAct5・6と新しいボスが追加されます",
+    "checkedAt": "2026-11-28",
+    "publishedAt": "2026-11-28",
+    "updatedAt": "2026-11-28",
+    "evidenceNote": "ボスの名前・英語名・場所は、このサイトの各攻略記事で出典（PoE2DB・PoE2 Wiki・GGG公式・PathofExile.gg）を確認した内容をまとめたものです。各出典の確認日は元の記事の確認日です。",
+    "structuredCitations": true,
+    "keywords": [
+      "ボス一覧",
+      "ボス",
+      "Boss",
+      "ジオノール伯爵",
+      "ジャマンラ",
+      "ドリヤニ",
+      "タヴァカイ",
+      "ゼシュト",
+      "ボダック",
+      "アッツィリ",
+      "アービター",
+      "クーラマク"
+    ],
+    "actions": [
+      "今いるActの表で、次に戦うボスと場所を確認する",
+      "任意ボスの恒久強化は、Act攻略の記事で取り逃しがないか確認する",
+      "エンドゲームのボスは、メカニクスの記事で挑むのに必要なアイテムを先に確認する"
+    ],
+    "quickLinks": [
+      {
+        "href": "#act1",
+        "label": "Act1"
+      },
+      {
+        "href": "#act2",
+        "label": "Act2"
+      },
+      {
+        "href": "#act3",
+        "label": "Act3"
+      },
+      {
+        "href": "#act4",
+        "label": "Act4"
+      },
+      {
+        "href": "#interlude",
+        "label": "間幕"
+      },
+      {
+        "href": "#trials",
+        "label": "試練"
+      },
+      {
+        "href": "#endgame",
+        "label": "エンドゲーム"
+      }
+    ],
+    "scope": "キャンペーン・試練のボスはサイト内の名前索引と各Act攻略の記事、エンドゲームのボスは各メカニクスの記事の出典を引き継いでいます（2026-11-28にまとめ）。",
+    "verification": {
+      "method": "サイト内の名前索引（data/name-index.json）と各攻略記事の出典を照合。",
+      "confirmed": "キャンペーン・試練のボス38体と、エンドゲームの主なボス7体の名前・英語名・場所。",
+      "unverified": "1.0で追加されるAct5・6と新しいボスの情報。マップボスの全一覧は掲載していません。"
+    },
+    "sections": [
+      {
+        "id": "overview",
+        "heading": "ボスの探し方：キャンペーン・試練・エンドゲーム",
+        "paragraphs": [
+          "PoE2のボスは、キャンペーン（Act1〜4と間幕）、アセンダンシーの試練、エンドゲームの3つに分かれます。この一覧では、名前・英語名・どこで戦うかを並べ、詳しい対策はそれぞれの攻略記事にリンクしています。",
+          "名前はゲーム内の日本語表記に合わせています。英語名でも検索できるよう、英語名を併記しました。"
+        ],
+        "bullets": [
+          "この記事は、サイト内の各攻略記事で出典を確認した内容を一覧にしたものです。戦い方の詳細と出典は、リンク先の記事で確認してください。"
+        ],
+        "links": [
+          {
+            "href": "/name-index/",
+            "label": "ボス・クエスト・NPCの名前索引"
+          }
+        ]
+      },
+      {
+        "id": "act1",
+        "heading": "Act1のボス（11体）",
+        "paragraphs": [
+          "Act1攻略の記事で扱っているボスです。任意ボスには、恒久的な強化がもらえるものがあります。[source:1]"
+        ],
+        "table": {
+          "caption": "Act1のボス",
+          "headers": [
+            "ボス（英語名）",
+            "どこで・何をする"
+          ],
+          "rows": [
+            [
+              "腐乱した粉屋（The Bloated Miller）",
+              "川岸のボス。戦闘と撃破後の会話を確認。"
+            ],
+            [
+              "腐りし群れのベイラ（Beira of the Rotten Pack）",
+              "クリアフェルの任意ボスと恒久強化。"
+            ],
+            [
+              "錆の王（The Rust King）",
+              "赤き谷のクエスト品から魂の木へ進む手順。"
+            ],
+            [
+              "ドレイヴン（Draven）",
+              "墓地で集める2つの鍵のうち、法務官の霊廟側。"
+            ],
+            [
+              "アシニア（Asinia）",
+              "墓地の鍵と、骨の檻への対処。"
+            ],
+            [
+              "ラクラン（Lachlann）",
+              "2つの鍵を揃えた後の墓地の進行。"
+            ],
+            [
+              "クロウベル（The Crowbell）",
+              "狩場の寄り道とパッシブ報酬。"
+            ],
+            [
+              "霧の王（The King in the Mists）",
+              "Act1のフレイソーンで得られる恒久強化。"
+            ],
+            [
+              "キャンドルマス（Candlemass, the Living Rite）",
+              "オガムの邸宅で確認する最大ライフの恒久強化。"
+            ],
+            [
+              "処刑人（The Executioner）",
+              "オガム村の戦闘と、レイティス救出後の会話。"
+            ],
+            [
+              "ジオノール伯爵（Count Geonor）",
+              "Act1最終戦の霧・冷気・突進への対処。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/act-1-walkthrough/",
+            "label": "Act1攻略を読む"
+          }
+        ],
+        "sourceRefs": [
+          1
+        ]
+      },
+      {
+        "id": "act2",
+        "heading": "Act2のボス（7体）",
+        "paragraphs": [
+          "Act2攻略の記事で扱っているボスです。任意ボスには、恒久的な強化がもらえるものがあります。[source:2]"
+        ],
+        "table": {
+          "caption": "Act2のボス",
+          "headers": [
+            "ボス（英語名）",
+            "どこで・何をする"
+          ],
+          "rows": [
+            [
+              "ラスブレイカー（Rathbreaker）",
+              "ヴァスティリ郊外からキャラバンへ進む手順。"
+            ],
+            [
+              "恐怖の技師、ルジャ（Rudja, the Dread Engineer）",
+              "採石場・鉱山の戦闘後にリスを救出する。"
+            ],
+            [
+              "復活した王、ジャマンラ（Jamanra, the Risen King）",
+              "Act2の門で戦うジャマンラ。最終戦とは別の戦闘。"
+            ],
+            [
+              "裏切り者、バルバラ（Balbala, the Traitor）",
+              "バルバラのバリャを拾い、セケマの試練と祭壇まで進む。"
+            ],
+            [
+              "大蛇の女王、カバラ（Kabala, Constrictor Queen）",
+              "ケスの任意ボスとパッシブ報酬。"
+            ],
+            [
+              "冒涜者、トール・ガル（Tor Gul, the Defiler）",
+              "デシャールの尖塔の戦闘と、撃破後のキャラバンの会話。"
+            ],
+            [
+              "アボミネーション、ジャマンラ（Jamanra, the Abomination）",
+              "Act2最終戦の砂嵐・雷の線・竜巻への対処。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/act-2-walkthrough/",
+            "label": "Act2攻略を読む"
+          }
+        ],
+        "sourceRefs": [
+          2
+        ]
+      },
+      {
+        "id": "act3",
+        "heading": "Act3のボス（6体）",
+        "paragraphs": [
+          "Act3攻略の記事で扱っているボスです。任意ボスには、恒久的な強化がもらえるものがあります。[source:3]"
+        ],
+        "table": {
+          "caption": "Act3のボス",
+          "headers": [
+            "ボス（英語名）",
+            "どこで・何をする"
+          ],
+          "rows": [
+            [
+              "キメラ、ザイクルシアン（Xyclucian, the Chimera）",
+              "マシナリウムへ進むためのボスと試練用アイテム。"
+            ],
+            [
+              "亡霊、黒き顎（Blackjaw, the Remnant）",
+              "マシナリウムの任意ボスと火耐性の恒久強化。"
+            ],
+            [
+              "沼地の魔女、イグナグドゥク（Ignagduk, the Bog Witch）",
+              "アザク湿原のスピリット恒久強化。"
+            ],
+            [
+              "太陽の大祭司、ケツーリ（Ketzuli, High Priest of the Sun）",
+              "コペク神殿の撃破後は儀式を完了する。"
+            ],
+            [
+              "ヴァイパー・ナプアツィ（Viper Napuatzi）",
+              "過去のウトザール。兵士の槍と毒の床への対処。"
+            ],
+            [
+              "宮廷魔術師、ドリヤニ（Doryani, Royal Thaumaturge）",
+              "Act3最終戦の光線・爆発・追尾雷への対処。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/act-3-walkthrough/",
+            "label": "Act3攻略を読む"
+          }
+        ],
+        "sourceRefs": [
+          3
+        ]
+      },
+      {
+        "id": "act4",
+        "heading": "Act4のボス（4体）",
+        "paragraphs": [
+          "Act4攻略の記事で扱っているボスです。任意ボスには、恒久的な強化がもらえるものがあります。[source:4]"
+        ],
+        "table": {
+          "caption": "Act4のボス",
+          "headers": [
+            "ボス（英語名）",
+            "どこで・何をする"
+          ],
+          "rows": [
+            [
+              "空のスカージ（Scourge of the Skies）",
+              "モズの島のボスから主線の武器部品を探す。"
+            ],
+            [
+              "囚人（The Prisoner）",
+              "放棄された監獄の奥、監禁独房での戦闘。"
+            ],
+            [
+              "キンの領主、クルトォグ（Krutog, Lord of Kin）",
+              "キンの島から火山地帯へ進む手順。"
+            ],
+            [
+              "族長、タヴァカイ（Tavakai, the Chieftain）",
+              "Act4最終戦は3段階を通して進める。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/act-4-walkthrough/",
+            "label": "Act4攻略を読む"
+          }
+        ],
+        "sourceRefs": [
+          4
+        ]
+      },
+      {
+        "id": "interlude",
+        "heading": "間幕のボス（6体）",
+        "paragraphs": [
+          "間幕攻略の記事で扱っているボスです。任意ボスには、恒久的な強化がもらえるものがあります。[source:5]"
+        ],
+        "table": {
+          "caption": "間幕のボス",
+          "headers": [
+            "ボス（英語名）",
+            "どこで・何をする"
+          ],
+          "rows": [
+            [
+              "ウルフリック族長（Thane Wulfric）",
+              "ホルテンの豪邸の2体。撃破後はレンリーへ報告。"
+            ],
+            [
+              "エルズウィス婦人（Lady Elswyth）",
+              "ホルテンの豪邸の2体。残った相手の強化と骨の檻に注意。"
+            ],
+            [
+              "ファリドゥンの王子、アズマディ（Azmadi, the Faridun Prince）",
+              "ヴァスティリの最終戦。グランドバリャとジャドの会話まで進む。"
+            ],
+            [
+              "放浪の槍、リサラ（Lythara, the Wayward Spear）",
+              "クリアール村の主線ボス。頭蓋骨の回収と使用を確認。"
+            ],
+            [
+              "血の司祭、ゾリン（Zolin）",
+              "クリアール最終戦の2体。撃破後にドリヤニを呼ぶ。"
+            ],
+            [
+              "血の巫女、ゼリナ（Zelina）",
+              "クリアール最終戦の2体。床の予兆と連撃を避ける。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/interlude-walkthrough/",
+            "label": "間幕攻略を読む"
+          }
+        ],
+        "sourceRefs": [
+          5
+        ]
+      },
+      {
+        "id": "trials",
+        "heading": "アセンダンシーの試練のボス（3体）",
+        "paragraphs": [
+          "セケマの試練と混沌の試練で戦うボスです。試練の進め方とアセンダンシーポイントは、転職・試練攻略の記事で確認できます。[source:6][source:7]"
+        ],
+        "table": {
+          "caption": "試練のボス",
+          "headers": [
+            "ボス（英語名）",
+            "どこで・何をする"
+          ],
+          "rows": [
+            [
+              "大地を砕く者、ラトルケージ（Rattlecage, the Earthbreaker）",
+              "セケマ第1階層の連続爆発・火山への対処。"
+            ],
+            [
+              "Zarokh（Zarokh）",
+              "セケマ第4階層。砂時計と名誉の変更点。"
+            ],
+            [
+              "試練の達人（Trialmaster）",
+              "混沌の試練の最終段階。3種類のFateと扉の先を確認。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/ascendancy-trials/",
+            "label": "転職・試練攻略を読む"
+          }
+        ],
+        "sourceRefs": [
+          6,
+          7
+        ]
+      },
+      {
+        "id": "endgame",
+        "heading": "エンドゲームの主なボス",
+        "paragraphs": [
+          "マップの各メカニクスの先にいる強いボスです。挑み方（必要なアイテムや鍵）はメカニクスごとに違います。"
+        ],
+        "table": {
+          "caption": "エンドゲームの主なボス",
+          "headers": [
+            "ボス（英語名）",
+            "どこで・何をする"
+          ],
+          "rows": [
+            [
+              "灰のアービター（Arbiter of Ash）",
+              "終盤ボス。円内への退避、剣の直線攻撃、炎の隙間を区別する。"
+            ],
+            [
+              "神性のアービター（The Arbiter of Divinity）",
+              "0.5.5で追加された終盤ボス。声・動作の予兆と第2フェーズの分身に注意。"
+            ],
+            [
+              "一つの我ら、ゼシュト（Xesht, We That Are One）",
+              "ブリーチの先のボス。追尾する射撃と頭上の手を見分ける。"
+            ],
+            [
+              "ボダック（The Bodach）",
+              "リチュアルの先のボス。霧の王・王の首・名もなき者の儀式を経て挑む。"
+            ],
+            [
+              "鴉のトリックスター（Tangmazu）",
+              "デリリウムの先のボス。"
+            ],
+            [
+              "クーラマクの器（Vessel of Kulemak）",
+              "アビスの先のボス。タスガル・ヴァンドロスが落とすクーラマクの招待状で挑む。"
+            ],
+            [
+              "赤き女王、アッツィリ（Atziri, the Red Queen）",
+              "アッツィリの神殿の頂点ボス。"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/guides/pinnacle-bosses/",
+            "label": "灰のアービター・ゼシュトの予兆"
+          },
+          {
+            "href": "/guides/arbiter-of-divinity/",
+            "label": "神性のアービター攻略"
+          },
+          {
+            "href": "/guides/xesht/",
+            "label": "ゼシュト攻略"
+          },
+          {
+            "href": "/guides/bodach/",
+            "label": "ボダック攻略"
+          },
+          {
+            "href": "/guides/tangmazu/",
+            "label": "鴉のトリックスター攻略"
+          },
+          {
+            "href": "/guides/abyss/",
+            "label": "アビス攻略（クーラマク）"
+          },
+          {
+            "href": "/guides/atziri-temple/",
+            "label": "アッツィリの神殿攻略"
+          }
+        ],
+        "sourceRefs": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "bullets": [
+          "出典：ボダック[source:8]、ゼシュト[source:9]、クーラマクの器[source:10]、鴉のトリックスター[source:11]、アッツィリ[source:12]、灰のアービター[source:13]、神性のアービター[source:14]。"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Act1の最後のボスは誰ですか？",
+        "answer": "ジオノール伯爵です。霧・冷気・突進への対処はAct1攻略の記事で確認できます。[source:1]"
+      },
+      {
+        "question": "エンドゲームの強いボスにはどう挑みますか？",
+        "answer": "メカニクスごとに必要なアイテムが違います。たとえばクーラマクの器はクーラマクの招待状、ボダックはリチュアルの名もなき者の儀式を経て挑みます。[source:8][source:10]"
+      },
+      {
+        "question": "ボスの名前が英語でしか分かりません",
+        "answer": "この一覧と名前索引に英語名を併記しています。ページ内検索で英語名を探してください。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PoE2DB：Act 1（二次資料）",
+        "url": "https://poe2db.tw/jp/Act_1",
+        "checkedAt": "2026-10-09",
+        "supports": "日本語名称、任意ボス・恒久報酬の種類。数値は本記事で固定していません。"
+      },
+      {
+        "name": "PoE2DB：Act 2（二次資料）",
+        "url": "https://poe2db.tw/jp/Act_2",
+        "checkedAt": "2026-10-09",
+        "supports": "日本語エリア名・ボス名、カバラ・ガルカーンの姉妹達・古代の誓いの強化報酬。"
+      },
+      {
+        "name": "PoE2DB：アクト3・日本語データ（二次資料）",
+        "url": "https://poe2db.tw/jp/Act_3",
+        "checkedAt": "2026-10-09",
+        "supports": "エリア・ボス・クエストの日本語名と報酬表示。下部の旧版Community Wiki本文とは区別。"
+      },
+      {
+        "name": "PoE2DB：Act4（二次資料）",
+        "url": "https://poe2db.tw/jp/Act_4",
+        "checkedAt": "2026-10-09",
+        "supports": "日本語名、エリアの接続と章の全体構成。Community Wikiの配置固定や旧報酬を現行の確定情報として扱わない。"
+      },
+      {
+        "name": "PoE2 Wiki：Interludes（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/Interludes",
+        "checkedAt": "2026-10-09",
+        "supports": "検索結果本文で任意順、進行によるエリアレベル上昇、3地域の構造を確認。固定推奨レベル・ボスHPには使用しない。"
+      },
+      {
+        "name": "PoE2DB：セケマの試練（二次資料）",
+        "url": "https://poe2db.tw/us/Trial_of_the_Sekhemas",
+        "checkedAt": "2026-10-10",
+        "supports": "部屋報酬、恩恵、苦難、ボス一覧。"
+      },
+      {
+        "name": "PoE2DB：カオスの試練（二次資料）",
+        "url": "https://poe2db.tw/jp/The_Trials_of_Chaos",
+        "checkedAt": "2026-10-10",
+        "supports": "Act3クエストと入場の進行。"
+      },
+      {
+        "name": "PoE2DB：ボダック（The Bodach）",
+        "url": "https://poe2db.tw/jp/The_Bodach",
+        "checkedAt": "2026-11-18",
+        "supports": "日本語名「ボダック」、デーモン、出現エリア「カイル・タルス」、ボダック由来のユニーク5種（忘れられし看守・リミナルコイル・周縁・シルヴァンの人形・闇の痕跡）。"
+      },
+      {
+        "name": "PathofExile.gg：Path of Exile 2 Breach Guide（2026年10月14日）",
+        "url": "https://pathofexile.gg/path-of-exile-2-breach-guide/",
+        "checkedAt": "2026-11-22",
+        "supports": "ブリーチの始め方、2本のバー、円の外では攻撃が通らないこと、中心の敵と閉じたときのドロップ、創生の樹の5つの枝と使い方、カタリストの変更、エイリス・ブリーチの砦（ティア6以上）・中央のハイヴ（ティア14以上）・トゥルとエシュ・供物・捻じれた領域・ゼシュトの時間制限、アトラスパッシブの取る順番。"
+      },
+      {
+        "name": "PathofExile.gg：Path of Exile 2 Abyss Guide（2026年10月12日）",
+        "url": "https://pathofexile.gg/path-of-exile-2-abyss-guide/",
+        "checkedAt": "2026-11-26",
+        "supports": "亀裂と穴の仕組み、1つの穴の亀裂の数、混沌耐性の目安、黒い雲、Act2での初登場、報酬の種類と入手先、アビスの深淵の再入場不可とモンスターレベル+1、魂の井戸の3つの分岐とティアの目安、アトラスポイント35、タスガル・ヴァンドロスと招待状、クーラマクの器の流れ。"
+      },
+      {
+        "name": "poe2wiki：The Raven Trickster",
+        "url": "https://www.poe2wiki.net/wiki/Tangmazu",
+        "checkedAt": "2026-11-21",
+        "supports": "鴉の鏡像（Raven's Reflection）を枯れ柳の鏡へ持っていく入場方法、タングマズが必ず落とすユニーク（ヴェイルピアサー、サディストの慈悲、ジ・アウスペクス、ホラーズフライト、鴉の群れ）とトリックスターの破片などの追加ドロップ。"
+      },
+      {
+        "name": "poe2db：赤き女王、アッツィリ",
+        "url": "https://poe2db.tw/jp/Atziri%2C_the_Red_Queen",
+        "checkedAt": "2026-11-27",
+        "supports": "赤き女王の耐性（火・冷・雷30%、カオス0%）とライフ倍率742%、エナジーシールドがライフの33%であること。"
+      },
+      {
+        "name": "GGG公式：0.5.0 パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3932540",
+        "checkedAt": "2026-10-10",
+        "supports": "2026-05-21公開、後日追記あり。FortressへのArbiter移動とBreachの進行再編。"
+      },
+      {
+        "name": "公式：0.5.5パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-10-24",
+        "supports": "雷耐性・火への脆弱性、クエスト版と非クエスト版の起源のコアによる要塞完了の違い。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/name-index/",
+        "label": "ボス・クエスト・NPCの名前索引"
+      },
+      {
+        "href": "/guides/campaign-progression/",
+        "label": "キャンペーンの進め方"
+      },
+      {
+        "href": "/guides/pinnacle-bosses/",
+        "label": "終盤ボス攻略"
+      },
+      {
+        "href": "/guides/endgame-contents/",
+        "label": "エンドゲームのコンテンツ全体"
+      }
+    ],
+    "revisionNotes": [
+      {
+        "date": "2026-11-28",
+        "summary": "キャンペーン・試練・エンドゲームのボス一覧を公開。"
+      }
+    ]
+  },
+  {
     "slug": "pinnacle-bosses",
     "title": "PoE2終盤ボス攻略｜灰のアービター・ゼシュトの予兆と避け方",
     "summary": "代表的な終盤ボス2体で、見えた予兆に対してどこへ動くかを整理。長い攻撃を欲張らず、回避後の短い反撃から練習します。",
@@ -5273,6 +5881,10 @@
       {
         "href": "/guides/tier-16-waystones/",
         "label": "周回用ウェイストーンを補充する"
+      },
+      {
+        "href": "/guides/bosses/",
+        "label": "ボス一覧"
       }
     ],
     "ogImage": "/images/poe2/og/poe2-beginner-guide-og.webp",
@@ -18712,12 +19324,500 @@
       {
         "href": "/guides/build-tier-list/",
         "label": "最強ビルドTier表"
+      },
+      {
+        "href": "/guides/multiplayer/",
+        "label": "マルチプレイのやり方"
       }
     ],
     "revisionNotes": [
       {
         "date": "2026-11-27",
         "summary": "リーグの仕組み・0.5.5で遊べるリーグ・ハードコアとSSF・期間と1.0を公式情報でまとめて公開。"
+      }
+    ]
+  },
+  {
+    "slug": "passive-respec",
+    "title": "パッシブの振り直し方｜フードをかぶった者・ゴールドの費用・転職の変更",
+    "metaDescription": "PoE2のパッシブスキルの振り直し方を初心者向けに整理。Act1のフードをかぶった者でゴールドを払って戻す手順、レベルで上がる費用の目安、大型パッチでの無料の振り直し、アセンダンシー（転職先）を変える条件をまとめます。",
+    "summary": "パッシブは、Act1で話せるようになる「フードをかぶった者」にゴールドを払って1つずつ戻せます。費用の目安と、無料で戻せるとき、転職先を変える条件を確認します。",
+    "category": "basics",
+    "version": "参照：2026-11-28時点の資料（0.5系）。1.0で変わる可能性があります",
+    "checkedAt": "2026-11-28",
+    "publishedAt": "2026-11-28",
+    "updatedAt": "2026-11-28",
+    "evidenceNote": "振り直しの場所と手順はPCGamesNの解説とPoE2 Wiki、費用の表はPoE2DB日本語版、無料の振り直しとアセンダンシーの変更条件はGGG公式のパッチノートで確認しました。1ポイントあたりの正確な費用は、表の意味が資料で説明されていないため断定していません。",
+    "structuredCitations": true,
+    "keywords": [
+      "振り直し",
+      "リスペック",
+      "Respec",
+      "パッシブ",
+      "返金",
+      "Refund Passives",
+      "フードをかぶった者",
+      "The Hooded One",
+      "ゴールド",
+      "アセンダンシー 変更"
+    ],
+    "actions": [
+      "Act1でフードをかぶった者を野営地に呼び、「Refund Passives」でパッシブを戻す",
+      "振り直しにはゴールドが要るので、育成を大きく変える前にゴールドを貯めておく",
+      "大型パッチでツリーが変わったときは、無料の振り直しが配られていないか確認する"
+    ],
+    "quickLinks": [
+      {
+        "href": "#where",
+        "label": "1. どこで振り直す？"
+      },
+      {
+        "href": "#cost",
+        "label": "2. 費用"
+      },
+      {
+        "href": "#free",
+        "label": "3. 無料で戻せるとき"
+      },
+      {
+        "href": "#ascendancy",
+        "label": "4. 転職先の変更"
+      }
+    ],
+    "scope": "振り直しの手順はPCGamesN（2024年12月23日更新）とPoE2 Wiki、費用の表はPoE2DB日本語版（0.5系）、無料の振り直しは公式0.2.0・0.4.0パッチノート、アセンダンシーの変更条件は公式0.2.0fで確認しました（2026-11-28）。",
+    "verification": {
+      "method": "PCGamesNの振り直し解説、PoE2 WikiのThe Hooded One、PoE2DB日本語版のゴールドの項目、GGG公式の0.2.0・0.2.0f・0.4.0パッチノートを照合。",
+      "confirmed": "フードをかぶった者の「Refund Passives」で、パッシブを1つずつゴールドで戻せること。Act1のクエストで利用できるようになること。PoE2DBの費用の表（レベルが上がるほど高い）。0.2.0と0.4.0で無料の振り直しが配られたこと。アセンダンシーを変える条件（0.2.0f）。",
+      "unverified": "1ポイントあたりの正確な費用（PoE2DBの表の単位が説明されていない）、まとめて全部戻す機能の有無、武器セット用パッシブの扱い、1.0での変更点。"
+    },
+    "sections": [
+      {
+        "id": "where",
+        "heading": "どこで振り直す？：Act1のフードをかぶった者",
+        "paragraphs": [
+          "パッシブの振り直しは、フードをかぶった者（The Hooded One）に話しかけて「Refund Passives」を選びます。戻したいパッシブを1つずつ選び、決まった額のゴールドを払って戻します。[source:1][source:2]",
+          "フードをかぶった者は、Act1のクエストを進めると野営地で利用できるようになります。ラクラン伯爵を倒して指輪を回収し、ウーナのところへ持っていく流れです。同じNPCで、持っている装備をまとめて鑑定することもできます。[source:1][source:2]"
+        ],
+        "links": [
+          {
+            "href": "/guides/act-1-walkthrough/",
+            "label": "Act1攻略（フードをかぶった者まで）"
+          }
+        ],
+        "sourceRefs": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": "cost",
+        "heading": "費用：レベルが上がるほど高くなる",
+        "paragraphs": [
+          "PoE2DB日本語版のゴールドの項目には、振り直しの費用の表が載っています。レベルが上がるほど値が大きくなります。[source:3]"
+        ],
+        "table": {
+          "caption": "PoE2DB日本語版の振り直し費用の表（抜粋）",
+          "headers": [
+            "レベル",
+            "表の値（ゴールド）"
+          ],
+          "rows": [
+            [
+              "1",
+              "15"
+            ],
+            [
+              "10",
+              "98"
+            ],
+            [
+              "20",
+              "273"
+            ],
+            [
+              "30",
+              "470"
+            ],
+            [
+              "40",
+              "736"
+            ],
+            [
+              "50",
+              "1,089"
+            ],
+            [
+              "60",
+              "1,550"
+            ],
+            [
+              "70",
+              "2,145"
+            ],
+            [
+              "80",
+              "2,904"
+            ],
+            [
+              "90",
+              "5,081"
+            ],
+            [
+              "100",
+              "10,129"
+            ]
+          ]
+        },
+        "bullets": [
+          "表の見出しは「Gold Respec /100」で、アセンダンシーは5倍、能力値の選び直しは0.5倍という倍率も載っています。ただし、値が1ポイントあたりの費用なのか、何を基準にしたレベルなのかはページに説明がありません。実際の費用はゲーム内の表示で確認してください。[source:3]",
+          "編集部の考え：レベルが高くなるほど振り直しは高くつきます。大きく方向を変えるなら、早めに決めた方がゴールドを節約できます。"
+        ],
+        "links": [
+          {
+            "href": "/guides/passive-tree/",
+            "label": "パッシブツリーの基本"
+          }
+        ],
+        "sourceRefs": [
+          3
+        ]
+      },
+      {
+        "id": "free",
+        "heading": "無料で戻せるとき：大型パッチでツリーが変わったとき",
+        "paragraphs": [
+          "大型パッチでパッシブツリーが変わったときは、無料で振り直しができることがあります。0.2.0と0.4.0のパッチノートには「変更に伴い、パッシブツリーの無料の振り直しを付与した」と書かれています。[source:4][source:5]",
+          "同じパッチノートには、配置が変わった場所にノードを振っていた場合、ツリーが強制的に戻されることがあるとも書かれています。[source:4][source:5]"
+        ],
+        "bullets": [
+          "1.0でもパッシブの変更が発表されています。無料の振り直しが配られるかは、1.0のパッチノートで確認してください。"
+        ],
+        "links": [
+          {
+            "href": "/poe2-1-0/balance-changes/",
+            "label": "1.0のバランス変更"
+          }
+        ],
+        "sourceRefs": [
+          4,
+          5
+        ]
+      },
+      {
+        "id": "ascendancy",
+        "heading": "転職先（アセンダンシー）を変えるには",
+        "paragraphs": [
+          "公式0.2.0fの変更では、アセンダンシーを変えるには、すでに得たポイント数に対応する試練をクリアし、振っているアセンダンシーポイントを0にしてから祭壇を使う条件になりました。[source:6]",
+          "PoE2DBの費用の表では、アセンダンシーに5倍の倍率が付いています。アセンダンシーポイントを戻す費用は、通常のパッシブより高いと考えておきましょう。[source:3]"
+        ],
+        "links": [
+          {
+            "href": "/guides/ascendancy-trials/",
+            "label": "転職・試練攻略"
+          },
+          {
+            "href": "/ascendancies/",
+            "label": "アセンダンシー一覧"
+          }
+        ],
+        "sourceRefs": [
+          3,
+          6
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "パッシブはどこで振り直せますか？",
+        "answer": "Act1のクエストを進めると野営地で利用できる、フードをかぶった者の「Refund Passives」で振り直せます。[source:1][source:2]"
+      },
+      {
+        "question": "振り直しにいくらかかりますか？",
+        "answer": "ゴールドが必要で、レベルが上がるほど高くなります。PoE2DBの表ではレベル50で1,089、レベル90で5,081の値が載っていますが、表の単位は説明されていません。ゲーム内の表示で確認してください。[source:3]"
+      },
+      {
+        "question": "無料で振り直せることはありますか？",
+        "answer": "大型パッチでツリーが変わったときに、無料の振り直しが配られたことがあります（0.2.0・0.4.0）。[source:4][source:5]"
+      },
+      {
+        "question": "転職先を変えられますか？",
+        "answer": "変えられます。すでに得たポイント数に対応する試練をクリアし、アセンダンシーポイントを0にしてから祭壇を使います。[source:6]"
+      }
+    ],
+    "sources": [
+      {
+        "name": "PCGamesN：How to respec in Path of Exile 2（2024年12月23日更新）",
+        "url": "https://www.pcgamesn.com/path-of-exile-2/respec",
+        "checkedAt": "2026-11-28",
+        "supports": "フードをかぶった者の「Refund Passives」でパッシブを1つずつゴールドで戻すこと、Act1のクエストで利用できるようになる流れ。"
+      },
+      {
+        "name": "PoE2 Wiki：The Hooded One（二次資料）",
+        "url": "https://www.poe2wiki.net/wiki/Hooded_One",
+        "checkedAt": "2026-10-09",
+        "supports": "装備一括鑑定とゴールドでのパッシブ振り直し。"
+      },
+      {
+        "name": "PoE2DB日本語版：ゴールド（非公式ゲームデータ、0.5系）",
+        "url": "https://poe2db.tw/jp/Gold",
+        "checkedAt": "2026-11-28",
+        "supports": "振り直し費用の表（Gold Respec /100、レベル別の値、アセンダンシー5倍・能力値の選び直し0.5倍）。"
+      },
+      {
+        "name": "GGG公式：0.2.0パッチノート",
+        "url": "https://www.pathofexile.com/forum/view-thread/3740562",
+        "checkedAt": "2026-11-28",
+        "supports": "無料のパッシブツリーの振り直しの付与、配置変更による強制的な振り直し。"
+      },
+      {
+        "name": "GGG公式：0.4.0パッチノート（2025年12月4日）",
+        "url": "https://www.pathofexile.com/forum/view-thread/3883495",
+        "checkedAt": "2026-11-28",
+        "supports": "無料のパッシブツリーの振り直しの付与、配置変更による強制的な振り直し。"
+      },
+      {
+        "name": "GGG公式：0.2.0f",
+        "url": "https://www.pathofexile.com/forum/view-thread/3762929",
+        "checkedAt": "2026-10-10",
+        "supports": "アセンダンシーを変更する条件。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/passive-tree/",
+        "label": "パッシブツリーの基本"
+      },
+      {
+        "href": "/guides/ascendancy-trials/",
+        "label": "転職・試練攻略"
+      },
+      {
+        "href": "/guides/act-1-walkthrough/",
+        "label": "Act1攻略"
+      },
+      {
+        "href": "/ascendancies/",
+        "label": "アセンダンシー一覧"
+      }
+    ],
+    "revisionNotes": [
+      {
+        "date": "2026-11-28",
+        "summary": "パッシブの振り直しの場所・費用の目安・無料の振り直し・転職先の変更条件をまとめて公開。"
+      }
+    ]
+  },
+  {
+    "slug": "multiplayer",
+    "title": "マルチプレイのやり方｜最大6人の協力プレイ・ローカル協力・クロスプレイ",
+    "metaDescription": "PoE2のマルチプレイを初心者向けに整理。最大6人の協力プレイ、1つのアカウントで2人目が遊べるローカル協力（カウチ協力）、PC・PS5・Xbox間のクロスプレイ、パーティでのリチュアルの報酬、SSFとの関係を公式情報でまとめます。",
+    "summary": "PoE2は最大6人で協力プレイができ、PC・PS5・Xbox間のクロスプレイにも対応しています。1つのアカウントで2人目が遊べるローカル協力もあります。分かっていることと、まだ公式に書かれていないことを分けて確認します。",
+    "category": "basics",
+    "version": "参照：2026-11-28時点の公式情報（アーリーアクセス・0.5.5）。1.0で変わる可能性があります",
+    "checkedAt": "2026-11-28",
+    "publishedAt": "2026-11-28",
+    "updatedAt": "2026-11-28",
+    "evidenceNote": "人数はSteamの公式ストアページ、ローカル協力とクロスプレイはGGG公式のFAQ、パーティでのリチュアルの報酬は公式0.5.5パッチノートで確認しました。ドロップの分け方と人数による敵の強さの変化は、読んだ公式ページに書かれていなかったため載せていません。",
+    "structuredCitations": true,
+    "keywords": [
+      "マルチプレイ",
+      "協力プレイ",
+      "Co-op",
+      "パーティ",
+      "ローカル協力",
+      "カウチ協力",
+      "Couch co-op",
+      "クロスプレイ",
+      "Cross Play",
+      "何人"
+    ],
+    "actions": [
+      "協力プレイは最大6人。PC・PS5・Xboxの友達とも一緒に遊べる",
+      "ローカル協力は1つのアカウントで2人目がキャラクターを作って遊ぶ",
+      "SSFのキャラクターはパーティを組めないので、協力プレイには通常のリーグを選ぶ"
+    ],
+    "quickLinks": [
+      {
+        "href": "#basics",
+        "label": "1. 何人で遊べる？"
+      },
+      {
+        "href": "#couch",
+        "label": "2. ローカル協力"
+      },
+      {
+        "href": "#crossplay",
+        "label": "3. クロスプレイ"
+      },
+      {
+        "href": "#party",
+        "label": "4. パーティでの報酬"
+      },
+      {
+        "href": "#unknown",
+        "label": "5. 未確認のこと"
+      }
+    ],
+    "scope": "人数はSteamの公式ストアページ、ローカル協力はGGG公式Early Access FAQ（2024年11月21日）、クロスプレイは公式のアカウント統合の告知（2024年11月12日）、パーティでのリチュアルは公式0.5.5パッチノート（2026年9月2日）で確認しました（2026-11-28）。",
+    "verification": {
+      "method": "Steamの公式ストアページ、GGG公式のEarly Access FAQ・アカウント統合の告知・0.5.5パッチノートを照合。",
+      "confirmed": "最大6人の協力プレイ。1つのアカウントでのローカル協力（2人目がそのアカウントでキャラクターを作る）。PoE2のキャラクターはどの対応機種でも遊べること（クロスプレイ）。パーティでリチュアルのトリビュートと報酬を受け取れること。",
+      "unverified": "ドロップの分け方、人数による敵の強さや報酬の変化（数値）、ローカル協力の対応機種と人数、パーティ同士のトレードの細かいルール、1.0での変更点。"
+    },
+    "sections": [
+      {
+        "id": "basics",
+        "heading": "何人で遊べる？：最大6人の協力プレイ",
+        "paragraphs": [
+          "PoE2は、最大6人での協力プレイに対応しています。Steamの公式ストアページには「最大6人の協力プレイ」と書かれ、オンライン協力の表示があります。[source:1]"
+        ],
+        "links": [
+          {
+            "href": "/guides/leagues/",
+            "label": "リーグとは"
+          }
+        ],
+        "sourceRefs": [
+          1
+        ]
+      },
+      {
+        "id": "couch",
+        "heading": "ローカル協力（カウチ協力）：1つのアカウントで2人",
+        "paragraphs": [
+          "公式FAQは、アーリーアクセスの最初から、1つのアカウントでカウチ協力（同じ画面の前で一緒に遊ぶ）ができると答えています。2人目はそのアカウントでキャラクターを作れます。[source:2]"
+        ],
+        "bullets": [
+          "対応している機種と、何人までローカルで遊べるかは、公式FAQには書かれていません。"
+        ],
+        "sourceRefs": [
+          2
+        ]
+      },
+      {
+        "id": "crossplay",
+        "heading": "クロスプレイ：PC・PS5・Xboxで一緒に遊べる",
+        "paragraphs": [
+          "PoE2は、対応するすべての機種の間でクロスプレイに対応しています。公式のアカウント統合の告知では、PoE2のキャラクターはどの機種でも遊べると答えています。[source:3]"
+        ],
+        "bullets": [
+          "PlayStationで購入した課金アイテムは、ほかの機種では使えません。[source:3]",
+          "そのスタッシュタブを持っていない機種でログインすると、タブは取り出し専用になります。[source:2]"
+        ],
+        "links": [
+          {
+            "href": "/poe2-1-0/carry-over/",
+            "label": "機種をまたいだ進行と課金アイテム"
+          }
+        ],
+        "sourceRefs": [
+          2,
+          3
+        ]
+      },
+      {
+        "id": "party",
+        "heading": "パーティでの報酬：リチュアルの例",
+        "paragraphs": [
+          "0.5.5で、パーティのメンバーもリチュアルを完了してトリビュートを得られるようになりました。メンバーにはそれぞれ限られた報酬が並び、その報酬はリロールできません。[source:4]",
+          "パーティでリチュアルを始めるときは、エリアにいる全員がイーファの説明を聞く必要があります。[source:4]"
+        ],
+        "links": [
+          {
+            "href": "/guides/ritual/",
+            "label": "リチュアル攻略"
+          }
+        ],
+        "sourceRefs": [
+          4
+        ]
+      },
+      {
+        "id": "unknown",
+        "heading": "まだ公式に書かれていないこと",
+        "paragraphs": [
+          "次の点は、今回読んだ公式ページには書かれていませんでした。推測では載せず、資料が見つかったら追記します。"
+        ],
+        "bullets": [
+          "ドロップの分け方（パーティ全員で共有か、一人ずつに分かれるか）",
+          "人数が増えたときの敵のライフや報酬の変化（数値）",
+          "ローカル協力の対応機種と人数",
+          "SSFの制限：このサイトの用語ページでは、SSFではパーティを組めないと説明しています"
+        ],
+        "links": [
+          {
+            "href": "/dictionary/ssf/",
+            "label": "用語：SSF"
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "PoE2は何人で遊べますか？",
+        "answer": "最大6人で協力プレイができます。[source:1]"
+      },
+      {
+        "question": "1台のゲーム機で2人で遊べますか？",
+        "answer": "遊べます。1つのアカウントでカウチ協力ができ、2人目はそのアカウントでキャラクターを作ります。[source:2]"
+      },
+      {
+        "question": "PCとPS5の友達と一緒に遊べますか？",
+        "answer": "遊べます。PoE2は対応するすべての機種の間でクロスプレイに対応しています。[source:3]"
+      },
+      {
+        "question": "パーティで遊ぶとドロップはどうなりますか？",
+        "answer": "ドロップの分け方は、読んだ公式ページに書かれていませんでした。分かり次第追記します。"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Steam：Path of Exile 2 ストアページ",
+        "url": "https://store.steampowered.com/app/2694490/Path_of_Exile_2/",
+        "checkedAt": "2026-11-28",
+        "supports": "最大6人の協力プレイ、オンライン協力の表示、1.0の公開日。"
+      },
+      {
+        "name": "GGG公式：Early Access FAQ（2024年11月21日）",
+        "url": "https://www.pathofexile.com/forum/view-thread/3587981",
+        "checkedAt": "2026-11-28",
+        "supports": "1つのアカウントでのカウチ協力、スタッシュタブが別機種で取り出し専用になること。"
+      },
+      {
+        "name": "GGG公式：アカウント統合とクロスプレイ（2024年11月12日）",
+        "url": "https://www.pathofexile.com/forum/view-thread/3586288",
+        "checkedAt": "2026-11-28",
+        "supports": "PoE2のキャラクターはどの機種でも遊べること（クロスプレイ）、PlayStationで買った課金アイテムはほかの機種で使えないこと。"
+      },
+      {
+        "name": "GGG公式：0.5.5パッチノート（2026年9月2日）",
+        "url": "https://www.pathofexile.com/forum/view-thread/4000864",
+        "checkedAt": "2026-11-28",
+        "supports": "パーティのメンバーがリチュアルのトリビュートと報酬を得られること、報酬はリロールできないこと、全員がイーファの説明を聞く必要があること。"
+      }
+    ],
+    "related": [
+      {
+        "href": "/guides/leagues/",
+        "label": "リーグとは"
+      },
+      {
+        "href": "/guides/trade/",
+        "label": "トレードのやり方"
+      },
+      {
+        "href": "/poe2-1-0/carry-over/",
+        "label": "1.0でキャラは引き継げる？"
+      },
+      {
+        "href": "/guides/ritual/",
+        "label": "リチュアル攻略"
+      }
+    ],
+    "revisionNotes": [
+      {
+        "date": "2026-11-28",
+        "summary": "協力プレイの人数・ローカル協力・クロスプレイ・パーティでのリチュアルの報酬を公式情報でまとめて公開。"
       }
     ]
   },
