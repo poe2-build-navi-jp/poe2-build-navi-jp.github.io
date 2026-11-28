@@ -163,6 +163,7 @@ https://poe2-build-navi-jp.github.io/guides/atlas-passive-trees/
 https://poe2-build-navi-jp.github.io/guides/ascendancy-trials/
 https://poe2-build-navi-jp.github.io/guides/permanent-rewards/
 https://poe2-build-navi-jp.github.io/guides/budget-gear-crafting/
+https://poe2-build-navi-jp.github.io/guides/bosses/
 https://poe2-build-navi-jp.github.io/guides/pinnacle-bosses/
 https://poe2-build-navi-jp.github.io/guides/arbiter-of-ash-clear-record/
 https://poe2-build-navi-jp.github.io/guides/unique-gear/
@@ -192,6 +193,8 @@ https://poe2-build-navi-jp.github.io/guides/map-events/
 https://poe2-build-navi-jp.github.io/guides/ailments/
 https://poe2-build-navi-jp.github.io/guides/build-tier-list/
 https://poe2-build-navi-jp.github.io/guides/leagues/
+https://poe2-build-navi-jp.github.io/guides/passive-respec/
+https://poe2-build-navi-jp.github.io/guides/multiplayer/
 https://poe2-build-navi-jp.github.io/guides/stuck-at-level-90/
 https://poe2-build-navi-jp.github.io/guides/tangmazu/
 https://poe2-build-navi-jp.github.io/guides/atziri-temple/

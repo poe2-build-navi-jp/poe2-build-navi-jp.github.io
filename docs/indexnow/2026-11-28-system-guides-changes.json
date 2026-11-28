@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "origin": "https://poe2-build-navi-jp.github.io",
+  "baseCommit": "f3a990b471e3e502a0ca1cb8c4a28eeea052c453",
+  "headCommit": "f077c34b4a2a909ffe982b6591f3bb4a97381d10",
+  "urls": [
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/",
+      "change": "updated",
+      "beforeHash": "900c5420ec822666f337e6193c9cde97a752277f40b0e93e99236bd3e57470a6",
+      "afterHash": "832a4309ada19fc0e93eefbf64307b832cfb87cf01abef4878304216cc07e9be"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/act-1-walkthrough/",
+      "change": "updated",
+      "beforeHash": "36a16ef7f88f7df009919326e30e3508ed4dcffc7580c9d994b56655d882d8db",
+      "afterHash": "fd0ff1ad737aeed4c80e3b56c93e0d91794eec934c53a4f261e9eac6302e79dd"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/ascendancy-trials/",
+      "change": "updated",
+      "beforeHash": "7bdff79f6497e40738083bfb86a59e7ed6502e19f4314271078288fc05efc927",
+      "afterHash": "11e9a601184d5899c7cf79e7813e78a202657ba86775434f6fcb0dc8a9a76721"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/bosses/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "fa3440795873f81dfeecc0c40bce41d626419b7830ba9b094bfb9c402c8d2153"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/campaign-progression/",
+      "change": "updated",
+      "beforeHash": "ecd132d31cf8a0fe10d14670180cb4bb5a6cb663cb2d7afc4e110127afac3bdd",
+      "afterHash": "9e200dfc497a092691320ae7c262faaf3b672c455950f53eeb1f7b63c0ebeb11"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/leagues/",
+      "change": "updated",
+      "beforeHash": "2ebd17590eb4e3d3bbfe45392e02af982de62ccf6482f532616bf2441ff1a420",
+      "afterHash": "b2fe0ca9b11f5eff9d009359b4afec02177199c326675243801d368a82bd0b16"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/multiplayer/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "1b55ef6e56742b30e49c0f1ed460a620fc59dab631c3819621ab852296ed0808"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/passive-respec/",
+      "change": "added",
+      "beforeHash": null,
+      "afterHash": "b01bdc97fee828b5c2a88f059981b06b75b6a47f87350cc48e10a9b25269ee0f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/guides/pinnacle-bosses/",
+      "change": "updated",
+      "beforeHash": "537dba335b7c0bcafb83501cfc89144318768cdb69f498f35d864f22e6bf2ccd",
+      "afterHash": "20c63b8d2eded9befbda6a8c706fe886f9567f6e34082ec4a61754f1780f0656"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/search/",
+      "change": "updated",
+      "beforeHash": "b123af4a0c8ce2719d9dfa86ae0853672a459f7f4cac745e26921be2d6a1813c",
+      "afterHash": "f84171aafea10f7c4649b6d32dc3c0d94aa991f6180b5349e0a7fe6af8960e0f"
+    },
+    {
+      "url": "https://poe2-build-navi-jp.github.io/site-map/",
+      "change": "updated",
+      "beforeHash": "63c5ae96af28f884a7f76985ae08b854d03e8ef65bd8c99e30c48bca76d2c318",
+      "afterHash": "12e8edea5787121f6f23e565ec1b87409e3496a791b4415545432023b8b77f13"
+    }
+  ]
+}

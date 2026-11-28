@@ -15,8 +15,8 @@
   "hashVersion": 2
  },
  "/search/": {
-  "hash": "ed06e3d6bbe0c475",
-  "date": "2026-11-27",
+  "hash": "97845847613a79d4",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/name-index/": {
@@ -330,8 +330,8 @@
   "hashVersion": 2
  },
  "/guides/": {
-  "hash": "570ba7676c7241be",
-  "date": "2026-11-27",
+  "hash": "2a3cf9de91cd461a",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/dictionary/": {
@@ -390,8 +390,8 @@
   "hashVersion": 2
  },
  "/site-map/": {
-  "hash": "a627076408faa9cb",
-  "date": "2026-11-27",
+  "hash": "3b3ed88ac0c5ec2a",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/classes/monk/": {
@@ -745,8 +745,8 @@
   "hashVersion": 2
  },
  "/guides/campaign-progression/": {
-  "hash": "21af6d3bfb070977",
-  "date": "2026-11-24",
+  "hash": "480648e4de5872c4",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/guides/trial-of-chaos/": {
@@ -770,8 +770,8 @@
   "hashVersion": 2
  },
  "/guides/act-1-walkthrough/": {
-  "hash": "344ca49168ee638c",
-  "date": "2026-11-24",
+  "hash": "cc68d757b167b2b9",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/guides/act-2-walkthrough/": {
@@ -810,8 +810,8 @@
   "hashVersion": 2
  },
  "/guides/ascendancy-trials/": {
-  "hash": "47ada79c98f968b4",
-  "date": "2026-11-24",
+  "hash": "e365f583581141cf",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/guides/permanent-rewards/": {
@@ -824,9 +824,14 @@
   "date": "2026-11-24",
   "hashVersion": 2
  },
+ "/guides/bosses/": {
+  "hash": "284a8f2cfd4fc966",
+  "date": "2026-11-28",
+  "hashVersion": 2
+ },
  "/guides/pinnacle-bosses/": {
-  "hash": "f7f9af7df1127b96",
-  "date": "2026-11-24",
+  "hash": "3032407e5201d994",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/guides/arbiter-of-ash-clear-record/": {
@@ -965,8 +970,18 @@
   "hashVersion": 2
  },
  "/guides/leagues/": {
-  "hash": "1bd3520c25dc9a28",
-  "date": "2026-11-27",
+  "hash": "fda1ac420b7fee26",
+  "date": "2026-11-28",
+  "hashVersion": 2
+ },
+ "/guides/passive-respec/": {
+  "hash": "5fe717e7534bb99b",
+  "date": "2026-11-28",
+  "hashVersion": 2
+ },
+ "/guides/multiplayer/": {
+  "hash": "78e17e7866b99821",
+  "date": "2026-11-28",
   "hashVersion": 2
  },
  "/guides/stuck-at-level-90/": {
