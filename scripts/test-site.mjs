@@ -237,7 +237,8 @@ assert(bestPage.includes('class="comparison-table"') && bestPage.includes("æŽ²è¼
 assert((bestPage.match(/<td data-label=/g) || []).length === builds.length * 8, "best builds comparison cells need mobile labels");
 assert((bestPage.match(/class="comparison-cta"/g) || []).length === builds.length, "best builds comparison rows need level CTAs");
 assert(styles.includes(".comparison-table td::before{content:attr(data-label)") && styles.includes(".comparison-table tr{display:block"), "best builds comparison mobile card layout missing");
-assert(seoPages.length === 27, "targeted SEO page count must be 27");
+// The 1.0 patch-notes summary (docs/templates/patch-notes-summary.json) is added on its publication day; it does not count here.
+assert(seoPages.filter((page) => page.path !== "/poe2-1-0/patch-notes/").length === 27, "targeted SEO page count must be 27 (plus the 1.0 patch-notes summary once it is published)");
 for (const page of seoPages) {
   const localPath = `${page.path.slice(1)}index.html`;
   assert(sitemap.includes(`${baseUrl}${page.path}`), `${page.path}: SEO page missing from sitemap`);
